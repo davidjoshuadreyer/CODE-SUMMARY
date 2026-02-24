@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -A3 \"null character\\\\|\\\\\\\\0\" \"c:/Users/david/OneDrive/Documents/CODE/CODE SUMMARY/Fundamentals.html\")",
+      "Bash(python3:*)"
+    ]
+  }
+}

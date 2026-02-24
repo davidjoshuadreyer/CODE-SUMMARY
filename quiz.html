@@ -1,0 +1,1811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C Programming Midterm Quiz</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #0f0f1a;
+    color: #e2e8f0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 24px 16px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #7c3aed, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  .subtitle {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+
+  /* HOME SCREEN */
+  #home {
+    width: 100%;
+    max-width: 700px;
+  }
+
+  .quiz-cards {
+    display: grid;
+    gap: 16px;
+  }
+
+  .quiz-card {
+    background: #1e1e30;
+    border: 1px solid #2d2d50;
+    border-radius: 16px;
+    padding: 24px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .quiz-card:hover {
+    border-color: #7c3aed;
+    background: #25253d;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(124, 58, 237, 0.2);
+  }
+
+  .quiz-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+  }
+
+  .quiz-card h2 { font-size: 1.15rem; font-weight: 600; margin-bottom: 4px; }
+  .quiz-card p { color: #94a3b8; font-size: 0.85rem; }
+
+  .btn-all {
+    margin-top: 20px;
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: 2px dashed #7c3aed;
+    background: transparent;
+    color: #a78bfa;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .btn-all:hover {
+    background: rgba(124, 58, 237, 0.15);
+  }
+
+  /* PART 2 IDEAS */
+  .part2-section {
+    margin-top: 32px;
+    background: #1e1e30;
+    border: 1px solid #2d2d50;
+    border-radius: 16px;
+    padding: 24px;
+  }
+
+  .part2-section h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #a78bfa;
+    margin-bottom: 4px;
+  }
+
+  .part2-subtitle {
+    font-size: 0.82rem;
+    color: #64748b;
+    margin-bottom: 16px;
+  }
+
+  .part2-card {
+    background: #16162a;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 10px;
+    border-left: 3px solid #7c3aed;
+  }
+
+  .part2-card:last-child { margin-bottom: 0; }
+
+  .part2-card h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #f1f5f9;
+    margin-bottom: 6px;
+  }
+
+  .part2-card p {
+    font-size: 0.82rem;
+    color: #94a3b8;
+    line-height: 1.55;
+  }
+
+  .part2-card code {
+    font-family: 'Cascadia Code', 'Consolas', monospace;
+    background: #0d0d1a;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: #93c5fd;
+  }
+
+  /* QUIZ SCREEN */
+  #quiz-screen {
+    display: none;
+    width: 100%;
+    max-width: 720px;
+  }
+
+  .quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .quiz-title-bar {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #a78bfa;
+  }
+
+  .score-badge {
+    background: #1e1e30;
+    border: 1px solid #2d2d50;
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-size: 0.85rem;
+    color: #94a3b8;
+  }
+
+  .progress-bar-wrap {
+    background: #1e1e30;
+    border-radius: 999px;
+    height: 6px;
+    width: 100%;
+    margin-bottom: 24px;
+    overflow: hidden;
+  }
+
+  .progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #7c3aed, #3b82f6);
+    border-radius: 999px;
+    transition: width 0.4s ease;
+  }
+
+  .question-card {
+    background: #1e1e30;
+    border: 1px solid #2d2d50;
+    border-radius: 20px;
+    padding: 28px;
+    margin-bottom: 20px;
+  }
+
+  .question-num {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #7c3aed;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .question-text {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #f1f5f9;
+    margin-bottom: 20px;
+  }
+
+  .code-block {
+    background: #0d0d1a;
+    border: 1px solid #2d2d50;
+    border-radius: 10px;
+    padding: 16px;
+    font-family: 'Cascadia Code', 'Consolas', monospace;
+    font-size: 0.85rem;
+    line-height: 1.7;
+    color: #93c5fd;
+    white-space: pre;
+    overflow-x: auto;
+    margin-bottom: 16px;
+  }
+
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .option {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 18px;
+    border-radius: 12px;
+    border: 1.5px solid #2d2d50;
+    background: #16162a;
+    cursor: pointer;
+    transition: all 0.15s;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  .option:hover:not(.disabled) {
+    border-color: #7c3aed;
+    background: #1e1e38;
+  }
+
+  .option.correct {
+    border-color: #22c55e;
+    background: #052e16;
+    color: #86efac;
+  }
+
+  .option.wrong {
+    border-color: #ef4444;
+    background: #2d0a0a;
+    color: #fca5a5;
+  }
+
+  .option.disabled { cursor: not-allowed; }
+
+  .option-letter {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #2d2d50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    transition: background 0.15s;
+  }
+
+  .option.correct .option-letter { background: #22c55e; color: #fff; }
+  .option.wrong .option-letter { background: #ef4444; color: #fff; }
+
+  .option-code {
+    font-family: 'Cascadia Code', 'Consolas', monospace;
+    font-size: 0.82rem;
+  }
+
+  /* FILL IN THE BLANK */
+  .fill-area {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 8px;
+  }
+
+  .fill-input {
+    width: 100%;
+    padding: 14px 18px;
+    border-radius: 12px;
+    border: 1.5px solid #2d2d50;
+    background: #16162a;
+    color: #f1f5f9;
+    font-size: 1rem;
+    font-family: 'Cascadia Code', 'Consolas', monospace;
+    outline: none;
+    transition: border-color 0.15s, background 0.15s;
+  }
+
+  .fill-input:focus { border-color: #7c3aed; }
+
+  .fill-input.correct-fill {
+    border-color: #22c55e;
+    background: #052e16;
+    color: #86efac;
+  }
+
+  .fill-input.wrong-fill {
+    border-color: #ef4444;
+    background: #2d0a0a;
+    color: #fca5a5;
+  }
+
+  .fill-input:disabled { cursor: not-allowed; }
+
+  /* FEEDBACK */
+  .feedback {
+    margin-top: 16px;
+    padding: 14px 18px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    display: none;
+  }
+
+  .feedback.correct-fb {
+    background: #052e16;
+    border: 1px solid #22c55e;
+    color: #86efac;
+    display: block;
+  }
+
+  .feedback.wrong-fb {
+    background: #2d0a0a;
+    border: 1px solid #ef4444;
+    color: #fca5a5;
+    display: block;
+  }
+
+  .nav-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+  }
+
+  .btn {
+    padding: 12px 28px;
+    border-radius: 10px;
+    border: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #7c3aed, #3b82f6);
+    color: #fff;
+  }
+
+  .btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+  .btn-primary:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
+
+  .btn-secondary {
+    background: #1e1e30;
+    border: 1px solid #2d2d50;
+    color: #94a3b8;
+  }
+
+  .btn-secondary:hover { background: #25253d; color: #e2e8f0; }
+
+  /* RESULTS SCREEN */
+  #results-screen {
+    display: none;
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+  }
+
+  .results-card {
+    background: #1e1e30;
+    border: 1px solid #2d2d50;
+    border-radius: 20px;
+    padding: 40px 32px;
+    margin-bottom: 20px;
+  }
+
+  .big-score {
+    font-size: 4rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #7c3aed, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .score-label { color: #94a3b8; font-size: 1rem; margin-bottom: 24px; }
+
+  .grade-bar-wrap {
+    background: #0f0f1a;
+    border-radius: 999px;
+    height: 12px;
+    margin-bottom: 32px;
+    overflow: hidden;
+  }
+
+  .grade-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #7c3aed, #3b82f6);
+    border-radius: 999px;
+    transition: width 1s ease;
+  }
+
+  .results-breakdown {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .breakdown-item {
+    background: #16162a;
+    border-radius: 12px;
+    padding: 16px 10px;
+    font-size: 0.85rem;
+    color: #94a3b8;
+  }
+
+  .breakdown-item strong {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e2e8f0;
+    margin-bottom: 4px;
+  }
+
+  .results-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* helper buttons */
+  .helper-btns {
+    display: flex;
+    gap: 8px;
+    margin-top: 14px;
+  }
+
+  .btn-helper {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1.5px solid #2d2d50;
+    background: #16162a;
+    color: #94a3b8;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .btn-helper:hover { border-color: #7c3aed; color: #a78bfa; background: #1e1e38; }
+  .btn-helper:disabled { opacity: 0.3; cursor: not-allowed; }
+
+  .hint-box {
+    margin-top: 12px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    background: #1a1a0a;
+    border: 1px solid #854d0e;
+    color: #fde68a;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    display: none;
+  }
+
+  /* review */
+  .review-list { text-align: left; margin-top: 20px; }
+  .review-item {
+    background: #1e1e30;
+    border: 1px solid #2d2d50;
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 12px;
+  }
+
+  .review-item.was-correct { border-left: 4px solid #22c55e; }
+  .review-item.was-wrong { border-left: 4px solid #ef4444; }
+
+  .review-q { font-size: 0.9rem; color: #94a3b8; margin-bottom: 8px; }
+  .review-q strong { color: #f1f5f9; }
+  .review-answer { font-size: 0.88rem; }
+  .review-answer .correct-ans { color: #86efac; }
+  .review-answer .your-ans { color: #fca5a5; }
+
+  #back-btn {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    background: #1e1e30;
+    border: 1px solid #2d2d50;
+    border-radius: 10px;
+    padding: 8px 14px;
+    color: #94a3b8;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.15s;
+    display: none;
+  }
+
+  #back-btn:hover { color: #e2e8f0; background: #25253d; }
+</style>
+</head>
+<body>
+
+<button id="back-btn" onclick="goHome()">← Home</button>
+
+<h1>C Programming Quiz</h1>
+<p class="subtitle">Midterm study tool — Quiz yourself on all past quiz questions</p>
+
+<!-- HOME SCREEN -->
+<div id="home">
+  <div class="quiz-cards">
+    <div class="quiz-card" onclick="startQuiz(0)">
+      <div class="quiz-icon">🔢</div>
+      <div>
+        <h2>Quiz 1 — Fundamentals</h2>
+        <p>Operators, variables, comments, printf/scanf, #define, strlen · 15 questions</p>
+      </div>
+    </div>
+    <div class="quiz-card" onclick="startQuiz(1)">
+      <div class="quiz-icon">🔁</div>
+      <div>
+        <h2>Quiz 2 — Flow Control</h2>
+        <p>Loops, conditionals, switch, ternary, break/continue, stdbool · 15 questions</p>
+      </div>
+    </div>
+    <div class="quiz-card" onclick="startQuiz(2)">
+      <div class="quiz-icon">📂</div>
+      <div>
+        <h2>Quiz 3 — Functions &amp; File I/O</h2>
+        <p>Scope, argc/argv, file pointers, fopen, pass-by-value, static · 15 questions</p>
+      </div>
+    </div>
+    <div class="quiz-card" onclick="startQuiz(3)">
+      <div class="quiz-icon">🔗</div>
+      <div>
+        <h2>Quiz 4 — Arrays &amp; Pointers</h2>
+        <p>Array declaration, pointer arithmetic, dereference, const, 2D arrays · 10 questions</p>
+      </div>
+    </div>
+    <div class="quiz-card" onclick="startQuiz(4)">
+      <div class="quiz-icon">✏️</div>
+      <div>
+        <h2>Quiz 5 — Fill in the Blank</h2>
+        <p>Type the correct answer — \0, strlen, static, &amp;, &amp;&amp;, file modes · 6 questions</p>
+      </div>
+    </div>
+  </div>
+  <button class="btn-all" onclick="startQuiz(-1)">⚡ All Quizzes — 61 Questions</button>
+
+  <div class="part2-section">
+    <h3>💻 Part 2 — Programming Practice Ideas</h3>
+    <p class="part2-subtitle">These are the kinds of questions that could appear on the practical section. Practice writing them by hand on paper or in a plain text editor.</p>
+    <div class="part2-card">
+      <h4>Idea 1: Array Reversal with Pointer Arithmetic</h4>
+      <p>Write a function <code>void reverse(int *arr, int size)</code> that reverses the array in-place using only pointer arithmetic (no square-bracket indexing). Call it from <code>main()</code>, print the result with a loop.</p>
+    </div>
+    <div class="part2-card">
+      <h4>Idea 2: Command-Line File Line Counter</h4>
+      <p>Accept a filename as <code>argv[1]</code>. Open the file with <code>fopen()</code>; if it returns <code>NULL</code>, print an error and <code>return 1</code>. Use <code>fgets()</code> in a loop to count lines; print the total and close the file.</p>
+    </div>
+    <div class="part2-card">
+      <h4>Idea 3: Student Grade Calculator</h4>
+      <p>Read N scores from the user into an <code>int</code> array using <code>scanf()</code>. Write a function <code>float average(int *scores, int n)</code>. Print the mean and count how many students scored above average.</p>
+    </div>
+    <div class="part2-card">
+      <h4>Idea 4: Character Counter (Strings + Pointers)</h4>
+      <p>Write <code>int countChar(char *str, char target)</code> that iterates through a string using pointer arithmetic and returns how many times <code>target</code> appears. Test with several calls from <code>main()</code>.</p>
+    </div>
+  </div>
+</div>
+
+<!-- QUIZ SCREEN -->
+<div id="quiz-screen">
+  <div class="quiz-header">
+    <div class="quiz-title-bar" id="quiz-title-bar">Quiz 1</div>
+    <div class="score-badge" id="score-badge">Score: 0 / 0</div>
+  </div>
+  <div class="progress-bar-wrap">
+    <div class="progress-bar-fill" id="progress-bar" style="width:0%"></div>
+  </div>
+  <div class="question-card">
+    <div class="question-num" id="question-num">Question 1 of 10</div>
+    <div class="question-text" id="question-text"></div>
+    <div id="code-area"></div>
+    <div class="options" id="options"></div>
+    <div class="fill-area" id="fill-area" style="display:none">
+      <input
+        type="text"
+        class="fill-input"
+        id="fill-input"
+        placeholder="Type your answer here..."
+        autocomplete="off"
+        spellcheck="false"
+        onkeydown="if(event.key==='Enter') checkFillAnswer()"
+      >
+      <button class="btn btn-primary" id="check-btn" onclick="checkFillAnswer()" style="align-self:flex-start">Check Answer</button>
+    </div>
+    <div class="helper-btns" id="helper-btns">
+      <button class="btn-helper" id="hint-btn" onclick="showHint()">💡 Hint</button>
+      <button class="btn-helper" id="answer-btn" onclick="showAnswer()">👁 Show Answer</button>
+    </div>
+    <div class="hint-box" id="hint-box"></div>
+    <div class="feedback" id="feedback"></div>
+  </div>
+  <div class="nav-buttons">
+    <button class="btn btn-primary" id="next-btn" onclick="nextQuestion()" disabled>Next →</button>
+  </div>
+</div>
+
+<!-- RESULTS SCREEN -->
+<div id="results-screen">
+  <div class="results-card">
+    <div class="big-score" id="final-score-text">8/10</div>
+    <div class="score-label" id="final-score-pct">80% — Great job!</div>
+    <div class="grade-bar-wrap">
+      <div class="grade-bar-fill" id="grade-bar" style="width:0%"></div>
+    </div>
+    <div class="results-breakdown" id="breakdown"></div>
+    <div class="results-actions">
+      <button class="btn btn-secondary" onclick="reviewAnswers()">Review Answers</button>
+      <button class="btn btn-primary" onclick="goHome()">Back to Home</button>
+    </div>
+  </div>
+  <div class="review-list" id="review-list" style="display:none"></div>
+</div>
+
+<script>
+const QUIZZES = [
+  // ─────────────────────────────────────────────
+  // QUIZ 1 — FUNDAMENTALS (15 questions)
+  // ─────────────────────────────────────────────
+  {
+    title: "Quiz 1 — Fundamentals",
+    questions: [
+      {
+        q: "Evaluate the expression: 3 * 3 % 6 + 4 * 5",
+        options: ["23", "20", "12", "29"],
+        correct: 0,
+        hint: "*, %, and * all have equal precedence and are evaluated left to right before +.",
+        explanation: "Order of operations (left to right for *, %, *): 3*3=9, 9%6=3, 4*5=20, then 3+20=23."
+      },
+      {
+        q: "The address operator is __________.",
+        options: ["@", "#", "%", "&"],
+        correct: 3,
+        hint: "What symbol do you put before a variable name in scanf() to pass its address?",
+        explanation: "& is the address-of operator in C. It returns the memory address of a variable."
+      },
+      {
+        q: "Which statement about comments is false?",
+        options: [
+          "Programmers insert comments to document programs and improve program readability.",
+          "Lengthy comments can cause poor execution-time performance.",
+          "Comments do not cause any machine language object code to be generated.",
+          "Comments can begin and end with /* and */, respectively."
+        ],
+        correct: 1,
+        hint: "Comments are stripped out before the code ever compiles or runs — they never become machine code.",
+        explanation: "B is the false statement. Comments are stripped by the preprocessor and never become machine code, so they have zero effect on execution-time performance — the claim that lengthy comments slow down execution is false."
+      },
+      {
+        q: "Which of the following is NOT true for variable names in C?",
+        options: [
+          "They can only contain lowercase letters, uppercase letters and digits.",
+          "Meaningful variable names are preferred.",
+          "Variable names cannot start with a digit.",
+          "C keywords like int and float cannot be used as variable names."
+        ],
+        correct: 0,
+        hint: "C variable names can use letters and digits — and one more special character. Which option's claim is therefore too narrow?",
+        explanation: "Variable names in C can also contain underscores (_), so the statement 'only lowercase, uppercase, and digits' is false."
+      },
+      {
+        q: "In a printf, a backslash (\\) is printed by enclosing in quotes:",
+        options: ["\\\\", "\\", "\\/", "//"],
+        correct: 0,
+        hint: "To include a special character literally you prefix it with \\. What do you do when the character IS \\ ?",
+        explanation: "To print a literal backslash, use the escape sequence \\\\ (two backslashes)."
+      },
+      {
+        q: "Who is the creator of the C language?",
+        options: ["Guido van Rossum", "Dennis Ritchie", "Steve Jobs", "James Gosling"],
+        correct: 1,
+        hint: "C was created at Bell Labs in the early 1970s. Python's creator and Java's creator are both in this list as distractors.",
+        explanation: "Dennis Ritchie created the C language at Bell Labs around 1972. (Guido van Rossum → Python, James Gosling → Java.)"
+      },
+      {
+        q: "Given #include <stdio.h>, which of the following is correct?",
+        options: [
+          'print("Hello world.")',
+          'int i = 5; printf("%d is an integer %d", i);',
+          'printf(5 is an integer);',
+          'printf("%d is an integer", 5+4);'
+        ],
+        correct: 3,
+        hint: "Count the %d specifiers and matching arguments in each printf. Also: does C have a function called print()?",
+        explanation: 'printf("%d is an integer", 5+4) is valid — one format specifier, one argument. The others have mismatched arguments, wrong function name, or syntax errors.',
+        codeOptions: true
+      },
+      {
+        q: "Which of the following is NOT a valid C variable name?",
+        options: ["can't", "int2float", "_c2", "mean_value"],
+        correct: 0,
+        hint: "C identifiers can only contain letters, digits, and underscores. Which option has a character outside that set?",
+        explanation: "can't contains an apostrophe ('), which is not a valid character in C identifiers. Only letters, digits, and underscores are allowed."
+      },
+      {
+        q: "Which of the following must every C program have?",
+        options: ["main", "#include", "/*", "<stdio.h>"],
+        correct: 0,
+        hint: "Think about where execution begins when you run a C program.",
+        explanation: "Every C program must have a main() function — that is where execution begins. The others are optional."
+      },
+      {
+        q: "Which of the following is correct?",
+        options: [
+          "Each variable being input in a scanf statement is generally preceded by an &.",
+          "Each variable being output in a printf statement is generally NOT preceded by an &.",
+          "Calculations can be performed inside printf statements.",
+          "All of the above"
+        ],
+        correct: 3,
+        hint: "Check each of the first three statements individually — are any of them false, or are all true?",
+        explanation: "All three statements are correct: scanf uses & for addresses, printf does not use &, and you can embed expressions like printf(\"%d\", x+1)."
+      },
+      // NEW Q11
+      {
+        q: "Which format specifier prints a float in scientific (exponential) notation?",
+        options: ["%f", "%e", "%g", "%lf"],
+        correct: 1,
+        hint: "Think of 'e' for exponential — like 6.022e+23.",
+        explanation: "%e prints a floating-point number in exponential notation (e.g., 6.022e+23). %f is fixed-point decimal, %g selects between %e and %f automatically, %lf is used for double in scanf."
+      },
+      // NEW Q12
+      {
+        q: "What is the output of the following?",
+        code: `printf("%d", 'A');`,
+        options: ["A", "65", "Error", "1"],
+        correct: 1,
+        hint: "In C, a char is stored as its ASCII integer value. The ASCII value of 'A' is 65.",
+        explanation: "Characters are stored internally as integers. 'A' has ASCII value 65. Using %d with printf outputs the integer value, so the result is 65."
+      },
+      // NEW Q13
+      {
+        q: "What does the preprocessor directive #define MAX 100 do?",
+        options: [
+          "Declares an int variable MAX with value 100",
+          "Creates a text substitution: every occurrence of MAX is replaced by 100 before compilation",
+          "Reserves 100 bytes of memory named MAX",
+          "Defines a function MAX that returns 100"
+        ],
+        correct: 1,
+        hint: "#define is handled before compilation by the preprocessor — it does simple text replacement.",
+        explanation: "#define MAX 100 is a macro constant. The preprocessor replaces every occurrence of MAX with the text 100 before compilation. No variable is created and no memory is allocated."
+      },
+      // NEW Q14
+      {
+        q: 'What does strlen("hello") return?',
+        options: ["6", "5", "4", "7"],
+        correct: 1,
+        hint: "strlen counts characters up to (but NOT including) the null terminator '\\0'. Count h-e-l-l-o.",
+        explanation: '"hello" has 5 characters. strlen returns 5 — it counts characters excluding the null terminator \'\\0\' at the end.'
+      },
+      // NEW Q15
+      {
+        q: "Given:  int arr[5] = {1, 2};\nWhat are the values of arr[2], arr[3], and arr[4]?",
+        options: [
+          "Garbage values (undefined)",
+          "0, 0, 0",
+          "1, 2, 1 (pattern repeats)",
+          "Compiler error — must initialize all elements"
+        ],
+        correct: 1,
+        hint: "In C, partial array initialization follows a specific rule for unspecified elements.",
+        explanation: "When an array is partially initialized, all remaining elements are automatically set to 0. So arr[2] = arr[3] = arr[4] = 0."
+      }
+    ]
+  },
+
+  // ─────────────────────────────────────────────
+  // QUIZ 2 — FLOW CONTROL (15 questions)
+  // ─────────────────────────────────────────────
+  {
+    title: "Quiz 2 — Flow Control",
+    questions: [
+      {
+        q: "What is the output of the following program?",
+        code: `#include <stdio.h>
+int main()
+{
+    int i = 1;
+    int sum = 0;
+    do
+    {
+        sum += i;
+        i++;
+    } while(i <= 3);
+    printf("%d", sum);
+}`,
+        options: ["6", "4", "Infinite loop", "1"],
+        correct: 0,
+        hint: "Trace it step by step: i=1→sum=1, i=2→sum=3, i=3→sum=? Then check the while condition.",
+        explanation: "The do-while runs for i=1,2,3. sum = 1+2+3 = 6."
+      },
+      {
+        q: "What is the output of the C program with switch statement or block?",
+        code: `#include <stdio.h>
+int main()
+{
+    int a = 5;
+
+    switch(a)
+    {
+        case 0: printf("a"); break;
+        case 5: printf("b"); break;
+        case 10: printf("c");
+    }
+}`,
+        options: ["b", "ab", "c", "abc", "bc", "a"],
+        correct: 0,
+        hint: "a=5. Which case label matches? Is there a break after it?",
+        explanation: "a=5 matches case 5, prints 'b', then hits break. Execution stops."
+      },
+      {
+        q: "Which is NOT a motivation for \"functionalizing\" a program?",
+        options: [
+          "Software reusability — using existing building blocks to create new programs.",
+          "Execution performance — functionalized programs run faster.",
+          "Avoid repeating code.",
+          "The divide-and-conquer approach makes program development more manageable."
+        ],
+        correct: 1,
+        hint: "Does breaking code into functions actually make the CPU execute it faster?",
+        explanation: "Breaking a program into functions does not inherently make it run faster. The motivation is code organization, reuse, and manageability — not execution speed."
+      },
+      {
+        q: "What is the output of the following program?",
+        code: `#include <stdio.h>
+int main() {
+    int x = 4, y = 4;
+    printf("%d,%d", ++x, y--);
+    return 0;
+}`,
+        options: ["4,4", "4,3", "5,4", "5,3"],
+        correct: 2,
+        hint: "Pre-increment (++x) changes the value BEFORE use. Post-decrement (y--) uses the current value FIRST, then decrements.",
+        explanation: "++x pre-increments x to 5 before use. y-- post-decrements, so y is still 4 when printed. Output: 5,4."
+      },
+      {
+        q: "The function prototype\n\n    double mySqrt(int x);\n\n...",
+        options: [
+          "defines a function called mySqrt which takes an argument of type x and returns a double",
+          "defines a function called mySqrt which takes a double as an argument and returns an integer",
+          "defines a function called mySqrt which takes an integer argument and returns a double",
+          "defines a function called double which calculates square roots"
+        ],
+        correct: 2,
+        hint: "Read left to right: the type before the function name is the return type; the type inside () is the parameter type.",
+        explanation: "double is the return type, mySqrt is the name, int x means it takes an integer parameter."
+      },
+      {
+        q: "What does the above code output?",
+        code: `#include <stdio.h>
+void main()
+{
+    int x = 5;
+    if (x > 1)
+        printf("a");
+    else if (x == 5)
+        printf("b");
+    else
+        printf("c");
+}`,
+        options: ["b", "ab", "ac", "a"],
+        correct: 3,
+        hint: "In an if-else chain, once the FIRST true condition is found, the rest of the chain is completely skipped.",
+        explanation: "x=5 satisfies (x > 1), so printf(\"a\") runs and the entire if-else chain exits. 'b' is never reached."
+      },
+      {
+        q: "Which of the following best describes the above code?\n\n    for (int i = 20; i >= 2; i -= 2)",
+        options: [
+          "a syntax error",
+          "an infinite loop",
+          "even values of i from 20 down to 2",
+          "even values of i from 2 up to 20"
+        ],
+        correct: 2,
+        hint: "What value does i start at? Does i-=2 go up or down? What's the last i where i >= 2 holds?",
+        explanation: "Starts at 20, condition i>=2, decrements by 2 each time: 20, 18, 16, … 2."
+      },
+      {
+        q: "The for statement header\n\n    for (int i = 1; i < 100; ++i)\n\nperforms the body of the loop for:",
+        options: [
+          "values of the control variable from 0 to 100 in increments of 1",
+          "values of the control variable from 0 to 99 in increments of 1",
+          "values of the control variable from 1 to 99 in increments of 1",
+          "values of the control variable from 1 to 100 in increments of 2"
+        ],
+        correct: 2,
+        hint: "i starts at 1, not 0. The condition is strictly less than 100 — what is the last value of i where i < 100 is true?",
+        explanation: "i starts at 1, runs while i < 100, so last value is 99. Increments by 1 each iteration."
+      },
+      {
+        q: "return cannot be used in a void function.",
+        options: ["True", "False"],
+        correct: 1,
+        hint: "There's a difference between 'return;' (exit early) and 'return value;' (return a value). Are BOTH banned in void functions?",
+        explanation: "False — void functions can use a bare return; statement to exit early. They just cannot return a value."
+      },
+      {
+        q: "In C, the condition   4 > y > 1",
+        options: [
+          "evaluates correctly",
+          "does not evaluate correctly and should be replaced by (4 > y || y > 1)",
+          "does not evaluate correctly and should be replaced by (4 > y & y > 1)",
+          "does not evaluate correctly and should be replaced by (4 > y && y > 1)"
+        ],
+        correct: 3,
+        hint: "C evaluates 4 > y first, producing 0 or 1. Then compares that result to 1. Is that the intended math?",
+        explanation: "In C, 4>y>1 evaluates as (4>y)>1 which gives 0 or 1 > 1, always false. Use (4 > y && y > 1) to chain comparisons correctly."
+      },
+      // NEW Q11
+      {
+        q: "What is the value of y after executing this code?",
+        code: `int x = 5;
+int y = (x > 3) ? 10 : 20;`,
+        options: ["20", "10", "5", "3"],
+        correct: 1,
+        hint: "Read the ternary as: if (x > 3) then y = 10, else y = 20. Is 5 > 3 true?",
+        explanation: "x = 5, and 5 > 3 is true, so the ternary evaluates to 10. y = 10."
+      },
+      // NEW Q12
+      {
+        q: "What does the continue statement do inside a loop body?",
+        options: [
+          "Exits the loop immediately",
+          "Skips the remaining statements in the current iteration and moves to the next",
+          "Restarts the entire loop from the initial value",
+          "Pauses execution temporarily"
+        ],
+        correct: 1,
+        hint: "Contrast with break, which exits entirely. continue is gentler — it skips to the next iteration.",
+        explanation: "continue skips the rest of the current loop iteration and jumps to the loop's update step (for loops) or condition check (while/do-while). The loop continues normally after that."
+      },
+      // NEW Q13
+      {
+        q: "Which statement correctly distinguishes do-while from while?",
+        options: [
+          "while always executes the body at least once; do-while may not",
+          "do-while always executes the body at least once; while may execute zero times",
+          "Both loops check the condition before the first execution",
+          "do-while cannot be used with a break statement"
+        ],
+        correct: 1,
+        hint: "In a do-while, where exactly is the condition checked — before or after the body runs?",
+        explanation: "do-while checks its condition AFTER executing the body, guaranteeing at least one execution. while checks the condition first and may skip the body entirely if the condition is false from the start."
+      },
+      // NEW Q14
+      {
+        q: "When break is used inside a loop that is nested inside another loop, it:",
+        options: [
+          "Terminates the program immediately",
+          "Exits all loops, returning to code after the outermost loop",
+          "Exits only the innermost loop containing the break statement",
+          "Causes a compile error — break cannot be used in nested loops"
+        ],
+        correct: 2,
+        hint: "break only 'sees' the loop it is directly inside.",
+        explanation: "break exits only the innermost enclosing loop. The outer loop continues to run normally. To exit multiple loops, you would need multiple break statements or a goto."
+      },
+      // NEW Q15
+      {
+        q: "After #include <stdbool.h>, what integer value does true represent?",
+        options: ["0", "1", "-1", "Depends on the compiler"],
+        correct: 1,
+        hint: "In C, false maps to 0. What is the non-zero value used for true?",
+        explanation: "In C with stdbool.h, true is defined as 1 and false as 0. Any non-zero integer is treated as true in a boolean context, but the literal true is exactly 1."
+      }
+    ]
+  },
+
+  // ─────────────────────────────────────────────
+  // QUIZ 3 — FUNCTIONS & FILE I/O (15 questions)
+  // ─────────────────────────────────────────────
+  {
+    title: "Quiz 3 — Functions & File I/O",
+    questions: [
+      {
+        q: "What is the output of the following program?",
+        code: `#include <stdio.h>
+
+int show();
+void main()
+{
+    int a;
+    a = show();
+    printf("%d", a);
+}
+
+int show()
+{
+    printf("3");
+    return 5;
+    printf("4");  // never reached
+}`,
+        options: ["35", "3", "354", "5"],
+        correct: 0,
+        hint: "What happens to code after a return statement? Trace what show() prints and what value it returns to main.",
+        explanation: "show() prints '3', then returns 5. Code after return is unreachable. main() prints the return value 5 with %d. Output: 35."
+      },
+      {
+        q: "fscanf() cannot get input from console (terminal).",
+        options: ["True", "False"],
+        correct: 1,
+        hint: "fscanf lets you specify which stream to read from. What stream represents the console/keyboard?",
+        explanation: "False — fscanf(stdin, ...) reads from the console, just like scanf(). fscanf simply lets you specify the file stream."
+      },
+      {
+        q: "What is the scope of a local variable in C?",
+        options: [
+          "within the project where it is created",
+          "within the main function and the function where it is created",
+          "within the file where it is created",
+          "within the function where it is created"
+        ],
+        correct: 3,
+        hint: "The word 'local' is the clue — where exactly is it local to?",
+        explanation: "Local variables are scoped to the block/function where they are declared. They are not accessible outside that function."
+      },
+      {
+        q: "Which line causes a problem?",
+        code: `void printWords(char str)  // line A
+{
+    printf("%s ", str);  // line B
+}
+
+int main(void)
+{
+    char *words[] = {"A", "Happy", "Quiz"};  // line C
+    for(int i = 0; i < 3; i++)
+    {
+        printWords(words[i]);  // line D
+    }
+    return 0;
+}`,
+        options: ["line B", "line A", "line D", "line C"],
+        correct: 1,
+        hint: "words[i] is a char* (a string). The function receives it as 'char str' (a single character). Where is that parameter declared?",
+        explanation: "Line A declares the parameter as char str (a single character), but it should be char *str to accept a string. This causes a type mismatch."
+      },
+      {
+        q: "The stdio.h file associates three file pointers with the three standard files automatically opened by C programs. Which of the following is NOT a file pointer?",
+        options: ["stdin", "stdout", "stderr", "stdall"],
+        correct: 3,
+        hint: "The three standard ones are named after standard input, standard output, and standard error.",
+        explanation: "The three standard file pointers are stdin, stdout, and stderr. 'stdall' does not exist in C."
+      },
+      {
+        q: "test is the compiled code of a C program:\n\n    #include <stdio.h>\n    int main(int argc, char *argv[]) { ... }\n\nWhat is the value of argc if the following command is executed?\n\n    ./test a1 b2 c3",
+        options: ["2", "1", "4", "3"],
+        correct: 2,
+        hint: "argc counts every space-separated word on the command line, including the program name itself. Count all tokens.",
+        explanation: "argc counts all command-line tokens including the program name. ./test a1 b2 c3 has 4 tokens, so argc = 4."
+      },
+      {
+        q: "Parameters, return type and function name are all mandatory parts in a function declaration.",
+        options: ["True", "False"],
+        correct: 1,
+        hint: "Can you write a valid C prototype like 'int foo();' without specifying any parameters?",
+        explanation: "False — in a function declaration (prototype), parameter names are optional and even the parameter list can be omitted (e.g., int foo(); is valid in C). Only the return type and function name are mandatory."
+      },
+      {
+        q: "fp = fopen(\"test.txt\", ______)\n\nThe above code is used to open a file for reading. What is the missing code?",
+        options: ['"b"', '"r"', '"a"', '"w"'],
+        correct: 1,
+        hint: "Think of the first letter: 'r' for read, 'w' for write, 'a' for append. 'b' is a binary modifier, not a standalone mode.",
+        explanation: '"r" opens a file for reading. "w" writes (creates/truncates), "a" appends, "b" is a binary modifier used with r/w/a.'
+      },
+      {
+        q: "Which of the following creates a file pointer?",
+        options: ["int *fp;", "FILE *fp;", "FILE fp;", "int fp;"],
+        correct: 1,
+        hint: "File operations use a special all-caps type — not int — for file handles. You also need it to be a pointer.",
+        explanation: "FILE *fp; declares a pointer to a FILE structure, which is the correct type for file pointers in C.",
+        codeOptions: true
+      },
+      {
+        q: "char ch = '$';\nputc(ch, stdout);\n\nWhich of the following is NOT equivalent to the above code?",
+        code: null,
+        codeQ: true,
+        options: [
+          "char ch = '$';\nprintf(ch);",
+          "char ch = '$';\nprintf(\"%c\", ch);",
+          "char ch = '$';\nfprintf(stdout, \"%c\", ch);",
+          "printf(\"$\");"
+        ],
+        correct: 0,
+        hint: "printf's first argument must always be a string literal format string, never a variable. Which option passes a variable as the first argument?",
+        explanation: 'printf(ch) is wrong — printf\'s first argument must be a format string literal, not a variable. It\'s also a security vulnerability (format string attack). Use printf("%c", ch) or printf("$") instead.',
+        codeOptions: true
+      },
+      // NEW Q11
+      {
+        q: "What is the output of the following program?",
+        code: `#include <stdio.h>
+void addTen(int n) {
+    n = n + 10;
+}
+int main() {
+    int x = 5;
+    addTen(x);
+    printf("%d", x);
+    return 0;
+}`,
+        options: ["15", "5", "10", "Undefined behavior"],
+        correct: 1,
+        hint: "C passes arguments by value — the function works on a copy, not the original variable.",
+        explanation: "C is pass-by-value. addTen receives a copy of x. Modifying n inside addTen has no effect on x in main. Output: 5."
+      },
+      // NEW Q12
+      {
+        q: "What is special about a static local variable in C?",
+        options: [
+          "It can be accessed by any function in the program",
+          "It retains its value between calls to the function where it is declared",
+          "It is stored in CPU registers for faster access",
+          "It cannot be modified after its initial value is set"
+        ],
+        correct: 1,
+        hint: "Think about the lifetime of a static variable vs a normal local variable.",
+        explanation: "A static local variable is initialized only once and retains its value across multiple calls to the function. Its lifetime is the entire program execution, but its scope remains limited to the function."
+      },
+      // NEW Q13
+      {
+        q: "In C, what does void foo(void) mean compared to void foo()?",
+        options: [
+          "They are identical in all versions of C",
+          "foo(void) explicitly means no parameters; foo() leaves the parameter list unspecified (old C style)",
+          "foo() means the function can take any arguments; foo(void) causes a compile error",
+          "void in the parameter list means the function returns void"
+        ],
+        correct: 1,
+        hint: "In C (not C++), an empty parameter list has a specific historical meaning that differs from void.",
+        explanation: "In C, void foo(void) explicitly declares no parameters. void foo() leaves the parameter list unspecified (legacy C behavior). In C++, they are equivalent. For clarity in C, use void in the parameter list."
+      },
+      // NEW Q14
+      {
+        q: "When fopen() cannot open a file (e.g., the file does not exist), it returns:",
+        options: ["0", "NULL", "-1", "An empty FILE* that causes no errors"],
+        correct: 1,
+        hint: "Always check fopen's return value — what special pointer value signals failure?",
+        explanation: "fopen returns NULL if the file cannot be opened. You must always check if (fp != NULL) before using the file pointer to avoid undefined behavior."
+      },
+      // NEW Q15
+      {
+        q: 'What does fopen("data.txt", "a") do?',
+        options: [
+          'Opens "data.txt" for reading only; returns NULL if it does not exist',
+          'Creates a new empty "data.txt" or erases existing content, then opens for writing',
+          'Opens "data.txt" for appending; creates it if it does not exist; preserves existing content',
+          'Opens "data.txt" for both reading and writing from the beginning'
+        ],
+        correct: 2,
+        hint: "Think 'a' for append — you're adding to the end, not replacing.",
+        explanation: '"a" (append) mode opens a file for writing at the end. If the file does not exist, it is created. Existing content is preserved. Contrast with "w" which truncates the file.'
+      }
+    ]
+  },
+
+  // ─────────────────────────────────────────────
+  // QUIZ 4 — ARRAYS & POINTERS (10 questions)
+  // ─────────────────────────────────────────────
+  {
+    title: "Quiz 4 — Arrays & Pointers",
+    questions: [
+      {
+        q: "Which of the following correctly declares an integer array of 5 elements in C?",
+        options: ["int arr(5);", "int arr[5];", "array int arr[5];", "int[5] arr;"],
+        correct: 1,
+        codeOptions: true,
+        hint: "Array declarations in C use square brackets [ ] after the variable name.",
+        explanation: "int arr[5]; is the correct syntax for declaring an integer array of 5 elements. Parentheses () are for function calls; the other forms are invalid C syntax."
+      },
+      {
+        q: "Given the following, what does *p refer to?",
+        code: `int x = 42;
+int *p = &x;`,
+        options: [
+          "The memory address stored in p",
+          "The value 42 stored at the location p points to",
+          "The address of the pointer p itself",
+          "This code causes undefined behavior"
+        ],
+        correct: 1,
+        hint: "The * in front of a pointer variable is the dereference operator — it 'follows' the pointer to the value.",
+        explanation: "*p dereferences pointer p, accessing the value at the address p holds. Since p = &x, *p accesses x's value, which is 42."
+      },
+      {
+        q: "If arr is an array, which expression is equivalent to arr[3]?",
+        options: ["&arr[3]", "*(arr+3)", "arr+3", "*arr+3"],
+        correct: 1,
+        codeOptions: true,
+        hint: "Array indexing is defined in terms of pointer arithmetic in C.",
+        explanation: "arr[i] is defined as *(arr+i). arr+3 gives the address of the 4th element; *(arr+3) dereferences it to get the value. &arr[3] would give the address, not the value."
+      },
+      {
+        q: "When an array name arr is used in an expression (without an index), what does it represent?",
+        options: [
+          "The first element arr[0]",
+          "The memory address of the first element (&arr[0])",
+          "The total size of the array in bytes",
+          "An invalid use — you must always use an index"
+        ],
+        correct: 1,
+        hint: "Arrays 'decay' to pointers in most expressions. What do they decay to?",
+        explanation: "In most expressions, an array name decays to a pointer to its first element — equivalent to &arr[0]. This is why you can assign arr to a pointer: int *p = arr;"
+      },
+      {
+        q: "Given:  char arr[10] = \"hello\";\nWhat does sizeof(arr) return?",
+        options: ["5", "6", "10", "2"],
+        correct: 2,
+        hint: "sizeof gives the total allocated size in bytes, not the string length. How big was arr declared?",
+        explanation: "sizeof(arr) returns 10 — the size of the allocated array as declared, regardless of the string's length. strlen(arr) would return 5 (the length of \"hello\"). sizeof always uses the declared size."
+      },
+      {
+        q: "Given the following, what is the value of *(p+2)?",
+        code: `int arr[] = {10, 20, 30, 40};
+int *p = arr;`,
+        options: ["10", "20", "30", "40"],
+        correct: 2,
+        hint: "p starts at arr[0]. Adding 2 to a pointer moves it 2 integer-widths forward in memory.",
+        explanation: "p points to arr[0] (value 10). p+1 points to arr[1] (value 20). p+2 points to arr[2] (value 30). Dereferencing with * gives 30."
+      },
+      {
+        q: "What does the declaration const int *p mean?",
+        options: [
+          "p is a constant pointer — p cannot be changed to point somewhere else",
+          "p points to a read-only integer — you cannot modify the value through *p",
+          "Both the pointer address and the pointed-to value are constant",
+          "const has no effect on pointer declarations"
+        ],
+        correct: 1,
+        hint: "Read right-to-left: p is a pointer (*) to a const int. The const modifies the int, not the pointer.",
+        explanation: "const int *p means the integer pointed to is read-only through p (you cannot do *p = 5). However, p itself can be reassigned to point to a different address. To lock the pointer, use int * const p."
+      },
+      {
+        q: "What is the problem with this code?",
+        code: `int *p;
+double x = 3.14;
+p = &x;`,
+        options: [
+          "You cannot declare a pointer and a double in the same function",
+          "Assigning a double* to an int* is a type mismatch",
+          "x must be declared before p",
+          "There is no problem"
+        ],
+        correct: 1,
+        hint: "A pointer's type must match the type of the variable it points to.",
+        explanation: "p is int* but &x is double*. Assigning them causes a type mismatch. If allowed, *p would misinterpret the double's bytes as an int, producing garbage. A compiler warning or error is expected."
+      },
+      {
+        q: "How many total integer elements are stored in int arr[3][4]?",
+        options: ["3", "4", "7", "12"],
+        correct: 3,
+        hint: "A 2D array with r rows and c columns has r × c elements total.",
+        explanation: "int arr[3][4] has 3 rows × 4 columns = 12 total integer elements. Each row is an array of 4 integers."
+      },
+      {
+        q: "Which statement is true about the following two declarations?",
+        code: `char arr[] = "hello";  // A
+char *p = "hello";    // B`,
+        options: [
+          "Both A and B allow you to modify individual characters",
+          "A copies the string into a modifiable array; modifying B's string causes undefined behavior",
+          "B copies the string into a modifiable array; modifying A's string causes undefined behavior",
+          "Neither allows modification of the string characters"
+        ],
+        correct: 1,
+        hint: 'String literals like "hello" are stored in read-only memory. char arr[] copies the literal into a local array.',
+        explanation: 'char arr[] = "hello" copies the string into a stack-allocated array — arr[0] = \'H\' works fine. char *p = "hello" points to a read-only string literal — *p = \'H\' causes undefined behavior (typically a segfault).'
+      }
+    ]
+  },
+
+  // ─────────────────────────────────────────────
+  // QUIZ 5 — FILL IN THE BLANK (6 questions)
+  // ─────────────────────────────────────────────
+  {
+    title: "Quiz 5 — Fill in the Blank",
+    questions: [
+      {
+        type: "fill",
+        q: "In C, every string ends with the null terminator character _____.\n(Type the escape sequence, e.g.  \\n  for newline)",
+        answers: ["\\0", "'\\0'"],
+        hint: "It's the character with ASCII value 0. Its escape sequence uses a backslash followed by the digit zero.",
+        explanation: "Every C string ends with '\\0' (the null terminator, ASCII value 0). Functions like strlen() and printf() rely on finding this character to know where the string ends."
+      },
+      {
+        type: "fill",
+        q: "The standard library function _____ returns the number of characters in a string, not counting the null terminator.\n(Include the parentheses, e.g.  func()  )",
+        answers: ["strlen()", "strlen"],
+        hint: "It's in <string.h>. Its name is short for 'string length'.",
+        explanation: "strlen() (from <string.h>) returns the number of characters in a string, not counting the '\\0'. strlen(\"hello\") returns 5."
+      },
+      {
+        type: "fill",
+        q: "A _____ local variable retains its value between calls to the function where it is declared.",
+        answers: ["static"],
+        hint: "This keyword also restricts visibility when used at file scope.",
+        explanation: "The static keyword makes a local variable persist across function calls. It is initialized only once and retains its value between calls."
+      },
+      {
+        type: "fill",
+        q: "In C, the _____ operator returns the memory address of a variable.\n(Type the operator symbol — it's also used in scanf before variable names)",
+        answers: ["&"],
+        hint: "You use this operator in scanf() before each variable name to pass the address.",
+        explanation: "The & (address-of) operator returns the memory address of a variable. It's used in scanf() like scanf(\"%d\", &x); to pass the address so scanf can store the value there."
+      },
+      {
+        type: "fill",
+        q: "The logical AND operator in C is _____.\n(Not the bitwise AND — this one is two characters)",
+        answers: ["&&"],
+        hint: "It's two of the same character. The single-character version is the bitwise AND operator.",
+        explanation: "&& is the logical AND operator. It evaluates to 1 (true) only if both operands are non-zero. A single & is the bitwise AND operator, which operates bit-by-bit."
+      },
+      {
+        type: "fill",
+        q: 'To open an existing file for reading with fopen(), the mode string passed as the second argument is _____.\n(Include quotes if applicable, e.g.  "x"  )',
+        answers: ['"r"', "r", "'r'"],
+        hint: "It's a single letter — the first letter of the word 'read'.",
+        explanation: '"r" opens a file for reading only. The file must exist; if it cannot be opened, fopen returns NULL. Use "w" for writing (creates/truncates) and "a" for appending.'
+      }
+    ]
+  }
+];
+
+// ─────────────────────────────────────────────
+// STATE
+// ─────────────────────────────────────────────
+let currentQuestions = [];
+let currentIndex = 0;
+let score = 0;
+let answered = [];
+let peeked = [];
+let quizLabel = "";
+let userAnswers = [];
+
+// ─────────────────────────────────────────────
+// NAVIGATION
+// ─────────────────────────────────────────────
+function goHome() {
+  document.getElementById('home').style.display = 'block';
+  document.getElementById('quiz-screen').style.display = 'none';
+  document.getElementById('results-screen').style.display = 'none';
+  document.getElementById('back-btn').style.display = 'none';
+  document.getElementById('review-list').style.display = 'none';
+}
+
+function startQuiz(quizIndex) {
+  if (quizIndex === -1) {
+    currentQuestions = shuffle(QUIZZES.flatMap(q => q.questions)).map(shuffleQuestion);
+    quizLabel = "All Quizzes";
+  } else {
+    currentQuestions = shuffle(QUIZZES[quizIndex].questions).map(shuffleQuestion);
+    quizLabel = QUIZZES[quizIndex].title;
+  }
+  currentIndex = 0;
+  score = 0;
+  answered = new Array(currentQuestions.length).fill(false);
+  peeked = new Array(currentQuestions.length).fill(false);
+  userAnswers = new Array(currentQuestions.length).fill(-1);
+
+  document.getElementById('home').style.display = 'none';
+  document.getElementById('results-screen').style.display = 'none';
+  document.getElementById('quiz-screen').style.display = 'block';
+  document.getElementById('back-btn').style.display = 'block';
+  document.getElementById('quiz-title-bar').textContent = quizLabel;
+  renderQuestion();
+}
+
+// ─────────────────────────────────────────────
+// RENDER
+// ─────────────────────────────────────────────
+function renderQuestion() {
+  const q = currentQuestions[currentIndex];
+  const total = currentQuestions.length;
+  const isFill = q.type === 'fill';
+
+  document.getElementById('question-num').textContent = `Question ${currentIndex + 1} of ${total}`;
+  document.getElementById('progress-bar').style.width = `${(currentIndex / total) * 100}%`;
+  document.getElementById('score-badge').textContent = `Score: ${score} / ${currentIndex}`;
+
+  // Question text — use text nodes to safely handle < > & characters
+  const qtEl = document.getElementById('question-text');
+  qtEl.innerHTML = '';
+  q.q.split('\n').forEach((line, i, arr) => {
+    qtEl.appendChild(document.createTextNode(line));
+    if (i < arr.length - 1) qtEl.appendChild(document.createElement('br'));
+  });
+
+  // Code block
+  const codeArea = document.getElementById('code-area');
+  if (q.code) {
+    codeArea.innerHTML = `<div class="code-block">${escHtml(q.code)}</div>`;
+  } else {
+    codeArea.innerHTML = '';
+  }
+
+  // Toggle between MC options and fill-in-blank
+  const optEl = document.getElementById('options');
+  const fillArea = document.getElementById('fill-area');
+
+  if (isFill) {
+    optEl.style.display = 'none';
+    fillArea.style.display = 'flex';
+    const input = document.getElementById('fill-input');
+    input.value = '';
+    input.className = 'fill-input';
+    input.disabled = false;
+    document.getElementById('check-btn').disabled = false;
+    setTimeout(() => input.focus(), 50);
+  } else {
+    optEl.style.display = 'flex';
+    fillArea.style.display = 'none';
+    // Build MC options
+    optEl.innerHTML = '';
+    const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
+    q.options.forEach((opt, i) => {
+      const div = document.createElement('div');
+      div.className = 'option';
+      div.dataset.index = i;
+      div.onclick = () => selectOption(i);
+      const optContent = q.codeOptions
+        ? `<span class="option-letter">${letters[i]}</span><span class="option-code">${escHtml(opt)}</span>`
+        : `<span class="option-letter">${letters[i]}</span><span>${escHtml(opt)}</span>`;
+      div.innerHTML = optContent;
+      optEl.appendChild(div);
+    });
+  }
+
+  // Feedback
+  const fb = document.getElementById('feedback');
+  fb.className = 'feedback';
+  fb.textContent = '';
+
+  // Hint box
+  const hintBox = document.getElementById('hint-box');
+  hintBox.style.display = 'none';
+  hintBox.textContent = '';
+
+  // Helper buttons — hide if already answered
+  document.getElementById('helper-btns').style.display = answered[currentIndex] ? 'none' : 'flex';
+
+  // Next button
+  const nextBtn = document.getElementById('next-btn');
+  nextBtn.disabled = true;
+  nextBtn.textContent = currentIndex === total - 1 ? 'Finish ✓' : 'Next →';
+
+  // Restore state if already answered (back navigation)
+  if (answered[currentIndex]) {
+    restoreAnswer();
+  }
+}
+
+// ─────────────────────────────────────────────
+// UTILITIES
+// ─────────────────────────────────────────────
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function shuffleQuestion(q) {
+  if (q.type === 'fill') return q; // no options to shuffle
+  const indices = q.options.map((_, i) => i);
+  const shuffled = shuffle(indices);
+  return {
+    ...q,
+    options: shuffled.map(i => q.options[i]),
+    correct: shuffled.indexOf(q.correct)
+  };
+}
+
+function escHtml(str) {
+  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ─────────────────────────────────────────────
+// ANSWER HANDLING — MC
+// ─────────────────────────────────────────────
+function selectOption(chosen) {
+  if (answered[currentIndex]) return;
+  answered[currentIndex] = true;
+  userAnswers[currentIndex] = chosen;
+
+  const q = currentQuestions[currentIndex];
+  const correct = q.correct;
+  const isRight = chosen === correct;
+  if (isRight && !peeked[currentIndex]) score++;
+
+  document.getElementById('helper-btns').style.display = 'none';
+
+  const opts = document.querySelectorAll('.option');
+  opts.forEach(o => {
+    o.classList.add('disabled');
+    const idx = parseInt(o.dataset.index);
+    if (idx === correct) o.classList.add('correct');
+    else if (idx === chosen && !isRight) o.classList.add('wrong');
+  });
+
+  const fb = document.getElementById('feedback');
+  if (isRight && !peeked[currentIndex]) {
+    fb.className = 'feedback correct-fb';
+    fb.innerHTML = `<strong>Correct!</strong> ${escHtml(q.explanation)}`;
+  } else if (isRight && peeked[currentIndex]) {
+    fb.className = 'feedback wrong-fb';
+    fb.innerHTML = `<strong>Answer revealed — no credit.</strong> ${escHtml(q.explanation)}`;
+  } else {
+    fb.className = 'feedback wrong-fb';
+    fb.innerHTML = `<strong>Incorrect.</strong> ${escHtml(q.explanation)}`;
+  }
+
+  document.getElementById('score-badge').textContent = `Score: ${score} / ${currentIndex + 1}`;
+  document.getElementById('next-btn').disabled = false;
+}
+
+// ─────────────────────────────────────────────
+// ANSWER HANDLING — FILL
+// ─────────────────────────────────────────────
+function checkFillAnswer() {
+  if (answered[currentIndex]) return;
+  const q = currentQuestions[currentIndex];
+  const input = document.getElementById('fill-input');
+  const userVal = input.value.trim();
+  if (userVal === '') return; // don't submit empty
+
+  const accepted = q.answers.map(a => a.toLowerCase());
+  const isRight = accepted.includes(userVal.toLowerCase());
+
+  answered[currentIndex] = true;
+  userAnswers[currentIndex] = userVal;
+
+  input.disabled = true;
+  document.getElementById('check-btn').disabled = true;
+  document.getElementById('helper-btns').style.display = 'none';
+
+  input.className = 'fill-input ' + (isRight ? 'correct-fill' : 'wrong-fill');
+
+  if (isRight && !peeked[currentIndex]) score++;
+
+  const fb = document.getElementById('feedback');
+  if (isRight && !peeked[currentIndex]) {
+    fb.className = 'feedback correct-fb';
+    fb.innerHTML = `<strong>Correct!</strong> ${escHtml(q.explanation)}`;
+  } else if (isRight && peeked[currentIndex]) {
+    fb.className = 'feedback wrong-fb';
+    fb.innerHTML = `<strong>Answer revealed — no credit.</strong> ${escHtml(q.explanation)}`;
+  } else {
+    fb.className = 'feedback wrong-fb';
+    fb.innerHTML = `<strong>Incorrect.</strong> Accepted: <em>${escHtml(q.answers[0])}</em>. ${escHtml(q.explanation)}`;
+  }
+
+  document.getElementById('score-badge').textContent = `Score: ${score} / ${currentIndex + 1}`;
+  document.getElementById('next-btn').disabled = false;
+}
+
+// ─────────────────────────────────────────────
+// HINT & SHOW ANSWER
+// ─────────────────────────────────────────────
+function showHint() {
+  const q = currentQuestions[currentIndex];
+  if (!q.hint) return;
+  const hintBox = document.getElementById('hint-box');
+  if (hintBox.style.display === 'block') {
+    hintBox.style.display = 'none';
+  } else {
+    hintBox.textContent = '💡 ' + q.hint;
+    hintBox.style.display = 'block';
+  }
+}
+
+function showAnswer() {
+  if (answered[currentIndex]) return;
+  const q = currentQuestions[currentIndex];
+  peeked[currentIndex] = true;
+  answered[currentIndex] = true;
+  userAnswers[currentIndex] = -2; // peeked marker
+
+  document.getElementById('helper-btns').style.display = 'none';
+  document.getElementById('hint-box').style.display = 'none';
+
+  if (q.type === 'fill') {
+    const input = document.getElementById('fill-input');
+    input.value = q.answers[0];
+    input.disabled = true;
+    input.className = 'fill-input correct-fill';
+    document.getElementById('check-btn').disabled = true;
+  } else {
+    const opts = document.querySelectorAll('.option');
+    opts.forEach(o => {
+      o.classList.add('disabled');
+      if (parseInt(o.dataset.index) === q.correct) o.classList.add('correct');
+    });
+  }
+
+  const fb = document.getElementById('feedback');
+  fb.className = 'feedback wrong-fb';
+  fb.innerHTML = `<strong>Answer revealed — no credit.</strong> ${escHtml(q.explanation)}`;
+
+  document.getElementById('score-badge').textContent = `Score: ${score} / ${currentIndex + 1}`;
+  document.getElementById('next-btn').disabled = false;
+}
+
+// ─────────────────────────────────────────────
+// RESTORE PREVIOUSLY ANSWERED QUESTION
+// ─────────────────────────────────────────────
+function restoreAnswer() {
+  const q = currentQuestions[currentIndex];
+  const chosen = userAnswers[currentIndex];
+  const fb = document.getElementById('feedback');
+
+  if (q.type === 'fill') {
+    const input = document.getElementById('fill-input');
+    input.disabled = true;
+    document.getElementById('check-btn').disabled = true;
+
+    if (chosen === -2) {
+      // Peeked
+      input.value = q.answers[0];
+      input.className = 'fill-input correct-fill';
+      fb.className = 'feedback wrong-fb';
+      fb.innerHTML = `<strong>Answer revealed — no credit.</strong> ${escHtml(q.explanation)}`;
+    } else {
+      const accepted = q.answers.map(a => a.toLowerCase());
+      const isRight = accepted.includes((chosen || '').toLowerCase()) && !peeked[currentIndex];
+      input.value = chosen;
+      input.className = 'fill-input ' + (isRight ? 'correct-fill' : 'wrong-fill');
+      if (isRight) {
+        fb.className = 'feedback correct-fb';
+        fb.innerHTML = `<strong>Correct!</strong> ${escHtml(q.explanation)}`;
+      } else {
+        fb.className = 'feedback wrong-fb';
+        fb.innerHTML = `<strong>Incorrect.</strong> Accepted: <em>${escHtml(q.answers[0])}</em>. ${escHtml(q.explanation)}`;
+      }
+    }
+  } else {
+    const correct = q.correct;
+    const opts = document.querySelectorAll('.option');
+    opts.forEach(o => {
+      o.classList.add('disabled');
+      const idx = parseInt(o.dataset.index);
+      if (idx === correct) o.classList.add('correct');
+      else if (idx === chosen && chosen !== -2) o.classList.add('wrong');
+    });
+
+    if (chosen === -2) {
+      fb.className = 'feedback wrong-fb';
+      fb.innerHTML = `<strong>Answer revealed — no credit.</strong> ${escHtml(q.explanation)}`;
+    } else if (chosen === correct && !peeked[currentIndex]) {
+      fb.className = 'feedback correct-fb';
+      fb.innerHTML = `<strong>Correct!</strong> ${escHtml(q.explanation)}`;
+    } else {
+      fb.className = 'feedback wrong-fb';
+      fb.innerHTML = `<strong>${chosen === correct ? 'Answer revealed — no credit.' : 'Incorrect.'}</strong> ${escHtml(q.explanation)}`;
+    }
+  }
+
+  document.getElementById('next-btn').disabled = false;
+}
+
+// ─────────────────────────────────────────────
+// NAVIGATION
+// ─────────────────────────────────────────────
+function nextQuestion() {
+  if (currentIndex < currentQuestions.length - 1) {
+    currentIndex++;
+    renderQuestion();
+    window.scrollTo(0, 0);
+  } else {
+    showResults();
+  }
+}
+
+// ─────────────────────────────────────────────
+// RESULTS
+// ─────────────────────────────────────────────
+function showResults() {
+  document.getElementById('quiz-screen').style.display = 'none';
+  document.getElementById('results-screen').style.display = 'block';
+  document.getElementById('review-list').style.display = 'none';
+
+  const total = currentQuestions.length;
+  const pct = Math.round((score / total) * 100);
+
+  document.getElementById('final-score-text').textContent = `${score}/${total}`;
+
+  let msg = '';
+  if (pct >= 90) msg = '🏆 Excellent!';
+  else if (pct >= 75) msg = '👍 Great job!';
+  else if (pct >= 60) msg = '📚 Keep studying!';
+  else msg = '💪 Review the material and try again!';
+
+  document.getElementById('final-score-pct').textContent = `${pct}% — ${msg}`;
+
+  setTimeout(() => {
+    document.getElementById('grade-bar').style.width = pct + '%';
+  }, 100);
+
+  const wrong = total - score;
+  document.getElementById('breakdown').innerHTML = `
+    <div class="breakdown-item"><strong>${total}</strong>Total</div>
+    <div class="breakdown-item"><strong style="color:#86efac">${score}</strong>Correct</div>
+    <div class="breakdown-item"><strong style="color:#fca5a5">${wrong}</strong>Incorrect</div>
+  `;
+}
+
+function reviewAnswers() {
+  const reviewEl = document.getElementById('review-list');
+  if (reviewEl.style.display !== 'none') {
+    reviewEl.style.display = 'none';
+    return;
+  }
+  reviewEl.style.display = '';
+  reviewEl.innerHTML = '<h3 style="margin-bottom:16px;font-size:1rem;color:#94a3b8;">Answer Review</h3>';
+
+  currentQuestions.forEach((q, i) => {
+    const chosen = userAnswers[i];
+    const wasPeeked = chosen === -2;
+    const letters = ['A','B','C','D','E','F'];
+    let isRight;
+
+    if (q.type === 'fill') {
+      if (wasPeeked) {
+        isRight = false;
+      } else {
+        const accepted = q.answers.map(a => a.toLowerCase());
+        isRight = typeof chosen === 'string' && accepted.includes(chosen.toLowerCase()) && !peeked[i];
+      }
+    } else {
+      isRight = chosen === q.correct && !peeked[i];
+    }
+
+    const div = document.createElement('div');
+    div.className = `review-item ${isRight ? 'was-correct' : 'was-wrong'}`;
+
+    let answerHTML = '';
+    if (q.type === 'fill') {
+      if (wasPeeked) {
+        answerHTML += `<div class="your-ans">👁 Answer revealed (no credit)</div>`;
+      } else if (!isRight) {
+        answerHTML += `<div class="your-ans">✗ You typed: "${escHtml(chosen || '')}"</div>`;
+      }
+      answerHTML += `<div class="correct-ans">✓ Correct: ${escHtml(q.answers[0])}</div>`;
+    } else {
+      if (wasPeeked) {
+        answerHTML += `<div class="your-ans">👁 Answer revealed (no credit)</div>`;
+      } else if (!isRight) {
+        answerHTML += `<div class="your-ans">✗ You chose: ${letters[chosen]} — ${escHtml(q.options[chosen])}</div>`;
+      }
+      answerHTML += `<div class="correct-ans">✓ Correct: ${letters[q.correct]} — ${escHtml(q.options[q.correct])}</div>`;
+    }
+
+    div.innerHTML = `
+      <div class="review-q"><strong>Q${i+1}:</strong> ${escHtml(q.q.split('\n')[0])}</div>
+      <div class="review-answer">${answerHTML}</div>
+    `;
+    reviewEl.appendChild(div);
+  });
+
+  reviewEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+</script>
+</body>
+</html>
