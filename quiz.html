@@ -560,7 +560,7 @@
       <div class="quiz-icon">📂</div>
       <div>
         <h2>Quiz 3 — Functions &amp; File I/O</h2>
-        <p>Scope, argc/argv, file pointers, fopen, pass-by-value, static · 15 questions</p>
+        <p>Scope, argc/argv, file pointers, fopen, pass-by-value, static · 17 questions</p>
       </div>
     </div>
     <div class="quiz-card" onclick="startQuiz(3)">
@@ -578,7 +578,7 @@
       </div>
     </div>
   </div>
-  <button class="btn-all" onclick="startQuiz(-1)">⚡ All Quizzes — 61 Questions</button>
+  <button class="btn-all" onclick="startQuiz(-1)">⚡ All Quizzes — 63 Questions</button>
 
   <div class="part2-section">
     <h3>💻 Part 2 — Programming Practice Ideas</h3>
@@ -1196,6 +1196,22 @@ int main() {
         correct: 2,
         hint: "Think 'a' for append — you're adding to the end, not replacing.",
         explanation: '"a" (append) mode opens a file for writing at the end. If the file does not exist, it is created. Existing content is preserved. Contrast with "w" which truncates the file.'
+      },
+      // FROM quiz.md Q5
+      {
+        q: "test is the compiled code of a C program:\n\n    #include <stdio.h>\n    int main(int argc, char *argv[]) { ... }\n\nWhat is the value of argv[1] if the following command is executed?\n\n    ./test a1 b2 c3",
+        options: ["b2", "c3", "a1", "test"],
+        correct: 2,
+        hint: "argv[0] is always the program name itself. argv[1] is the first argument after the program name.",
+        explanation: "argv[0] = \"./test\", argv[1] = \"a1\", argv[2] = \"b2\", argv[3] = \"c3\". So argv[1] is \"a1\"."
+      },
+      // FROM quiz.md Q9
+      {
+        q: "fp = fopen(\"test.txt\", ______)\n\nThe above code is used to open a file for writing. What is the missing code?",
+        options: ['"r"', '"a"', '"w"', '"b"'],
+        correct: 2,
+        hint: "Think of the first letter: 'w' for write. This mode creates the file if it doesn't exist, or truncates it if it does.",
+        explanation: '"w" opens a file for writing — creating it if it does not exist, or truncating it to zero length if it does. "r" reads, "a" appends, "b" is a binary modifier.'
       }
     ]
   },
