@@ -1,0 +1,1959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matrix Algebra — Math 251 Reference</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #0f0f1a;
+    color: #e2e8f0;
+    min-height: 100vh;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(15, 15, 26, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #2d2d50;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    height: 52px;
+    flex-wrap: nowrap;
+  }
+
+  nav::-webkit-scrollbar { display: none; }
+
+  nav a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 8px;
+    white-space: nowrap;
+    transition: all 0.15s;
+    flex-shrink: 0;
+  }
+
+  nav a:hover { background: #1e1e30; color: #a78bfa; }
+
+  .nav-brand {
+    font-weight: 800;
+    font-size: 0.9rem;
+    background: linear-gradient(135deg, #7c3aed, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-right: 12px;
+    flex-shrink: 0;
+    padding: 0 !important;
+    background-color: transparent !important;
+  }
+
+  .nav-brand:hover { opacity: 0.85; }
+
+  nav .divider {
+    width: 1px;
+    height: 20px;
+    background: #2d2d50;
+    margin: 0 4px;
+    flex-shrink: 0;
+  }
+
+  /* ── PAGE ── */
+  .page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #7c3aed, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 6px;
+    text-align: center;
+  }
+
+  .subtitle {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  /* ── SECTIONS ── */
+  section {
+    margin-bottom: 40px;
+    scroll-margin-top: 68px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #2d2d50;
+  }
+
+  .section-icon {
+    font-size: 1.8rem;
+    flex-shrink: 0;
+  }
+
+  .section-header h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #a78bfa, #60a5fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .section-header p {
+    font-size: 0.82rem;
+    color: #64748b;
+    margin-top: 2px;
+  }
+
+  /* ── CARDS ── */
+  .card {
+    background: #1e1e30;
+    border: 1px solid #2d2d50;
+    border-radius: 16px;
+    padding: 22px 24px;
+    margin-bottom: 14px;
+  }
+
+  .card-title {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #7c3aed;
+    margin-bottom: 12px;
+  }
+
+  /* ── CODE / MATRIX BLOCKS ── */
+  pre {
+    background: #0d0d1a;
+    border: 1px solid #2d2d50;
+    border-radius: 10px;
+    padding: 16px;
+    font-family: 'Cascadia Code', 'Consolas', 'Courier New', monospace;
+    font-size: 0.84rem;
+    line-height: 1.75;
+    color: #93c5fd;
+    white-space: pre;
+    overflow-x: auto;
+    margin: 10px 0;
+  }
+
+  code {
+    font-family: 'Cascadia Code', 'Consolas', monospace;
+    background: #16162a;
+    padding: 2px 7px;
+    border-radius: 5px;
+    font-size: 0.82rem;
+    color: #93c5fd;
+  }
+
+  .comment { color: #4a5568; }
+  .kw      { color: #c084fc; }   /* keywords / labels */
+  .str     { color: #86efac; }   /* strings / results */
+  .num     { color: #fbbf24; }   /* numbers */
+  .fn      { color: #38bdf8; }   /* function names / headings */
+  .op      { color: #f472b6; }   /* operators */
+  .out     { color: #6b7280; font-style: italic; }
+
+  /* ── NOTE / TIP BOXES ── */
+  .note {
+    background: #1a1a0a;
+    border: 1px solid #854d0e;
+    border-left: 4px solid #f59e0b;
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 0.87rem;
+    color: #fde68a;
+    line-height: 1.55;
+    margin: 10px 0;
+  }
+
+  .note strong { color: #fbbf24; }
+
+  .tip {
+    background: #052e16;
+    border: 1px solid #22c55e;
+    border-left: 4px solid #22c55e;
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 0.87rem;
+    color: #86efac;
+    line-height: 1.55;
+    margin: 10px 0;
+  }
+
+  .tip strong { color: #4ade80; }
+
+  /* ── TABLES ── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    margin: 10px 0;
+  }
+
+  th {
+    background: #16162a;
+    color: #a78bfa;
+    font-weight: 700;
+    text-align: left;
+    padding: 10px 14px;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  td {
+    padding: 9px 14px;
+    border-top: 1px solid #1e1e30;
+    color: #e2e8f0;
+    vertical-align: top;
+  }
+
+  tr:nth-child(even) td { background: #16162a; }
+
+  td code { font-size: 0.8rem; }
+
+  td.dim { color: #64748b; font-size: 0.82rem; }
+
+  /* ── GRID ── */
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  @media (max-width: 620px) {
+    .grid-2 { grid-template-columns: 1fr; }
+  }
+
+  /* ── INLINE LABEL ── */
+  .label {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 5px;
+    font-size: 0.74rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+  }
+
+  .label-purple { background: #4c1d95; color: #c4b5fd; }
+  .label-blue   { background: #1e3a5f; color: #93c5fd; }
+  .label-green  { background: #052e16; color: #86efac; }
+  .label-red    { background: #2d0a0a; color: #fca5a5; }
+
+  p { line-height: 1.6; color: #94a3b8; font-size: 0.9rem; }
+  p + p { margin-top: 8px; }
+
+  ul {
+    padding-left: 20px;
+    margin: 8px 0;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    line-height: 1.8;
+  }
+
+  li code { font-size: 0.8rem; }
+
+  .back-top {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: #1e1e30;
+    border: 1px solid #2d2d50;
+    border-radius: 12px;
+    padding: 10px 16px;
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 600;
+    transition: all 0.15s;
+  }
+
+  .back-top:hover { color: #a78bfa; border-color: #7c3aed; }
+
+  /* ── PROBLEMS ── */
+  .prob-q {
+    background: #13132a;
+    border: 1px solid #2d3a60;
+    border-left: 4px solid #60a5fa;
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 0.88rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+    margin: 10px 0;
+  }
+  .prob-q strong { color: #93c5fd; }
+
+  .output {
+    background: #0a0a18;
+    border: 1px solid #1e1e40;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-family: 'Cascadia Code', 'Consolas', monospace;
+    font-size: 0.82rem;
+    color: #6b7280;
+    margin: 8px 0;
+    white-space: pre;
+  }
+  .output-label {
+    font-size: 0.74rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #4a5568;
+    margin-bottom: 4px;
+  }
+
+  .prob-group {
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #60a5fa;
+    margin: 28px 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #1e2a40;
+  }
+
+  /* ── STEP BLOCK ── */
+  .step {
+    display: flex;
+    gap: 14px;
+    margin: 8px 0;
+    align-items: flex-start;
+  }
+  .step-num {
+    background: linear-gradient(135deg, #7c3aed, #3b82f6);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 800;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .step-body { color: #94a3b8; font-size: 0.9rem; line-height: 1.6; }
+  .step-body strong { color: #e2e8f0; }
+
+  /* ── TEXTBOOK MATRIX DISPLAY ── */
+  .bmat-outer {
+    display: inline-flex;
+    align-items: stretch;
+    vertical-align: middle;
+    margin: 4px 2px;
+  }
+  .bmat-outer::before,
+  .bmat-outer::after {
+    content: '';
+    width: 7px;
+    border: 2px solid #94a3b8;
+    flex-shrink: 0;
+  }
+  .bmat-outer::before {
+    border-right: none;
+    border-radius: 3px 0 0 3px;
+  }
+  .bmat-outer::after {
+    border-left: none;
+    border-radius: 0 3px 3px 0;
+  }
+  .bmat {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+  .bmat tr { display: table-row; }
+  .bmat tr td {
+    display: table-cell;
+    padding: 4px 10px;
+    text-align: right;
+    min-width: 1.6em;
+    font-family: 'Cambria Math', 'Latin Modern Math', serif;
+    font-size: 0.97rem;
+    color: #e2e8f0;
+    line-height: 1.9;
+    white-space: nowrap;
+  }
+  /* Augmented separator column */
+  .bmat tr td.aug {
+    border-left: 1.5px solid #4a5568;
+    padding-left: 14px;
+  }
+  /* Highlighted cell (e.g. wrong pivot) */
+  .bmat tr td.bad { color: #f87171; }
+  /* Equation wrapper: matrices with +/=/· between them */
+  .mat-eq {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    font-size: 1.05rem;
+    color: #94a3b8;
+  }
+  /* Step-by-step row operation trace */
+  .mat-trace {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 8px 0;
+  }
+  .mat-step { display: flex; flex-direction: column; gap: 6px; }
+  .mat-step-label {
+    color: #7c3aed;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  .mat-step-note {
+    color: #86efac;
+    font-size: 0.83rem;
+    margin-left: 4px;
+    align-self: center;
+  }
+  .mat-step-bad {
+    color: #f87171;
+    font-size: 0.83rem;
+    margin-left: 4px;
+    align-self: center;
+    font-weight: 600;
+  }
+  /* Sub-label inside equations (e.g. "A", "B") */
+  .mat-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #7c3aed;
+    text-align: center;
+    margin-bottom: 3px;
+  }
+  .mat-named { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="#">M251</a>
+  <div class="divider"></div>
+  <a href="#basics">Matrices</a>
+  <a href="#ops">Operations</a>
+  <a href="#lines">Lines</a>
+  <a href="#planes">Planes</a>
+  <a href="#systems">Systems</a>
+  <a href="#rref">RREF</a>
+  <a href="#span">Span</a>
+  <a href="#independence">Independence</a>
+  <a href="#problems">Problems</a>
+</nav>
+
+<div class="page">
+
+<h1>Matrix Algebra Reference</h1>
+<p class="subtitle">Math 251 — open-book study guide covering §2.3, §3.4, §3.5, §4.6</p>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SECTION 1: MATRIX BASICS -->
+<!-- ════════════════════════════════════════════ -->
+<section id="basics">
+  <div class="section-header">
+    <div class="section-icon">🟦</div>
+    <div>
+      <h2>Matrix Basics</h2>
+      <p>Notation, size, types, and equality — §4.6</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">What is a Matrix?</div>
+    <p>A matrix is a rectangular array of numbers arranged in rows and columns.</p>
+<p style="color:#4a5568;font-size:0.85rem;margin-bottom:8px;">An <em>m × n</em> matrix has m rows and n columns:</p>
+<div class="mat-eq" style="gap:14px;">
+  <span style="color:#94a3b8;">A =</span>
+  <span class="bmat-outer">
+    <table class="bmat">
+      <tr><td>a₁₁</td><td>a₁₂</td><td>⋯</td><td>a₁ₙ</td></tr>
+      <tr><td>a₂₁</td><td>a₂₂</td><td>⋯</td><td>a₂ₙ</td></tr>
+      <tr><td>⋮</td><td>⋮</td><td>⋱</td><td>⋮</td></tr>
+      <tr><td>aₘ₁</td><td>aₘ₂</td><td>⋯</td><td>aₘₙ</td></tr>
+    </table>
+  </span>
+</div>
+<p style="color:#94a3b8;font-size:0.88rem;margin-top:6px;">Entry <strong style="color:#e2e8f0;">aᵢⱼ</strong> = row <em>i</em>, column <em>j</em> (row index FIRST). &nbsp; Example: <strong style="color:#e2e8f0;">a₂₃</strong> = element in row 2, column 3.</p>
+    <div class="tip"><strong>Size matters:</strong> Always state the size as rows × columns. A 3×2 matrix is NOT the same as a 2×3 matrix.</div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">Special Matrices</div>
+      <table>
+        <tr><th>Name</th><th>Description</th></tr>
+        <tr><td><strong>Square</strong></td><td>m = n (same rows and columns)</td></tr>
+        <tr><td><strong>Zero (0)</strong></td><td>All entries are 0</td></tr>
+        <tr><td><strong>Identity (Iₙ)</strong></td><td>Square; 1s on main diagonal, 0s elsewhere</td></tr>
+        <tr><td><strong>Column vector</strong></td><td>n × 1 matrix (single column)</td></tr>
+        <tr><td><strong>Row vector</strong></td><td>1 × n matrix (single row)</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <div class="card-title">Identity Matrix I₃</div>
+<div class="mat-eq" style="gap:12px;">
+  <span style="color:#94a3b8;">I₃ =</span>
+  <span class="bmat-outer">
+    <table class="bmat">
+      <tr><td>1</td><td>0</td><td>0</td></tr>
+      <tr><td>0</td><td>1</td><td>0</td></tr>
+      <tr><td>0</td><td>0</td><td>1</td></tr>
+    </table>
+  </span>
+</div>
+<p style="color:#4a5568;font-size:0.85rem;margin-top:6px;">Property: A · I = I · A = A &nbsp;(multiplying by I does nothing)</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Matrix Equality</div>
+    <p>Two matrices <strong>A</strong> and <strong>B</strong> are equal if and only if:</p>
+    <ul>
+      <li>They have the <strong>same size</strong> (same m and n), AND</li>
+      <li>Every corresponding entry is equal: <code>aᵢⱼ = bᵢⱼ</code> for all i, j</li>
+    </ul>
+    <div class="note"><strong>Exam trap:</strong> A 2×3 matrix can NEVER equal a 3×2 matrix even if they contain the same numbers — different sizes means not equal.</div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SECTION 2: MATRIX OPERATIONS -->
+<!-- ════════════════════════════════════════════ -->
+<section id="ops">
+  <div class="section-header">
+    <div class="section-icon">➕</div>
+    <div>
+      <h2>Matrix Operations</h2>
+      <p>Addition, scalar multiplication, matrix multiplication — §4.6</p>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">Addition &amp; Subtraction</div>
+      <p><strong>Requirement:</strong> Both matrices must be the <em>same size</em>.</p>
+      <p>Add (or subtract) corresponding entries:</p>
+<p style="color:#94a3b8;font-size:0.88rem;margin-bottom:6px;">(A + B)ᵢⱼ = aᵢⱼ + bᵢⱼ</p>
+<div class="mat-eq">
+  <span class="bmat-outer"><table class="bmat">
+    <tr><td>1</td><td>2</td></tr>
+    <tr><td>3</td><td>4</td></tr>
+  </table></span>
+  <span>+</span>
+  <span class="bmat-outer"><table class="bmat">
+    <tr><td>5</td><td>6</td></tr>
+    <tr><td>7</td><td>8</td></tr>
+  </table></span>
+  <span>=</span>
+  <span class="bmat-outer"><table class="bmat">
+    <tr><td>6</td><td>8</td></tr>
+    <tr><td>10</td><td>12</td></tr>
+  </table></span>
+</div>
+    </div>
+    <div class="card">
+      <div class="card-title">Scalar Multiplication</div>
+      <p>Multiply <strong>every entry</strong> by the scalar c:</p>
+<p style="color:#94a3b8;font-size:0.88rem;margin-bottom:6px;">(cA)ᵢⱼ = c · aᵢⱼ</p>
+<div class="mat-eq">
+  <span>3 ·</span>
+  <span class="bmat-outer"><table class="bmat">
+    <tr><td>1</td><td>2</td></tr>
+    <tr><td>3</td><td>4</td></tr>
+  </table></span>
+  <span>=</span>
+  <span class="bmat-outer"><table class="bmat">
+    <tr><td>3</td><td>6</td></tr>
+    <tr><td>9</td><td>12</td></tr>
+  </table></span>
+</div>
+      <div class="tip"><strong>Key:</strong> <code>-A = (-1)A</code> negates every entry.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Matrix Multiplication — The Big One</div>
+    <p><strong>Size rule:</strong> A is <em>m×n</em> and B is <em>n×p</em> → AB is <em>m×p</em>. Inner dimensions must match.</p>
+<p style="color:#4a5568;font-size:0.85rem;margin-bottom:6px;">/* (m × n)(n × p) = (m × p) — inner n's cancel */</p>
+<p style="color:#94a3b8;font-size:0.88rem;margin-bottom:12px;">Entry (AB)ᵢⱼ = (row <em>i</em> of A) · (col <em>j</em> of B) = aᵢ₁b₁ⱼ + aᵢ₂b₂ⱼ + ··· + aᵢₙbₙⱼ</p>
+<div class="mat-eq" style="gap:20px;">
+  <div class="mat-named">
+    <div class="mat-label">A</div>
+    <span class="bmat-outer"><table class="bmat">
+      <tr><td>1</td><td>2</td></tr>
+      <tr><td>3</td><td>4</td></tr>
+    </table></span>
+  </div>
+  <div class="mat-named">
+    <div class="mat-label">B</div>
+    <span class="bmat-outer"><table class="bmat">
+      <tr><td>5</td><td>6</td></tr>
+      <tr><td>7</td><td>8</td></tr>
+    </table></span>
+  </div>
+</div>
+<p style="color:#94a3b8;font-size:0.88rem;margin:8px 0;line-height:1.9;">
+  (AB)₁₁ = 1·5 + 2·7 = 19 &ensp; (AB)₁₂ = 1·6 + 2·8 = 22<br>
+  (AB)₂₁ = 3·5 + 4·7 = 43 &ensp; (AB)₂₂ = 3·6 + 4·8 = 50
+</p>
+<div class="mat-eq">
+  <span style="color:#94a3b8;">AB =</span>
+  <span class="bmat-outer"><table class="bmat">
+    <tr><td>19</td><td>22</td></tr>
+    <tr><td>43</td><td>50</td></tr>
+  </table></span>
+</div>
+    <div class="note"><strong>NOT commutative:</strong> AB ≠ BA in general. Always check which order you're multiplying!</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Size Compatibility Quick Reference</div>
+    <table>
+      <tr><th>Operation</th><th>Requirement</th><th>Result Size</th><th>Example</th></tr>
+      <tr><td>A + B</td><td>A and B same size</td><td>Same as A, B</td><td>(3×2) + (3×2) = (3×2)</td></tr>
+      <tr><td>cA</td><td>Any matrix</td><td>Same as A</td><td>3 · (2×4) = (2×4)</td></tr>
+      <tr><td>AB</td><td>cols(A) = rows(B)</td><td>rows(A) × cols(B)</td><td>(3×2)(2×5) = (3×5)</td></tr>
+      <tr><td>A + B when sizes differ</td><td colspan="3" class="dim">❌ UNDEFINED — cannot add</td></tr>
+      <tr><td>AB when inner dims differ</td><td colspan="3" class="dim">❌ UNDEFINED — cannot multiply</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Non-Square Multiplication Example (3×2)(2×3)</div>
+<div class="mat-eq" style="gap:20px;flex-wrap:wrap;">
+  <div class="mat-named">
+    <div class="mat-label">A (3×2)</div>
+    <span class="bmat-outer"><table class="bmat">
+      <tr><td>1</td><td>2</td></tr>
+      <tr><td>3</td><td>4</td></tr>
+      <tr><td>5</td><td>6</td></tr>
+    </table></span>
+  </div>
+  <div class="mat-named">
+    <div class="mat-label">B (2×3)</div>
+    <span class="bmat-outer"><table class="bmat">
+      <tr><td>7</td><td>8</td><td>9</td></tr>
+      <tr><td>10</td><td>11</td><td>12</td></tr>
+    </table></span>
+  </div>
+</div>
+<p style="color:#94a3b8;font-size:0.88rem;margin:8px 0;line-height:1.9;">
+  Row 1: [1·7+2·10 &ensp; 1·8+2·11 &ensp; 1·9+2·12] = [27 &ensp; 30 &ensp; 33]<br>
+  Row 2: [3·7+4·10 &ensp; 3·8+4·11 &ensp; 3·9+4·12] = [61 &ensp; 68 &ensp; 75]<br>
+  Row 3: [5·7+6·10 &ensp; 5·8+6·11 &ensp; 5·9+6·12] = [95 &ensp; 106 &ensp; 117]
+</p>
+<div class="mat-eq">
+  <span style="color:#94a3b8;">AB =</span>
+  <span class="bmat-outer"><table class="bmat">
+    <tr><td>27</td><td>30</td><td>33</td></tr>
+    <tr><td>61</td><td>68</td><td>75</td></tr>
+    <tr><td>95</td><td>106</td><td>117</td></tr>
+  </table></span>
+</div>
+    <div class="tip"><strong>Check:</strong> BA would be (2×3)(3×2) = (2×2) — a different size! AB ≠ BA is obvious here because they're even different sizes.</div>
+  </div>
+
+  <div class="card" style="border-color:#7c3aed55; background:#1a1230;">
+    <div class="card-title" style="color:#a78bfa;">⚠ Common Exam Traps</div>
+    <table>
+      <tr><th>Trap</th><th>Wrong</th><th>Right</th></tr>
+      <tr><td>Commutativity</td><td><code>AB = BA</code> always</td><td>AB ≠ BA in general</td></tr>
+      <tr><td>Adding different sizes</td><td>(2×3) + (3×2)</td><td>❌ undefined</td></tr>
+      <tr><td>Wrong mult order size</td><td>(2×3)(4×2)</td><td>❌ inner: 3 ≠ 4, undefined</td></tr>
+      <tr><td>Entry index order</td><td>aᵢⱼ = row j, col i</td><td>aᵢⱼ = row i, col j</td></tr>
+      <tr><td>Result size</td><td>(m×n)(n×p) = (n×n)</td><td>(m×n)(n×p) = (m×p)</td></tr>
+      <tr><td>Identity</td><td>AI ≠ A</td><td>AI = IA = A always</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SECTION 3: LINES -->
+<!-- ════════════════════════════════════════════ -->
+<section id="lines">
+  <div class="section-header">
+    <div class="section-icon">📏</div>
+    <div>
+      <h2>Lines in ℝ² and ℝ³</h2>
+      <p>General, vector, and parametric forms — §2.3</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Three Forms of a Line</div>
+    <table>
+      <tr><th>Form</th><th>ℝ² (2D)</th><th>ℝ³ (3D)</th></tr>
+      <tr><td><strong>General</strong></td><td><code>ax + by = c</code></td><td>Two plane equations (not commonly used)</td></tr>
+      <tr><td><strong>Vector</strong></td><td><code>r = r₀ + t·d</code></td><td><code>r = r₀ + t·d</code></td></tr>
+      <tr><td><strong>Parametric</strong></td><td><code>x = x₀ + at<br>y = y₀ + bt</code></td><td><code>x = x₀ + at<br>y = y₀ + bt<br>z = z₀ + ct</code></td></tr>
+    </table>
+    <p style="margin-top:10px;">Where: <strong>r₀</strong> = position vector of a known point; <strong>d</strong> = direction vector; <strong>t</strong> ∈ ℝ is the free parameter.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">How to Find the Direction Vector d</div>
+    <p>Given two points P₁ = (x₁, y₁, z₁) and P₂ = (x₂, y₂, z₂):</p>
+<pre><span class="kw">d</span> = P₂ − P₁ = (x₂−x₁,  y₂−y₁,  z₂−z₁)
+
+<span class="comment">/* Any scalar multiple of d is also a valid direction vector */</span>
+<span class="comment">/* The parametric form is NOT unique — any point on the line */</span>
+<span class="comment">/* can serve as r₀, and any non-zero multiple of d is valid  */</span></pre>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Worked Example — Line in ℝ² Through Two Points</div>
+    <div class="prob-q"><strong>Find</strong> all three forms of the line through P₁ = (2, −1) and P₂ = (10, 3).</div>
+<pre><span class="fn">Step 1: Direction vector</span>
+d = P₂ − P₁ = (10−2, 3−(−1)) = (8, 4)
+  (can simplify: d = (2, 1) by dividing by 4)
+
+<span class="fn">Step 2: Vector form</span>  using P₁ as r₀
+<span class="str">r = (2, −1) + t(2, 1)</span>
+
+<span class="fn">Step 3: Parametric form</span>
+<span class="str">x = 2 + 2t
+y = −1 + t</span>
+
+<span class="fn">Step 4: General form</span>
+From parametric: t = y + 1, so x = 2 + 2(y+1) = 2y + 4
+→  <span class="str">x − 2y = 4</span></pre>
+    <div class="tip"><strong>Check:</strong> Plug P₁(2,−1): 2 − 2(−1) = 4 ✓ and P₂(10,3): 10 − 2(3) = 4 ✓</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Worked Example — Line in ℝ³ Through Two Points</div>
+    <div class="prob-q"><strong>Find</strong> parametric and vector forms for the line through P₁ = (−9, 3, 4) and P₂ = (−6, −15, 4).</div>
+<pre><span class="fn">Direction vector:</span>
+d = P₂ − P₁ = (−6−(−9),  −15−3,  4−4) = (3, −18, 0)
+Simplify: d = (1, −6, 0)
+
+<span class="fn">Vector form</span>  (using P₁):
+<span class="str">r = (−9, 3, 4) + t(1, −6, 0)</span>
+
+<span class="fn">Parametric form:</span>
+<span class="str">x = −9 + t
+y =  3 − 6t
+z =  4</span>     ← z is constant (line is horizontal in z)</pre>
+    <div class="note"><strong>Note:</strong> When a component of d is 0 (here, the z-component), that coordinate stays constant along the entire line.</div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SECTION 4: PLANES -->
+<!-- ════════════════════════════════════════════ -->
+<section id="planes">
+  <div class="section-header">
+    <div class="section-icon">🟧</div>
+    <div>
+      <h2>Planes in ℝ³</h2>
+      <p>Normal vector, general form, parametric form — §2.3</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Three Forms of a Plane in ℝ³</div>
+    <table>
+      <tr><th>Form</th><th>Equation</th><th>Notes</th></tr>
+      <tr><td><strong>General</strong></td><td><code>ax + by + cz = d</code></td><td>Normal vector <strong>n</strong> = (a, b, c). Unique (up to sign).</td></tr>
+      <tr><td><strong>Vector</strong></td><td><code>r = r₀ + s·u + t·v</code></td><td><strong>u</strong>, <strong>v</strong> are two direction vectors in the plane. NOT unique.</td></tr>
+      <tr><td><strong>Parametric</strong></td><td><code>x = x₀ + a₁s + a₂t<br>y = y₀ + b₁s + b₂t<br>z = z₀ + c₁s + c₂t</code></td><td>Two free parameters s, t ∈ ℝ.</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title">How to Find the General Form from 3 Points</div>
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-body"><strong>Find two direction vectors</strong> in the plane: u = P₂ − P₁, v = P₃ − P₁</div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-body"><strong>Find the normal vector n:</strong> n must be perpendicular to both u and v. Use the cross product n = u × v, OR set up the system n·u = 0, n·v = 0 and solve.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-body"><strong>Write general form:</strong> n = (a,b,c) and any known point P₁ = (x₁,y₁,z₁) gives <code>a(x−x₁) + b(y−y₁) + c(z−z₁) = 0</code>, simplify to <code>ax + by + cz = d</code>.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Worked Example — Plane Through 3 Points</div>
+    <div class="prob-q"><strong>Find</strong> all forms of the plane through P₁ = (5,0,0), P₂ = (6,1,0), P₃ = (3,0,1).</div>
+<pre><span class="fn">Step 1: Direction vectors</span>
+u = P₂ − P₁ = (6−5, 1−0, 0−0) = (1, 1, 0)
+v = P₃ − P₁ = (3−5, 0−0, 1−0) = (−2, 0, 1)
+
+<span class="fn">Step 2: Normal vector  n = (a, b, c)  such that n·u=0 and n·v=0</span>
+n · u = 0:   a + b       = 0    → b = −a
+n · v = 0:  −2a     + c = 0    → c = 2a
+
+Set a=1:  <span class="str">n = (1, −1, 2)</span>
+
+<span class="fn">Step 3: General form</span>  using P₁=(5,0,0):
+1(x−5) + (−1)(y−0) + 2(z−0) = 0
+<span class="str">x − y + 2z = 5</span>
+
+<span class="fn">Step 4: Vector / parametric form</span>  using r₀=P₁, directions u and v:
+<span class="str">r = (5,0,0) + s(1,1,0) + t(−2,0,1)
+
+x = 5 +  s − 2t
+y =     s
+z =         t</span></pre>
+    <div class="tip"><strong>Quick check:</strong> Plug P₁(5,0,0): 5−0+0=5 ✓  P₂(6,1,0): 6−1+0=5 ✓  P₃(3,0,1): 3−0+2=5 ✓</div>
+  </div>
+
+  <div class="note"><strong>Key difference — Lines vs Planes:</strong> A line has <em>one</em> direction vector and <em>one</em> free parameter t. A plane has <em>two</em> direction vectors and <em>two</em> free parameters s and t. The normal vector is perpendicular to the plane, not along it.</div>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SECTION 5: LINEAR SYSTEMS -->
+<!-- ════════════════════════════════════════════ -->
+<section id="systems">
+  <div class="section-header">
+    <div class="section-icon">⚖️</div>
+    <div>
+      <h2>Systems of Linear Equations</h2>
+      <p>Augmented matrices, solution types, row operations — §3.4</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Augmented Matrix Notation</div>
+    <p>A linear system is converted to an augmented matrix [A|b]:</p>
+<div style="display:flex;align-items:center;gap:28px;flex-wrap:wrap;padding:10px 0;">
+  <div style="color:#94a3b8;font-size:0.9rem;line-height:2.1;font-family:'Cambria Math',serif;">
+    &nbsp; x + 2y +  z = 3<br>
+    2x + 4y + 3z = 8<br>
+    3x + 6y + 5z = 13
+  </div>
+  <div style="color:#4a5568;font-size:1.4rem;">→</div>
+  <span class="bmat-outer"><table class="bmat">
+    <tr><td>1</td><td>2</td><td>1</td><td class="aug">3</td></tr>
+    <tr><td>2</td><td>4</td><td>3</td><td class="aug">8</td></tr>
+    <tr><td>3</td><td>6</td><td>5</td><td class="aug">13</td></tr>
+  </table></span>
+</div>
+<p style="color:#4a5568;font-size:0.84rem;">The vertical bar separates the coefficient matrix A from the constants b.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Three Solution Types</div>
+    <table>
+      <tr><th>Type</th><th>RREF gives…</th><th>Geometric meaning</th></tr>
+      <tr><td><span class="label label-red">Inconsistent</span></td><td>Row of form <code>[0 0 … 0 | k]</code> where k ≠ 0 → "0 = k" contradiction</td><td>No intersection; parallel planes</td></tr>
+      <tr><td><span class="label label-blue">Unique solution</span></td><td>Every variable is a leading variable; no free variables</td><td>Lines/planes meet at exactly one point</td></tr>
+      <tr><td><span class="label label-green">Infinitely many</span></td><td>At least one free variable; no contradictions</td><td>Infinite overlap — line, plane, etc.</td></tr>
+    </table>
+    <div class="tip"><strong>Decision order:</strong> First check for contradiction rows. If none → count free variables. Zero free vars = unique. One or more = infinitely many.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Elementary Row Operations</div>
+    <table>
+      <tr><th>Operation</th><th>Notation</th><th>What it does</th><th>Example</th></tr>
+      <tr><td>Scale a row</td><td><code>Rᵢ → k·Rᵢ</code></td><td>Multiply every entry in row i by nonzero scalar k</td><td><code>R₂ → ½R₂</code></td></tr>
+      <tr><td>Swap rows</td><td><code>Rᵢ ↔ Rⱼ</code></td><td>Exchange two rows</td><td><code>R₁ ↔ R₃</code></td></tr>
+      <tr><td>Row replacement</td><td><code>Rⱼ → Rⱼ + k·Rᵢ</code></td><td>Add k times row i to row j (row i unchanged)</td><td><code>R₂ → R₂ − 2R₁</code></td></tr>
+    </table>
+    <div class="note"><strong>None of these change the solution set</strong> — that's why they're safe to apply. You can reverse every operation.</div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SECTION 6: RREF & GAUSS-JORDAN -->
+<!-- ════════════════════════════════════════════ -->
+<section id="rref">
+  <div class="section-header">
+    <div class="section-icon">🔢</div>
+    <div>
+      <h2>RREF &amp; Gauss-Jordan Elimination</h2>
+      <p>Algorithm, free variables, reading solutions — §3.4</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">The 4 Properties of RREF</div>
+    <p>A matrix is in <strong>Reduced Row Echelon Form</strong> if ALL four hold:</p>
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-body">The first nonzero entry in each nonzero row is a <strong>1</strong> (called the <em>leading 1</em> or <em>pivot</em>).</div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-body">Each leading 1 is the <strong>only</strong> nonzero entry in its column (zeros above AND below).</div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-body">Leading 1s shift strictly to the <strong>right</strong> in each successive row (staircase pattern).</div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-body">All zero rows are <strong>grouped at the bottom</strong>.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Is This Matrix in RREF? — Examples</div>
+<div style="display:flex;gap:16px;flex-wrap:wrap;align-items:flex-start;padding:8px 0;">
+  <div>
+    <div style="color:#86efac;font-size:0.78rem;font-weight:700;margin-bottom:6px;">✓ RREF</div>
+    <span class="bmat-outer"><table class="bmat">
+      <tr><td>1</td><td>0</td><td>0</td><td class="aug">2</td></tr>
+      <tr><td>0</td><td>1</td><td>0</td><td class="aug">5</td></tr>
+      <tr><td>0</td><td>0</td><td>1</td><td class="aug">−1</td></tr>
+    </table></span>
+  </div>
+  <div>
+    <div style="color:#86efac;font-size:0.78rem;font-weight:700;margin-bottom:6px;">✓ RREF (free variable: x₂)</div>
+    <span class="bmat-outer"><table class="bmat">
+      <tr><td>1</td><td>3</td><td>0</td></tr>
+      <tr><td>0</td><td>0</td><td>1</td></tr>
+      <tr><td>0</td><td>0</td><td>0</td></tr>
+    </table></span>
+  </div>
+  <div>
+    <div style="color:#86efac;font-size:0.78rem;font-weight:700;margin-bottom:6px;">✓ RREF (identity)</div>
+    <span class="bmat-outer"><table class="bmat">
+      <tr><td>1</td><td>0</td><td>0</td></tr>
+      <tr><td>0</td><td>1</td><td>0</td></tr>
+      <tr><td>0</td><td>0</td><td>1</td></tr>
+    </table></span>
+  </div>
+</div>
+<div style="display:flex;gap:20px;flex-wrap:wrap;align-items:flex-start;padding:8px 0;">
+  <div>
+    <div style="color:#f87171;font-size:0.78rem;font-weight:700;margin-bottom:6px;">✗ NOT RREF — leading entry ≠ 1 (Rule 1)</div>
+    <span class="bmat-outer"><table class="bmat">
+      <tr><td class="bad">2</td><td>0</td><td>0</td><td class="aug">2</td></tr>
+      <tr><td>0</td><td>1</td><td>0</td><td class="aug">5</td></tr>
+      <tr><td>0</td><td>0</td><td>1</td><td class="aug">−1</td></tr>
+    </table></span>
+  </div>
+  <div>
+    <div style="color:#f87171;font-size:0.78rem;font-weight:700;margin-bottom:6px;">✗ NOT RREF — nonzero above pivot in col 2 (Rule 2)</div>
+    <span class="bmat-outer"><table class="bmat">
+      <tr><td>1</td><td class="bad">3</td><td>0</td></tr>
+      <tr><td>0</td><td>1</td><td>0</td></tr>
+      <tr><td>0</td><td>0</td><td>0</td></tr>
+    </table></span>
+  </div>
+</div>
+    <div class="note"><strong>Shortcut test:</strong> Check (1) all pivots are 1, (2) all other entries in pivot columns are 0, (3) pivots go right in a staircase, (4) zero rows at bottom.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Gauss-Jordan Algorithm — Step by Step</div>
+    <div class="step"><div class="step-num">1</div><div class="step-body"><strong>Find the leftmost column</strong> with a nonzero entry. If the top entry is 0, swap rows to bring a nonzero to the top.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-body"><strong>Scale the top row</strong> so the leftmost nonzero entry becomes 1 (the leading 1). Use Rᵢ → (1/aᵢⱼ)·Rᵢ.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-body"><strong>Eliminate below:</strong> Use row replacement operations to make all entries BELOW the leading 1 equal to zero.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-body"><strong>Cover that row.</strong> Repeat steps 1–3 on the remaining submatrix (ignoring rows already processed).</div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-body"><strong>Eliminate above:</strong> Working bottom-up, use row replacement to make all entries ABOVE each leading 1 equal to zero.</div></div>
+    <div class="step"><div class="step-num">6</div><div class="step-body"><strong>Read the solution</strong> from the RREF.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Full Worked Trace — Infinitely Many Solutions</div>
+    <div class="prob-q"><strong>Solve:</strong> x + 2y + z = 3 &nbsp; | &nbsp; 2x + 4y + 3z = 8 &nbsp; | &nbsp; 3x + 6y + 5z = 13</div>
+<div class="mat-trace">
+  <div class="mat-step">
+    <div class="mat-step-label">Augmented matrix:</div>
+    <div class="mat-eq" style="padding:4px 0;">
+      <span class="bmat-outer"><table class="bmat">
+        <tr><td>1</td><td>2</td><td>1</td><td class="aug">3</td></tr>
+        <tr><td>2</td><td>4</td><td>3</td><td class="aug">8</td></tr>
+        <tr><td>3</td><td>6</td><td>5</td><td class="aug">13</td></tr>
+      </table></span>
+    </div>
+  </div>
+  <div class="mat-step">
+    <div class="mat-step-label">R₂ → R₂ − 2R₁</div>
+    <div class="mat-eq" style="padding:4px 0;">
+      <span class="bmat-outer"><table class="bmat">
+        <tr><td>1</td><td>2</td><td>1</td><td class="aug">3</td></tr>
+        <tr><td>0</td><td>0</td><td>1</td><td class="aug">2</td></tr>
+        <tr><td>3</td><td>6</td><td>5</td><td class="aug">13</td></tr>
+      </table></span>
+    </div>
+  </div>
+  <div class="mat-step">
+    <div class="mat-step-label">R₃ → R₃ − 3R₁</div>
+    <div class="mat-eq" style="padding:4px 0;">
+      <span class="bmat-outer"><table class="bmat">
+        <tr><td>1</td><td>2</td><td>1</td><td class="aug">3</td></tr>
+        <tr><td>0</td><td>0</td><td>1</td><td class="aug">2</td></tr>
+        <tr><td>0</td><td>0</td><td>2</td><td class="aug">4</td></tr>
+      </table></span>
+    </div>
+  </div>
+  <div class="mat-step">
+    <div class="mat-step-label">R₃ → R₃ − 2R₂</div>
+    <div class="mat-eq" style="padding:4px 0;">
+      <span class="bmat-outer"><table class="bmat">
+        <tr><td>1</td><td>2</td><td>1</td><td class="aug">3</td></tr>
+        <tr><td>0</td><td>0</td><td>1</td><td class="aug">2</td></tr>
+        <tr><td>0</td><td>0</td><td>0</td><td class="aug">0</td></tr>
+      </table></span>
+      <span class="mat-step-note">← zero row (not a contradiction)</span>
+    </div>
+  </div>
+  <div class="mat-step">
+    <div class="mat-step-label">R₁ → R₁ − R₂ &nbsp;(eliminate above leading 1 in col 3)</div>
+    <div class="mat-eq" style="padding:4px 0;">
+      <span class="bmat-outer"><table class="bmat">
+        <tr><td>1</td><td>2</td><td>0</td><td class="aug">1</td></tr>
+        <tr><td>0</td><td>0</td><td>1</td><td class="aug">2</td></tr>
+        <tr><td>0</td><td>0</td><td>0</td><td class="aug">0</td></tr>
+      </table></span>
+      <span class="mat-step-note">RREF ✓</span>
+    </div>
+  </div>
+</div>
+<p style="color:#94a3b8;font-size:0.88rem;margin-top:10px;line-height:1.8;">
+  Leading variables (have pivot): x₁ (col 1), x₃ (col 3)<br>
+  Free variable (no pivot): <strong style="color:#e2e8f0;">x₂ (col 2)</strong> → let x₂ = t
+</p>
+    <div class="output-label">Solution set (infinitely many)</div>
+    <div class="output">{(1−2t,  t,  2) : t ∈ ℝ}</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Worked Trace — Inconsistent System</div>
+    <div class="prob-q"><strong>Solve:</strong> x + y = 1 &nbsp; | &nbsp; 2x + 2y = 5</div>
+<div class="mat-trace">
+  <div class="mat-step">
+    <div class="mat-step-label">Augmented matrix:</div>
+    <div class="mat-eq" style="padding:4px 0;">
+      <span class="bmat-outer"><table class="bmat">
+        <tr><td>1</td><td>1</td><td class="aug">1</td></tr>
+        <tr><td>2</td><td>2</td><td class="aug">5</td></tr>
+      </table></span>
+    </div>
+  </div>
+  <div class="mat-step">
+    <div class="mat-step-label">R₂ → R₂ − 2R₁</div>
+    <div class="mat-eq" style="padding:4px 0;">
+      <span class="bmat-outer"><table class="bmat">
+        <tr><td>1</td><td>1</td><td class="aug">1</td></tr>
+        <tr><td>0</td><td>0</td><td class="aug bad">3</td></tr>
+      </table></span>
+      <span class="mat-step-bad">← 0 = 3 &nbsp; CONTRADICTION!</span>
+    </div>
+  </div>
+</div>
+    <div class="note"><strong>Inconsistency signal:</strong> A row of the form [0 0 … 0 | k] where k ≠ 0. This literally says "0 = k" which is impossible. Stop — no solution exists.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Free Variables &amp; Leading Variables Summary</div>
+    <table>
+      <tr><th>Term</th><th>Meaning</th><th>In RREF…</th></tr>
+      <tr><td><strong>Leading variable</strong> (pivot variable)</td><td>Variable corresponding to a column that contains a leading 1</td><td>Expressed in terms of free vars and constants</td></tr>
+      <tr><td><strong>Free variable</strong></td><td>Variable corresponding to a column with NO leading 1</td><td>Assigned a parameter (t, s, …); can be anything</td></tr>
+    </table>
+    <div class="tip"><strong>Count free variables:</strong> (number of columns in A) − (number of leading 1s) = number of free variables = number of parameters in the general solution.</div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SECTION 7: SPANNING SETS -->
+<!-- ════════════════════════════════════════════ -->
+<section id="span">
+  <div class="section-header">
+    <div class="section-icon">🎯</div>
+    <div>
+      <h2>Spanning Sets &amp; Linear Combinations</h2>
+      <p>What vectors can be built from a set — §3.5</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Linear Combination</div>
+    <p>A vector <strong>v</strong> is a <strong>linear combination</strong> of vectors v₁, v₂, …, vₖ if there exist scalars c₁, c₂, …, cₖ such that:</p>
+<p style="color:#c084fc;font-size:0.95rem;font-weight:600;margin-bottom:10px;">v = c₁v₁ + c₂v₂ + ··· + cₖvₖ</p>
+<p style="color:#94a3b8;font-size:0.88rem;margin-bottom:10px;"><strong>Example:</strong> Is [5, 7] a linear combination of [1,2] and [3,1]?<br>
+Set up: c₁[1,2] + c₂[3,1] = [5,7] &nbsp;→&nbsp; c₁ + 3c₂ = 5 &nbsp;and&nbsp; 2c₁ + c₂ = 7</p>
+<div class="mat-trace">
+  <div class="mat-step">
+    <div class="mat-step-label">Augmented [v₁ | v₂ | b]:</div>
+    <div class="mat-eq" style="padding:4px 0;">
+      <span class="bmat-outer"><table class="bmat">
+        <tr><td>1</td><td>3</td><td class="aug">5</td></tr>
+        <tr><td>2</td><td>1</td><td class="aug">7</td></tr>
+      </table></span>
+    </div>
+  </div>
+  <div class="mat-step">
+    <div class="mat-step-label">R₂ → R₂ − 2R₁</div>
+    <div class="mat-eq" style="padding:4px 0;">
+      <span class="bmat-outer"><table class="bmat">
+        <tr><td>1</td><td>3</td><td class="aug">5</td></tr>
+        <tr><td>0</td><td>−5</td><td class="aug">−3</td></tr>
+      </table></span>
+      <span class="mat-step-note">→ c₂ = 3/5, &nbsp; c₁ = 16/5</span>
+    </div>
+  </div>
+</div>
+<p style="color:#86efac;font-size:0.88rem;margin-top:8px;">Consistent — so [5,7] = (16/5)[1,2] + (3/5)[3,1] ✓</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Span of a Set — Definition &amp; Geometry</div>
+    <p><strong>Span{v₁, v₂, …, vₖ}</strong> = the set of ALL possible linear combinations of v₁, …, vₖ.</p>
+    <p style="margin-top:8px;color:#94a3b8;font-size:0.88rem;">The span is always a <strong style="color:#e2e8f0;">subspace</strong> — it contains the origin, is closed under addition, and closed under scalar multiplication.</p>
+    <div class="tip" style="margin-top:10px;"><strong>The shape of the span depends on how many independent directions the vectors provide</strong> — not on how many vectors you have. Three parallel vectors still only span a line.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">How to Find the Span — The Rank Method</div>
+    <p>Form the matrix with the vectors as <strong>columns</strong> and row-reduce. The number of pivots = <strong>rank</strong> = dimension of the span.</p>
+    <div style="background:#0d0d1a;border:1px solid #2d2d50;border-radius:10px;padding:12px 16px;margin:10px 0;font-size:0.9rem;line-height:1.8;color:#94a3b8;">
+      <strong style="color:#c084fc;">rank</strong> = number of pivots in RREF of [v₁ | v₂ | ··· | vₖ]<br>
+      = number of <em>linearly independent</em> directions in the set
+    </div>
+    <table>
+      <tr><th>rank</th><th>Span in ℝ²</th><th>Span in ℝ³</th></tr>
+      <tr><td style="text-align:center;font-weight:700;color:#94a3b8;">0</td><td>Just {<strong>0</strong>} — origin only</td><td>Just {<strong>0</strong>} — origin only</td></tr>
+      <tr><td style="text-align:center;font-weight:700;color:#94a3b8;">1</td><td>A <em>line</em> through origin</td><td>A <em>line</em> through origin</td></tr>
+      <tr><td style="text-align:center;font-weight:700;color:#94a3b8;">2</td><td>All of <strong>ℝ²</strong> (whole plane)</td><td>A <em>plane</em> through origin</td></tr>
+      <tr><td style="text-align:center;font-weight:700;color:#94a3b8;">3</td><td class="dim">—</td><td>All of <strong>ℝ³</strong> (all space)</td></tr>
+    </table>
+    <div class="note" style="margin-top:10px;"><strong>Adding more vectors only increases the span if a vector is NOT in the current span.</strong> If v₃ is already in Span{v₁,v₂}, adding it does nothing — rank stays the same.</div>
+  </div>
+
+  <!-- ── OUTCOME 1 ── -->
+  <div class="prob-group" style="color:#a78bfa;">📐 Span Outcome Examples</div>
+
+  <div class="grid-2">
+    <div class="card" style="border-color:#7c3aed44;">
+      <div class="card-title" style="color:#a78bfa;">Outcome — Line in ℝ² (rank 1)</div>
+      <p style="color:#94a3b8;font-size:0.88rem;margin-bottom:8px;"><strong>When:</strong> One non-zero vector, OR all vectors are parallel (scalar multiples of each other).</p>
+      <div class="mat-eq" style="gap:14px;margin-bottom:8px;">
+        <div class="mat-named"><div class="mat-label">v₁</div>
+          <span class="bmat-outer"><table class="bmat"><tr><td>1</td></tr><tr><td>2</td></tr></table></span>
+        </div>
+        <div class="mat-named"><div class="mat-label">v₂</div>
+          <span class="bmat-outer"><table class="bmat"><tr><td>2</td></tr><tr><td>4</td></tr></table></span>
+        </div>
+        <span style="color:#4a5568;font-size:0.85rem;align-self:center;">v₂ = 2v₁</span>
+      </div>
+      <div class="mat-trace" style="gap:8px;">
+        <div class="mat-step">
+          <div class="mat-step-label">RREF of [v₁ | v₂]:</div>
+          <div class="mat-eq" style="padding:4px 0;">
+            <span class="bmat-outer"><table class="bmat">
+              <tr><td>1</td><td>2</td></tr>
+              <tr><td>0</td><td>0</td></tr>
+            </table></span>
+            <span class="mat-step-note">rank = 1</span>
+          </div>
+        </div>
+      </div>
+      <div class="output-label" style="margin-top:8px;">Span</div>
+      <div class="output">Span{v₁, v₂} = {t[1,2] : t ∈ ℝ}<br>A <strong>line</strong> through the origin in direction [1,2].</div>
+    </div>
+
+    <div class="card" style="border-color:#3b82f644;">
+      <div class="card-title" style="color:#60a5fa;">Outcome — All of ℝ² (rank 2)</div>
+      <p style="color:#94a3b8;font-size:0.88rem;margin-bottom:8px;"><strong>When:</strong> Two vectors in ℝ² that are NOT parallel (not scalar multiples).</p>
+      <div class="mat-eq" style="gap:14px;margin-bottom:8px;">
+        <div class="mat-named"><div class="mat-label">v₁</div>
+          <span class="bmat-outer"><table class="bmat"><tr><td>1</td></tr><tr><td>2</td></tr></table></span>
+        </div>
+        <div class="mat-named"><div class="mat-label">v₂</div>
+          <span class="bmat-outer"><table class="bmat"><tr><td>3</td></tr><tr><td>1</td></tr></table></span>
+        </div>
+        <span style="color:#4a5568;font-size:0.85rem;align-self:center;">not parallel</span>
+      </div>
+      <div class="mat-trace" style="gap:8px;">
+        <div class="mat-step">
+          <div class="mat-step-label">RREF of [v₁ | v₂]:</div>
+          <div class="mat-eq" style="padding:4px 0;">
+            <span class="bmat-outer"><table class="bmat">
+              <tr><td>1</td><td>0</td></tr>
+              <tr><td>0</td><td>1</td></tr>
+            </table></span>
+            <span class="mat-step-note">rank = 2</span>
+          </div>
+        </div>
+      </div>
+      <div class="output-label" style="margin-top:8px;">Span</div>
+      <div class="output">Span{v₁, v₂} = <strong>ℝ²</strong><br>Every vector in 2D can be reached.</div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card" style="border-color:#7c3aed44;">
+      <div class="card-title" style="color:#a78bfa;">Outcome — Line in ℝ³ (rank 1)</div>
+      <p style="color:#94a3b8;font-size:0.88rem;margin-bottom:8px;"><strong>When:</strong> One non-zero vector in ℝ³ (or all vectors are multiples of each other).</p>
+      <div class="mat-eq" style="gap:14px;margin-bottom:8px;">
+        <div class="mat-named"><div class="mat-label">v₁</div>
+          <span class="bmat-outer"><table class="bmat"><tr><td>1</td></tr><tr><td>2</td></tr><tr><td>3</td></tr></table></span>
+        </div>
+      </div>
+      <div class="mat-trace" style="gap:8px;">
+        <div class="mat-step">
+          <div class="mat-step-label">RREF of [v₁]:</div>
+          <div class="mat-eq" style="padding:4px 0;">
+            <span class="bmat-outer"><table class="bmat">
+              <tr><td>1</td></tr>
+              <tr><td>0</td></tr>
+              <tr><td>0</td></tr>
+            </table></span>
+            <span class="mat-step-note">rank = 1</span>
+          </div>
+        </div>
+      </div>
+      <div class="output-label" style="margin-top:8px;">Span</div>
+      <div class="output">Span{v₁} = {t[1,2,3] : t ∈ ℝ}<br>A <strong>line</strong> through the origin in direction [1,2,3].</div>
+    </div>
+
+    <div class="card" style="border-color:#3b82f644;">
+      <div class="card-title" style="color:#60a5fa;">Outcome — Plane in ℝ³ (rank 2)</div>
+      <p style="color:#94a3b8;font-size:0.88rem;margin-bottom:8px;"><strong>When:</strong> Two linearly independent vectors in ℝ³ (not parallel to each other).</p>
+      <div class="mat-eq" style="gap:14px;margin-bottom:8px;">
+        <div class="mat-named"><div class="mat-label">v₁</div>
+          <span class="bmat-outer"><table class="bmat"><tr><td>1</td></tr><tr><td>0</td></tr><tr><td>1</td></tr></table></span>
+        </div>
+        <div class="mat-named"><div class="mat-label">v₂</div>
+          <span class="bmat-outer"><table class="bmat"><tr><td>0</td></tr><tr><td>1</td></tr><tr><td>1</td></tr></table></span>
+        </div>
+      </div>
+      <div class="mat-trace" style="gap:8px;">
+        <div class="mat-step">
+          <div class="mat-step-label">RREF of [v₁ | v₂]:</div>
+          <div class="mat-eq" style="padding:4px 0;">
+            <span class="bmat-outer"><table class="bmat">
+              <tr><td>1</td><td>0</td></tr>
+              <tr><td>0</td><td>1</td></tr>
+              <tr><td>0</td><td>0</td></tr>
+            </table></span>
+            <span class="mat-step-note">rank = 2</span>
+          </div>
+        </div>
+      </div>
+      <div class="output-label" style="margin-top:8px;">Span</div>
+      <div class="output">Span{v₁,v₂} = {s[1,0,1] + t[0,1,1] : s,t ∈ ℝ}<br>A <strong>plane</strong> through origin. Normal: n = v₁ × v₂ = [−1,−1,1]<br>Plane equation: −x − y + z = 0 (i.e. z = x + y)</div>
+    </div>
+  </div>
+
+  <div class="card" style="border-color:#22c55e44;">
+    <div class="card-title" style="color:#86efac;">Outcome — All of ℝ³ (rank 3)</div>
+    <p style="color:#94a3b8;font-size:0.88rem;margin-bottom:8px;"><strong>When:</strong> Three linearly independent vectors in ℝ³ (no vector is in the span of the other two).</p>
+    <div class="mat-eq" style="gap:14px;margin-bottom:8px;">
+      <div class="mat-named"><div class="mat-label">v₁</div>
+        <span class="bmat-outer"><table class="bmat"><tr><td>1</td></tr><tr><td>0</td></tr><tr><td>1</td></tr></table></span>
+      </div>
+      <div class="mat-named"><div class="mat-label">v₂</div>
+        <span class="bmat-outer"><table class="bmat"><tr><td>0</td></tr><tr><td>1</td></tr><tr><td>1</td></tr></table></span>
+      </div>
+      <div class="mat-named"><div class="mat-label">v₃</div>
+        <span class="bmat-outer"><table class="bmat"><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>0</td></tr></table></span>
+      </div>
+    </div>
+    <div class="mat-trace" style="gap:8px;">
+      <div class="mat-step">
+        <div class="mat-step-label">RREF of [v₁ | v₂ | v₃]:</div>
+        <div class="mat-eq" style="padding:4px 0;">
+          <span class="bmat-outer"><table class="bmat">
+            <tr><td>1</td><td>0</td><td>0</td></tr>
+            <tr><td>0</td><td>1</td><td>0</td></tr>
+            <tr><td>0</td><td>0</td><td>1</td></tr>
+          </table></span>
+          <span class="mat-step-note">rank = 3 = identity ✓</span>
+        </div>
+      </div>
+    </div>
+    <div class="output-label" style="margin-top:8px;">Span</div>
+    <div class="output">Span{v₁, v₂, v₃} = <strong>ℝ³</strong><br>Every vector in 3D space can be written as a combination of these three. Any b will be consistent.</div>
+  </div>
+
+  <!-- ── TRICKY CASES ── -->
+  <div class="card" style="background:#1a1230;border-color:#7c3aed55;">
+    <div class="card-title" style="color:#a78bfa;">⚠ Tricky Cases — When Extra Vectors Don't Help</div>
+    <p style="color:#94a3b8;font-size:0.88rem;margin-bottom:12px;">Adding a third vector that is already in the span of the first two does NOT increase the span. The rank stays the same.</p>
+    <div class="grid-2" style="gap:14px;">
+      <div>
+        <p style="color:#7c3aed;font-size:0.82rem;font-weight:600;margin-bottom:6px;">3 vectors in ℝ³ but rank = 2 (plane, not ℝ³)</p>
+        <div class="mat-eq" style="gap:10px;margin-bottom:6px;">
+          <div class="mat-named"><div class="mat-label">v₁</div>
+            <span class="bmat-outer"><table class="bmat"><tr><td>1</td></tr><tr><td>0</td></tr><tr><td>1</td></tr></table></span>
+          </div>
+          <div class="mat-named"><div class="mat-label">v₂</div>
+            <span class="bmat-outer"><table class="bmat"><tr><td>0</td></tr><tr><td>1</td></tr><tr><td>1</td></tr></table></span>
+          </div>
+          <div class="mat-named"><div class="mat-label">v₃</div>
+            <span class="bmat-outer"><table class="bmat"><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>2</td></tr></table></span>
+          </div>
+        </div>
+        <p style="color:#f87171;font-size:0.83rem;">v₃ = v₁ + v₂ — already in span! RREF has a zero row → rank = 2 → still just a plane.</p>
+      </div>
+      <div>
+        <p style="color:#7c3aed;font-size:0.82rem;font-weight:600;margin-bottom:6px;">4 vectors in ℝ² — still only ℝ²</p>
+        <p style="color:#94a3b8;font-size:0.85rem;line-height:1.7;">You can never span more than ℝⁿ with vectors from ℝⁿ. Adding a 3rd, 4th, … vector to a ℝ² set still can't reach anything outside ℝ². The maximum rank in ℝⁿ is n.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── DOES IT SPAN Rn? ── -->
+  <div class="card">
+    <div class="card-title">Does {v₁, …, vₖ} Span ℝⁿ? — The Test</div>
+    <p>A set spans <strong>all</strong> of ℝⁿ iff you can reach <em>every</em> vector in ℝⁿ as a linear combination. Test:</p>
+    <div class="step"><div class="step-num">1</div><div class="step-body">Form A = [v₁ | v₂ | ··· | vₖ] — this is an n × k matrix.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-body">Row reduce A (ignore any augmented column — you're just checking rank).</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-body"><strong>Span = ℝⁿ iff rank = n</strong> (every row has a pivot, equivalently: no zero rows in RREF of A).</div></div>
+    <table style="margin-top:10px;">
+      <tr><th>RREF of A has…</th><th>Conclusion</th></tr>
+      <tr><td>n pivot rows (no zero rows)</td><td><span class="label label-green">Spans ℝⁿ ✓</span></td></tr>
+      <tr><td>At least one zero row</td><td><span class="label label-red">Does NOT span ℝⁿ</span> — some b has no solution</td></tr>
+    </table>
+    <div class="note" style="margin-top:10px;"><strong>Minimum requirement:</strong> You need at least n vectors to span ℝⁿ (k ≥ n). But having k ≥ n is not sufficient — they must also be linearly independent.</div>
+  </div>
+
+  <!-- ── WORKED EXAMPLE DOES NOT SPAN ── -->
+  <div class="card">
+    <div class="card-title">Worked Example — Does NOT Span ℝ³</div>
+    <div class="prob-q"><strong>Do v₁ = [1,0,2], v₂ = [0,1,1], v₃ = [2,1,5] span ℝ³?</strong></div>
+    <div class="mat-trace">
+      <div class="mat-step">
+        <div class="mat-step-label">Form A = [v₁ | v₂ | v₃] and row reduce:</div>
+        <div class="mat-eq" style="padding:4px 0;">
+          <span class="bmat-outer"><table class="bmat">
+            <tr><td>1</td><td>0</td><td>2</td></tr>
+            <tr><td>0</td><td>1</td><td>1</td></tr>
+            <tr><td>2</td><td>1</td><td>5</td></tr>
+          </table></span>
+        </div>
+      </div>
+      <div class="mat-step">
+        <div class="mat-step-label">R₃ → R₃ − 2R₁, then R₃ → R₃ − R₂:</div>
+        <div class="mat-eq" style="padding:4px 0;">
+          <span class="bmat-outer"><table class="bmat">
+            <tr><td>1</td><td>0</td><td>2</td></tr>
+            <tr><td>0</td><td>1</td><td>1</td></tr>
+            <tr><td>0</td><td>0</td><td class="bad">0</td></tr>
+          </table></span>
+          <span class="mat-step-bad">zero row → rank = 2, NOT 3</span>
+        </div>
+      </div>
+    </div>
+    <div class="output-label">Conclusion</div>
+    <div class="output">v₃ = 2v₁ + v₂ (dependent!) — these three vectors span only a <strong>plane</strong> in ℝ³, NOT all of ℝ³.<br>
+    Any b = [b₁, b₂, b₃] with b₃ ≠ 2b₁ + b₂ is NOT in their span.</div>
+  </div>
+
+  <!-- ── QUESTION TYPES SUMMARY ── -->
+  <div class="card" style="background:#1a1230;border-color:#7c3aed55;">
+    <div class="card-title" style="color:#a78bfa;">Exam Question Types — Span</div>
+    <table>
+      <tr><th>Question asks…</th><th>Method</th><th>Answer format</th></tr>
+      <tr>
+        <td><em>"Is <strong>b</strong> in Span{v₁,…}?"</em></td>
+        <td>Form [v₁|…|b], row reduce, check consistency</td>
+        <td>Yes/No + coefficients c₁,c₂,…</td>
+      </tr>
+      <tr>
+        <td><em>"Find the span of {v₁,…}"</em></td>
+        <td>Form [v₁|…], row reduce, count pivots (rank)</td>
+        <td>Line / plane / ℝ² / ℝ³ + parametric description</td>
+      </tr>
+      <tr>
+        <td><em>"Does {v₁,…} span ℝⁿ?"</em></td>
+        <td>Row reduce [v₁|…], check if rank = n (no zero rows)</td>
+        <td>Yes/No</td>
+      </tr>
+      <tr>
+        <td><em>"Does adding v₃ to {v₁,v₂} increase the span?"</em></td>
+        <td>Test if v₃ is IN Span{v₁,v₂} — if yes: no change; if no: span grows</td>
+        <td>Yes/No + new rank</td>
+      </tr>
+      <tr>
+        <td><em>"Express b as a linear combination"</em></td>
+        <td>Form [v₁|…|b], row reduce to RREF, read off c₁,c₂,…</td>
+        <td>b = c₁v₁ + c₂v₂ + …</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Test: Is b in Span{v₁, v₂, …, vₖ}?</div>
+    <div class="step"><div class="step-num">1</div><div class="step-body"><strong>Build the augmented matrix</strong> [v₁ | v₂ | … | vₖ | b] — place each vector as a column, b as the rightmost column.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-body"><strong>Row reduce</strong> to RREF.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-body"><strong>Check for consistency:</strong> If no contradiction row → <strong>b IS in the span</strong>. If contradiction row → <strong>b is NOT in the span</strong>.</div></div>
+    <div class="tip"><strong>This is just solving a linear system!</strong> c₁v₁ + … + cₖvₖ = b is exactly the system you're solving — you just want to know if it's consistent, not what c₁,…,cₖ are.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Worked Example — Span Test</div>
+    <div class="prob-q"><strong>Is b = [3, 1, 4]ᵀ in Span{v₁=[1,0,1]ᵀ, v₂=[1,1,2]ᵀ}?</strong></div>
+<div class="mat-trace">
+  <div class="mat-step">
+    <div class="mat-step-label">Set up [v₁ | v₂ | b]:</div>
+    <div class="mat-eq" style="padding:4px 0;">
+      <span class="bmat-outer"><table class="bmat">
+        <tr><td>1</td><td>1</td><td class="aug">3</td></tr>
+        <tr><td>0</td><td>1</td><td class="aug">1</td></tr>
+        <tr><td>1</td><td>2</td><td class="aug">4</td></tr>
+      </table></span>
+    </div>
+  </div>
+  <div class="mat-step">
+    <div class="mat-step-label">R₃ → R₃ − R₁</div>
+    <div class="mat-eq" style="padding:4px 0;">
+      <span class="bmat-outer"><table class="bmat">
+        <tr><td>1</td><td>1</td><td class="aug">3</td></tr>
+        <tr><td>0</td><td>1</td><td class="aug">1</td></tr>
+        <tr><td>0</td><td>1</td><td class="aug">1</td></tr>
+      </table></span>
+    </div>
+  </div>
+  <div class="mat-step">
+    <div class="mat-step-label">R₃ → R₃ − R₂</div>
+    <div class="mat-eq" style="padding:4px 0;">
+      <span class="bmat-outer"><table class="bmat">
+        <tr><td>1</td><td>1</td><td class="aug">3</td></tr>
+        <tr><td>0</td><td>1</td><td class="aug">1</td></tr>
+        <tr><td>0</td><td>0</td><td class="aug">0</td></tr>
+      </table></span>
+      <span class="mat-step-note">← zero row, no contradiction</span>
+    </div>
+  </div>
+  <div class="mat-step">
+    <div class="mat-step-label">R₁ → R₁ − R₂</div>
+    <div class="mat-eq" style="padding:4px 0;">
+      <span class="bmat-outer"><table class="bmat">
+        <tr><td>1</td><td>0</td><td class="aug">2</td></tr>
+        <tr><td>0</td><td>1</td><td class="aug">1</td></tr>
+        <tr><td>0</td><td>0</td><td class="aug">0</td></tr>
+      </table></span>
+      <span class="mat-step-note">RREF ✓ &nbsp; Consistent! c₁ = 2, c₂ = 1</span>
+    </div>
+  </div>
+</div>
+<p style="color:#86efac;font-size:0.88rem;margin-top:8px;">b = 2v₁ + v₂ = 2[1,0,1] + [1,1,2] = [3,1,4] ✓</p>
+    <div class="output-label">Answer</div>
+    <div class="output">Yes — b IS in Span{v₁, v₂}.   b = 2v₁ + 1·v₂</div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SECTION 8: LINEAR INDEPENDENCE -->
+<!-- ════════════════════════════════════════════ -->
+<section id="independence">
+  <div class="section-header">
+    <div class="section-icon">⛓️</div>
+    <div>
+      <h2>Linear Independence</h2>
+      <p>Definition, test, and quick rules — §3.5</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Definition</div>
+    <p>A set of vectors {v₁, v₂, …, vₖ} is <strong>linearly independent</strong> if the only solution to:</p>
+<div style="background:#0d0d1a;border:1px solid #2d2d50;border-radius:10px;padding:14px 18px;margin:10px 0;font-family:'Cambria Math',serif;font-size:0.95rem;line-height:2;">
+  <div style="color:#94a3b8;">c₁<strong style="color:#e2e8f0;">v₁</strong> + c₂<strong style="color:#e2e8f0;">v₂</strong> + ··· + cₖ<strong style="color:#e2e8f0;">vₖ</strong> = <strong style="color:#c084fc;">0</strong> &nbsp;&nbsp; (the zero vector)</div>
+  <div style="color:#86efac;">Trivial solution only: c₁ = c₂ = ··· = cₖ = 0 &nbsp;→&nbsp; <strong>LINEARLY INDEPENDENT</strong></div>
+  <div style="color:#f87171;">Any non-trivial solution (some cᵢ ≠ 0) &nbsp;→&nbsp; <strong>LINEARLY DEPENDENT</strong></div>
+</div>
+    <div class="note"><strong>Linearly dependent means:</strong> at least one vector can be expressed as a linear combination of the others — it's "redundant".</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Test: Are {v₁, v₂, …, vₖ} Linearly Independent?</div>
+    <div class="step"><div class="step-num">1</div><div class="step-body"><strong>Form the matrix A</strong> = [v₁ | v₂ | … | vₖ] with the vectors as columns.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-body"><strong>Row reduce A</strong> (no augmented column needed — the right side is all zeros).</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-body">
+      <strong>Check:</strong><br>
+      • <strong>No free variables</strong> (every column has a pivot) → <span class="label label-green">Linearly INDEPENDENT</span><br>
+      • <strong>At least one free variable</strong> → <span class="label label-red">Linearly DEPENDENT</span>
+    </div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Quick Rules — No Calculation Needed</div>
+    <table>
+      <tr><th>Situation</th><th>Conclusion</th><th>Why</th></tr>
+      <tr><td>Set contains the zero vector</td><td class="dim">Always DEPENDENT</td><td>c₁·<strong>0</strong> + 0·v₂ + … = <strong>0</strong> gives c₁ can be anything → non-trivial solution exists</td></tr>
+      <tr><td>Two vectors: one is a scalar multiple of the other</td><td class="dim">DEPENDENT</td><td>v₂ = kv₁ → v₁ − kv₂ = <strong>0</strong> is non-trivial</td></tr>
+      <tr><td>More vectors than dimensions</td><td class="dim">Always DEPENDENT</td><td>k vectors in ℝⁿ with k &gt; n → always dependent (more unknowns than equations)</td></tr>
+      <tr><td>Single non-zero vector</td><td class="dim">Always INDEPENDENT</td><td>cv = 0 and v ≠ 0 forces c = 0</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Worked Example — Independent Set</div>
+    <div class="prob-q"><strong>Are {v₁=[1,1,2], v₂=[2,3,4], v₃=[4,1,2]} linearly independent?</strong></div>
+<div class="mat-trace">
+  <div class="mat-step">
+    <div class="mat-step-label">Form A = [v₁ | v₂ | v₃] and row reduce:</div>
+    <div class="mat-eq" style="padding:4px 0;">
+      <span class="bmat-outer"><table class="bmat">
+        <tr><td>1</td><td>2</td><td>4</td></tr>
+        <tr><td>1</td><td>3</td><td>1</td></tr>
+        <tr><td>2</td><td>4</td><td>2</td></tr>
+      </table></span>
+    </div>
+  </div>
+  <div class="mat-step">
+    <div class="mat-step-label">R₂ → R₂ − R₁ &nbsp;&nbsp; R₃ → R₃ − 2R₁</div>
+    <div class="mat-eq" style="padding:4px 0;">
+      <span class="bmat-outer"><table class="bmat">
+        <tr><td>1</td><td>2</td><td>4</td></tr>
+        <tr><td>0</td><td>1</td><td>−3</td></tr>
+        <tr><td>0</td><td>0</td><td>−6</td></tr>
+      </table></span>
+    </div>
+  </div>
+  <div class="mat-step">
+    <div class="mat-step-label">R₃ → (−1/6)R₃, then back-substitute to RREF:</div>
+    <div class="mat-eq" style="padding:4px 0;">
+      <span class="bmat-outer"><table class="bmat">
+        <tr><td>1</td><td>0</td><td>0</td></tr>
+        <tr><td>0</td><td>1</td><td>0</td></tr>
+        <tr><td>0</td><td>0</td><td>1</td></tr>
+      </table></span>
+      <span class="mat-step-note">← every column has a pivot → NO free variables</span>
+    </div>
+  </div>
+</div>
+    <div class="output-label">Conclusion</div>
+    <div class="output">LINEARLY INDEPENDENT — only solution is c₁=c₂=c₃=0</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Worked Example — Dependent Set (More Vectors than Dimensions)</div>
+    <div class="prob-q"><strong>Are {v₁=[1,0], v₂=[0,1], v₃=[1,1]} linearly independent?</strong></div>
+<p style="color:#f87171;font-size:0.88rem;margin-bottom:8px;font-weight:600;">3 vectors in ℝ² → immediately DEPENDENT (k &gt; n quick rule)</p>
+<p style="color:#94a3b8;font-size:0.88rem;margin-bottom:8px;">Verify: Form A = [v₁ | v₂ | v₃] — already in RREF:</p>
+<div class="mat-eq" style="padding:4px 0;">
+  <span class="bmat-outer"><table class="bmat">
+    <tr><td>1</td><td>0</td><td class="bad">1</td></tr>
+    <tr><td>0</td><td>1</td><td class="bad">1</td></tr>
+  </table></span>
+  <span class="mat-step-bad">← col 3 has no pivot → x₃ is FREE</span>
+</div>
+<p style="color:#94a3b8;font-size:0.88rem;margin-top:8px;">x₁ = −x₃, &nbsp; x₂ = −x₃, &nbsp; x₃ = t (free)</p>
+<p style="color:#86efac;font-size:0.88rem;margin-top:4px;">Non-trivial solution: c₁ = −1, c₂ = −1, c₃ = 1<br>
+Check: (−1)[1,0] + (−1)[0,1] + 1[1,1] = [0,0] ✓</p>
+    <div class="output-label">Conclusion</div>
+    <div class="output">LINEARLY DEPENDENT.   v₃ = v₁ + v₂</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Dependence Relationship — How to Find It</div>
+    <p>If the set is dependent, the free variable solution tells you how to express one vector in terms of the others:</p>
+<div style="background:#0d0d1a;border:1px solid #2d2d50;border-radius:10px;padding:12px 16px;font-family:'Cambria Math',serif;font-size:0.92rem;line-height:2;color:#94a3b8;">
+  From c₁ = −1, c₂ = −1, c₃ = 1: &nbsp; −1·v₁ + (−1)·v₂ + 1·v₃ = <strong style="color:#c084fc;">0</strong><br>
+  → &nbsp; <strong style="color:#86efac;">v₃ = v₁ + v₂</strong> &nbsp; ← v₃ is redundant
+</div>
+    <div class="note"><strong>Any vector with a free variable in its column</strong> can be expressed as a combination of the other vectors.</div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SECTION 9: PRACTICE PROBLEMS -->
+<!-- ════════════════════════════════════════════ -->
+<section id="problems">
+  <div class="section-header">
+    <div class="section-icon">🧪</div>
+    <div>
+      <h2>Practice Problems &amp; Solutions</h2>
+      <p>Worked examples with step-by-step approach guides for each type</p>
+    </div>
+  </div>
+
+  <!-- ── MATRIX OPERATIONS ── -->
+  <div class="prob-group">➕ Matrix Operations</div>
+
+  <div class="card">
+    <div class="card-title">Problem 1 — Compute 2A + B and A·B</div>
+    <div class="prob-q"><strong>Given:</strong> A = [[1,2],[3,4]],  B = [[0,−1],[2,5]].  Compute (a) 2A + B,  (b) A·B,  (c) B·A.  Are AB and BA equal?</div>
+<p style="color:#7c3aed;font-size:0.85rem;font-weight:600;margin-bottom:6px;">(a) 2A + B:</p>
+<div class="mat-eq">
+  <span>2A =</span>
+  <span class="bmat-outer"><table class="bmat">
+    <tr><td>2</td><td>4</td></tr>
+    <tr><td>6</td><td>8</td></tr>
+  </table></span>
+  <span>&ensp; 2A + B =</span>
+  <span class="bmat-outer"><table class="bmat">
+    <tr><td>2</td><td>3</td></tr>
+    <tr><td>8</td><td>13</td></tr>
+  </table></span>
+</div>
+<p style="color:#7c3aed;font-size:0.85rem;font-weight:600;margin:10px 0 6px;">(b) A·B:</p>
+<p style="color:#94a3b8;font-size:0.87rem;margin-bottom:6px;">
+  (1·0+2·2 &ensp; 1·(−1)+2·5) = (4 &ensp; 9)<br>
+  (3·0+4·2 &ensp; 3·(−1)+4·5) = (8 &ensp; 17)
+</p>
+<div class="mat-eq">
+  <span>AB =</span>
+  <span class="bmat-outer"><table class="bmat">
+    <tr><td>4</td><td>9</td></tr>
+    <tr><td>8</td><td>17</td></tr>
+  </table></span>
+</div>
+<p style="color:#7c3aed;font-size:0.85rem;font-weight:600;margin:10px 0 6px;">(c) B·A:</p>
+<p style="color:#94a3b8;font-size:0.87rem;margin-bottom:6px;">
+  (0·1+(−1)·3 &ensp; 0·2+(−1)·4) = (−3 &ensp; −4)<br>
+  (2·1+5·3 &ensp;&ensp; 2·2+5·4) = (17 &ensp; 24)
+</p>
+<div class="mat-eq">
+  <span>BA =</span>
+  <span class="bmat-outer"><table class="bmat">
+    <tr><td>−3</td><td>−4</td></tr>
+    <tr><td>17</td><td>24</td></tr>
+  </table></span>
+</div>
+    <div class="output-label">Conclusion</div>
+    <div class="output">AB ≠ BA  (matrix multiplication is NOT commutative in general)</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Problem 2 — Size and Existence Check</div>
+    <div class="prob-q"><strong>A is 3×4, B is 4×2, C is 3×2. Which of AB, BA, AC, BC, AB+C are defined? Give sizes of those that are.</strong></div>
+<pre><span class="str">AB:</span>  (3×4)(4×2) → inner dims match (4=4) → defined, result is 3×2
+<span class="op">BA:</span>  (4×2)(3×4) → inner: 2 ≠ 3 → UNDEFINED
+<span class="op">AC:</span>  (3×4)(3×2) → inner: 4 ≠ 3 → UNDEFINED
+<span class="op">BC:</span>  (4×2)(3×2) → inner: 2 ≠ 3 → UNDEFINED
+<span class="str">AB+C:</span>  AB is 3×2,  C is 3×2 → same size → defined, result is 3×2</pre>
+  </div>
+
+  <!-- ── LINES & PLANES ── -->
+  <div class="prob-group">📏 Lines &amp; Planes</div>
+
+  <div class="card">
+    <div class="card-title">Problem 3 — Line Through Two Points in ℝ³</div>
+    <div class="prob-q"><strong>Find parametric and vector forms of the line through P = (1, 2, 3) and Q = (4, 0, −1).</strong></div>
+<pre><span class="fn">Approach:</span>  d = Q − P,  then r = P + td.
+
+d = (4−1,  0−2,  −1−3) = (3, −2, −4)
+
+<span class="fn">Vector form:</span>
+<span class="str">r = (1, 2, 3) + t(3, −2, −4)</span>
+
+<span class="fn">Parametric form:</span>
+<span class="str">x = 1 + 3t
+y = 2 − 2t
+z = 3 − 4t</span></pre>
+    <div class="tip"><strong>Verify:</strong> At t=0 get P=(1,2,3) ✓.  At t=1 get (4,0,−1)=Q ✓.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Problem 4 — Plane Through 3 Points</div>
+    <div class="prob-q"><strong>Find the general equation of the plane through A = (1,0,0), B = (0,2,0), C = (0,0,3).</strong></div>
+<pre><span class="fn">Approach:</span>  u = B−A,  v = C−A,  find n⊥u and n⊥v.
+
+u = (0−1, 2−0, 0−0) = (−1, 2, 0)
+v = (0−1, 0−0, 3−0) = (−1, 0, 3)
+
+<span class="fn">Find n=(a,b,c) s.t. n·u=0 and n·v=0:</span>
+n·u: −a + 2b     = 0  →  a = 2b
+n·v: −a     + 3c = 0  →  a = 3c
+
+Set b=3:  a=6, c=2.   n = (6, 3, 2)
+
+<span class="fn">General form</span> using point A=(1,0,0):
+6(x−1) + 3(y−0) + 2(z−0) = 0
+<span class="str">6x + 3y + 2z = 6</span></pre>
+    <div class="tip"><strong>Check:</strong> A(1,0,0): 6+0+0=6 ✓  B(0,2,0): 0+6+0=6 ✓  C(0,0,3): 0+0+6=6 ✓</div>
+  </div>
+
+  <!-- ── RREF SYSTEMS ── -->
+  <div class="prob-group">🔢 RREF &amp; Systems</div>
+
+  <div class="card">
+    <div class="card-title">Problem 5 — Solve by Gauss-Jordan (Unique Solution)</div>
+    <div class="prob-q"><strong>Solve:</strong> 2x + y = 5 &nbsp; | &nbsp; 5x + 3y = 13</div>
+<div class="mat-trace">
+  <div class="mat-step">
+    <div class="mat-step-label">Augmented matrix:</div>
+    <div class="mat-eq" style="padding:4px 0;">
+      <span class="bmat-outer"><table class="bmat">
+        <tr><td>2</td><td>1</td><td class="aug">5</td></tr>
+        <tr><td>5</td><td>3</td><td class="aug">13</td></tr>
+      </table></span>
+    </div>
+  </div>
+  <div class="mat-step">
+    <div class="mat-step-label">R₁ → ½R₁</div>
+    <div class="mat-eq" style="padding:4px 0;">
+      <span class="bmat-outer"><table class="bmat">
+        <tr><td>1</td><td>½</td><td class="aug">5/2</td></tr>
+        <tr><td>5</td><td>3</td><td class="aug">13</td></tr>
+      </table></span>
+    </div>
+  </div>
+  <div class="mat-step">
+    <div class="mat-step-label">R₂ → R₂ − 5R₁</div>
+    <div class="mat-eq" style="padding:4px 0;">
+      <span class="bmat-outer"><table class="bmat">
+        <tr><td>1</td><td>½</td><td class="aug">5/2</td></tr>
+        <tr><td>0</td><td>½</td><td class="aug">3/2</td></tr>
+      </table></span>
+    </div>
+  </div>
+  <div class="mat-step">
+    <div class="mat-step-label">R₂ → 2R₂</div>
+    <div class="mat-eq" style="padding:4px 0;">
+      <span class="bmat-outer"><table class="bmat">
+        <tr><td>1</td><td>½</td><td class="aug">5/2</td></tr>
+        <tr><td>0</td><td>1</td><td class="aug">3</td></tr>
+      </table></span>
+    </div>
+  </div>
+  <div class="mat-step">
+    <div class="mat-step-label">R₁ → R₁ − ½R₂</div>
+    <div class="mat-eq" style="padding:4px 0;">
+      <span class="bmat-outer"><table class="bmat">
+        <tr><td>1</td><td>0</td><td class="aug">1</td></tr>
+        <tr><td>0</td><td>1</td><td class="aug">3</td></tr>
+      </table></span>
+      <span class="mat-step-note">RREF ✓</span>
+    </div>
+  </div>
+</div>
+    <div class="output-label">Unique solution</div>
+    <div class="output">x = 1,  y = 3</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Problem 6 — Solve by Gauss-Jordan (Infinitely Many)</div>
+    <div class="prob-q"><strong>Solve:</strong> x₁ − x₂ + 2x₃ = 4 &nbsp; | &nbsp; 2x₁ − 2x₂ + 4x₃ = 8 &nbsp; | &nbsp; x₁ + x₂ = 2</div>
+<div class="mat-trace">
+  <div class="mat-step">
+    <div class="mat-step-label">Augmented matrix:</div>
+    <div class="mat-eq" style="padding:4px 0;">
+      <span class="bmat-outer"><table class="bmat">
+        <tr><td>1</td><td>−1</td><td>2</td><td class="aug">4</td></tr>
+        <tr><td>2</td><td>−2</td><td>4</td><td class="aug">8</td></tr>
+        <tr><td>1</td><td>1</td><td>0</td><td class="aug">2</td></tr>
+      </table></span>
+    </div>
+  </div>
+  <div class="mat-step">
+    <div class="mat-step-label">R₂ → R₂ − 2R₁ &nbsp;&nbsp; R₃ → R₃ − R₁</div>
+    <div class="mat-eq" style="padding:4px 0;">
+      <span class="bmat-outer"><table class="bmat">
+        <tr><td>1</td><td>−1</td><td>2</td><td class="aug">4</td></tr>
+        <tr><td>0</td><td>0</td><td>0</td><td class="aug">0</td></tr>
+        <tr><td>0</td><td>2</td><td>−2</td><td class="aug">−2</td></tr>
+      </table></span>
+      <span class="mat-step-note">← R₂ was redundant (zero row)</span>
+    </div>
+  </div>
+  <div class="mat-step">
+    <div class="mat-step-label">R₂ ↔ R₃ &nbsp;(move zero row to bottom)</div>
+    <div class="mat-eq" style="padding:4px 0;">
+      <span class="bmat-outer"><table class="bmat">
+        <tr><td>1</td><td>−1</td><td>2</td><td class="aug">4</td></tr>
+        <tr><td>0</td><td>2</td><td>−2</td><td class="aug">−2</td></tr>
+        <tr><td>0</td><td>0</td><td>0</td><td class="aug">0</td></tr>
+      </table></span>
+    </div>
+  </div>
+  <div class="mat-step">
+    <div class="mat-step-label">R₂ → ½R₂, then R₁ → R₁ + R₂</div>
+    <div class="mat-eq" style="padding:4px 0;">
+      <span class="bmat-outer"><table class="bmat">
+        <tr><td>1</td><td>0</td><td>1</td><td class="aug">3</td></tr>
+        <tr><td>0</td><td>1</td><td>−1</td><td class="aug">−1</td></tr>
+        <tr><td>0</td><td>0</td><td>0</td><td class="aug">0</td></tr>
+      </table></span>
+      <span class="mat-step-note">RREF ✓</span>
+    </div>
+  </div>
+</div>
+<p style="color:#94a3b8;font-size:0.88rem;margin-top:8px;">Free variable: <strong style="color:#e2e8f0;">x₃ = t</strong></p>
+    <div class="output-label">General solution (∞ many)</div>
+    <div class="output">(3−t,  −1+t,  t)  for any t ∈ ℝ</div>
+  </div>
+
+  <!-- ── SPAN & INDEPENDENCE ── -->
+  <div class="prob-group">⛓️ Span &amp; Linear Independence</div>
+
+  <div class="card">
+    <div class="card-title">Problem 7 — Test for Linear Independence</div>
+    <div class="prob-q"><strong>Are {v₁=[1,2,3], v₂=[0,1,0], v₃=[2,5,6]} linearly independent?</strong></div>
+<p style="color:#94a3b8;font-size:0.88rem;margin-bottom:8px;"><strong>Approach:</strong> Form A = [v₁ | v₂ | v₃] and row reduce.</p>
+<div class="mat-trace">
+  <div class="mat-step">
+    <div class="mat-step-label">Form A = [v₁ | v₂ | v₃]:</div>
+    <div class="mat-eq" style="padding:4px 0;">
+      <span class="bmat-outer"><table class="bmat">
+        <tr><td>1</td><td>0</td><td>2</td></tr>
+        <tr><td>2</td><td>1</td><td>5</td></tr>
+        <tr><td>3</td><td>0</td><td>6</td></tr>
+      </table></span>
+    </div>
+  </div>
+  <div class="mat-step">
+    <div class="mat-step-label">R₂ → R₂ − 2R₁ &nbsp;&nbsp; R₃ → R₃ − 3R₁</div>
+    <div class="mat-eq" style="padding:4px 0;">
+      <span class="bmat-outer"><table class="bmat">
+        <tr><td>1</td><td>0</td><td class="bad">2</td></tr>
+        <tr><td>0</td><td>1</td><td class="bad">1</td></tr>
+        <tr><td>0</td><td>0</td><td class="bad">0</td></tr>
+      </table></span>
+      <span class="mat-step-bad">← col 3 has no pivot → x₃ is FREE → DEPENDENT</span>
+    </div>
+  </div>
+</div>
+    <div class="output-label">Conclusion + dependence relation</div>
+    <div class="output">LINEARLY DEPENDENT.
+From RREF: x₁ = −2t,  x₂ = −t,  x₃ = t.  Set t=1:  c₁=−2, c₂=−1, c₃=1
+Check: −2[1,2,3] + (−1)[0,1,0] + [2,5,6] = [0,0,0] ✓
+So v₃ = 2v₁ + v₂</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Problem 8 — Is Vector in Span?</div>
+    <div class="prob-q"><strong>Is b = [1,2,6]ᵀ in Span{[1,0,2]ᵀ, [0,1,0]ᵀ, [2,0,4]ᵀ}?</strong></div>
+<p style="color:#94a3b8;font-size:0.88rem;margin-bottom:8px;"><strong>Approach:</strong> Set up [v₁ | v₂ | v₃ | b] and row reduce.</p>
+<div class="mat-trace">
+  <div class="mat-step">
+    <div class="mat-step-label">Augmented [v₁ | v₂ | v₃ | b]:</div>
+    <div class="mat-eq" style="padding:4px 0;">
+      <span class="bmat-outer"><table class="bmat">
+        <tr><td>1</td><td>0</td><td>2</td><td class="aug">1</td></tr>
+        <tr><td>0</td><td>1</td><td>0</td><td class="aug">2</td></tr>
+        <tr><td>2</td><td>0</td><td>4</td><td class="aug">6</td></tr>
+      </table></span>
+    </div>
+  </div>
+  <div class="mat-step">
+    <div class="mat-step-label">R₃ → R₃ − 2R₁</div>
+    <div class="mat-eq" style="padding:4px 0;">
+      <span class="bmat-outer"><table class="bmat">
+        <tr><td>1</td><td>0</td><td>2</td><td class="aug">1</td></tr>
+        <tr><td>0</td><td>1</td><td>0</td><td class="aug">2</td></tr>
+        <tr><td>0</td><td>0</td><td>0</td><td class="aug bad">4</td></tr>
+      </table></span>
+      <span class="mat-step-bad">← 0 = 4 &nbsp; CONTRADICTION!</span>
+    </div>
+  </div>
+</div>
+    <div class="output-label">Answer</div>
+    <div class="output">b is NOT in Span{v₁, v₂, v₃} — the system is inconsistent.</div>
+  </div>
+
+  <!-- ── TRACE PROBLEMS ── -->
+  <div class="prob-group">🔍 Read the RREF — Predict the Solution</div>
+
+  <div class="card">
+    <div class="card-title">Trace 1 — Read Solution from RREF</div>
+    <div class="prob-q"><strong>The augmented matrix below is in RREF. Write the general solution.</strong></div>
+<div class="mat-eq" style="padding:6px 0;">
+  <span class="bmat-outer"><table class="bmat">
+    <tr><td>1</td><td>0</td><td class="bad">3</td><td>0</td><td class="aug">2</td></tr>
+    <tr><td>0</td><td>1</td><td class="bad">1</td><td>0</td><td class="aug">−1</td></tr>
+    <tr><td>0</td><td>0</td><td class="bad">0</td><td>1</td><td class="aug">4</td></tr>
+    <tr><td>0</td><td>0</td><td class="bad">0</td><td>0</td><td class="aug">0</td></tr>
+  </table></span>
+  <span style="color:#f87171;font-size:0.83rem;align-self:center;">← col 3 (x₃) has no pivot → FREE</span>
+</div>
+    <div class="output-label">Solution</div>
+    <div class="output">Pivot columns: 1, 2, 4  →  x₁, x₂, x₄ are leading variables
+Free column: 3  →  x₃ = t (free)
+
+x₁ = 2 − 3t
+x₂ = −1 − t
+x₃ = t          (t ∈ ℝ)
+x₄ = 4
+
+Infinitely many solutions.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Trace 2 — Is This System Consistent?</div>
+    <div class="prob-q"><strong>Which of these RREF forms are inconsistent?</strong></div>
+<div style="display:flex;gap:20px;flex-wrap:wrap;padding:8px 0;align-items:flex-start;">
+  <div>
+    <div style="color:#f87171;font-size:0.78rem;font-weight:700;margin-bottom:5px;">(A) — INCONSISTENT</div>
+    <span class="bmat-outer"><table class="bmat">
+      <tr><td>1</td><td>0</td><td>0</td><td class="aug">3</td></tr>
+      <tr><td>0</td><td>1</td><td>0</td><td class="aug">1</td></tr>
+      <tr><td>0</td><td>0</td><td>0</td><td class="aug bad">2</td></tr>
+    </table></span>
+    <div style="color:#f87171;font-size:0.78rem;margin-top:4px;">0 = 2 contradiction</div>
+  </div>
+  <div>
+    <div style="color:#fbbf24;font-size:0.78rem;font-weight:700;margin-bottom:5px;">(B) — ∞ solutions</div>
+    <span class="bmat-outer"><table class="bmat">
+      <tr><td>1</td><td class="bad">2</td><td>0</td><td class="aug">5</td></tr>
+      <tr><td>0</td><td class="bad">0</td><td>1</td><td class="aug">3</td></tr>
+      <tr><td>0</td><td class="bad">0</td><td>0</td><td class="aug">0</td></tr>
+    </table></span>
+    <div style="color:#fbbf24;font-size:0.78rem;margin-top:4px;">x₂ is free</div>
+  </div>
+  <div>
+    <div style="color:#86efac;font-size:0.78rem;font-weight:700;margin-bottom:5px;">(C) — unique (trivial)</div>
+    <span class="bmat-outer"><table class="bmat">
+      <tr><td>1</td><td>0</td><td class="aug">0</td></tr>
+      <tr><td>0</td><td>1</td><td class="aug">0</td></tr>
+      <tr><td>0</td><td>0</td><td class="aug">0</td></tr>
+    </table></span>
+    <div style="color:#86efac;font-size:0.78rem;margin-top:4px;">x₁=0, x₂=0</div>
+  </div>
+  <div>
+    <div style="color:#86efac;font-size:0.78rem;font-weight:700;margin-bottom:5px;">(D) — unique (homogeneous)</div>
+    <span class="bmat-outer"><table class="bmat">
+      <tr><td>1</td><td>0</td><td>0</td><td class="aug">0</td></tr>
+      <tr><td>0</td><td>1</td><td>0</td><td class="aug">0</td></tr>
+      <tr><td>0</td><td>0</td><td>1</td><td class="aug">0</td></tr>
+    </table></span>
+    <div style="color:#86efac;font-size:0.78rem;margin-top:4px;">x₁=x₂=x₃=0</div>
+  </div>
+</div>
+    <div class="output-label">Answers</div>
+    <div class="output">(A) INCONSISTENT — row 3: [0 0 0 | 2] means 0 = 2, impossible.
+(B) Consistent, infinitely many — x₂ is free (no pivot in col 2).
+(C) Consistent, unique — x₁=0, x₂=0. (trivial solution)
+(D) Consistent, unique — x₁=x₂=x₃=0. (trivial solution, homogeneous)</div>
+  </div>
+
+</section>
+
+</div><!-- /page -->
+
+<a class="back-top" href="#">↑ Top</a>
+
+</body>
+</html>

@@ -2,7 +2,14 @@
   "permissions": {
     "allow": [
       "Bash(grep -A3 \"null character\\\\|\\\\\\\\0\" \"c:/Users/david/OneDrive/Documents/CODE/CODE SUMMARY/Fundamentals.html\")",
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "Bash(pdftotext \"c:\\\\Users\\\\david\\\\OneDrive\\\\Documents\\\\CODE\\\\CODE SUMMARY\\\\matrix\\\\26W M251 Notes \\(Section 3.5 Spanning Sets and Linear Independence\\)-1.pdf\" -)",
+      "Bash(pdftotext \"c:\\\\Users\\\\david\\\\OneDrive\\\\Documents\\\\CODE\\\\CODE SUMMARY\\\\matrix\\\\26W Math 251 Notes \\(Section 2,3 Lines and Planes\\).pdf\" -)",
+      "Bash(pdftotext \"c:\\\\Users\\\\david\\\\OneDrive\\\\Documents\\\\CODE\\\\CODE SUMMARY\\\\matrix\\\\26W Math 251 Notes \\(Section 3.4 Solving System of Linear Equations by using Gauss-Jordan Elimination\\).pdf\" -)",
+      "Bash(pdftotext \"c:\\\\Users\\\\david\\\\OneDrive\\\\Documents\\\\CODE\\\\CODE SUMMARY\\\\matrix\\\\26W Math 251 Notes \\(Section 4.6 Matrix Operations\\)-1.pdf\" -)",
+      "Bash(pdftotext \"c:\\\\Users\\\\david\\\\OneDrive\\\\Documents\\\\CODE\\\\CODE SUMMARY\\\\matrix\\\\matrix_examples.pdf\" -)",
+      "Bash(pdftotext -l 15 \"c:\\\\Users\\\\david\\\\OneDrive\\\\Documents\\\\CODE\\\\CODE SUMMARY\\\\matrix\\\\matrix_examples.pdf\" /dev/stdout)",
+      "Bash(pdftotext -l 15 \"c:\\\\Users\\\\david\\\\OneDrive\\\\Documents\\\\CODE\\\\CODE SUMMARY\\\\matrix\\\\matrix_examples.pdf\" -)"
     ]
   }
 }

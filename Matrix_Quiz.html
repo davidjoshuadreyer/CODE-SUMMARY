@@ -1,0 +1,1610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matrix Algebra Quiz — Math 251</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #0f0f1a;
+    color: #e2e8f0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 24px 16px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #7c3aed, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  .subtitle {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+
+  #home { width: 100%; max-width: 700px; }
+
+  .quiz-cards { display: grid; gap: 16px; }
+
+  .quiz-card {
+    background: #1e1e30;
+    border: 1px solid #2d2d50;
+    border-radius: 16px;
+    padding: 24px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .quiz-card:hover {
+    border-color: #7c3aed;
+    background: #25253d;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(124, 58, 237, 0.2);
+  }
+
+  .quiz-icon { font-size: 2.5rem; flex-shrink: 0; }
+  .quiz-card h2 { font-size: 1.15rem; font-weight: 600; margin-bottom: 4px; }
+  .quiz-card p { color: #94a3b8; font-size: 0.85rem; }
+
+  .btn-all {
+    margin-top: 20px;
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: 2px dashed #7c3aed;
+    background: transparent;
+    color: #a78bfa;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn-all:hover { background: rgba(124, 58, 237, 0.15); }
+
+  .part2-section {
+    margin-top: 32px;
+    background: #1e1e30;
+    border: 1px solid #2d2d50;
+    border-radius: 16px;
+    padding: 24px;
+  }
+  .part2-section h3 { font-size: 1rem; font-weight: 700; color: #a78bfa; margin-bottom: 4px; }
+  .part2-subtitle { font-size: 0.82rem; color: #64748b; margin-bottom: 16px; }
+  .part2-card {
+    background: #16162a;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 10px;
+    border-left: 3px solid #7c3aed;
+  }
+  .part2-card:last-child { margin-bottom: 0; }
+  .part2-card h4 { font-size: 0.9rem; font-weight: 600; color: #f1f5f9; margin-bottom: 6px; }
+  .part2-card p { font-size: 0.82rem; color: #94a3b8; line-height: 1.55; }
+  .part2-card code {
+    font-family: 'Cascadia Code', 'Consolas', monospace;
+    background: #0d0d1a;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: #93c5fd;
+  }
+
+  #quiz-screen { display: none; width: 100%; max-width: 720px; }
+
+  .quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .quiz-title-bar { font-weight: 700; font-size: 1rem; color: #a78bfa; }
+  .score-badge {
+    background: #1e1e30;
+    border: 1px solid #2d2d50;
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-size: 0.85rem;
+    color: #94a3b8;
+  }
+
+  .progress-bar-wrap {
+    background: #1e1e30;
+    border-radius: 999px;
+    height: 6px;
+    width: 100%;
+    margin-bottom: 24px;
+    overflow: hidden;
+  }
+  .progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #7c3aed, #3b82f6);
+    border-radius: 999px;
+    transition: width 0.4s ease;
+  }
+
+  .question-card {
+    background: #1e1e30;
+    border: 1px solid #2d2d50;
+    border-radius: 20px;
+    padding: 28px;
+    margin-bottom: 20px;
+  }
+  .question-num {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #7c3aed;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .question-text {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #f1f5f9;
+    margin-bottom: 20px;
+  }
+  .code-block {
+    background: #0d0d1a;
+    border: 1px solid #2d2d50;
+    border-radius: 10px;
+    padding: 16px;
+    font-family: 'Cascadia Code', 'Consolas', monospace;
+    font-size: 0.85rem;
+    line-height: 1.7;
+    color: #93c5fd;
+    white-space: pre;
+    overflow-x: auto;
+    margin-bottom: 16px;
+  }
+
+  .options { display: flex; flex-direction: column; gap: 10px; }
+  .option {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 18px;
+    border-radius: 12px;
+    border: 1.5px solid #2d2d50;
+    background: #16162a;
+    cursor: pointer;
+    transition: all 0.15s;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-align: left;
+  }
+  .option:hover:not(.disabled) { border-color: #7c3aed; background: #1e1e38; }
+  .option.correct { border-color: #22c55e; background: #052e16; color: #86efac; }
+  .option.wrong { border-color: #ef4444; background: #2d0a0a; color: #fca5a5; }
+  .option.disabled { cursor: not-allowed; }
+
+  .option-letter {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #2d2d50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    transition: background 0.15s;
+  }
+  .option.correct .option-letter { background: #22c55e; color: #fff; }
+  .option.wrong .option-letter { background: #ef4444; color: #fff; }
+  .option-code { font-family: 'Cascadia Code', 'Consolas', monospace; font-size: 0.82rem; }
+
+  .fill-area { display: flex; flex-direction: column; gap: 12px; margin-top: 8px; }
+  .fill-input {
+    width: 100%;
+    padding: 14px 18px;
+    border-radius: 12px;
+    border: 1.5px solid #2d2d50;
+    background: #16162a;
+    color: #f1f5f9;
+    font-size: 1rem;
+    font-family: 'Cascadia Code', 'Consolas', monospace;
+    outline: none;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .fill-input:focus { border-color: #7c3aed; }
+  .fill-input.correct-fill { border-color: #22c55e; background: #052e16; color: #86efac; }
+  .fill-input.wrong-fill { border-color: #ef4444; background: #2d0a0a; color: #fca5a5; }
+  .fill-input:disabled { cursor: not-allowed; }
+
+  .feedback {
+    margin-top: 16px;
+    padding: 14px 18px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    display: none;
+  }
+  .feedback.correct-fb { background: #052e16; border: 1px solid #22c55e; color: #86efac; display: block; }
+  .feedback.wrong-fb { background: #2d0a0a; border: 1px solid #ef4444; color: #fca5a5; display: block; }
+
+  .nav-buttons { display: flex; gap: 12px; justify-content: flex-end; }
+  .btn { padding: 12px 28px; border-radius: 10px; border: none; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: all 0.15s; }
+  .btn-primary { background: linear-gradient(135deg, #7c3aed, #3b82f6); color: #fff; }
+  .btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+  .btn-primary:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
+  .btn-secondary { background: #1e1e30; border: 1px solid #2d2d50; color: #94a3b8; }
+  .btn-secondary:hover { background: #25253d; color: #e2e8f0; }
+
+  #results-screen { display: none; width: 100%; max-width: 700px; text-align: center; }
+  .results-card { background: #1e1e30; border: 1px solid #2d2d50; border-radius: 20px; padding: 40px 32px; margin-bottom: 20px; }
+  .big-score {
+    font-size: 4rem; font-weight: 800;
+    background: linear-gradient(135deg, #7c3aed, #3b82f6);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    line-height: 1; margin-bottom: 8px;
+  }
+  .score-label { color: #94a3b8; font-size: 1rem; margin-bottom: 24px; }
+  .grade-bar-wrap { background: #0f0f1a; border-radius: 999px; height: 12px; margin-bottom: 32px; overflow: hidden; }
+  .grade-bar-fill { height: 100%; background: linear-gradient(90deg, #7c3aed, #3b82f6); border-radius: 999px; transition: width 1s ease; }
+  .results-breakdown { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 28px; }
+  .breakdown-item { background: #16162a; border-radius: 12px; padding: 16px 10px; font-size: 0.85rem; color: #94a3b8; }
+  .breakdown-item strong { display: block; font-size: 1.5rem; font-weight: 700; color: #e2e8f0; margin-bottom: 4px; }
+  .results-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+  .helper-btns { display: flex; gap: 8px; margin-top: 14px; }
+  .btn-helper {
+    padding: 8px 16px; border-radius: 8px; border: 1.5px solid #2d2d50;
+    background: #16162a; color: #94a3b8; font-size: 0.82rem; font-weight: 600;
+    cursor: pointer; transition: all 0.15s;
+  }
+  .btn-helper:hover { border-color: #7c3aed; color: #a78bfa; background: #1e1e38; }
+  .btn-helper:disabled { opacity: 0.3; cursor: not-allowed; }
+
+  .hint-box {
+    margin-top: 12px; padding: 12px 16px; border-radius: 10px;
+    background: #1a1a0a; border: 1px solid #854d0e;
+    color: #fde68a; font-size: 0.88rem; line-height: 1.5; display: none;
+  }
+
+  .review-list { text-align: left; margin-top: 20px; }
+  .review-item { background: #1e1e30; border: 1px solid #2d2d50; border-radius: 14px; padding: 20px; margin-bottom: 12px; }
+  .review-item.was-correct { border-left: 4px solid #22c55e; }
+  .review-item.was-wrong { border-left: 4px solid #ef4444; }
+  .review-q { font-size: 0.9rem; color: #94a3b8; margin-bottom: 8px; }
+  .review-q strong { color: #f1f5f9; }
+  .review-answer { font-size: 0.88rem; }
+  .review-answer .correct-ans { color: #86efac; }
+  .review-answer .your-ans { color: #fca5a5; }
+
+  #back-btn {
+    position: fixed; top: 16px; left: 16px;
+    background: #1e1e30; border: 1px solid #2d2d50; border-radius: 10px;
+    padding: 8px 14px; color: #94a3b8; cursor: pointer; font-size: 0.85rem;
+    transition: all 0.15s; display: none;
+  }
+  #back-btn:hover { color: #e2e8f0; background: #25253d; }
+
+  /* ── TEXTBOOK MATRIX DISPLAY ── */
+  .bmat-outer {
+    display: inline-flex;
+    align-items: stretch;
+    vertical-align: middle;
+    margin: 3px 2px;
+  }
+  .bmat-outer::before,
+  .bmat-outer::after {
+    content: '';
+    width: 7px;
+    border: 2px solid #94a3b8;
+    flex-shrink: 0;
+  }
+  .bmat-outer::before { border-right: none; border-radius: 3px 0 0 3px; }
+  .bmat-outer::after  { border-left: none;  border-radius: 0 3px 3px 0; }
+  .bmat { display: table; border-collapse: separate; border-spacing: 0; }
+  .bmat tr { display: table-row; }
+  .bmat tr td {
+    display: table-cell;
+    padding: 3px 9px;
+    text-align: right;
+    min-width: 1.4em;
+    font-family: 'Cambria Math', 'Latin Modern Math', serif;
+    font-size: 0.92rem;
+    color: #e2e8f0;
+    line-height: 1.8;
+    white-space: nowrap;
+  }
+  .bmat tr td.aug { border-left: 1.5px solid #4a5568; padding-left: 12px; }
+  .bmat tr td.bad { color: #f87171; }
+  .mat-eq {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 8px 0;
+    font-size: 1rem;
+    color: #94a3b8;
+  }
+  /* Matrix display area inside quiz card */
+  .mat-display {
+    background: #13132a;
+    border: 1px solid #2d2d50;
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin: 10px 0;
+    overflow-x: auto;
+  }
+  .mat-step-label {
+    color: #7c3aed;
+    font-size: 0.82rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+</style>
+</head>
+<body>
+
+<button id="back-btn" onclick="goHome()">← Home</button>
+
+<h1>Matrix Algebra Quiz</h1>
+<p class="subtitle">Math 251 — Each question gives you a real problem. Pick the correct method to solve it.</p>
+
+<!-- HOME SCREEN -->
+<div id="home">
+  <div class="quiz-cards">
+    <div class="quiz-card" onclick="startQuiz(0)">
+      <div class="quiz-icon">➕</div>
+      <div>
+        <h2>Quiz 1 — Matrix Operations</h2>
+        <p>How to check sizes, find a specific entry, compute products &amp; scalar operations · 12 questions</p>
+      </div>
+    </div>
+    <div class="quiz-card" onclick="startQuiz(1)">
+      <div class="quiz-icon">📏</div>
+      <div>
+        <h2>Quiz 2 — Lines &amp; Planes</h2>
+        <p>How to find direction vectors, normal vectors, parametric &amp; general forms · 10 questions</p>
+      </div>
+    </div>
+    <div class="quiz-card" onclick="startQuiz(2)">
+      <div class="quiz-icon">🔢</div>
+      <div>
+        <h2>Quiz 3 — RREF &amp; Systems</h2>
+        <p>How to row-reduce, spot contradictions, count free variables, read solutions · 12 questions</p>
+      </div>
+    </div>
+    <div class="quiz-card" onclick="startQuiz(3)">
+      <div class="quiz-icon">⛓️</div>
+      <div>
+        <h2>Quiz 4 — Span &amp; Independence</h2>
+        <p>How to set up and interpret span tests &amp; independence tests · 12 questions</p>
+      </div>
+    </div>
+    <div class="quiz-card" onclick="startQuiz(4)">
+      <div class="quiz-icon">🧩</div>
+      <div>
+        <h2>Quiz 5 — Mixed Problem Recognition</h2>
+        <p>See a problem cold — choose the right method — no warm-up · 8 questions</p>
+      </div>
+    </div>
+  </div>
+  <button class="btn-all" onclick="startQuiz(-1)">⚡ All Quizzes — 54 Questions</button>
+
+  <div class="part2-section">
+    <h3>📝 Part 2 — Written Practice</h3>
+    <p class="part2-subtitle">Exam-style problems to work by hand on paper. Show every row operation.</p>
+    <div class="part2-card">
+      <h4>Solve a system by Gauss-Jordan elimination</h4>
+      <p>Write the augmented matrix, apply row ops labelling each as <code>R₂ → R₂ − 2R₁</code>, reach RREF, classify the solution (unique / ∞ many / inconsistent), write the general solution.</p>
+    </div>
+    <div class="part2-card">
+      <h4>Find the equation of a plane through 3 points</h4>
+      <p>Compute <code>u = P₂−P₁</code> and <code>v = P₃−P₁</code>, find n by solving n·u=0 and n·v=0, write <code>ax+by+cz=d</code>, verify all 3 points satisfy it.</p>
+    </div>
+    <div class="part2-card">
+      <h4>Test linear independence of 3 vectors</h4>
+      <p>Form [v₁|v₂|v₃], row-reduce to RREF. No free variables → independent. Free variable → dependent; find the dependence relation by setting the free parameter to 1.</p>
+    </div>
+    <div class="part2-card">
+      <h4>Express b as a linear combination of v₁ and v₂</h4>
+      <p>Row-reduce [v₁|v₂|b]. If consistent → read off c₁ and c₂ and write <code>b = c₁v₁ + c₂v₂</code>. If inconsistent → b is NOT in the span.</p>
+    </div>
+  </div>
+</div>
+
+<!-- QUIZ SCREEN -->
+<div id="quiz-screen">
+  <div class="quiz-header">
+    <div class="quiz-title-bar" id="quiz-title-bar">Quiz 1</div>
+    <div class="score-badge" id="score-badge">Score: 0 / 0</div>
+  </div>
+  <div class="progress-bar-wrap">
+    <div class="progress-bar-fill" id="progress-bar" style="width:0%"></div>
+  </div>
+  <div class="question-card">
+    <div class="question-num" id="question-num">Question 1 of 10</div>
+    <div class="question-text" id="question-text"></div>
+    <div id="code-area"></div>
+    <div class="options" id="options"></div>
+    <div class="fill-area" id="fill-area" style="display:none">
+      <input type="text" class="fill-input" id="fill-input"
+        placeholder="Type your answer here..." autocomplete="off" spellcheck="false"
+        onkeydown="if(event.key==='Enter') checkFillAnswer()">
+      <button class="btn btn-primary" id="check-btn" onclick="checkFillAnswer()" style="align-self:flex-start">Check Answer</button>
+    </div>
+    <div class="helper-btns" id="helper-btns">
+      <button class="btn-helper" id="hint-btn" onclick="showHint()">💡 Hint</button>
+      <button class="btn-helper" id="answer-btn" onclick="showAnswer()">👁 Show Answer</button>
+    </div>
+    <div class="hint-box" id="hint-box"></div>
+    <div class="feedback" id="feedback"></div>
+  </div>
+  <div class="nav-buttons">
+    <button class="btn btn-primary" id="next-btn" onclick="nextQuestion()" disabled>Next →</button>
+  </div>
+</div>
+
+<!-- RESULTS SCREEN -->
+<div id="results-screen">
+  <div class="results-card">
+    <div class="big-score" id="final-score-text">8/10</div>
+    <div class="score-label" id="final-score-pct">80% — Great job!</div>
+    <div class="grade-bar-wrap">
+      <div class="grade-bar-fill" id="grade-bar" style="width:0%"></div>
+    </div>
+    <div class="results-breakdown" id="breakdown"></div>
+    <div class="results-actions">
+      <button class="btn btn-secondary" onclick="reviewAnswers()">Review Answers</button>
+      <button class="btn btn-primary" onclick="goHome()">Back to Home</button>
+    </div>
+  </div>
+  <div class="review-list" id="review-list" style="display:none"></div>
+</div>
+
+<script>
+const QUIZZES = [
+
+  // ─────────────────────────────────────────────
+  // QUIZ 1 — MATRIX OPERATIONS (12 questions)
+  // ─────────────────────────────────────────────
+  {
+    title: "Quiz 1 — Matrix Operations",
+    questions: [
+      {
+        q: "PROBLEM: You need to compute AB where A is 2×3 and B is 3×4.\nWhat is your FIRST step?",
+        options: [
+          "Verify sizes: cols(A)=3 must equal rows(B)=3 ✓. AB is defined and will be 2×4.",
+          "Check whether AB = BA before starting.",
+          "Transpose A to get 3×2, then multiply.",
+          "You can't multiply a 2×3 by a 3×4."
+        ],
+        correct: 0,
+        hint: "The rule is (m×n)(n×p) = (m×p). What must match for the product to be defined?",
+        explanation: "Always check sizes first: cols(A) must equal rows(B). Here cols(A)=3 = rows(B)=3, so AB is defined. The result size is rows(A) × cols(B) = 2×4."
+      },
+      {
+        q: "PROBLEM: A is 3×2 and B is 4×3. You need to decide which of AB or BA is defined.\nHow do you check?",
+        options: [
+          "AB: cols(A)=2, rows(B)=4. 2≠4 → undefined. BA: cols(B)=3, rows(A)=3. 3=3 → BA defined (4×2).",
+          "Both are always defined for any two matrices.",
+          "AB: rows(A)=3, rows(B)=4. Not equal → undefined. BA: same rule → also undefined.",
+          "Only square matrices can be multiplied."
+        ],
+        correct: 0,
+        hint: "For a product XY: check cols(X) = rows(Y). Test AB and BA separately.",
+        explanation: "AB needs cols(A)=rows(B): 2≠4 → undefined. BA needs cols(B)=rows(A): 3=3 → defined, giving a 4×2 matrix."
+      },
+      {
+        q: "PROBLEM: You need the (2,3) entry of AB.\nHow do you compute it?",
+        options: [
+          "Multiply entry a₂₃ by entry b₂₃.",
+          "Take row 2 of A and column 3 of B — compute their dot product (multiply corresponding entries and add).",
+          "Take column 2 of A and row 3 of B — dot product.",
+          "Add all entries in row 2 of A and all entries in column 3 of B."
+        ],
+        correct: 1,
+        hint: "Entry (i,j) of AB uses row i from A and column j from B.",
+        explanation: "(AB)₂₃ = (row 2 of A) · (col 3 of B) = a₂₁b₁₃ + a₂₂b₂₃ + a₂₃b₃₃. Always: row i of A dotted with column j of B."
+      },
+      {
+        q: "PROBLEM: Compute (AB)₁₂ given:\nA = [[1, 2], [3, 4]]   B = [[5, 6], [7, 8]]\nWhat is the answer?",
+        options: ["22", "19", "34", "50"],
+        correct: 0,
+        hint: "Row 1 of A = [1, 2]. Column 2 of B = [6, 8]. Dot product: (1)(6) + (2)(8).",
+        explanation: "(AB)₁₂ = row 1 of A · col 2 of B = 1×6 + 2×8 = 6 + 16 = 22."
+      },
+      {
+        q: "PROBLEM: You need to compute 3A − B where both A and B are 2×3.\nDescribe the method.",
+        options: [
+          "Multiply every entry of A by 3, then subtract the corresponding entry of B. Result is 2×3.",
+          "Compute 3A (2×3) and then B (2×3) must be transposed before subtracting.",
+          "First check if 3A and B have the same size — they won't, since 3A is 6×9.",
+          "You can only subtract matrices if one is the zero matrix."
+        ],
+        correct: 0,
+        hint: "Scalar multiplication scales every entry. Then subtraction is entry-wise — sizes must match.",
+        explanation: "Scalar mult: (3A)ᵢⱼ = 3aᵢⱼ. Subtraction: (3A − B)ᵢⱼ = 3aᵢⱼ − bᵢⱼ. Both operations are entry-wise. Size of result = 2×3 (unchanged)."
+      },
+      {
+        q: "PROBLEM: A is 4×4 and I is the 4×4 identity. You need AI.\nWhat is the result without computing?",
+        options: [
+          "AI = A — multiplying any square matrix by the matching identity gives A back.",
+          "AI = I — the identity absorbs everything.",
+          "AI = 2A — the identity doubles each entry.",
+          "AI is undefined — you need equal sizes only for addition."
+        ],
+        correct: 0,
+        hint: "The identity matrix is the matrix equivalent of multiplying by 1.",
+        explanation: "AI = IA = A for any square matrix A and matching identity I. This is the defining property of the identity matrix."
+      },
+      {
+        q: "PROBLEM: Someone claims AB = BA for their two 3×3 matrices.\nHow do you verify this?",
+        options: [
+          "Compute AB, compute BA separately, then compare entry by entry. Commutativity is NOT guaranteed.",
+          "It must be true since both matrices are square.",
+          "It's always true for matrices, just like numbers.",
+          "Check if either matrix is the zero matrix — then it's trivially true."
+        ],
+        correct: 0,
+        hint: "Can you name a property that numbers have but matrices don't?",
+        explanation: "Matrix multiplication is NOT commutative in general. The only way to verify AB = BA for specific matrices is to compute both products and compare. It may happen to be true for special cases (e.g., diagonal matrices)."
+      },
+      {
+        q: "PROBLEM: You need to evaluate A(BC) where A is 2×3, B is 3×4, C is 4×2.\nDo you compute AB first or BC first?",
+        options: [
+          "Either order gives the same answer — (AB)C = A(BC) by associativity. Pick whichever is computationally easier.",
+          "Always compute left to right: AB first, then (AB)C.",
+          "Always compute right to left: BC first, then A(BC).",
+          "The product is undefined because the sizes don't work out."
+        ],
+        correct: 0,
+        hint: "Is matrix multiplication associative? What does associativity mean for computation order?",
+        explanation: "Matrix multiplication is associative: (AB)C = A(BC). On a test, pick the order that gives smaller intermediate matrices. Here BC = (3×4)(4×2) = 3×2, then A(BC) = (2×3)(3×2) = 2×2."
+      },
+      {
+        q: "PROBLEM: You need to compute A + B where A is 3×4 and B is 4×3.\nWhat do you do?",
+        options: [
+          "Stop — A+B is UNDEFINED. Addition requires both matrices to be exactly the same size.",
+          "Transpose B to make it 3×4, then add entry by entry.",
+          "Add them column by column since they have the same number of columns (4 and 3 — wait, they don't).",
+          "Pad the smaller matrix with zeros and then add."
+        ],
+        correct: 0,
+        hint: "What is the size requirement for matrix addition?",
+        explanation: "Matrix addition requires identical sizes. A is 3×4 and B is 4×3 — different dimensions → A+B is undefined. Never transpose to 'fix' this."
+      },
+      {
+        q: "PROBLEM: You need to find −A where A = [[3, −1], [0, 2]].\nWhat is the method?",
+        options: [
+          "Multiply every entry by −1: −A = [[−3, 1], [0, −2]].",
+          "Swap the rows to get [[0, 2], [3, −1]].",
+          "Take the reciprocal of each entry.",
+          "Transpose A."
+        ],
+        correct: 0,
+        hint: "−A = (−1)A. Scalar multiplication applies to every single entry.",
+        explanation: "−A = (−1)×A — multiply every entry by −1: [[−3, 1], [0, −2]]. This is the additive inverse: A + (−A) = 0."
+      },
+      {
+        q: "PROBLEM: A is 2×5, B is 5×3, C is 3×2. Is A + BC defined?\nDescribe how you check.",
+        options: [
+          "First compute BC: (5×3)(3×2)… wait, B is 5×3 and C is 3×2: inner dims 3=3 ✓, BC is 5×2. Then A(2×5) + BC(5×2): sizes differ → A + BC is UNDEFINED.",
+          "Compute BC, then add — it always works for three matrices.",
+          "A is 2×5 and BC will be 5×3, so A + BC is undefined.",
+          "A + BC is defined and gives a 2×3 matrix."
+        ],
+        correct: 0,
+        hint: "First work out the size of BC, then check if it matches A's size for addition.",
+        explanation: "BC = (5×3)(3×2): inner dims match (3=3) → BC is 5×2. For A + BC: A is 2×5, BC is 5×2 — different sizes → A + BC is UNDEFINED."
+      },
+      {
+        q: "PROBLEM: You've computed AB and got a 3×3 matrix. A is 3×n. What must n be, and what is the size of B?",
+        options: [
+          "n can be anything — the result size only depends on rows(A) and cols(B).",
+          "The result is 3×3, so cols(B) = 3. B has n rows. n can be any positive integer; B is n×3.",
+          "n = 3 and B must also be 3×3.",
+          "n = 3 because A must be square to multiply."
+        ],
+        correct: 1,
+        hint: "(m×n)(n×p) = (m×p). Result is 3×3, so m=3 (given) and p=3. What does n tell you about B's size?",
+        explanation: "Result 3×3 means m=3 (rows of A, ✓) and p=3 (cols of B). B must be n×3. n is the number of columns of A (and rows of B) — it can be anything as long as A and B sizes are compatible."
+      }
+    ]
+  },
+
+  // ─────────────────────────────────────────────
+  // QUIZ 2 — LINES & PLANES (10 questions)
+  // ─────────────────────────────────────────────
+  {
+    title: "Quiz 2 — Lines & Planes",
+    questions: [
+      {
+        q: "PROBLEM: Find the parametric equations of the line through P₁=(1,2,3) and P₂=(4,0,−1).\nWhat is step 1?",
+        options: [
+          "Compute direction vector d = P₂ − P₁ = (3, −2, −4). Then write x=1+3t, y=2−2t, z=3−4t.",
+          "Compute the midpoint M = ((1+4)/2, (2+0)/2, (3−1)/2) and use that.",
+          "Find the normal vector by adding P₁ and P₂.",
+          "Write the general form ax+by+cz=d first, then convert."
+        ],
+        correct: 0,
+        hint: "The direction vector points from P₁ to P₂. How do you get a vector between two points?",
+        explanation: "Step 1: d = P₂ − P₁ = (3,−2,−4). Step 2: use either point as r₀. Parametric form: x=1+3t, y=2−2t, z=3−4t. Check: at t=0 get P₁ ✓, at t=1 get P₂ ✓."
+      },
+      {
+        q: "PROBLEM: You're given the line r = (2,1,4) + t(3,−1,2) and need to check if Q=(8,−1,8) is on it.\nWhat is the method?",
+        options: [
+          "Substitute Q into each equation: 2+3t=8→t=2, 1+(−1)(2)=−1 ✓, 4+2(2)=8 ✓. Same t for all three → Q is on the line.",
+          "Compute the distance from Q to the line and check if it's zero.",
+          "Check if Q − (2,1,4) is parallel to (3,−1,2).",
+          "Both A and C work — use whichever you prefer."
+        ],
+        correct: 3,
+        hint: "Two valid methods: solve for t from one equation and verify in the others; OR check if Q−r₀ is a scalar multiple of d.",
+        explanation: "Method 1 (substitution): x=2+3t=8→t=2; check y: 1−2=−1 ✓; check z: 4+4=8 ✓ → on line. Method 2: Q−r₀=(6,−2,4)=2(3,−1,2)=2d ✓ → on line. Both work."
+      },
+      {
+        q: "PROBLEM: Find the general equation ax+by+cz=d of the plane through P₁=(1,0,0), P₂=(0,2,0), P₃=(0,0,3).\nWhat is the sequence of steps?",
+        options: [
+          "1) Find u = P₂−P₁ and v = P₃−P₁.  2) Find n = (a,b,c) by solving n·u=0 and n·v=0.  3) Compute d = n·P₁.",
+          "1) Average the three points to get the center.  2) Use the center as the normal vector.",
+          "1) Set up ax+by+cz=d with the three points.  2) Solve the 3×3 system for a,b,c,d directly.",
+          "Both A and C are valid approaches."
+        ],
+        correct: 3,
+        hint: "Two valid approaches exist. Which does your course emphasize?",
+        explanation: "Method 1 (direction vectors): u=P₂−P₁=(−1,2,0), v=P₃−P₁=(−1,0,3); solve n·u=0 and n·v=0 for n. Method 2 (3-point system): plug all 3 points into ax+by+cz=d and solve. Both give the same plane."
+      },
+      {
+        q: "PROBLEM: Normal vector n=(2,−1,3), point P=(1,0,4) on the plane.\nHow do you find the constant d in ax+by+cz=d?",
+        options: [
+          "Compute d = n · P = 2(1) + (−1)(0) + 3(4) = 14. Equation: 2x − y + 3z = 14.",
+          "d is always 0 if the plane passes through a non-origin point.",
+          "d = |n| = √(4+1+9) = √14.",
+          "Substitute n into x+y+z=d to get d = 2+(−1)+3 = 4."
+        ],
+        correct: 0,
+        hint: "The plane equation n·r = d means d = n·r₀ for any known point r₀ on the plane.",
+        explanation: "d = n·P₀ = 2(1) + (−1)(0) + 3(4) = 2 + 0 + 12 = 14. Always: d = (normal vector) · (any known point on the plane)."
+      },
+      {
+        q: "PROBLEM: You need the normal vector for a plane containing direction vectors u=(1,1,0) and v=(−2,0,1).\nWhich approach works?",
+        options: [
+          "Solve the system n·u=0 and n·v=0 — two equations in three unknowns, pick a free value.",
+          "Compute the cross product n = u × v.",
+          "Set n = u + v.",
+          "Both A and B work — they find the same family of normal vectors."
+        ],
+        correct: 3,
+        hint: "Normal n must satisfy n⊥u and n⊥v. How many ways can you find a vector perpendicular to two given vectors?",
+        explanation: "Solving n·u=0, n·v=0 (with a free choice) and computing u×v both give a valid normal vector — they're equivalent methods. n = u+v is WRONG — that would be in the plane, not perpendicular to it."
+      },
+      {
+        q: "PROBLEM: Given a line's parametric form x=3+2t, y=−1+t, z=5−3t, identify r₀ and d.",
+        options: [
+          "r₀ = (3, −1, 5) (the constant terms) and d = (2, 1, −3) (the coefficients of t).",
+          "r₀ = (2, 1, −3) and d = (3, −1, 5).",
+          "r₀ = (3+2, −1+1, 5−3) = (5, 0, 2) and d is undefined.",
+          "r₀ = (3, −1, 5, t) is a 4D vector."
+        ],
+        correct: 0,
+        hint: "Parametric form: x = x₀ + at. The constant gives the base point; the coefficient of t gives the direction.",
+        explanation: "In x = x₀ + at: x₀ is the component of r₀ and a is the component of d. So r₀ = (3,−1,5) and d = (2,1,−3). At t=0 you're at r₀; as t changes you move in direction d."
+      },
+      {
+        q: "PROBLEM: A plane has parametric form r = (1,0,2) + s(1,1,0) + t(0,1,1).\nYou need to convert to general form ax+by+cz=d. What is the first thing you need?",
+        options: [
+          "Find the normal vector n by solving n·(1,1,0)=0 and n·(0,1,1)=0 (or cross product). Then d = n·(1,0,2).",
+          "Substitute s=1 and t=1 to find another point, then use 2 points to find the line equation.",
+          "The parametric form IS the general form — just replace s and t with x and y.",
+          "Average the direction vectors to get the normal."
+        ],
+        correct: 0,
+        hint: "The general form needs a normal vector. Where does n come from in relation to the direction vectors?",
+        explanation: "The normal n must be perpendicular to BOTH direction vectors. Find n by solving n·u=0 and n·v=0 (or cross product). Then d = n·r₀ = n·(1,0,2)."
+      },
+      {
+        q: "PROBLEM: A line in ℝ² has general form 3x − 2y = 7. You need the direction vector.\nHow do you find it?",
+        options: [
+          "The normal is n=(3,−2). The direction d must be ⊥ to n. Swap and negate one component: d=(2,3) (or any scalar multiple).",
+          "The direction vector is (3,−2) — same as the normal.",
+          "The direction is (7,0) since 7 appears in the equation.",
+          "You can't find a direction from the general form without two points."
+        ],
+        correct: 0,
+        hint: "For ax+by=c, the normal is (a,b). What vector is perpendicular to (a,b) in 2D?",
+        explanation: "Normal n=(3,−2). A direction in the line must be perpendicular to n. In 2D: rotate n by 90° → d=(2,3) (swap components, negate one). Check: n·d = 3(2)+(−2)(3) = 0 ✓."
+      },
+      {
+        q: "PROBLEM: You need to find where the line r=(1,2,0)+t(1,1,1) intersects the plane x+y−z=3.\nDescribe the method.",
+        options: [
+          "Substitute x=1+t, y=2+t, z=t into x+y−z=3 and solve for t. Then plug t back into the parametric equations to get the point.",
+          "Set the line equal to the plane's normal vector and solve.",
+          "Find where both equations equal zero simultaneously.",
+          "The line and plane can never intersect — different types of objects."
+        ],
+        correct: 0,
+        hint: "The point on the line satisfies both the line's parametric equations AND the plane equation.",
+        explanation: "Sub parametric into plane: (1+t)+(2+t)−(t)=3 → 3+t=3 → t=0. Point: (1+0, 2+0, 0) = (1,2,0). Check: 1+2−0=3 ✓."
+      },
+      {
+        q: "PROBLEM: The parametric and vector forms of a line are 'not unique'. What does this mean in practice?",
+        options: [
+          "Any point on the line works as r₀, and any non-zero scalar multiple of d is also a valid direction vector — both give equivalent descriptions of the same line.",
+          "The general form ax+by=c is also non-unique.",
+          "Different parametric forms describe different lines.",
+          "You must always use P₁ as r₀ and P₂−P₁ as d — other choices are wrong."
+        ],
+        correct: 0,
+        hint: "If you pick a different point on the line, or scale d by 2, does the line itself change?",
+        explanation: "The LINE is unique but its description isn't. Any r₀ on the line and any d=k(P₂−P₁) with k≠0 describe the same line. On exams: 'a' valid form is acceptable — don't worry if your r₀ or d looks different from the key."
+      }
+    ]
+  },
+
+  // ─────────────────────────────────────────────
+  // QUIZ 3 — RREF & SYSTEMS (12 questions)
+  // ─────────────────────────────────────────────
+  {
+    title: "Quiz 3 — RREF & Systems",
+    questions: [
+      {
+        q: "PROBLEM: After row-reducing a system, you get this row.\nWhat does this tell you and what do you do?",
+        matrix: `<div class="mat-eq"><span class="bmat-outer"><table class="bmat"><tr><td>0</td><td>0</td><td>0</td><td class="aug bad">5</td></tr></table></span><span style="color:#f87171;font-size:0.88rem;">← what does this mean?</span></div>`,
+        options: [
+          "STOP — this row says 0 = 5, a contradiction. The system is INCONSISTENT. No solution exists.",
+          "Ignore it — zero rows at the bottom are fine in RREF.",
+          "This means x₃ is a free variable.",
+          "Divide the row by 5 to get [0  0  0 | 1] — a valid leading 1."
+        ],
+        correct: 0,
+        hint: "What equation does [0  0  0 | 5] represent?",
+        explanation: "[0  0  0 | 5] means 0·x₁ + 0·x₂ + 0·x₃ = 5, i.e. 0 = 5. That's impossible — stop immediately, declare inconsistent. No further row-reducing is needed."
+      },
+      {
+        q: "PROBLEM: You need to determine the number of solutions to a 3-variable system.\nDescribe the complete method.",
+        options: [
+          "1) Row reduce to RREF.  2) Check for a contradiction row [0…0|k], k≠0 → inconsistent.  3) If no contradiction, count free variables (columns without a pivot). 0 free → unique; ≥1 free → infinitely many.",
+          "Count equations vs unknowns: equal → unique, more equations → inconsistent, fewer → infinite.",
+          "Row reduce, then count zero rows. Zero rows = free variables.",
+          "Check if the determinant is zero — if so, no unique solution."
+        ],
+        correct: 0,
+        hint: "What are the three possible outcomes and what do you look for in RREF for each?",
+        explanation: "The 3-step method: (1) reach RREF, (2) check for contradictions → inconsistent, (3) count pivot columns in A (not augmented). All columns have pivots → unique. At least one free variable → infinitely many."
+      },
+      {
+        q: "PROBLEM: Your RREF is shown below.\nHow do you identify which variables are free?",
+        matrix: `<div class="mat-eq"><span class="bmat-outer"><table class="bmat"><tr><td>1</td><td class="bad">3</td><td>0</td><td class="aug">2</td></tr><tr><td>0</td><td class="bad">0</td><td>1</td><td class="aug">4</td></tr><tr><td>0</td><td class="bad">0</td><td>0</td><td class="aug">0</td></tr></table></span><span style="color:#f87171;font-size:0.83rem;align-self:center;">← col 2 highlighted</span></div>`,
+        options: [
+          "Look at the coefficient columns of A only (ignore the augmented column). Columns WITHOUT a leading 1 are free variables. Here col 2 has no pivot → x₂ is free.",
+          "Zero rows indicate free variables — count the zero rows.",
+          "The last variable (x₃) is always free in RREF.",
+          "Any variable appearing in more than one row is free."
+        ],
+        correct: 0,
+        hint: "A 'free variable' corresponds to a column with no leading 1 in RREF.",
+        explanation: "Scan the columns of the coefficient part of RREF. Col 1: pivot ✓ (x₁ is a leading variable). Col 2: no pivot → x₂ is FREE. Col 3: pivot ✓ (x₃ is a leading variable). x₂ = t for any t ∈ ℝ."
+      },
+      {
+        q: "PROBLEM: To eliminate the entry in position (3,1), the current row 3 starts with 4 and the leading 1 in column 1 is in row 1.\nWhat exact row operation do you write?",
+        options: [
+          "R₃ → R₃ − 4R₁   (subtract 4 copies of row 1 from row 3, zeroing out the 4 in (3,1))",
+          "R₁ → R₁ − 4R₃",
+          "R₃ → R₃ / 4",
+          "R₁ ↔ R₃"
+        ],
+        correct: 0,
+        hint: "To zero out a₃₁ = 4, you want R₃ − (something)×R₁ so that 4 − (something)×1 = 0.",
+        explanation: "R₃ → R₃ − 4R₁ gives position (3,1): 4 − 4(1) = 0 ✓. General rule: to zero out aᵢⱼ when the pivot in column j is in row k: Rᵢ → Rᵢ − (aᵢⱼ/aₖⱼ)Rₖ."
+      },
+      {
+        q: "PROBLEM: A row in your matrix has pivot entry 5 (not 1). What single row operation creates a leading 1?",
+        options: [
+          "R → (1/5)R   — divide the entire row by 5.",
+          "R → R − 5   — subtract 5 from each entry.",
+          "R → R − 4R₁   — use another row to reduce.",
+          "Swap this row with a row that already has a leading 1."
+        ],
+        correct: 0,
+        hint: "You need to scale the row so the leftmost nonzero entry becomes exactly 1.",
+        explanation: "R → (1/5)R multiplies every entry in the row by 1/5, turning the leading 5 into a 1. Never subtract a constant from a row — that's not a valid elementary row operation."
+      },
+      {
+        q: "PROBLEM: Your RREF gives x₁ = 3 − 2t,  x₂ = t (free),  x₃ = 4.\nHow do you write the general solution in vector form?",
+        options: [
+          "x = (3, 0, 4) + t(−2, 1, 0)  for any t ∈ ℝ.",
+          "x = (3, t, 4) — just substitute t in directly, no vector form needed.",
+          "Set t = 0: unique solution x = (3, 0, 4).",
+          "x = t(−2, 1, 0) — only the free-variable part matters."
+        ],
+        correct: 0,
+        hint: "Separate the constant part (t=0 values) from the part that changes with t.",
+        explanation: "At t=0: x=(3,0,4) — the particular solution. The t-dependent part: (−2t, t, 0) = t(−2,1,0) — the homogeneous part. Combined: x = (3,0,4) + t(−2,1,0). This is the standard vector form."
+      },
+      {
+        q: "PROBLEM: Before row-reducing, you notice row 2 = 2 × row 1 in your augmented matrix.\nWhat does this immediately suggest?",
+        options: [
+          "Row 2 is redundant — after R₂ → R₂ − 2R₁, it will become all zeros. The system likely has free variables or may be inconsistent (if the augmented column doesn't follow the same ratio).",
+          "The system has a unique solution since the equations are related.",
+          "You should swap rows 1 and 2 to fix this.",
+          "This means the system is definitely inconsistent."
+        ],
+        correct: 0,
+        hint: "If two rows are multiples of each other (coefficient part), what happens when you eliminate?",
+        explanation: "R₂ → R₂ − 2R₁ will zero out the coefficient part of row 2. If the augmented entry also follows (b₂ = 2b₁), you get a zero row → free variables. If b₂ ≠ 2b₁, you get [0…0|k] → inconsistent. Spotting this early saves time."
+      },
+      {
+        q: "PROBLEM: You've created all the zeros BELOW the pivots (forward pass). Now you need to create zeros ABOVE the pivots too.\nWhat is this step called and how do you do it?",
+        options: [
+          "Back-substitution — working bottom-up, use row replacement (Rᵢ → Rᵢ − (entry)×(pivot row)) to zero out entries ABOVE each leading 1.",
+          "Transpose — flip the matrix and zero out the other side.",
+          "The forward pass already handles both above and below.",
+          "Row-swap every pair to reverse the matrix."
+        ],
+        correct: 0,
+        hint: "RREF requires zeros both above AND below each pivot. The forward pass handles below; what handles above?",
+        explanation: "In Gauss-Jordan, after forward elimination (zeros below pivots), you do back-substitution: use each pivot row to eliminate non-zero entries above it. This gives RREF. In regular Gaussian elimination you'd stop after forward pass and use back-substitution algebraically."
+      },
+      {
+        q: "PROBLEM: A system has 3 equations and 5 unknowns (a 3×5 augmented matrix). It row-reduces to RREF with 3 pivots and no contradictions.\nHow many free variables and solutions are there?",
+        options: [
+          "Free variables = 5 − 3 = 2. Two free variables → infinitely many solutions.",
+          "Free variables = 3 (one per equation). → Infinitely many.",
+          "No free variables — 3 pivots fills all 3 rows exactly.",
+          "Free variables = 5 − 3 = 2 but the system is inconsistent."
+        ],
+        correct: 0,
+        hint: "Free variables = (number of variable columns) − (number of pivots). The augmented column doesn't count.",
+        explanation: "Variable columns = 5 (the unknowns). Pivots = 3. Free vars = 5 − 3 = 2. No contradictions → consistent. 2 free variables → infinitely many solutions."
+      },
+      {
+        q: "PROBLEM: A homogeneous system Ax = 0 (all right-hand sides are 0). Before doing any work, what can you guarantee?",
+        options: [
+          "The system is always CONSISTENT — x = 0 (the trivial solution) always satisfies Ax = 0. It may also have infinitely many solutions.",
+          "The system has only x = 0 as its solution.",
+          "The system is inconsistent if A has more rows than columns.",
+          "Nothing — must row-reduce first."
+        ],
+        correct: 0,
+        hint: "Plug x = 0 into Ax = 0. Does it work for any matrix A?",
+        explanation: "A·0 = 0 is always true, so x=0 satisfies Ax=0 regardless of A. Homogeneous systems are ALWAYS consistent (at least the trivial solution exists). Whether there are other solutions depends on free variables."
+      },
+      {
+        q: "PROBLEM: The RREF below is your final result. Write the complete general solution.",
+        matrix: `<div class="mat-eq"><span class="bmat-outer"><table class="bmat"><tr><td>1</td><td>0</td><td class="bad">3</td><td class="aug">2</td></tr><tr><td>0</td><td>1</td><td class="bad">−1</td><td class="aug">5</td></tr><tr><td>0</td><td>0</td><td class="bad">0</td><td class="aug">0</td></tr></table></span><span style="color:#f87171;font-size:0.83rem;align-self:center;">← x₃ is free</span></div>`,
+        options: [
+          "Let x₃ = t. Then x₁ = 2 − 3t, x₂ = 5 + t, x₃ = t. Vector form: (2,5,0) + t(−3,1,1).",
+          "x₁=2, x₂=5, x₃=0 — plug in t=0.",
+          "x₃ is a leading variable so x₃=0, then x₁=2, x₂=5.",
+          "x = (2, 5, 0) + (−3, 1, 0)t."
+        ],
+        correct: 0,
+        hint: "Col 3 has no pivot → x₃ is free. Read x₁ and x₂ from rows 1 and 2, treating x₃ as the parameter.",
+        explanation: "Col 3 = no pivot → x₃ = t. Row 1: x₁ + 3t = 2 → x₁ = 2−3t. Row 2: x₂ − t = 5 → x₂ = 5+t. General solution: x = (2,5,0) + t(−3,1,1) for any t ∈ ℝ."
+      },
+      {
+        q: "PROBLEM: This matrix needs to be row-reduced. What operation removes the 4 in position (2,1)?",
+        matrix: `<div class="mat-eq"><span class="bmat-outer"><table class="bmat"><tr><td>1</td><td>2</td><td>3</td></tr><tr><td class="bad">4</td><td>8</td><td>12</td></tr></table></span></div>`,
+        options: [
+          "R₂ → R₂ − 4R₁.  New row 2: [4−4, 8−8, 12−12] = [0,0,0]. (Row 2 was a multiple of row 1.)",
+          "R₁ → R₁ − 4R₂.",
+          "R₂ → R₂/4.",
+          "R₁ ↔ R₂."
+        ],
+        correct: 0,
+        hint: "To zero out a₂₁=4 using the leading 1 in row 1: R₂ → R₂ − (4/1)R₁.",
+        explanation: "R₂ → R₂ − 4R₁: [4−4(1), 8−4(2), 12−4(3)] = [0,0,0]. The entire row becomes zero because row 2 was exactly 4 times row 1 — they were linearly dependent."
+      }
+    ]
+  },
+
+  // ─────────────────────────────────────────────
+  // QUIZ 4 — SPAN & INDEPENDENCE (12 questions)
+  // ─────────────────────────────────────────────
+  {
+    title: "Quiz 4 — Span & Independence",
+    questions: [
+      {
+        q: "PROBLEM: Is b in Span{v₁, v₂}?\nHow do you set up the problem?",
+        matrix: `<div class="mat-eq" style="gap:14px;"><div style="text-align:center;"><div class="mat-step-label" style="margin-bottom:3px;">v₁</div><span class="bmat-outer"><table class="bmat"><tr><td>1</td></tr><tr><td>0</td></tr><tr><td>1</td></tr></table></span></div><div style="text-align:center;"><div class="mat-step-label" style="margin-bottom:3px;">v₂</div><span class="bmat-outer"><table class="bmat"><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>2</td></tr></table></span></div><div style="text-align:center;"><div class="mat-step-label" style="margin-bottom:3px;">b</div><span class="bmat-outer"><table class="bmat"><tr><td>3</td></tr><tr><td>1</td></tr><tr><td>4</td></tr></table></span></div></div>`,
+        options: [
+          "Form the augmented matrix [v₁|v₂|b] and row-reduce. If consistent → b IS in the span (and you can read off c₁,c₂). If inconsistent → b is NOT in the span.",
+          "Form [b|v₁|v₂] — put b first so you can see it clearly.",
+          "Form [v₁|v₂] alone and check for free variables.",
+          "Compute v₁ + v₂ and check if it equals b."
+        ],
+        correct: 0,
+        hint: "You're solving c₁v₁ + c₂v₂ = b. How do you write this as an augmented matrix?",
+        explanation: "c₁v₁ + c₂v₂ = b means [v₁|v₂]·[c₁,c₂]ᵀ = b → augmented matrix is [v₁|v₂|b]. If consistent → b is in the span. The c values give the specific combination."
+      },
+      {
+        q: "PROBLEM: You row-reduce [v₁|v₂|b] and get a contradiction row [0  0 | 5].\nWhat is your conclusion?",
+        options: [
+          "b is NOT in Span{v₁,v₂}. The system is inconsistent — no scalars c₁,c₂ can produce b from v₁ and v₂.",
+          "b IS in the span — the contradiction means the vectors are independent.",
+          "v₁ and v₂ are linearly dependent.",
+          "You need more vectors to determine the span."
+        ],
+        correct: 0,
+        hint: "What does a contradiction row mean for the system?",
+        explanation: "A contradiction [0…0|5] means no solution exists → the system c₁v₁+c₂v₂=b has no solution → b CANNOT be written as a combination of v₁ and v₂ → b is NOT in the span."
+      },
+      {
+        q: "PROBLEM: Test whether {v₁, v₂, v₃} are linearly independent.\nWhich matrix do you form and row-reduce?",
+        options: [
+          "[v₁|v₂|v₃] with NO augmented column — the RHS is all zeros so it adds nothing useful.",
+          "[v₁|v₂|v₃|0] — augment with the zero vector.",
+          "[v₁|v₂|v₃|v₁+v₂+v₃] — augment with their sum.",
+          "[v₁ᵀ; v₂ᵀ; v₃ᵀ] — stack as rows."
+        ],
+        correct: 0,
+        hint: "You're solving c₁v₁+c₂v₂+c₃v₃=0. The right-hand side 0 doesn't affect the row reduction.",
+        explanation: "Form A = [v₁|v₂|v₃]. Row reduce. Since the RHS is 0 (homogeneous system), augmenting with a zero column changes nothing. Just reduce A itself."
+      },
+      {
+        q: "PROBLEM: You've row-reduced [v₁|v₂|v₃] and found that column 2 has no leading 1 (it's a free variable column).\nWhat is your conclusion?",
+        options: [
+          "The vectors are LINEARLY DEPENDENT — there is a non-trivial solution to c₁v₁+c₂v₂+c₃v₃=0 (specifically c₂ can be anything nonzero).",
+          "The vectors are linearly independent — free variables are good.",
+          "v₂ = 0 (the zero vector).",
+          "The system is inconsistent."
+        ],
+        correct: 0,
+        hint: "A free variable means a non-trivial solution to Ax=0 exists. What does that mean for independence?",
+        explanation: "Free variable in col 2 → c₂ = t (non-zero allowed). Then c₁ and c₃ adjust accordingly to give c₁v₁+c₂v₂+c₃v₃=0 with (c₁,c₂,c₃)≠(0,0,0) → LINEARLY DEPENDENT."
+      },
+      {
+        q: "PROBLEM: You have 5 vectors in ℝ³. Do you need to row-reduce to determine independence?",
+        options: [
+          "No — 5 > 3 (more vectors than dimensions), so they are ALWAYS linearly dependent. No calculation needed.",
+          "Yes — always row-reduce to be sure.",
+          "No — 5 vectors in ℝ³ are always independent.",
+          "Only if all 5 vectors are non-zero."
+        ],
+        correct: 0,
+        hint: "What is the quick rule for k vectors in ℝⁿ when k > n?",
+        explanation: "Quick rule: k vectors in ℝⁿ with k > n are ALWAYS linearly dependent. In ℝ³, at most 3 vectors can be independent. 5 > 3 → instantly dependent, no row reduction needed."
+      },
+      {
+        q: "PROBLEM: One of the vectors in your set is the zero vector 0. What do you conclude immediately?",
+        options: [
+          "The set is LINEARLY DEPENDENT — no calculation needed. You can set the zero vector's coefficient to any non-zero value and still satisfy ∑cᵢvᵢ=0.",
+          "The set is linearly independent — zero doesn't contribute.",
+          "The set spans a smaller space than expected.",
+          "Need to row-reduce to determine independence."
+        ],
+        correct: 0,
+        hint: "Can you set c₁=5 in c₁·0 + c₂v₂ + … = 0 and still have the equation hold?",
+        explanation: "Quick rule: any set containing 0 is ALWAYS dependent. Setting c₁=1 (for the zero vector) and all other cᵢ=0 gives 1·0 = 0 — a non-trivial solution exists immediately."
+      },
+      {
+        q: "PROBLEM: You're told v₂ = 3v₁. Are {v₁, v₂} linearly independent?\nHow do you conclude without any row reduction?",
+        options: [
+          "DEPENDENT immediately — v₂ is a scalar multiple of v₁. Quick rule: two vectors are dependent if and only if one is a scalar multiple of the other.",
+          "Independent — they are different vectors.",
+          "Need to row-reduce [v₁|v₂] to be sure.",
+          "Dependent only if v₁ = 0."
+        ],
+        correct: 0,
+        hint: "Quick rule for two vectors: when are they dependent?",
+        explanation: "Quick rule: two vectors are linearly dependent ⟺ one is a scalar multiple of the other. Since v₂=3v₁, they are dependent. Algebraically: c₁v₁+c₂v₂=0 → c₁v₁+3c₂v₁=0 → (c₁+3c₂)=0, which has c₂=1, c₁=−3 as a non-trivial solution."
+      },
+      {
+        q: "PROBLEM: After row-reducing [v₁|v₂|v₃] you get x₁=−2t, x₂=t, x₃=t with x₃=t free.\nHow do you find the explicit dependence relation?",
+        options: [
+          "Set t=1 (simplest non-trivial): c₁=−2, c₂=1, c₃=1. So −2v₁+v₂+v₃=0, meaning v₃=2v₁−v₂.",
+          "Set t=0 to get the trivial solution and declare independence.",
+          "The dependence relation is c₁+c₂+c₃=0.",
+          "Set t=−1: c₁=2, c₂=−1, c₃=−1."
+        ],
+        correct: 0,
+        hint: "To express the dependence, pick t=1 (the simplest non-trivial choice). Then rearrange to isolate one vector.",
+        explanation: "t=1: (c₁,c₂,c₃)=(−2,1,1). Equation: −2v₁+v₂+v₃=0 → v₃=2v₁−v₂ (isolate the vector in the free column). This is the dependence relation — v₃ is redundant."
+      },
+      {
+        q: "PROBLEM: You need to answer both: 'Is b in Span{v₁,v₂}?' AND 'Are v₁,v₂ independent?'\nCan one row reduction answer both?",
+        options: [
+          "Yes — row-reduce [v₁|v₂|b]. Span question: is the system consistent? Independence question: does the coefficient part (cols 1 and 2) have free variables?",
+          "No — two separate row reductions are always needed.",
+          "Yes — row-reduce [v₁|v₂] only; this answers both.",
+          "Yes — row-reduce [b|v₁|v₂]; the first column answers the span question."
+        ],
+        correct: 0,
+        hint: "[v₁|v₂|b] contains both the independence test (coefficient columns) and the span test (augmented column). What does each part tell you?",
+        explanation: "Row-reduce [v₁|v₂|b] once. Independence: look at cols 1-2 of RREF — no free variables → independent. Span: is there a contradiction row? If no → b is in the span. One reduction, two answers."
+      },
+      {
+        q: "PROBLEM: You row-reduce [v₁|v₂|v₃] to the 3×3 identity I₃.\nWhat does this tell you about the three vectors?",
+        options: [
+          "LINEARLY INDEPENDENT — every column has a pivot, no free variables. The only solution to c₁v₁+c₂v₂+c₃v₃=0 is c₁=c₂=c₃=0.",
+          "The vectors ARE the standard basis vectors e₁,e₂,e₃.",
+          "The vectors are linearly dependent — I₃ is a special matrix.",
+          "The vectors span only the diagonal of ℝ³."
+        ],
+        correct: 0,
+        hint: "RREF = I₃ means every column has a pivot. What does 'no free variables' imply for a homogeneous system?",
+        explanation: "RREF = I₃ → 3 pivots, 0 free variables. The only solution to Ax=0 is x=0 (trivial) → linearly independent. The vectors don't have to be e₁,e₂,e₃ — they just row-reduce to I₃."
+      },
+      {
+        q: "PROBLEM: Span{v₁,v₂} in ℝ³ — what geometrical object is this likely to be, assuming v₁ and v₂ are non-zero and not parallel?",
+        options: [
+          "A plane through the origin — two non-parallel vectors span a 2D plane.",
+          "All of ℝ³ — two vectors always span everything.",
+          "A line through the origin — two vectors is always a line.",
+          "A circle of radius |v₁|+|v₂|."
+        ],
+        correct: 0,
+        hint: "Span of one non-zero vector = line. Span of two non-parallel vectors = ?",
+        explanation: "Two linearly independent vectors in ℝ³ span a plane through the origin. The span = {c₁v₁+c₂v₂ : c₁,c₂∈ℝ} — two free parameters = 2D surface = plane. To span all of ℝ³ you need 3 independent vectors."
+      },
+      {
+        q: "PROBLEM: The vectors {[1,2,3], [2,4,6]} — can you determine independence WITHOUT row-reducing?",
+        options: [
+          "Yes — [2,4,6] = 2×[1,2,3]. One is a scalar multiple of the other → IMMEDIATELY DEPENDENT.",
+          "No — always need to row-reduce for 3D vectors.",
+          "Yes — they have the same ratio so they're independent.",
+          "Yes — two distinct vectors are always independent."
+        ],
+        correct: 0,
+        hint: "Quick rule: two vectors are dependent ⟺ one is a scalar multiple of the other. Check each component ratio.",
+        explanation: "[2,4,6]/[1,2,3] = [2,2,2] — every component ratio is 2. So [2,4,6]=2[1,2,3] → immediately DEPENDENT. Quick rule: save time on the exam — spot scalar multiples visually before row-reducing."
+      }
+    ]
+  },
+
+  // ─────────────────────────────────────────────
+  // QUIZ 5 — MIXED PROBLEM RECOGNITION (8 questions)
+  // ─────────────────────────────────────────────
+  {
+    title: "Quiz 5 — Mixed Problem Recognition",
+    questions: [
+      {
+        q: "PROBLEM: 'Find all vectors b = [b₁, b₂, b₃]ᵀ such that b is in Span{v₁, v₂}.'\nWhat type of problem is this and what is the approach?",
+        options: [
+          "Span test with a parameter. Set up [v₁|v₂|b] with symbolic b entries, row-reduce, and find the condition(s) on b₁,b₂,b₃ that make the system consistent.",
+          "Linear independence test. Form [v₁|v₂|b] and check for free variables.",
+          "Plane equation problem. Find n perpendicular to v₁ and v₂.",
+          "RREF problem. Just row-reduce [v₁|v₂] alone."
+        ],
+        correct: 0,
+        hint: "You're characterizing the ENTIRE span — which is a geometric object. How does row-reducing with symbolic b reveal the condition?",
+        explanation: "This finds the span geometrically. Row-reduce [v₁|v₂|b] keeping b₁,b₂,b₃ symbolic. The consistency condition (no contradiction row) gives you an equation relating b₁,b₂,b₃ — that equation IS the plane containing all vectors in the span."
+      },
+      {
+        q: "PROBLEM: 'Solve the system: 2x − y = 4,  x + 3y = 11.'\nWhat is the method?",
+        options: [
+          "Write augmented matrix [[2,−1|4],[1,3|11]], row-reduce to RREF, read solution.",
+          "Solve each equation independently for x and y.",
+          "Form [v₁|v₂] with the coefficient columns and check for free variables.",
+          "Test if [4,11] is in the span of [2,1] and [−1,3]."
+        ],
+        correct: 0,
+        hint: "A system of equations → which tool?",
+        explanation: "Standard linear system: augmented matrix + Gauss-Jordan. [[2,−1|4],[1,3|11]] → RREF gives unique solution. (Note: option D is technically equivalent but framed as a span problem — the standard framing for solving Ax=b is the augmented matrix approach.)"
+      },
+      {
+        q: "PROBLEM: 'Determine if {v₁, v₂, v₃, v₄} are linearly independent in ℝ³.'\nBefore touching the matrix, what do you know?",
+        options: [
+          "4 vectors in ℝ³ means k=4 > n=3 → ALWAYS dependent. No calculation needed. State this immediately.",
+          "Must row-reduce to determine — can't conclude without calculation.",
+          "4 vectors in ℝ³ are always independent.",
+          "Depends on whether any of the vectors is the zero vector."
+        ],
+        correct: 0,
+        hint: "Quick rules first — always save time by checking quick rules before row-reducing.",
+        explanation: "Quick rule: k vectors in ℝⁿ with k > n are ALWAYS dependent. Here k=4 > n=3 → stop immediately, state 'linearly dependent', no row reduction required. On a timed test, this saves 2-3 minutes."
+      },
+      {
+        q: "PROBLEM: 'Find the equation of the line through P=(2,−1,0) perpendicular to the plane 3x−y+2z=5.'\nWhat is the key insight?",
+        options: [
+          "The direction vector of the line IS the normal vector of the plane: d = (3,−1,2). Line: r=(2,−1,0)+t(3,−1,2).",
+          "Find two more points on the plane and connect them to P.",
+          "The line must be parallel to the plane, so use the plane's direction vectors.",
+          "Find where the plane intersects the x-axis and connect to P."
+        ],
+        correct: 0,
+        hint: "A line perpendicular to a plane must point in the direction of the plane's normal vector.",
+        explanation: "A line ⊥ to a plane must have its direction vector equal to (or parallel to) the plane's normal n=(3,−1,2). Line: r=(2,−1,0)+t(3,−1,2). This connects §2.3 and §4.6 knowledge."
+      },
+      {
+        q: "PROBLEM: 'Does [1,2,3]ᵀ lie in the span of the columns of matrix A?'\nRewrite this as a standard matrix problem.",
+        options: [
+          "This is the system Ax = b with b=[1,2,3]ᵀ. Form [A|b] and row-reduce. Consistent → yes, b is in the span of columns of A.",
+          "Compute Aᵀ[1,2,3]ᵀ and check if it's zero.",
+          "Find the RREF of A alone and count pivot columns.",
+          "Check if [1,2,3]ᵀ equals any single column of A."
+        ],
+        correct: 0,
+        hint: "The span of the columns of A is exactly the set {Ax : x ∈ ℝⁿ}. So asking 'is b in col span of A?' is the same as asking what?",
+        explanation: "'b in span of columns of A' ⟺ 'Ax=b has a solution' ⟺ [A|b] is consistent. This unifies span and system-solving: they're the same operation viewed differently."
+      },
+      {
+        q: "PROBLEM: 'How many solutions does Ax=0 have if A (4×3) has RREF with exactly 2 pivots?'\nWhat is the reasoning chain?",
+        options: [
+          "Ax=0 is homogeneous → always consistent. Variables = 3, pivots = 2, free = 1. One free variable → infinitely many solutions.",
+          "2 pivots out of 4 rows → 2 solutions.",
+          "Homogeneous → only x=0. One solution.",
+          "Need to know b to determine solutions."
+        ],
+        correct: 0,
+        hint: "Homogeneous → always consistent. Then: variables − pivots = free variables.",
+        explanation: "Step 1: Ax=0 is homogeneous → always consistent (x=0 works). Step 2: free vars = 3 variables − 2 pivots = 1. Step 3: 1 free variable → infinitely many solutions of the form x = t·(vector)."
+      },
+      {
+        q: "PROBLEM: You're given vectors v₁,v₂,v₃ and told they are linearly dependent. You find the dependence relation is v₃ = 2v₁ − v₂.\nWhat does this tell you about Span{v₁,v₂,v₃}?",
+        options: [
+          "Span{v₁,v₂,v₃} = Span{v₁,v₂} — since v₃ is redundant (a combo of v₁ and v₂), it adds nothing to the span.",
+          "Span{v₁,v₂,v₃} is larger than Span{v₁,v₂} because we have more vectors.",
+          "The span collapses to a single line.",
+          "Cannot determine the span from the dependence relation."
+        ],
+        correct: 0,
+        hint: "If v₃=2v₁−v₂, can any combination c₁v₁+c₂v₂+c₃v₃ be rewritten using only v₁ and v₂?",
+        explanation: "c₁v₁+c₂v₂+c₃v₃ = c₁v₁+c₂v₂+c₃(2v₁−v₂) = (c₁+2c₃)v₁+(c₂−c₃)v₂. Every combination of all three is already in Span{v₁,v₂} → the spans are equal. Dependent vectors never expand the span."
+      },
+      {
+        q: "PROBLEM: 'Find a vector NOT in Span{[1,0,1]ᵀ, [0,1,1]ᵀ}.'\nWhat is the approach?",
+        options: [
+          "Find the plane these two vectors span (via their normal vector n). Any vector NOT on this plane is not in the span. E.g., n itself works.",
+          "Pick any vector with a negative component.",
+          "The span contains all vectors, so nothing is outside it.",
+          "Row-reduce [v₁|v₂] and look for contradiction rows."
+        ],
+        correct: 0,
+        hint: "Two independent vectors in ℝ³ span a plane. What vectors are definitely NOT on that plane?",
+        explanation: "Two independent vectors in ℝ³ span a plane. Find the normal to that plane: solve n·v₁=0, n·v₂=0 → e.g. n=(−1,−1,1). Then verify: test [v₁|v₂|n] → inconsistent → n is not in the span ✓."
+      }
+    ]
+  }
+
+];
+
+// ─────────────────────────────────────────────
+// STATE
+// ─────────────────────────────────────────────
+let currentQuestions = [];
+let currentIndex = 0;
+let score = 0;
+let answered = [];
+let peeked = [];
+let quizLabel = "";
+let userAnswers = [];
+
+// ─────────────────────────────────────────────
+// NAVIGATION
+// ─────────────────────────────────────────────
+function goHome() {
+  document.getElementById('home').style.display = 'block';
+  document.getElementById('quiz-screen').style.display = 'none';
+  document.getElementById('results-screen').style.display = 'none';
+  document.getElementById('back-btn').style.display = 'none';
+  document.getElementById('review-list').style.display = 'none';
+}
+
+function startQuiz(quizIndex) {
+  if (quizIndex === -1) {
+    currentQuestions = shuffle(QUIZZES.flatMap(q => q.questions)).map(shuffleQuestion);
+    quizLabel = "All Quizzes";
+  } else {
+    currentQuestions = shuffle(QUIZZES[quizIndex].questions).map(shuffleQuestion);
+    quizLabel = QUIZZES[quizIndex].title;
+  }
+  currentIndex = 0;
+  score = 0;
+  answered = new Array(currentQuestions.length).fill(false);
+  peeked = new Array(currentQuestions.length).fill(false);
+  userAnswers = new Array(currentQuestions.length).fill(-1);
+
+  document.getElementById('home').style.display = 'none';
+  document.getElementById('results-screen').style.display = 'none';
+  document.getElementById('quiz-screen').style.display = 'block';
+  document.getElementById('back-btn').style.display = 'block';
+  document.getElementById('quiz-title-bar').textContent = quizLabel;
+  renderQuestion();
+}
+
+// ─────────────────────────────────────────────
+// RENDER
+// ─────────────────────────────────────────────
+function renderQuestion() {
+  const q = currentQuestions[currentIndex];
+  const total = currentQuestions.length;
+  const isFill = q.type === 'fill';
+
+  document.getElementById('question-num').textContent = `Question ${currentIndex + 1} of ${total}`;
+  document.getElementById('progress-bar').style.width = `${(currentIndex / total) * 100}%`;
+  document.getElementById('score-badge').textContent = `Score: ${score} / ${currentIndex}`;
+
+  const qtEl = document.getElementById('question-text');
+  qtEl.innerHTML = '';
+  q.q.split('\n').forEach((line, i, arr) => {
+    qtEl.appendChild(document.createTextNode(line));
+    if (i < arr.length - 1) qtEl.appendChild(document.createElement('br'));
+  });
+
+  const codeArea = document.getElementById('code-area');
+  if (q.matrix) {
+    codeArea.innerHTML = `<div class="mat-display">${q.matrix}</div>`;
+  } else if (q.code) {
+    codeArea.innerHTML = `<div class="code-block">${escHtml(q.code)}</div>`;
+  } else {
+    codeArea.innerHTML = '';
+  }
+
+  const optEl = document.getElementById('options');
+  const fillArea = document.getElementById('fill-area');
+
+  if (isFill) {
+    optEl.style.display = 'none';
+    fillArea.style.display = 'flex';
+    const input = document.getElementById('fill-input');
+    input.value = '';
+    input.className = 'fill-input';
+    input.disabled = false;
+    document.getElementById('check-btn').disabled = false;
+    setTimeout(() => input.focus(), 50);
+  } else {
+    optEl.style.display = 'flex';
+    fillArea.style.display = 'none';
+    optEl.innerHTML = '';
+    const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
+    q.options.forEach((opt, i) => {
+      const div = document.createElement('div');
+      div.className = 'option';
+      div.dataset.index = i;
+      div.onclick = () => selectOption(i);
+      const optContent = q.codeOptions
+        ? `<span class="option-letter">${letters[i]}</span><span class="option-code">${escHtml(opt)}</span>`
+        : `<span class="option-letter">${letters[i]}</span><span>${escHtml(opt)}</span>`;
+      div.innerHTML = optContent;
+      optEl.appendChild(div);
+    });
+  }
+
+  const fb = document.getElementById('feedback');
+  fb.className = 'feedback';
+  fb.textContent = '';
+
+  const hintBox = document.getElementById('hint-box');
+  hintBox.style.display = 'none';
+  hintBox.textContent = '';
+
+  document.getElementById('helper-btns').style.display = answered[currentIndex] ? 'none' : 'flex';
+
+  const nextBtn = document.getElementById('next-btn');
+  nextBtn.disabled = true;
+  nextBtn.textContent = currentIndex === total - 1 ? 'Finish ✓' : 'Next →';
+
+  if (answered[currentIndex]) {
+    restoreAnswer();
+  }
+}
+
+// ─────────────────────────────────────────────
+// UTILITIES
+// ─────────────────────────────────────────────
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function shuffleQuestion(q) {
+  if (q.type === 'fill') return q;
+  const indices = q.options.map((_, i) => i);
+  const shuffled = shuffle(indices);
+  return {
+    ...q,
+    options: shuffled.map(i => q.options[i]),
+    correct: shuffled.indexOf(q.correct)
+  };
+}
+
+function escHtml(str) {
+  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ─────────────────────────────────────────────
+// ANSWER HANDLING — MC
+// ─────────────────────────────────────────────
+function selectOption(chosen) {
+  if (answered[currentIndex]) return;
+  answered[currentIndex] = true;
+  userAnswers[currentIndex] = chosen;
+
+  const q = currentQuestions[currentIndex];
+  const correct = q.correct;
+  const isRight = chosen === correct;
+  if (isRight && !peeked[currentIndex]) score++;
+
+  document.getElementById('helper-btns').style.display = 'none';
+
+  const opts = document.querySelectorAll('.option');
+  opts.forEach(o => {
+    o.classList.add('disabled');
+    const idx = parseInt(o.dataset.index);
+    if (idx === correct) o.classList.add('correct');
+    else if (idx === chosen && !isRight) o.classList.add('wrong');
+  });
+
+  const fb = document.getElementById('feedback');
+  if (isRight && !peeked[currentIndex]) {
+    fb.className = 'feedback correct-fb';
+    fb.innerHTML = `<strong>Correct!</strong> ${escHtml(q.explanation)}`;
+  } else if (isRight && peeked[currentIndex]) {
+    fb.className = 'feedback wrong-fb';
+    fb.innerHTML = `<strong>Answer revealed — no credit.</strong> ${escHtml(q.explanation)}`;
+  } else {
+    fb.className = 'feedback wrong-fb';
+    fb.innerHTML = `<strong>Incorrect.</strong> ${escHtml(q.explanation)}`;
+  }
+
+  document.getElementById('score-badge').textContent = `Score: ${score} / ${currentIndex + 1}`;
+  document.getElementById('next-btn').disabled = false;
+}
+
+// ─────────────────────────────────────────────
+// ANSWER HANDLING — FILL
+// ─────────────────────────────────────────────
+function checkFillAnswer() {
+  if (answered[currentIndex]) return;
+  const q = currentQuestions[currentIndex];
+  const input = document.getElementById('fill-input');
+  const userVal = input.value.trim();
+  if (userVal === '') return;
+
+  const accepted = q.answers.map(a => a.toLowerCase());
+  const isRight = accepted.includes(userVal.toLowerCase());
+
+  answered[currentIndex] = true;
+  userAnswers[currentIndex] = userVal;
+
+  input.disabled = true;
+  document.getElementById('check-btn').disabled = true;
+  document.getElementById('helper-btns').style.display = 'none';
+
+  input.className = 'fill-input ' + (isRight ? 'correct-fill' : 'wrong-fill');
+
+  if (isRight && !peeked[currentIndex]) score++;
+
+  const fb = document.getElementById('feedback');
+  if (isRight && !peeked[currentIndex]) {
+    fb.className = 'feedback correct-fb';
+    fb.innerHTML = `<strong>Correct!</strong> ${escHtml(q.explanation)}`;
+  } else if (isRight && peeked[currentIndex]) {
+    fb.className = 'feedback wrong-fb';
+    fb.innerHTML = `<strong>Answer revealed — no credit.</strong> ${escHtml(q.explanation)}`;
+  } else {
+    fb.className = 'feedback wrong-fb';
+    fb.innerHTML = `<strong>Incorrect.</strong> Accepted: <em>${escHtml(q.answers[0])}</em>. ${escHtml(q.explanation)}`;
+  }
+
+  document.getElementById('score-badge').textContent = `Score: ${score} / ${currentIndex + 1}`;
+  document.getElementById('next-btn').disabled = false;
+}
+
+// ─────────────────────────────────────────────
+// HINT & SHOW ANSWER
+// ─────────────────────────────────────────────
+function showHint() {
+  const q = currentQuestions[currentIndex];
+  if (!q.hint) return;
+  const hintBox = document.getElementById('hint-box');
+  if (hintBox.style.display === 'block') {
+    hintBox.style.display = 'none';
+  } else {
+    hintBox.textContent = '💡 ' + q.hint;
+    hintBox.style.display = 'block';
+  }
+}
+
+function showAnswer() {
+  if (answered[currentIndex]) return;
+  const q = currentQuestions[currentIndex];
+  peeked[currentIndex] = true;
+  answered[currentIndex] = true;
+  userAnswers[currentIndex] = -2;
+
+  document.getElementById('helper-btns').style.display = 'none';
+  document.getElementById('hint-box').style.display = 'none';
+
+  if (q.type === 'fill') {
+    const input = document.getElementById('fill-input');
+    input.value = q.answers[0];
+    input.disabled = true;
+    input.className = 'fill-input correct-fill';
+    document.getElementById('check-btn').disabled = true;
+  } else {
+    const opts = document.querySelectorAll('.option');
+    opts.forEach(o => {
+      o.classList.add('disabled');
+      if (parseInt(o.dataset.index) === q.correct) o.classList.add('correct');
+    });
+  }
+
+  const fb = document.getElementById('feedback');
+  fb.className = 'feedback wrong-fb';
+  fb.innerHTML = `<strong>Answer revealed — no credit.</strong> ${escHtml(q.explanation)}`;
+
+  document.getElementById('score-badge').textContent = `Score: ${score} / ${currentIndex + 1}`;
+  document.getElementById('next-btn').disabled = false;
+}
+
+// ─────────────────────────────────────────────
+// RESTORE PREVIOUSLY ANSWERED QUESTION
+// ─────────────────────────────────────────────
+function restoreAnswer() {
+  const q = currentQuestions[currentIndex];
+  const chosen = userAnswers[currentIndex];
+  const fb = document.getElementById('feedback');
+
+  if (q.type === 'fill') {
+    const input = document.getElementById('fill-input');
+    input.disabled = true;
+    document.getElementById('check-btn').disabled = true;
+
+    if (chosen === -2) {
+      input.value = q.answers[0];
+      input.className = 'fill-input correct-fill';
+      fb.className = 'feedback wrong-fb';
+      fb.innerHTML = `<strong>Answer revealed — no credit.</strong> ${escHtml(q.explanation)}`;
+    } else {
+      const accepted = q.answers.map(a => a.toLowerCase());
+      const isRight = accepted.includes((chosen || '').toLowerCase()) && !peeked[currentIndex];
+      input.value = chosen;
+      input.className = 'fill-input ' + (isRight ? 'correct-fill' : 'wrong-fill');
+      if (isRight) {
+        fb.className = 'feedback correct-fb';
+        fb.innerHTML = `<strong>Correct!</strong> ${escHtml(q.explanation)}`;
+      } else {
+        fb.className = 'feedback wrong-fb';
+        fb.innerHTML = `<strong>Incorrect.</strong> Accepted: <em>${escHtml(q.answers[0])}</em>. ${escHtml(q.explanation)}`;
+      }
+    }
+  } else {
+    const correct = q.correct;
+    const opts = document.querySelectorAll('.option');
+    opts.forEach(o => {
+      o.classList.add('disabled');
+      const idx = parseInt(o.dataset.index);
+      if (idx === correct) o.classList.add('correct');
+      else if (idx === chosen && chosen !== -2) o.classList.add('wrong');
+    });
+
+    if (chosen === -2) {
+      fb.className = 'feedback wrong-fb';
+      fb.innerHTML = `<strong>Answer revealed — no credit.</strong> ${escHtml(q.explanation)}`;
+    } else if (chosen === correct && !peeked[currentIndex]) {
+      fb.className = 'feedback correct-fb';
+      fb.innerHTML = `<strong>Correct!</strong> ${escHtml(q.explanation)}`;
+    } else {
+      fb.className = 'feedback wrong-fb';
+      fb.innerHTML = `<strong>${chosen === correct ? 'Answer revealed — no credit.' : 'Incorrect.'}</strong> ${escHtml(q.explanation)}`;
+    }
+  }
+
+  document.getElementById('next-btn').disabled = false;
+}
+
+// ─────────────────────────────────────────────
+// NAVIGATION
+// ─────────────────────────────────────────────
+function nextQuestion() {
+  if (currentIndex < currentQuestions.length - 1) {
+    currentIndex++;
+    renderQuestion();
+    window.scrollTo(0, 0);
+  } else {
+    showResults();
+  }
+}
+
+// ─────────────────────────────────────────────
+// RESULTS
+// ─────────────────────────────────────────────
+function showResults() {
+  document.getElementById('quiz-screen').style.display = 'none';
+  document.getElementById('results-screen').style.display = 'block';
+  document.getElementById('review-list').style.display = 'none';
+
+  const total = currentQuestions.length;
+  const pct = Math.round((score / total) * 100);
+
+  document.getElementById('final-score-text').textContent = `${score}/${total}`;
+
+  let msg = '';
+  if (pct >= 90) msg = '🏆 Excellent!';
+  else if (pct >= 75) msg = '👍 Great job!';
+  else if (pct >= 60) msg = '📚 Keep studying!';
+  else msg = '💪 Review the material and try again!';
+
+  document.getElementById('final-score-pct').textContent = `${pct}% — ${msg}`;
+
+  setTimeout(() => {
+    document.getElementById('grade-bar').style.width = pct + '%';
+  }, 100);
+
+  const wrong = total - score;
+  document.getElementById('breakdown').innerHTML = `
+    <div class="breakdown-item"><strong>${total}</strong>Total</div>
+    <div class="breakdown-item"><strong style="color:#86efac">${score}</strong>Correct</div>
+    <div class="breakdown-item"><strong style="color:#fca5a5">${wrong}</strong>Incorrect</div>
+  `;
+}
+
+function reviewAnswers() {
+  const reviewEl = document.getElementById('review-list');
+  if (reviewEl.style.display !== 'none') {
+    reviewEl.style.display = 'none';
+    return;
+  }
+  reviewEl.style.display = '';
+  reviewEl.innerHTML = '<h3 style="margin-bottom:16px;font-size:1rem;color:#94a3b8;">Answer Review</h3>';
+
+  currentQuestions.forEach((q, i) => {
+    const chosen = userAnswers[i];
+    const wasPeeked = chosen === -2;
+    const letters = ['A','B','C','D','E','F'];
+    let isRight;
+
+    if (q.type === 'fill') {
+      if (wasPeeked) {
+        isRight = false;
+      } else {
+        const accepted = q.answers.map(a => a.toLowerCase());
+        isRight = typeof chosen === 'string' && accepted.includes(chosen.toLowerCase()) && !peeked[i];
+      }
+    } else {
+      isRight = chosen === q.correct && !peeked[i];
+    }
+
+    const div = document.createElement('div');
+    div.className = `review-item ${isRight ? 'was-correct' : 'was-wrong'}`;
+
+    let answerHTML = '';
+    if (q.type === 'fill') {
+      if (wasPeeked) {
+        answerHTML += `<div class="your-ans">👁 Answer revealed (no credit)</div>`;
+      } else if (!isRight) {
+        answerHTML += `<div class="your-ans">✗ You typed: "${escHtml(chosen || '')}"</div>`;
+      }
+      answerHTML += `<div class="correct-ans">✓ Correct: ${escHtml(q.answers[0])}</div>`;
+    } else {
+      if (wasPeeked) {
+        answerHTML += `<div class="your-ans">👁 Answer revealed (no credit)</div>`;
+      } else if (!isRight) {
+        answerHTML += `<div class="your-ans">✗ You chose: ${letters[chosen]} — ${escHtml(q.options[chosen])}</div>`;
+      }
+      answerHTML += `<div class="correct-ans">✓ Correct: ${letters[q.correct]} — ${escHtml(q.options[q.correct])}</div>`;
+    }
+
+    div.innerHTML = `
+      <div class="review-q"><strong>Q${i+1}:</strong> ${escHtml(q.q.split('\n')[0])}</div>
+      <div class="review-answer">${answerHTML}</div>
+    `;
+    reviewEl.appendChild(div);
+  });
+
+  reviewEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>General C Reference</title>
+<style>
+  :root {
+    --bg:#1e1e1e; --side:#252526; --text:#d4d4d4; --head:#fff;
+    --code:#0d0d0d; --accent:#569cd6; --green:#4ec9b0; --yellow:#dcdcaa;
+    --orange:#ce9178; --comment:#6a9955; --purple:#c586c0;
+    --number:#b5cea8; --border:#3c3c3c; --w:230px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);display:flex;font-size:14px;line-height:1.6}
+
+  /* SIDEBAR */
+  #sb{width:var(--w);min-width:var(--w);background:var(--side);border-right:1px solid var(--border);
+      position:fixed;top:0;left:0;bottom:0;overflow-y:auto;padding:10px 0 30px;z-index:100}
+  #sb .logo{color:var(--accent);font-size:11px;text-transform:uppercase;letter-spacing:1.5px;
+            padding:0 12px 8px;border-bottom:1px solid var(--border);margin-bottom:6px}
+  #sb a{display:block;padding:3px 12px;color:#ccc;text-decoration:none;font-size:12px;
+        border-left:2px solid transparent;transition:all .1s}
+  #sb a:hover,#sb a.h{color:#fff;border-left-color:var(--accent);background:rgba(86,156,214,.08)}
+  #sb .grp{margin-top:8px}
+  #sb .lbl{padding:5px 12px 1px;font-size:10px;text-transform:uppercase;letter-spacing:1px;color:#555}
+  #sb a.sub{padding-left:24px;font-size:11px;color:#aaa}
+
+  /* MAIN */
+  #main{margin-left:var(--w);padding:24px 32px 60px;max-width:980px;width:100%}
+  h1{color:var(--head);font-size:20px;margin-bottom:3px}
+  .sub{color:#666;font-size:12px;margin-bottom:28px}
+  .sec{margin-bottom:44px;padding-top:4px}
+  h2{color:var(--accent);font-size:17px;border-bottom:1px solid var(--border);padding-bottom:5px;margin-bottom:14px}
+  h3{color:var(--green);font-size:12.5px;margin:16px 0 7px;text-transform:uppercase;letter-spacing:.5px}
+
+  /* CODE */
+  pre{background:var(--code);border:1px solid var(--border);border-radius:4px;padding:12px 15px;
+      overflow-x:auto;margin:6px 0 12px;font-family:'Cascadia Code','Fira Code',Consolas,monospace;font-size:12.5px;line-height:1.55}
+  code{font-family:'Cascadia Code','Fira Code',Consolas,monospace}
+  p code,li code,td code{background:#111;border:1px solid #333;border-radius:3px;padding:1px 5px;font-size:12px;color:var(--orange)}
+
+  .kw{color:var(--accent);font-weight:600}
+  .ty{color:var(--green)}
+  .fn{color:var(--yellow)}
+  .st{color:var(--orange)}
+  .nm{color:var(--number)}
+  .cm{color:var(--comment);font-style:italic}
+  .pp{color:var(--purple)}
+  .dim{color:#888}
+
+  /* TABLES */
+  table{border-collapse:collapse;width:100%;margin:6px 0 12px;font-size:12.5px}
+  th{background:#2a2a2a;color:var(--accent);text-align:left;padding:5px 9px;border:1px solid var(--border);font-size:10.5px;text-transform:uppercase}
+  td{padding:4px 9px;border:1px solid var(--border);vertical-align:top}
+  tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+  td code{background:none;border:none;padding:0;color:var(--orange)}
+
+  /* BOXES */
+  .box{border-left:3px solid var(--accent);background:rgba(86,156,214,.07);
+       padding:9px 13px;margin:8px 0;border-radius:0 4px 4px 0;font-size:13px}
+  .box.g{border-left-color:var(--green);background:rgba(78,201,176,.07)}
+  .box.y{border-left-color:#dcdcaa;background:rgba(220,220,170,.07)}
+  .box.r{border-left-color:#f44747;background:rgba(244,71,71,.07)}
+
+  p{margin:5px 0 9px}
+  ul,ol{padding-left:18px;margin:5px 0 9px}
+  li{margin:2px 0}
+  hr{border:none;border-top:1px solid var(--border);margin:18px 0}
+
+  /* star badge */
+  .star{color:#ffd700;font-size:11px;margin-left:4px}
+
+  @media print{#sb{display:none}#main{margin-left:0}}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════ SIDEBAR -->
+<nav id="sb">
+  <div class="logo">C Reference</div>
+
+  <div class="grp">
+    <div class="lbl">Quick Start</div>
+    <a href="#labs">Your Lab Patterns</a>
+    <a href="#compile">Compile Commands</a>
+  </div>
+  <div class="grp">
+    <div class="lbl">Basics</div>
+    <a href="#types">Data Types &amp; sizeof</a>
+    <a href="#fmt">Format Specifiers</a>
+    <a href="#ops">Operators &amp; Precedence</a>
+    <a href="#flow">Control Flow</a>
+  </div>
+  <div class="grp">
+    <div class="lbl">Functions</div>
+    <a href="#funcs">Functions &amp; Prototypes</a>
+    <a href="#hdr">Header / Source Split</a>
+  </div>
+  <div class="grp">
+    <div class="lbl">Arrays &amp; Pointers</div>
+    <a href="#arrays">Arrays (1D, 2D)</a>
+    <a class="sub" href="#zippo">2D Pointer Duality ★</a>
+    <a href="#ptrs">Pointers</a>
+    <a href="#strs">Strings &amp; string.h</a>
+  </div>
+  <div class="grp">
+    <div class="lbl">Memory</div>
+    <a href="#dyn">Dynamic Memory</a>
+  </div>
+  <div class="grp">
+    <div class="lbl">File I/O ★</div>
+    <a href="#fio">File I/O — Full Guide</a>
+    <a class="sub" href="#fio-open">Open / Close / Modes</a>
+    <a class="sub" href="#fio-text">Text Read / Write</a>
+    <a class="sub" href="#fio-bin">Binary fread / fwrite</a>
+    <a class="sub" href="#fio-pos">fseek / ftell / rewind</a>
+    <a class="sub" href="#fio-pat">Complete Patterns</a>
+  </div>
+  <div class="grp">
+    <div class="lbl">Reference</div>
+    <a href="#math">math.h Functions</a>
+    <a href="#stdlib">stdlib / stdio Quick Ref</a>
+    <a href="#bool">stdbool / EXIT codes</a>
+    <a href="#pre">Preprocessor</a>
+    <a href="#prec">Precedence Table</a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════ MAIN -->
+<main id="main">
+<h1>General C Reference</h1>
+<p class="sub">Ctrl+F to search &nbsp;|&nbsp; click sidebar to jump</p>
+
+<!-- ════════════════════ YOUR LAB PATTERNS -->
+<div class="sec" id="labs">
+<h2>Complete Program Examples</h2>
+
+<h3>Making Change — money math with llround</h3>
+<div class="box y">Always convert dollars → integer cents with <code>llround(x * 100.0)</code> to avoid floating-point errors. Never divide money as raw doubles in a loop.</div>
+<pre><span class="pp">#include &lt;stdio.h&gt;</span>
+<span class="pp">#include &lt;stdlib.h&gt;</span>
+<span class="pp">#include &lt;math.h&gt;</span>          <span class="cm">// llround(), round()</span>
+
+<span class="cm">/* Round dollar amount to nearest nickel */</span>
+<span class="ty">double</span> <span class="fn">roundNickel</span>(<span class="ty">double</span> amount) {
+    <span class="ty">long long</span> cents = <span class="fn">llround</span>(amount * <span class="nm">100.0</span>);
+    <span class="ty">long long</span> rounded = ((cents + <span class="nm">2</span>) / <span class="nm">5</span>) * <span class="nm">5</span>;
+    <span class="kw">return</span> rounded / <span class="nm">100.0</span>;
+}
+
+<span class="cm">/* Dispense one denomination; return remaining change */</span>
+<span class="ty">double</span> <span class="fn">changeItem</span>(<span class="ty">double</span> change, <span class="ty">double</span> denom, <span class="ty">const</span> <span class="ty">char</span> *single, <span class="ty">const</span> <span class="ty">char</span> *plural) {
+    <span class="ty">long long</span> changeCents = <span class="fn">llround</span>(change * <span class="nm">100.0</span>);
+    <span class="ty">long long</span> denomCents  = <span class="fn">llround</span>(denom  * <span class="nm">100.0</span>);
+    <span class="ty">long long</span> count = changeCents / denomCents;
+    <span class="ty">long long</span> left  = changeCents - count * denomCents;
+    <span class="kw">if</span> (count > <span class="nm">0</span>)
+        <span class="fn">printf</span>(<span class="st">"%lld %s\n"</span>, count, (count == <span class="nm">1</span>) ? single : plural);
+    <span class="kw">return</span> left / <span class="nm">100.0</span>;
+}
+
+<span class="ty">int</span> <span class="fn">main</span>(<span class="ty">void</span>) {
+    <span class="ty">double</span> price, tendered, change;
+    <span class="fn">printf</span>(<span class="st">"Enter purchase amount: "</span>);  <span class="fn">scanf</span>(<span class="st">"%lf"</span>, &price);
+    <span class="fn">printf</span>(<span class="st">"Enter amount tendered: "</span>);  <span class="fn">scanf</span>(<span class="st">"%lf"</span>, &tendered);
+    change = <span class="fn">roundNickel</span>(tendered - price);
+    <span class="fn">printf</span>(<span class="st">"Change: $%.2f\n"</span>, change);
+
+    change = <span class="fn">changeItem</span>(change, <span class="nm">20.00</span>, <span class="st">"Twenty"</span>, <span class="st">"Twenties"</span>);
+    change = <span class="fn">changeItem</span>(change, <span class="nm">10.00</span>, <span class="st">"Ten"</span>,    <span class="st">"Tens"</span>);
+    change = <span class="fn">changeItem</span>(change,  <span class="nm">5.00</span>, <span class="st">"Five"</span>,   <span class="st">"Fives"</span>);
+    change = <span class="fn">changeItem</span>(change,  <span class="nm">2.00</span>, <span class="st">"Toonie"</span>, <span class="st">"Toonies"</span>);
+    change = <span class="fn">changeItem</span>(change,  <span class="nm">1.00</span>, <span class="st">"Loonie"</span>, <span class="st">"Loonies"</span>);
+    change = <span class="fn">changeItem</span>(change,  <span class="nm">0.25</span>, <span class="st">"Quarter"</span>,<span class="st">"Quarters"</span>);
+    change = <span class="fn">changeItem</span>(change,  <span class="nm">0.10</span>, <span class="st">"Dime"</span>,   <span class="st">"Dimes"</span>);
+    change = <span class="fn">changeItem</span>(change,  <span class="nm">0.05</span>, <span class="st">"Nickel"</span>, <span class="st">"Nickels"</span>);
+    <span class="kw">return</span> EXIT_SUCCESS;
+}</pre>
+
+<h3>Temperature Conversion (if/else chain + formatted output)</h3>
+<pre><span class="pp">#include &lt;stdio.h&gt;</span>
+<span class="pp">#include &lt;stdlib.h&gt;</span>
+
+<span class="ty">int</span> <span class="fn">main</span>(<span class="ty">void</span>) {
+    <span class="ty">double</span> inputTemp;
+    <span class="ty">char</span> line[<span class="nm">11</span>];
+    <span class="kw">const</span> <span class="ty">double</span> kOffset = <span class="nm">273.15</span>;
+
+    <span class="fn">printf</span>(<span class="st">"Enter temperature (e.g. 24.5F): "</span>);
+    <span class="fn">scanf</span>(<span class="st">"%lf%10s"</span>, &inputTemp, line);   <span class="cm">// read number then unit string</span>
+    <span class="ty">char</span> type = line[<span class="nm">0</span>];                  <span class="cm">// first char is unit letter</span>
+
+    <span class="kw">if</span> (type == <span class="st">'F'</span> || type == <span class="st">'f'</span>) {
+        <span class="ty">double</span> c = (inputTemp - <span class="nm">32.0</span>) * <span class="nm">5.0</span> / <span class="nm">9.0</span>;
+        <span class="ty">double</span> k = c + kOffset;
+        <span class="fn">printf</span>(<span class="st">"%8.3fK = %8.3fC = %8.3fF\n"</span>, k, c, inputTemp);
+    } <span class="kw">else if</span> (type == <span class="st">'C'</span> || type == <span class="st">'c'</span>) {
+        <span class="ty">double</span> k = inputTemp + kOffset;
+        <span class="ty">double</span> f = inputTemp * <span class="nm">9.0</span> / <span class="nm">5.0</span> + <span class="nm">32.0</span>;
+        <span class="fn">printf</span>(<span class="st">"%8.3fK = %8.3fC = %8.3fF\n"</span>, k, inputTemp, f);
+    } <span class="kw">else if</span> (type == <span class="st">'K'</span> || type == <span class="st">'k'</span>) {
+        <span class="ty">double</span> c = inputTemp - kOffset;
+        <span class="ty">double</span> f = c * <span class="nm">9.0</span> / <span class="nm">5.0</span> + <span class="nm">32.0</span>;
+        <span class="fn">printf</span>(<span class="st">"%8.3fK = %8.3fC = %8.3fF\n"</span>, inputTemp, c, f);
+    } <span class="kw">else</span> {
+        <span class="fn">printf</span>(<span class="st">"Unknown unit '%c'\n"</span>, type);
+    }
+    <span class="kw">return</span> EXIT_SUCCESS;
+}</pre>
+
+<h3>Physics Simulation (Euler method, math.h, const locals)</h3>
+<pre><span class="pp">#include &lt;stdio.h&gt;</span>
+<span class="pp">#include &lt;stdlib.h&gt;</span>
+<span class="pp">#include &lt;math.h&gt;</span>
+
+<span class="kw">const</span> <span class="ty">double</span> G = <span class="nm">9.80665</span>;     <span class="cm">// global constant</span>
+
+<span class="ty">double</span> <span class="fn">density</span>(<span class="ty">double</span> altitude) {
+    <span class="kw">const</span> <span class="ty">double</span> p0 = <span class="nm">101.325e3</span>;
+    <span class="kw">const</span> <span class="ty">double</span> T0 = <span class="nm">288.15</span>;
+    <span class="kw">const</span> <span class="ty">double</span> L  = <span class="nm">0.0065</span>;
+    <span class="kw">const</span> <span class="ty">double</span> R  = <span class="nm">8.31447</span>;
+    <span class="kw">const</span> <span class="ty">double</span> M  = <span class="nm">0.0289644</span>;
+    <span class="ty">double</span> T = T0 - L * altitude;
+    <span class="ty">double</span> p = p0 * <span class="fn">pow</span>((<span class="nm">1.0</span> - (L * altitude) / T0), (G * M) / (R * L));
+    <span class="kw">return</span> p * M / (R * T);
+}
+
+<span class="ty">int</span> <span class="fn">main</span>(<span class="ty">void</span>) {
+    <span class="ty">double</span> height, mass, Cd, area, dt;
+    <span class="ty">double</span> time = <span class="nm">0.0</span>, velocity = <span class="nm">0.0</span>;
+
+    <span class="fn">scanf</span>(<span class="st">"%lf"</span>, &height);  <span class="cm">/* ... (read all inputs) */</span>
+
+    <span class="cm">/* Euler integration loop */</span>
+    <span class="kw">for</span> (<span class="ty">int</span> step = <span class="nm">0</span>; step < <span class="nm">100000</span> && height > <span class="nm">0.0</span>; step++) {
+        <span class="ty">double</span> rho       = <span class="fn">density</span>(height);
+        <span class="ty">double</span> drag      = <span class="nm">0.5</span> * rho * Cd * area * velocity * velocity;
+        <span class="ty">double</span> accel     = -G + drag / mass;
+        velocity = velocity + accel * dt;
+        height   = height   + velocity * dt;
+        time     = time     + dt;
+        <span class="kw">if</span> (height > <span class="nm">0.0</span>)
+            <span class="fn">printf</span>(<span class="st">"%8.2f  %8.1f  %8.2f\n"</span>, time, height, <span class="fn">fabs</span>(velocity));
+    }
+    <span class="ty">double</span> rho0 = <span class="fn">density</span>(<span class="nm">0.0</span>);
+    <span class="fn">printf</span>(<span class="st">"Terminal velocity: %.1f m/s\n"</span>, <span class="fn">sqrt</span>((<span class="nm">2.0</span>*mass*G) / (rho0*Cd*area)));
+    <span class="kw">return</span> EXIT_SUCCESS;
+}</pre>
+
+<h3>Multi-file Project — Header + Source split</h3>
+<pre><span class="cm">/* changeItem.h */</span>
+<span class="pp">#ifndef CHANGEITEM_H</span>
+<span class="pp">#define CHANGEITEM_H</span>
+<span class="ty">double</span> <span class="fn">changeItem</span>(<span class="ty">double</span> change, <span class="ty">double</span> denom,
+                   <span class="ty">const</span> <span class="ty">char</span> *single, <span class="ty">const</span> <span class="ty">char</span> *plural);
+<span class="pp">#endif</span>
+
+<span class="cm">/* changeitem.c */</span>
+<span class="pp">#include "changeItem.h"</span>
+<span class="pp">#include &lt;stdio.h&gt;</span>
+<span class="pp">#include &lt;math.h&gt;</span>
+<span class="ty">double</span> <span class="fn">changeItem</span>(<span class="ty">double</span> change, <span class="ty">double</span> denom,
+                   <span class="ty">const</span> <span class="ty">char</span> *single, <span class="ty">const</span> <span class="ty">char</span> *plural) {
+    <span class="cm">/* ... implementation ... */</span>
+}
+
+<span class="cm">/* makeChange.c (main file) */</span>
+<span class="pp">#include "changeItem.h"</span>
+<span class="pp">#include &lt;stdio.h&gt;</span>
+<span class="ty">int</span> <span class="fn">main</span>(<span class="ty">void</span>) { <span class="cm">/* ... */</span> }
+
+<span class="cm">/* Compile multi-file: */</span>
+<span class="cm">// gcc makeChange.c changeitem.c -std=c11 -Wall -lm -o makeChange</span></pre>
+</div>
+
+<!-- ════════════════════ COMPILE COMMANDS -->
+<div class="sec" id="compile">
+<h2>Compile Commands</h2>
+<pre><span class="cm"># Basic (single file)</span>
+gcc file.c -std=c11 -Wall -Wextra -o file
+
+<span class="cm"># With math.h (MUST add -lm)</span>
+gcc file.c -std=c11 -Wall -Wextra -lm -o file
+
+<span class="cm"># Multiple source files</span>
+gcc main.c other.c -std=c11 -Wall -lm -o program
+
+<span class="cm"># Run it</span>
+./file            <span class="cm"># Linux / macOS</span>
+file.exe          <span class="cm"># Windows</span>
+
+<span class="cm"># With debug symbols (for gdb)</span>
+gcc file.c -std=c11 -Wall -g -o file</pre>
+
+<table>
+  <tr><th>Flag</th><th>What it does</th></tr>
+  <tr><td><code>-std=c11</code></td><td>Use C11 standard</td></tr>
+  <tr><td><code>-Wall</code></td><td>Enable most warnings</td></tr>
+  <tr><td><code>-Wextra</code></td><td>Extra warnings</td></tr>
+  <tr><td><code>-lm</code></td><td>Link math library — needed for sqrt, pow, fabs, llround, etc.</td></tr>
+  <tr><td><code>-o name</code></td><td>Name the output file</td></tr>
+  <tr><td><code>-g</code></td><td>Add debug symbols</td></tr>
+</table>
+</div>
+
+<!-- ════════════════════ DATA TYPES -->
+<div class="sec" id="types">
+<h2>Data Types &amp; sizeof</h2>
+<table>
+  <tr><th>Type</th><th>Size</th><th>Range / Use</th><th>scanf/printf</th></tr>
+  <tr><td><code>char</code></td><td>1 byte</td><td>character or small int (-128..127)</td><td><code>%c</code>, <code>%d</code></td></tr>
+  <tr><td><code>int</code></td><td>4 bytes</td><td>-2,147,483,648 .. 2,147,483,647</td><td><code>%d</code></td></tr>
+  <tr><td><code>long</code></td><td>4–8 bytes</td><td>large int</td><td><code>%ld</code></td></tr>
+  <tr><td><code>long long</code></td><td>8 bytes</td><td>very large int (use for cents!)</td><td><code>%lld</code></td></tr>
+  <tr><td><code>float</code></td><td>4 bytes</td><td>~6-7 significant digits</td><td><code>%f</code></td></tr>
+  <tr><td><code>double</code></td><td>8 bytes</td><td>~15-16 significant digits (prefer over float)</td><td><code>%lf</code> (scanf), <code>%f</code> (printf)</td></tr>
+  <tr><td><code>bool</code></td><td>1 byte</td><td><code>true</code> / <code>false</code> — needs <code>#include &lt;stdbool.h&gt;</code></td><td><code>%d</code></td></tr>
+  <tr><td><code>size_t</code></td><td>4–8 bytes</td><td>returned by sizeof; unsigned</td><td><code>%zu</code></td></tr>
+</table>
+
+<h3>sizeof</h3>
+<pre><span class="fn">sizeof</span>(<span class="ty">int</span>)       <span class="cm">// 4</span>
+<span class="fn">sizeof</span>(<span class="ty">double</span>)    <span class="cm">// 8</span>
+<span class="fn">sizeof</span>(<span class="ty">char</span>)      <span class="cm">// 1</span>
+
+<span class="ty">int</span> arr[<span class="nm">10</span>];
+<span class="ty">int</span> len = <span class="fn">sizeof</span>(arr) / <span class="fn">sizeof</span>(arr[<span class="nm">0</span>]);   <span class="cm">// 10 — works ONLY in same scope as arr</span>
+<span class="cm">// Inside a function that receives int arr[], sizeof(arr) = pointer size, NOT array size!</span>
+
+<span class="cm">/* LEN macro — safe array length (use in same file as array) */</span>
+<span class="pp">#define LEN(arr) (sizeof(arr) / sizeof((arr)[0]))</span>
+<span class="ty">int</span> n = <span class="fn">LEN</span>(arr);  <span class="cm">// 10</span></pre>
+
+<h3>Type casting</h3>
+<pre><span class="ty">int</span> a = <span class="nm">7</span>, b = <span class="nm">2</span>;
+<span class="ty">double</span> r = (<span class="ty">double</span>)a / b;     <span class="cm">// 3.5  — cast BEFORE division</span>
+<span class="ty">double</span> bad = (<span class="ty">double</span>)(a / b); <span class="cm">// 3.0  — integer division happens first, then cast</span>
+<span class="ty">int</span> x = (<span class="ty">int</span>)<span class="nm">3.9</span>;             <span class="cm">// 3    — truncates, does NOT round</span></pre>
+
+<h3>Constants</h3>
+<pre><span class="pp">#define PI 3.14159265</span>         <span class="cm">// preprocessor — no type, no semicolon</span>
+<span class="kw">const</span> <span class="ty">double</span> g = <span class="nm">9.80665</span>;    <span class="cm">// typed constant — preferred in C11</span>
+<span class="kw">const</span> <span class="ty">double</span> kOffset = <span class="nm">273.15</span>;  <span class="cm">// local const inside function is fine</span></pre>
+
+<h3>char &amp; ASCII values (from charcode.c)</h3>
+<pre><span class="cm">/* Every char is secretly an integer — its ASCII code */</span>
+<span class="ty">char</span> ch = <span class="st">'A'</span>;
+<span class="fn">printf</span>(<span class="st">"%c\n"</span>, ch);          <span class="cm">// → A         (print as character)</span>
+<span class="fn">printf</span>(<span class="st">"%d\n"</span>, ch);          <span class="cm">// → 65        (print as integer / ASCII code)</span>
+<span class="fn">printf</span>(<span class="st">"%c -> %d\n"</span>, ch, ch); <span class="cm">// → A -> 65   (both at once)</span>
+
+<span class="cm">/* Key ASCII values to memorize */</span>
+<span class="cm">// 'A' = 65   'Z' = 90</span>
+<span class="cm">// 'a' = 97   'z' = 122</span>
+<span class="cm">// '0' = 48   '9' = 57</span>
+<span class="cm">// ' ' = 32   '\n' = 10</span>
+
+<span class="cm">/* Arithmetic on chars works because they ARE integers */</span>
+<span class="ty">char</span> c = <span class="st">'A'</span>;
+<span class="fn">printf</span>(<span class="st">"%c\n"</span>, c + <span class="nm">1</span>);        <span class="cm">// → B   ('A'+1 = 66 = 'B')</span>
+<span class="fn">printf</span>(<span class="st">"%c\n"</span>, c + <span class="nm">25</span>);       <span class="cm">// → Z</span>
+
+<span class="cm">/* Read a char from stdin */</span>
+<span class="ty">char</span> ch2;
+<span class="fn">scanf</span>(<span class="st">"%c"</span>, &ch2);             <span class="cm">// reads one character</span>
+<span class="ty">int</span>  code = ch2;               <span class="cm">// implicit conversion to int = ASCII code</span></pre>
+</div>
+
+<!-- ════════════════════ FORMAT SPECIFIERS -->
+<div class="sec" id="fmt">
+<h2>Format Specifiers (printf / scanf)</h2>
+<table>
+  <tr><th>Specifier</th><th>Type</th><th>Example output</th><th>scanf note</th></tr>
+  <tr><td><code>%d</code></td><td>int</td><td><code>-42</code></td><td>use <code>&var</code></td></tr>
+  <tr><td><code>%ld</code></td><td>long</td><td><code>1234567</code></td><td>use <code>&var</code></td></tr>
+  <tr><td><code>%lld</code></td><td>long long</td><td><code>9876543210</code></td><td>use <code>&var</code></td></tr>
+  <tr><td><code>%u</code></td><td>unsigned int</td><td><code>42</code></td><td></td></tr>
+  <tr><td><code>%f</code></td><td>float/double (printf)</td><td><code>3.140000</code></td><td>use <code>%lf</code> for double in scanf</td></tr>
+  <tr><td><code>%lf</code></td><td>double (scanf)</td><td></td><td>use <code>&var</code></td></tr>
+  <tr><td><code>%.2f</code></td><td>double, 2 decimal places</td><td><code>3.14</code></td><td></td></tr>
+  <tr><td><code>%8.3f</code></td><td>width=8, 3 decimals</td><td><code>&nbsp;&nbsp;&nbsp;3.141</code> (right-aligned)</td><td></td></tr>
+  <tr><td><code>%08.2f</code></td><td>zero-padded, width=8</td><td><code>00003.14</code></td><td></td></tr>
+  <tr><td><code>%-8.2f</code></td><td>left-aligned, width=8</td><td><code>3.14&nbsp;&nbsp;&nbsp;&nbsp;</code></td><td></td></tr>
+  <tr><td><code>%+8.2f</code></td><td>force sign</td><td><code>&nbsp;&nbsp;&nbsp;+3.14</code></td><td></td></tr>
+  <tr><td><code>%e</code></td><td>scientific notation</td><td><code>3.141593e+00</code></td><td></td></tr>
+  <tr><td><code>%c</code></td><td>char</td><td><code>A</code></td><td>use <code>&var</code></td></tr>
+  <tr><td><code>%s</code></td><td>string (char array)</td><td><code>hello</code></td><td>NO <code>&</code> — array is already address</td></tr>
+  <tr><td><code>%29s</code></td><td>string, max 29 chars (safe)</td><td></td><td>prevents buffer overflow</td></tr>
+  <tr><td><code>%p</code></td><td>pointer address</td><td><code>0x7ffd1234</code></td><td></td></tr>
+  <tr><td><code>%o</code></td><td>octal</td><td><code>52</code></td><td></td></tr>
+  <tr><td><code>%x</code></td><td>hex lowercase</td><td><code>2a</code></td><td></td></tr>
+  <tr><td><code>%X</code></td><td>hex uppercase</td><td><code>2A</code></td><td></td></tr>
+  <tr><td><code>%#o</code></td><td>octal with <code>0</code> prefix</td><td><code>052</code></td><td></td></tr>
+  <tr><td><code>%#x</code></td><td>hex with <code>0x</code> prefix</td><td><code>0x2a</code></td><td></td></tr>
+  <tr><td><code>%zu</code></td><td>size_t</td><td><code>8</code></td><td></td></tr>
+  <tr><td><code>%%</code></td><td>literal %</td><td><code>%</code></td><td></td></tr>
+</table>
+
+<div class="box r">
+  <strong>scanf rules:</strong> Use <code>&</code> for scalars (int, double, char). Do NOT use <code>&</code> for char arrays — the array name is already an address.
+</div>
+
+<h3>Width &amp; precision formatting — full demo</h3>
+<pre><span class="ty">double</span> x = <span class="nm">3.14159</span>;
+<span class="fn">printf</span>(<span class="st">"|%f|\n"</span>,    x);    <span class="cm">// → |3.141590|   default (6 decimal places)</span>
+<span class="fn">printf</span>(<span class="st">"|%.2f|\n"</span>,  x);    <span class="cm">// → |3.14|       2 decimal places</span>
+<span class="fn">printf</span>(<span class="st">"|%8.3f|\n"</span>, x);    <span class="cm">// → |   3.142|   width 8, 3 decimals, right-aligned</span>
+<span class="fn">printf</span>(<span class="st">"|%-8.3f|\n"</span>,x);    <span class="cm">// → |3.142   |   left-aligned</span>
+<span class="fn">printf</span>(<span class="st">"|%08.2f|\n"</span>,x);    <span class="cm">// → |00003.14|   zero-padded</span>
+<span class="fn">printf</span>(<span class="st">"|%+.2f|\n"</span>, x);    <span class="cm">// → |+3.14|      force + sign</span>
+<span class="fn">printf</span>(<span class="st">"|%e|\n"</span>,    x);    <span class="cm">// → |3.141590e+00|  scientific notation</span>
+
+<span class="ty">int</span> n = <span class="nm">42</span>;
+<span class="fn">printf</span>(<span class="st">"%d %o %x\n"</span>, n, n, n);    <span class="cm">// → 42 52 2a   (decimal octal hex)</span>
+<span class="fn">printf</span>(<span class="st">"%d %#o %#x\n"</span>, n, n, n);  <span class="cm">// → 42 052 0x2a  (with prefixes)</span></pre>
+
+<h3>Reading mixed input (number + string in one scanf)</h3>
+<pre><span class="ty">double</span> val;
+<span class="ty">char</span>   unit[<span class="nm">11</span>];
+<span class="fn">scanf</span>(<span class="st">"%lf%10s"</span>, &val, unit);    <span class="cm">// input "24.5F" → val=24.5, unit="F"</span>
+<span class="ty">char</span> type = unit[<span class="nm">0</span>];              <span class="cm">// first char as letter → 'F'</span></pre>
+</div>
+
+<!-- ════════════════════ OPERATORS -->
+<div class="sec" id="ops">
+<h2>Operators &amp; Precedence</h2>
+
+<h3>Arithmetic &amp; common</h3>
+<pre><span class="nm">10</span> / <span class="nm">3</span>    <span class="cm">// 3   — integer division (truncates)</span>
+<span class="nm">10</span> % <span class="nm">3</span>    <span class="cm">// 1   — remainder (modulo)</span>
+<span class="nm">10</span> / <span class="nm">3.0</span>  <span class="cm">// 3.333... — one float makes it float division</span>
+x += <span class="nm">5</span>;   x -= <span class="nm">2</span>;   x *= <span class="nm">3</span>;   x /= <span class="nm">4</span>;   x %= <span class="nm">7</span>;</pre>
+
+<h3>Increment / decrement</h3>
+<pre><span class="ty">int</span> a = <span class="nm">5</span>;
+<span class="ty">int</span> b = a++;    <span class="cm">// b = 5, THEN a becomes 6  (post: use first, then increment)</span>
+<span class="ty">int</span> c = ++a;    <span class="cm">// a becomes 7, THEN c = 7  (pre: increment first, then use)</span></pre>
+
+<h3>Comparison &amp; logical</h3>
+<table>
+  <tr><th>Op</th><th>Meaning</th><th>Op</th><th>Meaning</th></tr>
+  <tr><td><code>==</code></td><td>equal</td><td><code>!=</code></td><td>not equal</td></tr>
+  <tr><td><code>&lt;</code></td><td>less</td><td><code>&gt;</code></td><td>greater</td></tr>
+  <tr><td><code>&lt;=</code></td><td>less or equal</td><td><code>&gt;=</code></td><td>greater or equal</td></tr>
+  <tr><td><code>&amp;&amp;</code></td><td>logical AND</td><td><code>||</code></td><td>logical OR</td></tr>
+  <tr><td><code>!</code></td><td>logical NOT</td><td><code>? :</code></td><td>ternary</td></tr>
+</table>
+
+<h3>Ternary</h3>
+<pre><span class="ty">int</span> a = <span class="nm">3</span>, b = <span class="nm">7</span>;
+<span class="ty">int</span> min = (a < b) ? a : b;   <span class="cm">// → 3</span>
+<span class="ty">int</span> max = (a > b) ? a : b;   <span class="cm">// → 7</span>
+<span class="fn">printf</span>(<span class="st">"%s\n"</span>, (count == <span class="nm">1</span>) ? <span class="st">"item"</span> : <span class="st">"items"</span>);   <span class="cm">// singular/plural pattern</span></pre>
+
+<h3>Realistic operator example — circle area (from pizza.c)</h3>
+<pre><span class="pp">#define PI 3.14159265</span>
+
+<span class="ty">double</span> radius = <span class="nm">5.0</span>;
+<span class="ty">double</span> area = PI * radius * radius;       <span class="cm">// → 78.539816</span>
+<span class="ty">double</span> circumference = <span class="nm">2.0</span> * PI * radius; <span class="cm">// → 31.415927</span>
+<span class="fn">printf</span>(<span class="st">"Area: %.2f\n"</span>, area);             <span class="cm">// → Area: 78.54</span>
+<span class="fn">printf</span>(<span class="st">"Circumference: %.2f\n"</span>, circumference); <span class="cm">// → Circumference: 31.42</span>
+
+<span class="cm">/* Modulo use case — is n even or odd? */</span>
+<span class="ty">int</span> n = <span class="nm">7</span>;
+<span class="kw">if</span> (n % <span class="nm">2</span> == <span class="nm">0</span>) <span class="fn">printf</span>(<span class="st">"even\n"</span>);
+<span class="kw">else</span>             <span class="fn">printf</span>(<span class="st">"odd\n"</span>);   <span class="cm">// → odd</span>
+
+<span class="cm">/* Integer vs float division — classic trap */</span>
+<span class="ty">int</span> x = <span class="nm">7</span>, y = <span class="nm">2</span>;
+<span class="fn">printf</span>(<span class="st">"%d\n"</span>,   x / y);             <span class="cm">// → 3    (integer division, truncates)</span>
+<span class="fn">printf</span>(<span class="st">"%.1f\n"</span>, (<span class="ty">double</span>)x / y);    <span class="cm">// → 3.5  (cast x to double first)</span>
+<span class="fn">printf</span>(<span class="st">"%.1f\n"</span>, (<span class="ty">double</span>)(x / y));  <span class="cm">// → 3.0  (divides first as int, THEN casts)</span></pre>
+
+<h3 id="prec">Operator Precedence (high → low)</h3>
+<table>
+  <tr><th>Level</th><th>Operators</th><th>Assoc.</th></tr>
+  <tr><td>1 (highest)</td><td><code>() [] -&gt; .</code></td><td>left→right</td></tr>
+  <tr><td>2</td><td><code>! ~ ++ -- (cast) * &amp; sizeof</code> (unary)</td><td>right→left</td></tr>
+  <tr><td>3</td><td><code>* / %</code></td><td>left→right</td></tr>
+  <tr><td>4</td><td><code>+ -</code></td><td>left→right</td></tr>
+  <tr><td>5</td><td><code>&lt;&lt; &gt;&gt;</code></td><td>left→right</td></tr>
+  <tr><td>6</td><td><code>&lt; &lt;= &gt; &gt;=</code></td><td>left→right</td></tr>
+  <tr><td>7</td><td><code>== !=</code></td><td>left→right</td></tr>
+  <tr><td>8–10</td><td><code>&amp;</code> &nbsp; <code>^</code> &nbsp; <code>|</code> (bitwise)</td><td>left→right</td></tr>
+  <tr><td>11</td><td><code>&amp;&amp;</code></td><td>left→right</td></tr>
+  <tr><td>12</td><td><code>||</code></td><td>left→right</td></tr>
+  <tr><td>13</td><td><code>?:</code></td><td>right→left</td></tr>
+  <tr><td>14</td><td><code>= += -= *= /= %=</code> etc.</td><td>right→left</td></tr>
+</table>
+</div>
+
+<!-- ════════════════════ CONTROL FLOW -->
+<div class="sec" id="flow">
+<h2>Control Flow</h2>
+
+<h3>if / else if / else</h3>
+<pre><span class="kw">if</span> (x < <span class="nm">0</span>) {
+    <span class="fn">printf</span>(<span class="st">"negative\n"</span>);
+} <span class="kw">else if</span> (x == <span class="nm">0</span>) {
+    <span class="fn">printf</span>(<span class="st">"zero\n"</span>);
+} <span class="kw">else</span> {
+    <span class="fn">printf</span>(<span class="st">"positive\n"</span>);
+}</pre>
+
+<h3>Tax bracket pattern (piecewise)</h3>
+<pre><span class="ty">double</span> tax = <span class="nm">0.0</span>;
+<span class="kw">if</span> (income <= b1) {
+    tax = income * r1;
+} <span class="kw">else if</span> (income <= b2) {
+    tax = b1 * r1 + (income - b1) * r2;
+} <span class="kw">else</span> {
+    tax = b1 * r1 + (b2 - b1) * r2 + (income - b2) * r3;
+}</pre>
+
+<h3>switch — with fall-through &amp; multiple labels</h3>
+<pre><span class="kw">switch</span> (choice) {
+    <span class="kw">case</span> <span class="nm">1</span>:
+        <span class="fn">puts</span>(<span class="st">"Option 1"</span>);
+        <span class="kw">break</span>;                  <span class="cm">// REQUIRED — or it falls through!</span>
+    <span class="kw">case</span> <span class="nm">2</span>:
+        <span class="fn">puts</span>(<span class="st">"Option 2"</span>);
+        <span class="kw">break</span>;
+    <span class="kw">default</span>:
+        <span class="fn">puts</span>(<span class="st">"Invalid"</span>);
+        <span class="kw">break</span>;
+}
+
+<span class="cm">/* Multiple labels — vowel counter pattern (from vowels.c) */</span>
+<span class="kw">switch</span> (ch) {
+    <span class="kw">case</span> <span class="st">'a'</span>: <span class="kw">case</span> <span class="st">'A'</span>: a_ct++; <span class="kw">break</span>;
+    <span class="kw">case</span> <span class="st">'e'</span>: <span class="kw">case</span> <span class="st">'E'</span>: e_ct++; <span class="kw">break</span>;
+    <span class="kw">default</span>: <span class="kw">break</span>;
+}</pre>
+
+<h3>for loop</h3>
+<pre><span class="kw">for</span> (<span class="ty">int</span> i = <span class="nm">0</span>; i < <span class="nm">10</span>; i++) { <span class="cm">/* i = 0..9 */</span> }
+<span class="kw">for</span> (<span class="ty">int</span> i = <span class="nm">9</span>; i >= <span class="nm">0</span>; i--) { <span class="cm">/* count down */</span> }
+
+<span class="cm">/* Nested loops — pattern printing (from displayPatterns.c) */</span>
+<span class="kw">for</span> (<span class="ty">int</span> r = <span class="nm">0</span>; r < rows; r++) {
+    <span class="kw">for</span> (<span class="ty">int</span> c = <span class="nm">0</span>; c < cols; c++) {
+        <span class="fn">putchar</span>(<span class="st">'*'</span>);
+    }
+    <span class="fn">putchar</span>(<span class="st">'\n'</span>);
+}</pre>
+
+<h3>while loop</h3>
+<pre><span class="ty">int</span> i = <span class="nm">1</span>, sum = <span class="nm">0</span>;
+<span class="kw">while</span> (i <= <span class="nm">10</span>) {
+    sum += i;
+    i++;
+}</pre>
+
+<h3>do-while</h3>
+<pre><span class="kw">do</span> {
+    <span class="fn">printf</span>(<span class="st">"Enter choice (1-3): "</span>);
+    <span class="fn">scanf</span>(<span class="st">"%d"</span>, &choice);
+} <span class="kw">while</span> (choice < <span class="nm">1</span> || choice > <span class="nm">3</span>);   <span class="cm">// body runs at least once</span></pre>
+
+<h3>break &amp; continue — with output</h3>
+<pre><span class="kw">for</span> (<span class="ty">int</span> i = <span class="nm">0</span>; i < <span class="nm">6</span>; i++) {
+    <span class="kw">if</span> (i == <span class="nm">2</span>) <span class="kw">continue</span>;   <span class="cm">// skip i=2, jump to i=3</span>
+    <span class="kw">if</span> (i == <span class="nm">5</span>) <span class="kw">break</span>;      <span class="cm">// exit loop when i=5</span>
+    <span class="fn">printf</span>(<span class="st">"%d "</span>, i);
+}
+<span class="cm">// → 0 1 3 4     (2 skipped, 5 never printed)</span></pre>
+
+<h3>Complete example — vowel counter (from vowels.c)</h3>
+<pre><span class="cm">/* Count how many of each vowel in "Hello World" */</span>
+<span class="ty">char</span> str[] = <span class="st">"Hello World"</span>;
+<span class="ty">int</span> a_ct=<span class="nm">0</span>, e_ct=<span class="nm">0</span>, i_ct=<span class="nm">0</span>, o_ct=<span class="nm">0</span>, u_ct=<span class="nm">0</span>;
+
+<span class="kw">for</span> (<span class="ty">int</span> i = <span class="nm">0</span>; str[i] != <span class="st">'\0'</span>; i++) {
+    <span class="kw">switch</span> (str[i]) {
+        <span class="kw">case</span> <span class="st">'a'</span>: <span class="kw">case</span> <span class="st">'A'</span>: a_ct++; <span class="kw">break</span>;
+        <span class="kw">case</span> <span class="st">'e'</span>: <span class="kw">case</span> <span class="st">'E'</span>: e_ct++; <span class="kw">break</span>;
+        <span class="kw">case</span> <span class="st">'i'</span>: <span class="kw">case</span> <span class="st">'I'</span>: i_ct++; <span class="kw">break</span>;
+        <span class="kw">case</span> <span class="st">'o'</span>: <span class="kw">case</span> <span class="st">'O'</span>: o_ct++; <span class="kw">break</span>;
+        <span class="kw">case</span> <span class="st">'u'</span>: <span class="kw">case</span> <span class="st">'U'</span>: u_ct++; <span class="kw">break</span>;
+        <span class="kw">default</span>: <span class="kw">break</span>;
+    }
+}
+<span class="fn">printf</span>(<span class="st">"a=%d e=%d i=%d o=%d u=%d\n"</span>, a_ct, e_ct, i_ct, o_ct, u_ct);
+<span class="cm">// → a=0 e=1 i=0 o=2 u=0</span>
+
+<span class="cm">/* Note: loop condition str[i] != '\0' — walks until null terminator */</span>
+<span class="cm">// Same as:  for (int i = 0; i < strlen(str); i++)</span></pre>
+</div>
+
+<!-- ════════════════════ FUNCTIONS -->
+<div class="sec" id="funcs">
+<h2>Functions &amp; Prototypes</h2>
+
+<h3>Prototype → Definition → Call</h3>
+<pre><span class="cm">/* Prototype (declaration) — put before main, or in .h file */</span>
+<span class="ty">int</span> <span class="fn">imin</span>(<span class="ty">int</span> a, <span class="ty">int</span> b);
+
+<span class="cm">/* Definition */</span>
+<span class="ty">int</span> <span class="fn">imin</span>(<span class="ty">int</span> a, <span class="ty">int</span> b) {
+    <span class="kw">return</span> (a < b) ? a : b;
+}
+
+<span class="cm">/* Call */</span>
+<span class="ty">int</span> m = <span class="fn">imin</span>(<span class="nm">3</span>, <span class="nm">7</span>);   <span class="cm">// m = 3</span></pre>
+
+<h3>Pass by value vs pass by pointer</h3>
+<pre><span class="cm">/* Pass by VALUE — function gets copy. Original unchanged. */</span>
+<span class="ty">void</span> <span class="fn">swapFails</span>(<span class="ty">int</span> a, <span class="ty">int</span> b) {
+    <span class="ty">int</span> t = a; a = b; b = t;   <span class="cm">// only changes local copies</span>
+}
+
+<span class="cm">/* Pass by POINTER — function modifies the original */</span>
+<span class="ty">void</span> <span class="fn">swap</span>(<span class="ty">int</span> *a, <span class="ty">int</span> *b) {
+    <span class="ty">int</span> t = *a; *a = *b; *b = t;
+}
+<span class="ty">int</span> x = <span class="nm">10</span>, y = <span class="nm">20</span>;
+<span class="fn">swap</span>(&x, &y);   <span class="cm">// x=20, y=10</span></pre>
+
+<h3>void function (no return value)</h3>
+<pre><span class="ty">void</span> <span class="fn">printStars</span>(<span class="ty">int</span> n) {
+    <span class="kw">for</span> (<span class="ty">int</span> i = <span class="nm">0</span>; i < n; i++) <span class="fn">putchar</span>(<span class="st">'*'</span>);
+    <span class="fn">putchar</span>(<span class="st">'\n'</span>);
+}
+<span class="fn">printStars</span>(<span class="nm">5</span>);</pre>
+
+<h3>Argument type conversion (from proto.c)</h3>
+<div class="box g">If a prototype exists, C <em>automatically converts</em> the argument to the declared type. Without a prototype, no conversion happens and types may mismatch silently.</div>
+<pre><span class="cm">/* With prototype — compiler converts int → double automatically */</span>
+<span class="ty">double</span> <span class="fn">half</span>(<span class="ty">double</span> x);   <span class="cm">// prototype declares x is double</span>
+
+<span class="ty">int</span> n = <span class="nm">9</span>;
+<span class="ty">double</span> r = <span class="fn">half</span>(n);      <span class="cm">// n (int 9) auto-converted to 9.0 before call</span>
+                          <span class="cm">// r = 4.5  ✓</span>
+
+<span class="ty">double</span> <span class="fn">half</span>(<span class="ty">double</span> x) { <span class="kw">return</span> x / <span class="nm">2.0</span>; }
+
+<span class="cm">/* Without prototype — if you call before defining, types may not convert */</span>
+<span class="cm">// Always put prototypes at top, or put function definitions before main</span>
+
+<span class="cm">/* Example: imin function */</span>
+<span class="ty">int</span> <span class="fn">imin</span>(<span class="ty">int</span> a, <span class="ty">int</span> b);    <span class="cm">// prototype</span>
+<span class="ty">double</span> x2 = <span class="nm">3.7</span>, y2 = <span class="nm">2.1</span>;
+<span class="ty">int</span> m = <span class="fn">imin</span>(x2, y2);      <span class="cm">// 3.7 → 3, 2.1 → 2 (truncated), returns 2</span></pre>
+
+<h3>static local variable</h3>
+<pre><span class="ty">void</span> <span class="fn">countCalls</span>(<span class="ty">void</span>) {
+    <span class="kw">static</span> <span class="ty">int</span> count = <span class="nm">0</span>;  <span class="cm">// initialized ONCE at program start; survives between calls</span>
+    count++;
+    <span class="fn">printf</span>(<span class="st">"Called %d times\n"</span>, count);
+}
+<span class="fn">countCalls</span>(); <span class="cm">// → "Called 1 times"</span>
+<span class="fn">countCalls</span>(); <span class="cm">// → "Called 2 times"</span>
+<span class="fn">countCalls</span>(); <span class="cm">// → "Called 3 times"</span></pre>
+
+<h3 id="hdr">Header / Source split (hotel.h / hotel.c pattern)</h3>
+<pre><span class="cm">/* hotel.h */</span>
+<span class="pp">#ifndef HOTEL_H</span>
+<span class="pp">#define HOTEL_H</span>
+<span class="pp">#define RATE_STANDARD 150.0</span>
+<span class="pp">#define RATE_SUITE    225.0</span>
+<span class="ty">void</span>   <span class="fn">showprice</span>(<span class="ty">int</span> nights, <span class="ty">double</span> rate);
+<span class="ty">int</span>    <span class="fn">getnights</span>(<span class="ty">void</span>);
+<span class="pp">#endif</span>
+
+<span class="cm">/* hotel.c */</span>
+<span class="pp">#include "hotel.h"</span>
+<span class="pp">#include &lt;stdio.h&gt;</span>
+<span class="ty">void</span> <span class="fn">showprice</span>(<span class="ty">int</span> nights, <span class="ty">double</span> rate) {
+    <span class="fn">printf</span>(<span class="st">"Total: $%.2f\n"</span>, nights * rate);
+}
+<span class="ty">int</span> <span class="fn">getnights</span>(<span class="ty">void</span>) {
+    <span class="ty">int</span> n;
+    <span class="fn">printf</span>(<span class="st">"Nights: "</span>); <span class="fn">scanf</span>(<span class="st">"%d"</span>, &n);
+    <span class="kw">return</span> n;
+}
+
+<span class="cm">/* usehotel.c (main file) */</span>
+<span class="pp">#include "hotel.h"</span>
+<span class="pp">#include &lt;stdio.h&gt;</span>
+<span class="ty">int</span> <span class="fn">main</span>(<span class="ty">void</span>) {
+    <span class="ty">int</span> nights = <span class="fn">getnights</span>();
+    <span class="fn">showprice</span>(nights, RATE_STANDARD);
+    <span class="kw">return</span> <span class="nm">0</span>;
+}</pre>
+</div>
+
+<!-- ════════════════════ ARRAYS -->
+<div class="sec" id="arrays">
+<h2>Arrays (1D, 2D)</h2>
+
+<h3>1D Array declaration &amp; initialization</h3>
+<pre><span class="ty">int</span> arr[<span class="nm">5</span>];                               <span class="cm">// uninitialized — garbage values</span>
+<span class="ty">int</span> arr[<span class="nm">5</span>] = {<span class="nm">1</span>, <span class="nm">2</span>, <span class="nm">3</span>, <span class="nm">4</span>, <span class="nm">5</span>};            <span class="cm">// fully initialized</span>
+<span class="ty">int</span> arr[]  = {<span class="nm">10</span>, <span class="nm">20</span>, <span class="nm">30</span>};              <span class="cm">// size inferred = 3</span>
+<span class="ty">int</span> arr[<span class="nm">5</span>] = {<span class="nm">0</span>};                        <span class="cm">// all zeros</span>
+<span class="ty">int</span> partial[<span class="nm">4</span>] = {<span class="nm">1492</span>, <span class="nm">1066</span>};          <span class="cm">// remaining become 0</span>
+
+<span class="cm">/* Designated initializers (C99+) — jump to a specific index with [n]= */</span>
+<span class="ty">int</span> days[<span class="nm">12</span>] = {<span class="nm">31</span>, <span class="nm">28</span>, [<span class="nm">4</span>]=<span class="nm">31</span>, <span class="nm">30</span>, <span class="nm">31</span>, [<span class="nm">1</span>]=<span class="nm">29</span>};
+<span class="cm">// Evaluates left to right:</span>
+<span class="cm">//   [0]=31, [1]=28           — positional</span>
+<span class="cm">//   [4]=31, [5]=30, [6]=31   — jumps to index 4, then continues positionally</span>
+<span class="cm">//   [1]=29                   — jumps back and OVERWRITES index 1 (was 28, now 29)</span>
+<span class="cm">// Final:  {31, 29, 0, 0, 31, 30, 31, 0, 0, 0, 0, 0}</span>
+<span class="cm">//   [2] and [3] are 0 because nothing set them</span></pre>
+
+<h3>Array access &amp; iteration</h3>
+<pre>arr[<span class="nm">0</span>] = <span class="nm">10</span>;  <span class="cm">// first element  (index starts at 0)</span>
+arr[<span class="nm">4</span>] = <span class="nm">99</span>;  <span class="cm">// last element   (size - 1)</span>
+<span class="cm">// arr[-1] or arr[5] are out of bounds — undefined behavior</span>
+
+<span class="kw">for</span> (<span class="ty">int</span> i = <span class="nm">0</span>; i < <span class="nm">5</span>; i++) <span class="fn">printf</span>(<span class="st">"%d "</span>, arr[i]);</pre>
+
+<h3>Passing arrays to functions</h3>
+<pre><span class="cm">/* Array decays to pointer — MUST pass size separately */</span>
+<span class="ty">int</span> <span class="fn">sumArray</span>(<span class="kw">const</span> <span class="ty">int</span> arr[], <span class="ty">int</span> n) {    <span class="cm">// same as: const int *arr</span>
+    <span class="ty">int</span> total = <span class="nm">0</span>;
+    <span class="kw">for</span> (<span class="ty">int</span> i = <span class="nm">0</span>; i < n; i++) total += arr[i];
+    <span class="kw">return</span> total;
+}
+<span class="ty">int</span> data[] = {<span class="nm">1</span>,<span class="nm">2</span>,<span class="nm">3</span>,<span class="nm">4</span>,<span class="nm">5</span>};
+<span class="fn">sumArray</span>(data, <span class="nm">5</span>);           <span class="cm">// pass array (no &) and its length</span>
+<span class="fn">sumArray</span>(data, LEN(data));   <span class="cm">// using the LEN macro</span>
+
+<span class="cm">/* Pointer-range style (from sum_arr2.c) */</span>
+<span class="ty">int</span> <span class="fn">sumRange</span>(<span class="kw">const</span> <span class="ty">int</span> *start, <span class="kw">const</span> <span class="ty">int</span> *end) {
+    <span class="ty">int</span> total = <span class="nm">0</span>;
+    <span class="kw">while</span> (start < end) { total += *start; start++; }
+    <span class="kw">return</span> total;
+}
+<span class="fn">sumRange</span>(data, data + <span class="nm">5</span>);   <span class="cm">// end pointer = one past last element</span></pre>
+
+<h3>Array with loop — realistic use case</h3>
+<pre><span class="cm">/* Scenario: read 5 scores, find average */</span>
+<span class="ty">int</span> scores[<span class="nm">5</span>];
+<span class="ty">int</span> total = <span class="nm">0</span>;
+
+<span class="kw">for</span> (<span class="ty">int</span> i = <span class="nm">0</span>; i < <span class="nm">5</span>; i++) {
+    <span class="fn">printf</span>(<span class="st">"Score %d: "</span>, i + <span class="nm">1</span>);
+    <span class="fn">scanf</span>(<span class="st">"%d"</span>, &scores[i]);      <span class="cm">// & required — scores[i] is a scalar</span>
+    total += scores[i];
+}
+<span class="fn">printf</span>(<span class="st">"Average: %.1f\n"</span>, (<span class="ty">double</span>)total / <span class="nm">5</span>);
+
+<span class="cm">/* Find max in an array */</span>
+<span class="ty">int</span> arr[] = {<span class="nm">3</span>, <span class="nm">7</span>, <span class="nm">1</span>, <span class="nm">9</span>, <span class="nm">4</span>};
+<span class="ty">int</span> max = arr[<span class="nm">0</span>];                <span class="cm">// start with first element</span>
+<span class="kw">for</span> (<span class="ty">int</span> i = <span class="nm">1</span>; i < <span class="nm">5</span>; i++) {
+    <span class="kw">if</span> (arr[i] > max) max = arr[i];
+}
+<span class="fn">printf</span>(<span class="st">"Max: %d\n"</span>, max);         <span class="cm">// → Max: 9</span></pre>
+
+<h3>2D Arrays</h3>
+<pre><span class="ty">int</span> m[<span class="nm">3</span>][<span class="nm">4</span>];                                   <span class="cm">// 3 rows, 4 cols — uninitialized</span>
+<span class="ty">int</span> m[<span class="nm">2</span>][<span class="nm">3</span>] = {{<span class="nm">1</span>,<span class="nm">2</span>,<span class="nm">3</span>}, {<span class="nm">4</span>,<span class="nm">5</span>,<span class="nm">6</span>}};
+<span class="cm">// m[row][col]  — row first, col second</span>
+<span class="cm">// m[0][0]=1  m[0][1]=2  m[0][2]=3</span>
+<span class="cm">// m[1][0]=4  m[1][1]=5  m[1][2]=6</span>
+
+m[<span class="nm">0</span>][<span class="nm">1</span>] = <span class="nm">99</span>;   <span class="cm">// overwrite row 0, col 1 → was 2, now 99</span>
+
+<span class="cm">/* From rain.c — traverse all elements, print grid */</span>
+<span class="kw">for</span> (<span class="ty">int</span> r = <span class="nm">0</span>; r < <span class="nm">2</span>; r++) {
+    <span class="kw">for</span> (<span class="ty">int</span> c = <span class="nm">0</span>; c < <span class="nm">3</span>; c++) {
+        <span class="fn">printf</span>(<span class="st">"%6d"</span>, m[r][c]);    <span class="cm">// width 6, right-aligned</span>
+    }
+    <span class="fn">printf</span>(<span class="st">"\n"</span>);                 <span class="cm">// newline after each row</span>
+}
+<span class="cm">// →      1    99     3</span>
+<span class="cm">// →      4     5     6</span></pre>
+
+<h3 id="zippo">2D Array / Pointer duality</h3>
+<div class="box y">A 2D array name decays to a pointer to its first <em>row</em>. Each row then decays to a pointer to its first <em>element</em>. This creates two levels of indirection.</div>
+<pre><span class="ty">int</span> zippo[<span class="nm">4</span>][<span class="nm">2</span>] = { {<span class="nm">2</span>,<span class="nm">4</span>}, {<span class="nm">6</span>,<span class="nm">8</span>}, {<span class="nm">1</span>,<span class="nm">3</span>}, {<span class="nm">5</span>,<span class="nm">7</span>} };
+<span class="cm">// Grid:    col0  col1</span>
+<span class="cm">//  row0:    2     4</span>
+<span class="cm">//  row1:    6     8</span>
+<span class="cm">//  row2:    1     3</span>
+<span class="cm">//  row3:    5     7</span>
+
+<span class="cm">/* ── Normal access ───────────────────────────────────── */</span>
+zippo[<span class="nm">0</span>][<span class="nm">0</span>]  <span class="cm">// 2   — row 0, col 0</span>
+zippo[<span class="nm">1</span>][<span class="nm">1</span>]  <span class="cm">// 8   — row 1, col 1</span>
+zippo[<span class="nm">2</span>][<span class="nm">0</span>]  <span class="cm">// 1   — row 2, col 0</span>
+
+<span class="cm">/* ── Pointer equivalents (zippo1.c style) ────────────── */</span>
+zippo           <span class="cm">// pointer to row 0   (address of first row)</span>
+*zippo          <span class="cm">// same as zippo[0]   (pointer to first int in row 0)</span>
+**zippo         <span class="cm">// 2  — same as zippo[0][0]  (dereference twice)</span>
+
+zippo + <span class="nm">1</span>       <span class="cm">// pointer to row 1</span>
+*(zippo + <span class="nm">1</span>)   <span class="cm">// same as zippo[1]   (pointer to first int in row 1)</span>
+**(zippo + <span class="nm">1</span>)  <span class="cm">// 6  — same as zippo[1][0]</span>
+
+*(zippo[<span class="nm">1</span>] + <span class="nm">1</span>)      <span class="cm">// 8  — same as zippo[1][1]</span>
+*(*(zippo + <span class="nm">1</span>) + <span class="nm">1</span>) <span class="cm">// 8  — fully dereferenced form of zippo[1][1]</span>
+
+<span class="cm">/* ── General rule ────────────────────────────────────── */</span>
+<span class="cm">// zippo[r][c]  is IDENTICAL to  *(*(zippo + r) + c)</span>
+<span class="cm">// zippo[r]     is IDENTICAL to  *(zippo + r)</span></pre>
+</div>
+
+<!-- ════════════════════ POINTERS -->
+<div class="sec" id="ptrs">
+<h2>Pointers</h2>
+
+<h3>Core syntax — step by step</h3>
+<pre><span class="ty">int</span>  x = <span class="nm">42</span>;       <span class="cm">// x lives at some address, say 0x100.  x holds 42.</span>
+<span class="ty">int</span> *p;            <span class="cm">// p is a variable that can hold the ADDRESS of an int</span>
+p = &x;            <span class="cm">// & = "address of"  → p now holds 0x100</span>
+
+<span class="fn">printf</span>(<span class="st">"%p\n"</span>, (void*)p); <span class="cm">// → 0x100      (the address stored in p)</span>
+<span class="fn">printf</span>(<span class="st">"%d\n"</span>, *p);       <span class="cm">// → 42         (* = "dereference" = follow the address)</span>
+<span class="fn">printf</span>(<span class="st">"%d\n"</span>,  x);       <span class="cm">// → 42         (same value, directly)</span>
+
+*p = <span class="nm">100</span>;                  <span class="cm">// write 100 to the address p holds → changes x</span>
+<span class="fn">printf</span>(<span class="st">"%d\n"</span>, x);         <span class="cm">// → 100        (x was changed through p)</span>
+<span class="fn">printf</span>(<span class="st">"%d\n"</span>, *p);        <span class="cm">// → 100        (p still points to x)</span>
+
+<span class="cm">/* Declare and assign in one line */</span>
+<span class="ty">int</span> *p2 = &x;     <span class="cm">// fine — p2 points to x immediately</span>
+
+<span class="cm">/* Common mistake: forgetting & in scanf */</span>
+<span class="ty">int</span> age;
+<span class="fn">scanf</span>(<span class="st">"%d"</span>, &age);  <span class="cm">// CORRECT — pass address so scanf can write there</span>
+<span class="fn">scanf</span>(<span class="st">"%d"</span>, age);   <span class="cm">// WRONG   — passes the garbage value of age as an address</span></pre>
+
+<h3>Pointers and arrays — step by step</h3>
+<pre><span class="ty">int</span> arr[] = {<span class="nm">10</span>, <span class="nm">20</span>, <span class="nm">30</span>, <span class="nm">40</span>};
+<span class="ty">int</span> *p = arr;      <span class="cm">// arr decays to &arr[0] — no & needed for array name</span>
+
+<span class="cm">/* Four identical ways to reach arr[2] = 30 */</span>
+arr[<span class="nm">2</span>]           <span class="cm">// 30 — normal subscript</span>
+*(arr + <span class="nm">2</span>)       <span class="cm">// 30 — pointer + offset, then dereference</span>
+p[<span class="nm">2</span>]             <span class="cm">// 30 — subscript via pointer (works the same)</span>
+*(p + <span class="nm">2</span>)         <span class="cm">// 30 — pointer + offset</span>
+
+<span class="cm">/* Walking with p++ */</span>
+<span class="fn">printf</span>(<span class="st">"%d\n"</span>, *p);    <span class="cm">// → 10   (arr[0])</span>
+p++;
+<span class="fn">printf</span>(<span class="st">"%d\n"</span>, *p);    <span class="cm">// → 20   (arr[1])</span>
+p++;
+<span class="fn">printf</span>(<span class="st">"%d\n"</span>, *p);    <span class="cm">// → 30   (arr[2])</span>
+
+<span class="cm">/* Scenario: print all elements with a pointer */</span>
+<span class="ty">int</span> *q = arr;
+<span class="kw">for</span> (<span class="ty">int</span> i = <span class="nm">0</span>; i < <span class="nm">4</span>; i++) {
+    <span class="fn">printf</span>(<span class="st">"%d "</span>, *q);  <span class="cm">// dereference current position</span>
+    q++;               <span class="cm">// advance to next element</span>
+}
+<span class="cm">// → 10 20 30 40</span></pre>
+
+<h3>Pointer arithmetic — advances by element size</h3>
+<pre><span class="ty">short</span>  *sp;   <span class="cm">// sp+1 advances 2 bytes</span>
+<span class="ty">double</span> *dp;   <span class="cm">// dp+1 advances 8 bytes</span>
+<span class="cm">// C scales pointer arithmetic by sizeof(type) automatically</span></pre>
+
+<h3>NULL pointer</h3>
+<pre><span class="ty">int</span> *p = <span class="kw">NULL</span>;
+<span class="kw">if</span> (p == <span class="kw">NULL</span>) { <span class="cm">/* safe */</span> }
+<span class="cm">// NEVER dereference NULL — immediate crash</span></pre>
+
+<h3>const + pointers</h3>
+<pre><span class="kw">const</span> <span class="ty">int</span> *p;        <span class="cm">// can't change *p (the value pointed to)   — read-only data</span>
+<span class="ty">int</span> * <span class="kw">const</span> p2 = &x; <span class="cm">// can't change p2 (the address)            — fixed pointer</span>
+<span class="kw">const</span> <span class="ty">int</span> * <span class="kw">const</span> p3 = &x; <span class="cm">// neither changeable</span>
+
+<span class="cm">/* In function params, const means "I won't modify what you pass" */</span>
+<span class="ty">int</span> <span class="fn">sum</span>(<span class="kw">const</span> <span class="ty">int</span> *arr, <span class="ty">int</span> n) { <span class="cm">/* arr[i] readable, not writable */</span> }</pre>
+
+<h3>Pointer to struct — arrow operator</h3>
+<pre><span class="kw">struct</span> Point { <span class="ty">int</span> x; <span class="ty">int</span> y; };
+<span class="kw">struct</span> Point  pt = {<span class="nm">3</span>, <span class="nm">4</span>};
+<span class="kw">struct</span> Point *pp = &pt;
+
+pp->x = <span class="nm">10</span>;          <span class="cm">// same as: (*pp).x = 10</span>
+<span class="cm">// Use . when you have the value, -> when you have a pointer</span></pre>
+</div>
+
+<!-- ════════════════════ STRINGS -->
+<div class="sec" id="strs">
+<h2>Strings &amp; string.h</h2>
+
+<h3>char arrays</h3>
+<pre><span class="ty">char</span> s1[] = <span class="st">"hello"</span>;       <span class="cm">// 6 bytes: 'h','e','l','l','o','\0'</span>
+<span class="ty">char</span> s2[<span class="nm">20</span>] = <span class="st">"hello"</span>;     <span class="cm">// 20-byte buffer</span>
+<span class="ty">char</span> s3[<span class="nm">20</span>];               <span class="cm">// uninitialized buffer</span>
+<span class="ty">char</span> *lit = <span class="st">"abc"</span>;         <span class="cm">// string literal — do NOT modify through this pointer</span>
+
+<span class="fn">printf</span>(<span class="st">"%s\n"</span>, s1);
+<span class="fn">scanf</span>(<span class="st">"%29s"</span>, s3);           <span class="cm">// safe: max 29 chars + \0 = 30 total</span>
+<span class="fn">fgets</span>(s3, <span class="nm">20</span>, stdin);        <span class="cm">// reads full line including spaces (SAFER)</span>
+
+<span class="fn">strlen</span>(s1)                   <span class="cm">// 5 — does NOT count the '\0'</span>
+<span class="fn">sizeof</span>(s1)                   <span class="cm">// 6 — includes the '\0'</span></pre>
+
+<h3>string.h functions</h3>
+<pre><span class="pp">#include &lt;string.h&gt;</span>
+
+<span class="fn">strlen</span>(s)              <span class="cm">// length (not counting \0)</span>
+<span class="fn">strcpy</span>(dest, src)      <span class="cm">// copy src into dest</span>
+<span class="fn">strncpy</span>(dest, src, n)  <span class="cm">// copy at most n chars (safer)</span>
+<span class="fn">strcat</span>(dest, src)      <span class="cm">// append src to end of dest</span>
+<span class="fn">strncat</span>(dest, src, n)  <span class="cm">// append at most n chars</span>
+<span class="fn">strcmp</span>(a, b)           <span class="cm">// compare: 0=equal, <0 = a<b, >0 = a>b</span>
+<span class="fn">strncmp</span>(a, b, n)       <span class="cm">// compare first n chars</span>
+<span class="fn">strchr</span>(s, c)           <span class="cm">// pointer to first char c in s, NULL if not found</span>
+<span class="fn">strstr</span>(hay, needle)    <span class="cm">// pointer to first substring, NULL if not found</span>
+<span class="fn">memset</span>(ptr, val, n)    <span class="cm">// fill n bytes with val</span></pre>
+
+<div class="box r">
+  To compare strings, use <code>strcmp(a,b) == 0</code>.  Do NOT use <code>a == b</code> — that compares addresses, not contents.
+</div>
+
+<h3>Realistic string examples</h3>
+<pre><span class="cm">/* ── Scenario: read a name, greet them ───────────────── */</span>
+<span class="ty">char</span> name[<span class="nm">50</span>];
+<span class="fn">printf</span>(<span class="st">"Enter your name: "</span>);
+<span class="fn">scanf</span>(<span class="st">"%49s"</span>, name);                <span class="cm">// NO & for char array; 49 = buffer-1</span>
+<span class="fn">printf</span>(<span class="st">"Hello, %s! Length=%zu\n"</span>, name, <span class="fn">strlen</span>(name));
+<span class="cm">// Input: Alice → "Hello, Alice! Length=5"</span>
+
+<span class="cm">/* ── strcmp — check if strings are equal ─────────────── */</span>
+<span class="ty">char</span> a[] = <span class="st">"apple"</span>;
+<span class="ty">char</span> b[] = <span class="st">"apple"</span>;
+<span class="ty">char</span> c[] = <span class="st">"banana"</span>;
+
+<span class="kw">if</span> (<span class="fn">strcmp</span>(a, b) == <span class="nm">0</span>)  <span class="fn">printf</span>(<span class="st">"equal\n"</span>);      <span class="cm">// → equal</span>
+<span class="kw">if</span> (<span class="fn">strcmp</span>(a, c) < <span class="nm">0</span>)   <span class="fn">printf</span>(<span class="st">"a before c\n"</span>); <span class="cm">// → a before c  (apple &lt; banana alphabetically)</span>
+<span class="kw">if</span> (<span class="fn">strcmp</span>(a, b) != <span class="nm">0</span>)  <span class="fn">printf</span>(<span class="st">"different\n"</span>); <span class="cm">// won't print</span>
+
+<span class="cm">/* ── strcpy / strcat — build a string ────────────────── */</span>
+<span class="ty">char</span> full[<span class="nm">100</span>];
+<span class="fn">strcpy</span>(full, <span class="st">"Hello"</span>);      <span class="cm">// full = "Hello"</span>
+<span class="fn">strcat</span>(full, <span class="st">", "</span>);         <span class="cm">// full = "Hello, "</span>
+<span class="fn">strcat</span>(full, <span class="st">"World"</span>);      <span class="cm">// full = "Hello, World"</span>
+<span class="fn">printf</span>(<span class="st">"%s\n"</span>, full);        <span class="cm">// → Hello, World</span>
+
+<span class="cm">/* ── strlen — measure before copying ────────────────── */</span>
+<span class="ty">char</span> src[] = <span class="st">"test"</span>;
+<span class="fn">printf</span>(<span class="st">"%zu\n"</span>, <span class="fn">strlen</span>(src));  <span class="cm">// → 4   (does NOT count '\0')</span>
+<span class="fn">printf</span>(<span class="st">"%zu\n"</span>, <span class="kw">sizeof</span>(src));  <span class="cm">// → 5   (DOES count '\0')</span>
+
+<span class="cm">/* ── fgets vs scanf for strings ──────────────────────── */</span>
+<span class="ty">char</span> line[<span class="nm">80</span>];
+<span class="fn">fgets</span>(line, <span class="kw">sizeof</span>(line), stdin);  <span class="cm">// reads FULL line including spaces</span>
+                                   <span class="cm">// keeps the '\n' at end — strip it with:</span>
+line[<span class="fn">strcspn</span>(line, <span class="st">"\n"</span>)] = <span class="st">'\0'</span>; <span class="cm">// replace first \n with null terminator</span>
+
+<span class="cm">/* scanf %s stops at whitespace — only reads one word */</span>
+<span class="fn">scanf</span>(<span class="st">"%79s"</span>, line);  <span class="cm">// "hello world" → line = "hello" only</span></pre>
+</div>
+
+<!-- ════════════════════ DYNAMIC MEMORY -->
+<div class="sec" id="dyn">
+<h2>Dynamic Memory</h2>
+<pre><span class="pp">#include &lt;stdlib.h&gt;</span></pre>
+
+<h3>malloc / calloc / free pattern</h3>
+<pre><span class="ty">int</span> n = <span class="nm">100</span>;
+
+<span class="cm">/* malloc — allocate, uninitialized */</span>
+<span class="ty">double</span> *nums = (<span class="ty">double</span>*) <span class="fn">malloc</span>((<span class="ty">size_t</span>)n * <span class="kw">sizeof</span>(*nums));
+<span class="kw">if</span> (nums == <span class="kw">NULL</span>) {
+    <span class="fn">fprintf</span>(stderr, <span class="st">"malloc failed\n"</span>);
+    <span class="kw">return</span> EXIT_FAILURE;
+}
+nums[<span class="nm">0</span>] = <span class="nm">3.14</span>;   <span class="cm">// use like a normal array</span>
+<span class="fn">free</span>(nums);       <span class="cm">// always free</span>
+nums = <span class="kw">NULL</span>;
+
+<span class="cm">/* calloc — allocate + zero-initialize */</span>
+<span class="ty">int</span> *arr = (<span class="ty">int</span>*) <span class="fn">calloc</span>(n, <span class="kw">sizeof</span>(<span class="ty">int</span>));
+<span class="fn">free</span>(arr);</pre>
+
+<h3>malloc with user-defined count</h3>
+<pre><span class="ty">int</span> n;
+<span class="fn">scanf</span>(<span class="st">"%d"</span>, &n);
+<span class="ty">double</span> *a = (<span class="ty">double</span>*) <span class="fn">malloc</span>((<span class="ty">size_t</span>)n * <span class="kw">sizeof</span>(<span class="ty">double</span>));
+<span class="kw">if</span> (a == <span class="kw">NULL</span>) { <span class="fn">perror</span>(<span class="st">"malloc"</span>); <span class="kw">return</span> EXIT_FAILURE; }
+<span class="cm">/* ... use a[0] through a[n-1] ... */</span>
+<span class="fn">free</span>(a);</pre>
+
+<h3>Realistic scenario — read n numbers, compute average</h3>
+<pre><span class="cm">/* Scenario: user says how many scores, then enters them */</span>
+<span class="ty">int</span> n;
+<span class="fn">printf</span>(<span class="st">"How many scores? "</span>);
+<span class="fn">scanf</span>(<span class="st">"%d"</span>, &n);
+
+<span class="ty">double</span> *scores = (<span class="ty">double</span>*) <span class="fn">malloc</span>((<span class="ty">size_t</span>)n * <span class="kw">sizeof</span>(<span class="ty">double</span>));
+<span class="kw">if</span> (scores == <span class="kw">NULL</span>) { <span class="fn">perror</span>(<span class="st">"malloc"</span>); <span class="kw">return</span> EXIT_FAILURE; }
+
+<span class="ty">double</span> total = <span class="nm">0.0</span>;
+<span class="kw">for</span> (<span class="ty">int</span> i = <span class="nm">0</span>; i < n; i++) {
+    <span class="fn">printf</span>(<span class="st">"Score %d: "</span>, i + <span class="nm">1</span>);
+    <span class="fn">scanf</span>(<span class="st">"%lf"</span>, &scores[i]);    <span class="cm">// scores[i] is a double — use &</span>
+    total += scores[i];
+}
+<span class="fn">printf</span>(<span class="st">"Average: %.2f\n"</span>, total / n);
+
+<span class="fn">free</span>(scores);     <span class="cm">// ALWAYS free — every malloc needs a matching free</span>
+scores = <span class="kw">NULL</span>;    <span class="cm">// good habit</span></pre>
+</div>
+
+<!-- ════════════════════ FILE I/O -->
+<div class="sec" id="fio">
+<h2>File I/O <span class="star">★ full guide</span></h2>
+<div class="box">
+  <strong>Flow:</strong> <code>fopen()</code> → get <code>FILE*</code> → check for NULL → read/write → <code>fclose()</code>
+</div>
+<pre><span class="pp">#include &lt;stdio.h&gt;</span></pre>
+
+<h3 id="fio-open">Opening &amp; Closing + Mode Strings</h3>
+<pre><span class="ty">FILE</span> *fp = <span class="fn">fopen</span>(<span class="st">"file.txt"</span>, <span class="st">"r"</span>);
+<span class="kw">if</span> (fp == <span class="kw">NULL</span>) {
+    <span class="fn">perror</span>(<span class="st">"fopen"</span>);           <span class="cm">// prints: "fopen: No such file or directory"</span>
+    <span class="kw">return</span> EXIT_FAILURE;
+}
+<span class="cm">/* ... use fp ... */</span>
+<span class="kw">if</span> (<span class="fn">fclose</span>(fp) != <span class="nm">0</span>) <span class="fn">perror</span>(<span class="st">"fclose"</span>);</pre>
+
+<table>
+  <tr><th>Mode</th><th>Meaning</th><th>File exists?</th><th>File missing?</th></tr>
+  <tr><td><code>"r"</code></td><td>Read text</td><td>Open at start</td><td>Returns NULL</td></tr>
+  <tr><td><code>"w"</code></td><td>Write text</td><td><strong>Empties file!</strong></td><td>Creates new</td></tr>
+  <tr><td><code>"a"</code></td><td>Append text</td><td>Write at end</td><td>Creates new</td></tr>
+  <tr><td><code>"a+"</code></td><td>Read + append</td><td>Read anywhere, write at end</td><td>Creates new</td></tr>
+  <tr><td><code>"rb"</code></td><td>Read binary</td><td>Open at start</td><td>Returns NULL</td></tr>
+  <tr><td><code>"wb"</code></td><td>Write binary</td><td><strong>Empties file!</strong></td><td>Creates new</td></tr>
+  <tr><td><code>"ab"</code></td><td>Append binary</td><td>Write at end</td><td>Creates new</td></tr>
+</table>
+
+<h3>Standard streams (always open)</h3>
+<pre>stdin   <span class="cm">// keyboard input (same as FILE* — can pass to fgets, fscanf, etc.)</span>
+stdout  <span class="cm">// normal output</span>
+stderr  <span class="cm">// error output  →  fprintf(stderr, "error: ...\n");</span></pre>
+
+<h3 id="fio-text">Text File Reading</h3>
+<pre><span class="cm">/* ─── Character by character (from count.c) ─────────────────── */</span>
+<span class="ty">int</span> ch;
+<span class="ty">FILE</span> *fp = <span class="fn">fopen</span>(<span class="st">"data.txt"</span>, <span class="st">"r"</span>);
+<span class="kw">while</span> ((ch = <span class="fn">getc</span>(fp)) != EOF) {    <span class="cm">// getc returns int — check for EOF (-1)</span>
+    <span class="fn">putc</span>(ch, stdout);               <span class="cm">// echo to screen</span>
+}
+<span class="fn">fclose</span>(fp);</pre>
+
+<pre><span class="cm">/* ─── Line by line with fgets ────────────────────────────────── */</span>
+<span class="ty">char</span> line[<span class="nm">256</span>];
+<span class="ty">FILE</span> *fp = <span class="fn">fopen</span>(<span class="st">"data.txt"</span>, <span class="st">"r"</span>);
+<span class="kw">while</span> (<span class="fn">fgets</span>(line, <span class="kw">sizeof</span>(line), fp) != <span class="kw">NULL</span>) {
+    <span class="fn">printf</span>(<span class="st">"%s"</span>, line);   <span class="cm">// fgets keeps the '\n' at end of line</span>
+}
+<span class="fn">fclose</span>(fp);</pre>
+
+<pre><span class="cm">/* ─── Formatted read with fscanf (from addaword.c pattern) ───── */</span>
+<span class="ty">char</span> word[<span class="nm">41</span>];
+<span class="ty">FILE</span> *fp = <span class="fn">fopen</span>(<span class="st">"words.txt"</span>, <span class="st">"r"</span>);
+<span class="kw">while</span> (<span class="fn">fscanf</span>(fp, <span class="st">"%40s"</span>, word) == <span class="nm">1</span>) {   <span class="cm">// 1 = one item read successfully</span>
+    <span class="fn">printf</span>(<span class="st">"%s\n"</span>, word);
+}
+<span class="fn">fclose</span>(fp);</pre>
+
+<h3>Text File Writing</h3>
+<pre><span class="ty">FILE</span> *fp = <span class="fn">fopen</span>(<span class="st">"out.txt"</span>, <span class="st">"w"</span>);
+<span class="fn">fprintf</span>(fp, <span class="st">"Name: %s, Score: %.2f\n"</span>, name, score);  <span class="cm">// like printf to file</span>
+<span class="fn">fputs</span>(<span class="st">"some text\n"</span>, fp);                              <span class="cm">// write string</span>
+<span class="fn">fputc</span>(<span class="st">'A'</span>, fp);                                        <span class="cm">// write one char</span>
+<span class="fn">fclose</span>(fp);</pre>
+
+<h3>Append + rewind (addaword.c pattern)</h3>
+<pre><span class="ty">FILE</span> *fp = <span class="fn">fopen</span>(<span class="st">"words.txt"</span>, <span class="st">"a+"</span>);  <span class="cm">// open for append + read</span>
+<span class="ty">char</span> word[<span class="nm">41</span>];
+<span class="kw">while</span> (<span class="fn">fscanf</span>(stdin, <span class="st">"%40s"</span>, word) == <span class="nm">1</span> && word[<span class="nm">0</span>] != <span class="st">'#'</span>) {
+    <span class="fn">fprintf</span>(fp, <span class="st">"%s\n"</span>, word);
+}
+<span class="fn">rewind</span>(fp);                          <span class="cm">// go back to beginning to read it</span>
+<span class="kw">while</span> (<span class="fn">fscanf</span>(fp, <span class="st">"%40s"</span>, word) == <span class="nm">1</span>)
+    <span class="fn">printf</span>(<span class="st">"%s\n"</span>, word);
+<span class="fn">fclose</span>(fp);</pre>
+
+<h3 id="fio-bin">Binary File — fread &amp; fwrite</h3>
+<div class="box">
+  <code>fwrite(ptr, element_size, count, fp)</code><br>
+  <code>fread (ptr, element_size, count, fp)</code><br>
+  Both return the number of elements actually transferred.
+</div>
+<pre><span class="cm">/* Write array of doubles (from freadAndfwrite.c) */</span>
+<span class="ty">double</span> a[] = {<span class="nm">1.0</span>, <span class="nm">2.0</span>, <span class="nm">3.0</span>, <span class="nm">4.0</span>, <span class="nm">5.0</span>};
+<span class="ty">FILE</span> *out = <span class="fn">fopen</span>(<span class="st">"data.bin"</span>, <span class="st">"wb"</span>);
+<span class="fn">fwrite</span>(a, <span class="kw">sizeof</span>(a[<span class="nm">0</span>]), LEN(a), out);
+<span class="fn">fclose</span>(out);
+
+<span class="cm">/* Read them back */</span>
+<span class="ty">double</span> b[<span class="nm">5</span>];
+<span class="ty">FILE</span> *in = <span class="fn">fopen</span>(<span class="st">"data.bin"</span>, <span class="st">"rb"</span>);
+<span class="ty">size_t</span> got = <span class="fn">fread</span>(b, <span class="kw">sizeof</span>(b[<span class="nm">0</span>]), LEN(b), in);
+<span class="kw">if</span> (got != LEN(b)) {
+    <span class="kw">if</span> (<span class="fn">feof</span>(in))   <span class="fn">puts</span>(<span class="st">"Unexpected EOF"</span>);
+    <span class="kw">else if</span> (<span class="fn">ferror</span>(in)) <span class="fn">perror</span>(<span class="st">"fread"</span>);
+}
+<span class="fn">fclose</span>(in);</pre>
+
+<pre><span class="cm">/* Write struct to binary file */</span>
+<span class="kw">typedef</span> <span class="kw">struct</span> { <span class="ty">int</span> id; <span class="ty">double</span> score; <span class="ty">char</span> name[<span class="nm">20</span>]; } Record;
+
+Record r = {<span class="nm">1</span>, <span class="nm">9.5</span>, <span class="st">"Alice"</span>};
+<span class="ty">FILE</span> *fp = <span class="fn">fopen</span>(<span class="st">"rec.bin"</span>, <span class="st">"wb"</span>);
+<span class="fn">fwrite</span>(&r, <span class="kw">sizeof</span>(Record), <span class="nm">1</span>, fp);  <span class="cm">// write 1 record</span>
+<span class="fn">fclose</span>(fp);
+
+<span class="cm">/* Read struct back */</span>
+Record r2;
+<span class="ty">FILE</span> *fp2 = <span class="fn">fopen</span>(<span class="st">"rec.bin"</span>, <span class="st">"rb"</span>);
+<span class="fn">fread</span>(&r2, <span class="kw">sizeof</span>(Record), <span class="nm">1</span>, fp2);
+<span class="fn">printf</span>(<span class="st">"%s: %.1f\n"</span>, r2.name, r2.score);</pre>
+
+<h3 id="fio-pos">fseek / ftell / rewind</h3>
+<pre><span class="fn">rewind</span>(fp);                  <span class="cm">// go back to start (most common)</span>
+<span class="fn">fseek</span>(fp, <span class="nm">0</span>, SEEK_SET);      <span class="cm">// same as rewind</span>
+<span class="fn">fseek</span>(fp, <span class="nm">0</span>, SEEK_END);      <span class="cm">// go to end</span>
+<span class="fn">fseek</span>(fp, <span class="nm">10</span>, SEEK_SET);     <span class="cm">// byte 10 from start</span>
+<span class="fn">fseek</span>(fp, -<span class="nm">5</span>, SEEK_CUR);    <span class="cm">// 5 bytes back from current position</span>
+<span class="ty">long</span> pos = <span class="fn">ftell</span>(fp);        <span class="cm">// current position in bytes</span>
+
+<span class="cm">/* Get file size */</span>
+<span class="fn">fseek</span>(fp, <span class="nm">0</span>, SEEK_END);
+<span class="ty">long</span> size = <span class="fn">ftell</span>(fp);
+<span class="fn">rewind</span>(fp);</pre>
+
+<h3 id="fio-pat">Command-line args + file (from count.c)</h3>
+<pre><span class="ty">int</span> <span class="fn">main</span>(<span class="ty">int</span> argc, <span class="ty">char</span> *argv[]) {
+    <span class="kw">if</span> (argc != <span class="nm">2</span>) {
+        <span class="fn">fprintf</span>(stderr, <span class="st">"Usage: %s filename\n"</span>, argv[<span class="nm">0</span>]);
+        <span class="kw">return</span> EXIT_FAILURE;
+    }
+    <span class="ty">FILE</span> *fp = <span class="fn">fopen</span>(argv[<span class="nm">1</span>], <span class="st">"r"</span>);  <span class="cm">// filename from command line</span>
+    <span class="kw">if</span> (!fp) { <span class="fn">perror</span>(argv[<span class="nm">1</span>]); <span class="kw">return</span> EXIT_FAILURE; }
+
+    <span class="ty">int</span> ch, count = <span class="nm">0</span>;
+    <span class="kw">while</span> ((ch = <span class="fn">getc</span>(fp)) != EOF) count++;
+    <span class="fn">printf</span>(<span class="st">"%d characters\n"</span>, count);
+    <span class="fn">fclose</span>(fp);
+    <span class="kw">return</span> EXIT_SUCCESS;
+}</pre>
+
+<h3>File I/O function signatures</h3>
+<table>
+  <tr><th>Function</th><th>Signature</th><th>Returns</th></tr>
+  <tr><td><code>fopen</code></td><td><code>FILE* fopen(const char *path, const char *mode)</code></td><td>FILE* or NULL</td></tr>
+  <tr><td><code>fclose</code></td><td><code>int fclose(FILE *fp)</code></td><td>0 on success</td></tr>
+  <tr><td><code>getc/fgetc</code></td><td><code>int getc(FILE *fp)</code></td><td>char as int, or EOF</td></tr>
+  <tr><td><code>putc/fputc</code></td><td><code>int putc(int c, FILE *fp)</code></td><td>char or EOF</td></tr>
+  <tr><td><code>fgets</code></td><td><code>char* fgets(char *buf, int n, FILE *fp)</code></td><td>buf or NULL at EOF</td></tr>
+  <tr><td><code>fputs</code></td><td><code>int fputs(const char *s, FILE *fp)</code></td><td>non-neg or EOF</td></tr>
+  <tr><td><code>fprintf</code></td><td><code>int fprintf(FILE *fp, const char *fmt, ...)</code></td><td>chars written</td></tr>
+  <tr><td><code>fscanf</code></td><td><code>int fscanf(FILE *fp, const char *fmt, ...)</code></td><td>items read, EOF at end</td></tr>
+  <tr><td><code>fread</code></td><td><code>size_t fread(void *buf, size_t sz, size_t n, FILE *fp)</code></td><td>elements read</td></tr>
+  <tr><td><code>fwrite</code></td><td><code>size_t fwrite(const void *buf, size_t sz, size_t n, FILE *fp)</code></td><td>elements written</td></tr>
+  <tr><td><code>rewind</code></td><td><code>void rewind(FILE *fp)</code></td><td>void</td></tr>
+  <tr><td><code>fseek</code></td><td><code>int fseek(FILE *fp, long off, int whence)</code></td><td>0 on success</td></tr>
+  <tr><td><code>ftell</code></td><td><code>long ftell(FILE *fp)</code></td><td>position in bytes</td></tr>
+  <tr><td><code>feof</code></td><td><code>int feof(FILE *fp)</code></td><td>non-zero at EOF</td></tr>
+  <tr><td><code>ferror</code></td><td><code>int ferror(FILE *fp)</code></td><td>non-zero on error</td></tr>
+  <tr><td><code>perror</code></td><td><code>void perror(const char *msg)</code></td><td>void</td></tr>
+</table>
+</div>
+
+<!-- ════════════════════ MATH.H -->
+<div class="sec" id="math">
+<h2>math.h Functions</h2>
+<div class="box y">Always compile with <code>-lm</code> when using any math.h function.</div>
+<pre><span class="pp">#include &lt;math.h&gt;</span>
+
+<span class="cm">/* Used in your labs */</span>
+<span class="fn">round</span>(x)     <span class="cm">// round to nearest integer, returns double</span>
+<span class="fn">llround</span>(x)   <span class="cm">// round to nearest integer, returns long long  (preferred for money)</span>
+<span class="fn">fabs</span>(x)      <span class="cm">// absolute value for double   e.g. fabs(-3.7) → 3.7</span>
+<span class="fn">sqrt</span>(x)      <span class="cm">// square root                 e.g. sqrt(9.0)  → 3.0</span>
+<span class="fn">pow</span>(a, b)    <span class="cm">// a raised to power b         e.g. pow(2.0,10) → 1024.0</span>
+
+<span class="cm">/* Other common */</span>
+<span class="fn">ceil</span>(x)      <span class="cm">// round up   → ceil(3.2)  = 4.0</span>
+<span class="fn">floor</span>(x)     <span class="cm">// round down → floor(3.9) = 3.0</span>
+<span class="fn">log</span>(x)       <span class="cm">// natural log</span>
+<span class="fn">log10</span>(x)     <span class="cm">// base-10 log</span>
+<span class="fn">sin</span>(x)  <span class="fn">cos</span>(x)  <span class="fn">tan</span>(x)    <span class="cm">// trig (radians)</span></pre>
+
+<h3>llround — money pattern (why it matters)</h3>
+<pre><span class="cm">// Float arithmetic is imprecise:
+//   0.1 + 0.2 = 0.30000000000000004 (not 0.3)
+// Using llround converts to integer cents cleanly:
+long long cents = llround(3.14 * 100.0);  // 314, not 313 or 315</span></pre>
+</div>
+
+<!-- ════════════════════ STDLIB -->
+<div class="sec" id="stdlib">
+<h2>stdlib.h / stdio.h Quick Reference</h2>
+<table>
+  <tr><th>Function</th><th>Header</th><th>What it does</th></tr>
+  <tr><td><code>printf(fmt,...)</code></td><td>stdio.h</td><td>Print to stdout</td></tr>
+  <tr><td><code>scanf(fmt,...)</code></td><td>stdio.h</td><td>Read from stdin</td></tr>
+  <tr><td><code>fgets(buf,n,fp)</code></td><td>stdio.h</td><td>Read line (safe, keeps \n)</td></tr>
+  <tr><td><code>getchar()</code></td><td>stdio.h</td><td>Read one char from stdin</td></tr>
+  <tr><td><code>putchar(c)</code></td><td>stdio.h</td><td>Write one char to stdout</td></tr>
+  <tr><td><code>puts(s)</code></td><td>stdio.h</td><td>Print string + newline</td></tr>
+  <tr><td><code>sprintf(buf,fmt,...)</code></td><td>stdio.h</td><td>printf into a string buffer</td></tr>
+  <tr><td><code>perror(msg)</code></td><td>stdio.h</td><td>Print system error with prefix</td></tr>
+  <tr><td><code>malloc(sz)</code></td><td>stdlib.h</td><td>Allocate bytes, uninitialized</td></tr>
+  <tr><td><code>calloc(n,sz)</code></td><td>stdlib.h</td><td>Allocate n×sz bytes, zeroed</td></tr>
+  <tr><td><code>free(ptr)</code></td><td>stdlib.h</td><td>Deallocate memory</td></tr>
+  <tr><td><code>atoi(s)</code></td><td>stdlib.h</td><td>String → int ("42" → 42)</td></tr>
+  <tr><td><code>atof(s)</code></td><td>stdlib.h</td><td>String → double ("3.14" → 3.14)</td></tr>
+  <tr><td><code>EXIT_SUCCESS</code></td><td>stdlib.h</td><td>0 — return from main on success</td></tr>
+  <tr><td><code>EXIT_FAILURE</code></td><td>stdlib.h</td><td>1 — return from main on error</td></tr>
+</table>
+</div>
+
+<!-- ════════════════════ STDBOOL + EXIT -->
+<div class="sec" id="bool">
+<h2>stdbool.h &amp; EXIT codes</h2>
+
+<h3>stdbool.h</h3>
+<pre><span class="pp">#include &lt;stdbool.h&gt;</span>
+
+<span class="ty">bool</span> flag = <span class="kw">true</span>;
+<span class="ty">bool</span> done = <span class="kw">false</span>;
+
+<span class="kw">if</span> (!done) { <span class="fn">printf</span>(<span class="st">"still running\n"</span>); }
+<span class="kw">while</span> (!flag) { ... }
+
+<span class="cm">// true = 1, false = 0 — prints as %d</span></pre>
+
+<h3>EXIT codes</h3>
+<pre><span class="kw">return</span> EXIT_SUCCESS;   <span class="cm">// same as return 0;  — success</span>
+<span class="kw">return</span> EXIT_FAILURE;   <span class="cm">// same as return 1;  — something went wrong</span>
+<span class="fn">exit</span>(EXIT_FAILURE);    <span class="cm">// terminate from anywhere (not just main)</span></pre>
+</div>
+
+<!-- ════════════════════ PREPROCESSOR -->
+<div class="sec" id="pre">
+<h2>Preprocessor</h2>
+
+<h3>#define</h3>
+<pre><span class="pp">#define PI 3.14159265</span>               <span class="cm">// constant (no type, no semicolon)</span>
+<span class="pp">#define MAX_SIZE 100</span>
+<span class="pp">#define RATE_STANDARD 150.0</span>         <span class="cm">// from hotel.h</span>
+<span class="pp">#define LEN(arr) (sizeof(arr) / sizeof((arr)[0]))</span>  <span class="cm">// array length macro</span>
+<span class="pp">#define SQUARE(x) ((x) * (x))</span>      <span class="cm">// always parenthesize args</span></pre>
+
+<h3>#include</h3>
+<pre><span class="pp">#include &lt;stdio.h&gt;</span>      <span class="cm">// system header (angle brackets)</span>
+<span class="pp">#include "myfile.h"</span>     <span class="cm">// local header (quotes — looks in current dir first)</span></pre>
+
+<h3>Header guard (always in .h files)</h3>
+<pre><span class="pp">#ifndef MYHEADER_H</span>      <span class="cm">// if not already defined</span>
+<span class="pp">#define MYHEADER_H</span>      <span class="cm">// define it</span>
+
+<span class="cm">/* prototypes, #define constants, struct definitions go here */</span>
+
+<span class="pp">#endif</span>                  <span class="cm">// end of guard</span></pre>
+
+<h3>Conditional compilation</h3>
+<pre><span class="pp">#ifdef DEBUG</span>
+    <span class="fn">printf</span>(<span class="st">"debug: x = %d\n"</span>, x);
+<span class="pp">#endif</span></pre>
+</div>
+
+<hr>
+<p style="color:#444;font-size:11px">General C Reference &nbsp;|&nbsp; Ctrl+F to search</p>
+</main>
+</body>
+</html>
