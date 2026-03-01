@@ -1,0 +1,6395 @@
+
+================================================================================
+FILE: Week 1 continuing - Tagged.pdf
+================================================================================
+Pages: 127
+
+--- Page 1 ---
+CHEM 150 Engineering Chemistry
+Camosun College,   January 2026
+Foto: Daniel Chem 060
+Welcome to
+
+--- Page 2 ---
+What is Chemistry?
+Chemistry is a 
+modern 
+science. It is 
+also a central 
+science.
+Foto: Daniel Chem 150
+
+--- Page 3 ---
+What is chemistry?
+• Chemistry looks at the properties and 
+composition of all material and the changes 
+they can undergo.
+Burns
+
+--- Page 4 ---
+What is chemistry?
+Chemistry also looks at kinetics and
+energetics of reactions
+4C7H5N3O6 + 6O2 → 28CO + 10H2O + 6N2
+Mg2SiO4 + 2H2O + 4CO2  → 2Mg(HCO3)2 + SiO2
+Fotos: wikipedia
+
+--- Page 5 ---
+Why do engineers need to know 
+about chemistry?
+- fuel (energy dense)
+- batteries
+- welding
+- combustion
+- corrosion
+- electronics
+- materials old & new
+Chemistry is everywhere! 
+
+--- Page 6 ---
+Why study chemistry?
+• Novel materials, novel applications
+• Steel versus memory metal
+www.ruthtrumpold.id.au/blogs/designtech/2012/01/21/bendable-
+eyeglasses
+
+--- Page 7 ---
+What happens when a teacher makes a 
+mistake?
+
+
+--- Page 8 ---
+Oppau plant in Germany after the 
+explosion of 1921
+Foto:  BASF archive Ludwigshafen
+
+--- Page 9 ---
+Chemistry today: Miniaturization of devices into the nano-world 
+A Molecular Switch
+
+--- Page 10 --- [no text extracted]
+
+--- Page 11 ---
+Why do engineers need to know 
+about chemistry?
+• California heat wave likely to spur flex alerts for energy grid
+• https://www.latimes.com › california › story › california...
+• State officials are asking Californians to voluntarily limit 
+electricity ... California power grid to limit, with 
+rolling blackouts possible
+ 
+Los Angeles Times 31 September 2022
+Emerging global problems e.g. Energy one 
+of or most important commodities! 
+
+--- Page 12 ---
+Artificial Leaf, Daniel Nocera and Pamela Silver
+• Combine water splitting 
+with CO2 conversion in to 
+fuel in one system by using 
+electrochemistry and 
+biosynthetic system with 
+CO2 reduction efficiencies 
+exceeding photosynthesis
+Science.org/doi/10.1126/science.aaf5039
+
+--- Page 13 ---
+Scientists create 'artificial leaf' that turns 
+carbon dioxide into fuel
+MONDAY, NOVEMBER 4, 2019
+Waterloo engineering professor Yimin Wu. 
+Photo: Brian Caldwell, University of Waterloo
+Wu collaborated on the paper, Facet-dependent active 
+sites of a single Cu2O particle photocatalyst for CO2 
+reduction to methanol, with Tijana Rajh and other 
+researchers at the Argonne National Laboratory in Illinois, 
+as well as scientists at California State University, 
+Northridge, and the City University of Hong Kong.
+
+--- Page 14 ---
+Nature Energy 4(11):1-12
+DOI: 10.1038/s41560-019-0490-3
+
+--- Page 15 ---
+CHEM 150 Review
+A carefully deoxygenated vessel charged with 0.200 L of 1.0 % wt. solution of iron 
+(II) acetate in glacial acetic acid is pressurized to 200 kPa with carefully dried 
+dinitrogen monoxide….
+
+--- Page 16 ---
+CHEM 150 week 1+
+Matter, Atoms, Isotopes, 
+Molecules, Lewis Structures, 
+Periodic Table, Ionic and Covalent 
+Bonding
+
+--- Page 17 ---
+Chemistry
+The study of 
+matter and the 
+changes it 
+undergoes.
+Brown, LeMay
+
+--- Page 18 ---
+Matter
+Matter: Anything that has mass and takes up space.
+Classification of matter according to (a) its physical 
+state or (b) its composition
+
+--- Page 19 ---
+Matter
+A gas has no fixed volume or shape. It conforms to   
+the volume and shape of its container. A gas can be 
+compressed or expanded
+A liquid has a distinct volume independent of its 
+container but has no specific shape. It assumes 
+the shape of the portion of the container that it 
+occupies.
+A solid has both, a definite volume and definite 
+shape. Neither solids nor liquids are compressible.
+
+--- Page 20 ---
+Matter
+Atoms are the building blocks of matter.
+Each element is made of the same kind of atom.
+A compound is made of two or more different kinds of elements.
+Brown, LeMay
+
+--- Page 21 ---
+Pure Substances, Elements
+and Compounds
+The elemental composition of a pure compound is always the same is known as the Law of 
+Constant Composition (or Law of Definite Proportions)
+Joseph Proust (1754 - 1826)
+• Pure Substance Matter that has distinct properties and 
+a composition that doesn’t vary from 
+sample to sample, e.g. salt.
+• Element A substance that cannot be 
+decomposed into simpler substances, 
+e.g. oxygen gas.
+• Compound A substance that is composed of two 
+or more different elements i.e. two or 
+more different kinds of atoms, e.g. water.
+
+
+--- Page 22 ---
+Elements and Compounds
+• Compounds, unlike elements, can be broken down 
+into simpler substances by chemical means but not 
+by physical means. 
+   Distillation
+Electrolysis
+
+
+--- Page 23 ---
+Elements and Compounds
+• If two ore more elements react to give a compound, the 
+properties of the elements are not retained in the compound 
+e.g.
+     2Mg +        O2   →    2MgO
+Shiny metal         colorless gas  white solid
+Compounds are represented by chemical formulas which 
+show their elemental composition e.g. MgO.
+Class Demonstration: Reaction of magnesium in air and starved 
+of oxygen in a test tube, followed by aqueous workup 
+
+--- Page 24 ---
+Mixtures
+• Most substances found in nature are mixtures of 
+compounds and elements (soil, air, plants, 
+seawater).
+• Unlike compounds,
+mixtures can be separated 
+by physical (as well
+as chemical) means.
+  wikipedia
+
+
+--- Page 25 ---
+Mixtures
+• Mixtures also differ from compounds in that the 
+composition of the mixtures are variable e.g. home 
+made bread is a different mixture every time!
+ 
+
+
+--- Page 26 ---
+Mixtures
+• The components of mixtures retain their own identities. Salt water 
+tastes salty and has properties similar to pure water. 
+• This is in contrast to magnesium and oxygen forming magnesium 
+oxide.
+
+--- Page 27 ---
+Mixtures
+• There are two types of mixtures:
+- heterogeneous: a mixture which does not have 
+the same composition, properties and appearance 
+throughout, e.g. muesli, rocks
+- homogeneous: a mixture which is uniform 
+throughout, e.g. A cup of tee. Homogeneous 
+mixtures are called solutions. 
+
+--- Page 28 ---
+Classification of Matter
+Brown, LeMay
+
+--- Page 29 ---
+Mixtures: Find three mixtures in this picture!
+Hornby Island, Photo Daniel
+
+--- Page 30 ---
+Class Exercises
+Classify the following as elements, compounds or mixtures 
+(indicate if hetero or homogeneous)
+Air, iron, soil, carbon dioxide, carbon, an egg
+Which of the following are examples of solutions 
+(homogeneous mixtures)
+Wine, muddy water, brass, oil on water, air, vinegar
+
+--- Page 31 ---
+Metals and Non-metals
+• Metals are conductors of heat and electricity, have 
+a lustre (shiny) appearance, are ductile (can be 
+drawn in to wirers) and are malleable (can be 
+hammered out into thin foils).
+
+
+--- Page 32 ---
+Burns 4/e Chapter 1 Slide 33 of  25
+ 
+
+
+--- Page 33 ---
+Metals and Non-metals
+• Non-metals are generally non conductors, do not 
+have a metallic lustre and are brittle.
+sulfure, white phosphorus and 
+bromine
+
+--- Page 34 ---
+Metals and Non-metals
+Metals are to the left and non-metals to the right of the “step ladder”. 
+Hydrogen, a non-metal, is an exception.
+
+
+--- Page 35 ---
+Metals and Non-metals
+• The elements near the “step ladder” have both, 
+metallic and non-metallic properties and are called 
+metalloids.
+Metallic arsenic and silicon waver
+
+--- Page 36 ---
+Dalton’s Atomic Theory
+• Some basic laws had been established by the year 
+1800. These included: 
+• Law of definite composition:
+Every pure compound has a constant 
+composition.
+• Law of conservation of mass
+Matter can neither be created nor destroyed 
+during a chemical change.
+
+--- Page 37 ---
+Brown, LeMay
+Law of Definite Proportions by 
+Synthesis (Berzelius, Proust)
+
+--- Page 38 ---
+Law of Conservation of Mass
+“We may lay it down as an 
+incontestable axiom that, in all the 
+operations of art and nature, 
+nothing is created; an equal 
+amount of matter exists both 
+before and after the experiment.  
+Upon this principle, the whole art 
+of performing chemical 
+experiments depends.”
+Antoine Lavoisier, 1789
+ t May 08th 1794
+
+--- Page 39 ---
+Dalton’s Atomic Theory
+To account for those laws Dalton proposed:
+1. All matter is composed of extremely small 
+particles called atoms.
+2. All atoms of a given element are alike, but atoms 
+of one element differ from the atoms of any other 
+element.
+3. Compounds are formed when atoms of different 
+elements combine in fixed proportion.
+4. A chemical reaction involves a rearrangement of 
+atoms.  No atoms are created or destroyed or 
+broken apart in a chemical reaction.
+
+--- Page 40 ---
+Atoms and Molecules
+• An atom can be defined as the smallest part of an 
+element that can take part in chemical changes (an oxygen 
+atom is the smallest part of the element oxygen that is 
+found in any substance that contains this element.)
+• Usually individual atoms are not found in nature except 
+the noble gases which occur in atomic form: 
+helium He
+neon Ne
+argon Ar
+xenon Xe
+krypton Kr
+radon Rn
+
+
+--- Page 41 ---
+Atoms and Molecules
+• A molecule can be defined as the smallest particle of a 
+substance that still has the properties of that substance. 
+Several elements exist as diatomic molecules:
+hydrogen H2 fluorine F2 
+nitrogen N2 chlorine Cl2
+oxygen O2 bromine Br2
+iodine I2
+
+
+--- Page 42 ---
+Everything in our world (and beyond) is 
+composed of atoms
+Prevost Island, Photo Daniel
+
+
+--- Page 43 ---
+https://iupac.org/what-we-do/periodic-table-of-elements/
+
+--- Page 44 ---
+Atomic Structure
+• Each element is composed of the same three 
+fundamental particles:
+electron -1 0.0005486
+proton +1 1.0073
+neutron 0 1.0087
+Charge Mass (u)Particle
+Atomic mass unit = 1/12 mass of one atom of carbon-12
+1 u = 1.6605 x 10-24 g
+
+--- Page 45 ---
+The Atom
+electrons
+protons
+neutrons
+The Nucleus
+(positive charge)
+(negative charge)
+(neutral - no charge)
+rn
+ra
+ra
+rn
+≈ 100,000
+Atoms are mostly empty space
+Mass ≈ 1 u
+Mass ≈ 1 u
+Mass ≈ 0 u
+Most mass 
+in the 
+nucleus
+
+--- Page 46 ---
+Cathode Rays and Electrons
+• Streams of negatively charged particles were found to 
+emanate from cathode tubes.
+• The emitted particles (electrons) were independent of 
+the nature of the cathode metal used 
+• J. J. Thompson is credited with its discovery in 1897.
+• He determined the charge/mass ratio of the electron 
+to be 1.76 x 108 coulomb/g
+
+--- Page 47 ---
+Cathode Rays and Electrons
+
+
+--- Page 48 ---
+Millikan Oil Drop Experiment 
+(1909)
+
+
+--- Page 49 ---
+Radioactivity
+Three types of radiation were discovered by Ernest 
+Rutherford and others
+–  particles
+–  particles
+–  rays
+
+
+--- Page 50 ---
+Discovery of the Nucleus
+• Ernest Rutherford shot  particles at a thin sheet of gold foil and 
+observed the pattern of scatter of the particles.
+
+--- Page 51 ---
+The Nuclear Atom
+• Some particles were deflected 
+at large angles. This lead 
+Rutherford to postulate that 
+the atom had a nucleus. 
+Rutherford postulated a very 
+small, dense nucleus with the 
+electrons around the outside 
+of the nucleus.
+• Most of the volume of the 
+atom is empty space
+
+
+--- Page 52 ---
+The Elements
+• The number of protons in the 
+nucleus identifies the element 
+(look up Z in periodic table)
+•  The # of protons + # of neutrons 
+= MASS NUMBER (A)
+•  The # of protons = ATOMIC NUMBER 
+(Z)
+All atoms of the same element have the 
+same atomic number.
+Helium atom Z=2, with two protons, two 
+neutrons and two electrons.
+Graphic Daniel
+
+--- Page 53 ---
+Symbolic Representation of an Element
+
+Z
+A
+E
+Symbol  
+for the element
+Mass Number
+(#protons+#neutrons)
+Atomic Number
+(#protons)
+For a particular element (E)… 
+A can vary, but Z must remain the same…
+
+Z
+A
+E
+
+--- Page 54 ---
+Isotopes
+• While all atoms of a particular element have the 
+same atomic number they may have differing mass 
+numbers. If they do, they are called isotopes of 
+that element.
+• Three isotopes of the element hydrogen:
+Graphic Daniel
+
+--- Page 55 ---
+Isotopes
+• Although the masses of the isotopes are different they behave 
+similarly chemically.
+• Most elements have isotopes, only a few are mono-isotopic.
+• Some isotopes are stable while others are radioactive.
+• Isotopes have many important applications.
+
+--- Page 56 ---
+Class exercise
+ Fill in the empty spaces!
+Symbol 103Rh3+_____ _____
+Protons _____ 15 _____
+Neutrons _____ 16 1
+Electrons _____ 18 1
+Net charge _____ _____ 0
+
+--- Page 57 ---
+Class exercise - solutions
+ Fill in the empty spaces!
+Symbol 103Rh3+_31P3- _        _2H_
+Protons __45_     15 _ 1__
+Neutrons __58_     16    1
+Electrons __42_     18    1
+Net charge __+3_    _-3__      0
+
+--- Page 58 ---
+Some applications of isotopes
+• Agricultural and animal forensics
+• Diagnostics and Therapy
+• Dating of rocks or artifacts
+
+--- Page 59 ---
+Gabriel J. Bowen Æ Leonard I. Wassenaar
+Keith A. Hobson
+Global application of stable hydrogen and oxygen isotopes
+to wildlife forensics
+
+--- Page 60 ---
+Radio carbon dating
+• n + 14N → 14C + p
+• ratio 12C/ 14C = 1/1ppt
+• Ötzi the Iceman
+• Born 3300 BC
+
+
+--- Page 61 ---
+Atomic Mass
+Atomic and molecular masses can be measured with 
+great accuracy with a mass spectrometer.
+Figure 1.23 Brown LeMay
+
+--- Page 62 ---
+Output of mass spectrometer (Cl+ is 
+detected)
+To get to the mass to charge ratio we 
+determine the center of the signal (can be 
+done with great precision
+To get to the abundance of the isotope we 
+need to integrate the signal (less precise!) 
+
+--- Page 63 ---
+Actual mass spectrum of chlorine (Signals for 
+Cl+ and Cl2
++ with characteristic “isotopic finger print” of Chlorine) 
+https://www.chemguide.co.uk/analysis/masspec/elements.html
+
+--- Page 64 ---
+Average Atomic Mass
+(commonly called Atomic Mass)
+• We use average masses in calculations, because we 
+use large amounts of atoms and molecules in the real 
+world.
+• Average atomic mass is calculated from the fractional 
+abundance of each isotope and mass of that isotope.
+
+--- Page 65 ---
+Isotopes
+Class Exercise
+•Boron has two naturally occurring isotopes whose masses have been determined by experiment
+•Determine the average atomic mass of naturally occurring boron if the lighter isotope is 20.0 % and the 
+heavier isotope is 80.0 % abundant.
+
+5
+11
+B
+
+5
+10
+B
+10.012937 u 11.009305 u
+
+5
+11
+B
+
+5
+10
+B
+
+--- Page 66 ---
+Question:
+Why do we have to determine the masses of all 
+isotopes by experiment?
+Would it not be enough to determine the masses of 
+the three principle particles and calculate the masses 
+of each isotope by adding them up? 
+
+--- Page 67 ---
+Atomic Masses
+ A helium atom is made up of 2 protons 2 
+neutrons and 2 electrons but
+m(2p + 2n + 2e- ) ≠ m(He)
+Graphic Daniel
+
+
+--- Page 68 ---
+Atomic Masses
+• In fusion, light nuclei are combined to form nuclei of 
+intermediate size.  The intermediate size nuclei have 
+greater binding energy than the light nuclei.  The  mass 
+“lost” during fusion is converted in to energy according 
+to Einstein’s equation:
+E = mc
+2
+Slide 69 of  25
+ 
+
+
+--- Page 69 ---
+Consequence of Isotopes
+• Some Atomic Masses (Atomic Weight) cannot 
+always be determined accurately
+Why is the AW of Fluorine known to 7 
+decimal places, whereas Carbon is known 
+to 3 decimal places?
+
+
+--- Page 70 ---
+Why is a range given for the average 
+atomic mass of some elements?
+
+
+--- Page 71 ---
+Consequence of Isotopes (for us in 
+CHEM 150)
+• Use average relative atomic mass in 
+calculations!
+• All masses listed in the periodic table are 
+relative
+   to carbon 12 and have
+   thus no units.
+• 1 mole of carbon has a mass of 12.011 g
+• 1 carbon atom hat an average mass of 12.011u
+
+--- Page 72 ---
+Stoichiometry
+Lets start with basic ways to express concentrations
+
+--- Page 73 ---
+Stoichiometry is straight forward but sometimes 
+its hard getting started (getting to moles):
+% is based on “out of 100”, If nothing is stated and we are dealing 
+with solids it usually refers to % wt.
+Some examples:
+Rabbit pellets containing 18% wt. nitrogen. This means 100 g pellets 
+contain 18 g nitrogen (in various forms such as protein – not N2!!!)
+Red wine contains 13 % vol Ethanol means….
+Physiological saline solution is 0.9 % wt/vol in sodium chloride. That 
+means….
+
+--- Page 74 ---
+If only traces are present we often see 
+ppm, ppb or even ppt
+• ppm stands for parts per million
+Examples:
+Rock loaded with 4 ppm in gold means 4 mg of gold are found in a million mg of 
+rock (e.g. 4 mg gold per kg of rock)
+A solution is 35 ppm in aqueous nickel means …35 mg dissolved nickel e.g. Ni2+
+(aq) in one million mg of solution. In such a dilute solution the density of water is 
+not greatly effected by the solute and 35 mg per kg is almost equal to 35 mg per 
+L.
+For gasses we usually use volume! Air that is 10 ppm in CO has 10 mL of CO gas 
+dissolved in 1 cubic meter of air. Because pV=nRT we can also use mole, so 10 
+mol of CO dissolved in 1,000,000 mol of air
+
+--- Page 75 ---
+Molarity (preferred in solution over other 
+concentrations)
+• Molarity is defined as moles of solute per liter of solution: M =  = [] = [M]
+• To make 1 L of a 1M NaCl take 1 mol of sodium chloride (e.g. 58.45 g) and 
+dissolve it in enough water to make exactly 1 L of solution (at 20°C)
+• There is special volumetric equipment for this:
+• Volumetric Flasks (come in 25 mL, 50 mL, 100 mL ….up to 2000 mL)
+• If you dilute solutions use MiVi = MfVf
+Mi= initial Molarity
+Vi = initial Volume
+Mf= final Molarity
+Vf = final Volume
+
+
+--- Page 76 ---
+Example
+• In our Nickel Lab you are asked to prepare a set of diluted standards 
+from a 0.1000 M aqueous nickel stock solution.
+• How much stock solution do you need to make 50 mL of a solution 
+that is 0.0125 M
+ Remember: MiVi = MfVf
+
+--- Page 77 ---
+Example
+• In our Nickel Lab you are asked to prepare a set of diluted standards 
+from a 0.1000M aqueous nickel stock solution.
+• How much stock solution do you need to make 50 mL of a solution 
+that is 0.0125 M
+Remember: MiVi = MfVf Next identify the knowns and unknown:
+Mi= 0.1000M
+Vi = unknown
+Mf= 0.0125 M
+Vf = 50 mL Finally solve for Vi =  = 6.25 mL
+
+--- Page 78 ---
+Stoichiometry Problems
+1.) quantities of only one reactant are given
+2.) quantities of two or more reactants are given
+
+--- Page 79 ---
+1.) quantities of only one reactant are 
+given
+• The Bridge Problem
+
+--- Page 80 ---
+A 80 t steel bridge
+Restricted to a 20 t load
+In SINGLE LANE TRAFFIC ONLY
+Has aged considerably and 
+after 22 years 20 % of the iron 
+has corroded.
+Assume 98.5 % iron in the 
+steel, no rust has peeled off 
+and assume rust to have the 
+chemical composition
+Fe2O3 (H2O). 
+1. Calculate the new mass of 
+the bridge.
+2. Does the load restriction 
+have to be changed?
+
+
+--- Page 81 ---
+At the hearth of a stoichiometry 
+problem is a balanced chemical 
+equation
+So translate:
+Iron + oxygen + water → rust
+Into:
+Fe + O2 + H2O → Fe2O3 (H2O) (unbalanced)
+Note that Fe2O3 (H2O) is preferred over Fe2O4H2 as the formula easily 
+suggests we have a hydrate of iron(III)oxide (and not a mixed hydride-
+oxide of penta-valent iron).
+
+--- Page 82 ---
+At the hearth of a stoichiometry problem is a 
+balanced chemical equation
+Fe + O2 + H2O → Fe2O3 (H2O) (unbalanced)
+Balance equation
+4Fe + 3O2 + 2H2O → 2Fe2O3 (H2O) (ballanced)
+reactants → products
+Next we follow a simple 3 step (a,b,c) procedure using the conversion 
+factor method.
+
+--- Page 83 ---
+a) Convert mass of reactant to moles 
+of reactant
+• 98.5 % of 80 t are iron! How many grams are that?
+80 t x  x  x  = 78,800,000 g Fe = 7.88 x 107 g Fe
+20 % of that iron has converted to rust so 
+7.88 x 107 g Fe x  = 1.576 x 107 g Fe
+Finally convert mass of iron to moles of iron:
+1.576 x 107 g Fe x  = 282200 mol Fe
+
+--- Page 84 ---
+b) Convert moles of reactant to 
+moles of product
+Use the coefficients from your balanced chemical equation!
+4Fe + 3O2 + 2H2O → 2Fe2O3 (H2O)
+282200 mol Fe x  = 141100 mol Fe2O3 (H2O)
+
+--- Page 85 ---
+c) Convert moles of product to mass 
+of product
+Find the molar mass of the product Fe2O3 (H2O)
+2Fe = 2 x 55.847 g/mol
+4O = 4 x 16.00 g/mol
+2H = 2 x 1.008 g/mol
+Fe2O3 (H2O) = 177.71 gmol
+141100 mol Fe2O3 (H2O) x  = 25,074,844… g Fe2O3 (H2O) we have at best 
+two sig figs so lets state 25.(1) t of rust form
+
+--- Page 86 ---
+A 80 t steel bridge
+Restricted to a 20 t load
+In SINGLE LANE traffic only
+Has aged considerably and 
+after 22 years 20 % of the iron 
+has corroded.
+Assume 98.5 % iron is in the 
+steel, no rust has peeled off, 
+and assume rust to have the 
+chemical composition
+Fe2O3 (H2O). 
+1. Calculate the new mass of 
+the bridge.
+2. Does the load restriction 
+have to be changed?
+
+
+--- Page 87 ---
+A 80 t steel bridge
+Restricted to a 20 t load
+In SINGLE LANE traffic only
+Has aged considerably and after 
+22 years 20 % of the iron has 
+corroded.
+Assume 98.5 % iron is in the 
+steel, no rust has peeled off, 
+and assume rust to have the 
+chemical composition
+Fe2O3 (H2O). 
+1. Calculate the new mass of 
+the bridge: 80t Fe initially – 
+15.85 t of iron reacted + 25.1 t 
+of rust produced = 89 t
+2. Does the load restriction 
+have to be changed?
+What do you think?
+
+
+--- Page 88 ---
+2.) quantities of two or more reactants are given
+• The Limiting Reactant Problem
+
+--- Page 89 ---
+2.) quantities of two or more reactants are given
+The Limiting Reactant Problem 
+This is the problem we did in section X02
+• How much gold (III) fluoride can form if 7.00 g of gold react with 5.00 
+g of fluorine. Also state what mass of what reactant is left unreacted?
+
+--- Page 90 ---
+2.) quantities of two or more reactants are given
+• The Limiting Reactant Problem
+• How much gold (III) fluoride can form if 7.00 g of gold react with 5.00 g of 
+fluorine. Also state what mass of what reactant is left unreacted?
+• We start the same way: with an equation!
+
+--- Page 91 ---
+2.) quantities of two or more reactants are given
+• The Limiting Reactant Problem
+• How much gold (III) fluoride can form if 7.00 g of gold react with 5.00 g of 
+fluorine. Also state what mass of what reactant is left unreacted?
+Gold + Fluorine → gold (III) fluoride
+
+--- Page 92 ---
+2.) quantities of two or more reactants are given
+• How much gold (III) fluoride can form if 7.00 g of gold react with 5.00 
+g of fluorine. Also state what mass of what reactant is left unreacted?
+Au + F2  → AuF3  (not balanced, remember fluorine is a diatomic molecule)
+The formulas are now correct and must not be changed,
+Use coefficients to balance the equation
+2Au + 3F2  → 2AuF3  (balanced)
+
+--- Page 93 ---
+a) Convert mass of reactant to moles 
+of reactant (just do it twice, for both 
+reactants)
+Starting with gold (optional, you can start with fluorine if you like):
+Convert mass of gold to moles of gold:
+7.00 g Au x  = 0.035539 mol Au (I keep more digits than are significant in 
+calculations to avoid rounding errors, round off at the end)
+Convert mass of bromine to moles of bromine:
+5.00 g F2 x  = 0.13159 mol F2
+
+--- Page 94 ---
+b) Convert moles of reactant to 
+moles of product (again, for both 
+reactants)
+2Au + 3F2  → 2AuF3
+Starting with gold
+0.035539 mol Au x  = 0.035539 mol AuF3
+Next we check fluorine
+0.13159 mol F2 x  = 0.087727 mol AuF3
+What does this mean?
+
+--- Page 95 ---
+b) Convert moles of reactant to 
+moles of product (again, for both 
+reactants)
+2Au + 3F2  → 2AuF3
+Starting with gold
+0.035539 mol Au x  = 0.035539 mol AuF3
+Next we check fluorine
+0.13159 mol F2 x  = 0.087727 mol AuF3
+What does this mean?
+It means gold limits the amount of product that can form. Only 0.03554 mole product 
+can be made. Gold will be all used up and some fluorine will be left unreacted (left 
+over).
+
+--- Page 96 ---
+c) Convert moles of product to mass 
+of product
+Find the molar mass of the product AuF3
+Au = 196.9665 g/mol
+3F = 3 x 18.9984 g/mol
+AuF3 = 266.6935  gmol
+0.035539 mol AuF3 x  =  9.03g AuF3 
+
+--- Page 97 ---
+• How much gold (III) fluoride can form if 7.00 g of gold react with 5.00 
+g of fluorine. Also state what mass of what reactant is left unreacted?
+• 9.03 g gold (III) fluoride can form,
+• 2Au + 3F2  → 2AF3 this equation must also hold for mass balance
+
+--- Page 98 ---
+• How much gold (III) fluoride can form if 7.00 g of gold react with 5.00 
+g of fluorine. Also state what mass of what reactant is left unreacted?
+• 9.03 g gold (III) fluoride can form,
+• 2Au + 3F2  → 2AuF3 this equation must also hold for mass balance
+• 7.00 g Au + 5.00 F2  → 9.03 g AuF3 + x g F2 (left unreacted)
+• 7.00 g + 5.00 g – 9.03 g = 2.97 g F2 unreacted
+
+--- Page 99 ---
+% yield
+If 8.00 g gold (III) fluoride were actually isolated from the reaction, 
+what was the percent yield?
+% yield = {actual (practical) yield / theoretical yield} * 100 %
+So:
+% yield =  x 100 % = 88.3 % yield
+PS: I don’t remember what actual yield we used in class. I did not write 
+it down so there might be a small discrepancy here with your notes. 
+Important is how to calculate the yield properly.
+
+--- Page 100 ---
+2.) quantities of two or more reactants are given
+The Limiting Reactant Problem 
+This is the problem we did in section X01
+• In the thermite reaction: How much liquid iron can be produced if 
+70.0 g of aluminum are reacted with 450 g of iron (III) oxid?
+
+--- Page 101 ---
+2.) quantities of two or more reactants are given
+• How much liquid iron can be produced if 70.0 g of aluminum are 
+reacted with 450 g of iron (III) oxide?
+Lest formulate an equation: aluminum is oxidized (gaining oxygen and 
+iron in iron(III) oxide is reduced (loosing oxygen)
+Al + Fe2O3 → Fe  + Al2O3  (not balanced)
+The formulas are now correct and must not be changed,
+Use coefficients to balance the equation
+ 2Al + Fe2O3 → 2Fe  + Al2O3  (balanced)
+
+--- Page 102 ---
+a) Convert mass of reactant to moles 
+of reactant (just do it twice, for both 
+reactants)
+Starting with aluminum (optional, you can start with iron (III) oxide if 
+you like):
+Convert mass of aluminum to moles of aluminum:
+70.0 g Al x  = 2.5943 mol Al (I keep more digits than are significant in 
+calculations to avoid rounding errors, round off at the end)
+Convert mass of iron (iii) oxide to moles:
+450 g Fe2O3  x  = 2.8179 mol Fe2O3 
+
+--- Page 103 ---
+b) Convert moles of reactant to 
+moles of product (again, for both 
+reactants)
+2Al + Fe2O3 → 2Fe  + Al2O3 In class I converted moles of aluminum to 
+moles of aluminum oxide and then converted moles of iron (III) oxide to moles 
+of aluminum oxide to determine the limiting reactant and that is fine. Here I 
+convert moles of Aluminum directly to moles of iron because that is ultimately 
+what we are interested in so we reduce the procedure by one step 
+2.5943 mol Al x  = 2.5943 mol Fe
+Next we check iron(III)oxide
+2.8179 mol Fe2 O3 x  = 5.635 mol Fe
+What does this mean?
+
+--- Page 104 ---
+b) Convert moles of reactant to 
+moles of product (again, for both 
+reactants)
+2Al + Fe2O3 → 2Fe  + Al2O3 
+2.5943 mol Al x  = 2.5943 mol Fe,   Next we check iron(III)oxide
+2.8179 mol Fe2 O3 x  = 5.635 mol Fe
+What does this mean?
+It means only 2.59 mol Fe can be made, Aluminum is limiting the amount of iron that can be produced and is all used up. Iron(III) oxide 
+is in excess and some will be left over (2.5943 mol Al x  = 1.297 mol used
+2.8179 mol Fe2O3 – 1.297 mol Fe2O3 = 1.52075 mol Fe2O3 left over
+1.52075 mol Fe2O3 left
+
+--- Page 105 ---
+c) Convert moles of product to mass 
+of product
+2.5943 mol Fe x  =  145g liquid iron can be made
+Check:
+1.52075 mol Fe2O3  x  =  242 g Fe2O3 are left over
+And 2.5943 mol Fe x  x  =  132 g Al₂O₃ produced
+ 
+70 g Al + 450 g Fe2O3 → 145 g Fe  + 132 g Al2O3 + 242 g Fe2O3 (left over)
+520 g is almost equal  519 g (using more decimals gives 520 g = 520 g)
+
+--- Page 106 ---
+An analytical problem: Section X01 
+data
+CuSO4(H2O)n → CuSO4 + nH2O   Decompose reactant using heat.
+Weigh out  1.51 g of reactant. Weigh out the product: 
+1.00 g CuSO4/159.6 g/mol = 0.0062657 mol
+The difference is water: 0.51 g H2O/ 18.016 g/mol = 0.028308 mol
+Ratio of moles of H2O/ CuSO4 = 0.028308 mol / 0.0062657 mol = n = 4.52
+Which can be rounded off to give 5 so we likely have  CuSO4(H2O)5
+
+--- Page 107 ---
+Chemical Nomenclature
+
+--- Page 108 ---
+Two set of rules apply depending 
+on if we are naming ionic 
+compounds or molecular 
+compounds
+
+--- Page 109 ---
+Naming Ionic compounds
+
+--- Page 110 ---
+ Positive Ions (Cations)
+a) Cations formed from metal atoms have the same 
+name as the metal, e.g. Na+ is the sodium ion
+b) If a metal can form different cations, the positive 
+charge is indicated by a Roman numeral in 
+parentheses following the name of the metal, e.g. 
+Au+ is the gold(I) ion and Au3+ is the gold(III) ion.
+c) Cations formed from nonmetal atoms have 
+names that end in -ium, e.g. NH4
++ is the ammonium 
+ion.
+
+--- Page 111 ---
+Common Cations
+
+
+--- Page 112 ---
+ Negative Ions (Anions)
+a) The names of the monatomic anions are formed by 
+replacing the ending of the name of the element with -ide, e.g. 
+O2- is the oxide ion.
+b) Polyatomic anions containing oxygen (called oxyanions) 
+usually have names ending in -ate or -ite, e.g. SO4
+2- is the 
+sulfate ion and SO3
+2- is the sulfite ion.
+c) Anions derived by adding H+ to an oxyanion are named 
+by adding the prefix hydrogen or dihydrogen, e.g. HCO3
+-
+ is the 
+hydrogen carbonate ion
+
+--- Page 113 ---
+Chemical Nomenclature
+Common Anions
+
+
+--- Page 114 --- [no text extracted]
+
+--- Page 115 ---
+ More on naming oxyanions
+Examples
+ClO4
+-
+perchlorate ion (one more O atom than chlorate)
+ClO3
+-
+chlorate
+ClO2
+-
+chlorite ion (one less O atom than chlorate)
+ClO
+-
+hypochlorite ion (one O atom less than chlorite)
+
+
+--- Page 116 ---
+Chemical Nomenclature
+Ionic Compounds
+Names of ionic compounds consist of the cation 
+followed by the anion name, e.g. Cu(ClO4)2 is copper(II) 
+perchlorate, and CaCO3 is calcium carbonate.
+
+--- Page 117 ---
+The periodic table and chemical 
+nomenclature
+• Elements of the 2nd period form ate ending oxyanions 
+that have the formula EO3
+n- while elements of the 3rd 
+period give EO4
+m-
+:C: → C4+ + 4e- 
+C4++ 3O2- = CO3
+2-
+• To calculate the charges assume the ion is composed 
+of oxide ions and a nonmetal cation having lost all its 
+valence electrons
+ Group 
+13
+Group 
+14
+Group 
+15
+Group 
+16
+Group 
+17
+ 
+2nd Period BO3
+3- CO3
+2- NO3
+-   EO3
+n-
+3rd Period  SiO4
+4- PO4
+3- SO4
+2- (ClO4
+-) EO4
+m-
+
+--- Page 118 ---
+Nick the Camel….
+Nick the camel ate a clam for supper in Phoenix
+Is a code for remembering the formulas of
+Nitrate   carbonate chlorate sulfate and phosphate
+The number of consonants in each word is the number of 
+oxygen's in the ion. The number of vowels gives the charge:
+Nick the camel ate a clam for supper in Phoenix
+NO3
+-        CO3
+2-          ClO3
+-        SO4
+2-         PO4
+3-
+
+--- Page 119 ---
+Chemical Nomenclature
+Name and Formulae of Acids
+
+
+--- Page 120 ---
+Exercise
+• Which acids contain the following ions
+• Br-
+• CO3
+2-
+• NO3
+-
+• SO3
+2-
+• SO4
+2-
+• More on your handout. You need to know those acids and anions!
+• If you feel lost check the periodic table or ask “Nick the Camel” !
+
+--- Page 121 ---
+Naming molecular compounds
+
+--- Page 122 ---
+Chemical Nomenclature
+Binary Molecular Compounds
+1. The name of the element farther to the left in 
+the periodic table is written first.
+2. If both elements are in the same group in the 
+periodic table, the one having the higher atomic 
+number is written first.
+3. The name of the second element is given an -ide 
+ending.
+4. Greek prefixes are used to indicate the number 
+of atoms of each element.
+Examples
+N2O4 is dinitrogen tetroxide
+P4S10 is tetraphosphorus decasulfide
+
+
+--- Page 123 ---
+So would we write CO or OC? 
+
+--- Page 124 ---
+Chemical Nomenclature
+Binary Molecular Compounds
+1. The name of the element farther to the left in 
+the periodic table is written first.
+2. If both elements are in the same group in the 
+periodic table, the one having the higher atomic 
+number is written first.
+3. The name of the second element is given an -ide 
+ending.
+4. Greek prefixes are used to indicate the number 
+of atoms of each element.
+Examples
+N2O4 is dinitrogen tetroxide
+P4S10 is tetraphosphorus decasulfide
+
+
+--- Page 125 ---
+So would we write SO2 or O2S? 
+
+--- Page 126 ---
+Chemical Nomenclature
+Binary Molecular Compounds
+1. The name of the element farther to the left in 
+the periodic table is written first.
+2. If both elements are in the same group in the 
+periodic table, the one having the higher atomic 
+number is written first.
+3. The name of the second element is given an -ide 
+ending.
+4. Greek prefixes are used to indicate the number 
+of atoms of each element.
+Examples
+N2O4 is dinitrogen tetroxide
+P4S10 is tetraphosphorus decasulfide
+
+
+--- Page 127 ---
+Examples
+• Name the following compounds (Careful!)
+• CO
+• O2
+• MgCl2
+• HCl
+• SO3
+• CS2
+• N2O3
+
+================================================================================
+FILE: Week 3 Chemical Bonding.pdf
+================================================================================
+Pages: 52
+
+--- Page 1 ---
+Chapter 2 
+Chemical Bonding
+
+--- Page 2 ---
+“Ach wüßt ich nur was die Welt,
+im innersten zusammenhält.”
+• Dr. Faust desperately seeking 
+“…understanding of the true forces 
+that are holding matter together on 
+this earth” before the devil appears 
+as Mephisto in Johan Wolfgang von 
+Goethe’s “Faust” Part I
+Bild:Faust, Titelblatt der Erstausgabe.jpg
+
+
+--- Page 3 ---
+Dr.Faus and 
+Mephisto
+Bild:Teufelspakt Faust-Mephisto, Julius Nisle.jpg
+
+
+--- Page 4 ---
+Chemical Bonding
+• Interaction between atoms leads to a rearrangement of the electrons to 
+a more stable state - bonding.
+• The types (extremes) of chemical bonds:
+– Ionic bond - electrostatic forces hold together oppositely charged 
+ions.
+– Covalent bond - two atoms sharing electron pair(s).  Electrons are 
+mutually attracted by the nuclei of adjacent atoms.
+– Metallic bond -is a complicated type of bond.  The elements are 
+envisaged of being metal cations in a “sea” of electrons. The 
+electrons are shared between all the ions simultaneously… (Not the 
+whole picture!)
+
+--- Page 5 ---
+To understand chemical bonding, 
+trends in three atomic properties 
+must be considered:
+• Ionization energy
+• Atomic radius
+• Electron affinity
+
+--- Page 6 ---
+Ionization Energy
+Ionization energy is the energy required to strip an electron 
+from a gaseous atom.
+Mg(g) Mg+
+(g) + e- I1 = 738 kJ/mol
+Mg+
+(g) Mg2+
+(g)+ e- I2 = 1451 kJ/mol
+Ionization energy decrease as 
+atomic radii increase.
+Petrucci,Table 9.3 (pg. 253)
+
+--- Page 7 ---
+Petrucci Table 9.4, p. 354 
+
+--- Page 8 ---
+Electron Affinity
+Electron affinity is a measure of the energy change that occurs 
+when a gaseous atom gains an electron.
+ F(g) + e-  → F-
+(g)  EA = -328 kJ/mol
+This reaction is exothermic.
+Trends:  generally, electron affinities are larger (more negative) 
+towards the right of the periodic table and less negative towards 
+the bottom of a group (some exceptions).
+
+--- Page 9 ---
+Sizes of Atoms and Ions
+• Atomic radius is difficult to define – there is a small 
+probability of finding an electron at an infinite distance 
+from the nucleus.
+• Often atomic radius is defined in terms of internuclear 
+distance in a compound.
+
+--- Page 10 ---
+Methods of representing Size
+covalent radii:
+• half of the internuclear distance in a homonuclear X-X single bond.
+ionic radii:
+• The ionic radius, rion, is the size of an ion (due to changes in effective 
+nuclear charge; for cations, rion < rcov; whilst for anions, rion > rcov). These 
+values are estimated from electron density maps determined from 
+crystallographic data. 
+van der Waals Radii:
+• half of the distance of closest approach of two non-bonded atoms.  The 
+forces holding the atoms together are weak London Dispersion 
+forces(more to come…).
+
+--- Page 11 ---
+Covalent radius:
+Metallic radius:
+Ionic radius:
+Fig. 9-3
+Pg. 347
+(metals often don’t form
+covalent bonds)
+
+--- Page 12 ---
+Periodic Trends in Atomic Radii
+In order to understand trends in atomic radii, we 
+must consider the shielding or screening effect of 
+the core electrons.
+Effective nuclear charge:
+       Zeff = Z – S
+– Z = atomic number
+– S = number of inner electrons that screen an 
+outer electron
+Fig.: Brown, LeMay
+
+--- Page 13 ---
+1. Variation of atomic radii within a group of the periodic 
+table.
+The more electronic shells in an atom, the larger the atom.  Atomic radius 
+increases from top to bottom in a group.
+2. Variation of atomic radii within a period of the periodic table.
+The atomic radius decreases from left to right through a period of 
+elements.
+
+--- Page 14 ---
+Fig. 9-4, pg. 347
+
+--- Page 15 ---
+Ionic Radius
+• Cations are smaller than the atoms from which they are 
+formed.
+Fig. 9-6
+Pg. 351
+Isoelectronic cations have the same 
+number of electrons in identical 
+configurations.
+Na+ and Mg2+ both have closed 
+shells
+For isoelectronic cations, the 
+more positive the ionic charge, 
+the smaller the ionic radius.
+
+--- Page 16 ---
+• Anions are larger than the atoms from which they are 
+formed.
+• For isoelectronic anions, the more negative the charge, 
+the larger the ionic radius.
+Fig. 9-7
+Pg. 351
+
+--- Page 17 ---
+Source: Petrucci
+Summary
+
+--- Page 18 ---
+Class Demonstrations:
+Reaction of Mg, Ca, Na and K with 
+water
+Although not a gas phase process, the trend in 
+ionization energy is related to the trend in 
+reactivity of the active metals since it involves 
+the metals losing electrons:
+ Na(g) + I1 → Na+(g) + e- (I1 first ionization energy)
+ Na(s) + H2O(l) → Na+(aq) + OH-(aq) + 0.5H2(g)
+
+--- Page 19 ---
+Na Mg 
+K Ca
+Reactivity of active metals with water 
+at room temperature 
+
+--- Page 20 ---
+Class exercise
+Arrange the following atoms in order of 
+increasing ionization energy:
+    Si, F, Na, O 
+
+--- Page 21 ---
+Class exercise
+Arrange the following atoms in order of 
+increasing ionization energy:
+    Si, F, Na, O 
+    Na<Si<O<F
+
+--- Page 22 ---
+Class exercise
+Arrange the following atoms in order of 
+increasing electron affinity
+    Cl, As, P , Ba 
+
+--- Page 23 ---
+Class exercise
+Arrange the following atoms in order of 
+increasing electron affinity
+    Cl, As, P , Ba 
+    Ba<As<P<Cl
+
+--- Page 24 ---
+Class exercise
+Arrange the following atoms in order of 
+increasing atomic radius:
+    Mg, N, Rb, Be
+
+--- Page 25 ---
+Class exercise
+Arrange the following atoms in order of 
+increasing atomic radius:
+    Mg, N, Rb, Be
+    
+    N<Be<Mg<Rb
+
+--- Page 26 ---
+Class exercise
+Arrange the following ions in order of 
+increasing ionic radius:
+    Al3+, Cl-, Na+, F- 
+
+--- Page 27 ---
+Class exercise
+Arrange the following ions in order of 
+increasing ionic radius:
+    Al3+, Cl-, Na+, F- 
+    Al3+  <  Na+  <  F-  <  Cl- 
+    10 e-, 10 e-, 10 e-, 18 e-
+    13 p+, 11 p+, 9 p+ 17 p+
+
+--- Page 28 ---
+Metals have low ionization energies and tend to 
+lose electrons to form positive ions
+Main group metals lose all their valence electrons 
+to form cations:
+If this occurs during a reaction it is an oxidation.
+Na . Na+  +   e-                         sodium
+Mg:                  Mg2+   +  2 e-      magnesium
+ :Al .                  Al 3+    +  3 e-      aluminum
+Ionic bond 
+
+--- Page 29 ---
+Non-metals have high ionization energies and (except 
+for the noble gases) tend to acquire electrons
+Non-metals gain electrons to obtain the noble gas 
+configuration and form anions:
+The gain of electrons in a reaction is called reduction.
+Cl
+-
+Cl +     e-
+O
+2-
+O +     2e-
+N
+3-
+N +     3e-
+
+--- Page 30 ---
+Ionic Compounds
+• Octet Rule:
+• When ionic bonds are formed, metals lose 
+valence electrons so that the electron 
+configuration becomes that of the nearest 
+noble gas.
+• Non-metals gain electrons to achive the 
+noble gas electron configuration (8 or 2 
+valence electrons)
+Note: There are many exceptions to the octet rule, but, it remains 
+useful for introducing many important concepts of bonding.
+
+--- Page 31 ---
+Ions - Metals versus Nonmetals
+Brown, LeMay
+
+--- Page 32 ---
+Class Exercise
+Write balanced equations for the reaction of:
+• sodium with bromine
+• magnesium with chlorine
+• aluminum with sulfur
+• strontium with fluorine
+• hydrogen with calcium
+• nitrogen with lithium
+
+--- Page 33 ---
+Energetics of Ionic Bonding
+As we have seen it takes 495 kJ/mol to remove 
+electrons from sodium (first ionization energy of 
+sodium).
+We get 349 kJ/mol back by giving the electrons 
+to chlorine (remember the exothermic electron 
+gain).
+
+--- Page 34 ---
+Energetics of Ionic Bonding
+• But these 
+numbers don’t 
+explain why 
+the reaction of 
+sodium metal 
+and chlorine 
+gas to form 
+sodium 
+chloride is so 
+exothermic!
+Brown; LeMay, Figure 7.2
+
+--- Page 35 ---
+Energetics of Ionic Bonding
+What is as yet 
+unaccounted for is 
+the electrostatic 
+attraction between 
+the newly formed 
+sodium cation and 
+chloride anion.
+
+
+--- Page 36 ---
+Energetics of Ionic Bonding
+• Negative anions are attracted to positive 
+cations.
+• The result is an ionic bond.
+• A three-dimensional crystal lattice of 
+anions and cations is formed.
+• The energy released upon forming the ionic 
+crystal from isolated gas phase ions is 
+known as lattice energy
+
+--- Page 37 ---
+Space filling View of NaCl
+Image:Sodium-chloride-3D-ionic.png
+
+
+--- Page 38 ---
+Energetics of Ionic Bonding
+Lattice energies of the crystalline solids are 
+generally very high.
+ As a result ionic compound tend to be hard 
+(ceramics) and high melting solids…
+e.g. would aluminum oxide (or sodium chloride) 
+be used as a lubricant or rather as an  
+abrasive?
+
+--- Page 39 ---
+Determining the Lattice Energy using the Born-Haber cycle
+Na(s) + 0.5Cl2(g)
+Na(g) + 0.5Cl2(g)
+Na(g) + Cl(g)
+Na+(g) + e- + Cl(g)
+Na+(g) + Cl-(g)
+NaCl(s)
+-411 kJ
++107 kJ
++122 kJ
++496 kJ
+-349 kJ
+-787 kJStart
+End
+
+--- Page 40 ---
+Structure- Properties Relationship
+Compound Lattice energy
+(kJ/mol)
+Melting point
+(°C)
+Boiling Point
+(°C)
+Solubility  
+(g/100mL H2O)
+LiF 1,049 848 1673 0.13
+NaCl 787 801 1465 36
+KBr 691 734 1435 67
+RbI 632 656 1300 165
+Compound Lattice energy
+(kJ/mol)
+Melting point
+(°C)
+Boiling Point
+(°C)
+Solubility  
+(g/100mL H2O)
+Na2O 2481 1134 decomposition decomposition
+MgO 3795 2825 3600 insoluble
+Al2O3 15916 2054 2977 insoluble
+ZrN 7633 2952 _____ insoluble
+Class exercise: Rationalize the trends in lattice energies, 
+melting and boiling points as well as aqueous solubilities.
+
+--- Page 41 ---
+Formation of Molecular 
+Compounds - Sharing of Electrons
+• For some nonmetals it is not feasible to gain the 
+number of electrons required to reach an octet.
+• E.g. Carbon would have to gain 4 electrons!!!
+• Carbon (and many nonmetals) share valence 
+electrons so that they are surrounded by 8 
+electrons (hydrogen by 2 electrons)
+• This is called covalent bonding
+
+--- Page 42 ---
+Covalent Bonding in Dihydrogen
+• In these bonds atoms share 
+electrons.
+• There are several 
+electrostatic interactions in 
+these bonds:
+– Attractions between 
+electrons and nuclei
+– Repulsions between 
+electrons
+– Repulsions between 
+nuclei
+Brown; LeMay  Figure 7.4
+
+--- Page 43 ---
+Electron Dot Formulas (Lewis 
+structures)
+• It is often useful to represent the valence 
+electrons (electrons in the outermost shell) as 
+dots around the symbol for the elements 
+(Important for chemical bonding!!!)
+• These are called electron dot structures or 
+Lewis structures (Lewis diagrams)
+Li Be Si Cl Ne
+Lewis dot structures for atoms are straight forward!
+
+--- Page 44 ---
+Class Exercise
+• How many valence electrons for each atom:
+– Potassium
+– Selenium
+– Iodine
+– Barium
+
+--- Page 45 ---
+Class Exercise
+• Write electron dot formulas for each:
+– Calcium
+– Boron
+– Bromine
+– Sulfur
+
+--- Page 46 ---
+Chemical Bonding and Lewis 
+structures
+• Ionic bond: complete electron transfer between 
+atoms yields ions with stable octets (or duets), 
+Electrostatic attraction is the main force.
+Cl
+-
+Cl +     Na Na + +
+
+--- Page 47 ---
+Chemical Bonding and Lewis structures
+• Covalent bond: sharing of electrons so each atom 
+obtains eight electrons (or two for hydrogen)
+A bond is represented as a solid line between atoms. It 
+represents a bonding electron pair.
+A non-bonding electron pair is represented by a pair of dots.
+ClH H Cl
+
+--- Page 48 ---
+Lewis Structures of Molecules
+Lewis structures are representations of 
+molecules showing all valence electrons - 
+bonding and nonbonding.
+
+
+--- Page 49 ---
+Lewis Structures of Molecules
+Part 1 (simple molecules)
+• Draw each atom along with it’s valence 
+electrons
+• Make one Bond between the central atom and 
+each terminal atom by pairing up electrons
+• Pair electrons to make double bonds if 
+necessarily to complete octet for all atoms 
+(maximum of four bonds per atom)
+
+--- Page 50 ---
+Lewis structures  of Molecules
+Learn by doing!!!
+Write Lewis structures for the following molecules:
+ HF
+ H2O
+ NH3
+
+--- Page 51 ---
+Answers:
+N
+H H
+HH
+O
+HH FH F
+H
+O
+H NH
+H
+H
+A bond is represented as a solid line between atoms.
+
+--- Page 52 ---
+Lewis structures  of Molecules
+Learn by doing!!!
+Write Lewis structures for the following molecules:
+ N2
+ CO2
+ [NH4]+
+
+================================================================================
+FILE: Week 4 Lecture Lewis Structures - Tagged.pdf
+================================================================================
+Pages: 69
+
+--- Page 1 ---
+Lewis Structures of Molecules
+Part 1 (simple molecules)
+• Draw each atom along with it’s valence 
+electrons
+• Make one Bond between the central atom 
+and each terminal atom by pairing up 
+electrons
+• Pair electrons to make double bonds if 
+necessarily to complete octet for all atoms 
+(maximum of four bonds per atom)
+
+--- Page 2 ---
+Lewis Structures of Molecules
+Part 1 (simple molecules) Example: 
+methane, CH
+4
+
+--- Page 3 ---
+Lewis Structures of Molecules
+Part 1 (simple molecules)
+Example methane, CH
+4
+1.) Draw each atom along with it’s valence 
+electrons
+
+
+--- Page 4 ---
+Lewis Structures of Molecules
+Part 1 (simple molecules) Example 
+methane, CH
+4
+2.) Make one Bond between the central atom 
+and each terminal atom by pairing up 
+electrons
+
+
+--- Page 5 ---
+Lewis Structures of Molecules
+Part 1 (simple molecules)
+3.) If necessarily pair electrons to make 
+double (or triple) bonds to complete octet for 
+all atoms to a maximum of four bonds per 
+atom. (This is strictly true for elements of 
+the 2nd period. We will cover exceptions 
+later.)
+
+--- Page 6 ---
+Lewis structures  of Molecules
+Learn by doing!!!
+Write Lewis structures for the following molecules:
+HF
+H2O
+NH3
+
+--- Page 7 ---
+Answers:
+N
+H H
+HH
+O
+HH FH F
+H
+O
+H NH
+H
+H
+A bond is represented as a solid line between atoms.
+
+--- Page 8 ---
+Lewis structures and the central 
+atom:
+For the molecules CH4, NH3 and H2O you might 
+have wondered which atom would be the central 
+atom. Note that hydrogen would not make a very 
+good central atom since it would have to form 
+more than one bond. 
+How about CO2, HCN or N2O though?
+
+--- Page 9 ---
+Lewis structures and the central 
+atom:
+1.) Usually, but not always, the least electron affine 
+element is the central atom CO2, HCN or N2O 
+e.g. in oxo-anions such as [CO3]2-, [ClO4]-, [PO4]3-or 
+[SO4]2- the non oxygen atom is the central atom
+
+--- Page 10 ---
+Lewis structures and the central 
+atom:
+2.) Generally, if there are four atoms or more, 
+small compact structures are preferred over linear 
+arrangements SO3
+e.g. the molecule SO3  does not consist of a chain of 
+four atoms but carries a central sulfur atom (less 
+electronegative then oxygen) with three oxygen 
+atoms surrounding it.
+
+--- Page 11 ---
+Lewis structures  of Molecules
+Learn by doing!!!
+Write Lewis structures for the following molecules:
+N2
+CO2
+CH2O (formaldehyde)
+HCN
+
+--- Page 12 --- [no text extracted]
+
+--- Page 13 ---
+Lewis structures of ions
+The concept of Lewis structures also 
+applies to polyatomic ions. We just 
+have to take into account the extra 
+electron(s) for anions, or the missing 
+electron for cations.
+[NH4]+
+
+--- Page 14 ---
+Lewis structures of ions
+Write the Lewis structure for the ammonium ion!
+[NH4]+
+
+--- Page 15 ---
+Lewis structures of ions
+1.) Draw each atom along with it’s valence 
+electrons
+
+
+--- Page 16 ---
+Lewis structures of ions
+2.) Make one Bond between the central atom 
+and each terminal atom by pairing up 
+electrons
+
+
+--- Page 17 ---
+Lewis structures of ions
+3.) If overall charge (n-) add n electrons to 
+a terminal atom(s), if overall charge n+ 
+remove n electrons from the central atom.
+
+
+--- Page 18 ---
+Lewis structures of ions
+4.) Indicate the absence of that electron by 
+placing a FORMAL CHARGE (circled positive 
+charge sign) on the nitrogen atom.
+
+
+--- Page 19 ---
+Lewis structures of ions
+Lets try an anion:
+Draw the Lewis structure of the nitrite ion
+
+--- Page 20 ---
+Lewis structures of ions
+Lets try an anion:
+Draw the Lewis structure of the nitrite ion
+[NO2]-
+
+--- Page 21 ---
+Lewis structures of ions
+1.) Draw each atom along with it’s valence 
+electrons
+
+
+--- Page 22 ---
+Lewis structures of ions
+2.) Make one Bond between the central atom 
+and each terminal atom by pairing up 
+electrons
+
+
+--- Page 23 ---
+Lewis structures of ions
+3.) If overall charge (n-) add n electrons to 
+a terminal atom(s), if overall charge n+ 
+remove n electrons from the central atom.
+
+
+--- Page 24 ---
+Lewis structures of ions
+4.) Indicate the presence of the extra electron 
+by placing a FORMAL CHARGE (circled negative 
+charge sign) on the oxygen atom that received 
+the extra electron.
+
+
+--- Page 25 ---
+Lewis structures of ions
+5.) If necessarily pair electrons to make 
+double (or triple) bonds to complete octet for 
+all atoms to a maximum of four bonds per 
+atom.
+
+
+--- Page 26 ---
+Resonance
+The nitrite example raises an important point. How did 
+you decide which of the two oxygen atoms in the 
+nitrite ion was to receive the extra electron
+
+
+--- Page 27 ---
+Resonance
+The nitrite example raises an important point. How did 
+we decide which of the two oxygen atoms in the nitrite 
+ion was to receive the extra electron?
+
+
+--- Page 28 ---
+Resonance
+The double bond would have ended up on the 
+other side of the ion:
+O N O ONO
+
+--- Page 29 ---
+Resonance
+The double bond would have ended up on the 
+other side of the ion:
+   But what is the significance of this?
+O N O ONO
+
+--- Page 30 ---
+Resonance
+Whenever we can draw more than one valid 
+Lewis structure for a molecule, we have 
+resonance and the two structures are referred 
+to as resonance structures, Resonance is 
+indicated by the double headed arrow.
+O N O ONO
+
+--- Page 31 ---
+Resonance
+The true structure, the one we actually observe, 
+looks like something in between those two 
+extremes and is called the resonance hybrid.
+(The resonance hybris is not meant to be drawn 
+as a valid Lewis structure)
+O N O ONO ONO
+
+--- Page 32 ---
+Resonance
+The two resonance structures are related by 
+symmetry. They can both be superimposed 
+upon another an are thus identical. This means 
+they contribute equally to the resonance 
+hybrid and are called equivalent resonance 
+structures.
+O N O ONO
+
+--- Page 33 ---
+Resonance
+Note that the electrons move orders of magnitudes 
+faster than atoms, so if the ion was to flip over 
+from one form to the other the electrons would 
+have already flipped thousands of times between 
+right and left form.
+Atoms never move in resonance structures. Only 
+electrons!
+O N O ONO
+
+--- Page 34 ---
+Resonance
+Consider: 
+(i) NO3
+-
+(ii) CO3
+2-
+Two or more valid Lewis structures can 
+be drawn for the same molecule or ion. 
+The true structure is somewhere in 
+between.
+
+--- Page 35 ---
+Resonance
+
+
+--- Page 36 ---
+Book keeping for valence electrons
+There are a total of nine valence 
+electron pairs in this Lewis structure: 
+9 x 2 = 18 VE
+It is essential that we draw valid Lewis 
+structures. We can check if we have included 
+all valence electrons (VE) by counting them 
+and comparing that number to the # of VE our 
+molecule or ion possesses: For nitrite:
+
+
+--- Page 37 ---
+More bookkeeping:
+Calculating Formal Charges
+Formal charge on an atom 
+= # valence e– – 0.5x(# bonding e–) – (# lone 
+pair e–)
+Consider,
+ NOF3
+DO NOT CONFUSE FC WITH OXIDATION STATE!
+
+--- Page 38 ---
+Formal Charges
+F
+O
+N F
+F
+N
+O
+F F
+F
+N
+O
+F F
+F
+N
+O
+F F
+F
+a) b)
+c)
+d)
+
+--- Page 39 ---
+Draw the Lewis Structures of the azide ion
+Azide (N3
+-)
+N NN
+1.  Draw each atom along 
+with the number of 
+valence electrons.
+2. Make 1 bond between the 
+central atom and each 
+terminal atom by pairing 
+electrons
+4.  Pair electrons to make 
+double bonds (maximum 4 
+bonds per atom) and 
+complete octet for all atoms.
+N NN
+3.  If overall charge (n-) add 
+n electrons to a terminal 
+atom; if overall charge (n+) 
+remove n electrons from 
+central atom
+N NN
+N NN
+5.  If necessary, complete 
+octets by forming 
+additional bonds - this will 
+lead to formal charges on 
+some atoms
+8e
+8e
+6e
+N NN
+8e
+8e
+8e
+
+--- Page 40 ---
+Resonance is not Isomerism! 
+Three equivalent resonance structures 
+of a hypothetical cyclic isomer of [N3]-  
+Isomers have the same number 
+of atoms (same formula [N3]-) in 
+a different arrangement 
+(structural or geometrical) 
+
+--- Page 41 ---
+The structure of [N
+3
+]
+-
+Ball-and-stick model of the unit cell of 
+lithium azide, LiN3. Structural data from G. 
+E. Pringle and D. E. Noakes (February 
+1968). "The crystal structures of lithium, 
+sodium and strontium azides". Acta 
+Cryst. 'B24' (2): 
+262-269. DOI:10.1107/S056774086800206
+2.
+
+--- Page 42 ---
+Non-equivalent Resonance 
+structures
+Consider: Dinitrogen monoxide
+Draw all possible (valid) Lewis 
+structures
+
+--- Page 43 ---
+1.Draw each atom with its proper 
+number of VE
+
+
+--- Page 44 ---
+Non-equivalent Resonance 
+structures
+
+
+--- Page 45 ---
+Non Equivalent Resonance 
+Structures
+Non–equivalent resonance structures do not 
+contribute equally to the resonance hybrid. 
+
+
+--- Page 46 ---
+Finding the BEST Lewis structure among a set of 
+non-equivalent resonance structures
+1. The best Lewis structures has the lowest 
+possible formal charges (e.g. zero formal 
+charges!)
+
+
+--- Page 47 ---
+Finding the BEST Lewis structure among a set 
+of non-equivalent resonance structures
+2. If formal charges are necessarily the best 
+Lewis structure will be the one that has the 
+negative formal charge on the more 
+electronegative atom and the positive charge on 
+the less electronegative atom. (Electronegativity 
+correlates with electron affinity.)
+
+
+--- Page 48 ---
+Finding the BEST Lewis structure among a set 
+of non-equivalent resonance structures
+3. Formal charges of the same sign on 
+adjacent atoms are very unlikely.
+
+
+--- Page 49 ---
+What does this mean?
+• The BEST resonance structure contributes 
+most strongly to the resonance hybrid!
+
+
+--- Page 50 ---
+Relating structure to property:
+Dinitrogen monoxide is an endothermic 
+compound and is thermodynamically instable.
+Propose the path by which it decomposes.
+2N2O → 2N2 +O2
+2N2O → 2NO +N2
+
+
+--- Page 51 ---
+Relating structure to property:
+Dinitrogen monoxide decomposed into the 
+elements. Note that a chemical reaction is a 
+rearrangement of atoms, some bonds need to 
+break and new bonds form. The best resonance 
+structure already contains two triple bonded N
+2N2O → 2N2 +O2
+
+
+--- Page 52 ---
+Exceptions to the Octet Rule
+• Odd-electron species (eg NO)
+• Incomplete octets (eg BF3)
+• Expanded valence shells 
+eg PCl5, SF6,
+SO2, (SO4)2- and (ClO4)-
+
+--- Page 53 ---
+Exceptions to the Octet Rule
+• Odd-electron species (eg NO)
+• Incomplete octets (eg BF3)
+• Expanded valence shells 
+eg PCl5, SF6,
+SO2, (SO4)2- and (ClO4)-
+Most Important
+
+--- Page 54 ---
+Expanded Valence Shells
+H He
+B C N O F Ne
+Al Si P S Cl Ar
+Ga Ge As Se Br Kr
+In Sn Sb Te I Xe
+Tl Pb Bi Po At Rn
+Row
+n = 1
+n = 2
+n = 3
+n = 4
+n = 5
+n = 6
+Group
+13 14 15 16 17 18
+maximum duet
+maximum octet
+Can exceeded 
+an octet of 
+electrons
+
+--- Page 55 ---
+Draw all possible Lewis 
+structures for the sulfate ion:
+
+--- Page 56 ---
+Draw all possible Lewis 
+structures for the sulfate ion:
+Best structure (lowest formal charges
+6 resonance structures possible)
+S obeys octet but
+high formal Charges!
+
+--- Page 57 ---
+In CHEM 150
+• For elements beyond the 2nd Period always 
+minimize Formal Charges by forming 
+multiple bonds.
+
+
+--- Page 58 ---
+How exceptions to the octet rule 
+affect the chemistry of our 
+atmosphere
+
+--- Page 59 ---
+Gas Mixing ratio 
+(mol/mol)
+Nitrogen (N2) 0.78
+Oxygen (O2) 0.21
+Nitrogen dioxide (NO2) 1  10-7
+Hydroxyl radical (OH) 110-12
+Composition of the Atmosphere
+•78 % of the Earth’s atmosphere 
+consists of N2
+•Yet, N2 does not play any role in the 
+chemistry of the atmosphere?
+• Explain using Lewis structure
+OH makes up a very small amount of 
+atmosphere
+Yet it is the most important molecule 
+in terms of chemistry 
+•OH is formed by a complicated set of 
+reactions
+•photolysis of O3 to produce atomic O, 
+which reacts with H2O to give OH
+•OH is basically the “cleaning agent” of the 
+atmosphere  
+•Example: OH reacts with NO2
+•If OH was not present, NO2 (which is 
+toxic) would continue to build up to a very 
+dangerous level
+Sources of NO2 to the atmosphere
+
+--- Page 60 ---
+•OH reacts with NO2 to form 
+HNO3
+•OH + NO2 → HNO3
+•HNO3 is then rapidly 
+scavenged by rain droplets
+•Leads to acid rain (which is 
+another problem)
+NO2
+NO2 + OH
+→ HNO3
+HNO3 droplets
+Rain
+A pH distribution map shows 
+areas in the continental United 
+States of greatest acidity in the 
+rain.  A large part of the acidity 
+is due to HNO3 from chemistry 
+above.
+
+--- Page 61 ---
+Exercise
+• Draw all Resonance structures for the 
+phosphate ion and the pyrazolate ion which 
+skeletal structure is shown below:
+[C3H3N2]-
+ 
+C
+C
+C N
+N
+H
+H
+H
+
+--- Page 62 ---
+Energetics of Covalent Bonding
+Define bond dissociation energies: do
+
+--- Page 63 ---
+Bond Strength
+• The higher the bond order, the shorter the 
+bond length, the higher the bond energy.
+• Trend in Do:  Cl-Cl > Br-Br > I-I 
+(correlates to size)
+Bond Dissociation Energy (Do)
+It costs energy to break bonds!
+Cl Cl 2 Cl Do= +243 kJ/mol
+(g) (g)
+
+--- Page 64 ---
+SCISAT-1 - Canadian Space Agencywww.asc-csa.gc.ca 
+The graph above shows an absorption spectrum.
+
+--- Page 65 ---
+Class Exercise
+• Estimate the energy change that occurs when 
+two mol of hydrogen combine with one mol of 
+oxygen to form water in the gas phase. 
+• 2H2(g)   +  O2(g)   →   2H2O(g) 
+
+--- Page 66 ---
+Strategy:
+
+
+--- Page 67 ---
+bond bond energy (kJ/mol) bond bond energy D(o)   bond     D(o)
+H-H 436 C-C 347 N-N 163
+H-C 414 C=C 611 N=N 418
+H-N 389 CΞC 837 NΞN 946
+H-O 464 C-N 305 N-O 222
+H-S 368 C=N 615 N=O 590
+H-F 565 CΞN 891 O-O 142
+H-Cl 431 C-O 360 O=O 498
+HBr 364 C=O 736 F-F 159
+H-I 297 C-Cl 339 Cl-Cl 243
+Br-Br 193 I-I 151
+
+--- Page 68 ---
+2H2(g) + O2(g)    →      486 kJ +    2H2O(g) 
+
+--- Page 69 ---
+Class exercise and demo
+Estimate the energy change that occurs when 20 
+g isopropanol CH3-CH(OH)-CH3 combust 
+quantitatively to carbon dioxide and water.
+
+================================================================================
+FILE: Week 5 Lecture Polarity - Tagged.pdf
+================================================================================
+Pages: 28
+
+--- Page 1 ---
+Chapter 3
+Polar Bonds and polar Molecules
+
+--- Page 2 ---
+Polar Covalent Bonds
+• Homonuclear molecules (eg F2, H2) are nonpolar 
+(electrons shared equally).
+• In heteronuclear molecules (eg HCl, HF) the bonds 
+are polar (electrons not shared equally).
+NaCl
+(ionic)
+HCl
+(polar 
+covalent)
+Cl2
+(covalent)
+Fig 10.5; p. 380
+
+--- Page 3 ---
+Electronegativity
+• In polar bonds, electrons are attracted to 
+the atom with a greater electronegativity.
+• Electronegativity (EN) is the ability of an 
+atom in a molecule to attract shared 
+electrons to itself.
+• Why not use electron affinity?
+– EA is an atomic property, EN is a molecular 
+property.
+• A widely used scale is the Pauling 
+electronegativity scale.
+
+--- Page 4 ---
+Increasing Electronegativity
+Increasing Electronegativity
+Fig 10-6, p. 382
+
+--- Page 5 ---
+Electronegativity
+• The bigger the electronegativity difference (EN), 
+the more polar the bond and the closer it will be 
+to ionic rather than polar covalent.
+Fig. 10-7, pg 382
+
+--- Page 6 ---
+Dipole Moments
+• We can actually measure how 
+polar a bond is! When two atoms 
+share electrons unequally, a bond 
+dipole results.
+• The dipole moment, , produced 
+by two equal but opposite charges 
+separated by a distance, r, is 
+calculated:
+ = Qr
+• It is measured in debyes (D).
+
+
+--- Page 7 ---
+Contour plot of the 
+electrostatic potential of a 
+horizontally oriented electrical 
+dipole of finite size. Strong 
+colors indicate highest and 
+lowest potential (where the 
+opposing charges of the dipole 
+are located).
+Electric field lines of 
+two opposing charges 
+separated by a finite 
+distance
+Source of pictures 
+Wikipedia
+
+--- Page 8 ---
+Polar Covalent Bonds
+The greater the difference in electronegativity, 
+the more polar is the bond.
+Figure 
+7.8
+Table 
+7.3
+
+--- Page 9 ---
+Polar molecules
+In polar molecules fractional (or partial) positive and 
+negative charges arise are indicated as + and -
+Dipole moment, 
+=fractional charge X distance between nuclei
+Calculate the magnitude of + and - (e.g. the fractional charge)
+in a HCl molecule as well as the % ionic character of the HCl bond. 
+The bond distance in HCl is 126 pm and the dipole moment was 
+measured to be 1.08 Debye (D)   
+(1 D = 3.34 x 10-30 Cm and the elemental charge is 1.602 x 10-19 C)
+Consider, 
+HCl
+
+
+--- Page 10 ---
+How do we measure dipole 
+moments?
+
+--- Page 11 ---
+Polar HCl molecules in the absence of 
+an external electric fiel
+Graphic Daniel
+
+--- Page 12 ---
+hydrogen chloride molecules orient themselves in an 
+electric field. As a result, the field is weakend.
+Graphic Daniel
+
+--- Page 13 ---
+So what about a “molecular 
+capacitor” such as Na
++     
+Cl
+-
+ 
+separated by vacuum and 
+introduced to H
+2
+O?
+
+--- Page 14 ---
+Polar water molecules weaken the electric field between 
+sodium and chloride ions by almost two orders of magnitude. 
+NaCl (mp 801 °C) spontaneously dissolves in water at room 
+temperature. 
+
+--- Page 15 ---
+The Solution Process
+In addition ion-dipole 
+interactions cause 
+solvation of the ions 
+which essentially 
+shields ion of opposite 
+charge from 
+electrostatic attraction.
+Brown LeMay
+
+--- Page 16 ---
+Give it some thought!
+• Why do some ionic compounds dissolve in 
+water while others do not (for example 
+MgO)
+• Explain why NaCl dissolves in water but 
+not in gasoline. 
+
+--- Page 17 ---
+All heteronuclear diatomic 
+molecules must be polar,
+but what about larger molecules?
+
+--- Page 18 ---
+Molecular Shape and Molecular 
+Polarity
+If a molecule 
+possesses polar bonds 
+it does not mean the 
+molecule as a whole 
+will be polar.
+Figure 
+8.11
+
+--- Page 19 ---
+Molecular Shape and Molecular Polarity
+By “adding” the 
+individual bond 
+dipoles, one can 
+determine the overall 
+dipole moment for the 
+molecule.
+Figure 
+8.12
+
+--- Page 20 ---
+Molecules Containing Polar Bonds
+Figure 
+8.13
+
+
+--- Page 21 ---
+In short:
+To determine if a molecule or ion 
+is polar or not, we need to know 
+its molecular shape!
+
+--- Page 22 ---
+The Shapes of Molecules
+Lewis structures are useful but don’t allow prediction 
+of the shape of a molecule.
+Can use a simple theory based on electron repulsion 
+to predict structure (for non-transition elements).
+H O H
+water
+
+--- Page 23 ---
+VSEPR Theory
+Valence-Shell Electron-Pair Repulsion Theory
+• Electron pairs repel each other whether 
+they are in chemical bonds(X) or lone pairs 
+(E).  
+• Valence electron pairs are oriented to be as 
+far apart as possible to minimize 
+repulsions  ==>  LOWEST ENERGY!
+
+--- Page 24 ---
+Chlorophyll
+
+
+--- Page 25 ---
+Electron Group Geometry (EGG)
+EGG = Lone Pairs (E) + Bond Pairs(X)
+Linear (E + X = 2)
+Trigonal Planar (E + X = 3)
+Tetrahedral (E + X = 4)
+Trigonal bipyramidal (E + X = 5)
+Octahedral (E + X = 6)
+Pentagonal bipyramidal (E + X = 7)
+You must know how to draw these!
+
+--- Page 26 ---
+Shapes of Molecules
+• All molecular shapes are based on the 
+EGG.
+• To determine the EGG:
+1. Draw a Lewis Structure
+2. Determine # Bond Pairs (X) - multiple 
+bonds count as 1 only.
+3. Determine # Lone Pairs (E)
+4. EGG = X + E
+EGG is also known as “Parent Shape”
+
+--- Page 27 ---
+Shapes of Molecules
+• Once the EGG is known, lone pairs (E) are 
+placed in positions to minimize E-E and X-
+E repulsions.  E-E repulsions are larger 
+than X-E repulsions.
+• The Molecular Geometry (aka SHAPE) is 
+determined by the position of the bond 
+pairs (X).
+
+--- Page 28 ---
+Examples (VSEPR)
+(a) HCN
+(b) [NO2]-
+(c) CH4
+(d) NH3
+(e) IF3
+(f) BrF5
+(g) H2O
+(h) I3
+-
+(i) Determine the molecular geometry (shape) of each. 
+(ii) Draw a perspective diagram.  
+(iii) Polar or non-polar?
+For Homework:  SF4, PF5, SF6, XeF4,  [SiF6]2- 
+
+================================================================================
+FILE: Week 5 additional VSEPR slides - Tagged-1.pdf
+================================================================================
+Pages: 29
+
+--- Page 1 ---
+Lewis draw the Lewis structure
+  #EG Count the # of Electron groups around central atom
+Remember: multiple bonds, single bonds and each lone pair
+around the central atom all count as one EG
+ EGG   draw the electron group geometry
+shape  draw the molecular shape
+polar? Is the species polar 
+(if multiple Lewis structures exist: Is the resonance hybrid polar?
+linear             linear
+
+--- Page 2 ---
+How about Nitrite?
+
+--- Page 3 ---
+Trigonal planar           bent
+Note that we place the three electron groups
+as far away as possible to minimize repulsion 
+(trigonal planar EGG) but the molecular shape
+is derived only from bonding electron pairs. 
+We don’t “see” the lone pairs,
+but they do take up equal space!
+
+--- Page 4 ---
+So in trigonal planar EGG we can 
+get two molecular shapes:
+Trigonal planar
+Bent (120 )⁰
+
+--- Page 5 ---
+How about Methane?
+
+
+--- Page 6 ---
+tetrahedral       tetrahedral
+The fourth electron group presses out
+in the third dimension to minimize
+Repulsion. Note that the fourth H atom
+(the one pointing into the plane of the paper)
+is given a white color for clarity only.
+
+--- Page 7 ---
+How about Ammonia?
+
+--- Page 8 ---
+trigonal
+pyramidal
+(tripod)
+tetrahedral
+Note that in the “ball and stick” 
+perspective of the molecular shape 
+I drew the hydrogen atom pointing 
+into the plane of the paper in white 
+so that the drawing would appear 
+mor three-dimensional
+
+--- Page 9 ---
+Why is water a liquid?
+
+--- Page 10 ---
+Tetrahedral          Bent
+
+--- Page 11 ---
+So in tetrahedral EGG we can get 
+three molecular shapes:
+Tetrahedral
+Trigonal pyramidal (tripod)
+Bent (109 )⁰
+
+--- Page 12 ---
+Phosphorus pentachloride
+
+--- Page 13 ---
+Trigonal trigonal
+Bipyramidal bipyramidal
+
+--- Page 14 ---
+Sulfur tetrafluoride
+
+
+--- Page 15 ---
+Where do we place the lone pair???
+In a trigonal bipyramid there are two different sites!
+
+--- Page 16 ---
+There two AXIAL sites and three EQUATORIAL sites
+Lone pairs need more space. In TBP EGG always place 
+lone pairs in the equatorial positions!!!!!
+
+--- Page 17 ---
+Trigonal See-saw
+Bipyramidal (Canada Goose)
+
+--- Page 18 ---
+Bromine trifluoride
+
+--- Page 19 ---
+Trigonal T-shaped
+Bipyramidal
+
+--- Page 20 ---
+Xenon difluoride
+
+--- Page 21 ---
+Trigonal            Linear
+Bipyramidal
+
+--- Page 22 ---
+So in trigonal pyramidal EGG we 
+can get four molecular shapes:
+Trigonal bipyramidal
+see-saw (Canada goose)
+T-shaped
+Linear
+
+--- Page 23 ---
+Sulfur hexafluoride
+
+--- Page 24 ---
+Octahedral       Octahedral
+
+--- Page 25 ---
+Bromine pentafluoride
+
+--- Page 26 ---
+Octahedral          square
+  pyramidal
+
+--- Page 27 ---
+Xenon tetrafluoride
+
+--- Page 28 ---
+Octahedral        square
+  planar
+
+--- Page 29 ---
+So in octahedral EGG we can get 
+three molecular shapes:
+Octahedral
+Square pyramidal
+Square planar
+
+================================================================================
+FILE: Week 6 Lecture Intermolecular Forces - Tagged-1.pdf
+================================================================================
+Pages: 25
+
+--- Page 1 ---
+Why isn’t water a gas at normal temperatures?
+
+
+--- Page 2 ---
+Chapter 4   Intermolecular Forces
+There are weak attractive forces between most molecules. These 
+forces are typically 1-2 orders of magnitude weaker than the 
+intramolecular attractions (e.g. the covalent bonds between atoms)
+Figure 10.2
+
+--- Page 3 ---
+Intermolecular Forces
+They are, however, strong enough to control physical 
+properties such as boiling and melting points, vapour 
+pressures, and viscosities.
+Figure 10.2
+
+--- Page 4 ---
+Give it a thought!
+What happens when water boils?
+Which bonds break?
+H2O(l) + energy → H2O (g)
+
+--- Page 5 ---
+https://sphweb.bumc.bu.edu/otlt/MPH-Modules/PH/PH709_BasicCellBiology/PH709_BasicCellBIology4.html
+
+--- Page 6 ---
+Intermolecular Forces
+These intermolecular forces are referred to 
+as van der Waals forces.
+Figure 10.2
+
+--- Page 7 ---
+Intermolecular Forces
+• Polar species have a permanent dipole moment 
+().  Electrons in a nonpolar species may be 
+displaced momentarily resulting in an 
+instantaneous dipole.
+• This can result in an induced dipole in nearby 
+molecules, causing an attraction between the 
+molecules called a dispersion or London force.
+
+
+--- Page 8 ---
+Dispersion forces
+• Where do you see a greater likelihood for 
+an spontaneous dipole in a helium or an 
+argon atom?
+• Which is more polarizable?
+
+
+--- Page 9 ---
+Dispersion forces
+• We say that argon is more polarizable then 
+helium.
+• Consequences: melting and boiling points
+• mpHe   <1K mpAr 83.8 K
+• bpHe  4.2 K bpAr   87.3 K
+
+
+--- Page 10 ---
+• The larger the molecules the more electrons, the 
+greater the attraction. Careful it is not gravity!
+• Octane b.p. 126 °C Methane b.p. - 162 ° C
+• More interactions exist between larger molecules
+
+
+--- Page 11 ---
+Intermolecular Force vs. Gravity
+• For water the heat of vaporization is 40.8 
+kJ/ mol. How does this compare with the 
+work that would need to be done to lift one 
+mol of water by one metre?
+• Work of lifting =
+
+--- Page 12 ---
+Intermolecular Force vs. Gravity
+Work of lifting = m x g x h
+= (0.018 kg) (9.81 m/s2)(1 m)
+= 0.176 J
+Compare that to 40800 J needed to evaporate one 
+mole of water! It is not gravity keeping water in the 
+ocean!
+
+--- Page 13 ---
+Molecular Shape
+• The shape of the molecule affects the 
+strength of dispersion forces: long, 
+skinny molecules (like n-pentane 
+tend to have stronger dispersion 
+forces than short, fat ones (like 
+neopentane).
+• This is due to the increased surface 
+area in n-pentane. It is also easier to 
+polarize a long cigar shaped 
+molecule than a sphere.
+Figure 10.6
+
+--- Page 14 ---
+Important Summary
+• When comparing  molecules of comparable molecular 
+mass usually the more polar molecule has the higher 
+boiling and melting point.
+• When comparing  molecules of vastly different 
+molecular mass the one with the greater mass will have 
+the higher melting and boiling point.
+Octane b.p. 126 °C Methane b.p. - 162 ° C
+methane CH4 water H2O
+molecular mass 16 u molecular mass 18 u
+Boiling point -162 °C Boiling point 100 °C 
+H
+C
+H H
+H
+
+
+--- Page 15 ---
+Example
+   Arrange in order of decreasing boiling 
+point:
+– He, Ne, Cl2, (CH3)2CO, O2
+
+--- Page 16 ---
+Example
+   Arrange in order of decreasing boiling 
+point:
+– He, Ne, Cl2, (CH3)2CO, O2
+species He Ne Cl2 (CH3)2CO O2
+Molar 
+mass
+4 20 71 58 32
+polar No No No Yes No
+
+--- Page 17 ---
+Example
+   Arrange in order of decreasing boiling 
+point:
+– He, Ne, Cl2, (CH3)2CO, O2
+Answer:
+(CH3)2CO (56) > Cl2(-34) >  O2(-183) > Ne (-246) > He (-269)
+
+--- Page 18 ---
+Hydrogen Bonding
+Anomalous BP’s
+
+--- Page 19 ---
+Hydrogen Bonding
+• The anomolous boiling points of NH3, H2O and HF are a 
+result of hydrogen bonding, a special type of 
+intermolecular force.
+• Hydrogen bonding results when a hydrogen atom on a 
+highly electronegative atom is attracted to a highly 
+electronegative atom (usually F, O and N) on an adjacent 
+molecule.
+• Hydrogen bond energies are ~ 15 to 40 kJ mol-1
+
+--- Page 20 ---
+Hydrogen Bonding in Water
+ice
+
+
+--- Page 21 ---
+Hydrogen Bonding in Water
+• Ice is rigid - less dense than liquid water; water can pack 
+more densely because there are less hydrogen bonds in the 
+liquid.  
+ice
+water
+
+--- Page 22 ---
+Consequences of anomalous 
+properties
+• Ice floats, water has its greatest density at 4 °C
+Winter or summer the bottom of the lake has 
+approximately the same temperature of 4°C 
+   providing a stable environment.
+
+
+--- Page 23 ---
+Hydrogen Bonding - an aside
+so guess what holds together the double strands of DNA....
+Guanine-cytosine
+H-bonding
+
+--- Page 24 ---
+Hydrogen bonding in Kevlar, Image Wikipedia 
+
+--- Page 25 ---
+Image Wikipedia
+
+================================================================================
+FILE: Week 7 Lecture - Tagged-1.pdf
+================================================================================
+Pages: 64
+
+--- Page 1 ---
+Vapour pressure and Boiling Point
+• As we heat a liquid, we increase the kinetic energy of the 
+molecules and as we speed them up there comes a point 
+where the kinetic energy overcomes the intermolecular 
+attractions that form the liquid in the first place. The 
+liquid starts to boil.
+We say that at the boiling point 
+the vapour pressure of the liquid 
+equals the surrounding (atmospheric) pressure.
+
+--- Page 2 ---
+Vapour pressure and Boiling Point
+• If we reduce the pressure over the liquid we 
+make it easier for molecules to enter the gas 
+phase (boiling point is lowered)
+• If we increase the pressure...
+
+
+--- Page 3 ---
+Vapour pressure and Boiling Point
+Even bellow the boiling point at 
+any given temperature there is a 
+certain amount molecules that 
+overcome the intermolecular 
+forces and form a vapour over the 
+liquid. Temperature is the average 
+kinetic energy so there are always 
+a few fast ones that can escape.
+
+
+--- Page 4 ---
+Vapour Pressure
+• As the temperature rises, the fraction of 
+molecules that have enough energy to 
+escape increases.
+Brown LeMay
+
+--- Page 5 ---
+Why do synthetic fabrics dry faster?
+ Polypropylene Nylon       Cotton
+
+
+--- Page 6 ---
+Why do 
+synthetic
+ fabrics dry 
+faster?
+• Polypropylen
+• Nylon
+• cotton
+CH
+CH2
+CH
+CH2
+CH
+CH3
+CH
+CH2
+CH
+CH
+O
+CH
+CH
+CH
+HC
+O
+CH
+O
+CH
+CH
+CH
+HC
+O
+C
+H2
+OH
+OH
+O
+HO
+OH
+OHC
+H2
+HO
+H3C
+H3C
+H3C
+H3C
+H3C
+NH
+C
+CH2
+H2C
+CH2
+H2C
+C
+HN
+CH2
+H2C
+CH2
+H2C
+CH2
+H2C
+NH
+C
+O
+O
+O
+H2C
+CH
+CH
+CH
+HC
+CH
+HC
+H
+C
+OH
+OH
+HO
+HO
+O
+CH2
+CH
+CH2
+CH
+CH2
+CH
+H3C
+H3C
+H3C
+
+--- Page 7 ---
+Vapour Pressure of some liquids at different temperatures
+Correlate the data with the structure of the liquids. 
+
+--- Page 8 ---
+Diethyl ether Ethanol
+Water
+Ethylene glycol (ethane diol)
+
+--- Page 9 --- [no text extracted]
+
+--- Page 10 ---
+Consequences of polarity
+• Solubility
+• Miscibility and 
+immiscibility
+
+
+--- Page 11 ---
+Solubility
+• Liquid methanol is completely miscible with 
+water. That is they dissolve in each other in all 
+portions.
+• Methanol and water can form hydrogen bonds 
+(red dashed) between each other and themselves
+HO
+H
+O
+C
+H H
+H
+H
+HO
+H
+O
+C
+H H
+H
+H
+
+--- Page 12 ---
+Solubility
+• sugar molecules can dissolve in water because 
+they contain many polar OH groups.
+O
+OH
+CH2OH
+OH
+OH
+OH
+
+--- Page 13 ---
+Solubility
+By contrast gasoline and water are completely 
+immiscible. These two liquids are insoluble in 
+each other. Gasoline is made up of nonpolar 
+molecules such as octane which cannot form 
+hydrogen bonds to water:
+H
+C
+C
+C
+H
+H H
+H
+C
+C
+C
+C
+C
+H
+H H H
+H H HH H H
+HHH
+HO
+H
+
+--- Page 14 ---
+Solute-Solvent Interactions
+Polar substances tend to dissolve in polar solvents, 
+e.g. sugar in water.
+Nonpolar substances tend to dissolve in nonpolar 
+solvents, e.g. oil in petrol.
+The more similar the intermolecular attractions, 
+the more likely one substance is to be soluble in 
+another. In other words: “like dissolves like.”
+
+--- Page 15 ---
+Exercise
+• Which of the following molecules would 
+you expect to be very soluble in water:
+• NH3   C2H2   SO2   
+•  C2H5OH    CCl4   HF
+
+--- Page 16 ---
+Exercise
+• Which of the following molecules can a) 
+hydrogen bond with water, b) hydrogen bond 
+with themselves: Give perspective drawing.
+• NH3   C2H2   SO2   
+•  C2H5OH    CCl4   HF
+• How about O2?
+
+--- Page 17 ---
+Advanced Problem
+• Pentane C5H12 and hexane C6H14
+• Methanol CH3OH and Ethanol C2H5OH
+• And aceton (CH3)2CO and chloroform CHCl3
+• All the above pairs of liquids are completely 
+miscible but only acetone and chloroform warm 
+when mixed. Why?
+
+--- Page 18 ---
+Soap a special case!
+
+--- Page 19 ---
+Soap
+Soap consists of a 
+large hydrophobic 
+molecule with a 
+hydrophilic terminal 
+group
+
+
+--- Page 20 ---
+Soap
+These molecules can aid in the emulsification of 
+fats and oils in aqueous solutions.
+Brown LeMay
+
+--- Page 21 ---
+Intermolecular Forces Affect 
+Many Physical Properties
+The strength of the 
+attractions between 
+particles can greatly 
+affect the properties of 
+a substance or solution.
+Figure: Brown LeMay
+
+--- Page 22 ---
+Surface Tension
+Surface tension 
+results from the net 
+inward force 
+experienced by the 
+molecules on the 
+surface of a liquid.
+Figure: Brown LeMay
+
+--- Page 23 --- [no text extracted]
+
+--- Page 24 ---
+Viscosity
+• Resistance of a liquid to flow is 
+called viscosity.
+• It is related to the ease with 
+which molecules can move past 
+each other.
+• Viscosity increases with 
+stronger intermolecular forces 
+and decreases with higher 
+temperature.
+Brown LeMay
+
+--- Page 25 ---
+Energy Changes Associated with 
+Changes of State
+• The heat added to the 
+system at the melting 
+and boiling points goes 
+into pulling the 
+molecules further apart 
+from each other.
+• The temperature of the 
+substance does not rise 
+during the phase 
+change.
+Brown LeMay
+
+--- Page 26 ---
+• Heat of Fusion:  Energy required to change a solid at 
+its melting point to a liquid.
+• Heat of Vaporisation:  Energy required to change a 
+liquid at its boiling point to a gas.
+Brown LeMay
+
+--- Page 27 ---
+Adhesive and cohesive forces
+When a liquid  contacts a solid surface two 
+extreme situations can be observed:
+liquid can spread out and wet the surface (oil in 
+frying pan)
+Liquid can remain a spherical droplet (Hg on 
+glass,  water on waxed car)
+Meniscus, capillary action, flotation, caulking
+
+--- Page 28 ---
+Flotation
+https://www.sciencedirect.com/topics/earth-
+and-planetary-sciences/flotation-froth
+
+--- Page 29 ---
+Fieldtrip with the mining bridge to the
+Nyrstar operation in Strathcona Park
+
+--- Page 30 ---
+Note how differently the condensate from the fractional and 
+simple distillation wets the still head. Cohesive forces in 
+water are strong (right image) whereas adhesive forces are 
+stronger between alcohol and the glass surface (left).
+Fractional
+distillation
+Simple 
+distillation
+
+--- Page 31 ---
+Summary Van der Waals Forces
+• Ion-dipole forces (sodium ions in water)
+• Dipole-dipole forces (polar molecules)
+• London dispersion forces (between non-
+polar molecules)
+• Hydrogen bonding (a special type of dipol-
+dipole forces, molecules must have OH,NH 
+or FH bonds)
+
+--- Page 32 ---
+Henry’s law, Gases in Solution
+• In general, the 
+solubility of gases in 
+water increases with 
+increasing mass.
+• Larger molecules 
+have stronger 
+dispersion forces.
+Brown LeMay
+
+--- Page 33 ---
+Pressure Effects
+• The solubility of a gas in a 
+liquid is directly proportional 
+to its pressure.
+Brown LeMay
+
+--- Page 34 ---
+Henry’s Law   S
+g
+ = kP
+g
+ 
+where
+• Sg is the solubility of the gas;
+• k is the Henry’s law constant for that 
+gas in that solvent;
+• Pg is the partial pressure of the gas 
+above the liquid.
+
+--- Page 35 ---
+Example using Henry’s law:
+• Calculate the molar solubility of CO  in ₂
+water that has been carbonated with 405.3 
+kPa pressure above the liquid (equilibrium 
+pressure) at 25 °C. The Henry’s law 
+constant for CO  in water at 25 ₂ °C is
+ 3.06 x10-4 mol/(L kPa)
+
+--- Page 36 ---
+Example using Henry’s law:
+Sg = kPg 
+Sg = [3.06 x10
+-4
+ mol/(L kPa)][405.3 kPa]
+Sg = 0.124 mol/L 
+
+--- Page 37 ---
+How much CO  (g) is this per L ₂
+of solution?
+Sg = 0.124 mol/L
+ n CO  (g) = (₂ 0.124 mol/L)(1L)
+V CO₂(g, at STP) = (0.124 mol)(22.4 L/mol)
+V CO₂(g, at STP) = 2.8 L
+
+--- Page 38 ---
+Henry’s law Constant
+• Henry’s law is a very simple law. A 
+practical problem is that the constant k  not 
+only varies from gas to gas but it also varies 
+from solvent to solvent and with 
+temperature. 
+
+
+--- Page 39 ---
+Lake Nyos, Africa 
+
+--- Page 40 ---
+Depth (m) p (atm) pH O₂ (mg/L) CO₂ mg/L
+0 1 8.7 8.1 39
+15 2.5 6.9 6.1 40
+30 4 6.3 2.3 42
+50 6 5.5 0 370
+100 11 5.3 0 550
+150 16 5.2 0 690
+200 21 5 0 1100
+208 22 5 0 1200
+H2O + CO2  H⇄
++
+ + HCO3
+-
+
+--- Page 41 ---
+On 21 August 1986 Lake Nyos exploded, asphyxiating 1700 
+people and 3000 cattle. 
+
+--- Page 42 ---
+French scientists working on degassing the lake. 
+
+
+--- Page 43 ---
+Temperature Effects
+• Solubility of gases 
+decreases with ↑T:
+– Carbonated soft drinks 
+are more “bubbly” if 
+stored in the 
+refrigerator.
+– Warm lakes have less 
+O2 dissolved in them 
+than cool lakes.
+
+
+--- Page 44 ---
+Colligative Properties
+
+
+--- Page 45 ---
+Colligative Properties
+• Changes in colligative properties depend only 
+on the number of solute particles present, not 
+on the identity of the solute particles.
+• Among colligative properties are
+– Vapour pressure lowering 
+– Boiling point elevation
+– Melting point depression
+– Osmotic pressure 
+
+--- Page 46 ---
+Lowering of Vapour Pressure
+Because of solute-
+solvent intermolecular 
+attraction, higher 
+concentrations of 
+nonvolatile solutes 
+make it harder for 
+solvent to escape to 
+the vapour phase.
+
+
+--- Page 47 ---
+Lowering of Vapour Pressure
+Therefore, the vapour 
+pressure of a solution is 
+lower than that of the 
+pure solvent (at the 
+same temperature) This 
+means it is harder to 
+boil the solution).
+A salted road dries much slower than non salted road
+
+--- Page 48 ---
+Raoult’s Law
+PA = XAPA
+where
+• XA is the mole fraction of compound A
+• PA is the normal vapour pressure of A at that 
+temperature
+
+--- Page 49 ---
+Applying Raoult’s Law
+What is the vapour pressure of a solution of 1 mol 
+of sucrose in 15 mol of water at 25 C? 
+The vapour pressure of pure water at 25 ͦC  is :
+PH2O  = 31.26 mbar
+
+--- Page 50 ---
+Applying Raoult’s Law
+What is the vapour pressure of a solution of 1 mol 
+of sucrose in 15 mol of water at 25 C? PH2O (25 C) 
+= 31.26 mbar
+First we find the mole fraction of water in the 
+solution: 15 mol/ (15 mol + 1 mol) = 0.938
+ 
+• Psolution  = XsolventPsolvent  = 0.938 x 31.26 mbar
+Psolution = 29.32 mbar
+
+--- Page 51 ---
+Applying Raoult’s law to ideal 
+solutions of volatile liquids
+• The vapour pressure of pure benzene and 
+pure toluene at 25 C are 95.1 and 28.4 mm 
+Hg respectively. A solution is prepared in 
+which the mole fractions of benzene and 
+toluene are both 0.5. What are the partial 
+pressures of benzene and toluene above this 
+solution? What is the total vapour pressure 
+of the mixture? 
+
+--- Page 52 ---
+Applying Raoult’s Law
+ 
+• Pbenzene  = XbenzenePbenzene = 0.5 x 95.1 mm Hg
+Ptoluene  = XtoluenePtoluene = 0.5 x 28.4 mm Hg
+Psolution  = Pbenzene +Ptoluene = (47.6 +14.2) mm Hg
+Psolution = 61.8 mm Hg = vapour pressure of the mixture
+
+--- Page 53 ---
+Predicting vapour compositions
+• What is the composition of the vapour in 
+equilibrium with the benzene toluene 
+mixture our example (25 C)?
+
+--- Page 54 ---
+Predicting vapour compositions
+
+
+--- Page 55 --- [no text extracted]
+
+--- Page 56 ---
+Osmosis
+• Some substances form semipermeable 
+membranes, allowing some smaller particles 
+to pass through, but blocking other larger 
+particles.
+• In biological systems, most semipermeable 
+membranes allow water to pass through, but 
+solutes are not free to do so.
+
+--- Page 57 ---
+In osmosis, there is net movement of solvent from 
+the area of higher solvent concentration lower 
+solvent concentration
+
+
+--- Page 58 ---
+Osmotic Pressure
+• The pressure required to stop osmosis, 
+known as osmotic pressure, , is
+ = MRT
+where M is the molarity of the solution
+If the osmotic pressure is the same on both sides of a 
+membrane (i.e., the concentrations are the same), 
+the solutions are isotonic.
+
+--- Page 59 ---
+• Calculate the osmotic pressure of a 0.15 M 
+NaCl at 25 C.
+ = MRT 
+R = 0.08206 L atm/K mol
+
+--- Page 60 ---
+• Osmotic pressures can be huge!
+ = MRT 
+= 2x0.15M x 0.08206 L atm/K mol x 298 K
+ 7.33 atm !!!
+ NaCl (s) ↔ Na+(aq) + Cl-(aq)
+ Guess what pumps the water up to the top branches of the 
+three sisters?
+
+--- Page 61 --- [no text extracted]
+
+--- Page 62 ---
+Osmosis in Blood Cells
+• If the solute 
+concentration outside 
+the cell is greater than 
+that inside the cell, the 
+solution is hypertonic.
+• Water will flow out of 
+the cell, and crenation 
+results.
+Figure 11.19 (a)
+
+--- Page 63 ---
+Osmosis in Cells
+• If the solute 
+concentration outside 
+the cell is less than 
+that inside the cell, the 
+solution is hypotonic.
+• Water will flow into 
+the cell, and 
+haemolysis results.
+Figure 11.19 (b)
+
+--- Page 64 ---
+Why do pickles look like 
+pickles?  
+
+================================================================================
+FILE: Week 8 gasses - Tagged.pdf
+================================================================================
+Pages: 57
+
+--- Page 1 ---
+Gases
+CH4 + 2O2 → CO2 + 2H2O
+N2, O2, Ar, CO2
+
+--- Page 2 ---
+Why are Gases Gaseous?
+• Unlike liquids and solids, they
+– Expand to fill their containers.
+– Are highly compressible.
+– Have extremely low densities.
+Why?
+In the gaseous state the molecules are 
+separated from each other (fare apart!) 
+and are in continuous random motion.
+
+
+--- Page 3 ---
+Pressure
+• Pressure is the 
+amount of force 
+applied to an area.
+• Atmospheric 
+pressure is the 
+weight of air per 
+unit of area.
+P =
+F
+A
+
+
+--- Page 4 --- [no text extracted]
+
+--- Page 5 ---
+Units of Pressure
+• Pascals
+– 1 Pa = 1 N/m2
+• mm Hg or torr
+– Atmospheric pressure at sea
+ level can push Hg up 760 mm an evacuated tube. 
+This pressure is called  one atmosphere (1 atm)
+• Atmosphere
+– 1.00 atm = 760 torr = 101.3 kPa
+Still widely used in North America: PSI 1 atm = 14.7 psi
+
+
+--- Page 6 ---
+Gas Volume and Pressure
+1.)     2.)
+1.) Air is trapped inside a 
+cylinder  fitted with an 
+air-tight plunger.
+2.) Placing a weight on 
+the plunger 
+compresses the 
+trapped air in to a 
+smaller volume. 
+Removing it restores 
+state 1.)
+How is Volume and pressure of a gas related? Boyle’s law!
+
+--- Page 7 ---
+• As pressure increases the volume 
+decreases.
+• Volume and pressure are inversely 
+proportional!                 
+
+
+--- Page 8 ---
+•                           V = k 
+(1/P)
+•                   PV = k
+•                        Boyle’s 
+Law
+A plot of V versus P results in a curve. A plot 
+of V versus 1/P will be a straight line!
+
+
+--- Page 9 ---
+Gas Volume and Temperature
+• If pressure is 
+kept constant, 
+the volume of a 
+gas increases as 
+its temperature 
+increases.
+A plot of V versus T will be a straight line.
+Look at this graph! What can we extract from it?
+
+
+--- Page 10 ---
+Absolute Temperature (in Kelvin)
+• The intercept with 
+the T-axis physically 
+means that the 
+Volume of the gas 
+has vanished to zero.
+V cannot get any smaller
+than zero (negative volume
+makes no sense) T cannot
+get any smaller either!!! -273.15 °C is the coldest 
+possible temperature. NO MORE HEAT LEFT!
+
+
+--- Page 11 ---
+Gas Volume and Temperature
+• Volume and 
+absolute 
+temperature 
+(in Kelvin) of 
+a gas are 
+directly 
+proportional. 
+(at p = const.)
+• Charle’s Law
+
+
+--- Page 12 ---
+   Think
+a 
+Moment!
+ Why does
+a hot air
+balloon rise?
+
+
+--- Page 13 ---
+Gay-Lussac’s Law
+• At constant volume, the pressure exerted by a gas is 
+directly proportional to the Kelvin temperature:
+– p  T
+– p = kT
+– k = P/T
+– p1/T1 = p2/T2
+
+
+--- Page 14 ---
+Rationalizing the Relation of Pressure 
+and Temperature
+As the temperature 
+increases, the kinetic 
+energy of the gas molecules 
+increase. Thus the 
+molecules hit the walls 
+more frequently and more 
+energetically.  The pressure 
+(a macroscopic property) 
+increases as a result.
+
+
+--- Page 15 ---
+Combining the Gas Laws
+• What do we know so fare:
+• Boyle’s Law V  (1/p)
+• Charls’ Law V  T
+• Gay-Lussac’s Law p  T
+
+--- Page 16 ---
+Combined Gas Law
+• Boyle’s Law, Charles’s Law, and Gay Lussac’s Law 
+may be combined into one formula, the 
+Combined Gas Law: 
+• pV/T = constant  or
+Now volumes of gases can be converted or 
+compared e.g. to a standard state (1 atm, 273 K)
+=
+p1V1    p2V2
+T1 T2
+
+--- Page 17 ---
+COMBINED GAS LAW PROBLEM
+• A Helium balloon has  a volume of 3.0 L at 
+760 Torr and 273 K.  Calculate its volume 
+at 2.00 atm and 27
+o
+C.
+• V1 = 3.0 L
+• P1 = 760/760 = 1.00 atm
+• T1 = 273 K
+• P2 = 2.00 atm
+• T2 = 27 + 273 = 300K 
+
+--- Page 18 ---
+COMBINED GAS LAW PROBLEM
+• A Helium balloon has  a volume of 3.0 L at 
+760 Torr and 273 K.  Calculate its volume 
+at 2.00 atm and 27
+o
+C.
+  =  so  V2 =  
+ = 1.65 L
+
+--- Page 19 ---
+Gas Volume and Number of Moles
+• The volume of a gas varies directly with the 
+number of molecules (if p and T are held constant)
+V  n
+In the decomposition of 
+CuBr 2 the amount of Br2 
+released depended 
+directly on how much 
+CuBr2 you heated.
+
+--- Page 20 ---
+Gas Volume and Number of Moles
+• More so: Equal volumes of different gases 
+contain the same number of gas molecules (if 
+p and T are kept constant)
+• This is known as Avogadro’s Law
+How do we know this? Avogadro conducted 
+the following experiments: First he mixed one 
+volume of H2 with one volume of Cl2 and 
+obtained two volumina of HCl.
+
+--- Page 21 ---
+Gas Volume and Number of Moles
+Next he mixed two volumes of H2 with one 
+volume of O2 and obtained how many 
+volumes of H2O vapour?
+
+--- Page 22 ---
+Avogadro’s Law
+V = constant x n, The volume of one mole of 
+any gas at STP is 22.4 L
+
+--- Page 23 ---
+Exercise
+• What is the volume of 0.05 mole carbon dioxide 
+at standard temperature and standard pressure 
+(STP)?
+• How many moles of nitrogen are in 1.00 L of it 
+at STP?
+• What is the volume of 7.14 g of oxygen at STP?
+
+--- Page 24 ---
+Answers
+• 0.05 mole CO2 (g) x  = 1.12 L = 1 L
+•  1.00 L N2 (g) x  = 0.0446 mol N2 (g)
+
+--- Page 25 ---
+Answers
+What is the volume of 7.14 g of oxygen at STP?
+Here it is crucial to remember that oxygen is O2 !!!
+7.14 g O2 (g) x   x  =5.00 L O2 (g)
+Otherwise your Volume (or pressure) would be off 
+by a factor of 2!
+
+--- Page 26 ---
+Combining all the Gas Laws
+• Boyle’s Law V  (1/p)
+• Charls’ Law V  T
+• Gay-Lussac’s Law p  T
+• Avogadro’s Law V  n
+__________________________________________
+ Ideal Gas Law: pV = nRT
+ R is the gas constant. R = 8.314 (L x kPa) / (mol x K)
+
+--- Page 27 --- [no text extracted]
+
+--- Page 28 --- [no text extracted]
+
+--- Page 29 --- [no text extracted]
+
+--- Page 30 ---
+Example
+• Calculate the volume of sulfur dioxide gas 
+that was released in to the fume hood  in 
+the reaction of 1.20 g of sulfur with 1.00 g 
+of copper after the gas had cooled to 25 C. 
+The pressure in the lab at the day of the 
+experiment was 102.3 kPa.
+
+--- Page 31 ---
+Equations:
+First: 2Cu(s) + S(s) → Cu2S(s) second: S(s) + O2(g) → SO2(g)
+Moles of copper: 1.00 g Cu x   = 0.0157 mol Cu
+Moles of sulfur: 1.20 g S x  = 0.0374 mol S
+ 0.0157 mol Cu x  = 0.00787 mol S used up (combining with Cu)
+Moles of S available for combustion with oxygen:
+= total moles of S  – moles of S reacted with Cu = 0.0374 mol – 0.00787 mol = 0.02953 
+mol S left
+Moles of SO2(g):  __0.02953____mol S x  = __0.02953__mol SO2(g)
+pV = nRT
+V = (nRT)/p =(0.02953 mol)(8.314 L kPa/mol K)(298 K)/102.3 kPa = 0.715 L
+A quick check using Avogadro's molar volume giver 0.0295 mol x 22.4 L/mol = 0.66L
+
+--- Page 32 --- [no text extracted]
+
+--- Page 33 ---
+Example
+• In the field, weather balloons are often 
+filled with hydrogen produced on site. The 
+reaction of calcium hydride with water is 
+used to generate the hydrogen gas. solid 
+calcium hydroxide is also formed.
+• Write a balanced equation.
+• Calculate the volume of the balloon on site 
+if 200 g calcium hydride are reacted (11 °C, 
+99.5 kPa) and after takeoff at an altitude of 
+3000 m where T = -30 °C and p = 80.5 kPa.
+
+--- Page 34 ---
+CaH2 (s) + 2H2O (l) → Ca(OH)2 (aq/s)  +  2H2 (g)
+200g          excess
+Grams to Moles: 200 g CaH2 x   = 4.75 mol CaH2
+Moles of H2(g): 4.75 mol CaH2 x  = 9.50 mol H2(g)
+pV = nRT
+V = (nRT)/p = (9.50 mol)(8.314 L kPa/mol K)(284 K)/(99.5 kPa) = 225 L
+At 3000 m (-30 ⁰C 80.5 kPa)
+V = (nRT)/p =(9.50 mol)(8.314 L kPa/mol K)(243 K)/(80.5 kPa) = 238 L
+
+--- Page 35 ---
+One more law…. (Just one more!)
+• The ideal gas law can be applied to pure gases as 
+well as gas mixtures. It treats a litre of hydrogen 
+gas the same as a litre of air (because it has the 
+same number of gas particles in it even though 
+they are different in nature)
+• For stoichiometric problems it is however 
+important to know the pressure of a certain gas 
+in a mixture of gases e.g. How much oxygen is 
+available for combustion when using air?
+
+--- Page 36 ---
+Partial Pressure, Dalton’s Law
+• In a mixture of gases each component 
+exerts its own pressure (its partial 
+pressure) independent of the other 
+components of the mixture
+• The total pressure of the mixture is the 
+sum of the partial pressures of the 
+components
+Dalton’s law:  p
+total
+ = p
+1
+ + p
+2
+ + p
+3
+ + ....
+
+--- Page 37 ---
+Partial Pressure, Dalton’s Law
+
+--- Page 38 ---
+Partial Pressure, Example
+• A 10 L vessel is filled with 2 mol of argon and 8 
+mol oxygen at 20 °C.
+• What is the total pressure of the gas mixture and 
+what are the partial pressures of argon and 
+oxygen?
+
+--- Page 39 ---
+Partial Pressure, Example
+• A 10 L vessel is filled with 2 mol of argon and 8 
+mol oxygen at 20 °C.
+• What is the total pressure of the gas mixture and 
+what are the partial pressures of argon and 
+oxygen?
+ptot = ntotRT/V = (10 mol)R(293 K)/(10 L) = 2436 kPa
+pAr = ptot(2mol/10mol) = 487 kPa = 0.5 MPa
+pO2 = 2436 kPa – 487 kPa = 1949 kPa = 2 MPa
+
+--- Page 40 ---
+Partial Pressure
+• So, when one collects a gas over water, 
+there is water vapour mixed in with the gas.
+• To find only the pressure of the desired gas, 
+one must subtract the vapour pressure of 
+water from the total pressure.
+
+
+--- Page 41 ---
+Class experiment, Avogadro’s 
+molar Volume
+We will use the reaction of Mg (s) 
+with HCl (aq) to generate hydrogen 
+gas.
+The gas generated is trapped and 
+the volume measured.
+Mass Mg (s) = ___ mg
+p(atm) = ____ kPa
+P(H2O at 24 C) = 3.0 kPa⁰
+STP = 101.3 kPa and 273 K
+
+--- Page 42 --- [no text extracted]
+
+--- Page 43 ---
+Class experiment, Avogadro’s 
+molar Volume
+First we find the hydrogen gas 
+pressure in the burette: p(H2)
+p(Htotal) = p(Hatm) = p(H2) + p(H2O)
+p(H2) = _____ kPa – 3.0 kPa
+p(H2) = ____ kPa
+
+--- Page 44 ---
+Class experiment, Avogadro’s 
+molar Volume
+Next, we compare the volume of 
+hydrogen gas collected to the 
+volume it would have at standard 
+state using the combined gas law:
+V2 =  
+ V2 =  
+V2 =
+
+--- Page 45 ---
+Class experiment, Avogadro’s 
+molar Volume
+Finally we relate the volume of 
+hydrogen gas to the moles of hydrogen
+Mg(s) +HCl(aq) → MgCl2(aq) + H2(g)
+____ mg Mg x  = ____ mmol
+____ mmol Mg x  = ____ mmol H₂
+Vmol =  =    =      L/mol
+
+--- Page 46 ---
+Kinetic-Molecular Theory
+1. Gases consist of large numbers of molecules 
+that are in continuous, random motion.
+2. The combined volume of all the molecules of 
+the gas is negligible relative to the total 
+volume in which the gas is contained.
+3. Attractive and repulsive forces between gas 
+molecules are negligible.
+
+--- Page 47 ---
+Kinetic-Molecular Theory
+4. Energy can be transferred between molecules 
+during collisions, but the average kinetic 
+energy of the molecules does not change with 
+time, as long as the temperature of the gas 
+remains constant.
+5. The average kinetic energy of the molecules is 
+proportional to the absolute temperature.
+
+--- Page 48 ---
+Molecular Effusion and Diffusion
+Effusion
+The escape of gas 
+molecules through a 
+tiny hole into an 
+evacuated space.
+Diffusion
+The spread of one 
+substance throughout 
+a space or throughout 
+a second substance.
+Brown LeMay
+
+--- Page 49 ---
+Molecular Effusion
+Effusion
+The escape of gas 
+molecules through a 
+tiny hole into an 
+evacuated space.
+Assume a 50/50 mixture 
+of He and Ar. Would 
+you expect them to 
+effuse at equal rates?
+Brown LeMay
+
+
+--- Page 50 ---
+Real Gases
+In the real world, the 
+behaviour of gases 
+only conforms to the 
+ideal-gas equation at 
+relatively high 
+temperature and low 
+pressure.
+Brown LeMay
+
+
+--- Page 51 ---
+Deviations from Ideal Behaviour
+The assumptions made in the kinetic-molecular 
+model break down at high pressure and/or low 
+temperature.
+
+
+--- Page 52 ---
+Joule-Thomson Effect
+A) Gas at Ti and pi 
+B) gas passes through a porous membrane 
+without doing work
+C) gas has expanded (Tf and pf) 
+      A             B    C
+Graphic Daniel
+
+--- Page 53 ---
+Corrections for Nonideal Behaviour
+• The ideal-gas equation can be adjusted to take 
+these deviations from ideal behaviour into 
+account.
+• The corrected ideal-gas equation is known as 
+the van der Waals equation.
+
+--- Page 54 ---
+The van der Waals Equation Check a !!!
+) (V − nb) = nRT
+n
+2
+a
+V
+2
+(P + 
+Brown LeMay
+
+
+--- Page 55 ---
+Applying the van der Waals Equation
+) (V − nb) = nRT
+n
+2
+a
+V
+2
+(P + 
+Table 9.2
+Consider a sample of 1.00 mol of CO2 confined to 
+a volume of 3.00L at 273 K. Calculate the pressure 
+of the gas using a) the ideal gas equation and b) 
+the van der Waals equation.
+a = 364 L2 kPa/mol2
+b =  0.0427 L/mol
+
+--- Page 56 ---
+Applying the van der Waals Equation
+) (V − nb) = nRT
+n
+2
+a
+V
+2
+(P + 
+Table 9.2
+Rearrange equation to solve for pressure:
+ p +  = 
+p =   -  
+
+--- Page 57 ---
+Applying the van der Waals Equation
+a = 364 L2 kPa/mol2
+b =  0.0427 L/molp =   -   
+p =   -  
+p = 767.5 kPa – 40.4 kPa = 727.1 kPa
+Compared to the ideal gas pressure:
+pideal =  =  = 756.6 kPa
+
+================================================================================
+FILE: CHEM150___Midterm_I___Practice_A.pdf.pdf
+================================================================================
+Pages: 8
+
+--- Page 1 ---
+ 
+Page 1 of 8 
+ 
+CHEM150  Midterm I Exam   Name: _______________________________________ 
+30 Marks PRACTICE A    Units 1-5 
+8 pages Test time:  1.5 hours 
+ 
+ 
+ 
+Read all questions carefully.  
+ 
+Marks are indicated in the [ ] brackets. Each question is worth 1 mark. There are 30 questions in total.  
+ 
+Scientific calculators and the provided data sheets are permitted. No other aids are permitted.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+This study source was downloaded by 100000776013313 from CourseHero.com on 02-27-2026 20:22:02 GMT -06:00
+https://www.coursehero.com/file/190968212/CHEM150-Midterm-I-Practice-Apdf/
+
+--- Page 2 ---
+Page 2 of 8 
+ 
+1. An element cannot ______________  
+A. Be part of a heterogeneous mixture. 
+B. Be part of a homogeneous mixture. 
+C. Be separated into other substances by chemical means. 
+D. Interact with other elements to form compounds. 
+E. Be a pure substance. 
+ 
+2. Oxygen is a __________ and nitrogen is a __________.  
+A. Metal, metalloid 
+B. Nonmetal, metal 
+C. Metalloid, metalloid 
+D. Non-metal, non-metal 
+E. Non-metal, metalloid 
+ 
+3. Barium forms an ion with a charge of _______.  
+A. +1   B. -2  C. +3  D. -3  E. +2 
+ 
+4. Which of the following compounds would you expect to be ionic?  
+A. SF6  B. H2O  C. H2O2  D. NH3   E. CaO 
+ 
+5. Which metal does not form cations of differing charges?  
+A. Na  B. Cu  C. Co  D. Fe  E. Sn 
+ 
+6. There are _______ molecules of methane in 0.123 mol of methane (CH4).  
+A. 5 
+B. 2.46x10-2 
+C. 2.04x10-25 
+D. 7.40x1022 
+E. 0.615 
+ 
+ 
+This study source was downloaded by 100000776013313 from CourseHero.com on 02-27-2026 20:22:02 GMT -06:00
+https://www.coursehero.com/file/190968212/CHEM150-Midterm-I-Practice-Apdf/
+
+--- Page 3 ---
+Page 3 of 8 
+ 
+7. In 1999 scientists published the measurement of an interference pattern 
+that demonstrated that the de Broglie wavelength of C60 (buckyball, mass 
+1.2x10-24 kg). Calculate the frequency (v) of the de Broglie wavelength 
+that corresponds to a buckyball moving at a velocity of 220 m/s?  
+A. 1.2x1020 s-1 
+B. 2.5x10-12 s-1 
+C. 5.4x1017 s-1 
+D. 8.3x10-21 s-1 
+E. 4.0x1011 s-1 
+ 
+Below is the energy level diagram for the possible 
+energy levels of a hydrogen atom (not to scale). Answer 
+the following questions 10-11 about the hydrogen atom. 
+8. What is the energy change (E) corresponding to the 
+transition labeled E?  
+A. -1.63x10-18 J 
+B. 5.45x10-19 J 
+C. 2.18x10-18 J 
+D. 1.63x10-18 J 
+E. -5.45x10-19 J 
+ 
+9. Consider the following chemical equation:  
+H (g)  H+ (g) + e- 
+Which of the transition arrows in the energy diagram best describes the energy change for this 
+reaction?  
+A. A B. B C. C D. D E. E 
+ 
+ 
+ 
+This study source was downloaded by 100000776013313 from CourseHero.com on 02-27-2026 20:22:02 GMT -06:00
+https://www.coursehero.com/file/190968212/CHEM150-Midterm-I-Practice-Apdf/
+
+--- Page 4 ---
+Page 4 of 8 
+ 
+10. Using the notation n, l, ml, ms, which of the following sets of four quantum numbers never occurs for 
+any electron in a ground state ruthenium (Ru) atom?  
+A. 4, 2, -1, -1/2  
+B. 5, 1, -1, +1/2 
+C. 2, 1, 0, -1/2 
+D. 5, 0, 0, -1/2 
+E. 3, 2, +2, -1/2 
+ 
+Use the following figure to answer questions 15 and 16. 
+ 
+ 
+11. Which of the above orbitals have no node at the nucleus? 
+A. A  B. B  C. E  D. B and E  E. A, C, and D 
+ 
+12. Which of the above orbitals have a principal quantum number of n=2? 
+A. A  B. B  C. C  D. D and E  E. A, C, and D 
+ 
+13. If A > B means the radius of A is greater than the radius of B, then which of the following comparisons 
+is INCORRECT?  
+A. C > C+   B. S > O  C. As > S  D. Rb+ > Br-  E. Rb+ > Sr2+ 
+ 
+14. If A > B means the first ionization energy (I1) of A is greater than the first ionization energy of B, then 
+which of the following comparisons is INCORRECT?  
+A. S > Si  B. Be > B  C. C > Si  D. S > Se  E. S > O 
+ 
+This study source was downloaded by 100000776013313 from CourseHero.com on 02-27-2026 20:22:02 GMT -06:00
+https://www.coursehero.com/file/190968212/CHEM150-Midterm-I-Practice-Apdf/
+
+--- Page 5 ---
+Page 5 of 8 
+ 
+15. Identify the atom in the following list in which the valence electron(s) experience the highest effective 
+nuclear charge.  
+A. H  B. He   C. Li   D. Be   E. C 
+ 
+16. Which element from the set below has the largest negative (most favourable) electron affinity?  
+A. Mg  B. Na   C. Al   D. Si   E. P 
+ 
+17. Which of the following pairs of ions are isoelectronic?  
+A. Br- and Sr2+     B. Si4- and C4-     C. O2- and Cl- 
+D. Si4- and Sn4+     E. Ca2+ and Zn2+  
+ 
+18. Which of these (below) is the best Lewis structure for the NCF molecule?  
+ 
+ 
+19. Which of these neutral atoms has an INCORRECT Lewis symbol? 
+ 
+ A           B      C   D           E 
+ 
+ 
+20. The formal charges on the Cl atoms in the two resonance structures of [ClO2]- are, respectively?  
+A. +1, 0 
+B. -1, 0 
+C. 0, 0 
+D. 0, +1 
+E. 0, -1 
+This study source was downloaded by 100000776013313 from CourseHero.com on 02-27-2026 20:22:02 GMT -06:00
+https://www.coursehero.com/file/190968212/CHEM150-Midterm-I-Practice-Apdf/
+
+--- Page 6 ---
+Page 6 of 8 
+ 
+21. How many bonds are drawn in the best Lewis structure for NO2+?  
+A. 2 
+B. 3 
+C. 4 
+D. 5 
+E. 6 
+ 
+22. In which one of the following molecules or ions is the octet rule not followed (not counting H)? 
+A. NH3 
+B. NH4+ 
+C. I2 
+D. BH4- 
+E. NO2 
+ 
+23. Of the molecules, LiF, HF, HCl, H2O, and KCl, which compounds are covalently bonded?  
+A. KCl and H2O    B. HF and KCl    C. LiF and KCl 
+D. LiF and HF    E. HF, HCl, and H2O 
+ 
+24. Consider the Lewis structure of HOClO2 in which O and Cl obey the octet rule (H is bonded to one O 
+atom and all three O atoms are bonded to chlorine.) Which one of the following statements is 
+INCORRECT?  
+A. The O atom bonded to the H atom has two nonbonded pairs of electrons. 
+B. The O atoms that are not bonded to the H atom have three non-bonded pairs of electrons each. 
+C. The O to Cl bonds are double bonds. 
+D. The H to O bond is a single bond. 
+E. Cl has one lone pair of electrons. 
+ 
+ 
+ 
+This study source was downloaded by 100000776013313 from CourseHero.com on 02-27-2026 20:22:02 GMT -06:00
+https://www.coursehero.com/file/190968212/CHEM150-Midterm-I-Practice-Apdf/
+
+--- Page 7 ---
+Page 7 of 8 
+ 
+25. Tungsten (W) has the highest melting point of all the pure metals (3422oC). Using your knowledge of 
+metallic bonding, choose the best explanations for this fact from the selection below.  
+A. Tungsten has electrons in the 5d subshell. 
+B. Tungsten’s molecular orbitals form a continuous band. 
+C. Tungsten has a half-filled s-d molecular orbital band, so the forces between atoms are of maximum 
+strength. 
+D. Tungsten has as many anti-bonding electrons as bonding electrons, so the forces between atoms 
+are of maximum strength. 
+E. Tungsten has a large first ionization energy, so it will not form an ionic lattice. 
+ 
+26. Estimate which bond angle is smallest based on the VSEPR model.  
+A. H-Si-H in SiH4 
+B. H-P-H in PH3 
+C. H-S-H in H2S 
+D. H-C-H in H2C=O 
+E. H-C-H in H2C=S 
+ 
+27. The molecular geometry illustrated below can only be derived from which electron domain (VSEPR) 
+geometry?  
+ 
+A. Trigonal bipyramidal   B. Tetrahedral   C. V-shaped 
+D.    See saw    E. Trigonal planar 
+ 
+ 
+ 
+ 
+ 
+ 
+This study source was downloaded by 100000776013313 from CourseHero.com on 02-27-2026 20:22:02 GMT -06:00
+https://www.coursehero.com/file/190968212/CHEM150-Midterm-I-Practice-Apdf/
+
+--- Page 8 ---
+Page 8 of 8 
+ 
+28. Which of the following oxides of nitrogen (A, B, C, D or E) is non-polar?  
+ 
+ 
+29. The following is the molecular orbital energy diagram for MOs obtained from combining the 1s 
+orbitals of two atoms such as H or He. To correctly represent the electron energies for the ground 
+state of dihelium +1 ion (He2+) the orbtials labeled A and B will contain _____ electron(s) and _____ 
+electron(s) respectively.  
+ 
+A. 2, 1  B. 2, 2  C. 1, 2  D. 1, 1  E. 2, 0 
+ 
+30. How many sp2 hybrid orbitals are there in a molecule of propene, C3H6 (structural formula       
+shown)?  
+A. 2  B. 6  C. 4  D. 8  E. 16 
+ 
+ 
+ 
+ 
+ 
+This study source was downloaded by 100000776013313 from CourseHero.com on 02-27-2026 20:22:02 GMT -06:00
+https://www.coursehero.com/file/190968212/CHEM150-Midterm-I-Practice-Apdf/
+Powered by TCPDF (www.tcpdf.org)
+
+================================================================================
+FILE: Chem TT 1B.pdf.pdf
+================================================================================
+Pages: 5
+
+--- Page 1 ---
+Chem 150      Term Test 1B     14 February 2025     8:30   Student Name:_______________________ 
+ 
+1.(2 marks) Using the periodic table arrange the following elements in the expected order of increasing 
+ionization energy: Ca, Se, Br, Sr 
+ 
+ 
+ 
+ 
+ 
+2.(3 marks) Arrange the following ions in order increasing size: I-, Ba2+, Sb3-, Sr2+ 
+ 
+ 
+ 
+ 
+ 
+ 
+3. (6 marks) Consider the following four bonds between elements shown below. Using the 
+electronegativity values provided on the last page of this exam, assign partial (fractional) charges (δ+, δ-,) 
+to all eight atoms. Next rank the molecules in order of increasing bond polarity (increasing % ionic 
+character).  
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+--- Page 2 ---
+4.(6 marks) Name three types (extremes) of chemical bonding and give a representative example for 
+each type. Your example must be a pure substance (e.g. an element or a compound) 
+ 
+ 
+a) _____________________________________________________________ 
+ 
+ 
+b) _____________________________________________________________ 
+ 
+ 
+c) _____________________________________________________________  
+ 
+ 
+5. (8 marks) Draw all valid Lewis structures of the molecule N2O. If there are formal charges on any of 
+the atoms be sure to include them! Indicate if the structures you have drawn are equivalent or non-
+equivalent. Circle equivalent Resonance structures. If you have non-equivalent resonance structures, 
+state this also and underline your best resonance structure. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- Page 3 ---
+4.(21 marks) Identify the electron group geometry (EGG) and the molecular shape of the species below. 
+Start by writing a valid Lewis structure and state the number of electron groups (#EG) around the central 
+atom. Be sure to show all electrons and indicate any non-zero formal charges. Continue by drawing the 
+EGG placing lone pairs and bonding pairs in the appropriate positions. Name the EGG. Next draw the 
+molecular shape. Here multiple bonds, formal charges on atoms and lone pairs might be omitted for 
+clarity. Name the molecular shape. Finally, indicate if the molecule or ion is polar or not. Please refer to 
+the example below (SF4) if in doubt about any of the instructions. 
+   Lewis Structure     #EG                       EGG                   shape        polar (Yes or No) 
+_______________________________________________________________________________ 
+_______________________________________________________________________________ 
+ 
+PH3  
+ 
+__________________________________________________________________________________ 
+ 
+SF4 
+ 
+ 
+_____________________________________________________________________________________ 
+ 
+ 
+[NO2]- 
+ 
+ 
+
+
+--- Page 4 ---
+7.(8 marks) Using the data given below estimate the lattice energy for magnesium fluoride, MgF2 in 
+kJ/mol. Note that not all the data given below are necessary to complete this task. Drawing a diagram 
+with energy along the y axis might prove invaluable. Positive energies mean energy is required (moving 
+up along the y-axis) whereas negative energies mean energy is released (going down along the y-axis). 
+Melting Point Magnesium: 650 ⁰C     
+Melting point Fluorine: -219 ⁰C     
+Boiling point Fluorine: -188 ⁰C     
+Heat of sublimation for magnesium: 146 kJ/mol  
+Density of magnesium: 1.74 g/cm3  
+First ionization energy fluorine: 1681 kJ/mol   
+2nd ionization energy of fluorine: 3373 kJ/mol   
+electron affinity of fluorine:  -328 kJ/mol 
+First ionization energy magnesium: 738 kJ/mol 
+Second ionization energy magnesium: 1451 kJ/mol 
+Third ionization energy magnesium: 2652.5 kJ/mol 
+Fourth ionization energy Titanium: 7733 kJ/mol 
+Bond dissociation energy for the difluorine molecule: 155 kJ/mol 
+Energy released forming solid magnesium fluoride from the elements: -1124 kJ/mol 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- Page 5 ---
+Electronegativities of the elements 
+ 
+ 
+ 
+
+
+================================================================================
+FILE: Answer Key Chem 150 review test A - Tagged.pdf
+================================================================================
+Pages: 7
+
+--- Page 1 ---
+Chem 150 Answer Key Review Test A      
+Part 1 For questions 1  Circle the letter that corresponds to the best answer. There is only one correct 
+answer for Question 1 worth 2 marks
+1. Which of the following statements is FALSE?
+a)   Compounds can be separated into simpler substances physical means.
+(only chemical means can separate compounds into simpler substances)
+b)  Mixtures have a variable composition that can vary from sample to sample.
+c)  Elements and compounds are both pure substances.
+d)  When the temperature changes, a heterogeneous mixture might become homogeneous.  
+e)  In mixtures the components retain their identity.
+2. (5 marks) In the space to the left of letters a) to e) indicate if the statements below are true (T) or 
+false (F)
+F  a) 2H and 1H are the only isotopes of the element hydrogen. (there is 3H too)
+T  b) ppm stands for mass of solute dissolved (in mg) divided by mass of solution in kg.
+T  c) Barium is an element in the 2nd group in the periodic table.
+T  d) Barium is also an element of the 6th period in the periodic table.
+F  e) Ordinary barium oxide has the formula BaO2. (ordinary barium oxide is BaO)
+
+--- Page 2 ---
+Part 2  Short answer questions.
+1. (2 marks) Define the following forms of matter.  If you indicate mixture specify if homogeneous 
+or heterogeneous:
+a) Drywall__________________ heterogeneous mixture______________________
+b) Neodymium___________________element______________________________
+c) High quality glass used for making windows________homogeneous mixture____
+d) Disulfur difluoride _______________compound________________________
+2. (2 marks) Indicate if the following processes involve chemical or physical change:
+a) Condensation forming inside the kitchen window __________physical change________
+b) Breaking rock in a quarry _______________________ physical change ______________
+c) Making steel from basic minerals in a blast furnace ________chemical change________
+d) Unprotected iron rusting in a moist environment___________ chemical change ______
+3. (4 marks) Fill in the empty spaces. Make sure to include the mass number in the top row.
+Symbol 192Os2+ _14C_ _19F-__
+# of protons __76_ __6__ __9__
+# of neutrons _116_ __8__ _10__
+# of electrons __74_ __6__ _10__
+Charge __+2_ __ 0_ _-1__
+
+--- Page 3 ---
+4. (2 marks) Indicate whether the following elements are metals, non-metals or metalloids
+a) Bromine _________________non metal___________________________
+b) Palladium __________________metal______________________________
+c) Sodium ___________________metal_____________________________
+d) Arsenic ___________________metalloid__________________________
+5. (4 marks) Balance the following equation
+C2H6O  +      3O2     →    2CO2     +    3H2O
+3H2SO4      +       2Al(OH)3    →         Al2(SO4)3     +    6H2O
+
+--- Page 4 ---
+Part 3   Chemical Nomenclature
+1. (3 marks) Name the following molecular compounds
+SF4 sulfur tetrafluoride
+N2O3 dinitrogen trioxide
+CS2 carbon disulfide
+2. (3 marks) Write formulas for the following ionic compounds
+Aluminum nitride AlN
+Manganese (II) nitrate Mn(NO3)2
+Potassium nitrite KNO2
+3.  (3 marks) Write formulas for the following acids:
+Carbonic acid H2CO3
+Nitric acid HNO3
+Hydrochloric acid HCl     or more correctly HCl (aq)
+
+--- Page 5 ---
+Part 4  Numerical problems
+1. (11 marks) Niobium reacts with Chlorine at 300 ⁰C in a quartz tube according to the equation 
+bellow. The product sublimes and crystallizes on the cooler parts inside the tube as bright yellow 
+crystals.
+2Nb   + 5Cl2  → 2NbCl5
+a) (5 marks) Calculate the mass of product that can form if 22.2 g of the metal is allowed to 
+react with 214 g of the non-metal.
+22.2 g Nb x mol
+92.9064 g  = 0.23895 mol Nb, 0.23895 mol Nb x 2mol NbCl ₅
+2 mol Nb   = 0.23895 mol 
+NbCl5
+214 g Cl2 x mol
+70.906 g  = 3.018 mol Cl2, 3.018 mol Cl2 x 2mol NbCl ₅
+5 mol Cl ₂   = 1.207 mol NbCl5
+0.23895 mol NbCl5 can be produced (Niobium is limiting, Chlorine is in excess)
+0.23895 mol NbCl5 x 270.1714 g
+mol  = 64.6 g NbCl5 can be produced.
+ 
+b) (2 marks) Which reactant is completely used up and what mass of the other reactant is left 
+over?
+There is a few ways to get there. The fastest way here is probably the law of conservation of 
+mass: Niobium is limiting and completely consumed. Chlorine is in excess and some will be 
+left over.
+22.2 g Nb + 214 g Cl2 = 64.6 g NbCl5 + x g Cl2 left over
+171.6 g chlorine is left over
+c) (2 marks) Suppose you isolated 55.3 g product from the reaction above what would be the 
+percent yield.
+ % yield = 55.3 g
+64.6 g  x 100 % = 85.7 % yield
+d) (2 marks) What is the name of the product?
+
+--- Page 6 ---
+Niobium (V) chloride   (also widely called niobium pentachloride)
+2. (3 marks) A mixture of CaCO3(s) and MgCO3(s) weighing 1.2345 g is heated to 1000 °C until no 
+more CO2(g) is released and the mixture of now CaO (s)and MgO (s) has a constant mass of 
+0.62874 g. What is the %wt composition of MgCO3(s) in the mixture.
+If x is the number of mol of CaCO3(s) and y is the number of mol of MgCO3(s) then:
+x CaCO3(s) + y MgCO3(s) → x CaO(s) + y MgO(s) + (x+y) CO2(g)
+We can easily get to the sum of mol of x and y using: 1.23456 g → 0.62874 g + mCO2(g)
+mCO2(g) = 0.605818 g and
+0.605818 g x mol
+44.011 g  = 0.013766 mol CO2(g) = x + y
+Now we can set up one of two equations involving masses and substituting mass for 
+mass = (mol)x(molar mass)
+If a is the mass in grams of CaCO3(s) and b is the mass in grams of MgCO3(s) then:
+a CaCO3(s) + b MaCO3(s) = 1.23456 g
+x(100.0872 g/mol) + y(84.3142) = 1.23456 g (mol/mol cancel and dividing both sides by g)
+x(100.0872) + y(84.3142) = 1.23456   (Equation 1)
+x + y = 0.013766 (Equation 2)
+substituting yields  x = 0.004687213 mol 
+and mass CaCO3(s) = (0.004687213 mol)x(100.0872g/mol) = 0.46913 g
+and y = 0.009078 mol
+mass MgCO3(s) = (0.009078 mol)(84.3142 g/mol) = 0.76543 g
+which adds up to 1.23456 g
+Finally: % wt MgCO3(s) in the original mixture is: 0.76543 g
+1.23456 g  x 100 % = 62.00 % wt
+
+--- Page 7 --- [no text extracted]
+
+================================================================================
+FILE: Answer Key Term Test 1 - Tagged.pdf
+================================================================================
+Pages: 5
+
+--- Page 1 ---
+Chem 150 Answer Key Term Test 1
+1.(2 marks) Using the periodic table arrange the following elements in the expected order of increasing 
+ionization energy: Ca, Se, Br, Sr
+Sr < Ca < Se < Br
+2.(3 marks) Arrange the following ions in order increasing size: N3-, Be2+, F-, Mg2+
+species N3- Be2+ F- Mg2+
+Total # of e- 10 2 10 10
+# of protons to 
+attract those e-
+7 4 9 12
+Be2+  < Mg2 < F- < N3-
+3.(4 marks) Write balanced equations for the reactions of a) aluminum with chlorine and b) magnesium 
+with nitrogen.
+a) _________2Al + 3Cl2 →2AlCl3_______________________
+b) __________3Mg + N2 →Mg3N2______________________
+
+--- Page 2 ---
+4.(6 marks) Fill out the table below by naming three types (extremes) of chemical bonding and giving a 
+representative example for each type. Your example must be a pure substance (either an element or a 
+compound).
+Type of chemical bond Representative example (element or compound)
+Ionic bond NaCl(s)
+Covalent bond H2(g)
+Metallic bond Fe(s)
+5.(2 marks) Give an equation that represents the 2nd ionization energy of tin.
+Sn+(g) + I2 → Sn2+(g) + e- 
+I was generous here if (g) was missing but recall this is a property of a isolated gas phase atom!
+6.(2 marks) What is the effective nuclear charge in a boron atom.
+Zeff = Z - # of core electrons = 5-2 = 3
+7.(8 marks) Draw all valid Lewis structures for the dinitrogen monoxide molecule. State if the structures 
+you have drawn are equivalent or non-equivalent resonance structures. If your resonance structures are 
+non-equivalent, circle the best resonance structure (the one that contributes most strongly to the 
+resonance hybrid).
+The three Resonance structures above are non-equivalent.
+
+--- Page 3 ---
+8.(21 marks) Identify the electron group geometry (EGG) and the molecular shape of the species below. 
+Start by writing a valid Lewis structure and state the number of electron groups (#EG) around the central 
+atom. Show all valence electrons and indicate any non-zero formal charges in your Lewis structure 
+Continue by drawing the EGG placing lone pairs and bonding pairs in the appropriate positions. Name 
+the EGG. Next draw the molecular shape. Here multiple bonds, formal charges on atoms and lone pairs 
+might be omitted for clarity. Name the molecular shape. Finally, indicate if the molecule or ion is polar 
+or not. Please refer to the example below (SO2) if in doubt about any of the instructions.
+   Lewis Structure     #EG                       EGG                  shape        polar (Yes or No) 
+_______________________________________________________________________________
+_________
+______________________________________________________________________
+_______________________________________________________________________________
+__________________________ _______________________________________________________
+H-CΞN:  2         H-CΞN:         H-C-N Yes
+         linear                linear
+
+--- Page 4 ---
+9.(6 marks) Estimate the lattice energy of aluminum fluoride AlF3(s) using the data given on the data 
+and constants sheet. Drawing a diagram might prove very helpful. Not all the data provided might be 
+necessary. A positive energy (enthalpy or heat) means energy is required to achieve the process or 
+reaction while a negative sign indicates that energy is released (in the direction as stated e.g. the heat of 
+sublimation is positive as it requires energy to transform the solid metallic phase into the gas phase).
+Thanks for catching my typo on the next page so I could announce this to the class in a timely manner. 
+One of the most common mistakes I encountered was the direction (sign) for the reaction of Aluminum 
+with Fluorine. -1504 kJ are generated (exotherm) during the formation of one mol AlF3(s) so 1504 mol of 
+energy are required (+1504 kJ) to convert one mol of AlF3(s) into 1 mol of Al(s) and 1.5 mol of F2(g)
+Final Answer: 1504 kJ + 330 kJ + 235.5 kJ +577.6 kJ + 1817 kJ + 2745 kJ – 984 kJ = + 6225.1 kJ (from End 
+to gas phase ions) The lattice energy is the energy released for the reverse process as shown in diagram:
+
+--- Page 5 ---
+So the lattice energy for Al3+(g) + 3F-(g) →AlF3(s) is – 6225.1 kJ and since this is for the formation of one 
+mol AlF3(s) – 6225.1 kJ/mol
+Data and constants sheet  (You may detach this sheet from the exam for easier use)
+Density of aluminum: 2.70 g/cm3
+Boiling point of fluorine: -188 °C
+Electron affinity of fluorine: -328 kJ/mol
+First ionization energy of fluorine: 1681 kJ/mol
+Bond-dissociation energy of fluorine: 157 kJ/mol
+Enthalpy (heat) of reacting solid aluminum with fluorine gas to get solid magnesium aluminum fluoride: -1504 
+kJ/mol
+Enthalpy (heat) of sublimation of aluminum: 330 kJ/mol
+Melting point of aluminum: 660 °C
+First ionization energy of aluminum: 577.6 kJ/mol
+Second ionization energy of aluminum: 1817 kJ/mol
+Third ionization energy of aluminum: 2745 kJ/mol
+Fourth ionization energy of aluminum: 11580 kJ/mol
+
+================================================================================
+FILE: Answer_Key_Chem_150_Old_Midterm_Friday.pdf.pdf
+================================================================================
+Pages: 10
+
+--- Page 1 ---
+Chem 150   Answer Key  Midterm  Friday  
+Part 1  (6 marks) Multiple Choice Section 
+For each statement below circle the letter that corresponds to the best answer. There is only one correct 
+answer per question. Each question answered correctly is worth 2 marks. 
+1. Consider generating five mixtures of substances a, b, c, d and e in water. In each case enough water is 
+added to 1.00 g compound to generate 1.000 L of mixture. In what mixture would the osmotic pressure be 
+highest? Assume 25 °C. 
+This is an Osmotic pressure problem: П = MRT. The solution with the greatest Molarity of solute will 
+have the highest osmotic pressure. So wee need to convert mass of solute to moles of solute for each and 
+see what happens to the solute when it is dissolved in water. Since Osmotic Pressure is a colligative 
+property it will depend only on the quantity of solute, not its identity.  
+solute mass moles Moles of aqueous 
+“active” solute 
+Molarity of 
+solute 
+CH3-OH 1 g 0.03125 mol 0.03125 mol 0.03125 M 
+NaCl 1 g 0.0171 mol 0.0171 mol + 0.0171 mol 0.0342 M 
+S8 1 g 0.004 mol 0 mol (insoluble in water) 0 M 
+BaCl2 1 g 0.0048 mol 0.0048 mol + 0.0096 mol 0.0144 M 
+SO2 1 g 0.0156 mol 0.0156 mol 0.0156 M 
+ 
+a) CH3OH (l) → CH3OH (aq) 32 g/mol, M = 0.03125 
+𝑚𝑜𝑙
+𝐿  CH3OH (aq) 
+b) NaCl (s) ↔ Na+(aq) + Cl-(aq) 58.45 g/mol, MNa+ = 0.0171 
+𝑚𝑜𝑙
+𝐿  , MCl- = 0.0171 
+𝑚𝑜𝑙
+𝐿  
+c) S8(s) → S8(s) non-polar, insoluble in polar water, does not contribute to osmotic pressure! 
+d) BaCl2(s) ↔ Ba2+(aq) + 2Cl-(aq) 208 g/mol, MBa2+ = 0.0048 
+𝑚𝑜𝑙
+𝐿  , MCl- = 0.0096 
+𝑚𝑜𝑙
+𝐿  
+e) SO2(g) ↔ SO2(aq) (if all was actually dissolving, in reality only 2 % wt ) 
+Since both the chloride and sodium ions contribute to the osmotic pressure the solute ion 
+concentration entered in the equation π=MRT is higher for b) with 2 x 0.0171 M = 0.0342 M 
+2. Consider the substances a to e again. Which substance would form a heterogeny mixture with water? 
+a) CH3OH (l)  
+b) NaCl (s) 
+c) S8(s) not water soluble (non-polar eight-membered ring, no electronegativity difference) 
+d) BaCl2(s) 
+e) SO2(g) 
+
+--- Page 2 ---
+3. In which of the substances a to e can the CHEMICAL BONDING not be explained by metallic, polar 
+covalent or ionic bonding?  
+a) CH3OH (l) polar covalent 
+b) NaCl (s) ionic 
+c) S8(s) covalent (non-polar covalent) 
+d) BaCl2(s) ionic 
+e) SO2(g) polar covalent 
+Part 2 (45 marks) Lewis structures, VSEPR and periodic properties and short answer questions 
+1.(21 marks) Identify the electron group geometry (EGG) and the molecular shape of the species below. 
+Start by writing a valid Lewis structure and state the number of electron groups (#EG) around the central 
+atom. Be sure to show all electrons and indicate any non-zero formal charges. Continue by drawing the 
+EGG placing lone pairs and bonding pairs in the appropriate positions. Name the EGG. Next draw the 
+molecular shape. Here multiple bonds, formal charges on atoms and lone pairs might be omitted for 
+clarity. Name the molecular shape. Finally, indicate if the molecule or ion is polar or not. Please refer to 
+the example below (SO2) if in doubt about any of the instructions. 
+   Lewis Structure     EGG              Parent shape              molecular shape        polar (Yes or No) 
+_______________________________________________________________________________ 
+______________________________________________________________________________ 
+________________________________________________________________________________ 
+________________________________________________________________________________ 
+
+
+--- Page 3 ---
+2.(6 marks) Experimental evidence shows that PF3Cl2 has a dipole moment whereas PF2Cl3 does not. 
+Determine the structure of the two molecules and give a three-dimensional drawing. In a sentence or two 
+elaborate on how the structures minimize overall repulsion and explain the experimental evidence. 
+Both molecules have trigonal bipyramidal shape. Let’s work through the possibilities in which 2 Cl and 
+3 F atoms can be arranged around the central phosphorus (top frame below). The two Cl could be axial, 
+which would create a fully symmetrical molecule in which all the bond dipoles would cancel out creating 
+a non-polar molecule. This is not what the experimental evidence suggests! PF3Cl2 is polar. The other two 
+possibilities (one Cl axial and one equatorial, as well as both Cl equatorial) would create polar molecules. 
+ 
+The second frame (above) shows the isomers of PF2Cl3. The only isomer that would cancel all bond-
+dipoles would be the one with all 3 Cl atoms in equatorial positions. 
+This makes sense since we learned that lone-pairs in trigonal bipyramidal EGG always go in the 
+equator as they require more space and repulsion is greatly reduced in the equator (only two 90 ° 
+neighbours, as suppose to the axial positions with three 90 ° neighbours). Chlorine atoms are larger 
+than fluorine atoms and would prefer the equatorial positions, just like lone-pairs would. The 
+structures that would be in agreement with these assumptions and the experimental evidence are shown 
+below. 
+ 
+ 
+PF3Cl2 (polar) repulsions minimized and PF2Cl3 (non-polar) repulsion minimized,  
+
+
+--- Page 4 ---
+  3. (2 marks) Using the periodic table arrange the following in the expected order of increasing size:    
+Cl, Rb, Ca, Si 
+Cl <  Si < Ca < Rb 
+ 
+ 
+4.(8 marks) Complete the table below by naming four types of intermolecular forces. Give a 
+representative example for each type of intermolecular force, 
+ 
+Type of intermolecular force Example 
+ 
+Ion-dipole force 
+ 
+ 
+Sodium chloride dissolved in water 
+ 
+London forces (dispersion forces, also 
+called induced dipole- induced dipole 
+forces) 
+ 
+ 
+Methane, argon, oil 
+ 
+Dipole-dipole forces 
+ 
+ 
+Forces between two HCl molecules 
+ 
+Hydrogen bonding 
+ 
+ 
+water 
+ 
+5. (8 marks) Draw all valid Lewis structures for the nitrate ion [NO3]- Comment if the structures you 
+have drawn are equivalent or not. State if the nitrate ion is polar or not. 
+ 
+ 
+All three resonance structures are equivalent. The nitrate ion is non-polar (by resonance, resonance 
+hybrid is non-polar) 
+
+
+--- Page 5 ---
+Part 3  (15 marks) Intermolecular interactions, Colligative Properties and Gases and more short 
+answer questions 
+1. (5 marks) The compounds CO2 and SiO2 have very different properties. CO2 is a gas under 
+standard conditions whilst SiO2 is a solid with a melting point just under 2000 K. Explain the 
+differences. Use arguments involving chemical bonding and intermolecular forces. Draw Lewis 
+structures of both compounds that are consistent with their physical properties.      
+Hard Question! We are already familiar with the Lewis structure of CO2   
+The Lewis structure of SiO2 must be different to account for the very different physical 
+properties!  would also be a non-polar relatively small molecule with 
+slightly larger dispersion forces. This would elevate melting and boiling points but 
+perhaps by some 50 to 100 K, not by over 1800 K. What other options do we have? 
+Oxygen can meet its two-bond requirement by making a double bond or two single 
+bonds. Similarly, silicon can make two double bonds or four single bonds. In SiO2 each 
+silicon forms four single bonds to four oxygens with each oxygen bridging two silicon 
+atoms. The result is a covalent network solid, the mineral quartz, of which a small 
+structural segment is shown below: 
+ 
+ 
+ 
+                      
+ 
+ 
+
+
+--- Page 6 ---
+2. (3 marks) How many electrons, protons and neutrons are there in an atom of 28Si? 
+ 
+ 
+Number of Electrons 
+ 
+ 
+14 
+ 
+Number of Protons 
+ 
+ 
+14 
+ 
+Number of Neutrons 
+ 
+ 
+14 
+ 
+ 
+3. (4 marks) Draw a water molecule that are engaged in an ion-dipole interaction with a sodium 
+ion. Be sure to draw the molecule in its correct geometry and align the molecule and the ion 
+properly. Draw covalent bonds as solid lines (as usual) and the ion-dipole bond as dashed line. 
+ 
+ 
+ 
+4. (3 marks) Calculate the molar solubility of nitrogen in water that has been pressurized with 
+12 atm of air (78 % vol nitrogen) at 25 °C. The Henry’s Law constant for nitrogen at that 
+temperature is 6.0 x 10-4 
+𝑚𝑜𝑙
+𝐿 𝑎𝑡𝑚. 
+ 
+Sg = kpg = 6.0 x 10-4 
+𝑚𝑜𝑙
+𝐿 𝑎𝑡𝑚 x 0.78 x 12 atm = 5.6 x 10-3 
+𝑚𝑜𝑙
+𝐿  
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+--- Page 7 ---
+Part 4  (19 marks) Numerical problems 
+1. (5 marks) The vapour pressure of liquid mercury is only 0.261 Pa at 25 °C. Nevertheless, dangerous 
+levels build up in air that is in contact with mercury, especially in areas that are not ventilated well. 
+Calculate the concentration of mercury in air saturated with mercury vapour at 25 °C. State your answer 
+in mg of Hg per cubic meter of air and state if it is safe to work in an environment saturated with Hg(g) 
+given that the legal exposure limit is 0.1 mg/m3 over an 8-hour work day whilst the recommended 
+airborne exposure limit is 0.05 mg/m3 over 10 hr work day. 
+Strategy: 
+Use the vapour pressure of mercury to find the moles on Hg(g) in 1 m3 of air and convert that to mg/m3. 
+pV = nRT and  nHg(g)= 
+𝑝𝑉
+𝑅𝑇 = 
+(0.261 𝑃𝑎)(0.001𝐾𝑝𝑎
+𝑃𝑎 )(1000 𝐿)
+(8.314𝐿𝑘𝑃𝑎
+𝑚𝑜𝑙𝐾 )(298 𝑘)
+ = 1.0535 x 10-4 mol Hg(g) in 1000 L of air at 
+saturation. 
+1.0535 x 10-4 mol/m3 x 
+200.6 𝑔
+𝑚𝑜𝑙  = 0.0211g/m3 = 21.1 mg/m3 
+The air is not safe! 
+ 
+2.(6 marks) Magnesium can be uses as a “getter” in tungsten light bulbs to remove residual amounts of 
+oxygen and nitrogen which would shorten the lifetime of the tungsten wire because it forms 
+magnesium oxide and magnesium nitride respectively. Write a balanced equation for the reaction 
+of nitrogen with magnesium. Assume a residual nitrogen partial pressure pN2 of 3.45 x 10-4 kPa in 
+a light bulb of 0.320 L volume at 20°C (and no residual oxygen). What mass of magnesium 
+would react? 
+This question was directly from Problem Set 4 (gasses). See Answer Key Problem Set 4 for solution. 
+ 
+3.(8 marks) Many people and governments around the world are concerned about increasing CO2 
+emissions into our shared atmosphere and huge efforts are underway to curb those emissions. The Mauna 
+Loa Observatory on the big Island of Hawaii has been rigorously monitoring atmospheric CO2 
+concentrations since 1967. The average monthly measurement for January 2023 was 419.48 ppm whilst 
+the monthly average for January 2024 was 422.80 ppm (e.g. 422.80 mol of CO2 in 1,000,000 mol of dry 
+air). Estimate the annual increase of CO2 in metric tons in our global atmosphere. Recall that pressure is 
+force per area and force is mass times acceleration, which is 9.81 
+𝑚
+𝑠2 on earths surface. Recall the surface 
+of a sphere is A =4πr2 and Earth’s radius is 6371 km. Assume a composition of the air that is 78 % vol N2, 
+21 % vol O2, 1 % vol Ar. Assume standard temperature and standard pressure. Neglect water vapour and 
+mountain ranges. Depending on your approach not all the data given might be needed. 
+ 
+
+--- Page 8 ---
+Some of you started with pV = nRT and estimated the volume of the atmosphere using a certain height 
+and got pretty close to a good estimate. We can avoid the Volume of the atmosphere altogether by starting 
+with atmospheric pressure at sea-level. Since pressure is force per area and force is mass times 
+acceleration, we can calculate the mass of the atmosphere. Next, we can convert mass to moles using an 
+average molar mass for air (calculated from the abundance data) and finally use the difference in mol 
+fraction between 2023 and 2024 to calculate the increase in the number of moles of CO2 in the 
+atmosphere and finally convert that to mass. 
+Average pressure at sea-level is 101.3 kPa 
+p = 
+𝐹
+𝐴 = 
+𝑚𝑎
+𝐴   We can calculate the mass of the atmosphere in two steps by calculating the mass per 1m2 
+first and then expanding the area to the whole surface of earth. We can also do it all in one step by 
+inserting the surface of earth in the equation. I often prefer working in steps as it gives more opportunity 
+to check if intermediate results are sensible. This is especially important with road map question like this 
+one where we do a lot of synthesis and are likely faced with having to evaluate very large (almost 
+inconceivably large) numbers. 
+Mass of atmosphere per 1 m2: m = 
+𝑝𝐴
+𝑎  = 
+(101300 𝑃𝑎)(1 𝑚2)
+9.81𝑚/𝑠2  = 10326 kg  [Pa = N/m2 and N = (kg x m)/s2] 
+Let’s evaluate this first answer. Recall that pressure of the atmosphere can also be expressed in mmHg 
+1 atm = 760 mm Hg (formula sheet) or 10 m of water (Otto von Guericke’s barometer we talked about in 
+class, Magdeburg halfspheres slide). What does this mean? The mercury in the mercury barometer rises 
+760 mm as the force of a column of Hg 760 mm high is equal of to force exerted by the mass of the 
+atmosphere. A column of mercury, 760 mm high (or water 10 m high) is thus equal in mass to a column 
+of atmosphere over the same area. Mercury is about 13 times denser than water (10 m/ 0.76m = 13) 
+Envision a column of water 10 m tall by stacking ten cubes of water each measuring 1m x 1m x 1m on 
+top of another. The mass of this tower of water would have a mass of 10 metric tons (10,000 kg) spread 
+out over an area of 1 m2. This lines up with our first result. Divers know that for every 10 m they descent 
+the pressure increases by one atmosphere. 
+Now we can calculate the mass of the entire atmosphere by expanding the area from 1 m2 to earths 
+surface. 
+A = 4πr2 = 4π(6371000 m)2 = 5.1 x 1014 m2. 
+m atmosphere =  10326 kg/m2 x  5.1 x 1014 m2 = 5.25 x 1018 kg = 5.25 x 1021 g 
+How many moles is that? We need the molar mass of air which is a mixture of mainly three gasses. Let’s 
+do a weighted average: 
+0.78 x 28.013 
+𝑔
+𝑚𝑜𝑙 + 0.21 x 32.0 
+𝑔
+𝑚𝑜𝑙 + 0.01 x 40.0 
+𝑔
+𝑚𝑜𝑙 = 29.0 g/mol 
+So the number of moles of air (or gas molecules) in the atmosphere is: n = 
+𝑚𝑎𝑠𝑠
+𝑚𝑜𝑙𝑎𝑟 𝑚𝑎𝑠𝑠 = 
+5.25 𝑥 𝐸21 𝑔
+29 𝑔/𝑚𝑜𝑙  
+nair = 1.8 x 1020 mol 
+
+--- Page 9 ---
+Now we can get to the increase of CO2 in the atmosphere in the last year. It increased by 422.80ppm – 
+419.48 ppm  =  3.32 ppm or 3.32 mol CO2 per 1,000,000 mol dry air. 
+So expanding that mol fraction to the entire atmosphere gives an annual increase of: 
+3.32 𝑚𝑜𝑙
+1,000,000 𝑚𝑜𝑙 x 1.8 x 1020 mol = 6x1014 mol CO2  which can easily be converted to mass: 
+6.0x1014 mol CO2 x 44.011 
+𝑔
+𝑚𝑜𝑙 = 27 x 1015 g = 27 x 109 t  
+Approximately 27 billion metric tons of CO2 were emitted globally in 2023. 
+One of your answers reduced this problem efficiently to two lines by calculating the increase in partial 
+pressure of CO2 directly from the increase in mole fraction. Thus, the increase in partial pressure of CO2 
+is approximately: 
+3.32 𝑚𝑜𝑙
+1,000,000 𝑚𝑜𝑙 x 101300 Pa = 0.336Pa which translates to a mass of: 
+m = 
+𝑝𝐴
+𝑎  = 
+(0.336 𝑃𝑎)(5.1 𝐸14 𝑚2)
+9.81𝑚/𝑠2  = 17.5 x 1012 kg = 18 Billion tons 
+This approach is low by about a third. Obviously assuming ideal conditions only stretches so far. It is 
+nevertheless an amazingly efficient estimate. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- Page 10 ---
+Formulas and Constants for the Midterm 
+ 
+pV = nRT 
+piVi(Ti)-1 = pfVf(Tf)-1 
+Ptotal = p1 + p2 + p3 + .... + pn 
+Vmol  = 22.4 L mol-1 at STP (1 atm = 101.325 kPa = 760 mm Hg  and 273.15 K) 
+R = 8.3145 L kPa mol-1 K-1 
+Avogadro’s number   Na = 6.022 x 1023 mol-1 
+Unified atomic mass unit  1 u = 1.660 x 10-27 kg 
+Π = MRT 
+PA = xAP°A 
+Sg = kpg 
+Electronegativities of the elements 
+ 
+ 
+
+
+================================================================================
+FILE: TT 1A Answer Key-1.pdf
+================================================================================
+Pages: 5
+
+--- Page 1 ---
+Chem 150  Answer Key   Term Test 1 A 
+ 
+1.(2 marks) Using the periodic table arrange the following elements in the expected order of increasing 
+size: Ca, Se, Br, Sr 
+ 
+Br <  Se < Ca <  Sr 
+ 
+ 
+2.(3 marks) Arrange the following ions in order increasing size: S2-, K+, Se2-, Ti4+ 
+species S2-  K+ Se2- Ti4+ 
+# of protons 16 19 34 22 
+# of electrons 18 18 36 18 
+ 
+Arrange isoelectronic ions first! The greater the number of protons, the smaller the ion.  Ti4+ < K+< S2-  
+Next look at the “oddball” Se2- which is in the same group as S2- but has a higher atomic number 
+meaning there are more electronic shells filled in Se2- compared to S2- so Se2- will be bigger than S2-. 
+Final answer: Ti4+ < K+< S2- < Se2-  
+ 
+3. (6 marks) Consider the molecules below. Using the electronegativity values provided on the last page 
+of this exam, assign partial (fractional) charges (δ+, δ-, δ2- etc.) to ALL atoms in the four molecules.  
+ 
+ 
+ 
+
+
+--- Page 2 ---
+4.(4 marks) Write balanced equations for the reactions of a) sulfur with aluminum and b) magnesium 
+with chlorine. 
+ 
+ 
+a) _______2Al + 3S → Al2S3____________________________________ 
+ 
+ 
+b) _______Mg + Cl2 → MgCl2_________________________________   
+ 
+ 
+5. (10 marks) Draw four valid Lewis structures of the phosphate ion [PO4]3-. If there are formal charges 
+on any of the atoms be sure to include them! Indicate if the structures you have drawn are equivalent or 
+non-equivalent. Circle equivalent Resonance structures. If you have non-equivalent resonance 
+structures, state this also and underline your best resonance structure. 
+See answer Key Problem set 2 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- Page 3 ---
+4.(21 marks) Identify the electron group geometry (EGG) and the molecular shape of the species below. 
+Start by writing a valid Lewis structure and state the number of electron groups (#EG) around the central 
+atom. Be sure to show all electrons and indicate any non-zero formal charges. Continue by drawing the 
+EGG placing lone pairs and bonding pairs in the appropriate positions. Name the EGG. Next draw the 
+molecular shape. Here multiple bonds, formal charges on atoms and lone pairs might be omitted for 
+clarity. Name the molecular shape. Finally, indicate if the molecule or ion is polar or not. Please refer to 
+the example below (SF4) if in doubt about any of the instructions. 
+   Lewis Structure     #EG                       EGG                   shape        polar (Yes or No) 
+_______________________________________________________________________________ 
+_______________________________________________________________________________ 
+_______________________________________________________________________________ 
+   
+Hint: Only use single bonds between I and I________________________________________________ 
+ 
+ 
+
+
+--- Page 4 ---
+6.(6 marks) The molecule shown below is tetrahydrofuran (THF), a cyclic organic ether which is 
+extremely flammable and combusts readily with oxygen to form carbon dioxide and water. 
+ 
+a) Balance the equation above: 2C4H8O + 11O2 → 8CO2 + 8H2O 
+ 
+b) Using bond dissociation values provided in the table below estimate the energy change that 
+occurs when one mole of THF combusts quantitatively. Hint. You might want to draw Lewis 
+structures off all reactants and products. 
+Energy required to break bonds:   Energy released forming bonds 
+2x2mol x 360 kJ/mol for 4 C-O bonds = 1440 kJ      8x2mol x 799 kJ/mol for 16 C=O bonds = 12784 kJ 
+2x3mol x 347 kJ/mol for 6 C-C bonds = 2082 kJ      8x2 mol x 464 kJ/mol for 16 H-O bonds = 7424 kJ 
+2x8mol x 414 kJ/mol for 16 C-H bonds = 6624 kJ 
+11mol x 498 kJ/mol for 11 O=O bonds = 5478 kJ 
+               15624k J      20208 kJ 
+More energy is released than consumed! 
+20208 kJ – 15624 kJ = 4584 kJ are released for the combustion of two mole of THF so half would be 
+released per one mole. Final answer: 2292 kJ/mol are released. 
+ 
+c) State if energy is absorbed by the reaction or if it released (produced). 
+Energy is released (produced) by the reaction. 
+
+
+--- Page 5 ---
+bond   d0 (kJ/mol)  bond   d0 (kJ/mol)  bond   d0(kJ/mol) 
+H-H   436   C-C   347   N-N   163 
+H-C   414   C=C   611   N=N   418 
+H-N   389   CΞC   837   NΞN   946 
+H-O   464   C-N   305   N-O   222 
+H-S   368   C=N   615   N=O   590 
+H-F   565   CΞN  891   O-O   142 
+H-Cl   431   C-O   360   O=O   498 
+H-Br  364   C=O   799   Cl-Cl   243 
+ 
+ 
+ 
+Electronegativities of the elements 
+ 
+ 
+ 
+
+
+================================================================================
+FILE: Answer Key Problem Set 1-1.pdf
+================================================================================
+Pages: 6
+
+--- Page 1 ---
+Chem 150  Answers Problem set 1 
+1. Which of the following figures represents? 
+a) A pure element 
+b) A mixture of two elements 
+c) A pure compound 
+d) A mixture of an element and a compound 
+ 
+ 
+i and v: pure element; ii, iii: A mixture of an element and a compound; iv: a pure compound; 
+vi: A mixture of two elements 
+ 
+ 
+ 
+2. Does the following diagram represent a chemical or physical change? How do you know? 
+ 
+ 
+ 
+ Chemical Change! New matter is produced. 
+
+--- Page 2 ---
+3. Define the following forms of matter as element, compound or mixture. If you indicate mixture 
+specify if homogeneous or heterogeneous: 
+a) Sand heterogeneous mixture 
+b) Diamond element 
+c) Gasoline homogeneous mixture 
+d) Sugar compound 
+ 
+4. Indicate which of the following changes represent chemical change or physical change: 
+a) Burning candle wax  chemical change 
+b) Melting candle wax  physical change 
+c) Cutting wire  physical change 
+d) Painting your bike  physical change* 
+*Painting in the sense that the paint is made up of pigments, a binder and a solvent. The 
+solvent evaporates and hardens the binder. (There are a few paints out there that 
+chemically react with the surface or with the binder) 
+ 
+5. Fill in the empty spaces: 
+ 
+Symbol   27Al3+  __96Mo  150Sm 
+ 
+# of protons  __13_  42  __62_ 
+ 
+# of neutrons  __14_  54  __88_ 
+ 
+# of electrons  __10_  __42_  __62_ 
+ 
+Charge   __+3_  0  __0__ 
+ 
+6. Which atomic property is described by the following equation? 
+ 
+Cl  +  e-  →  Cl-  +energy     
+ 
+Electron Affinity (or electron gain) 
+ 
+7. Name 3 metals, 3 non-metals and 2 metalloids. Name three properties that characterize metals 
+and three properties that characterize non-metals. 
+-Metals are ductile, malleable and good conductors of heat and electricity. They also have a 
+shiny appearance (iron, nickel, gold). 
+-non-metals are brittle. They are generally not conducting electricity and have no lustrous 
+appearance (bromine, sulfur, argon) 
+Examples for metalloids are Silicone, Germanium, Arsenic (note that both aluminum and 
+polonium are metals even though they are bordering the “step ladder”) 
+
+--- Page 3 ---
+8. Balance the following equation 
+ 
+2C2H6O2 + 5O2 →4CO2 + 6H2O 
+ 
+P4 + 5O2 → P4O10 
+ 
+Ca(OH)2  + 2HCl → CaCl2 + 2H2O 
+ 
+Fe3O4 + 4H2 → 3Fe + 4H2O 
+ 
+9. In a typical car battery lead (IV) oxide reacts with lead according to the following equation: 
+(During charging the battery the reveres reaction occurs!)  
+ 
+PbO2  +  Pb  +  2H2SO4       →  2PbSO4   +  2H2O 
+ 
+One way of checking the “livelihood” of a battery is to measure the density of the acid. At first 
+approximation battery acid consists only of sulfuric acid and water. Calculate the amount of lead 
+sulfate that formed and the amount of lead that reacted if the density of the acid changed from 
+1.2769 g/ml in the freshly charged battery to 1.1243 g/ml. Assume a total of 3 L of battery acid 
+which does not change considerably during the reaction. Use the table densities of aqueous 
+sulfuric acid to solve the problem. 
+ 
+This is a bit of a tricky question. The key to this problem is to realize that sulfuric acid is used up 
+in the discharge of the battery and water is produced. Thus the battery acid is diluted which 
+changes the density. First wee convert densities to specific gravity using the density of water at 
+4  C which we look up in a handbook or otherwise (0.9999750 g/ml). Next we relate the specific 
+gravity of the sulfric acid to its concentration using the table provided (Excel file). 
+ 
+1.2769 g/ml corresponds to (1.2769 g/ml)/(0.9999750 g/ml) = 1.2769 which gives  37 % H2SO4 
+ 
+similarly we obtain for  1.1243 g/ml a concentration of 18 % H2SO4 
+ 
+37 % H2SO4 refers to 37 g H2SO4 in 100 g solution (e.g. battery acid) 
+We have 3 L of battery acid with a density of 1.2769 g/ml so using D = m/V we get  3830.7 g acid 
+37 % of this mass is pure sulfuric acid: 0.37 x  3830.7 g = 1417.4 g 
+ 
+For the 18 % acid we get 18 g of H2SO4 in 100 g acid. If we assume the volume is not changing 
+(which is a good approximation in this case) we get 3372.9 g acid, 18 % of which is pure sulfuric 
+acid: 0.18 x 3372.9 g = 607.12 g 
+ 
+The difference in mass corresponds to the mass of sulfuric acid used up during battery  
+discharge: 1417.4 g – 607.12 g = 810.28 g 
+
+--- Page 4 ---
+ 
+If we convert this mass of sulfuric acid to moles of sulfuric acids we can relate it to the amount 
+of lead sulfate produced and the amount of lead consumed using the balanced reaction 
+equation. 
+1.) convert  grams to moles 
+ 
+801.28 g H2SO4 x (mol/98.08 g) = 8.261 mol H2SO4 
+ 
+2.)  convert moles to moles  
+ 
+ 8.261 mol H2SO4 x (2 mol PbSO4/2mol H2SO4) = 8.261 mol PbSO4 
+ 
+ 8.261 mol H2SO4 x (1 mol Pb/2mol H2SO4) = 4.131 mol Pb 
+ 
+3.) convert moles to grams 
+ 
+ 8.261 mol PbSO4 x (303.26g/mol) = 2505 g PbSO4 
+ 
+ 4.131 mol Pb x (207.2 g/mol) = 855.9 g Pb 
+ 
+answer:  During the discharge 2.5 kg of lead sulfate are produced and 0.86 kg of lead is used up. 
+ 
+LEAD Batteries are heavy!!!! 
+ 
+10. Copper can be refined from copper salt solutions using iron according to the following equation 
+ 
+CuCl2  +  Fe  →  Cu  +  FeCl2 
+ 
+What is the %yield of copper if 150 g Copper chloride reacted and 55 g Copper were obtained. 
+ 
+% Yield = (mass of product actually obtained (55 g Cu) divided by mass of product that could in 
+theory have formed) x 100 %.  To find the theoretical yield assume all the copper chloride 
+reacted:  
+First convert grams of CuCl2 in to mols of CuCl2:  150g x (mol/ 134.45g) = 1.116 mol 
+ 
+Next convert mols of CuCl2 to mols of Cu. This is easy since the molar ratio is 1:1 
+1.116 mol CuCl2 x (1 mol Cu/1 mol CuCl2) = 1.116 mol Cu 
+ 
+Now convert mols of copper to grams of copper: 1.116 mol Cu x (63.546 g/mol) = 70.9 g Cu 
+ 
+Finally calculate the % yield = {55 g/70.9 g} x 100 % = 77.6 % 
+ 
+
+--- Page 5 ---
+11. A main component of Portland cement that is made up of the elements calcium, silicon and 
+oxygen has the following analytical data: 34.50 % Ca, 24.18 % Si. Calculate the empirical formula 
+of the compound. 
+34.50 g Ca x (mol/40.08 g)  = 0.8608 mol 
+24.18 g Si x (mol/28.09 g)  = 0.8608 mol 
+100g – (35.50g + 24.18g) = 41.32 g ;  41.32 g O x (mol/ 16.00g)  = 2.5825 mol 
+Divide the molar ratio by the smallest number (0.8608 mol) and we get a ratio for: 
+Ca:Si:O = 1:1:3 which gives the empirical formula CaSiO3. 
+ 
+12. You have to determine the identity of a polymer used to insulate a copper wire in an older 
+industrial complex: Elemental analysis of the polymer gave 38.42 % C and 4.88 % H. Which of 
+the following polymers is very likely to be the material in question? 
+ 
+ 
+Polyethylene (PE) 
+C
+C
+nH
+H H
+H  
+Polyethylene can be ruled out immediately since it is made up of the elements hydrogen and 
+carbon only. The %C and %H in the elemental analysis would add up to 100 % which they 
+clearly do not. 
+ 
+Polyurethane (PU) 
+C
+C
+C
+C
+C
+C
+N
+C
+O
+C
+C
+O
+N
+C
+O
+H
+H
+O
+H
+H
+H
+H
+H H
+H H
+n  
+First find the empirical formula of this polyurethane by simply counting all the atoms in the 
+formula unit: C10 H10 N2 O4. This can be reduced to the simplest whole number ratio C5H5NO2 
+ 
+Next find the molecular weight (or more accurate the formula weight) of this formula: 
+(5 x 12.011 g/mol)  + (5 x 1.008 g/mol) + 14.01 g/mol + (2 x 16.00 g/mol) = 111.105 g/mol 
+ 
+Determining the % Carbon and % Hydrogen is now a relatively simple task: 
+
+--- Page 6 ---
+{(5 x 12.011 g/mol) /( 111.105 g/mol)} x 100 % = 54.05 % Carbon. 
+ 
+Conclusion: This is almost 20 % off. It cannot be this polyurethane! 
+ 
+Polyvinylchloride (PVC) 
+C
+C
+nH
+Cl H
+H  
+ 
+By exclusion this should be the material in question. Let’s check using the same mechanism as 
+above: 
+Empirical formula for PVC is C2H3Cl which has a mass of: 
+(2 x 12.011 g/mol) + (3 x 1.008 g/mol) + 35.45 g/mol = 62.496 g/mol 
+ 
+This gives: {(2 x 12.011 g/mol) /(62.496 g/mol)} x 100 % = 38.43 % Carbon 
+and{(3 x 1.008 g/mol) /( 62.496 g/mol)} x 100 % = 4.84 % Hydrogen. 
+ 
+Final conclusion: The elemental analysis are in close agreement with PVC. 
+ 
+13. How much of a 5 M stock solution of NaCl do you need to make 2 L of a 2 M NaCl solution? 
+ 
+ciVi=cfVf 
+Solving for Vi gives Vi = cfVf/ci and we can substitute Vi = 2M x 2L / 5M = 0.8 L 
+ 
+This means we require 0.8 l of the 5 M stock solution and dilute it with so much water as to 
+end up with 2 L. This new solution will have a concentration of 2M. 
+ 
+14. Name the following ions: 
+SO4
+2- sulfate (or sulphate) H2SO4  sulfuric acid (or sulphuric acid) 
+Cl- chloride  HCl hydrochloric acid 
+PO4
+3- phosphate  H3PO4 phosphoric acid 
+ClO3
+- chlorate  HClO3  chloric acid 
+NO3
+- nitrate   HNO3 nitric acid 
+ 
+15. Write names and formulas for the parent acids for the ions above. 
+To get to the parent acids we add enough hydrogen ions (protons), H+,to compensate for all 
+the negative charges and obtain the electrically neutral molecules. So a sulfate ion with a 
+charge of minus two will add two hydrogen ions  to form sulfuric acid. See italicised answer on 
+the right above.  
+
+================================================================================
+FILE: Answer Key Problem Set 2-2.pdf
+================================================================================
+Pages: 7
+
+--- Page 1 ---
+Chem 150  Answer Key  Problem Set 2 
+1. Complete the following phrases: 
+Ionization energy _decreases__ from the top to the bottom in a group. 
+Electron affinity __increases___ from the left to the right within a period. 
+Atomic radius ____increases __ from the top to the bottom in a group. 
+Electronegativity _ increases __ from the left to the right within a period. 
+The metallic character of an element _ decreases _ from the left to the right within a period. 
+Cations are ______smaller____ than the atoms from which they form. 
+In isoelectronic anions the radius _ increases __ as the charge increases (becomes more 
+negative). 
+2. What is the difference between Electron affinity and electronegativity of an element? 
+Electronegativity is the ability of an atom in a compound to attract shared electrons to itself. 
+Electron affinity is an atomic property (measures the energy change when an isolated gaseous 
+atom gains an electron). 
+3. Write an equation for the third ionization energy of tin. 
+ Sn2+  + → Sn3+ + e- 
+4. What is the effective nuclear charge in a nitrogen atom? 
+The effective nuclear charge is the portion of the nuclear charge that the valence electrons 
+effectively experience due to the screening of the inner electrons (the core electrons). 
+Zeff = atomic number - # of inner electrons 
+5. How many Valence electrons do the following elements possess: He, Si, Br, K 
+ He (2), Si (4), Br (7), K (1) 
+6. Arrange the following ions in order of increasing size:  F-, O2-, Al3+ and Na+ 
+Al3+ < Na+ < F- < O2- (all ions have 8 VE, so the greater the number of protons in the nucleus, the 
+greater the attraction of the electrons, the smaller the radius) 
+7. Using the periodic table arrange the following in the expected order of increasing 
+first ionization energy: B, Li, N, K 
+K < Li < B < N 
+
+--- Page 2 ---
+8. Arrange the following atoms in order of increasing atomic radii: Mg, Si, Sr, S 
+ S < Si < Mg < Sr 
+9. Using the periodic table alone, predict the formulas for: 
+a) the chloride of tin  SnCl4 
+b) the oxide of indium  In2O3 
+c) the sulfate of barium BaSO4 
+d) the hydride of phosphorus PH3 
+ 
+10. Draw the Lewis symbols (Lewis structures) of the following species: Mg, C, F, S2-,O2 
+Mg C F S
+2
+O O
+ 
+11. Draw Lewis structures of the following molecules: SCl2, HCN, SOCl2 (sulfur is the central atom) COCl2 
+(carbon is the central atom) 
+Cl
+S
+Cl
+H C N
+C
+O
+ClCl
+S
+O
+ClCl
+ 
+12. Draw Lewis structures for the following species. Show lone pairs as pairs of dots and show any non-
+zero formal charges: 
+________________________________________________________________________________ 
+H2O    
+H
+O
+H  
+________________________________________________________________________________ 
+
+--- Page 3 ---
+PCl5    
+Cl
+PCl
+Cl
+Cl
+Cl  
+________________________________________________________________________________ 
+N2H4   
+H
+N
+H
+N
+H
+H   (The molecule has a N-N single bond)  
+_______________________________________________________________________________ 
+[ClO2]-  
+O Cl O  
+_______________________________________________________________________________ 
+XeF2   
+F Xe F     
+______________________________________________________________________________ 
+13. Draw all possible Lewis structures for the phosphate ion and the pyrazolate ion [C3H3N2]- (see 
+skeletal structure below). Indicate in each case which Lewis structures are equivalent and which are the 
+best Lewis structures. 
+C
+N
+N
+C
+C
+H
+H
+H
+Skeletal structure of the pyrazolate 
+
+--- Page 4 ---
+O
+P
+O
+O O
+O
+P
+O
+O O
+O
+P
+O
+O O
+O
+P
+O
+O O
+O
+P
+O
+O O
+ 
+The best Lewis structures are the framed four structures (also equivalent). The Lewis structure without 
+any double bonds obeys the octet for all atoms but has to many formal charges. 
+ 
+C
+C
+C
+N
+N
+H
+H
+C
+C
+C
+N
+N
+H
+H
+HH
+C
+C
+C
+N
+N
+H
+H
+H
+C
+C
+C
+N
+N
+H
+H
+H
+C
+C
+C
+N
+N
+H
+H
+H
+ 
+The two underlined Lewis structures are the best Lewis structures since the negative formal charge is on 
+the most electronegative atom (nitrogen). The two best Lewis structures are also equivalent Lewis 
+structures, so are the two structures on the right (top right and bottom right) 
+
+--- Page 5 ---
+14. Hydrogen peroxide (atom connectivity H-O-O-H) is a reactive substance that usually does not exceed 
+30 % vol. H2O2 in aqueous solution commercially available. Pure hydrogen peroxide has rocket fuel 
+properties. Using the bond energy values from the table provided at the end of the chapter 2 handout 
+evaluate which of the two reaction pathways given below is responsible for the instability of this 
+molecule. Estimate the energy change that occurs with each decomposition reaction. 
+ H2O2 → H2 + O2 
+ 2H2O2 →2H2O + O2 
+Let’s rewrite the equations a bit so we can see the bonds that need to be broken and the bonds that 
+form more easily starting with the top equation: 
+ H-O-O-H → H-H + O=O 
+We need to break two O-H bonds and one O-O bond which will cost 2 x 464 kJ/mol + 142 kJ/mol  = 
+1070 kJ/mol to produce two hydrogen atoms and two oxygen atoms. We get energy back by forming 
+one H-H and one O=O bond as summarized in the table bellow. 
+Energy required for bond breaking:     2  mol H-O bonds  we need   2 x  464 kJ 
+        1 mol O-O bonds we need      142 kJ 
+Total bond breaking energy required to atomize one mol of H2O2:                 1070 kJ 
+Energy released in bond forming:    1 mol H-H bonds we get  -436 kJ 
+        1 mol of O=O bonds we get  -498 kJ 
+Total energy released in forming 1 mol H2 and 1 mol O2 from isolated atoms:                  -934 kJ 
+Energy change that occurs in the reaction H2O2 → H2 + O2                                +136 kJ 
+This means 135 kJ are required to decompose one mol of hydrogen peroxide in to the elements. This 
+reaction is endothermic. 
+ 
+Let’s now consider the decomposition in to water and oxygen: 
+2H-O-O-H →2H-O-H + O=O 
+Energy required for bond breaking:     4  mol H-O bonds  we need   4 x  464 kJ 
+        2 mol O-O bonds we need     2 x 142 kJ 
+Total bond breaking energy required to atomize two mol of H2O2:                2140 kJ 
+
+--- Page 6 ---
+Energy released in bond forming:    4 mol HO bonds we get           4 x -464 kJ 
+        1 mol of O=O bonds we get  -498 kJ 
+Total energy released in forming 2 mol H2O and 1 mol O2 from isolated atoms:               -2354 kJ 
+Energy change that occurs in the reaction 2H2O2 →2H2O + O2                  -214 kJ 
+This means 214 kJ are released if two mol of hydrogen peroxide decompose in to water and oxygen. This 
+reaction is exothermic and we would suggest that this is the pathway by which hydrogen peroxide 
+decomposes. This is indeed the observed reaction. Hydrogen peroxide solutions decompose into oxygen 
+and water and are generally stored in the fridge to slow down the decomposition. 
+ 
+ 
+ 
+ 
+15.  
+ 
+   Lewis Structure     EGG              Parent shape              molecular shape        polar (Yes or No) 
+_______________________________________________________________________________ 
+OSO S
+O O O
+S
+O
+benttrigonal planar
+Yes3
+ 
+SO2 
+________________________________________________________________________________ 
+ 
+[NO2]+ 
+ONO N
+linearlinear
+No2 ONO O O
+ 
+________________________________________________________________________________ 
+ 
+
+--- Page 7 ---
+[CO3]2- 
+OCO C
+trigonal planartrigonal planar
+No3 C
+OO
+O O
+O
+O O
+ 
+XeF2 
+FXeF Xe
+lineartrigonal bipyramidal
+No5 Xe F F
+F
+F
+ 
+________________________________________________________________________________ 
+SF4 
+FSF S
+see sawtrigonal bipyramidal
+Yes5 S F F
+F
+F
+F
+F
+F
+F FF
+ 
+______________________________________________________________________________________________________________________________  
+
+================================================================================
+FILE: Answer Key Problem Set 3 Intermolecular Interactions.pdf
+================================================================================
+Pages: 7
+
+--- Page 1 ---
+Chem 150 Answers Problem Set 3 Intermolecular Interactions and Colligative Properties 
+ 
+1. To answer the questions below use solid lines as usual for covalent bonds and dotted lines for any 
+hydrogen bonds. Be sure to align the molecules properly. Use perspective drawings clearly 
+showing the shape of the participating molecules and the way they interact (align!). 
+a) Draw two water molecules that are hydrogen bonded. 
+ 
+H
+O
+H
+O
+H
+H
+ 
+ 
+b) Draw a water molecule that is hydrogen bonded to a hydrogen fluoride molecule. Is there 
+more than one possible interaction? If so give a perspective drawing. 
+ 
+H
+O
+H
+F
+H O
+H
+H
+H
+F
+ 
+ 
+c) Is there any hydrogen bonding between sulfur dioxide and water? If so, give a perspective 
+drawing. If not, state why not. 
+ 
+O
+S
+O
+H
+O
+H
+ This drawing should be corrected to account for a 180    hydrogen 
+     bond angle. 
+d) Is there any hydrogen bonding between methane and water? If so, give a perspective drawing. 
+If not, state why not. 
+No. The hydrogens in methane are not bound to a highly electronegative element so they 
+cannot participate in hydrogen bonding 
+
+--- Page 2 ---
+2. Shown below are the perspective drawings of two relatively simple organic compounds A and B. 
+Both compounds have the same molecular shape differing only in the identity of one atom. 
+Identify the high and low boiling compound. In one or two sentences give the reason for your 
+choice. Use arguments involving intermolecular interactions. 
+H
+C
+C
+N
+H
+H HH
+H H
+H
+C
+C
+P
+H
+H HH
+H H
+ 
+   Compound A    Compound B 
+Compound A is the higher boiling compound. Even though its mass is slightly lower than that of 
+compound B it has the higher boiling point because it contains a hydrogen bound to nitrogen 
+which can engage in hydrogen bonding. 
+ 
+3. Arrange in order of increasing boiling point: F2, Cl2, SO2, He, N2. 
+He, N2, F2, Cl2, SO2  ( SO2 is polar! All other species are non-polar) 
+ 
+4. Calculate the osmotic pressure of a solution made by dissolving 50 g glucose (C6H12O6)  in 
+enough water to make 2.0 L of solution. Assume 25 °C. R = 8.314  L kPa mol-1 K-1 
+First we find the molecular mass of glucose: 180 g/mol so we can convert grams to moles: 
+50 g : 180g/mol = 0.278 mol  M = n/V = 0.278 mol/2.0 L = 0.139 mol/L 
+Π = MRT = (0.139 mol/L) x (8.314 L kPa/mol K) x (298 K) 
+Π = 344 kPa 
+ 
+5. Calculate the vapour pressure of a solution made by mixing 1 mol of the non volatile glycerine 
+(propanetriol) with 10 mol of water at 25 °C. The vapour pressure of pure water at that 
+temperature is 23.8 torr. 
+ 
+This is a solution of a non volatile liquid in water. The vapour pressure of the solution is given by 
+Raoult’s law (where xwater is the mol fraction of water in the solution). 
+ Psolution = xwaterP°water  xwater =         
+                       =       
+             = 0.909 
+Psolution = 0.909 x 23.8 torr = 21.6 torr 
+
+--- Page 3 ---
+6. The vapour pressures of pure toluene (C7H8) and pure benzene (C6H6) at 25 °C are 28.4 and 95.1 
+torr respectively. A solution is prepared in which 100 g of benzene are mixed with 100 g of 
+toluene.  
+a) What are the partial pressures of benzene and toluene above the solution?  
+b) What is the total vapour pressure? 
+c) What is the composition of the vapour above the mixture at that temperature? 
+ 
+to a) Before we can apply Raoult’s law we need to find the mole fractions of each component in 
+the mixture.   
+  xtol =  
+      
+                  with  ntol = 100 g toluene x 
+   
+        = 1.085 mol 
+     and   nbenz = 100 g benzene x    
+        = 1.280 mol 
+xtol = 
+         
+                    = 0.4588 
+ 
+and   xbenz =        
+                =           
+                    = 0.5412 
+ 
+Check: the mol fractions of all components of a mixture must add up to 1 (0.4588 + 0.5412 = 1) 
+Now we can calculate the individual vapour pressures of each component: 
+ Pbenz = xbenzP°benz = 0.5412 x 95.1 torr = 51.47 torr 
+ Ptol = xtolP°tol = 0.4588 x 28.4 torr = 13.03 torr 
+ to b) Using Daltons Law of partial pressures gives the total vapour pressure over the mixture: 
+ Ptotal = Pbenz + Ptol = 64.50 torr 
+ to c) The composition of the vapour is  xbenzene (vapour) =           
+         =           
+          = 0.798 
+     and xtoluene(vapour) = 1-0.798 = 0.202 
+ As expected the vapour is enriched in the more volatile benzene. 
+ 
+7. Nitrogen gas (N2) dissolves in water only slightly (e.g. a few ppm at room temperature) whereas 
+gaseous ammonia (NH3) dissolves very well in water (e.g. several hundred grams per litre). In a 
+short statement give the reason for the different solubilities. 
+Ammonia, like water, is highly polar whilst dinitrogen is a nonpolar hydrophobic gas. There are 
+many hydrogen bond possible between ammonia and water but not between dinitrogen and water. 
+ 
+8. Under an O2(g) pressure of 1 atm, 28.31 mL of O2(g) dissolves in 1.00 L H2O at 25 °C. What will 
+be the molarity of O2 in a saturated solution at 25 °C when the O2(g) pressure is increased to 
+3.86 atm. Assume the solution volume remains at 1.00 L. 
+
+--- Page 4 ---
+ Using the ideal gas equation we find the Molarity of the saturated oxygen solution at 1 atm and 
+ 25°C: 
+ n =   
+   = 
+                      
+                              = 0.00116 mol 
+ M = 
+ 
+  = 
+           
+  = 0.00116 mol/L 
+ This is a Henry’s Law problem. We use the data in the first part of the question to calculate the 
+ Henry’s law constant for oxygen at the given temperature in water and use the constant k to 
+ find the solubility of oxygen at the higher pressure. 
+ Sg = k pg  k = 
+             
+      = 0.00116 mol L-1 atm-1 
+ Sg(@3.86 atm) = k pg =  (0.00116 mol L-1 atm-1) (3.86 atm) = 4.47 x 10-3 mol/L 
+ 
+9. Using data from the example above, determine the molarity of O2 in an aqueous solution at 
+equilibrium with air at normal atmospheric pressure. The volume percent of oxygen in air 
+20.95 % vol. 
+ First we find the partial pressure of oxygen: poxygen = 
+        
+       ptotal = 0.2095 atm 
+ Next we use Henry’s law: Sg = k pg =  (0.00116 mol L-1 atm-1) (0.2095 atm) = 2.43x10-4 mol/L 
+ 
+10. A 0.72 g sample of polyvinyl chloride (PVC) is dissolved in 250.0 mL of a suitable solvent at 25 °C. 
+The solution has an osmotic pressure of 1.67 mm Hg. What is the molar mass of the PVC? 
+ Since molarity M is related to numbers of moles (per volume of solution) and the number of 
+ moles is related to the molar mass (n = 
+ 
+  ) we can extract molar masses (molecular weights, 
+ MW) from osmotic pressure measurements. 
+ π = MRT = 
+   
+  = 
+   
+    solving for the molecular weight and converting pressure from mm Hg to 
+ kPa gives: 1.67 mm Hg  
+         
+          = 0.223 kPa 
+ Mw = 
+   
+   = 
+                                         
+                     = 32 kg/mol = 32000 g/mol 
+ Polyvinylchloride is made up of repeating units of
+C C
+H
+Cl
+H
+H
+n  
+ Each monomer unit, made up of the same C2H3Cl group, has a mass of 
+
+--- Page 5 ---
+ (2x 12.01 + 3 x 1.008 + 35.45) g/mol = 62.47 g/mol 
+ “n” the number of repeating units in the polymer formula above must thus be about       
+      = 512 
+ which is  a low to moderate molecular weight for a polymer. 
+ 
+11. The density of acetone vapour in equilibrium with liquid acetone, (CH3)2CO, at 32 °C is 0.876 g/L. 
+What is the vapour pressure of acetone at 32 °C, expressed in kilopascals 
+ First we find the number of moles of acetone in one Litre of vapour and then we use the ideal 
+ gas equation to calculate the vapour pressure. 
+ nacetone (in 1L vapour) =        
+             = 0.01508 mol 
+ p = 
+   
+  = 
+                                          
+     = 38.24 kPa 
+12. Solutions can be prepared from the following pairs of solvents: Hexane and pentane (D), Ethanol 
+and Methanol (E) and acetone chloroform (F) 
+       
+H
+C
+C
+C
+C
+C
+C
+H
+H H H
+H H HH H H
+HHH
+H
+C
+C
+C
+C
+C
+H
+H H H
+H HH H
+HHH
+hexane
+pentane
+O
+C
+H H
+H
+O
+C
+C
+H
+H
+H H
+H
+H
+H
+methanol
+ethanol
+H
+C
+Cl Cl
+Cl
+O
+C
+C
+HH
+H HH H
+chloroform
+acetone  
+                 D            E         F 
+a) (2 marks) All of the above solvent pairs are completely miscible. Explain why. 
+Likes dissolves likes! In D we have two nonpolar hydrocarbons of similar size. The London dispersion 
+forces between molecules of C6H14  will be similar to those between molecules of C5H12 and most 
+importantly for miscibility: they will also be of similar strength between molecules of C6H14 and C5H12. 
+
+--- Page 6 ---
+In E and F we have pairs of molecules that are both polar. In E the molecules are capable of hydrogen 
+bonding and in F dipol-dipol interactions are possible. In each case (pair) the intermolecular interactions 
+between the same molecules are similar in strength when compared to the intermolecular interactions 
+between different molecules in the mixture. Thus D, E and F are completely miscible.  
+b) (3 marks) When preparing the actual solutions it is observed that upon mixing chloroform and 
+acetone (F) considerable amounts of heat are generated that is, the solution is warmer then the two 
+components before mixing. No such heat is produced by mixing either of the other systems (hexane-
+pentane and methanol-ethanol). Account for this observation involving intermolecular interactions. 
+This was a hard question!  Intermolecular interactions between C6H14 and C5H12 are very similar to those 
+between C6H14 and C6H14 and between C5H12 and C5H12 so in the mixing process the energy required to 
+separate (dilution!) molecules of C5H12 and C5H12 (see figure M) as well as C6H14 and C6H14 (see figure N) 
+will be almost identical to the energy gained by bringing molecules of C6H14 and C5H12 back together 
+(FigureQ) and no heat is gained or lost by the mixture. The same holds for mixture E. 
+For F the situation is somewhat different. The mixture is heating up can only mean that the interactions 
+between molecules of acetone and chloroform are much stronger (see (2) Figure R) than those between 
+chloroform and chloroform (3) and those between acetone and acetone (1). The energy is released as 
+heat to the surroundings and the solution warms upon mixing.  
+     
+     
+Figure M: energy is required to separate solvent molecules Figure N 
+     
+  
+Figure Q:  energy (heat) is released by bringing the molecules back to close contact (intermolecular 
+forces are much stronger at close proximity and quickly decrease as separation increases which is why 
+we assume no intermolecular interaction in an ideal gas where the separation between molecules is 
+much larger then in liquids or solids.) 
+ 
+
+--- Page 7 ---
+(1)
+(2)
+(3)
+ Figure R Intermolecular interactions between the components of the 
+mixture F: (1) acetone-acetone, (3) chloroform-chloroform, (2) acetone-chloroform 
+ 
+Formulas and constants: 
+pV = nRT 
+piVi(Ti)-1 = pfVf(Tf)-1 
+Ptotal = p1 + p2 + p3 + .... + pn 
+[p + n2a/V2][V – nb] = nRT 
+Vmol  = 22.4 L mol-1 at STP (1 atm = 101.325 kPa = 760 mm Hg  and 273.15 K) 
+R = 8.3145 L kPa mol-1 K-1 
+Avogadro’s number   Na = 6.022 x 1023 mol-1 
+Unified atomic mass unit  1 u = 1.660 x 10-27 kg 
+Sg = kpg 
+Π = MRT 
+PA = xAP°A 
+
+================================================================================
+FILE: Answer Key Problem Set 4 Gases.pdf
+================================================================================
+Pages: 7
+
+--- Page 1 ---
+Chem 150 Answers   Problem Set 4  Gases 
+ 
+ Figure A   Figure B             Figure C 
+1. The three gas mixtures depicted in the figures above (helium and nitrogen) are all at the same 
+temperature and in containers of the same volume. Rank the samples A, B and C according to: 
+ 
+a) total pressure A = C > B 
+ 
+b) partial pressure of helium A > B > C 
+ 
+c) density C > A > B (since D = m/V and V = const. simply rank after mass: He: 4 u, N2:  28 u) 
+ 
+d) average kinetic energy A = B = C (since they are all at the same temperature, the average 
+kinetic energy of the particles must all be the same) 
+Use <, > or = for ranking (e.g. A>B=C) 
+ 
+2. A mixture containing 3.00 g helium, 3.00 g neon and 3.00 g argon is confined to a 50.0 L vessel 
+at 20.0 °C. Calculate the partial pressure of each of the gases and the total pressure of the mixture. 
+ 
+We need to find the number of moles of each gas: 3g He x 
+   
+       = 0.750 mol He 
+Similar we find 0.148 mol Ne and 0.0750 mol of Ar (or a total of 0.973 mol gases). We can 
+calculate the individual partial pressures of each gas and sum them up to get ptotal. For example:  
+ 
+pHe = 
+   
+  = 
+                                       
+       = 36.5 kPa 
+ 
+Similar we get pNe = 7.21 kPa and pAr = 3.65 kPa and ptotal =  pHe + pNe + pAr = 47.4 kPa 
+ 
+
+--- Page 2 ---
+Alternatively and perhaps more elegantly we could calculate the total pressure first: 
+ 
+Ptotal = 
+   
+  = 
+                                       
+       = 47.4 kPa  
+ 
+and derive the partial pressure from the mol fraction:  
+ 
+pHe =      
+         x ptotal  =          
+            x 47.4 kPa = 36.5 kPa (do pNe and pAr the same way) 
+ 
+Does the result make sense? We have close to 1 mole of gases slightly above standard 
+temperature where they should occupy a volume close to 22.4 L ( the molar volume). The gas is 
+however confined to approximately twice the molar volum (2 x 22.4 L = 44.4 L approx. 50 L) 
+which means it would exert approximately half the standard pressure. 47.4 kPa is roughly half of 
+101.3 kPa. The result makes sense. 
+ 
+ 
+3. 1.00 g dry ice is added to a 1.00 L flask containing only air (approx 80 % N2 and 20 % O2 by 
+volume) at 25 C and 112 kPa. Calculate the partial pressure of N2, O2 and CO2 as well as the total 
+pressure in the flask after all the dry ice has sublimed and the temperature in the flask has 
+equilibrated with the surrounding. 
+We need to find the number of moles of each gas in the flask: there are 0.8L N2 and 0.2 L O2 in 
+the flask at 112 kPa and 298 K: using pV = nRT we calculate the numbers of moles for nitrogen 
+0.03616 mol and oxygen: 0.00904 mol. 
+We can get to the numbers of moles of CO2 more easily because we have the mass: 1 g/ 44.01 
+gmol-1 = 0.02227 mol. 
+The total pressure depends on the total number of moles of gases: 0.0679 mol, which yields 
+(using pV = nRT) 168.3 kPa. The partial pressures of the gases are fractions of the total pressure 
+given by the relative ratio of the numbers of moles of that gas to the total number of mole 
+pCO2 = (0.02227 mol/0.0679 mol) x 168.3 kPa = 55.2 kPa 
+pN2 = (0.03616 mol/0.0679 mol) x 168.3 kPa = 89.6 kPa 
+pO2 = (0.00904 mol/0.0679 mol) x 168.3 kPa = 22.4 kPa 
+ 
+ 
+4. Zinc reacts with dilute hydrochloric acid to produce zinc chloride and hydrogen gas. Write a 
+balanced equation for this reaction. Hint: In compounds Zinc always carries a charge of +2 
+
+--- Page 3 ---
+Zn    +   2HCl    →    ZnCl2    +   H2 
+If 55.00 g zinc are dissolved in excess hydrochloric acid, how much hydrogen gas is produced 
+in L. Assume 25 °C and 1 atm. 
+nZn = 55 g/65.39 gmol-1 = nH2 = 0.841 mol H2 Since molar ratio is 1:1) 
+Using pV = nRT we get a volume of 20.6 L which makes sense since we have just under one 
+mole (e.g.22.4 L/mol) 
+ 
+ 
+5. The decomposition of ammonium nitrate at elevated temperatures yields dinitrogen monoxide 
+and water. Write a balanced equation for this reaction. Using the ideal gas law calculate the total 
+volume of gases produced if 1.22 mol reactant is completely consumed. Assume both the 
+dinitrogen monoxide and the water to be in the gaseous state at the reaction temperature of 350 
+°C and standard pressure. 
+NH4NO3    → N2O + 2H2O 
+The total volume of gas produced depends on the number of moles of gaseous reactants formed. 
+Under the reaction conditions (350 °C and standard pressure e.g 1 atm = 101.3 kPa) both 
+reactants are in the gaseous state as indicated in the question. Thus 1.22 mol ammonium nitrate 
+will form 1.22 mol of nitrous oxide and 2 x 1.22 mol of water. The total amount of gases formed 
+is 3.66 mol. Using pV = nRT and solving for V yields: 
+ 
+V = 
+   
+  = 
+                                      
+          = 187 L 
+ 
+Does the result make sense? The molar volume is 22.4 L/mol so 3.66 mol gases should occupy a 
+volume of  82 L at 273 K and 1 atm. Doubling the thermodynamic temperature (in K) should 
+double the volume so raising the temperature from 273 K to 546 K would increase the volume 
+from 82 L to 164 L. The reaction temperature is yet a bit higher (623 K) so we would expect the 
+volume to be a bit above 164 L which it is. The result makes sense. 
+ 
+6. Magnesium can be uses as a “getter” in tungsten light bulbs to remove residual amounts of 
+oxygen and nitrogen which would shorten the lifetime of the tungsten wire because it forms 
+magnesium oxide and magnesium nitride respectively. Write a balanced equation for this 
+reaction. Assume a residual nitrogen partial pressure pN2 of 3.45 x 10 -4 kPa in a light bulb of 
+0.320 L volume at 20°C (and no residual oxygen). What mass of magnesium would react?  
+ 
+3Mg + N2 → Mg3N2 
+In order to solve this stoichiometry problem we need to find the number of moles of nitrogen 
+available for reacting with magnesium. Use pV = nRT and solve for n 
+
+--- Page 4 ---
+nN₂ = 
+  
+   = 
+                         
+                            = 4.53 x 10-8 mol N2 
+ 
+Now we have to convert moles of N2 to moles of Mg using the reaction equation: 
+ 
+4.53 x 10-8 mol N2 x 
+        
+       ₂    =  1.35 x 10-7 mol Mg 
+ 
+Almost finished, just convert moles of Mg to grams of Mg: 
+ 
+1.35 x 10-7 mol Mg  x 
+      
+    = 3.30 x 10-6 g Mg. 
+ 
+Does the result make sense? This is not as easy to approximate as in the examples above. 
+However. The partial pressure of nitrogen is very small. So we would expect the mass of Mg that 
+would react to be very small as well. So if your result states 106 g that cannot be right (e.g. 106 g 
+= 103 kg  = 1 t of Mg which would not be able to fit in an enclosure of 0.32 L.) 
+ 
+7. Use the Van der Waals equation to calculate the pressure of 1mol of CCl4 confined to a volume of 
+28 L at 40 °C. The van der Waals constants for CCl4 are: a = 2070 L2kPa/mol2 and b = 0.1383 
+L/mol. 
+This involves solving the van der Waals equation for pressure 
+[p + n2a/V2][V – nb] = nRT solve for p: make sure you end up with  
+p = [nRT/(V-nb)] –[n2a/V2] = 93.4 kPa – 2.6 kPa = 90.8 kPa 
+ 
+8. Here is another data set from our in class demonstration on the molar volume of a hydrogen 
+where we reacted magnesium with hydrochloric acid to produce hydrogen gas (which we 
+collected in a gas burette) and aqueous magnesium chloride. Calculate the molar volume of H2. 
+ 
+mass of Mg:    54 mg 
+ambient air pressure 102.8 kPa 
+temperature  20 °C 
+  Volume of Hydrogen gas  48.1 ml 
+  vapour pressure of water at 20 °C 2.3 kPa 
+   
+   Mg + 2HCl → MgCl2 + H2 
+
+--- Page 5 ---
+Not all the pressure in the gas burette is caused by hydrogen molecules. Because we are 
+ collecting the gas over water some water vapour is also present. To find the partial pressure 
+ of hydrogen we use Daltons law of partial pressures. 
+Ptotal =p(H2Ovapour) + p(H2) 
+p(H2) = 102.8 kPa – 2.3 kPa = 100.5 kPa 
+Now we need to compare the volume the hydrogen occupied in our gas burette under the 
+ prevailing conditions to the volume it would have occupied at STP (1 atm and 273 K) 
+piVi(Ti)-1 = pfVf(Tf)-1 
+(100.5 kPa)(0.0481 L)/(293 K) = (101.3 Kpa)(Vf)/(273 K) 
+Vf = 44.46 mL 
+ 
+Last we relate the volume of hydrogen to moles of hydrogen which we easily find from the mass 
+ of magnesium which was completely consumed (balanced chemical equation!). 
+0.054 g Mg x    
+       x        ₂
+         = 0.00222 mol H2 
+Vmolar =   
+  =          
+            = 20 L (Our experiment in class was better!!!) 
+ 
+9. A power failure on board a submarine disables the vessel to manoeuvre, surface or regenerate air 
+which puts the crew of 26 under severe distress. To sustain vital body functions until help arrives 
+rations are in place. Assume a diet of 300 g of carbohydrates per sailor per day which is 
+metabolized according to the following equation: 
+ 
+C6H12O6 (s) + 6O2 (g) → 6CO2 (g) + 6H2O (l) 
+Calculate the partial pressure of oxygen and carbon dioxide in the submarine after two days. Also 
+express the concentration of CO2 in % vol. (e.g. mL of CO2 in 100 mL “air”) and comment on the 
+crew’s time given that drowsiness in people starts to occur at CO2 concentrations of 1 % vol 
+(10,000 ppm) and unconsciousness follows after a few minutes of exposures to 7-10 % vol CO2. 
+The initial conditions in the submarine that has an air volume of 360 m3 are: 
+T = constant = 18°C, pressure 119 kPa, air composition approximately 20 % vol O2 and 80 % vol 
+N2. The initial CO2 concentration present in air is 365 ppm = 365 ml/m3. 
+
+--- Page 6 ---
+ 
+p(O2)initial = 0.2 x 119 kPa = 23.8 kPa 
+ 
+n(O2)initial = 
+  
+   = 
+                     
+                              = 3541 mol 
+ n(O2)consumed will depend on the amount of glucose metabolized:  
+             
+              x 26 sailors x 2 days = 15,600 g glucose which gives 15,600 g x 
+   
+         = 86.6 mol 
+86.6 mol glucose x         
+              = 519.5 mol O2 consumed = 519.5 mol CO2 produced 
+ n(O2)after 2 days = n(O2)initial - n(O2)consumed = 3541 mol - 519.5 mol = 3021.5 mol 
+p(O2) after 2 days =    
+  = 
+                                         
+          =20.3 kPa 
+The initial concentration of CO2 is so small that we could ignore it but I will include it here: 
+360 ppm CO2 = 365 mL/m3 = 0.365 L/m3 and since we have 360 m3 of air we have 129.6 L of 
+CO2 in the entire submarine to start with.  
+Using the ideal gas equation we find n(CO2)initial = 6.46 mol 
+n(CO2)after 2 days = n(CO2)initial + n(CO2)produced = 6.46 mol + 519.5 mol = 526.0 mol 
+p(CO2) after 2 days =    
+  = 
+                                      
+          = 3.53 kPa 
+ 
+      
+         = 
+      
+         and ptotal = constant since the mol of CO2 produced equal the mol O2 consumed. 
+ 
+        
+        x 100 % = 2.96 % CO2 vol. The crew is drowsy and might survive another day. 
+ 
+ 
+ 
+ 
+
+
+--- Page 7 ---
+Formulas and constants: 
+pV = nRT 
+piVi(Ti)-1 = pfVf(Tf)-1 
+Ptotal = p1 + p2 + p3 + .... + pn 
+[p + n2a/V2][V – nb] = nRT 
+Vmol  = 22.4 L mol-1 at STP (1 atm = 101.325 kPa  and 273.15 K) 
+R = 8.3145 L kPa mol-1 K-1 
+Avogadro’s number   Na = 6.022 x 1023 mol-1 
+Unified atomic mass unit  1 u = 1.660 x 10-27 kg 
+Π = MRT 
+PA = xAP°A 
+
+
+================================================================================
+EXTRACTION COMPLETE
+================================================================================
