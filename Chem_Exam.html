@@ -219,6 +219,7 @@
   <div class="divider"></div>
   <a href="#exam-a">Practice A</a>
   <a href="#exam-b">Practice B</a>
+  <a href="#exam-c">Practice C</a>
   <a href="#data">Data Sheet</a>
 </nav>
 
@@ -335,6 +336,40 @@
     </div>
 
     <div id="questions-b"></div>
+  </section>
+
+  <!--
+       PRACTICE EXAM C
+   -->
+  <section id="exam-c">
+    <div class="section-header">      <div><h2>Practice Exam C</h2><p>30 questions · 90 min · questions drawn from real past midterms</p></div>
+    </div>
+
+    <div class="exam-header-bar">
+      <div class="exam-info">
+        <h3>CHEM 150  Midterm I Practice C</h3>
+        <p>Units 1–7 · 30 marks · Scientific calculator permitted</p>
+      </div>
+      <div class="timer-display" id="timer-c">90:00</div>
+    </div>
+    <div class="exam-controls">
+      <button class="btn-start" id="start-c" onclick="startExam('c')"> Start Timed Exam</button>
+      <button class="btn-submit" id="submit-c" onclick="submitExam('c')">Submit Exam</button>
+      <button class="btn-reset"  id="reset-c"  onclick="resetExam('c')"> Reset</button>
+    </div>
+
+    <div class="results-panel" id="results-c">
+      <h3>Exam C Results</h3>
+      <div class="score-big" id="score-c-pct"></div>
+      <div class="score-sub" id="score-c-sub"></div>
+      <div class="results-grid">
+        <div class="res-cell"><div class="res-cell-num" id="res-c-correct"></div><div class="res-cell-lbl">Correct</div></div>
+        <div class="res-cell"><div class="res-cell-num red" id="res-c-wrong"></div><div class="res-cell-lbl">Incorrect</div></div>
+        <div class="res-cell"><div class="res-cell-num" id="res-c-time" style="color:#67e8f9;"></div><div class="res-cell-lbl">Time Used</div></div>
+      </div>
+    </div>
+
+    <div id="questions-c"></div>
   </section>
 
 </div>
@@ -526,14 +561,243 @@ const EXAMS = {
     { section: 'Unit 7', q: "The Joule-Thomson effect describes __________.",
       opts:['Gas expanding adiabatically through a porous plug cools down (for real gases with attractions)','Gas compressing at constant T releases heat','Gas pressure increasing as temperature increases','Ideal gas temperature increasing on expansion','Evaporation causing warming'],
       ans: 0, hint: "Think about what happens to gas molecules when they expand against their own attractions.", sol: "The <strong>Joule-Thomson effect</strong>: when a real gas expands through a porous membrane (throttling), it does work against intermolecular attractions  loses kinetic energy  cools. This is the principle behind refrigerators and liquefaction of gases." }
+  ],
+  c: [
+    // --- From 2013 Midterm (Feb 18 2013) — Part 1 MC ---
+    { section: 'Unit 5', q: "Find the FALSE statement about hydrogen bonding.",
+      opts: [
+        'Hydrogen bonding is a type of intermolecular interaction.',
+        'Hydrogen bonding is a particularly strong type of dipole-dipole interaction.',
+        'There are more hydrogen bonds in liquid water than in solid ice.',
+        'Two hydrogen fluoride molecules can hydrogen bond with each other.',
+        'Hydrogen bond energies are in the range of 15–40 kJ/mol.'
+      ],
+      ans: 2, hint: "In which state of water is the H-bond network more complete and ordered?",
+      sol: "Ice has a rigid, fully ordered H-bond network — every molecule donates and accepts exactly 2 H-bonds (4 per molecule total). In liquid water the network is partially disrupted. So <strong>solid ice has MORE H-bonds per molecule</strong>, not fewer. Statement C is <span class='bad-answer'>FALSE</span>." },
+
+    { section: 'Unit 6', q: "The osmotic pressure of a 0.129 M MgCl₂ solution at 25 °C is closest to:",
+      opts: ['320 kPa', '639 kPa', '959 kPa', 'Approximately zero — MgCl₂ is non-volatile', 'None of the above'],
+      ans: 2, hint: "MgCl₂ dissociates into 3 ions total. Use π = iMRT.",
+      sol: "MgCl₂(s) → Mg²⁺(aq) + 2Cl⁻(aq): i = 3. Effective particle concentration = 3 × 0.129 = 0.387 M. π = MRT = 0.387 × 8.314 × 298 = <span class='answer'>959 kPa</span>. Osmotic pressure depends on particle concentration, not volatility." },
+
+    { section: 'Unit 7', q: "The Joule-Thomson effect explains why the expansion of most gases is accompanied by:",
+      opts: [
+        'A decrease in temperature of the expanding gas.',
+        'An increase in temperature of the expanding gas.',
+        'No net temperature change of the expanding gas.',
+        'A reduction in pressure of the expanding gas.',
+        'An increase in volume at constant temperature.'
+      ],
+      ans: 0, hint: "When a real gas expands, it must overcome intermolecular attractions. Where does that energy come from?",
+      sol: "The <strong>Joule-Thomson effect</strong>: when a real gas expands through a porous plug (throttling), molecules must do work against their own intermolecular attractions, costing kinetic energy → the gas <span class='answer'>cools down</span>. This principle is used in refrigerators and gas liquefaction." },
+
+    // --- From 2013 Midterm — Part 2 VSEPR table ---
+    { section: 'Unit 4', q: "What is the molecular shape of XeF₄?",
+      opts: ['Tetrahedral', 'Octahedral', 'Square planar', 'See-saw', 'T-shaped'],
+      ans: 2, hint: "Xe in XeF₄: 4 bonds + 2 lone pairs = 6 EG (octahedral EGG). Where do the 2 lone pairs sit?",
+      sol: "Xe in XeF₄: 4 F bonds + 2 lone pairs = 6 EG → octahedral EGG. The 2 lone pairs go in opposite axial positions (180° apart) to minimise repulsion. The 4 bonding pairs form a <span class='answer'>square planar</span> shape. XeF₄ is non-polar (all bond dipoles cancel)." },
+
+    { section: 'Unit 4', q: "Which correctly describes the molecular shape and polarity of H₂S?",
+      opts: ['Linear, non-polar', 'Bent, polar', 'Trigonal pyramidal, polar', 'Tetrahedral, non-polar', 'Bent, non-polar'],
+      ans: 1, hint: "S in H₂S: 2 bonds + 2 lone pairs. Is S more electronegative than H?",
+      sol: "S in H₂S: 2 bonds + 2 lone pairs = 4 EG → tetrahedral EGG. Molecular shape (bonding pairs only): <strong>bent</strong>. S is more electronegative than H → polar S–H bonds. The bent geometry means bond dipoles don't cancel → <span class='answer'>bent, polar</span>." },
+
+    { section: 'Unit 4', q: "Which correctly describes the molecular shape and polarity of O₃ (ozone)?",
+      opts: ['Linear, non-polar', 'Linear, polar', 'Bent, non-polar', 'Bent, polar', 'Trigonal planar, non-polar'],
+      ans: 3, hint: "Central O in O₃: 1 double bond + 1 single bond (resonance) + 1 lone pair = how many EG?",
+      sol: "Central O in O₃: effectively 2 bonds + 1 lone pair = 3 EG → trigonal planar EGG. The lone pair produces a <strong>bent</strong> molecular shape (~117°). The molecule is asymmetric → net dipole → <span class='answer'>bent, polar</span>." },
+
+    // --- From 2013 Midterm — Part 2 Q2: carbonate ---
+    { section: 'Unit 3', q: "How many equivalent resonance structures can be drawn for the carbonate ion [CO₃]²⁻?",
+      opts: ['1 (no resonance)', '2 equivalent structures', '3 equivalent structures', '4 structures, not all equivalent', '6 structures'],
+      ans: 2, hint: "The C=O double bond can be placed on any of the 3 oxygen atoms.",
+      sol: "The carbonate ion [CO₃]²⁻ has <span class='answer'>3 equivalent resonance structures</span> — one C=O double bond on each oxygen in turn. All three are symmetry-equivalent. The resonance hybrid has three equal C–O bonds (bond order ≈ 1.33), stabilised by delocalisation." },
+
+    // --- From 2013 Midterm — Part 3 Q1: acetone vs isobutane ---
+    { section: 'Unit 5', q: "Acetone (CH₃COCH₃, polar) and isobutane (C₄H₁₀, non-polar) have similar molar masses. Which has the higher boiling point, and why?",
+      opts: [
+        'Acetone — additional dipole-dipole interactions require more energy to overcome than London forces alone.',
+        'Isobutane — its larger molar mass means stronger London forces.',
+        'Both boil at the same temperature because of their similar molar masses.',
+        'Isobutane — hydrogen bonding between isobutane molecules.',
+        'Acetone — hydrogen bonding between acetone molecules.'
+      ],
+      ans: 0, hint: "Both have similar London forces (similar mass). What extra IMF does polar acetone have?",
+      sol: "Both have comparable London forces (similar molar masses). However, <strong>acetone is polar</strong> (C=O dipole) → additional dipole-dipole attractions. Isobutane is non-polar → London forces only → lower bp. Note: acetone <em>cannot</em> H-bond with itself (no H attached to O, N, or F). <span class='answer'>Acetone has the higher bp.</span>" },
+
+    // --- From 2013 Midterm — Part 3 Q2: boiling points ---
+    { section: 'Unit 5', q: "Arrange in order of INCREASING boiling point: S₈, CO₂, Br₂, N₂.",
+      opts: ['N₂ < CO₂ < Br₂ < S₈', 'S₈ < Br₂ < CO₂ < N₂', 'N₂ < Br₂ < CO₂ < S₈', 'CO₂ < N₂ < Br₂ < S₈', 'N₂ < CO₂ < S₈ < Br₂'],
+      ans: 0, hint: "All are non-polar — only London forces. Compare molar masses: N₂ (28), CO₂ (44), Br₂ (160), S₈ (256 g/mol).",
+      sol: "All are non-polar → only London dispersion forces. Larger molar mass → more electrons → stronger London forces → higher bp. N₂ (28) &lt; CO₂ (44) &lt; Br₂ (160) &lt; S₈ (256 g/mol, solid ring of 8 S atoms). <span class='answer'>N₂ &lt; CO₂ &lt; Br₂ &lt; S₈</span>" },
+
+    // --- From 2013 Midterm — Part 3 Q5: NH3 vs N2 solubility ---
+    { section: 'Unit 5', q: "Which gas is more soluble in water: NH₃ or N₂? Why?",
+      opts: [
+        'N₂ — it is lighter and dissolves more easily.',
+        'NH₃ — it is polar and can hydrogen bond with water (like dissolves like).',
+        'Both are equally soluble.',
+        'N₂ — its higher partial pressure in air drives more into solution.',
+        'NH₃ — it is an ionic compound that fully dissociates.'
+      ],
+      ans: 1, hint: "Like dissolves like. Which molecule is polar and can interact with polar water?",
+      sol: "<strong>NH₃</strong> is polar; its N–H bonds donate H-bonds to water and its lone pair accepts H-bonds from water. It is highly soluble (and partially ionises: NH₃ + H₂O ⇌ NH₄⁺ + OH⁻). N₂ is non-polar → no H-bonding → very low solubility. <span class='answer'>NH₃ is far more soluble.</span>" },
+
+    // --- From 2013 Midterm — Part 3 Q6a: alcohol solubility ---
+    { section: 'Unit 6', q: "Aqueous solubility of straight-chain alcohols decreases as chain length increases. The best explanation is:",
+      opts: [
+        'Longer alkyl chains increase London dispersion forces, making alcohol–alcohol interactions stronger than alcohol–water H-bonds.',
+        'H-bonding ability decreases as chain length increases (fewer OH groups).',
+        'Longer chains are more polar, repelling water.',
+        'Longer chains make the molecule heavier than water.',
+        'Longer chains reduce molar mass.'
+      ],
+      ans: 0, hint: "All these alcohols have exactly one OH group. What changes as the chain grows?",
+      sol: "All these alcohols have exactly <strong>one OH group</strong>. As chain length grows, the alkyl chain's <strong>London dispersion forces increase</strong>, making alcohol–alcohol interactions dominate over alcohol–water H-bonds. Short alcohols (methanol–propanol) are fully miscible because their H-bonds to water are comparable to self-interactions; heavier alcohols prefer each other." },
+
+    // --- From 2013 Midterm — Part 3 Q7: molecular formula ---
+    { section: 'Unit 1', q: "Complete combustion of 1.110 g of a hydrocarbon gives 3.613 g CO₂ and 1.109 g H₂O. A separate 0.288 g sample occupies 131 mL at 24.8 °C and 753 mmHg. What is the molecular formula?",
+      opts: ['C₂H₃', 'C₄H₆', 'C₃H₄', 'C₄H₈', 'C₂H₂'],
+      ans: 1, hint: "Find mol C from CO₂ (÷44.01), mol H from H₂O (×2÷18.02). Get empirical formula. Then use PV=nRT for molar mass.",
+      sol: "mol C = 3.613/44.01 = 0.0821; mol H = 2×(1.109/18.02) = 0.1231. Ratio C:H = 1:1.5 → empirical C₂H₃ (MW = 27). Molar mass from PV = nRT: M = mRT/PV = 0.288×8.314×298/(99.1×0.131) ≈ 55 g/mol. n = 55/27 ≈ 2. <span class='answer'>Molecular formula: C₄H₆</span>" },
+
+    // --- From 2013 Midterm — Part 3 Q8: partial pressures ---
+    { section: 'Unit 7', q: "A mixture of 1.25 g He, 1.30 g CO₂, and 1.2 g N₂ is confined to a 2.5 L flask at 22 °C. What is the partial pressure of He?",
+      opts: ['28.9 kPa', '41.9 kPa', '305 kPa', '376 kPa', '256 kPa'],
+      ans: 2, hint: "Find mol of each gas, get P_total = n_total RT/V, then P_He = x_He × P_total.",
+      sol: "n_He = 1.25/4.003 = 0.312 mol; n_CO₂ = 1.30/44.01 = 0.0295; n_N₂ = 1.2/28.01 = 0.0428. n_total = 0.385 mol. P_total = 0.385×8.314×295/2.5 = 376 kPa. x_He = 0.312/0.385 = 0.811. P_He = 0.811×376 = <span class='answer'>305 kPa</span>" },
+
+    // --- From 2013 Midterm — Part 3 Q9: Henry's law CO2 ---
+    { section: 'Unit 6', q: "At 25 °C and 1 atm CO₂, 0.0310 mol CO₂ dissolves per litre of water. What is the molar solubility of CO₂ at 5.3 atm?",
+      opts: ['0.0310 mol/L', '0.164 mol/L', '0.310 mol/L', '0.0585 mol/L', '0.820 mol/L'],
+      ans: 1, hint: "Henry's law: Sg = k × Pg. Find k from the 1 atm data, then apply at 5.3 atm.",
+      sol: "k = S/P = 0.0310/1 = 0.0310 mol/(L·atm). At 5.3 atm: S_CO₂ = 0.0310 × 5.3 = <span class='answer'>0.164 mol/L</span>. Henry's law: solubility is directly proportional to partial pressure of the gas." },
+
+    // --- From 2013 Midterm — Part 3 Q10: stoichiometry + gas law ---
+    { section: 'Unit 7', q: "Si(s) + 4 NaOH(aq) → Na₄SiO₄(aq) + 2 H₂(g). What volume of H₂ is produced at 1.02 atm and 22 °C from 5.97 g Si reacted with 20.3 g NaOH?",
+      opts: ['2.53 L', '4.75 L', '6.02 L', '9.52 L', '12.0 L'],
+      ans: 2, hint: "Find mol Si and mol NaOH separately, determine which limits H₂ production, then use V = nRT/P.",
+      sol: "mol Si = 5.97/28.09 = 0.212 → can make 0.425 mol H₂. mol NaOH = 20.3/40.00 = 0.508 → can make (0.508/4)×2 = 0.254 mol H₂. <strong>NaOH is limiting.</strong> V = nRT/P = 0.254×0.08206×295/1.02 = <span class='answer'>6.02 L</span>" },
+
+    // --- From 2013 Midterm — Part 3 Q11: van der Waals ---
+    { section: 'Unit 7', q: "1.05 mol CO₂ in 2.50 L at −15 °C. Ideal gas gives P = 901 kPa. Van der Waals (a = 362 L²·kPa/mol², b = 0.0427 L/mol) gives approximately:",
+      opts: [
+        '901 kPa — same as ideal (CO₂ behaves ideally at this T)',
+        '853 kPa — real P is LOWER due to intermolecular attractions',
+        '853 kPa — real P is LOWER due to finite molecular volume',
+        '950 kPa — real P is HIGHER due to molecular repulsions',
+        '450 kPa — van der Waals halves the pressure'
+      ],
+      ans: 1, hint: "At low T, attractions dominate. The 'a' correction reduces the observed pressure because molecules slow down before hitting the wall.",
+      sol: "vdW: [P + n²a/V²][V−nb] = nRT → [P + 63.9][2.455] = 2254 → P ≈ 853 kPa. <strong>Real P &lt; ideal P</strong>: at −15 °C, CO₂ attractions pull molecules back before they reach the wall → pressure is lower than ideal. <span class='answer'>853 kPa</span>" },
+
+    // --- From Friday Midterm — Part 1 MC ---
+    { section: 'Unit 6', q: "1 g of each substance is dissolved in enough water to make 1 L of solution at 25 °C. Which has the HIGHEST osmotic pressure?",
+      opts: ['CH₃OH (MW = 32)', 'NaCl (MW = 58.45)', 'S₈ (MW = 256)', 'BaCl₂ (MW = 208)', 'SO₂ (MW = 64)'],
+      ans: 1, hint: "π = MRT. Count ALL solute particles. Watch for insoluble substances.",
+      sol: "Effective solute molarity: CH₃OH: 1/32 = 0.031 M; NaCl → Na⁺ + Cl⁻: 2×(1/58.45) = 0.034 M; S₈: <strong>insoluble</strong>, 0 M; BaCl₂ → Ba²⁺ + 2Cl⁻: 3×(1/208) = 0.014 M; SO₂: 1/64 = 0.016 M. <span class='answer'>NaCl has the highest π</span> because it dissociates into 2 ions per formula unit." },
+
+    { section: 'Unit 5', q: "Which of the following forms a HETEROGENEOUS mixture with water?",
+      opts: ['CH₃OH (methanol)', 'NaCl (sodium chloride)', 'S₈ (elemental sulfur)', 'BaCl₂ (barium chloride)', 'SO₂ (sulfur dioxide)'],
+      ans: 2, hint: "Which substance is non-polar and insoluble in polar water?",
+      sol: "<strong>S₈</strong> is a non-polar, cyclic eight-membered sulfur ring with ΔEN = 0 for all S–S bonds. It does not dissolve in polar water and forms a <span class='answer'>heterogeneous mixture</span> (a separate solid phase). All others are soluble or miscible." },
+
+    { section: 'Unit 2', q: "In which substance can the chemical bonding NOT be explained by metallic, polar covalent, or ionic bonding?",
+      opts: ['CH₃OH (methanol)', 'NaCl (sodium chloride)', 'S₈ (elemental sulfur)', 'BaCl₂ (barium chloride)', 'SO₂ (sulfur dioxide)'],
+      ans: 2, hint: "Metallic = metal bonding. Polar covalent = unequal sharing. Ionic = electron transfer. What is the fourth type?",
+      sol: "<strong>S₈</strong> has only S–S bonds where all atoms are identical → ΔEN = 0 → <strong>non-polar covalent</strong> bonding. This is not metallic, not polar covalent (requires ΔEN &gt; 0), and not ionic. CH₃OH and SO₂ are polar covalent; NaCl and BaCl₂ are ionic." },
+
+    // --- From Friday Midterm — Part 2 Q3: periodic size ---
+    { section: 'Unit 2', q: "Arrange in order of INCREASING atomic size: Cl, Rb, Ca, Si.",
+      opts: ['Rb &lt; Ca &lt; Si &lt; Cl', 'Cl &lt; Si &lt; Ca &lt; Rb', 'Si &lt; Cl &lt; Ca &lt; Rb', 'Cl &lt; Ca &lt; Si &lt; Rb', 'Ca &lt; Rb &lt; Si &lt; Cl'],
+      ans: 1, hint: "Size increases going down a group and decreases going left to right across a period.",
+      sol: "Cl and Si are both in Period 3: Si (Group 14) &gt; Cl (Group 17) — more protons in Cl pulls electrons closer. Ca (Period 4, Group 2) &gt; Si. Rb (Period 5, Group 1) is the largest. <span class='answer'>Cl &lt; Si &lt; Ca &lt; Rb</span>" },
+
+    // --- From Friday Midterm — Part 2 Q5: nitrate resonance ---
+    { section: 'Unit 3', q: "How many equivalent resonance structures can be drawn for [NO₃]⁻? Is the ion polar?",
+      opts: ['1 structure; polar', '2 equivalent structures; polar', '3 equivalent structures; non-polar', '3 non-equivalent structures; polar', '4 equivalent structures; non-polar'],
+      ans: 2, hint: "The N=O double bond can sit on any of the 3 O atoms. Is the resulting resonance hybrid symmetric?",
+      sol: "[NO₃]⁻ has <strong>3 equivalent resonance structures</strong> (N=O double bond rotated among the 3 O atoms). The resonance hybrid is trigonal planar and perfectly symmetric → all N–O bonds equal (bond order ≈ 1.33) → <span class='answer'>3 equivalent structures; non-polar</span>." },
+
+    // --- From Friday Midterm — Part 3 Q1: CO2 vs SiO2 ---
+    { section: 'Unit 3', q: "CO₂ is a gas at room temperature; SiO₂ melts near 2000 K. The best explanation is:",
+      opts: [
+        'CO₂ is ionic; SiO₂ is covalent.',
+        'CO₂ has larger London forces because C is heavier than Si.',
+        'SiO₂ is a covalent network solid (each Si bonds to 4 O atoms, each O bridges 2 Si) — breaking this requires enormous energy; CO₂ is a discrete small molecule with only weak London forces.',
+        'CO₂ has stronger hydrogen bonding than SiO₂.',
+        'SiO₂ is metallic; CO₂ is molecular.'
+      ],
+      ans: 2, hint: "CO₂ has a simple O=C=O structure. What kind of bonding must SiO₂ have to melt at ~2000 K?",
+      sol: "CO₂: discrete linear molecules held together by weak London forces → gas at RT. SiO₂: each Si forms 4 single Si–O bonds; each O bridges 2 Si atoms, creating an infinite <strong>covalent network solid</strong> (quartz). Breaking covalent bonds throughout the crystal requires ~2000 K. <span class='answer'>Covalent network vs discrete molecule.</span>" },
+
+    // --- From Friday Midterm — Part 3 Q2: 28Si ---
+    { section: 'Unit 1', q: "How many electrons, protons, and neutrons are there in an atom of ²⁸Si?",
+      opts: ['14p, 28n, 14e', '28p, 14n, 28e', '14p, 14n, 14e', '28p, 28n, 28e', '14p, 28n, 28e'],
+      ans: 2, hint: "Z = atomic number = protons. A = mass number = protons + neutrons. Neutral atom: electrons = protons.",
+      sol: "Si has Z = 14 → <strong>14 protons</strong>. For ²⁸Si: neutrons = 28 − 14 = <strong>14 neutrons</strong>. Neutral atom → <strong>14 electrons</strong>. <span class='answer'>14p, 14n, 14e</span>" },
+
+    // --- From Friday Midterm — Part 3 Q4: Henry's law N2 ---
+    { section: 'Unit 6', q: "Calculate the molar solubility of N₂ in water pressurised with 12 atm of air (78 % N₂) at 25 °C. k_H(N₂) = 6.0 × 10⁻⁴ mol/(L·atm).",
+      opts: ['7.2 × 10⁻³ mol/L', '5.6 × 10⁻³ mol/L', '4.7 × 10⁻⁴ mol/L', '9.4 × 10⁻³ mol/L', '6.0 × 10⁻³ mol/L'],
+      ans: 1, hint: "First find P_N2 = mole fraction × total pressure. Then Sg = k × P_N2.",
+      sol: "P_N₂ = 0.78 × 12 = 9.36 atm. S_N₂ = k × P_N₂ = 6.0×10⁻⁴ × 9.36 = <span class='answer'>5.6×10⁻³ mol/L</span>. (Use the partial pressure of N₂, not the total air pressure!)" },
+
+    // --- From Friday Midterm — Part 4 Q1: mercury vapour ---
+    { section: 'Unit 7', q: "Mercury has a vapour pressure of 0.261 Pa at 25 °C. What is the concentration of Hg(g) in saturated air? Legal limit: 0.1 mg/m³. M(Hg) = 200.6 g/mol.",
+      opts: [
+        '0.05 mg/m³ — safe (below limit)',
+        '0.261 mg/m³ — slightly above limit',
+        '21.1 mg/m³ — far above the 0.1 mg/m³ limit, NOT safe',
+        '2.11 mg/m³ — somewhat unsafe',
+        '0.001 mg/m³ — completely safe'
+      ],
+      ans: 2, hint: "Use PV = nRT for 1 m³ at 25 °C with P = 0.261 Pa, then convert mol to mg.",
+      sol: "n_Hg = PV/RT = (0.261 × 1)/(8.314 × 298) = 1.054×10⁻⁴ mol/m³. Mass = 1.054×10⁻⁴ × 200.6 = 0.02114 g = <strong>21.1 mg/m³</strong>. The legal limit is 0.1 mg/m³ → saturated air contains <span class='answer'>over 200× the safe exposure limit — extremely hazardous.</span>" },
+
+    // --- From Friday Midterm — Part 2 Q2: PF3Cl2 vs PF2Cl3 ---
+    { section: 'Unit 4', q: "PF₃Cl₂ is polar; PF₂Cl₃ is non-polar. Both are trigonal bipyramidal. The best explanation is:",
+      opts: [
+        'PF₃Cl₂ is polar because Cl is more electronegative than F.',
+        'Cl atoms prefer equatorial positions (larger size, like lone pairs). PF₂Cl₃ places all 3 Cl equatorially — symmetric, non-polar. PF₃Cl₂ has only 2 Cl; they cannot be arranged symmetrically — polar.',
+        'PF₂Cl₃ is non-polar because it has more F atoms.',
+        'PF₃Cl₂ is polar because phosphorus has lone pairs.',
+        'Both should be polar — the experimental result contradicts VSEPR.'
+      ],
+      ans: 1, hint: "In TBP geometry, larger atoms prefer equatorial positions (fewer 90° repulsions). How many Cl can fit equatorially in each molecule?",
+      sol: "In TBP, larger atoms (Cl &gt; F) prefer <strong>equatorial positions</strong>. PF₂Cl₃: all 3 Cl in equatorial (120° apart, symmetric) + 2 F axial → dipoles cancel → <strong>non-polar</strong>. PF₃Cl₂: only 2 Cl available; they can't form a symmetric equatorial arrangement → net dipole → <span class='answer'>polar</span>." },
+
+    // --- From 2013 Midterm — Part 2 Q3: Mg density estimation ---
+    { section: 'Unit 2', q: "Given: density of Na(s) = 0.971 g/cm³, Al(s) = 2.70 g/cm³. Estimate the density of Mg(s) using periodic trends.",
+      opts: ['0.97 g/cm³ (same as Na)', '1.83 g/cm³ (average of Na and Al)', '2.70 g/cm³ (same as Al)', '3.67 g/cm³ (above Al)', '1.13 g/cm³ (geometric mean)'],
+      ans: 1, hint: "Periodic properties change gradually — not abruptly — across a period. Mg sits between Na and Al in Period 3.",
+      sol: "Properties change gradually across a period. Mg is between Na (d = 0.971) and Al (d = 2.70) in Period 3 and has a similar metallic structure. Estimated d_Mg ≈ (0.971 + 2.70)/2 = <span class='answer'>1.83 g/cm³</span>. (Observed: 1.74 g/cm³ — an excellent estimate!)" },
+
+    // --- From 2013 Midterm — Part 3 Q3: IMF-dependent properties ---
+    { section: 'Unit 5', q: "Which physical property is NOT primarily determined by intermolecular forces?",
+      opts: ['Surface tension', 'Boiling point', 'Molar mass', 'Vapour pressure', 'Solubility in water'],
+      ans: 2, hint: "IMF determine how strongly molecules attract each other. Does the mass of individual molecules depend on those attractions?",
+      sol: "<strong>Molar mass</strong> is an intrinsic property of a molecule determined by atomic masses — completely independent of intermolecular forces. Surface tension, boiling point, vapour pressure, and aqueous solubility are all directly governed by IMF strength: stronger IMF → higher bp, lower vapour pressure, higher surface tension." },
+
+    // --- From Friday Midterm — Part 2 Q4: ion-dipole ---
+    { section: 'Unit 5', q: "Which type of intermolecular force is most responsible for dissolving ionic compounds (e.g. NaCl) in polar solvents like water?",
+      opts: ['Hydrogen bonding', 'London dispersion forces', 'Ion-dipole forces', 'Dipole-dipole forces', 'Metallic bonding'],
+      ans: 2, hint: "When Na⁺ and Cl⁻ ions are surrounded by water molecules, what force exists between a charged ion and a polar molecule?",
+      sol: "<strong>Ion-dipole forces</strong> are responsible. The partial-negative O of each water molecule is attracted to Na⁺ cations; the partial-positive H atoms are attracted to Cl⁻ anions. This solvation energy must overcome the ionic lattice energy for dissolution to occur. Ion-dipole interactions are stronger than ordinary dipole-dipole or H-bonding." },
+
+    // --- From Friday Midterm — Part 4 Q2: Mg + N2 ---
+    { section: 'Unit 1', q: "Magnesium reacts with nitrogen gas to form magnesium nitride. What is the correct balanced equation?",
+      opts: ['Mg(s) + N₂(g) → MgN₂(s)', '2Mg(s) + N₂(g) → 2MgN(s)', '3Mg(s) + N₂(g) → Mg₃N₂(s)', 'Mg(s) + 2N₂(g) → MgN₄(s)', '2Mg(s) + N₂(g) → Mg₂N₂(s)'],
+      ans: 2, hint: "Mg (Group 2) forms Mg²⁺. N (Group 15) forms N³⁻. Write the formula of magnesium nitride, then balance.",
+      sol: "Mg²⁺ and N³⁻ combine as Mg₃N₂ [check: 3×(+2) + 2×(−3) = 0 ✓]. Balanced equation: <span class='answer'>3Mg(s) + N₂(g) → Mg₃N₂(s)</span>" }
   ]
 };
 
-const timers = { a: null, b: null };
-const timeLeft = { a: 5400, b: 5400 };
-const startTime = { a: null, b: null };
-const examStarted = { a: false, b: false };
-const examSubmitted = { a: false, b: false };
+const timers = { a: null, b: null, c: null };
+const timeLeft = { a: 5400, b: 5400, c: 5400 };
+const startTime = { a: null, b: null, c: null };
+const examStarted = { a: false, b: false, c: false };
+const examSubmitted = { a: false, b: false, c: false };
 
 function buildExam(id) {
   const qs = EXAMS[id];
@@ -682,6 +946,7 @@ function resetExam(id) {
 // Init
 buildExam('a');
 buildExam('b');
+buildExam('c');
 </script>
 </body>
 </html>
