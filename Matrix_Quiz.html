@@ -355,9 +355,44 @@
     font-weight: 600;
     margin-bottom: 4px;
   }
+
+  /* Auth bar */
+  #auth-bar {
+    position: fixed; top: 14px; right: 18px; z-index: 100;
+    display: flex; align-items: center; gap: 10px;
+  }
+  #auth-bar .btn-auth {
+    background: #1e1e30; border: 1px solid #2d2d50;
+    color: #94a3b8; border-radius: 8px;
+    padding: 5px 12px; cursor: pointer; font-size: 0.8rem;
+    transition: all 0.15s;
+  }
+  #auth-bar .btn-auth:hover { border-color: #7c3aed; color: #a78bfa; }
+  #auth-label { color: #64748b; font-size: 0.8rem; }
+
+  /* Stat badges on home cards */
+  .card-stat-row { margin-top: 8px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .stat-badge { font-size: 0.75rem; color: #64748b; font-weight: 600; }
+  .stat-badge.has-weak { color: #f59e0b; }
+  .btn-weak {
+    padding: 3px 10px; background: transparent;
+    border: 1px solid #854d0e; color: #fde68a;
+    border-radius: 6px; font-size: 0.72rem; font-weight: 600;
+    cursor: pointer; transition: all 0.15s;
+  }
+  .btn-weak:hover { background: rgba(245,158,11,0.12); }
 </style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
+
+<div id="auth-bar">
+  <button class="btn-auth" id="btn-login" onclick="authLogin()">Sign in to save progress</button>
+  <span id="auth-user" style="display:none; align-items:center; gap:8px;">
+    <span id="auth-label"></span>
+    <button class="btn-auth" onclick="authLogout()">Sign out</button>
+  </span>
+</div>
 
 <button id="back-btn" onclick="goHome()">← Home</button>
 
@@ -367,35 +402,35 @@
 <!-- HOME SCREEN -->
 <div id="home">
   <div class="quiz-cards">
-    <div class="quiz-card" onclick="startQuiz(0)">
+    <div class="quiz-card" data-quiz="0" onclick="startQuiz(0)">
       <div class="quiz-icon">➕</div>
       <div>
         <h2>Quiz 1 — Matrix Operations</h2>
         <p>How to check sizes, find a specific entry, compute products &amp; scalar operations · 12 questions</p>
       </div>
     </div>
-    <div class="quiz-card" onclick="startQuiz(1)">
+    <div class="quiz-card" data-quiz="1" onclick="startQuiz(1)">
       <div class="quiz-icon">📏</div>
       <div>
         <h2>Quiz 2 — Lines &amp; Planes</h2>
         <p>How to find direction vectors, normal vectors, parametric &amp; general forms · 10 questions</p>
       </div>
     </div>
-    <div class="quiz-card" onclick="startQuiz(2)">
+    <div class="quiz-card" data-quiz="2" onclick="startQuiz(2)">
       <div class="quiz-icon">🔢</div>
       <div>
         <h2>Quiz 3 — RREF &amp; Systems</h2>
         <p>How to row-reduce, spot contradictions, count free variables, read solutions · 12 questions</p>
       </div>
     </div>
-    <div class="quiz-card" onclick="startQuiz(3)">
+    <div class="quiz-card" data-quiz="3" onclick="startQuiz(3)">
       <div class="quiz-icon">⛓️</div>
       <div>
         <h2>Quiz 4 — Span &amp; Independence</h2>
         <p>How to set up and interpret span tests &amp; independence tests · 12 questions</p>
       </div>
     </div>
-    <div class="quiz-card" onclick="startQuiz(4)">
+    <div class="quiz-card" data-quiz="4" onclick="startQuiz(4)">
       <div class="quiz-icon">🧩</div>
       <div>
         <h2>Quiz 5 — Mixed Problem Recognition</h2>
@@ -1174,6 +1209,11 @@ const QUIZZES = [
 
 ];
 
+// Assign stable IDs for progress tracking
+QUIZZES.forEach((quiz, qi) => {
+  quiz.questions.forEach((q, i) => { q._id = `matrix-${qi}-${i}`; });
+});
+
 // ─────────────────────────────────────────────
 // STATE
 // ─────────────────────────────────────────────
@@ -1194,16 +1234,20 @@ function goHome() {
   document.getElementById('results-screen').style.display = 'none';
   document.getElementById('back-btn').style.display = 'none';
   document.getElementById('review-list').style.display = 'none';
+  renderHomeStats();
 }
 
-function startQuiz(quizIndex) {
+function startQuiz(quizIndex, weak = false) {
+  let pool;
   if (quizIndex === -1) {
-    currentQuestions = shuffle(QUIZZES.flatMap(q => q.questions)).map(shuffleQuestion);
-    quizLabel = "All Quizzes";
+    pool = weak ? getWeakQuestions(-1) : QUIZZES.flatMap(q => q.questions);
+    quizLabel = weak ? "Weak Cards — All Quizzes" : "All Quizzes";
   } else {
-    currentQuestions = shuffle(QUIZZES[quizIndex].questions).map(shuffleQuestion);
-    quizLabel = QUIZZES[quizIndex].title;
+    pool = weak ? getWeakQuestions(quizIndex) : QUIZZES[quizIndex].questions;
+    quizLabel = weak ? `Weak Cards — ${QUIZZES[quizIndex].title}` : QUIZZES[quizIndex].title;
   }
+  if (pool.length === 0) return;
+  currentQuestions = shuffle(pool).map(shuffleQuestion);
   currentIndex = 0;
   score = 0;
   answered = new Array(currentQuestions.length).fill(false);
@@ -1334,6 +1378,7 @@ function selectOption(chosen) {
   const correct = q.correct;
   const isRight = chosen === correct;
   if (isRight && !peeked[currentIndex]) score++;
+  if (!peeked[currentIndex]) recordAnswer(q._id, isRight);
 
   document.getElementById('helper-btns').style.display = 'none';
 
@@ -1384,6 +1429,7 @@ function checkFillAnswer() {
   input.className = 'fill-input ' + (isRight ? 'correct-fill' : 'wrong-fill');
 
   if (isRight && !peeked[currentIndex]) score++;
+  if (!peeked[currentIndex]) recordAnswer(q._id, isRight);
 
   const fb = document.getElementById('feedback');
   if (isRight && !peeked[currentIndex]) {
@@ -1605,6 +1651,131 @@ function reviewAnswers() {
 
   reviewEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
+
+// ── AUTH + PROGRESS ──────────────────────────────────────────────────────────
+const SUPA_URL = 'https://xsscvdooviztaxzuwbmr.supabase.co';
+const SUPA_KEY = 'sb_publishable_BTkvBDZodnIPQoJ4nFEhMQ_Wd5me5QY';
+let supa = null;
+let authUser = null;
+let localProgress = {};
+let saveTimer = null;
+
+async function initAuth() {
+  if (!window.supabase) return;
+  supa = window.supabase.createClient(SUPA_URL, SUPA_KEY);
+  const { data } = await supa.auth.getSession();
+  if (data.session) {
+    authUser = data.session.user;
+    await loadProgress();
+    renderHomeStats();
+  }
+  renderAuthUI();
+  supa.auth.onAuthStateChange(async (event, session) => {
+    authUser = session?.user ?? null;
+    renderAuthUI();
+    if (authUser) {
+      await loadProgress();
+    } else {
+      localProgress = {};
+    }
+    renderHomeStats();
+  });
+}
+
+function authLogin() {
+  if (!supa) return;
+  supa.auth.signInWithOAuth({ provider: 'google', options: { redirectTo: window.location.href } });
+}
+
+function authLogout() {
+  if (!supa) return;
+  supa.auth.signOut();
+}
+
+function renderAuthUI() {
+  if (authUser) {
+    const name = authUser.user_metadata?.full_name ?? authUser.user_metadata?.name ?? authUser.email ?? 'Signed in';
+    document.getElementById('auth-label').textContent = name;
+    document.getElementById('btn-login').style.display = 'none';
+    document.getElementById('auth-user').style.display = 'inline-flex';
+  } else {
+    document.getElementById('btn-login').style.display = 'inline-block';
+    document.getElementById('auth-user').style.display = 'none';
+  }
+}
+
+async function loadProgress() {
+  if (!supa || !authUser) return;
+  const { data } = await supa
+    .from('tesselate_progress')
+    .select('progress_json')
+    .eq('user_id', authUser.id)
+    .maybeSingle();
+  if (data?.progress_json) localProgress = data.progress_json;
+}
+
+function recordAnswer(questionId, correct) {
+  if (!authUser || !questionId) return;
+  if (!localProgress[questionId]) localProgress[questionId] = { c: 0, w: 0 };
+  if (correct) localProgress[questionId].c++;
+  else localProgress[questionId].w++;
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(saveProgress, 2000);
+}
+
+async function saveProgress() {
+  if (!supa || !authUser) return;
+  await supa.from('tesselate_progress').upsert({
+    user_id: authUser.id,
+    progress_json: localProgress,
+    updated_at: new Date().toISOString()
+  }, { onConflict: 'user_id' });
+}
+
+function getQuizStat(quizIndex) {
+  const qs = quizIndex === -1
+    ? QUIZZES.flatMap(q => q.questions)
+    : QUIZZES[quizIndex].questions;
+  let correct = 0, total = 0, weak = 0;
+  qs.forEach(q => {
+    const s = localProgress[q._id];
+    if (s && (s.c + s.w) > 0) {
+      correct += s.c;
+      total += s.c + s.w;
+      if (s.c / (s.c + s.w) < 0.5) weak++;
+    }
+  });
+  return { correct, total, weak, pct: total ? Math.round(correct / total * 100) : null };
+}
+
+function getWeakQuestions(quizIndex) {
+  const qs = quizIndex === -1
+    ? QUIZZES.flatMap(q => q.questions)
+    : QUIZZES[quizIndex].questions;
+  return qs.filter(q => {
+    const s = localProgress[q._id];
+    return s && (s.c + s.w) > 0 && s.c / (s.c + s.w) < 0.5;
+  });
+}
+
+function renderHomeStats() {
+  for (let i = 0; i < QUIZZES.length; i++) {
+    const card = document.querySelector(`[data-quiz="${i}"]`);
+    if (!card) continue;
+    let row = card.querySelector('.card-stat-row');
+    if (!row) {
+      row = document.createElement('div');
+      row.className = 'card-stat-row';
+      card.querySelectorAll('div')[1].appendChild(row);
+    }
+    if (!authUser) { row.innerHTML = ''; continue; }
+    const stat = getQuizStat(i);
+    if (stat.total === 0) { row.innerHTML = ''; continue; }
+    row.innerHTML = `<span class="stat-badge${stat.weak ? ' has-weak' : ''}">${stat.pct}% &middot; ${stat.correct}/${stat.total} attempts</span>${stat.weak ? `<button class="btn-weak" onclick="event.stopPropagation();startQuiz(${i},true)">Review Weak (${stat.weak})</button>` : ''}`;
+  }
+}
+
+initAuth();
 </script>
 </body>
 </html>

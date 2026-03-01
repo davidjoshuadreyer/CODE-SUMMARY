@@ -186,28 +186,63 @@
     font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: all 0.2s;
   }
   .btn-back:hover { background: rgba(8,145,178,0.1); }
+
+  /* Auth bar */
+  #auth-bar {
+    position: fixed; top: 14px; right: 18px; z-index: 100;
+    display: flex; align-items: center; gap: 10px;
+  }
+  #auth-bar .btn-auth {
+    background: #1e1e30; border: 1px solid #2d2d50;
+    color: #94a3b8; border-radius: 8px;
+    padding: 5px 12px; cursor: pointer; font-size: 0.8rem;
+    transition: all 0.15s;
+  }
+  #auth-bar .btn-auth:hover { border-color: #10b981; color: #6ee7b7; }
+  #auth-label { color: #64748b; font-size: 0.8rem; }
+
+  /* Stat badges on home cards */
+  .card-stat-row { margin-top: 8px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .stat-badge { font-size: 0.75rem; color: #64748b; font-weight: 600; }
+  .stat-badge.has-weak { color: #f59e0b; }
+  .btn-weak {
+    padding: 3px 10px; background: transparent;
+    border: 1px solid #854d0e; color: #fde68a;
+    border-radius: 6px; font-size: 0.72rem; font-weight: 600;
+    cursor: pointer; transition: all 0.15s;
+  }
+  .btn-weak:hover { background: rgba(245,158,11,0.12); }
 </style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
+
+<div id="auth-bar">
+  <button class="btn-auth" id="btn-login" onclick="authLogin()">Sign in to save progress</button>
+  <span id="auth-user" style="display:none; align-items:center; gap:8px;">
+    <span id="auth-label"></span>
+    <button class="btn-auth" onclick="authLogout()">Sign out</button>
+  </span>
+</div>
 
 <!--  HOME  -->
 <div id="home">
   <h1>CHEM 150 Quiz</h1>
   <p class="subtitle">Midterm I Practice · Choose a topic or quiz all</p>
   <div class="quiz-cards">
-    <div class="quiz-card" onclick="startQuiz('matter')">      <div><h2>Unit 1  Matter &amp; Measurement</h2><p>Classification, atomic structure, stoichiometry, nomenclature · 12 questions</p></div>
+    <div class="quiz-card" data-topic="matter" onclick="startQuiz('matter')">      <div><h2>Unit 1  Matter &amp; Measurement</h2><p>Classification, atomic structure, stoichiometry, nomenclature · 12 questions</p></div>
     </div>
-    <div class="quiz-card" onclick="startQuiz('bonding')">      <div><h2>Unit 2  Chemical Bonding</h2><p>Bond types, periodic trends, IE, EA, radius, lattice energy · 12 questions</p></div>
+    <div class="quiz-card" data-topic="bonding" onclick="startQuiz('bonding')">      <div><h2>Unit 2  Chemical Bonding</h2><p>Bond types, periodic trends, IE, EA, radius, lattice energy · 12 questions</p></div>
     </div>
-    <div class="quiz-card" onclick="startQuiz('lewis')">      <div><h2>Unit 3  Lewis Structures</h2><p>Drawing rules, formal charges, resonance, exceptions · 10 questions</p></div>
+    <div class="quiz-card" data-topic="lewis" onclick="startQuiz('lewis')">      <div><h2>Unit 3  Lewis Structures</h2><p>Drawing rules, formal charges, resonance, exceptions · 10 questions</p></div>
     </div>
-    <div class="quiz-card" onclick="startQuiz('vsepr')">      <div><h2>Unit 4  Polarity &amp; VSEPR</h2><p>Electronegativity, dipole moments, molecular shapes · 10 questions</p></div>
+    <div class="quiz-card" data-topic="vsepr" onclick="startQuiz('vsepr')">      <div><h2>Unit 4  Polarity &amp; VSEPR</h2><p>Electronegativity, dipole moments, molecular shapes · 10 questions</p></div>
     </div>
-    <div class="quiz-card" onclick="startQuiz('imf')">      <div><h2>Unit 5  Intermolecular Forces</h2><p>London, dipole-dipole, H-bonding, physical properties · 10 questions</p></div>
+    <div class="quiz-card" data-topic="imf" onclick="startQuiz('imf')">      <div><h2>Unit 5  Intermolecular Forces</h2><p>London, dipole-dipole, H-bonding, physical properties · 10 questions</p></div>
     </div>
-    <div class="quiz-card" onclick="startQuiz('solutions')">      <div><h2>Unit 6  Solutions &amp; Colligative</h2><p>Raoult's Law, Henry's Law, osmotic pressure · 8 questions</p></div>
+    <div class="quiz-card" data-topic="solutions" onclick="startQuiz('solutions')">      <div><h2>Unit 6  Solutions &amp; Colligative</h2><p>Raoult's Law, Henry's Law, osmotic pressure · 8 questions</p></div>
     </div>
-    <div class="quiz-card" onclick="startQuiz('gases')">      <div><h2>Unit 7  Gases</h2><p>Gas laws, ideal gas law, Dalton, KMT, van der Waals · 10 questions</p></div>
+    <div class="quiz-card" data-topic="gases" onclick="startQuiz('gases')">      <div><h2>Unit 7  Gases</h2><p>Gas laws, ideal gas law, Dalton, KMT, van der Waals · 10 questions</p></div>
     </div>
   </div>
   <button class="btn-all" onclick="startQuiz('all')">Quiz All Topics (72 questions)</button>
@@ -786,6 +821,12 @@ const QUESTIONS = {
 // Build 'all' category
 QUESTIONS.all = Object.values(QUESTIONS).flat();
 
+// Assign stable IDs for progress tracking
+Object.entries(QUESTIONS).forEach(([topic, qs]) => {
+  if (topic === 'all') return;
+  qs.forEach((q, i) => { q._id = `chem-${topic}-${i}`; });
+});
+
 let currentCategory = '';
 let questionList = [];
 let currentIndex = 0;
@@ -794,7 +835,7 @@ let answered = 0;
 let hintVisible = false;
 let solVisible = false;
 
-function startQuiz(cat) {
+function startQuiz(cat, weak = false) {
   currentCategory = cat;
   const titles = {
     matter: 'Unit 1  Matter & Measurement',
@@ -806,8 +847,10 @@ function startQuiz(cat) {
     gases: 'Unit 7  Gases',
     all: 'All Topics'
   };
-  document.getElementById('quiz-title').textContent = titles[cat];
-  questionList = shuffle([...QUESTIONS[cat]]);
+  const pool = weak ? getWeakQuestions(cat) : [...QUESTIONS[cat]];
+  if (pool.length === 0) return;
+  document.getElementById('quiz-title').textContent = weak ? `Weak Cards  ${titles[cat] || titles.all}` : titles[cat];
+  questionList = shuffle(pool);
   currentIndex = 0; score = 0; answered = 0;
   document.getElementById('home').style.display = 'none';
   document.getElementById('results').style.display = 'none';
@@ -885,6 +928,7 @@ function selectAnswer(chosen) {
   const correct = q.ans;
   const isCorrect = chosen === correct;
   if (isCorrect) score++;
+  recordAnswer(q._id, isCorrect);
 
   // Colour options
   if (isCorrect) {
@@ -943,8 +987,134 @@ function showResults() {
 function retryQuiz() { startQuiz(currentCategory); }
 function goHome() {
   document.getElementById('results').style.display = 'none';
+  document.getElementById('quiz-screen').style.display = 'none';
   document.getElementById('home').style.display = 'block';
+  renderHomeStats();
 }
+
+// ── AUTH + PROGRESS ──────────────────────────────────────────────────────────
+const SUPA_URL = 'https://xsscvdooviztaxzuwbmr.supabase.co';
+const SUPA_KEY = 'sb_publishable_BTkvBDZodnIPQoJ4nFEhMQ_Wd5me5QY';
+let supa = null;
+let authUser = null;
+let localProgress = {};
+let saveTimer = null;
+
+async function initAuth() {
+  if (!window.supabase) return;
+  supa = window.supabase.createClient(SUPA_URL, SUPA_KEY);
+  const { data } = await supa.auth.getSession();
+  if (data.session) {
+    authUser = data.session.user;
+    await loadProgress();
+    renderHomeStats();
+  }
+  renderAuthUI();
+  supa.auth.onAuthStateChange(async (event, session) => {
+    authUser = session?.user ?? null;
+    renderAuthUI();
+    if (authUser) {
+      await loadProgress();
+    } else {
+      localProgress = {};
+    }
+    renderHomeStats();
+  });
+}
+
+function authLogin() {
+  if (!supa) return;
+  supa.auth.signInWithOAuth({ provider: 'google', options: { redirectTo: window.location.href } });
+}
+
+function authLogout() {
+  if (!supa) return;
+  supa.auth.signOut();
+}
+
+function renderAuthUI() {
+  if (authUser) {
+    const name = authUser.user_metadata?.full_name ?? authUser.user_metadata?.name ?? authUser.email ?? 'Signed in';
+    document.getElementById('auth-label').textContent = name;
+    document.getElementById('btn-login').style.display = 'none';
+    document.getElementById('auth-user').style.display = 'inline-flex';
+  } else {
+    document.getElementById('btn-login').style.display = 'inline-block';
+    document.getElementById('auth-user').style.display = 'none';
+  }
+}
+
+async function loadProgress() {
+  if (!supa || !authUser) return;
+  const { data } = await supa
+    .from('tesselate_progress')
+    .select('progress_json')
+    .eq('user_id', authUser.id)
+    .maybeSingle();
+  if (data?.progress_json) localProgress = data.progress_json;
+}
+
+function recordAnswer(questionId, correct) {
+  if (!authUser || !questionId) return;
+  if (!localProgress[questionId]) localProgress[questionId] = { c: 0, w: 0 };
+  if (correct) localProgress[questionId].c++;
+  else localProgress[questionId].w++;
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(saveProgress, 2000);
+}
+
+async function saveProgress() {
+  if (!supa || !authUser) return;
+  await supa.from('tesselate_progress').upsert({
+    user_id: authUser.id,
+    progress_json: localProgress,
+    updated_at: new Date().toISOString()
+  }, { onConflict: 'user_id' });
+}
+
+function getTopicStat(topic) {
+  const qs = QUESTIONS[topic] || [];
+  let correct = 0, total = 0, weak = 0;
+  qs.forEach(q => {
+    const s = localProgress[q._id];
+    if (s && (s.c + s.w) > 0) {
+      correct += s.c;
+      total += s.c + s.w;
+      if (s.c / (s.c + s.w) < 0.5) weak++;
+    }
+  });
+  return { correct, total, weak, pct: total ? Math.round(correct / total * 100) : null };
+}
+
+function getWeakQuestions(topic) {
+  const qs = topic === 'all'
+    ? Object.entries(QUESTIONS).filter(([k]) => k !== 'all').flatMap(([, v]) => v)
+    : (QUESTIONS[topic] || []);
+  return qs.filter(q => {
+    const s = localProgress[q._id];
+    return s && (s.c + s.w) > 0 && s.c / (s.c + s.w) < 0.5;
+  });
+}
+
+function renderHomeStats() {
+  const topics = ['matter','bonding','lewis','vsepr','imf','solutions','gases'];
+  topics.forEach(topic => {
+    const card = document.querySelector(`[data-topic="${topic}"]`);
+    if (!card) return;
+    let row = card.querySelector('.card-stat-row');
+    if (!row) {
+      row = document.createElement('div');
+      row.className = 'card-stat-row';
+      card.querySelector('div').appendChild(row);
+    }
+    if (!authUser) { row.innerHTML = ''; return; }
+    const stat = getTopicStat(topic);
+    if (stat.total === 0) { row.innerHTML = ''; return; }
+    row.innerHTML = `<span class="stat-badge${stat.weak ? ' has-weak' : ''}">${stat.pct}% &middot; ${stat.correct}/${stat.total} attempts</span>${stat.weak ? `<button class="btn-weak" onclick="event.stopPropagation();startQuiz('${topic}',true)">Review Weak (${stat.weak})</button>` : ''}`;
+  });
+}
+
+initAuth();
 </script>
 </body>
 </html>
