@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CHEM 150 — Midterm I Reference</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #0f0f1a;
+    color: #e2e8f0;
+    min-height: 100vh;
+  }
+
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(15,15,26,0.92); backdrop-filter: blur(12px);
+    border-bottom: 1px solid #1e3a2a; padding: 0 24px;
+    display: flex; align-items: center; gap: 4px;
+    overflow-x: auto; scrollbar-width: none; height: 52px; flex-wrap: nowrap;
+  }
+  nav::-webkit-scrollbar { display: none; }
+  nav a {
+    color: #94a3b8; text-decoration: none; font-size: 0.82rem; font-weight: 600;
+    padding: 6px 12px; border-radius: 8px; white-space: nowrap; transition: all 0.15s; flex-shrink: 0;
+  }
+  nav a:hover { background: #1e2a20; color: #6ee7b7; }
+  .nav-brand {
+    font-weight: 800; font-size: 0.9rem;
+    background: linear-gradient(135deg, #10b981, #0891b2);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    margin-right: 12px; flex-shrink: 0; padding: 0 !important; background-color: transparent !important;
+  }
+  nav .divider { width: 1px; height: 20px; background: #1e3a2a; margin: 0 4px; flex-shrink: 0; }
+
+  .page { max-width: 880px; margin: 0 auto; padding: 40px 20px 80px; }
+
+  h1 {
+    font-size: 2.2rem; font-weight: 800;
+    background: linear-gradient(135deg, #10b981, #0891b2);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    margin-bottom: 6px; text-align: center;
+  }
+  .subtitle { color: #94a3b8; font-size: 0.9rem; text-align: center; margin-bottom: 48px; }
+
+  section { margin-bottom: 44px; scroll-margin-top: 68px; }
+
+  .section-header {
+    display: flex; align-items: center; gap: 14px;
+    margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid #1e3a2a;
+  }
+  .section-icon { font-size: 1.8rem; flex-shrink: 0; }
+  .section-header h2 {
+    font-size: 1.35rem; font-weight: 700;
+    background: linear-gradient(135deg, #6ee7b7, #67e8f9);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+  .section-header p { font-size: 0.82rem; color: #64748b; margin-top: 2px; }
+
+  .card {
+    background: #1e1e30; border: 1px solid #1e3a2a; border-radius: 16px;
+    padding: 22px 24px; margin-bottom: 14px;
+  }
+  .card-title {
+    font-size: 0.78rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.1em; color: #10b981; margin-bottom: 12px;
+  }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media(max-width: 620px) { .two-col { grid-template-columns: 1fr; } }
+
+  p { line-height: 1.65; color: #94a3b8; font-size: 0.9rem; }
+  p + p { margin-top: 6px; }
+  ul { padding-left: 20px; margin: 6px 0; color: #94a3b8; font-size: 0.9rem; line-height: 1.8; }
+  li + li { margin-top: 2px; }
+  strong { color: #e2e8f0; }
+
+  .formula {
+    background: #0d1a10; border: 1px solid #1e3a2a; border-left: 4px solid #10b981;
+    border-radius: 10px; padding: 14px 18px; margin: 10px 0;
+    font-family: 'Cascadia Code', 'Consolas', monospace; font-size: 0.9rem;
+    color: #6ee7b7; line-height: 1.8;
+  }
+  .formula .label { color: #94a3b8; font-family: 'Segoe UI', sans-serif; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
+
+  .note {
+    background: #1a1a0a; border: 1px solid #854d0e; border-left: 4px solid #f59e0b;
+    border-radius: 10px; padding: 12px 16px; font-size: 0.87rem; color: #fde68a;
+    line-height: 1.55; margin: 10px 0;
+  }
+  .note strong { color: #fbbf24; }
+
+  .tip {
+    background: #052e1c; border: 1px solid #059669; border-left: 4px solid #10b981;
+    border-radius: 10px; padding: 12px 16px; font-size: 0.87rem; color: #6ee7b7;
+    line-height: 1.55; margin: 10px 0;
+  }
+  .tip strong { color: #34d399; }
+
+  .danger {
+    background: #2d0a0a; border: 1px solid #dc2626; border-left: 4px solid #ef4444;
+    border-radius: 10px; padding: 12px 16px; font-size: 0.87rem; color: #fca5a5;
+    line-height: 1.55; margin: 10px 0;
+  }
+  .danger strong { color: #f87171; }
+
+  table {
+    width: 100%; border-collapse: collapse; font-size: 0.85rem; margin: 10px 0;
+  }
+  th {
+    background: #0d1a10; color: #6ee7b7; padding: 8px 12px;
+    text-align: left; font-size: 0.78rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #1e3a2a;
+  }
+  td { padding: 8px 12px; border-bottom: 1px solid #1a2820; color: #cbd5e1; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #16261c; }
+
+  .tag {
+    display: inline-block; padding: 2px 9px; border-radius: 999px;
+    font-size: 0.72rem; font-weight: 700; margin: 2px;
+  }
+  .tag-green { background: #052e1c; color: #34d399; border: 1px solid #059669; }
+  .tag-blue  { background: #0c1a2e; color: #60a5fa; border: 1px solid #1d4ed8; }
+  .tag-red   { background: #2d0a0a; color: #fca5a5; border: 1px solid #dc2626; }
+  .tag-yellow{ background: #1a1505; color: #fde68a; border: 1px solid #854d0e; }
+  .tag-purple{ background: #1a0a2e; color: #c4b5fd; border: 1px solid #6d28d9; }
+
+  .shape-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; margin: 10px 0;
+  }
+  .shape-card {
+    background: #111820; border: 1px solid #1e3a2a; border-radius: 10px; padding: 12px;
+    text-align: center;
+  }
+  .shape-card .shape-name { color: #6ee7b7; font-weight: 700; font-size: 0.88rem; margin-bottom: 4px; }
+  .shape-card .shape-eg { color: #10b981; font-size: 0.75rem; font-weight: 700; }
+  .shape-card .shape-angle { color: #94a3b8; font-size: 0.75rem; }
+  .shape-card .shape-polar { font-size: 0.7rem; margin-top: 4px; }
+
+  .trend-box {
+    background: #111820; border-radius: 10px; padding: 14px 16px; margin: 8px 0;
+  }
+  .trend-label { font-size: 0.78rem; font-weight: 700; color: #10b981; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .trend-arrow {
+    display: flex; align-items: center; gap: 8px; color: #94a3b8; font-size: 0.85rem; margin: 3px 0;
+  }
+  .arrow-up   { color: #34d399; font-size: 1rem; }
+  .arrow-down { color: #f87171; font-size: 1rem; }
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-brand">CHEM 150</span>
+  <div class="divider"></div>
+  <a href="#matter">Matter</a>
+  <a href="#bonding">Bonding</a>
+  <a href="#lewis">Lewis</a>
+  <a href="#vsepr">VSEPR</a>
+  <a href="#imf">IMF</a>
+  <a href="#solutions">Solutions</a>
+  <a href="#gases">Gases</a>
+  <a href="#formulas">Formulas</a>
+</nav>
+
+<div class="page">
+  <h1>CHEM 150 — Midterm I</h1>
+  <p class="subtitle">Engineering Chemistry · Camosun College · Units 1–7 Reference</p>
+
+  <!-- ══════════════════════════════════════════════
+       UNIT 1 — MATTER & MEASUREMENT
+  ═════════════════════════════════════════════════ -->
+  <section id="matter">
+    <div class="section-header">
+      <span class="section-icon">⚗️</span>
+      <div>
+        <h2>Unit 1 — Matter &amp; Measurement</h2>
+        <p>Classification, atomic structure, stoichiometry, nomenclature</p>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">Classification of Matter</div>
+        <ul>
+          <li><strong>Element</strong> — pure substance; cannot be separated by chemical means</li>
+          <li><strong>Compound</strong> — two+ elements, fixed ratio; separated only by <em>chemical</em> means</li>
+          <li><strong>Homogeneous mixture</strong> — uniform (e.g., salt water, glass, air)</li>
+          <li><strong>Heterogeneous mixture</strong> — non-uniform (e.g., drywall, sandy water)</li>
+        </ul>
+        <div class="tip"><strong>Tip:</strong> Physical changes (melting, dissolving) preserve chemical identity. Chemical changes (burning, rusting) produce new substances.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Dalton's Atomic Theory (1808)</div>
+        <ol style="padding-left:18px;color:#94a3b8;font-size:0.9rem;line-height:1.8;">
+          <li>Matter composed of indivisible atoms</li>
+          <li>All atoms of an element are identical</li>
+          <li>Compounds = atoms in fixed whole-number ratios</li>
+          <li>Chemical reactions = rearrangement of atoms; atoms not created/destroyed</li>
+        </ol>
+        <div class="note"><strong>Note:</strong> Isotopes violate postulate 2; nuclear reactions violate postulate 4.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Atomic Structure</div>
+      <table>
+        <tr><th>Particle</th><th>Charge</th><th>Mass (u)</th><th>Location</th></tr>
+        <tr><td>Proton</td><td>+1</td><td>1.0073</td><td>Nucleus</td></tr>
+        <tr><td>Neutron</td><td>0</td><td>1.0087</td><td>Nucleus</td></tr>
+        <tr><td>Electron</td><td>−1</td><td>0.000549</td><td>Orbitals</td></tr>
+      </table>
+      <p style="margin-top:10px;"><strong>Atomic number Z</strong> = # protons &nbsp;|&nbsp; <strong>Mass number A</strong> = protons + neutrons &nbsp;|&nbsp; <strong>Isotopes</strong> = same Z, different A</p>
+      <div class="formula">
+        <div class="label">Average Atomic Mass</div>
+        avg mass = Σ (fractional abundance × isotope mass)
+        e.g., Cl: 0.7577×34.97 + 0.2423×36.97 = 35.45 u
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">Stoichiometry Essentials</div>
+        <div class="formula">
+          n = m / M &nbsp;&nbsp;&nbsp; (mol = g ÷ g/mol)
+          N = n × Nₐ &nbsp; (Nₐ = 6.022×10²³)
+          M = mol × M &nbsp; (g = mol × g/mol)
+        </div>
+        <p><strong>Limiting reagent:</strong> convert all reactants to same product; smallest amount is the limit.</p>
+        <div class="formula">
+          % yield = (actual / theoretical) × 100%
+          M = n / V &nbsp; (mol/L) &nbsp;&nbsp; MᵢVᵢ = MᶠVᶠ
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Nomenclature Quick Reference</div>
+        <ul>
+          <li><strong>Ionic:</strong> cation name + anion name; variable-charge metals use Roman numerals (Fe²⁺ = iron(II))</li>
+          <li><strong>Oxyanions:</strong> "Nick the Camel" — NO₃⁻ nitrate, NO₂⁻ nitrite, SO₄²⁻ sulfate, SO₃²⁻ sulfite, ClO₄⁻ perchlorate, ClO₃⁻ chlorate, ClO₂⁻ chlorite, ClO⁻ hypochlorite</li>
+          <li><strong>Molecular:</strong> Greek prefixes (mono, di, tri, tetra, penta …)</li>
+          <li><strong>Acids:</strong> H + anion; -ide → hydro___ic acid; -ate → ___ic acid; -ite → ___ous acid</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Metal Types &amp; Periodic Table Groups</div>
+      <p><strong>Diatomic elements:</strong> H₂, N₂, O₂, F₂, Cl₂, Br₂, I₂ (mnemonic: HOFBrINCl)</p>
+      <p style="margin-top:8px;"><strong>Metals</strong> (left/centre): ductile, malleable, lustrous, conduct heat &amp; electricity. &nbsp;<strong>Non-metals</strong> (right): brittle, poor conductors. &nbsp;<strong>Metalloids</strong>: along staircase (B, Si, Ge, As, Sb, Te).</p>
+      <p style="margin-top:8px;">Variable-charge metals: <span class="tag tag-red">Cu (1+, 2+)</span> <span class="tag tag-red">Fe (2+, 3+)</span> <span class="tag tag-red">Co (2+, 3+)</span> <span class="tag tag-red">Mn (2+, 7+)</span> <span class="tag tag-red">Sn (2+, 4+)</span> &nbsp;| Fixed: Na⁺, Mg²⁺, Al³⁺, Ca²⁺, Ba²⁺, K⁺</p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       UNIT 2 — CHEMICAL BONDING
+  ═════════════════════════════════════════════════ -->
+  <section id="bonding">
+    <div class="section-header">
+      <span class="section-icon">🔗</span>
+      <div>
+        <h2>Unit 2 — Chemical Bonding</h2>
+        <p>Bond types, periodic trends, ionization energy, lattice energy, Born-Haber</p>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">Types of Chemical Bonds</div>
+        <ul>
+          <li><strong>Ionic</strong> — complete electron transfer; metal + nonmetal; e.g., NaCl. Electrostatic attraction of oppositely charged ions.</li>
+          <li><strong>Covalent</strong> — electron sharing; nonmetal + nonmetal; e.g., H₂, CO₂. Can be polar or nonpolar.</li>
+          <li><strong>Metallic</strong> — metal cations in a delocalized "sea" of electrons; explains conductivity, malleability.</li>
+        </ul>
+        <div class="tip"><strong>ΔEN rule:</strong> 0 = nonpolar covalent | 0–1.5 = polar covalent | &gt;1.5 → ionic character</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Periodic Trends Summary</div>
+        <div class="trend-box">
+          <div class="trend-label">Ionization Energy (I₁)</div>
+          <div class="trend-arrow"><span class="arrow-up">↑</span> Increases left→right across period</div>
+          <div class="trend-arrow"><span class="arrow-down">↓</span> Decreases top→bottom in group</div>
+          <p style="font-size:0.8rem;color:#64748b;margin-top:4px;">Exceptions: B &lt; Be (2p vs 2s); O &lt; N (paired e⁻ repulsion in O)</p>
+        </div>
+        <div class="trend-box">
+          <div class="trend-label">Atomic Radius</div>
+          <div class="trend-arrow"><span class="arrow-down">↓</span> Increases top→bottom (more shells)</div>
+          <div class="trend-arrow"><span class="arrow-up">↑</span> Decreases left→right (Zeff increases)</div>
+        </div>
+        <div class="trend-box">
+          <div class="trend-label">Electron Affinity</div>
+          <div class="trend-arrow"><span class="arrow-up">↑</span> More negative going right and up</div>
+          <p style="font-size:0.8rem;color:#64748b;margin-top:4px;">More negative = more exothermic = "wants" electrons more. Exceptions: N (half-filled 2p stable)</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Effective Nuclear Charge &amp; Ionic Radii</div>
+      <div class="formula">
+        <div class="label">Slater's Rule (simplified)</div>
+        Z_eff = Z − S &nbsp;&nbsp; (S = # core electrons shielding valence shell)
+        Examples: C (Z=6, 2 core e⁻) → Z_eff = 4
+                  N (Z=7, 2 core e⁻) → Z_eff = 5
+                  B (Z=5, 2 core e⁻) → Z_eff = 3
+      </div>
+      <p><strong>Ionic radius:</strong> Cations are <em>smaller</em> than parent atom (lost electrons, more Zeff per electron). Anions are <em>larger</em> (gained electrons, less Zeff per electron).</p>
+      <p style="margin-top:6px;"><strong>Isoelectronic series</strong> (same # electrons): more protons → smaller. E.g., Al³⁺ &lt; Na⁺ &lt; F⁻ &lt; O²⁻ (all have 10 electrons).</p>
+    </div>
+
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">Lattice Energy</div>
+        <p>Energy released when gaseous ions form 1 mol of ionic crystal. Always <em>negative</em> (exothermic).</p>
+        <p style="margin-top:8px;"><strong>Factors:</strong> Lattice energy ↑ with <em>higher ionic charges</em> and <em>smaller ions</em> (shorter distance).</p>
+        <table style="margin-top:8px;">
+          <tr><th>Compound</th><th>Lattice E (kJ/mol)</th><th>mp (°C)</th></tr>
+          <tr><td>LiF</td><td>−1049</td><td>848</td></tr>
+          <tr><td>NaCl</td><td>−787</td><td>801</td></tr>
+          <tr><td>KBr</td><td>−691</td><td>734</td></tr>
+          <tr><td>MgO</td><td>−3795</td><td>2825</td></tr>
+          <tr><td>Al₂O₃</td><td>−15916</td><td>2054</td></tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Born-Haber Cycle (NaCl example)</div>
+        <div class="formula" style="font-size:0.8rem;">
+Na(s) → Na(g)              +107  kJ  (sublimation)
+Na(g) → Na⁺(g) + e⁻       +496  kJ  (IE₁)
+½Cl₂(g) → Cl(g)           +121  kJ  (½ bond energy)
+Cl(g) + e⁻ → Cl⁻(g)       −349  kJ  (EA)
+Na⁺(g) + Cl⁻(g) → NaCl(s) −787  kJ  (lattice E)
+─────────────────────────────────────
+Na(s) + ½Cl₂(g) → NaCl(s) −412  kJ  (ΔH°f)
+        </div>
+        <p style="font-size:0.82rem;color:#64748b;">Use Hess's Law: ΔH°f = sublimation + IE + ½ bond + EA + lattice E</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">IE Trend Practice (memorize order)</div>
+      <p><strong>Increasing IE:</strong> &nbsp;Sr &lt; Ca &lt; Se &lt; Br &nbsp;(same group ordering + period position)</p>
+      <p style="margin-top:6px;"><strong>Increasing ionic size:</strong> &nbsp;Ti⁴⁺ &lt; K⁺ &lt; S²⁻ &lt; Se²⁻ &nbsp;(isoelectronic Ti⁴⁺, K⁺, S²⁻ all have 18 e⁻; Se²⁻ has 36 e⁻ = bigger shell)</p>
+      <p style="margin-top:6px;"><strong>Increasing atomic radius:</strong> &nbsp;Br &lt; Se &lt; Ca &lt; Sr</p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       UNIT 3 — LEWIS STRUCTURES
+  ═════════════════════════════════════════════════ -->
+  <section id="lewis">
+    <div class="section-header">
+      <span class="section-icon">🧩</span>
+      <div>
+        <h2>Unit 3 — Lewis Structures</h2>
+        <p>Drawing rules, formal charges, resonance, exceptions to octet</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Lewis Structure Drawing Steps</div>
+      <ol style="padding-left:20px;color:#cbd5e1;font-size:0.9rem;line-height:2;">
+        <li>Count total valence electrons (VE). For anions add n e⁻; for cations subtract n e⁻.</li>
+        <li>Choose central atom: usually <em>least electronegative</em> (but not H or F). In oxoanions, the non-O atom is central.</li>
+        <li>Place one bond between central atom and each terminal atom.</li>
+        <li>Complete octets on terminal atoms first using lone pairs.</li>
+        <li>Place remaining electrons on central atom.</li>
+        <li>If central atom is short of octet, convert lone pairs on terminals to double/triple bonds.</li>
+        <li>Verify: total electrons used = VE counted in step 1.</li>
+      </ol>
+      <div class="tip"><strong>Quick VE check:</strong> VE = (sum of group numbers) ± charge. E.g., NO₂⁻ = 5+6+6+1 = 18 VE</div>
+    </div>
+
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">Formal Charge Formula</div>
+        <div class="formula">
+FC = (valence e⁻) − ½(bonding e⁻) − (lone pair e⁻)
+
+e.g., in N≡N—O⁻ (best N₂O structure):
+  Left N: 5 − ½(6) − 2 = 0 ✓
+  Right N: 5 − ½(6) − 0 = +2? → check each structure
+        </div>
+        <p><strong>Best Lewis structure:</strong></p>
+        <ol style="padding-left:18px;color:#94a3b8;font-size:0.88rem;line-height:1.9;">
+          <li>Lowest formal charges (ideally zero)</li>
+          <li>Negative FC on most electronegative atom</li>
+          <li>Same-sign FCs on adjacent atoms = very bad</li>
+        </ol>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Resonance</div>
+        <p>When two or more valid Lewis structures can be drawn, <strong>resonance</strong> exists. The true structure is the <strong>resonance hybrid</strong> — intermediate between all structures.</p>
+        <div class="note"><strong>Key rule:</strong> Only electrons move in resonance. Atoms <em>never</em> move. Use double-headed arrow (↔) between structures.</div>
+        <p style="margin-top:8px;"><strong>Equivalent resonance:</strong> NO₂⁻, NO₃⁻, CO₃²⁻ (all structures identical by symmetry → contribute equally)</p>
+        <p style="margin-top:4px;"><strong>Non-equivalent resonance:</strong> N₂O — structures NOT identical; best (lowest FC) contributes most to hybrid.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Exceptions to the Octet Rule</div>
+      <div class="two-col">
+        <div>
+          <p><strong>1. Odd-electron species</strong> (radical)</p>
+          <ul>
+            <li>NO, NO₂ — odd total VE, always one atom with 7e⁻</li>
+            <li>Very reactive; paramagnetic</li>
+          </ul>
+          <p style="margin-top:8px;"><strong>2. Incomplete octets</strong></p>
+          <ul>
+            <li>BF₃ (6e⁻ on B), BeCl₂ (4e⁻ on Be)</li>
+            <li>Lewis acids — can accept a lone pair</li>
+          </ul>
+        </div>
+        <div>
+          <p><strong>3. Expanded valence shell</strong></p>
+          <ul>
+            <li>Only elements in period 3+ (Si, P, S, Cl, As, Se, Br, I, Xe)</li>
+            <li>PCl₅ (10e⁻), SF₆ (12e⁻), XeF₄ (12e⁻)</li>
+            <li>SO₄²⁻, ClO₄⁻ — expanded shells minimize formal charges</li>
+          </ul>
+          <div class="danger"><strong>Never</strong> give C, N, O, F more than 8 valence electrons.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Bond Dissociation Energies (D°, kJ/mol)</div>
+      <table>
+        <tr><th>Bond</th><th>D° (kJ/mol)</th><th>Bond</th><th>D° (kJ/mol)</th><th>Bond</th><th>D° (kJ/mol)</th></tr>
+        <tr><td>H–H</td><td>436</td><td>C–C</td><td>347</td><td>N≡N</td><td>946</td></tr>
+        <tr><td>C–H</td><td>414</td><td>C=C</td><td>611</td><td>O=O</td><td>498</td></tr>
+        <tr><td>C–O</td><td>360</td><td>C≡C</td><td>837</td><td>H–O</td><td>464</td></tr>
+        <tr><td>C=O</td><td>799</td><td>C–N</td><td>305</td><td>H–N</td><td>391</td></tr>
+      </table>
+      <div class="formula" style="margin-top:10px;">
+        <div class="label">ΔH reaction using bond energies</div>
+        ΔH = Σ D°(bonds broken) − Σ D°(bonds formed)
+        (bonds broken = reactants; bonds formed = products)
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       UNIT 4 — POLARITY & VSEPR
+  ═════════════════════════════════════════════════ -->
+  <section id="vsepr">
+    <div class="section-header">
+      <span class="section-icon">🔬</span>
+      <div>
+        <h2>Unit 4 — Polarity &amp; VSEPR</h2>
+        <p>Electronegativity, dipole moments, molecular geometry</p>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">Electronegativity &amp; Bond Polarity</div>
+        <p><strong>Electronegativity (EN)</strong> = ability of atom in molecule to attract shared electrons (Pauling scale).</p>
+        <p style="margin-top:6px;">Increases <strong>up and to the right</strong> on periodic table. F is most electronegative (4.0).</p>
+        <div class="formula">
+          μ = Q × r &nbsp;&nbsp; (dipole moment, debyes D)
+          1 D = 3.34×10⁻³⁰ C·m
+          % ionic character = (measured μ / theoretical μ) × 100%
+        </div>
+        <div class="tip"><strong>Polarity:</strong> Bond dipoles must add as <em>vectors</em>. CO₂ has polar bonds but is nonpolar (linear, dipoles cancel). H₂O has polar bonds AND is polar (bent, net dipole).</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">VSEPR Algorithm</div>
+        <ol style="padding-left:18px;color:#cbd5e1;font-size:0.9rem;line-height:2;">
+          <li>Draw Lewis structure</li>
+          <li>Count <strong>Electron Groups</strong> (EG) around central atom: each single bond, double bond, triple bond, and lone pair = 1 EG</li>
+          <li>Determine <strong>Electron Group Geometry</strong> (EGG) from # EG</li>
+          <li>Determine <strong>Molecular Shape</strong> from bonding pairs only</li>
+          <li>Determine if molecule is polar (net dipole ≠ 0)</li>
+        </ol>
+        <div class="note"><strong>Lone pairs repel more</strong> than bonding pairs → bond angles are compressed. LP–LP &gt; LP–BP &gt; BP–BP repulsion.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">VSEPR Shape Reference Table</div>
+      <table>
+        <tr><th>EG</th><th>EGG</th><th>LP</th><th>Molecular Shape</th><th>Angles</th><th>Example</th><th>Polar?</th></tr>
+        <tr><td>2</td><td>Linear</td><td>0</td><td>Linear</td><td>180°</td><td>CO₂, HCN</td><td>No / Yes</td></tr>
+        <tr><td>3</td><td>Trig. planar</td><td>0</td><td>Trigonal planar</td><td>120°</td><td>BF₃, SO₃</td><td>No</td></tr>
+        <tr><td>3</td><td>Trig. planar</td><td>1</td><td>Bent (120°)</td><td>~117°</td><td>SO₂, NO₂⁻</td><td>Yes</td></tr>
+        <tr><td>4</td><td>Tetrahedral</td><td>0</td><td>Tetrahedral</td><td>109.5°</td><td>CH₄, CCl₄</td><td>No</td></tr>
+        <tr><td>4</td><td>Tetrahedral</td><td>1</td><td>Trig. pyramidal</td><td>107°</td><td>NH₃, PH₃</td><td>Yes</td></tr>
+        <tr><td>4</td><td>Tetrahedral</td><td>2</td><td>Bent (109°)</td><td>104.5°</td><td>H₂O, H₂S</td><td>Yes</td></tr>
+        <tr><td>5</td><td>Trig. bipyramidal</td><td>0</td><td>Trig. bipyramidal</td><td>90°/120°</td><td>PCl₅, PF₅</td><td>No</td></tr>
+        <tr><td>5</td><td>Trig. bipyramidal</td><td>1</td><td>See-saw</td><td>~90°/120°</td><td>SF₄</td><td>Yes</td></tr>
+        <tr><td>5</td><td>Trig. bipyramidal</td><td>2</td><td>T-shaped</td><td>~90°</td><td>BrF₃, IF₃</td><td>Yes</td></tr>
+        <tr><td>5</td><td>Trig. bipyramidal</td><td>3</td><td>Linear</td><td>180°</td><td>XeF₂, I₃⁻</td><td>No</td></tr>
+        <tr><td>6</td><td>Octahedral</td><td>0</td><td>Octahedral</td><td>90°</td><td>SF₆</td><td>No</td></tr>
+        <tr><td>6</td><td>Octahedral</td><td>1</td><td>Square pyramidal</td><td>~90°</td><td>BrF₅</td><td>Yes</td></tr>
+        <tr><td>6</td><td>Octahedral</td><td>2</td><td>Square planar</td><td>90°</td><td>XeF₄</td><td>No</td></tr>
+      </table>
+      <div class="tip" style="margin-top:10px;"><strong>TBP lone pairs:</strong> Always go <em>equatorial</em> (120° from each other) because equatorial sites have fewer 90° neighbors than axial sites.</div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       UNIT 5 — INTERMOLECULAR FORCES
+  ═════════════════════════════════════════════════ -->
+  <section id="imf">
+    <div class="section-header">
+      <span class="section-icon">🧲</span>
+      <div>
+        <h2>Unit 5 — Intermolecular Forces</h2>
+        <p>London dispersion, dipole-dipole, hydrogen bonding, effects on properties</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Types of IMFs (weakest → strongest)</div>
+      <table>
+        <tr><th>Force</th><th>Between</th><th>Strength</th><th>Example</th></tr>
+        <tr><td><strong>London Dispersion</strong></td><td>ALL molecules (induced dipoles)</td><td>Weakest; increases with molar mass &amp; surface area</td><td>He, Ar, CH₄, I₂</td></tr>
+        <tr><td><strong>Dipole–Dipole</strong></td><td>Polar molecules</td><td>Moderate; depends on polarity</td><td>HCl–HCl, acetone</td></tr>
+        <tr><td><strong>Hydrogen Bonding</strong></td><td>H bonded to <em>F, O, or N</em> near another F/O/N</td><td>Strong (15–40 kJ/mol)</td><td>H₂O, NH₃, HF, alcohols</td></tr>
+        <tr><td><strong>Ion–Dipole</strong></td><td>Ions + polar solvents</td><td>Strongest of Van der Waals</td><td>Na⁺ in water</td></tr>
+      </table>
+      <div class="note" style="margin-top:10px;"><strong>Remember:</strong> IMFs are 10–100× weaker than covalent bonds. Boiling water breaks H-bonds between H₂O molecules — NOT the O–H bonds within them.</div>
+    </div>
+
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">Effects on Physical Properties</div>
+        <ul>
+          <li><strong>Boiling point:</strong> ↑ with stronger/more IMFs. Same mass → polar &gt; nonpolar. Same polarity → heavier (more surface area) = higher bp.</li>
+          <li><strong>Vapour pressure:</strong> ↓ with stronger IMFs (harder to escape)</li>
+          <li><strong>Viscosity:</strong> ↑ with stronger IMFs; ↓ with higher temperature</li>
+          <li><strong>Surface tension:</strong> net inward force on surface molecules; ↑ with stronger IMFs</li>
+        </ul>
+        <div class="formula">
+BP order: He(−269°C) &lt; O₂(−183°C) &lt; Cl₂(−34°C) &lt; acetone(56°C)
+(London disp. only)       (London)   (London) (London + dipole-dipole)
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">H-Bonding Special Cases</div>
+        <ul>
+          <li><strong>Ice floats:</strong> H-bonding creates rigid open lattice → ice less dense than liquid water (4°C = maximum density)</li>
+          <li><strong>Anomalous bp:</strong> H₂O (100°C), HF (19°C), NH₃ (−33°C) are all higher than expected from their group trend</li>
+          <li><strong>DNA:</strong> H-bonds hold the double helix together</li>
+          <li><strong>Kevlar:</strong> strength comes from H-bonding between amide groups</li>
+        </ul>
+        <div class="tip"><strong>H-bonding requires:</strong> H directly bonded to F, O, or N. The H must be attracted to a nearby F, O, or N on another molecule.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">"Like Dissolves Like" — Solubility</div>
+      <p>Polar solvents dissolve polar/ionic solutes. Nonpolar solvents dissolve nonpolar solutes.</p>
+      <div class="two-col" style="margin-top:10px;">
+        <div>
+          <p><strong>Soluble in water (polar):</strong></p>
+          <ul>
+            <li>NH₃ — H-bonds with water</li>
+            <li>HF, HCl — polar, H-bond/dipole</li>
+            <li>SO₂ — polar molecule</li>
+            <li>C₂H₅OH — OH group H-bonds</li>
+            <li>NaCl, ionic compounds (if lattice E &lt; solvation E)</li>
+          </ul>
+        </div>
+        <div>
+          <p><strong>Insoluble in water:</strong></p>
+          <ul>
+            <li>C₂H₂ (acetylene) — nonpolar</li>
+            <li>CCl₄ — nonpolar (symmetric)</li>
+            <li>Octane, hexane — nonpolar</li>
+            <li>S₈ — nonpolar</li>
+            <li>MgO — lattice E too large</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       UNIT 6 — SOLUTIONS & COLLIGATIVE PROPERTIES
+  ═════════════════════════════════════════════════ -->
+  <section id="solutions">
+    <div class="section-header">
+      <span class="section-icon">💧</span>
+      <div>
+        <h2>Unit 6 — Solutions &amp; Colligative Properties</h2>
+        <p>Raoult's Law, Henry's Law, vapour pressure, osmosis</p>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">Raoult's Law — Vapour Pressure Lowering</div>
+        <div class="formula">
+P_A = x_A × P°_A
+ΔP = x_solute × P°_A
+
+x_A = mole fraction of A = n_A / n_total
+        </div>
+        <p><strong>Example:</strong> 1 mol sucrose + 15 mol water. x_water = 15/16 = 0.9375. P = 0.9375 × 31.26 mbar = 29.3 mbar (pure water = 31.26 mbar).</p>
+        <p style="margin-top:6px;"><strong>Benzene/toluene mixture</strong> (0.5 mol each): Total P = x_benz×P°_benz + x_tol×P°_tol. Vapour is enriched in the <em>more volatile</em> (higher vapour pressure) component.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Henry's Law — Gas Solubility</div>
+        <div class="formula">
+S_g = k × P_g
+
+S_g = solubility of gas (mol/L)
+k = Henry's constant (mol/(L·kPa) or mol/(L·atm))
+P_g = partial pressure of gas above liquid
+        </div>
+        <p><strong>Key facts:</strong></p>
+        <ul>
+          <li>Gas solubility <strong>increases</strong> with pressure</li>
+          <li>Gas solubility <strong>decreases</strong> with temperature (carbonated drinks more bubbly when warm)</li>
+          <li>Larger molecules (stronger London forces) → higher solubility</li>
+        </ul>
+        <div class="note"><strong>Lake Nyos (1986):</strong> Deep lake CO₂ suddenly outgassed under pressure release → 1700 deaths.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Colligative Properties (depend on # particles only)</div>
+      <table>
+        <tr><th>Property</th><th>Formula</th><th>Notes</th></tr>
+        <tr><td>Vapour pressure lowering</td><td>ΔP = x_solute × P°</td><td>Raoult's Law</td></tr>
+        <tr><td>Boiling point elevation</td><td>ΔT_b = K_b × m × i</td><td>m = molality (mol/kg)</td></tr>
+        <tr><td>Freezing point depression</td><td>ΔT_f = K_f × m × i</td><td>Antifreeze, salting roads</td></tr>
+        <tr><td>Osmotic pressure</td><td>π = MRT</td><td>M = molarity, R = 8.314, T in K</td></tr>
+      </table>
+      <p style="margin-top:8px;"><strong>van 't Hoff factor i:</strong> # particles per formula unit. NaCl → i=2; MgCl₂ → i=3; glucose → i=1.</p>
+      <div class="formula">
+        <div class="label">Osmotic pressure example</div>
+NaCl at 0.15 M, 25°C: π = 2 × 0.15 × 8.314×10⁻³ × 298 = 0.744 kPa×10³...
+Actually: π = MiRT = (0.15)(2)(0.08206)(298) = 7.33 atm ≈ enormous!
+      </div>
+      <div class="tip"><strong>Osmosis:</strong> Solvent moves from low solute concentration to high solute concentration across semipermeable membrane. Isotonic = no net flow; hypertonic = cells shrink (crenation); hypotonic = cells burst (haemolysis).</div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       UNIT 7 — GASES
+  ═════════════════════════════════════════════════ -->
+  <section id="gases">
+    <div class="section-header">
+      <span class="section-icon">💨</span>
+      <div>
+        <h2>Unit 7 — Gases</h2>
+        <p>Gas laws, ideal gas law, Dalton's Law, KMT, real gases</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Pressure Units &amp; Conversions</div>
+      <div class="formula">
+1 atm = 760 mmHg = 760 torr = 101.325 kPa = 14.7 psi
+1 Pa = 1 N/m²  &nbsp;&nbsp;&nbsp;  STP: 0°C (273.15 K), 1 atm, molar volume = 22.4 L/mol
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">Simple Gas Laws</div>
+        <div class="formula">
+Boyle's:  P₁V₁ = P₂V₂  &nbsp;&nbsp; (const T, n)
+Charles': V₁/T₁ = V₂/T₂  (const P, n; T in Kelvin!)
+Gay-Lussac: P₁/T₁ = P₂/T₂ (const V, n)
+Avogadro: V ∝ n  (const T, P)
+Combined: P₁V₁/T₁ = P₂V₂/T₂
+        </div>
+        <div class="note"><strong>Always convert T to Kelvin!</strong> T(K) = T(°C) + 273.15</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Ideal Gas Law &amp; Dalton's Law</div>
+        <div class="formula">
+Ideal Gas Law: PV = nRT
+  R = 8.314 L·kPa/(mol·K)  [or]
+  R = 0.08206 L·atm/(mol·K)
+
+Dalton's Law: P_total = P₁ + P₂ + P₃ + ...
+  P_i = x_i × P_total  (x_i = mole fraction)
+
+Molar mass from ideal gas: M = mRT / PV
+        </div>
+        <p style="margin-top:8px;"><strong>Gas over water:</strong> P_gas = P_atm − P_H₂O(vapour)</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Kinetic-Molecular Theory (5 Postulates)</div>
+      <ol style="padding-left:20px;color:#cbd5e1;font-size:0.9rem;line-height:2;">
+        <li>Gases consist of a large number of molecules in <em>continuous random motion</em></li>
+        <li>Volume of individual molecules is negligible compared to total volume</li>
+        <li>No attractive or repulsive forces between molecules</li>
+        <li>Average kinetic energy is proportional to <em>absolute temperature</em>: KE_avg = ½mv² = (3/2)k_B T</li>
+        <li>Collisions between molecules are perfectly elastic (energy is transferred but not lost)</li>
+      </ol>
+      <p style="margin-top:8px;"><strong>At same T:</strong> all gases have the same average KE. Lighter molecules move faster (effuse/diffuse faster).</p>
+      <p style="margin-top:4px;"><strong>Effusion:</strong> escape through a tiny hole. <strong>Diffusion:</strong> spread through space. Both faster for lighter gases.</p>
+    </div>
+
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">Real Gases — van der Waals</div>
+        <div class="formula">
+[P + n²a/V²][V − nb] = nRT
+
+a = correction for intermolecular attractions
+    (reduces observed pressure)
+b = correction for molecular volume
+    (reduces available volume)
+        </div>
+        <p>Real gases deviate most from ideal at <strong>high pressure</strong> and <strong>low temperature</strong> (conditions that bring molecules closer together).</p>
+        <p style="margin-top:6px;">CO₂ at 273K: ideal → 756.6 kPa; van der Waals → 727.1 kPa (a=364, b=0.0427)</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Common Gas Calculation Tips</div>
+        <div class="tip"><strong>Units:</strong> Use R = 8.314 when P is in kPa; use R = 0.08206 when P is in atm. Never mix.</div>
+        <p style="margin-top:8px;"><strong>Limiting reagent + gas:</strong> Find limiting reagent first, then use moles of product to calculate volume with ideal gas law.</p>
+        <p style="margin-top:6px;"><strong>Mixture pressures:</strong> Calculate moles of each gas, find total moles, then P_i = n_i × RT/V for each component.</p>
+        <div class="formula" style="margin-top:8px;">
+          <div class="label">Molar mass of gas from density</div>
+M (g/mol) = ρ × R × T / P   (ρ in g/L)
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       KEY FORMULAS QUICK REFERENCE
+  ═════════════════════════════════════════════════ -->
+  <section id="formulas">
+    <div class="section-header">
+      <span class="section-icon">📐</span>
+      <div>
+        <h2>Key Formulas &amp; Constants</h2>
+        <p>Everything you need on exam day</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Constants</div>
+      <div class="formula">
+Nₐ = 6.022 × 10²³ mol⁻¹       1 u = 1.660 × 10⁻²⁷ kg
+R  = 8.314 L·kPa/(mol·K)      R = 0.08206 L·atm/(mol·K)
+STP molar volume = 22.4 L/mol   1 atm = 101.325 kPa = 760 torr
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">All Key Formulas</div>
+        <div class="formula" style="font-size:0.82rem;line-height:2;">
+n = m/M           MᵢVᵢ = MᶠVᶠ       % yield = actual/theoretical × 100%
+FC = VE − ½(BE) − LP             Z_eff = Z − S (core electrons)
+μ = Qr (dipoles)                  ΔH = Σ D°(broken) − Σ D°(formed)
+P_A = x_A × P°_A  (Raoult)       ΔP = x_solute × P°_A
+S_g = k × P_g     (Henry)        π = MRT  (osmotic pressure)
+PV = nRT          P₁V₁/T₁ = P₂V₂/T₂
+P_total = Σ P_i   P_i = x_i × P_total
+[P + n²a/V²][V − nb] = nRT       (van der Waals)
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Common Ion Charges</div>
+        <table style="font-size:0.82rem;">
+          <tr><th>Ion</th><th>Charge</th><th>Ion</th><th>Charge</th></tr>
+          <tr><td>NH₄⁺</td><td>+1</td><td>OH⁻</td><td>−1</td></tr>
+          <tr><td>NO₃⁻</td><td>−1</td><td>NO₂⁻</td><td>−1</td></tr>
+          <tr><td>SO₄²⁻</td><td>−2</td><td>SO₃²⁻</td><td>−2</td></tr>
+          <tr><td>CO₃²⁻</td><td>−2</td><td>PO₄³⁻</td><td>−3</td></tr>
+          <tr><td>ClO₄⁻</td><td>−1</td><td>ClO₃⁻</td><td>−1</td></tr>
+          <tr><td>ClO₂⁻</td><td>−1</td><td>ClO⁻</td><td>−1</td></tr>
+          <tr><td>MnO₄⁻</td><td>−1</td><td>Cr₂O₇²⁻</td><td>−2</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Naming Acids — Quick Chart</div>
+      <table>
+        <tr><th>Anion</th><th>Acid name</th><th>Anion</th><th>Acid name</th></tr>
+        <tr><td>Cl⁻ (chloride)</td><td>HCl → hydrochloric acid</td><td>NO₃⁻ (nitrate)</td><td>HNO₃ → nitric acid</td></tr>
+        <tr><td>SO₄²⁻ (sulfate)</td><td>H₂SO₄ → sulfuric acid</td><td>NO₂⁻ (nitrite)</td><td>HNO₂ → nitrous acid</td></tr>
+        <tr><td>PO₄³⁻ (phosphate)</td><td>H₃PO₄ → phosphoric acid</td><td>ClO₃⁻ (chlorate)</td><td>HClO₃ → chloric acid</td></tr>
+        <tr><td>CO₃²⁻ (carbonate)</td><td>H₂CO₃ → carbonic acid</td><td>ClO⁻ (hypochlorite)</td><td>HClO → hypochlorous acid</td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Stoichiometry Worked Example — Limiting Reagent</div>
+      <div class="formula">
+Reaction: 2Nb + 5Cl₂ → 2NbCl₅
+Given: 22.2 g Nb (M=92.91) and excess Cl₂
+
+mol Nb = 22.2 / 92.91 = 0.2390 mol Nb
+mol NbCl₅ = 0.2390 mol Nb × (2 mol NbCl₅ / 2 mol Nb) = 0.2390 mol
+mass NbCl₅ = 0.2390 × 270.17 g/mol = 64.6 g  (theoretical yield)
+
+If actual yield = 55.4 g → % yield = 55.4/64.6 × 100 = 85.7%
+      </div>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>

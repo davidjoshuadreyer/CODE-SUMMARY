@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CHEM 150 Quiz — Midterm I</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #0f0f1a; color: #e2e8f0;
+    min-height: 100vh; display: flex; flex-direction: column; align-items: center;
+    justify-content: flex-start; padding: 24px 16px;
+  }
+
+  h1 {
+    font-size: 2rem; font-weight: 700;
+    background: linear-gradient(135deg, #10b981, #0891b2);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    margin-bottom: 8px; text-align: center;
+  }
+  .subtitle { color: #94a3b8; font-size: 0.95rem; margin-bottom: 32px; text-align: center; }
+
+  #home { width: 100%; max-width: 700px; }
+  .quiz-cards { display: grid; gap: 16px; }
+  .quiz-card {
+    background: #1e1e30; border: 1px solid #1e3a2a; border-radius: 16px;
+    padding: 24px; cursor: pointer; transition: all 0.2s;
+    display: flex; align-items: center; gap: 20px;
+  }
+  .quiz-card:hover {
+    border-color: #10b981; background: #1a2520;
+    transform: translateY(-2px); box-shadow: 0 8px 24px rgba(16,185,129,0.2);
+  }
+  .quiz-icon { font-size: 2.5rem; flex-shrink: 0; }
+  .quiz-card h2 { font-size: 1.15rem; font-weight: 600; margin-bottom: 4px; }
+  .quiz-card p { color: #94a3b8; font-size: 0.85rem; }
+
+  .btn-all {
+    margin-top: 20px; width: 100%; padding: 14px; border-radius: 12px;
+    border: 2px dashed #10b981; background: transparent; color: #6ee7b7;
+    font-size: 1rem; font-weight: 600; cursor: pointer; transition: all 0.2s;
+  }
+  .btn-all:hover { background: rgba(16,185,129,0.12); }
+
+  #quiz-screen { display: none; width: 100%; max-width: 720px; }
+
+  .quiz-header {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 20px; flex-wrap: wrap; gap: 10px;
+  }
+  .quiz-title-bar { font-weight: 700; font-size: 1rem; color: #6ee7b7; }
+  .score-badge {
+    background: #1e1e30; border: 1px solid #1e3a2a; border-radius: 999px;
+    padding: 6px 16px; font-size: 0.85rem; color: #94a3b8;
+  }
+  .progress-bar-wrap {
+    background: #1e1e30; border-radius: 999px; height: 6px; width: 100%;
+    margin-bottom: 24px; overflow: hidden;
+  }
+  .progress-bar-fill {
+    height: 100%; background: linear-gradient(90deg, #10b981, #0891b2);
+    border-radius: 999px; transition: width 0.4s ease;
+  }
+
+  .question-card {
+    background: #1e1e30; border: 1px solid #1e3a2a;
+    border-radius: 20px; padding: 28px; margin-bottom: 20px;
+  }
+  .q-top-row { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; }
+  .q-num {
+    display: inline-block; font-size: 0.75rem; font-weight: 800;
+    background: linear-gradient(135deg, #10b981, #0891b2);
+    color: #fff; padding: 4px 12px; border-radius: 8px;
+  }
+  .q-unit {
+    display: inline-block; font-size: 0.72rem; font-weight: 700;
+    color: #64748b; text-transform: uppercase; letter-spacing: 0.06em;
+  }
+
+  /* ── Hint button (pre-answer) ── */
+  .btn-hint-q {
+    margin-left: auto; padding: 5px 14px; border-radius: 8px;
+    background: transparent; border: 1px solid #854d0e; color: #fde68a;
+    font-size: 0.78rem; font-weight: 600; cursor: pointer; transition: all 0.15s;
+  }
+  .btn-hint-q:hover { background: rgba(245,158,11,0.12); }
+
+  .hint-box-q {
+    margin: 10px 0; background: #1a1505; border: 1px solid #854d0e;
+    border-left: 4px solid #f59e0b; border-radius: 10px;
+    padding: 12px 16px; font-size: 0.87rem; color: #fde68a;
+    line-height: 1.55; display: none;
+  }
+  .hint-box-q strong { color: #fbbf24; }
+
+  .q-text { font-size: 0.97rem; line-height: 1.6; color: #e2e8f0; margin-bottom: 20px; }
+  .q-text strong { color: #6ee7b7; }
+  .q-text em { color: #67e8f9; font-style: normal; font-weight: 600; }
+  .q-text sub, .q-text sup { font-size: 0.75em; }
+
+  .options { display: flex; flex-direction: column; gap: 10px; }
+  .option {
+    background: #16162a; border: 1.5px solid #2d2d50; border-radius: 12px;
+    padding: 12px 18px; cursor: pointer; transition: all 0.15s;
+    font-size: 0.9rem; color: #cbd5e1; text-align: left;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .option:hover:not(.locked) { border-color: #10b981; background: #0d2018; }
+  .option .opt-letter {
+    width: 26px; height: 26px; border-radius: 50%; background: #2d2d50;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.75rem; font-weight: 800; color: #94a3b8; flex-shrink: 0;
+  }
+  .option.selected { border-color: #0891b2; background: #0c1a2e; }
+  .option.selected .opt-letter { background: #0891b2; color: #fff; }
+  .option.correct  { border-color: #10b981; background: #052e1c; }
+  .option.correct .opt-letter  { background: #10b981; color: #fff; }
+  .option.wrong    { border-color: #ef4444; background: #2d0a0a; }
+  .option.wrong .opt-letter    { background: #ef4444; color: #fff; }
+  .option.show-correct { border-color: #10b981; background: #052e1c; opacity: 0.8; }
+  .option.locked { cursor: default; }
+
+  /* ── Solution box (post-answer) ── */
+  .sol-row { display: flex; align-items: center; gap: 10px; margin-top: 16px; display: none; }
+  .verdict {
+    display: flex; align-items: center; gap: 8px; padding: 8px 14px;
+    border-radius: 8px; font-size: 0.85rem; font-weight: 700; flex-shrink: 0;
+  }
+  .verdict.correct-v { background: #052e1c; color: #34d399; border: 1px solid #059669; }
+  .verdict.wrong-v   { background: #2d0a0a; color: #f87171; border: 1px solid #dc2626; }
+  .btn-sol-toggle {
+    padding: 5px 14px; border-radius: 8px;
+    background: transparent; border: 1px solid #0891b2; color: #67e8f9;
+    font-size: 0.78rem; font-weight: 600; cursor: pointer; transition: all 0.15s;
+  }
+  .btn-sol-toggle:hover { background: rgba(8,145,178,0.12); }
+
+  .sol-box {
+    margin-top: 10px; background: #0d1420; border: 1px solid #1e3a2a;
+    border-left: 4px solid #0891b2; border-radius: 10px;
+    padding: 14px 18px; font-size: 0.88rem; color: #cbd5e1;
+    line-height: 1.65; display: none;
+  }
+  .sol-box strong { color: #67e8f9; }
+  .sol-box .sol-step { color: #6ee7b7; font-size: 0.82rem; font-weight: 700; margin: 8px 0 3px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .sol-box .sol-answer {
+    display: inline-block; background: #052e1c; border: 1px solid #22c55e;
+    border-radius: 7px; padding: 4px 12px; color: #4ade80; font-weight: 700;
+    font-size: 0.88rem; margin-top: 8px;
+  }
+
+  .btn-next {
+    margin-top: 20px; width: 100%; padding: 14px; border-radius: 12px;
+    background: linear-gradient(135deg, #059669, #0891b2); border: none;
+    color: #fff; font-size: 1rem; font-weight: 700; cursor: pointer; display: none;
+    transition: opacity 0.2s;
+  }
+  .btn-next:hover { opacity: 0.85; }
+
+  #results { display: none; width: 100%; max-width: 520px; text-align: center; }
+  .results-card {
+    background: #1e1e30; border: 1px solid #1e3a2a; border-radius: 20px; padding: 40px 30px;
+  }
+  .results-score {
+    font-size: 3.5rem; font-weight: 900;
+    background: linear-gradient(135deg, #10b981, #0891b2);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    margin: 16px 0 8px;
+  }
+  .results-label { color: #94a3b8; font-size: 0.95rem; margin-bottom: 24px; }
+  .results-breakdown { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 20px 0; }
+  .breakdown-item { background: #111820; border-radius: 10px; padding: 12px; }
+  .breakdown-num { font-size: 1.5rem; font-weight: 800; color: #6ee7b7; }
+  .breakdown-lbl { font-size: 0.75rem; color: #64748b; margin-top: 2px; }
+  .btn-retry {
+    margin-top: 10px; width: 100%; padding: 13px; border-radius: 12px;
+    background: transparent; border: 2px solid #10b981; color: #6ee7b7;
+    font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: all 0.2s;
+  }
+  .btn-retry:hover { background: rgba(16,185,129,0.1); }
+  .btn-back {
+    margin-top: 10px; width: 100%; padding: 13px; border-radius: 12px;
+    background: transparent; border: 2px solid #0891b2; color: #67e8f9;
+    font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: all 0.2s;
+  }
+  .btn-back:hover { background: rgba(8,145,178,0.1); }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════ HOME ═══════════════════ -->
+<div id="home">
+  <h1>CHEM 150 Quiz</h1>
+  <p class="subtitle">Midterm I Practice · Choose a topic or quiz all</p>
+  <div class="quiz-cards">
+    <div class="quiz-card" onclick="startQuiz('matter')">
+      <span class="quiz-icon">⚗️</span>
+      <div><h2>Unit 1 — Matter &amp; Measurement</h2><p>Classification, atomic structure, stoichiometry, nomenclature · 12 questions</p></div>
+    </div>
+    <div class="quiz-card" onclick="startQuiz('bonding')">
+      <span class="quiz-icon">🔗</span>
+      <div><h2>Unit 2 — Chemical Bonding</h2><p>Bond types, periodic trends, IE, EA, radius, lattice energy · 12 questions</p></div>
+    </div>
+    <div class="quiz-card" onclick="startQuiz('lewis')">
+      <span class="quiz-icon">🧩</span>
+      <div><h2>Unit 3 — Lewis Structures</h2><p>Drawing rules, formal charges, resonance, exceptions · 10 questions</p></div>
+    </div>
+    <div class="quiz-card" onclick="startQuiz('vsepr')">
+      <span class="quiz-icon">🔬</span>
+      <div><h2>Unit 4 — Polarity &amp; VSEPR</h2><p>Electronegativity, dipole moments, molecular shapes · 10 questions</p></div>
+    </div>
+    <div class="quiz-card" onclick="startQuiz('imf')">
+      <span class="quiz-icon">🧲</span>
+      <div><h2>Unit 5 — Intermolecular Forces</h2><p>London, dipole-dipole, H-bonding, physical properties · 10 questions</p></div>
+    </div>
+    <div class="quiz-card" onclick="startQuiz('solutions')">
+      <span class="quiz-icon">💧</span>
+      <div><h2>Unit 6 — Solutions &amp; Colligative</h2><p>Raoult's Law, Henry's Law, osmotic pressure · 8 questions</p></div>
+    </div>
+    <div class="quiz-card" onclick="startQuiz('gases')">
+      <span class="quiz-icon">💨</span>
+      <div><h2>Unit 7 — Gases</h2><p>Gas laws, ideal gas law, Dalton, KMT, van der Waals · 10 questions</p></div>
+    </div>
+  </div>
+  <button class="btn-all" onclick="startQuiz('all')">Quiz All Topics (72 questions)</button>
+</div>
+
+<!-- ═══════════════════ QUIZ SCREEN ═══════════════════ -->
+<div id="quiz-screen">
+  <div class="quiz-header">
+    <span class="quiz-title-bar" id="quiz-title"></span>
+    <span class="score-badge" id="score-badge">Score: 0 / 0</span>
+  </div>
+  <div class="progress-bar-wrap">
+    <div class="progress-bar-fill" id="progress-fill" style="width:0%"></div>
+  </div>
+  <div class="question-card">
+    <div class="q-top-row">
+      <span class="q-num" id="q-num"></span>
+      <span class="q-unit" id="q-unit"></span>
+      <button class="btn-hint-q" id="btn-hint-q" onclick="toggleHint()">💡 Hint</button>
+    </div>
+    <div class="hint-box-q" id="hint-box-q"></div>
+    <div class="q-text" id="q-text"></div>
+    <div class="options" id="options"></div>
+    <div class="sol-row" id="sol-row">
+      <div class="verdict" id="verdict"></div>
+      <button class="btn-sol-toggle" id="btn-sol-toggle" onclick="toggleSolution()">📖 Solution</button>
+    </div>
+    <div class="sol-box" id="sol-box"></div>
+  </div>
+  <button class="btn-next" id="btn-next" onclick="nextQuestion()">Next Question →</button>
+</div>
+
+<!-- ═══════════════════ RESULTS ═══════════════════ -->
+<div id="results">
+  <div class="results-card">
+    <h1 style="-webkit-text-fill-color:unset;background:none;color:#e2e8f0;font-size:1.6rem;">Quiz Complete!</h1>
+    <div class="results-score" id="res-score"></div>
+    <div class="results-label" id="res-label"></div>
+    <div class="results-breakdown">
+      <div class="breakdown-item"><div class="breakdown-num" id="res-correct"></div><div class="breakdown-lbl">Correct</div></div>
+      <div class="breakdown-item"><div class="breakdown-num" id="res-wrong" style="color:#f87171;"></div><div class="breakdown-lbl">Incorrect</div></div>
+    </div>
+    <button class="btn-retry" id="btn-retry" onclick="retryQuiz()">Retry This Quiz</button>
+    <button class="btn-back" onclick="goHome()">← Back to Topics</button>
+  </div>
+</div>
+
+<script>
+const QUESTIONS = {
+  matter: [
+    {
+      q: "An element cannot __________.",
+      opts: ["Be part of a heterogeneous mixture","Be part of a homogeneous mixture","Be separated into other substances by chemical means","Interact with other elements to form compounds","Be a pure substance"],
+      ans: 2,
+      hint: "What is the one defining property that distinguishes an element from a compound?",
+      sol: "<div class='sol-step'>Key concept</div>Elements <strong>cannot be separated into simpler substances by chemical means</strong> — that is their defining property. They CAN exist in mixtures (both homogeneous and heterogeneous). Compounds can be separated by chemical means; elements cannot."
+    },
+    {
+      q: "Oxygen and nitrogen are both classified as __________.",
+      opts: ["Metal and metalloid","Nonmetal and metal","Metalloid and metalloid","Non-metal and non-metal","Non-metal and metalloid"],
+      ans: 3,
+      hint: "Both O and N are located on the right side of the periodic table. Where are the metals?",
+      sol: "<div class='sol-step'>Periodic table position</div>Both O (Group 16) and N (Group 15) are in the upper-right region of the periodic table → both are <strong>non-metals</strong>. Metals are on the left; metalloids are along the staircase."
+    },
+    {
+      q: "Barium (Group 2) forms an ion with a charge of _____.",
+      opts: ["+1","−2","+3","−3","+2"],
+      ans: 4,
+      hint: "Group 2 elements always lose the same number of electrons to reach a noble gas configuration.",
+      sol: "<div class='sol-step'>Group 2 behaviour</div>Barium (Group 2) has 2 valence electrons. It loses both to reach a stable noble gas configuration: Ba → Ba²⁺ + 2e⁻. <span class='sol-answer'>Charge = +2</span>"
+    },
+    {
+      q: "Which of the following compounds would you expect to be ionic?",
+      opts: ["SF₆","H₂O","H₂O₂","NH₃","CaO"],
+      ans: 4,
+      hint: "Ionic compounds form between a metal and a non-metal. Which option has a metal?",
+      sol: "<div class='sol-step'>Identify metal vs non-metal</div>CaO = Ca (metal, Group 2) + O (non-metal). Large electronegativity difference → <strong>ionic</strong>. SF₆, H₂O, H₂O₂, NH₃ are all nonmetal–nonmetal combinations → covalent."
+    },
+    {
+      q: "Which metal forms cations of only ONE charge?",
+      opts: ["Na","Cu","Co","Fe","Sn"],
+      ans: 0,
+      hint: "Group 1 and 2 metals have only one stable oxidation state. Transition metals have multiple.",
+      sol: "<div class='sol-step'>Fixed vs variable charge metals</div><strong>Na</strong> (Group 1) always forms Na⁺ — only one stable oxidation state. The others are transition/post-transition metals: Cu (1+/2+), Co (2+/3+), Fe (2+/3+), Sn (2+/4+)."
+    },
+    {
+      q: "How many molecules of methane (CH₄) are in 0.123 mol of methane?",
+      opts: ["5","2.46×10⁻²","2.04×10⁻²⁵","7.40×10²²","0.615"],
+      ans: 3,
+      hint: "Use N = n × Nₐ where Nₐ = 6.022×10²³ mol⁻¹.",
+      sol: "<div class='sol-step'>Calculation</div>N = n × Nₐ = 0.123 mol × 6.022×10²³ mol⁻¹ <span class='sol-answer'>= 7.40×10²² molecules</span>"
+    },
+    {
+      q: "Which of the following describes a chemical change (not physical)?",
+      opts: ["Condensation of water vapour","Breaking a rock in two","Making steel from iron ore","Dissolving salt in water","Melting ice"],
+      ans: 2,
+      hint: "A chemical change produces a new substance with different properties. A physical change is reversible and changes only form.",
+      sol: "<div class='sol-step'>Chemical vs physical</div><strong>Making steel from iron ore</strong> is chemical — new substances with different properties are formed (you can't easily reverse it). Condensation, breaking, dissolving, and melting are all physical: the chemical identity is preserved."
+    },
+    {
+      q: "Iron-57 (⁵⁷Fe) has atomic number Z = 26. How many neutrons does it have?",
+      opts: ["26","31","57","83","28"],
+      ans: 1,
+      hint: "Neutrons = Mass number (A) − Atomic number (Z).",
+      sol: "<div class='sol-step'>Calculation</div>Neutrons = A − Z = 57 − 26 <span class='sol-answer'>= 31 neutrons</span>"
+    },
+    {
+      q: "Chlorine has two isotopes: ³⁵Cl (34.969 u, 75.77%) and ³⁷Cl (36.966 u, 24.23%). What is the average atomic mass?",
+      opts: ["35.00 u","35.45 u","36.00 u","36.97 u","34.97 u"],
+      ans: 1,
+      hint: "Average atomic mass = Σ (fractional abundance × isotope mass). Convert % to decimals first.",
+      sol: "<div class='sol-step'>Weighted average</div>avg = (0.7577 × 34.969) + (0.2423 × 36.966)<br>= 26.496 + 8.955 <span class='sol-answer'>= 35.45 u</span>"
+    },
+    {
+      q: "What is the name of N₂O₃?",
+      opts: ["Nitrogen trioxide","Dinitrogen oxide","Dinitrogen trioxide","Nitrous oxide","Nitrogen(III) oxide"],
+      ans: 2,
+      hint: "Binary molecular compounds use Greek prefixes: mono, di, tri, tetra, penta... Apply to each atom count.",
+      sol: "<div class='sol-step'>Greek prefix rules</div>N₂ → di-nitrogen; O₃ → tri-oxide. Combine: <span class='sol-answer'>dinitrogen trioxide</span>. Note: 'mono' is omitted only for the first element if count is 1."
+    },
+    {
+      q: "2Nb + 5Cl₂ → 2NbCl₅. You have 22.2 g of Nb (M=92.91 g/mol) and excess Cl₂. What is the theoretical yield of NbCl₅ (M=270.17 g/mol)?",
+      opts: ["32.3 g","46.1 g","64.6 g","129 g","270 g"],
+      ans: 2,
+      hint: "Step 1: mol Nb = mass ÷ M. Step 2: use the 1:1 Nb-to-NbCl₅ molar ratio. Step 3: mass = mol × M.",
+      sol: "<div class='sol-step'>Step 1 — mol Nb</div>n(Nb) = 22.2 / 92.91 = 0.2390 mol<div class='sol-step'>Step 2 — molar ratio</div>2Nb : 2NbCl₅ → ratio is 1:1, so n(NbCl₅) = 0.2390 mol<div class='sol-step'>Step 3 — mass</div>mass = 0.2390 × 270.17 <span class='sol-answer'>= 64.6 g</span>"
+    },
+    {
+      q: "The compound Mn(NO₃)₂ has the IUPAC name __________.",
+      opts: ["Manganese nitrite","Manganese(II) nitrate","Manganese(IV) nitrate","Dimanganese dinitrate","Manganese nitrate"],
+      ans: 1,
+      hint: "NO₃⁻ is nitrate (not nitrite). Mn is a variable-charge metal → needs a Roman numeral. Work out Mn's charge from the anion charges.",
+      sol: "<div class='sol-step'>Identify the anion</div>NO₃⁻ = nitrate, charge −1. Two nitrate ions = −2 total.<div class='sol-step'>Find Mn charge</div>Mn + 2(−1) = 0 → Mn = +2 → Mn(II)<div class='sol-step'>Name</div><span class='sol-answer'>Manganese(II) nitrate</span> — Roman numeral required for variable-charge metals."
+    }
+  ],
+
+  bonding: [
+    {
+      q: "Which ranking of first ionization energies is correct (increasing order)?",
+      opts: ["Ca < K < Br < Se","K < Ca < Br < Se","K < Ca < Se < Br","Ca < K < Se < Br","Se < Br < Ca < K"],
+      ans: 2,
+      hint: "All four are in Period 4. Ionization energy increases left → right across a period.",
+      sol: "<div class='sol-step'>Period 4 trend</div>IE increases across a period (left → right). K (Group 1) &lt; Ca (Group 2) &lt; Se (Group 16) &lt; Br (Group 17). <span class='sol-answer'>K &lt; Ca &lt; Se &lt; Br</span>"
+    },
+    {
+      q: "Which set is arranged in order of INCREASING atomic radius?",
+      opts: ["Sr < Ca < Se < Br","Br < Se < Ca < Sr","Ca < Sr < Br < Se","Se < Br < Sr < Ca","Br < Ca < Se < Sr"],
+      ans: 1,
+      hint: "Radius decreases left → right across a period; increases top → bottom in a group.",
+      sol: "<div class='sol-step'>Apply two trends</div>Across Period 4: Br (right) &lt; Se (left of Br). Down Group 2: Ca (above) &lt; Sr (below). Br &lt; Se (same period, Br further right); Ca &lt; Sr (same group, Sr is lower). <span class='sol-answer'>Br &lt; Se &lt; Ca &lt; Sr</span>"
+    },
+    {
+      q: "Effective nuclear charge (Zeff) of nitrogen (Z=7) using simplified Slater's rule is __________.",
+      opts: ["2","5","7","9","3"],
+      ans: 1,
+      hint: "Zeff = Z − S, where S = number of core electrons shielding the valence shell. N has a 1s² core.",
+      sol: "<div class='sol-step'>Slater's rule</div>N configuration: 1s² 2s² 2p³. Core electrons in 1s² = 2. Zeff = Z − S = 7 − 2 <span class='sol-answer'>= 5</span>"
+    },
+    {
+      q: "Which list correctly shows INCREASING ionic radius?",
+      opts: ["Al³⁺ < Na⁺ < F⁻ < O²⁻","O²⁻ < F⁻ < Na⁺ < Al³⁺","F⁻ < O²⁻ < Al³⁺ < Na⁺","Na⁺ < Al³⁺ < F⁻ < O²⁻","Al³⁺ < F⁻ < Na⁺ < O²⁻"],
+      ans: 0,
+      hint: "All four ions are isoelectronic — they all have 10 electrons. More protons = stronger pull on same electrons = smaller radius.",
+      sol: "<div class='sol-step'>Isoelectronic series (10 e⁻ each)</div>Al³⁺ (13p), Na⁺ (11p), F⁻ (9p), O²⁻ (8p). More protons → smaller. <span class='sol-answer'>Al³⁺ &lt; Na⁺ &lt; F⁻ &lt; O²⁻</span>"
+    },
+    {
+      q: "Why is the lattice energy of MgO (−3795 kJ/mol) so much greater in magnitude than NaCl (−787 kJ/mol)?",
+      opts: ["MgO has weaker bonds","Mg²⁺ and O²⁻ are both smaller and more highly charged (2+/2−) vs Na⁺/Cl⁻ (1+/1−)","NaCl dissolves in water more easily","MgO has a different crystal structure","MgO molecules are polar"],
+      ans: 1,
+      hint: "Lattice energy ∝ (cation charge × anion charge) ÷ distance between ions.",
+      sol: "<div class='sol-step'>Lattice energy formula</div>E_lattice ∝ q₊ × q₋ / r. For MgO: (2)(2)/(small) = 4× more charge product than NaCl (1)(1). Additionally, Mg²⁺ and O²⁻ are smaller than Na⁺ and Cl⁻ → shorter distance → even stronger. Combined effect: ~5× larger lattice energy."
+    },
+    {
+      q: "The electron affinity of fluorine is −328 kJ/mol. This means F(g) + e⁻ → F⁻(g) __________.",
+      opts: ["Absorbs 328 kJ/mol","Releases 328 kJ/mol","Is endothermic","Has no energy change","Requires ionization"],
+      ans: 1,
+      hint: "A negative sign in thermochemistry means energy is released (exothermic).",
+      sol: "<div class='sol-step'>Sign convention</div>Negative ΔH = <strong>exothermic</strong> = energy <strong>released</strong>. EA = −328 kJ/mol means 328 kJ/mol is released when F gains one electron. F is highly electronegative → strongly 'wants' that extra electron."
+    },
+    {
+      q: "Which comparison of atomic radius is INCORRECT?",
+      opts: ["K > Na","Rb > Br","Cl > F","Na > Mg","Ca > Sr"],
+      ans: 4,
+      hint: "Find which pair is in the same group, then check which element is lower (and therefore larger).",
+      sol: "<div class='sol-step'>Same group — size increases going down</div>Ca and Sr are both in Group 2. Sr is BELOW Ca → Sr is larger. So Ca &gt; Sr is <strong>incorrect</strong>. The correct comparison is Sr &gt; Ca. All other options are correct."
+    },
+    {
+      q: "In the Born-Haber cycle for NaCl(s), which step represents the lattice energy?",
+      opts: ["Na(s) → Na(g)","Na(g) → Na⁺(g) + e⁻","Na⁺(g) + Cl⁻(g) → NaCl(s)","Cl(g) + e⁻ → Cl⁻(g)","½Cl₂(g) → Cl(g)"],
+      ans: 2,
+      hint: "Lattice energy is the energy released when gaseous ions come together to form the ionic crystal.",
+      sol: "<div class='sol-step'>Definition of lattice energy</div>Lattice energy = energy released when <em>gaseous ions</em> combine to form the ionic solid. It is always exothermic (negative): <strong>Na⁺(g) + Cl⁻(g) → NaCl(s)</strong>. The other steps are sublimation (A), ionization (B), bond dissociation (E), and electron affinity (D)."
+    },
+    {
+      q: "Which property INCREASES as you move left → right across Period 3?",
+      opts: ["Atomic radius","Metallic character","Ionization energy","Number of electron shells","Number of core electrons"],
+      ans: 2,
+      hint: "Going across a period, the number of protons increases while core shielding stays approximately constant. What does that do to how tightly electrons are held?",
+      sol: "<div class='sol-step'>Across Period 3 effect</div>More protons across the period → Zeff increases → valence electrons held more tightly → harder to remove → <strong>ionization energy increases</strong>. Atomic radius decreases; metallic character decreases; number of shells stays at 3."
+    },
+    {
+      q: "Cations are SMALLER than their parent neutral atoms because __________.",
+      opts: ["They gain electrons","They lose protons","Losing electrons reduces repulsion so the remaining electrons are pulled closer by the same nucleus","The nucleus shrinks","They become lighter"],
+      ans: 2,
+      hint: "Think about what changes when an atom loses electrons: the number of protons stays the same but there are fewer electrons.",
+      sol: "<div class='sol-step'>Electron-nuclear attraction</div>When a metal loses electrons: the nuclear charge stays the same, but there are fewer electrons → each remaining electron experiences a <strong>greater effective nuclear attraction</strong> → electrons pulled closer → smaller radius. E.g., Na (186 pm) vs Na⁺ (102 pm)."
+    },
+    {
+      q: "Which pair of ions is isoelectronic?",
+      opts: ["Na⁺ and Mg²⁺","K⁺ and Ca²⁺","Br⁻ and Sr²⁺","Na and Cl⁻","Cl⁻ and S"],
+      ans: 2,
+      hint: "Isoelectronic = same total number of electrons. Count electrons for each ion (protons ± charge).",
+      sol: "<div class='sol-step'>Count electrons</div>Br⁻: 35 + 1 = 36 electrons. Sr²⁺: 38 − 2 = 36 electrons. <strong>Both have 36 electrons</strong> → isoelectronic. (Note: Na⁺ and Mg²⁺ are also isoelectronic with 10e⁻ each — but Br⁻/Sr²⁺ is the intended answer here.)"
+    },
+    {
+      q: "The 2nd ionization energy of tin (Sn) corresponds to which process?",
+      opts: ["Sn(s) → Sn⁺(g) + e⁻","Sn(g) → Sn⁺(g) + e⁻","Sn⁺(g) → Sn²⁺(g) + e⁻","Sn²⁺(g) → Sn³⁺(g) + e⁻","Sn⁺(g) → Sn(g) + e⁻"],
+      ans: 2,
+      hint: "The nth ionization energy starts from the (n−1)+ gaseous ion and removes one more electron.",
+      sol: "<div class='sol-step'>nth IE rule</div>IE₁: Sn(g) → Sn⁺(g) + e⁻. IE₂: starts from Sn⁺. <span class='sol-answer'>Sn⁺(g) → Sn²⁺(g) + e⁻</span>. Must be from a gaseous ion (not solid). Each successive IE is always larger than the previous."
+    }
+  ],
+
+  lewis: [
+    {
+      q: "How many total valence electrons are in the nitrite ion [NO₂]⁻?",
+      opts: ["16","17","18","19","20"],
+      ans: 2,
+      hint: "Count: N (Group 15) has 5 VE; each O (Group 16) has 6 VE; add 1 extra for the negative charge.",
+      sol: "<div class='sol-step'>VE count</div>N: 5 &nbsp; O: 6 &nbsp; O: 6 &nbsp; charge (−1): +1<br>Total = 5 + 6 + 6 + 1 <span class='sol-answer'>= 18 VE</span>"
+    },
+    {
+      q: "In the Lewis structure of [NH₄]⁺, what is the formal charge on nitrogen?",
+      opts: ["−1","0","+1","+2","−2"],
+      ans: 2,
+      hint: "FC = VE − ½(bonding e⁻) − (lone pair e⁻). In NH₄⁺, N forms 4 bonds and has no lone pairs.",
+      sol: "<div class='sol-step'>Formal charge calculation</div>N valence electrons = 5. In NH₄⁺: N makes 4 bonds = 8 bonding e⁻, 0 lone pairs.<br>FC = 5 − ½(8) − 0 = 5 − 4 <span class='sol-answer'>= +1</span>"
+    },
+    {
+      q: "Which molecule does NOT follow the octet rule?",
+      opts: ["CH₄","H₂O","NH₃","NO₂","CO₂"],
+      ans: 3,
+      hint: "Count total valence electrons for each molecule. An odd number of VE always violates the octet rule.",
+      sol: "<div class='sol-step'>Count total VE</div>NO₂: N=5, O=6, O=6 → total = <strong>17 (odd)</strong>. An odd-electron species always leaves at least one atom with an incomplete octet (7 electrons). CH₄=8, H₂O=8, NH₃=8, CO₂=16 — all even."
+    },
+    {
+      q: "Resonance structures differ only in __________.",
+      opts: ["The arrangement of atoms","The molecular formula","The positions of electrons (lone pairs and π bonds)","The bond lengths in the real molecule","The total number of valence electrons"],
+      ans: 2,
+      hint: "In resonance: what moves? What stays fixed?",
+      sol: "<div class='sol-step'>Resonance rule</div>In resonance, <strong>only electrons move</strong> — specifically lone pairs and π bonds shift. Atoms never move. The molecular formula and total VE count are identical in every resonance structure. The bond lengths in the actual hybrid are all equal (between resonance structures)."
+    },
+    {
+      q: "Which element can have MORE than 8 electrons in its Lewis structure valence shell?",
+      opts: ["Carbon","Nitrogen","Oxygen","Fluorine","Phosphorus"],
+      ans: 4,
+      hint: "Expanded valence shells require d orbitals. Which row of the periodic table first has d orbitals available?",
+      sol: "<div class='sol-step'>Octet exceptions</div><strong>Phosphorus</strong> is in Period 3 → has access to 3d orbitals → can expand its valence shell. Examples: PCl₅ (10 e⁻ on P), PCl₆⁻ (12 e⁻). C, N, O, F are Period 2 — no d orbitals available → strictly maximum 8 VE."
+    },
+    {
+      q: "The 'best' Lewis structure among non-equivalent resonance structures is the one with __________.",
+      opts: ["The most double bonds","The highest formal charges on electronegative atoms","The lowest formal charges, with negative FC on the more electronegative atom","The most lone pairs","The highest bond order on all bonds"],
+      ans: 2,
+      hint: "Think about what formal charge arrangement is most physically realistic and stable.",
+      sol: "<div class='sol-step'>Best structure criteria (in order of priority)</div>1. <strong>Lowest overall formal charges</strong> (ideally all zero)<br>2. If FCs required: negative FC on the <em>more electronegative</em> atom<br>3. Avoid same-sign FCs on adjacent atoms<div class='sol-step'>Why?</div>The best structure contributes most to the resonance hybrid and best represents the actual charge distribution."
+    },
+    {
+      q: "What is the formal charge on carbon in CO₂ (O=C=O)?",
+      opts: ["−2","−1","0","+1","+2"],
+      ans: 2,
+      hint: "In O=C=O: count how many bonding electrons are around C and how many lone pairs.",
+      sol: "<div class='sol-step'>FC for C in CO₂</div>C valence electrons = 4. In O=C=O: C has 2 double bonds = 8 bonding e⁻, 0 lone pairs.<br>FC = 4 − ½(8) − 0 = 4 − 4 <span class='sol-answer'>= 0</span><div class='sol-step'>Check O</div>Each O: 6 − ½(4) − 4 = 0. All formal charges are zero → ideal structure."
+    },
+    {
+      q: "BF₃ has an incomplete octet on boron. This makes BF₃ a __________.",
+      opts: ["Lewis base (electron pair donor)","Lewis acid (electron pair acceptor)","Free radical","Brønsted-Lowry acid","Strong nucleophile"],
+      ans: 1,
+      hint: "B in BF₃ has only 6 electrons — it is electron-deficient. Can it donate or accept electrons?",
+      sol: "<div class='sol-step'>Lewis acid definition</div>A Lewis acid is an electron pair <strong>acceptor</strong>. BF₃ has only 6 e⁻ on B (electron-deficient) → it wants to accept a lone pair from a Lewis base to complete its octet. Example: BF₃ + :NH₃ → F₃B←NH₃ (coordinate covalent bond formed)."
+    },
+    {
+      q: "Which of the following has an ODD number of valence electrons?",
+      opts: ["NO₂","BF₃","PCl₅","SF₄","XeF₂"],
+      ans: 0,
+      hint: "Count total VE for each: odd-electron species are radicals.",
+      sol: "<div class='sol-step'>VE count check</div>NO₂: N(5) + O(6) + O(6) = <strong>17</strong> (odd) → radical ✓<br>BF₃: 3+3×7=24 (even); PCl₅: 5+5×7=40 (even); SF₄: 6+4×7=34 (even); XeF₂: 8+2×7=22 (even). <span class='sol-answer'>NO₂ is the radical</span>."
+    },
+    {
+      q: "Estimate ΔH for H₂(g) + F₂(g) → 2HF(g). Given: D°(H–H)=436, D°(F–F)=155, D°(H–F)=565 kJ/mol.",
+      opts: ["−539 kJ","−439 kJ","+539 kJ","+1130 kJ","−1130 kJ"],
+      ans: 0,
+      hint: "ΔH = Σ D°(bonds broken in reactants) − Σ D°(bonds formed in products).",
+      sol: "<div class='sol-step'>Bonds broken (reactants)</div>H–H: 436 kJ &nbsp; F–F: 155 kJ &nbsp; → Total broken = 591 kJ<div class='sol-step'>Bonds formed (products)</div>2 × H–F: 2 × 565 = 1130 kJ<div class='sol-step'>ΔH</div>591 − 1130 <span class='sol-answer'>= −539 kJ</span> (exothermic)"
+    }
+  ],
+
+  vsepr: [
+    {
+      q: "What is the molecular geometry (shape) of NH₃?",
+      opts: ["Tetrahedral","Trigonal planar","Trigonal pyramidal","T-shaped","Bent"],
+      ans: 2,
+      hint: "N in NH₃ has 3 bonds + 1 lone pair. Count total electron groups → EGG → remove lone pairs for molecular shape.",
+      sol: "<div class='sol-step'>VSEPR steps</div>N: 3 N–H bonds + 1 lone pair = 4 EG → <strong>tetrahedral EGG</strong>.<div class='sol-step'>Molecular shape</div>3 bonds visible, 1 lone pair invisible → <span class='sol-answer'>trigonal pyramidal</span>. Bond angle compressed from 109.5° to ~107° by lone pair repulsion."
+    },
+    {
+      q: "Which molecule has a SQUARE PLANAR molecular geometry?",
+      opts: ["SF₄","BrF₅","XeF₄","PCl₅","SF₆"],
+      ans: 2,
+      hint: "Square planar requires 6 electron groups total with 2 lone pairs. Which molecule has 4 bonds + 2 lone pairs on the central atom?",
+      sol: "<div class='sol-step'>XeF₄ analysis</div>Xe: 4 F bonds + 2 lone pairs = 6 EG → <strong>octahedral EGG</strong>. The 2 lone pairs occupy opposite axial positions (minimizing repulsion). <span class='sol-answer'>Square planar</span> molecular shape, 90° F–Xe–F angles."
+    },
+    {
+      q: "In a trigonal bipyramidal (TBP) electron group geometry, lone pairs always go in __________.",
+      opts: ["Axial positions","Equatorial positions","Either position equally","The positions closest to terminal atoms","Whichever gives the most bonds"],
+      ans: 1,
+      hint: "Count 90° neighbors for axial vs equatorial positions. Lone pairs prefer positions with fewer close (90°) neighbors.",
+      sol: "<div class='sol-step'>Why equatorial?</div>Axial position has 3 neighbors at 90° + 2 at 180°. Equatorial position has 2 neighbors at 90° + 2 at 120° + 1 at 180°. Lone pairs (which repel strongly) prefer <strong>equatorial</strong> (fewer 90° repulsions). Examples: SF₄, BrF₃, XeF₂."
+    },
+    {
+      q: "CO₂ has two polar C=O bonds but is a nonpolar molecule. Why?",
+      opts: ["The bonds cancel because CO₂ is linear and the two dipoles point in exactly opposite directions","CO₂ has no lone pairs","C–O bonds are actually nonpolar","CO₂ is asymmetric","Carbon has no electronegativity"],
+      ans: 0,
+      hint: "Draw CO₂ and add arrows for each bond dipole. What is the vector sum?",
+      sol: "<div class='sol-step'>Vector addition of dipoles</div>CO₂ is <strong>linear</strong> (2 EG, 0 LP). The two C=O dipoles point in exactly opposite directions (180° apart) and <strong>cancel perfectly</strong> → net μ = 0 → nonpolar. This is why CO₂ is a gas: only weak London forces, despite polar bonds."
+    },
+    {
+      q: "What is the electron group geometry (EGG) AND molecular shape of SF₄?",
+      opts: ["Tetrahedral EGG, tetrahedral shape","Trigonal bipyramidal EGG, see-saw shape","Octahedral EGG, square planar shape","Tetrahedral EGG, see-saw shape","Trigonal bipyramidal EGG, T-shaped"],
+      ans: 1,
+      hint: "S in SF₄: count all bonds + all lone pairs on S. S has 6 valence electrons and makes 4 bonds.",
+      sol: "<div class='sol-step'>S in SF₄</div>S (6 VE) makes 4 bonds, uses 8 of its 6... wait: SF₄ has S with 4 bonds and 1 lone pair = 5 EG → <strong>TBP EGG</strong>. Lone pair goes equatorial. <span class='sol-answer'>See-saw molecular shape</span> (2 axial F + 2 equatorial F, with equatorial lone pair)."
+    },
+    {
+      q: "Which of these molecules is polar?",
+      opts: ["CO₂","CCl₄","BF₃","SO₂","XeF₄"],
+      ans: 3,
+      hint: "Check both bond polarity AND symmetry. Symmetric molecules have cancelling dipoles even with polar bonds.",
+      sol: "<div class='sol-step'>Check each for symmetry</div>CO₂: linear → dipoles cancel. CCl₄: tetrahedral (all same bonds) → cancel. BF₃: trigonal planar (all same) → cancel. XeF₄: square planar → cancel.<div class='sol-step'>SO₂</div>3 EG (2 bonds + 1 LP) → <strong>bent shape</strong> → S=O dipoles point in same general direction → <span class='sol-answer'>SO₂ is polar ✓</span>"
+    },
+    {
+      q: "Which molecule has a T-shaped molecular geometry?",
+      opts: ["BrF₃","PF₃","XeF₂","ClF₃","Both A and D"],
+      ans: 4,
+      hint: "T-shaped = 5 electron groups with exactly 2 lone pairs. Which molecules have 3 bonds + 2 lone pairs on the central atom?",
+      sol: "<div class='sol-step'>T-shaped requirement</div>5 EG (3 bonds + 2 LP) → TBP EGG. Lone pairs in equatorial → T-shaped.<br><strong>BrF₃</strong>: Br has 3 bonds + 2 LP ✓ &nbsp;&nbsp; <strong>ClF₃</strong>: Cl has 3 bonds + 2 LP ✓<br><span class='sol-answer'>Both A and D</span>. XeF₂ is linear (3 LP); PF₃ is trigonal pyramidal (1 LP in tetrahedral EGG)."
+    },
+    {
+      q: "The H–O–H bond angle in water is ~104.5°, less than the ideal 109.5°. This is because __________.",
+      opts: ["O has too many electrons","The H atoms are too small","Lone pair–lone pair and lone pair–bond pair repulsions compress the H–O–H angle below 109.5°","Water is a polar molecule","O–H bonds are very strong"],
+      ans: 2,
+      hint: "VSEPR rule: lone pairs repel more than bonding pairs. H₂O has 2 lone pairs AND 2 bonding pairs.",
+      sol: "<div class='sol-step'>Repulsion hierarchy</div>LP–LP &gt; LP–BP &gt; BP–BP. Water's 2 lone pairs push the bonding pairs together, compressing the angle from the ideal 109.5° to ~104.5°. Compare: NH₃ (1 LP) → 107°; H₂O (2 LP) → 104.5°."
+    },
+    {
+      q: "How many sigma (σ) and pi (π) bonds are in N₂?",
+      opts: ["1σ, 1π","1σ, 2π","2σ, 1π","3σ, 0π","0σ, 3π"],
+      ans: 1,
+      hint: "Every bond has 1σ. Additional bonds beyond the first are π. A triple bond = ?",
+      sol: "<div class='sol-step'>Bond breakdown rule</div>Single bond = 1σ + 0π<br>Double bond = 1σ + 1π<br>Triple bond = 1σ + 2π<br>N₂ has a triple bond (N≡N): <span class='sol-answer'>1σ + 2π</span>. The σ bond is along the internuclear axis; the 2 π bonds are perpendicular."
+    },
+    {
+      q: "What is the molecular shape of [I₃]⁻ (triiodide)?",
+      opts: ["Bent","T-shaped","Trigonal planar","Linear","Trigonal pyramidal"],
+      ans: 3,
+      hint: "Central I in I₃⁻: count its 2 bonds + lone pairs. I has 7 VE, makes 2 bonds.",
+      sol: "<div class='sol-step'>Central I in I₃⁻</div>I (7 VE) makes 2 bonds → uses 2 e⁻ for bonds, leaving 3 lone pairs on central I. Total EG = 2 + 3 = 5 → <strong>TBP EGG</strong>. Three lone pairs go equatorial; 2 bonds go axial (180°) → <span class='sol-answer'>linear molecular shape</span>."
+    }
+  ],
+
+  imf: [
+    {
+      q: "Which type of intermolecular force exists between ALL molecules, polar or nonpolar?",
+      opts: ["Hydrogen bonding","Dipole-dipole forces","London dispersion forces","Ion-dipole forces","Covalent bonding"],
+      ans: 2,
+      hint: "Which IMF requires no permanent dipole — only fluctuating electron clouds?",
+      sol: "<div class='sol-step'>Universal IMF</div><strong>London dispersion forces</strong> (instantaneous dipole → induced dipole) exist between ALL molecules. They arise from momentary uneven electron distribution. Polar molecules have these PLUS additional forces. Nonpolar molecules have ONLY London forces."
+    },
+    {
+      q: "Which molecule can form hydrogen bonds with water?",
+      opts: ["CH₄","C₂H₂","CCl₄","NH₃","Cl₂"],
+      ans: 3,
+      hint: "H-bonding requires H bonded directly to F, O, or N. Which molecule fits this?",
+      sol: "<div class='sol-step'>H-bonding requirement</div>H-bonding needs: H directly bonded to F, O, or N. <strong>NH₃</strong> has H bonded to N ✓ → forms H-bonds with water's O. CH₄ (H on C), C₂H₂ (H on C), CCl₄ (no H), Cl₂ (no H) — none qualify."
+    },
+    {
+      q: "n-Pentane (linear, bp 36°C) has a higher bp than neopentane (spherical, bp 9°C), though both are C₅H₁₂. The reason is __________.",
+      opts: ["n-Pentane has polar bonds","n-Pentane is ionic","n-Pentane is linear with greater surface area, allowing stronger London dispersion forces","n-Pentane forms hydrogen bonds","n-Pentane has a higher molar mass"],
+      ans: 2,
+      hint: "Both have the exact same formula. What structural difference affects how well molecules contact each other?",
+      sol: "<div class='sol-step'>Surface area and London forces</div>Same formula (C₅H₁₂) → same molar mass → same type of IMF (London only). But <strong>n-pentane is linear</strong> → larger surface area for molecule-to-molecule contact → stronger London forces → higher bp. Neopentane is compact/spherical → less contact surface."
+    },
+    {
+      q: "Why does ice float on liquid water?",
+      opts: ["Ice has an open H-bonded tetrahedral lattice that is less dense than liquid water","Ice has stronger London forces","Water molecules move faster in ice","Ice molecules are heavier","Gravity acts more strongly on liquid water"],
+      ans: 0,
+      hint: "Think about what H-bonding forces water molecules into a specific arrangement in ice vs the more disordered liquid state.",
+      sol: "<div class='sol-step'>Structure of ice</div>In ice, each water molecule forms 4 H-bonds in a rigid, <strong>open tetrahedral lattice</strong> with lots of empty space → ice is less dense than liquid water (0.917 g/mL vs 1.00 g/mL). In liquid water, H-bonds constantly break and reform, allowing molecules to pack more closely."
+    },
+    {
+      q: "Rank in order of INCREASING boiling point: He, O₂, Cl₂, SO₂.",
+      opts: ["He < O₂ < Cl₂ < SO₂","SO₂ < Cl₂ < O₂ < He","He < O₂ < SO₂ < Cl₂","Cl₂ < SO₂ < O₂ < He","He < Cl₂ < O₂ < SO₂"],
+      ans: 0,
+      hint: "He, O₂, Cl₂ are nonpolar (London forces only — compare molar mass). SO₂ is polar. Where does polarity add?",
+      sol: "<div class='sol-step'>BP ranking logic</div>He (4 g/mol): tiny London forces → −269°C. O₂ (32 g/mol): stronger London → −183°C. Cl₂ (71 g/mol): much larger London → −34°C. SO₂ (64 g/mol): polar molecule → dipole-dipole + London → −10°C. <span class='sol-answer'>He &lt; O₂ &lt; Cl₂ &lt; SO₂</span>"
+    },
+    {
+      q: "Sugar dissolves in water; oil (octane) does not. The best explanation is __________.",
+      opts: ["Sugar has a lower molar mass","Oil has stronger London forces than water","Sugar's many polar OH groups H-bond with water; octane is nonpolar and cannot interact with polar water","Sugar is ionic","Oil is a gas"],
+      ans: 2,
+      hint: "Like dissolves like — what type of IMFs does each solute have? Do they match water's IMFs?",
+      sol: "<div class='sol-step'>Like dissolves like</div>Water uses <strong>H-bonding and dipole-dipole forces</strong>. Sucrose has many −OH groups → forms H-bonds with water → dissolves. Octane (C₈H₁₈) is nonpolar → only London forces, incompatible with water's H-bonding → immiscible."
+    },
+    {
+      q: "Which physical property is MOST directly related to the strength of intermolecular forces?",
+      opts: ["Molar mass","Crystal hardness","Boiling point","Electrical conductivity","Colour"],
+      ans: 2,
+      hint: "Boiling requires separating molecules from each other. What must you overcome to do that?",
+      sol: "<div class='sol-step'>IMFs and phase transitions</div><strong>Boiling point</strong> directly measures the energy required to overcome IMFs (transition liquid → gas). ΔH_vap ∝ IMF strength. Stronger IMFs → more energy to boil → higher bp. Molar mass correlates with London forces but is not the direct cause."
+    },
+    {
+      q: "Acetone (bp 56°C) has a much higher bp than propane (bp −42°C) despite similar molar mass (~58 g/mol). Why?",
+      opts: ["Acetone is ionic","Acetone H-bonds with itself","Acetone is polar (C=O group) → dipole-dipole forces; propane is nonpolar → only London forces","Propane has stronger London forces","Propane is more polarizable"],
+      ans: 2,
+      hint: "Both molecules have similar molar mass, so London forces are similar. What additional force does acetone have that propane lacks?",
+      sol: "<div class='sol-step'>Extra IMF in acetone</div>Same molar mass → similar London forces. But acetone (CH₃COCH₃) has a <strong>polar C=O group</strong> → significant dipole-dipole interactions ON TOP of London forces. Propane (C₃H₈) is nonpolar → London forces only. Extra dipole-dipole in acetone → much higher bp."
+    },
+    {
+      q: "Which statement about hydrogen bonding is CORRECT?",
+      opts: ["H-bonding occurs between any two H atoms","H-bonding requires H bonded to C, N, O, or F","H-bonds are stronger than covalent bonds","H-bonding is a special dipole-dipole interaction requiring H bonded to F, O, or N","H-bonding only occurs in liquid water"],
+      ans: 3,
+      hint: "Recall the specific atoms required: which electronegative atoms with lone pairs are needed on both sides of the H-bond?",
+      sol: "<div class='sol-step'>H-bonding requirements</div>1. H must be directly bonded to <strong>F, O, or N</strong> (very electronegative → makes H very δ+)<br>2. That H is attracted to a lone pair on a nearby <strong>F, O, or N</strong><br>Strength: ~15–40 kJ/mol — much weaker than covalent bonds (~200–900 kJ/mol) but strongest of the Van der Waals forces."
+    },
+    {
+      q: "Surface tension in water is caused by __________.",
+      opts: ["Gravity pulling down on surface molecules","Covalent O–H bonds breaking at the surface","A net inward attractive force on surface molecules from neighbours below and beside but not above","Evaporation","Air pressure pushing down on water"],
+      ans: 2,
+      hint: "Compare a molecule at the surface to one in the bulk. Which direction are neighbouring molecules?",
+      sol: "<div class='sol-step'>Surface vs bulk molecules</div>Bulk molecules: surrounded on all sides by neighbours → balanced attractions.<br>Surface molecules: neighbours below and beside but NOT above → <strong>net inward force</strong>. This inward pull creates surface tension, allowing insects to walk on water and water to bead on surfaces."
+    }
+  ],
+
+  solutions: [
+    {
+      q: "According to Raoult's Law, the vapour pressure above a solution is __________.",
+      opts: ["P = x_solute × P°_solvent","P = x_solvent × P°_solvent","P = M × R × T","P = k × P_gas","P = P°_solvent + x_solute"],
+      ans: 1,
+      hint: "Raoult's Law uses the mole fraction of the SOLVENT (not solute) times the pure solvent vapour pressure.",
+      sol: "<div class='sol-step'>Raoult's Law</div><span class='sol-answer'>P_A = x_A × P°_A</span><br>P_A = vapour pressure of A above solution<br>x_A = mole fraction of solvent A = n_A / n_total<br>P°_A = vapour pressure of pure A<br>Adding solute always LOWERS vapour pressure (x_solvent &lt; 1)."
+    },
+    {
+      q: "Henry's Law states that the solubility of a gas in a liquid is __________.",
+      opts: ["Inversely proportional to temperature","Proportional to the partial pressure of the gas above the liquid","Constant at all temperatures","Proportional to the mole fraction of the gas","Independent of pressure"],
+      ans: 1,
+      hint: "Think about a carbonated drink: what happens when you increase pressure (seal) vs. decrease pressure (open)?",
+      sol: "<div class='sol-step'>Henry's Law</div>S_g = k × P_g<br>Gas solubility is <strong>directly proportional to partial pressure</strong>. Double the pressure → double the solubility. Example: carbonated drinks are bottled under CO₂ pressure; opening (pressure drops) → CO₂ comes out of solution → fizz."
+    },
+    {
+      q: "Which solution has the HIGHEST osmotic pressure (π = iMRT)? All are 1 L solutions.",
+      opts: ["0.10 mol glucose","0.10 mol NaCl","0.05 mol MgCl₂","0.10 mol sucrose","0.08 mol NaCl"],
+      ans: 1,
+      hint: "Calculate effective concentration = i × M for each. i = # particles per formula unit.",
+      sol: "<div class='sol-step'>Effective [particles]</div>Glucose (i=1): 0.10 M → 0.10 M effective<br>NaCl (i=2): 0.10 M → <strong>0.20 M effective</strong><br>MgCl₂ (i=3): 0.05 M → 0.15 M<br>Sucrose (i=1): 0.10 M<br>NaCl 0.08 M (i=2): 0.16 M<br><span class='sol-answer'>0.10 mol NaCl has highest π (0.20 M effective)</span>"
+    },
+    {
+      q: "Osmosis is the movement of __________.",
+      opts: ["Solute from high to low concentration","Solvent from low solute concentration to high solute concentration across a semipermeable membrane","Ions through solution","Gas molecules through a liquid","Water molecules through a non-permeable membrane"],
+      ans: 1,
+      hint: "The semipermeable membrane blocks solute but lets solvent pass. In which direction does the solvent move?",
+      sol: "<div class='sol-step'>Direction of osmosis</div>Solvent (water) moves from <strong>low solute concentration → high solute concentration</strong> (equivalently: from high water concentration to low water concentration) across a semipermeable membrane. This dilutes the concentrated solution until osmotic pressure is reached."
+    },
+    {
+      q: "1 mol glycerol is added to 10 mol water. If P°(water) = 23.8 torr, what is the vapour pressure above the solution?",
+      opts: ["23.8 torr","21.6 torr","2.16 torr","26.2 torr","0 torr"],
+      ans: 1,
+      hint: "x_water = n_water / (n_water + n_solute). Then P = x_water × P°.",
+      sol: "<div class='sol-step'>Mole fraction of water</div>x_water = 10 / (10 + 1) = 10/11 = 0.9091<div class='sol-step'>Raoult's Law</div>P = x_water × P° = 0.9091 × 23.8 <span class='sol-answer'>= 21.6 torr</span>"
+    },
+    {
+      q: "Why does gas solubility in water DECREASE as temperature increases?",
+      opts: ["Higher temperatures increase pressure above the liquid","Dissolved gas molecules gain kinetic energy to overcome IMFs and escape to the gas phase","Gases become more reactive at high T","Henry's constant k decreases with temperature","Water density increases at high T"],
+      ans: 1,
+      hint: "Think about the KE of dissolved gas molecules. At higher T, what can they do more easily?",
+      sol: "<div class='sol-step'>Kinetic energy argument</div>At higher T, dissolved gas molecules have greater <strong>average kinetic energy</strong> → more molecules have enough energy to overcome the (weak) IMFs keeping them in solution → they escape to the gas phase → lower solubility. This is why warm soda goes flat faster than cold soda."
+    },
+    {
+      q: "NaCl at 0.15 M is placed on one side of a semipermeable membrane, pure water on the other. Which is TRUE?",
+      opts: ["Water flows from the NaCl side to the pure water side","No osmosis occurs since NaCl is ionic","Water flows from the pure water side into the NaCl solution","Salt ions flow to the water side","Both sides stay at equal volume"],
+      ans: 2,
+      hint: "Osmosis: water moves from low solute to high solute concentration. Which side has more solute?",
+      sol: "<div class='sol-step'>Osmotic direction</div>Pure water has ZERO solute → highest water concentration. NaCl solution has solute → lower water concentration. Osmosis moves water from <strong>pure water → NaCl solution</strong>. The NaCl side will rise; pure water side will fall until equilibrium (osmotic pressure = hydrostatic pressure)."
+    },
+    {
+      q: "In a benzene-toluene mixture, the vapour above the liquid is enriched in benzene because __________.",
+      opts: ["Benzene is more polar","Benzene has a higher molar mass","Benzene is more volatile (higher P°) and enters the gas phase more readily than toluene","Toluene is a Lewis acid","Benzene has stronger London forces"],
+      ans: 2,
+      hint: "The more volatile component has a higher vapour pressure. Which compound has weaker IMFs and escapes more easily?",
+      sol: "<div class='sol-step'>Raoult's Law + relative volatility</div>P°(benzene) ≈ 95 torr at 25°C; P°(toluene) ≈ 29 torr. Benzene is <strong>more volatile</strong> (weaker IMFs, lower bp 80°C vs toluene 111°C) → enters gas phase more readily → vapour phase is enriched in benzene. This is the basis of distillation."
+    }
+  ],
+
+  gases: [
+    {
+      q: "A gas at 2.00 atm and 3.00 L is compressed to 1.00 L at constant temperature. What is the new pressure?",
+      opts: ["1.00 atm","4.00 atm","6.00 atm","0.67 atm","3.00 atm"],
+      ans: 2,
+      hint: "Boyle's Law: P₁V₁ = P₂V₂. Temperature and moles are constant.",
+      sol: "<div class='sol-step'>Boyle's Law</div>P₁V₁ = P₂V₂<br>P₂ = P₁V₁ / V₂ = (2.00 × 3.00) / 1.00 <span class='sol-answer'>= 6.00 atm</span>"
+    },
+    {
+      q: "A gas occupies 5.00 L at 25°C. What volume does it occupy at 100°C at constant pressure?",
+      opts: ["20.0 L","6.26 L","6.25 L","4.26 L","1.25 L"],
+      ans: 1,
+      hint: "Charles's Law: V₁/T₁ = V₂/T₂. Always convert °C to Kelvin first.",
+      sol: "<div class='sol-step'>Charles's Law</div>T₁ = 25 + 273 = 298 K &nbsp;&nbsp; T₂ = 100 + 273 = 373 K<br>V₂ = V₁ × T₂/T₁ = 5.00 × 373/298 <span class='sol-answer'>= 6.26 L</span>"
+    },
+    {
+      q: "How many moles of gas are in a 2.00 L flask at 27°C and 202.6 kPa?",
+      opts: ["0.163 mol","0.326 mol","0.0815 mol","1.63 mol","4.00 mol"],
+      ans: 0,
+      hint: "Ideal gas law: PV = nRT. Rearrange to n = PV/RT. Use R = 8.314 L·kPa/(mol·K) since P is in kPa.",
+      sol: "<div class='sol-step'>Ideal Gas Law</div>T = 27 + 273 = 300 K<br>n = PV / RT = (202.6 × 2.00) / (8.314 × 300)<br>= 405.2 / 2494.2 <span class='sol-answer'>= 0.163 mol</span>"
+    },
+    {
+      q: "Dalton's Law states that the total pressure of a gas mixture is __________.",
+      opts: ["The average of all partial pressures","The pressure of the most abundant gas","Equal to the sum of all individual partial pressures","Dependent on the molecular types of gases","Less than any individual partial pressure"],
+      ans: 2,
+      hint: "In an ideal gas mixture, each gas behaves independently. What does each contribute?",
+      sol: "<div class='sol-step'>Dalton's Law of Partial Pressures</div>P_total = P₁ + P₂ + P₃ + ...<br>Each gas exerts the same pressure it would exert alone in the same volume. Partial pressures add together. Also: P_i = x_i × P_total (x_i = mole fraction)."
+    },
+    {
+      q: "Which conditions cause a real gas to deviate MOST from ideal behaviour?",
+      opts: ["High temperature and low pressure","Low temperature and high pressure","High temperature and high pressure","Low temperature and low pressure","Room temperature and 1 atm"],
+      ans: 1,
+      hint: "Real gas deviations matter when molecules are close to each other. When does that happen?",
+      sol: "<div class='sol-step'>When do real gas deviations matter?</div>Deviations occur when <strong>intermolecular forces matter AND molecular volumes are significant</strong> — i.e., when molecules are close together. This happens at <strong>low temperature</strong> (slow molecules, attractions pull them together) + <strong>high pressure</strong> (molecules squeezed together)."
+    },
+    {
+      q: "According to KMT, at the SAME temperature, which gas molecule moves fastest on average?",
+      opts: ["CO₂ (44 g/mol)","N₂ (28 g/mol)","O₂ (32 g/mol)","He (4 g/mol)","Ar (40 g/mol)"],
+      ans: 3,
+      hint: "Same T = same average KE = ½mv². If KE is the same for all, what happens with lower mass m?",
+      sol: "<div class='sol-step'>KMT and speed</div>KE_avg = ½mv² = constant at same T. So v = √(2KE/m). <strong>Lower mass m → higher speed v</strong>. He has the smallest molar mass (4 g/mol) → <span class='sol-answer'>He moves fastest</span>. This is also why He effuses fastest through a pinhole."
+    },
+    {
+      q: "When collecting a gas over water, the partial pressure of the dry gas equals __________.",
+      opts: ["P_atm + P_water","P_atm × P_water","P_atm − P_water","P_water / P_atm","P_atm alone (water doesn't matter)"],
+      ans: 2,
+      hint: "The gas collected is a mixture of the desired gas + water vapour. Use Dalton's Law to separate them.",
+      sol: "<div class='sol-step'>Gas over water setup</div>The collected gas is a mixture: P_total = P_gas + P_H₂O(vapour). By Dalton's Law: <span class='sol-answer'>P_gas = P_atm − P_H₂O(vapour)</span>. Water vapour pressure depends only on temperature (look up from a table)."
+    },
+    {
+      q: "In the van der Waals equation, the constant 'a' corrects for __________.",
+      opts: ["The volume of individual gas molecules","Intermolecular attractive forces that reduce the observed pressure vs ideal","Temperature fluctuations","The molar mass of gas molecules","Kinetic energy of molecules"],
+      ans: 1,
+      hint: "The 'a' term appears added to the pressure: [P + n²a/V²]. Why would real pressure be LESS than ideal?",
+      sol: "<div class='sol-step'>van der Waals corrections</div>[P + n²a/V²][V − nb] = nRT<br><strong>'a'</strong> corrects for intermolecular attractions: molecules attract each other → slow down before hitting walls → real pressure &lt; ideal. Adding n²a/V² restores the ideal value.<br><strong>'b'</strong> corrects for finite molecular volume: real volume &lt; available volume. Subtracting nb gives true available volume."
+    },
+    {
+      q: "What is the molar volume of an ideal gas at STP (0°C, 1 atm)?",
+      opts: ["22.4 L/mol","24.0 L/mol","8.314 L/mol","1.00 L/mol","0.0821 L/mol"],
+      ans: 0,
+      hint: "Use PV = nRT at T = 273.15 K, P = 1 atm, n = 1 mol. Solve for V.",
+      sol: "<div class='sol-step'>V at STP</div>V = nRT/P = (1)(0.08206)(273.15) / 1 <span class='sol-answer'>= 22.4 L/mol</span><br>This is a fundamental constant worth memorising. Note: SATP (25°C, 1 bar) gives 24.8 L/mol."
+    },
+    {
+      q: "A weather balloon contains 9.50 mol of H₂ at 11°C and 99.5 kPa. What is its volume?",
+      opts: ["200 L","215 L","225 L","250 L","300 L"],
+      ans: 2,
+      hint: "Use V = nRT/P. Convert T to Kelvin. Use R = 8.314 L·kPa/(mol·K) since P is in kPa.",
+      sol: "<div class='sol-step'>Ideal Gas Law</div>T = 11 + 273 = 284 K<br>V = nRT/P = (9.50 × 8.314 × 284) / 99.5<br>= 22,424 / 99.5 <span class='sol-answer'>= 225 L</span>"
+    }
+  ]
+};
+
+// Build 'all' category
+QUESTIONS.all = Object.values(QUESTIONS).flat();
+
+let currentCategory = '';
+let questionList = [];
+let currentIndex = 0;
+let score = 0;
+let answered = 0;
+let hintVisible = false;
+let solVisible = false;
+
+function startQuiz(cat) {
+  currentCategory = cat;
+  const titles = {
+    matter: 'Unit 1 — Matter & Measurement',
+    bonding: 'Unit 2 — Chemical Bonding',
+    lewis: 'Unit 3 — Lewis Structures',
+    vsepr: 'Unit 4 — Polarity & VSEPR',
+    imf: 'Unit 5 — Intermolecular Forces',
+    solutions: 'Unit 6 — Solutions',
+    gases: 'Unit 7 — Gases',
+    all: 'All Topics'
+  };
+  document.getElementById('quiz-title').textContent = titles[cat];
+  questionList = shuffle([...QUESTIONS[cat]]);
+  currentIndex = 0; score = 0; answered = 0;
+  document.getElementById('home').style.display = 'none';
+  document.getElementById('results').style.display = 'none';
+  document.getElementById('quiz-screen').style.display = 'block';
+  showQuestion();
+}
+
+function shuffle(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+function showQuestion() {
+  const q = questionList[currentIndex];
+  const total = questionList.length;
+
+  document.getElementById('q-num').textContent = `Q${currentIndex + 1} / ${total}`;
+  document.getElementById('progress-fill').style.width = ((currentIndex / total) * 100) + '%';
+  document.getElementById('score-badge').textContent = `Score: ${score} / ${answered}`;
+  document.getElementById('q-text').innerHTML = q.q;
+
+  // Reset hint
+  hintVisible = false;
+  solVisible = false;
+  const hintBox = document.getElementById('hint-box-q');
+  hintBox.innerHTML = q.hint;
+  hintBox.style.display = 'none';
+  const hintBtn = document.getElementById('btn-hint-q');
+  hintBtn.textContent = '💡 Hint';
+  hintBtn.style.display = 'inline-block';
+
+  // Reset solution row
+  document.getElementById('sol-row').style.display = 'none';
+  document.getElementById('sol-box').style.display = 'none';
+  document.getElementById('sol-box').innerHTML = q.sol;
+  document.getElementById('btn-sol-toggle').textContent = '📖 Solution';
+
+  // Reset next button
+  document.getElementById('btn-next').style.display = 'none';
+
+  // Build options
+  const letters = ['A','B','C','D','E'];
+  const opts = document.getElementById('options');
+  opts.innerHTML = '';
+  q.opts.forEach((opt, i) => {
+    const div = document.createElement('div');
+    div.className = 'option';
+    div.innerHTML = `<span class="opt-letter">${letters[i]}</span><span>${opt}</span>`;
+    div.onclick = () => selectAnswer(i);
+    opts.appendChild(div);
+  });
+}
+
+function toggleHint() {
+  hintVisible = !hintVisible;
+  document.getElementById('hint-box-q').style.display = hintVisible ? 'block' : 'none';
+  document.getElementById('btn-hint-q').textContent = hintVisible ? '💡 Hide Hint' : '💡 Hint';
+}
+
+function toggleSolution() {
+  solVisible = !solVisible;
+  document.getElementById('sol-box').style.display = solVisible ? 'block' : 'none';
+  document.getElementById('btn-sol-toggle').textContent = solVisible ? '📖 Hide Solution' : '📖 Solution';
+}
+
+function selectAnswer(chosen) {
+  const q = questionList[currentIndex];
+  const opts = document.getElementById('options').children;
+  Array.from(opts).forEach(o => o.classList.add('locked'));
+  answered++;
+
+  const correct = q.ans;
+  const isCorrect = chosen === correct;
+  if (isCorrect) score++;
+
+  // Colour options
+  if (isCorrect) {
+    opts[chosen].classList.add('correct');
+  } else {
+    opts[chosen].classList.add('wrong');
+    opts[correct].classList.add('show-correct');
+  }
+
+  // Hide hint button, show verdict + solution toggle
+  document.getElementById('btn-hint-q').style.display = 'none';
+  document.getElementById('hint-box-q').style.display = 'none';
+
+  const solRow = document.getElementById('sol-row');
+  solRow.style.display = 'flex';
+
+  const verdict = document.getElementById('verdict');
+  if (isCorrect) {
+    verdict.className = 'verdict correct-v';
+    verdict.textContent = '✓ Correct!';
+  } else {
+    verdict.className = 'verdict wrong-v';
+    verdict.textContent = '✗ Incorrect';
+  }
+
+  document.getElementById('score-badge').textContent = `Score: ${score} / ${answered}`;
+
+  const nextBtn = document.getElementById('btn-next');
+  nextBtn.style.display = 'block';
+  nextBtn.textContent = currentIndex + 1 < questionList.length ? 'Next Question →' : 'See Results';
+}
+
+function nextQuestion() {
+  currentIndex++;
+  if (currentIndex < questionList.length) {
+    showQuestion();
+  } else {
+    showResults();
+  }
+}
+
+function showResults() {
+  document.getElementById('quiz-screen').style.display = 'none';
+  const pct = Math.round((score / questionList.length) * 100);
+  document.getElementById('res-score').textContent = pct + '%';
+  const labels = pct < 50 ? 'Keep studying!' : pct < 65 ? 'Getting there!' : pct < 75 ? 'Good work!' : pct < 85 ? 'Great job!' : pct < 100 ? 'Excellent!' : 'Perfect!';
+  document.getElementById('res-label').textContent = labels;
+  document.getElementById('res-correct').textContent = score;
+  document.getElementById('res-wrong').textContent = questionList.length - score;
+  const resEl = document.getElementById('results');
+  resEl.style.display = 'flex';
+  resEl.style.flexDirection = 'column';
+  resEl.style.alignItems = 'center';
+}
+
+function retryQuiz() { startQuiz(currentCategory); }
+function goHome() {
+  document.getElementById('results').style.display = 'none';
+  document.getElementById('home').style.display = 'block';
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CHEM 150 — Practice Exams</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0f0f1a; color: #e2e8f0; min-height: 100vh; }
+
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(15,15,26,0.92); backdrop-filter: blur(12px);
+    border-bottom: 1px solid #1e3a2a; padding: 0 24px;
+    display: flex; align-items: center; gap: 4px;
+    overflow-x: auto; scrollbar-width: none; height: 52px; flex-wrap: nowrap;
+  }
+  nav::-webkit-scrollbar { display: none; }
+  nav a {
+    color: #94a3b8; text-decoration: none; font-size: 0.82rem; font-weight: 600;
+    padding: 6px 12px; border-radius: 8px; white-space: nowrap; transition: all 0.15s; flex-shrink: 0;
+  }
+  nav a:hover { background: #1e2a20; color: #6ee7b7; }
+  .nav-brand {
+    font-weight: 800; font-size: 0.9rem;
+    background: linear-gradient(135deg, #10b981, #0891b2);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    margin-right: 12px; flex-shrink: 0; padding: 0 !important; background-color: transparent !important;
+  }
+  nav .divider { width: 1px; height: 20px; background: #1e3a2a; margin: 0 4px; flex-shrink: 0; }
+
+  .page { max-width: 860px; margin: 0 auto; padding: 40px 20px 80px; }
+
+  h1 {
+    font-size: 2.2rem; font-weight: 800;
+    background: linear-gradient(135deg, #10b981, #0891b2);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    margin-bottom: 6px; text-align: center;
+  }
+  .subtitle { color: #94a3b8; font-size: 0.9rem; text-align: center; margin-bottom: 48px; }
+
+  section { margin-bottom: 48px; scroll-margin-top: 68px; }
+
+  .section-header {
+    display: flex; align-items: center; gap: 14px;
+    margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid #1e3a2a;
+  }
+  .section-icon { font-size: 1.8rem; flex-shrink: 0; }
+  .section-header h2 {
+    font-size: 1.35rem; font-weight: 700;
+    background: linear-gradient(135deg, #6ee7b7, #67e8f9);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+  .section-header p { font-size: 0.82rem; color: #64748b; margin-top: 2px; }
+
+  p { line-height: 1.6; color: #94a3b8; font-size: 0.9rem; }
+  p + p { margin-top: 8px; }
+  ul { padding-left: 20px; margin: 8px 0; color: #94a3b8; font-size: 0.9rem; line-height: 1.8; }
+
+  .note {
+    background: #1a1a0a; border: 1px solid #854d0e; border-left: 4px solid #f59e0b;
+    border-radius: 10px; padding: 12px 16px; font-size: 0.87rem; color: #fde68a;
+    line-height: 1.55; margin: 10px 0;
+  }
+  .note strong { color: #fbbf24; }
+  .tip {
+    background: #052e1c; border: 1px solid #059669; border-left: 4px solid #10b981;
+    border-radius: 10px; padding: 12px 16px; font-size: 0.87rem; color: #6ee7b7;
+    line-height: 1.55; margin: 10px 0;
+  }
+  .tip strong { color: #34d399; }
+
+  /* ── EXAM TIMER BAR ── */
+  .exam-header-bar {
+    background: #1e1e30; border: 1px solid #1e3a2a; border-radius: 16px;
+    padding: 18px 24px; margin-bottom: 24px;
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+  }
+  .exam-info h3 { font-size: 1rem; font-weight: 700; color: #e2e8f0; }
+  .exam-info p { font-size: 0.82rem; color: #64748b; margin-top: 2px; }
+  .timer-display {
+    font-size: 1.6rem; font-weight: 900;
+    background: linear-gradient(135deg, #10b981, #0891b2);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    font-family: 'Cascadia Code', monospace;
+  }
+  .timer-display.warning { background: none; -webkit-text-fill-color: #f87171; color: #f87171; }
+
+  .exam-controls {
+    display: flex; gap: 10px; flex-wrap: wrap; margin: 16px 0;
+  }
+  .btn-start {
+    padding: 10px 24px; border-radius: 10px;
+    background: linear-gradient(135deg, #059669, #0891b2); border: none;
+    color: #fff; font-size: 0.9rem; font-weight: 700; cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  .btn-start:hover { opacity: 0.85; }
+  .btn-submit {
+    padding: 10px 24px; border-radius: 10px;
+    background: transparent; border: 2px solid #10b981; color: #6ee7b7;
+    font-size: 0.9rem; font-weight: 700; cursor: pointer; display: none; transition: all 0.2s;
+  }
+  .btn-submit:hover { background: rgba(16,185,129,0.1); }
+  .btn-reset {
+    padding: 10px 24px; border-radius: 10px;
+    background: transparent; border: 2px solid #64748b; color: #94a3b8;
+    font-size: 0.9rem; font-weight: 700; cursor: pointer; display: none; transition: all 0.2s;
+  }
+  .btn-reset:hover { background: rgba(100,116,139,0.1); }
+
+  /* ── QUESTION CARDS ── */
+  .question-card {
+    background: #1e1e30; border: 1px solid #1e3a2a;
+    border-radius: 16px; padding: 20px 24px; margin-bottom: 20px;
+  }
+  .question-card.answered { border-color: #0891b2; }
+  .question-card.correct-q { border-color: #10b981; }
+  .question-card.wrong-q   { border-color: #ef4444; }
+
+  .q-header { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; flex-wrap: wrap; }
+  .q-num {
+    background: linear-gradient(135deg, #059669, #0891b2);
+    color: #fff; font-size: 0.78rem; font-weight: 800;
+    padding: 4px 10px; border-radius: 8px; flex-shrink: 0;
+  }
+  .q-section { font-size: 0.78rem; color: #64748b; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+  .q-btns { margin-left: auto; display: flex; gap: 8px; flex-wrap: wrap; }
+  .btn-hint {
+    background: #1a1a2e; border: 1px solid #059669; color: #6ee7b7;
+    padding: 5px 14px; border-radius: 8px; font-size: 0.78rem; font-weight: 600;
+    cursor: pointer; transition: all 0.15s;
+  }
+  .btn-hint:hover { background: #0d2018; }
+  .btn-sol {
+    background: #052e1c; border: 1px solid #22c55e; color: #86efac;
+    padding: 5px 14px; border-radius: 8px; font-size: 0.78rem; font-weight: 600;
+    cursor: pointer; transition: all 0.15s;
+  }
+  .btn-sol:hover { background: #14532d; }
+
+  .prob-q {
+    background: #13132a; border: 1px solid #1e3a2a; border-left: 4px solid #0891b2;
+    border-radius: 10px; padding: 14px 16px; font-size: 0.88rem; color: #cbd5e1; line-height: 1.65; margin: 10px 0;
+  }
+  .prob-q strong { color: #67e8f9; }
+
+  /* MCQ options */
+  .mcq-options { margin: 12px 0; }
+  .mcq-opt {
+    display: flex; align-items: flex-start; gap: 10px; padding: 9px 12px;
+    border-radius: 8px; margin-bottom: 6px; cursor: pointer; transition: all 0.15s;
+    border: 1.5px solid transparent;
+  }
+  .mcq-opt:hover:not(.locked) { background: #0d2018; border-color: #10b981; }
+  .mcq-opt input { margin-top: 2px; accent-color: #10b981; }
+  .mcq-opt label { cursor: pointer; color: #cbd5e1; font-size: 0.88rem; line-height: 1.5; }
+  .mcq-opt.selected { background: #0c1a2e; border-color: #0891b2; }
+  .mcq-opt.correct-opt { background: #052e1c; border-color: #10b981; }
+  .mcq-opt.correct-opt label { color: #6ee7b7; }
+  .mcq-opt.wrong-opt { background: #2d0a0a; border-color: #ef4444; }
+  .mcq-opt.wrong-opt label { color: #fca5a5; }
+  .mcq-opt.reveal-correct { background: #052e1c; border-color: #10b981; opacity: 0.7; }
+  .mcq-opt.reveal-correct label { color: #6ee7b7; }
+
+  .hint-box {
+    margin-top: 12px; background: #1a1a0a; border: 1px solid #854d0e; border-left: 4px solid #f59e0b;
+    border-radius: 10px; padding: 12px 16px; font-size: 0.87rem; color: #fde68a; line-height: 1.55; display: none;
+  }
+  .hint-box strong { color: #fbbf24; }
+
+  .sol-box {
+    margin-top: 12px; background: #0d0d20; border: 1px solid #1e3a2a; border-left: 4px solid #0891b2;
+    border-radius: 10px; padding: 16px 18px; font-size: 0.88rem; color: #cbd5e1; line-height: 1.65; display: none;
+  }
+  .sol-box strong { color: #67e8f9; }
+  .sol-box .sol-step { color: #6ee7b7; font-size: 0.83rem; font-weight: 600; margin: 10px 0 4px; }
+  .sol-box .answer {
+    display: inline-block; background: #052e1c; border: 1px solid #22c55e;
+    border-radius: 8px; padding: 6px 14px; color: #4ade80; font-weight: 700; font-size: 0.9rem; margin-top: 10px;
+  }
+  .sol-box .bad-answer {
+    display: inline-block; background: #2d0a0a; border: 1px solid #ef4444;
+    border-radius: 8px; padding: 6px 14px; color: #f87171; font-weight: 700; font-size: 0.9rem; margin-top: 10px;
+  }
+
+  /* ── RESULTS ── */
+  .results-panel {
+    background: #1e1e30; border: 1px solid #1e3a2a; border-radius: 16px;
+    padding: 28px; margin: 24px 0; display: none;
+  }
+  .results-panel h3 { font-size: 1.1rem; font-weight: 700; color: #e2e8f0; margin-bottom: 16px; }
+  .score-big {
+    font-size: 3rem; font-weight: 900; text-align: center;
+    background: linear-gradient(135deg, #10b981, #0891b2);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    margin: 8px 0;
+  }
+  .score-sub { text-align: center; color: #94a3b8; font-size: 0.9rem; margin-bottom: 20px; }
+  .results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .res-cell { background: #111820; border-radius: 10px; padding: 14px; text-align: center; }
+  .res-cell-num { font-size: 1.8rem; font-weight: 800; color: #6ee7b7; }
+  .res-cell-num.red { color: #f87171; }
+  .res-cell-lbl { font-size: 0.75rem; color: #64748b; margin-top: 4px; }
+
+  /* Data sheet */
+  .data-card {
+    background: #111820; border: 1px solid #1e3a2a; border-radius: 12px;
+    padding: 16px 18px; margin-bottom: 12px;
+  }
+  .data-card h4 { font-size: 0.82rem; font-weight: 700; color: #10b981; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px; }
+  .data-card .formula-line { font-family: 'Cascadia Code','Consolas',monospace; font-size: 0.84rem; color: #6ee7b7; line-height: 2; }
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-brand">CHEM 150</span>
+  <div class="divider"></div>
+  <a href="#exam-a">Practice A</a>
+  <a href="#exam-b">Practice B</a>
+  <a href="#data">Data Sheet</a>
+</nav>
+
+<div class="page">
+  <h1>CHEM 150 — Practice Exams</h1>
+  <p class="subtitle">Midterm I · 30 Questions · 90 Minutes · Units 1–7</p>
+
+  <!-- ══════════════════════════════════════════════
+       DATA SHEET
+  ═════════════════════════════════════════════════ -->
+  <section id="data">
+    <div class="section-header">
+      <span class="section-icon">📄</span>
+      <div><h2>Provided Data Sheet</h2><p>Constants and formulas allowed in the exam</p></div>
+    </div>
+    <div class="data-card">
+      <h4>Constants</h4>
+      <div class="formula-line">
+        Nₐ = 6.022 × 10²³ mol⁻¹ &nbsp;&nbsp; 1 u = 1.660 × 10⁻²⁷ kg<br>
+        R = 8.314 L·kPa/(mol·K) = 0.08206 L·atm/(mol·K)<br>
+        1 atm = 101.325 kPa = 760 mmHg = 760 torr<br>
+        STP: 0°C, 1 atm &nbsp;&nbsp; molar volume = 22.4 L/mol
+      </div>
+    </div>
+    <div class="data-card">
+      <h4>Key Formulas</h4>
+      <div class="formula-line">
+        PV = nRT &nbsp;&nbsp;&nbsp; P₁V₁/T₁ = P₂V₂/T₂ &nbsp;&nbsp;&nbsp; P_total = Σ Pᵢ &nbsp;&nbsp;&nbsp; Pᵢ = xᵢ × P_total<br>
+        [P + n²a/V²][V − nb] = nRT &nbsp;&nbsp;&nbsp; (van der Waals)<br>
+        P_A = x_A × P°_A (Raoult) &nbsp;&nbsp;&nbsp; S_g = k × P_g (Henry)<br>
+        π = MRT &nbsp;&nbsp;&nbsp; FC = VE − ½(BE) − LP<br>
+        % yield = (actual/theoretical) × 100% &nbsp;&nbsp;&nbsp; MᵢVᵢ = MᶠVᶠ
+      </div>
+    </div>
+    <div class="data-card">
+      <h4>Bond Dissociation Energies (kJ/mol)</h4>
+      <div class="formula-line">
+        H–H 436 &nbsp; C–H 414 &nbsp; C–C 347 &nbsp; C=C 611 &nbsp; C≡C 837<br>
+        C–O 360 &nbsp; C=O 799 &nbsp; N≡N 946 &nbsp; O=O 498 &nbsp; H–O 464 &nbsp; H–N 391
+      </div>
+    </div>
+    <div class="data-card">
+      <h4>Electronegativity Values (Pauling)</h4>
+      <div class="formula-line">
+        H:2.1 &nbsp; C:2.5 &nbsp; N:3.0 &nbsp; O:3.5 &nbsp; F:4.0<br>
+        P:2.1 &nbsp; S:2.5 &nbsp; Cl:3.0 &nbsp; Br:2.8 &nbsp; I:2.5<br>
+        Na:0.9 &nbsp; Mg:1.2 &nbsp; Al:1.5 &nbsp; Si:1.8 &nbsp; Ca:1.0 &nbsp; K:0.8
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       PRACTICE EXAM A
+  ═════════════════════════════════════════════════ -->
+  <section id="exam-a">
+    <div class="section-header">
+      <span class="section-icon">📝</span>
+      <div><h2>Practice Exam A</h2><p>30 questions · 90 min · modelled after actual CHEM 150 Midterm I</p></div>
+    </div>
+
+    <div class="exam-header-bar" id="header-a">
+      <div class="exam-info">
+        <h3>CHEM 150 — Midterm I Practice A</h3>
+        <p>Units 1–7 · 30 marks · Scientific calculator permitted</p>
+      </div>
+      <div class="timer-display" id="timer-a">90:00</div>
+    </div>
+    <div class="exam-controls">
+      <button class="btn-start" id="start-a" onclick="startExam('a')">▶ Start Timed Exam</button>
+      <button class="btn-submit" id="submit-a" onclick="submitExam('a')">Submit Exam</button>
+      <button class="btn-reset"  id="reset-a"  onclick="resetExam('a')">↺ Reset</button>
+    </div>
+
+    <div class="results-panel" id="results-a">
+      <h3>Exam A Results</h3>
+      <div class="score-big" id="score-a-pct"></div>
+      <div class="score-sub" id="score-a-sub"></div>
+      <div class="results-grid">
+        <div class="res-cell"><div class="res-cell-num" id="res-a-correct"></div><div class="res-cell-lbl">Correct</div></div>
+        <div class="res-cell"><div class="res-cell-num red" id="res-a-wrong"></div><div class="res-cell-lbl">Incorrect</div></div>
+        <div class="res-cell"><div class="res-cell-num" id="res-a-time" style="color:#67e8f9;"></div><div class="res-cell-lbl">Time Used</div></div>
+      </div>
+    </div>
+
+    <!-- Questions injected by JS -->
+    <div id="questions-a"></div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       PRACTICE EXAM B
+  ═════════════════════════════════════════════════ -->
+  <section id="exam-b">
+    <div class="section-header">
+      <span class="section-icon">📋</span>
+      <div><h2>Practice Exam B</h2><p>30 questions · 90 min · different question set, same topics</p></div>
+    </div>
+
+    <div class="exam-header-bar">
+      <div class="exam-info">
+        <h3>CHEM 150 — Midterm I Practice B</h3>
+        <p>Units 1–7 · 30 marks · Scientific calculator permitted</p>
+      </div>
+      <div class="timer-display" id="timer-b">90:00</div>
+    </div>
+    <div class="exam-controls">
+      <button class="btn-start" id="start-b" onclick="startExam('b')">▶ Start Timed Exam</button>
+      <button class="btn-submit" id="submit-b" onclick="submitExam('b')">Submit Exam</button>
+      <button class="btn-reset"  id="reset-b"  onclick="resetExam('b')">↺ Reset</button>
+    </div>
+
+    <div class="results-panel" id="results-b">
+      <h3>Exam B Results</h3>
+      <div class="score-big" id="score-b-pct"></div>
+      <div class="score-sub" id="score-b-sub"></div>
+      <div class="results-grid">
+        <div class="res-cell"><div class="res-cell-num" id="res-b-correct"></div><div class="res-cell-lbl">Correct</div></div>
+        <div class="res-cell"><div class="res-cell-num red" id="res-b-wrong"></div><div class="res-cell-lbl">Incorrect</div></div>
+        <div class="res-cell"><div class="res-cell-num" id="res-b-time" style="color:#67e8f9;"></div><div class="res-cell-lbl">Time Used</div></div>
+      </div>
+    </div>
+
+    <div id="questions-b"></div>
+  </section>
+
+</div>
+
+<script>
+const EXAMS = {
+  a: [
+    // --- Unit 1: Matter & Measurement ---
+    { section: 'Unit 1', q: "An element cannot __________.",
+      opts:['Be part of a heterogeneous mixture','Be part of a homogeneous mixture','Be separated into other substances by chemical means','Interact with other elements to form compounds','Be a pure substance'],
+      ans: 2, hint: "Think about what defines an element vs a compound.", sol: "Elements <strong>cannot be separated into simpler substances by chemical means</strong>. They CAN exist in mixtures. The key distinction: separating an element requires a <em>chemical</em> change, which creates a different substance — that's not separation." },
+    { section: 'Unit 1', q: "Which compound would you expect to be ionic?",
+      opts:['SF₆','H₂O','H₂O₂','NH₃','CaO'],
+      ans: 4, hint: "Ionic = metal + nonmetal with large EN difference.", sol: "CaO: Ca (metal, Group 2) + O (non-metal) → large ΔEN → <strong>ionic</strong>. All others are nonmetal–nonmetal combos → covalent." },
+    { section: 'Unit 1', q: "There are _______ molecules of methane (CH₄) in 0.123 mol of methane.",
+      opts:['5','2.46×10⁻²','2.04×10⁻²⁵','7.40×10²²','0.615'],
+      ans: 3, hint: "N = n × Nₐ", sol: "<div class='sol-step'>Calculation</div>N = 0.123 mol × 6.022×10²³ mol⁻¹ = <span class='answer'>7.40×10²² molecules</span>" },
+    { section: 'Unit 1', q: "Barium (Group 2) forms an ion with a charge of _____.",
+      opts:['+1','−2','+3','−3','+2'],
+      ans: 4, hint: "Group 2 elements lose 2 electrons.", sol: "Group 2 metals lose 2 valence electrons → <strong>Ba²⁺</strong> (+2)." },
+    { section: 'Unit 1', q: "Which metal does NOT form cations of differing charges?",
+      opts:['Na','Cu','Co','Fe','Sn'],
+      ans: 0, hint: "Group 1 and Group 2 metals have fixed charges.", sol: "<strong>Na</strong> is in Group 1 → always forms Na⁺. Cu (1+/2+), Co (2+/3+), Fe (2+/3+), Sn (2+/4+) are transition or post-transition metals with variable charges." },
+
+    // --- Unit 2: Chemical Bonding ---
+    { section: 'Unit 2', q: "Which ranking of FIRST ionization energies is correct (increasing order)?",
+      opts:['Ca < K < Br < Se','K < Ca < Br < Se','K < Ca < Se < Br','Ca < K < Se < Br','Se < Br < Ca < K'],
+      ans: 2, hint: "IE increases across a period; decreases down a group.", sol: "All in Period 4. IE increases left → right: K (Group 1) &lt; Ca (Group 2) &lt; Se (Group 16) &lt; Br (Group 17). Answer: <span class='answer'>K &lt; Ca &lt; Se &lt; Br</span>" },
+    { section: 'Unit 2', q: "Effective nuclear charge of boron (Z=5) using Slater's rule is _____.",
+      opts:['1','2','3','5','7'],
+      ans: 2, hint: "Zeff = Z − (number of core electrons)", sol: "B: 1s² 2s² 2p¹. Core electrons = 2 (1s²). Z_eff = 5 − 2 = <span class='answer'>3</span>" },
+    { section: 'Unit 2', q: "Isoelectronic series Al³⁺, Na⁺, F⁻, O²⁻ are all arranged in INCREASING size. Which is CORRECT?",
+      opts:['Al³⁺ < Na⁺ < F⁻ < O²⁻','O²⁻ < F⁻ < Na⁺ < Al³⁺','F⁻ < Al³⁺ < O²⁻ < Na⁺','Na⁺ < F⁻ < Al³⁺ < O²⁻','O²⁻ < Al³⁺ < Na⁺ < F⁻'],
+      ans: 0, hint: "All isoelectronic (10 e⁻). More protons → smaller.", sol: "All have 10 electrons. Al³⁺ (13p) &lt; Na⁺ (11p) &lt; F⁻ (9p) &lt; O²⁻ (8p). More protons = stronger pull on same electrons = smaller. <span class='answer'>Al³⁺ &lt; Na⁺ &lt; F⁻ &lt; O²⁻</span>" },
+    { section: 'Unit 2', q: "Which comparison of atomic radius is INCORRECT?",
+      opts:['K > Na','Rb > Br','Cl > F','Na > Mg','Ca > Sr'],
+      ans: 4, hint: "Compare same-group atoms: which is lower in the table?", sol: "Ca and Sr are in the same group (Group 2). Sr is BELOW Ca → Sr is larger → Ca > Sr is <span class='bad-answer'>WRONG</span>. The correct statement is Sr > Ca." },
+
+    // --- Unit 3: Lewis Structures ---
+    { section: 'Unit 3', q: "Which molecule does NOT obey the octet rule?",
+      opts:['CH₄','H₂O','NH₃','NO₂','CO₂'],
+      ans: 3, hint: "Count total valence electrons. Odd number = radical.", sol: "<strong>NO₂</strong>: N=5, O=6+6=17 total VE (odd number). Odd-electron species always violate the octet rule — one atom is left with 7 electrons (a radical)." },
+    { section: 'Unit 3', q: "The formal charge formula is FC = __________.",
+      opts:['(# bonds) − (# lone pairs)','VE − ½(bonding e⁻) − (lone pair e⁻)','(# protons) − (# electrons)','½(bonding e⁻) + (lone pair e⁻)','VE − (bonding e⁻) − ½(lone pair e⁻)'],
+      ans: 1, hint: "FC assigns electrons: half of bonding pairs, all of lone pairs.", sol: "<span class='answer'>FC = VE − ½(BE) − LP</span><br>Where VE = valence electrons of neutral atom, BE = bonding electrons, LP = lone pair electrons." },
+    { section: 'Unit 3', q: "Which element CAN exceed 8 electrons in its Lewis structure valence shell?",
+      opts:['C','N','O','F','S'],
+      ans: 4, hint: "Period 3+ elements have accessible d orbitals.", sol: "<strong>S</strong> is in Period 3 → can use d orbitals → expanded valence shell possible. Examples: SF₄ (10 e⁻), SF₆ (12 e⁻). C, N, O, F are Period 2 → max 8 electrons." },
+    { section: 'Unit 3', q: "In resonance, which statement is TRUE?",
+      opts:['Atoms and electrons both move between structures','Only atoms move; electrons stay fixed','Only electrons (lone pairs and π bonds) move; atoms never move','The molecule switches rapidly between resonance structures','Resonance structures are different compounds'],
+      ans: 2, hint: "Remember: atoms are much heavier and slower than electrons.", sol: "In resonance, <strong>only electrons move</strong> — specifically lone pairs and π bonds shift. Atoms maintain their positions. The true structure (resonance hybrid) is the average of all resonance contributors." },
+    { section: 'Unit 3', q: "Estimate ΔH for H₂(g) + Cl₂(g) → 2HCl(g). Given: D°(H–H)=436, D°(Cl–Cl)=243, D°(H–Cl)=432 kJ/mol.",
+      opts:['−185 kJ','−370 kJ','+185 kJ','+370 kJ','−432 kJ'],
+      ans: 0, hint: "ΔH = Σ bonds broken − Σ bonds formed", sol: "<div class='sol-step'>Bonds broken (reactants):</div>H–H: 436 + Cl–Cl: 243 = 679 kJ<div class='sol-step'>Bonds formed (products):</div>2×H–Cl: 2×432 = 864 kJ<div class='sol-step'>ΔH:</div>679 − 864 = <span class='answer'>−185 kJ</span>" },
+
+    // --- Unit 4: VSEPR ---
+    { section: 'Unit 4', q: "What is the molecular geometry of SF₄?",
+      opts:['Tetrahedral','Trigonal bipyramidal','See-saw','Square planar','T-shaped'],
+      ans: 2, hint: "Count electron groups (bonds + lone pairs) on S.", sol: "S in SF₄: 4 bonds + 1 lone pair = 5 EG → trigonal bipyramidal EGG. Lone pair occupies equatorial position → <span class='answer'>see-saw</span> molecular shape." },
+    { section: 'Unit 4', q: "Which molecule has the SMALLEST bond angle at the central atom?",
+      opts:['CH₄ (tetrahedral)','NH₃ (trigonal pyramidal)','H₂O (bent)','H₂S (bent)','BF₃ (trigonal planar)'],
+      ans: 3, hint: "Compare H₂O vs H₂S. Lone pair repulsion depends on the central atom.", sol: "<strong>H₂S</strong>: S is larger and less electronegative than O. Bonding pairs are further from S and closer to H → S–H bond pairs repel each other less strongly → smallest angle (≈92°). H₂O ≈104.5°, NH₃ ≈107°, CH₄=109.5°, BF₃=120°." },
+    { section: 'Unit 4', q: "The molecular geometry of XeF₄ is __________.",
+      opts:['Tetrahedral','Octahedral','Square planar','See-saw','T-shaped'],
+      ans: 2, hint: "Xe in XeF₄: how many bonds and lone pairs?", sol: "Xe has 4 bonds + 2 lone pairs = 6 EG → octahedral EGG. The 2 lone pairs go in axial positions (opposite sides) → <span class='answer'>square planar</span>." },
+    { section: 'Unit 4', q: "Which of the following oxide molecules is NON-POLAR?",
+      opts:['H₂O','SO₂','NO₂','CO₂','ClO₂'],
+      ans: 3, hint: "Check both bond polarity AND geometry (do dipoles cancel?)", sol: "<strong>CO₂</strong> is linear (180°). The two C=O dipoles point in exactly opposite directions and cancel → net dipole = 0 → <span class='answer'>nonpolar</span>. All others are bent → dipoles don't cancel → polar." },
+    { section: 'Unit 4', q: "In PF₂Cl₃ (trigonal bipyramidal), the Cl atoms occupy equatorial positions. Is this molecule polar?",
+      opts:['Yes, because Cl is more electronegative than F','No, because the 3 Cl dipoles cancel in the equatorial plane','Yes, the axial F–P–F bond dipoles don\'t cancel the equatorial P–Cl dipoles','No, PF₂Cl₃ has equal numbers of F and Cl','Yes, because P has lone pairs'],
+      ans: 1, hint: "Draw the TBP shape. Where are the F and Cl atoms?", sol: "PF₂Cl₃: Cl (3) in equatorial positions (120° apart), F (2) in axial positions. The 3 equatorial P–Cl dipoles cancel in the plane; the 2 axial P–F dipoles cancel along the axis → net dipole = 0 → <span class='answer'>nonpolar</span>." },
+
+    // --- Unit 5: IMF ---
+    { section: 'Unit 5', q: "Which IMF is responsible for the unusually high boiling point of water (100°C) compared to H₂S (−60°C)?",
+      opts:['London dispersion forces','Dipole-dipole forces','Hydrogen bonding','Ion-dipole forces','Metallic bonding'],
+      ans: 2, hint: "What's special about H bonded to O vs H bonded to S?", sol: "<strong>Hydrogen bonding</strong>. Water has H bonded to O (highly electronegative, small) → strong H-bonds between molecules (~20 kJ/mol). H₂S has H bonded to S (less electronegative, larger) → no H-bonding, only weaker London forces." },
+    { section: 'Unit 5', q: "Which of the following pairs of liquids would you expect to be IMMISCIBLE?",
+      opts:['Water and methanol','Water and ethanol','Hexane and pentane','Water and hexane','Acetone and water'],
+      ans: 3, hint: "Like dissolves like.", sol: "<strong>Water and hexane</strong> are immiscible. Water is highly polar (H-bonds); hexane (C₆H₁₄) is completely nonpolar. Very different intermolecular forces → they don't mix." },
+    { section: 'Unit 5', q: "Acetone (C₃H₆O) and chloroform (CHCl₃) are completely miscible and produce heat when mixed. Why do they warm on mixing?",
+      opts:['They react chemically','Mixing increases entropy, releasing energy','Acetone–chloroform interactions (dipole-dipole) are stronger than acetone–acetone or chloroform–chloroform interactions','Chloroform is a Lewis acid','The London forces are exothermic'],
+      ans: 2, hint: "When do liquids warm on mixing? When unlike interactions are stronger than like interactions.", sol: "The C=O of acetone can accept H from CHCl₃ (C–H is slightly acidic when attached to 3 Cl). The <strong>acetone–CHCl₃ dipole-dipole interactions are stronger</strong> than acetone–acetone or CHCl₃–CHCl₃. Extra energy released = warming." },
+    { section: 'Unit 5', q: "Rank in order of INCREASING boiling point: He, N₂, F₂, Cl₂, SO₂.",
+      opts:['He < N₂ < F₂ < Cl₂ < SO₂','SO₂ < Cl₂ < F₂ < N₂ < He','He < F₂ < N₂ < Cl₂ < SO₂','Cl₂ < SO₂ < N₂ < F₂ < He','He < N₂ < Cl₂ < F₂ < SO₂'],
+      ans: 0, hint: "Nonpolar → London forces only (compare molar mass). Polar → add dipole-dipole or H-bonding on top.", sol: "He (4 g/mol, weakest London) &lt; N₂ (28 g/mol, nonpolar) &lt; F₂ (38 g/mol, nonpolar, similar mass) &lt; Cl₂ (71 g/mol, nonpolar, much heavier London) &lt; SO₂ (64 g/mol, BUT polar → dipole-dipole forces). <span class='answer'>He &lt; N₂ &lt; F₂ &lt; Cl₂ &lt; SO₂</span>" },
+
+    // --- Unit 6: Solutions ---
+    { section: 'Unit 6', q: "Using Henry's Law with k(N₂) = 6.0×10⁻⁴ mol/(L·atm), what is the solubility of N₂ in water under 0.78 atm of N₂?",
+      opts:['4.7×10⁻⁴ mol/L','7.7×10⁻⁴ mol/L','6.0×10⁻⁴ mol/L','3.9×10⁻⁴ mol/L','1.3×10⁻³ mol/L'],
+      ans: 0, hint: "Sg = k × Pg", sol: "S_g = k × P_g = 6.0×10⁻⁴ × 0.78 = <span class='answer'>4.7×10⁻⁴ mol/L</span>" },
+    { section: 'Unit 6', q: "Which solution has the HIGHEST osmotic pressure at 25°C? (Same molar concentrations.)",
+      opts:['0.10 M glucose','0.10 M NaCl','0.10 M MgCl₂','0.10 M sucrose','0.05 M NaCl'],
+      ans: 2, hint: "π = iMRT. What is i for each solute?", sol: "π = iMRT. MgCl₂ → Mg²⁺ + 2Cl⁻: i=3 → effective [particles] = 0.30 M. NaCl: i=2 → 0.20 M. Glucose/sucrose: i=1 → 0.10 M. <span class='answer'>MgCl₂ has highest π.</span>" },
+
+    // --- Unit 7: Gases ---
+    { section: 'Unit 7', q: "A gas is at 1.50 atm and 4.00 L. If pressure increases to 3.00 atm at constant T, what is the new volume?",
+      opts:['8.00 L','2.00 L','6.00 L','1.00 L','12.0 L'],
+      ans: 1, hint: "Boyle's Law: P₁V₁ = P₂V₂", sol: "V₂ = P₁V₁/P₂ = (1.50 × 4.00)/3.00 = <span class='answer'>2.00 L</span>" },
+    { section: 'Unit 7', q: "A 200 g sample of CaH₂ reacts with water to produce H₂(g): CaH₂ + 2H₂O → Ca(OH)₂ + 2H₂. M(CaH₂)=42.1 g/mol. How many moles of H₂ are produced?",
+      opts:['2.37 mol','4.75 mol','9.50 mol','1.19 mol','200 mol'],
+      ans: 2, hint: "Find mol CaH₂, then use stoichiometry.", sol: "mol CaH₂ = 200/42.1 = 4.75 mol. Ratio 1:2 → mol H₂ = 4.75 × 2 = <span class='answer'>9.50 mol H₂</span>" },
+    { section: 'Unit 7', q: "A mixture contains 2 mol Ar and 8 mol O₂ at 20°C in a 10.0 L container. What is the TOTAL pressure?",
+      opts:['243 kPa','487 kPa','1949 kPa','2436 kPa','1460 kPa'],
+      ans: 3, hint: "Find P from PV = nRT, then use total moles.", sol: "n_total = 2+8 = 10 mol. P = nRT/V = 10×8.314×293/10.0 = <span class='answer'>2436 kPa</span>. (T=20+273=293K)" },
+    { section: 'Unit 7', q: "Which statement about an ideal gas is FALSE?",
+      opts:['Gas molecules are in constant random motion','Collisions between molecules are elastic','Gas molecules have no intermolecular forces','Gas molecules have negligible volume','Average kinetic energy is proportional to Celsius temperature'],
+      ans: 4, hint: "KMT Postulate 4: KE is proportional to WHAT temperature scale?", sol: "Average KE is proportional to <strong>absolute temperature (Kelvin)</strong>, not Celsius. This is a critical distinction. KE_avg = ½mv² = (3/2)k_B T (where T is in K)." },
+    { section: 'Unit 7', q: "1.20 g of sulfur reacts with excess copper: S + Cu → CuS. What is the limiting reagent? (M(S)=32.07, M(Cu)=63.55)",
+      opts:['Sulfur (with excess Cu)','Copper (with excess S)','Neither; they are in perfect stoichiometric ratio','Both are limiting equally','Cannot determine without amounts of Cu'],
+      ans: 0, hint: "The question says 'excess copper' — so which reactant is limited?", sol: "The problem states excess copper → <span class='answer'>sulfur is the limiting reagent</span>. n(S) = 1.20/32.07 = 0.0374 mol determines how much CuS is produced." },
+    { section: 'Unit 7', q: "CO₂ at 273K deviates from ideal gas behaviour. The van der Waals correction [P + n²a/V²] accounts for __________.",
+      opts:['The volume of CO₂ molecules','The intermolecular attractions that reduce observed pressure','The temperature of the gas','The molar mass of CO₂','The number of degrees of freedom'],
+      ans: 1, hint: "van der Waals: 'a' corrects for attractions, 'b' corrects for volume.", sol: "The term n²a/V² is added back to the measured pressure because <strong>intermolecular attractions reduce the pressure</strong> CO₂ actually exerts on the walls (molecules slow down as they attract each other). 'b' corrects for finite molecular volume." }
+  ],
+  b: [
+    // --- Unit 1 ---
+    { section: 'Unit 1', q: "Which of the following is a HOMOGENEOUS mixture?",
+      opts:['Sand and water','Granite rock','Saltwater (NaCl dissolved in water)','Iron filings and sulfur powder','Oil and water'],
+      ans: 2, hint: "Homogeneous = uniform composition throughout.", sol: "<strong>Saltwater</strong> is a homogeneous mixture (a solution) — uniform composition throughout. Sand+water and oil+water are heterogeneous; granite is a heterogeneous mixture of minerals; iron+sulfur is heterogeneous." },
+    { section: 'Unit 1', q: "Balance: __Al + __O₂ → __Al₂O₃. The coefficient for O₂ is _____.",
+      opts:['1','2','3','4','6'],
+      ans: 2, hint: "Balance Al, then O.", sol: "4Al + 3O₂ → 2Al₂O₃. Coefficient for O₂ = <span class='answer'>3</span>." },
+    { section: 'Unit 1', q: "The molar mass of CaH₂ is closest to __________.",
+      opts:['21.0 g/mol','42.1 g/mol','63.2 g/mol','84.2 g/mol','104 g/mol'],
+      ans: 1, hint: "M(Ca)=40.08, M(H)=1.008. CaH₂ = Ca + 2H.", sol: "M(CaH₂) = 40.08 + 2(1.008) = <span class='answer'>42.10 g/mol</span>" },
+    { section: 'Unit 1', q: "The formula for magnesium nitrate is __________.",
+      opts:['MgNO₃','Mg(NO₃)₂','Mg₂NO₃','Mg(NO₂)₂','MgN₂O₆'],
+      ans: 1, hint: "Mg forms Mg²⁺; NO₃⁻ is nitrate. Need to balance charges.", sol: "Mg²⁺ + 2(NO₃⁻) → <span class='answer'>Mg(NO₃)₂</span>. Two nitrate ions needed to balance the 2+ charge." },
+    { section: 'Unit 1', q: "⁵⁶Fe²⁺ has how many protons, neutrons, and electrons?",
+      opts:['26p, 30n, 26e','26p, 30n, 24e','26p, 56n, 24e','24p, 30n, 26e','26p, 28n, 24e'],
+      ans: 1, hint: "Z=26, A=56, 2+ means 2 electrons lost.", sol: "Fe: Z=26 (protons). Neutrons = A − Z = 56 − 26 = 30. Fe²⁺ lost 2 electrons → electrons = 26 − 2 = 24. <span class='answer'>26p, 30n, 24e</span>" },
+    // --- Unit 2 ---
+    { section: 'Unit 2', q: "Which property DECREASES as you go down Group 17 (halogens) from F to I?",
+      opts:['Atomic radius','Molar mass','Ionization energy','Boiling point','Number of electrons'],
+      ans: 2, hint: "Going down a group: what happens to how tightly electrons are held?", sol: "<strong>Ionization energy decreases</strong> going down a group. The valence electrons are in higher shells, farther from the nucleus, more shielded by core electrons → easier to remove → lower IE." },
+    { section: 'Unit 2', q: "Arrange in order of INCREASING size: Ti⁴⁺, K⁺, S²⁻, Se²⁻.",
+      opts:['Ti⁴⁺ < K⁺ < S²⁻ < Se²⁻','Se²⁻ < S²⁻ < K⁺ < Ti⁴⁺','K⁺ < Ti⁴⁺ < S²⁻ < Se²⁻','S²⁻ < K⁺ < Ti⁴⁺ < Se²⁻','Ti⁴⁺ < S²⁻ < K⁺ < Se²⁻'],
+      ans: 0, hint: "Ti⁴⁺, K⁺, and S²⁻ are isoelectronic (18 e⁻). Se²⁻ has more electrons.", sol: "Ti⁴⁺ (22p, 18e), K⁺ (19p, 18e), S²⁻ (16p, 18e) are isoelectronic. More protons = smaller: Ti⁴⁺ &lt; K⁺ &lt; S²⁻. Se²⁻ (34p, 36e) has a completely different shell → much larger. <span class='answer'>Ti⁴⁺ &lt; K⁺ &lt; S²⁻ &lt; Se²⁻</span>" },
+    { section: 'Unit 2', q: "The lattice energy of AlF₃ is approximately −6225 kJ/mol, much larger than NaF (−923 kJ/mol). The main reason is __________.",
+      opts:['Al is a transition metal','Al³⁺ has a higher charge than Na⁺, and F⁻ surrounds it more tightly in the crystal','AlF₃ is covalent, not ionic','F is more electronegative next to Al','Al has more electrons'],
+      ans: 1, hint: "Lattice energy ∝ charge product / distance.", sol: "Lattice energy ∝ (q_cation × q_anion)/r. Al³⁺ has charge 3+ vs Na⁺ charge 1+. The effect is (3×1)/(1×1) = 3× stronger, plus Al³⁺ is smaller than Na⁺ → shorter bond → much stronger electrostatic attraction → <span class='answer'>much larger lattice energy</span>." },
+    { section: 'Unit 2', q: "Which of the following is a correct electron affinity equation for chlorine?",
+      opts:['Cl⁻(g) → Cl(g) + e⁻','Cl(g) + e⁻ → Cl⁻(g)','Cl(g) → Cl⁺(g) + e⁻','Cl₂(g) + 2e⁻ → 2Cl⁻(g)','Cl(s) + e⁻ → Cl⁻(s)'],
+      ans: 1, hint: "EA = energy change when a gaseous atom gains one electron.", sol: "Electron affinity: <span class='answer'>Cl(g) + e⁻ → Cl⁻(g)</span>. Must be a <em>gaseous</em> atom gaining exactly one electron. The first option is ionization of the anion (reverse)." },
+    // --- Unit 3 ---
+    { section: 'Unit 3', q: "How many total valence electrons are in the phosphate ion [PO₄]³⁻?",
+      opts:['29','32','35','38','26'],
+      ans: 1, hint: "Count: P (Group 15) + 4×O (Group 16) + 3 extra (charge).", sol: "P: 5 VE. 4×O: 4×6=24 VE. Charge 3⁻: +3 VE. Total = 5+24+3 = <span class='answer'>32 VE</span>." },
+    { section: 'Unit 3', q: "In the best Lewis structure for [NO₃]⁻, the formal charge on nitrogen is __________.",
+      opts:['−2','−1','0','+1','+2'],
+      ans: 3, hint: "Draw the structure with 1 N=O double bond and 2 N–O single bonds. Apply FC formula.", sol: "Best [NO₃]⁻: N has one double bond and two single bonds. N bonds: 1 double + 2 single = 8 bonding e⁻. No lone pairs. FC(N) = 5 − ½(8) − 0 = 5 − 4 = <span class='answer'>+1</span>. Each O with single bond gets FC=−1; O with double bond gets FC=0." },
+    { section: 'Unit 3', q: "The bond order in N₂ is __________.",
+      opts:['1','2','3','4','0.5'],
+      ans: 2, hint: "Count bonds in N≡N.", sol: "N₂ has a triple bond (N≡N): 1 sigma + 2 pi bonds. Bond order = <span class='answer'>3</span>. This is why N₂ is so unreactive (bond D° = 946 kJ/mol, strongest diatomic)." },
+    { section: 'Unit 3', q: "Which is NOT a valid Lewis structure exception?",
+      opts:['BeCl₂ (incomplete octet on Be)','SF₆ (expanded octet on S)','PCl₅ (10 electrons on P)','CF₄ (8 electrons on C, 4 on each F)','NO (odd electron radical)'],
+      ans: 3, hint: "Which of these follows normal rules?", sol: "CF₄ is completely normal — C obeys the octet rule (4 bonds = 8 e⁻ on C), and each F has 3 lone pairs + 1 bonding pair = 8 e⁻. <span class='answer'>CF₄ is not an exception</span>. All others are genuine exceptions." },
+    // --- Unit 4 ---
+    { section: 'Unit 4', q: "What is the EGG and molecular shape of [NO₂]⁻ (nitrite)?",
+      opts:['Linear EGG, linear shape','Trigonal planar EGG, bent shape','Tetrahedral EGG, bent shape','Trigonal planar EGG, trigonal planar shape','Linear EGG, bent shape'],
+      ans: 1, hint: "N in NO₂⁻ has 2 bonds + 1 lone pair. Total EG?", sol: "N in NO₂⁻: 2 bonds (one single, one double = one resonance hybrid) + 1 lone pair = 3 EG → <strong>trigonal planar EGG</strong>. Molecular shape (bonding pairs only): 2 bonds → <span class='answer'>bent (≈117°)</span>." },
+    { section: 'Unit 4', q: "PF₃ is polar. CCl₄ is nonpolar. What determines this difference?",
+      opts:['PF₃ has different bond types','Both have polar bonds, but CCl₄ is symmetric (tetrahedral, all bonds identical) so dipoles cancel, while PF₃ is trigonal pyramidal (1 lone pair) so dipoles don\'t cancel','PF₃ has more electrons','CCl₄ has H-bonding','PF₃ molecules are larger'],
+      ans: 1, hint: "Check both bond polarity AND molecular symmetry.", sol: "Both PF₃ (P-F, ΔEN≈1.9) and CCl₄ (C-Cl, ΔEN≈0.5) have polar bonds. CCl₄ is <strong>perfectly tetrahedral</strong> → 4 equal dipoles cancel → nonpolar. PF₃ has a lone pair → trigonal pyramidal → dipoles DON'T cancel → polar." },
+    { section: 'Unit 4', q: "In BrF₅, bromine has how many electron groups?",
+      opts:['4','5','6','7','3'],
+      ans: 2, hint: "Br in BrF₅: count bonds + lone pairs.", sol: "Br in BrF₅: 5 F bonds + 1 lone pair = 6 EG → <span class='answer'>6 electron groups</span>, octahedral EGG. Molecular shape: square pyramidal (1 lone pair in axial position)." },
+    // --- Unit 5 ---
+    { section: 'Unit 5', q: "Glycerol (three OH groups) has a very high viscosity. The primary reason is __________.",
+      opts:['High molar mass','Glycerol is ionic','Extensive hydrogen bonding through multiple OH groups creates a tangled, hard-to-flow network','London forces are unusually strong','Glycerol is nonpolar'],
+      ans: 2, hint: "Viscosity relates to resistance to flow. What interaction makes liquids resist flowing?", sol: "Glycerol's three OH groups form an extensive <strong>H-bonding network</strong> between molecules, making them resist sliding past each other. More H-bonds = higher viscosity. Compare: water (1 OH, low viscosity) vs glycerol (3 OH, very high viscosity)." },
+    { section: 'Unit 5', q: "Diethyl ether (bp 35°C) has a lower boiling point than ethanol (bp 78°C) despite similar molar masses (~74 vs 46 g/mol). The main reason ether has lower bp is __________.",
+      opts:['Ether is heavier','Ethanol can hydrogen bond with itself; ether cannot (O not bonded to H)','Ether has stronger London forces','Ether has ionic character','Ether molecules are more polarizable'],
+      ans: 1, hint: "What type of IMF requires H bonded to O, N, or F?", sol: "<strong>Ethanol</strong> has an O–H group → can hydrogen bond with itself → much stronger IMFs → higher bp. Ether's oxygen has no H attached → cannot H-bond with itself → only weaker dipole-dipole and London forces." },
+    // --- Unit 6 ---
+    { section: 'Unit 6', q: "50.0 g of glucose (M=180 g/mol) is dissolved in 2.00 L of solution. The osmotic pressure at 25°C is __________.",
+      opts:['34.4 kPa','68.8 kPa','344 kPa','3.44 kPa','172 kPa'],
+      ans: 2, hint: "π = MRT. Find M in mol/L, then calculate.", sol: "n = 50.0/180 = 0.278 mol. M = 0.278/2.00 = 0.139 mol/L. π = iMRT = 1×0.139×8.314×298 = <span class='answer'>344 kPa</span> (glucose is non-electrolyte, i=1)." },
+    // --- Unit 7 ---
+    { section: 'Unit 7', q: "3.00 g of He, 3.00 g of Ne, and 3.00 g of Ar are placed in a 50.0 L container at 20°C. What is the partial pressure of He?",
+      opts:['3.65 kPa','7.21 kPa','36.5 kPa','14.4 kPa','47.4 kPa'],
+      ans: 2, hint: "Find mol He, then use PV=nRT.", sol: "n_He = 3.00/4.003 = 0.750 mol. P_He = nRT/V = 0.750×8.314×293/50.0 = 36.5 kPa. <span class='answer'>36.5 kPa</span>" },
+    { section: 'Unit 7', q: "NH₄NO₃ decomposes: NH₄NO₃(s) → N₂O(g) + 2H₂O(g). If 1.22 mol NH₄NO₃ decomposes at 350°C and 1 atm, what volume of gas is produced?",
+      opts:['63 L','92 L','187 L','374 L','56 L'],
+      ans: 2, hint: "Find total moles of gas, then use ideal gas law.", sol: "1.22 mol NH₄NO₃ → 1.22 mol N₂O + 2.44 mol H₂O = 3.66 mol gas. V = nRT/P = 3.66×0.08206×623/1 = <span class='answer'>187 L</span>. (T=350+273=623K)" },
+    { section: 'Unit 7', q: "A submarine crew of 26 consumes 300 g carbohydrate/person/day. Using C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O, if 360 m³ of air (20% O₂) is available at 119 kPa, 18°C, after 2 days the CO₂ percentage is approximately __________. Is the crew safe?",
+      opts:['0.5% CO₂ — safe','1% CO₂ — borderline','2.96% CO₂ — drowsy, may not survive long','7% CO₂ — unconscious','0.04% CO₂ — perfectly fine'],
+      ans: 2, hint: "Find mol O₂ consumed, equal mol CO₂ produced. Find initial mol air, calculate % CO₂.", sol: "Total carbs = 26×300×2 = 15,600 g = 86.6 mol C₆H₁₂O₆. O₂ consumed = CO₂ produced = 86.6×6 = 519.6 mol. Air: n = PV/RT = 119×360/(8.314×291) = 17,730 mol. O₂ remaining: 0.20×17730 − 519.6 = 3026 mol. CO₂: 519.6 mol → % = 519.6/17730 = 2.93% ≈ <span class='answer'>~3% CO₂ → crew is drowsy</span>." },
+    { section: 'Unit 7', q: "The Joule-Thomson effect describes __________.",
+      opts:['Gas expanding adiabatically through a porous plug cools down (for real gases with attractions)','Gas compressing at constant T releases heat','Gas pressure increasing as temperature increases','Ideal gas temperature increasing on expansion','Evaporation causing warming'],
+      ans: 0, hint: "Think about what happens to gas molecules when they expand against their own attractions.", sol: "The <strong>Joule-Thomson effect</strong>: when a real gas expands through a porous membrane (throttling), it does work against intermolecular attractions → loses kinetic energy → cools. This is the principle behind refrigerators and liquefaction of gases." }
+  ]
+};
+
+const timers = { a: null, b: null };
+const timeLeft = { a: 5400, b: 5400 };
+const startTime = { a: null, b: null };
+const examStarted = { a: false, b: false };
+const examSubmitted = { a: false, b: false };
+
+function buildExam(id) {
+  const qs = EXAMS[id];
+  const container = document.getElementById('questions-' + id);
+  container.innerHTML = '';
+  qs.forEach((q, i) => {
+    const card = document.createElement('div');
+    card.className = 'question-card';
+    card.id = `qcard-${id}-${i}`;
+
+    const letters = ['A','B','C','D','E'];
+    let optsHtml = q.opts.map((o, j) =>
+      `<div class="mcq-opt" id="opt-${id}-${i}-${j}" onclick="selectMCQ('${id}',${i},${j})">
+        <input type="radio" name="q-${id}-${i}" id="r-${id}-${i}-${j}">
+        <label for="r-${id}-${i}-${j}">${letters[j]}. ${o}</label>
+      </div>`
+    ).join('');
+
+    card.innerHTML = `
+      <div class="q-header">
+        <span class="q-num">Q${i+1}</span>
+        <span class="q-section">${q.section}</span>
+        <div class="q-btns">
+          <button class="btn-hint" onclick="toggleHint('${id}',${i})">Hint</button>
+          <button class="btn-sol"  onclick="toggleSol('${id}',${i})">Solution</button>
+        </div>
+      </div>
+      <div class="prob-q">${q.q}</div>
+      <div class="mcq-options">${optsHtml}</div>
+      <div class="hint-box" id="hint-${id}-${i}">${q.hint}</div>
+      <div class="sol-box"  id="sol-${id}-${i}">${q.sol}</div>
+    `;
+    container.appendChild(card);
+  });
+}
+
+function toggleHint(id, i) {
+  const box = document.getElementById(`hint-${id}-${i}`);
+  box.style.display = box.style.display === 'block' ? 'none' : 'block';
+}
+function toggleSol(id, i) {
+  const box = document.getElementById(`sol-${id}-${i}`);
+  box.style.display = box.style.display === 'block' ? 'none' : 'block';
+}
+
+function selectMCQ(examId, qIdx, optIdx) {
+  if (examSubmitted[examId]) return;
+  if (!examStarted[examId]) return;
+  const qs = EXAMS[examId];
+  const numOpts = qs[qIdx].opts.length;
+  for (let j = 0; j < numOpts; j++) {
+    const el = document.getElementById(`opt-${examId}-${qIdx}-${j}`);
+    el.classList.remove('selected');
+  }
+  document.getElementById(`opt-${examId}-${qIdx}-${optIdx}`).classList.add('selected');
+  document.getElementById(`r-${examId}-${qIdx}-${optIdx}`).checked = true;
+  document.getElementById(`qcard-${examId}-${qIdx}`).classList.add('answered');
+}
+
+function startExam(id) {
+  if (examStarted[id]) return;
+  examStarted[id] = true;
+  startTime[id] = Date.now();
+  document.getElementById('start-' + id).style.display = 'none';
+  document.getElementById('submit-' + id).style.display = 'inline-block';
+  document.getElementById('reset-' + id).style.display = 'inline-block';
+  timers[id] = setInterval(() => {
+    timeLeft[id]--;
+    updateTimer(id);
+    if (timeLeft[id] <= 0) {
+      clearInterval(timers[id]);
+      submitExam(id);
+    }
+  }, 1000);
+}
+
+function updateTimer(id) {
+  const t = timeLeft[id];
+  const m = String(Math.floor(t / 60)).padStart(2, '0');
+  const s = String(t % 60).padStart(2, '0');
+  const el = document.getElementById('timer-' + id);
+  el.textContent = `${m}:${s}`;
+  el.className = 'timer-display' + (t < 300 ? ' warning' : '');
+}
+
+function submitExam(id) {
+  if (!examStarted[id] || examSubmitted[id]) return;
+  examSubmitted[id] = true;
+  clearInterval(timers[id]);
+  document.getElementById('submit-' + id).style.display = 'none';
+
+  const qs = EXAMS[id];
+  let correct = 0;
+  qs.forEach((q, i) => {
+    const card = document.getElementById(`qcard-${id}-${i}`);
+    let selected = -1;
+    for (let j = 0; j < q.opts.length; j++) {
+      if (document.getElementById(`r-${id}-${i}-${j}`).checked) { selected = j; break; }
+    }
+    // Lock all options
+    for (let j = 0; j < q.opts.length; j++) {
+      document.getElementById(`opt-${id}-${i}-${j}`).classList.add('locked');
+    }
+    if (selected === q.ans) {
+      correct++;
+      document.getElementById(`opt-${id}-${i}-${selected}`).classList.add('correct-opt');
+      card.classList.add('correct-q');
+    } else {
+      if (selected >= 0) document.getElementById(`opt-${id}-${i}-${selected}`).classList.add('wrong-opt');
+      document.getElementById(`opt-${id}-${i}-${q.ans}`).classList.add('reveal-correct');
+      card.classList.add('wrong-q');
+    }
+    // Show solution
+    document.getElementById(`sol-${id}-${i}`).style.display = 'block';
+  });
+
+  const pct = Math.round((correct / qs.length) * 100);
+  const used = 5400 - timeLeft[id];
+  const um = String(Math.floor(used / 60)).padStart(2,'0');
+  const us = String(used % 60).padStart(2,'0');
+
+  const resEl = document.getElementById('results-' + id);
+  resEl.style.display = 'block';
+  document.getElementById(`score-${id}-pct`).textContent = pct + '%';
+  document.getElementById(`score-${id}-sub`).textContent = correct + ' / ' + qs.length + ' questions correct';
+  document.getElementById(`res-${id}-correct`).textContent = correct;
+  document.getElementById(`res-${id}-wrong`).textContent = qs.length - correct;
+  document.getElementById(`res-${id}-time`).textContent = `${um}:${us}`;
+  resEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function resetExam(id) {
+  if (!confirm('Reset this exam? All answers will be cleared.')) return;
+  clearInterval(timers[id]);
+  examStarted[id] = false;
+  examSubmitted[id] = false;
+  timeLeft[id] = 5400;
+  updateTimer(id);
+  document.getElementById('start-' + id).style.display = 'inline-block';
+  document.getElementById('submit-' + id).style.display = 'none';
+  document.getElementById('reset-' + id).style.display = 'none';
+  document.getElementById('results-' + id).style.display = 'none';
+  buildExam(id);
+}
+
+// Init
+buildExam('a');
+buildExam('b');
+</script>
+</body>
+</html>
