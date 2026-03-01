@@ -1224,6 +1224,7 @@ let answered = [];
 let peeked = [];
 let quizLabel = "";
 let userAnswers = [];
+let currentQuizIdx = -1;
 
 // ─────────────────────────────────────────────
 // NAVIGATION
@@ -1238,6 +1239,7 @@ function goHome() {
 }
 
 function startQuiz(quizIndex, weak = false) {
+  currentQuizIdx = quizIndex;
   let pool;
   if (quizIndex === -1) {
     pool = weak ? getWeakQuestions(-1) : QUIZZES.flatMap(q => q.questions);
@@ -1573,7 +1575,14 @@ function showResults() {
 
   const total = currentQuestions.length;
   const pct = Math.round((score / total) * 100);
-
+  if (authUser) {
+    const key = `_best_${currentQuizIdx}`;
+    if (!localProgress[key] || pct > localProgress[key].pct) {
+      localProgress[key] = { pct, score, total };
+      clearTimeout(saveTimer);
+      saveTimer = setTimeout(saveProgress, 2000);
+    }
+  }
   document.getElementById('final-score-text').textContent = `${score}/${total}`;
 
   let msg = '';
@@ -1769,9 +1778,10 @@ function renderHomeStats() {
       card.querySelectorAll('div')[1].appendChild(row);
     }
     if (!authUser) { row.innerHTML = ''; continue; }
+    const best = localProgress[`_best_${i}`];
+    if (!best) { row.innerHTML = ''; continue; }
     const stat = getQuizStat(i);
-    if (stat.total === 0) { row.innerHTML = ''; continue; }
-    row.innerHTML = `<span class="stat-badge${stat.weak ? ' has-weak' : ''}">${stat.pct}% &middot; ${stat.correct}/${stat.total} attempts</span>${stat.weak ? `<button class="btn-weak" onclick="event.stopPropagation();startQuiz(${i},true)">Review Weak (${stat.weak})</button>` : ''}`;
+    row.innerHTML = `<span class="stat-badge${stat.weak ? ' has-weak' : ''}">Best: ${best.score}/${best.total} &middot; ${best.pct}%</span>${stat.weak ? `<button class="btn-weak" onclick="event.stopPropagation();startQuiz(${i},true)">Review Weak (${stat.weak})</button>` : ''}`;
   }
 }
 

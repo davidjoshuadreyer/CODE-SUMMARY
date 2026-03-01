@@ -973,6 +973,15 @@ function nextQuestion() {
 function showResults() {
   document.getElementById('quiz-screen').style.display = 'none';
   const pct = Math.round((score / questionList.length) * 100);
+  if (authUser && currentCategory) {
+    if (!localProgress._best) localProgress._best = {};
+    const prev = localProgress._best[currentCategory];
+    if (!prev || pct > prev.pct) {
+      localProgress._best[currentCategory] = { pct, score, total: questionList.length };
+      clearTimeout(saveTimer);
+      saveTimer = setTimeout(saveProgress, 2000);
+    }
+  }
   document.getElementById('res-score').textContent = pct + '%';
   const labels = pct < 50 ? 'Keep studying!' : pct < 65 ? 'Getting there!' : pct < 75 ? 'Good work!' : pct < 85 ? 'Great job!' : pct < 100 ? 'Excellent!' : 'Perfect!';
   document.getElementById('res-label').textContent = labels;
@@ -1108,9 +1117,10 @@ function renderHomeStats() {
       card.querySelector('div').appendChild(row);
     }
     if (!authUser) { row.innerHTML = ''; return; }
+    const best = localProgress._best?.[topic];
+    if (!best) { row.innerHTML = ''; return; }
     const stat = getTopicStat(topic);
-    if (stat.total === 0) { row.innerHTML = ''; return; }
-    row.innerHTML = `<span class="stat-badge${stat.weak ? ' has-weak' : ''}">${stat.pct}% &middot; ${stat.correct}/${stat.total} attempts</span>${stat.weak ? `<button class="btn-weak" onclick="event.stopPropagation();startQuiz('${topic}',true)">Review Weak (${stat.weak})</button>` : ''}`;
+    row.innerHTML = `<span class="stat-badge${stat.weak ? ' has-weak' : ''}">Best: ${best.score}/${best.total} &middot; ${best.pct}%</span>${stat.weak ? `<button class="btn-weak" onclick="event.stopPropagation();startQuiz('${topic}',true)">Review Weak (${stat.weak})</button>` : ''}`;
   });
 }
 
