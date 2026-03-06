@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interweb Cafe - Tesselate</title>
+<style>
+  :root {
+    --teal-0: #c7efe4;
+    --teal-1: #2e8f8f;
+    --teal-2: #126f6f;
+    --ink: #111;
+    --paper: #d4d0c8;
+    --panel-hi: #fff;
+    --panel-mid: #c7c3bb;
+    --panel-lo: #808080;
+    --panel-deep: #404040;
+    --title-a: #000080;
+    --title-b: #1084d0;
+    --accent: #006a6a;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: "Tahoma", "Trebuchet MS", "Verdana", sans-serif;
+    color: var(--ink);
+    background:
+      radial-gradient(1200px 900px at 10% -20%, #8cd6c5 0%, rgba(140, 214, 197, 0) 60%),
+      radial-gradient(900px 700px at 110% 120%, #86b8d9 0%, rgba(134, 184, 217, 0) 62%),
+      linear-gradient(165deg, var(--teal-1), var(--teal-2));
+    min-height: 100vh;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.06) 0 1px, transparent 1px 3px),
+      radial-gradient(circle at 50% 40%, rgba(255, 255, 255, 0.06), transparent 55%);
+    pointer-events: none;
+    opacity: 0.55;
+    z-index: 1;
+  }
+
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 15;
+    border-bottom: 2px solid #0a4a4a;
+    background: linear-gradient(180deg, #dbeceb, #9ccfcb);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  }
+
+  .brand {
+    font-family: "Impact", "Franklin Gothic Medium", sans-serif;
+    letter-spacing: 0.06em;
+    font-size: 1.2rem;
+    color: #083838;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .topbar a.action {
+    color: #053f6b;
+    font-weight: 700;
+    text-decoration: none;
+    border: 2px solid #fff;
+    border-right-color: #5f5f5f;
+    border-bottom-color: #5f5f5f;
+    background: var(--paper);
+    padding: 5px 11px;
+  }
+
+  .topbar a.action:active {
+    border-color: #5f5f5f;
+    border-right-color: #fff;
+    border-bottom-color: #fff;
+  }
+
+  .layout {
+    width: min(1120px, 96vw);
+    margin: 22px auto 30px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .window {
+    border: 2px solid var(--panel-hi);
+    border-right-color: var(--panel-lo);
+    border-bottom-color: var(--panel-lo);
+    box-shadow: inset 0 0 0 1px var(--panel-mid), 0 10px 24px rgba(0, 0, 0, 0.2);
+    background: var(--paper);
+    animation: enter 500ms ease both;
+  }
+
+  .title-bar {
+    background: linear-gradient(90deg, var(--title-a), var(--title-b));
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    padding: 6px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .title-controls {
+    display: inline-flex;
+    gap: 4px;
+  }
+
+  .title-controls span {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    border: 2px solid #fff;
+    border-right-color: #4d4d4d;
+    border-bottom-color: #4d4d4d;
+    background: #d5d1c8;
+  }
+
+  .window-body { padding: 12px; }
+
+  .hero {
+    margin-bottom: 14px;
+    animation-delay: 70ms;
+  }
+
+  .ascii {
+    font-family: "Courier New", "Lucida Console", monospace;
+    font-size: clamp(0.45rem, 1.16vw, 0.72rem);
+    line-height: 1.1;
+    white-space: pre;
+    overflow: auto;
+    background: #081b2f;
+    color: #8ee5f9;
+    padding: 10px;
+    border: 2px solid #fff;
+    border-right-color: #6e6e6e;
+    border-bottom-color: #6e6e6e;
+  }
+
+  .hero-text {
+    margin-top: 10px;
+    font-size: 0.96rem;
+    line-height: 1.5;
+    color: #222;
+  }
+
+  .hero-text strong { color: #005a5a; }
+
+  .split {
+    display: grid;
+    grid-template-columns: 1.45fr 0.9fr;
+    gap: 14px;
+  }
+
+  .lounge {
+    animation-delay: 170ms;
+  }
+
+  #loungeCanvas {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    background: #1c2330;
+    border: 2px solid #fff;
+    border-right-color: #616161;
+    border-bottom-color: #616161;
+    display: block;
+    image-rendering: pixelated;
+    cursor: crosshair;
+  }
+
+  .lounge-meta {
+    margin: 8px 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.78rem;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #08a90a;
+    display: inline-block;
+    margin-right: 5px;
+    box-shadow: 0 0 8px rgba(8, 169, 10, 0.8);
+    animation: blink 1.2s steps(2, start) infinite;
+  }
+
+  .chat-box {
+    border: 2px solid #fff;
+    border-right-color: #656565;
+    border-bottom-color: #656565;
+    background: #f5f5f5;
+    padding: 8px;
+  }
+
+  #chatLog {
+    list-style: none;
+    max-height: 210px;
+    overflow: auto;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin-bottom: 8px;
+  }
+
+  #chatLog li {
+    padding: 3px 0;
+    border-bottom: 1px dotted #b8b8b8;
+    word-break: break-word;
+  }
+
+  #chatForm {
+    display: grid;
+    grid-template-columns: 120px 1fr auto;
+    gap: 6px;
+  }
+
+  input,
+  button {
+    font: inherit;
+  }
+
+  input {
+    border: 2px solid #7b7b7b;
+    border-right-color: #fff;
+    border-bottom-color: #fff;
+    background: #fff;
+    padding: 5px 7px;
+    font-size: 0.8rem;
+    min-width: 0;
+  }
+
+  button {
+    border: 2px solid #fff;
+    border-right-color: #5f5f5f;
+    border-bottom-color: #5f5f5f;
+    background: var(--paper);
+    font-weight: 700;
+    font-size: 0.78rem;
+    padding: 6px 10px;
+    cursor: pointer;
+  }
+
+  button:active {
+    border-color: #5f5f5f;
+    border-right-color: #fff;
+    border-bottom-color: #fff;
+  }
+
+  .side {
+    animation-delay: 250ms;
+  }
+
+  .note {
+    font-size: 0.84rem;
+    line-height: 1.55;
+    margin-bottom: 10px;
+  }
+
+  .rulebook {
+    font-size: 0.82rem;
+    line-height: 1.45;
+    padding-left: 17px;
+    margin-bottom: 12px;
+  }
+
+  .rulebook li { margin-bottom: 6px; }
+
+  .mini-panels {
+    display: grid;
+    gap: 8px;
+  }
+
+  .mini {
+    border: 2px solid #fff;
+    border-right-color: #686868;
+    border-bottom-color: #686868;
+    background: #edf0f4;
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+
+  .mini h4 {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+
+  .tracks button {
+    width: 100%;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+
+  .status-line {
+    margin-top: 10px;
+    border-top: 1px solid #a5a5a5;
+    padding-top: 8px;
+    font-size: 0.78rem;
+    color: #334;
+  }
+
+  @keyframes blink {
+    0%, 48% { opacity: 1; }
+    52%, 100% { opacity: 0.35; }
+  }
+
+  @keyframes enter {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 920px) {
+    .split {
+      grid-template-columns: 1fr;
+    }
+
+    #chatForm {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+  <nav class="topbar">
+    <a href="index.html" class="brand">Tesselate Cafe</a>
+    <a class="action" href="index.html">Back To Home</a>
+  </nav>
+
+  <main class="layout">
+    <section class="window hero">
+      <div class="title-bar">
+        <span>INTERWEB CAFE.BAT</span>
+        <div class="title-controls"><span></span><span></span><span></span></div>
+      </div>
+      <div class="window-body">
+<pre class="ascii">   _____      __        __         _       _____        __      
+  / ___/___ _/ /_____ _/ /____    | |     / / _ )____ _/ /_____ 
+ / /__/ _ `/  '_/ _ `/ __/ -_)   | | /| / / _  / _ `/  '_/ -_)
+ \___/\_,_/_/\_\\_,_/\__/\__/    | |/ |/ /____/\_,_/_/\_\\__/ 
+                                        /_/                    
+</pre>
+        <p class="hero-text">
+          A retro social room inspired by classic web cafes. Click in the lounge to move your avatar, send messages,
+          and watch simulated visitors wander around. <strong>No backend required</strong>, everything runs in this page.
+        </p>
+      </div>
+    </section>
+
+    <div class="split">
+      <section class="window lounge">
+        <div class="title-bar">
+          <span>LOUNGE.EXE</span>
+          <div class="title-controls"><span></span><span></span><span></span></div>
+        </div>
+        <div class="window-body">
+          <canvas id="loungeCanvas" width="960" height="600"></canvas>
+          <div class="lounge-meta">
+            <span><span class="dot"></span>Connected: <strong id="visitorCount">0</strong> visitors</span>
+            <span id="coordHint">Click the room to move.</span>
+          </div>
+          <div class="chat-box">
+            <ul id="chatLog"></ul>
+            <form id="chatForm">
+              <input id="nameInput" maxlength="12" value="You" aria-label="Display name">
+              <input id="messageInput" maxlength="120" placeholder="Type a message or /name NewName" required aria-label="Message">
+              <button type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <aside class="window side">
+        <div class="title-bar">
+          <span>INSTRUCTIONS.TXT</span>
+          <div class="title-controls"><span></span><span></span><span></span></div>
+        </div>
+        <div class="window-body">
+          <p class="note">This is a local lounge scene styled after old-school web cafe spaces.</p>
+          <ul class="rulebook">
+            <li>Click inside the room to move your avatar.</li>
+            <li>Use <code>/name NewName</code> in chat to rename yourself.</li>
+            <li>Simulated visitors post random messages.</li>
+            <li>The "Jukebox" buttons print flavor messages in chat.</li>
+          </ul>
+
+          <div class="mini-panels">
+            <div class="mini">
+              <h4>Jukebox</h4>
+              <div class="tracks">
+                <button type="button" data-track="Lo-Fi Night Shift">Play: Lo-Fi Night Shift</button>
+                <button type="button" data-track="CRT Rain Ambience">Play: CRT Rain Ambience</button>
+                <button type="button" data-track="Dial-up Jazz">Play: Dial-up Jazz</button>
+              </div>
+            </div>
+            <div class="mini">
+              <h4>Cafe Board</h4>
+              <div>Theme: Retro web lounge</div>
+              <div>Open: 24/7</div>
+              <div>Mode: Local simulation</div>
+            </div>
+          </div>
+
+          <div class="status-line" id="statusLine">Status: Ready.</div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+<script>
+  const canvas = document.getElementById("loungeCanvas");
+  const ctx = canvas.getContext("2d");
+  const visitorCountEl = document.getElementById("visitorCount");
+  const chatLog = document.getElementById("chatLog");
+  const chatForm = document.getElementById("chatForm");
+  const messageInput = document.getElementById("messageInput");
+  const nameInput = document.getElementById("nameInput");
+  const statusLine = document.getElementById("statusLine");
+  const coordHint = document.getElementById("coordHint");
+
+  const room = { w: 960, h: 600 };
+  const avatars = [];
+  const bubbles = [];
+  const botNames = ["PixelKid", "CRTQueen", "ByteBrew", "CacheCat", "LanGhost", "ModemMage"];
+  const botLines = [
+    "anyone grinding practice exams tonight?",
+    "this lounge looks like 2001 and i love it.",
+    "remember to take stretch breaks.",
+    "matrix quizzes are no joke.",
+    "running on coffee and recursion.",
+    "dropping in to say hi from the lab."
+  ];
+
+  const local = {
+    id: "local",
+    name: "You",
+    x: 480,
+    y: 460,
+    tx: 480,
+    ty: 460,
+    color: "#ffd166",
+    speed: 2.9
+  };
+
+  avatars.push(local);
+
+  function createBot(i) {
+    const hue = 150 + i * 28;
+    return {
+      id: "bot-" + i,
+      name: botNames[i % botNames.length],
+      x: 120 + Math.random() * 720,
+      y: 120 + Math.random() * 330,
+      tx: 120 + Math.random() * 720,
+      ty: 120 + Math.random() * 330,
+      color: "hsl(" + hue + " 75% 65%)",
+      speed: 1.4 + Math.random() * 1.1
+    };
+  }
+
+  for (let i = 0; i < 6; i++) avatars.push(createBot(i));
+  visitorCountEl.textContent = avatars.length;
+
+  function postLine(name, text, tone) {
+    const li = document.createElement("li");
+    const stamp = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+    li.innerHTML = "<strong>[" + stamp + "] " + escapeHtml(name) + ":</strong> " + escapeHtml(text);
+    if (tone === "system") li.style.color = "#0f4f75";
+    if (tone === "alert") li.style.color = "#7a2400";
+    chatLog.appendChild(li);
+    chatLog.scrollTop = chatLog.scrollHeight;
+    while (chatLog.children.length > 70) chatLog.removeChild(chatLog.firstChild);
+  }
+
+  function bubbleFor(name, text, x, y) {
+    bubbles.push({
+      name,
+      text,
+      x,
+      y,
+      ttl: 220
+    });
+  }
+
+  function escapeHtml(value) {
+    return value
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;");
+  }
+
+  function clampTarget(a) {
+    a.tx = Math.max(56, Math.min(room.w - 56, a.tx));
+    a.ty = Math.max(84, Math.min(room.h - 56, a.ty));
+  }
+
+  function updateAvatar(a) {
+    const dx = a.tx - a.x;
+    const dy = a.ty - a.y;
+    const dist = Math.hypot(dx, dy);
+    if (dist < 0.8) return;
+    const step = Math.min(a.speed, dist);
+    a.x += (dx / dist) * step;
+    a.y += (dy / dist) * step;
+  }
+
+  function randomBotMove() {
+    for (const a of avatars) {
+      if (a.id === local.id) continue;
+      a.tx = 90 + Math.random() * (room.w - 180);
+      a.ty = 120 + Math.random() * (room.h - 200);
+      clampTarget(a);
+    }
+  }
+
+  function randomBotChat() {
+    const bot = avatars[1 + Math.floor(Math.random() * (avatars.length - 1))];
+    const text = botLines[Math.floor(Math.random() * botLines.length)];
+    postLine(bot.name, text);
+    bubbleFor(bot.name, text, bot.x, bot.y);
+  }
+
+  function drawRoom() {
+    ctx.clearRect(0, 0, room.w, room.h);
+
+    const floorGrad = ctx.createLinearGradient(0, 0, 0, room.h);
+    floorGrad.addColorStop(0, "#303a4d");
+    floorGrad.addColorStop(1, "#1a1f2a");
+    ctx.fillStyle = floorGrad;
+    ctx.fillRect(0, 0, room.w, room.h);
+
+    for (let y = 0; y < room.h; y += 40) {
+      for (let x = 0; x < room.w; x += 40) {
+        const even = ((x + y) / 40) % 2 === 0;
+        ctx.fillStyle = even ? "rgba(255,255,255,0.045)" : "rgba(0,0,0,0.06)";
+        ctx.fillRect(x, y, 40, 40);
+      }
+    }
+
+    drawFurniture(40, 36, 880, 70, "#6e4f2c");
+    drawFurniture(110, 198, 156, 74, "#495f83");
+    drawFurniture(354, 146, 176, 74, "#495f83");
+    drawFurniture(600, 240, 220, 74, "#495f83");
+    drawFurniture(246, 336, 220, 74, "#6c6b7f");
+    drawFurniture(570, 406, 190, 74, "#6c6b7f");
+
+    ctx.fillStyle = "#9fd38f";
+    ctx.fillRect(872, 88, 34, 52);
+    ctx.fillRect(58, 468, 32, 52);
+
+    for (const a of avatars) drawAvatar(a);
+    for (let i = bubbles.length - 1; i >= 0; i--) {
+      drawBubble(bubbles[i]);
+      bubbles[i].ttl -= 1;
+      if (bubbles[i].ttl <= 0) bubbles.splice(i, 1);
+    }
+  }
+
+  function drawFurniture(x, y, w, h, color) {
+    ctx.fillStyle = color;
+    ctx.fillRect(x, y, w, h);
+    ctx.fillStyle = "rgba(255,255,255,0.12)";
+    ctx.fillRect(x + 2, y + 2, w - 4, 8);
+    ctx.fillStyle = "rgba(0,0,0,0.2)";
+    ctx.fillRect(x + 4, y + h - 10, w - 8, 8);
+  }
+
+  function drawAvatar(a) {
+    const bob = Math.sin(performance.now() / 220 + a.x * 0.01) * 1.2;
+    ctx.beginPath();
+    ctx.fillStyle = a.color;
+    ctx.arc(a.x, a.y - 8 + bob, 14, 0, Math.PI * 2);
+    ctx.fill();
+
+    ctx.fillStyle = "#1f2937";
+    ctx.fillRect(a.x - 11, a.y + 7 + bob, 22, 16);
+    ctx.fillStyle = "#e5e7eb";
+    ctx.font = "12px Tahoma";
+    const tagW = ctx.measureText(a.name).width + 10;
+    ctx.fillRect(a.x - tagW / 2, a.y - 35 + bob, tagW, 16);
+    ctx.fillStyle = "#111";
+    ctx.fillText(a.name, a.x - tagW / 2 + 5, a.y - 23 + bob);
+  }
+
+  function drawBubble(b) {
+    const text = b.text.length > 34 ? b.text.slice(0, 34) + "..." : b.text;
+    ctx.font = "12px Tahoma";
+    const w = ctx.measureText(text).width + 14;
+    const h = 22;
+    const x = Math.max(8, Math.min(room.w - w - 8, b.x - w / 2));
+    const y = Math.max(8, b.y - 58);
+    ctx.fillStyle = "rgba(255,255,255,0.96)";
+    ctx.fillRect(x, y, w, h);
+    ctx.fillStyle = "#111";
+    ctx.fillText(text, x + 7, y + 15);
+  }
+
+  function loop() {
+    for (const a of avatars) updateAvatar(a);
+    drawRoom();
+    requestAnimationFrame(loop);
+  }
+
+  canvas.addEventListener("click", (ev) => {
+    const rect = canvas.getBoundingClientRect();
+    const scaleX = room.w / rect.width;
+    const scaleY = room.h / rect.height;
+    local.tx = (ev.clientX - rect.left) * scaleX;
+    local.ty = (ev.clientY - rect.top) * scaleY;
+    clampTarget(local);
+    coordHint.textContent = "Target: " + Math.round(local.tx) + ", " + Math.round(local.ty);
+  });
+
+  chatForm.addEventListener("submit", (ev) => {
+    ev.preventDefault();
+    const message = messageInput.value.trim();
+    if (!message) return;
+
+    if (message.toLowerCase().startsWith("/name ")) {
+      const next = message.slice(6).trim().slice(0, 12);
+      if (next) {
+        local.name = next;
+        nameInput.value = next;
+        postLine("System", "Display name changed to " + next + ".", "system");
+        statusLine.textContent = "Status: Name updated.";
+      }
+      messageInput.value = "";
+      return;
+    }
+
+    if (nameInput.value.trim()) local.name = nameInput.value.trim().slice(0, 12);
+    postLine(local.name, message);
+    bubbleFor(local.name, message, local.x, local.y);
+    statusLine.textContent = "Status: Message sent.";
+    messageInput.value = "";
+  });
+
+  document.querySelectorAll("[data-track]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const track = btn.getAttribute("data-track");
+      postLine("Jukebox", "Now playing: " + track, "system");
+      bubbleFor("Jukebox", track, room.w * 0.5, 70);
+      statusLine.textContent = "Status: " + track + " selected.";
+    });
+  });
+
+  postLine("System", "Welcome to the Interweb Cafe.", "system");
+  postLine("System", "Click inside the lounge to move.", "system");
+  randomBotMove();
+  setInterval(randomBotMove, 3200);
+  setInterval(randomBotChat, 4700);
+  loop();
+</script>
+</body>
+</html>
