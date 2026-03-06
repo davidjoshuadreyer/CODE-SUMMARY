@@ -9,7 +9,12 @@
       "Bash(pdftotext \"c:\\\\Users\\\\david\\\\OneDrive\\\\Documents\\\\CODE\\\\CODE SUMMARY\\\\matrix\\\\26W Math 251 Notes \\(Section 4.6 Matrix Operations\\)-1.pdf\" -)",
       "Bash(pdftotext \"c:\\\\Users\\\\david\\\\OneDrive\\\\Documents\\\\CODE\\\\CODE SUMMARY\\\\matrix\\\\matrix_examples.pdf\" -)",
       "Bash(pdftotext -l 15 \"c:\\\\Users\\\\david\\\\OneDrive\\\\Documents\\\\CODE\\\\CODE SUMMARY\\\\matrix\\\\matrix_examples.pdf\" /dev/stdout)",
-      "Bash(pdftotext -l 15 \"c:\\\\Users\\\\david\\\\OneDrive\\\\Documents\\\\CODE\\\\CODE SUMMARY\\\\matrix\\\\matrix_examples.pdf\" -)"
+      "Bash(pdftotext -l 15 \"c:\\\\Users\\\\david\\\\OneDrive\\\\Documents\\\\CODE\\\\CODE SUMMARY\\\\matrix\\\\matrix_examples.pdf\" -)",
+      "Bash(git add Chem_Quiz.html Matrix_Quiz.html supabase_setup.sql)",
+      "Bash(git commit:*)",
+      "Bash(git push origin main)",
+      "Bash(pdftotext \"/c/Users/david/OneDrive/Documents/CODE/CODE SUMMARY/Chemistry/Chem 150 Answer key Midterm \\(2015_10_17 05_51_48 UTC\\).pdf\" -)",
+      "Bash(pdftotext \"/c/Users/david/OneDrive/Documents/CODE/CODE SUMMARY/Chemistry/Answer_Key_Chem_150_Old_Midterm_Friday.pdf.pdf\" -)"
     ]
   }
 }
