@@ -459,7 +459,7 @@
             <li>Click inside the room to move your avatar.</li>
             <li>Use <code>/name NewName</code> in chat to rename yourself.</li>
             <li>Connected visitors appear in real time.</li>
-            <li>Walk to the arcade cabinet and press <code>E</code> to play.</li>
+            <li>Walk to the arcade cabinet and press <code>E</code> to play (A/D move, Space shoot).</li>
             <li>The "Jukebox" buttons broadcast flavor messages.</li>
           </ul>
 
@@ -495,7 +495,7 @@
   <div class="arcade-overlay" id="arcadeOverlay" hidden>
     <div class="window arcade-window">
       <div class="title-bar">
-        <span>BEAN BLASTER.EXE</span>
+        <span>NEON DEFENDER.EXE</span>
         <div class="title-controls"><span></span><span></span><span></span></div>
       </div>
       <div class="window-body">
@@ -537,7 +537,7 @@
 
   const room = { w: 960, h: 600 };
   const arcadeCabinet = { x: 696, y: 184, radius: 86 };
-  const ARCADE_BEST_KEY = "tesselateCafeArcadeBest";
+  const ARCADE_BEST_KEY = "tesselateCafeArcadeBestV2";
   const bubbles = [];
   const steamPuffs = [];
   const avatars = new Map();
@@ -580,14 +580,23 @@
     lives: 3,
     best: Number(localStorage.getItem(ARCADE_BEST_KEY) || "0"),
     playerX: 240,
-    beans: [],
+    bullets: [],
+    enemies: [],
+    powerups: [],
+    particles: [],
     spawnMs: 0,
-    roundMs: 45000,
-    timeLeftMs: 45000,
+    roundMs: 60000,
+    timeLeftMs: 60000,
     keyLeft: false,
     keyRight: false,
+    keyShoot: false,
+    shootCooldownMs: 0,
+    rapidTimerMs: 0,
+    shield: 0,
+    combo: 1,
+    comboTimerMs: 0,
     lastTs: 0,
-    message: "Catch beans before time runs out."
+    message: "Defend against glitch drones."
   };
 
   function randomId() {
@@ -772,14 +781,14 @@
 
     ctx.fillStyle = "#7de6ff";
     ctx.font = "10px Tahoma";
-    const label = "BEAN";
+    const label = "NEON";
     const labelW = ctx.measureText(label).width;
     ctx.fillText(label, x - labelW / 2, y - 49);
   }
 
   function drawArcadePrompt() {
     if (!arcade.nearCabinet || arcade.active) return;
-    const text = "Press E to play Bean Blaster";
+    const text = "Press E to play Neon Defender";
     ctx.font = "12px Tahoma";
     const w = ctx.measureText(text).width + 18;
     const x = arcadeCabinet.x - w / 2;
@@ -796,26 +805,101 @@
     arcadeBestEl.textContent = "Best: " + arcade.best;
   }
 
-  function spawnArcadeBean() {
-    const lucky = Math.random() < 0.12;
-    arcade.beans.push({
-      x: 20 + Math.random() * (arcadeCanvas.width - 40),
-      y: -10,
-      r: lucky ? 10 : 8,
-      speed: (lucky ? 105 : 135) + Math.random() * 85 + arcade.score * 0.7,
-      value: lucky ? 3 : 1,
-      color: lucky ? "#f9d648" : "#8b5a2b"
+  function createArcadeBurst(x, y, color, count) {
+    for (let i = 0; i < count; i++) {
+      arcade.particles.push({
+        x,
+        y,
+        vx: (-90 + Math.random() * 180),
+        vy: (-120 + Math.random() * 180),
+        life: 0.28 + Math.random() * 0.42,
+        size: 1.5 + Math.random() * 2.6,
+        color
+      });
+    }
+  }
+
+  function spawnArcadePowerup(x, y) {
+    if (Math.random() > 0.2) return;
+    const kind = Math.random() < 0.55 ? "shield" : "rapid";
+    arcade.powerups.push({
+      kind,
+      x,
+      y,
+      r: 10,
+      speed: 96 + Math.random() * 30
     });
+  }
+
+  function spawnArcadeEnemy() {
+    const difficulty = 1 + (arcade.score / 180) + ((arcade.roundMs - arcade.timeLeftMs) / 90000);
+    const roll = Math.random();
+    let enemy;
+
+    if (roll < 0.56) {
+      enemy = {
+        type: "scout",
+        x: 26 + Math.random() * (arcadeCanvas.width - 52),
+        y: -16,
+        r: 12,
+        hp: 1,
+        speed: 118 + Math.random() * 110 * difficulty,
+        points: 12,
+        color: "#ff6884",
+        t: 0,
+        phase: Math.random() * Math.PI * 2,
+        drift: 10 + Math.random() * 12
+      };
+    } else if (roll < 0.88) {
+      enemy = {
+        type: "zigzag",
+        x: 30 + Math.random() * (arcadeCanvas.width - 60),
+        y: -16,
+        r: 12,
+        hp: 1,
+        speed: 94 + Math.random() * 75 * difficulty,
+        points: 18,
+        color: "#6ce2ff",
+        t: 0,
+        phase: Math.random() * Math.PI * 2,
+        drift: 42 + Math.random() * 52
+      };
+    } else {
+      enemy = {
+        type: "tank",
+        x: 34 + Math.random() * (arcadeCanvas.width - 68),
+        y: -20,
+        r: 16,
+        hp: 3,
+        speed: 66 + Math.random() * 48 * difficulty,
+        points: 30,
+        color: "#ffd36f",
+        t: 0,
+        phase: Math.random() * Math.PI * 2,
+        drift: 16 + Math.random() * 12
+      };
+    }
+
+    arcade.enemies.push(enemy);
   }
 
   function resetArcadeRound() {
     arcade.score = 0;
     arcade.lives = 3;
+    arcade.shield = 0;
+    arcade.combo = 1;
+    arcade.comboTimerMs = 0;
+    arcade.rapidTimerMs = 0;
+    arcade.shootCooldownMs = 0;
     arcade.playerX = arcadeCanvas.width / 2;
-    arcade.beans = [];
+    arcade.bullets = [];
+    arcade.enemies = [];
+    arcade.powerups = [];
+    arcade.particles = [];
     arcade.spawnMs = 0;
     arcade.timeLeftMs = arcade.roundMs;
-    arcade.message = "Catch beans with A/D or arrow keys.";
+    arcade.message = "A/D move. Space fires. Survive the shift.";
+    arcade.keyShoot = false;
     updateArcadeHud();
   }
 
@@ -826,7 +910,7 @@
     if (arcade.score > arcade.best) {
       arcade.best = arcade.score;
       localStorage.setItem(ARCADE_BEST_KEY, String(arcade.best));
-      postLine("System", "New Bean Blaster best: " + arcade.best + ".", "system");
+      postLine("System", "New Neon Defender best: " + arcade.best + ".", "system");
     }
     updateArcadeHud();
     setStatus(reason, "ok");
@@ -837,7 +921,7 @@
     arcade.running = true;
     arcade.lastTs = performance.now();
     arcadeStartBtn.textContent = "Restart";
-    setStatus("Bean Blaster running.", "ok");
+    setStatus("Neon Defender running.", "ok");
   }
 
   function openArcade() {
@@ -846,7 +930,7 @@
     arcade.running = false;
     arcade.lastTs = 0;
     arcadeOverlay.hidden = false;
-    arcade.message = "Press Start Round to begin.";
+    arcade.message = "Press Start Round. Shoot with Space.";
     arcadeStartBtn.textContent = "Start Round";
     updateArcadeHud();
     setStatus("Arcade ready. Press Start Round.", "ok");
@@ -858,52 +942,146 @@
     arcade.running = false;
     arcade.keyLeft = false;
     arcade.keyRight = false;
+    arcade.keyShoot = false;
     arcadeOverlay.hidden = true;
     setStatus("Arcade closed.", "ok");
   }
 
   function updateArcadeGame(dtMs) {
-    const moveSpeed = 0.42 * dtMs;
+    const moveSpeed = 0.43 * dtMs;
     if (arcade.keyLeft) arcade.playerX -= moveSpeed;
     if (arcade.keyRight) arcade.playerX += moveSpeed;
     arcade.playerX = Math.max(36, Math.min(arcadeCanvas.width - 36, arcade.playerX));
 
-    arcade.spawnMs += dtMs;
-    const spawnGap = Math.max(190, 520 - arcade.score * 4.5);
-    while (arcade.spawnMs >= spawnGap) {
-      arcade.spawnMs -= spawnGap;
-      spawnArcadeBean();
+    arcade.shootCooldownMs = Math.max(0, arcade.shootCooldownMs - dtMs);
+    arcade.rapidTimerMs = Math.max(0, arcade.rapidTimerMs - dtMs);
+    arcade.comboTimerMs = Math.max(0, arcade.comboTimerMs - dtMs);
+    if (arcade.comboTimerMs === 0) arcade.combo = 1;
+
+    if (arcade.keyShoot && arcade.shootCooldownMs <= 0) {
+      const rapid = arcade.rapidTimerMs > 0;
+      arcade.bullets.push({
+        x: arcade.playerX,
+        y: arcadeCanvas.height - 40,
+        r: 3,
+        vy: rapid ? -460 : -380,
+        life: 1.5
+      });
+      arcade.shootCooldownMs = rapid ? 86 : 180;
+      createArcadeBurst(arcade.playerX, arcadeCanvas.height - 42, "#9fe5ff", 4);
     }
 
-    const basketY = arcadeCanvas.height - 24;
-    const basketHalfW = 30;
+    arcade.spawnMs += dtMs;
+    const elapsedSec = (arcade.roundMs - arcade.timeLeftMs) / 1000;
+    const spawnGap = Math.max(150, 670 - elapsedSec * 6 - arcade.score * 0.75);
+    while (arcade.spawnMs >= spawnGap) {
+      arcade.spawnMs -= spawnGap;
+      spawnArcadeEnemy();
+    }
 
-    for (let i = arcade.beans.length - 1; i >= 0; i--) {
-      const bean = arcade.beans[i];
-      bean.y += bean.speed * (dtMs / 1000);
-      const caught = bean.y + bean.r >= basketY
-        && bean.y - bean.r <= basketY + 12
-        && bean.x >= arcade.playerX - basketHalfW
-        && bean.x <= arcade.playerX + basketHalfW;
-      if (caught) {
-        arcade.score += bean.value;
-        arcade.beans.splice(i, 1);
-        continue;
+    for (let i = arcade.bullets.length - 1; i >= 0; i--) {
+      const bullet = arcade.bullets[i];
+      bullet.y += bullet.vy * (dtMs / 1000);
+      bullet.life -= dtMs / 1000;
+      if (bullet.y < -10 || bullet.life <= 0) arcade.bullets.splice(i, 1);
+    }
+
+    for (let i = arcade.enemies.length - 1; i >= 0; i--) {
+      const enemy = arcade.enemies[i];
+      enemy.t += dtMs / 1000;
+      enemy.y += enemy.speed * (dtMs / 1000);
+      if (enemy.type === "zigzag") {
+        enemy.x += Math.sin(enemy.phase + enemy.t * 5.4) * enemy.drift * (dtMs / 1000);
+      } else if (enemy.type === "scout") {
+        enemy.x += Math.sin(enemy.phase + enemy.t * 3.8) * enemy.drift * (dtMs / 1000);
       }
-      if (bean.y - bean.r > arcadeCanvas.height + 5) {
-        arcade.beans.splice(i, 1);
-        arcade.lives -= 1;
-        if (arcade.lives <= 0) {
-          finishArcadeRound("Round over! Beans escaped.");
+      enemy.x = Math.max(enemy.r + 4, Math.min(arcadeCanvas.width - enemy.r - 4, enemy.x));
+    }
+
+    for (let ei = arcade.enemies.length - 1; ei >= 0; ei--) {
+      const enemy = arcade.enemies[ei];
+      for (let bi = arcade.bullets.length - 1; bi >= 0; bi--) {
+        const bullet = arcade.bullets[bi];
+        const dx = enemy.x - bullet.x;
+        const dy = enemy.y - bullet.y;
+        const r = enemy.r + bullet.r;
+        if (dx * dx + dy * dy > r * r) continue;
+
+        arcade.bullets.splice(bi, 1);
+        enemy.hp -= 1;
+        createArcadeBurst(bullet.x, bullet.y, "#d6f6ff", 4);
+        if (enemy.hp <= 0) {
+          const gained = Math.round(enemy.points * arcade.combo);
+          arcade.score += gained;
+          if (arcade.comboTimerMs > 0) arcade.combo = Math.min(4, arcade.combo + 0.25);
+          else arcade.combo = 1.25;
+          arcade.comboTimerMs = 1800;
+          createArcadeBurst(enemy.x, enemy.y, enemy.color, 9);
+          spawnArcadePowerup(enemy.x, enemy.y);
+          arcade.enemies.splice(ei, 1);
           break;
         }
       }
     }
 
+    const shipY = arcadeCanvas.height - 30;
+    const shipHalfW = 24;
+    for (let i = arcade.enemies.length - 1; i >= 0; i--) {
+      const enemy = arcade.enemies[i];
+      const hitShip = enemy.y + enemy.r >= shipY - 10
+        && enemy.y - enemy.r <= shipY + 16
+        && Math.abs(enemy.x - arcade.playerX) <= shipHalfW + enemy.r;
+
+      const missed = enemy.y - enemy.r > arcadeCanvas.height + 8;
+      if (!hitShip && !missed) continue;
+
+      if (hitShip) createArcadeBurst(enemy.x, enemy.y, "#ffb7b7", 10);
+      arcade.enemies.splice(i, 1);
+
+      if (arcade.shield > 0) arcade.shield -= 1;
+      else arcade.lives -= 1;
+
+      if (arcade.lives <= 0) {
+        finishArcadeRound("Systems down! Final score: " + arcade.score);
+        return;
+      }
+    }
+
+    for (let i = arcade.powerups.length - 1; i >= 0; i--) {
+      const p = arcade.powerups[i];
+      p.y += p.speed * (dtMs / 1000);
+      p.x += Math.sin((p.y + i * 13) * 0.04) * 0.7;
+      const hit = Math.abs(p.x - arcade.playerX) <= 24 + p.r
+        && p.y + p.r >= arcadeCanvas.height - 36;
+      if (hit) {
+        if (p.kind === "shield") {
+          arcade.shield = Math.min(4, arcade.shield + 1);
+          arcade.message = "Shield boosted.";
+        } else {
+          arcade.rapidTimerMs = 9000;
+          arcade.message = "Rapid fire active.";
+        }
+        createArcadeBurst(p.x, p.y, p.kind === "shield" ? "#7dffca" : "#ffe07f", 10);
+        arcade.powerups.splice(i, 1);
+        continue;
+      }
+      if (p.y - p.r > arcadeCanvas.height + 6) arcade.powerups.splice(i, 1);
+    }
+
+    for (let i = arcade.particles.length - 1; i >= 0; i--) {
+      const p = arcade.particles[i];
+      p.x += p.vx * (dtMs / 1000);
+      p.y += p.vy * (dtMs / 1000);
+      p.vy += 60 * (dtMs / 1000);
+      p.life -= dtMs / 1000;
+      if (p.life <= 0) arcade.particles.splice(i, 1);
+    }
+
     arcade.timeLeftMs -= dtMs;
     if (arcade.timeLeftMs <= 0) {
       arcade.timeLeftMs = 0;
-      finishArcadeRound("Time! Final score: " + arcade.score);
+      finishArcadeRound("Shift complete! Final score: " + arcade.score);
+      return;
     }
     updateArcadeHud();
   }
@@ -914,55 +1092,129 @@
     arcadeCtx.clearRect(0, 0, w, h);
 
     const bg = arcadeCtx.createLinearGradient(0, 0, 0, h);
-    bg.addColorStop(0, "#102236");
-    bg.addColorStop(1, "#0b1522");
+    bg.addColorStop(0, "#101d35");
+    bg.addColorStop(1, "#090f1c");
     arcadeCtx.fillStyle = bg;
     arcadeCtx.fillRect(0, 0, w, h);
 
-    for (let i = 0; i < 40; i++) {
+    for (let i = 0; i < 44; i++) {
       arcadeCtx.fillStyle = i % 2 ? "rgba(255,255,255,0.06)" : "rgba(0,0,0,0.08)";
-      arcadeCtx.fillRect((i * 37) % w, (i * 53 + 17) % h, 2, 2);
+      arcadeCtx.fillRect((i * 37) % w, (i * 53 + 17 + performance.now() * 0.02) % h, 2, 2);
     }
 
     arcadeCtx.fillStyle = "#22344d";
     arcadeCtx.fillRect(0, h - 22, w, 22);
 
-    for (const bean of arcade.beans) {
-      arcadeCtx.fillStyle = bean.color;
-      arcadeCtx.beginPath();
-      arcadeCtx.arc(bean.x, bean.y, bean.r, 0, Math.PI * 2);
-      arcadeCtx.fill();
-      arcadeCtx.fillStyle = "rgba(0,0,0,0.22)";
-      arcadeCtx.fillRect(bean.x - bean.r * 0.5, bean.y - bean.r * 0.6, bean.r * 0.3, bean.r * 0.5);
+    for (const p of arcade.particles) {
+      arcadeCtx.globalAlpha = Math.max(0, p.life * 1.2);
+      arcadeCtx.fillStyle = p.color;
+      arcadeCtx.fillRect(p.x, p.y, p.size, p.size);
+    }
+    arcadeCtx.globalAlpha = 1;
+
+    for (const enemy of arcade.enemies) {
+      arcadeCtx.save();
+      arcadeCtx.translate(enemy.x, enemy.y);
+      arcadeCtx.rotate(Math.sin(performance.now() * 0.002 + enemy.phase) * 0.18);
+      arcadeCtx.fillStyle = enemy.color;
+      if (enemy.type === "tank") {
+        arcadeCtx.fillRect(-enemy.r, -enemy.r * 0.7, enemy.r * 2, enemy.r * 1.4);
+        arcadeCtx.fillStyle = "#2f3240";
+        arcadeCtx.fillRect(-enemy.r * 0.4, -enemy.r * 0.18, enemy.r * 0.8, enemy.r * 0.36);
+      } else if (enemy.type === "zigzag") {
+        arcadeCtx.beginPath();
+        arcadeCtx.moveTo(0, -enemy.r);
+        arcadeCtx.lineTo(enemy.r, 0);
+        arcadeCtx.lineTo(0, enemy.r);
+        arcadeCtx.lineTo(-enemy.r, 0);
+        arcadeCtx.closePath();
+        arcadeCtx.fill();
+      } else {
+        arcadeCtx.beginPath();
+        arcadeCtx.arc(0, 0, enemy.r, 0, Math.PI * 2);
+        arcadeCtx.fill();
+      }
+      if (enemy.hp > 1) {
+        arcadeCtx.fillStyle = "rgba(0,0,0,0.42)";
+        arcadeCtx.fillRect(-enemy.r, enemy.r + 2, enemy.r * 2, 4);
+        arcadeCtx.fillStyle = "#9fffe5";
+        arcadeCtx.fillRect(-enemy.r, enemy.r + 2, enemy.r * 2 * (enemy.hp / 3), 4);
+      }
+      arcadeCtx.restore();
     }
 
-    const px = arcade.playerX;
-    const py = h - 24;
-    arcadeCtx.fillStyle = "#f2f2f2";
-    arcadeCtx.fillRect(px - 30, py, 60, 12);
-    arcadeCtx.fillStyle = "#67b2ff";
-    arcadeCtx.fillRect(px - 22, py - 8, 44, 9);
-    arcadeCtx.fillStyle = "#1a2536";
-    arcadeCtx.fillRect(px - 26, py + 10, 52, 3);
+    for (const pu of arcade.powerups) {
+      arcadeCtx.save();
+      arcadeCtx.translate(pu.x, pu.y);
+      arcadeCtx.rotate(performance.now() * 0.0035);
+      arcadeCtx.fillStyle = pu.kind === "shield" ? "#86ffc8" : "#ffe37e";
+      arcadeCtx.fillRect(-pu.r, -pu.r, pu.r * 2, pu.r * 2);
+      arcadeCtx.fillStyle = "#203046";
+      if (pu.kind === "shield") {
+        arcadeCtx.fillRect(-2, -6, 4, 12);
+        arcadeCtx.fillRect(-6, -2, 12, 4);
+      } else {
+        arcadeCtx.beginPath();
+        arcadeCtx.moveTo(-4, -6);
+        arcadeCtx.lineTo(1, -1);
+        arcadeCtx.lineTo(-2, -1);
+        arcadeCtx.lineTo(4, 6);
+        arcadeCtx.lineTo(-1, 1);
+        arcadeCtx.lineTo(2, 1);
+        arcadeCtx.closePath();
+        arcadeCtx.fill();
+      }
+      arcadeCtx.restore();
+    }
+
+    for (const bullet of arcade.bullets) {
+      arcadeCtx.fillStyle = "#a2eeff";
+      arcadeCtx.beginPath();
+      arcadeCtx.arc(bullet.x, bullet.y, bullet.r, 0, Math.PI * 2);
+      arcadeCtx.fill();
+    }
+
+    const px = arcade.playerX, py = h - 30;
+    if (arcade.shield > 0) {
+      arcadeCtx.strokeStyle = "rgba(130,255,210,0.8)";
+      arcadeCtx.lineWidth = 2;
+      arcadeCtx.beginPath();
+      arcadeCtx.arc(px, py - 4, 22 + Math.sin(performance.now() * 0.01) * 1.5, 0, Math.PI * 2);
+      arcadeCtx.stroke();
+    }
+    arcadeCtx.fillStyle = "#c8e8ff";
+    arcadeCtx.beginPath();
+    arcadeCtx.moveTo(px, py - 18);
+    arcadeCtx.lineTo(px + 17, py + 10);
+    arcadeCtx.lineTo(px - 17, py + 10);
+    arcadeCtx.closePath();
+    arcadeCtx.fill();
+    arcadeCtx.fillStyle = "#4fb8ff";
+    arcadeCtx.fillRect(px - 5, py - 6, 10, 14);
+    arcadeCtx.fillStyle = "#243048";
+    arcadeCtx.fillRect(px - 12, py + 10, 24, 4);
 
     const secs = Math.ceil(arcade.timeLeftMs / 1000);
     arcadeCtx.fillStyle = "#c7e9ff";
     arcadeCtx.font = "14px Tahoma";
     arcadeCtx.fillText("Time: " + secs + "s", 12, 22);
+    arcadeCtx.fillText("Shield: " + arcade.shield, 12, 40);
+    if (arcade.rapidTimerMs > 0) arcadeCtx.fillText("Rapid: " + (arcade.rapidTimerMs / 1000).toFixed(1) + "s", 112, 40);
+    arcadeCtx.fillText("Combo x" + arcade.combo.toFixed(2), w - 118, 22);
 
     if (!arcade.running) {
       arcadeCtx.fillStyle = "rgba(4, 11, 20, 0.74)";
       arcadeCtx.fillRect(48, 110, w - 96, 92);
       arcadeCtx.fillStyle = "#9fe9ff";
       arcadeCtx.font = "16px Tahoma";
-      const title = "Bean Blaster";
+      const title = "Neon Defender";
       const titleW = arcadeCtx.measureText(title).width;
       arcadeCtx.fillText(title, w / 2 - titleW / 2, 140);
       arcadeCtx.fillStyle = "#d8f4ff";
       arcadeCtx.font = "12px Tahoma";
       const msgW = arcadeCtx.measureText(arcade.message).width;
       arcadeCtx.fillText(arcade.message, w / 2 - msgW / 2, 166);
-      arcadeCtx.fillText("A / D or arrows to move", w / 2 - 78, 186);
+      arcadeCtx.fillText("A / D move  |  Space shoot", w / 2 - 82, 186);
     }
   }
 
@@ -1730,8 +1982,9 @@
         closeArcade();
         ev.preventDefault();
       }
-      if (key === " " && !arcade.running) {
-        startArcadeRound();
+      if (key === " ") {
+        if (!arcade.running) startArcadeRound();
+        else arcade.keyShoot = true;
         ev.preventDefault();
       }
       return;
@@ -1747,6 +2000,7 @@
     const key = ev.key.toLowerCase();
     if (key === "arrowleft" || key === "a") arcade.keyLeft = false;
     if (key === "arrowright" || key === "d") arcade.keyRight = false;
+    if (key === " ") arcade.keyShoot = false;
   });
 
   arcadeStartBtn.addEventListener("click", () => {
