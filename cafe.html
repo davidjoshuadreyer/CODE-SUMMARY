@@ -390,12 +390,12 @@
           <div class="title-controls"><span></span><span></span><span></span></div>
         </div>
         <div class="window-body">
-          <p class="note">This is a local lounge scene styled after old-school web cafe spaces.</p>
+          <p class="note">This is a live lounge scene styled after old-school web cafe spaces.</p>
           <ul class="rulebook">
             <li>Click inside the room to move your avatar.</li>
             <li>Use <code>/name NewName</code> in chat to rename yourself.</li>
-            <li>Simulated visitors post random messages.</li>
-            <li>The "Jukebox" buttons print flavor messages in chat.</li>
+            <li>Connected visitors appear in real time.</li>
+            <li>The "Jukebox" buttons broadcast flavor messages.</li>
           </ul>
 
           <div class="mini-panels">
@@ -411,7 +411,7 @@
               <h4>Cafe Board</h4>
               <div>Theme: Retro web lounge</div>
               <div>Open: 24/7</div>
-              <div>Mode: Local simulation</div>
+              <div>Mode: Live multiplayer</div>
             </div>
           </div>
 
@@ -421,6 +421,7 @@
     </div>
   </main>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
   const canvas = document.getElementById("loungeCanvas");
   const ctx = canvas.getContext("2d");
@@ -433,47 +434,83 @@
   const coordHint = document.getElementById("coordHint");
 
   const room = { w: 960, h: 600 };
-  const avatars = [];
   const bubbles = [];
-  const botNames = ["PixelKid", "CRTQueen", "ByteBrew", "CacheCat", "LanGhost", "ModemMage"];
-  const botLines = [
-    "anyone grinding practice exams tonight?",
-    "this lounge looks like 2001 and i love it.",
-    "remember to take stretch breaks.",
-    "matrix quizzes are no joke.",
-    "running on coffee and recursion.",
-    "dropping in to say hi from the lab."
+  const avatars = new Map();
+  const seenMessages = new Set();
+
+  const SUPA_URL = "https://xsscvdooviztaxzuwbmr.supabase.co";
+  const SUPA_KEY = "sb_publishable_BTkvBDZodnIPQoJ4nFEhMQ_Wd5me5QY";
+  const ROOM_NAME = "tesselate-cafe-v1";
+  const NAME_KEY = "tesselateCafeName";
+  const palette = [
+    "#ffd166", "#7dd3fc", "#a7f3d0", "#fca5a5",
+    "#fde68a", "#c4b5fd", "#86efac", "#f9a8d4"
   ];
 
+  let supa = null;
+  let channel = null;
+  let connected = false;
+  let lastMoveSend = 0;
+  let lastPresenceSend = 0;
+  let lastMoveSnapshot = "";
+
+  function randomId() {
+    return "u-" + Math.random().toString(36).slice(2, 10);
+  }
+
+  function hashString(value) {
+    let h = 0;
+    for (let i = 0; i < value.length; i++) {
+      h = ((h << 5) - h) + value.charCodeAt(i);
+      h |= 0;
+    }
+    return Math.abs(h);
+  }
+
+  function sanitizeName(raw) {
+    if (!raw) return "";
+    return raw.replace(/\s+/g, " ").trim().slice(0, 12);
+  }
+
+  function pickColor(id) {
+    return palette[hashString(id) % palette.length];
+  }
+
+  const localId = (window.crypto && window.crypto.randomUUID) ? window.crypto.randomUUID() : randomId();
+  const storedName = sanitizeName(localStorage.getItem(NAME_KEY));
   const local = {
-    id: "local",
-    name: "You",
+    id: localId,
+    name: storedName || ("Guest" + (Math.floor(Math.random() * 900) + 100)),
     x: 480,
     y: 460,
     tx: 480,
     ty: 460,
-    color: "#ffd166",
+    color: pickColor(localId),
     speed: 2.9
   };
 
-  avatars.push(local);
+  nameInput.value = local.name;
+  avatars.set(local.id, local);
+  updateVisitorCount();
 
-  function createBot(i) {
-    const hue = 150 + i * 28;
-    return {
-      id: "bot-" + i,
-      name: botNames[i % botNames.length],
-      x: 120 + Math.random() * 720,
-      y: 120 + Math.random() * 330,
-      tx: 120 + Math.random() * 720,
-      ty: 120 + Math.random() * 330,
-      color: "hsl(" + hue + " 75% 65%)",
-      speed: 1.4 + Math.random() * 1.1
-    };
+  function setStatus(text, tone) {
+    statusLine.textContent = "Status: " + text;
+    if (tone === "warn") statusLine.style.color = "#8a2d00";
+    else if (tone === "ok") statusLine.style.color = "#1f5d27";
+    else statusLine.style.color = "#334";
   }
 
-  for (let i = 0; i < 6; i++) avatars.push(createBot(i));
-  visitorCountEl.textContent = avatars.length;
+  function updateVisitorCount() {
+    visitorCountEl.textContent = avatars.size;
+  }
+
+  function rememberMessage(id) {
+    seenMessages.add(id);
+    if (seenMessages.size > 300) {
+      const first = seenMessages.values().next().value;
+      seenMessages.delete(first);
+    }
+  }
 
   function postLine(name, text, tone) {
     const li = document.createElement("li");
@@ -486,21 +523,22 @@
     while (chatLog.children.length > 70) chatLog.removeChild(chatLog.firstChild);
   }
 
-  function bubbleFor(name, text, x, y) {
+  function bubbleFor(avatarId, text) {
+    const avatar = avatars.get(avatarId);
+    if (!avatar) return;
     bubbles.push({
-      name,
       text,
-      x,
-      y,
+      x: avatar.x,
+      y: avatar.y,
       ttl: 220
     });
   }
 
   function escapeHtml(value) {
-    return value
-      .replaceAll("&", "&amp;")
-      .replaceAll("<", "&lt;")
-      .replaceAll(">", "&gt;");
+    return String(value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
   }
 
   function clampTarget(a) {
@@ -518,20 +556,201 @@
     a.y += (dy / dist) * step;
   }
 
-  function randomBotMove() {
-    for (const a of avatars) {
-      if (a.id === local.id) continue;
-      a.tx = 90 + Math.random() * (room.w - 180);
-      a.ty = 120 + Math.random() * (room.h - 200);
-      clampTarget(a);
+  function ensureRemoteAvatar(id, meta) {
+    if (id === local.id) return local;
+    let avatar = avatars.get(id);
+    if (!avatar) {
+      avatar = {
+        id,
+        name: sanitizeName(meta?.name) || ("Guest-" + id.slice(-4)),
+        x: 160 + Math.random() * 580,
+        y: 140 + Math.random() * 260,
+        tx: 160 + Math.random() * 580,
+        ty: 140 + Math.random() * 260,
+        color: meta?.color || pickColor(id),
+        speed: 2.4
+      };
+      avatars.set(id, avatar);
+    }
+
+    if (meta) {
+      if (meta.name) avatar.name = sanitizeName(meta.name) || avatar.name;
+      if (meta.color) avatar.color = meta.color;
+      const x = Number(meta.x);
+      const y = Number(meta.y);
+      const tx = Number(meta.tx);
+      const ty = Number(meta.ty);
+      if (Number.isFinite(x)) avatar.x = x;
+      if (Number.isFinite(y)) avatar.y = y;
+      if (Number.isFinite(tx)) avatar.tx = tx;
+      if (Number.isFinite(ty)) avatar.ty = ty;
+      clampTarget(avatar);
+    }
+    return avatar;
+  }
+
+  function buildMovePayload() {
+    return {
+      id: local.id,
+      name: local.name,
+      color: local.color,
+      x: Math.round(local.x),
+      y: Math.round(local.y),
+      tx: Math.round(local.tx),
+      ty: Math.round(local.ty),
+      ts: Date.now()
+    };
+  }
+
+  async function syncPresence(force) {
+    if (!channel || !connected) return;
+    const now = Date.now();
+    if (!force && now - lastPresenceSend < 2500) return;
+    lastPresenceSend = now;
+    try {
+      await channel.track(buildMovePayload());
+    } catch (_) {
+      // Ignore intermittent realtime tracking failures.
     }
   }
 
-  function randomBotChat() {
-    const bot = avatars[1 + Math.floor(Math.random() * (avatars.length - 1))];
-    const text = botLines[Math.floor(Math.random() * botLines.length)];
-    postLine(bot.name, text);
-    bubbleFor(bot.name, text, bot.x, bot.y);
+  function sendMove(force) {
+    if (!channel || !connected) return;
+    const now = performance.now();
+    if (!force && now - lastMoveSend < 90) return;
+    lastMoveSend = now;
+
+    const payload = buildMovePayload();
+    const snapshot = payload.x + "|" + payload.y + "|" + payload.tx + "|" + payload.ty;
+    if (!force && snapshot === lastMoveSnapshot) return;
+    lastMoveSnapshot = snapshot;
+
+    channel.send({ type: "broadcast", event: "move", payload });
+    syncPresence(false);
+  }
+
+  function handleIncomingMove(payload) {
+    if (!payload || !payload.id || payload.id === local.id) return;
+    ensureRemoteAvatar(payload.id, payload);
+    updateVisitorCount();
+  }
+
+  function handleIncomingChat(payload) {
+    if (!payload || !payload.id || !payload.text) return;
+    const messageId = payload.messageId || (payload.id + ":" + payload.ts + ":" + payload.text);
+    if (seenMessages.has(messageId)) return;
+    rememberMessage(messageId);
+
+    const avatar = payload.id === local.id
+      ? local
+      : ensureRemoteAvatar(payload.id, payload);
+
+    if (payload.name) avatar.name = sanitizeName(payload.name) || avatar.name;
+
+    postLine(avatar.name, payload.text);
+    bubbleFor(payload.id, payload.text);
+  }
+
+  function sendChat(text) {
+    const clean = text.trim().slice(0, 120);
+    if (!clean) return;
+
+    const payload = {
+      id: local.id,
+      name: local.name,
+      text: clean,
+      ts: Date.now(),
+      messageId: local.id + ":" + Date.now() + ":" + Math.random().toString(36).slice(2, 8)
+    };
+
+    handleIncomingChat(payload);
+    if (channel && connected) {
+      channel.send({ type: "broadcast", event: "chat", payload });
+    }
+  }
+
+  function syncPresenceList() {
+    if (!channel) return;
+    const state = channel.presenceState();
+    const active = new Set([local.id]);
+
+    for (const key in state) {
+      if (!Object.prototype.hasOwnProperty.call(state, key)) continue;
+      active.add(key);
+      const entries = state[key];
+      const latest = Array.isArray(entries) && entries.length ? entries[entries.length - 1] : {};
+      if (key !== local.id) ensureRemoteAvatar(key, latest);
+    }
+
+    for (const [id] of avatars) {
+      if (id === local.id) continue;
+      if (!active.has(id)) avatars.delete(id);
+    }
+    updateVisitorCount();
+  }
+
+  function initRealtime() {
+    if (!window.supabase) {
+      setStatus("Realtime library not found.", "warn");
+      postLine("System", "Realtime unavailable. Refresh to retry.", "alert");
+      return;
+    }
+
+    try {
+      supa = window.supabase.createClient(SUPA_URL, SUPA_KEY, {
+        auth: { persistSession: false, autoRefreshToken: false }
+      });
+
+      channel = supa.channel(ROOM_NAME, {
+        config: {
+          broadcast: { self: true },
+          presence: { key: local.id }
+        }
+      });
+
+      channel
+        .on("broadcast", { event: "move" }, ({ payload }) => handleIncomingMove(payload))
+        .on("broadcast", { event: "chat" }, ({ payload }) => handleIncomingChat(payload))
+        .on("presence", { event: "sync" }, () => syncPresenceList())
+        .on("presence", { event: "join" }, ({ key, newPresences }) => {
+          if (key === local.id) return;
+          const latest = Array.isArray(newPresences) && newPresences.length ? newPresences[newPresences.length - 1] : {};
+          const avatar = ensureRemoteAvatar(key, latest);
+          postLine("System", avatar.name + " entered the cafe.", "system");
+          updateVisitorCount();
+        })
+        .on("presence", { event: "leave" }, ({ key, leftPresences }) => {
+          if (key === local.id) return;
+          const avatar = avatars.get(key);
+          const fallback = Array.isArray(leftPresences) && leftPresences.length ? leftPresences[0] : {};
+          const name = avatar?.name || sanitizeName(fallback.name) || ("Guest-" + key.slice(-4));
+          avatars.delete(key);
+          updateVisitorCount();
+          postLine("System", name + " left the cafe.", "system");
+        });
+
+      channel.subscribe(async (status) => {
+        if (status === "SUBSCRIBED") {
+          connected = true;
+          await syncPresence(true);
+          setStatus("Connected to live lounge.", "ok");
+          postLine("System", "Connected. Visitors online are now real.", "system");
+          syncPresenceList();
+        } else if (status === "CHANNEL_ERROR") {
+          connected = false;
+          setStatus("Realtime channel error.", "warn");
+        } else if (status === "TIMED_OUT") {
+          connected = false;
+          setStatus("Realtime timeout, retrying...", "warn");
+        } else if (status === "CLOSED") {
+          connected = false;
+          setStatus("Disconnected from lounge.", "warn");
+        }
+      });
+    } catch (_) {
+      setStatus("Could not initialize realtime.", "warn");
+      postLine("System", "Realtime setup failed.", "alert");
+    }
   }
 
   function drawRoom() {
@@ -562,7 +781,7 @@
     ctx.fillRect(872, 88, 34, 52);
     ctx.fillRect(58, 468, 32, 52);
 
-    for (const a of avatars) drawAvatar(a);
+    for (const a of avatars.values()) drawAvatar(a);
     for (let i = bubbles.length - 1; i >= 0; i--) {
       drawBubble(bubbles[i]);
       bubbles[i].ttl -= 1;
@@ -610,7 +829,8 @@
   }
 
   function loop() {
-    for (const a of avatars) updateAvatar(a);
+    for (const a of avatars.values()) updateAvatar(a);
+    sendMove(false);
     drawRoom();
     requestAnimationFrame(loop);
   }
@@ -622,6 +842,8 @@
     local.tx = (ev.clientX - rect.left) * scaleX;
     local.ty = (ev.clientY - rect.top) * scaleY;
     clampTarget(local);
+    sendMove(true);
+    syncPresence(true);
     coordHint.textContent = "Target: " + Math.round(local.tx) + ", " + Math.round(local.ty);
   });
 
@@ -631,38 +853,50 @@
     if (!message) return;
 
     if (message.toLowerCase().startsWith("/name ")) {
-      const next = message.slice(6).trim().slice(0, 12);
+      const next = sanitizeName(message.slice(6));
       if (next) {
         local.name = next;
         nameInput.value = next;
+        localStorage.setItem(NAME_KEY, next);
+        syncPresence(true);
         postLine("System", "Display name changed to " + next + ".", "system");
-        statusLine.textContent = "Status: Name updated.";
+        setStatus("Name updated.", "ok");
       }
       messageInput.value = "";
       return;
     }
 
-    if (nameInput.value.trim()) local.name = nameInput.value.trim().slice(0, 12);
-    postLine(local.name, message);
-    bubbleFor(local.name, message, local.x, local.y);
-    statusLine.textContent = "Status: Message sent.";
+    const fromInput = sanitizeName(nameInput.value);
+    if (fromInput) {
+      local.name = fromInput;
+      localStorage.setItem(NAME_KEY, fromInput);
+      syncPresence(true);
+    }
+
+    sendChat(message);
+    setStatus("Message sent.", "ok");
     messageInput.value = "";
   });
 
   document.querySelectorAll("[data-track]").forEach((btn) => {
     btn.addEventListener("click", () => {
       const track = btn.getAttribute("data-track");
-      postLine("Jukebox", "Now playing: " + track, "system");
-      bubbleFor("Jukebox", track, room.w * 0.5, 70);
-      statusLine.textContent = "Status: " + track + " selected.";
+      sendChat("[Jukebox] Now playing: " + track);
+      setStatus(track + " selected.", "ok");
     });
+  });
+
+  window.addEventListener("beforeunload", () => {
+    if (!channel) return;
+    channel.untrack();
+    channel.unsubscribe();
   });
 
   postLine("System", "Welcome to the Interweb Cafe.", "system");
   postLine("System", "Click inside the lounge to move.", "system");
-  randomBotMove();
-  setInterval(randomBotMove, 3200);
-  setInterval(randomBotChat, 4700);
+  setStatus("Connecting to realtime lounge...", "warn");
+  initRealtime();
+  setInterval(() => syncPresence(false), 12000);
   loop();
 </script>
 </body>
