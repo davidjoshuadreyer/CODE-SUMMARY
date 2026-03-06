@@ -333,6 +333,51 @@
     color: #334;
   }
 
+  .arcade-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    background: rgba(7, 18, 29, 0.72);
+    display: grid;
+    place-items: center;
+    padding: 14px;
+  }
+
+  .arcade-overlay[hidden] {
+    display: none;
+  }
+
+  .arcade-window {
+    width: min(94vw, 540px);
+  }
+
+  #arcadeCanvas {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    border: 2px solid #fff;
+    border-right-color: #666;
+    border-bottom-color: #666;
+    background: #0f1825;
+    image-rendering: pixelated;
+    display: block;
+  }
+
+  .arcade-hud {
+    margin-top: 8px;
+    font-size: 0.78rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .arcade-controls {
+    margin-top: 8px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
   @keyframes blink {
     0%, 48% { opacity: 1; }
     52%, 100% { opacity: 0.35; }
@@ -414,6 +459,7 @@
             <li>Click inside the room to move your avatar.</li>
             <li>Use <code>/name NewName</code> in chat to rename yourself.</li>
             <li>Connected visitors appear in real time.</li>
+            <li>Walk to the arcade cabinet and press <code>E</code> to play.</li>
             <li>The "Jukebox" buttons broadcast flavor messages.</li>
           </ul>
 
@@ -446,6 +492,27 @@
     </div>
   </main>
 
+  <div class="arcade-overlay" id="arcadeOverlay" hidden>
+    <div class="window arcade-window">
+      <div class="title-bar">
+        <span>BEAN BLASTER.EXE</span>
+        <div class="title-controls"><span></span><span></span><span></span></div>
+      </div>
+      <div class="window-body">
+        <canvas id="arcadeCanvas" width="480" height="320"></canvas>
+        <div class="arcade-hud">
+          <span id="arcadeScore">Score: 0</span>
+          <span id="arcadeLives">Lives: 3</span>
+          <span id="arcadeBest">Best: 0</span>
+        </div>
+        <div class="arcade-controls">
+          <button id="arcadeStartBtn" type="button">Start Round</button>
+          <button id="arcadeCloseBtn" type="button">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
   const canvas = document.getElementById("loungeCanvas");
@@ -459,8 +526,18 @@
   const coordHint = document.getElementById("coordHint");
   const nowPlayingEl = document.getElementById("nowPlaying");
   const volumeInput = document.getElementById("musicVolume");
+  const arcadeOverlay = document.getElementById("arcadeOverlay");
+  const arcadeCanvas = document.getElementById("arcadeCanvas");
+  const arcadeCtx = arcadeCanvas.getContext("2d");
+  const arcadeScoreEl = document.getElementById("arcadeScore");
+  const arcadeLivesEl = document.getElementById("arcadeLives");
+  const arcadeBestEl = document.getElementById("arcadeBest");
+  const arcadeStartBtn = document.getElementById("arcadeStartBtn");
+  const arcadeCloseBtn = document.getElementById("arcadeCloseBtn");
 
   const room = { w: 960, h: 600 };
+  const arcadeCabinet = { x: 696, y: 184, radius: 86 };
+  const ARCADE_BEST_KEY = "tesselateCafeArcadeBest";
   const bubbles = [];
   const steamPuffs = [];
   const avatars = new Map();
@@ -493,6 +570,24 @@
     activeNodes: [],
     activeTimers: [],
     noiseBuffer: null
+  };
+
+  const arcade = {
+    active: false,
+    running: false,
+    nearCabinet: false,
+    score: 0,
+    lives: 3,
+    best: Number(localStorage.getItem(ARCADE_BEST_KEY) || "0"),
+    playerX: 240,
+    beans: [],
+    spawnMs: 0,
+    roundMs: 45000,
+    timeLeftMs: 45000,
+    keyLeft: false,
+    keyRight: false,
+    lastTs: 0,
+    message: "Catch beans before time runs out."
   };
 
   function randomId() {
@@ -641,6 +736,244 @@
       puff.size += 0.03;
       if (puff.life <= 0) steamPuffs.splice(i, 1);
     }
+  }
+
+  function updateArcadeProximity() {
+    const dx = local.x - arcadeCabinet.x;
+    const dy = local.y - (arcadeCabinet.y + 8);
+    arcade.nearCabinet = Math.hypot(dx, dy) <= arcadeCabinet.radius;
+  }
+
+  function drawArcadeCabinet() {
+    const x = arcadeCabinet.x;
+    const y = arcadeCabinet.y;
+    const pulse = 0.5 + Math.sin(performance.now() / 250) * 0.5;
+
+    ctx.fillStyle = "#2b3346";
+    ctx.fillRect(x - 26, y - 56, 52, 60);
+    ctx.fillStyle = "#151b27";
+    ctx.fillRect(x - 30, y + 4, 60, 24);
+    ctx.fillStyle = "#3d4a66";
+    ctx.fillRect(x - 18, y + 6, 36, 10);
+    ctx.fillStyle = "#101722";
+    ctx.fillRect(x - 18, y - 46, 36, 28);
+    ctx.fillStyle = "rgba(82, 236, 255," + (0.45 + pulse * 0.35) + ")";
+    ctx.fillRect(x - 14, y - 42, 28, 20);
+    ctx.fillStyle = "#111";
+    ctx.fillRect(x - 5, y - 7, 10, 4);
+    ctx.fillStyle = "#cf2f53";
+    ctx.beginPath();
+    ctx.arc(x + 9, y + 13, 4, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.fillStyle = "#31d189";
+    ctx.beginPath();
+    ctx.arc(x - 9, y + 13, 4, 0, Math.PI * 2);
+    ctx.fill();
+
+    ctx.fillStyle = "#7de6ff";
+    ctx.font = "10px Tahoma";
+    const label = "BEAN";
+    const labelW = ctx.measureText(label).width;
+    ctx.fillText(label, x - labelW / 2, y - 49);
+  }
+
+  function drawArcadePrompt() {
+    if (!arcade.nearCabinet || arcade.active) return;
+    const text = "Press E to play Bean Blaster";
+    ctx.font = "12px Tahoma";
+    const w = ctx.measureText(text).width + 18;
+    const x = arcadeCabinet.x - w / 2;
+    const y = arcadeCabinet.y - 84;
+    ctx.fillStyle = "rgba(8,16,30,0.78)";
+    ctx.fillRect(x, y, w, 22);
+    ctx.fillStyle = "#89f1ff";
+    ctx.fillText(text, x + 9, y + 15);
+  }
+
+  function updateArcadeHud() {
+    arcadeScoreEl.textContent = "Score: " + arcade.score;
+    arcadeLivesEl.textContent = "Lives: " + arcade.lives;
+    arcadeBestEl.textContent = "Best: " + arcade.best;
+  }
+
+  function spawnArcadeBean() {
+    const lucky = Math.random() < 0.12;
+    arcade.beans.push({
+      x: 20 + Math.random() * (arcadeCanvas.width - 40),
+      y: -10,
+      r: lucky ? 10 : 8,
+      speed: (lucky ? 105 : 135) + Math.random() * 85 + arcade.score * 0.7,
+      value: lucky ? 3 : 1,
+      color: lucky ? "#f9d648" : "#8b5a2b"
+    });
+  }
+
+  function resetArcadeRound() {
+    arcade.score = 0;
+    arcade.lives = 3;
+    arcade.playerX = arcadeCanvas.width / 2;
+    arcade.beans = [];
+    arcade.spawnMs = 0;
+    arcade.timeLeftMs = arcade.roundMs;
+    arcade.message = "Catch beans with A/D or arrow keys.";
+    updateArcadeHud();
+  }
+
+  function finishArcadeRound(reason) {
+    arcade.running = false;
+    arcade.message = reason;
+    arcadeStartBtn.textContent = "Play Again";
+    if (arcade.score > arcade.best) {
+      arcade.best = arcade.score;
+      localStorage.setItem(ARCADE_BEST_KEY, String(arcade.best));
+      postLine("System", "New Bean Blaster best: " + arcade.best + ".", "system");
+    }
+    updateArcadeHud();
+    setStatus(reason, "ok");
+  }
+
+  function startArcadeRound() {
+    resetArcadeRound();
+    arcade.running = true;
+    arcade.lastTs = performance.now();
+    arcadeStartBtn.textContent = "Restart";
+    setStatus("Bean Blaster running.", "ok");
+  }
+
+  function openArcade() {
+    if (arcade.active) return;
+    arcade.active = true;
+    arcade.running = false;
+    arcade.lastTs = 0;
+    arcadeOverlay.hidden = false;
+    arcade.message = "Press Start Round to begin.";
+    arcadeStartBtn.textContent = "Start Round";
+    updateArcadeHud();
+    setStatus("Arcade ready. Press Start Round.", "ok");
+    requestAnimationFrame(arcadeLoop);
+  }
+
+  function closeArcade() {
+    arcade.active = false;
+    arcade.running = false;
+    arcade.keyLeft = false;
+    arcade.keyRight = false;
+    arcadeOverlay.hidden = true;
+    setStatus("Arcade closed.", "ok");
+  }
+
+  function updateArcadeGame(dtMs) {
+    const moveSpeed = 0.42 * dtMs;
+    if (arcade.keyLeft) arcade.playerX -= moveSpeed;
+    if (arcade.keyRight) arcade.playerX += moveSpeed;
+    arcade.playerX = Math.max(36, Math.min(arcadeCanvas.width - 36, arcade.playerX));
+
+    arcade.spawnMs += dtMs;
+    const spawnGap = Math.max(190, 520 - arcade.score * 4.5);
+    while (arcade.spawnMs >= spawnGap) {
+      arcade.spawnMs -= spawnGap;
+      spawnArcadeBean();
+    }
+
+    const basketY = arcadeCanvas.height - 24;
+    const basketHalfW = 30;
+
+    for (let i = arcade.beans.length - 1; i >= 0; i--) {
+      const bean = arcade.beans[i];
+      bean.y += bean.speed * (dtMs / 1000);
+      const caught = bean.y + bean.r >= basketY
+        && bean.y - bean.r <= basketY + 12
+        && bean.x >= arcade.playerX - basketHalfW
+        && bean.x <= arcade.playerX + basketHalfW;
+      if (caught) {
+        arcade.score += bean.value;
+        arcade.beans.splice(i, 1);
+        continue;
+      }
+      if (bean.y - bean.r > arcadeCanvas.height + 5) {
+        arcade.beans.splice(i, 1);
+        arcade.lives -= 1;
+        if (arcade.lives <= 0) {
+          finishArcadeRound("Round over! Beans escaped.");
+          break;
+        }
+      }
+    }
+
+    arcade.timeLeftMs -= dtMs;
+    if (arcade.timeLeftMs <= 0) {
+      arcade.timeLeftMs = 0;
+      finishArcadeRound("Time! Final score: " + arcade.score);
+    }
+    updateArcadeHud();
+  }
+
+  function renderArcadeGame() {
+    const w = arcadeCanvas.width;
+    const h = arcadeCanvas.height;
+    arcadeCtx.clearRect(0, 0, w, h);
+
+    const bg = arcadeCtx.createLinearGradient(0, 0, 0, h);
+    bg.addColorStop(0, "#102236");
+    bg.addColorStop(1, "#0b1522");
+    arcadeCtx.fillStyle = bg;
+    arcadeCtx.fillRect(0, 0, w, h);
+
+    for (let i = 0; i < 40; i++) {
+      arcadeCtx.fillStyle = i % 2 ? "rgba(255,255,255,0.06)" : "rgba(0,0,0,0.08)";
+      arcadeCtx.fillRect((i * 37) % w, (i * 53 + 17) % h, 2, 2);
+    }
+
+    arcadeCtx.fillStyle = "#22344d";
+    arcadeCtx.fillRect(0, h - 22, w, 22);
+
+    for (const bean of arcade.beans) {
+      arcadeCtx.fillStyle = bean.color;
+      arcadeCtx.beginPath();
+      arcadeCtx.arc(bean.x, bean.y, bean.r, 0, Math.PI * 2);
+      arcadeCtx.fill();
+      arcadeCtx.fillStyle = "rgba(0,0,0,0.22)";
+      arcadeCtx.fillRect(bean.x - bean.r * 0.5, bean.y - bean.r * 0.6, bean.r * 0.3, bean.r * 0.5);
+    }
+
+    const px = arcade.playerX;
+    const py = h - 24;
+    arcadeCtx.fillStyle = "#f2f2f2";
+    arcadeCtx.fillRect(px - 30, py, 60, 12);
+    arcadeCtx.fillStyle = "#67b2ff";
+    arcadeCtx.fillRect(px - 22, py - 8, 44, 9);
+    arcadeCtx.fillStyle = "#1a2536";
+    arcadeCtx.fillRect(px - 26, py + 10, 52, 3);
+
+    const secs = Math.ceil(arcade.timeLeftMs / 1000);
+    arcadeCtx.fillStyle = "#c7e9ff";
+    arcadeCtx.font = "14px Tahoma";
+    arcadeCtx.fillText("Time: " + secs + "s", 12, 22);
+
+    if (!arcade.running) {
+      arcadeCtx.fillStyle = "rgba(4, 11, 20, 0.74)";
+      arcadeCtx.fillRect(48, 110, w - 96, 92);
+      arcadeCtx.fillStyle = "#9fe9ff";
+      arcadeCtx.font = "16px Tahoma";
+      const title = "Bean Blaster";
+      const titleW = arcadeCtx.measureText(title).width;
+      arcadeCtx.fillText(title, w / 2 - titleW / 2, 140);
+      arcadeCtx.fillStyle = "#d8f4ff";
+      arcadeCtx.font = "12px Tahoma";
+      const msgW = arcadeCtx.measureText(arcade.message).width;
+      arcadeCtx.fillText(arcade.message, w / 2 - msgW / 2, 166);
+      arcadeCtx.fillText("A / D or arrows to move", w / 2 - 78, 186);
+    }
+  }
+
+  function arcadeLoop(ts) {
+    if (!arcade.active) return;
+    if (!arcade.lastTs) arcade.lastTs = ts;
+    const dtMs = Math.min(40, ts - arcade.lastTs);
+    arcade.lastTs = ts;
+    if (arcade.running) updateArcadeGame(dtMs);
+    renderArcadeGame();
+    requestAnimationFrame(arcadeLoop);
   }
 
   function ensureRemoteAvatar(id, meta) {
@@ -984,6 +1317,7 @@
     ctx.fillStyle = "#9fd38f";
     ctx.fillRect(872, 88, 34, 52);
     ctx.fillRect(58, 468, 32, 52);
+    drawArcadeCabinet();
 
     ctx.fillStyle = "#454f66";
     ctx.fillRect(792, 74, 64, 28);
@@ -1003,6 +1337,7 @@
     for (const avatar of avatars.values()) drawQueue.push({ y: avatar.y, fn: () => drawHumanSprite(avatar, true) });
     drawQueue.sort((a, b) => a.y - b.y);
     for (const item of drawQueue) item.fn();
+    drawArcadePrompt();
 
     for (let i = bubbles.length - 1; i >= 0; i--) {
       drawBubble(bubbles[i]);
@@ -1323,6 +1658,7 @@
     for (const a of avatars.values()) updateAvatar(a);
     updateAmbientSprites();
     updateSteamPuffs();
+    updateArcadeProximity();
     sendMove(false);
     drawRoom();
     requestAnimationFrame(loop);
@@ -1369,6 +1705,61 @@
     sendChat(message);
     setStatus("Message sent.", "ok");
     messageInput.value = "";
+  });
+
+  function isTypingInField() {
+    const el = document.activeElement;
+    if (!el) return false;
+    const tag = el.tagName;
+    return tag === "INPUT" || tag === "TEXTAREA";
+  }
+
+  window.addEventListener("keydown", (ev) => {
+    const key = ev.key.toLowerCase();
+
+    if (arcade.active) {
+      if (key === "arrowleft" || key === "a") {
+        arcade.keyLeft = true;
+        ev.preventDefault();
+      }
+      if (key === "arrowright" || key === "d") {
+        arcade.keyRight = true;
+        ev.preventDefault();
+      }
+      if (key === "escape") {
+        closeArcade();
+        ev.preventDefault();
+      }
+      if (key === " " && !arcade.running) {
+        startArcadeRound();
+        ev.preventDefault();
+      }
+      return;
+    }
+
+    if (key === "e" && arcade.nearCabinet && !isTypingInField()) {
+      openArcade();
+      ev.preventDefault();
+    }
+  });
+
+  window.addEventListener("keyup", (ev) => {
+    const key = ev.key.toLowerCase();
+    if (key === "arrowleft" || key === "a") arcade.keyLeft = false;
+    if (key === "arrowright" || key === "d") arcade.keyRight = false;
+  });
+
+  arcadeStartBtn.addEventListener("click", () => {
+    if (!arcade.active) openArcade();
+    startArcadeRound();
+  });
+
+  arcadeCloseBtn.addEventListener("click", () => {
+    closeArcade();
+  });
+
+  arcadeOverlay.addEventListener("click", (ev) => {
+    if (ev.target === arcadeOverlay) closeArcade();
   });
 
   document.querySelectorAll("[data-track]").forEach((btn) => {
