@@ -296,6 +296,7 @@
           <div class="card-title">Interweb Cafe</div>
           <div class="card-desc">Retro web lounge inspired by classic internet cafes. Move around, chat, and hang out in a Windows-style room.</div>
           <span class="tag" style="background:#082621;color:#7ce8d7;border:1px solid #0f766e;">Interactive</span>
+          <span id="cafePresence" style="display:none;margin-top:8px;font-size:0.78rem;color:#7ce8d7;font-family:'Courier New',monospace;">&#9749; <span id="cafeCount">0</span> in the cafe right now</span>
         </div>
       </a>
     </div>
@@ -308,5 +309,29 @@
   &nbsp;·&nbsp; tesselate.ca
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  (function() {
+    if (!window.supabase) return;
+    const supa = window.supabase.createClient(
+      "https://xsscvdooviztaxzuwbmr.supabase.co",
+      "sb_publishable_BTkvBDZodnIPQoJ4nFEhMQ_Wd5me5QY",
+      { auth: { persistSession: false, autoRefreshToken: false } }
+    );
+    const ch = supa.channel("tesselate-cafe-v1", {
+      config: { presence: { key: "index-observer-" + Math.random().toString(36).slice(2, 8) } }
+    });
+    ch.on("presence", { event: "sync" }, () => {
+      const state = ch.presenceState();
+      const count = Object.keys(state).filter(k => !k.startsWith("index-observer-")).length;
+      const el = document.getElementById("cafePresence");
+      const ct = document.getElementById("cafeCount");
+      if (!el || !ct) return;
+      ct.textContent = count;
+      el.style.display = count > 0 ? "block" : "none";
+    });
+    ch.subscribe();
+  })();
+</script>
 </body>
 </html>

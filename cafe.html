@@ -18,6 +18,10 @@
     --title-a: #000080;
     --title-b: #1084d0;
     --accent: #006a6a;
+    --warm-amber: #f4a83a;
+    --amber-dark: #8a6010;
+    --cream: #fef3dc;
+    --deep-wood: #2a1a0e;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -26,6 +30,7 @@
     font-family: "Tahoma", "Trebuchet MS", "Verdana", sans-serif;
     color: var(--ink);
     background:
+      radial-gradient(700px 500px at 50% 60%, rgba(244, 168, 58, 0.09) 0%, transparent 70%),
       radial-gradient(1200px 900px at 10% -20%, #8cd6c5 0%, rgba(140, 214, 197, 0) 60%),
       radial-gradient(900px 700px at 110% 120%, #86b8d9 0%, rgba(134, 184, 217, 0) 62%),
       linear-gradient(165deg, var(--teal-1), var(--teal-2));
@@ -81,6 +86,20 @@
     border-color: #5f5f5f;
     border-right-color: #fff;
     border-bottom-color: #fff;
+  }
+
+  .bean-counter {
+    font-family: "Courier New", monospace;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #3a2200;
+    background: #f4a83a;
+    border: 2px solid #fff;
+    border-right-color: #8a6010;
+    border-bottom-color: #8a6010;
+    padding: 4px 10px;
+    letter-spacing: 0.03em;
+    user-select: none;
   }
 
   .layout {
@@ -185,6 +204,9 @@
     align-items: center;
     gap: 10px;
     font-size: 0.78rem;
+    background: linear-gradient(90deg, rgba(244,168,58,0.10), transparent);
+    border-left: 3px solid var(--warm-amber);
+    padding: 4px 8px;
   }
 
   .dot {
@@ -290,6 +312,16 @@
     background: #edf0f4;
     padding: 8px;
     font-size: 0.8rem;
+  }
+
+  #whoHerePanel {
+    background: var(--cream);
+    border-left-color: var(--warm-amber);
+    border-top-color: var(--warm-amber);
+  }
+
+  #whoHerePanel h4 {
+    color: var(--deep-wood);
   }
 
   .mini h4 {
@@ -402,6 +434,7 @@
 <body>
   <nav class="topbar">
     <a href="index.html" class="brand">Tesselate Cafe</a>
+    <span class="bean-counter" title="Your beans">&#9749; <span id="beanCount">0</span></span>
     <a class="action" href="index.html">Back To Home</a>
   </nav>
 
@@ -486,6 +519,11 @@
             </div>
           </div>
 
+          <div class="mini" id="whoHerePanel" style="margin-top:10px;">
+            <h4>Who's Here</h4>
+            <ul id="whoHereList" style="list-style:none;padding:0;margin:4px 0 0;font-size:0.78rem;line-height:1.7;"></ul>
+          </div>
+
           <div class="status-line" id="statusLine">Status: Ready.</div>
         </div>
       </aside>
@@ -551,6 +589,7 @@
   const SUPA_KEY = "sb_publishable_BTkvBDZodnIPQoJ4nFEhMQ_Wd5me5QY";
   const ROOM_NAME = "tesselate-cafe-v1";
   const NAME_KEY = "tesselateCafeName";
+  const PLAYER_ID_KEY = "tesselatePlayerId";
   const palette = [
     "#ffd166", "#7dd3fc", "#a7f3d0", "#fca5a5",
     "#fde68a", "#c4b5fd", "#86efac", "#f9a8d4"
@@ -621,8 +660,14 @@
     return palette[hashString(id) % palette.length];
   }
 
-  const localId = (window.crypto && window.crypto.randomUUID) ? window.crypto.randomUUID() : randomId();
+  let localId = localStorage.getItem(PLAYER_ID_KEY);
+  if (!localId) {
+    localId = (window.crypto && window.crypto.randomUUID) ? window.crypto.randomUUID() : randomId();
+    localStorage.setItem(PLAYER_ID_KEY, localId);
+  }
   const storedName = sanitizeName(localStorage.getItem(NAME_KEY));
+  const params = new URLSearchParams(window.location.search);
+  const fromParam = params.get("from"); // "chem" | "math" | "comp" | null
   const local = {
     id: localId,
     name: storedName || ("Guest" + (Math.floor(Math.random() * 900) + 100)),
@@ -631,7 +676,10 @@
     tx: 480,
     ty: 460,
     color: pickColor(localId),
-    speed: 2.9
+    speed: 2.9,
+    activity: fromParam ? "studying:" + fromParam : "vibing",
+    beans: 0,
+    avatarConfig: {}
   };
 
   nameInput.value = local.name;
@@ -645,8 +693,24 @@
     else statusLine.style.color = "#334";
   }
 
+  const ACTIVITY_LABELS = {
+    "studying:chem": "⚗️ studying CHEM",
+    "studying:math": "∑ studying MATH",
+    "studying:comp": "💻 studying COMP",
+    "arcade": "🕹️ at the arcade",
+    "vibing": "☕ just vibing"
+  };
+
   function updateVisitorCount() {
     visitorCountEl.textContent = avatars.size;
+    const list = document.getElementById("whoHereList");
+    if (!list) return;
+    const all = [...avatars.values()];
+    list.innerHTML = all.map(av => {
+      const label = ACTIVITY_LABELS[av.activity] || "☕ just vibing";
+      const dot = `<span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${av.color};margin-right:5px;vertical-align:middle;"></span>`;
+      return `<li>${dot}<strong>${escapeHtml(av.name)}</strong> — ${label}</li>`;
+    }).join("");
   }
 
   function rememberMessage(id) {
@@ -927,6 +991,8 @@
   function openArcade() {
     if (arcade.active) return;
     arcade.active = true;
+    local.activity = "arcade";
+    syncPresence(true);
     arcade.running = false;
     arcade.lastTs = 0;
     arcadeOverlay.hidden = false;
@@ -944,6 +1010,8 @@
     arcade.keyRight = false;
     arcade.keyShoot = false;
     arcadeOverlay.hidden = true;
+    local.activity = fromParam ? "studying:" + fromParam : "vibing";
+    syncPresence(true);
     setStatus("Arcade closed.", "ok");
   }
 
@@ -1248,6 +1316,7 @@
     if (meta) {
       if (meta.name) avatar.name = sanitizeName(meta.name) || avatar.name;
       if (meta.color) avatar.color = meta.color;
+      if (meta.activity) avatar.activity = meta.activity;
       const x = Number(meta.x);
       const y = Number(meta.y);
       const tx = Number(meta.tx);
@@ -1270,7 +1339,8 @@
       y: Math.round(local.y),
       tx: Math.round(local.tx),
       ty: Math.round(local.ty),
-      ts: Date.now()
+      ts: Date.now(),
+      activity: local.activity || "vibing"
     };
   }
 
@@ -1361,6 +1431,29 @@
     updateVisitorCount();
   }
 
+  async function upsertPlayer() {
+    if (!supa) return;
+    const { data } = await supa.from("players")
+      .upsert({
+        id: local.id,
+        display_name: local.name,
+        last_seen: new Date().toISOString()
+      }, { onConflict: "id", ignoreDuplicates: false })
+      .select("avatar_config, beans")
+      .single();
+    if (data) {
+      if (data.avatar_config?.color) local.color = data.avatar_config.color;
+      local.beans = data.beans || 0;
+      local.avatarConfig = data.avatar_config || {};
+      updateBeanDisplay();
+    }
+  }
+
+  function updateBeanDisplay() {
+    const el = document.getElementById("beanCount");
+    if (el) el.textContent = (local.beans || 0);
+  }
+
   function initRealtime() {
     if (!window.supabase) {
       setStatus("Realtime library not found.", "warn");
@@ -1404,6 +1497,7 @@
       channel.subscribe(async (status) => {
         if (status === "SUBSCRIBED") {
           connected = true;
+          upsertPlayer().catch(() => {});
           await syncPresence(true);
           setStatus("Connected to live lounge.", "ok");
           postLine("System", "Connected. Visitors online are now real.", "system");
@@ -1495,6 +1589,21 @@
       ctx.fillRect(entity.x - tagW / 2, entity.y - 38, tagW, 16);
       ctx.fillStyle = "#111";
       ctx.fillText(entity.name, entity.x - tagW / 2 + 5, entity.y - 26);
+    }
+
+    const ACTIVITY_EMOJIS = {
+      "studying:chem": "⚗️",
+      "studying:math": "∑",
+      "studying:comp": "💻",
+      "arcade": "🕹️"
+    };
+    const auraEmoji = ACTIVITY_EMOJIS[entity.activity];
+    if (auraEmoji) {
+      const auraY = entity.y - 52 + Math.sin(performance.now() / 600 + entity.x * 0.05) * 2.5;
+      ctx.font = "13px serif";
+      ctx.textAlign = "center";
+      ctx.fillText(auraEmoji, entity.x, auraY);
+      ctx.textAlign = "left";
     }
   }
 
