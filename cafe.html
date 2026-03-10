@@ -383,6 +383,91 @@
     width: min(94vw, 540px);
   }
 
+  .customize-window {
+    width: min(94vw, 360px);
+  }
+
+  .customize-section-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+
+  .swatch-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 6px;
+    margin-bottom: 4px;
+  }
+
+  .swatch {
+    width: 100%;
+    aspect-ratio: 1;
+    border: 3px solid transparent;
+    border-right-color: #686868;
+    border-bottom-color: #686868;
+    cursor: pointer;
+  }
+
+  .swatch.selected {
+    border-color: #fff;
+    border-right-color: #686868;
+    border-bottom-color: #686868;
+    outline: 2px solid #111;
+  }
+
+  .hat-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .hat-btn {
+    border: 2px solid #fff;
+    border-right-color: #686868;
+    border-bottom-color: #686868;
+    background: var(--paper);
+    padding: 5px 10px;
+    font-family: "Tahoma", sans-serif;
+    font-size: 0.78rem;
+    cursor: pointer;
+    text-transform: capitalize;
+  }
+
+  .hat-btn.selected {
+    border-color: #686868;
+    border-right-color: #fff;
+    border-bottom-color: #fff;
+    background: #b0c8ff;
+  }
+
+  .customize-actions {
+    margin-top: 14px;
+    display: flex;
+    gap: 8px;
+  }
+
+  .customize-actions button {
+    border: 2px solid #fff;
+    border-right-color: #686868;
+    border-bottom-color: #686868;
+    background: var(--paper);
+    padding: 5px 14px;
+    font-family: "Tahoma", sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .customize-actions button:active {
+    border-color: #686868;
+    border-right-color: #fff;
+    border-bottom-color: #fff;
+  }
+
   #arcadeCanvas {
     width: 100%;
     height: auto;
@@ -435,6 +520,7 @@
   <nav class="topbar">
     <a href="index.html" class="brand">Tesselate Cafe</a>
     <span class="bean-counter" title="Your beans">&#9749; <span id="beanCount">0</span></span>
+    <button class="action" id="customizeBtn" type="button">&#9670; Customize</button>
     <a class="action" href="index.html">Back To Home</a>
   </nav>
 
@@ -530,6 +616,25 @@
     </div>
   </main>
 
+  <div class="arcade-overlay" id="customizeOverlay" hidden>
+    <div class="window customize-window">
+      <div class="title-bar">
+        <span>CUSTOMIZE.EXE</span>
+        <div class="title-controls"><span></span><span></span><span></span></div>
+      </div>
+      <div class="window-body">
+        <p class="customize-section-label">Avatar Color</p>
+        <div id="colorSwatches" class="swatch-grid"></div>
+        <p class="customize-section-label" style="margin-top:14px;">Hat</p>
+        <div id="hatPicker" class="hat-grid"></div>
+        <div class="customize-actions">
+          <button id="customizeSaveBtn" type="button">Save</button>
+          <button id="customizeCancelBtn" type="button">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="arcade-overlay" id="arcadeOverlay" hidden>
     <div class="window arcade-window">
       <div class="title-bar">
@@ -576,6 +681,16 @@
   const room = { w: 960, h: 600 };
   const arcadeCabinet = { x: 696, y: 184, radius: 86 };
   const ARCADE_BEST_KEY = "tesselateCafeArcadeBestV2";
+  const AVATAR_CONFIG_KEY = "tesselateCafeAvatarConfig";
+
+  const COSMETICS = {
+    colors: [
+      "#ffd166", "#7dd3fc", "#a7f3d0", "#fca5a5",
+      "#fde68a", "#c4b5fd", "#86efac", "#f9a8d4",
+      "#fb923c", "#34d399", "#60a5fa", "#f87171"
+    ],
+    hats: ["none", "beanie", "cap", "graduation", "headphones", "crown"]
+  };
   const bubbles = [];
   const steamPuffs = [];
   const avatars = new Map();
@@ -668,6 +783,7 @@
   const storedName = sanitizeName(localStorage.getItem(NAME_KEY));
   const params = new URLSearchParams(window.location.search);
   const fromParam = params.get("from"); // "chem" | "math" | "comp" | null
+  const cachedAvatarConfig = JSON.parse(localStorage.getItem(AVATAR_CONFIG_KEY) || "{}");
   const local = {
     id: localId,
     name: storedName || ("Guest" + (Math.floor(Math.random() * 900) + 100)),
@@ -675,11 +791,12 @@
     y: 460,
     tx: 480,
     ty: 460,
-    color: pickColor(localId),
+    color: cachedAvatarConfig.color || pickColor(localId),
+    hat: cachedAvatarConfig.hat || "none",
     speed: 2.9,
     activity: fromParam ? "studying:" + fromParam : "vibing",
     beans: 0,
-    avatarConfig: {}
+    avatarConfig: cachedAvatarConfig
   };
 
   const ACTIVITY_LABELS = {
@@ -1317,6 +1434,7 @@
       if (meta.name) avatar.name = sanitizeName(meta.name) || avatar.name;
       if (meta.color) avatar.color = meta.color;
       if (meta.activity) avatar.activity = meta.activity;
+      if (meta.hat !== undefined) avatar.hat = meta.hat;
       const x = Number(meta.x);
       const y = Number(meta.y);
       const tx = Number(meta.tx);
@@ -1340,7 +1458,8 @@
       tx: Math.round(local.tx),
       ty: Math.round(local.ty),
       ts: Date.now(),
-      activity: local.activity || "vibing"
+      activity: local.activity || "vibing",
+      hat: local.hat || "none"
     };
   }
 
@@ -1447,9 +1566,12 @@
       return;
     }
     if (data) {
-      if (data.avatar_config?.color) local.color = data.avatar_config.color;
+      const cfg = data.avatar_config || {};
+      if (cfg.color) local.color = cfg.color;
+      if (cfg.hat) local.hat = cfg.hat;
       local.beans = data.beans || 0;
-      local.avatarConfig = data.avatar_config || {};
+      local.avatarConfig = cfg;
+      localStorage.setItem(AVATAR_CONFIG_KEY, JSON.stringify(cfg));
       updateBeanDisplay();
     }
   }
@@ -1458,6 +1580,77 @@
     const el = document.getElementById("beanCount");
     if (el) el.textContent = (local.beans || 0);
   }
+
+  // ── Customizer ────────────────────────────────────────────────────────────
+
+  let pendingColor = local.color;
+  let pendingHat = local.hat;
+
+  function openCustomizer() {
+    pendingColor = local.color;
+    pendingHat = local.hat;
+    buildSwatches();
+    buildHatPicker();
+    document.getElementById("customizeOverlay").hidden = false;
+  }
+
+  function closeCustomizer() {
+    document.getElementById("customizeOverlay").hidden = true;
+  }
+
+  function buildSwatches() {
+    const grid = document.getElementById("colorSwatches");
+    grid.innerHTML = "";
+    for (const c of COSMETICS.colors) {
+      const el = document.createElement("div");
+      el.className = "swatch" + (c === pendingColor ? " selected" : "");
+      el.style.background = c;
+      el.title = c;
+      el.addEventListener("click", () => {
+        pendingColor = c;
+        grid.querySelectorAll(".swatch").forEach(s => s.classList.toggle("selected", s.title === c));
+      });
+      grid.appendChild(el);
+    }
+  }
+
+  function buildHatPicker() {
+    const grid = document.getElementById("hatPicker");
+    grid.innerHTML = "";
+    const labels = { none: "None", beanie: "Beanie", cap: "Cap", graduation: "Grad", headphones: "Headphones", crown: "Crown" };
+    for (const h of COSMETICS.hats) {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "hat-btn" + (h === pendingHat ? " selected" : "");
+      btn.textContent = labels[h] || h;
+      btn.addEventListener("click", () => {
+        pendingHat = h;
+        grid.querySelectorAll(".hat-btn").forEach(b => b.classList.toggle("selected", b.textContent === (labels[h] || h)));
+      });
+      grid.appendChild(btn);
+    }
+  }
+
+  async function saveCustomizer() {
+    local.color = pendingColor;
+    local.hat = pendingHat;
+    local.avatarConfig = { ...local.avatarConfig, color: pendingColor, hat: pendingHat };
+    localStorage.setItem(AVATAR_CONFIG_KEY, JSON.stringify(local.avatarConfig));
+    closeCustomizer();
+    syncPresence(true);
+    if (supa) {
+      const { error } = await supa.from("players")
+        .update({ avatar_config: local.avatarConfig })
+        .eq("id", local.id);
+      if (error) console.warn("[saveCustomizer]", error.message);
+    }
+  }
+
+  document.getElementById("customizeBtn").addEventListener("click", openCustomizer);
+  document.getElementById("customizeSaveBtn").addEventListener("click", saveCustomizer);
+  document.getElementById("customizeCancelBtn").addEventListener("click", closeCustomizer);
+
+  // ── End Customizer ────────────────────────────────────────────────────────
 
   function initRealtime() {
     if (!window.supabase) {
@@ -1538,6 +1731,61 @@
     return "#" + [nr, ng, nb].map((n) => n.toString(16).padStart(2, "0")).join("");
   }
 
+  // Hat drawing — called inside ctx.save()/restore() with entity at origin (0,0+bob).
+  function drawHat(hat, s) {
+    if (!hat || hat === "none") return;
+
+    if (hat === "beanie") {
+      ctx.fillStyle = "#cc3333";
+      ctx.fillRect(-2.5 * s, -9.3 * s, 5.0 * s, 1.1 * s);   // cuff
+      ctx.fillStyle = "#ee4444";
+      ctx.fillRect(-2.2 * s, -11.6 * s, 4.4 * s, 2.5 * s);   // body
+      ctx.fillStyle = "#ffffff";
+      ctx.fillRect(-0.6 * s, -12.4 * s, 1.2 * s, 0.9 * s);   // pom
+    }
+
+    if (hat === "cap") {
+      ctx.fillStyle = "#2255cc";
+      ctx.fillRect(-2.2 * s, -10.3 * s, 4.4 * s, 2.0 * s);   // crown
+      ctx.fillStyle = "#1a44aa";
+      ctx.fillRect(-0.8 * s, -8.9 * s, 4.6 * s, 0.8 * s);    // brim
+      ctx.fillStyle = "#aabbee";
+      ctx.fillRect(-0.4 * s, -10.6 * s, 0.8 * s, 0.5 * s);   // button
+    }
+
+    if (hat === "graduation") {
+      ctx.fillStyle = "#111111";
+      ctx.fillRect(-3.6 * s, -10.6 * s, 7.2 * s, 0.9 * s);   // board
+      ctx.fillRect(-1.8 * s, -9.7 * s, 3.6 * s, 1.2 * s);    // cap body
+      ctx.fillStyle = "#f4a83a";
+      ctx.fillRect(2.5 * s, -10.3 * s, 0.45 * s, 2.5 * s);   // tassel
+    }
+
+    if (hat === "headphones") {
+      ctx.fillStyle = "#222222";
+      ctx.fillRect(-3.5 * s, -8.1 * s, 1.2 * s, 1.8 * s);    // left cup
+      ctx.fillRect(2.3 * s, -8.1 * s, 1.2 * s, 1.8 * s);     // right cup
+      ctx.fillRect(-2.5 * s, -10.6 * s, 5.0 * s, 0.8 * s);   // band
+      ctx.fillStyle = "#555555";
+      ctx.fillRect(-3.2 * s, -7.9 * s, 0.8 * s, 1.4 * s);    // left cushion
+      ctx.fillRect(2.4 * s, -7.9 * s, 0.8 * s, 1.4 * s);     // right cushion
+    }
+
+    if (hat === "crown") {
+      ctx.fillStyle = "#f4a83a";
+      ctx.fillRect(-2.5 * s, -9.6 * s, 5.0 * s, 1.0 * s);    // band
+      ctx.fillRect(-2.3 * s, -11.0 * s, 1.0 * s, 1.5 * s);   // left point
+      ctx.fillRect(-0.5 * s, -11.5 * s, 1.0 * s, 2.0 * s);   // centre point
+      ctx.fillRect(1.3 * s, -11.0 * s, 1.0 * s, 1.5 * s);    // right point
+      ctx.fillStyle = "#ff4444";
+      ctx.fillRect(-1.9 * s, -10.5 * s, 0.4 * s, 0.4 * s);   // gem left
+      ctx.fillStyle = "#44ffaa";
+      ctx.fillRect(-0.2 * s, -11.0 * s, 0.4 * s, 0.4 * s);   // gem centre
+      ctx.fillStyle = "#4488ff";
+      ctx.fillRect(1.7 * s, -10.5 * s, 0.4 * s, 0.4 * s);    // gem right
+    }
+  }
+
   function drawHumanSprite(entity, showLabel) {
     const moving = Math.hypot(entity.tx - entity.x, entity.ty - entity.y) > 1.2;
     const frame = moving ? Math.floor(performance.now() / 120) % 4 : Math.floor(performance.now() / 380) % 2;
@@ -1585,6 +1833,8 @@
     ctx.fillStyle = "#201f20";
     ctx.fillRect(-2.4 * s + stride, 3.35 * s, 2.1 * s, 0.95 * s);
     ctx.fillRect(0.28 * s - stride, 3.35 * s, 2.1 * s, 0.95 * s);
+
+    drawHat(entity.hat || "none", s);
     ctx.restore();
 
     if (showLabel) {
