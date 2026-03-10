@@ -468,6 +468,43 @@
     border-bottom-color: #fff;
   }
 
+  /* ── Shop ── */
+  .shop-window {
+    width: min(94vw, 520px);
+  }
+
+  .shop-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  @media (max-width: 540px) {
+    .shop-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  .shop-item {
+    border: 2px solid #fff;
+    border-right-color: #686868;
+    border-bottom-color: #686868;
+    background: var(--paper);
+    padding: 9px 6px;
+    text-align: center;
+    font-size: 0.76rem;
+  }
+
+  .shop-item.owned {
+    background: #d4edda;
+    border-color: #4a8f5a;
+  }
+
+  .shop-item-icon { font-size: 1.5rem; display: block; margin-bottom: 3px; }
+  .shop-item-label { font-weight: 700; display: block; margin-bottom: 2px; font-size: 0.72rem; }
+  .shop-item-cost { color: var(--deep-wood); font-family: "Courier New", monospace; font-size: 0.72rem; display: block; margin-bottom: 6px; }
+
+  .shop-buy-btn { width: 100%; font-size: 0.7rem; padding: 4px; }
+  .shop-buy-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
   /* ── Toast notifications ── */
   .bean-toast {
     position: fixed;
@@ -562,6 +599,7 @@
     <a href="index.html" class="brand">Tesselate Cafe</a>
     <span class="bean-counter" title="Your beans">&#9749; <span id="beanCount">0</span></span>
     <button class="action" id="customizeBtn" type="button">&#9670; Customize</button>
+    <button class="action" id="shopBtn" type="button">&#9749; Shop</button>
     <a class="action" href="index.html">Back To Home</a>
   </nav>
 
@@ -668,9 +706,27 @@
         <div id="colorSwatches" class="swatch-grid"></div>
         <p class="customize-section-label" style="margin-top:14px;">Hat</p>
         <div id="hatPicker" class="hat-grid"></div>
+        <p class="customize-section-label" style="margin-top:14px;">Frame <span style="font-size:0.68rem;font-weight:400;color:#667;">(buy in Shop)</span></p>
+        <div id="framePicker" class="hat-grid"></div>
         <div class="customize-actions">
           <button id="customizeSaveBtn" type="button">Save</button>
           <button id="customizeCancelBtn" type="button">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="arcade-overlay" id="shopOverlay" hidden>
+    <div class="window shop-window">
+      <div class="title-bar">
+        <span>BEAN SHOP.EXE — &#9749; <span id="shopBeanDisplay">0</span> beans</span>
+        <div class="title-controls"><span></span><span></span><span></span></div>
+      </div>
+      <div class="window-body">
+        <p style="font-size:0.79rem;margin-bottom:10px;color:#334;">Spend your &#9749; beans on exclusive cosmetics. Purchases are permanent!</p>
+        <div id="shopGrid" class="shop-grid"></div>
+        <div style="margin-top:12px;text-align:right;">
+          <button id="shopCloseBtn" type="button">Close</button>
         </div>
       </div>
     </div>
@@ -732,6 +788,19 @@
     ],
     hats: ["none", "beanie", "cap", "graduation", "headphones", "crown"]
   };
+
+  const OWNED_ITEMS_KEY = "tesselateCafeOwnedItems";
+  const SHOP_ITEMS = [
+    { id: "color_gold",     type: "color",  value: "#ffd700", label: "Gold",         icon: "🌟", cost: 50  },
+    { id: "color_silver",   type: "color",  value: "#c0c8d4", label: "Silver",        icon: "✨", cost: 50  },
+    { id: "color_neonpink", type: "color",  value: "#ff5fa0", label: "Neon Pink",     icon: "💗", cost: 75  },
+    { id: "color_neongrn",  type: "color",  value: "#00e87d", label: "Neon Green",    icon: "💚", cost: 75  },
+    { id: "color_violet",   type: "color",  value: "#9b30ff", label: "Deep Violet",   icon: "💜", cost: 75  },
+    { id: "hat_wizard",     type: "hat",    value: "wizard",   label: "Wizard Hat",   icon: "🧙", cost: 100 },
+    { id: "hat_tophat",     type: "hat",    value: "tophat",   label: "Top Hat",      icon: "🎩", cost: 100 },
+    { id: "frame_gold",     type: "frame",  value: "gold",     label: "Gold Frame",   icon: "👑", cost: 200 },
+    { id: "frame_rainbow",  type: "frame",  value: "rainbow",  label: "Rainbow Aura", icon: "🌈", cost: 300 },
+  ];
   const bubbles = [];
   const steamPuffs = [];
   const avatars = new Map();
@@ -834,6 +903,7 @@
     ty: 460,
     color: cachedAvatarConfig.color || pickColor(localId),
     hat: cachedAvatarConfig.hat || "none",
+    frame: cachedAvatarConfig.frame || "none",
     speed: 2.9,
     activity: fromParam ? "studying:" + fromParam : "vibing",
     beans: 0,
@@ -1483,6 +1553,7 @@
       if (meta.color) avatar.color = meta.color;
       if (meta.activity) avatar.activity = meta.activity;
       if (meta.hat !== undefined) avatar.hat = meta.hat;
+      if (meta.frame !== undefined) avatar.frame = meta.frame;
       const x = Number(meta.x);
       const y = Number(meta.y);
       const tx = Number(meta.tx);
@@ -1507,7 +1578,8 @@
       ty: Math.round(local.ty),
       ts: Date.now(),
       activity: local.activity || "vibing",
-      hat: local.hat || "none"
+      hat: local.hat || "none",
+      frame: local.frame || "none"
     };
   }
 
@@ -1617,6 +1689,7 @@
       const cfg = data.avatar_config || {};
       if (cfg.color) local.color = cfg.color;
       if (cfg.hat) local.hat = cfg.hat;
+      if (cfg.frame) local.frame = cfg.frame;
       local.beans = data.beans || 0;
       local.avatarConfig = cfg;
       localStorage.setItem(AVATAR_CONFIG_KEY, JSON.stringify(cfg));
@@ -1761,12 +1834,15 @@
 
   let pendingColor = local.color;
   let pendingHat = local.hat;
+  let pendingFrame = local.frame;
 
   function openCustomizer() {
     pendingColor = local.color;
     pendingHat = local.hat;
+    pendingFrame = local.frame;
     buildSwatches();
     buildHatPicker();
+    buildFramePicker();
     document.getElementById("customizeOverlay").hidden = false;
   }
 
@@ -1777,7 +1853,10 @@
   function buildSwatches() {
     const grid = document.getElementById("colorSwatches");
     grid.innerHTML = "";
-    for (const c of COSMETICS.colors) {
+    const owned = local.avatarConfig.owned_items || [];
+    const shopColors = SHOP_ITEMS.filter(i => i.type === "color" && owned.includes(i.id)).map(i => i.value);
+    const allColors = [...COSMETICS.colors, ...shopColors];
+    for (const c of allColors) {
       const el = document.createElement("div");
       el.className = "swatch" + (c === pendingColor ? " selected" : "");
       el.style.background = c;
@@ -1793,8 +1872,11 @@
   function buildHatPicker() {
     const grid = document.getElementById("hatPicker");
     grid.innerHTML = "";
-    const labels = { none: "None", beanie: "Beanie", cap: "Cap", graduation: "Grad", headphones: "Headphones", crown: "Crown" };
-    for (const h of COSMETICS.hats) {
+    const owned = local.avatarConfig.owned_items || [];
+    const shopHats = SHOP_ITEMS.filter(i => i.type === "hat" && owned.includes(i.id)).map(i => i.value);
+    const allHats = [...COSMETICS.hats, ...shopHats];
+    const labels = { none: "None", beanie: "Beanie", cap: "Cap", graduation: "Grad", headphones: "Headphones", crown: "Crown", wizard: "Wizard", tophat: "Top Hat" };
+    for (const h of allHats) {
       const btn = document.createElement("button");
       btn.type = "button";
       btn.className = "hat-btn" + (h === pendingHat ? " selected" : "");
@@ -1807,10 +1889,31 @@
     }
   }
 
+  function buildFramePicker() {
+    const grid = document.getElementById("framePicker");
+    grid.innerHTML = "";
+    const owned = local.avatarConfig.owned_items || [];
+    const shopFrames = SHOP_ITEMS.filter(i => i.type === "frame" && owned.includes(i.id)).map(i => ({ value: i.value, label: i.label }));
+    const allFrames = [{ value: "none", label: "None" }, ...shopFrames];
+    for (const f of allFrames) {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "hat-btn" + (f.value === pendingFrame ? " selected" : "");
+      btn.textContent = f.label;
+      btn.dataset.frameValue = f.value;
+      btn.addEventListener("click", () => {
+        pendingFrame = f.value;
+        grid.querySelectorAll(".hat-btn").forEach(b => b.classList.toggle("selected", b.dataset.frameValue === f.value));
+      });
+      grid.appendChild(btn);
+    }
+  }
+
   async function saveCustomizer() {
     local.color = pendingColor;
     local.hat = pendingHat;
-    local.avatarConfig = { ...local.avatarConfig, color: pendingColor, hat: pendingHat };
+    local.frame = pendingFrame;
+    local.avatarConfig = { ...local.avatarConfig, color: pendingColor, hat: pendingHat, frame: pendingFrame };
     localStorage.setItem(AVATAR_CONFIG_KEY, JSON.stringify(local.avatarConfig));
     closeCustomizer();
     syncPresence(true);
@@ -1827,6 +1930,72 @@
   document.getElementById("customizeCancelBtn").addEventListener("click", closeCustomizer);
 
   // ── End Customizer ────────────────────────────────────────────────────────
+
+  // ── Bean Shop ─────────────────────────────────────────────────────────────
+
+  function openShop() {
+    document.getElementById("shopBeanDisplay").textContent = local.beans || 0;
+    buildShopGrid();
+    document.getElementById("shopOverlay").hidden = false;
+  }
+
+  function closeShop() {
+    document.getElementById("shopOverlay").hidden = true;
+  }
+
+  function buildShopGrid() {
+    const grid = document.getElementById("shopGrid");
+    const owned = local.avatarConfig.owned_items || [];
+    document.getElementById("shopBeanDisplay").textContent = local.beans || 0;
+    grid.innerHTML = "";
+    for (const item of SHOP_ITEMS) {
+      const isOwned = owned.includes(item.id);
+      const canAfford = (local.beans || 0) >= item.cost;
+      const div = document.createElement("div");
+      div.className = "shop-item" + (isOwned ? " owned" : "");
+      const btnLabel = isOwned ? "Owned" : canAfford ? "Buy" : "Need " + item.cost + " ☕";
+      div.innerHTML =
+        `<span class="shop-item-icon">${item.icon}</span>` +
+        `<span class="shop-item-label">${escapeHtml(item.label)}</span>` +
+        `<span class="shop-item-cost">${isOwned ? "OWNED" : item.cost + " ☕"}</span>` +
+        `<button class="shop-buy-btn" type="button" ${isOwned || !canAfford ? "disabled" : ""}>${btnLabel}</button>`;
+      if (!isOwned && canAfford) {
+        div.querySelector(".shop-buy-btn").addEventListener("click", () => purchaseItem(item.id));
+      }
+      grid.appendChild(div);
+    }
+  }
+
+  async function purchaseItem(itemId) {
+    const item = SHOP_ITEMS.find(i => i.id === itemId);
+    if (!item) return;
+    const owned = local.avatarConfig.owned_items || [];
+    if (owned.includes(itemId)) return;
+    if ((local.beans || 0) < item.cost) { setStatus("Not enough beans!", "warn"); return; }
+
+    local.beans -= item.cost;
+    updateBeanDisplay();
+
+    const newOwned = [...owned, itemId];
+    local.avatarConfig = { ...local.avatarConfig, owned_items: newOwned };
+    localStorage.setItem(AVATAR_CONFIG_KEY, JSON.stringify(local.avatarConfig));
+
+    buildShopGrid();
+    setStatus("Purchased " + item.label + "! Open Customize to equip it.", "ok");
+
+    if (supa) {
+      await Promise.allSettled([
+        supa.from("players").update({ beans: local.beans, avatar_config: local.avatarConfig }).eq("id", local.id),
+        supa.from("bean_transactions").insert({ player_id: local.id, amount: -item.cost, reason: "shop:" + itemId })
+      ]);
+    }
+  }
+
+  document.getElementById("shopBtn").addEventListener("click", openShop);
+  document.getElementById("shopCloseBtn").addEventListener("click", closeShop);
+  document.getElementById("shopOverlay").addEventListener("click", ev => { if (ev.target === document.getElementById("shopOverlay")) closeShop(); });
+
+  // ── End Shop ──────────────────────────────────────────────────────────────
 
   function initRealtime() {
     if (!window.supabase) {
@@ -1910,6 +2079,28 @@
     return "#" + [nr, ng, nb].map((n) => n.toString(16).padStart(2, "0")).join("");
   }
 
+  // Frame drawing — called before ctx.save() block, uses world coords.
+  function drawFrame(frame, cx, cy, s) {
+    if (!frame || frame === "none") return;
+    ctx.save();
+    ctx.beginPath();
+    if (frame === "gold") {
+      ctx.strokeStyle = "#ffd700";
+      ctx.lineWidth = 2.4 * s;
+      ctx.shadowColor = "#ffd700";
+      ctx.shadowBlur = 10;
+    } else if (frame === "rainbow") {
+      const hue = (performance.now() / 18) % 360;
+      ctx.strokeStyle = `hsl(${hue}, 100%, 60%)`;
+      ctx.lineWidth = 2.4 * s;
+      ctx.shadowColor = `hsl(${hue}, 100%, 70%)`;
+      ctx.shadowBlur = 14;
+    }
+    ctx.ellipse(cx, cy + s * 4.4, s * 5.8, s * 1.9, 0, 0, Math.PI * 2);
+    ctx.stroke();
+    ctx.restore();
+  }
+
   // Hat drawing — called inside ctx.save()/restore() with entity at origin (0,0+bob).
   function drawHat(hat, s) {
     if (!hat || hat === "none") return;
@@ -1963,6 +2154,30 @@
       ctx.fillStyle = "#4488ff";
       ctx.fillRect(1.7 * s, -10.5 * s, 0.4 * s, 0.4 * s);    // gem right
     }
+
+    if (hat === "wizard") {
+      ctx.fillStyle = "#3d0070";
+      ctx.fillRect(-4.2 * s, -9.1 * s, 8.4 * s, 1.2 * s);   // brim
+      ctx.fillStyle = "#6a0dad";
+      ctx.beginPath();
+      ctx.moveTo(-3.2 * s, -8.9 * s);
+      ctx.lineTo(0, -16.0 * s);
+      ctx.lineTo(3.2 * s, -8.9 * s);
+      ctx.fill();
+      ctx.fillStyle = "#ffe066";                               // stars
+      ctx.fillRect(-1.6 * s, -14.2 * s, 0.9 * s, 0.9 * s);
+      ctx.fillRect(0.7 * s, -12.3 * s, 0.7 * s, 0.7 * s);
+      ctx.fillRect(-0.4 * s, -11.0 * s, 0.6 * s, 0.6 * s);
+    }
+
+    if (hat === "tophat") {
+      ctx.fillStyle = "#1a1a1a";
+      ctx.fillRect(-4.4 * s, -9.0 * s, 8.8 * s, 1.2 * s);   // brim
+      ctx.fillStyle = "#2d2d2d";
+      ctx.fillRect(-2.6 * s, -14.5 * s, 5.2 * s, 5.8 * s);  // cylinder
+      ctx.fillStyle = "#8b6914";
+      ctx.fillRect(-2.6 * s, -10.9 * s, 5.2 * s, 0.9 * s);  // band
+    }
   }
 
   function drawHumanSprite(entity, showLabel) {
@@ -1981,6 +2196,8 @@
     ctx.fillStyle = "rgba(0,0,0,0.28)";
     ctx.ellipse(entity.x, entity.y + s * 4.6, s * 4.8, s * 1.45, 0, 0, Math.PI * 2);
     ctx.fill();
+
+    if (entity.frame && entity.frame !== "none") drawFrame(entity.frame, entity.x, entity.y, s);
 
     ctx.save();
     ctx.translate(entity.x, entity.y + bob);
