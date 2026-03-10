@@ -682,6 +682,14 @@
     avatarConfig: {}
   };
 
+  const ACTIVITY_LABELS = {
+    "studying:chem": "⚗️ studying CHEM",
+    "studying:math": "∑ studying MATH",
+    "studying:comp": "💻 studying COMP",
+    "arcade": "🕹️ at the arcade",
+    "vibing": "☕ just vibing"
+  };
+
   nameInput.value = local.name;
   avatars.set(local.id, local);
   updateVisitorCount();
@@ -692,14 +700,6 @@
     else if (tone === "ok") statusLine.style.color = "#1f5d27";
     else statusLine.style.color = "#334";
   }
-
-  const ACTIVITY_LABELS = {
-    "studying:chem": "⚗️ studying CHEM",
-    "studying:math": "∑ studying MATH",
-    "studying:comp": "💻 studying COMP",
-    "arcade": "🕹️ at the arcade",
-    "vibing": "☕ just vibing"
-  };
 
   function updateVisitorCount() {
     visitorCountEl.textContent = avatars.size;
