@@ -543,7 +543,8 @@
           for(const p of newPresences){if(p.id&&p.id!==local.id){ensureRemoteAvatar(p.id,p);postLine("System",p.name+" arrived.","system");}}
           updateVisitorCount();
         })
-        .on("presence",{event:"leave"},({leftPresences})=>{
+        .on("presence",{event:"leave"},({key,leftPresences})=>{
+          if(key===local.id)return;
           for(const p of leftPresences){if(p.id){avatars.delete(p.id);postLine("System",(p.name||"Someone")+" left.","system");}}
           updateVisitorCount();
         })
