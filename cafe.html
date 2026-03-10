@@ -505,6 +505,42 @@
   .shop-buy-btn { width: 100%; font-size: 0.7rem; padding: 4px; }
   .shop-buy-btn:disabled { opacity: 0.5; cursor: not-allowed; }
 
+  /* ── Room nav ── */
+  .room-nav {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+  }
+  .room-nav a {
+    color: #053f6b;
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-decoration: none;
+    border: 2px solid #fff;
+    border-right-color: #5f5f5f;
+    border-bottom-color: #5f5f5f;
+    background: var(--paper);
+    padding: 4px 8px;
+    white-space: nowrap;
+  }
+  .room-nav a.current-room {
+    background: #c0d8ff;
+    border-color: #5f5f5f;
+    border-right-color: #fff;
+    border-bottom-color: #fff;
+  }
+  .room-count {
+    display: inline-block;
+    background: var(--warm-amber);
+    color: var(--deep-wood);
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 1px 4px;
+    margin-left: 3px;
+    min-width: 14px;
+    text-align: center;
+  }
+
   /* ── Toast notifications ── */
   .bean-toast {
     position: fixed;
@@ -600,7 +636,12 @@
     <span class="bean-counter" title="Your beans">&#9749; <span id="beanCount">0</span></span>
     <button class="action" id="customizeBtn" type="button">&#9670; Customize</button>
     <button class="action" id="shopBtn" type="button">&#9749; Shop</button>
-    <a class="action" href="index.html">Back To Home</a>
+    <nav class="room-nav">
+      <a href="town.html">&#128507; Town</a>
+      <a href="cafe.html" class="current-room">&#9749; Caf&#233; <span class="room-count" id="rcCafe">&#8212;</span></a>
+      <a href="beach.html">&#127958; Beach <span class="room-count" id="rcBeach">0</span></a>
+    </nav>
+    <a class="action" href="index.html">Home</a>
   </nav>
 
   <main class="layout">
@@ -813,6 +854,9 @@
   const SUPA_URL = "https://xsscvdooviztaxzuwbmr.supabase.co";
   const SUPA_KEY = "sb_publishable_BTkvBDZodnIPQoJ4nFEhMQ_Wd5me5QY";
   const ROOM_NAME = "tesselate-cafe-v1";
+  const ROOM_DOORS = [
+    { label: "Town Square", url: "town.html?from=cafe", x: 480, y: 570, w: 80, h: 30, radius: 70 }
+  ];
   const NAME_KEY = "tesselateCafeName";
   const PLAYER_ID_KEY = "tesselatePlayerId";
   const palette = [
@@ -1043,6 +1087,48 @@
     const dx = local.x - arcadeCabinet.x;
     const dy = local.y - (arcadeCabinet.y + 8);
     arcade.nearCabinet = Math.hypot(dx, dy) <= arcadeCabinet.radius;
+  }
+
+  let nearDoor = null;
+  function updateDoorProximity() {
+    nearDoor = null;
+    for (const door of ROOM_DOORS) {
+      if (Math.hypot(local.x - door.x, local.y - door.y) <= door.radius) {
+        nearDoor = door;
+        break;
+      }
+    }
+  }
+
+  function drawDoors() {
+    for (const door of ROOM_DOORS) {
+      // door arch
+      ctx.fillStyle = "#3d2a12";
+      ctx.fillRect(door.x - door.w / 2, door.y - door.h, door.w, door.h);
+      ctx.fillStyle = "#6b4a28";
+      ctx.fillRect(door.x - door.w / 2 + 3, door.y - door.h + 3, door.w - 6, door.h - 6);
+      // warm glow when near
+      if (nearDoor === door) {
+        ctx.save();
+        ctx.shadowColor = "#f4a83a";
+        ctx.shadowBlur = 18;
+        ctx.fillStyle = "rgba(244,168,58,0.18)";
+        ctx.fillRect(door.x - door.w / 2, door.y - door.h, door.w, door.h);
+        ctx.restore();
+        // prompt
+        ctx.fillStyle = "#fef3dc";
+        ctx.font = "bold 13px Tahoma";
+        ctx.textAlign = "center";
+        ctx.fillText("Press E → " + door.label, door.x, door.y - door.h - 10);
+        ctx.textAlign = "left";
+      } else {
+        ctx.fillStyle = "#fef3dc";
+        ctx.font = "11px Tahoma";
+        ctx.textAlign = "center";
+        ctx.fillText(door.label, door.x, door.y - door.h - 6);
+        ctx.textAlign = "left";
+      }
+    }
   }
 
   function drawArcadeCabinet() {
@@ -2350,6 +2436,7 @@
     drawQueue.sort((a, b) => a.y - b.y);
     for (const item of drawQueue) item.fn();
     drawArcadePrompt();
+    drawDoors();
 
     for (let i = bubbles.length - 1; i >= 0; i--) {
       drawBubble(bubbles[i]);
@@ -2671,6 +2758,7 @@
     updateAmbientSprites();
     updateSteamPuffs();
     updateArcadeProximity();
+    updateDoorProximity();
     sendMove(false);
     drawRoom();
     requestAnimationFrame(loop);
@@ -2752,9 +2840,9 @@
       return;
     }
 
-    if (key === "e" && arcade.nearCabinet && !isTypingInField()) {
-      openArcade();
-      ev.preventDefault();
+    if (key === "e" && !isTypingInField()) {
+      if (arcade.nearCabinet) { openArcade(); ev.preventDefault(); }
+      else if (nearDoor) { window.location.href = nearDoor.url; ev.preventDefault(); }
     }
   });
 
@@ -2801,10 +2889,31 @@
     channel.unsubscribe();
   });
 
+  // ── Room nav live counts (observer-only channels) ─────────────────────────
+  function initRoomNavCounts() {
+    if (!window.supabase) return;
+    const s = window.supabase.createClient(SUPA_URL, SUPA_KEY, { auth: { persistSession: false, autoRefreshToken: false } });
+    const rooms = [{ id: "rcBeach", channel: "tesselate-beach-v1" }];
+    for (const r of rooms) {
+      const el = document.getElementById(r.id);
+      if (!el) continue;
+      const ch = s.channel(r.channel, { config: { presence: { key: "nav-observer-" + Math.random() } } });
+      ch.on("presence", { event: "sync" }, () => {
+        const state = ch.presenceState();
+        const count = Object.keys(state).filter(k => !k.startsWith("nav-observer-") && !k.startsWith("index-observer-")).length;
+        el.textContent = count || "0";
+      }).subscribe();
+    }
+    // Café count = this room's own avatars map
+    const rcCafe = document.getElementById("rcCafe");
+    if (rcCafe) setInterval(() => { rcCafe.textContent = avatars.size; }, 2000);
+  }
+
   postLine("System", "Welcome to the Interweb Cafe.", "system");
   postLine("System", "Click inside the lounge to move.", "system");
   setStatus("Connecting to realtime lounge...", "warn");
   initRealtime();
+  initRoomNavCounts();
   setInterval(() => syncPresence(false), 12000);
   nowPlayingEl.textContent = "Now playing: none";
   loop();

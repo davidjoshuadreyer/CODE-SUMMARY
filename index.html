@@ -128,6 +128,27 @@
     font-weight: 700;
   }
 
+  /* world card */
+  .world-card { border-color: #1b3a4a !important; }
+  .world-card:hover { border-color: #0ea5e9 !important; box-shadow: 0 10px 28px rgba(14,165,233,0.15) !important; }
+  .world-rooms {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+  .room-pill {
+    font-size: 0.72rem;
+    font-family: 'Courier New', monospace;
+    color: #7dd3fc;
+    background: #082636;
+    border: 1px solid #0369a1;
+    border-radius: 999px;
+    padding: 2px 10px;
+    white-space: nowrap;
+  }
+  .room-pill .rc { font-weight: 700; }
+
   /* per-course accent colours */
   .chem .course-label h2  { color: #6ee7b7; }
   .chem .card             { border-color: #1e3a2a; }
@@ -291,12 +312,16 @@
           <span class="tag" style="background:#1a0a2e;color:#c4b5fd;border:1px solid #6d28d9;">Interactive</span>
         </div>
       </a>
-      <a class="card" href="cafe.html" style="border-color:#1b4a45;">
+      <a class="card world-card" href="town.html">
         <div class="card-body">
-          <div class="card-title">Interweb Cafe</div>
-          <div class="card-desc">Retro web lounge inspired by classic internet cafes. Move around, chat, and hang out in a Windows-style room.</div>
-          <span class="tag" style="background:#082621;color:#7ce8d7;border:1px solid #0f766e;">Interactive</span>
-          <span id="cafePresence" style="display:none;margin-top:8px;font-size:0.78rem;color:#7ce8d7;font-family:'Courier New',monospace;">&#9749; <span id="cafeCount">0</span> in the cafe right now</span>
+          <div class="card-title">Tesselate World</div>
+          <div class="card-desc">A multiplayer world to explore. Walk between rooms, chat with others, earn beans, and unlock cosmetics.</div>
+          <span class="tag" style="background:#082636;color:#7dd3fc;border:1px solid #0369a1;">Multiplayer</span>
+          <div class="world-rooms">
+            <span class="room-pill">🗺 Town &nbsp;<span class="rc" id="rcTown">·</span></span>
+            <span class="room-pill">☕ Café &nbsp;<span class="rc" id="rcCafe">·</span></span>
+            <span class="room-pill">🏖 Beach &nbsp;<span class="rc" id="rcBeach">·</span></span>
+          </div>
         </div>
       </a>
     </div>
@@ -318,19 +343,23 @@
       "sb_publishable_BTkvBDZodnIPQoJ4nFEhMQ_Wd5me5QY",
       { auth: { persistSession: false, autoRefreshToken: false } }
     );
-    const ch = supa.channel("tesselate-cafe-v1", {
-      config: { presence: { key: "index-observer-" + Math.random().toString(36).slice(2, 8) } }
+    const OBS_PREFIX = "index-obs-" + Math.random().toString(36).slice(2, 7) + "-";
+    const rooms = [
+      { channel: "tesselate-town-v1",  elId: "rcTown"  },
+      { channel: "tesselate-cafe-v1",  elId: "rcCafe"  },
+      { channel: "tesselate-beach-v1", elId: "rcBeach" },
+    ];
+    rooms.forEach(({ channel, elId }) => {
+      const key = OBS_PREFIX + channel;
+      const ch = supa.channel(channel, { config: { presence: { key } } });
+      ch.on("presence", { event: "sync" }, () => {
+        const state = ch.presenceState();
+        const count = Object.keys(state).filter(k => !k.startsWith(OBS_PREFIX)).length;
+        const el = document.getElementById(elId);
+        if (el) el.textContent = count > 0 ? count : "·";
+      });
+      ch.subscribe();
     });
-    ch.on("presence", { event: "sync" }, () => {
-      const state = ch.presenceState();
-      const count = Object.keys(state).filter(k => !k.startsWith("index-observer-")).length;
-      const el = document.getElementById("cafePresence");
-      const ct = document.getElementById("cafeCount");
-      if (!el || !ct) return;
-      ct.textContent = count;
-      el.style.display = count > 0 ? "block" : "none";
-    });
-    ch.subscribe();
   })();
 </script>
 </body>
