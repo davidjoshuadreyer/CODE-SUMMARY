@@ -468,6 +468,47 @@
     border-bottom-color: #fff;
   }
 
+  /* ── Toast notifications ── */
+  .bean-toast {
+    position: fixed;
+    bottom: 80px;
+    right: 24px;
+    background: var(--warm-amber);
+    color: var(--deep-wood);
+    font-family: "Courier New", monospace;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 7px 16px;
+    border: 2px solid #fff;
+    border-right-color: var(--amber-dark);
+    border-bottom-color: var(--amber-dark);
+    z-index: 200;
+    pointer-events: none;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.9s ease 0.5s, transform 0.9s ease 0.5s;
+  }
+  .bean-toast.go { opacity: 0; transform: translateY(-28px); }
+
+  .ach-toast {
+    position: fixed;
+    bottom: 80px;
+    right: 24px;
+    background: var(--cream);
+    border: 2px solid var(--warm-amber);
+    border-right-color: var(--amber-dark);
+    border-bottom-color: var(--amber-dark);
+    padding: 10px 14px;
+    z-index: 201;
+    max-width: 260px;
+    font-size: 0.78rem;
+    pointer-events: none;
+    animation: achIn 0.3s ease, achOut 0.5s ease 2.8s forwards;
+  }
+  .ach-toast strong { display: block; font-size: 0.85rem; color: var(--deep-wood); margin-bottom: 2px; }
+  @keyframes achIn  { from { opacity:0; transform:translateX(30px); } to { opacity:1; transform:translateX(0); } }
+  @keyframes achOut { to   { opacity:0; transform:translateX(30px); } }
+
   #arcadeCanvas {
     width: 100%;
     height: auto;
@@ -1095,6 +1136,13 @@
     }
     updateArcadeHud();
     setStatus(reason, "ok");
+
+    const arcadeBeans = Math.min(15, Math.floor(arcade.score / 10));
+    if (arcadeBeans > 0) {
+      const today = new Date().toISOString().slice(0, 10);
+      awardBeans(arcadeBeans, "arcade_" + today);
+    }
+    checkAchievements();
   }
 
   function startArcadeRound() {
@@ -1574,12 +1622,140 @@
       localStorage.setItem(AVATAR_CONFIG_KEY, JSON.stringify(cfg));
       updateBeanDisplay();
     }
+
+    // Sync earned achievements from DB into localStorage cache
+    const { data: achRows } = await supa.from("player_achievements")
+      .select("achievement_id").eq("player_id", local.id);
+    if (achRows && achRows.length) {
+      const ids = achRows.map(r => r.achievement_id);
+      const local_ = JSON.parse(localStorage.getItem(EARNED_ACH_KEY) || "[]");
+      const merged = [...new Set([...local_, ...ids])];
+      localStorage.setItem(EARNED_ACH_KEY, JSON.stringify(merged));
+    }
   }
 
   function updateBeanDisplay() {
     const el = document.getElementById("beanCount");
     if (el) el.textContent = (local.beans || 0);
   }
+
+  // ── Beans + Achievements ─────────────────────────────────────────────────
+
+  const DAILY_BEANS_KEY  = "tesselateDailyBeans";
+  const VISIT_DAYS_KEY   = "tesselateCafeVisitDays";
+  const CHAT_COUNT_KEY   = "tesselateCafeChatCount";
+  const EARNED_ACH_KEY   = "tesselateCafeAchievements";
+
+  const ACHIEVEMENTS = [
+    { id: "cafe_regular",      name: "Regular",          desc: "Visited the café 5 different days", beans: 25,
+      check: () => getVisitDays() >= 5 },
+    { id: "arcade_champion",   name: "Arcade Champion",  desc: "Scored 50+ points in Neon Defender",  beans: 30,
+      check: () => arcade.best >= 50 },
+    { id: "social_butterfly",  name: "Social Butterfly", desc: "Sent 10 messages in the café",         beans: 15,
+      check: () => getChatCount() >= 10 },
+    { id: "bean_hoarder",      name: "Bean Hoarder",     desc: "Accumulated 100 ☕ beans",              beans: 20,
+      check: () => local.beans >= 100 }
+  ];
+
+  function getVisitDays() {
+    return JSON.parse(localStorage.getItem(VISIT_DAYS_KEY) || "[]").length;
+  }
+
+  function recordVisitDay() {
+    const today = new Date().toISOString().slice(0, 10);
+    const days = JSON.parse(localStorage.getItem(VISIT_DAYS_KEY) || "[]");
+    if (!days.includes(today)) days.push(today);
+    localStorage.setItem(VISIT_DAYS_KEY, JSON.stringify(days.slice(-60)));
+  }
+
+  function getChatCount() {
+    return Number(localStorage.getItem(CHAT_COUNT_KEY) || "0");
+  }
+
+  function incrementChatCount() {
+    const n = getChatCount() + 1;
+    localStorage.setItem(CHAT_COUNT_KEY, String(n));
+    return n;
+  }
+
+  function isDailyReasonUsed(reason) {
+    const today = new Date().toISOString().slice(0, 10);
+    const daily = JSON.parse(localStorage.getItem(DAILY_BEANS_KEY) || "{}");
+    return !!(daily[today] && daily[today][reason]);
+  }
+
+  function markDailyReason(reason) {
+    const today = new Date().toISOString().slice(0, 10);
+    const daily = JSON.parse(localStorage.getItem(DAILY_BEANS_KEY) || "{}");
+    if (!daily[today]) daily[today] = {};
+    daily[today][reason] = true;
+    // Keep only last 7 days
+    const keys = Object.keys(daily).sort();
+    if (keys.length > 7) delete daily[keys[0]];
+    localStorage.setItem(DAILY_BEANS_KEY, JSON.stringify(daily));
+  }
+
+  function showBeanToast(amount) {
+    const el = document.createElement("div");
+    el.className = "bean-toast";
+    el.textContent = "+" + amount + " ☕";
+    document.body.appendChild(el);
+    requestAnimationFrame(() => requestAnimationFrame(() => el.classList.add("go")));
+    setTimeout(() => el.remove(), 1800);
+  }
+
+  function showAchievementToast(name, desc, beans) {
+    const el = document.createElement("div");
+    el.className = "ach-toast";
+    el.innerHTML = `<strong>🏆 ${escapeHtml(name)}</strong>${escapeHtml(desc)}<br><span style="color:var(--deep-wood);font-weight:700;">+${beans} ☕</span>`;
+    document.body.appendChild(el);
+    setTimeout(() => el.remove(), 3500);
+  }
+
+  async function awardBeans(amount, reason) {
+    if (!amount || amount <= 0) return;
+    if (isDailyReasonUsed(reason)) return;
+    markDailyReason(reason);
+
+    local.beans += amount;
+    updateBeanDisplay();
+    showBeanToast(amount);
+
+    if (supa) {
+      await Promise.allSettled([
+        supa.from("players").update({ beans: local.beans }).eq("id", local.id),
+        supa.from("bean_transactions").insert({ player_id: local.id, amount, reason })
+      ]);
+    }
+    checkAchievements();
+  }
+
+  async function checkAchievements() {
+    const earned = JSON.parse(localStorage.getItem(EARNED_ACH_KEY) || "[]");
+    for (const ach of ACHIEVEMENTS) {
+      if (earned.includes(ach.id)) continue;
+      if (!ach.check()) continue;
+      earned.push(ach.id);
+      localStorage.setItem(EARNED_ACH_KEY, JSON.stringify(earned));
+
+      local.beans += ach.beans;
+      updateBeanDisplay();
+      showAchievementToast(ach.name, ach.desc, ach.beans);
+
+      if (supa) {
+        await Promise.allSettled([
+          supa.from("player_achievements").upsert(
+            { player_id: local.id, achievement_id: ach.id },
+            { onConflict: "player_id,achievement_id", ignoreDuplicates: true }
+          ),
+          supa.from("players").update({ beans: local.beans }).eq("id", local.id),
+          supa.from("bean_transactions").insert({ player_id: local.id, amount: ach.beans, reason: "achievement:" + ach.id })
+        ]);
+      }
+    }
+  }
+
+  // ── End Beans ─────────────────────────────────────────────────────────────
 
   // ── Customizer ────────────────────────────────────────────────────────────
 
@@ -1696,6 +1872,9 @@
         if (status === "SUBSCRIBED") {
           connected = true;
           upsertPlayer().catch(() => {});
+          recordVisitDay();
+          const today = new Date().toISOString().slice(0, 10);
+          awardBeans(5, "cafe_visit_" + today);
           await syncPresence(true);
           setStatus("Connected to live lounge.", "ok");
           postLine("System", "Connected. Visitors online are now real.", "system");
@@ -2321,6 +2500,8 @@
     sendChat(message);
     setStatus("Message sent.", "ok");
     messageInput.value = "";
+    incrementChatCount();
+    checkAchievements();
   });
 
   function isTypingInField() {
