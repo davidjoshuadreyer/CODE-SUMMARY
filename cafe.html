@@ -1433,7 +1433,7 @@
 
   async function upsertPlayer() {
     if (!supa) return;
-    const { data } = await supa.from("players")
+    const { data, error } = await supa.from("players")
       .upsert({
         id: local.id,
         display_name: local.name,
@@ -1441,6 +1441,11 @@
       }, { onConflict: "id", ignoreDuplicates: false })
       .select("avatar_config, beans")
       .single();
+    if (error) {
+      console.warn("[upsertPlayer]", error.message, error.code);
+      setStatus("DB sync failed: " + error.message, "warn");
+      return;
+    }
     if (data) {
       if (data.avatar_config?.color) local.color = data.avatar_config.color;
       local.beans = data.beans || 0;
