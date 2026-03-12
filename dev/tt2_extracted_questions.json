@@ -1,0 +1,47 @@
+[
+  {
+    "qnum": 0,
+    "page": 1,
+    "text": "00112 M Ca(OH)2(aq) x 2 \ud835\udc5a\ud835\udc5c\ud835\udc59 \ud835\udc42\ud835\udc3b\u2212 1 \ud835\udc5a\ud835\udc5c\ud835\udc59 \ud835\udc36\ud835\udc4e(\ud835\udc42\ud835\udc3b)\u2082 = 0.00224 M OH-(aq) pOH = -log[0.00224] = 2.65 pH = 14 \u2013 pOH = 11.35 This study source was downloaded by 100000776013313 from CourseHero.com on 03-07-2026 22:27:05 GMT -06:00"
+  },
+  {
+    "qnum": 1,
+    "page": 4,
+    "text": "388 x 10-11 = [\ud835\udc3b\ud835\udc41\ud835\udc42\u2082][\ud835\udc42\ud835\udc3b\u2212] [\ud835\udc41\ud835\udc42\u2082\u2212] = \ud835\udc65\u00b2 (0.111\u2212\ud835\udc65) We can solve the quadratic equation or try the approximation if x << 0.111 then \ud835\udc65\u00b2 (0.111\u2212\ud835\udc65) ~ \ud835\udc65\u00b2"
+  },
+  {
+    "qnum": 2,
+    "page": 1,
+    "text": "Write an ionization equation for HNO3 in water. HNO3 (l) + H2O(l) \u2192 NO3-(aq) + H3O+(aq)"
+  },
+  {
+    "qnum": 3,
+    "page": 1,
+    "text": "Sodium chloride dissolves spontaneously in water at room temperature. The standard enthalpy for this process NaCl(s) \u2192NaCl(aq) is + 5 kJ/mol. What can you confidently say about the standard entropy for this process? We know that sodium chloride dissolves spontaneous in water at room temperature (25 \u00b0C or 298 K) so \u0394G\u00b0 must be negative, we also know that \u0394H\u00b0 is + 5 \ud835\udc58\ud835\udc3d \ud835\udc5a\ud835\udc5c\ud835\udc59 so the entropy must be increasing (\u0394S\u00b0 must be positive) which makes sense since we are increasing the randomness (the ions are free to move in x, y and z direction in the salt solution but not in the crystal lattice). We can be even more specific: T\u0394S\u00b0 must be greater than 5 \ud835\udc58\ud835\udc3d \ud835\udc5a\ud835\udc5c\ud835\udc59 to make \u0394G\u00b0 negative and since T is 298 K we can say: = T\u0394S\u00b0 > \u0394H\u00b0 or (298 K) (\u0394S\u00b0) > 5"
+  },
+  {
+    "qnum": 4,
+    "page": 1,
+    "text": "Calculate the pH of 0.00112 M Ca(OH)2(aq) Calcium hydroxide is an ionic compound that has some solubility in water. All the Ca(OH)2 that dissolves dissociates in water making the solution strongly basic. Ca(OH)2(s) \u2194 Ca2+(aq) + 2OH-(aq)"
+  },
+  {
+    "qnum": 5,
+    "page": 2,
+    "text": "As far as thermodynamics is concerned define a closed system. Write a sentence! Next give an example of a closed system. A closed system is any system in which energy can be transferred between the system and its surroundings but matter cannot. Example: a can of beer, the cylinder of compressed air in the lab (when not in use, valve closed)"
+  },
+  {
+    "qnum": 6,
+    "page": 2,
+    "text": "Calculate the enthalpy of combustion of propene compound A and cyclopropane compound B using the thermodynamic data given in the formulas and constants section. The final result should have the unit kJ/mol and should be based on the heat produced per mole of compound combusted. The two enthalpies for the isomers are different. Which compound is more stable and how can you tell? I am sorry about my drawing error. Thanks for pointing it out during the exam Trevor! I corrected this on the board but this information would not have reached students who were writing with CAL. See me if you feel that you lost marks because of this. C3H6 (g) + 4.5O2(g) \u2192 3CO2(g) + 3H2O(l) Equation for both A and B (they are isomers)"
+  },
+  {
+    "qnum": 7,
+    "page": 3,
+    "text": "Draw a hydrogen electrode properly connected to a gold half cell. Name all vital parts of this Voltaic cell in your drawing. The hydrogen ion concentration in the hydrogen electrode is 0.010 M and the H2(g) pressure is 0.1 atm. The gold electrode is dipping into a solution with a gold(III) ion concentration of 0.0111 M. Which electrode is the Anode and which electrode is the Cathode in your drawing? The hydrogen electrode is anode (Pt) and the gold electrode is cathode Give the half reactions that occur on both electrodes and give the overall cell reaction. Cathode half reaction [Au3+(aq) + 3e- \u2192Au(s)]x2 + 1.52 V Anode half reaction [H2(g) \u2192 2H+(aq) + 2e-]x3 0 V Overall cell reaction 2Au3+(aq) + 3H2(g) \u2192 2Au(s) + 6H+(aq) Ecell\u2070 = + 1.52 V"
+  },
+  {
+    "qnum": 8,
+    "page": 4,
+    "text": "Calculate the pH of 0.111 M aqueous sodium nitrite: NaNO2(aq). The acid ionization constant for nitrous acid (HNO2) is Ka= 7.2 x 10-4"
+  }
+]

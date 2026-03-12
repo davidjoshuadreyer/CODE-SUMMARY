@@ -1,0 +1,198 @@
+
+===== PAGE 1050 =====
+Chapter 20: Electrochemistry 
+1050 
+V 800 . 0Ag(s) 2 (aq) H 2Ag 2 (g) H : Net
+V 800 . 02 Ag(s)}e (aq) {Ag : Reduction
+V 000 . 0e 2 aq) ( H 2 (g) H : Oxidation
+cell2
+2
+ qo
+ quo
+ q o
+
+
+
+E
+E
+E
+ 
+2 2
+cell cell 2 2
+0.0592 [H ] 0.0592 1.00log 0.503 V 0.800 V log22 [Ag ] [Ag ]EE
+
+  q     
+ 100 10
+2
+2
+2
+2
+10 0 . 1 10
+] Ag [
+00 . 10 . 100592 . 0
+) 503 . 0 800 . 0 ( 2
+] Ag [
+00 . 1log u    
+  
+  
+  [Ag+ ]2 =1.0 u10-10M2  [Ag+ ]=1.0 u10-5  
+ 
+Ag g 10 4 . 5Ag mol 1
+Ag g 87 . 107
+Ag mol 1
+Ag mol 1
+soln L 1
+Ag mol 10 0 . 1L 0.500 Ag  mass        4
+5
+
+
+
+u uuuu 
+Ag % 051 . 0 % 100sample g 050 . 1
+Ag g 10 5.4Ag %
+4
+ uu 
+
+(by mass) 
+91. (M) 250.0 mL of 0.1000 M CuSO4  = 0.02500 moles Cu2+ initially. 
+ 
+ moles of Cu2+ plated out 
+ 
+= 3.512C
+s u1368 s u1 mol e-
+96,485 C u1 mol Cu2+
+2 mole-  0.02490mol Cu 2+  
+ 
+moles of Cu2+ in solution = 0.02500 mol – 0.02490 mol = 0.00010 mol Cu2+ 
+ 
+ [Cu2+] = 0.00010 mol Cu2+/0.250 L = 4.0 × 10-4 M 
+ 
+      Cu2+(aq)  +  4NH 3(aq)
+1311 1 0fK  u
+ZZZZZZXYZZZZZZ  Cu(NH3)4
+2+(aq) 
+  I n i t i a l     0 . 0 0 0 4 0  M   0 . 1 0  M    0  M  
+  C h a n g e ( 1 0 0 %  r x n )  - 0 . 0 0 0 4 0 M   m a i n t a i n e d    + 0 . 0 0 0 4 0  M  
+  N e w  i n i t i a l    0  M    0 . 1 0  M    0 . 0 0 0 4 0  M  
+  C h a n g e    + x   maintained   -x 
+  E q u i l i b r i u m   x   0.10 M   (0.00040 – x) M | 0.00040 M 
+ 
+ 
+2+
+13 2+ 1334
+f 2+ 42 + 4
+3
+[Cu(NH ) ] 0.00040K= = 1 . 1 1 0 [ C u ]  =  3 . 6 1 0
+[Cu ][NH ] [Cu ](0.10)
+M u u  
+ H e n c e ,  t h e  a s s u m p t i o n  i s  v a l i d.  The concentration of Cu(NH 3)4
+2+(aq) = 0.00040 M which is 
+40 times greater than the 1 × 10-5 detection limit.   Thus, the blue color should appear. 
+ 
+92.  (M) First we determine the molar solubility of AgBr in 1 M NH3 . 
+26
+33 s p fum         AgBr(s) 2NH (aq)    Ag(NH ) (aq) Br (aq) K K  K 8.0 10
+Initial                     1.00 M                         0  M         0 M
+quil.                       1.00-2s                 
+S
+E
+   u  uU
+2
+2 633
+2
+3
+13
+sp 10
+3
+       s                s     {s AgBr molar solubility}
+[Ag(NH ) ][Br ]K 8.0 10   s2 . 8 1 1 0  M  ( a l s o  [ B r ] )[NH (aq)] (1 2 )
+K 5.0 10So  [Ag ]  1.8 10[Br ] 2.81 10
+s
+s
+M
+
+ 
+
+
+
+
+   u u 
+u   u u
+
+===== PAGE 1051 =====
+
+
+===== PAGE 1052 =====
+Chapter 20: Electrochemistry 
+1052 
+95. (M) The overall reaction for the electrolytic cell is: 
+  Cu(s)+Zn2+ (aq) o Cu2+ (aq)+Zn(s)   Ecell
+o   1.103V  
+ N e x t ,  w e  c a l c u l a t e  t h e  n u m b e r  o f  m o l e s  o f  Z n2+(aq) plated out and number of moles of 
+ C u 2+(aq) formed: 
+ 
+  
+n(Cu2+ )  = 0.500C
+s u10 h u60min
+1h u60s
+1min  u1 mol e-
+96,485 C u1 mol Cu2+
+2 mol e-  0.0935mol Cu2+
+n(Zn2+ )  n(Cu2+ )=0.0935mol
+ 
+ I n i t i a l l y ,  s o l u t i o n  c o n t a i n e d   1.00molL-1 u0.100L=0.100 mol Zn2+(aq).  Therefore, at the end 
+ o f  e l e c t r o l y s i s  w e  a r e  l e f t  w i t h :  
+ 
+ 
+n(Zn2+ )LEFT =(0.100-0.0935)mol=6.5u10-3mol  [Zn2+ ]= 6.5 u10-3mol
+0.1L =6.5 u10-2M
+n(Cu2+ )FORMED =0.0935mol  [Cu2+ ]= 0.0935mol
+0.1L =0.936M
+ 
+ T h e  n e w  p o t e n t i a l  a f t e r  t h e  c e l l  w a s  s w i t c h e d  t o  a voltaic one can be calculated using Nernst
+ e q u a t i o n :  
+ 
+  
+Ecell  Eqcell 0.0592
+2 log [Zn2]
+[Cu2]
+ 1.103 0.0592
+2 log 6.5 u103 M
+0.935 M  1.103 0.064 1.167 V  
+ 
+96. (M) (a)  T h e  m e t a l  h a s  t o  h a v e  a  r e d u c t i o n  p o t e n tial more negative than -0.691 V, so that 
+its oxidation can reverse the tarnishing re action’s -0.691 V reduction potential.  
+Aluminum is a good candidate, b ecause it is inexpensive, readily available, will not react 
+with water and has an E o of -1.676 V.  Zinc is also  a possibility with an E o of -0.763 V, 
+but we don't choose it because there may be an overpotential associated with the 
+tarnishing reaction. 
+ 
+3
+-2
+2
+Oxidation:     {Al(s)  Al (aq)   3 e  }  2                               
+          Reduction:     {Ag S(s) 2 e Ag(s)   S (aq)  }  3                           
+          Net:       
+
+
+o u
+  o u
+(b)       
+32
+2        2 Al(s) 3 Ag S(s)  6Ag(s)  2 Al (aq)   3 S (aq)   o 
+  
+  
+ ( c )   The dissolved NaHCO 3(s) serves as an electrolyte. It would also enhance the electrical 
+contact between the two objects. 
+ 
+ ( d )  T h e r e  a r e  s e v e r a l  c h e m i c a l s  i n v o l v e d :  A l ,  H2O, and NaHCO3.  Although the aluminum 
+plate will be consumed very slowly because  s i l v e r  t a r n i s h  i s  v e r y  t h i n ,  i t  w i l l ,  
+nonetheless, eventually erode away.  We shoul d be able to detect  l o s s  o f  m a s s  a f t e r  
+many uses. 
+ 
+97. (M) (a)        Overall:           C3H8(g) + 5 O2(g)  o 3  C O 2(g) + 4 H2O(l) 
+           Anode:         6 H 2O(l) + C3H8(g)  o 3  C O 2(g) + 20 H+(g) + 20 e- 
+             C a t h o d e :  2 0  e- + 20 H+(g) + 5 O2(g)  o 1 0  H 2O(l) 
+ 
+    'Gqrxn = 3(-394.4 kJ/mol) + 4(-237.1 kJ/mol) – 1(-23.3 kJ/mol) = -2108.3 kJ/mol
+ 

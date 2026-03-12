@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fractal Tree — Tesselate</title>
+<title>Recursive Tree — Tesselate</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -40,11 +40,7 @@
 
   .nav-divider { width: 1px; height: 20px; background: #2d2d50; }
 
-  .nav-title {
-    font-size: 0.9rem;
-    color: #64748b;
-    font-weight: 500;
-  }
+  .nav-title { font-size: 0.9rem; color: #64748b; font-weight: 500; }
 
   canvas {
     position: fixed;
@@ -55,10 +51,9 @@
     pointer-events: none;
   }
 
-  /* Tall div that makes the page scrollable */
-  #scroll-area { height: 6000px; }
+  /* Very tall — gives the infinite scroll feeling */
+  #scroll-area { height: 12000px; }
 
-  /* Top intro text */
   #intro {
     position: fixed;
     top: 76px;
@@ -67,7 +62,7 @@
     z-index: 10;
     text-align: center;
     pointer-events: none;
-    transition: opacity 0.6s;
+    transition: opacity 0.5s;
     white-space: nowrap;
   }
 
@@ -81,12 +76,8 @@
     margin-bottom: 6px;
   }
 
-  #intro p {
-    font-size: 0.82rem;
-    color: #475569;
-  }
+  #intro p { font-size: 0.82rem; color: #475569; }
 
-  /* Scroll hint arrow */
   #scroll-hint {
     position: fixed;
     bottom: 80px;
@@ -96,16 +87,12 @@
     font-size: 0.78rem;
     color: #334155;
     pointer-events: none;
-    transition: opacity 0.6s;
+    transition: opacity 0.5s;
     animation: pulse 2s ease-in-out infinite;
   }
 
-  @keyframes pulse {
-    0%, 100% { opacity: 0.3; }
-    50% { opacity: 0.9; }
-  }
+  @keyframes pulse { 0%, 100% { opacity: 0.3; } 50% { opacity: 0.9; } }
 
-  /* Depth HUD at bottom */
   #hud {
     position: fixed;
     bottom: 28px;
@@ -117,30 +104,22 @@
   }
 
   #depth-label {
-    font-size: 0.7rem;
+    font-size: 0.68rem;
     color: #334155;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    margin-bottom: 7px;
+    margin-bottom: 2px;
   }
 
-  #depth-bar {
-    display: flex;
-    gap: 5px;
-    justify-content: center;
-  }
-
-  .depth-pip {
-    width: 20px;
-    height: 3px;
-    border-radius: 2px;
-    background: #1e1e30;
-    transition: background 0.35s, box-shadow 0.35s;
-  }
-
-  .depth-pip.active {
-    background: #10b981;
-    box-shadow: 0 0 6px rgba(16,185,129,0.6);
+  #depth-value {
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 1;
+    background: linear-gradient(135deg, #10b981, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-variant-numeric: tabular-nums;
   }
 </style>
 </head>
@@ -149,147 +128,140 @@
 <nav>
   <a class="nav-brand" href="index.html">Tesselate</a>
   <div class="nav-divider"></div>
-  <span class="nav-title">Fractal Tree</span>
+  <span class="nav-title">Recursive Tree</span>
 </nav>
 
-<canvas id="tree-canvas"></canvas>
+<canvas id="c"></canvas>
 <div id="scroll-area"></div>
 
 <div id="intro">
   <h1>Recursive Tree</h1>
-  <p>Each branch spawns two children &nbsp;·&nbsp; scroll to grow</p>
+  <p>Each node spawns two children &nbsp;·&nbsp; scroll to descend</p>
 </div>
 
 <div id="scroll-hint">↓ &nbsp; scroll to recurse &nbsp; ↓</div>
 
 <div id="hud">
-  <div id="depth-label">Recursion Depth: <span id="depth-num">1</span></div>
-  <div id="depth-bar"></div>
+  <div id="depth-label">Recursion Depth</div>
+  <div id="depth-value">0</div>
 </div>
 
 <script>
-  const MAX_DEPTH = 12;
-  const SCROLL_PER_LEVEL = 460;
+  const canvas = document.getElementById('c');
+  const ctx    = canvas.getContext('2d');
+  const depthEl = document.getElementById('depth-value');
+  const intro   = document.getElementById('intro');
+  const hint    = document.getElementById('scroll-hint');
 
-  const canvas = document.getElementById('tree-canvas');
-  const ctx = canvas.getContext('2d');
-  const depthBar = document.getElementById('depth-bar');
-  const depthNum = document.getElementById('depth-num');
-  const intro = document.getElementById('intro');
-  const scrollHint = document.getElementById('scroll-hint');
+  // Pixels of scroll between each recursion level
+  const LEVEL_H  = 280;
+  // Canvas-Y of the root node when scrollY = 0
+  const TREE_TOP = 90;
 
-  // Build depth pips
-  for (let i = 0; i < MAX_DEPTH; i++) {
-    const pip = document.createElement('div');
-    pip.className = 'depth-pip';
-    pip.id = 'pip-' + i;
-    depthBar.appendChild(pip);
-  }
-
-  // Interpolate a color along a multi-stop palette based on depth fraction
-  function branchColor(depth, maxDepth) {
+  // Interpolate across a color palette by depth
+  function depthColor(d, alpha) {
+    const PALETTE_DEPTH = 12; // depth at which palette saturates
     const stops = [
-      [120, 80, 40],   // warm brown — trunk
-      [30,  90, 30],   // dark green
-      [22, 163, 74],   // green
-      [16, 185, 129],  // emerald
-      [6,  182, 212],  // cyan
-      [186, 230, 253], // pale blue — tips
+      [130, 90,  50],  // warm brown   – root
+      [34,  90,  34],  // dark green
+      [22,  163, 74],  // green
+      [16,  185, 129], // emerald
+      [6,   182, 212], // cyan
+      [148, 163, 184], // slate        – deep tips
     ];
-    const t = depth / Math.max(1, maxDepth);
-    const scaled = t * (stops.length - 1);
-    const i = Math.min(Math.floor(scaled), stops.length - 2);
-    const f = scaled - i;
-    const a = stops[i], b = stops[i + 1];
-    const r = Math.round(a[0] + (b[0] - a[0]) * f);
-    const g = Math.round(a[1] + (b[1] - a[1]) * f);
+    const t  = Math.min(1, d / PALETTE_DEPTH);
+    const sc = t * (stops.length - 1);
+    const i  = Math.min(Math.floor(sc), stops.length - 2);
+    const f  = sc - i;
+    const a  = stops[i], b = stops[i + 1];
+    const r  = Math.round(a[0] + (b[0] - a[0]) * f);
+    const g  = Math.round(a[1] + (b[1] - a[1]) * f);
     const bl = Math.round(a[2] + (b[2] - a[2]) * f);
-    return 'rgb(' + r + ',' + g + ',' + bl + ')';
+    return alpha == null
+      ? `rgb(${r},${g},${bl})`
+      : `rgba(${r},${g},${bl},${alpha})`;
   }
 
-  // Recursive branch draw
-  function branch(x, y, angle, len, depth, maxDepth) {
-    if (depth > maxDepth) return;
-
-    const endX = x + Math.cos(angle) * len;
-    const endY = y + Math.sin(angle) * len;
-
-    ctx.beginPath();
-    ctx.moveTo(x, y);
-    ctx.lineTo(endX, endY);
-    ctx.strokeStyle = branchColor(depth, maxDepth);
-    ctx.lineWidth = Math.max(0.5, (maxDepth - depth + 1) * 1.4);
-    ctx.stroke();
-
-    // Small dot at each leaf tip for bloom effect
-    if (depth === maxDepth) {
-      ctx.beginPath();
-      ctx.arc(endX, endY, 1.8, 0, Math.PI * 2);
-      ctx.fillStyle = branchColor(depth, maxDepth);
-      ctx.fill();
-    }
-
-    const childLen = len * 0.72;
-    const spread = 0.42; // ~24 degrees
-
-    branch(endX, endY, angle - spread, childLen, depth + 1, maxDepth);
-    branch(endX, endY, angle + spread, childLen, depth + 1, maxDepth);
-  }
-
-  function drawTree(depth) {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    const cx = canvas.width / 2;
-    const cy = canvas.height - 20;
-    const trunkLen = Math.min(canvas.height * 0.21, 155);
-
+  function draw(sy) {
+    const W = canvas.width;
+    const H = canvas.height;
+    ctx.clearRect(0, 0, W, H);
     ctx.lineCap = 'round';
-    branch(cx, cy, -Math.PI / 2, trunkLen, 0, depth);
-  }
 
-  function updateHUD(depth) {
-    depthNum.textContent = depth;
-    for (let i = 0; i < MAX_DEPTH; i++) {
-      document.getElementById('pip-' + i).classList.toggle('active', i < depth);
-    }
-  }
+    // Which depth level is at the vertical center of the viewport
+    const centerD = Math.max(0, Math.floor((sy + H / 2 - TREE_TOP) / LEVEL_H));
+    depthEl.textContent = centerD;
 
-  let currentDepth = 1;
-  let rafPending = false;
+    // Range of depth levels that overlap the visible canvas
+    const dMin = Math.max(0, Math.floor((sy - TREE_TOP) / LEVEL_H) - 1);
+    const dMax = Math.ceil((sy + H  - TREE_TOP) / LEVEL_H) + 1;
 
-  window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    const newDepth = Math.min(MAX_DEPTH, Math.floor(scrollY / SCROLL_PER_LEVEL) + 1);
+    let lastD = dMin; // track deepest level we actually drew
 
-    if (newDepth !== currentDepth) {
-      currentDepth = newDepth;
-      if (!rafPending) {
-        rafPending = true;
-        requestAnimationFrame(() => {
-          drawTree(currentDepth);
-          updateHUD(currentDepth);
-          rafPending = false;
-        });
+    for (let d = dMin; d <= dMax; d++) {
+      const numNodes = Math.pow(2, d); // 2^d nodes at this depth
+      const zoneW    = W / numNodes;   // horizontal slot per node
+
+      // Stop when branches are thinner than half a pixel
+      if (zoneW < 0.5) break;
+
+      lastD = d;
+
+      // Canvas Y positions for this level and its children
+      const py = d       * LEVEL_H + TREE_TOP - sy;
+      const cy = (d + 1) * LEVEL_H + TREE_TOP - sy;
+
+      // Fade alpha as branches approach sub-pixel width
+      const alpha = Math.min(1, (zoneW - 0.5) / 4 + 0.15);
+
+      // Line thickness tapers exponentially with depth
+      ctx.strokeStyle = depthColor(d, alpha);
+      ctx.lineWidth   = Math.max(0.4, Math.pow(0.72, d) * 14);
+
+      // Draw all 2^d pairs of branches in a single path (fast)
+      ctx.beginPath();
+      for (let i = 0; i < numNodes; i++) {
+        const px  = (i + 0.5) * zoneW; // parent x
+        const off = zoneW / 4;          // child x offset from parent
+        ctx.moveTo(px, py); ctx.lineTo(px - off, cy); // left child
+        ctx.moveTo(px, py); ctx.lineTo(px + off, cy); // right child
       }
+      ctx.stroke();
     }
 
-    // Fade intro text and scroll hint as user scrolls
-    const fade = Math.min(1, scrollY / 280);
-    intro.style.opacity = 1 - fade;
-    scrollHint.style.opacity = 1 - fade;
-  });
+    // Below the last drawn level: soft glow suggesting infinite density
+    const floorY = lastD * LEVEL_H + TREE_TOP - sy;
+    if (floorY < H && floorY > -LEVEL_H) {
+      const top  = Math.max(0, floorY);
+      const grad = ctx.createLinearGradient(0, top, 0, Math.min(H, top + LEVEL_H * 1.5));
+      grad.addColorStop(0,   depthColor(lastD, 0.55));
+      grad.addColorStop(0.5, depthColor(lastD, 0.12));
+      grad.addColorStop(1,   'rgba(15,15,26,0)');
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, top, W, H - top);
+    }
+  }
 
   function resize() {
-    canvas.width = window.innerWidth;
+    canvas.width  = window.innerWidth;
     canvas.height = window.innerHeight;
-    drawTree(currentDepth);
+    draw(window.scrollY);
   }
 
-  window.addEventListener('resize', resize);
+  let raf = false;
+  window.addEventListener('scroll', () => {
+    const sy   = window.scrollY;
+    const fade = Math.min(1, sy / 300);
+    intro.style.opacity = 1 - fade;
+    hint.style.opacity  = 1 - fade;
+    if (!raf) {
+      raf = true;
+      requestAnimationFrame(() => { draw(sy); raf = false; });
+    }
+  });
 
-  // Initial render
+  window.addEventListener('resize', resize);
   resize();
-  updateHUD(1);
 </script>
 </body>
 </html>

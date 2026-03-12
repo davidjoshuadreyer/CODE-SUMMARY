@@ -14,7 +14,18 @@
       "Bash(git commit:*)",
       "Bash(git push origin main)",
       "Bash(pdftotext \"/c/Users/david/OneDrive/Documents/CODE/CODE SUMMARY/Chemistry/Chem 150 Answer key Midterm \\(2015_10_17 05_51_48 UTC\\).pdf\" -)",
-      "Bash(pdftotext \"/c/Users/david/OneDrive/Documents/CODE/CODE SUMMARY/Chemistry/Answer_Key_Chem_150_Old_Midterm_Friday.pdf.pdf\" -)"
+      "Bash(pdftotext \"/c/Users/david/OneDrive/Documents/CODE/CODE SUMMARY/Chemistry/Answer_Key_Chem_150_Old_Midterm_Friday.pdf.pdf\" -)",
+      "Bash(pandoc --version)",
+      "Bash(node --version)",
+      "Bash(pip show weasyprint markdown)",
+      "Bash(pip show reportlab)",
+      "Bash(pip install markdown weasyprint)",
+      "Bash(python -m pip install markdown weasyprint)",
+      "Bash(where python3 python py)",
+      "Bash(py --version)",
+      "Bash(cmd /c \"py --version 2>&1 && py -m pip --version 2>&1\")",
+      "Bash(cmd /c \"where python\")",
+      "Bash(cmd /c \"python --version\")"
     ]
   }
 }

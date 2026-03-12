@@ -1,0 +1,151 @@
+
+===== Week 1 continuing - Tagged.pdf total 127 pages =====
+
+--- PAGE 20 ---
+Matter
+Atoms are the building blocks of matter.
+Each element is made of the same kind of atom.
+A compound is made of two or more different kinds of elements.
+Brown, LeMay
+
+--- PAGE 21 ---
+Pure Substances, Elements
+and Compounds
+The elemental composition of a pure compound is always the same is known as the Law of 
+Constant Composition (or Law of Definite Proportions)
+Joseph Proust (1754 - 1826)
+• Pure Substance Matter that has distinct properties and 
+a composition that doesn’t vary from 
+sample to sample, e.g. salt.
+• Element A substance that cannot be 
+decomposed into simpler substances, 
+e.g. oxygen gas.
+• Compound A substance that is composed of two 
+or more different elements i.e. two or 
+more different kinds of atoms, e.g. water.
+
+
+--- PAGE 22 ---
+Elements and Compounds
+• Compounds, unlike elements, can be broken down 
+into simpler substances by chemical means but not 
+by physical means. 
+   Distillation
+Electrolysis
+
+
+--- PAGE 23 ---
+Elements and Compounds
+• If two ore more elements react to give a compound, the 
+properties of the elements are not retained in the compound 
+e.g.
+     2Mg +        O2   →    2MgO
+Shiny metal         colorless gas  white solid
+Compounds are represented by chemical formulas which 
+show their elemental composition e.g. MgO.
+Class Demonstration: Reaction of magnesium in air and starved 
+of oxygen in a test tube, followed by aqueous workup 
+
+--- PAGE 24 ---
+Mixtures
+• Most substances found in nature are mixtures of 
+compounds and elements (soil, air, plants, 
+seawater).
+• Unlike compounds,
+mixtures can be separated 
+by physical (as well
+as chemical) means.
+  wikipedia
+
+
+--- PAGE 80 ---
+A 80 t steel bridge
+Restricted to a 20 t load
+In SINGLE LANE TRAFFIC ONLY
+Has aged considerably and 
+after 22 years 20 % of the iron 
+has corroded.
+Assume 98.5 % iron in the 
+steel, no rust has peeled off 
+and assume rust to have the 
+chemical composition
+Fe2O3 (H2O). 
+1. Calculate the new mass of 
+the bridge.
+2. Does the load restriction 
+have to be changed?
+
+
+--- PAGE 81 ---
+At the hearth of a stoichiometry 
+problem is a balanced chemical 
+equation
+So translate:
+Iron + oxygen + water → rust
+Into:
+Fe + O2 + H2O → Fe2O3 (H2O) (unbalanced)
+Note that Fe2O3 (H2O) is preferred over Fe2O4H2 as the formula easily 
+suggests we have a hydrate of iron(III)oxide (and not a mixed hydride-
+oxide of penta-valent iron).
+
+--- PAGE 82 ---
+At the hearth of a stoichiometry problem is a 
+balanced chemical equation
+Fe + O2 + H2O → Fe2O3 (H2O) (unbalanced)
+Balance equation
+4Fe + 3O2 + 2H2O → 2Fe2O3 (H2O) (ballanced)
+reactants → products
+Next we follow a simple 3 step (a,b,c) procedure using the conversion 
+factor method.
+
+--- PAGE 83 ---
+a) Convert mass of reactant to moles 
+of reactant
+• 98.5 % of 80 t are iron! How many grams are that?
+80 t x  x  x  = 78,800,000 g Fe = 7.88 x 107 g Fe
+20 % of that iron has converted to rust so 
+7.88 x 107 g Fe x  = 1.576 x 107 g Fe
+Finally convert mass of iron to moles of iron:
+1.576 x 107 g Fe x  = 282200 mol Fe
+
+===== Week 7 Lecture - Tagged-1.pdf total 64 pages =====
+
+--- PAGE 28 ---
+Flotation
+https://www.sciencedirect.com/topics/earth-
+and-planetary-sciences/flotation-froth
+
+--- PAGE 29 ---
+Fieldtrip with the mining bridge to the
+Nyrstar operation in Strathcona Park
+
+--- PAGE 30 ---
+Note how differently the condensate from the fractional and 
+simple distillation wets the still head. Cohesive forces in 
+water are strong (right image) whereas adhesive forces are 
+stronger between alcohol and the glass surface (left).
+Fractional
+distillation
+Simple 
+distillation
+
+--- PAGE 31 ---
+Summary Van der Waals Forces
+• Ion-dipole forces (sodium ions in water)
+• Dipole-dipole forces (polar molecules)
+• London dispersion forces (between non-
+polar molecules)
+• Hydrogen bonding (a special type of dipol-
+dipole forces, molecules must have OH,NH 
+or FH bonds)
+
+--- PAGE 32 ---
+Henry’s law, Gases in Solution
+• In general, the 
+solubility of gases in 
+water increases with 
+increasing mass.
+• Larger molecules 
+have stronger 
+dispersion forces.
+Brown LeMay

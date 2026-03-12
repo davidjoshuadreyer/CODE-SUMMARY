@@ -9,170 +9,225 @@
 
   body {
     font-family: 'Segoe UI', system-ui, sans-serif;
-    background: #0f0f1a;
-    color: #e2e8f0;
+    background: #ffffff;
+    color: #1a1a1a;
     min-height: 100vh;
   }
 
   nav {
     position: sticky; top: 0; z-index: 100;
-    background: rgba(15,15,26,0.92); backdrop-filter: blur(12px);
-    border-bottom: 1px solid #1e3a2a; padding: 0 24px;
+    background: #ffffff; border-bottom: 1px solid #d1d5db; padding: 0 24px;
     display: flex; align-items: center; gap: 4px;
-    overflow-x: auto; scrollbar-width: none; height: 52px; flex-wrap: nowrap;
+    overflow-x: auto; scrollbar-width: none; height: 48px; flex-wrap: nowrap;
   }
   nav::-webkit-scrollbar { display: none; }
   nav a {
-    color: #94a3b8; text-decoration: none; font-size: 0.82rem; font-weight: 600;
-    padding: 6px 12px; border-radius: 8px; white-space: nowrap; transition: all 0.15s; flex-shrink: 0;
+    color: #555; text-decoration: none; font-size: 0.82rem; font-weight: 600;
+    padding: 5px 10px; border-radius: 6px; white-space: nowrap; transition: all 0.12s; flex-shrink: 0;
   }
-  nav a:hover { background: #1e2a20; color: #6ee7b7; }
+  nav a:hover { background: #f3f4f6; color: #111; }
   .nav-brand {
-    font-weight: 800; font-size: 0.9rem;
-    background: linear-gradient(135deg, #10b981, #0891b2);
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-    margin-right: 12px; flex-shrink: 0; padding: 0 !important; background-color: transparent !important;
+    font-weight: 800; font-size: 0.9rem; color: #111;
+    margin-right: 12px; flex-shrink: 0; padding: 0 !important;
   }
-  nav .divider { width: 1px; height: 20px; background: #1e3a2a; margin: 0 4px; flex-shrink: 0; }
+  nav .divider { width: 1px; height: 18px; background: #d1d5db; margin: 0 4px; flex-shrink: 0; }
 
-  .page { max-width: 880px; margin: 0 auto; padding: 40px 20px 80px; }
+  .page { max-width: 860px; margin: 0 auto; padding: 40px 20px 80px; }
 
   h1 {
-    font-size: 2.2rem; font-weight: 800;
-    background: linear-gradient(135deg, #10b981, #0891b2);
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-    margin-bottom: 6px; text-align: center;
+    font-size: 2rem; font-weight: 800; color: #111;
+    margin-bottom: 4px; text-align: center; letter-spacing: -0.01em;
   }
-  .subtitle { color: #94a3b8; font-size: 0.9rem; text-align: center; margin-bottom: 48px; }
+  .subtitle { color: #6b7280; font-size: 0.88rem; text-align: center; margin-bottom: 44px; }
 
-  section { margin-bottom: 44px; scroll-margin-top: 68px; }
+  section { margin-bottom: 44px; scroll-margin-top: 60px; }
 
   .section-header {
-    display: flex; align-items: center; gap: 14px;
-    margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid #1e3a2a;
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid #111;
   }
-  .section-icon { font-size: 1.8rem; flex-shrink: 0; }
-  .section-header h2 {
-    font-size: 1.35rem; font-weight: 700;
-    background: linear-gradient(135deg, #6ee7b7, #67e8f9);
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-  }
-  .section-header p { font-size: 0.82rem; color: #64748b; margin-top: 2px; }
+  .section-icon { font-size: 1.5rem; flex-shrink: 0; }
+  .section-header h2 { font-size: 1.2rem; font-weight: 700; color: #111; }
+  .section-header p { font-size: 0.82rem; color: #6b7280; margin-top: 2px; }
 
   .card {
-    background: #1e1e30; border: 1px solid #1e3a2a; border-radius: 16px;
-    padding: 22px 24px; margin-bottom: 14px;
+    background: #fff; border: 1px solid #d1d5db;
+    border-radius: 10px; padding: 20px 22px; margin-bottom: 12px;
   }
   .card-title {
-    font-size: 0.78rem; font-weight: 700; text-transform: uppercase;
-    letter-spacing: 0.1em; color: #10b981; margin-bottom: 12px;
+    font-size: 0.76rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.1em; color: #374151; margin-bottom: 10px; border-bottom: 1px solid #e5e7eb; padding-bottom: 6px;
   }
 
-  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
   @media(max-width: 620px) { .two-col { grid-template-columns: 1fr; } }
 
-  p { line-height: 1.65; color: #94a3b8; font-size: 0.9rem; }
+  p { line-height: 1.65; color: #374151; font-size: 0.9rem; }
   p + p { margin-top: 6px; }
-  ul { padding-left: 20px; margin: 6px 0; color: #94a3b8; font-size: 0.9rem; line-height: 1.8; }
+  ul { padding-left: 20px; margin: 6px 0; color: #374151; font-size: 0.9rem; line-height: 1.8; }
   li + li { margin-top: 2px; }
-  strong { color: #e2e8f0; }
+  strong { color: #111; }
 
   .formula {
-    background: #0d1a10; border: 1px solid #1e3a2a; border-left: 4px solid #10b981;
-    border-radius: 10px; padding: 14px 18px; margin: 10px 0;
-    font-family: 'Cascadia Code', 'Consolas', monospace; font-size: 0.9rem;
-    color: #6ee7b7; line-height: 1.8;
+    background: #f3f4f6; border: 1px solid #d1d5db; border-left: 3px solid #374151;
+    border-radius: 8px; padding: 12px 16px; margin: 10px 0;
+    font-family: 'Cascadia Code', 'Consolas', monospace; font-size: 0.88rem;
+    color: #1a1a1a; line-height: 1.8;
   }
-  .formula .label { color: #94a3b8; font-family: 'Segoe UI', sans-serif; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
+  .formula .label { color: #6b7280; font-family: 'Segoe UI', sans-serif; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 5px; }
 
   .note {
-    background: #1a1a0a; border: 1px solid #854d0e; border-left: 4px solid #f59e0b;
-    border-radius: 10px; padding: 12px 16px; font-size: 0.87rem; color: #fde68a;
+    background: #fffbeb; border: 1px solid #fbbf24; border-left: 3px solid #d97706;
+    border-radius: 8px; padding: 11px 14px; font-size: 0.87rem; color: #78350f;
     line-height: 1.55; margin: 10px 0;
   }
-  .note strong { color: #fbbf24; }
+  .note strong { color: #92400e; }
 
   .tip {
-    background: #052e1c; border: 1px solid #059669; border-left: 4px solid #10b981;
-    border-radius: 10px; padding: 12px 16px; font-size: 0.87rem; color: #6ee7b7;
+    background: #f0fdf4; border: 1px solid #86efac; border-left: 3px solid #16a34a;
+    border-radius: 8px; padding: 11px 14px; font-size: 0.87rem; color: #14532d;
     line-height: 1.55; margin: 10px 0;
   }
-  .tip strong { color: #34d399; }
+  .tip strong { color: #15803d; }
 
   .danger {
-    background: #2d0a0a; border: 1px solid #dc2626; border-left: 4px solid #ef4444;
-    border-radius: 10px; padding: 12px 16px; font-size: 0.87rem; color: #fca5a5;
+    background: #fef2f2; border: 1px solid #fca5a5; border-left: 3px solid #dc2626;
+    border-radius: 8px; padding: 11px 14px; font-size: 0.87rem; color: #991b1b;
     line-height: 1.55; margin: 10px 0;
   }
-  .danger strong { color: #f87171; }
+  .danger strong { color: #b91c1c; }
 
   table {
     width: 100%; border-collapse: collapse; font-size: 0.85rem; margin: 10px 0;
   }
   th {
-    background: #0d1a10; color: #6ee7b7; padding: 8px 12px;
+    background: #f3f4f6; color: #374151; padding: 8px 12px;
     text-align: left; font-size: 0.78rem; font-weight: 700;
-    text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #1e3a2a;
+    text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 2px solid #d1d5db;
   }
-  td { padding: 8px 12px; border-bottom: 1px solid #1a2820; color: #cbd5e1; }
+  td { padding: 8px 12px; border-bottom: 1px solid #e5e7eb; color: #374151; }
   tr:last-child td { border-bottom: none; }
-  tr:hover td { background: #16261c; }
+  tr:hover td { background: #f9fafb; }
 
   .tag {
     display: inline-block; padding: 2px 9px; border-radius: 999px;
     font-size: 0.72rem; font-weight: 700; margin: 2px;
   }
-  .tag-green { background: #052e1c; color: #34d399; border: 1px solid #059669; }
-  .tag-blue  { background: #0c1a2e; color: #60a5fa; border: 1px solid #1d4ed8; }
-  .tag-red   { background: #2d0a0a; color: #fca5a5; border: 1px solid #dc2626; }
-  .tag-yellow{ background: #1a1505; color: #fde68a; border: 1px solid #854d0e; }
-  .tag-purple{ background: #1a0a2e; color: #c4b5fd; border: 1px solid #6d28d9; }
+  .tag-green { background: #f0fdf4; color: #15803d; border: 1px solid #86efac; }
+  .tag-blue  { background: #eff6ff; color: #1d4ed8; border: 1px solid #93c5fd; }
+  .tag-red   { background: #fef2f2; color: #b91c1c; border: 1px solid #fca5a5; }
+  .tag-yellow{ background: #fffbeb; color: #92400e; border: 1px solid #fcd34d; }
+  .tag-purple{ background: #faf5ff; color: #6d28d9; border: 1px solid #c4b5fd; }
 
   .shape-grid {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; margin: 10px 0;
   }
   .shape-card {
-    background: #111820; border: 1px solid #1e3a2a; border-radius: 10px; padding: 12px;
+    background: #f9fafb; border: 1px solid #d1d5db; border-radius: 8px; padding: 12px;
     text-align: center;
   }
-  .shape-card .shape-name { color: #6ee7b7; font-weight: 700; font-size: 0.88rem; margin-bottom: 4px; }
-  .shape-card .shape-eg { color: #10b981; font-size: 0.75rem; font-weight: 700; }
-  .shape-card .shape-angle { color: #94a3b8; font-size: 0.75rem; }
-  .shape-card .shape-polar { font-size: 0.7rem; margin-top: 4px; }
+  .shape-card .shape-name { color: #111; font-weight: 700; font-size: 0.88rem; margin-bottom: 4px; }
+  .shape-card .shape-eg { color: #374151; font-size: 0.75rem; font-weight: 700; }
+  .shape-card .shape-angle { color: #6b7280; font-size: 0.75rem; }
+  .shape-card .shape-polar { font-size: 0.7rem; margin-top: 4px; color: #6b7280; }
 
   .trend-box {
-    background: #111820; border-radius: 10px; padding: 14px 16px; margin: 8px 0;
+    background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 16px; margin: 8px 0;
   }
-  .trend-label { font-size: 0.78rem; font-weight: 700; color: #10b981; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .trend-label { font-size: 0.78rem; font-weight: 700; color: #374151; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.06em; }
   .trend-arrow {
-    display: flex; align-items: center; gap: 8px; color: #94a3b8; font-size: 0.85rem; margin: 3px 0;
+    display: flex; align-items: center; gap: 8px; color: #374151; font-size: 0.85rem; margin: 3px 0;
   }
-  .arrow-up   { color: #34d399; font-size: 1rem; }
-  .arrow-down { color: #f87171; font-size: 1rem; }
+  .arrow-up   { color: #16a34a; font-size: 1rem; }
+  .arrow-down { color: #dc2626; font-size: 1rem; }
 
   /* ── TT2A Question-reveal blocks ───────────────────────── */
-  .q-block { margin-bottom: 14px; }
-  .q-pts { font-size: 0.76rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px; }
-  .q-stem { color: #e2e8f0; font-size: 0.92rem; line-height: 1.7; margin-bottom: 10px; }
+  .q-block { margin-bottom: 16px; border-bottom: 1px solid #e5e7eb; padding-bottom: 16px; }
+  .q-block:last-child { border-bottom: none; }
+  .q-pts { font-size: 0.74rem; color: #6b7280; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 5px; }
+  .q-stem { color: #1a1a1a; font-size: 0.92rem; line-height: 1.7; margin-bottom: 10px; }
   .q-stem sub, .q-stem sup { font-size: 0.78em; }
   details.sol { margin-top: 8px; }
   details.sol summary {
-    cursor: pointer; color: #10b981; font-weight: 700; font-size: 0.82rem;
-    padding: 7px 12px; background: #052e1c; border: 1px solid #059669;
-    border-radius: 8px; list-style: none; user-select: none;
+    cursor: pointer; color: #374151; font-weight: 700; font-size: 0.82rem;
+    padding: 6px 12px; background: #f3f4f6; border: 1px solid #d1d5db;
+    border-radius: 6px; list-style: none; user-select: none;
   }
   details.sol summary::-webkit-details-marker { display: none; }
   details.sol summary::before { content: '▶  '; font-size: 0.68rem; }
   details.sol[open] summary::before { content: '▼  '; }
   details.sol .sol-body {
-    margin-top: 10px; padding: 14px 16px; background: #0d1a10;
-    border: 1px solid #1e3a2a; border-radius: 10px; font-size: 0.88rem;
-    color: #94a3b8; line-height: 1.75;
+    margin-top: 8px; padding: 14px 16px; background: #f9fafb;
+    border: 1px solid #e5e7eb; border-radius: 8px; font-size: 0.88rem;
+    color: #374151; line-height: 1.75;
   }
-  details.sol .sol-body strong { color: #e2e8f0; }
+  details.sol .sol-body strong { color: #111; }
   details.sol .sol-body .formula { margin: 8px 0; font-size: 0.85rem; }
-  .petrucci-ref { margin-top: 8px; font-size: 0.8rem; color: #64748b; }
-  .petrucci-ref strong { color: #0891b2; }
+  .petrucci-ref { margin-top: 8px; font-size: 0.8rem; color: #6b7280; }
+  .petrucci-ref strong { color: #1d4ed8; }
+</style>
+<style>
+  /* ── Dark theme overrides ───────────────────────────────── */
+  body.dark { background: #0f0f1a; color: #e2e8f0; }
+  body.dark nav { background: rgba(15,15,26,0.92); backdrop-filter: blur(12px); border-bottom-color: #1e3a2a; }
+  body.dark nav a { color: #94a3b8; }
+  body.dark nav a:hover { background: #1e2a20; color: #6ee7b7; }
+  body.dark .nav-brand { background: linear-gradient(135deg,#10b981,#0891b2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  body.dark nav .divider { background: #1e3a2a; }
+  body.dark #theme-btn { background: #1e2a20; border-color: #1e3a2a; color: #6ee7b7; }
+  body.dark #theme-btn:hover { background: #052e1c; }
+  body.dark h1 { background: linear-gradient(135deg,#10b981,#0891b2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent; }
+  body.dark .subtitle { color: #94a3b8; }
+  body.dark .section-header { border-bottom: 1px solid #1e3a2a; }
+  body.dark .section-header h2 { background: linear-gradient(135deg,#6ee7b7,#67e8f9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent; }
+  body.dark .section-header p { color: #64748b; }
+  body.dark .card { background: #1e1e30; border-color: #1e3a2a; }
+  body.dark .card-title { color: #10b981; border-bottom-color: #1e3a2a; }
+  body.dark p { color: #94a3b8 !important; }
+  body.dark ul, body.dark ol { color: #94a3b8 !important; }
+  body.dark strong { color: #e2e8f0; }
+  body.dark .formula { background: #0d1a10; border-color: #1e3a2a; border-left-color: #10b981; color: #6ee7b7; }
+  body.dark .formula .label { color: #94a3b8; }
+  body.dark .note { background: #1a1a0a; border-color: #854d0e; border-left-color: #f59e0b; color: #fde68a; }
+  body.dark .note strong { color: #fbbf24; }
+  body.dark .tip { background: #052e1c; border-color: #059669; border-left-color: #10b981; color: #6ee7b7; }
+  body.dark .tip strong { color: #34d399; }
+  body.dark .danger { background: #2d0a0a; border-color: #dc2626; border-left-color: #ef4444; color: #fca5a5; }
+  body.dark .danger strong { color: #f87171; }
+  body.dark th { background: #0d1a10; color: #6ee7b7; border-bottom-color: #1e3a2a; }
+  body.dark td { border-bottom-color: #1a2820; color: #cbd5e1; }
+  body.dark tr:hover td { background: #16261c; }
+  body.dark .tag-green { background: #052e1c; color: #34d399; border-color: #059669; }
+  body.dark .tag-blue  { background: #0c1a2e; color: #60a5fa; border-color: #1d4ed8; }
+  body.dark .tag-red   { background: #2d0a0a; color: #fca5a5; border-color: #dc2626; }
+  body.dark .tag-yellow{ background: #1a1505; color: #fde68a; border-color: #854d0e; }
+  body.dark .tag-purple{ background: #1a0a2e; color: #c4b5fd; border-color: #6d28d9; }
+  body.dark .shape-card { background: #111820; border-color: #1e3a2a; }
+  body.dark .shape-card .shape-name { color: #6ee7b7; }
+  body.dark .shape-card .shape-eg { color: #10b981; }
+  body.dark .shape-card .shape-angle, body.dark .shape-card .shape-polar { color: #94a3b8; }
+  body.dark .trend-box { background: #111820; border-color: #1e3a2a; }
+  body.dark .trend-label { color: #10b981; }
+  body.dark .trend-arrow { color: #94a3b8; }
+  body.dark .arrow-up { color: #34d399; }
+  body.dark .arrow-down { color: #f87171; }
+  body.dark .q-block { border-bottom-color: #1e3a2a; }
+  body.dark .q-pts { color: #64748b; }
+  body.dark .q-stem { color: #e2e8f0; }
+  body.dark details.sol summary { color: #10b981; background: #052e1c; border-color: #059669; }
+  body.dark details.sol .sol-body { background: #0d1a10; border-color: #1e3a2a; color: #94a3b8; }
+  body.dark details.sol .sol-body strong { color: #e2e8f0; }
+  body.dark .petrucci-ref { color: #64748b; }
+  body.dark .petrucci-ref strong { color: #0891b2; }
+
+  /* ── Theme toggle button ────────────────────────────────── */
+  #theme-btn {
+    margin-left: auto; flex-shrink: 0;
+    background: #f3f4f6; border: 1px solid #d1d5db; border-radius: 6px;
+    padding: 5px 11px; font-size: 0.78rem; font-weight: 600; color: #374151;
+    cursor: pointer; white-space: nowrap; transition: all 0.12s;
+  }
+  #theme-btn:hover { background: #e5e7eb; }
 </style>
 </head>
 <body>
@@ -189,7 +244,9 @@
   <a href="#gases">Gases</a>
   <a href="#crosswalk">Crosswalk</a>
   <a href="#tt2a">TT 2A</a>
+  <a href="#petrucci">Petrucci Qs</a>
   <a href="#formulas">Formulas</a>
+  <button id="theme-btn" onclick="toggleTheme()">Dark</button>
 </nav>
 
 <div class="page">
@@ -220,7 +277,7 @@
 
       <div class="card">
         <div class="card-title">Dalton's Atomic Theory (1808)</div>
-        <ol style="padding-left:18px;color:#94a3b8;font-size:0.9rem;line-height:1.8;">
+        <ol style="padding-left:18px;color:#374151;font-size:0.9rem;line-height:1.8;">
           <li>Matter composed of indivisible atoms</li>
           <li>All atoms of an element are identical</li>
           <li>Compounds = atoms in fixed whole-number ratios</li>
@@ -307,7 +364,7 @@
           <div class="trend-label">Ionization Energy (I)</div>
           <div class="trend-arrow"><span class="arrow-up"></span> Increases leftright across period</div>
           <div class="trend-arrow"><span class="arrow-down"></span> Decreases topbottom in group</div>
-          <p style="font-size:0.8rem;color:#64748b;margin-top:4px;">Exceptions: B &lt; Be (2p vs 2s); O &lt; N (paired e repulsion in O)</p>
+          <p style="font-size:0.8rem;color:#6b7280;margin-top:4px;">Exceptions: B &lt; Be (2p vs 2s); O &lt; N (paired e repulsion in O)</p>
         </div>
         <div class="trend-box">
           <div class="trend-label">Atomic Radius</div>
@@ -317,7 +374,7 @@
         <div class="trend-box">
           <div class="trend-label">Electron Affinity</div>
           <div class="trend-arrow"><span class="arrow-up"></span> More negative going right and up</div>
-          <p style="font-size:0.8rem;color:#64748b;margin-top:4px;">More negative = more exothermic = "wants" electrons more. Exceptions: N (half-filled 2p stable)</p>
+          <p style="font-size:0.8rem;color:#6b7280;margin-top:4px;">More negative = more exothermic = "wants" electrons more. Exceptions: N (half-filled 2p stable)</p>
         </div>
       </div>
     </div>
@@ -361,7 +418,7 @@ Na(g) + Cl(g)  NaCl(s) 787  kJ  (lattice E)
 
 Na(s) + ½Cl(g)  NaCl(s) 412  kJ  (ΔH°f)
         </div>
-        <p style="font-size:0.82rem;color:#64748b;">Use Hess's Law: ΔH°f = sublimation + IE + ½ bond + EA + lattice E</p>
+        <p style="font-size:0.82rem;color:#6b7280;">Use Hess's Law: ΔH°f = sublimation + IE + ½ bond + EA + lattice E</p>
       </div>
     </div>
 
@@ -385,7 +442,7 @@ Na(s) + ½Cl(g)  NaCl(s) 412  kJ  (ΔH°f)
 
     <div class="card">
       <div class="card-title">Lewis Structure Drawing Steps</div>
-      <ol style="padding-left:20px;color:#cbd5e1;font-size:0.9rem;line-height:2;">
+      <ol style="padding-left:20px;color:#374151;font-size:0.9rem;line-height:2;">
         <li>Count total valence electrons (VE). For anions add n e; for cations subtract n e.</li>
         <li>Choose central atom: usually <em>least electronegative</em> (but not H or F). In oxoanions, the non-O atom is central.</li>
         <li>Place one bond between central atom and each terminal atom.</li>
@@ -408,7 +465,7 @@ e.g., in NNO (best NO structure):
   Right N: 5  ½(6)  0 = +2?  check each structure
         </div>
         <p><strong>Best Lewis structure:</strong></p>
-        <ol style="padding-left:18px;color:#94a3b8;font-size:0.88rem;line-height:1.9;">
+        <ol style="padding-left:18px;color:#374151;font-size:0.88rem;line-height:1.9;">
           <li>Lowest formal charges (ideally zero)</li>
           <li>Negative FC on most electronegative atom</li>
           <li>Same-sign FCs on adjacent atoms = very bad</li>
@@ -493,7 +550,7 @@ e.g., in NNO (best NO structure):
 
       <div class="card">
         <div class="card-title">VSEPR Algorithm</div>
-        <ol style="padding-left:18px;color:#cbd5e1;font-size:0.9rem;line-height:2;">
+        <ol style="padding-left:18px;color:#374151;font-size:0.9rem;line-height:2;">
           <li>Draw Lewis structure</li>
           <li>Count <strong>Electron Groups</strong> (EG) around central atom: each single bond, double bond, triple bond, and lone pair = 1 EG</li>
           <li>Determine <strong>Electron Group Geometry</strong> (EGG) from # EG</li>
@@ -713,7 +770,7 @@ Molar mass from ideal gas: M = mRT / PV
 
     <div class="card">
       <div class="card-title">Kinetic-Molecular Theory (5 Postulates)</div>
-      <ol style="padding-left:20px;color:#cbd5e1;font-size:0.9rem;line-height:2;">
+      <ol style="padding-left:20px;color:#374151;font-size:0.9rem;line-height:2;">
         <li>Gases consist of a large number of molecules in <em>continuous random motion</em></li>
         <li>Volume of individual molecules is negligible compared to total volume</li>
         <li>No attractive or repulsive forces between molecules</li>
@@ -764,7 +821,7 @@ M (g/mol) = ρ × R × T / P   (ρ in g/L)
 
     <div class="card">
       <div class="card-title">Strategy Loop (Use Before Every Term Test)</div>
-      <ol style="padding-left:18px;color:#cbd5e1;font-size:0.9rem;line-height:1.85;">
+      <ol style="padding-left:18px;color:#374151;font-size:0.9rem;line-height:1.85;">
         <li>Collect the latest past tests (target 3 to 5 papers).</li>
         <li>Label each question by topic (e.g., ionization energy, Lewis resonance, VSEPR, gases).</li>
         <li>Find 1 to 3 <strong>equivalent Petrucci exercise questions</strong> for each exam question.</li>
@@ -1238,6 +1295,406 @@ If actual yield = 55.4 g  % yield = 55.4/64.6 × 100 = 85.7%
     </div>
   </section>
 
+  <!-- ═══════════════════════════════════════════════════════
+       PETRUCCI PRACTICE QUESTIONS
+       ═══════════════════════════════════════════════════════ -->
+  <section id="petrucci">
+    <div class="section-header"><div>
+      <h2>Petrucci Practice Questions</h2>
+      <p>Actual textbook questions (10th ed.) grouped by topic — attempt first, then reveal solution</p>
+    </div></div>
+
+    <!-- ── STRONG ACID & BASE pH ─────────────────────────── -->
+    <div class="card">
+      <div class="card-title">Strong Acid &amp; Base — pH Calculations &nbsp;·&nbsp; Ch. 16</div>
+
+      <div class="q-block">
+        <div class="q-pts">Q9 · Ch.16 · [H₃O⁺] and [OH⁻]</div>
+        <div class="q-stem">For each of the following aqueous solutions, determine [H₃O⁺], [OH⁻], and whether the solution is acidic, basic, or neutral:<br>
+          (a) 0.00165 M HNO₃ &nbsp; (b) 0.0087 M KOH &nbsp; (c) 0.00213 M Sr(OH)₂ &nbsp; (d) 5.8 × 10⁻⁴ M HI</div>
+        <details class="sol"><summary>Show Solution</summary>
+          <div class="sol-body">
+            All solutes are strong acids/bases — complete dissociation.<br><br>
+            <strong>(a) 0.00165 M HNO₃</strong><br>
+            HNO₃ → H⁺ + NO₃⁻ &nbsp;→&nbsp; [H₃O⁺] = <strong>0.00165 M</strong><br>
+            [OH⁻] = 1.0×10⁻¹⁴ / 0.00165 = <strong>6.1×10⁻¹² M</strong> &nbsp; → <em>acidic</em><br><br>
+            <strong>(b) 0.0087 M KOH</strong><br>
+            [OH⁻] = <strong>0.0087 M</strong> &nbsp;→&nbsp; [H₃O⁺] = 1.0×10⁻¹⁴ / 0.0087 = <strong>1.1×10⁻¹² M</strong> &nbsp; → <em>basic</em><br><br>
+            <strong>(c) 0.00213 M Sr(OH)₂</strong><br>
+            Sr(OH)₂ → Sr²⁺ + 2 OH⁻ &nbsp;→&nbsp; [OH⁻] = 2 × 0.00213 = <strong>0.00426 M</strong><br>
+            [H₃O⁺] = 1.0×10⁻¹⁴ / 0.00426 = <strong>2.3×10⁻¹² M</strong> &nbsp; → <em>basic</em><br><br>
+            <strong>(d) 5.8×10⁻⁴ M HI</strong><br>
+            [H₃O⁺] = <strong>5.8×10⁻⁴ M</strong> &nbsp;→&nbsp; [OH⁻] = 1.0×10⁻¹⁴ / 5.8×10⁻⁴ = <strong>1.7×10⁻¹¹ M</strong> &nbsp; → <em>acidic</em>
+          </div>
+        </details>
+      </div>
+
+      <div class="q-block">
+        <div class="q-pts">Q10 · Ch.16 · Calculate pH</div>
+        <div class="q-stem">Calculate the pH of each of the following aqueous solutions:<br>
+          (a) 0.0045 M HCl &nbsp; (b) 6.14 × 10⁻⁴ M HNO₃ &nbsp; (c) 0.00683 M NaOH &nbsp; (d) 4.8 × 10⁻³ M Ba(OH)₂</div>
+        <details class="sol"><summary>Show Solution</summary>
+          <div class="sol-body">
+            <strong>(a)</strong> [H⁺] = 0.0045 M → <strong>pH = −log(0.0045) = 2.35</strong><br><br>
+            <strong>(b)</strong> [H⁺] = 6.14×10⁻⁴ M → <strong>pH = −log(6.14×10⁻⁴) = 3.21</strong><br><br>
+            <strong>(c)</strong> [OH⁻] = 0.00683 M → pOH = −log(0.00683) = 2.166 → <strong>pH = 14.00 − 2.166 = 11.83</strong><br><br>
+            <strong>(d)</strong> Ba(OH)₂ → Ba²⁺ + 2 OH⁻ &nbsp;→&nbsp; [OH⁻] = 2 × 4.8×10⁻³ = 9.6×10⁻³ M<br>
+            pOH = −log(9.6×10⁻³) = 2.02 → <strong>pH = 14.00 − 2.02 = 11.98</strong>
+          </div>
+        </details>
+      </div>
+
+      <div class="q-block">
+        <div class="q-pts">Q11 · Ch.16 · pH of Ba(OH)₂·8H₂O solution</div>
+        <div class="q-stem">Calculate the pH of the solution prepared by dissolving 3.9 g of Ba(OH)₂·8H₂O (M = 315.5 g/mol) in sufficient water to give 100.0 mL of solution.</div>
+        <details class="sol"><summary>Show Solution</summary>
+          <div class="sol-body">
+            mol Ba(OH)₂ = 3.9 g / 315.5 g·mol⁻¹ = 0.01236 mol in 0.100 L → [Ba(OH)₂] = 0.1236 M<br>
+            Ba(OH)₂ → Ba²⁺ + 2 OH⁻ &nbsp;→&nbsp; [OH⁻] = 2 × 0.1236 = <strong>0.247 M</strong><br>
+            pOH = −log(0.247) = 0.607 → <strong>pH = 14.00 − 0.61 = 13.39 ≈ 13.40</strong><br>
+            [H₃O⁺] = 1.0×10⁻¹⁴ / 0.247 = 4.0×10⁻¹⁴ M
+          </div>
+        </details>
+      </div>
+
+      <div class="q-block">
+        <div class="q-pts">Q12 · Ch.16 · Solubility of Ca(OH)₂ from pH</div>
+        <div class="q-stem">A saturated solution of Ca(OH)₂ has a pH of 12.35 at 25°C. What is the solubility of Ca(OH)₂ in grams per 100 mL of solution?</div>
+        <details class="sol"><summary>Show Solution</summary>
+          <div class="sol-body">
+            pH = 12.35 → pOH = 14.00 − 12.35 = 1.65<br>
+            [OH⁻] = 10⁻¹·⁶⁵ = 0.022 M<br>
+            Ca(OH)₂ → Ca²⁺ + 2 OH⁻ (complete dissociation)<br>
+            [Ca(OH)₂] dissolved = 0.022 M / 2 = 0.011 mol/L<br>
+            mass in 100 mL = 0.011 mol/L × 0.100 L × 74.09 g/mol = <strong>0.081 g = 81 mg per 100 mL</strong>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- ── WEAK ACID & BASE pH ────────────────────────────── -->
+    <div class="card">
+      <div class="card-title">Weak Acid &amp; Base — pH &amp; Percent Ionization &nbsp;·&nbsp; Ch. 16</div>
+
+      <div class="q-block">
+        <div class="q-pts">Q21 · Ch.16 · Weak acid pH — HNO₂</div>
+        <div class="q-stem">Calculate the pH of 0.143 M HNO₂. K<sub>a</sub>(HNO₂) = 7.2 × 10⁻⁴.</div>
+        <details class="sol"><summary>Show Solution</summary>
+          <div class="sol-body">
+            HNO₂ + H₂O ⇌ H₃O⁺ + NO₂⁻<br>
+            <div class="formula">I:  0.143      0        0
+C:  −x        +x       +x
+E:  0.143−x    x        x</div>
+            Ka = x² / (0.143 − x) = 7.2×10⁻⁴<br>
+            Assume x &lt;&lt; 0.143: x = √(0.143 × 7.2×10⁻⁴) = 0.010 M<br>
+            Check: 0.010/0.143 = 7% — use successive approximation:<br>
+            x = √((0.143 − 0.010) × 7.2×10⁻⁴) = <strong>0.0098 M = [H₃O⁺]</strong><br>
+            <strong>pH = −log(0.0098) = 2.01</strong>
+          </div>
+        </details>
+      </div>
+
+      <div class="q-block">
+        <div class="q-pts">Q22 · Ch.16 · Weak base pH — ethylamine</div>
+        <div class="q-stem">Calculate the pH of 0.085 M ethylamine (C₂H₅NH₂). K<sub>b</sub> = 4.3 × 10⁻⁴.</div>
+        <details class="sol"><summary>Show Solution</summary>
+          <div class="sol-body">
+            C₂H₅NH₂ + H₂O ⇌ C₂H₅NH₃⁺ + OH⁻<br>
+            <div class="formula">I:  0.085      0        0
+C:  −x        +x       +x
+E:  0.085−x    x        x</div>
+            Kb = x² / 0.085 = 4.3×10⁻⁴ → x = √(0.085 × 4.3×10⁻⁴) = 0.0060 M<br>
+            Successive approx → <strong>[OH⁻] = 0.0058 M</strong><br>
+            pOH = −log(0.0058) = 2.24 → <strong>pH = 14.00 − 2.24 = 11.76</strong>
+          </div>
+        </details>
+      </div>
+
+      <div class="q-block">
+        <div class="q-pts">Q29 · Ch.16 · Weak acid pH (quadratic) — HClO₂</div>
+        <div class="q-stem">Calculate the pH of 0.55 M HClO₂. K<sub>a</sub> = 1.1 × 10⁻².</div>
+        <details class="sol"><summary>Show Solution</summary>
+          <div class="sol-body">
+            HClO₂ + H₂O ⇌ H₃O⁺ + ClO₂⁻ &nbsp;→&nbsp; Ka = x² / (0.55 − x) = 1.1×10⁻²<br>
+            Ka is large relative to concentration — use quadratic:<br>
+            x² + 0.011x − 0.00605 = 0<br>
+            x = [−0.011 + √(0.000121 + 0.0242)] / 2 = <strong>0.073 M = [H₃O⁺]</strong><br>
+            <strong>pH = −log(0.073) = 1.14</strong>
+          </div>
+        </details>
+      </div>
+
+      <div class="q-block">
+        <div class="q-pts">Q30 · Ch.16 · Weak base pH — methylamine</div>
+        <div class="q-stem">Calculate the pH of 0.386 M methylamine (CH₃NH₂). K<sub>b</sub> = 4.2 × 10⁻⁴.</div>
+        <details class="sol"><summary>Show Solution</summary>
+          <div class="sol-body">
+            CH₃NH₂ + H₂O ⇌ OH⁻ + CH₃NH₃⁺ &nbsp;→&nbsp; Kb = x² / 0.386 = 4.2×10⁻⁴<br>
+            x = √(0.386 × 4.2×10⁻⁴) = <strong>0.013 M = [OH⁻]</strong> (x/0.386 = 3.4% — valid)<br>
+            pOH = −log(0.013) = 1.89 → <strong>pH = 14.00 − 1.89 = 12.11</strong>
+          </div>
+        </details>
+      </div>
+
+      <div class="q-block">
+        <div class="q-pts">Q39 · Ch.16 · Percent ionization — benzoic acid</div>
+        <div class="q-stem">Calculate the degree of ionization and percent ionization of benzoic acid (pK<sub>a</sub> = 4.89) in 0.45 M solution.</div>
+        <details class="sol"><summary>Show Solution</summary>
+          <div class="sol-body">
+            Ka = 10⁻⁴·⁸⁹ = 1.3×10⁻⁵<br>
+            x = √(0.45 × 1.3×10⁻⁵) = 2.4×10⁻³ M (assumption valid: 2.4×10⁻³/0.45 = 0.53%)<br>
+            Degree of ionization α = 2.4×10⁻³ / 0.45 = <strong>0.0053</strong><br>
+            <strong>Percent ionization = 0.53%</strong>
+          </div>
+        </details>
+      </div>
+
+      <div class="q-block">
+        <div class="q-pts">Q40 · Ch.16 · Percent ionization — ethylamine</div>
+        <div class="q-stem">Calculate the degree of ionization and percent ionization of 0.85 M ethylamine (C₂H₅NH₂). K<sub>b</sub> = 4.3 × 10⁻⁴.</div>
+        <details class="sol"><summary>Show Solution</summary>
+          <div class="sol-body">
+            Kb = x² / 0.85 ≈ 4.3×10⁻⁴ → x = √(0.85 × 4.3×10⁻⁴) = <strong>0.019 M = [OH⁻]</strong><br>
+            Degree of ionization α = 0.019 / 0.85 = <strong>0.022</strong><br>
+            <strong>Percent ionization = 2.2%</strong>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- ── ANION/CATION HYDROLYSIS ─────────────────────────── -->
+    <div class="card">
+      <div class="card-title">Anion &amp; Cation Hydrolysis (Salt Solutions) &nbsp;·&nbsp; Ch. 16</div>
+
+      <div class="q-block">
+        <div class="q-pts">Q59 · Ch.16 · Anion hydrolysis — NaOCl</div>
+        <div class="q-stem">Calculate the pH of 0.089 M NaOCl. K<sub>a</sub>(HOCl) = 2.9 × 10⁻⁸.</div>
+        <details class="sol"><summary>Show Solution</summary>
+          <div class="sol-body">
+            NaOCl → Na⁺ + OCl⁻. Na⁺ does not hydrolyze; OCl⁻ undergoes base hydrolysis.<br>
+            OCl⁻ + H₂O ⇌ HOCl + OH⁻<br>
+            Kb = Kw / Ka = 1.0×10⁻¹⁴ / 2.9×10⁻⁸ = <strong>3.4×10⁻⁷</strong><br>
+            <div class="formula">I:  0.089    0      0
+C:  −x      +x     +x
+E:  0.089−x  x      x</div>
+            x² / 0.089 = 3.4×10⁻⁷ → x = <strong>1.7×10⁻⁴ M = [OH⁻]</strong> (assumption valid)<br>
+            pOH = −log(1.7×10⁻⁴) = 3.77 → <strong>pH = 14.00 − 3.77 = 10.23</strong>
+          </div>
+        </details>
+      </div>
+
+      <div class="q-block">
+        <div class="q-pts">Q60 · Ch.16 · Cation hydrolysis — NH₄Cl</div>
+        <div class="q-stem">Calculate the pH of 0.123 M NH₄Cl. K<sub>b</sub>(NH₃) = 1.8 × 10⁻⁵.</div>
+        <details class="sol"><summary>Show Solution</summary>
+          <div class="sol-body">
+            NH₄Cl → NH₄⁺ + Cl⁻. Cl⁻ is neutral; NH₄⁺ undergoes acid hydrolysis.<br>
+            NH₄⁺ + H₂O ⇌ NH₃ + H₃O⁺<br>
+            Ka = Kw / Kb = 1.0×10⁻¹⁴ / 1.8×10⁻⁵ = <strong>5.6×10⁻¹⁰</strong><br>
+            x² / 0.123 = 5.6×10⁻¹⁰ → x = <strong>8.3×10⁻⁶ M = [H₃O⁺]</strong><br>
+            <strong>pH = −log(8.3×10⁻⁶) = 5.08</strong>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- ── CALORIMETRY ─────────────────────────────────────── -->
+    <div class="card">
+      <div class="card-title">Calorimetry &nbsp;·&nbsp; Ch. 7</div>
+
+      <div class="q-block">
+        <div class="q-pts">Q38 · Ch.7 · Coffee-cup calorimetry — Zn + HCl</div>
+        <div class="q-stem">1.82 g of zinc is added to 100.0 mL of 0.300 M HCl in a coffee-cup calorimeter. The temperature rises from 20.3°C to 30.5°C. The specific heat of the solution is 4.18 J g⁻¹ °C⁻¹ and density ≈ 1.00 g/mL. Calculate ΔH for the reaction per mole of Zn consumed. [M(Zn) = 65.39 g/mol]<br>
+          Reaction: Zn(s) + 2 HCl(aq) → ZnCl₂(aq) + H₂(g)</div>
+        <details class="sol"><summary>Show Solution</summary>
+          <div class="sol-body">
+            mol HCl = 0.1000 L × 0.300 M = 0.0300 mol &nbsp;|&nbsp; mol Zn = 1.82/65.39 = 0.02783 mol<br>
+            Ratio needed: 2 mol HCl per mol Zn → need 0.0557 mol HCl for all Zn, but only 0.0300 mol present. <strong>HCl is limiting.</strong><br>
+            mol Zn reacted = 0.0300/2 = 0.0150 mol<br><br>
+            q_solution = 100.0 g × 4.18 J g⁻¹ °C⁻¹ × (30.5 − 20.3)°C = 4.26×10³ J = 4.26 kJ<br>
+            ΔH = −q_solution / mol Zn = −4.26 kJ / 0.0150 mol = <strong>−284 kJ/mol Zn</strong>
+          </div>
+        </details>
+      </div>
+
+      <div class="q-block">
+        <div class="q-pts">Q40 · Ch.7 · Coffee-cup — temperature change on dissolution</div>
+        <div class="q-stem">When 13.3 g of potassium acetate (KC₂H₃O₂, M = 98.14 g/mol, ΔH_sol = −15.3 kJ/mol) dissolves in 525 mL of water (density = 1.00 g/mL) in a coffee-cup calorimeter, what is the final temperature? The initial temperature is 25.1°C; assume the specific heat of the solution equals that of water, 4.18 J g⁻¹ °C⁻¹.</div>
+        <details class="sol"><summary>Show Solution</summary>
+          <div class="sol-body">
+            mol KC₂H₃O₂ = 13.3 / 98.14 = 0.1355 mol<br>
+            q_rxn = 0.1355 mol × (−15.3 kJ/mol) × 1000 J/kJ = −2.07×10³ J (exothermic → solution heats up)<br>
+            q_soln = +2.07×10³ J<br>
+            mass_soln = 525 g + 13.3 g = 538.3 g<br>
+            ΔT = q / (m × c) = 2.07×10³ / (538.3 × 4.18) = <strong>+0.919°C</strong><br>
+            T_final = 25.1 + 0.92 = <strong>26.0°C</strong>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- ── HESS'S LAW ──────────────────────────────────────── -->
+    <div class="card">
+      <div class="card-title">Hess's Law &amp; Combustion Enthalpy &nbsp;·&nbsp; Ch. 7</div>
+
+      <div class="q-block">
+        <div class="q-pts">Q68 · Ch.7 · Combine reactions to find ΔH°</div>
+        <div class="q-stem">Using the thermochemical equations below, calculate ΔH° for the reaction CO(g) + ½O₂(g) → CO₂(g).<br>
+          (1) C(graphite) + ½O₂(g) → CO(g) &nbsp;&nbsp;&nbsp; ΔH° = −110.54 kJ<br>
+          (2) C(graphite) + O₂(g) → CO₂(g) &nbsp;&nbsp;&nbsp; ΔH° = −393.51 kJ</div>
+        <details class="sol"><summary>Show Solution</summary>
+          <div class="sol-body">
+            Target: CO + ½O₂ → CO₂<br>
+            Reverse (1): CO(g) → C + ½O₂ &nbsp;&nbsp; ΔH° = +110.54 kJ<br>
+            Keep (2): C + O₂ → CO₂ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ΔH° = −393.51 kJ<br>
+            Sum: CO + ½O₂ → CO₂ &nbsp;&nbsp; <strong>ΔH° = +110.54 + (−393.51) = −282.97 kJ</strong>
+          </div>
+        </details>
+      </div>
+
+      <div class="q-block">
+        <div class="q-pts">Q69 · Ch.7 · Hydrogenation of propyne to propane</div>
+        <div class="q-stem">Using the following thermochemical data, calculate ΔH° for the hydrogenation of propyne to propane:<br>
+          CH₃C≡CH(g) + 2 H₂(g) → CH₃CH₂CH₃(g)<br><br>
+          (1) CH₃C≡CH(g) + 4 O₂(g) → 3 CO₂(g) + 2 H₂O(l) &nbsp;&nbsp;&nbsp; ΔH° = −1937 kJ<br>
+          (2) CH₃CH₂CH₃(g) + 5 O₂(g) → 3 CO₂(g) + 4 H₂O(l) &nbsp;&nbsp; ΔH° = −2219.1 kJ<br>
+          (3) H₂(g) + ½ O₂(g) → H₂O(l) &nbsp;&nbsp;&nbsp; ΔH° = −285.8 kJ</div>
+        <details class="sol"><summary>Show Solution</summary>
+          <div class="sol-body">
+            Keep (1): CH₃C≡CH + 4O₂ → 3CO₂ + 2H₂O &nbsp;&nbsp; ΔH° = −1937 kJ<br>
+            Reverse (2): 3CO₂ + 4H₂O → C₃H₈ + 5O₂ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ΔH° = +2219.1 kJ<br>
+            2×(3): 2H₂ + O₂ → 2H₂O &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ΔH° = −571.6 kJ<br>
+            Net: C₃H₄ + 2H₂ → C₃H₈ &nbsp;&nbsp; <strong>ΔH° = −1937 + 2219.1 − 571.6 = −290 kJ</strong>
+          </div>
+        </details>
+      </div>
+
+      <div class="q-block">
+        <div class="q-pts">Q76 · Ch.7 · Hydrogenation of 1-butene; isomer stability</div>
+        <div class="q-stem">From the following thermochemical data, calculate ΔH° for the hydrogenation of 1-butene to butane:<br>
+          C₄H₈(g) + 6 O₂(g) → 4 CO₂(g) + 4 H₂O(l) &nbsp;&nbsp;&nbsp; ΔH° = −2540.2 kJ<br>
+          C₄H₁₀(g) + 13/2 O₂(g) → 4 CO₂(g) + 5 H₂O(l) &nbsp; ΔH° = −2877.6 kJ<br>
+          H₂(g) + ½ O₂(g) → H₂O(l) &nbsp;&nbsp;&nbsp; ΔH° = −285.85 kJ</div>
+        <details class="sol"><summary>Show Solution</summary>
+          <div class="sol-body">
+            Target: C₄H₈(g) + H₂(g) → C₄H₁₀(g)<br>
+            Keep combustion of butene: C₄H₈ + 6O₂ → 4CO₂ + 4H₂O &nbsp;&nbsp;&nbsp; −2540.2 kJ<br>
+            Reverse combustion of butane: 4CO₂ + 5H₂O → C₄H₁₀ + 13/2 O₂ &nbsp; +2877.6 kJ<br>
+            Keep H₂ combustion: H₂ + ½O₂ → H₂O &nbsp;&nbsp;&nbsp; −285.85 kJ<br>
+            Sum: C₄H₈ + H₂ → C₄H₁₀ &nbsp;&nbsp; <strong>ΔH° = −2540.2 + 2877.6 − 285.85 = −234.2 kJ/mol</strong><br>
+            Hydrogenation enthalpy is more exothermic for more strained alkenes — less negative means more stable.
+          </div>
+        </details>
+      </div>
+
+      <div class="q-block">
+        <div class="q-pts">Q78 · Ch.7 · Fermentation: find ΔH° for ethanol combustion</div>
+        <div class="q-stem">Given the following thermochemical data, calculate ΔH° for the combustion of ethanol:<br>
+          CH₃CH₂OH(l) + 3 O₂(g) → 2 CO₂(g) + 3 H₂O(l)<br><br>
+          (1) C₆H₁₂O₆(s) + 6 O₂(g) → 6 CO₂(g) + 6 H₂O(l) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ΔH° = −2808 kJ<br>
+          (2) C₆H₁₂O₆(s) → 2 CH₃CH₂OH(l) + 2 CO₂(g) &nbsp;(fermentation) &nbsp; ΔH° = −72 kJ</div>
+        <details class="sol"><summary>Show Solution</summary>
+          <div class="sol-body">
+            Take ½ × (1): ½C₆H₁₂O₆ + 3O₂ → 3CO₂ + 3H₂O &nbsp;&nbsp; ΔH° = −1404 kJ<br>
+            Take ½ × reverse(2): CH₃CH₂OH + CO₂ → ½C₆H₁₂O₆ &nbsp;&nbsp; ΔH° = +36 kJ<br>
+            Sum: CH₃CH₂OH + 3O₂ → 2CO₂ + 3H₂O &nbsp;&nbsp; <strong>ΔH° = −1404 + 36 = −1368 kJ</strong>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- ── GIBBS ENERGY & SPONTANEITY ─────────────────────── -->
+    <div class="card">
+      <div class="card-title">Gibbs Energy &amp; Spontaneity &nbsp;·&nbsp; Ch. 19 (textbook)</div>
+
+      <div class="q-block">
+        <div class="q-pts">Q21 · Ch.19 · Conceptual — when can exothermic be non-spontaneous?</div>
+        <div class="q-stem">Give an example of an exothermic process that is non-spontaneous, and explain why it is not spontaneous using ΔG = ΔH − TΔS.</div>
+        <details class="sol"><summary>Show Solution</summary>
+          <div class="sol-body">
+            Example: <strong>Freezing water above 0°C</strong>.<br>
+            Freezing is exothermic (ΔH &lt; 0) — it releases heat.<br>
+            However, freezing creates a more ordered solid (ΔS &lt; 0, entropy decreases).<br>
+            At high temperature, the −TΔS term (which is positive when ΔS &lt; 0) dominates:<br>
+            ΔG = ΔH − TΔS = (negative) − T×(negative) = (negative) + (positive)<br>
+            When T is large enough, ΔG &gt; 0 → <strong>non-spontaneous</strong> despite being exothermic.
+          </div>
+        </details>
+      </div>
+
+      <div class="q-block">
+        <div class="q-pts">Q22 · Ch.19 · AB(g) → A(g) + B(g) spontaneity</div>
+        <div class="q-stem">Consider the reaction AB(g) → A(g) + B(g). Is this reaction expected to be spontaneous at high or low temperatures? Explain your reasoning in terms of ΔH, ΔS, and ΔG.</div>
+        <details class="sol"><summary>Show Solution</summary>
+          <div class="sol-body">
+            <strong>ΔS &gt; 0:</strong> one mole of gas → two moles of gas (more disorder).<br>
+            <strong>ΔH &gt; 0:</strong> breaking the A–B bond requires energy (endothermic).<br>
+            ΔG = ΔH − TΔS<br>
+            Since ΔH &gt; 0 and ΔS &gt; 0: at low T, ΔH dominates → ΔG &gt; 0 (non-spontaneous).<br>
+            At high T, TΔS term dominates → ΔG &lt; 0 (spontaneous).<br>
+            <strong>The reaction is spontaneous only at high temperatures.</strong>
+          </div>
+        </details>
+      </div>
+
+      <div class="q-block">
+        <div class="q-pts">Q23 · Ch.19 · Calculate ΔH°, ΔG°, ΔS° — NH₃ + HCl → NH₄Cl</div>
+        <div class="q-stem">For the reaction NH₃(g) + HCl(g) → NH₄Cl(s), use standard thermodynamic data to calculate ΔH°, ΔG°, and ΔS° at 25°C.<br>
+          ΔH°f: NH₃(g) = −46.11 kJ/mol; HCl(g) = −92.31 kJ/mol; NH₄Cl(s) = −314.4 kJ/mol<br>
+          ΔG°f: NH₃(g) = −16.48 kJ/mol; HCl(g) = −95.30 kJ/mol; NH₄Cl(s) = −202.9 kJ/mol</div>
+        <details class="sol"><summary>Show Solution</summary>
+          <div class="sol-body">
+            <strong>ΔH°</strong> = ΔH°f[NH₄Cl] − ΔH°f[NH₃] − ΔH°f[HCl]<br>
+            = −314.4 − (−46.11) − (−92.31) = <strong>−176.0 kJ/mol</strong><br><br>
+            <strong>ΔG°</strong> = ΔG°f[NH₄Cl] − ΔG°f[NH₃] − ΔG°f[HCl]<br>
+            = −202.9 − (−16.48) − (−95.30) = <strong>−91.1 kJ/mol</strong><br><br>
+            <strong>ΔS°</strong> from ΔG° = ΔH° − TΔS°:<br>
+            ΔS° = (ΔH° − ΔG°)/T = (−176.0 − (−91.1)) kJ/mol × 1000 / 298 K<br>
+            = −84.9×1000 / 298 = <strong>−285 J mol⁻¹ K⁻¹</strong><br>
+            (ΔS° &lt; 0 makes sense: two gases → one solid, large entropy decrease.)
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- ── ELECTROCHEMISTRY ────────────────────────────────── -->
+    <div class="card">
+      <div class="card-title">Electrochemistry — Voltaic Cells &nbsp;·&nbsp; Ch. 20 (textbook)</div>
+
+      <div class="q-block">
+        <div class="q-pts">Q19(c) · Ch.20 · Cr|Cr²⁺ ‖ Au³⁺|Au voltaic cell</div>
+        <div class="q-stem">For the cell Cr(s) | Cr²⁺(aq) ‖ Au³⁺(aq) | Au(s):<br>
+          (a) Write the oxidation and reduction half-reactions.<br>
+          (b) Write the balanced net ionic equation.<br>
+          (c) Calculate E°<sub>cell</sub>.<br><br>
+          E°(Cr²⁺/Cr) = −0.90 V &nbsp;|&nbsp; E°(Au³⁺/Au) = +1.52 V</div>
+        <details class="sol"><summary>Show Solution</summary>
+          <div class="sol-body">
+            <strong>Anode (oxidation):</strong> Cr(s) → Cr²⁺(aq) + 2e⁻ &nbsp;&nbsp; ×3<br>
+            <strong>Cathode (reduction):</strong> Au³⁺(aq) + 3e⁻ → Au(s) &nbsp;&nbsp; ×2<br>
+            <strong>Net:</strong> 3 Cr(s) + 2 Au³⁺(aq) → 3 Cr²⁺(aq) + 2 Au(s)<br><br>
+            E°<sub>cell</sub> = E°<sub>cathode</sub> − E°<sub>anode</sub> = +1.52 − (−0.90) = <strong>+2.42 V</strong>
+          </div>
+        </details>
+      </div>
+    </div>
+
+  </section>
+
 </div>
+
+<script>
+  (function(){
+    if(localStorage.getItem('chem-theme')==='dark'){
+      document.body.classList.add('dark');
+      document.getElementById('theme-btn').textContent='Light';
+    }
+  })();
+  function toggleTheme(){
+    const dark=document.body.classList.toggle('dark');
+    document.getElementById('theme-btn').textContent=dark?'Light':'Dark';
+    localStorage.setItem('chem-theme',dark?'dark':'light');
+  }
+</script>
 </body>
 </html>

@@ -1,0 +1,4132 @@
+
+
+=== PDF PAGE 721 ===
+Chapter 16: Acids and Bases 
+ 7 2 1  2B (M) HO3+ is computed from pH in each case: HOpH
+3+=1 0 
+HO MH O M
+conc dil3+ 25 0 3
+3+ 31 0 4=1 0 =3 . 2 1 0 =1 0 =7 . 9 1 0 uu  
+All of the H O3+ in the dilute solution comes from the concentrated solution. 
+3+
++ 3+ 3
+3 33.2 10 mol H Oamount H O = 1.00 L conc. soln = 3.2 10 mol H O1L  c o n c .  s o l n
+ uuu  
+Next we calculate the volume of the dilute solution. 
+3+
+3 4+
+31 L dilute solnvolume of dilute solution = 3.2 10 mol H O = 4.1 L dilute soln7.9 10 mol H O
+uuu 
+Thus, the volume of water to be added is = 3.1 L. 
+Infinite dilution does not lead  to infinitely small hydroge n ion concentrations. Since 
+dilution is done with water, the pH of an infinitely dilute solution will approach that of 
+pure water, namely pH = 7. 
+ 
+3A (E) pH is computed directly from the equation below. ++
+33HO ,p H= l o g HO = l o g 0 . 0 0 2 5 =2 . 6 0ªº ªº ¬¼ ¬¼. 
+We know that HI is a strong acid and, t hus, is completely dissociated into H O3+ and I. 
+The consequence is that IH O== 0 . 0 0 2 53+ M. OHis most readily computed from 
+pH: pOH 11 40 12pOH = 14.00 pH = 14.00 2.60 = 11.40;    OH = 10 = 10 = 4.0 10 ªº  u¬¼M 
+ 
+3B (M) The number of moles of HCl(g) is ca lculated from the ideal gas law. Then HO3+ is 
+calculated, based on the fact that HCl(aq) is a strong acid (1 mol H O3+ is produced from 
+each mole of HCl). 
+ 
++
+3
++
+31atm747 mmHg 0.535L760 mmHgmoles HCl(g) = 0.08206Latm(26.5 273.2) Kmol K
+moles HCl(g) 0.0214mol HCl(g) = 0.0214mol H O  when dissolved in water
+[H O ]  0.0214mol   pH = -log(0.0214) = 1.670§·uu ¨¸©¹
+u
+ 
+  
+ 
+4A (E) pH is most readily determined from pOH log OH =. Assume Mg OH b g2 is a strong 
+base. 
+
+ 
+22
+229.63 mg Mg OH 1m o l  M g  O H 1000 mL 1g 2m o l  O HOH =100.0 mL soln 1 L 1000 mg 58.32g Mg OH 1 mol Mg OH
+OH = 0.00330 M;  pOH = log 0.00330 = 2.481
+pH = 14.000 pOH = 14.000 2.481 = 11.519
+
+ªº uuu u¬¼
+ªº ¬¼
+
+ 
+
+=== PDF PAGE 722 ===
+Chapter 16: Acids and Bases 
+722 4B (E)  KOH is a strong base, which means that eac h mole of KOH that dissolves produces one 
+mole of  dissolved OH aqbg . First we calculate OH and the pOH. We then use 
+pH pOH+= 1 4 . 0 0  t o  d e t e r m i n e  p H .  
+ 
+OHg KOH
+g solnmol KOH
+g KOHmol OH
+mol KOHg soln
+mL solnmL
+LM
+uu uu =3.00
+100.001
+56.111
+11.0242
+11000
+1=0 . 5 4 8   
+ pOH = log 0.548 = 0.261 pH = 14.000 pOH = 14.000 0.261 = 13.739    
+ 
+5A (M) HOpH
+3+4 185=1 0 =1 0 =6 . 6 1 0 u M.  
+ 
+Organize the solution using the ba lanced chemical equation.  
+ 
+Equation: 2 HOCl aq      +       H O(l)  ZXYZ HO a q3+bg      +  OCl aqbg  
+Initial: 0.150 M   —     0 M|       0 M 
+Changes: 56.6 10  Mu    —  5+6 .6 10  Mu 5+6 .6 10  Mu
+Equil:  § 0.150 M   —     56.6 10  Mu   56.6 10  Mu 
+ 
+>@55 +
+3 86.6 10 6.6 10 HO O C l
+=2 . 9 1 0HOCl 0.150aK ªº ªº uu¬¼ ¬¼  u  
+ 
+5B (M) First, we use pH to determine OH.  pOH pH =1 4 . 0 0 =1 4 . 0 0 1 0 . 0 8=3 . 9 2 .  
+ 
+OHpOH   u =1 0 =1 0 =1 . 2 1 039 2 4 M. We determine the initial concentration of cocaine 
+and then organize the solution around the balanced equation in the manner we have used 
+before. 
+17 21 4 17 21 4
+17 21 4
+17 21 40.17 g C H O N 1mol C H O N 1000 mL[C H O N] = =0 . 0 0 5 6 M100 mL soln 1L 303.36g C H O Nuu  
+ 
+Equation: 17 21 4 2 CHO N ( a q )+ H O ( l )ZXYZ CHO N H a q17 21 4+bg     +     OH aqbg  
+Initial: 0.0056 M  —         0 M    0 M| 
+Changes: 41.2 10  Mu   —  4+1.2 10  Mu 4+1.2 10  Mu 
+Equil: § 0.0055 M  —     41.2 10  Mu    41.2 10  Mu
+ 
+Kb  uu
+ u 
+CHO N H O H
+CHO N17 21 4+
+17 21 444
+61.2 10 1.2 10
+00 0 5 526 1 0ch ch
+.. 
+
+=== PDF PAGE 723 ===
+Chapter 16: Acids and Bases 
+ 7 2 3  6A (M) Again we organize our solution around the balanced chemical equation. 
+ 
+Equation: 
+Initial: 22 2 2 HC H FO (aq)  +    H O(l)
+   0.100 M  — ZXYZ
+ HO3+(aq) + 
+ |0M  CHF O22 2(aq) 
+    0 M 
+Changes:        x M  —  +x M +x M 
+Equil:  0.100 xb g M  —    x M   x M 
+ 
++
+32 2 2 3
+a
+22 2HO CHF O
+=  ; therefore, 2.6 100.100 HC H FOxxKx
+
+ªº ª º  ¬¼ ¬ ¼u ªº¬¼ 
+We can use the 5% rule to ignore x in the denominator.  Therefore, x = [H 3O+] = 0.016 M, 
+and pH = –log (0.016) = 1.8.  Thus, the calculated pH is considerably lower than 2.89 
+(Example 16-6). 
+ 
+6B    (M) We first determine the concentration of undi ssociated acid. We then  use this value in 
+         a set-up that is based on the balanced chemical equation.  
+ 974 974
+9740.500 g HC H O 1 mol HC H O 12aspirintablets× × × = 0.0171Mtablet 180.155g HC H O 0.325L 
+Equation: 
+Initial:  974HC H O (aq)   +   H 2O(l) 
+    0.0171 M   — ZXYZ HO3+(aq)   + 
+    0 M 974CHO ( a q ) 
+    0 M 
+Changes:         x M   —   +x M  +x M  
+Equil:  0.0171 x b g M   —     x M    x M  
+ 
++
+39 7 44
+a
+974HO CHO
+== 3.310=HC H O 0.0171xxKx
+
+ªº
+«»¬¼ªºªº ¬¼¬¼u 
+ 
+24 6+3 . 3 1 0 5 . 64 1 0 =0xuu  ( f i n d  t h e  p h y s i c a l l y  reasonable roots of the quadratic equation) 
+ 
+47 53.3 10 1.1 10 2.3 100.0022 M;  pH log (0.0022)  2.662x u r u u      
+ 
+7A (M) Again we organize our solution around the balanced chemical equation.  
+ 
+Equation: 
+Initial: 
+Changes 22 2 2 HC H FO (aq) + H O(l)
+0.015 M  — 
+   x M  — ZXYZ
+ 
+  H3O+ (aq) + 
+0M|  
++x M  CHF O22 2(aq) 
+    0 M 
++x M 
+Equil:  0.015 xb g M  —     x M   x M  
+ 
+>@ +232 2 23
+a
+22 2HO CHF O
+== 2.610=HC H FO 0.015 0.015xxxKx
+ªºªº¬¼¬¼u| 
+ 
+xx=0 0 1 5 2 6 1 0 0 0 0 6 223 u u  .. . M = [ H O ]3+  O u r  a s s u m p t i o n  i s  i n v a l i d :   
+ 
+
+=== PDF PAGE 724 ===
+Chapter 16: Acids and Bases 
+724 0.0062 is not quite small enough compared to 0.015 for the 5% rule to hold. Thus we use 
+another cycle of successive approximations. 
+ 
+ 
+ 33 +
+a 3
+33 +
+a 3= =2 . 6 1 0 = ( 0 . 0 1 5 0 . 0 0 6 2 ) 2 . 6 1 0 0 . 0 0 4 8M  =  [ HO ]0.015 0.0062
+= =2 . 6 1 0 = ( 0 . 0 1 5 0 . 0 0 4 8 ) 2 . 6 1 0 0 . 0 0 5 1M  =  [ HO ]0.015 0.0048xxKx
+xxKx
+u u u 
+u u u  
+ 
+ 33 +
+a 3 = =2 . 6 1 0 = ( 0 . 0 1 5 0 . 0 0 5 1 ) 2 . 6 1 0 0 . 0 0 5 1M  =  [ HO ]0.015 0.0051xxKxu u u  
+ 
+Two successive identical results indicate that we have the solution.  
+ 
+pH log H O log= =0 . 0 0 5 1 = 2 . 2 93+b g . The quadratic equation gives the same result 
+(0.0051 M) as this method of successive approximations.  
+ 
+7B (M) First we find [C 5H11N]. We then use this value as the starting base concentration in a 
+set-up based on the balanced chemical equation.  
+CH Nmg C H N
+mL solnmmol C H N
+mg C H NM51 151 1 51 1
+51 1=114
+3151
+85.15=0 . 0 0 4 2 5 u  
+Equation:  
+ 
+Initial:  
+Changes:  
+Equil:  51 1 2 CH N ( a q )     + HO ( l )  
+0.00425 M   — 
+    Mx  — 
+0.00425  M x — ZXYZ+
+51 1CH N H ( a q )  +
+    0 M  
++ Mx   
+  Mx  OH(aq)  
+0 M| 
++ Mx 
+   Mx 
+ 
+>@+
+51 1 3
+b
+51 1CH N H O H
+== 1 . 6 1 0 =CH N 0 . 0 0 4 2 5 0 . 0 0 4 2 5xxx xKx
+ªº ª º ¬¼ ¬ ¼u|   We assumed that 0.00425x  
+ 
+x u 00 0 1 6 00 0 4 2 5 00 0 2 6.. . M  The assumption is not valid. Let’s assume x|00 0 2 6.  
+x   00 0 1 6 00 0 4 2 5 00 0 2 6 00 0 1 6.( . .) .  L e t ’ s  t r y  a g a i n ,  w i t h  x|00 0 1 6. 
+x   00 0 1 6 00 0 4 2 5 00 0 1 6 00 0 2 1.( . .) .  Y e t  a n o t h e r  t r y ,  w i t h  x|00 0 2 1. 
+x   00 0 1 6 00 0 4 2 5 00 0 2 1 00 0 1 9.( . . ) .  T h e  l a s t  t i m e ,  w i t h  x|00 0 1 9. 
+0.0016(0.00425 0.0019) 0.0019 M = [OH ] x    
+ 
+3 pOH= log[H O ] log(0.0019) 2.72      pH pOH =1 4 . 0 0 =1 4 . 0 0 2 . 7 2=1 1 . 2 8  
+We could have solved the problem with the qua dratic formula roots equation rather than by 
+successive approximations. The same answer is obtained. In fact, if we substitute x=0 . 0 0 1 9 i n t o  t h e  Kb expression, we obtain 0.0019 / 0.00425 0.0019 = 1.5 102 3 b g b g u 
+compared to Kb=1 . 6 1 03u. The error is due to rounding, not to an incorrect value.  
+Using x=0 . 0 0 2 0 g i v e s  a  v a l u e  o f  1 . 8 1 03u, while using x=0 . 0 0 1 8 g i v e s  1 . 3 1 03u. 
+ 
+
+=== PDF PAGE 725 ===
+Chapter 16: Acids and Bases 
+ 7 2 5  8A (M) We organize the solution around th e balanced chemical equation; aM is [HF] initial. 
+Equation:  
+ 
+Initial:  
+Changes:  
+Equil:  2 HF(aq)    + H O(l)  
+ Ma    — 
+ Mx  — 
+ M ax  — ZXYZ +
+3HO ( a q )
+0 M|+ Mx  
+   Mx + 
+  
+  F( a q )  
+0 M  
++ Mx   
+   Mx 
+>@ +2
+3 4
+aHO F
+== = 6 . 6 1 0HFxx xKax aªº ª º¬¼ ¬ ¼|u     xa=6 6 1 04uu.  
+For 0.20 M HF, a = 0.20 M     4=0 . 2 06 . 6 1 0 0 . 0 1 1 Mxuu    
+ 
+0.011 M% dissoc= 100%=5.5%0.20 Mu  
+For 0.020 M HF, a = 0.020 M    x=0 0 2 06 61 0 0 0 0 3 64.. .uu  M  
+We need another cycle of approximation: x=0 0 2 0 0 0 0 3 66 6 1 0 0 0 0 3 34(. . ) . . u u  M  
+Yet another cycle with x|0.0033 M :  x=0 0 2 0 0 0 0 3 36 6 1 0 0 0 0 3 34(. . ) . . u u  M 
+0.0033M% dissoc = 100% = 17%0.020Mu    
+As expected, the weak acid is more dissociated. 
+ 
+8B (E) Since both H O3+ and C H O353 come from the same source in equimolar amounts,  
+their concentrations are equal. HO CHO MM3+
+353== 0 . 0 6 7 0 . 0 2 8 4 = 0 . 0 0 1 9u  
+KaHO CHO
+HC H O==0.0019 0.0019
+0.0284 0.0019=1 . 4 1 03+
+353
+3534
+LNMOQP
+ub gb g 
+ 
+9A (M) For an aqueous solution of a diprotic acid, the concentration of the divalent anion is 
+very close to the sec ond ionization constant: 
+26
+2a OOCCH COO = 2.0 10 M K ªº |u¬¼. We 
+organize around the chemical equation. 
+ 
+Equation:  
+Initial: 
+Change: 
+Equil: 
+  22 2CH COOH (aq)  + H O(l)  
+        1.0 M        — 
+x M        — 
+     (1.0 – x) M         — ZXYZ 
+  
+  +
+3HO ( a q )  
+0M|  
++ Mx  
+Mx + 
+  
+  2 2HCH COO (aq) 
+0 M  
++ Mx  
+Mx  
+ 
+2
+32 3 2
+22[H O ][HCH (COO) ] () ()1.4 10[CH (COOH) ] 1.0 1.0axx xKx   | u 
+ 
+32+
+32 1.4 10 3.7 10 M [H O ] [HOOCCH COO ] x  u u    1.0Mx is a valid assumption. 
+
+=== PDF PAGE 726 ===
+Chapter 16: Acids and Bases 
+726 9B ( M )  We know >@2a doubly charged anion K|  for a polyprotic acid. Thus, 
+252
+a2 4=5 . 3 1 0 C OKªºu|¬¼. From the pH, +p H 0 6 7
+3HO = 1 0 = 1 0 =0 . 2 1Mªº¬¼. We also 
+recognize that HC O H O24 3+=, since the second ionization occurs to only a very small 
+extent. We note as well that HC O24 is produced by the ionization of H C O224 .   Each 
+mole of HC O24 present results from the ionization of 1 mole of HCO224 .  Now we have 
+sufficient information to determine the 
+1aK. 
+ 
+1+
+32 42
+a
+224HO H CO 0.21 0.21== = 5 . 3 1 0HCO 1 . 0 5 0 . 2 1Kªº
+«»¬¼ªºªºu ¬¼¬¼u 
+ 
+10A (M) H S O24  is a strong acid in its first ionization, and somewhat weak in  its second, with 
+22
+a=1 . 1 1 0 =0 . 0 1 1Ku . Because of the strong first ionization step, this problem involves 
+determining concentrations in a so lution that initially is 0.20 M H O3+ and 0.20 M HSO4. 
+We base the set-up on the balanced chemical equation. 
+ 
+ 
+Equation:  HSO aq H O42 +bg (l) ZXYZHO a q3+bg   + 2-
+4SO (aq)  
+Initial:  0.20 M  —   0 . 2 0  M     0  M  
+Changes:   Mx  —   +  Mx    +  Mx 
+Equil:  0.20  M x  —   0.20 +  M x   Mx 
+ 
+ 
+
+22 +
+34
+a
+4HO S O 0.20 + 0.20== = 0 . 0 1 1 ,  a s s u m i n g  t h a t 0 . 2 0 M .   0.20 0.20 HSO
+=0 . 0 1 1 M T r y  o n e  c y c l e  o f  a p p r o x i m a t i o n :  xx xKxx
+x
+ªºªºu ¬¼¬¼| ªº¬¼ 
+ 
+ 
+0.0110.20 + 0.011
+0.20 0.011=0.21
+0.19=0.19 0.011
+0.21=0 . 0 1 0 |u b gb gx xx M 
+The next cycle of approximation produces the same answer 2
+4 0.010M = SO ,ªº¬¼ 
++
+34HO =0 . 0 1 0 + 0 . 2 0M=0 . 2 1M ,     H S O =0 . 2 0 0 . 0 1 0M=0 . 1 9Mªº ªº ¬¼ ¬¼ 
+ 
+10B (M) We know that H SO24  is a strong acid in its first ionization, and a somewhat weak 
+acid in its second, with 
+22
+a=1 . 1 1 0 =0 . 0 1 1Ku . Because of the strong first ionization step, 
+the problem essentially reduces to determining co ncentrations in a solution that initially is 
+0.020 M H O3+ and 0.020 M HSO4. We base the set-up on the balanced chemical 
+equation. The result is solved  using the quadratic equation. 
+ 
+ 
+
+=== PDF PAGE 727 ===
+Chapter 16: Acids and Bases 
+ 7 2 7  Equation:  HSO aq H O42 +bg (l) ZXYZHO a q3+bg   + SO aq42bg 
+Initial:  0.020 M    —   0 . 0 2 0  M         0  M  
+Changes:   Mx     —    +  Mx    +  Mx 
+Equil:  0.020  M x  —   0.020 +  M x       Mx 
+ 
+
+22 +
+3424
+a
+4HO S O 0.020 +== = 0 . 0 1 1 0 . 0 2 0 + = 2 . 2 1 0 0 . 0 1 10.020 HSOxxKx x xx
+
+ªºªº¬¼¬¼u ªº¬¼
+ 
++
+43 HSO = 0.020 0.0060 = 0.014 M    H O = 0.020 + 0.0060 = 0.026 Mªº ªº ¬¼ ¬¼ 
+ 
+ (The method of successive approximations converges to =0 . 0 0 6Mx  in 8 cycles.) 
+ 
+11A (E)  
+ ( a )  C H N H N O33+
+3 is the salt of the cation of a weak base.  The cation, +
+33CH NH , will 
+hydrolyze to form an acidic solution + +
+33 2 32 3CH NH + H O CH NH + H OZZXYZZ , while 
+NO 3–, by virtue of being the conjugate base of a strong acid will not hydrolyze to a 
+detectable extent. The aqueous solutions  of this compound w ill thus be acidic. 
+ 
+ (b) N a I  i s  t h e  s a l t  c o m p o s e d  o f   t h e  c a t i o n  o f  a strong base and the anion of a strong 
+acid, neither of which hydrolyzes in wate r. Solutions of this compound will be pH 
+neutral. 
+ 
+ (c) N a N O2 is the salt composed of the cation of a strong base that will not hydrolyze in 
+water and the anion of a weak  acid that will hydrolyze to form an alkaline solution 
+22 2 NO + H O HNO + OHZZXYZZ . Thus aqueous solutions of this compound will be 
+basic (alkaline). 
+ 
+11B (E) Even without referring to the K values for acids and bases,  we can predict that the 
+reaction that produces H O3+ occurs to the greater extent. Th is, of course, is because the pH 
+is less than 7, thus acid hydrolysis must predominate.  
+We write the two reactions of H PO24 with water, along with the values of their equilibrium 
+constants. 
+2+2 8
+24 2 3 4 a HP O a q + HO ( l ) HO a q + H P O a q     = 6 . 3 1 0 K u ZZXYZZ  
+  
+114
+12 w
+24 2 34 b 3
+a1.0 10HP O a q + HO ( l ) O H a q + HP O a q      = = = 1 . 4 1 07.1 10KKK
+
+uuuZZXYZZ  
+As predicted, the acid ionization occurs to the greater extent. 
+ 2 2
+40.031 0.00096 + 0.00088+0 . 0 3 1 0 . 0 0 0 2 2=0 = =0 . 0 0 6 0 M= S O2xx xrªº ¬¼
+
+=== PDF PAGE 728 ===
+Chapter 16: Acids and Bases 
+728 12A (M) From the value of pbK we determine the value of Kb and then Ka for the cation. 
+ 
+cocainebp
+aw
+b:= 1 0 = 1 0 = 3 . 9 1 0 = =1.0 10
+3.9 10=2 . 6 1 084 1 914
+96KKK
+KK 
+uu
+uu 
+ 
+codeinebp
+aw
+b:= 1 0 = 1 0 = 1 . 1 1 0 = =1.0 10
+1.1 10=9 . 1 1 079 5 814
+87KKK
+KK 
+uu
+uu 
+ 
+ (This method may be a bit easier: 
+ppab a KK K=1 4 . 0 0 =1 4 . 0 0 8 . 4 1=5 . 5 9 , =1 0 =2 . 6 1 055 9 6 u) The acid with the larger 
+Ka will produce the higher H+, and that solution will have the lower pH. Thus, the 
+solution of codeine hydrochlorid e will have the higher pH (i.e ., codeine hydrochloride is 
+the weaker acid). 
+ 
+12B (E) Both of the ions of NH CN aq4bg react with water in hydrolysis reactions. 
+ 
+  14
++ +1 0 w
+42 3 3 a 5
+b1.0 10NH aq + H O(l)  NH aq + H O aq   = = = 5.6 101.8 10KKKuuuZXYZ  
+ 
+  14
+5 w
+2b 10
+a1.0 10CN aq + H O(l)  HCN aq + OH aq     = = = 1.6 106.2 10KKK
+ 
+uuuZXYZ  
+ 
+Since the value of the equilibrium constant for the hydrolysis reaction of cyanide ion is 
+larger than that for the hydrolysis of amm onium ion, the cyanide ion hydrolysis reaction 
+will proceed to a greater extent and thus the solution of NH CN aq4bg will be basic 
+(alkaline). 
+ 
+13A (M) NaF dissociates completely into sodium i ons and fluoride ions. The released fluoride 
+ion hydrolyzes in aqueous solution to form  hydroxide ion. The determination of the 
+equilibrium pH is organized around the balanced equation. 
+ 
+Equation:  
+Initial: 
+Changes: 
+Equil: 
+  -
+2 F( a q ) + HO ( l )  
+  0.10 M  — 
+     Mx  — 
+0.10  M x  — ZXYZ
+   
+  
+  HF(aq)  
+   0 M 
++ Mx  
+   Mx  + 
+  
+  OH(aq)
+   0 M 
++Mx  
+   Mx  
+ 
+14 2
+11
+4-1.0 10 [HF][OH ] ( )( )1.5 106.6 10 [F ] (0.10 ) 0.10w
+b
+aKxxxKKx
+
+u   u    u 
+ 
+11 6 6=0 . 1 0 1 . 5 1 0 1 . 2 1 0 M = [ O H ] ; p O H =l o g ( 1 . 2 1 0 )5 . 9 2
+pH = 14.00 pOH = 14.00 5.92 = 8.08   (As expected, pH > 7)x  uu  u u  
+ 
+ 
+
+=== PDF PAGE 729 ===
+Chapter 16: Acids and Bases 
+ 7 2 9  13B (M) The cyanide ion hydrolyzes in solution, as  indicated in Practi ce Example 16-12B. As a 
+consequence of the hydrolysis, OH HCN=.  OH can be found from the pH of the 
+solution, and then values are substituted into the Kb expression for CN, which is then 
+solved for CN. 
+ 
+pOH = 14.00 pH = 14.00 10.38 = 3.62   
+ 
+>@-pOH 3 62 4OH = 10 = 10 = 2.4 10 M = HCN ªºu«»¬¼ 
+ 
+KbHCN OH
+CN CNCN M == 1 . 6 1 0 =2.4 10
+=2.4 10
+1.6 10=3 . 6 1 054242
+53
+
+
+uuu
+uuch ch 
+ 
+14A (M) First we draw the Lewis structures of the four acids. Lone pairs have been omitted 
+since we are interested only in the arrangements of atoms. 
+ 
+HClO4  should be stronger than HNO3. Although Cl and N have similar electronegativities, 
+there are more terminal oxygen atoms attached to the chlorine in perchl oric acid than to the 
+nitrogen in nitric acid. By virtue of having more terminal oxygens, perchloric acid, when 
+ionized, affords a more stable conjugate base. The more stable the anion, the more easily it is 
+formed and hence the stronger is the conjuga te acid from which it is derived. CH FCOOH2  
+will be a stronger acid than CH BrCOOH2  because F is a more electronegative atom than Br. 
+The F atom withdraws additional electron density from the O — H  bond, making the bond 
+easier to break, which leads to increased acidity. 
+ 
+14B (M) First we draw the Lewis structures of the first two acids. Lone pa irs are not depicted 
+since we are interested in the arrangements of atoms. 
+ 
+HP O34  and H SO23  both have one terminal oxygen atom , but S is more electronegative 
+than P. This suggests that 12
+23 aHS O = 1 . 3 1 0 Ku should be a stronger acid than 
+13
+34 aHP O =7 . 1 1 0 Ku, and it is. The only difference between CCl CH COOH32  and 
+CCl FCH COOH22  is the replacement of Cl by F. Sin ce F is more electronegative than Cl, 
+CCl CH COOH32  should be a weaker acid than CCl FCH COOH22 . ONOO
+HO ClOO
+H
+OOCCO
+FHH
+HOCCO
+Br HH
+H
+OPOO
+HH
+OHOSOO
+HH
+
+=== PDF PAGE 730 ===
+Chapter 16: Acids and Bases 
+730 15A  ( M )  We draw Lewis structur es to help us decide. 
+(a) C l e a r l y ,  B F3 is an electron pair acceptor, a Lewis acid, and NH3 is an electron pair 
+donor, a Lewis base. 
+ 
+ 
+ (b) HO2 certainly has electron pairs (lone pairs)  to donate and thus it can be a Lewis 
+base. It is unlikely that the cation Cr3+ has any accessible valence electrons that can 
+be donated to another atom, thus, it is the Lewis acid.  The produc t of the reaction, 
+[Cr(H 2O)6]3+, is described as a water adduct of Cr3+. 
+ 
+Cr3+(aq)  +  H
+HO6OH2
+OH2
+OH2
+OH2H2OH2OCr3+
+ 
+ 
+15B (M) The Lewis structures of the six species follow.  
+Both the hydroxide ion and the chloride ion have lone pair s of electrons that can be 
+donated to electron-poor centers .  These two are the electr on pair donors, or the Lewis 
+bases. Al OHbg3 and SnCl4 have additional spaces in thei r structures to accept pairs of 
+electrons, which is what occurs when they form the complex anions [Al(OH) 4]- and 
+[SnCl 6]2 -. Thus, Al OH b g3 and SnCl4 are the Lewis acids in these reactions. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ BFF
+FNH
+HH  BFF
+FNH
+HHO
+HH
+SnCl
+Cl Cl
+ClOH
++
+Al O HO H
+O
+HAl O HO H
+O
+HOH-
+Cl2 SnCl
+Cl Cl
+ClClCl2-
+2-
+
+=== PDF PAGE 731 ===
+Chapter 16: Acids and Bases 
+ 7 3 1  INTEGRATIVE EXAMPLE 
+ 
+ 
+A. ( D )  To confirm the pH of rainwater, we ha ve to calculate the concentration of CO 2(aq) in 
+water and then use simple acid-ba se equilibrium to calculate pH. 
+ 
+Concentration of CO 2 in water at 1 atm pressure and 298 K is 1.45 g/L, or  
+ 
+22
+2
+21.45 g CO 1 mol CO0.0329 M COL4 4 . 0 g  C Ou  
+ 
+Furthermore, if the atmosphere is 0.037% by volume CO 2, then the mole fraction of CO 2 is 
+0.00037, and the partial pressure of CO 2 also becomes 0.00037 atm (because 
+22CO CO atmPPF  ) 
+ 
+From Henry’s law, we know th at concentration of a gas in a liquid is proportional to its 
+partial pressure. 
+2CO
+11C(mol / L) H P ,  which can rearrange to solve for H:
+0.0329 MH 0.0329 mol L atm1a tm 
+    
+ 
+Therefore, concentration of CO 2(aq) in water under atmospheric pressures at 298 K is:  
+ 
+211 5
+COC( m o l / L ) 0 . 0 3 2 9 m o l L a t m 0 . 0 0 0 3 7 a t m  =  1 . 2 1 7 1 0 M     u  
+ 
+Using the equation for reaction of CO 2 with water: 
+ 
+CO 2 (aq) + 2 H 2O (l) UH3O+ (aq) +3 HCO (aq) 
+1.217×10-5    0   0  
+-x    +x  +x 
+1.217×10-5–x    x  X 
+ 
+
+2
+7
+a1 5
+6
+6
+3xK4 . 4 1 0
+1.217 10 x
+Using the quadratic formula, x = 2.104 10 M
+pH log H O log 2.104 10 5.68 5.7
+
+
+  u
+u
+u
+ªº    u  |¬¼ 
+ 
+We can, of course, continue to refine the value of [H 3O+] further by considering the 
+dissociation of HCO 3–, but the change is too small to matter. 
+
+=== PDF PAGE 732 ===
+Chapter 16: Acids and Bases 
+732 B. (D)  
+ ( a )  For the acids given, we determine values of m and n in the formula EO m(OH) n.  HOCl or 
+Cl(OH) has m = 0 and n = 1.  We expect K a | 10-7 or pK a | 7, which is in good 
+agreement with the accepted pK a = 7.52.  HOClO or ClO(OH) has m = 1 and n = 1.  We 
+expect K a | 10-2 or pK a | 2, in good agreement with the pK a = 1.92.  HOClO 2 or 
+ClO 2(OH) has m = 2 and n = 1.  We expect K a to be large and in  good agreement with 
+the accepted value of pK a = -3, K a = 10-pKa  = 103.  HOClO 3 or ClO 3(OH) has m = 3 and 
+n = 1.  We expect K a to be very large and in good agreement with the accepted K a = -8, 
+pKa = -8, K a = 10-pKa  = 108 which turns out to be the case. 
+ ( b) The formula H 3AsO 4 can be rewritten as AsO(OH) 3, which has m = 1 and n = 3.  The 
+expected value is K a = 10-2. 
+ 
+ ( c) The value of pK a = 1.1 corresponds to K a = 10-pKa = 10-1.1 = 0.08, which indicates that 
+m = 1.  The following Lewis structure is consistent with this value of m. 
+OPOH
+H
+OH  
+ 
+EXERCISES 
+ 
+Brønsted-Lowry Theory of Acids and Bases 
+ 
+1. (E) 
+ ( a )  H N O2 is an acid, a proton donor.  Its conjugate base is NO2. 
+ 
+ (b) O C l is a base, a proton acceptor. Its conjugate acid is HOCl.  
+ 
+ (c) N H2 is a base, a proton accept or. Its conjugate acid is NH3.  
+ 
+ (d) N H4+ is an acid, a proton donor. It’s conjugate base is NH3.  
+ 
+ (e) C H N H33+ is an acid, a proton donor. It’s conjugate base is CH NH32 . 
+ 
+2. (E) We write the conjugate base as the first product of the equilibrium for which the acid is 
+the first reactant.  
+ 
+ (a) +
+32 3 3HIO aq + H O(l) IO aq + H O aqZXYZ  
+ 
+ (b) +
+65 2 65 3CHC O O H a q + HO ( l ) CHC O O a q + HO a qZXYZ  
+ 
+ (c) 23 +
+42 43 HPO aq + H O(l) PO aq + H O aqZXYZ  
+ 
+ (d) +
+25 3 2 25 2 3CHN H a q + HO ( l ) CHN H a q + HO a qZXYZ  
+
+=== PDF PAGE 733 ===
+Chapter 16: Acids and Bases 
+ 7 3 3   
+3. (E) The acids (proton donors) and bases (pro ton acceptors) are labeled below their 
+formulas. Remember that a proton, in  Brønsted-Lowry acid-base theory, is H+. 
+ 
+ (a) +
+23 HOBr(aq) + H O(l)  H O (aq)  +  OBr (aq) 
+   acid   base acid  baseZXYZ 
+ 
+ (b) 2 +
+42 3 4  HSO (aq)  + H O(l)   H O (aq)   +   SO (aq) 
+     acid          base                  acid           baseZXYZ 
+ 
+ (c) 22  HS (aq)   +   H O(l)   H S(aq)   +  OH (aq) 
+ base                 acid        acid               baseZXYZ 
+ 
+ (d) 65 3 65 2 2 CHN H ( a q )    +   O H ( a q )     CHN H( a q )    +    HO ( l )  
+     acid base             base          acid ZXYZ 
+ 
+ 
+4. (E) For each amphiprotic substance, we write both its acid and base hydrolysis reaction.  
+Even for the substances that are not usually  considered amphiprot ic, both reactions are 
+written, but one of them is labeled as unlikel y. In some instances we have written an 
+oxygen as  to keep track of it through the reaction. 
+2+
+23 22 H+ H O + H O u n l i k e l y H+ H O H + O H    ZXZ X YZY Z  
+++
+42 3 3 4NH + H O NH + H O NH  has no  pairs that can be donated e ZXYZ  
+++
+22 3 22 3 H+ H O H + H O H+ H O H + O H   ZXZ X YZY Z 
+2+
+23 2 2 HS + H O S + H O HS + H O H S + OH  ZX ZX YZ YZ
+22 2 2 NO cannot act as an acid, (no protons) NO + H O HNO + OH ZXYZ 
+2 +
+32 3 3 32 2 3 HCO + H O CO + H O HCO + H O H CO + OH  ZX ZX YZ YZ 
+++
+23 22unlikely HBr + H O H O + Br HBr + H O H Br + OH ZX ZX YZ YZ 
+ 
+5. ( E )  Answer (b), NH3, is correct. HC H O23 2  will react most complete ly with the strongest 
+base. 3NO and Cl are very weak bases. HO2 is a weak base, but it is amphiprotic, 
+acting as an acid (donating prot ons), as in the presence of NH3. Thus, NH3 must be the 
+strongest base and the most e ffective in deprotonating HC H O23 2 . 
+ 
+6. (M) Lewis structures are gi ven below each equation. 
+(a) +
+34 2 2NH l NH + NHZZXYZZ   
+ 
+                                                     +                                             
+ 
+ 
+ 2 H N H
+HHNH
+HH
+HNH
+
+=== PDF PAGE 734 ===
+Chapter 16: Acids and Bases 
+734 (b) +
+2 2HF l     H F + FZXYZ  
+ FH
+HFFH FH+ +
+ 
+ 
+(c) +
+33 2 3 2CH OH l CH OH + CH OZXYZ  
+ 
+(d) +
+232 22 32 2 32 2HC H O l H C H O + C H OZXYZ  
+(e) 24 34 4 2 H SO ( )    2 H SO HSO l ZXYZ  
+ 
+ 
+7. ( E )  The principle we will follow here is that, in  terms of their concen trations, the weaker 
+acid and the weaker base will predominate at equilibrium. The reason for this is that a 
+strong acid will do a good job of donating its protons and, having done so, its conjugate 
+base will be left behind. The preferred direction is:  
+ 
+ 
+strong acid +  strong base o weak (conjugate) base +  weak (conjugate) acid 
+ 
+ 
+(a) The reaction will favor the forward direction because OH (a strong base) !NH3 (a 
+weak base) and 42NH (relatively strong weak acid) H O (very weak acid)! . 
+ 
+ 
+(b) T h e  r e a c t i o n  w i l l  f a v o r  t h e  r e v e r s e  d i r e c t i o n  b e c a u s e  H N O H S O34! (a weak acid 
+in the second ionization) (acting as acids), and SO NO42
+3! (acting as bases). 
+ 
+ 
+(c) T h e  r e a c t i o n  w i l l  f a v o r  t h e  r e v e r s e  d i r e c t i o n  b e c a u s e  H C H O C H O H23 2 3 !  (not 
+usually thought of as an acid)  (acting as acids), and CH O C H O32 3 2 !  (acting as 
+bases). 
+ 2 H C O
+HHCO
+HH
+H
+HHH
+HCO
+HH
+2 H C C
+HHCC
+HH
+H
+OOOHO
+HH
+HCC
+HH
+OO
+SOO
+OH
+OH SOO
+OH
+OH + + SOO
+OH
+OSOO
+OH
+OH
+H +
+
+=== PDF PAGE 735 ===
+Chapter 16: Acids and Bases 
+ 7 3 5  8. (M) The principle we follow here is that, in te rms of their concentra tions, the weaker acid 
+and the weaker base predominate at equilibr ium. This is because a strong acid will do a 
+good job of donating its protons and, having don e so, its conjugate base will remain in 
+solution. The preferred direction is:  
+ 
+ 
+strong acid +  strong base o weak (conjugate) base +  weak (conjugate) acid 
+ 
+ 
+(a) T h e  r e a c t i o n  w i l l  f a v o r  t h e  f o r w a r d  d i r e c t i o n  b e c a u s e  H C H O23 2  (a moderate acid) 
+!HCO3 (a rather weak acid) (acting as acids) and CO C H O32
+23 2 !  (acting as 
+bases). 
+ 
+(b) T h e  r e a c t i o n  w i l l  f a v o r  t h e  r e v e r s e  d i r e c t i o n  b e c a u s e  HClO4 (a strong acid) 
+!HNO2 (acting as acids), and NO ClO24! (acting as bases). 
+ 
+(c) T h e  r e a c t i o n  w i l l  f a v o r  t h e  f o r w a r d  d i r e c t i o n ,  b e c a u s e  23 3HC O H C O! (acting as 
+acids) (because KK12!) and CO HCO32
+3! (acting as bases). 
+ 
+Strong Acids, Strong Bases, and pH 
+ 
+9. (M) All of the solutes are strong acids or strong bases.  
+(a) +
++ 3
+33
+31m o l  HOHO =0 . 0 0 1 6 5M  H N O 0 . 0 0 1 6 5M1m o l  H N Oªº u ¬¼ 
+14
+12 w
++
+31.0 10OH = = = 6.1 10 M0.00165M HOK
+ uªº u¬¼ªº¬¼ 
+ 
+(b) 1m o l  O HOH = 0.0087 M KOH 0.0087 M1m o l  K O H
+ªº u ¬¼ 
+14
++1 2 w
+31.0 10HO = =   =   1 . 1 1 0 M0.0087M OHK
+
+uªº u¬¼ªº¬¼ 
+ 
+ (c)    
+2
+22m o l  O HOH = 0.00213 M Sr OH 0.00426 M1mol Sr OH
+ªº u ¬¼ 
+ 14
++1 2 w
+31.0 10HO = =   =   2 . 3 1 0 M0.00426 M OHK
+
+uªº u¬¼ªº¬¼ 
+ 
+ 
+ (d) +
++4 4 3
+31mol H OHO =5 . 8 1 0 M  H I 5 . 8 1 0 M1mol HIªº uu  u¬¼ 
+ 14
+11 w
+4 +
+31.0 10OH = =   1.7 10 M5.8 10 M HOK
+
+uªº  u¬¼u ªº¬¼ 
+ 
+
+=== PDF PAGE 736 ===
+Chapter 16: Acids and Bases 
+736 10. (M) Again, all of the solutes are strong acids or strong bases.  
+(a) 
++
++ 3
+31m o l  HOHO =0 . 0 0 4 5M  H C l =0 . 0 0 4 5M1m o l  H C l
+pH = log 0.0045 = 2.35ªº u¬¼
+ 
+ 
+ (b) 
++
++4 4 3
+33
+3
+41m o l  HOHO =6 . 1 4 1 0 M  H N O =6 . 1 4 1 0 M1m o l  H N O
+pH = log 6.14 10 = 3.21
+ªº uu u¬¼
+u 
+ 
+ (c) 
+1m o l  O HOH = 0.00683 M NaOH = 0.00683M1m o l  N a O H
+pOH = log 0.00683 = 2.166 and pH = 14.000 pOH = 14.000 2.166 = 11.83
+ªº u¬¼
+  
+ 
+ (d) 
+33
+2
+2
+32m o l  O HOH = 4.8 10 M Ba OH = 9.6 10 M1m o l  B a O H
+pOH = log 9.6 10 = 2.02 pH = 14.00 2.02 = 11.98
+ 
+ªº uu u¬¼
+u  
+ 
+11. ( E )  
+
+ 22 22
+22 223.9 g Ba OH 8H O 1m o l  B a O H 8 HO 1000 mL 2m o l  O HOH =
+100 mL soln 1 L 315.5 g Ba OH 8H O 1 mol Ba OH 8H O
+=0 . 2 5M
+ uu u
+ªº¬¼ 
+14
++1 4 w
+314 1.0 10HO = = =4 . 0 1 0 M
+0.25 M OH OHpH = log 4.0 10 = 13.40K
+
+  uu ªº u¬¼ªº¬¼ 
+ 
+12. (M) The dissolved Ca OH b g2 is completely dissociated into ions.  
+pOH pH =1 4 . 0 0 =1 4 . 0 0 1 2 . 3 5=1 . 6 5   
+pOH 1 65 2OH = 10 = 10 = 2.2 10  M OH = 0.022 M OH    ªº u¬¼ 
+ 
+
+
+22 2
+22
+2
+21m o l  C a O H 7 4 . 0 9g  C a O H 1 0 0 0m gC a O H 0.022 mol OHsolubility =1L  s o l n 2m o l  O H 1m o l  C a O H 1gC a O H
+8.1 10 mg Ca OH               =1L  s o l n
+uu u
+u 
+In 100 mL the solubility is 2
+2
+28.1 10 mg Ca OH 1L100 mL = 81 mg Ca OH1000 mL 1 L solnuuu  
+ 
+
+=== PDF PAGE 737 ===
+Chapter 16: Acids and Bases 
+ 7 3 7  13. ( M )  First we determine the moles of HCl, and then its concentration. 
+ 
+moles 3
+111a t m751 mmHg 0.205 L760 mmHgHCl  =   8.34 10 mol HCl0.08206 L atm mol K 296 KPV
+RT
+§·uu ¨¸©¹  uu  
+ 
++ 3
++ 3 3
+31m o l  HO 8.34 10 mol HClHO = =1 . 9 6 1 0 M4.25 L soln 1 mol HCl
+ uªº uu¬¼ 
+ 
+14. (E) First determine the concentration of NaOH, then of OH. 
+ 
+0.606 mol NaOH 1 mol OH0.125 L1L 1m o lN a O HOH = = 0.00505 M15.0 L final solution
+uu
+ªº¬¼ 
+ 
+ pOH = log 0.00505 M = 2.297 pH = 14.00 2.297 = 11.703   
+ 
+15. (E) First determine the amount of HCl, and then  the volume of the concentrated solution 
+required. 
+amount HCl Lmol H O
+L solnmol HCl
+mol H Omol HCl =1 2 . 510
+11
+1=0 . 0 9 921 0
+3+
+3+uu
+ 
+ 
+solution36.46 g HCl 100.0 g soln 1 mL soln=0 . 0 9 9m o l  H C l =8 . 5m L  s o l n1m o l  H C l 3 6 . 0g  H C l 1 . 1 8g  s o l nV uuu  
+ 
+16. (E) First we determine the amount of KOH, and th en the volume of the concentrated solution 
+required. 
+ 
+pOH pH OH MpOH=1 4 . 0 0 =1 4 . 0 0 1 1 . 5 5=2 . 4 5 =1 0 =1 0 =0 . 0 0 3 524 5  
+ 
+amount KOH LM mol OH
+L solnmol KOH
+mol OHmol KOH =2 5 . 00.0035
+11
+1=0 . 0 8 8 uu
+ 
+ 
+solution56.11 g KOH 100.0 g soln 1 mL soln=0 . 0 8 8m o l  K O H =2 9m L  s o l n1m o l  K O H 1 5 . 0g  K O H 1 . 1 4g  s o l nV uu u  
+ 
+17. (E) The volume of HCl(aq) needed is determined by first finding the amount of NH aq3bg 
+present, and then realizing that acid and base react in a 1:1 molar ratio. 
+ 
++
+33
+HCl +
+3 30.265 mol NH 1 mol H O 1m o l  H C l 1L  a c i d=1 . 2 5L  b a s e1L  b a s e 1m o l  N H 6 . 1 5m o l  H C l 1m o l  H O
+=0 . 0 5 3 9L  a c i d   o r  5 3 . 9  m L  a c i d .V uu u u 
+ 
+
+=== PDF PAGE 738 ===
+Chapter 16: Acids and Bases 
+738 18. (M) NH3 and HCl react in a 1:1 molar ratio. A ccording to Avogadro’s hypothesis, equal 
+volumes of gases at the same temperature and pressure contain equal numbers of moles.  
+Thus, the volume of H 2(g) at 762 mmHg and 21.0DC t h a t  i s  e q u i v a l e n t  t o  2 8 . 2  L  o f  H 2(g) 
+at 742 mmHg and 25.0DCw i l l  b e  e q u a l  t o  t h e  v o l u m e  o f  N H 3(g) needed for stoichiometric 
+neutralization. 
+ 
+ 
+
+
+33
+3 NH g273.2 + 21.0 K 1 L NH g 742 mmHg=2 8 . 2L  H C l g =2 7 . 1L  N H g762 mmHg 273.2 + 25.0 K 1 L HCl gV uu u  
+ 
+Alternatively, we can solve the ideal gas equa tion for the amount of each gas, and then, by 
+equating these two expressions, we can find the volume of NH3 needed. 
+ 
+nRKnV
+RK{HCl} =742 mmHg 28.2 L{NH }mmHg NH }
+33 
+  298 2762
+294 2 .{
+. 
+ 
+742 mmHg 28.2 L mmHg NH }3 
+  RKV
+RK 298 2762
+294 2 .{
+. T h i s  y i e l d s  33 {NH } 27.1 L NH (g)V  
+ 
+19. (M) Here we determine the amounts of H O3+ and OH and then the amount of the one 
+that is in excess. We express molar concen tration in millimoles/milliliter, equivalent to 
+mol/L. 
+ 
+50.000.0155
+11
+1=0 . 7 7 53+
+3+mLmmol HI
+mL solnmmol H O
+mmol HImmol H O uu  
+ 
+75.000.0106
+11
+1=0 . 7 9 5 mLmmol KOH
+mL solnmmol OH
+mmol KOHmmol OH uu
+ 
+ 
+The net reaction is +
+32HO a q + O H a q 2 HO ( l )o .  
+ 
+There is an excess of OH of ( 0.795 0.775 =) 0.020 mmol OH.  
+Thus, this is a basic solution. The total so lution volume is (50.00 + 75.00 = ) 125.00 mL. 
+ 
+44 0.020 mmol OHOH = = 1.6 10 M, pOH = log 1.6 10 = 3.80, pH = 10.20125.00 mL
+ ªº u u¬¼ 
+20. (M) In each case, we need to determine the HO3+ or OH of each solution being 
+mixed, and then the amount of H O3+ or OH, so that we can determine the amount in 
+excess. We express molar concentration in millimoles/milliliter, equivalent to mol/L. 
+ 
++2 1 2 3 + 3 +
+33 3HO = 1 0 =7 . 6 1 0 M m o l e s  HO =2 5 . 0 0m L 7 . 6 1 0 M=0 . 1 9m m o l  HO ªº uu u¬¼
+ 
+pOH OH M =1 4 . 0 0 1 2 . 6 5=1 . 3 5 =1 0 =4 . 5 1 013 5 2u  
+ 
+amount OH mL M mmol OH uu =2 5 . 0 0 4 . 5 1 0 =1 . 1 32 
+ 
+
+=== PDF PAGE 739 ===
+Chapter 16: Acids and Bases 
+ 7 3 9  There is excess OH in the amount of 0. 94 mmol (=1.13 mmol OH– – 0.19 mmol H 3O+).  
+ 
+22 0.94 mmol OH
+25.00 mL + 25.00 mLOH = =1 . 8 8 1 0 M      p O H= l o g 1 . 8 8 1 0 =1 . 7 3 p H = 1 2 . 2 7
+ ªº u u¬¼ 
+ 
+ 
+Weak Acids, Weak  Bases, and pH 
+ 
+21. ( M )  We organize the solution around th e balanced chemical equation. 
+Equation: 
+Initial: 
+Changes: 
+Equil: 
+ 
+ 22 HNO (aq)      +         H O(l)
+0.143 M   — 
+     Mx  — 0.143  M x  — ZXYZ
+ 
+ +
+32HO ( a q )       +         N O ( a q ) 
+0 M|        0 M 
+ + Mx     + Mx 
+   Mx                   Mx 
+ 
++2232 4
+a
+2
+4HO N O
+ =  7.2×10    (if 0.143)HNO 0.143 0.143
+=0 . 1 4 3 7 . 2 1 0 0 . 0 1 0 MxxKxx
+x
+
+ªº
+«»¬¼
+ªº ªº¬¼ ¬¼  
+uu  
+ 
+ 
+We have assumed that 0.143 Mx , an almost acceptable assumption. Another cycle of 
+approximations yields: 
+ 
+4+
+3 =( 0 . 1 4 30 . 0 1 0 )7 . 2 1 0 0 . 0 0 9 8 M[ H O ] p H l o g ( 0 . 0 0 9 8 ) 2 . 0 1xu u       
+This is the same result as is determined with the quadratic formula roots equation. 
+ 
+22. (M) We organize the solution around the balanced  chemical equation, and solve first for 
+OH 
++
+25 2 2 25 3 Equation : C H NH (aq)     +     H O(l)         OH (aq) + C H NH (aq)
+Initial : 0.085 M          0 M 0 M
+Changes :  M   +  M  +  M
+Equil : 0.085  M      M    Mxx x
+xx x
+|
+
+ZZXYZZ
+ 
+ 
++2225 34
+b
+25 2OH C H NH
+== = 4 . 3 1 0 a s s u m i n g  0 . 0 8 5CHN H 0 . 0 8 5 0 . 0 8 5xxKxx
+
+ªº
+«»¬¼ªºªº¬¼¬¼u| 
+ 
+x=0 0 8 54 3 1 0 0 0 0 6 04.. .uu  M 
+ 
+We have assumed that 0.085x M, an almost acceptable assumption. Another cycle of 
+approximations yields: 
+ 
+x=0 0 8 5 0 0 0 6 04 3 1 0 0 0 0 5 84(. . ) . . ] u u  M=[ O H  Y e t  a n o t h e r  c y c l e  p r o d u c e s :  
+ 
+
+=== PDF PAGE 740 ===
+Chapter 16: Acids and Bases 
+740 4(0.085 0.0058) 4.3 10 0.0058 M [OH ] pOH log(0.0058) 2.24 x  u u       
+ 
+pH HO MpH=1 4 . 0 0 2 . 2 4=1 1 . 7 6 =1 0 =1 0 =1 . 7 1 03+ 11 76 12u  
+ 
+This is the same result as determined with the quadratic formula roots equation. 
+ 
+23. (M)  
+ ( a )  T h e  s e t - u p  i s  b a s e d  o n  t h e  b a lanced chemical equation. 
+Equation:  
+Initial: 
+Changes: 
+Equil: 
+ 
+ 872 2 HC H O (aq) + H O(l)  
+0.186 M    — 
+      Mx   — 0.186  M x  — ZXYZ 
+  
+  
+  +
+3HO ( a q ) +  
+ 0 M|  
+  + Mx  
+    Mx  872CHO ( a q )
+   0 M  
++ Mx  
+   Mx 
+ 
+2
+5 38 7 2
+a
+872[H O ][C H O ]4.9 10[HC H O ] 0.186 0.186xxxKx 
+  u   | 
+ 
+x=0 1 8 64 91 0 0 0 0 3 05.. . ] [uu    M=[ H O C H O ]3+
+872  
+0.0030 M is less than 5 % OF 0.186 M,  thus, the approximation is valid. 
+ 
+ ( b )   The set-up is based on the ba lanced chemical equation. 
+ 
+ 
++2238 7 25 +
+a 3
+872HO CHO
+=4 . 9 1 0 = = =0 . 0 0 2 4  M= HOHC H O 0.121 0.121xxKxx
+
+ªº
+«»¬¼ªºªº¬¼¬¼ªº u|¬¼ 
+ 
+Assumption 0.121, x is correct. pH log =0 . 0 0 2 4 = 2 . 6 2b g  
+ 
+24. (E) 
+ >@
+>@352 initial
+352 equilibrium0.275 mol 1000 mLHC H O = = 0.440 M625 mL 1 L
+HC H O = 0.440 M 0.00239 M = 0.438 M§· § ·
+¨¸ ¨ ¸©¹ © ¹
+ 
+ 
+KaHO CHO
+HC H O==0.00239
+0.438=1 . 3 0 1 03+
+352
+3522
+5
+LNMOQPub g 
+ Equation: 872 2 HC H O (aq) + H O(l)ZZXYZZ+
+3HO ( a q )   872CHO( a q )
+Initial:  0.121 M    —   |0M 0 M 
+Changes:   Mx    —   + Mx  + Mx 
+Equil:  0.121  M x  —   Mx   Mx 
+
+=== PDF PAGE 741 ===
+Chapter 16: Acids and Bases 
+ 7 4 1  25. (M) We base our solution on the ba lanced chemical equation. 
+HO M3+1 5 6 2=1 0 =2 . 8 1 0u 
+ +
+22 23 Equation : CH FCOOH aq  +  H O(l)  CH FCOO aq + H O aq
+Initial : 0.318 M                      0 M          0 M
+Changes : 0.028 M      + 0.028 M      + 0.028 M
+Equil : 0.290 M      0.028 M    0.028 M
+|
+
+|ZZXYZZ
+ 
+ 
+KaHO C HF C O O
+CH FCOOH==0.028 0.028
+0.290=2 . 7 1 03+
+2
+23
+ub gb g 
+ 
+26. (M) HC H Og
+Lmol HC H O
+g HC H OMM61 1261 12
+61 122=11
+11
+116.2=9 . 5 1 0 =0 . 0 9 5 uu 
+ 
++2 943
+3equilHO = 1 0 = 1 . 1 1 0 M=0 . 0 0 1 1 Mªº u¬¼ 
+ 
+The stoichiometry of the reaction, written below, indicates that HO CH O3+
+61 12= 
+ 
++
+61 12 2 61 12 3 Equation : HC H O (aq)  +   H O(l) C H O (aq) + H O (aq)
+Initial : 0.095 M 0 M     0 M
+Changes : 0.0011 M +0.0011 M     + 0.0011 M
+Equil : 0.094 M 0.0011 M    0.0011 M
+|
+
+ZZXYZZ
+ 
+ 
+KaCH O HO
+HC H O==0.0011
+0.094=1 . 3 1 061 12 3+
+61 122
+5
+LNMOQPub g 
+ 
+27. (M) Here we need to find the molarity S of the acid needed that yields+2 8 53
+3HO = 1 0 = 1 . 4 1 0 Mªº u¬¼ 
+ 
+Equation:  752 2 HC H O (aq)   +    H O(l)  ZXYZ+
+3HO ( a q )  + 752CHO ( a q ) 
+Initial:         S    —     0  M        0  M  
+Changes:  0.0014 M    —   +0.0014M    +0.0014M  
+Equil:  S0.0014M    —   0 . 0 0 1 4  M    0 . 0 0 1 4  M  
+ 
+KSSaHO CHO
+HC H O==0.0014
+0.0014=6 . 3 1 0 0 . 0 0 1 4=0.0014
+6.3 10=0 . 0 3 13+
+75 2
+75 22
+52
+5
+LNMOQP
+uub g b g 
+ >@752 =0 . 0 3 1 +0 . 0 0 1 4=0 . 0 3 2M= H C HOS  
+ 
+752 752
+752
+7520.032 mol HC H O 122.1 g HC H O 1L350.0 mL = 1.4 g HC H O1000 mL 1 L soln 1 mol HC H Ouu u  
+ 
+
+=== PDF PAGE 742 ===
+Chapter 16: Acids and Bases 
+742 28. (M) First we find OH and then use the Kb expression to find >@33(CH ) N  
+ 
+pOH 2 88pOH = 14.00 pH = 14.00 11.12 = 2.88 OH = 10 = 10 = 0.0013 M ªº ¬¼ 
+ 
+>@
+>@>@2 +
+33 5
+b 33 33 equil
+33 33 equil equil(CH ) NH OH 0.0013=6 . 3 1 0 = = ( C H ) N =0 . 0 2 7M  ( C H ) N(CH ) N (CH ) NK
+ªº ª º¬¼ ¬ ¼u  
+
+33 initial
+33 initialCH N = 0.027 M(equil. concentration) + 0.0013 M(concentration ionized)
+CH N = 0.028 Mªº¬¼
+ªº¬¼ 
+ 
+29. (M) We use the balanced chemical equation, then solve using the quadratic formula. 
+ 
++
+22 3 2 Equation : HClO (aq)     +       H O(l)               H O (aq)       +    ClO (aq)
+Initial : 0.55 M                         0M   0M
+Changes :  M     + M      +  M
+Equil : 0.55  M    M            Mxx x
+xx x
+|
+
+ZZXYZZ
+ 
+ 
++23222
+a
+2HO C l O
+== = 1 . 1 1 0 = 0 . 0 1 1    = 0 . 0 0 6 1 0 . 0 1 1HClO 0.55xKx xx
+
+ªº
+«»¬¼ªºªº¬¼¬¼u 
+ xx2+0 . 0 1 1 0 . 0 0 6 1=0   
+ 
+2
++
+340 . 0 1 1 0 . 0 0 0 1 2 1 + 0 . 0 2 4 40.073 M H O22bb a cxar   rªº     ¬¼ 
+The method of successive approximations conver ges to the same answer in four cycles. 
+pH log H O log pOH pH = =0 . 0 7 3 = 1 . 1 4 = 1 4 . 0 0= 1 4 . 0 0 1 . 1 4 = 1 2 . 8 63+  b g  
+pOH 12 86 13OH = 10 = 10 = 1.4 10  M  ªº u¬¼ 
+30. (M) Organize the solution around the balanced chemical equation, and solve first for 
+OH. 
+ 
++
+32 2 33 Equation : CH NH (aq) + H O(l) OH (aq) + CH NH (aq)
+Initial : 0.386 M    0 M   0 M
+Changes :  M    + M     + M
+Equil : 0.386  M    M    Mxx x
+xx x
+|
+
+ZXYZ
+ 
+ 
++22334
+b
+32OH CH NH
+== = 4 . 2 1 0 a s s u m i n g 0 . 3 8 6CH NH 0.386 0.386xxKxx
+
+ªº
+«»¬¼ªºªº¬¼¬¼u| 
+ 
+x=0 3 8 64 21 0 0 0 1 34.. . ]uu  M=[ O H p O H= l o g ( 0 . 0 1 3 )=1 . 8 9-  
+ 
+
+=== PDF PAGE 743 ===
+Chapter 16: Acids and Bases 
+ 7 4 3  + pH 12 11 13
+3 pH = 14.00 1.89 = 12.11 H O = 10 = 10 = 7.8 10 M ªº u¬¼ 
+ 
+This is the same result as is determined with the quadratic equation roots formula. 
+ 
+31. (M)  
+>@10 7 2 10 7 2 2
+10 7 2
+21 0 7 2
+10 7 21g  C H N H 1m o l  C H N H 1.00 g H O 1000 mLCH N H =590 g H O 1 mL 1 L 143.2 g C H NH
+=0 . 0 1 2M  C H N Huu u
+ 
+ 
+ p 39 2 4
+b= 10 = 10 = 1.2 10bKK u 
+ 
+Equation:  10 7 2 2 CH N H ( a q )    + H O ( l )ZZXYZZOH (aq) +
+10 7 3CH N H ( a q )
+Initial:       0.012 M   —  0 M|       0 M 
+Changes:           Mx  —   + Mx    + Mx 
+Equil:  0.012  M x —      Mx        Mx 
+ 
+2210 7 34
+b
+10 7 2OH C H NH
+== = 1 . 2 1 0CH N H 0 . 0 1 2 0 . 0 1 2xxKx 
+
+ªº
+«»¬¼ªºªº¬¼¬¼u|   assuming 0.012x 
+ 
+x=0 0 1 21 21 0 0 0 0 1 24.. .uu   This is an almost acceptable assumption. Another 
+approximation cycle gives: 
+ 
+x=0 0 1 2 0 0 0 1 21 2 1 0 0 0 0 1 14(. . ) . . u u      Yet another cycle seems necessary. 
+ 
+4=( 0 . 0 1 20 . 0 0 1 1 ) 1 . 2 1 0 0 . 0 0 1 1 M[ O H ]xu u    
+The quadratic equation roots form ula provides the same answer. 
+ 
+pOH log OH log pH pOH == 0 . 0 0 1 1 = 2 . 9 6 = 1 4 . 0 0 = 1 1 . 0 4 bg  
+ 
+pH 11 04 12
+3HO 1 0 1 0 9 . 1 1 0  M     u  
+ 
+32. (M) The stoichiometry of the ioniza tion reaction indicates that  
+ 
+p +7 23 8
+36 4 2a HO = O CHN O , = 1 0 = 1 0 =5 . 9 1 0bKK  ªº ª º u¬¼ ¬ ¼ and  
+ 
+HO M3+4 5 3 5=1 0 =3 . 0 1 0u. We let S=t h e m o l a r  s o l u b i l i t y  o f  o-nitrophenol. 
+ 
+Equation:  64 2 2 HOC H NO (aq) + H O(l)ZZXYZZ64 2OC H NO (aq) +     +
+3HO ( a q )  
+Initial:            S  —       0  M   0 M| 
+Changes:  53.0 10  Mu  —  5+3.0 10  Mu 5+3.0 10  Mu
+Equil:  (53.0 10 ) MSu  —     53.0 10  Mu 53.0 10  Mu 
+ 
+
+=== PDF PAGE 744 ===
+Chapter 16: Acids and Bases 
+744 KSaOC H NO H O
+HOC H NO=5 . 9 1 0 = =3.0 10
+3.0 10864 2 3+
+65 252
+5uu
+u
+LNMOQP
+c h 
+ 
+SSuu
+uuu u u
+  3.0 10 =3.0 10
+5.9 10=1 . 5 1 0 =1 . 5 1 0 +3 . 0 1 0 =1 . 5 1 0552
+822 5 2 chMM M M  
+Hence, 
+ 
+solubilitymol HOC H NO
+L solng HOC H NO
+mol HOC H NOg HOC H NO L soln =1.5 10
+1139.1
+1=2 . 1 /2
+64 2 64 2
+64 264 2uu
+  
+ 
+33. (M) Here we determine HO3+ which, because of the stoi chiometry of the reaction, 
+equals232CHO .ªº¬¼ +p H 4 5 2 5
+32 3 2HO = 1 0 = 1 0 =3 . 0 1 0 M= CHO  ªº ªº u¬¼¬¼ 
+We solve forS, the concentration of HC H O23 2  in the 0.750 L solution before it dissociates. 
+ 
+Equation:  232 2 HC H O (aq) + H O(l)ZZXYZZ232CHO ( a q ) + +
+3HO ( a q )  
+Initial:         SM   —       0  M       |0M  
+Changes:   u3.0 105M  —  +3.0 105uM + 3 . 0 1 05uM
+Equil:  53.0 10  MSu  —     3.0 105uM 3 . 0 1 05uM 
+ 
+52
+5 32 3 2
+5
+232[H O ][C H O ] (3.0 10 )1.8 10[HC H O ] ( 3.0 10 )aKS 
+
+u  u  u 
+ 
+3.0 10 = 1.8 10 3.0 10 = 9.0 10 = 1.8 10 5.4 105255 1 0 5 1 0uu  u u u  u   ch c h SS  
+ 
+S=9.0 10 + 5.4 10
+1.8 10=8 . 0 1 010 10
+55 uu
+uu
+M   N o w  w e  d e t e r m i n e  t h e  m a s s  o f  v i n e g a r  n e e d e d .  
+ 
+5
+232 232
+232 2328.0 10 mol HC H O 60.05 g HC H O 100.0 g vinegarmass vinegar = 0.750 L1L  s o l n 1m o l  H C HO 5 . 7g  H C HO
+=0 . 0 6 3 g  v i n e g a ruuu u 
+ 
+34. (M) First we determine OH which, because of the stoi chiometry of the reaction, 
+equals NH4.  
+ 
+pOH 2 45 3
+4 pOH = 14.00 pH = 14.00 11.55 = 2.45 OH = 10 = 10 = 3.5 10 M = NH  ªºª º  u¬¼¬ ¼  
+ 
+We solve forS, the concentration of NH3 in the 0.625 L solution prior to dissociation. 
+
+=== PDF PAGE 745 ===
+Chapter 16: Acids and Bases 
+ 7 4 5   
+Equation:  32NH ( ) + H O(l) aqZZXYZZ4NH (aq) +OH (aq) 
+Initial:      SM     —       0  M     0 M| 
+Changes:  0.0035 M     —  +0.0035 M  +0.0035 M  
+Equil:  0.0035  MS  —     0 . 0 0 3 5  M     0 . 0 0 3 5  M  
+ 
+KSbNH OH
+NH== 1.810=0.0035
+0.00354
+352  
+LNMOQPub gb g 
+ 
+  2 55 5 80.0035 = 1.8 10 0.0035 = 1.225 10 = 1.8 10 6.3 10 SS  u u u  u  
+ 
+58
+51.225 10 + 6.3 10== 0 . 6 8 M1.8 10S
+uu
+u 
+ 
+Now we determine the volume of household ammonia needed  
+ 
+33
+ammonia
+330.68 mol NH 17.03 g NH 100.0 g soln 1 mL soln=0 . 6 2 5L  s o l n1L  s o l n 1m o l  N H 6 . 8g  N H 0 . 9 7g  s o l nV uu u u  
+ 
+ 
+35. (D)  
+(a)   nproplyamine = PVRT= 
+ -1 -11 atm316 Torr  0.275 L760 Torr
+0.08206 L atm K  mol 298.15 K§·u ¨¸©¹= 4.67 u 103 mol propylamine 
+ 
+  [propylamine] =n
+V=-34.67  10  moles
+0.500 Lu = 9.35 u 103 M     
+ 
+ Kb = 10pKb = 103.43 = 3.7 u 104 
+ C H 3CH 2CH 2NH 2(aq) + H 2O(l)ZXYZCH 3CH 2CH 2NH 3+(aq) + OH (aq)
+Initial 9.35 u 103 M —  0  M   | 0 M 
+Change x M —  + x M  + x M 
+Equil. (9.35 u 103 x) M —  x M  x M 
+ 
+  Kb = 3.7 u 104 =2
+-39.35  10  xxu or  3.5 u 106  3. 7u 104(x) = x2    
+ 
+  x2 + 3.7 u 104x  3.5 u 106 = 0   
+   
+   2=1 . 1 1 0  m L  h o u s e h o l d  a m m o n i a  s o l u t i o n u
+
+=== PDF PAGE 746 ===
+Chapter 16: Acids and Bases 
+746 Find x with the roots formula: 
+ 
+ 
+  -4 -4 2 -63.7  10  (3.7   10 )   4(1)( 3.5  10 ) 
+2(1)xu r u  u       
+ 
+  Therefore x = 1.695  u 103 M = [OH ]   pOH = 2.77 and pH = 11.23 
+ 
+ (b) [ O H] =  1.7 u 103 M = [NaOH]    (MM NaOH = 39.997 g mol1) 
+ 
+   nNaOH = (C)(V) =  1.7 u 103 M u 0.500 L = 8.5 u 104 moles NaOH   
+ 
+   m a s s  o f  N a O H  =  ( n)(MM NaOH) = 8.5 u 104 mol NaOH u 39.997 g NaOH/mol NaOH  
+ 
+   mass of NaOH = 0.034 g  NaOH(34 mg of NaOH)  
+ 
+   
+36. (M) Kb = 10pKb = 109.5 = 3.2  u 1010      MM quinoline  = 129.16 g mol1       
+ 
+         Solubility(25 qC) =0.6 g
+100 mL 
+ 
+ M o l a r  s o l u b i l i t y ( 2 5  qC) = 0.6 g
+100 mLu 1 mol 1000 mL
+129.16 g 1 Lu  = 0.046  M  (note: only 1 sig fig) 
+ 
+ C 9H7N(aq) + H 2O(l) UC9H7NH+(aq) + OH(aq) 
+Initial 0.046 M —  0  M   | 0 M 
+Change x M —  + x M  + x M 
+Equil. (0.046 x) M —  x M  x M 
+ 
+ 3 . 2  u 1010 =2
+0.046xx | 2
+0.046x,       x = 3.8  u 106 M   ( x << 0.046 , valid assumption) 
+ 
+ T h e r e f o r e ,   [ O H  ] = 4 u 106 M        pOH = 5.4 and pH = 8.6 
+ 
+37. (M)  If the molarity of acetic acid is doubled, we expect a lower initial pH (more H 3O+(aq)  
+in solution) and a lower percen t ionization as a result of the increase in concentration. The 
+ratio between [H 3O+] of concentration “M” a nd concentration 2 M is 21 . 4|.   Therefore, 
+(b), containing 14 H 3O+ symbols best represen ts the conditions (~(2)1/2  times greater). 
+ 
+38. (M)  If NH 3 is diluted to half its original molarity, we expect a lower pH (a lower [OH]) and a 
+higher percent ionization in the dilu ted sample.  The ratio between [OH–] of concentration “M” 
+and concentration 0.5 M is 0.5 0.71|.  Since the diagram represent M has 24 OH– symbols, 
+then diagram (c), containing 17 OH– symbols would be the correct choice. 
+ 
+
+=== PDF PAGE 747 ===
+Chapter 16: Acids and Bases 
+ 7 4 7  Percent Ionization 
+ 
+39. (M) Let us first compute the HO3+ in this solution. 
+Equation:  
+Initial:  
+Changes: 
+Equil:  352 2 HC H O (aq)   + H O(l)
+0.45 M   — 
+  Mx   — 
+0.45  M x  — ZZXYZZ+
+33 5 2HO ( a q ) + CHO ( a q ) 
+0 M|       0 M|  
+ + Mx         + Mx 
+   Mx              Mx 
+ 
++2233 5 248 9 5
+a
+352HO CHO
+== = 1 0 = 1 . 3 1 0HC H O 0.45 0.45xxKx
+
+ªº
+«»¬¼ªºªº¬¼¬¼u| 
+ x=2 . 4 1 03uM;  W e  h a v e  a s s u m e d  t h a t 0 . 4 5M x , an assumption that clearly is correct. 
+ 
+ (a) +33equil
+352 initialHO2.4 10 M== = 0 . 0 0 5 3 = d e g r e eHC H O 0.45 MD
+ªº
+«»¬¼ªºu ¬¼of ionization 
+ 
+ (b) %= 1 0 0 % 0 . 0 0 5 3 1 0 0 % 0 5 3 % ionization =Duu .  
+ 
+ 
+40. (M) For C 2H5NH 2 (ethylamine),  Kb = 4.3 u 104 
+ 
+ 
+ C2H5NH 2(aq) + H 2O(l)ZXYZC2H5NH 3+(aq) + OH(aq) 
+Initial 0.85 M —  0  M   | 0 M 
+Change x M —  + x  M  + x  M 
+Equil. (0.85 x) M —   x  M   x  M 
+ 
+ 4 . 3  u 104 = 2
+(0.85 ) Mx
+x | 2
+0.85 M x     x = 0.019 M  ( x << 0.85, thus a valid assumption) 
+ 
+ D e g r e e  o f  i o n i z a t i o n   D = 0.019 M
+0.85 M = 0.022     Percent ionization = D u 100% = 2.2 % 
+ 
+41. (M) Let x be the initial concentration of NH 3, hence, the amount dissociated is 0.042  x 
+ 
+ N H 3(aq) + H 2O(l)-5
+a = 1.8  10KuZZZZZZZZZ X YZZZZZZZZ ZNH 4+(aq) + OH-(aq) 
+Initial x M —  0  M  | 0 M 
+Change 0.042 x M —  +0.042 x M  +0.042 x M
+Equil. (1x0.042 x) M —  0 . 0 4 2 x M  0.042 x M 
+ =  0 . 9 5 8  x      
+ 
+
+=== PDF PAGE 748 ===
+Chapter 16: Acids and Bases 
+748 >@2
+4 5
+b
+3equilNH OH 0.042=1 . 8 1 0 = = =0 . 0 0 1 8 4NH [0.958 ]xKxx
+
+ªº
+«»¬¼ªº ª º¬¼ ¬ ¼u  
+>@5
+3initial1.8 10NH = 0.00978 0.00980.00184xMMu    
+ 
+42. (M) 
+ H C 3H5O2(aq) + H 2O(l)-5
+a = 1.3  10KuZZZZZZZZZ X YZZZZZZZZ ZC3H5O2(aq) + H 3O+(aq)
+Initial 0.100 M —  0  M  | 0 M 
+Change x M —  + x M  + x M 
+Equil. (0.100 x) M —  x M  x M 
+ 
+1.3 u 105 = 2
+0.100 Mxx | 2
+0.100x      x = 1.1 u 103  (x << 0.100, thus a valid assumption)
+Percent ionization = 0.0011
+0.100u 100% = 1.14  %   
+Next we need to find molarity of acetic acid that is 1.1% ionized 
+ 
+ H C 2H3O2(aq)    + H 2O(l)-5
+a=1.8  10K uZZZZZZZX Z YZZZZZZ ZZC2H3O2(aq) + H 3O+(aq) 
+Initial X M —  0  M   | 0 M 
+Change  1004 1.1 X M  
+—  +1004 1.1 X M  + 1004 1.1 X M 
+Equil. X  1004 1.1 X   
+= 0.9886  X M  
+—  
+1004 1.1 X M 
+= 0.0114  M  
+ 1004 1.1 X M 
+= 0.0114  M
+1.8 u 105 =21.14
+100 
+0.9886XX§·
+¨¸©¹= 1.3 u 104(X);    X = 0.138  M 
+ C o n s e q u e n t l y ,  a p p r o x i m a t e l y  0 . 1 4  m o l e s  o f  a c e tic acid must be dissolv ed in one liter of 
+water in order to have the same percent ionization as 0.100 M propionic acid. 
+ 
+43. (E) We would not expect these ionizations to be  correct because the calculated degree of 
+ionization is based on the assumption that the [HC 2H3O2]initial |[HC 2H3O2]initial  
+[HC 2H3O2]equil., which is invalid at the 13 and 42 per cent levels of ioni zation seen here. 
+ 
+44. (M) HC 2Cl3O2 (trichloroacetic acid) p Ka = 0.52       Ka = 100.52 = 0.30 
+ F o r  a  0 . 0 3 5  M  s o l u t i o n ,  t h e  a s s u m p t i o n  w i l l  n o t  work (the concentration is too small and 
+Ka is too large) Thus, we must solve th e problem using the quadratic equation. 
+ 
+ H C 2Cl3O2(aq) + H 2O(l)ZXYZC2Cl3O2(aq) +H 3O+(aq) 
+Initial 0.035 M —  0  M   | 0 M 
+Change x M —  + x M  + x M 
+Equil. (0.035  x) M —  x M  x M 
+
+=== PDF PAGE 749 ===
+Chapter 16: Acids and Bases 
+ 7 4 9    
+ 0 . 3 0  =2
+0.035xx or  0.0105   0.30( x) = x2    or  x2 + 0.30 x  0.0105  = 0 ; solve quadratic:   
+ 
+  
+ 2-0.30  (0.30) 4(1)(0.0105) 
+2(1)xr      Therefore x = 0.032 M = [H 3O+]    
+  
+ D e g r e e  o f  i o n i z a t i o n   D = 0.032 M
+0.035 M = 0.91     Percent ionization = D u 100% = 91. % 
+ 
+Polyprotic Acids 
+ 
+45. (E) Because H 3PO 4 is a weak acid, th ere is little HPO 42- (produced in the 2nd ionization) 
+compared to the H 3O+ (produced in the 1st ionization). In turn , there is little PO 43- (produced 
+in the 3rd ionization) compared to the HPO 42-, and very little compared to the H 3O+. 
+ 
+46. (E) The main estimate involves assuming that th e mass percents can be expressed as 0.057 
+g of 75% H PO34  per 100. mL of solution and 0.084 g of 75% H PO34  per 100. mL of 
+solution. That is, that the density of the a queous solution is essentially 1.00 g/mL. Based 
+on this assumption, the initial minimu m and maximum concentrations of H PO34 is: 
+ 
+34 34
+34
+34 34
+3475g H PO 1mol H PO0.057 g impure H PO100gimpure H PO 98.00 g H PO[H PO ] 0.0044 M1L100 mLsoln1000 mLuu
+  
+u 
+ 
+34 34
+34
+34 34
+3475g H PO 1mol H PO0.084g impure H PO100gimpure H PO 98.00 g H PO[H PO ] 0.0064 M1L100 mLsoln1000 mLuu
+  
+u 
+ 
+Equation: +
+34 2 24 3 HP O( a q ) + HO ( l ) HP O ( a q ) + HO ( a q )ZZXYZZ  
+Initial: 0.0044 M  — 0 M |0 M 
+Changes: xM   — +x M +x M 
+Equil: (0 . 0 0 4 4 x) M — x M x M 
+ 
+1+224 332 5
+a
+34HP O HO
+= == 7 . 1 1 0     + 0 . 0 0 7 1 3 . 1 1 0 = 0HP O 0 . 0 0 4 4xKx xx
+
+ªº
+«»¬¼ªº ªº¬¼ ¬¼u u 
+ 
+25 4
+3+
+340 . 0 0 7 1 5 . 0 1 0 + 1 . 2 1 0== = 3 . 0 1 0 M = H O22bb a cxa
+ r   r u uªº u¬¼ 
+ 
+
+=== PDF PAGE 750 ===
+Chapter 16: Acids and Bases 
+750 The set-up for the second concentration is the sa me as for the first, with the exception that 
+0.0044 M is replaced by 0.0064 M. 
+1+224 332 5
+a
+34HP O HO
+== = 7 . 1 1 0    + 0 . 0 0 7 1 4 . 5 1 0 = 0HP O 0 . 0 0 6 4xKx xx
+
+ªº
+«»¬¼ªº ªº¬¼ ¬¼u u 
+ 
+25 4
+3+
+340 . 0 0 7 1 5 . 0 1 0 + 1 . 8 1 0== = 4 . 0 1 0 M = H O22bb a cxa
+ r   r u uªº u¬¼ 
+ 
+The two values of pH now are determined, re presenting the pH range in a cola drink. 
+ 
+3pH = log 3.0 10 = 2.52u  3pH = log 4. 10 = 2.40u  
+ 
+47. (D) 
+ ( a )  Equation: +
+22 3HS ( a q )         +   HO ( l )        H S( a q ) + HO ( a q )ZZXYZZ  
+Initial: 0.075 M  — 0 M |0 M 
+Changes: x M   — +x M +x M 
+Equil: (0 . 0 7 5 x) M  — x M +x M 
+ 
+>@1
+2+22
+3 75 +
+a 3
+2
+52 1 9
+aHS H O
+= =1 . 0 1 0 = =8 . 7 1 0 M= H OHS 0.075 0.075
+HS = 8.7 10 M  and  S = = 1 10 MxxKxx
+K
+
+  ªº ª º¬¼ ¬ ¼ªº u|u¬¼
+ªº ªº uu¬¼ ¬¼ 
+ 
+(b) T h e  s e t - u p  f o r  t h i s  p r o b l e m  i s  t h e  s a m e  a s  for part (a), with 0.0050 M replacing 0.075 
+M as the initial value of HS2. 
+ 
+>@1+22
+3 75 +
+a 3
+2HS H O
+= =1 . 0 1 0 = =2 . 2 1 0 M= HOHS 0.0050 0.0050xxKxx
+ªº ª º¬¼ ¬ ¼ªº u| u¬¼ 
+252 1 9
+a HS = 2.2 10 M  and S = = 1 10 M K  ªº ªº uu¬¼ ¬¼ 
+ 
+ (c) T h e  s e t - u p  f o r  t h i s  p a r t  i s  t h e  s a m e  a s  f o r  p a r t  ( a ) ,  w i t h  1 . 01 05u M replacing 0.075 
+M as the initial value of HS2. The solution differs in that we cannot 
+assumex1.0 105u. Solve the quadratic equation to find the desired equilibrium 
+concentrations.  
+ 
+>@1+2
+3
+5
+27
+aHS H O
+HS 1.0 10== 1.010=xxK
+uªº ª º¬¼ ¬ ¼u  
+ 
+27 1 2  1 . 0 1 0   1 . 0 1 0  0xxu u   
+ 
+ 
+
+=== PDF PAGE 751 ===
+Chapter 16: Acids and Bases 
+ 7 5 1  
+71 41 2 1.0 10   1.0 10  4  1.0 10
+ = 2  1x u r u uu
+u 
+ 
+27+ 72 1 9
+3a =9 . 5 1 0 M= HO H S =9 . 5 1 0 M S = =1 1 0 MxK  ªº ª º ª º uu u¬¼ ¬ ¼ ¬ ¼ 
+ 
+48. (M) For H CO2317,= 4 . 4 1 0K u and K211=4 . 7 1 0 u 
+ 
+ (a) T h e  f i r s t  a c i d  i o n i z a t i o n  p r o c e e d s  t o  a  f a r greater extent than does the second and 
+determines the value of HO3+. 
+Equation:  23 2 HC O( a q )    +       HO ( l )  +
+3HO ( a q )  +  3 HCO (aq)
+Initial:  0.045 M   —  0 M|  0  M  
+Changes:  x M    —  +x M  +x M 
+Equil:  0.045 xb g M   —  x M  x M 
+ 
+Kx
+xx
+13+
+3
+232
+72
+==0.045=4 . 4 1 00.045HO H C O
+HC O
+LNMOQP
+u|      x=1 . 4 1 0 =4
+3+uMH O  
+ 
+(b) S i n c e  t h e  s e c o n d  i o n i z a t i o n  o c c u rs to only a limited extent, 
+4
+3 HCO = 1.4 10  M = 0.00014 M ªº u¬¼ 
+ 
+(c) W e  u s e  t h e  s e c o n d  i o n i z a t i o n  t o  d e t e r m i n e  CO32. 
+Equation:  
+ 
+ 
+ 
+Initial:  
+Changes:  
+Equil: 32 HCO (aq)   +   H O(l) 
+0.00014 M   — 
+ Mx    — 
+0.00014  M x  —   
+  +
+3HO ( a q )  
+0.00014 M  
++ Mx   0.00014 +  M x   2
+3CO (aq) 
+0 M  
++ Mx 
+ Mx 
+ 2 +
+3311
+2
+3HO C O 0.00014 + 0.00014== = 4 . 7 1 00.00014 0.00014 HCOxxxKx
+
+ªºªº¬¼¬¼u| ªº¬¼ 
+x=4 . 7 1 0 =11
+32u MC O  
+Again we assumed that 0.00014x  M, which clearly is the case. We also note that 
+our original assumption, that the second i onization is much less significant than the 
+first, also is a valid one. As an alternative to all of this, we could have recognized 
+that the concentration of th e divalent anion equals th e second ionization constant: 
+CO32
+2=K. 
+ 
+
+=== PDF PAGE 752 ===
+Chapter 16: Acids and Bases 
+752 49. (D) In all cases, of course, the first ionization of H SO24  is complete, and establishes the 
+initial values of HO3+ and HSO4. Thus, we need only deal with the second ionization 
+in each case. 
+ (a) Equation:                                          2+
+42 4 3 HSO (aq) +    H O(l) SO (aq) + H O (aq)ZXYZ  
+Initial: 0.75 M   —     0 M    0.75 M 
+Changes: x M   — +x M     +x M 
+Equil: (0 . 7 5 x) M  —    x M ( 0.75 +x) M 
+
+22 +
+43 2
+a 4
+4SO H O 0.75 + 0.75== 0 . 0 1 1 =    = 0 . 0 1 1  M = S O0.75 0.75 HSOxx xKxxªºªº¬¼¬¼ªº |¬¼ ªº¬¼ 
+ 
+We have assumed that 0.75x M, an assumption that clearly is correct. 
++
+43 HSO = 0.75 0.011 = 0.74 M H O = 0.75 + 0.011 = 0.76 Mªº ªº ¬¼ ¬¼ 
+ 
+(b) T h e  s e t - u p  f o r  t h i s  p a r t  i s  s i m i l a r  t o  p a rt (a), with the exception that 0.75 M is 
+replaced by 0.075 M. 
+24
+2+0 . 0 8 6 8 . 3 1 0 =0
+40 . 0 8 6 0 . 0 0 7 4 + 0 . 0 0 3 3== = 0 . 0 0 8 7 M22xx
+bb a cxau
+r   r  
+2
+4 =0 . 0 0 8 7M= S Oxªº¬¼ 
+ 
++
+43 HSO = 0.075 0.0087 = 0.066M H O = 0.075 + 0.0088M = 0.084 Mªº ªº ¬¼ ¬¼ 
+ 
+(c) A g a i n ,  t h e  s e t - u p  i s  t h e  s a m e  a s  f o r  p a rt (a), with the exception that 0.75 M is 
+replaced by 0.00075 M 
+ 
+22 2
+43
+a 26
+40.011(0.00075 ) 0.00075 [SO ][H O ] (0.00075 )0.0110.00075 0.0118 8.3 10 0 [HSO ]xxx xxKx xx 
+        u   
+xbb a c
+a=4
+2=0.0118 1.39 10 + 3.3 10
+2=6 . 6 1 024 5
+4 r   r u uu
+ 
+ 
+2 4 5
+44 =6 . 6 1 0 M= S O H S O =0 . 0 0 0 7 5 0 . 0 0 0 6 6=9 1 0 Mx  ªº ª º u u¬¼ ¬ ¼ 
+ 
++3 +
+3 3 HO =0 . 0 0 0 7 5 + 0 . 0 0 0 6 6 M= 1 . 4 1 1 0 M HOªº ªº u¬¼ ¬¼ is almost twice the initial 
+value of HS O24 .  Thus, the second ionization of H SO24  is nearly complete in this 
+dilute solution. 22 +
+432
+a
+4SO H O 0.075 +== 0 . 0 1 1 = 0 . 0 1 1 0 . 0 7 5 = 0 . 0 7 5 +0.075 HSOxxKx x xx
+ªºªº¬¼¬¼ ªº¬¼
+
+=== PDF PAGE 753 ===
+Chapter 16: Acids and Bases 
+ 7 5 3   
+50. (D) First we determine HO3+, with the calculation based on the balanced chemical 
+equation. 
+ 
+Equation:   +
+22 2 344HOOC CH COOH aq + H O(l) HOOC CH COO aq + H O aqZXYZ  
+Initial: 0.10 M  —   0 M |0 M 
+Changes:   xM  — +x M +x M 
+Equil: 0.10 xb gM  —  x M    x M 
+ 
+Kxx
+xx
+aHO H O O CC H C O O
+HOOC CH COOH1== 3.910=0.10 0.103+
+24
+2452 b g
+FHIKu
+| 
+ 
+x u u  u010 39 10 20 1053.. . ] M=[ H O3+ 
+ 
+We see that our simplifying assumption, that 0.10x M, is indeed valid. Now we 
+consider the second ionization. We  shall see that very little H O3+ is produced in this 
+ionization because of the sm all size of two numbers: Ka2and HOOC CH COO24b g. 
+Again we base our calculation on the balanced chemical equation. 
+ 
+Equation:  +
+22 2 344HOOC CH COO aq + H O(l) OOC CH COO aq + H O aq ZXYZ  
+Initial:     2.0 103uM  —     0 M     2.0 103u M 
+Changes:    yM  — +y M       +y M 
+Equil: 0.0020 y b gM —    y M 0.0020 + y b g M 
+ 
+Kyy
+yy
+aHO O O CC H C O O
+HOOC CH COO2== 3.910=0.0020 +
+0.00200.0020
+0.00203+
+24
+246
+FHIKu|b g bg 
+ 
+6
+24 3.9 10 M = [ OOC(CH ) COO ]y  u  
+ 
+Again, we see that our assumption, that 0.0020 y  M, is valid. In addition, we also note 
+that virtually no H O3+ is created in this second ioniza tion. The concentrations of all 
+species have been calculated above, with the exception of OH. 
+ 
+14
+12 w
+2 3 4 +
+31.0 10OH = = = 5.0 10 M; HOOC CH COOH = 0.10 M2.0 10 HOK
+
+uªº ªº u¬¼ ¬¼u ªº¬¼ 
+ 
++3 6
+32 2 44HO = H O O C C H C O O =2 . 0 1 0 M ; O O C C H C O O =3 . 9 1 0 M  ªº ª º ª º uu¬¼ ¬ ¼ ¬ ¼ 
+
+=== PDF PAGE 754 ===
+Chapter 16: Acids and Bases 
+754  
+51. (M) 
+ ( a )  R e c a l l  t h a t  a  b a s e  i s  a  p r o t o n  acceptor, in this case, accepting H+ from H O2. 
+1
+2+
+20 24 2 2 2 20 24 2 2 b
+2+ +
+20 24 2 2 2 20 24 2 2 2 bFirst ionization : C H O N + H O C H O N H + OH p = 6.0
+Second ionization : C H O N H + H O C H O N H + OH p = 9.8K
+K
+ZZXYZZ
+ZZXYZZ 
+(b)
+ 
+13
+20 24 2 2
+60 6
+b1molquinine1.00g quinine324.4g quinine[C H O N ] 1.62 10 M   1L1900 mL1000 mL
+10 1 10 K
+u
+  u
+u
+  u 
+ 
+Because the OH- produced in (a) suppresses th e reaction in (b) and since K b1 >> Kb2, 
+the solution’s pH is determined almost entirely by the first base hydrolysis of the 
+first reaction.  Once again, we set-up the I.C.E. table and solve for the [OH ] in this 
+case: 
+Equation: +
+20 24 2 2 2 20 24 2 2CHO N ( a q ) +H O ( l ) CHO N H ( a q ) + O H ( a q )ZZXYZZ  
+Initial: 0.00162 M   —     0 M |0 M  
+Changes: x M   — +x M  +x M 
+Equil: 0.00162 x b gM —    x M    x M 
+ 
+1+22
+20 24 2 2 65
+b
+20 24 2 2CHO N H O H
+== 1 1 0 = 4 1 0 MCHO N 0 . 0 0 1 6 2 0 . 0 0 1 6 2xxKxx
+
+ªº
+«»¬¼ªº ªº¬¼ ¬¼u| | u
+ 
+ 
+The assumption 0.00162x , is valid. 5pOH = log 4 10 = 4.4 pH = 9.6u  
+ 
+52. (M)  Hydrazine is made up of two NH 2 units held together by a nitrogen–nitrogen single 
+bond: 
+ 
+HNH H
+N
+H  
+ ( a )  N2H4(aq) + H 2O(l)   ZZXYZZ  N2H5+(aq) + OH-(aq)  K b1 = 10-6.07  =  8.5 ×10-7 
+ 
+ ( b )  N2H5+(aq) + H 2O(l)   ZZXYZZ  N2H62+(aq) + OH-(aq)  K b2 = 10-15.05  =  8.9 ×10-16 
+Because the OH- produced in (a) suppresses th e reaction in (b) and since K b1 >> Kb2, 
+the solution’s pH is determined almost entirely by the first base hydrolysis reaction (a).  
+Thus we need only solve the I.C.E. table for the hydrolysis of N 2H4 in order to find the 
+[OH-]equil, which will ultimately provide us with the pH via the relationship  
+[OH-]×[H 3O+] = 1.00 × 10-14.  
+   
+
+=== PDF PAGE 755 ===
+Chapter 16: Acids and Bases 
+ 7 5 5   
+Reaction: N2H4(aq)    +         H 2O(l)      ZZXYZZ   N2H5+(aq)   + OH-(aq) 
+Initial: 0.245 M   —     0 M |0 M  
+Changes: x M   — +x M  +x M 
+Equil: (0.245 x) M  —    x M    x M 
+ 
+1+22
+25 74 -bequil
+24
+14
++1 1 1 1
+3 4NH O H
+= =8 . 5 1 0 = = =4 . 5 6 1 0  M  =  [ O H ]NH 0.245 0.245
+1.0 10Thus, [H O ] =  = 2.19 10 M pH = -log(2.19 10 ) = 10.664.56 10xxKxx
+
+ªº
+«»¬¼
+
+
+ªº ª º¬¼ ¬ ¼uu
+uuuu 
+ 
+53. (E) Protonated codeine hydrolyzes water according to the following reaction: 
+18 21 3 2 18 21 3 3
+a
+baCHO N H H O CHO N H O
+pK 6.05
+pK 14 pK 7.95
+ 
+   U
+ 
+ 
+54. (E) Protonated quinoline is, of course, an acid, which hydrolyzes water to give a 
+hydronium ion. The reaction is as follows: 
+ 
+97 2 97 3
+14
+5 W
+b 10
+a
+5
+bCHN H HO CHN HO
+K 11 0K1 .610K6 . 3 1 0
+pK log 1.6 10 4.8
+
+
+
+
+u   uu
+  u  U
+ 
+ 
+ 
+55. (E) The species that hydrolyze are the cat ions of weak bases, namely, NH4+ and 
+CHN H65 3+, and the anions of weak acids, namely, NO2 and CHO75 2. 
+ 
+(a)   + +
+43 2 3 3 3NH aq + NO aq + H O(l) NH aq + NO aq + H O aqZZXYZZ  
+ 
+(b)   ++
+22 2 Na aq + NO aq + H O(l) Na aq + HNO aq + OH aq ZZXYZZ  
+(c)   ++
+752 2 752 Ka q + C H O a q + H O ( l ) Ka q + H C H Oa q + O Ha q ZZXYZZ  
+ 
+(d)  ++
+2 Ka q + C la q + N aa q + Ia q + H O ( l ) n o  r e a c t i o no  
+ 
+(e)   + +
+65 3 2 65 2 3 CHN H a q + C l a q + HO ( l ) CHN H a q + C l a q + HO a qZZXYZZ  
+ 
+ 
+ 
+ 
+
+=== PDF PAGE 756 ===
+Chapter 16: Acids and Bases 
+756 56. (E) Recall that, for a conjugate weak acid–weak base pair, KK Kab wu= 
+(a) 14
+6+ w
+a5 5 9
+b1.0 10== = 6 . 7 1 0  f o r C H N H1.5 10KKK
+
+uuu 
+ 
+(b) 14
+11 wb2 4
+a1.0 10== 5 . 6 1 0  f o r  C H O1.8 10KKK
+u uu 
+ 
+(c) 14
+4 w
+b6 5 10
+a1.0 10== 1 . 0 1 0 f o r C H O1.0 10KKK
+u uu 
+ 
+57. (E)  
+ ( a )  B e c a u s e  i t  i s  c o m p o s e d  o f  t h e  c a t i o n  o f  a strong base, and the anion of a strong acid, 
+KCl forms a neutral solution (i.e., no hydrolysis occurs). 
+ 
+ (b) K F  f o r m s  a n  a l k a l i n e  ( b a s i c )  s o l u t i o n .   T h e fluoride ion, being the conjugate base of 
+a relatively strong weak acid,  undergoes hydrolysis, while potassium ion, the weakly 
+polarizing cation of a strong base, does not react with water.  
+ 
+2 F( a q ) + HO ( l ) H F ( a q ) + O H( a q )ZZXYZZ  
+ 
+ (c) N a N O3 forms a neutral solution, being compos ed of a weakly polarizing cation and 
+anionic conjugate base of a st rong acid. No hydrolysis occurs. 
+ 
+ (d) C a O C lb g2 forms an alkaline (basic) solution, be ing composed of a weakly polarizing 
+cation and the anion of a weak acid  T hus, only the hypochlorite ion hydrolyzes.  
+ 
+2 OCl (aq) + H O(l)    HOCl(aq) + OH (aq)ZZXYZZ  
+ 
+ (e) N H N O42 forms an acidic solution. The salt is co mposed of the cation of a weak base 
+and the anion of a weak acid.  The ammonium ion hydrolyzes:  
+ + +1 0
+42 3 3 a NH (aq) + H O(l) NH aq + H O (aq) = 5.6 10 Ku ZXYZ  
+ 
+  a s  d o e s  t h e  n i t r i t e  i o n :   
+ 
+11
+22 2 bNO (aq) + H O(l) HNO (aq) + OH (aq) = 1.4 10 Ku ZXYZ  
+ 
+Since NH4+ is a stronger acid than NO2 is a base (as shown by the relative sizes of 
+the K values), the solution will be acidic. The ionization constants were computed 
+from data in Table 16-3 and with the relationship KK Kwa b=u. 
+ 
+For NH For NOab 4+14
+510
+214
+411,=1.0 10
+1.8 10=5 . 6 1 0 , =1.0 10
+7.2 10=1 . 4 1 0 KKu
+uuu
+uu
+ 
+ 
+ 
+54b3a 2 Where 1.8 10 =  of NH and 7.2 10 =  of HNO KKuu  
+
+=== PDF PAGE 757 ===
+Chapter 16: Acids and Bases 
+ 7 5 7  58. (E) Our list in order of increasing pH is also in order of decr easing acidity. First we look 
+for the strong acids; there is just HNO3. Next we look for the weak acids; there is only 
+one, HC H O23 2 . Next in order of decreasing acidity come salts with cations from weak 
+bases and anions from strong acids; NH ClO44 is in this category. Then come salts in 
+which both ions hydrolyze to the same degree; NH C H O42 32 is an example, forming a pH-
+neutral solution. Next are salts that have th e cation of a strong ba se and the anion of a 
+weak acid; NaNO2is in this category. Then come weak bases, of which NH aq3bg is an 
+example. And finally, we terminate the lis t with strong bases: NaOH is the only one. 
+Thus, in order of increasing pH of their 0.010 M aqueous solutions, the solutes are: 
+HNO HC H O NH ClO NH C H O NaNO NH NaOH32 3 2 4 4 4 2 3 2 2 3 
+ 
+59. (M) NaOCl dissociates completely in aqueous solution into Na aq+bg , which does not 
+hydrolyze, and OCl-(aq), which undergoes base hydrolysis. We determine [OH-] in a 0.089 M 
+solution of OCl, finding the value of the hydrolysis constant from the ionization constant of 
+HOCl, Ka=2 . 9 1 08u. 
+ 
+ 2 Equation : OCl (aq)       +      H O(l)     HOCl(aq) + OH (aq)
+Initial : 0.089 M 0 M 0 M
+Changes : M + M + M
+Equil : 0.089 M M Mxx x
+xx x 
+|
+
+ZXYZ
+ 
+ 
+KK
+Kx
+xx
+bw
+aHOCl OH
+OCl==1.0 10
+2.9 10=3 . 4 1 0 = =0.089 0.08914
+8722u
+uu|
+
+ 
+ 
+41.7 10 M  0.089,  the assumption is valid.u   
+ 44=1 . 7 1 0 M= O H ; p O H= l o g 1 . 7 1 0 =3 . 7 7, p H=1 4 . 0 0 3 . 7 7=1 0 . 2 3x ªº u u¬¼ 
+ 
+60. (M) dissociates completely in aqueous solution into NH aq4+bg, which hydrolyzes, 
+and Cl aqbg , which does not. We determine HO3+ in a 0.123 M solution of NH4+, finding 
+the value of the hydrolysis constant  from the ionization constant of 3NH , 5
+b=1 . 8 1 0Ku. 
+ 
++ +
+42 3 3 Equation : NH (aq)       +     H O(l) NH (aq) H O (aq)
+Initial : 0.123M 0 M 0 M
+Changes : M + M + M
+Equil : 0.123 M M Mxx x
+xx x
+|
+
+ZXYZ
+ 
+ 
+KK
+Kx
+xx
+bw
+a3 NH H O
+NH==1.0 10
+1.8 10=5 . 6 1 0 =0123 012314
+510 3
+422u
+uu |
+
+[] [ ]
+[] .. 
+ 
+
+=== PDF PAGE 758 ===
+Chapter 16: Acids and Bases 
+758 68.3 10 M  << 0.123, the assumption is validu  
+ 6+ 6
+3 =8 . 3 1 0 M= H O ; p H= l o g 8 . 3 1 0 =5 . 0 8xªº u u¬¼ 
+ 
+61. (M) KC H O672  dissociates completely in aqueous solution into K aq),+( w h i c h  d o e s  n o t  
+hydrolyze, and the ion C H O (aq)672, which undergoes base hydrolysis. We determine 
+OH in 0.37 M KC H O672  solution using an I.C.E. table.  
+Note:p47 7 5
+a=1 0 =1 0 =1 . 7 1 0KK u 
+ 
+672 2 672 Equation : C H O (aq)    +    H O(l)   HC H O (aq)      + OH (aq)
+Initial : 0.37 M 0 M 0 M
+Changes : M +M +M
+Equil : 0.37 M M Mxx x
+xx x 
+|
+
+ZXYZ
+ 
+ 
+KK
+Kx
+xx
+bw
+a672
+67HC H O ][OH
+CHO  u
+u u   |
+
+10 10
+17 1059 1 003 7 03 714
+510
+222.
+..[]
+[] .. 
+ 55=1 . 5 1 0 M= O H , p O H= l o g 1 . 5 1 0 =4 . 8 2, p H=1 4 . 0 0 4 . 8 2=9 . 1 8x ªº u u¬¼ 
+ 
+62. (M)  
+   + +
+55 2 55 3 Equation : C H NH (aq) + H O(l)  C H N(aq)    + H O (aq)
+Initial : 0.0482 M   0 M 0 M
+Changes : M  + M + M
+Equil : 0.0482 M     M Mxx x
+xx x|
+
+ZXYZ
+ 
+ >@+14 2 2
+55 3 6 w
+a 9 +
+b 55CHN HO 1.0 10== = 6 . 7 1 0 = =1.5 10 0.0482 0.0482 CHN HKxxKKx
+
+ªº u ¬¼u|u ªº¬¼ 
+ 
+45.7 10 M << 0.0482 M, the assumption is validu  
+ 4+ 4
+3 =5 . 7 1 0 M= HO , p H= l o g 5 . 7 1 0 =3 . 2 4xªº u u¬¼ 
+ 
+63. (M)  
+ ( a )  
+22 +8
+32 3 3a a , S u l f u r o u s HSO + H O H O +SO = = 6.2 10 KKu ZZXYZZ  
+114
+13 w
+32 2 3 b 2
+a, S u l f u r o u s1.0 10HSO + H O OH + H SO = = = 7.7 101.3 10KKK
+  
+uuuZZXYZZ  
+Since KKab!, solutions of HSO3 are acidic. 
+ 
+ 
+
+=== PDF PAGE 759 ===
+Chapter 16: Acids and Bases 
+ 7 5 9   (b) 
+2+2 19
+23 aa ,Hydrosulfuric HS + H O H O +S = =1 1 0 KK u ZZXYZZ  
+114
+7 w
+22 b 7
+a, H y d r o s u l f u r i c1.0 10HS + H O OH + H S = = = 1.0 101.0 10KKK
+ 
+uuuZZXYZZ  
+Since KKab, solutions of HS are alkaline, or basic. 
+ 
+ (c) 
+323 +1 3
+42 3 4 a a , P h o s p h o r i c HPO + H O H O + PO = = 4.2 10 KK u ZZXYZZ  
+214
+2 7 w
+42 24 b 8
+a, P h o s p h o r i c1.0 10HPO + H O OH + H PO = = = 1.6 106.3 10KKK
+  
+uuuZZXYZZ  
+Since KKab, solutions of HPO42 are alkaline, or basic. 
+ 
+64. (M) pH = 8.65 (basic).  We need a salt made up of a weakly polarizing cation and an 
+anion of a weak acid, which will hydrolyze to  produce a basic solution. The salt (c) KNO 2 
+satisfies these requirements. (a) NH Cl4is the salt of the cation of a weak base and the anion 
+of a strong acid, and should fo rm an acidic solution. (b) KHSO4and (d) NaNO3 have 
+weakly polarizing cations and anions of strong acids; they form pH-neutral solutions. 
+pOH OH M =1 4 . 0 0 8 . 6 5=5 . 3 5 =1 0 =4 . 5 1 053 5 6u   
+ 
+22 2
+66 6
+66 6Equation: NO (aq)   +   H O(l) HNO (aq) + OH (aq)
+Initial: 0M 0M
+Changes: 4.5 10 M +4.5 10 M +4.5 10 M
+Equil: 4.5 10 M 4.5 10 M 4.5 10 MS
+S 
+ 
+ |
+u  u u
+u  u uZXYZ
+ 
+ 
+KK
+KSbw
+aHNO OH
+NO==1.0 10
+7.2 10=1 . 4 1 0 = =4.5 10
+4.5 1014
+411 2
+262
+6u
+uuu
+u
+
+
+ch 
+>@26
+6 6
+2 114.5 10
+4.5 10 = =1 . 4M =1 . 4M  +4 . 5 1 0 =1 . 4M = K N O1.4 10SS
+ 
+u
+u uu 
+ 
+Molecular Structure and Acid-Base Behavior 
+ 
+65. (M)  
+ ( a )  H C l O3should be a stronger acid than is HClO2. In each acid there is an H – O – Cl  
+grouping. The remaining oxygen atoms are bonde d directly to Cl as terminal O 
+atoms. Thus, there are two terminal O atoms in HClO3 and only one in HClO2.  
+For oxoacids of the same element, the one  with the higher number of terminal 
+oxygen atoms is the stronger.  With more oxygen atoms, the negative charge on the 
+conjugate base is more effectively spread  out, which affords greater stability.  
+HClO3:
+12
+a=5 1 0K u and HClO2:Ka=1 . 1 1 02u. 
+ 
+
+=== PDF PAGE 760 ===
+Chapter 16: Acids and Bases 
+760 (b) H N O2and H CO23  each have one terminal oxygen atom. The difference? N is more 
+electronegative than C, which makes 4
+2a HNO = 7.2 10 Ku, a stronger acid than  
+H2CO 3 17
+a=4 . 4 1 0Ku. 
+ 
+(c) HP O34  and HS i O23  have the same number (one) of terminal oxygen atoms.  
+They differ in P being more electronegative than Si, which makes 34HP O  
+13
+a=7 . 1 1 0Ku a stronger acid than 110
+23 aHS i O = 1 . 7 1 0 Ku. 
+ 
+66. (E) CCl COOH3  is a stronger acid than CH COOH3  because in CCl COOH3  there are 
+electronegative (electro-withdrawing) Cl at oms bonded to the carbon atom adjacent to the 
+COOH group. The electron-withdrawing Cl  atoms further polarize the OH  bond and 
+enhance the stability of the conjugate base, resul ting in a stronger acid. 
+ 
+67. (E)  
+ ( a )  H I  i s  t h e  s t r o n g e r  a c i d  b e c a u s e  t h e  H — I  bond length is longer than the H — Br  
+bond length and, as a result, H — I  is easier to cleave. 
+ 
+(b) H O C l O  i s  a  s t r o n g e r  a c i d  t h a n  H O B r  b e c a u s e   
+(i)  there is a terminal O in HOClO but not in HOBr  
+(ii) Cl is more electronegative than Br. 
+ 
+(c) H C C H C C l C O O H32 2  is a stronger acid than I CCH CH COOH32 2  both because Cl is 
+more electronegative than is I and because  the Cl atoms are closer to the acidic 
+hydrogen in the COOH group and thus can exert a stronger e withdrawing effect on 
+the O H bond than can the more distant I atoms. 
+ 
+ 
+68. (M) The weakest of the five acids is CH CH COOH32 . The reasoning is as follows. HBr is a 
+strong acid, stronger than th e carboxylic acids. A carboxyl ic acid—such as CH ClCOOH2  
+and CH FCH COOH22 —with a strongly electronegative atom attached to the hydrocarbon 
+chain will be stronger than one in which no su ch group is present. But the I atom is so 
+weakly electronegative that it barely influences  the acid stre ngth. Acid strengths of some 
+of these acids (as values of paK) follow. (Larger values of paK indicate weaker acids.) 
+Strength: 32 3 22 2 CH CH COOH 4.89 CI COOH CH FCH COOH CH ClCOOH HBr 8.72      
+ 
+69. (E) The largest Kb (most basic) belongs to (c) CH 3CH 2CH 2NH 2  (hydrocarbon chains have 
+the lowest electronegativity).  The smallest Kb (least basic) is that  of (a) o-chloroaniline 
+(the nitrogen lone pair is 
+delocalized (spread out over the ring), hence, less available to 
+accept a  proton (i.e., it is a poorer Brønsted base)). 
+ 
+70. (E) The most basic species is (c) CH 3O (methoxide ion).  Methanol is the weakest acid, 
+thus its anion is the strongest ba se.   Most acidic: (b) ortho-chlo rophenol.  In fact, it is the 
+only acidic compound shown. 
+
+=== PDF PAGE 761 ===
+
+
+=== PDF PAGE 762 ===
+Chapter 16: Acids and Bases 
+762 (c) 
+HNCHHH
+H  The incomplete octet of B provides a site for 
+acceptance of an electron pair , this is a Lewis acid. 
+ 
+74. (M) A Lewis base is an electron pa ir donor, while a Lewis acid is  an electron pair acceptor. 
+We draw Lewis structures to assist our interpretation. 
+ 
+(a) According to the following Lewis structures, SO3 appears to be the electron pair 
+acceptor (the Lewis acid), and H O2 is the electron pair donor  (the Lewis base).  
+(Note that an additional sulfur-to-oxygen bond is formed upon successful attachment 
+of water to SO 3.) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ (b) The Zn metal center in Zn OH bg2accepts a pair of electrons.  Thus, Zn OH bg2 is a 
+Lewis acid. OH donates the pair of electrons that form the covalent bond.  
+Therefore, OH is a Lewis base. We have assumed here that Zn has sufficient 
+covalent character to form coordinate covalent bonds with hydroxide ions.  
+OH OHZ n O H ZnOOO
+OH HH
+H2 +2-
+ 
+ 
+75.  (M) (a) 
+OH + BO HO H
+O
+HBO HO HOH
+O
+H-
+ 
+ 
+ Acid: e pair acceptor Base: e pair donor  
+O S 
+O H O H  O 
+OS
+OO
+HO H
+Base: e pair donor Acid: e pair acceptor 
+
+=== PDF PAGE 763 ===
+Chapter 16: Acids and Bases 
+ 7 6 3   (b)  
+H HN
+HHNH
+OH
+H HOH
+HH HN
+HHN
+The actual Lewis acid is H+, which is supplied by H3O+
+ 
+ 
+ (c) 
+HCHH
+C
+HH
+OC
+HH
+C
+HH
+H
+Base: electron pair donor    Acid: electron pair acceptorF
+FBFF
+F F
+HCHH
+C
+HH
+C
+HH
+C
+HH
+HB
+O
+ 
+ 
+76. (E) The C in a CO2 molecule can accept a pair of electrons.  Thus, CO 2 is the Lewis acid. 
+The hydroxide anion is the Lewis base as it has pairs of electrons it can donate. 
+OCO + OHOCOOH
+acid                           base
+ 
+ 
+77. (E) 23I( a q )   I( a q )   I ( a q ) ZZXYZZ
+ II I
+Lewis acid
+(e- pair acceptor)Lewis base
+(e- pair donor)III
+ 
+ 
+78. (E)  
+(a) 
+Lewis acid
+(e- pair acceptor)Lewis base
+(e- pair donor)HF SbF
+F
+F
+FF
+SbF
+F
+FF F
+FH
+ 
+ 
+ (b) 
+Lewis acid
+(e- pair acceptor)Lewis base
+(e- pair donor)HF BF
+FF
+BF
+FF
+FH
+ 
+ 
+
+=== PDF PAGE 764 ===
+Chapter 16: Acids and Bases 
+764 79. ( E )  
+ 
+HOH OSO OS
+OO
+HH
+OS
+OO
+HHLewis base(e- pair donor)Lewis acid(e- pair acceptor) 
+ 
+ 
+80. (E) 
+HNH
+H2 Ag+
+HNHH
+HN
+HH
+Ag+
+electron pair donor electron pair acceptor    
+ 
+ 
+INTEGRATIVE AND ADV ANCED EXERCISES 
+ 
+81. (E) We use (ac) to represent the fact that  a species is dissolved in acetic acid. 
+(a) 232 232 232 232 CHO ( a c ) H CHO( l )   H CHO( l )     CHO ( a c ) ZXYZ  
+ C 2H3O2– is a base in acetic acid. 
+ 
+(b) 2 232 3 232 HO ( a c )   H CHO()  HO( a c )   CHO ( a c ) l ZXYZ  
+ S i n c e  H 2O is a weaker acid than HC 2H3O2 in aqueous solution, it will also be weaker in 
+acetic acid. Thus H 2O will accept a proton from the solvent acetic acid, making H 2O a 
+base in acetic acid.  
+ 
+(c) 232 232 2232 2 32 HC H O (l) HC H O ( )  H C H O (ac) C H O (aq) lZXYZ  
+ A c e t i c  a c i d  c a n  a c t  a s  a n  a c i d or a base in acetic acid.  
+ 
+(d) 42 3 24 2 2 3 2 HClO (ac) HC H O (l)  ClO (ac) H C H O (ac) ZXYZ  
+ S i n c e  H C l O 4 is a stronger acid than HC 2H3O2 in aqueous solution, it will also be 
+stronger in acetic acid. Thus, HClO 4 will donate a proton to th e solvent acetic acid, 
+making HClO 4 an acid in acetic acid. 
+ 
+82.   (E) Sr(OH) 2 (sat'd) ZXYZ Sr2+(aq) + 2 OH-(aq)      
+-0 88pOH 14 pH=14-13.12 0.88
+[OH ] 10 0.132 M   
+   ammoniaadduct
+
+=== PDF PAGE 765 ===
+Chapter 16: Acids and Bases 
+ 7 6 5   3
+dilute
+3
+310.0 ml concentrate[OH ] 0.132M ( ) 5.28 10 M     
+250.0 mL total
+(10.0 ml ) (5.28 10 M)[HCl] 2.10 10 M
+25.1 mL  
+
+ u  u
+uu  u 
+ 
+83. (M)  
+ ( a )  H2SO 4 is a diprotic acid.  A pH of 2 assu mes no second ionization step and the second 
+ionization step alone would produce a pH of  less than 2, so it is not matched. 
+(b) p H  4 . 6  m a t c h e d ;  a m m o n i u m  s a l t s  h y d r o l yze to form solutions with pH < 7. 
+(c) KI should be nearly neutral (pH 7.0) in solu tion since it is the salt  of a strong acid (HI) 
+and a strong base (KOH).  Thus it is not matched. 
+(d) p H  o f  t h i s  s o l u t i o n  i s  n o t  matched as it's a weak base.  A 0.002 M solution of KOH has a 
+pH of about 11.3.  A 0.0020 M  methylamine solution would be lower (~10.9). 
+(e) pH of this solution is matched, since  a 1.0 M hypochlorite salt hydrolyzes to form a 
+solution of ~ pH 10.8. 
+(f) pH of this solution is not matched.  Phenol is a very weak acid (pH >5). 
+(g) p H  o f  t h i s  s o l u t i o n  i s  4 . 3 .   It is close, but not matched. 
+(h) p H  o f  t h i s  s o l u t i o n  i s  2 . 1 ,  m a t c hed as it's a strong organic acid. 
+(i)  p H  o f  t h i s  s o l u t i o n  i s  2 . 5 ,  it is close, but not matched. 
+ 
+84. (M) We let [H 3O+]a = 0.500 [H 3O+]i  pH = –log[H 3O+]i 
+ p H a = –log[H 3O+]a = –log(0.500 [H 3O+]i) = –log [H 3O+]i – log (0.500) = pH i + 0.301 
+ T h e  t r u t h  o f  t h e  s t a t e m e n t  h a s  b e e n  d e m o n s t r ated. Remember, however, that the extent of 
+ionization of weak acids and weak bases in wa ter increases as these solutions become more 
+and more dilute.  Finally, there are some solu tions whose pH doesn’t change with dilution, 
+such as NaCl(aq), which has pH  = 7.0 at all concentrations. 
+ 
+ 
+85. (M) Since a strong acid is complete ly ionized, increasing its con centration has the effect of 
+increasing [H 3O+] by an equal degree. In the case of a weak acid, however, the solution of 
+the Ka expression gives the following e quation (if we can assume that [H 3O+] is negligible 
+compared to the original concentrat ion of the undissociated acid, [HA]). x2 = Ka[HA] (where 
+x = [H 3O+]), or ] HA [aKx . Thus, if [HA] is doubled, [H 3O+] increases by 2. 
+ 
+ 
+86. (E) H2O(l) + H 2O(l) U H3O+(aq) + OH-(aq)  'Ho = (-230.0 kJ mol) – (-285.8 kJ mol-1) 
+= 55.8 kJ 
+ S i n c e  'Ho is positive, the value of K eq is larger at higher temperat ures.  Therefore, the ionic 
+products increase with incr easing temperature. Le Ch  âtelier’s principle or the Van’t Hoff 
+equation would show this to be true.
+ 
+ 
+
+=== PDF PAGE 766 ===
+Chapter 16: Ac ids and Bases 
+766 87. (M) First we assume that molarity and molality ar e numerically equal in this dilute aqueous 
+solution. Then compute the molality that  creates the observed freezing point, with Kf = 1.86 
+°C/m for water. 
+ 
+ f0.096 C0.052 concentration 0.052 M1.86 C/fTmmKm' q    q 
+ 
+ T h i s  i s  t h e  t o t a l  c o n c e n t r a t i o n  o f  a l l  s p e c i e s  i n  solution, ions as well as molecules. We base 
+our remaining calculation on the balanced chemical equation. 
+ 
+ 452 2 452 3 Equation:   HC H O (aq)  H O  C H O (aq)  H O (aq)
+Initial:         0.0500 M 0 M    0 M
+Changes:      M                                      M                  M
+Equil:          (0.0500 ) xx x
+x
+ 
+ZZXYZZ
+M                              M                     M xx 
+ 
+6 6
+2
+5 452 3 6
+a
+452 6      Total conc. 0.051  M (0.0500 ) M  M  M 0.0500 M  M 0.001 M
+[C H O ][H O ] (0.001 )      51 0[HC H O ] 0.0500 0.0500 0.001xx x xx
+xxKx
+       
+    u 
+ 
+88. (D) [H3O+] = 10–pH = 10–5.50 = 3.2 × 10–6 M 
+(a) To produce this acidic solution we could not use 15 M NH 3(aq), because aqueous 
+solutions of NH 3 have pH values greater than 7 owing to the fact that NH 3 is a weak 
+base. 
+(b)     
+6
+5 3
+HCl
+33.2 10 mol H O 1 mol HCl 1 L solnV1 0 0 . 0  m L 2 . 7 1 0  m L  1 2  M  H C l  s o l n
+1 L 12  mol HCl 1 mol H O
+
+u u u u  u
+ (very unlikely, since this sma ll a volume is hard to measure) 
+ 
+ (c) Ka = 5.6 × 10–10 for NH 4+(aq) 
+42 3 3
+66 6
+6Equation:    NH (aq) H O(l)      NH (aq)       H O (aq)
+Initial:           M  0 M   0 M
+Changes:     3.2 10  M                 3.2 10  M 3.2 10  M
+Equil:          ( 3.2 10 ) M          c
+c 
+ 
+
+|
+u  u u
+uZZXYZZ
+66
+66
+10 33
+a 6
+4   3.2 10  M       3.2 10   M
+[NH ][H O ] (3.2 10 )(3.2 10 )5.6 10[NH ] 3.2 10K
+c
+ 
+
+ u u
+uu u   
+u 
+
+=== PDF PAGE 767 ===
+Chapter 16: Ac ids and Bases 
+ 7 6 7  Cl NH  g  096 . 0   Cl NH  mol  1Cl NH  g  49 . 53
+NH  mol  1Cl NH  mol  1
+mL  1000NH  mol  0.018mL  100.0 mass  Cl NH       M  018 . 0 ] [NH             M  10 8 . 110 6 . 5) 10 2 . 3 (10 2 . 3       
+4
+44
+44 4
+442
+1026
+6
+ u u u   u uu u 
+ 
+
+c
+This would be an easy mass to measure on a laboratory three decimal place balance. 
+ 
+(d) The set-up is similar to that for NH 4Cl. 
+232 2 232 3
+66Equation:    HC H O (aq)              H O (l)   C H O (aq)        H O (aq)
+Initial:                    M            0  M  0  M
+Changes:      3.2 10  M                        3.2 10  M     c
+
+|
+u  uZZXYZZ
+6
+66 6     3.2 10  M
+Equil:          ( 3.2 10 ) M                           3.2 10  M            3.2 10  M c
+ u
+u  u u 
+ 
+66
+5 232 3
+a 6
+232
+62
+67 6
+232 5
+6
+232
+232[C H O ][H O ] (3.2 10 )(3.2 10 )      K 1.8 10[HC H O ] 3.2 10
+(3.2 10 )      3.2 10 5.7 10 [HC H O ] 3.8 101.8 10
+3.8 10  mol HC H O 60.      HC H O   mass  100.0 mL1000 mLc
+cc 
+
+
+
+ 
+
+uu u   u
+uu   u   uu
+u u u232
+232
+5
+23205 g HC H O
+1 mol HC H O
+                           2.3 10  g HC H O  (an almost impossibly small mass to measure
+    using conventional laboratory scales) u 
+89. (M)  
+(a) 1.0 × 10-5 M   HCN:   
+   HCN(aq)      +      H 2O(l)   106.2 10aK uZZZZZZZZ XZ YZZZZZZZ ZZ  H3O+(aq)         +       CN-(aq) 
+ Initial:  1.0 × 10-5 M  –   1.0 × 10-7 M                 0 M 
+ C h a n g e :     – x   –                       +x  +x 
+ E q u i l i b r i u m :  ( 1 . 0  × 10-5-x) M  –   (1.0 × 10-7+x) M   x  
+  
+ 7
+10 15 10 7 2
+5
+27 1 5
+77 2 1 5
+7(1.0 10 )6.2 10 6.2 10 6.2 10 1.0 10(1.0 10 )
+1.006 10 6.2 10 0
+1.006 10 (1.006 10 ) 4(1)( 6.2 10 )1.44 102(1)xxxxxx
+x
+x
+  
+
+
+ 
+uu  u u  u u
+u  u  
+u r u  u  u 
+ Final pH = -log[H 3O+] = -log(1.0 × 10-7+ 1.44  × 10-7) = 6.61 
+ 
+ 
+
+=== PDF PAGE 768 ===
+Chapter 16: Ac ids and Bases 
+768 (b) 1.0 × 10-5 M  C 6H5NH 2: 
+     C 6H5NH 2(aq)     +   H 2O(l)   107.4 10aK uZZZZZZZZ XZ YZZZZZZZ ZZ       OH-(aq)   +  C 6H5NH 3+(aq) 
+ Initial:        1.0 × 10-5 M     –          1.0 × 10-7 M      0 M 
+ C h a n g e :        – x       –                 +x        +x 
+ E q u i l i b r i u m :  ( 1 . 0  ×  1 0-5–x) M         –        (1.0 × 10-7+x) M         x  
+ 
+ 7
+10 15 10 7 2
+5
+27 1 5
+77 2 1 5
+8(1.0 10 )7.4 10 7.4 10 7.4 10 1.0 10(1.0 10 )
+1.0074 10 7.4 10 0
+1.0074 10 (1.0074 10 ) 4(1)( 7.4 10 )4.93 10  M2(1)xxxxxx
+x
+x
+  
+
+
+ 
+uu  u u  u u
+u  u  
+u r u  u  u 
+  Final pOH = -log[OH-] = -log(1.0 × 10-8+ 4.93  × 10-7) = 6.83    Final pH = 7.17 
+ 
+90. (D)  
+(a) For a weak acid, we begin with the ionizati on constant expression fo r the weak acid, HA. 
+222
+3
+a[H O ][A ] [H ] [H ] [H ]
+[HA] [HA] M  [H ] MK  
+   | 
+The first modification results from realizing that [H+] = [A–]. The second modification 
+is based on the fact that the equilibrium [H A] equals the initial [HA] minus the amount 
+that dissociates. And the third modification is an approximation, assuming that the 
+amount of dissociated weak acid is small co mpared to the original amount of HA in 
+solution. Now we take the logarithm of both sides of the equation. 
+M McK  log ] [H  log  2  log ] [H  log]H [log  log22
+a       
+ 
+11
+aa a 22 2  log [H ] log log  2 pH  p log pH p  log KM K M K M        
+For a weak base, we begin w ith the ionization constant e xpression for a weak base, B. 
+M MK2 2 2
+b] OH [
+] OH [] OH [
+[B]] OH [
+[B]] OH ][ BH [
+   
+|
+    
+The first modification results from realizing that [OH–] = [BH+]. The second 
+modification is based on the fact that the e quilibrium [B] equals the initial [B] minus 
+the amount that dissociates. And the third modification is an approximation, assuming 
+that the amount of dissociated weak base is small compared to the original amount of B 
+in solution. Now we take the logar ithm of both sides of the equation. 
+2
+2
+b
+11
+bbb 22
+11
+b 22[OH ]log K log log [OH ]  log M 2 log  [OH ] log MM
+2 log [OH ] log K log  M 2  pOH pK log  M       pOH   pK   logM
+pH 14.00  pOH 14.00 pK  log  M
+
+    
+      
+   
+ 
+The anion of a relatively strong weak acid is  a weak base. Thus, the derivation is the 
+same as that for a weak base, immediatel y above, with the exception of the value for 
+Kb. We now obtain an expression for p Kb. 
+
+=== PDF PAGE 769 ===
+Chapter 16: Ac ids and Bases 
+ 7 6 9   
+a w b a w ba w
+aw
+b
+aw
+b
+p p p  log  log  log log   log log    log
+KK K K K KKKKKKKKK
+        
+ 
+ S u b s t i t u t i o n  o f  t h i s  e x p r e s s i o n  f o r  p Kb into the expression above gives the following result. 
+ M KK  log  p  p 14.00 pH21
+a 21
+w 21   
+(b) 0.10 M HC 2H3O2  pH = 0.500 × 4.74 – 0.500 log 0.10 = 2.87 
+ 232 2 232 3 Equation:   HC H O (aq)         H O(l)       C H O (aq)       H O (aq)
+Initial:         0.10 M 0 M      0 M
+Changes:     M                      M                     M
+Equil:          (0.1xx x
+|
+  ZXYZ
+0 ) M                          M                         Mxx x  
+ 2
+5 32 3 2
+a
+232
+53 3[H O ][C H O ]     1.8 10[HC H O ] 0.10  0.10
+0.10 1.8 10 1.3 10  M, pH log(1.3 10 ) 2.89xx xKx
+x
+
+   u  |
+ u u  u  u   
+ 
+ .   p H1 4 . 0 00 . 5 0 0 4 . 7 40 . 5 0 0  l o g  0 . 1 01 1 . 1 3  u   3 0 10 M NH  
+ 324 Equation:     NH (aq)        H O(l)    NH (aq)       OH (aq)
+Initial:           0.10  M    0 M     0 M
+Changes:        M                   M                  M
+Equil:           (0.10 )  M  xx x
+x
+|
+  
+ZXYZ
+              M                     M xx  
+2
+55 3 4
+b
+3
+3[NH ][OH ]            1.8 10    0.10 1.8 10   1.3 10  M[NH ] 0.10  0.10
+       pOH log(1.3 10 ) 2.89                       pH 14.00 2.89 11.11xx xKxx
+ 
+  u  |  u u  u
+  u      
+ 
+3        .              pH 14.00 0.500 14.00 0.500 4.74  0.500 log 0.10 8.87  uu  22 01 0 M N a C HO
+ 232 2 232 Equation:   C H O (aq) H O(l)    HC H O (aq)       OH (aq)
+Initial:         0.10 M 0 M  0 M
+Changes:      M                                  M                      M
+Equil:          (0.10 )xx x
+x
+|
+  
+ZXYZ
+14 2
+232
+a 5
+232
+14
+66
+5 M                          M                         M
+[OH ][HC H O ] 1.0 10     
+0.10 0.10 [C H O ] 1.8 10
+0.10 1.0 107.5 10  M pOH log(7.5 10 ) 5.121.8 10
+pH 14.00 5.12 8.88xx
+xx xKx
+x 
+
+
+
+
+u   | u
+uu  u   u  u
+    
+
+=== PDF PAGE 770 ===
+Chapter 16: Ac ids and Bases 
+770  
+91. (D)  
+(a) We know 
+eqeq eq 3
+a[HA]]A [ ]O H [ 
+ K , 
+i [HA]]A [eq
+ D  and finally  % ionized = D × 100%.  
+Let us see how far we can get with no assumptions. Recall first what we mean by [HA] eq. 
+eq eq eq eq ] [A  HA] [ [HA] or   ] A [ HA] [ ] HA [   i i  
+We substitute this expression into the expression for D. 
+eq eqeq
+] [ [HA]][
+
+ AAD  
+We solve both the D and the Keq expressions for [HA] eq, equate the results, and solve for D. 
+_
+3
+eq eq eq
+a
+_
+3
+a[H O ][A ] [A ] Į[A ][HA] [A ] [HA] [A ] [HA]
+[H O ][A ] [A ](1 )R  
+1R1        R 1( 1 R )     1RK
+KDDD
+D
+D
+DD D DD D
+
+     
+  
+        
+Momentarily, for ease in writing, we have let pH) p (
+pKpH
+a310
+1010 O] [HR
+ 
+   K
+K 
+Once we realize that 100 D = % ionized, we note that we have proven the cited formula. 
+Notice that no approximations were made during the cour se of this derivation. 
+ 
+(b) Formic acid has p Ka = 3.74. Thus 10(pK–pH) = 10(3.74–2.50) = 101.24 = 17.4 
+ % 43 . 517.4 1100ionization  %    
+ 
+(c) [ H 3O+] = 10–2.85 = 1.4 × 10–3 M % 93 . 0 % 100M 150 . 0M  10 1.4ionization  %3
+ uu 
+ 
+5 88 4
+apH) p ( pH) p (
+pH) p (
+10 3 . 1 10      88 . 4 03 . 2 85 . 2 03 . 2 pH p        pH p 03 . 2       107 10             10893 . 010010 1         10 110093 . 0       
+  
+
+u           
+K K KK K
+K 
+ 
+92. (M) We note that, as the hydrocarbon chain be tween the two COOH groups increases in 
+length, the two values of p Ka get closer together. The reason for this is that the ionized 
+COOH group, COO–, is negatively charged. When the two COOH groups are close together, 
+the negative charge on the molecule, arising fr om the first ionization, inhibits the second 
+ionization, producing a large difference between  the two ionization constants. But as the 
+hydrocarbon chain lengthens, th e effect of this negative COO- group on the second 
+ionization becomes less pronounced, due to th e increasing separation between the two 
+carbonyl groups, and the values of the tw o ionization constants are more alike. 
+ 
+
+=== PDF PAGE 771 ===
+Chapter 16: Ac ids and Bases 
+ 7 7 1  93. (M) Consider only the 1st dissociation. 
+-562 1 0
+24 44 2 3 4 44 Equation:     H C H O (aq) H O(l)     H O (aq)    HC H O (aq)
+Initial:           0.100  M                                     0 M                   0 M
+Changes:      M        xu 
+|
+ZZZZZXYZZZZZ
+                     M                  M
+Equil:           (0.100 ) M                                          M                  Mxx
+xx x
+ 
+2
+5
+a  6.2 10 0.00246 M0.100
+Solve using the quadratic equation.   Hence pH = log 0.00246 = 2.61xKxx  u  
+ 
+ 
+ Consider only the 2nd dissociation. 
+-523 1 0 2
+444 2 3 444 Equation:     HC H O (aq)                 H O(l)        H O (aq)         C H O (aq)
+Initial:           0.0975  M                                          0.00246 M            u  
+ZZZZZXYZZZZZ
+      0 M
+Changes:      M                  M                    M
+Equil:           (0.0975 ) M                                      0.00246 +  M             Mxx x
+xx x  
+ 
+6
+a(0.00246 ) (0.00246) 2.3 100.0975 0.0975
+0.000091 M  or  0.000088 M (solve quadratic) Hence pH  2.59  
+Thus, the pH is virually identical, hence, we need only consider the 1st ionization.xx xKx
+xx   u  
+  |  
+ 
+94. (M) To have the same freezing point, the two solutions must have the same total 
+concentration of all particles of solute—i ons and molecules. We first determine the 
+concentrations of all solute species in 0.150 M HC 2H2ClO 2, Ka = 1.4 × 10–3 
+ 22 2 2 3 22 2 Equation:     HC H ClO (aq) H O(l)   H O (aq)    C H ClO (aq)
+Initial:           0.150  M                                   0 M                   0 M
+Changes:      M              M       xx
+|
+ ZZXYZZ
+           M
+Equil:           (0.150 ) M                           M                  Mx
+xx x
+  
+ 3 32 2 2
+a
+22 2
+24 3 2 3 4
+23 6 4[H O ] [C H ClO ]      1.4 10[HC H ClO ] 0.150
+2.1 10 1.4 10   1.4 10  2.1 10 0
+41 . 4 1 0 2 . 0 1 0 8 . 4 1 00.014 M22xxKx
+xx x x
+bb a cxa
+
+  
+    u
+ u u u u  
+r   u r u  u    
+total concentra tion = (0.150 – x) + x + x  = 0.150 + x = 0.150 + 0.014 = 0.164 M 
+Now we determine the [HC 2H3O2] that has this total concentration.  
+
+=== PDF PAGE 772 ===
+Chapter 16: Ac ids and Bases 
+772  
+232 2 3 232 Equation:     HC H O (aq)      H O(l)     H O (aq)    C H O ( )
+Initial:            M                                          0 M                  0 M
+Changes:        M                  aq
+z
+y
+|
+ZZXYZZ
+5 32 3 2
+a
+232                         M               M
+Equil:           ( ) M                                           M                   M
+[H O ][C H O ]       1.8 10[HC H O ]     yy
+z y yy
+yyKzy
+ 
+
+  u  
+ 
+We also know that the tota l concentration of all solute species is 0.164 M. 
+52
+10 8 . 12  164 . 0        164 . 0         164 . 0u    yyy z yzyyyz  
+We assume that 3 6 5 210 7 . 1      10 0 . 3 10 8 . 1 164 . 0        0.164  2  u u uu   y y y  
+The assumption is valid: 0.164   0034 . 0 2 y  
+ T h u s ,  [ H C 2H3O2] = z = 0.164 – y = 0.164 – 0.0017 = 0.162 M 
+232
+232232 232
+232 O H HC  g  73 . 9O H HC  mol  1O H HC  g  05 . 60
+soln  L  1O H HC  mol  0.162L  000 . 1 O H HC  mass  u u  
+ 
+95. (M) The first ionization of H 2SO 4 makes the major contribution to the acidity of the 
+solution. 
+ Then the following two ionizations, both of wh ich are repressed because of the presence of 
+H3O+ in the solution, must be solved simultaneously. 
+ -2
+42 4 3 Equation:   HSO (aq)            H O(l)       SO (aq)   H O ( )
+Initial:         0.68 M                                       0 M         0.68 M
+Changes:      M                M        aq
+xx
+
+ ZZXYZZ
+      M
+Equil:          (0.68 ) M                          M          (0.68 )Mxxxx
+  
+ 
+ xxxK    
+68 . 0)   68 . 0 (011 . 0
+] HSO [] ][SO O H [
+42
+4 3
+2  
+ 
+ L e t  u s  s o l v e  t h i s  e x p r e s s i o n  f o r  x. 0.011 (0.68 – x) = 0.68 x + x2 = 0.0075 – 0.011 x 
+ 
+ 2
+2 40 . 6 9 0 . 4 8 0 . 0 3 0  0 . 6 9  0 . 0 0 7 50              0 . 0 1  M22bb a cxx xar   r      
+  
+
+=== PDF PAGE 773 ===
+Chapter 16: Ac ids and Bases 
+ 7 7 3  This gives [H 3O+] = 0.68 + 0.01 = 0.69 M. Now we solve the second equilibrium. 
+ 
+ 22 23 Equation:    HCHO (aq)    H O( )       CHO (aq)    H O ( )
+Initial:          1.5 M                                                      0 M              0.69 M
+Changes:        M            la q
+x
+
+ZZXYZZ
+4 32
+a
+2                      M             M
+Equil:           (1.5 ) M                                              M            (0.69 ) M
+[H O ][CHO ] (0.69  ) 0.691.8 10    [HCHO ] 1.5 1.5xx
+xx x
+xx xKx
+
+ 
+   u  |4    3.9 10  Mx u 
+  
+We see that the second acid doe s not significantly  affect the [H 3O+], for which a final value is 
+now obtained. [H 3O+] = 0.69 M, pH = –log(0.69) = 0.16 
+ 
+96. (D) 
+
+1
+21
+11 1 1
+11 1 122
+1
+1
+11
+22
+2
+2
+22
+21/22
+212[] [] [][]Let [ ][] [ ] []
+[] [] [][]Let [ ] 2[] [ ] []
+[][] []
+[]2 []2 [] 2 2HA
+HA HA
+HA HA HA HA
+HA HA HA HAHA HHHA M KHA H HA M
+HA H HHA M K KHA H HA M
+HKH K M H K M K MM
+HKH K M HK M K MM  
+
+ 
+
+
+
+
+  |  
+   |  
+  u  u  u
+  u  u  u/2  
+  
+ 
+
+11
+11
+11 1 1
+111/2 1/2
+10
+1/2 1/2
+1/ 2 1/2[] 2( t a k e t h e n e g a t i v e l o g o f b o t h s i d e s )
+log([ ] ) log log 2
+11pH log log log log 222
+11pH log log 2 log22overall HA HA
+overall HA HA
+HA HA HA HA
+HA HAHK M K M
+HK M K M
+KM KM KM KM
+KM KM K
+ u u
+  u   u
+  u  u   u  u
+  u  u   
+ 11
+112
+11pH 3 322HA HA
+HA HAMK M
+KM M Ku u
+  u   
+ 
+
+=== PDF PAGE 774 ===
+Chapter 16: Ac ids and Bases 
+774 97. (M) HSbF 6  o  H+ +  SbF 6- 
+SbF
+FFF
+FFH+
+        
+The six bonds are all sigma bonds
+V (Sb sp3d2 - F 2p)
+   
+ H B F 4  o  H+ +  BF 4-  
+BF
+FFH+
+        
+The four bonds are all sigma bonds
+V (Bsp3 - F2p) F
+ 
+ 
+98.  (M) The structure of H 3PO 3  is shown on the right. 
+ T h e  t w o  i o n i z a b l e  p r o t o n s  a r e  b o u n d  t o  o x y g e n .  
+ 
+99.  (M) 
+(a) H2SO 3 > HF >N 2H5+ > CH 3NH 3+ > H 2O  
+(b) OH– > CH 3NH 2 > N 2H4 > F–> HSO 3– 
+(c) (i) to the right and (ii) to the left.  F uses one of its 2p orbitals 
+Sb uses all six of its sp3d2 hybrid orbitals 
+F uses one of its 2p orbitals 
+B uses all four of its sp3 hybrid orbitals 
+H HH
+OOP
+O 
+
+=== PDF PAGE 775 ===
+Chapter 16: Ac ids and Bases 
+ 7 7 5  FEATURE PROBLEMS 
+ 
+100. (D) 
+ ( a )  From the combustion analysis we can determine the empirical formula. Note that the 
+mass of oxygen is determined by difference. 
+2
+2
+221m o l  C O 1m o l  Camount C = 1.599 g CO = 0.03633 mol C44.01 g CO 1 mol CO
+12.011 g Cmass of C = 0.03633 mol C = 0.4364 g C1m o l  Cuu
+u 
+2
+2
+221m o l  H O 2m o l  Hamount H = 0.327 g H O = 0.03629 mol H18.02 g H O 1 mol H O
+1.008 g Hmass of H = 0.03629 mol H = 0.03658 g H1m o l  Huu
+u 
+amount O g sample g C g Hmol O
+g Omol O =1 . 0 5 4 0 . 4 3 6 4 0 . 0 3 5 6 81
+16.00=0 . 0 3 6 4  ubg
+There are equal moles of the three elements. The empirical formula is CHO. 
+The freezing-point depression data are used to determine the molar mass. 
+''
+
+TK m mT
+Kmmfff
+fC
+C== =0.82
+3.90 /=0 . 2 1D
+D 
+1 kg 0.21 mol soluteamount of solute = 25.10 g  solvent = 0.0053 mol1000 g 1 kg solventuu  
+M=0.615
+0.0053=1 . 2 1 02 g solute
+mol soluteg/mol u  
+The formula mass of the empirical formula is: 12.0 +1.0 +16.0 = 29.0 g C g H g O g / mol  
+Thus, there are four empirical units in a molecule, the molecular formula is C H O444 , 
+and the molar mass is 116.1 g/mol. 
+ 
+ (b) H e r e  w e  d e t e r m i n e  t h e  m a s s  o f  m a l e i c  a c i d  t h a t  r e a c t s  w i t h  o n e  m o l O H, 
+mass 0.4250  g maleic acid58.03g/molOH1L 0.2152mol KOH mol OH34.03mL base1000 mL 1L base
+  
+uu 
+This means that one mole of maleic aci d (116.1 g/mol) reacts with two moles of 
+hydroxide ion. Maleic acid is a diprotic acid: H C H O24 24 . 
+ 
+(c) M a l e i c  a c i d  h a s  t w o — C O O H  g r o u p s joined together by a bridging C 2H2 group. A 
+plausible Lewis structure is shown below: 
+CO
+CH
+CH
+COH OHO
+ 
+
+=== PDF PAGE 776 ===
+Chapter 16: Ac ids and Bases 
+776 (d) W e  f i r s t  d e t e r m i n e  +p H1 8 0
+3HO = 1 0 = 1 0 =0 . 0 1 6  Mªº¬¼ and then the initial 
+concentration of acid. 
+2initial0.215g 1000 mL 1 molCHCOOH = = 0.0370 M50.00 mL 1L 116.1 gªº uu¬¼ 
+We use the first ionization to determine the value of 
+1aK 
++
+23 22Equation: CHCOOH (aq) +  H O(l)  H CHCOO (aq) + H O (aq)
+Initial: 0.0370 M    0M 0 M
+Changes: 0.016 M             + 0.016 M    + 0.016 M
+Equil: 0.021M           0.016 M       0.016 M
+|
+
+ZZXYZZ
+ 
+
+ +
+3 2 2
+a
+2HC H C O O H O 0.016 0.016== = 1 . 2 1 00.021 CHCOOHKªº
+«»¬¼ªº ªº¬¼ ¬¼u 
+Ka2 could be determined if we had some way to measure the total concentration of all 
+ions in solution, or if  we could determine 22
+a 2CHCOO Kªº  ¬¼ 
+ 
+(e) P r a c t i c a l l y  a l l  t h e  HO3+ arises from the first ionization. 
+
++
+23 22Equation: CHCOOH (aq) +  H O(l)   H CHCOO (aq) +  H O (aq)
+Initial: 0.0500 M 0 M 0M
+Changes:   M +M +M
+Equil: 0.0500  M M Mxx x
+xx x
+|
+
+ZXYZ
+ 
+2
+2 23
+2
+22[H(CHCOO) ][H O ]1.2 10[(CHCOOH) ] 0.0500
+0.00060 0.012         0.012 0.00060 0axKx
+xx x x    u
+    
+2
++
+340 . 0 1 2 0 . 0 0 0 1 4 + 0 . 0 0 2 4= = = 0.019 M = H O22bb a cxar   rªº¬¼ 
+pH log=0 . 0 1 9 = 1 . 7 2b g  
+ 
+
+=== PDF PAGE 777 ===
+Chapter 16: Ac ids and Bases 
+ 7 7 7  101. (D)  
+ ( a )  
+ 22
+4
+1
+22
+4
+2
+22
+4
+3
+224.2 10                    0.001020.00250 0.00250
+4.2 10         0.0007880.00250 0.00102 0.00148
+4.2 10        0.0008480.00250 0.000788 0.00171
+4.0.00250 0.000848 0.00165xxxx
+xxx
+xxx
+xx
+
+u
+ u
+ u
+  
+
+
+4
+4
+22
+4
+5
+22
+4
+6
+4
+62 10        0.000833
+4.2 10        0.0008370.00250 0.000833 0.00167
+4.2 10        0.0008360.00250 0.000837 0.00166
+0.000836           or 8.4 10 ,  x
+xxx
+xxx
+x
+
+
+u
+ u
+ u
+u
+
+
+ 
+which is the same as the value obt ained using the quadratic equation. 
+ 
+(b)  We organize the solution around the balanced chemical equation, as we have done before. 
++
+22 2 3 Equation: HClO (aq) + H O(l)  ClO (aq) +  H O (aq)
+Initial: 0.500 M  0 M  0  M
+Changes:   M +M  +M
+Equil: M     M Mxx x
+xx x
+|
+
+ZXYZ
+ 
++22232
+a
+2ClO H O
+= = = 1.1 10HClO 0.500 0.500xxKx
+
+ªº
+«»¬¼ªºªº¬¼¬¼u|      Assuming 0.500 Mx , 
+22=0 . 5 0 0 1 . 1 1 0 0 . 0 7 4 M N o t  s i g n i f i c a n t l y  s m a l l e r  t h a n  0 . 5 0 0  M .xx u u  
+2
+2
+2Assume 0.074 (0.500 0.0774) 1.1 10 0.068M   Try once more.
+Assume  0.068 (0.500 0.068) 1.1 10 0.069 M     One more time.
+Assume  0.069 (0.500 0.069) 1.1 10 0.069 M     Final result!xx
+xx
+xx
+
+   u u  
+   u u  
+   u u   
+ ++
+33HO =0 . 0 6 9M ,     p H= l o g HO = l o g 0 . 0 6 9 = 1 . 1 6ªº ªº ¬¼ ¬¼ 
+ 
+
+=== PDF PAGE 778 ===
+Chapter 16: Ac ids and Bases 
+778 102. (D)  
+(a) Here, two equilibria must be satisfied simultaneously. The common variable, 
+HO3+=z. 
++
+232 2 232 3
++
+32 3 2 5
+a
+232Equation: HC H O (aq) + H O(l)        C H O (aq) + H O (aq)
+Initial: 0.315 M    0 M 0 M
+Changes: + M    + M + M
+Equil: 0.315 M   M M
+HO CHO
+ =  =   = 1.8 10HC H O 0.315xx z
+xx z
+xzKx
+
+
+ªº
+«»¬¼|
+
+
+ªº ª º¬¼ ¬ ¼uZZXYZZ
+ 
++
+22 2 3
++
+32 4
+a
+2Equation: HCHO (aq)    +    H O(l)        CHO (aq) + H O (aq)
+Initial: 0.250 M 0M 0M
+Changes: M + M +M
+Equil: (0.250 ) M   M M
+HO C H O
+== = 1.810HCHO 0.250yy z
+yy z
+yzKy
+
+
+ªº
+«»¬¼
+
+
+ªº ª º¬¼ ¬ ¼uZZXYZZ
+ 
+In this system, there are three variables, xy=, =23 2 2 CHO C H O, and z=3+HO .  
+These three variables also represent the con centrations of the only charged species in 
+the reaction, and thus xyz +=.  W e  s o l v e  t h e  t w o  Ka expressions for x and y. (Before 
+we do so, however, we take advantage of the fact that x and y are quite small: x0.315 and y0.250 .) Then we substitute these results into the expression for z, 
+and solve to obtain a value of that variable. 
+56 45
+65=1 . 8 1 0 0 . 3 1 5 =5 . 7 1 0 =1 . 8 1 0 0 . 2 5 0 =4 . 5 1 0
+5.7 10 4.5 10==xz yz
+xyzz 
+uu uu
+uu 
+65 5
+53 +
+35.7 10 4.5 10 5.07 10=+= + = =5 . 0 7 1 0 = 7 . 1 1 0 M = [ H O ]zxy zzz z 
+ uu uuu  
+pH log=7 . 1 1 0 = 2 . 1 53uc h  We see that our assumptions about the sizes of x and y 
+must  
+be valid, since each of them is smaller than z. (Remember that xyz + = .) 
+ 
+(b) W e  f i r s t  d e t e r m i n e  t h e  i n i t i a l  c o n c e n t r a t i o n  o f  e a c h  s o l u t e .  
+>@5 3 2
+3 b
+31m o l  N H 12.5g NHNH = = 1.96M = 1.8 100.375L soln 17.03g NHKuu  
+>@4 32 32
+32 b
+321.55 g CH NH 1 mol CH NHCH NH = = 0.133M = 4.2 100.375L soln 31.06 g CH NHKuu  
+Now we solve simultaneously two equilibria, which have a common variable, OH=z. 
+
+=== PDF PAGE 779 ===
+Chapter 16: Ac ids and Bases 
+ 7 7 9   
++
+32 4
++
+4 5
+b
+3Equation: NH aq       +     H O NH aq      + OH aq
+Initial: 1.96 M 0 M 0M
+Changes: M +M +M
+Equil: 1.96 M M M
+NH OH
+== 1.810=NH 1.96 1.96xx z
+xx z
+xz xzKx
+
+
+ªº
+«»¬¼|
+
+
+ªº ª º¬¼ ¬ ¼u|ZZXYZZ
+ 
+ +
+32 2 33
++
+33 4
+b
+32Eqn: CH NH aq    + H O(l)      CH NH aq    + OH aq
+Initial: 0.133M 0 M 0 M
+Changes:  M M M
+Equil: (0.133 ) M M M
+CH NH OH
+== 4 . 2 1 0 = =CH NH 0.133 0.133yy z
+yy z
+yz yzKy
+
+
+ªº
+«»¬¼|
+  
+
+ªº ª º¬¼ ¬ ¼uZZXYZZ
+ 
+ 
+In this system, there are three variables, xy=, =4+
+33+NH CH NH , and z=O H. 
+These three variables also represent the con centrations of the only charged species in 
+solution in substantial co ncentration, and thus xyz + = . We solve the two Kb expressions 
+for x andy. Then we substitute these re sults into the expression for z, and solve to obtain 
+the value of that variable. 
+ 
+55 55
+55=1 . 9 6 1 . 8 1 0 =3 . 5 3 1 0 =0 . 1 3 3 4 . 2 1 0 =5 . 5 9 1 0
+3.53 10 5.59 10==xz yz
+xyzz 
+uu u uu u
+uu 
+ 
+55 5
+25 3.53 10 5.59 10 9.12 10=+= + = = 9 . 1 2 1 0zxy zzz z
+ uuuu 33=9 . 5 1 0 M= O H p O H= l o g 9 . 5 1 0 =2 . 0 2 p H=1 4 . 0 0 2 . 0 2=1 1 . 9 8z ªº u u¬¼ 
+ 
+We see that our assumptions about x and y (that x1.96 M and y  0.133  M) must be 
+valid, since each of them is smaller than z. (Remember that xyz + = .) 
+ 
+(c) I n  1 . 0  M  N H C N4  there are the following species: NH aq NH aq CN aq4+
+3 ,,bg bg bg, HCN(aq), 
+HO a q3+bg , and OH aqbg . These species are related by the following six equations. 
+14
+14 +
+w3 +
+31.0 101= 1 . 0 1 0 = H O O H O H =
+HOK
+  uªº ª º ª ºu¬¼ ¬ ¼ ¬ ¼ªº¬¼ 
+2= 6 . 2 1 0 =10 3+bg KaHO C N
+HCNu
+  3= 1 . 8 1 0 =54+
+3bg KbNH OH
+NHu
+LNMOQP 
+
+=== PDF PAGE 780 ===
+Chapter 16: Ac ids and Bases 
+780 >@>@++
+34 3 4 4N H + N H= 1 . 0 M NH = 1.0 NH ªº ªº¬¼ ¬¼ 
+>@>@5H C N + C N= 1 . 0 M HCN = 1.0 CNªº ªº¬¼ ¬¼ 
+++ +
+43 4 6N H+ H O = C N + O Ho r N H C N ªº ªº ª º ª º ªº ª º |¬¼ ¬¼ ¬ ¼ ¬ ¼ ¬¼ ¬ ¼ 
+ 
+Equation (6) is the result of ch arge balance, that there mu st be the same quantity of 
+positive and negative charge in the soluti on. The approximation is the result of 
+remembering that not much H O3+ or OH will be formed as the result of hydrolysis of 
+ions.  Substitute equation (4) into equati on (3), and equation (5 ) into equation (2). 
+ 
+3’ = 1.8 10 =
+1.02’ = 4.0 10 =
+1.054+
+4+10 3+bg bg KKbaNH OH
+NHHO C N
+CNu
+u
+
+
+ 
+Now substitute equation (6) into equation 2’ bg, and equation (1) into equation 3’ bg. 
+2’’ = 6.2 10 =
+1.03’’1.8 10
+1.0 10=
+1.0103+
+4+
+4+5
+144+
+3+
+4+ bg bgejKaHO N H
+NHNH
+HO N Hu
+u
+u 
+ 
+Now we solve both of these equations for NH4+. 
+‘2: 6 . 2 1 0 6 . 2 1 0 = =6.2 10
+6.2 10 +10 10
+4+
+3+
+4+
+4+10
+10
+3+ bg u uu
+u
+NH H O NH NH
+HO 
+‘3: 1 . 8 1 0 1 . 8 1 0 = =1.8 10
+1.00 +1.8 109
+3+9
+3+
+4+
+4+
+4+9
+3+
+9
+3+ bg u uu
+uHO HO N H N H N HHO
+HO
+ 
+We equate the two results and solve for 
+HO3+.6.2 10
+6.2 10 +=1.8 10
+1.00 +1.8 1010
+10
+3+9
+3+
+9
+3+u
+uu
+u
+HOHO
+HO 
+ 
+6.2 10 +1.1 = 1.1 +1.8 10 6.2 10 = 1.8 1010
+3+
+3+9
+3+210 9
+3+2uu u u HO HO HO HO  
+HO Mp H l o g3+10
+910 10=62 1 0
+18 1059 1 0 = 5 . 9 1 0 =9 . 2 3.
+..u
+u u  u
+c h  
++ aw
+3a w b
+bNote that  H O = or pH=0.500 (p p p )KKKK KKuªº ¬¼ 
+
+=== PDF PAGE 781 ===
+Chapter 16: Ac ids and Bases 
+ 7 8 1   
+SELF-ASSESSMENT EXERCISES 
+ 
+103. (E) 
+(a) KW: Dissociation constant of water, which is defined as [H 3O+][OH¯] 
+(b) pH: A logarithmic scale of expressing acidity of a solution (H 3O+);  it is defined as 
+-log [H 3O+] 
+(c) pKa: A logarithmic scale expressing the streng th of an acid (which is how much an acid 
+dissociates in water at equilibrium); it is defined as –log K a 
+(d) Hydrolysis: A reaction invol ving ionization of water 
+(e) Lewis acid: A compound or species that accepts electrons 
+ 
+104. (E) 
+(a) Conjugate base: A base that is derived by removing an abstractable proton from the acid 
+(b) Percent ionization of acid/base: The ratio between the conjugate of the acid or base 
+under study and the acid/base itself times 100 
+(c) Self-ionization: A reaction i nvolving ionization of two mol ecules of water to give 
+[H3O+] and [OH¯] 
+(d) Amphiprotic behavior: A substance acti ng as either an acid or a base 
+ 
+105. (E) 
+(a) Brønstead–Lowry acid and base: A Brønste d–Lowry acid is a substance that when 
+placed in water will cause the formation of hydronium ion by donating a proton to 
+water.  The base is one that  abstracts a proton from water and results in a hydroxyl ion. 
+(b) [H 3O+] and pH: [H 3O+] is the molar concentration of hydronium ion in water, whereas 
+pH is the –log [H 3O+] 
+(c) Ka for NH 4+ and K b for NH 3: K b of NH 3 is the equilibrium constant for hydrolysis of 
+water with NH 3 to generate NH 4+ and OH¯.  K a of NH 4+ is for deprotonation of NH 4+ 
+with water to give NH 3 and OH¯. 
+(d) Leveling effect and electron- withdrawing effect:  The leveling effect is the result of 
+reaction of water with any acid or base such that no acid or base can exist in water that 
+are more acidic than H 3O+ or more basic than OH¯.  The electron-withdrawing effect is 
+the tendency for a central atom with high el ectronegativity in an oxoacid to withdraw 
+electrons from the O–H bond. 
+ 
+106. (E) The answer is (a), HCO 3–, because it can donate a proton to water to become CO 32–, or 
+it can be protonated to give H 2CO 3 (i.e., CO 2(aq)). 
+ 
+107. (E) The answer is (c). CH 3CH 2COOH is a weak acid, so  the concentration of H 3O+ ions it 
+will generate upon dissociation in water will be si gnificantly less than 0.1 M.  Therefore, its 
+pH will be higher the 0.10 M HBr, which disso ciates completely in water to give 0.10 M 
+H3O+. 
+ 
+108. (E) The answer is (d).  CH 3NH 2 is a weak base.  
+ 
+
+=== PDF PAGE 782 ===
+Chapter 16: Ac ids and Bases 
+782 109. ( M )  The answer is (e) because CO 32- is the strongest base and it drives the dissociation of 
+acetic acid furthest. 
+ 
+110. ( M )  The answer is (c).  H 2SO 4 dissociation is nearly complete for the first proton, giving a 
+[H3O+] = 0.10 M (pH = 1).  The second dissociation is not complete.  Therefore, (c) is the 
+only choice that makes sense. 
+ 
+111. ( M )  The answer is (b).  You can write down the stepwise equations for dissociation of 
+H2SO 3 and then the dissociation of HSO 3¯ and calculate the equili brium concentration of 
+each species.  However, you can determine th e answer without detailed calculations.  The 
+two dissociation equatio ns are given below: 
+ 
+Eq.1 23 2 33 HS O HO H S O HOU  Ka1 = 1.3×10-2 
+Eq.2 2
+32 3 3 HSO H O SO H O U  Ka2 = 6.3×10-8 
+ 
+For the first equation, the equi librium concentrations, of HSO 3¯ and H 3O+ are the same.  
+They become the initial concentration values  for the second dissociation reaction.  Since 
+Ka2 is 6.3×10-8 (which is small), the equili brium concentrations of HSO 3¯ and H 3O+ won’t 
+change significantly.  So, the equation simplifies as follows: 
+2- + 2- +
+33 338
+a2 -
+3SO H O SO H O +
+K6 . 8 1 0 =
+HSO -x
+xªºª º ªº ª º ¬¼¬ ¼ ¬¼ ¬ ¼ u  ªº¬¼-
+3 HSOªº¬¼
+82 -
+a2 3K= 6 . 81 0 S Oªºu ¬¼ 
+ 
+112. (E) Since both the acid and the base in this r eaction are strong, they dissociate completely.  
+The pH is determined as follows: 
+ 
+mol H 3O+: 0.248 M HNO 3 × 0.02480 L = 0.00615 mol 
+mol OH¯: 0.394 M KOH × 0.01540 L = 0.00607 mol 
+ 
+ 
+Final: 0.00615 – 0.00607 = 8.00×10-5 mol H 3O+ 
+
+5
+38.00 10 molHO   0 . 0 0 2 0 0  M0.02480 L + 0.01540 L
+pH  log 0.00200   2.70
+ uªº  ¬¼
+    
+ 
+113. ( M )  Since pH = 3.25, the [H 3O+] = 10-3.25 = 5.62×10-4 M.  Using the reaction below, we 
+can determine the equilibrium concentrations of other species 
+ 
+ H C 2H3O2 + H 2O UC2H3O2¯ + H 3O+ 
+Initial C    0  0 
+Change -x    +x  +x 
+Equil. C  - x    x   x  
+
+=== PDF PAGE 783 ===
+Chapter 16: Ac ids and Bases 
+ 7 8 3   
+Since x = 5.62×10-4 M, the equilibrium expression becomes 
+>@
+44
+32 3 2 5
+a 4
+2325.62 10 M 5.62 10 M HO CHO
+K1 . 8 1 0HC H O C 5.62 10 M ªº ª º uu¬¼ ¬ ¼   u
+u 
+ 
+Solving C gives a concentration of 0.0181 M. 
+ 
+Since concentrated acetic acid is 35% by we ight and the density is 1.044 g/mL, the 
+concentration of acetic acid is: 
+ 
+35 g HAc 1.044 g Conc. HAc 1 mol HAc6.084 M HAc100 g Conc. HAc sol'n 0.001 L sol'n 60.06 g HAcuu   
+ 
+Therefore, volume of concentrated soluti on required to make 12.5 L of 0.0181 M HAc 
+solution is: 
+ 
+
+ dilute conc
+concMV MV
+0.0181 M 12500 mLV3 7 . 2 m L6.084 M 
+   
+ 
+114. ( M )  Table 16.3 has the K a value for chloroacetic acid, HC 2H2ClO 2. Ka = 1.4×10-3.  The 
+solution is made of the chloroacetate salt , which hydrolyzes water according to the 
+following reaction: 
+ 
+ C 2H2ClO 2¯ + H 2O UHC 2H2ClO 2+O H ¯ 
+Initial 2.05    0  0 
+Change -x    +x  +x 
+Equil. 2.05  – x    x   x  
+  
+ 
+14
+12 W
+b 3
+aK 1.0 10K7 . 1 4 1 0K1 . 4 1 0u   uu 
+>@-
+22 2
+22 2
+12
+-- 6
+-6HC H ClO OH
+CHC l O
+7.14 102.05
+Solving the above simplified expression for x, we get x = OH =3.826×10
+pH=14-pOH=14- -log 3.826×10 =8.58bK
+xx
+x
+ªº¬¼ ªº¬¼
+u 
+ªº¬¼
+ªº¬¼ 
+ 
+ 
+
+=== PDF PAGE 784 ===
+Chapter 16: Ac ids and Bases 
+784 115. ( M )  0.10 M HI < 0.05 M H 2SO 4 < 0.05 M HC 2H2ClO 2 < 0.50 M HC 2H3O2 < 0.50 M 
+NH 4Cl < 1.0 M NaBr < 0.05 M KC 2H3O2 < 0.05 M NH 3 < 0.06 M NaOH < 0.05 M 
+Ba(OH) 2 
+ 
+116. ( M )  Since pH = 5 pOH, pH must  be significantly larger than pOH, which means that the 
+solution is basic.  The pH can be determ ined by solving two simultaneous equations: 
+pH 5 pOH 0
+pH + pOH = 14 
+ 
+pOH = 2.333 
+pH = 14 – 2.33 = 11.67.   
+Therefore, [H 3O+] = 2.14×10-12 M (and [OH¯] = 4.67×10-3 M) 
+ 
+The solute must be NH 3, because it is the only basic spec ies (the other tw o are acidic and 
+neutral, respectively).  Since the K b of NH 3 is 1.8×10-5, the concentration of NH 3 can be 
+determined as follows: 
+ 
+>@33 -+
+4 5
+b
+34.67 10 4.67 10 OH NH
+K = 1.8 10NH
+  1 . 2  Mx
+xªº ªº uu¬¼ ¬¼  u
+  
+ 
+ 
+117. ( M )  The answer is (a).  If HC 3H5O2 is 0.42% ionized for a 0.80 M solution, then the 
+concentration of the acid at equilibrium is (0.80×0.0042) = 0.00336.  The equilibrium 
+expression for the dissociation of HC 3H5O2 is: 
+  
+>@ 
+33 5 2 5
+a
+352HO CHO 0.00336 0.00336K1 .4210HC H O 0.800 0.00336ªº ª º¬¼ ¬ ¼   u 
+ 
+118. (E) The answer is (b), because H 2PO 4¯ is a result of addition of one proton to the base 
+HPO 42-. 
+ 
+119. ( M )  The answer is (d).  This is be cause, in the second equation, HNO 2 will give its proton 
+to ClO¯ (rather than HClO giving its proton to NO 2¯), which means that HNO 2 is a 
+stronger acid than HClO.  Also, in the first equation, ClO¯ is not a strong enough base to 
+abstract a proton from water, which means that  HClO is in turn a stronger acid than H 2O. 
+ 
+120. ( M )  The dominant species in the solution is ClO 2¯.  Therefore, determine its concentration 
+and ionization constant first: 
+ 
+22
+2
+23.00 mol CaClO 2 mol ClOClO  = 2.40 M2.50 L 1 mol CaClO
+ªº u¬¼ 
+14
+13 W
+b 2
+aK 1.0 10K9 . 1 1 0K1 . 1 1 0u   uu 
+
+=== PDF PAGE 785 ===
+Chapter 16: Ac ids and Bases 
+ 7 8 5   
+The reaction and the dissociation of ClO 2¯ is as follows: 
+  
+ C l O 2¯ + H 2O UHClO 2 + O H ¯ 
+Initial 2.40    0  0 
+Change -x    +x  +x 
+Equil. 2.40 – x    x  x 
+ 
+-
+2
+-
+2
+13
+-- 6
+-6HClO OH
+ClO
+9.1 102.40
+Solving the above simplified expression for x, we get x = OH =1.478×10 .
+pH=14-pOH=14- -log 1.478×10 =8.2bK
+xx
+xªº ª º¬¼ ¬ ¼ ªº¬¼
+u 
+ªº¬¼
+ªº¬¼ 
+ 
+121. (M)  Section 16-8 discusses the effects of st ructure on acid/base behavior.  The major 
+subtopics are effects of stru cture on binary acids, oxo aci ds, organic acids, and amine 
+bases.  For binary acids, acidity can be discus sed in terms of electronegativity of the main 
+atom, bond length, and heterolytic bond disso ciation energy.  For oxo acids, the main 
+things affecting acidity are the electronegativity  of the central atom and number of oxygen 
+atoms surrounding the central atom.  For organi c acids, the main topic is the electron-
+withdrawing capability of constituent groups atta ched to the carboxyl unit.  For amines, the 
+basicity is discussed in term s of electron withdrawing or donating groups attached to the 
+nitrogen in the amine, and the number of resonance structures possible for the base 
+molecule. 

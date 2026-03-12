@@ -1,0 +1,3199 @@
+
+
+=== PDF PAGE 960 ===
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy  
+960  
+(c)  
+     o
+ff 2 f 3 4 f 2 =3 F e s +4 H O g F eO s 4 H g
+=3 0 . 0 0k J / m o l +4 2 2 8 . 6k J / m o l 1 0 1 5k J / m o l 4 0 . 0 0k J / m o l =1 0 1k J / m o lGG G G G'' '  '  ' ªº ªº ª ºª º¬¼ ¬ ¼ ¬ ¼ ¬ ¼
+  
+ 
+(d)  
+      o3 + +
+ff 2f f =2 A l a q +3 H g 2 A l s 6 H a q
+=2 4 8 5k J / m o l +3 0 . 0 0k J / m o l 2 0 . 0 0 k J / m o l 6 0 . 0 0k J / m o l = 9 7 0 .k J / m o lGG G G G ªº ªº '' '  '  ' ªº ª º¬¼ ¬ ¼ ¬¼ ¬¼
+  
+25. (M) (a) 
+ oo o o
+33 2 =2 P O C l 1 2 P C l g O g
+=2 2 2 2 . 4J / K 2 3 1 1 . 7J / K 2 0 5 . 1J / K= 3 8 3 . 7J / KSS S S'  ªº ª º ª º¬¼ ¬ ¼ ¬ ¼
+  
+  oo o 3 3= =6 2 0 . 2 1 0 J 2 9 8 K 3 8 3 . 7 J / K =5 0 6 1 0J =5 0 6 k J GH T S''  'u   u   
+ 
+(b) The reaction proceeds spontaneously in th e forward direction when reactants and 
+products are in their standard states, because the value of 'Go is less than zero. 
+ 
+26. (M) (a) >@>@ >@     oo o o+ o o
+22 2 =B r l + 2 H N O a q2H a q2B r a q2N O g
+=1 5 2 . 2 J / K+2 1 3 5 . 6 J / K 2 0 J / K 2 8 2 . 4 J / K 2 2 4 0 . 1J / K = 2 2 1 . 6 J / KSS S SS S'  
+  ªº ªº¬¼ ¬¼  
+ 
+   oo o 3 3= =6 1 . 61 0 J 2 9 8 K 2 2 1 . 6 J / K = + 4 . 41 0 J = + 4 . 4 k J GH T S''  ' u  u  
+ 
+(b) The reaction does not proceed spontaneously in  the forward directi on when reactants and 
+products are in their standard states, because the value of 'Go is greater than zero. 
+ 
+27. (M) We combine the reactions in the same way as for any Hess's law calculations. 
+ (a)     N2OgoN2g+1
+2O2g 'Go=1
+2+208.4 kJ=104.2kJ  
+ N2g+2O2go2N O2g 'Go=+ 1 0 2 . 6k J  
+Net: N2Og+3
+2O2go2NO2g 'Go=104.2 +102.6 = 1.6 kJ  
+This reaction reaches an equilibrium c ondition, with signifi cant amounts of all 
+species being present.  This conclusion is based on the relatively small absolute 
+value of 'Go. 
+ 
+(b) 2N2g+6 H2go4NH3g'Go=233.0 kJ=66.0 kJ  
+4NH3g+5 O2go4NO g+6 H2Ol'Go=1010.5 kJ  
+4NO go2N2g+2 O2g 'Go=2+ 1 7 3 . 1 k J=346.2 kJ  
+ N e t :  6 H2g+3 O2go6H2Ol'Go=66.0kJ 1010.5kJ 346.2kJ = 1422.7kJ  
+This reaction is three times the desired reaction, which therefore has  
+o=1 4 2 2 . 7 k J3 =4 7 4 . 3G' y   kJ.  
+The large negative 'Go value indicates that this re action will go to completion at 25DC.  
+ 
+
+=== PDF PAGE 961 ===
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 6 1  (c) 4NH3g+5 O2go4NO g+6H2Ol'Go=1010.5 kJ  
+4NO go2N2g+2 O2g 'Go=2+ 1 7 3 . 1 k J=346.2 kJ  
+ o
+22 22N g +O g 2N O g =+ 2 0 8 . 4k JG o'  
+  o
+32 2 2 4NH g +4O g 2N O g +6H O l = 1010.5kJ 346.2kJ +208.4kJ
+                                                                               = 1148.3kJG o'  
+ 
+This reaction is twice the desired reaction, which, therefore, has 'Go= -574.2 kJ. 
+The very large negative value of the'Go for this reaction indicates that it will go to 
+completion. 
+28. (M) We combine the reactions in the same way as for any Hess's law calculations. 
+ 
+ (a) COS g+2 C O2goSO2g+3 C O g'Go=246.4 kJ=+ 2 4 6 . 6k J 
+2CO g+2 H2Ogo2CO2g+2H2g'Go=228.6 kJ=57.2 kJ  
+ 
+COS g+2 H2OgoSO2g+C O g+2H2g'Go=+ 2 4 6 . 6 57.2 = +189.4 kJ
+ 
+This reaction is spontaneous in the reverse direction, because of the large positive 
+value of 'Go 
+ 
+(b) COS g+2 C O2goSO2g+3 C O g'Go=246.4 kJ=+ 2 4 6 . 6k J 
+3CO g+3 H2Ogo3CO2g+3 H2g'Go=328.6 kJ=85.8 kJ  
+ C O S g +3 H2OgoCO2g+S O2g+3 H2g'Go=+ 2 4 6 . 6 85.8 = +160.8 kJ  
+This reaction is spontaneous in the reverse direction, because of the large positive value 
+of 'Go. 
+ 
+(c)  o
+22  COS g + H g CO g + H S g =+ 1 . 4 k JG o'   
+ o
+22 2 CO g + H O g CO g + H g =2 8 . 6 k J =2 8 . 6 k JG o'   
+COS g+H2OgoCO2g+H2Sg'Go=1.4 kJ 28.6 kJ = 30.0 kJ  
+The negative value of the'Go for this reaction indicates th at it is spontaneous in the 
+forward direction.   
+ 
+29.  ( D )       The combustion reaction is :C6H6l+15
+2O2go6CO2g+3 H2Og  o r  l 
+ 
+ (a)  
+   o 15
+f2 f 2 f 6 6 f 2 2
+15
+2= 6 CO g + 3 H O l C H l O g
+=6 3 9 4 . 4k J +3 2 3 7 . 1k J + 1 2 4 . 5k J 0 . 0 0k J = 3 2 0 2k JGG G G G'' '  '  ' ªº ªº ª º ª º¬¼¬¼ ¬¼ ¬ ¼
+   
+ 
+ 
+ (b)
+  
+   o 15
+f2 f 2 f 6 6 f 2 2
+15
+2= 6 CO g + 3 H O g C H l O g
+=6 3 9 4 . 4k J +3 2 2 8 . 6k J + 1 2 4 . 5k J 0 . 0 0k J = 3 1 7 7k JGG G G G'' '  '  ' ªº ªº ªºª º¬¼¬¼ ¬¼ ¬ ¼
+   
+ 
+
+=== PDF PAGE 962 ===
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy  
+962  We could determine the differen ce between the two values of 'Go by noting the 
+difference between the two products: 3H2Olo3H2Ogand determining the 
+value of 'Go for this difference: 
+o
+f2 f2 =3 H O g 3 H O l =3 2 2 8 . 6 2 3 7 . 1 k J=2 5 . 5k JGG G''  '   ªº ªº ª º¬¼¬¼ ¬ ¼ 
+ 
+30. (M) We wish to find the value of the 'Ho for the given reaction: F2go2F ( g )  
+ oo o 1 1 1
+2 =2 F g F g =2 1 5 8 . 8  J  K 2 0 2 . 8  J  K =+ 1 1 4 . 8  J  KSS S'  ªºª º¬¼¬ ¼ oo o 3=+ = 1 2 3 . 9 1 0 J + 2 9 8 K 1 1 4 . 8 J / K = 1 5 8 . 1 k J / m o l e  o f  b o n d sHG T S'' ' u u  
+The value in Table 10.3 is 159 kJ/mol, which is in quite good agreem ent with the value 
+found here. 
+31. (M) (a) 'Sqrxn = 6Sqproducts - 6Sqreactants   
+  =  [1 mol u 301.2 J K1mol1 + 2 mol u 188.8 J K1mol1]  [2 mol u 247.4 J K1mol1    
+            + 1 mol u 238.5 J K1mol1] = 54.5 J K1 
+ 'Sqrxn = = 0.0545 kJ K1 
+ 
+(b) 'Hqrxn= 6bonds broken in reactants (kJ/mol)) – 6bonds broken in products(kJ/ mol)) 
+        =  [ 4  m o l  u (389 kJ mol1)N-H + 4 mol u (222 kJ mol1)O-F]  
+                       [4 mol u (301 kJ mol1)N-F + 4 mol u (464 kJ mol1)O-H]  
+ 'Hqrxn= 616 kJ 
+ 
+(c) 'Gqrxn = 'Hqrxn  T'Sqrxn =  616 kJ  298 K( 0.0545 kJ K1) = 600 kJ 
+Since the 'Gqrxn is negative , the reaction is spontaneous , and hence feasible  
+(at 25 qC ). Because both the entropy and enthalpy changes are negative , this 
+reaction will be more highly favored at low temperatures (i.e., the reaction is 
+enthalpy driven) 
+ 
+32. (D)  In this problem we are asked to find 'Gq at 298 K for the decomposition of 
+ammonium nitrate to yield di nitrogen oxide gas and liquid wa ter.  Furthermore, we are 
+asked to determine whether the decomposition will be favored at temperatures above or 
+below 298 K.  In order to answer these quest ions, we first need the balanced chemical 
+equation for the process.  From the da ta in Appendix D, we can determine 'Hqrxn and 
+'Sqrxn.  Both quantities will be required to determine 'Gqrxn ('Gqrxn='Hqrxn-T'Sqrxn).  
+Finally the magnitude of 'Gqrxn as a function of temperatur e can be judged depending on 
+the values of 'Hqrxn and 'Sqrxn. 
+ Stepwise approach: 
+ First we need the balanced chem ical equation for the process: 
+ N H 4NO 3(s) 'o N2O(g) + 2H 2O(l) 
+ N o w  w e  c a n  d e t e r m i n e  'Hqrxn by utilizing 'Hfovalues provided in Appendix D: 
+ N H 4NO 3(s)     'o      N 2O(g)      +      2H 2O(l) 
+         'Hfo   -365.6 kJmol-1            82.05 kJmol-1      -285.6 kJmol-1 
+'Hqrxn=6'Hfqproducts  6'Hfqreactants 
+'Hqrxn=[2 mol( 285.8 kJ mol1) + 1 mol(82.05 kJ mol1)] [1 mol ( 365.6 kJ  
+           m o l1)] 
+
+=== PDF PAGE 963 ===
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 6 3  'Hqrxn= 124.0 kJ 
+ S i m i l a r l y ,  'Sqrxn can be calculated utilizing Sq values provided in Appendix D 
+ N H 4NO 3(s)     'o      N 2O(g)      +      2H 2O(l) 
+          So   15.1 Jmol-1K-1            219.9 Jmol-1K-1       69.91 Jmol-1K-1 
+          'Sqrxn=6Sqproducts  6Sqreactants 
+'Sqrxn=[2 mol u 69.91 J K1mol1 + 1 mol u 219.9 J K1mol1 ]  [1 mol u 151.1 J   
+K1mol1] 
+'Sqrxn=208.6 J K1 = 0.2086 kJ K1 
+         To find 'Gqrxn we can either utilize 'Gqf values provided in Appendix D or 'Gqrxn='Hqrxn-
+T'Sqrxn: 
+'Gqrxn='Hqrxn-T'Sqrxn=-124.0 kJ – 298.15 K u0.2086 kJK-1 
+'Gqrxn=-186.1 kJ 
+        Magnitude of 'Gqrxn as a function of temperature can be judged depending on the values of 
+'Hqrxn and 'Sqrxn: 
+Since 'Hqrxn is negative  and 'Sqrxn is positive , the decomposition of ammonium nitrate is 
+spontaneous at all temperatures.  Howe ver, as the temperature increases, the T'S term gets 
+larger and as a result, the decomposition re action shift towards pr oducing more products.  
+Consequently, we can say that the re action is more highly favored above  298 K (it will also 
+be faster at higher temperatures) 
+ Conversion pathway approach: 
+ F r o m  t h e  b a l a n c e d  c h e m i c a l  e q u a t i o n  f o r  t h e  p r o c e s s  
+ N H 4NO 3(s) 'o N2O(g) + 2H 2O(l) 
+ w e  c a n  d e t e r m i n e  'Hqrxn and 'Sqrxn by utilizing 'Hfo and Sq values provided in Appendix 
+D: 
+ 'Hqrxn=[2 mol( 285.8 kJ mol1) + 1 mol(82.05 kJ mol1)] [1 mol ( 365.6 kJ mol1)] 
+'Hqrxn= 124.0 kJ  
+        'Sqrxn=[2 mol u 69.91 J K1mol1 + 1 mol u 219.9 J K1mol1 ]  [1 mol u 151.1 J   
+K1mol1] 
+'Sqrxn=208.6 J K1 = 0.2086 kJ K1 
+'Gqrxn='Hqrxn-T'Sqrxn=-124.0 kJ – 298.15 K u0.2086 kJK-1 
+'Gqrxn=-186.1 kJ 
+Since 'Hqrxn is negative  and 'Sqrxn is positive , the decomposition of ammonium nitrate is 
+spontaneous at all temperatures.  Howe ver, as the temperature increases, the T'S term gets 
+larger and as a result, the decomposition re action shift towards pr oducing more products.  
+The reaction is highly favored above  298 K (it will also be faster). 
+ 
+ 
+The Thermodynamic Equilibrium Constant 
+ 
+33. ( E )  In all three cases, KKeq p=b e c a u s e  o n l y  g a s e s ,  p u r e  s o l i d s ,  a n d  p u r e  l i q u i d s  a r e  p r e s e n t  
+in the chemical equations. There are no factors for solids and liquids in Keq expressions, 
+and gases appear as partial pressures in atmospheres. That makes Keq the same as Kp for 
+these three reactions.  
+
+=== PDF PAGE 964 ===
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy  
+964 We now recall that Kp=KcRT'n.  Hence, in these three cases we have: 
+(a)      1
+22 3 g a s p c2SO g + O g 2SO g ;   = 2 2 +1 = 1;   = = nK K K R T'  U  
+ 
+(b)  11 11
+22 g as pc 22 22 HI g H g + I g ;         = 1 + = 0;     = = nK K K' U  
+ 
+(c)  
+  43 3 2 2
+2
+gas p c NH HCO s NH g + CO g + H O l ;
+=2 0 =+ 2 = =nK K KRT 'U
+ 
+ 
+34.    (M) (a)    
+4
+2
+4
+2{H g }={H O g }PKP 
+ 
+(b) Terms for both solids, Fe(s) and Fe3O4s, are properly excluded from the 
+thermodynamic equilibrium constant expression.  (Actually, each solid has an activity 
+of 1.00.) Thus, the equilibriu m partial pressures of both H2g and H2Og do not 
+depend on the amounts of the two solids present, as long as some of each solid is 
+present. One way to understand this is that any chemical reaction occurs on the 
+surface of the solids, and thus is unaffected by the amount present. 
+ 
+(c) We can produce H2g from H2Og without regard to the proportions of Fe(s) and 
+Fe3O4s with the qualification, that there must always be some Fe(s) present for the 
+production of H2g to continue. 
+ 
+35.  (M)  In this problem we are asked to determine the equilibrium constant and the change in 
+Gibbs free energy for the reaction between  carbon monoxide and hydrogen to yield 
+methanol.  The equilibrium concentrations of  each reagent at 483K were provided.  We 
+proceed by first determining the equilibrium constant.  Gibbs free energy can be 
+calculated using 'Go RTlnK. 
+ Stepwise approach: 
+ First determine the equilibrium c onstant for the reaction at 483K: 
+ 23 CO(g)+2H (g) CH OH(g) U  
+K [CH3OH(g)]
+[CO(g)][H2(g)] 0.00892
+0.0911 u0.08222 14.5  
+ N o w  u s e  'Go RTlnK to calculate the change in Gibbs free energy at 483 K: 
+ 'Go RTlnK 
+ 'Go 8.314 u483uln(14.5)Jmol-1 1.1u104Jmol-1
+'Go 11kJmol-1 
+Conversion pathway approach: 
+K [CH3OH(g)]
+[CO(g)][H2(g)] 0.00892
+0.0911 u0.08222 14.5  
+'Go RTlnK 8.314 u483uln(14.5)Jmol-1 1.1u104Jmol-1
+'Go 11kJmol-1 
+
+=== PDF PAGE 965 ===
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 6 5  36.  (M)  Gibbs free energy for the reaction ('Go 'HoT'So) can be calculated using 'Hfo 
+and Sovalues for CO(g), H 2(g) and CH 3OH(g) from Appendix D. 
+'Ho 'Hfo(CH3OH(g)) ['Hfo(CO(g)) 2'Hfo(H2(g)]
+'Ho 200.7kJmol-1(110.5kJmol-10kJmol-1) 90.2kJmol-1 
+'So So(CH3OH(g)) [So(CO(g)) 2So(H2(g)]
+'So 239.8JK1mol-1(197.7JK1mol-12u130.7JK1mol-1) 219.3JK-1mol-1 
+'Go 90.2kJmol-1483Ku(219.3)kJK-1mol-1
+1000 15.7kJmol-1 
+Equilibrium constant for the reaction can be calculated using 'Go RTlnK 
+lnK 'Go
+RTlnK 15.7 u1000 Jmol1
+8.314 JK1mol1u483K 3.9K e39 2.0u102 
+The values are different because in this case, the calculated K is the thermodynamic 
+equilibrium constant that repres ents the reactants a nd products in their st andard states.  In 
+Exercise 35, the reactants and products were not in their standard states. 
+ 
+ 
+Relationships Involving 'G,  'G o, Q and K 
+ 
+37. ( M )  
+   
+ o
+ff 2f 2
+31 1
+pp=2 N O g NO g 0 . 5 O g
+=2 8 6 . 5 5k J / m o l 1 0 4 . 2k J / m o l 0 . 5 0 . 0 0k J / m o l =6 8 . 9k J / m o l
+=l n = 8 . 3 1 4 5 1 0 k J  m o l K 2 9 8 K l nGG G G
+RT K K ''  '  ' ªºª º ª º¬¼¬ ¼ ¬ ¼
+
+ u 
+p 31 168.9 kJ/molln = = 27.88.3145 10 kJ mol K 298 KK uu  27 8 13
+p=e =8 1 0Ku 
+ 
+38. (M) (a) 
+   o
+f2 5 f2 4 f2 =2 NO g 2 NO g O g
+=2 1 1 5 . 1k J / m o l 2 9 7 . 8 9k J / m o l 0 . 0 0k J / m o l =3 4 . 4k J / m o lGG G G''  '  ' ªº ªº ª º¬¼ ¬¼ ¬ ¼
+ 
+         (b)  o3
+o
+pp 11
+13 9 7
+p34.4 10 J/mol=l n l n = = = 1 3 . 98.3145 J mol K 298K
+=e =9 1 0GGR T K KRT
+K
+'u'   u
+u 
+ 
+39. ( M )  We first balance each chemical equa tion, then calculate the value of 'Go with data 
+from Appendix D, and finally calculate the value of Keq with the use of 'GR T Koln =.  
+(a)  22 2 4HCl g + O g 2H O g + 2Cl s U  
+ o
+f2 f 2 f f2 =2 H O g +2 C l g 4 H C l g O g
+kJ kJ kJ kJ kJ=2 2 2 8 . 6 +2 0 4 9 5 . 3 0 0 = 7 6 . 0  mol mol mol mol molGG G G G'' '  '  ' ªº ªº ª ºªº¬¼¬ ¼¬¼ ¬ ¼
+§· §·u u u    ¨¸ ¨¸©¹ ©¹ 
+o3
++30 7 13
+11+76.0 10 J/molln = = = +30.7 = e = 2 108.3145 J mol K 298 KGKKRT' uuu 
+
+=== PDF PAGE 966 ===
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy  
+966  (b)  23 2 34 2 3Fe O s + H g 2Fe O s + H O g U  
+ 
+ 
+ o
+f3 4 f 2 f2 3 f 2 =2 F eO s + H O g 3 F eO s H g
+=2 1 0 1 5k J / m o l 2 2 8 . 6k J / m o l 3 7 4 2 . 2k J / m o l 0 . 0 0k J / m o l
+=3 2 k J / m o lGG G G G'' '  '  ' ªº ªºª º ª º¬¼ ¬ ¼ ¬¼ ¬ ¼
+u  u 
+ 
+o3
++13 5
+1132 10 J/molln = = = 13; = e = 4 108.3145 J mol K 298 KGKKRT' uuu 
+ 
+(c)  +2
+42 4 2Ag aq +SO aq Ag SO sU  
+'Go='GfAg2SO4sª¬ º¼2'GfAg+aqª¬º¼'GfSO42aqª¬º¼
+=618.4 kJ/mol 2u77.11kJ/mol 744.5 kJ/mol =28.1kJ/mol 
+o3
++11 3 4
+1128.1 10 J/molln = = = 11.3; = e = 8 108.3145 J mol K 298 KGKKRT' uuu 
+ 
+40. (E) oo o o o
+22 2
+11 11 11 11
+11={ C O g } +{ H g } { C O g } { H O g }
+=2 1 3 . 7J  m o l K + 1 3 0 . 7J  m o l K 1 9 7 . 7J  m o l  K 1 8 8 . 8J  m o l K
+=4 2 . 1 J  m o lKSS S S S
+   
+' 
+
+ 
+ 
+ 
+41. (M) In this problem we need to determ ine in which direction the reaction 
+   22 32SO g + O g 2SO g U  is spontaneous when the partial pressure of SO 2, O2, and 
+ S O 3 are 1.0 u10-4, 0.20 and 0.10 atm, respectively.  We proceed by first determining the 
+ standard free energy change for the reaction ('Go) using tabulated data in Appendix D.  
+ Change in Gibbs free energy for the reaction ('G) is then calculated by employing the 
+ e q u a t i o n  olnp GG R T Q' '  ,where Qp is the reaction quotient .  Based on the sign of 
+ 'G, we can determine in which dir ection is the reac tion spontaneous.  
+ Stepwise approach: 
+ F i r s t  d e t e r m i n e  'Go for the reaction using data in Appendix D: 
+   22 32SO g + O g 2SO g U  
+ 
+  'Go=2'GfoSO3gª¬º¼2'GfoSO2gª¬º¼'GfoO2gª¬º¼
+'Go 2u(371.1 kJ/mol) 2u(300.2 kJ/mol) 0.0 kJ/mol 
+ 'Go 141.8kJ 
+ C a l c u l a t e  'G by employing the equation olnp GG R T Q' '  , where Qp is the reaction 
+ q u o t i e n t :  
+ olnp GG R T Q' '   
+ 
+ 2
+3
+p 2
+22{SO g }={O g } {SO g }PQPP 
+
+=== PDF PAGE 967 ===
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 6 7   
+2
+6
+p 240.10 atm=5 .010
+0.20 atm 1.0 10  atmQ
+ u
+u 
+ G' = 141.8 kJ + (8.3145 u 103 kJ/K mol )(298 K)ln(5.0 u 106) 
+ G' = 141.8 kJ + 38.2 kJ = 104 kJ. 
+ E x a m i n e  t h e  s i g n  o f  'G to decide in which directi on is the reactio n spontaneous: 
+ S i n c e  G'is negative, the reaction is spontaneous in the forward direction. 
+ Conversion pathway approach: 
+ 
+  'Go=2'GfoSO3gª¬º¼2'GfoSO2gª¬º¼'GfoO2gª¬º¼
+'Go 2u(371.1 kJ/mol) 2u(300.2 kJ/mol) 0.0 kJ/mol=-141.8kJ 
+ olnp GG R T Q' '   
+ 
+  Qp=P{SO3g}2
+P{O2g}P{SO2g}2 0.10 atm2
+0.20 atm 1.0u104 atm 2 5.0u106 
+ G' = 141.8 kJ + (8.3145 u 103 kJ/K mol )(298 K)ln(5.0 u 106)=-104 kJ. 
+ S i n c e  G' is negative, the reaction is spontaneous in the forward direction. 
+ 
+42. (M) We begin by calculating the standard free energy change for the reaction:  
+                            22Hg + C lg 2 H C l g U  
+ ff 2f 2 =2 H C l g C l g H g
+2( 9 5 . 3 0  k J / m o l )0 . 0  k J / m o l0 . 0  k J / m o l 1 9 0 . 6 k JGG G G''  '  ' ªº ª º ª º¬¼ ¬ ¼ ¬ ¼
+ u     DD D D
+ 
+        
+Now we can calculate G' by employing the equation olnp GG R T Q' '  , where  
+ 
+ 2
+p
+22{HCl g }={H g } {Cl g }PQPP ; 
+ 2
+p0.5 atm=10.5 atm 0.5 atmQ  
+ 
+ G' = 190.6 kJ + (8.3145 u 103 kJ/K mol )(298 K)ln(1) 
+ G' = 190.6 kJ + 0 kJ = 190.6 kJ. 
+ 
+ S i n c e  G'is negative, the reaction is spontaneous in the forward direction. 
+ 
+43. (M) In order to determine the direction in wh ich the reaction is spont aneous, we need to 
+calculate the non-standard free energy change for the reaction. To accomplish this, we will 
+employ the equation olnc GG R T Q' '  , where  
+ 
+  
++
+33 2
+c
+32[H O aq ] [CH CO aq ]=[CH CO H aq ]Q
+ ; 23
+5
+c1.0 10  M
+=1 . 0 1 0  (0.10 M)Q
+u
+ u  
+ 
+G' = 27.07 kJ + (8.3145 u 103 kJ/K mol )(298 K)ln(1.0 u 105) 
+ G' = 27.07 kJ + ( 28.53 kJ) = 1.46 kJ. 
+ 
+ S i n c e  G' is negative, the reaction is spontaneous in the forward direction. 
+ 
+
+=== PDF PAGE 968 ===
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy  
+968 44. (M) As was the case for exercise 39, we need to calculate the non-standard free energy 
+change for the reaction. Once again, we will employ the equation oln GG R T Q' '  , but 
+this time 
+  
++
+4
+c
+3[NH aq ] [OH aq ]=[NH aq ]Q
+ ; 23
+5
+c1.0 10  M
+=1 . 0 1 0  (0.10 M)Q
+u
+ u  
+ G' = 29.05 kJ + (8.3145 u 103 kJ/K mol)(298 K)ln(1.0 u 105) 
+ G' = 29.05 kJ + ( 28.53 kJ) = 0.52 kJ. 
+ S i n c e  G'is positive, the reaction is sponta neous in the reverse direction. 
+ 
+45. (E) The relationship 'So = ('Go  'Ho)/T  (Equation (b)) is incorrect. Rearranging this 
+equation to put 'Go on one side by itself gives 'Go = 'Ho + T'So. This equation is not 
+valid. The T'So term should be subtracted from the 'Ho term, not added to it. 
+ 
+46. (E) The 'Go value is a powerful thermodynamic parameter because it can be used to 
+determine the equilibrium constant for th e reaction at each and every chemically 
+reasonable temperature via the equation 'Go = RT ln K. 
+ 
+47. (M) (a) To determine Kp we need the equilibrium partial pressures. In the ideal gas law, 
+each partial pressure is defined byPnRTV =/. Because R, T, and V are the same for 
+each gas, and because there are the same nu mber of partial pressure factors in the 
+numerator as in the denominator of the Kp expression, we can use the ratio of amounts 
+to determine Kp. 
+  ^`^`^` ^ `^`^`^` ^ `22 2
+p
+22 2 2 2 2CO(g) H O(g) CO(g) H O(g) 0.224 mol CO 0.224 mol H O== = = 0 . 6 5 9CO (g) H (g) CO (g) H (g) 0.276 mol CO 0.276 mol HPP nnKPP nnu
+u 
+ 
+(b) o1 1
+1000K p
+3=l n = 8 . 3 1 4 5 J  m o l K 1 0 0 0 . K l n 0 . 6 5 9
+=3 . 4 6 7 1 0 J / m o l=3 . 4 6 7k J / m o lGR T K'  u u
+u 
+(c) 
+2pp
+220.0340 mol CO 0.0650 mol H O== 0 . 3 1 0 . 6 5 9 =0.0750 mol CO 0.095 mol HQKuu 
+Since Qp is smaller than Kp, the reaction will proceed to the right, forming products, 
+to attain equilibrium, i.e., 'G = 0. 
+ 
+48. (M) (a) We know that Kp=KcRT'n. For the reaction  22 32SO g + O g 2SO g , U   
+  gas=2 2+ 1 = 1n'  , and therefore a value of Kp can be obtained. 
+  
+  Kp=KcRT1 2.8u102
+0.08206 L atm
+mol Ku1000 K 3.41  K 
+  W e  r e c o g n i z e  t h a t  p=KK  since all of the substances involved in the reaction are 
+gases. We can now evaluate'Go. 
+
+=== PDF PAGE 969 ===
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 6 9    o 4
+eq8.3145 J=l n = 1000 K ln 3.41 = 1.02 10 J/mol = 10.2 kJ/molmol KGR T K'  u u  u   
+(b) We can evaluate Qc for this situation and compare the value with that of Kc=2 . 8 1 02u to 
+determine the direction of the reaction to reach equilibrium. 
+2
+3
+2
+2 3
+c c 2 2
+22220.72 mol SO
+2.50 L [SO ]45 2.8 10[SO ] [O ] 0.40 mol SO 0.18 mol O
+2.50 L 2.50 LQK§·
+¨¸©¹    u  
+§· § ·u ¨¸ ¨ ¸©¹ © ¹ 
+Since Qc is smaller than Kc the reaction will shift right , producing sulfur trioxide 
+and consuming sulfur dioxide and molecula r oxygen, until the two values are equal. 
+ 
+49. (M) (a) c=KK  
+         o3 1 1
+eq =l n = 8 . 3 1 4 5 1 0 k J  m o l K 4 4 5 + 2 7 3 K l n 5 0 . 2 = 2 3 . 4 k JGR T K '  u  
+ (b)   gn1 /2 13 13
+pc== =1 . 7 1 0 0 . 0 8 2 1 2 9 8 =8 . 4 1 0 KK K R T'uuu  
+o3 1 1 13
+p
+o=l n = 8 . 3 1 4 5 1 0 k J  m o l K 2 9 8 K l n 8 . 4 1 0
+=+ 6 8 . 9k J / m o lGR T K
+G  '  u u
+' 
+ (c)   +1 3
+pc== = 4 . 6 1 1 0 0 . 0 8 2 0 6 2 9 8 = 0 . 1 1 3nKK K R T' uu  
+'Go=RTlnKp=8.3145 u103kJ mol1K1 298Kln 0.113=+ 5 . 4 0k J / m o l 
+ (d) 6
+c== 9 . 1 4 1 0KKu 
+           o3 1 1 6
+c
+o=l n = 8 . 3 1 4 5 1 0 k J  m o l K 2 9 8 K l n 9 . 1 4 1 0
+=+ 2 8 . 7k J / m o lGR T K
+G  '  u u
+' 
+50. (M) (a) The first equation involves the formation of one mole of Mg2+aq from 
+Mg OH2s and +2H aq , while the second equation i nvolves the formation of 
+only half-a-mole of Mg2+aq. We would expect a free energy change of half the 
+size if only half as much product is formed. 
+ 
+(b) The value of K for the first reaction is the square of the value of K for the second 
+reaction. The equilibrium c onstant expressions are related in the same fashion.   
+ 
+K1=Mg2+ª¬º¼
+H+ª¬º¼2=Mg2+ª¬º¼1/2
+H+ª¬º¼§
+©¨¨·
+¹¸¸2
+=K22 
+ 
+(c) The equilibrium solubilities will be the same regardless which expression is used. 
+The equilibrium conditions (solubilities in this instance) are the same no matter how 
+we choose to express them in an equilibrium constant expression. 
+ 
+
+=== PDF PAGE 970 ===
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy  
+970 51. (E) o3 1 1 11
+p = ln = 8.3145 10 kJ mol K 298K ln 6.5 10 = 67.4 kJ/molGR T K '  u u  
+  22 CO g + Cl g COCl g o     o=6 7 . 4 k J / m o lG'  
+  1
+2 2 Cg r a p h i t e+ O g C Og o    f=1 3 7 . 2 k J / m o lG'  
+            
+  1
+22 2 2 Cg r a p h i t e+ O g+ C l g C O C l g o   f=2 0 4 . 6 k J / m o lG'  
+         'Gf of COCl2g given in Appendix D is 204.6 kJ/mol, thus the agreement is excellent. 
+ 
+52. (M) In each case, we first determine the value of 'Go for the solubility reaction. From 
+that, we calculate the value of the equilibrium constant, spK, for the solubility reaction. 
+(a)   +AgBr s Ag aq + Br aqU  
+
+o+
+ff f =A g a q +B r a q A g B r s
+=7 7 . 1 1k J / m o l 1 0 4 . 0k J / m o l 9 6 . 9 0k J / m o l =+ 7 0 . 0k J / m o lGG G Gªº ªº '' '  ' ª º¬¼ ¬¼ ¬¼
+  
+3 o
+28 2 13
+sp 1170.0 10 J/molln = = = 28.2; = e = 6 108.3145 J mol K 298.15 KGKKRT
+u 'uu 
+ 
+(b)   2+ 2
+44 CaSO s Ca aq +SO aqU  
+  
+oo 2o o2 +
+ff 4f 4 =C a a q +S O a q C a S O s
+=5 5 3 . 6 k J / m o l7 4 4 . 5 k J / m o l 1 3 3 2 k J / m o l = + 3 4 k J / m o lGG G Gªº ªº '' '  ' ªº¬¼ ¬¼ ¬¼
+  
+3 o
+14 7
+sp 1134 10 J/molln = = = 14; = e = 8 108.3145 J mol K 298.15 KGKKRT
+u 'uu 
+ 
+ (c)     3+
+3Fe OH s Fe aq + 3OH aqU  
+'Go='GfFe3+aqª¬º¼+3'GfOHaqª¬º¼'GfFe OH3s ª¬º¼
+=4.7 kJ/mol + 3 u157.2 kJ/mol 696.5 kJ/mol =+ 2 2 0 . 2k J / m o l 
+3 o
+88 83 39
+sp 11220.2 10 J/molln = = = 88.83 = e = 2.6 108.3145 J mol K 298.15 KGKKRT
+u 'uu 
+ 
+53. ( M ) ( a )  We can determine the equilibrium partial pressure from the value of the equilibrium 
+constant. 
+  o3
+o
+pp 1158.54 10 J/mol=l n l n = = = 2 3 . 6 38.3145 J mol K 298.15 KGGR T K KRT'u'   u 
+   21/2 23 63 11 11 21
+p2 2 ={ Og }= e = 5 . 5 1 0 { Og } = 5 . 5 1 0 = 3 . 0 1 0 a t mKP P uu u  
+ 
+(b) Lavoisier did two things to increase the quantit y of oxygen that he obtained. First, he ran 
+the reaction at a high temper ature, which favors the products (i.e., the side with 
+molecular oxygen.) Second, the molecular oxyg en was removed immediately after it was 
+formed, which causes the equilibrium to shift to the right continuously (the shift towards 
+products as result of the removal of the O 2 is an example of Le Châtelier's principle). 
+
+=== PDF PAGE 971 ===
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 7 1   
+54. (D) (a) We determine the values of 'Ho and 'So from the data in Appendix D, and then 
+the value of 'Go at 25 = 298DC K .   
+   o
+f3 f 2 f2 f 2 =C H O H g +H O g C O g 3H g
+=2 0 0 . 7 k J / m o l + 2 4 1 . 8 k J / m o l 3 9 3 . 5 k J / m o l 3 0 . 0 0 k J / m o l =4 9 . 0 k J / m o lHH H H H'' ' '  ' ªº ª º ª º ª º¬¼ ¬ ¼ ¬ ¼ ¬ ¼
+    
+ oo o o o
+32 2 2
+11 11=C H O H g +H O g C O g3H g
+=( 2 3 9 . 8+ 1 8 8 . 8 2 1 3 . 7 3 1 3 0 . 7 )J  m o l K = 1 7 7 . 2J  m o l KSS SS S '  ªº ª º ª º ª º¬¼ ¬ ¼ ¬ ¼ ¬ ¼
+ u  oo o 11= = 49.0 kJ/mol 298 K 0.1772 kJ mol K = +3.81 kJ/mol GH T S''  '    
+Because the value of 'Go is positive, this reaction does not proceed in the forward  
+        d i r e c t i o n  a t  2 5DC.  
+ 
+(b) Because the value of 'Ho is negative and that of 'So is negative, the reaction is non-
+spontaneous  at high temperatures, if reactants and products are in their standard states . 
+The reaction will proceed slight ly in the forward directi on, however, to produce an 
+equilibrium mixture with small quantities of 3CH OH g  and H2Og. Also, because 
+the forward reaction is exothermic, this  reaction is favored by lowering the 
+temperature. That is, the value of K increases with decreasing temperature. 
+ 
+(c) oo o 11
+500K
+3
+p= =4 9 . 0 k J / m o l5 0 0 . K 0 . 1 7 7 2 k J  m o l K = 3 9 . 6 k J / m o l
+=3 9 . 6 1 0 J / m o l= l nGH T S
+RT K''  '  
+u 
+3
+95 3 5
+p p 1139.6 10 J/molln 9.53;     e 7.3 108.3145 J mol K 500. KGKKRT
+'  u      uuD
+ 
+ 
+(d) Reaction: CO2g+ 3 H2g ZXZYZZ C H3OH g + H2Og 
+ Initial:       1.00 atm         1.00 atm                      0 atm     0 atm 
+ C h a n g e s :    x atm          3x atm                     +x atm    +x atm 
+ E q u i l :  ( 1 . 0 0  x) atm      1.003x atm             x atm      x atm 
+^`^`^` ^ `   32 5 2
+p 33
+22CH OH H O=7 . 3 1 0 = =
+CO H 1.00 1.00 3PP xxKx
+PP x x u|
+ 
+^`53
+3 7.3 10 8.5 10 atm P CH OH x u u    Our assumption, that 31 . 0 0x atm, is valid. 
+ 
+'Go and K as Function of Temperature 
+ 
+55 (M)(a)  oo o o o
+23 2 2 3
+JJ J J J
+K mol K mol K mol K mol K mol=N a C O s +H O l +C O g 2 N a H C O s
+=1 3 5 . 0 +6 9 . 9 1 +2 1 3 . 7 2 1 0 1 . 7 = 2 1 5 . 2SS S S S'ªº ª º ª º ª º¬¼ ¬ ¼ ¬ ¼ ¬ ¼
+§·¨¸©¹ 
+ 
+
+=== PDF PAGE 972 ===
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy  
+972 (b) o
+f2 3 f 2 f 2 f 3
+kJ kJ kJ kJ kJ
+mol mol mol mol mol=N a C O s +H O l + C O g 2 N a H C O s
+=1 1 3 1 2 8 5 . 8 3 9 3 . 5 2 9 5 0 . 8 = + 9 1HH H H H'' ' ' ' ªº ª º ª º ª º¬¼ ¬ ¼ ¬ ¼ ¬ ¼
+§·    ¨¸©¹ 
+ 
+(c) oo o 31 1= =9 1k J / m o l 2 9 8K 2 1 5 . 2 1 0 k J  m o l K
+=9 1k J / m o l 6 4 . 1 3k J / m o l=2 7k J / m o lGH T S ''  '  u
+ 
+ 
+(d) 3 o
+o
+1127 10 J/mol=l n l n = = = 1 0 . 98.3145J mol K 298KGGR T K KRTu ''   u 
+  K=e10 9=2u105 
+ 
+56. (M) (a)  32 2 2 3oo o o oo
+o
+oCH CH OH g H O g CO g H g CH OH g
+JJ J J J
+K mol K mol K mol K mol K mol
+J
+K mol=+ 2
+=2 8 2 . 7 + 1 8 8 . 8 1 9 7 . 7 2 1 3 0 . 7 2 3 9 . 8
+=2 2 7 . 4  SS SSS S
+S
+Sªº ª º ª º ª º ª º¬¼ ¬ ¼ ¬ ¼ ¬ ¼ ¬ ¼
+§·
+¨¸©¹'  
+'  
+' 
+ 
+  >@ >@>@32 23 2o
+ff f f f
+o
+oCH CH OH g Hg C H O H g HOg C Og
+kJ kJ kJ kJ kJ
+mol mol mol mol mol
+kJ
+mol=+ 2
+=2 3 5 . 1 2 4 1 . 8 1 1 0 . 5 2 0 . 0 0 2 0 0 . 7
+=1 6 5 . 7HH HHH H
+H
+Hªºª º¬¼¬ ¼
+§· § · §·
+¨¸ ¨ ¸ ¨¸©¹ © ¹ ©¹'' ' '  '  '
+'      
+'  
+ 
+o3 kJ kJ kJ kJ kJ
+mol Km o l mol mol mol=1 6 5 . 7 2 9 8 K 2 2 7 . 4 1 0 =1 6 5 . 4 + 6 7 . 8 =9 7 . 9G§·
+¨¸¨¸©¹'  u   
+ 
+ 
+(b) 'Ho0f o r  t h i s  r e a c t i o n .   T h u s  i t  i s  f a v o r ed at low temperatures. Also, because 
+' ngas=+ 2 4= 2,  w h i c h  i s  l e s s  t h a n  z e r o ,  t h e  r e a c t i o n  i s  f a v o r e d  a t  h i g h  p r e s s u r e s .  
+ 
+(c) First we assume that neither 'So nor 'Ho varies significantly with temperature. Then 
+we compute a value for 'Go at 750 K. From this value of'Go, we compute a value 
+forKp. 
+ 
+  'Go='HoT'So=165.7 kJ/mol 750.K227.4 u103kJ mol1K1=165.7 kJ/mol + 170.6kJ/mol = +4.9kJ/mol = RTlnKp 
+ 
+  lnKp='Go
+RT=4.9u103J/mol
+8.3145 J mol1K1u750.K=0.79 Kp=e07 9=0 . 5  
+ 
+57. ( E )  In this problem we are asked to determine the temperature for the reaction between 
+iron(III) oxide and carbon monoxide to yield iron and car bon dioxide given 'Go, 'Ho, 
+and 'So.  We proceed by rearranging 'Go='HoT'Soin order to express the 
+temperature as a function of 'Go, 'Ho, and 'So. 
+
+=== PDF PAGE 973 ===
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 7 3   Stepwise approach: 
+         Rearrange   'Go='HoT'So in order to expres s T as a function of 'Go, 'Ho, and 'So: 
+ 
+  'Go='HoT'So
+T'So='Ho'Go
+T='Ho'Go
+'So 
+ Calculate T: 
+ 
+  T=24.8 u103J45.5 u103J 
+15.2 J/K=1 . 3 6 u103K 
+ Conversion pathway approach: 
+ 
+  'Go='HoT'SoT 'Ho'Go
+'So 24.8 u103J45.5 u103J
+15.2 J/K=1 . 3 6 u103K 
+ 
+58. (E) We use the van't Hoff equation witho5
+1 =1 . 8 1 0 J / m o l , = 8 0 0HT' u . K,  
+ 
+T2=1 0 0 . =3 7 3DCK ,  a n d K12=9 . 1 1 0 u. 
+ 
+lnK2
+K1='Ho
+R1
+T11
+T2§
+©¨·
+¹¸=1.8u105J/mol
+8.3145 J mol1K11
+800 K1
+373K§
+©¨·
+¹¸=3 1  
+ 
+ 31 13 13 2 16 22
+2 2
+1=e =2 . 9 1 0 = =2 . 91 0 9 . 11 0 = 31 09.1 10KKKKuu uuu 
+ 
+59. ( M )  We first determine the value of 'Go at 400 CD, from the values of 'Ho and 'So, 
+which are calculated from info rmation listed in Appendix D. 
+
+    o
+f3 f 2 f 2
+2=2 N H g N g 3 H g
+=2 4 6 . 1 1 k J / m o l 0 . 0 0 k J / m o l 3 0 . 0 0  k J / m o l = 9 2 . 2 2 k J / m o l  NHH H H''  '  ' ªº ªº ªº¬¼ ¬ ¼¬ ¼
+  
+ 
+  oo o o
+32 2
+11 11 11 11=2 N H g N g 3 H g
+=2 1 9 2 . 5J  m o l K 1 9 1 . 6 J  m o l K 31 3 0 . 7J  m o l K = 1 9 8 . 7J  m o l KSS S S
+   '  ªº ª º ª º¬¼ ¬ ¼ ¬ ¼
+  
+ oo o 11
+p= =9 2 . 2 2 k J / m o l6 7 3 K 0 . 1 9 8 7 k J  m o lK
+=+ 4 1 . 5 1k J / m o l= l nGH T S
+RT K''  '  u 
+ 
+ 
+o3
+74 2 4
+p p 1141.51 10 J/molln = = = 7.42;     = e = 6.0 108.3145J mol K 673KGKKRT
+'  uuu 
+
+=== PDF PAGE 974 ===
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy  
+974 60. (M) (a)
+  
+ o
+f2 f 2 f f 2 =C O g +H g C O g H O g
+=3 9 3 . 5 k J / m o l0 . 0 0 k J / m o l 1 1 0 . 5 k J / m o l 2 4 1 . 8 k J / m o l =4 1 . 2 k J / m o lHH H H H'' '  '  ' ªº ªºªºª º¬¼ ¬ ¼ ¬ ¼ ¬¼
+      
+ 
+  oo o o o
+22 2
+11 11 11 11
+11=C O g +H g C O g H O g
+=2 1 3 . 7J  m o l K + 1 3 0 . 7J  m o l K 1 9 7 . 7J  m o l K 1 8 8 . 8J  m o l K
+=4 2 . 1 J  m o lKSS S S S
+   
+'  ªº ª º ª º ªº¬¼ ¬ ¼ ¬ ¼ ¬¼
+
+ 
+   
+  'Go 'HoT'So 41.2kJ/mol 298.15K u(42.1u103)kJ/molK
+'Go 41.2kJ/mol12.6kJ/mol 28.6kJ/mol 
+ 
+(b) 'Go='HoT'So=41.2 kJ/mol 875 K42.1u103kJ mol1K1
+=41.2 kJ/mol + 36.8 kJ/mol = 4.4 kJ/mol = RTlnKp 
+o3
++0 60
+p p 114.4 10 J/molln = = = +0.60 = e = 1.88.3145J mol K 875KGKKRT' uu 
+ 
+61. ( M )  We assume that both 'Ho and 'So are constant with temperature. 
+'Ho=2'HfSO3gª¬º¼2'HfSO2gª¬º¼'HfO2gª¬º¼
+=2395.7 kJ/mol 2296.8 kJ/mol 0.00 kJ/mol =197.8 kJ/mol 
+
+  oo o o
+32 2
+11 11 11
+11=2 S O g 2 S O g O g
+=2 2 5 6 . 8J  m o l K 2 2 4 8 . 2J  m o l K 2 0 5 . 1J  m o l K
+=1 8 7 . 9 J  m o lKSS S S
+  
+'  ªº ªº ª º¬¼ ¬¼ ¬ ¼
+
+
+o
+oo o o o
+o== l n= l n=lnHGH T SR T K H T S R T K TSR K'''  ' ' ' ' 
+3
+11 11 6197.8 10 J/mol=6 5 0 K
+187.9 J mol K 8.3145 J mol K ln 1.0 10T u|
+ u 
+This value compares very fa vorably with the value of T=6 . 3 7 1 02u that was obtained in 
+Example 19-10. 
+ 
+62. (E) We use the van't Hoff equation to determine the value of o(448 C = 721 KH'D and 
+350 C = 623 K)D. 
+lnK1
+K2='Ho
+R1
+T21
+T1§
+©¨·
+¹¸=l n50.0
+66.9=0.291 ='Ho
+R1
+6231
+721§
+©¨·
+¹¸='Ho
+R2.2u104  
+o
+3
+4- 1
+o3 - 1 - 1 3 - 1 - 10.291== 1 . 3 1 0  K ;2.2 10  K
+= 1.3 10 K 8.3145 J K  mol = 11 10 J mol = 11 kJ molH
+R
+H'uu
+' uu  u  
+ 
+
+=== PDF PAGE 975 ===
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 7 5  63. (M) (a) o3
+2
+11
+11 211 5 7 . 2 1 0 J / m o l 1 1ln = = = 2.118.3145 J mol K 298 K 273 KKH
+KR T T§· §· 'u ¨¸ ¨¸©¹ ©¹ 
+  21 1 2
+2
+1=e =0 . 1 2 1 =0 . 1 2 1 0 . 1 1 3=0 . 0 1 4a t2 7 3KKKKu  
+ 
+(b) lnK2
+K1='Ho
+R1
+T11
+T2§
+©¨·
+¹¸=57.2 u103J/mol
+8.3145 J mol1K11
+T11
+298 K§
+©¨·
+¹¸=l n0.113
+1.00=2.180  
+1
+T11
+298K§
+©¨·
+¹¸=2.180 u8.3145
+57.2 u103K1=3.17 u104K1 
+43 43 1
+1
+111=3 . 1 7 1 0 = 3 . 3 6 1 0 3 . 1 7 1 0 = 3 . 0 4 1 0 K ; = 3 2 9 K298TT  u uu u  
+ 
+64. (D) First we calculate 'Go at 298 K to obtain a value for Keq at that temperature. 
+
+ o
+f2 f f 2 =2 N O g 2 N O g O g
+=2 5 1 . 3 1k J / m o l 2 8 6 . 5 5k J / m o l 0 . 0 0k J / m o l= 7 0 . 4 8k J / m o lGG G G''  '  ' ªº ªºª º¬¼¬ ¼ ¬ ¼
+  
+3
+28 43 12 70.48 10 J/mol Kln 28.43 e 2.2 108.3145 J298.15 Kmol KGKKRTu '      u
+uD
+ 
+Now we calculate 'Ho for the reaction, which then will be in serted into the van't Hoff equation. 
+'Ho=2'HfNO2gª¬º¼2'HfNO gª¬º¼'HfO2gª¬º¼
+=2 3 3 . 1 8k J / m o l 29 0 . 2 5 k J / m o l 0.00 kJ/mol = 114.14 kJ/mol 
+o3
+2
+11
+11 211 1 1 4 . 1 4 1 0 J / m o l 1 1ln = = = 9.268.3145 J mol K 298 K 373 KKH
+KR T T§· §· ' u  ¨¸ ¨¸©¹ ©¹ 
+92 6 5 5 12 8 2
+2
+1=e =9 . 5 1 0 ;  =9 . 5 1 0 2 . 2 1 0 =2 . 1 1 0KKK uu u u u  
+Another way to find K at 100 ºC is to compute 'Ho114.14 kJ/mol from 'Hfo values 
+and o1 1146.5 J mol K S'  from So values. Then determine 'Go(59.5 kJ/mol), and 
+find Kp with the expression 'GR T Ko
+pln = . Not surprisingly, we obtain the same 
+result, 8
+p=2 . 2 1 0K u. 
+ 
+65. ( M )  First, the van't Hoff  equation is used to obtain a value of 'Ho. 200 = 473DCK and 
+260 = 533DCK. 
+o1 1o
+2
+81 1
+11 211 2 . 1 5 1 0 11ln = =l n =6 . 1 5 6=4.56 10 8.3145 J mol K 533K 473 KKH H
+KR T T§· §· 'u'¨¸ ¨¸u ©¹ ©¹ 
+6.156 = 2.9 10 =6.156
+2.9 10=2 . 11 0 =2 . 11 05
+552u ' 'uu u
+HHooJ/m o l k J/m o l  
+
+=== PDF PAGE 976 ===
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy  
+976 Another route to 'Ho is the combination of standard enthalpies of formation. 
+  24 2 CO g + 3H g CH g + H O g U  
+ 
+o
+f4 f 2 f f 2 =C H g +H O g C O g 3 H g
+=7 4 . 8 1 k J / m o l2 4 1 . 8  k J / m o l 1 1 0 . 5 30 . 0 0 k J / m o l =2 0 6 . 1 k J / m o lHH H H H'' '  '  ' ªº ªº ª ºª º¬¼ ¬¼ ¬ ¼¬ ¼
+    u  
+ 
+Within the precision of the data supplie d, the results are in good agreement. 
+ 
+66. (D) (a)  
+t,DC  T, K  1/ ,1TK  Kp  lnpK 
+ 
+30.  303  3.30 103u  1.66 105u  11.006 
+ 
+50.  323  3 . 1 0 1 03u  3 . 9 0 1 04u 7.849  
+ 
+70.  343  2.92 103u  6.27 103u 5.072  
+ 
+100.  373  2.68 103u  2.31 101u 1.465 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+          
+  o1 14 3=8 . 3 1 4 5  J  m o l K 1 . 5 4 1 0 K = 1 2 8 1 0 J / m o l = 1 2 8 k J / m o lH' u u  
+ 
+(b) When the total pressure is 2.00 atm, a nd both gases have been produced from NaHCO3s,  
+ 
+ 22{H O g } = {CO g } = 1.00 atmPP  
+ 
+p2 2={ H O g } { C Og } = 1 . 0 01 . 0 0 = 1 . 0 0KP P  
+ 
+Thus, ln Kp=l n 1 . 0 0=0 . 0 0 0.  T h e  c o r r e s p o n d s  t o  311/ = 2.59 10 KTu; 
+=3 8 6  KT . 
+We can compute the same temperatur e from the van't Hoff equation. 
+ Plot of ln(K p) versus 1/T
+y = -15402.12x + 39.83
+-12-10-8-6-4-200.0026 0.0029 0.00321/T(K-1)ln K p
+
+=== PDF PAGE 977 ===
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 7 7  lnK2
+K1='Ho
+R1
+T11
+T2§
+©¨·
+¹¸=128u103J/mol
+8.3145 J mol1K11
+T11
+303 K§
+©¨·
+¹¸=l n1.66 u105
+1.00=11.006
+ 
+ 
+1
+T11
+303 K§
+©¨·
+¹¸=11.006 u8.3145
+128u103K1=7.15 u104K1 
+ 
+43 43 1
+1
+111=7 . 1 5 1 0 = 3 . 3 0 1 0 7 . 1 5 1 0 = 2 . 5 9 1 0 K ;    = 3 8 6 K303TT  u uu u  
+ 
+This temperature agrees well with th e result obtained from the graph. 
+ 
+Coupled Reactions 
+ 
+67. (E) (a) We compute 'Go for the given reaction in the following manner 
+ 
+   
+  o
+f4 f 2 f 2 f 2 =T i C l l +O g T i O s 2 C l g
+=8 0 4 . 2 k J / m o l + 0 . 0 0 k J / m o l 9 4 4 . 7 k J / m o l 2 0 . 0 0 k J / m o l
+=+ 1 4 0 . 5k J / m o lHH H H H'' '  '  ' ªº ªºª º ªº¬¼ ¬ ¼ ¬¼¬ ¼
+    
+ 
+  
+ 11 11 11oo o o o
+42 2 2
+11
+11J mol K J mol K J mol K=T i C l l +O g T i O s2 C l g
+=2 5 2 . 3 +2 0 5 . 1J  m o l K 5 0 . 3 3 2 2 2 3 . 1
+=3 9 . 1 J  m o lKSS S S S
+   
+'  ªº ª º ªº ª º¬¼ ¬ ¼ ¬¼ ¬ ¼
+
+ 
+ 
+  oo o 31 1= =+ 1 4 0 . 5k J / m o l 2 9 8K 3 9 . 1 1 0 k J  m o l K
+= +140.5 kJ/mol +11.6 kJ/mol = +152.1 kJ/molGH T S ''  '  u 
+ 
+  T h u s  t h e  r e a c t i o n  i s  n o n - s p o n t a n e o u s  a t 2 5DC.  ( w e  a l s o  c o u l d  h a v e  u s e d  v a l u e s  o f  'Gfo 
+to calculate 'Go). 
+ 
+(b) For the cited reaction, 'Go=2'GfCO2gª¬º¼2'GfCO gª¬º¼'GfO2gª¬º¼ 
+ 
+'Go=2394.4 kJ/mol 2137.2 kJ/mol0.00 kJ/mol = 514.4 kJ/mol  
+ 
+Then we couple the two reactions. 
+ 
+ 22 4 2TiO s + 2Cl g TiCl l + O g o   o=+ 1 5 2 . 1k J / m o lG'  
+ 
+ 22 2CO g + O g 2CO g o    o=5 1 4 . 4 k J / m o lG'  
+_________________________________________________________________       
+         o
+22 4 2TiO s + 2Cl g + 2CO g TiCl l + 2CO g ; = 362.3 kJ/mol G o'    
+ 
+The coupled reaction has 'Go0, and, therefore, is spontaneous. 
+ 
+
+=== PDF PAGE 978 ===
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy  
+978 68. (E) If 'Go0 for the sum of coupled reactions, the reduction of the oxide with carbon is 
+spontaneous. 
+ 
+(a)   1
+2 2 NiO s Ni s + O g o    o=+ 1 1 5k JG'  
+ 1
+2 2 Cs+ O g C Og o    o=2 5 0 k JG'  
+               
+  Net : NiO + C s Ni s + CO g s o   o=+ 1 1 5k J 2 5 0k J= 1 3 5k JG'   
+Therefore the coupled re action is spontaneous 
+ 
+(b)  1
+2 2 MnO s Mn s + O g o    o=+ 2 8 0k JG'  
+ 1
+2 2 Cs+ O g C Og o    o=2 5 0 k JG'  
+               
+  Net : MnO s +C s Mn s + CO g o  o=+ 2 8 0k J 2 5 0k J=+ 3 0k JG'  
+Therefore the coupled re action is non-spontaneous 
+ 
+(c)  22TiO s Ti s + O g o    o=+ 6 3 0k JG'  
+ 2 2C s + O g 2CO g o    o=2 2 5 0  k J = 5 0 0  k JG'   
+               
+ 2 Net : TiO s + 2C s Ti s + 2CO g o  o=+ 6 3 0k J 5 0 0k J=+ 1 3 0k JG'  
+Therefore the coupled re action is non-spontaneous 
+ 
+69. ( E )  In this problem we need to determine if the phosphorylation of arginine with ATP is a 
+ spontaneous reaction.  We proceed by coup ling the two given reac tions in order to 
+ c a l c u l a t e  'Gtofor the overall reaction.  The sign of 'Gto can then be used to determine 
+ w h e t h e r  t h e  r e a c t i o n  i s  spontaneous or not. 
+ Stepwise approach: 
+ First determine 'Gtofor the coupled reaction: 
+ ATP+H2OoADP+P     'Gto 31.5kJmol-1
+arginine+P ophosphorarginine+H2O      'Gto 33.2kJmol-1    
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  
+ ATP+arginine ophosphorarginine+ADP     
+'Go (31.5 33.2)kJmol-1 1.7kJmol-1 
+ Examine the sign of 'Gto: 
+ 'Gto!0.   T h e r e f o r e ,  t h e  r e a c t i o n  i s  n o t  s p o n t a n e o u s .  
+ Conversion pathway approach: 
+ 'Gto for the coupled reaction is: 
+ ATP+arginine ophosphorarginine+ADP     
+'Go (31.5 33.2)kJmol-1 1.7kJmol-1 
+ S i n c e  'Gto!0,the reaction is not spontaneous.  
+  
+
+=== PDF PAGE 979 ===
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 7 9  70. (E) By coupling the two reactions, we obtain: 
+ Glu-+NH4+oGln+H2O     'Gto 14.8kJmol-1
+ATP+H2OoADP+P     'Gto 31.5kJmol-1 
+ _________________________________________ 
+ Glu-+NH4++ATP oGln+ADP+P     'Go (14.8 31.5)kJmol-1 16.7kJmol-1 
+ Therefore, the reaction is spontaneous. 
+ 
+ 
+INTEGRATIVE AND ADV ANCED EXERCISES 
+ 
+ 
+71. (M) (a) The normal boiling point of mercury is th at temperature at which the mercury 
+vapor pressure is 1.00 atm, or where the equilibrium constant for the vaporization 
+equilibrium reaction has a numerical value of 1.00. This is also the temperature where 
+0 q 'G , since eqlnK RT G  q ' and 0 ) 00 . 1 ( ln . 
+ H g ( l ) H g ( g ) U  
+11 11 11f f
+K mol J 0 . 99 K mol J 02 . 76 K mol J 0 . 175 )] Hg(l [ )] Hg(g [        kJ/mol 32 . 61 kJ/mol 00 . 0 kJ/mol 32 . 61 )] Hg(l [ )] Hg(g [        
+     q q  q '  q'  q'  q'
+S SSH HH
+11 3K mol J 0 . 99 J/mol 10 32 . 61 0u u q '  q '  T ST H  
+  K 619
+K mol J 0 . 99J/mol 10 32 . 61
+113
+ u T  
+ 
+(b) The vapor pressure in atmospheres is the va lue of the equilibriu m constant, which is 
+related to the value of the free energy  change for formation of Hg vapor. 
+ eq f ln kJ/mol 82 . 31 ] Hg(g) [ K RT G   q '  
+ 3
+1131.82 10 J/molln 12.848.3145J mol K 298.15KKu  u       12 84 6e2 . 6 5 1 0 a t mK  u  
+ T h e r e f o r e ,  t h e  v a p o r  p r e s s u r e  of Hg at 25ºC is 2.65×10-6 atm. 
+ 
+72. (M) (a) TRUE;  It is the change in free energy for a process in which 
+reactants and products are all in their standard states (regardless of 
+whatever states might be mentioned in the statement of the problem).  
+When liquid and gaseous water are each  at 1 atm at 100 °C (the normal 
+boiling point), they are in equilibrium, so that 'G = 'G° = 0 is only true 
+when the difference of the standard fr ee energies of products and reactants 
+is zero. A reaction with 'Gq = 0 would be at equilibrium when products 
+and reactants were all present under  s t a n d a r d  s t a t e  c o n d i t i o n s  a n d  t h e  
+pressure of H 2O(g) = 2.0 atm is not the standard pressure for H 2O(g). 
+ 
+(b) FALSE;  .0z'G  The system is not at equilibrium. 
+ 
+
+=== PDF PAGE 980 ===
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy  
+980 (c) FALSE;  'G° c a n  h a v e  o n l y  o n e  v a l u e  a t  a n y  g i v e n  t e m p e r a t u r e ,  a n d  t h a t  i s  t h e  
+value corresponding to all re actants and products in their standard states, 
+so at the normal boiling point 'G° = 0 [as was also the case in answering 
+part (a)]. Water will not vaporize sp ontaneously under standard conditions 
+to produce water vapor with a pressure of 2 atmospheres. 
+ 
+(d) TRUE;   .0!'G  The process of transforming water to vapor at 2.0 atm pressure  
+  a t  1 0 0 ° C  i s  n o t  a  s p o n t a n e o u s  p r o c e ss; the condensation (reverse) process  
+   is spontaneous.  (i.e. for the system to reach equilibrium, some H 2O(l)  
+  m u s t  f o r m )  
+73. (D) ] BrCl(g) [ ] (g) Cl [ ] (g) Br [f 2f 21
+2f 21q'q'q '   q ' G G GG  
+ p 21
+21ln kJ/mol 54 . 2 ) kJ/mol 98 . 0 ( ) kJ/mol 00 . 0 ( ) kJ/mol 11 . 3 ( K RT      
+ 
+ 02 . 1K 15 . 298 K mol J 3145 . 8J/mol 10 54 . 2ln113
+p  uu q' TRGK  10 2
+pe0 . 3 6 1 K   
+ 
+ F o r  e a s e  o f  s o l v i n g  t h e  p r o b l e m ,  w e  d o u b l e  t h e reaction, which squa res the value of the 
+equilibrium constant. 130 . 0 ) 357 . 0 (2
+eq   K  
+ 22 Reaction: 2BrCl(g) Br (g) Cl (g)
+Initial: 1.00 mol            0 mol      0 mol
+Changes: 2 mol mol mol
+Equil: (1.00 2 )mol mol molxx x
+xx x
+ 
+U
+ 
+x xxx
+xxnnn
+V RT nV RT n V RT n
+PPPK
+722 . 0 361 . 0 361 . 02 00 . 1) 361 . 0 () 2 00 . 1 (} BrCl(g) {} (g) Cl { } (g) Br {
+] / } BrCl(g) { [] / } (g) Cl { [ ] / )} (g Br { [
+} BrCl(g) {} (g) Cl { } (g) Br {      
+2
+2222 2
+22 2
+22 2
+p
+       
+ 
+ BrCl mol 580 . 0 2 00 . 1 Cl mol 210 . 0 Br mol 210 . 0722 . 1361 . 0
+2 2      x x  
+ 
+74. (M) First we determine the value of Kp for the dissociati on reaction. If I 2(g) is 50% dissociated, 
+then for every mole of undissociated I 2(g), one mole of I 2(g) has dissociated, producing two 
+moles of I(g). Thus, the partial pressure of  I ( g )  i s  t w i c e  t h e  p a r t i a l  p r e s s u r e  o f  I 2(g) 
+(2I( g ) 2 I ( g ) U ). 
+ atm 333 . 0 32 atm 00 . 1) (g I (g) I (g) I (g) I ) I(g (g) I total2 2 2 2 2  u    PP P P P P P
+293 . 0 ln 34 . 1333 . 0) 667 . 0 (
+p2
+) (g I2
+I(g)
+p
+2    KPPK
+11 11 11
+22f f
+K mol J 9 . 100 K mol J 7 . 260 K mol J 8 . 180 2 ] (g) I [ ] I(g) [ 2 SkJ/mol 2 . 151 kJ/mol 44 . 62 kJ/mol 8 . 106 2 ] (g) I [ ] I(g) [ 2
+    u q q  q ' u q'  q' q'
+SSH HH
+  
+ N o w  w e  e q u a t e  t w o  e x p r e s s i o n s  f o r  q'G and solve for T. 
+
+=== PDF PAGE 981 ===
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 8 1  'Gq 'HqT'Sq RTlnKp 151.2 u103100.9 T 8.3145 uTu0.293
+151.2 u103 100.9 T2.44T 98.4TT  151.2 u103
+98.5 1535 K |1.5u103K 
+75. (M) (a) The oxide with the most positive (least negative) value of fq'G is the one that 
+most readily decomposes to the free metal and O 2(g), since the decomposition is the 
+reverse of the formation reaction. Thus th e oxide that decomposes most readily is 
+Ag2O(s). 
+ 
+(b) The decomposition reaction is (g)O Ag(s) 4 ) O(s Ag 22 2  o  F o r  t h i s  r e a c t i o n  
+(g) O p2PK . Thus, we need to find the temperature where 00 . 1p K .Since 
+plnK RT G  q ' a n d  0 ) 00 . 1 ( ln , we wish to know the temperature where 0 q'G . 
+Note also that the decomposition is the re verse of the formation reaction. Thus, the 
+following values are valid for the decomposition reaction at 298 K. 
+kJ/mol 20 . 11 G kJ/mol 05 . 31 q' q 'H  
+We use these values to determine the value of q'S for the reaction. 
+113 3
+K mol J 6 . 66K 298J/mol 10 20 . 11 J/mol 10 05 . 31 u u q 'q'q' q ' q 'q ' q ' q ' q ' q '
+STGHSG HS T S T HG
+ 
+Now we determine the value of T where 0 q'G . 
+C 193 K 466
+K mol J 6 . 66J/mol 0 . 0 J/mol 10 05 . 31
+113
+q  
+ u q'q'  q' SGHT  
+ 
+76. (M) At 127 °C = 400 K, the two phases ar e in equilibrium, meaning that 
+] (red) (yellow) [ ] (red) (yellow) [ 0       f f q qq'q' q ' q '   q ' S ST H HS T H Grxn rxn rxn  
+ 
+J/mol 10 20 . 7 yellow) ( K 400 J/mol 10 5 . 2] K mol J 180 yellow) ( [ K 400 J 10 )] 4 . 105 ( 9 . 102 [
+4 311 3
+u q u  u q u  u     
+SS 
+ 113 4
+K mol J 186K 400J/mol ) 10 5 . 2 10 20 . 7 () yellow ( uu q S  
+ T h e n  w e  c o m p u t e  t h e  v a l u e  o f  t h e  “ e n t r o p y  of formation” of the yellow form at 298 K. 
+11 11
+f2 2       [HgI ] [Hg(l)] [I (s)] [186 76.02 116.1] J mol K 6J mol K SS S S 'q q q q       
+ N o w  w e  c a n  d e t e r m i n e  t h e  v a l u e  o f  t h e  f r e e  e n e r g y  o f  f o r m a t i o n  f o r  t h e  y e l l o w  f o r m .  
+ ff fkJ J1 k J kJ102.9 [298K ( 6 ) ] 101.1mol Km o l 1 0 0 0J m o lGH T S'q 'q'q   u u    
+ 
+77. (M) First we need a value for the equilibrium constant. 1% conversion means that 0.99 mol 
+N2(g) are present at equilibrium for every 1.00 mole present initially. 
+ 
+222 22
+NO(g)
+p
+N( g ) O( g ) 2 2 2 2[{ N O ( g ) } R T / V ] {NO(g)}      [{ N( g ) } R T / V ] [{ O( g ) } R T / V ] { N( g ) } { O( g ) }P nnKKPP n n n n     
+ 
+
+=== PDF PAGE 982 ===
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy  
+982  22 Reaction: N( g ) O( g ) 2 N O ( g )
+Initial: 1.00mol 1.00mol   0mol
+Changes(1% rxn): 0.010 mol 0.010 mol   0.020 mol
+Equil: 0.99mol 0.99mol 0.020mol
+ U
+ 2
+4 (0.020)4.1 10(0.99)(0.99)K  u  
+ 
+The cited reaction is tw ice the formation reaction of NO(g), and thus 
+ 
+ f
+22
+-1 -1 -1 -1 -1 -1 -1
+-1 -1 -H =  2 H °[ N O ( g ) ]  =  2 9 0 . 2 5 k J / m o l  =  1 8 0 . 5 0 k J / m o l
+S° = 2S°[NO(g)] - S°[N (g)] - S°[O (g)]
+       =2(210.7 J mol K)-191.5J mol K -205.0J mol K = 24.9J mol K
+G° = -RTlnK = -8.31447 JK mol (T)ln(4.1 10'q ' u
+'
+'u4
+-1 -1
+-1 -1 3)=6 4 . 8 5 ( T )
+G° = H°-T S° = 64.85(T) = 180.5kJ/mol -(T)24.9 J mol K
+180.5  10 J/mol = 64.85(T) + (T)24.9 J mol K = 89.75(T)      T = 2.01  10  K'''
+uu 
+ 
+78. (E) Sr(IO 3)2(s) ZXZYZZ Sr2+(aq) + 2 IO 3-(aq) 
+ 
+'Gq = (2 mol×(-128.0 kJ/mol) + (1 mol ×-500.5 kJ/mol))  (1 mol × -855.1 kJ/mol) = -0.4 kJ 
+ 
+'Gq = -RTlnK = -8.31447 JK-1mol-1(298.15 K)ln K = -0.4 kJ = -400 J 
+ 
+ln K = 0.16  and K = 1.175  = [Sr2+][IO 3-]2   Let x = solubility of Sr(IO 3)2 
+ 
+[Sr2+][IO 3-]2   = 1.175   = x(2x)2 = 4x3  x = 0.665  M for a saturated solution of Sr(IO 3)2. 
+ 
+ 
+79. (M) PH2O = 75 torr or 0.0987  atm. K = (P H2O)2 = (0.0987 )2 = 9.74  × 10-3 
+ 
+'Gq = (2 mol×(-228.6 kJ/mol) + (1 mol)×-918.1 kJ /mol) – (1 mol)×-1400.0 kJ/mol = 309.0 kJ 
+ 
+'Hq = (2 mol×(-241.8 kJ/mol) + (1 mol)×-1085.8.1 kJ/mol) – (1 mol)×-1684.3 kJ/mol = 114.9 kJ 
+ 
+'Sq = (2 mol×(188.J/K mol) + (1 mol×146.J/K mo l) + (1 mol)×221.3.J/K mol = 302.3 J/K mol 
+ 
+-1 -1 -3
+eq
+-1 -1 -1
+-1 oG =  - R T l n K  =  - 8 . 3 1 4 5 J m o l K T l n ( 9 . 7 4 1 0 )  =  3 8 . 5 ( T )
+G° = 38.5(T) = H°-T S° = 114,900 J mol - (T) 302.3J K  mol
+114,900 = 340.8K (T)    Hence: T = 337 K = 64 C'q uu u
+'' ' u  
+80. (D) (a) 3
+11131 10 J/molln ln 52.88.3145J mol K 298.15KGGR T K KRTu 'q'q        u 
+ 
+ 52 8 23 21 760 mmHge1 . 2 1 0 a t m 8 . 9 1 0 m m H g1atmK   u u  u  
+ 
+ S i n c e  t h e  s y s t e m  c a n n o t  p r o d u c e  a  v a c u u m  l o w e r  t h a n  1 0–9 mmHg, this partial pressure 
+of CO 2(g) won't be detected in the system. 
+ 
+
+=== PDF PAGE 983 ===
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 8 3  (b) Since we have the value of q'G f o r  t h e  d e c o m p o s i t i o n  r e a c t i o n  a t  a  s p e c i f i e d  
+temperature (298.15 K), and we need q'H a n d  q'S f o r  t h i s  s a m e  r e a c t i o n  t o  
+determine (g)} P{CO2  as a function of temperature, obtaining either q'H or q'S will 
+enable us to determine the other. 
+ 
+ (c) ] (s) [CaCO ] (g) CO [ )] CaO(s [3 f 2f f q'q'  q'  q' H H HH  
+ kJ/mol 178 ) kJ/mol 1207 ( kJ/mol 5 . 393 kJ/mol 1 . 635    
+ 
+  HGGH T S T SHG ST'q  'q'q  'q 'q 'q  'q  'q 'q   
+ 
+  21 1 178 kJ/mol 131 kJ/mol 1000 J1.6 10 J mol K298. K 1 kJS 'q  u  u  
+ 
+  91 2 1a t m1.0 10 mmHg 1.3 10760 mmHgK u u  u  
+ 
+ eqlnK RT S T H G  q' q ' q '  ln HT SR T K'q ' q  
+ 
+ 3
+2
+2 1 1 1 1 12178 10 J/mol4.6 10 K
+1.6 10 J mol K 8.3145 J mol K ln(1.3 10 ) lnHTSR K  u  u
+u u'q 'q  
+ 
+81. (D) ] (g) PCl [ ] (g) Cl [ )] (g PCl [5f 2f 3f q'q'  q'  q' H H HH  
+ 
+ 32 5
+-1 -1 -1 -1 -1 -1 -1 -1287.0 kJ/mol 0.00 kJ/mol ( 374.9 kJ/mol) 87.9 kJ/mol
+[PCl (g)] [Cl (g)] [PCl (g)]
+311.8 J mol  K  + 223.1 J mol  K   364.6 J mol  K  = +170.3 J mol  KSS S S      
+'q  q q q
+  
+ 
+ 11 3K mol J 3 . 170 K 500 J/mol 10 9 . 87u u q '  q '  q 'ST H G  
+ 
+ 'Gº3p2.8 10 J/mol lnRTK  u    
+ 
+ 06 7
+p p 112.8 10 J/molln 0.67 e 0.518.3145J mol K 500 KGKKRT
+
+u ' q      u 
+ 
+ atm 74 . 2L 50 . 1K 500 K mol atm L 08206 . 0 mol 100 . 0] PCl [11
+5  u u  
+VnRTPi  
+ 
+ 53 2 Reaction: PCl (g) PCl (g) Cl (g)
+Initial: 2.74 atm 0 atm         0 atm
+Changes: atm  atm atm
+Equil: (2.74 ) atm   atm  atmxx x
+xxx 
+U
+ 
+ 
+
+=== PDF PAGE 984 ===
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy  
+984 32
+p
+5
+22[PCl ] [Cl ]      0.51[PCl ] 2.74
+0.51(2.74 ) 1.4 0.51 0.51 1.4 0PP xxKPx
+xx x xx   
+       
+240 . 5 1 0 . 2 6 5 . 60.96atm, 1.47 atm22bb a cxar   r      
+atm 70 . 3 96 . 0 74 . 2 74 . 2 ) 74 . 2 (
+2 3 5 Cl PCl PCl total      xx x x PPPP  
+ 
+82. (M) The value of q'H determined in Exercise 64 is kJ/mol128 q'H . We use any one of 
+the values of eq pKK  to determine a value of q'G. At 30 °C = 303 K, 
+J/mol 10 77 . 2 ) 10 66 . 1 ln( ) K 303 )( K mol J 3145 . 8 ( ln        4 5 11
+eq u  u   q ' K RT G  
+       Now we determine q'S. q'' q ' ST H G 
+ 114 3
+K mol J 331K 303J/mol 10 77 . 2 J/mol 10 128 u u q'  q' q 'TGHS  
+ B y  u s i n g  t h e  a p p r o p r i a t e  S° values in Appendix D, we calculate 11K mol J 334 q'S . 
+ 
+83.  (M)  In this problem we are asked to estimate the temperature at which the vapor pressure of 
+cyclohexane is 100 mmHg.  We begin by using Trouton’s rule to determine the value of 
+vapH' for cyclohexane.  The temperature at wh ich the vapor pressure is 100.00 mmHg can 
+then be determined using Clausius–Clapeyron equation. 
+ Stepwise approach: 
+ Use Trouton’s rule to find the value of vapH': 
+ J/mol 10 31 K mol J 87 K 9 . 3533 11
+vap nbp vap u u '  'ST H  
+ N e x t ,  u s e  C l a u s i u s – C l a p e y r o n  e q u a t i on to find the required temperature: 
+ lnP2
+P1 'Hvap
+R1
+T11
+T2§
+©¨·
+¹¸ ln100 mmHg
+760 mmHg
+ 31u103J/mol
+8.3145 J mol1K11
+353.9K1
+T§
+©¨·
+¹¸ 2.028
+1
+353.91
+T 2.028 u8.3145
+31u103 5.4u104 
+2.826 u1031
+T1
+T 3.37 u103K1
+          T 297 K  24qC 
+  
+
+=== PDF PAGE 985 ===
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 8 5  Conversion pathway approach: 
+ lnP2
+P1 'Hvap
+R1
+T11
+T2§
+©¨·
+¹¸ Tnbp'Svap
+R1
+T11
+T2§
+©¨·
+¹¸
+1
+T11
+T2§
+©¨·
+¹¸ R
+Tnbp'SvaplnP2
+P11
+T2 1
+T1R
+Tnbp'SvaplnP2
+P1
+1
+T2 1
+353.9K8.314JK-1mol-1
+353.9 Ku87JK-1mol-1ln100mmHg
+760mmHg 3.37 u103
+T2 297K=24oC 
+     (M)(a) 2Ag(s) 1
+2O2(g)oAg2O
+'Gfo 'Gfo(Ag2O(s))-{2 'Gfo(Ag(s))1
+2'Gfo(O2)}
+'Gfo  -11.2 kJ-{2(0) 1
+2(0)} 11.2 kJAg2O is thermodynamically stable at 25oC 
+ 
+   (b)  Assuming 'Ho, 'So are constant from 25-200oC (not so, but a reasonable assumption !)
+      'So So(Ag2O)-{2 So(Ag(s)) 1
+2 So(O2)} 121.3 (2(42.6) 1
+2(205.1))  66.5 J/K
+      'Go 31.0 kJ (473 K)(-66.5 J/K)
+1000 J/kJ 'HoT'So 0.45 kJ
+thermodynamically unstable  at 200oC 
+ 
+85. (M) 'G = 0 since the system is at equilibrium.  As well, 'Gq = 0 because this process is 
+under standard conditions.  Since 'Gq = 'Hq - T'Sq = 0.  = 'Hq = T'Sq =273.15 K×21.99 J 
+K-1 mol-1 = 6.007 kJ mol-1. Since we are dealing with 2 moles of ice melting, the 
+values of 'Hq and 'Sq are doubled.  Hence, 'Hq = 12.01 kJ and 'Sq = 43.98 J K-1.    
+ Note:  The densities are not necessary for the calculations required for this question.
+ 
+86. ( D )  First we determine the value of Kp that corresponds to 15% di ssociation. We represent 
+the initial pressure  of phosgene as x atm.   
+ 
+ 22 Reaction: COCl (g) CO(g) Cl (g)
+Initial :  atm   0 atm 0 atm
+Changes: 0.15 atm 0.15 atm 0.15 atm
+Equil: 0.85 atm 0.15 atm 0.15 atmx
+xx x
+xx x
+ U
+ 84. 
+
+=== PDF PAGE 986 ===
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy  
+986  
+ 
+atm 870 . 015 . 100 . 1atm 00 . 1 atm 15 . 1 atm 15 . 0 atm 15 . 0 atm 85 . 0       total        x x x x x P
+ 
+ 0230 . 0870 . 0 85 . 0) 870 . 0 15 . 0 (2
+COClCl CO
+p
+22 uu  PPP
+K  
+ 
+ Next we find the value of q'H for the decomposition reaction. 
+ 
+) 10 18 . 1 (0 . 3731
+668171 . 1510 44 . 410 7 . 6ln11ln        3
+29
+12 21 
+
+uq' ¸
+¹·¨
+©§q'   uu ¸¸
+¹·
+¨¨
+©§q' RH
+RH
+TTRH
+KK
+ 
+ 4
+310 33 . 1
+10 18 . 171 . 15u 
+u q'
+RH,
+kJ/mol 111 J/mol 10 111 3145 . 8 10 33 . 13 4 u uu  q ' H  
+ A n d  f i n a l l y  w e  f i n d  t h e temperature at which K = 0.0230. 
+ 
+ 
+C 374 K 64710 546 . 11110 497 . 1 10 93 . 410 1113145 . 8 658 . 0 1
+6681658 . 01
+K 6681
+K mol J 3145 . 8J/mol 10 111
+0444 . 00230 . 0ln11ln
+3 3 5
+3113
+12 21
+q  u u  u  uu  ¸¸
+¹·
+¨¨
+©§u  ¸¸
+¹·
+¨¨
+©§q' 
+  
+TTT TT TTRH
+KK
+ 
+ 
+87. ( D )  First we write the solubility reaction for AgBr. Then we calculate values of q'H and 
+ q'S for the reaction: 2
+eq sp AgBr(s) Ag (aq) Br (aq) [Ag ][Br ] KK s    U  
+ AgBr(s)] [ ] (aq) Br [ )] (aq Ag [f f f q'  q'  q'  q' H H HH  
+  kJ/mol4 . 84 ) kJ/mol 4 . 100 ( kJ/mol 6 . 121 kJ/mol 6 . 105    
+ ] AgBr(s) [ ] (aq) Br [ ] (aq) Ag [q q q q' S S SS  
+  11 11 11 11K mol J 0 . 48 K mol J 1 . 107 K mol J 4 . 82 K mol J 68 . 72        
+ T h e s e  v a l u e s  a r e  t h e n  u s e d  t o  d e t e r m i n e  t h e  v a l u e  o f  q'G for the solubility reaction, and the 
+standard free energy change, in turn, is used to obtain the value of K. 
+ 
+31 11 3
+3
+21 4 10 2 5
+sp      84.4 10 J mol (100 273) K 48.0 J mol K 66.5 10 J/mol
+66. 10      ln 21.4 e 5.0 10 s8.3145J373Kmol KGH T S
+GKK KRT 
+'q  'q 'q  u   u  u
+u ' q       u  
+u 
+ And now we compute the solubility of AgBr in mg/L. 
+ AgBr/L mg 2 . 4g1mg 1000
+AgBr mol 1AgBr g 187.7710 0 . 510 u uu s  
+ 
+
+=== PDF PAGE 987 ===
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 8 7  88. (M) Sq298.15 = Sq274.68 + 'Sfusion + 'Sheating   
+ S q298.15 =  67.15 J K- mol-1 + -112,660 J mol
+274.68 K+ 298 15
+2274 68JJ97.78  + 0.0586 274.68mol K mol KTu ³ 
+ S q298.15 =  67.15 J K-1 mol-1 + 46.09 J K-1 mol-1 + 8.07 J K-1 mol-1  = 121.3 J K-1 mol-1  
+ 
+89. (M) Sq = Sqsolid + 'Sfusion + 'Sheating  + 'Svaporization  + 'Spressure change   
+ S q = 128.82 J K-1 mol-1 + -19866 J mol
+278.68 K+298 15
+278 68J134.0mol K
+TdT
+³+ -133,850 J mol
+298.15 K 
+      +  8 . 3 1 4 5  J  K-1 mol-1 × 95.13 torrln760 torr§·
+¨¸©¹ 
+ S q = 128.82 J K-1 mol-1 + 35.40 J K-1 mol-1 + 9.05 J K-1 mol-1 + 113.5 J K-1 mol-1  + (-17.28 J K-1 mol-1 ) 
+ S q =  269.53 J K-1 mol-1  
+ 
+90. (D)  Start by labeling the particles A, B and C.  Now arrange the particles among the states.  
+One possibility includes A, B, and C occupying one energy state ( H=0,1,2 or 3).  This counts as 
+one microstate.  Another possibili ty is two of the particles oc cupying one energy state with the 
+remaining one being in a different state.  This po ssibility includes a total of three microstates.  
+The final set of combinations is one with each pa rticle being in different  energy state.  This 
+combination includes a total of six microstates.  Therefore, the total numbe r of microstates in the 
+system is 10.  See pictorial representation on th e following page illustrating the three different 
+cases. 
+
+=== PDF PAGE 988 ===
+
+
+=== PDF PAGE 989 ===
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 8 9  92. (D)  Because KNO 3 is a strong electrolyte, its solution reaction will be: 
+ 32 3 () ( ) ( ) KNO s H O K aq NO aqU  
+ This reaction can be considered to be at equ ilibrium when the solid is in contact with a 
+saturated solution, i.e. the conditions when crystallization begins.  The solubility, s, of the 
+salt, in moles per liter, can be calculated fr om the amount of salt  w e i g h t e d  o u t  a n d  t h e  
+volume of the solution.  The equilibrium constant K for the reaction will be: 
+ K = [ K+(aq)][NO3-(aq)]=(s)(s)=s2 
+ I n  t h e  c a s e  o f  2 5 . 0  m L  s o l u t i o n  a t  340 K, the equilibrium constant K is: 
+ n(KNO3) m
+M 20.2g
+101.103gmol1 0.200mol s=n
+V 0.200mol
+0.0250L 8.0molL-1
+K s2 82 64 
+ T h e  e q u i l i b r i u m  c o n s t a n t  K  c a n  b e  u s e d  t o  c a l c u l a t e  'G for the reaction using 'G=-RTlnK: 
+ 'G 8.314JK-1mol-1u340Kuln 64 12kJmol-1 
+ T h e  v a l u e s  f o r  K  a n d  'G at all other temperatures are su mmarized in the table below.  
+  
+Volume (mL) T/(K) 1/T (K-1) s (molL-1) K lnK 'G (kJmol-1)
+25.0 340 0.00294 8.0 64 4.2 -12 
+29.2 329 0.00304 6.9 48 3.9 -11 
+33.4 320 0.00312 6.0 36 3.6 -9.6 
+37.6 313 0.00320 5.3 28 3.3 -8.6 
+41.8 310 0.00322 4.8 23 3.1 -8.0 
+46.0 306 0.00327 4.3 18.5 2.9 -7.4 
+51.0 303 0.00330 3.9 15 2.7 -6.8 
+  
+ The plot of lnK v.s. 1/T provides 'H (slope=- 'H/R) and 'S (y-intercept= 'S/R) for the 
+reaction: 
+25335445
+0.0029 0.003 0.0031 0.0032 0.0033 0.0034y = 16.468 - 4145.7x   R= 0.99156 ln K
+1/T (K-1) 
+'H slope uR 4145.7 u8.314JK-1mol-1 34.5kJmol1
+'S yintercept uR 16.468 u8.314JK-1mol-1 136.9JK-1mol-1 
+
+=== PDF PAGE 990 ===
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy  
+990  'H for the crystallization process is -35.4 kJmol-1.  It is negative as expected because 
+crystallization is an exothermic proce ss.  Furthermore, the positive value for 'S shows that 
+crystallization is a process that decreases the entropy of a system. 
+ 
+ 
+FEATURE PROBLEMS 
+ 
+93. ( M )  ( a )  The first method involves combining the values of 'Gfo. The second uses  
+ 
+  ''  'GHTSoo o= 
+  
+o
+f2 f2 =H O g H O l
+=2 2 8 . 5 7 2 k J / m o l 2 3 7 . 1 2 9 k J / m o l = + 8 . 5 5 7 k J / m o lGG G''  ' ªº ªº¬¼ ¬¼
+  
+  
+o
+f2 f2 =H O g H O l
+=2 4 1 . 8 1 8 k J / m o l 2 8 5 . 8 3 0 k J / m o l = + 4 4 . 0 1 2 k J / m o lHH H''  ' ªº ªº¬¼ ¬¼
+  
+  oo o
+22
+11 11 11=H O g H O l
+= 188.825 J mol K 69.91 J mol K = +118.92 J mol KSS S
+  'ªº ªº¬¼ ¬¼
+ 
+  oo o
+31 1=
+=4 4 . 0 1 2k J / m o l 2 9 8 . 1 5K 1 1 8 . 9 2 1 0 k J  m o l K =+ 8 . 5 5 6k J / m o lGH T S
+ ''  '
+u u 
+ 
+ (b) We use the average value: o3=+ 8 . 5 5 8 1 0 J / m o l= l nGR T K'u  
+34 5 2
+118558 J/molln = = 3.452; = e = 0.0317 bar8.3145 J mol K 298.15 KKK
+u 
+ 
+ (c) 21atm 760mmHg{H O} = 0.0317 bar = 23.8 mmHg1.01325bar 1atmP uu  
+ 
+ (d) 118590 J/molln = = 3.4658.3145 J mol K 298.15 KKu; 
+34 6 5
+7 =e =0 . 0 3 1 2  a t mK; 
+2760 mmHg{H O} = 0.0313atm = 23.8 mmHg1atmP u  
+94. ( D )  ( a )  When we combine two reactions and obtain the overall value of 'Go, we subtract 
+the value on the plot of the reaction that becomes a reduction from the value on the 
+plot of the reaction that is an oxidation. Thus, to reduce ZnO with elemental Mg, we 
+subtract the values on the line labeled “ 2+ 22 Zn O ZnO o” from those on the line 
+labeled “ 2+ 22 Mg O MgO o ”. The result for the overall 'Go will always be 
+negative because every point on the “zinc” line is above the corresponding point on 
+the “magnesium” line 
+ 
+(b) In contrast, the “carbon” line is only below th e “zinc” line at temperatures above about 
+1000DC.  T h u s ,  o n l y  a t  t h e s e  e l e v a t e d  t e m p e r atures can ZnO be reduced by carbon. 
+ 
+
+=== PDF PAGE 991 ===
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 9 1  (c) The decomposition of zinc oxide to its elemen ts is the reverse of the plotted reaction, 
+the value of 'Go for the decomposition becomes ne gative, and the reaction becomes 
+spontaneous, where the value of 'Go for the plotted reaction becomes positive. This 
+occurs above about 1850DC.  
+ 
+(d) The “carbon” line has a negative slope, indicating that carbon monoxide becomes 
+more stable as temperature rises. The poi nt where CO(g) would become less stable 
+than 2C(s) and O 2(g) looks to be below 1000DC ( b y  e x t r a p o l a t i n g  t h e  l i n e  t o  l o w e r  
+temperatures). Based on this plot, it is not possible to decompose CO(g) to C(s) and 
+O2g in a spontaneous reaction.  
+ 
+(e)                            
+ 
+Reaction 1 
+2 CO(g) + O 2(g) o 2 CO 2(g) 
+ 
+Reaction 2 
+C(s) + O 2(g) o CO 2(g) 
+ 
+Reaction 3 
+2 C(s) + O 2(g) o 2 CO(g) 
+All three lines are straight-line plots of 'Gq vs. T following the equation 'Gq = 'Hq  T'Sq. 
+ 
+The general equation for a stra ight line is given below with the slightly modified 
+Gibbs Free-Energy equation as a reference: 'Gq =   'SqT'Hq (here 'Hq assumed 
+constant)
+ 
+y = mx + b       (m = 'Sq = slope of the line) 
+ 
+Thus, the slope of each line multiplied by minus one is equal to the 'Sq for the oxide 
+formation reaction. It is hardly surprising,  therefore, that the slopes for these lines 
+differ so markedly beca use these three reaction s have quite different 'Sq values ( 'Sq 
+for Reaction 1 = -173 J K1, 'Sq for Reaction 2 = 2.86 J K1, 'Sq for Reaction 3  
+= 178.8 J K1) 
+ 
+ ( f )  S i n c e  o t h e r  m e t a l  o x i d e s  a p p a r e n t l y  h a v e  positive slopes similar to Mg and Zn, we 
+can conclude that in general, th e stability of metal oxides decreases  as the 
+temperature increases.  Put another way, the decomposition of me tal oxides to their 
+elements becomes more spontaneous as the temperature is increased.  By contrast, 
+the two reactions involving elemental car bon, namely Reaction 2 and Reaction 3, 
+have negative slopes, indicat ing that the formation of CO 2(g) and CO(g) from 
+graphite becomes more favorable as the te mperature rises.  This means that the 'Gq 
+for the reduction of metal oxides by carbon becomes more and more negative with -700-600-500-400-300-200-100005 0 0 1 0 0 0 1 5 0 0 2 0 0 0
+Temperature (°C)Standard Free Energy Change 
+(kJ)
+31
+2
+
+=== PDF PAGE 992 ===
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy  
+992 increasing temperature.  Moreover, there mu st exist a threshold temperature for each 
+metal oxide above which the reaction with carbon will occur spontaneously.  Carbon 
+would appear to be an excel lent reducing agent, therefor e, because it will reduce 
+virtually any  metal oxide to its corresponding me tal as long as the temperature 
+chosen for the reaction is higher than th e threshold temperat ure (the threshold 
+temperature is commonly referred to  as the transition temperature). 
+ 
+  Consider for instance the reaction of  MgO(s) with graphite to give CO 2(g) and Mg metal: 
+  2 MgO(s) + C(s) o 2 Mg(s) + CO 2(g)  'Sqrxn = 219.4 J/K and '+qrxn = 809.9 kJ 
+  T transition  =  o
+rxn
+o
+rxnH
+S'
+'= 1809.9 kJ
+0.2194 kJ K = 3691 K = Tthreshold 
+ C o n s e q u e n t l y ,  a b o v e  3 6 9 1  K ,  c a r b o n  w i l l  s p o n t a n e o u s l y  r e d u c e  M g O  t o  M g  m e t a l .
+ 
+95.   (D) (a) With a 36% efficiency and a condenser temperature ( Tl) of 41 °C = 314 K, 
+  h1
+hefficiency 100% 36%TT
+T u   h
+h3140.36T
+T ;    
+  Th = (0.36 u T h) + 314 K;   0.64 Th = 314 K;   Th = 4.9 u102 K 
+ 
+(b) T h e  o v e r a l l  e f f i c i e n c y  o f  t h e  p o w e r  p l a n t is affected by fact ors other than the 
+thermodynamic  efficiency.  For example, a portion of the heat of combustion of the 
+fuel is lost to parts of the surroundings  other than the steam  boiler; there are 
+frictional losses of energy in moving parts in the engine; and so on.  To compensate 
+for these losses, the thermodynamic efficiency  must be greater than 36%.  To obtain 
+this higher thermodynamic efficiency, Th must be greater than 4.9 u 102 K. 
+ 
+(c)  The steam pressure we are seeking is  the vapor pressure of water at 4.9 u 102 K. We 
+also know that the vapor pressure of water at  373 K (100 °C) is 1 atm.  The enthalpy of 
+vaporization of water at 298 K is 'H° = 'Hf°[H 2O(g)  'Hf°[H 2O(l)] = 241.8 kJ/mol 
+ (285.8 kJ/mol) = 44.0 kJ/mol.  Although the enthalpy of vaporization is somewhat 
+temperature dependent, we will assume th at this value holds from 298 K to 4.9 u 102 
+K, and make appropriate substitutions into the Clausius-Clapeyron equation. 
+ 
+  1
+33 3 2
+3144.0 kJ mol 1 1ln = = 5.29 10 2.68 10 2.04 101a t m 8 . 3 1 4 5 1 0 k J  m o l 3 7 3 K 4 9 0KP
+ 
+§· §·u u  u ¨¸ ¨¸u ©¹ ©¹ 
+2ln = 3.391a t mP§·
+¨¸
+©¹;    
+  P2
+1a t m§
+©¨·
+¹¸=2 9 . 7;     P2 | 30 atm 
+The answer cannot be given with greater certainty because of the weakness of the 
+assumption of a constant H°vapn. 
+ 
+(d)   It is not possible to devise  a heat engine with 100% effi ciency or greater.  For 100% 
+efficiency, Tl = 0 K, which is unattainable.  To have an efficiency greater than 100 % 
+would require a negative T l, which is also unattainable. 
+ 
+
+=== PDF PAGE 993 ===
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 9 3  96.   (D) (a)  Under biological standard conditions: 
+ 
+   ADP3– + HPO 42– + H+ o ATP4–+ H 2O   'Go' = 32.4 kJ/mol 
+ 
+ If all of the energy of co mbustion of 1 mole of gluc ose is employed in the  
+ c o n v e r s i o n  o f  A D P  t o  A T P ,  t h e n  t h e  maximum number of moles ATP produced is 
+ 
+ 1
+12870 kJ molMaximum number = 88.6 moles ATP32.4 kJ mol
+  
+ 
+(b) I n  a n  a c t u a l  c e l l  t h e  n u m b e r  of ATP moles produced is 38, so that the efficiency is: 
+ number of ATP's actually produced 38Efficiency = 0.43Maximum number of ATP's that can be produced 88.6   
+ T h u s ,  t h e  c e l l ’ s  e f f i c i e n c y  i s  a b o u t  4 3 % .  
+ 
+(c)  The previously calculated efficiency is based upon the biological standard state.  We 
+now calculate the Gibbs energies involved unde r the actual conditions in the cell.  To 
+do this we require the relationship between 'G and 'G' for the two coupled 
+reactions.  For the combustion of glucose we have 
+  'G 'GocRTlnaCO26aH2O6
+agluaO26§
+©¨¨·
+¹¸¸       
+ F o r  t h e  c o n v e r s i o n  o f  A D P  t o  A T P  w e  h a v e  
+  'G 'GocRTlnaATPaH2O
+aADPaPiH+ª¬º¼/1 07§
+©¨
+¨·
+¹¸
+¸ 
+ 
+Using the concentrations and pressures pr ovided we can calculate the Gibbs energy 
+for the combustion of glucose under biological conditions.  First, we need to replace 
+the activities by the appropriate ef fective concentrations. That is, 
+  'G 'GocRTlnp/poCO26aH2O6
+gluª¬º¼/g l uª¬º¼op/poO26§
+©¨
+¨¨·
+¹¸
+¸¸ 
+using 
+2HO 1 a| for a dilute solution we obtain 
+
+>@6 6
+60.050 bar /1 bar 1ln
+glu /1 0.132 bar /1 barGG R T§· uc' '  ¨ ¸¨¸u©¹D 
+ 
+The concentration of glucose is given in mg/mL and this has to be converted to 
+molarity as follows: 
+ 
+1
+11.0 mg g 1000 mL 1[glu] = 0.00555 mol LmL 1000 mg L 180.16 g mol
+uuu  , 
+ 
+where the molar mass of glucose is 180.16 g mol1. 
+Assuming a temperature of 37 oC for a biological system we have, for one mole of 
+glucose: 
+ 
+
+=== PDF PAGE 994 ===
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy  
+994 
+6 6
+31
+60.050 12870 10 J 8.314 JK 310K ln
+0.00555 /1 0.132G§· u'  u  u u ¨¸¨¸ u©¹ 
+  'G 2870 u103J8.314JK1u310K uln2.954 u103
+0.00555§
+©¨·
+¹¸ 312870 10 J 8.314 JK 310 K ln 0.5323 G'  u  u u  
+ 312870 10 J 8.314 JK 310K 0.6305 G'  u  u u   
+  'G 2870 u103J1.625 u103J
+'G 2872 u103J 
+ 
+In a similar manner we calculate the Gibbs  free energy change for the conversion of 
+ADP to ATP: 
+ 
+'G 'GocRTlnATP>@/1u1
+ADP>@/1uPi>@/1u(Hª¬º¼/107)§
+©¨·
+¹¸ 
+ 
+31
+770.000132.4 10 J 8.314JK 310K ln0.0001 0.0001 (10 /10 )G
+§·' u  u u ¨¸uu©¹ 
+ 31 432.4 10 J 8.314JK 310K ln 10G' u  u u  
+ 31 33 332.4 10 J 8.314 JK 310 K 9.2103) 32.4 10 J 23.738 10 J 56.2 10 JG' u  u u  u  u  u  
+ 
+ (d) T h e  e f f i c i e n c y  u n d e r  b i o l ogical conditions is  
+ 
+number of ATP's actually produced 38Efficiency = 0.744Maximum number of ATP's that can be produced 2872/56.2   
+ 
+Thus, the cell’s efficiency is about 74%. 
+ 
+The theoretical efficiency of the diesel engine is: 
+ 
+h1
+h1923 873Efficiency 100% 100% 55%1923TT
+T u  u   
+Thus, the diesel’s actual efficiency is 0.78 u 55 % = 43 %. 
+The cell’s efficiency is 74% whereas that of  the diesel engine is only 43 %. Why is 
+there such a large discrepancy?  The dies el engine supplies h eat to the surroundings, 
+which is at a lower temperature than the engi ne.  This dissipation of energy raises the 
+temperature of the surroundings and the en tropy of the surroundings.  A cell operates 
+under isothermal conditions and the energy not utilized goes onl y towards changing 
+the entropy of the cell’s surroundings.  The cel l is more efficient since it does not 
+heat the surroundings. 
+ 
+
+=== PDF PAGE 995 ===
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 9 5  97. (E) (a)  In this case CO can exist in two states, therefore, W=2.  There are N of these  
+ s t a t e s  i n  t h e  c r y s t a l ,  a n d  s o  w e  h a v e  
+ S kln 2N 1.381 u1023JK-1u6.022u1023mol-1ln 2 5.8JK-1mol-1 
+ ( b )   For water, W=3/2, which leads to 
+ S kln(3
+2)N 1.381 u1023JK-1u6.022 u1023mol-1ln1.5  3.4JK-1mol-1 
+ 
+SELF-ASSESSMENT EXERCISES 
+ 
+98. (E)  (a) 'Suniv or total entropy contains contributio ns from the entropy change of the 
+ s y s t e m  ( 'Ssys) and the surroundings ('Ssurr).  According to the second law of 
+ t h e r m o d y n a m i c s ,  'Suniv is always greater then zero. 
+ ( b )  'Gfo or standard free energy of formation is the free energy change for a reaction in 
+ w h i c h  a  s u b s t a n c e s  i n  i t s  s t a n d a r d  s t a t e  i s  formed from its elements in their reference 
+ f o r m s  i n  t h e i r  s t a n d a r d  s t a t e s .  
+(c) For a hypothetical chemical reaction aA+bB UcC+dD , the equilibrium constant K is 
+defined as K [C]c[D]d
+[A]a[B]b. 
+ 
+99. (E)  (a)   A b s o l u t e  m o l a r  e n t r o p y  i s  t h e  e n t r o p y at zero-point ener gy (lowest possible 
+ e n e r g y  s t a t e )  a n d  i t  i s  e q u a l  t o  z e r o .  
+ ( b )   Coupled reactions are spontaneous reactions ( 'G<0) that are obtained by pairing 
+ r e a c t i o n s  w i t h  p o s i t i v e  'G with the reactions with negative 'G. 
+ (c)  Trouton’s rule states that for many liquids at their normal boiling points, the standard 
+ m o l a r  e n t r o p y  o f  v a p o r i z a t i o n  h a s  a value of approximately 87 Jmol-1K-1. 
+(d) Equilibrium constant K for a certain chemical reaction can be evaluated using either 
+'Gfo or 'Hfo in conjunction with So (which are often tabulated).  The relationship used 
+to calculate K is 'Go RTlnK. 
+ 
+100. (E)  (a)   A spontaneous process is a process that occurs in a system left to itself; once 
+ s t a r t e d ,  n o  e x t e r n a l  a c t i o n  f o rm outsize the system is n ecessary to make the process 
+ c o n t i n u e .   A  n o n s p o n t a n e o u s  p r o c e s s  i s  a  p r o c e s s that will not occur unless some external 
+ a c t i o n  i s  c o n t i n u o u s l y  a p p l i e d .  
+ (b)  Second law of thermodynamics states that the entropy of universe is always greater 
+ t h a n  z e r o  o r  i n  o t h e r  w o r d s  t h a t  a l l  s p o n t aneous processes produce an increase in the 
+ e n t r o p y  o f  t h e  u n i v e r s e .   T h e  t h i r d  l a w  o f  thermodynamics states that the entropy of 
+ p e r f e c t  p u r e  c r y s t a l  a t  0 K  i s  z e r o .  
+ (c) 'G is the Gibbs free energy defined as 'G='H-T'S. 'G0 is the standard free energy 
+ c h a n g e .  
+ 
+101. (E)  Second law of thermodynamics states that all spontaneous processes produce an 
+ i n c r e a s e  i n  t h e  e n t r o p y  o f  t h e  u n i v e r s e .   I n  o t h e r  w o r d s ,  'Suniv 'Ssys'Ssurr!0.  
+ Therefore, the correct answer is (d). 
+
+=== PDF PAGE 996 ===
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy  
+996  
+102. ( E )   The Gibbs free energy is a function of 'H, 'S and temperature T.  It cannot be used 
+ t o  d e t e r m i n e  h o w  m u c h  h e a t  i s  a b s o r b e d  from the surroundings or  how much work the 
+ s y s t e m  d o e s  o n  t h e  s u r r o u n d i n g s .   F u r t h e r m o r e ,  it also cannot be us ed to determine the 
+ p r o p o r t i o n  o f  t h e  h e a t  e v o l v e d  in an exothermic reaction that  can be converted to various 
+ f o r m s  o f  w o r k .   S i n c e  G i b b s  f r e e  e n e r g y  i s  related to the equili brium constant of a 
+ c h e m i c a l  r e a c t i o n  ( 'G RTlnK) its value can be used to access the net direction in 
+ w h i c h  t h e  r e a c t i o n  o c c u r s  t o  r e a c h  e q u i l i b r i u m .   Therefore, the correct answer is (c).   
+ 
+103. ( M )   In order to answer this question, we must first determine whether the entropy 
+ c h a n g e  f o r  t h e  g i v e n  r e a c t i o n  is positive or negative.  Th e reaction produces three moles 
+ o f  g a s  f r o m  t w o  m o l e s ,  t h e r efore there is an increase in randomness of the system, i.e. 
+ e n t r o p y  c h a n g e  f o r  t h e  r e a c t i o n  i s  p o s i t i v e .   Gibbs free energy is a function of enthalpy, 
+ e n t r o p y  a n d  t e m p e r a t u r e  ( 'G 'HT'S).  Since 'H0 a n d  'S!0,  t h i s  r e a c t i o n  
+ will be spontaneous at any temperature.  The correct answer is (a). 
+104. ( M )   Recall that 'Go RTlnK.  If 'Go 0,  t h e n  i t  f o l l o w s  t h a t  'Go RTlnK 0.   
+ S o l v i n g  f o r  K  y i e l d s :  l n K 0K e0 1.  Therefore, the correct answer is (b). 
+ 
+105. ( E )   In this reaction, the number of moles of reactants equals the number of moles of 
+ p r o d u c t s .   T h e r e f o r e ,  K  i s  e q u a l  t o  K p and K c.  The correct answers are (a) and (d).   
+ 
+106. ( M )   ( a )   The two lines will intersect at  the normal melting point of I 2(s) which is 113.6 
+ oC.  (b) 'Go f o r  t h i s  p r o c e s s  m u s t  b e  e q u a l  t o  zero because solid and liquid are at 
+ e q u i l i b r i u m  a n d  a l s o  i n  their standard states. 
+ 
+107. ( M )   ( a )   No reaction is expected because of the decrease in entropy and the expectation 
+ t h a t  t h e  r e a c t i o n  i s  e n d o t h e r m i c .   A s  a  c h e c k  w i t h  d a t a  f r o m  A p p e n d i x  D ,  'Go=326.4 
+ k J m o l-1 f o r  t h e  r e a c t i o n  a s  w r i t t e n - a  v e r y  l a r g e  v a l u e .   (b)  B a s e d  o n  t h e  i n c r e a s e  i n  
+ e n t r o p y ,  t h e  f o r w a r d  r e a c t i o n  s h o u l d  o c c u r ,  a t  l e a s t  t o  s o m e  e x t e n t .   F o r  t h i s  r e a c t i o n  
+ 'Go=75.21 kJmol-1.  (c) 'Sis probably small, and 'His probably also small (one Cl-Cl 
+ b o n d  a n d  o n e  B r - B r  b o n d s  a r e  b r o k e n  and two Br-Cl bonds are formed). 'Go should be 
+ s m a l l  a n d  t h e  f o r w a r d  r e a c t i o n  s h o u l d  o c c u r  to a significant extent.  For this reaction 
+ 'Go=-5.07 kJmol-1.   
+ 
+108. ( M )   ( a )  Entropy change must be accessed for the system and its surroundings ('Suniv), 
+ n o t  j u s t  f o r  t h e  s y s t e m  a l o n e .   (b)  E q u i l i b r i u m  c o n s t a n t  c a n  b e  c a l c u l a t e d  f r o m  
+ 'Go('Go RTlnK), and K permits equilibrium calculations for nonstandard 
+ c o n d i t i o n s .  
+ 
+109. ( D )   ( a )   First we need to determine 'Hvapo w h i c h  i s  s i m p l y  e q u a l  t o :  
+'Hvapo 'Hfo[(C5H10(g)]'Hfo[(C5H10(l)] 77.2kJ/mol (105.9kJ/mol)  28.7kJ/mol .  Now 
+ w e  u s e  T r o u t o n ’ s  r u l e  t o  c a l c u l a t e  the boiling point of cyclopentane: 
+
+=== PDF PAGE 997 ===
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 9 7   'Svapo 'Hvapo
+Tbp 87Jmol-1K-1Tbp 'Hvapo
+87Jmol-1K-1 28.7 u1000Jmol-1
+87Jmol-1K-1 330K
+Tbp 330K273.15 K 57oC 
+ (b)  If we assume that 'Hvapo and 'Svapoare independent of T we can calculate 'Gvapo: 
+ 'Gvap,298 Ko 'HvapoT'Svapo 28.7kJmol-1298.15 Ku87
+1000kJK-1mol-1 2.8kJmol-1 
+ (c)  Because 'Gvap,298 Ko>0, the vapor pressure is less than  1 atm at 298 K, consistent with 
+ T bp=57 oC.   
+ 
+110. ( M )   ( a )   We can use the data from Appendix D to  determine the change in enthalpy and 
+ e n t r o p y  f o r  t h e  r e a c t i o n :  
+ 'Ho 'Hfo(N2O(g))2'Hfo(H2O(l))'Hfo(NH4NO3(s))
+'Ho 82.05kJmol-12u(285.8kJmol-1)(365.6kJmol-1) 124kJmol-1
+'So So(N2O(g))2So(H2O(l))So(NH4NO3(s))
+'So 219.9JK-1mol-12u69.91JK-1mol-1151.1JK-1mol-1 208.6JK-1mol-1 
+ (b)  From the values of 'Hoand 'Sodetermined in part (a) we can calculate 'Go a t  
+ 2 9 8 K :  
+ 'Go 'HoT'So
+'Go 124kJmol-1298Ku208.6kJmol-1K-1
+1000 186.1kJmol-1 
+ A l t e r n a t i v e l y ,  'Go c a n  a l s o  b e  c a l c u l a t e d  d i r e c t l y  u s i n g  'Gfovalues tabulated in 
+ A p p e n d i x  D .  
+ (c)  The equilibrium constant for the reaction is calculated using 'Go RTlnK: 
+ 'Go RTlnK186.1 u1000Jmol-1 8.314JK-1mol-1u298KulnK
+186100Jmol-1 2477.6 lnKlnK 75.1 K e75 1 4.1u1032 
+ (d)  The reaction has 'Ho0 a n d  'So!0.   B e c a u s e  'Go 'HoT'So, the reaction 
+ w i l l  b e  s p o n t a n e o u s  a t  a l l  t e m p e r a t u r e s .  
+ 
+111. (M)  Recall from exercise 104 that 'Go 0 w h e n  K = 1 .   T h e r e f o r e ,  w e  a r e  l o o k i n g  f o r  
+the diagram with smallest change in Gibbs  f r e e  e n e r g y  b e t w e e n  t h e  p r o d u c t s  a n d  t h e  
+reactants.  The correct answer is diagram (a).   Notice that diagrams (b) and (c) represent 
+chemical reactions with small and large values  of equilibrium consta nts, respectively.   
+ 
+112. ( M )   Carbon dioxide is a gas at room temperature.  The melt ing point of carbon dioxide is 
+ e x p e c t e d  t o  b e  v e r y  l o w .   A t  r o o m  t e m p erature and normal atmospheric pressure this 
+ p r o c e s s  i s  s p o n t a n e o u s .   T h e  e n tropy of the universe if positive. 
+  
+
+=== PDF PAGE 998 ===
+998 CHAPTER 20  
+ 
+ELECTROCHEMISTRY 
+ 
+PRACTICE EXAMPLES 
+ 
+1A (E) The conventions state that the anode material is written first, and the cathode material is written 
+last. 
+Anode, oxidation: Sc soSc3+aq+3 e 
+Cathode, reduction: +{Ag aq + e Ag s }  3ou  
+        
+Net reaction  Sc s +3A g+aqoSc3+aq+3A g s 
+ 
+1B (E) Oxidation of Al(s) at the anode:     Al soAl3+aq+3 e 
+Reduction of Ag+aq at the cathode: Ag+aq+eoAg s 
+          
+Overall reaction in cell: Al s +3A g+aqoAl3+aq+3A g s      Diagram:3+ +Al(s)|Al (aq)||Ag (aq)|Ag(s)  
+ 
+2A ( E )  Anode, oxidation: Sn s oSn2+aq+2 e 
+ C a t h o d e ,  r e d u c t i o n :  { Agaq1eoAg(s)}u2 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  
+ O v e r a l l  r e a c t i o n  i n  c e l l :  Sn(s)2Ag(aq)oSn2(aq)2Ag(s) 
+2B ( E )  Anode, oxidation: { InsoIn3+aq+3 e}u2 
+ C a t h o d e ,  r e d u c t i o n :  { Cd2aq2eoCd(s)}u3 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  
+ O v e r a l l  r e a c t i o n  i n  c e l l :  2 In(s)3Cd2(aq)o2In3(aq)3Cd(s) 
+ 
+3A (M) We obtain the two balanced half-equations a nd the half-cell potentials from Table 20-1. 
+ 
+Oxidation:  2+ 3+{Fe aq Fe aq + e }  2ou        o=0 . 7 7 1 VE  
+Reduction: 2Cl g + 2e 2Cl aqo           o=+ 1 . 3 5 8 VE  
+Net:   2+ 3+
+2 2Fe aq + Cl g 2Fe aq + 2Cl aqo ;    o
+cell=+ 1 . 3 5 8 V 0 . 7 7 1 V=+ 0 . 5 8 7VE   
+ 
+3B (M) Since we need to refer to Table 20-1, in any event, it is perhaps a bit easier to locate the 
+two balanced half-equations in the table. There is only one half -equation involving both 
+Fe2+aq and Fe3+aq ions. It is reversed and written as an oxidation below. The half-
+equation involving MnO4aq is also written below. [Actually, we need to know that in 
+acidic solution Mn2+aq is the principal reduction product of MnO4aq.] 
+ 
+Oxidation:  2+ 3+{Fe aq Fe aq + e }  5ou            o=0 . 7 7 1 VE  
+Reduction: +2 +
+42 MnO aq +8 H aq + 5e Mn aq + 4 H O(l) o  o=+ 1 . 5 1 VE  
+Net:  2+ + 2+ 3+
+4 2 MnO aq + 5 Fe aq + 8H aq Mn aq + 5Fe aq + 4H O(l)o  anode
+cathodee-
+salt bridge
+NO3-
+Ag+K+
+Al3+AlAg
+
+=== PDF PAGE 999 ===
+Chapter 20: Electrochemistry 
+ 9 9 9  EcelloVV V =+ 1 . 5 1 0 . 7 7 1 =+ 0 . 7 4   
+ 
+4A (M) We write down the oxidation half-equation following the method of Chapter 5, and 
+obtain the reduction half-equati on from Table 20-1, along with the reduction half-cell 
+potential. 
+ 
+Oxidation: +
+224 2{H C O (aq) 2CO (aq) 2H (aq) 2e } 3o  u         22 2 4 {CO /H C O }ED 
+Reduction: 2 +3 +
+27 2Cr O aq +14H aq + 6e 2Cr aq + 7 H O(l) o  o=+ 1 . 3 3 VE  
+Net:   2 +3 +
+27 224 2 2Cr O aq +8H aq + 3H C O aq 2Cr aq + 7 H O(l) + 6CO go  
+oo
+22 2 4 cell=+ 1 . 8 1 V=+ 1 . 3 3 V { C O / H C O } ; EE   o
+22 2 4{CO /H C O } = 1.33V 1.81V = 0.48 VE   
+ 
+4B (M) The 2nd half-reaction must have O2g as reactant and 2HO ( l )  as product. 
+Oxidation:2+ 3+{Cr (aq) Cr (aq) e }  4 o u   32{Cr /Cr }Eq  
+Reduction:   +
+22Og + 4 Ha q + 4 e 2 H O ( l )o      o= +1.229VE  
+           
+Net:   +2 + 3+
+22Og + 4 Ha q 4 C r ( a q ) 2 H O ( l ) + 4 C r a q o  
+o o3 2
+cell 1.653V 1.229V E {Cr / Cr } E     ; o3 2{Cr /Cr } 1.229V 1.653V 0.424VE    
+ 
+5A (M) First we write down the two half-equations, ob tain the half-cell potential for each, and 
+then calculate Ecello. From that value, we determine 'Go 
+Oxidation:   3+{Al s Al aq +3e }  2ou   o= +1.676VE  
+Reduction: 2{Br l +2e 2 Br aq }  3ou    o= +1.065VE  
+             
+Net:  3+ o
+2c ell 2A l s +3B r l 2A l a q +6B r a q =1 . 6 7 6V+1 . 0 6 5V=2 . 7 4 1V Eo  
+oo 6
+cell96, 485 C== 6 m o l  e 2 . 7 4 1 V = 1 . 5 8 7 1 0 J = 1 5 8 7 k J1mol eGn F E
+'  u u u   
+ 
+5B (M) First we write down the two half-equations, on e of which is the reduction equation from 
+the previous example. The other is the oxida tion that occurs in the standard hydrogen 
+electrode. 
+Oxidation:   +
+22H g 4H aq + 4eo  
+Reduction:   +
+22Og + 4 Ha q + 4 e 2 H O ( l )o  
+         
+Net:    22 22H g +O g 2HO l =4  i n  t h i s  r e a c t i o n . n o  
+This net reaction is simply twice the formation reaction for 2HO ( l )  and, therefore, 
+  o o 3o
+f2 cell =2 HO l =2 2 3 7 . 1  k J = 4 7 4 . 2 1 0  J=GG n F E'' u   u  ªº¬¼ 
+3o
+o o
+cell474.2 10  J
+= = 1.229V96,485C4m o lemol eGEEnF 
+ u'  
+u, as we might expect. 
+ 
+6A (M) Cu(s) will displace metal ions of a metal le ss active than copper. Silver ion is one 
+example. 
+
+=== PDF PAGE 1000 ===
+Chapter 20: Electrochemistry  
+1000 Oxidation:   2+ oCu s Cu aq + 2e =0 . 3 4 0 VEo  (from Table 20.1) 
+Reduction: +o{Ag aq + e Ag s }  2 = +0.800V Eou  
+Net:   +2 +o
+cell 2Ag aq + Cu s Cu aq + 2Ag s = 0.340V + 0.800V = +0.460V E o  
+ 
+6B (M) We determine the value for the hypo thetical reaction's cell potential. 
+Oxidation:   +{Na s Na aq + e }  2ou   o= +2.713VE  
+Reduction: 2+Mg aq +2e Mg so   o=2 . 3 5 6 VE 
+Net:   2+ +2N a s + M g a q 2N a a q  +  M g s o  o
+cell= 2.713V 2.356 V = +0.357 VE   
+The method is not feasible because another reaction occurs that has a more positive cell 
+potential, i.e., Na(s) reacts with water to form H2g and NaOH(aq): 
+Oxidation:   +{Na s Na aq + e }  2ou   o= +2.713VE  
+Reduction:  2H2O+2e-oH2(g)+2OH-(aq)  Eo=-0.828V  
+EcelloVV V =2 . 7 1 3 0 . 8 2 8 =+ 1 . 8 8 5  . 
+ 
+7A (M) The oxidation is that of SO 42 to S 2O82, the reduction is that of O 2 to H 2O.  
+ 
+Oxidation: 22 o
+42 8 {2 SO aq S O aq + 2e } 2 = 2.01V E ou   
+Reduction:   +o
+22Og + 4 Ha q + 4 e 2 H O ( l ) =+ 1 . 2 2 9VEo  
+               
+Net:    22 +
+24 2 8 2Og + 4 Ha q + 2 S O a q S O a q + 2 H O ( l )o  Eqcell = -0.78 V 
+Because the standard cell potential is negativ e, we conclude that this cell reaction is 
+nonspontaneous under standard conditions. This  would not be a feasib le method of producing 
+peroxodisulfate ion. 
+ 
+7B (M) (1) The oxidation is that of Sn2+aq to Sn4+aq; the reduction is that of O 2 to 
+H2O. 
+  O x i d a t i o n :  { S n2+aqoSn4+aq+2 e}u2 Eo=0.154 V  
+Reduction: +o
+22Og + 4 Ha q + 4 e 2 H O ( l ) = + 1 . 2 2 9 V Eo  
+          ___________    
+Net:  +2 +4 +
+2 2 Og + 4 Ha q + 2 S n a q 2 S n a q + 2 H O ( l ) oo
+cell=+ 1 . 0 7 5 VE  
+   
+  S i n c e  t h e  s t a n d a r d  c e l l  p o tential is positive, this ce ll reaction is spontaneous under 
+standard conditions. 
+ 
+ ( 2 )  The oxidation is that of Sn(s) to Sn2+aq; the reduction is still that of O 2 to H 2O. 
+  O x i d a t i o n :  { S n s oSn2+aq+2 e} u2 Eo=+ 0 . 1 3 7V 
+Reduction: +o
+22Og + 4 Ha q + 4 e 2 H O ( l ) = + 1 . 2 2 9 V Eo  
+           
+Net:  +2 +
+22Og + 4 Ha q + 2 S n s 2 S n a q + 2 H O ( l ) o  
+o
+cell=0 . 1 3 7V+ 1 . 2 2 9V=+ 1 . 3 6 6VE  
+
+=== PDF PAGE 1001 ===
+Chapter 20: Electrochemistry 
+ 1 0 0 1   T h e  s t a n d a r d  c e l l  p o t e n t i a l  f o r  t h i s  r e a c t i o n  i s  more positive than that for situation (1).  
+Thus, reaction (2) should occu r preferentially. Also, if Sn4+aq is formed, it should 
+react with Sn(s) to form Sn2+aq. 
+ O x i d a t i o n :  S n s oSn2+aq+2 eEo=+ 0 . 1 3 7 V 
+Reduction: 4+ 2+ oSn aq + 2e Sn aq = +0.154 V Eo  
+            
+Net: Sn4+aq+S n so2Sn2+aqEcello=+ 0 . 1 3 7 V+0 . 1 5 4V=+ 0 . 2 9 1 V 
+ 
+8A (M) For the reaction 2A l s+3 C u2+aqo2A l3+aq+3 C u s we know   n=6 a n d   
+EcelloV =+ 2 . 0 1 3 .  W e  c a l c u l a t e  t h e  v a l u e  o f  Keq. 
+o
+o 470 204 cell
+cell eq eq eq0.0257 6( + 2 . 0 1 3 )=l n ;    l n == =4 7 0 ;     =e =1 00.0257 0.0257nEEK K Knu 
+The huge size of the equilibrium constant in dicates that this reaction indeed will go to 
+essentially 100% to completion. 
+ 
+8B (M) We first determine the value of Ecello from the half-cell potentials. 
+Oxidation:   2+Sn s Sn aq +2eo    o–= + 0 . 1 3 7 VE  
+Reduction: 2+Pb aq +2e Pb so     o=0 . 1 2 5 VE 
+             
+Net:     2+ 2+Pb aq +Sn s Pb s +Sn aq o     o
+cell=+ 0 . 1 3 7V 0 . 1 2 5 V=+ 0 . 0 1 2 VE   
+o
+o 09 3 cell
+cell eq eq eq0.0257 2( + 0 . 0 1 2 )=l n l n == =0.93 = e  = 2.50.0257 0.0257nEEK K Knu 
+The equilibrium constant's small size (0.001 < K <1000)  indicates that  this reaction will not 
+go to completion. 
+ 
+9A (M) We first need to determine the sta ndard cell voltage and the cell reaction. 
+Oxidation:   3+{Al s Al aq + 3 e }  2ou   o=+ 1 . 6 7 6 VE  
+Reduction: 4+ 2+{Sn aq + 2 e Sn aq }  3ou     o=+ 0 . 1 5 4 VE  
+           
+Net:   4+ 3+ 2+2A l s + 3S n a q 2A l a q + 3S n a q oo
+cell=+ 1 . 6 7 6 V+0 . 1 5 4 V=+ 1 . 8 3 0 VE  
+ 
+Note that   n=6.  W e  n o w  s e t  u p  a n d  s u b s t i t u t e  i n t o  t h e  N e r n s t  e q u a t i o n .  
+Ecell=Ecello0.0592
+nlogAl3+ª¬º¼2Sn2+ª¬º¼3
+Sn4+ª¬º¼3 =+ 1 . 8 3 0 0.0592
+6log0.36 M20.54 M3
+0.086 M3
+=+ 1 . 8 3 0 V 0.0149V = +1.815V 
+ 
+9B (M) We first need to determine the sta ndard cell voltage and the cell reaction. 
+Oxidation: 2 2C l 1 . 0  M C l 1  a t m + 2 eo     o=1 . 3 5 8 VE  
+Reduction:  +2 +
+22PbO s + 4H aq + 2e Pb aq + 2H O(l)o     o=+ 1 . 4 5 5VE  
+            
+
+=== PDF PAGE 1002 ===
+Chapter 20: Electrochemistry  
+1002 Net:   +2 +
+22 2 PbO s + 4H 0.10 M + 2Cl 1.0 M Cl 1 atm + Pb 0.050 M + 2H O(l)o  
+EcelloVV V =1 . 3 5 8 + 1 . 4 5 5 = + 0 . 0 9 7        Note that n= 2. Substitute values  into the Nernst 
+equation. 
+  
+  2+
+2 o
+cell cell 42 4 2+P{Cl } Pb 1.0atm 0.050 M 0.0592 0.0592=l o g = + 0 . 0 9 7 l o g2 0.10 M 1.0 M HC l
+=+ 0 . 0 9 7V 0 . 0 8 0V=+ 0 . 0 1 7VEEnªº¬¼
+ªº ªº¬¼ ¬¼
+ 
+ 
+10A (M) The cell reaction is 3+ 2+ 2+2F e 0 . 3 5  M + C u s 2F e 0 . 2 5  M + C u 0 . 1 5  M o  with 
+  n=2 a n d  EcelloVV V =0 . 3 3 7 + 0 . 7 7 1 = 0 . 4 3 4      Next, substitute this voltage and the 
+concentrations into the Nernst equation. 
+ 
+22 2+ 2+
+o
+cell cell 223+Fe Cu 0.25 0.15 0.0592 0.0592=l o g = 0 . 4 3 4 l o g = 0 . 4 3 4 0 . 0 3 32 0.35 FeEEnªº ªº¬¼ ¬¼
+ªº¬¼ 
+cell=+ 0 . 4 6 7VE    Thus the reaction is spontaneous under standard conditions as written. 
+10B (M) The reaction is not spontane ous under standard conditions in either direction when 
+Ecell V =0 . 0 0 0 .  W e  u s e  t h e  s t a n d a r d  c e l l  p o t e n t i a l  f r o m  E x a m p l e  2 0 - 1 0 .  
+ 
+  Ecell=Ecello0.0592
+nlogAg+ª¬º¼2
+Hg2+ª¬º¼;     0.000 V = 0.054 V 0.0592
+2logAg+ª¬º¼2
+Hg2+ª¬º¼ 
+ 
+ logAg+ª¬º¼2
+Hg2+ª¬º¼=0.054 u2
+0.0592=1.82;      Ag+ª¬º¼2
+Hg2+ª¬º¼=1 018 2=0 . 0 1 5 0 
+ 
+ 
+11A (M) In this concentration cell EcelloV =0 . 0 0 0  b e c a u s e  t h e  s a m e  r e a c t i o n  o c c u r s  a t  a n o d e  a n d  
+cathode, only the concentrati ons of the ions differ. +Ag = 0.100 Mªº¬¼ in the cathode 
+compartment. The anode compartment cont ains a saturated solution of AgCl(aq). 
+ 
+Kssp Ag Cl =1 . 8 1 0 = =10 + 2u;     10 51.8 10 1.3 10 M s u  u  
+ 
+Now we apply the Nernst equation. The cell reaction is  
+ 
+Ag+0.100 M oAg+1.3u105M  
+ 
+Ecell logM
+MV =0 . 0 0 00.0592
+11.3 10
+0.100= +0.235
+u
+ 
+ 
+11B ( D )  Because the electrodes in this cell are identical, the stan dard electrode potentials are 
+numerically equal and subt racting one from the ot her leads to the value o
+cell=0 . 0 0 0V .E   
+However, because the ion concentrations differ,   there is a potential difference between the 
+
+=== PDF PAGE 1003 ===
+Chapter 20: Electrochemistry 
+ 1 0 0 3  two half cells (non-zero nonsta ndard voltage for the cell).  2+Pb = 0.100 Mªº¬¼ in the cathode 
+compartment, while the anode compartmen t contains a satura ted solution of PbI2.  
+We use the Nernst equation (with n=2)  t o  d e t e r m i n e  Pb2+ in the saturated solution. 
+ 
+cell0.0592 M M2 0 . 0 5 6 7=+ 0 . 0 5 6 7V=0 . 0 0 0 l o g ;     l o g = = 1 . 9 220 . 1 0 0 M 0 . 1 0 0 M 0 . 0 5 9 2xxEu 
+ 
+19 2 2+
+anodeM=1 0 =0 . 0 1 2 ; P b = M=0 . 0 1 2 0 . 1 0 0 M=0 . 0 0 1 2 M ;0.100 M
+I= 2 0 . 0 0 1 2 M 0 . 0 0 2 4  Mxx
+ªº u¬¼
+ªºu ¬¼ 
+ 
+Ksp=P b2+ª¬º¼Iª¬º¼2=0 . 0 0 1 20.00242=6 . 9 u109 compared with 7.1 109u in Appendix 
+D 
+ 
+12A (M) From Table 20-1 we choose one oxidations and one reductions reaction so as to get the 
+least negative cell voltage. This will be the most likely pair of ½ -reactions to occur. 
+Oxidation:   2 2I aq I s + 2 eo     o=0 . 5 3 5 VE  
+ +
+222H O ( l ) O g +4H a q +4eo   o=1 . 2 2 9 VE  
+Reduction:  +Ka q + e K so    o=2 . 9 2 4 VE  
+ 222H O ( l )+2e H g +2O H a qo   o=0 . 8 2 8 VE  
+The least negative standard cell potential 0.535V 0.828V = 1.363V occurs when I2s is 
+produced by oxidation at the anode, and H2g is produced by reduction at the cathode. 
+ 
+12B ( M )  We obtain from Table 20-1 all the possible oxi dations and reductions and choose one of each 
+to get the least negative cell voltage. That pair is the most likely pair of half-reactions to occur. 
+ 
+Oxidation: +o
+222H O ( l ) O g +4H a q +4 e =1 . 2 2 9 VEo  
+Ag soAg+aq+eEo=0.800V  
+[We cannot further oxidize NO3aq or Ag+aq.] 
+Reduction: +oAg aq + e Ag s =+ 0 . 8 0 0 VEo  o
+222H O ( l )+2 e H g +2O H a q =0 . 8 2 8 VEo  
+Thus, we expect to form silver metal at the cathode and Ag+aq at the anode. 
+ 
+13A ( M )  The half-cell equation is Cu2+aq+2 eoCu s, indicating that two moles of 
+electrons are required for each mole of copper depo sited. Current is measured in amperes, or 
+coulombs per second. We convert the mass of co pper to coulombs of el ectrons needed for the 
+reduction and the time in hours to seconds. 
+
+=== PDF PAGE 1004 ===
+Chapter 20: Electrochemistry  
+1004  Current  12.3 gCu u1m o lC u
+63.55gCuu2m o l e
+1m o lC uu96,485 C
+1mole
+5.50 h u60 min
+1hu60 s
+1min 3.735 u104C
+1.98 u104s 1.89 amperes  
+ 
+13B ( D )  We first determine the moles of O2g produced with the ideal gas equation. 
+2 21a t m738 mm Hg 2.62 L760 mm Hgmoles O (g) 0.104 mol O0.08206 Latm26.2 273.2 Kmol K§·uu ¨¸©¹  
+u 
+Then we determine the time needed to produce this amount of O 2. 
+elapsed time mol Omol e
+mol OC
+mol es
+Ch
+sh =0 . 1 0 44
+196,485
+11
+2.131
+3600=5 . 2 32
+2uuu u
+ 
+ 
+ 
+INTEGRATIVE EXAMPLE  
+14A (D) In this problem we are asked to determine Eo for the reduction of CO 2(g) to C 3H8(g) in 
+an acidic solution.  We proceed by first determining 'Go for the reaction using tabulated 
+values for 'Gfo in Appendix D.  Next, Ecello for the reaction can be determined using 
+'Go zFEcello.  Given reaction can be separated into  reduction and oxidation.  Since we are 
+in acidic medium, the reduction half-cell poten tial can be found in Table 20.1.  Lastly, the 
+oxidation half-cell potential can be calculated using 
+Ecello Eo(reduction half-cell) Eo(oxidation half-cell). 
+ Stepwise approach 
+ First determine 'Go for the reaction using tabulated values for 'Gfo in Appendix D: 
+C3H8(g)     +     5O 2(g)     o     3CO 2(g)     +     4H 2O(l) 
+  'Gfo    -23.3 kJ/mol        0 kJ/mol        -394.4 kJ/mol     -237.1 kJ/mol 
+ 'Go 3u'Gfo(CO2(g))4u'Gfo(H2O(l))['Gfo(C3H8(g))5u'Gfo(O2(g))]
+'Go 3u(394.4) 4u(237.1) [23.3 5u0]kJ/mol
+'Go 2108kJ/mol 
+ I n  o r d e r  t o  c a l c u l a t e  Ecello for the reaction using 'Go zFEcello, z must be first determined.  
+We proceed by separating the given r eaction into oxidation and reduction: 
+ R e d u c t i o n :  5 u{O2(g)+4H+(aq)+4e- o 2H 2O(l)}     Eo=+1.229 V 
+ O x i d a t i o n :  C 3H8(g) + 6H 2O(l) o 3CO 2(g) + 20H+ + 20e-     Eo=xV 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  
+ O v e r a l l :  C 3H8(g) + 5O 2(g) o 3CO 2(g) + 4H 2O(l)      Eo=+1.229 V-xV 
+ S i n c e  z = 2 0 ,  Ecello can now be calculated using 'Go zFEcello: 
+
+=== PDF PAGE 1005 ===
+Chapter 20: Electrochemistry 
+ 1 0 0 5   'Go zFEcello
+2108 u1000J/mol  20mol e-u96485C
+1mol e-uEcello
+Ecello 2108 u1000
+20u96485V 1.092 V 
+ F i n a l l y , Eo(reduction half-cell) can be calculated using 
+Ecello Eo(reduction half-cell) Eo(oxidation half-cell): 
+ 1 . 0 9 2  V  =  1 . 2 2 9  V  –  Eo(oxidation half-cell)  V 
+ Eo(oxidation half-cell) =1.229 V – 1.092 V = 0.137 V 
+ T h e r e f o r e ,  Eo for the reduction of CO 2(g) to C 3H8(g) in an acidic medium is 0.137 V. 
+ Conversion pathway approach: 
+ Reduction: 5 u{O2(g)+4H+(aq)+4e- o 2H 2O(l)}     Eo=+1.229 V 
+ O x i d a t i o n :  C 3H8(g) + 6H 2O(l) o 3CO 2(g) + 20H+ + 20e-     Eo=x V 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  
+ O v e r a l l :       C 3H8(g)      +      5O 2(g)      o      3CO 2(g)    +    4H 2O(l)      Eo=+1.229 V-x V 
+ 'Gfo       -23.3 kJ/mol        0 kJ/mol             -394.4 kJ/mol  -237.1 kJ/mol 
+ 'Go 3u'Gfo(CO2(g))4u'Gfo(H2O(l))['Gfo(C3H8(g))5u'Gfo(O2(g))]
+'Go 3u(394.4) 4u(237.1) [23.3 5u0]kJ/mol
+'Go 2108kJ/mol 
+ 'Go zFEcello
+2108 u1000J/mol  20mol e-u96485C
+1mol e-uEcello
+Ecello 2108 u1000
+20u96485V 1.092 V 
+ 1 . 0 9 2  V  =  1 . 2 2 9  V  –  Eo(oxidation half-cell)  V 
+ Eo(oxidation half-cell) =1.229 V – 1.092 V = 0.137 V 
+ 
+14B (D)  This is a multi component problem dealing with a flow battery in which oxidation 
+occurs at an aluminum anode and reduction at a carbon-air cathode.  Al3+ produced at the 
+anode is complexed with OH- anions from NaOH(aq) to form [Al(OH) 4]-.   
+ Stepwise approach: 
+ P a r t  ( a ) :  The flow battery consists of aluminum anode where oxidation occurs and the formed 
+Al3+ cations are complexes with OH- anions to form [Al(OH) 4]-.  The plausible half-reaction 
+for the oxidation is: 
+ O x i d a t i o n :  A l ( s )  +  4 O H-(aq) o [Al(OH) 4]- + 3e- 
+ T h e  c a t h o d e ,  o n  t h e  o t h e r  h a n d  c o n s i s t s  o f  c a r b o n  and air.  The plausible half-reaction for the 
+reduction involves the conversion of O 2 and water to form OH- anions (basic medium): 
+ R e d u c t i o n :  O 2(g) + 2H 2O(l) + 4e- o 4OH-(aq) 
+ C o m b i n i n g  t h e  o x i d a t i o n  a n d  r e d u c t i o n  h a l f -reactions we obtain ove rall reaction for the 
+process: 
+ O x i d a t i o n :  { A l ( s )  +  4 O H-(aq) o [Al(OH) 4]- + 3e-}u4 
+
+=== PDF PAGE 1006 ===
+Chapter 20: Electrochemistry  
+1006  Reduction: {O 2(g) + 2H 2O(l) + 4e- o 4OH-(aq)} u3 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  
+ Overall: 4Al(s) + 4OH-(aq) +3O 2(g) + 6H 2O(l)o 4[Al(OH) 4]-(aq) 
+ P a r t ( b ) :  In order to find E o for the reduction, use the known value for Ecelloas well as Eo for 
+the reduction half-reaction from Table 20.1: 
+ Ecello Eo(reduction half-cell) Eo(oxidation half-cell)
+Ecello 0.401 VEo(oxidation half-cell)  2.73V
+Eo(oxidation half-cell)  0.401 V2.73V 2.329 V 
+ P a r t  ( c ) :  From the given value for Ecello (+2.73V) first calculate 'Gousing 'Go zFEcello 
+(notice that z=12 from part (a) above): 
+ 'Go zFEcello 12mol e-u96485C
+1mol e-u2.73V
+'Go 3161kJ/mol 
+ G i v e n  t h e  o v e r a l l  r e action (part (a)) and 'Gfo for OH-(aq) anions and H 2O(l), we can 
+calculate the Gibbs energy of form ation of the aluminate ion, [Al(OH) 4]-: 
+ O v e r a l l  r e a c t i o n :         4 A l ( s )    +    4 O H-(aq)   +  3O 2(g)   +   6H 2O(l) o  4[Al(OH) 4]-(aq) 
+   'Gfo     0 kJ/mol       -157 kJ/mol     0 kJ/mol    -237.2 kJ/mol       x 
+ 'Go 4ux[4u04u(157) 3u06u(237.2)kJ/mol  3161kJ/mol
+4x 3161 2051.2  5212.2kJ/molx 1303kJ/mol 
+ T h e r e f o r e ,  'Gfo([Al(OH)4]) 1303kJ/mol  
+ P a r t ( d ) :   First calculate the numbe r of moles of electrons: 
+ number of mol e current( C/s)utime(s) u1mol e-
+96485 C
+number of mol e 4.00hu60 min
+1hu60s
+1minu10.0C
+su1mol e-
+96485 C
+number of mol e 1.49mol e- 
+ Now, use the oxidation half-reaction to determine the mass of Al(s) consumed: 
+ mass (Al) 1.49mol e-u1mol Al
+3mol e-u26.98g Al
+1mol Al 13.4g 
+ Conversion pathway approach: 
+ P a r t  ( a ) :  
+ O x i d a t i o n :  { A l ( s )  +  4 O H-(aq) o [Al(OH) 4]- + 3e-}u4 
+ Reduction: {O 2(g) + 2H 2O(l) + 4e- o 4OH-(aq)} u3 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  
+ O v e r a l l :  4 A l ( s )  +  4 O H-(aq) +3O 2(g) + 6H 2O(l)o 4[Al(OH) 4]-(aq) 
+ P a r t  ( b ) :  
+
+=== PDF PAGE 1007 ===
+Chapter 20: Electrochemistry 
+ 1 0 0 7   Ecello Eo(reduction half-cell) Eo(oxidation half-cell)
+Ecello 0.401 VEo(oxidation half-cell)  2.73V
+Eo(oxidation half-cell)  0.401 V2.73V 2.329 V 
+ P a r t  ( c ) :  
+ 'Go zFEcello 12mol e-u96485C
+1mol e-u2.73V
+'Go 3161kJ/mol 
+ O v e r a l l  r e a c t i o n :         4 A l ( s )    +    4 O H-(aq)   +  3O 2(g)   +   6H 2O(l) o  4[Al(OH) 4]-(aq) 
+   'Gfo     0 kJ/mol       -157 kJ/mol     0 kJ/mol    -237.2 kJ/mol       x 
+ 'Go 4ux[4u04u(157) 3u06u(237.2)kJ/mol  3161kJ/mol
+4x 3161 2051.2  5212.2kJ/mol
+x 'Gfo([Al(OH)4]) 1303kJ/mol 
+ P a r t  ( d ) :  
+ number of mol e current( C/s)utime(s) u1mol e-
+96485 C
+number of mol e 4.00hu60 min
+1hu60s
+1minu10.0C
+su1mol e-
+96485 C
+number of mol e 1.49mol e- 
+ mass (Al) 1.49mol e-u1mol Al
+3mol e-u26.98g Al
+1mol Al 13.4g 
+ 
+ 
+EXERCISES  
+ 
+Standard Electrode Potential 
+ 
+1. (E) (a) If the metal dissolves in HNO3, it has a reduction potential that is smaller than 
+  ^`o
+3NO aq /NO g = 0.956 VE. If it also does not diss olve in HCl, it has a 
+reduction potential that is larger than ^`o+
+2 Ha q / Hg= 0 . 0 0 0 VE . If it displaces 
+Ag+aq from solution, then it has a reduction potential that is smaller than 
+  ^`o+Ag aq /Ag s = 0.800 VE . But if it does not displace Cu2+aq from solution, 
+then its reduction potential is larger than   
+    ^`o2 + oCu aq /Cu s = 0.340V  Thus, 0.340 V 0.800VEE   
+ 
+(b) If the metal dissolves in HCl, it has a reduction potential that is smaller than 
+  ^`o+
+2 Ha q / Hg= 0 . 0 0 0 VE . If it does not displace Zn2+aq from solution, its 
+reduction potential is larger than ^`o2 +Zn aq /Zn s = 0.763 VE . If it also does not 
+displace Fe2+aq from solution, its reduction potential is larger than  
+
+=== PDF PAGE 1008 ===
+Chapter 20: Electrochemistry  
+1008    ^`o2 +Fe aq /Fe s = 0.440 VE .    0.440 0.000 VVoE  
+ 
+2. (E) We would place a strip of solid  indium metal into each of the metal ion solutions and see 
+if the dissolved metal plates out on the indium stri p.  Similarly, strips of all the other metals 
+would be immersed in a solution of In3+ to see if indium metal pl ates out.  Eventually, we 
+will find one metal whose ions are displaced by indium and another metal that displaces 
+indium from solution, which are adjacent to  each other in Table 20-1.  The standard 
+electrode potential for the In/In3+(aq) pair will lie between the standard reduction potentials 
+for these two metals.  This technique will work only if indium metal does not react with 
+water, that is, if the standard reduction potential of In3+aq/I n s is greater than about 
+1.8 V. The inaccuracy inherent in this technique is due to overpotentials, which can be as 
+much as 0.200 V. Its imprecision is limited by the closeness of the reduction potentials for 
+the two bracketing metals 
+ 
+3. ( M )  We separate the given equation into its two half-equations. One of them is the reduction 
+of nitrate ion in acidic solution, whose standard  half-cell potential we re trieve from Table 20-1 
+and use to solve the problem. 
+ 
+Oxidation: 2
+4 {Pt(s) 4Cl (aq) [PtCl ] (aq) 2 e } 3 o u ;       o2
+4 {[PtCl ] (aq)/Pt(s)}E  
+Reduction:  +
+32 {NO aq +4H aq +3e NO g +2H O(l)} 2 ou ; o=+ 0 . 9 5 6VE  
+Net: 3Pt s +2N O3aq+8H+aq+12Claqo3P t C l4>@2aq+2N O g +6H2Ol 
+oo 2
+cell 4 0.201V 0.956 V {[PtCl ] (aq)/Pt(s)} EE    
+o2
+4 {[PtCl ] (aq)/Pt(s)} 0.956V 0.201V 0.755VE    
+ 
+4. (M) In this problem, we are dealing with the el ectrochemical reaction in volving the oxidation 
+of Na(in Hg) to Na+(aq) and the reduction of Cl 2(s) to Cl-(aq). Given that Ecello 3.20V, we 
+are asked to find Eofor the reduction of Na+ to Na(in Hg).  We proceed by separating the 
+given equation into its two half-equations. One of them is the reduction of Cl (g)2 to Cl (aq) 
+whose standard half-cell potenti al we obtain from Table 20-1 a nd use to solve the problem. 
+ Stepwise approach: 
+ Separate the given equation into two half-equations: 
+ O x i d a t i o n : { N a ( i n H g ) N a ( a q ) e }   2o u   { N a ( a q ) / N a ( i n H g ) } ED 
+Reduction:2Cl (g) 2e 2Cl (aq)o      1 . 3 5 8 V E D 
+Net:2 2Na(in Hg) Cl (g) 2 Na (aq) 2Cl (aq)o     cell 3.20 V E  
+Use Ecello Eo(reduction half-cell) Eo(oxidation half-cell) to solve for 
+Eo(oxidation half-cell) : 
+  Ecello 3.20 V=+1.385 V Eo{Na(aq) / Na(in Hg)}  
+{Na (aq) / Na(in Hg)} 1.358 V 3.20 V 1.84 VE   D 
+Conversion pathway approach: 
+ O x i d a t i o n : { N a ( i n H g ) N a ( a q ) e }   2o u   { N a ( a q ) / N a ( i n H g ) } ED 
+
+=== PDF PAGE 1009 ===
+Chapter 20: Electrochemistry 
+ 1 0 0 9  Reduction:2Cl (g) 2e 2Cl (aq)o      1 . 3 5 8 V E D 
+Net:2 2Na(in Hg) Cl (g) 2 Na (aq) 2Cl (aq)o     cell 3.20 V E  
+3.20V 1.358 Eo{Na(aq)/Na(in Hg)}
+Eo{Na(aq)/Na(in Hg)}  1.358 V3.20V 1.84V 
+ 
+5. ( M )  We divide the net cell equa tion into two half-equations. 
+ 
+Oxidation:   4 {Al s + 4 OH aq [Al(OH) ] aq + 3 e } 4 ou ; o
+4 {[Al(OH) ] (aq)/Al(s)}E  
+Reduction: 22{O g + 2 H O(l) + 4e 4 OH aq }  3ou ;          o=+ 0 . 4 0 1 VE  
+Net:  22 4 4A l s  + 3O g  +  6H O ( l )  +  4O H a q 4 [ A l ( O H ) ] a qo  o
+cell=2 . 7 1 V E  
+oo
+cell 4=2.71V=+0.401V {[Al(OH) ] (aq)/Al(s)}EE  
+o
+4 {[Al(OH) ] (aq)/Al(s)} = 0.401V 2.71V = 2.31VE  
+ 
+6. (M) We divide the net cell equa tion into two half-equations. 
+ 
+Oxidation: +
+42 2CH g + 2H O(l) CO g +8H aq +8eo         ^`o
+24CO g /CH gE  
+Reduction:   +
+22{O g + 4H aq + 4e 2H O(l)}  2ou          o=+ 1 . 2 2 9VE  
+Net:  42 2 2CH g  + 2 O g CO g  + 2H O(l) o    o
+cell=1.06VE   ^` ^`oo
+cell 2 4
+o
+241.06V 1.229V CO g /CH g
+CO g /CH g 1.229V 1.06V 0.17 VEE
+E   
+    
+ 
+7. (M) (a)  We need standard reduction potentials for the given half-reactions from Table 10.1: 
+ A g+(aq)+e- oAg(s) E o=+0.800 V 
+ Z n2+(aq)+2e- oZn(s) E o=-0.763 V 
+ C u2+(aq)+2e- oCu(s) E o=+0.340 V 
+ A l3+(aq)+3e- oAl(s) E o=-1.676 V 
+ Therefore, the largest positive cell potential will be obtained for the reaction involving the 
+oxidation of Al(s) to Al3+(aq) and the reduction of Ag+(aq) to Ag(s): 
+ Al(s) + 3Ag+(aq) o 3Ag(s)+Al3+(aq) Ecello 1.676 V0.800 V 2.476 V 
+ A g  i s  t h e  a n o d e  a n d  A l  i s  t h e  c a t h o d e .  
+ (b)  Reverse to the above, the cell with the smalle st positive cell potential will be obtained for 
+the reaction involving the oxidation of Zn(s) to Zn2+(aq) (anode) and the reduction of Cu+2(aq) 
+to Cu(s) (cathode): 
+ Zn(s) + Cu2+(aq) o Cu(s)+Zn2+(aq) Ecello 0.763 V0.340 V 1.103 V 
+ 
+8. (M) (a) The largest positive cell potential w ill be obtained for the reaction: 
+ Zn(s) + 4NH 3(aq) + 2VO2+(aq) + 4H+(aq) o [Zn(NH 3)4]2+(aq)+2V3+(aq)+2H 2O(l) 
+ Ecello Eo(reduction half-cell) Eo(oxidation half-cell)  0.340 V(1.015 V) 1.355 V 
+ Z n  i s  t h e  a n o d e  a n d  V O2+ is the cathode. 
+
+=== PDF PAGE 1010 ===
+Chapter 20: Electrochemistry  
+1010  (b) Reverse to the above, the cell with the smallest  positive cell potential will be obtained for the 
+reaction involving the oxidation of Ti2+(aq) to Ti3+(aq) (anode) and the reduction of Sn+2(aq) to 
+Sn(s) (cathode): 
+ 2Ti2+(aq) + Sn2+(aq) o 2Ti3+(aq)+Sn(aq) 
+ Ecello Eo(reduction half-cell) Eo(oxidation half-cell)  0.14V(0.37V) 0.23V 
+ 
+Predicting Oxidation-Reduction Reactions 
+ 
+9. (E)  (a)  Ni2+, (b) Cd. 
+ 
+10. (E)   (a) potassium, (b) barium. 
+ 
+11. (M) (a) Oxidation: 2+Sn s Sn aq + 2eo   o=+ 0 . 1 3 7VE  
+  R e d u c t i o n :  2+Pb aq +2e Pb so    o=0 . 1 2 5 VE  
+             _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  
+  N e t :    2+ 2+Sn s + Pb aq Sn aq + Pb s o    o
+cell= +0.012 V SpontaneousE  
+ 
+ ( b )  Oxidation: 2 2I aq I s + 2eo    o=0 . 5 3 5 VE  
+  R e d u c t i o n :  2+Cu aq +2e Cu so     o= +0.340 VE  
+           
+  N e t :   2+
+2 2I aq  + Cu aq Cu s  + I so    o
+cell=0 . 1 9 5 VN o n s p o n t a n e o u sE   
+ 
+(c) Oxidation: +
+22{2H O(l) O g + 4H aq + 4 e }  3ou               o=1 . 2 2 9 VE  
+ R e d u c t i o n :  +
+32 {NO (aq) + 4H aq +3e NO g +2H O(l)}  4 ou      o = +0.956 VE  
+                
+  N e t :  +
+32 2 4N O a q  + 4H a q 3O g  +  4N O g  +  2H O ( l )o     o
+cell=0 . 2 7 3 VE   
+  N o n s p o n t a n e o u s  
+ 
+ ( d )  Oxidation: 2 Cl aq  +  2OH aq OCl aq  + H O(l) + 2e  o  o=0 . 8 9 0 VE  
+Reduction: 32 2 Og  +  H O ( l )  +  2  e Og  +  2 O Ha qo     o = +1.246 VE  
+Net:   32 Cl aq  +  O g OCl aq  +  O go (basic solution)   o
+cell = +0.356VE  
+Spontaneous 
+ 
+12. (M) It is more difficult to oxidize Hg(l) to Hg22+0.797V than it is to reduce H+ to H2 
+(0.000 V); Hg(l) will not dissolve in 1 M HCl. The standard reduction of  nitrate ion to NO(g) 
+in acidic solution is strongly spontaneous in ac idic media ( +0.956V ). This can help overcome 
+the reluctance of Hg to be oxidized. Hg(l ) will react with and dissolve in the HNO3aq. 
+ 
+13. (M) (a) Oxidation: 2+Mg s Mg aq  + 2 eo   o= +2.356 VE  
+Reduction: 2+Pb aq + 2 e Pb so     o= 0.125VE  
+            
+ N e t :    2+ 2+Mg s  + Pb aq Mg aq  + Pb s o     o
+cell=  +2.231VE  
+
+=== PDF PAGE 1011 ===
+Chapter 20: Electrochemistry 
+ 1 0 1 1   This reaction occurs to a significant extent. 
+ 
+(b) Oxidation: 2+Sn s Sn aq + 2eo    o=+ 0 . 1 3 7VE  
+Reduction: +
+2 2H a q H g o       o= 0.000VE  
+             
+Net:   +2 +
+2 Sn s  +  2H aq Sn aq  +  H g o     o
+cell=+ 0 . 1 3 7VE  
+This reaction will occur to a significant extent. 
+ 
+ 
+(c) Oxidation: 2+ 4+Sn aq Sn aq + 2eo      o=0 . 1 5 4 VE  
+Reduction: 2 +
+42 2SO aq + 4H aq +2e SO g +2H O(l) o     o=+0 . 1 7VE  
+               
+Net:  2 2+ + 4+
+42 2 Sn aq +SO aq + 4H aq Sn aq +SO g + 2H O(l)o    o
+cell= + 0.02VE  
+This reaction will occur, but not to a large extent. 
+ 
+(d) Oxidation: +
+22 2{H O aq O g + 2 H aq + 2e }  5ou      o=0 . 6 9 5 VE  
+Reduction: - +- 2 +
+42 {MnO aq +8H aq +5e Mn aq +4H O(l)}  2uo        o=+ 1 . 5 1 VE  
+Net: - +2 +
+22 4 2 2 5H O aq +2MnO aq +6H aq 5O g +2Mn aq +8H O(l) oo
+cell = +0.82VE  
+This reaction will occur to a significant extent. 
+ 
+(e) Oxidation: o
+2 2B r a q B r a q +2e =1 . 0 6 5 VEo  
+Reduction: o
+2I s + 2e 2 I aq  = +0.535VEo  
+            
+Net:   o
+22 c e l l 2B r a q +I s B r a q +2I a q = 0 . 5 3 0V Eo  
+This reaction will not occur to a significant extent. 
+ 
+14. (M) In this problem we are asked to determine whether the electrochem ical reaction between 
+Co(s) and Ni2+(aq) to yield Co2+(aq) + Ni(s) will proceed to  completion based on the known 
+Ecellovalue.  This question can be answered by si mply determining the equilibrium constant. 
+ Stepwise approach 
+ First comment on the value of  Ecello: 
+ The relatively small positive value of Ecello for the reaction indicates that the reaction will 
+proceed in the forward direction, but will stop short of completion. A much larger positive 
+value of Ecello would be necessary before we woul d conclude that the reaction goes to 
+completion.  
+ C a l c u l a t e  t h e  e q u i l i b r i u m  c onstant for the reaction using Ecello 0.0257
+nlnKeq: 
+ 
+  Ecello 0.0257
+nlnKeqln Keq nuEcello
+0.0257 2u0.02
+0.0257 2  
+ 2
+eqe7 K   
+ C o m m e n t  o n  t h e  v a l u e  o f  K eq: 
+
+=== PDF PAGE 1012 ===
+Chapter 20: Electrochemistry  
+1012  K eq is small. A value of 1000 or more is needed  before we can descri be the reaction as one 
+that goes to completion. 
+ Conversion pathway approach: 
+ 
+  Ecello 0.0257
+nlnKeq
+ln Keq nuEcello
+0.0257
+Keq enuEcello
+00 2 5 7 e2u00 2
+00 2 5 7 7 
+ K eq is too small. The reacti on does not go to completion.  
+15. ( M )  If Ecello is positive, the reaction will occur. For the reduction of Cr 2O72 to Cr3+aq:  
+ 2 +3 + o
+27 2Cr O aq +14H aq + 6e 2Cr aq + 7 H O(l) = +1.33V E o  
+If the oxidation has Eo smaller (more negative) than 1.33V , the oxidation will not occur.  
+ 
+(a)  2+ 4+ oSn aq Sn aq +2e =0 . 1 5 4 VEo  
+  H e n c e ,  S n2+aq can be oxidized to Sn4+aq by Cr2O72aq. 
+ 
+(b) +o
+22 3I s + 6H O(l) 2IO aq +12H aq +10e =1 . 2 0 VE o  
+  I2s can be oxidized to IO3aq by Cr2O72aq. 
+ 
+(c) 2+ + o
+24 Mn aq + 4H O(l) MnO aq +8H aq +5e =1 . 5 1 VE o  
+  Mn2+aq cannot be oxidized to MnO4aq by Cr2O72aq. 
+ 
+16. (M) In order to reduce Eu3+ to Eu2+, a stronger reducing agent than Eu2+ is required.  From 
+the list given, Al(s) and H 2C2O4(aq) are stronger reducing agen ts.  This is determined by 
+looking at the reduction pot entials (-1.676 V for Al3+/Al(s) and -0.49 V for CO 2, 
+H+/H2C2O4(aq)), are more negative than -0.43 V).   Co(s), H 2O2 and Ag(s) are not strong 
+enough reducing agents for this process.  A qui ck look at their reduc tion potentials shows 
+that they all have more positive redu ction potentials than that for Eu3+ to Eu2+ (-0.277 V for 
+Co2+/Co(s), +0.695 V for O 2, H+/H2O2(aq) and +0.800 V for Ag+/Ag(s). 
+ 
+17. (M) (a) Oxidation: +{Ag s Ag aq + e }  3ou        o=0 . 8 0 0 VE  
+Reduction: +
+32NO aq + 4 H aq + 3 e NO g + 2 H O(l) o       o=+ 0 . 9 5 6VE  
+               
+Net: ++
+32 3Ag s +NO aq +4H aq 3Ag aq +NO g +2H O(l)o   o
+cell=+ 0 . 1 5 6VE  
+Ag(s) reacts with HNO3aq to form a solution of AgNO3aq. 
+(b) Oxidation: 2+Zn s Zn aq + 2 eo   o=+ 0 . 7 6 3 VE  
+Reduction: +
+2 2H a q + 2e H go    o=0 . 0 0 0VE  
+Net:   +2 +
+2 Zn s + 2 H aq Zn aq + H g o    o
+cell=+ 0 . 7 6 3 VE  
+Zn(s) reacts with HI(aq) to form a solution of 2ZnI aq . 
+ 
+
+=== PDF PAGE 1013 ===
+Chapter 20: Electrochemistry 
+ 1 0 1 3  (c) Oxidation: 3+Au s Au aq + 3eo                   o=1 . 5 2 VE  
+Reduction: +
+32NO aq + 4 H aq + 3e NO g + 2H O(l) o                o=+ 0 . 9 5 6VE  
+Net:   +3 +
+32 Au s + NO aq + 4 H aq Au aq + NO g + 2 H O(l)o ;o
+cell=0 . 5 6 VE  
+Au(s) does not react with 1.00 M HNO3aq. 
+ 
+18. (M) In each case, we determine whether EcellR is greater than zero; if so, the reaction will 
+occur. 
+(a) Oxidation: 2+Fe s Fe aq + 2eo         o0.440 V E  
+Reduction: 2+Zn aq + 2e Zn so  o=0 . 7 6 3 VE  
+Net:   2+ 2+Fe s + Zn aq Fe aq + Zn s o  o
+cell 0.323V E   
+The reaction is not spontaneous under standard conditions as written 
+ 
+(b) Oxidation: 2 {2Cl aq Cl g + 2 e }  5ou           o=1 . 3 5 8 VE  
+Reduction: +2 +
+42 {MnO aq +8 H aq +5e Mn aq +4 H O(l)}×2 o ;o=1 . 5 1VE  
+Net:  +2 +
+42 2 10Cl aq + 2 MnO aq +16 H aq 5Cl g + 2 Mn aq +8H O(l) o  
+o
+cell=+ 0 . 1 5 VE . The reaction is spontaneous under standard conditions as written. 
+ 
+(c) Oxidation: +{Ag s Ag aq + e }  2ou          o=0 . 8 0 0 VE  
+Reduction: +
+2 2H a q +2e H go   o=+ 0 . 0 0 0VE  
+Net:   ++
+2 2A g s +2H a q 2A g a q +H g o   o
+cell=0 . 8 0 0 VE  
+The reaction is not spontaneous under standard conditions as written. 
+ 
+(d) Oxidation: 2 {2 Cl aq Cl g + 2 e }  2ou          o=1 . 3 5 8 VE  
+Reduction: +
+22Og + 4 Ha q + 4 e 2 H O ( l )o   o=+ 1 . 2 2 9VE  
+            
+Net:  +
+22 2 4Cl aq +4H aq +O g 2Cl g +2H O(l)o  o
+cell=0 . 1 2 9 VE  
+The reaction is not spontaneous under standard conditions as written. 
+ 
+Galvanic Cells 
+ 
+19. (M) (a) Oxidation: 3+{Al s Al aq + 3e }  2ou    o=+ 1 . 6 7 6VE  
+  R e d u c t i o n :  2+{Sn aq + 2e Sn s }  3ou       o=0 . 1 3 7 VE  
+             
+  N e t :   2+ 3+2A l s + 3S n a q 2A l a q + 3S n s o     o
+cell=+1 . 5 3 9VE  
+ ( b )  Oxidation: 2+ 3+Fe aq Fe aq + eo     o=0 . 7 7 1 VE  
+  R e d u c t i o n :  +Ag aq + e Ag so        o=+ 0 . 8 0 0VE  
+             
+  N e t :   2+ + 3+Fe aq + Ag aq Fe aq +Ag s o      o
+cell = +0.029 VE  
+ (c) Oxidation: {Cr(s) oCr2+(aq)+2e-}u3    Eo=0.90V  
+
+=== PDF PAGE 1014 ===
+Chapter 20: Electrochemistry  
+1014  Reduction: {Au3+(aq)+3e-oAu(s)} u2     Eo=1 . 5 2 V        
+           ____________________  
+  N e t :   3 C r ( s ) + 2 A u3+(aq)o3Cr2+(aq)+2Au(s)    Ecello=2 . 4 2 V  
+ (d) Oxidation: 2H2O(l)oO2(g)+4H+(aq)+4e-  Eo=1.229V  
+ Reduction: O2(g)+2H2O(l)+4e-o4OH-(aq)     Eo=0.401V    
+            
+  Net:  H2O(l)oH+(aq)+OH-(aq)    Ecello=0.828V  
+ 
+ 
+20. (M) In this problem we are asked to write th e half-reactions, balan ced chemical equation 
+and determine Ecello for a series of electrochemical cells. 
+ ( a )  Stepwise approach  
+  First write the oxidation and re duction half-reactions and find Eo values from 
+Appendix D: 
+  Oxidation: Cu(s) oCu2+(aq)+2e-     Eo=0.340 V  
+  R e d u c t i o n :   Cu+(aq)+e-oCu(s)      Eo=+ 0 . 5 2 0V 
+  In order to obtain bala nced net equation, the reduc tion half-reaction needs to be 
+multiplied by 2: 
+   2Cu+(aq)+2e-o2Cu(s)  
+  A d d  t h e  t w o  h a l f - r e a c t i o n s  to obtain the net reaction: 
+  C u ( s ) oCu2+(aq)+2e- 
+   2Cu+(aq)+2e-o2Cu(s)  
+             
+  N e t :    2Cu+(aq)oCu2+(aq)+Cu(s)         
+  D e t e r m i n e  Ecello: 
+    Ecello =-0.340V+0.520V= +0.18 V  
+  Conversion pathway approach: 
+  O x i d a t i o n :  C u ( s ) oCu2+(aq)+2e-     Eo=0.340 V  
+  R e d u c t i o n :   {Cu+(aq)+e-oCu(s)} u2    Eo=+ 0 . 5 2 0V 
+               
+  N e t :    2Cu+(aq)oCu2+(aq)+Cu(s)     Ecello 0.18V  
+  F o l l o w  t h e  s a m e  m e t h o d o l o g y  f o r parts (b), (c), and (d). 
+ ( b )  Oxidation:  Ag(s)+I-(aq)oAgI(s)+e-    Eo=0.152 V  
+  R e d u c t i o n :   AgCl(s)+e-oAg(s)+Cl-(aq)     Eo=0.2223 V  
+             
+  N e t :    AgCl(s)+I-(aq)oAgI(s)+Cl-(aq)       Ecello = +0.3743 V  
+ ( c )  Oxidation:  {Ce3+(aq)oCe4+(aq)+e-}u2      Eo=1.76V  
+  R e d u c t i o n :   I2(s)+2e-o2I-(aq)        Eo=+ 0 . 5 3 5V 
+             
+  N e t :    2Ce3+(aq)+I2(s)o2Ce4+(aq)+2I-(aq)     Ecello = -1.225 V  
+
+=== PDF PAGE 1015 ===
+Chapter 20: Electrochemistry 
+ 1 0 1 5    
+ 
+ ( d )  Oxidation:  {U(s) oU3+(aq)+3e-}u2       Eo=1.66V  
+  R e d u c t i o n :  { V2+(aq)+2e-oV(s)} u3          Eo=1.13V  
+             
+  N e t :    2U(s)+3V2+(aq)o2U3+(aq)+3V(s)      Ecello = +0.53 V  
+ 
+21. (M) In each case, we determine whether EcellR is greater than zero; if so, the reaction will 
+occur. 
+(a) Oxidation: 2H( g ) 2 H + 2 e a qo         o0.000 V E  
+Reduction: 2F( g ) +2 e 2 F a qo    o=2 . 8 6 6VE  
+Net: +-
+22H( g )  +  F ( g )   2  H( a q )  +  2  F ( a q ) o  o
+cell 2.866 V E   
+The reaction is spontaneous under standard conditions as written 
+ 
+(b) Oxidation: 2+Cu(s)  Cu (aq) + 2eo   o=0 . 3 4 0 VE  
+Reduction: 2+Ba (aq) + 2e  Ba(s)o;  Eo=2.92V  
+Net: 2+ 2+Cu(s) + Ba (aq) Cu (aq) + Ba(s) o    o
+cell=3 . 2 6  VE .  
+The reaction is not spontaneous under standard conditions as written. 
+ 
+(c) Oxidation: ^`2+ 3+Fe (aq) Fe (aq) + e 2ou         o=0 . 7 7 1  VE  
+Reduction: 2+Fe (aq) +  2e  Fe(s)o   o=0 . 4 4 0  VE   
+Net: 2+ 3+3 Fe (aq)  Fe(s) + 2 Fe (aq) o    o
+cell=1 . 2 1 1  VE   
+The reaction is not spontaneous as written. 
+ 
+(d) Oxidation: -
+22 2 Hg(l) + 2 Cl   Hg Cl (s) + 2 eo   o=( 0 . 2 6 7 6 ) VE  
+Reduction: -
+22 2 2 HgCl (aq) + 2 e  Hg Cl (s) + 2 Cl (aq)o  o=+ 0 . 6 3 VE                 
+Net: 22 2 2 Hg(l) + 2 HgCl (aq)  2 Hg Cl (s) o    o
+cell=0 . 3 6 VE  
+(divide by 2 to get 22 2 Hg(l) + HgCl (aq)  Hg Cl (s) o ) 
+The reaction is spontaneous under standard conditions as written. 
+
+=== PDF PAGE 1016 ===
+
+
+=== PDF PAGE 1017 ===
+
+
+=== PDF PAGE 1018 ===
+Chapter 20: Electrochemistry  
+1018 24. (M) (a) Fe s¨Fe2+aq¨¨ClaqCl2g¨Pt s 
+  O x i d a t i o n :  2+Fe s Fe aq + 2eo    o=+ 0 . 4 4 0VE  
+Reduction: 2Cl g + 2e 2Cl aqo      o=+ 1 . 3 5 8 VE  
+  N e t :   2+
+2 Fe s + Cl g Fe aq + 2Cl aqo     o
+cell=+ 1 . 7 9 8  VE  
+(b)     2+Zn s Zn aq Ag aq Ag s¨¨ ¨¨  
+ Oxidation: 2+Zn s Zn aq + 2 eo    o=+ 0 . 7 6 3 VE  
+Reduction: +{Ag aq + e Ag s }  2ou     o=+ 0 . 8 0 0VE  
+ N e t :    +2 +Zn s + 2 Ag aq Zn aq + 2 Ag s o     o
+cell=+ 1 . 5 6 3 VE  
+(c) Pt s¨Cu+aq,Cu2+aq¨¨Cu+aq¨Cu s 
+ O x i d a t i o n :  +2 +Cu aq Cu aq + eo    o=0 . 1 5 9 VE  
+Reduction: +Cu aq + e Cu so      o=+ 0 . 5 2 0VE  
+ N e t :   +2 +2Cu aq Cu aq +Cu s o      o
+cell=+ 0 . 3 6 1 VE  
+(d) Mg s¨Mg2+aq¨¨BraqBr2l¨Pt s 
+ O x i d a t i o n :  2+Mg s Mg aq + 2eo    o=+ 2 . 3 5 6 VE  
+Reduction: 2Br l + 2e 2 Br aqo      o=+ 1 . 0 6 5 VE  
+ N e t :   2+
+2 Mg s + Br l Mg aq + 2Br aqo               o
+cell=+ 3 . 4 2 1 VE  
+ PtFe
+Cl-salt bridgee-
+cathodeanodeCl2(g)
+Fe2+
+ 
+anode
+cathodee-
+salt bridge
+Zn2+ZnAg
+Ag+
+ 
+ 
+anodecathodee-
+salt bridge
+Cu+   Cu2+Cu+CuPt
+ 
+anode
+cathodee-
+salt bridge
+Mg2+MgPt
+Br2Br-
+ 24(a) 24(b) 
+24(c) 24(d) 
+
+=== PDF PAGE 1019 ===
+Chapter 20: Electrochemistry 
+ 1 0 1 9  'oG, o
+cellE, and K 
+ 
+25. (M) (a) Oxidation:  3+{Al s Al aq +3e }  2ou   o=+ 1 . 6 7 6VE  
+Reduction: 2+{Cu aq +2 e Cu s }  3ou       o=+ 0 . 3 3 7VE  
+           
+Net:   2+ 3+2A l s +3Cu a q 2A l a q +3Cu s o     o
+cell=+ 2 . 0 1 3 VE  
+oo
+cell
+o6 3== 6  m o l  e 9 6 , 4 8 5 C / m o l  e 2 . 0 1 3 V
+=1 . 1 6 5 1 0 J =1 . 1 6 5 1 0k JGn F E
+G' 
+'u u 
+ 
+(b) Oxidation: 2 {2I aq I s +2e }  2ou    o=0 . 5 3 5 VE  
+Reduction: +
+22Og + 4 Ha q + 4 e 2 H O ( l )o     o=+ 1 . 2 2 9 VE  
+           
+Net:   +
+22 2 4I a q +O g +4H a q 2I s +2H O ( l )o   o
+cell=+ 0 . 6 9 4 VE  
+oo 5
+cell == 4  m o l  e 9 6 , 4 8 5 C / m o l  e 0 . 6 9 4 V = 2 . 6 8 1 0 J = 2 6 8 k JGn F E'  u   
+ 
+(c) Oxidation: +{Ag s Ag aq + e }  6ou         o=0 . 8 0 0 VE  
+ R e d u c t i o n :  2 +3 +
+27 2Cr O aq +14 H aq +6 e 2 Cr aq +7 H O(l) o  o= +1.33VE  
+                
+ Net:    2 ++ 3 +
+27 2 6A g s + C rO a q + 1 4 H a q 6 A g a q + 2 C r a q + 7 HO ( l )o  
+ Ecello=0 . 8 0 0 V + 1 . 3 3 V = + 0 . 5 3 V  
+   oo 52
+cell == 6 m o l  e 9 6 , 4 8 5 C / m o l  e 0 . 5 3 V = 3 . 1 1 0 J = 3 . 1 1 0 k JGn F E'  u u  
+26. (M) In this problem we need to write the equilib rium constant expression for a set of redox 
+reactions and determine the value of K at 25 oC.  We proceed by calculating Ecello from 
+standard electrode reduction potentials (Table 20.1).  Then we use the expression 
+  'Go=nFEcello=RTlnKto calculate K. 
+ (a) 
+ Stepwise approach: 
+ D e t e r m i n e  Ecellofrom standard electrode reducti on potentials (Table 20.1): 
+  Oxidation:  Ni(s) oNi2+(aq)+2e-    Eo 0.257 V  
+Reduction:  {V3+(aq)+e-oV2+(aq)} u2       Eo 0.255 V  
+           
+Net:  Ni(s)+2V3+(aq)oNi2+(aq)+2V2+(aq)     Ecello=0.003V  
+ 
+Use the expression   'Go=nFEcello=RTlnKto calculate K: 
+
+=== PDF PAGE 1020 ===
+Chapter 20: Electrochemistry  
+1020   'Go=nFEcello=RTlnK;  
+'Go 2moleu96485C
+molu0.003 V 578.9 J
+'Go RTlnK578.9 J 8.314 JK1mol1u298.15 KlnK
+lnK 0.233 K e02 3 3 1.26
+K 1.26  Ni2+ª¬º¼V2+ª¬º¼2
+V3+ª¬º¼2 
+Conversion pathway approach: 
+ D e t e r m i n e  Ecellofrom standard electrode reducti on potentials (Table 20.1): 
+  Oxidation: Ni(s) oNi2+(aq)+2e-    Eo 0.257 V  
+Reduction:  {V3+(aq)+e-oV2+(aq)} u2        Eo 0.255 V  
+           
+Net:  Ni(s)+2V3+(aq)oNi2+(aq)+2V2+(aq)     Ecello=0.003V  
+  'Go=nFEcello=RTlnKlnKeq nFEcello
+RT nu96485 Cmol1
+8.314 JK1mol1u298.15 KEcello
+lnKeq n
+0.0257Ecello 2 mol eu0.003 V
+0.0257 0.233  
+ 
+ 
+  Keq e02 3 3 1.26  Ni2+ª¬º¼V2+ª¬º¼2
+V3+ª¬º¼2 
+Similar methodology can be used for parts (b) and (c) 
+(b) Oxidation: 2ClaqoCl2g+2e     EoV =1 . 3 5 8  
+ Reduction: +2 +
+22 MnO s + 4H aq + 2e Mn aq + 2H O(l)o     o=+ 1 . 2 3 VE  
+ N e t :    +2 + o
+22 2 cell 2C l a q + M n O s + 4H a q M n a q + C l g + 2HO ( l ) = 0 . 1 3 V Eo  
+ 2+
+2 10 1 5
+eq 1e q 24+Mn {Cl g } 2 mol e 0.13 Vln = = 10. ;   = e = 4 10 =0.0257 Cl HP
+KK
+
+ªº u ¬¼u
+ªº ªº¬¼ ¬¼ 
+(c) Oxidation: 22 4O H a q O g + 2 HO ( l ) + 4eo    o=0 . 4 0 1 VE  
+ R e d u c t i o n :  2 {OCl (aq)+H O(l)+2e Cl (aq)+2OH }  2 ou     o0.890 V E   
+                
+ N e t :  2 2OCI (aq) 2CI (aq) O (g)o         o
+cell 0.489 V E   
+ l n^`2
+2 76 1 33
+eq eq 2Cl P O (g) 4m o l  e ( 0 . 4 8 9V )76.1 e 1 100.0257 OClKK
+ªº¬¼    u  
+ªº¬¼ 
+27. ( M )  First calculate Ecellofrom standard electrode reduction pot entials (Table 20.1).  Then use 
+  'Go=nFEcello=RTlnK to determine 'Goand K. 

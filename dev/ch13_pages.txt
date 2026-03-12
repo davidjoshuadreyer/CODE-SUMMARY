@@ -1,0 +1,3288 @@
+
+
+=== PDF PAGE 580 ===
+Chapter 13: Solutions and Their Physical Properties 
+ 
+580  
+53. (M)  We need to determine the mole fraction of water in this solution. 
+61 26
+glucose 6 12 6 6 12 6
+61 261 mol C H O=1 6 5 g  C H O =0 . 9 1 6 m o l  C H O180.2 g C H On u  
+2 2
+2water 2 2w a t e r1 mol H O 38.0 mol H O=
+18.02 g H O 38.0 + 0.916  total moles=6 8 5  g  H O =3 8 . 0  m o l  H O = 0.976 n F u  
+*
+sol'n water water== 0 . 9 7 6 2 3 . 8  m m H g = 2 3 . 2  m m H gPP F u  
+ 
+54. (M)  We need to determine the mole fraction of methanol in this solution. 
+
+22
+urea 2 2 22
+221 mol CO NH
+=1 7  g  C O N H =0 . 2 8 3  m o l  C O N H60.06 g CO NHn u  
+nmethanol  mL CH OH g
+ mL mol CH OH
+ g CH OH mol CH OH =1 0 00.792
+11
+32.04=2 . 4 733
+33 uu  
+3
+methanol2.47 mol CH OH= =0 . 8 9 72.47 + 0.283  total molesF
+*
+sol'n methanol methanol= =0 . 8 9 7 9 5 . 7  m m H g=8 5 . 8  m m H g PP F u  
+ 
+55. (M)  We consider a sample of 100.0 g of the so lution and determine the number of moles of 
+each component in this sample. From this in formation and the given vapor pressures, we 
+determine the vapor pressure of each  component. Note that styrene, C 6H5C=CH 2, is 
+represented by the simplified molecular formula C 8H8 in this problem. 
+88
+s8 8
+881 mol C H amount of styrene = = 38 g styrene = 0.37 mol C H104 g C Hn u  
+ amount of ethylbenzene = = 62en  g ethylbenzene 81 0
+81 0
+81 01 mol C H=0 . 5 8  m o l  C  H106 g C Hu  
+s
+s s8 8
+se0.37 mol styrene== = 0 . 3 9 ; = 0 . 3 9 1 3 4  m m H g = 5 2  m m H g  f o r  C H
++0 . 3 7 + 0 . 5 8  t o t a l  m o l e snP
+nnF u
+e
+e e8 1 0
+se0.58 mol ethylbenzene== = 0 . 6 1 ; = 0 . 6 1 1 8 2  m m H g = 1 1 1  m m H g  f o r  C H
++0 . 3 7 + 0 . 5 8  t o t a l  m o l e snP
+nnF u  
+Then the mole fraction in the vapor can be determined. 
+e
+e s
+es111 mmHg== = 0 . 6 8 = 1 . 0 0 0 . 6 8 = 0 . 3 2+1 1 1 + 5 2  m m H gPyyPP  
+ 
+
+=== PDF PAGE 581 ===
+Chapter 13: Solutions and Their Physical Properties 
+ 5 8 1  56. (D)  The vapor pressures of the pure liquids are: for benzene Pbo=9 5 . 1  m m H g ,  a n d  f o r  
+toluene Pto=2 8 . 4 m m H g .  W e  k n o w  t h a t  PPtt to=F and PPbb bo=F. We also know that FFtb+= 1 . 0 0 0 . We solve for Fb in the following expression. 
+ oo
+bb b b b b
+oo o o
+bt b b bb tt bb bt28.495.10.620 = = = =+9 5 . 1 + 1 + +1 PPP P
+PP PP PFF F
+FF FF FF   
+95.1 = 0.620 95.1+ 1 28.4 = 59.0 +17.6 17.6FF F F Fbb b b b b g  
+17.6 = 95.1 59.0 +17.6 = 53.7 =17.6
+53.7=0 . 3 2 8 bg FFFbb b  
+ 
+57. (M) The total vapor pressure above the solution at its normal boiling point is 760 mm Hg.   
+The vapor pressure due to toluene is given by the following equation. 
+Ptoluene  = Ftoluene  . Pqtoluene  = 0.700 u 533 mm Hg = 373 mm Hg.  Ne xt, the vapor pressure due 
+to benzene is determined, followed by the vapor pressure for pure benzene.   
+Pbenzene  = P totalPtoluene  = 760 mm Hg - 373 mm  Hg = 387 mm Hg = Fbenzene  . Pqbenzene  
+ 3 8 7  m m  H g  =  0 . 3 0 0  u Pqbenzene   and hence, P qbenzene  = 1.29 u 103 mm Hg 
+ 
+ 
+58. (E)  
+ (a) T h e  v a p o r  p r e s s u r e  o f  w a t e r  i s  g r e a t e r  a bove the solution that has the higher mole 
+fraction of water, according to Raoult's law.  This also is the solution that has the smaller 
+mole fraction of NaCl, namely, the unsaturated Solution 2. 
+ 
+ (b) As water evaporates from the unsaturated solution, its concentration changes and so does 
+its vapor pressure, according to Raoult's law.   This does not happe n with the saturated 
+solution (Solution 1).  Its concentration and t hus its vapor pressure remains constant as 
+the solvent evaporates. 
+ 
+ (c) T h e  s o l u t i o n  w i t h  t h e  h i g h e r  b o i l i n g  p o i n t  i s  t h e  m o r e  c o n c e n t r a t e d  s o l u t i o n  ( t h e  
+saturated solution, Solution 1) because the boiling point increases as the amount of 
+dissolved solute increases. 
+ 
+Osmotic Pressure 
+ 
+59. (M)  We first compute the concentration of the solu tion. Then, assuming that the solution volume is 
+the same as that of the solvent (0.2500 L), we de termine the amount of solute dissolved, and finally 
+the molar mass. 
+5
+111 atm1.67 mmHg 760 mmHg== = 8 . 9 8 1 0  M0.08206 L atm mol  K 298.2 Kn
+VR TS
+u
+uu 
+5
+54
+5  8.98 10  mol 0.72 g solute=0 . 2 5 0 0  L =2 . 2 5 1 0  m o l = =3 . 2 1 0  g / m  o lamount1 L 2.25 10  molM
+
+uuu uu 
+ 
+
+=== PDF PAGE 582 ===
+Chapter 13: Solutions and Their Physical Properties 
+ 
+582 60. (M) We assume the density of the soluti on to be 1.00 g/mL and calculate the [C 12H22O11]. 
+ 12 22 11
+12 22 11
+12 22 11
+12 22 111 mol C H O20. g C H O342.3 g C H O[C H O ] =  = 0.584 M1 mL solution 1 L solution100 g solution1 g solution 1000 mL solution
+We now compute the osmotic pressure, assuming a temperatureu
+uu
+ of 25 C.
+0.08206 L atmπ = CRT = 0.584 M 298 K = 14.3 atmK mol
+Next we need to determine the height of a column of sucrose (density = water).
+760 mmHg 13.6 mm solution 1 m height = 14.3 atm1 atm 1 mmHguu
+uu uD
+solution= 148 m ~ 150 m solution1000 mmsolution 
+ W e  h a v e  a s s u m e d  a  d e n s i t y  o f  1 . 0 0  g / m L  and a conversion of 13.6 mm of solution per 
+mmHg.  If the solution were more dense, sa y 1.06 g/mL, this would correspond to a higher 
+concentration and a larger osmotic pressure.  At the same time, an increase in the density 
+would result in a slight decr ease in the conversion factor  between mmHg and mm solution 
+(we used 13.6 mm solution per mmHg , resulti ng in a slight decrease in the osmotic 
+pressure).  Overall, an increase in density woul d result in a slight increase in the osmotic 
+pressure. 
+ 
+ 
+61. (E)  Both the flowers and the cucumber contain io nic solutions (plant sap), but both of these 
+solutions are less concentrated than the salt  solution. Thus, the solution in the plant 
+material moves across the semipermeable membrane in an attempt to dilute the salt 
+solution, leaving behind wilted flowers and shri veled pickles (wilted/shriveled plants have 
+less water in their tissues). 
+ 
+62. (E)  The main purpose of drinking water is to provide H 2O for living tissues. In freshwater, 
+water should move across the semipermeable me mbranes into the fish’s body as water moves 
+past the gills for breathing. Thus, it should not be  necessary for freshwater fish to drink. In 
+contrast, the concentration of solutes in saltwate r is about the same as their concentration in a 
+fish's blood plasma. In this case, osmotic pressure  will not be effective in moving water into a 
+fish's tissues. The purpose of drinking for a saltw ater fish is to isolate the ingested water 
+within the fish. Then mechanisms within th e fish's body can move water across membranes 
+into the fish's tissues. Or possibly, the fish ha s a means of desalinating the ingested water, in 
+which case osmotic pressure would ca rry water into the fish's tissues. 
+ 
+63. (E)  We first determine the molarity of the solution. Let's work the problem out with three 
+significant figures. 
+111.00 atm== = 0 . 0 4 4 6  M0.08206 L atm mol  K 273 Kn
+VR TSu 
+1 L volume = 1 mol = 22.4 L solution 22.4 L solvent0.0446 mol soluteu|  
+We have assumed that the solution is so dilu te that its volume closely approximates the 
+volume of the solvent constituting it. Note th at this volume corresponds to the STP molar 
+volume of an ideal gas. The osmotic pressure equation also resembles the ideal gas equation. 
+ 
+
+=== PDF PAGE 583 ===
+Chapter 13: Solutions and Their Physical Properties 
+ 5 8 3  64. (E)  First we calculate the concentration of solute  in the solution, then the mass of solute in 
+100.0 mL of that solution. 
+>@4
+111atm7.25mmHg760 mmHg solute = = = 3.90 10  M0.08206 L atm mol  K 298 K()
+RTS
+u
+uu 
+443.90 10  mol hemoglobin 6.86 10  gmass of hemoglobin = 0.1000 L = 2.68 g hemoglobin1 L soln 1 mol hemoglobinuuuu  
+ 
+65. (M)  First we determine the concentration of the solution from the osmotic pressure, then the 
+amount of solute dissolved, and fina lly the molar mass of that solute. 
+4 0.88 mmHg 1 atm=5 . 1  m m  s o l n =4 . 3 1 0  a t m13.6 mm soln 760 mmHgSuu u  
+4
+5
+114.3 10  atm== = 1 . 8 1 0  M0.08206 L atm mol  K 298 Kn
+VR TS
+
+uuu 
+amount solute  mL L
+ mL M  mol solute =1 0 0 . 01
+10001.8 10 = 1.8 1056uu u u 
+5
+60.50 gmolar mass  = = 2.8 10  g/mol1.8 10  moluu 
+66. (M)  We need the molar concentration of ions in the solution to determine its osmotic 
+pressure. We assume that the solution has a density of 1.00 g/mL. 
+ [ions] = g NaCl  mol NaCl
+58.4 g NaCl mol ions
+1 mol NaCl
+ mL soln1 L soln
+1000 mLM09 212
+100 003 2.
+..uu
+u  
+11  mol== 0 . 3 20 . 0 8 2 0 6  L  a t m  m o l  K 3 7 . 0 + 2 7 3 . 2  K = 8 . 1  a t m LnRTVSuu  
+ 
+67. (M)  The reverse osmosis process requires a pressu re equal to or slightly greater than the 
+osmotic pressure of the solution. We assume th at this solution has a density of 1.00 g/mL. 
+First, we determine the molar concentration of ions in the solution. 
+ 1 mol NaCl 2 mol ions2.5 g NaCl 58.4 g NaCl 1 mol NaCl[ions]=  0.86 M1 mL soln 1 L soln100.0 mL soln1.00 g 1000 mLuu
+ 
+uu 
+11  mol== 0 . 8 60 . 0 8 2 0 6  L  a t m  m o l  K 2 5 + 2 7 3 . 2  K = 2 1  a t m LnRTVSuu  
+ 
+ 
+ 
+
+=== PDF PAGE 584 ===
+Chapter 13: Solutions and Their Physical Properties 
+ 
+584 68. (M)  We need to determine the molarity of each solution. The solution with the higher 
+molarity has the higher osmotic pressure, and water will flow from the more dilute into the 
+more concentrated solution, in an attempt to create two solutions of  equal concentrations. 
+ 383
+383
+383
+3831 mol C H O14.0 g C H O  92.09 g C H O[C H O ]= 2.75 M1 L55.2 mL soln1000 mLu
+ 
+u 
+ 12 22 11
+12 22 11
+12 22 11
+12 22 111 mol C H O17.2 g C H O  342.3 g C H O[C H O ]= 0.804 M1 L62.5 mL soln1000 mLu
+ 
+u 
+Thus, water will move from the CHO12 22 11  solution into the CHO383  solution, that is, from 
+right to left. 
+ 
+ 
+Freezing-Point Depression and Boiling-Point Elevation 
+ 
+69. (M)  First we compute the molality of the ben zene solution, then the number of moles of 
+solute dissolved, and finally the molar mass of the unknown compound. 
+4.92 C 5.53 C== = 0 . 1 25.12 C/f
+fTmmKm' q q
+D 
+amount solute  kg benzenemol solute
+ kg benzene mol solute =0 . 0 7 5 2 20.12
+1=9 . 0 1 03uu 
+2
+31.10 g unknown compoundmolecular weight = = 1.2 10  g/mol9.0 10  moluu 
+70. (M)  We compute the value of the va n't Hoff factor first, then use this value to compute the 
+boiling-point elevation. 
+f
+f
+1
+bb0.072 C== = 3 . 91.86 C/ 0.010
+== 3 . 9 0 . 5 1 2 C  0 . 0 1 0 ; = 0 . 0 2 0 CTiKm m m
+Ti K m mm' q
+ q u
+'u q u q  
+Thus, the solution begins to boil at 100.02DC. 
+ 
+71. (M)   
+ ( a )  First we determine the molality of the solu tion, then the value of the freezing-point 
+depression constant.  
+ 66
+66
+66 f
+f1 mol C H1.00 g C H  
+78.11 g C H 3.3 C 6.5 C=0 . 1 6 0 2 0 . C  /  1 kg 0.16080.00 g solvent
+1000 gTmm K m
+mmu
+'q q    q
+u 
+ 
+
+=== PDF PAGE 585 ===
+Chapter 13: Solutions and Their Physical Properties 
+ 5 8 5  (b) For benzene, Kmf C =5 . 1 21 D. Cyclohexane is the better solvent for freezing-point 
+depression determinations of molar mass, b ecause a less concentrated solution will still 
+give a substantial freezing-point depression.  For the same concentration, cyclohexane 
+solutions will show a freezing-point depres sion approximately four times that of 
+benzene. Also, one should steer clear of  benzene because it is a known carcinogen. 
+ 
+72. (M)  The solution's boiling point is 0.40DC a b o v e  t h e  b o i l i n g  p o i n t  o f  p u r e  w a t e r .  F i r s t  w e  
+must compute the molality of the solution, then  the mass of sucrose that must be added to 
+1 kg (1000 g) HO2, and finally the mass% sucrose in the solution. 
+o
+12 22 11 12 22 11
+o
+21 2 2 2 1 161 26
+20.78 mol C H O 342.3 g C H O 0.40 C== = 0 . 7 8 =
+0.512 C/ 1kg H O 1 mol C H O267 g C H O
+1 kg H Ob
+bTmm
+Km'u o  
+12 22 11
+12 22 11 12 22 11267 g C H Omass % C H O = 100% = 21% C H O1000.+ 267  g totalu  
+  
+73. (M)  Here we determine the molality of the solu tion, then the number of moles of solute 
+present, and the molar mass of the solute to  start things off. Then we determine the 
+compound's empirical formula, and combine th is with the molar mass to determine the 
+molecular formula. 
+mT
+Kmm ==1.37 5.53
+5.12 /=0 . 8 1 3'
+
+f
+fCC
+CDD
+D 
+amount  mL C H g
+ mL kg
+ g mol solute
+ kg C H mol =5 0 . 00.879
+11
+10000.813
+1=3 . 5 7 1 066
+662uuFHGIKJuu 
+26.45 gmolecular weight = = 181 g/mol3.57 10  molu 
+Now, calculate the empirical formula from the provided mass percents for C, H, N, and O. 
+1 mol C42.9 g C = 3.57 mol C 1.19 3.00 mol C12.01 g Cuy o  
+1 mol H2.4 g H = 2.4 mol H 1.19 2.0 mol H1.01 g Huy o  
+1 mol N16.7 g N = 1.19 mol N 1.19 1.00 mol N14.01 g Nuy o  
+1 mol O38.1 g O = 2.38 mol O 1.19 2.00 mol O16.00 g Ouy o  
+ T h e  e m p i r i c a l  f o r m u l a  i s  CHN O32 2 , with a formula mass of 84.0 g/mol. This is one-half the 
+experimentally determined molar mass. Thus, the molecular formula is CHNO6424 . 
+ 
+
+=== PDF PAGE 586 ===
+Chapter 13: Solutions and Their Physical Properties 
+ 
+586 74. (M)  We determine the molality of the nitrobenzene Kmf C  8.1 /Dc h solution first, then the 
+solute's molar mass. 
+f
+f1.4 C 5.7 C== = 0 . 8 88.1 C/TmmKm'
+DD
+D 
+1.204 g 1 kg 0.88 mol soluteamount solute = 30.0 mL nitrobenzene = 0.032 mol solute1 mL 1000 g 1 kg nitrobenzeneuuu  
+2 3.88 g nicotinamidemolar mass  = = 1.2 10  g/mol0.032 mol nicotinamideu  
+ T h e n  w e  d e t e r m i n e  t h e  c o m p o u n d ' s  e m p i r i c a l  f o r m u l a ,  a n d  c o m b i n e  t h i s  w i t h  t h e  m o l a r  m a s s  
+to determine the molecular formula. 
+1 mol C59.0 g C = 4.91 mol C 0.819 6.00 mol C12.01 g Cuy o  
+1 mol H5.0 g H = 5.0 mol H 0.819 6.0 mol H1.01 g Huy o  
+1 mol N22.9 g N = 1.63 mol N 0.819 2.00 mol N14.01 g Nuy o  
+1 mol O13.1 g O = 0.819 mol O 0.819 1.00 mol O16.00 g Ouy o  
+ T h e  e m p i r i c a l  f o r m u l a  i s  CHNO662 , with a molar mass of 122 g/mol. Since this is the same as the 
+experimentally determined molar mass, the molecular formula of nicotinamide is CHNO662 . 
+ 
+75. (M)  We determine the molality of the benzene solution first, then the molar mass of the 
+solute. 
+f
+f1.183 C== = 0 . 2 3 15.12 C/TmmKm'
+D
+D 
+ amount solute  kg benzene mol solute
+ kg benzene mol solute =0 . 0 4 4 5 60.231
+1=0 . 0 1 0 3 u  
+0.867 g thiophenemolar mass  = = 84.2 g/mol0.0103 mol thiophene 
+ Next, we determine the empirical formula from the masses of the combustion products. 
+2
+2
+221 mol CO 1 mol Camount C = 4.913 g CO = 0.1116 mol C 0.02791 4.000 mol C
+44.010 g CO 1 mol COuu y o  
+2
+2
+221 mol H O 2 mol Hamount H = 1.005 g H O = 0.1116 mol H 0.02791 4.000 mol H
+18.015 g H O 1 mol H Ouu y o  
+2
+2
+221 mol SO 1 mol Samount S = 1.788 g SO = 0.02791 mol S 0.02791 1.000 mol S
+64.065 g SO 1 mol SOuu y o  
+A reasonable empirical formula is CHS44 , which has an empirical mass of 84.1 g/mol. Since this is the 
+same as the experimentally determined molar mass, the molecular formula of thiophene is CHS44 . 
+ 
+
+=== PDF PAGE 587 ===
+Chapter 13: Solutions and Their Physical Properties 
+ 5 8 7  76.     (D)  First we determine the empirical formula of coniferin from the combustion data. 
+2
+2
+221 mol H O 2 mol H 1.008 g H0.698 g H O =0 . 0 7 7 5  m o l  H =0 . 0 7 8 1  g  H18.015 g H O 1 mol H O 1 mol Huu u  
+2
+2
+221 mol CO 1 mol C 12.011 g C2.479 g CO =0 . 0 5 6 3 3  m o l  C =0 . 6 7 6 6  g  C44.010 g CO 1 mol CO 1 mol Cuu u  
+1 mol O1.205 g 0.0781 g H 0.6766 g C = 0.0281 mol O16.00 g O u  
+0.0775 mol H 0.0281 = 2.76 mol H 4 11.04 mol H yu o  
+0.05633 mol C 0.0281 = 2.00 mol C 4 8.00 mol C yu o  
+0.0281 mol O 0.0281 = 1.00 mol O 4 4.00 mol O yu o  
+81 14 Empirical formula =  C H O  with a formula weight of 171 g/mol. 
+Now we determine the molality of the boiling solu tion, the number of moles of solute present 
+in that solution, and the molar mass of the solute. 
+b
+b0.068 C== = 0 . 1 30.512 C/TmmKm'D
+D 
+amount solute  g H O kg solvent
+ g mol solute
+ kg solvent mol solute =4 8 . 6 81
+10000.13
+1=6 . 3 1 023uu u 
+2
+32.216 g solutemolar mass  = = 3.5 10  g/mol6.3 10  mol soluteuu 
+ T h i s  m o l a r  m a s s  i s  t w i c e  t h e  f o r m u l a  w e i g h t  o f  t h e  e m p i r i c a l  f o r m u l a .  T h u s ,  t h e  m o l e c u l a r  
+formula is twice the empirical formula:  Molecular  formula  C H O =16 22 8 . 
+ 
+77. (M)  The boiling point must go up by 2 °C, so 'Tb = 2 qC.  We know that K b = 0.512 qC/m for water.  
+We assume that the mass of a liter of water is 1.000 kg and the van't Hoff factor for NaCl is i = 2.  
+We first determine the molality of the saltwate r solution and then the mass of solute needed. 
+ m = o
+o2C
+2.00 0.512 C/mb
+bT
+iK' u= 2 m 
+ s o l u t e  m a s s  =  1 . 0 0  L  H 2O u 2
+221k gH O 2 mol NaCl 58.4 g NaCl
+1LH O 1k gH O 1  m o l  N a C luu = 120  g NaCl 
+ T h i s  i s  a t  l e a s t  t e n  t i m e s  t h e  a m o u n t  o f  s a l t  o n e  w o u l d  t y p i c a l l y  a d d  t o  a  l i t e r  o f  w a t e r  f o r   
+ cooking purposes! 
+ 
+78. (M)   
+ (a) T h e  i m p u r e  c o m p o u n d  b e g i n s  t o  m e l t  a t  a  temperature lower than that of the pure 
+compound because the compound acts as a solvent for the impurity.  The impurity 
+thus causes a depression of the freezing point for the compound.  Actually, the 
+compound freezes (or melts) over a range of  temperatures because once some of the 
+pure compound freezes out, the remaining solution is a more concentrated solution of 
+the impurity and thus has an even lower fr eezing point.  It is this range of freezing 
+points (or melting points) rather than a single freezing point ʊa so called "sharp" 
+melting point ʊthat is the true characteris tic of an impure solid.   
+ 
+
+=== PDF PAGE 588 ===
+Chapter 13: Solutions and Their Physical Properties 
+ 
+588  ( b )  T h e  m e l t i n g  p o i n t  o f  t h e  i m p u r e  c o m p o u n d  c a n  b e  h i g h e r  t h a n  t h e  m e l t i n g  p o i n t  o f  t h e  p u r e  
+compound if two conditions are met. First, the impurity must have a higher melting point 
+than the pure compound.  Second, the impurity and the compound of interest must be 
+soluble in each other.  Third,  the amount of impurity should be  as much as or greater than 
+the desired compound, so the melting point is dominated by the higher melting point 
+impurity. 
+ 
+79. (E)  Assume that 1 L of ocean  water has a mass of 1 kg. 
+ff
+1TK m
+1.94 C 1.86 C m m
+m1 . 0 4' 
+  
+ DD 
+ 
+80. (E)  Ocean water is 3.5% NaCl, or 35 g of NaCl per 1 kg of ocean water: 
+1m o l  N a C l 2m o l  i o n smN a C l  =  3 5 . 0g  N a C l 1 . 2 0m58.443 g NaCl 1mol NaCluu   
+1
+ffTK m1 . 8 6 C m 1 . 2 0 m2 . 2 3 C'     DD 
+ 
+Strong Electrolytes, Weak Elect rolytes, and Nonelectrolytes 
+ 
+81. ( M )  The freezing-point depression is given by 'Ti K mff= . Since Kmf C =1 . 8 6 /D for water, 
+'Tif C =0 . 1 8 6D for this group of 0.10m solutions. 
+ 
+(a) Tf = –0.186 ° C.  Urea is a nonelectrolyte, and i = 1. 
+ 
+(b) Tf = –0.372 ° C.  NH 4NO 3 is a strong electrolyte, com posed of two ions per formula 
+unit; i=2.  
+ 
+(c) Tf = –0.372 ° C.  HCl  is a strong electrolyte, composed of two ions per formula unit;  
+i = 2. 
+  
+(d) Tf = –0.558 ° C.  CaCl 2 is a strong electrolyte, composed of three ions per formula unit; 
+i = 3. 
+ 
+(e) Tf = –0.372 ° C.  MgSO 4 is a strong electroly te, composed of two ions per formula unit;  
+i = 2. 
+ 
+(f) Tf = –0.186 ° C.  Ethanol is a nonelectrolyte; i = 1. 
+ 
+(g) Tf < –0.186 ° C.  HC 2H3O2 is a weak electrolyte; i is somewhat larger than 1. 
+ 
+82. (M)   
+ ( a )  First calculate the freezing point for a 0.050 m solution of a nonelectrolyte.  
+f,obs
+f,calc f
+f,calc0.0986 C= = 1.86 C/ 0.050 = 0.093 C = = = 1.1
+0.093 CT
+TK m m m i
+T'' u 
+'D
+DD
+D 
+
+=== PDF PAGE 589 ===
+Chapter 13: Solutions and Their Physical Properties 
+ 5 8 9  (b)  H  NO  M  M+
+23== 6 . 9 1 1 0 = 0 . 0 0 6 9 1 u    
+ HNO  M  M  M2=0 . 1 0 0 0 . 0 0 6 9 1 =0 . 0 9 3   
+particles  M  M  M  M =0 . 0 0 6 9 1 +0 . 0 0 6 9 1 +0 . 0 9 3 =0 . 1 0 7  i=0.107
+0.100=1 . 0 7 M
+ M 
+ 
+83. (E) The combination of NH3(aq) with HC H O23 2 (aq), results in the formation of 
+NH C H O42 32 (aq), which is a solution of the ions NH 4+ and CH 3COO-. 
+NH aq HC H O aq NH C H O aq NH aq C H O aq32 324 2 324+
+23 2 ++bg bg bg bg bg oo 
+This solution of ions or strong elec trolytes conducts a current very well. 
+ 
+84. (E) For two solutions to be isotonic, they must c ontain the same concentra tion of particles.   
+For the solutions to also have the same % mass/volume would mean that each solution 
+must possess the same number of particles pe r unit mass, typically per gram of solution. 
+This would be true if they had the same molar mass and the same van't Hoff factor. It 
+would also be true if the quotient of molar mass and van't Hoff factor were the same. While 
+this condition is not impossible to meet, it is highly improbable. 
+ 
+85. (E)  The answer is (d).  The other options describe  (a) a gas dissolved in water, (b) a gas which 
+when dissolved in water fully dissociates and is  a strong electrolyte, a nd (c) a non-e lectrolytic 
+molecule in water. 
+ 
+86. (E)  The answer is (b);  see notes for Exercise 85. 
+ 
+ 
+ 
+INTEGRATIVE AND ADV ANCED EXERCISES  
+ 
+87.     (M)  
+34 75 g H PO 29.6 mL 1.00 g 0.13 g acid solnmass P  12 fl oz     1 fl oz 1 mL 100.0 g root beer 100 g acid soln  u u u u  
+                  2 34
+34 341 mol H PO 1 mol P 30.97 g P 1000 mg P 1.1 10  mg P98.00 g H PO 1 mol H PO 1 mol P 1 g Puu u u  u  
+ 
+88. (M)  The molarity of the original solution is computed first.  
+ 
+ M  1.950   soln  L  1KOH  g  010 . 56KOH mol 1   KOH  g  109.2
+ molarity  KOH  u
+  
+ A  1 . 9 5 0  M  s o l u t i o n  i s  m o r e  c o n c e n t r a t e d  t h a n  a  0 . 2 5 0  m solution. Thus, we must dilute the 
+original solution. First we determine the mass of water produced in the final solution, and 
+the mass of water present in the original solu tion, and finally the mass of water we must 
+add. 
+ 
+
+=== PDF PAGE 590 ===
+Chapter 13: Solutions and Their Physical Properties 
+ 
+590 2
+2 21 kg H O 1.950 mol KOHmass H O in final soln  0.1000 L orig. soln 0.780 kg H O1 L soln 0.250 mol KOH
+1.09 gmass original solution  100.0 mL    109 g original solution1 mL u u  
+ u   
+   
+ 2
+22 221 L 109.2 g KOHmass KOH  100.0 mL      1 0 . 9 2  g  K O H1000 mL 1 L soln
+original mass of water  109 g soln - 10.92 g KOH  98 g H O
+mass added H O  780.g H O - 98 g H O  682 g H O uu  
+  
+   
+ 
+89. (M) A quick solution to this problem is to calculate the molarity of a 50% by volume solution, 
+using the density of 0.789 g/mL for ethanol.  
+ 
+ ethanol molarity = mL C H OH 0.789 g
+1 mL mol C H OH
+46.07 g C H OH
+ mL soln1 L
+1000 mLM2525
+25501
+10086uu
+u .  
+ 
+ T h u s ,  s o l u t i o n s  t h a t  a r e  m o r e  t h an 8.6 M are more than 100 proof. 
+ 
+90. (D) At the outset, we observe that the solu tion having the highest  m o l e  f r a c t i o n  o f  
+water (the most dilute solution) will have th e highest partial pressu re of water in its 
+equilibrium vapor. Also, the solution with the lowest mole fraction of water (the most 
+concentrated solution) will have the lowest freezing point.  We need to identify these 
+two solutions, and to achieve this we need a simple way to compare concentrations, 
+which are given here in dispar ate units. Let’s look at the solutions one at a time.  Keep 
+in mind that 1 L of water contains about 1000 g H 2O y 18.02 g/mol | 55.49 mol H 2O 
+(55.49 M). 
+ 
+Solution (a) :  The concentration 0.100 % CH 3COCH 3 by mass is equivalent to 1.00 g 
+CH 3COCH 3/1000 g solution, which in turn is about 1.00 g CH 3COCH 3/L 
+solution. (The density of the solution w ill be very nearly the same as that of 
+water.) A 1.00-g sample of CH 3COCH 3 is the same as 1.00 g /58.1 g /mol  
+<<  0.10 mol CH 3COCH 3 .   
+ 
+ 
+Solution (b) :  The 0.100 M CH 3COCH 3 has 0.100 mol CH 3COCH 3 per liter. Solution (b) is 
+more concentrated than (a), so (b) cannot be the solution with the highest 
+water vapor pressure.   
+ 
+Solution (c) :  The 0.100 m CH 3COCH 3 has 0.100 mol CH 3COCH 3 per kg H 2O. Because 
+water is the preponderant component in  the solution, the density of the 
+solution will be very nearly that of water, and the 0.100 m CH 3COCH 3  
+| 0.100 M CH 3COCH 3. So, as with (b), solutio n (c) cannot be the solution 
+with the highest water vapor pressure.   
+ 
+
+=== PDF PAGE 591 ===
+Chapter 13: Solutions and Their Physical Properties 
+ 5 9 1  Solution (d) :   In the solution Facetone = 0.100, acetone molecules comprise one-tenth of all 
+the molecules, or there is one acetone molecule for every nine water 
+molecules. In a liter of this solution there would be about 55.5 y 9 | 6  mol 
+CH 3COCH 3. This is clearly the most concentrated of the solutions.   
+ 
+To summarize, solution (a) ha s the highest water vapor pres sure and soluti on (d) has the 
+lowest freezing point. Our next ta sk is to apply Raoult’s law to solution (a), which requires 
+the mole fraction of water in solution (a). On e kilogram of this so lution contains 1.00 g  
+per 58.1 g /mol = 0.0172 mol CH 3COCH 3 and 999 g  per 18.02 g/ mol = 55.44 mol H 2O. 
+The mole fraction of the water is Fwater = 55.44/(55.44 + 0.0172) | 1.00. The mole fraction 
+is only very slightly less than 1.00, so the water vapor pressure  above this solution will be 
+only very slightly less than the vapor pressure  of pure water at 25 °C, namely, 23.8 mHg.  
+ 
+To apply Equation 13.5 for freezing-point de pression to solution (d), we must first 
+express its concentration in molality.  In a solution that has 1.00 mol CH 3COCH 3 for 
+every 9.00 mol H 2O, there is 1.00 mol of the solute for every (9.00 mol × 18.02 g/mol=) 
+162 g H 2O. The molality of the solution is 1.00 mol CH 3COCH 3/0.162 kg H 2O = 6.17 m 
+CH 3COCH 3.  The approximate freezing-point depression for this solution is  
+ 
+Tf = Kf × m = 1.86 °C × 6.17 m | –11.5 °C  
+ 
+and the approximate freezing point of the solution is –11.5 °C. This result is only 
+approximate because we have used Equation 13.5 for a much more concentrated solution 
+than that for which the equation is intended.   
+ 
+91. W e  a s s u m e  t h a t  t h e  p r e s e n c e  o f  t h e  s e c o n d  s o l u te will not substantially affect the solubility 
+of the first solute in the so lution. To get around this assump tion, solubility data often are 
+given in grams of solute per 100 g of solvent, as in Figure 13-8. This only partially avoids 
+the problem because the interact ion of the solutes can mutually affect their solubilities. 
+ 
+ (a) W e  d e t e r m i n e  t h e  s o l u t i o n  c o n c e n t r a t i o n  o f  each solute in the mixture, and compare 
+these values to the solubilities at 60 °C  obtained from Figure 13-8: greater than 
+100 g/100g H 2O for KNO 3 and 18.2 g/100 g water for K 2SO 4. 
+  
+  3 3
+24 240.850  60.0 g solidconc. KNO     100 g water  39.2 g KNO /100 g water130.0 g water
+0.150 60.0 g solidconc. K SO   100 g water  6.92 g K SO /100 g water130.0 g wateru u  
+u u  
+  
+Thus, all of the solid dissolves. 
+ 
+
+=== PDF PAGE 592 ===
+Chapter 13: Solutions and Their Physical Properties 
+ 
+592  (b) At 0 °C, the solubility of KNO 3 i s  1 4 . 0  g / 1 0 0  g  w a t e r .  T h e  m a s s  o f  K N O 3 t h a t  
+crystallizes is obtai ned by difference. 
+ 
+ o o
+3
+3KNO
+KNO 3(dissolved at 60 C) (dissolved at 0 C) 39.2 g  - 14.0 g m 130.0g water  100 g water
+m3 2 . 8 g  K N O  c r y s t a l l i z e d u
+  
+ 
+ (c) At 0 °C, the solubility of K 2SO 4 i s  7 . 4  g / 1 0 0  g  w a t e r .  S i n c e  this is greater than the 
+6.92 g K 2SO 4/100 g water that is dissolved at 60 °C, all of the K 2SO 4 remains dissolved. 
+ 
+92. ( M )  First determine the molality of the solution with the desired freezing point and 
+compare it to the molality of the supplied solution to determine if ethanol or water needs to 
+be added. 
+f
+f
+3
+3 25
+25 – 2 . 0  C    1 . 1    ( d e s i r e d )–– 1 . 8 6  C /  
+1000 mL 0.9767 gmass solution  2.50 L    2.44  10  g solution1 L 1 mL
+13.8 g C H OHmass solute  2.44  10  g soln    337 g C H OH100.0 g soln TmmKm'q   q
+ u u  u
+ u u   
+   3
+22 5 2
+25
+25
+25
+21 kgmass H O  (2.44  10  g - 337 g C H OH)     2.10 kg H O1000 g
+1 mol C H OH337 g C H OH  46.07 g C H OH  3 . 4 8   ( a v a i l a b l e )2.10 kg H Omm u u 
+u
+   
+  
+Thus we need to dilute the solution with water.  We must find the mass of water needed in the 
+final solution, then the mass of water that must be added.  
+ 25 2
+25 2
+25 25
+2 21 mol C H OH 1 kg H Ofinal mass of water  337 g C H OH      6.6 kg H O46.07 g C H OH 1.1 mol C H OH
+mass H O needed  6.6 kg total - 2.10 kg already present  4.5 kg H O u u  
+   
+ 
+93. (E) HCl is very soluble in water and the r eaction with water is highly exothermic.  
+Concentrated HCl gives off small quantities of HCl(g) which react with water vapor in the 
+atmosphere.  The reaction between HCl and wate r is sufficiently exothermic that the room 
+temperature water vapor changes to steam and then recondenses as the solution returns to 
+room temperature. 
+ 
+
+=== PDF PAGE 593 ===
+Chapter 13: Solutions and Their Physical Properties 
+ 5 9 3  94.  (M)  
+(a)  F i r s t  w e  w i l l  d e t e r m i n e  t h e  e f f e c t  o f  a n  i n c r e a s e in pressure from the triple point pressure 
+of 4.58 mmHg to 1 atm pressure  on the melting point of ice.  
+ 
+ (760 4.58) Torr0.00750 C/atm 0.00746 C760Torr/atmTRR'  u    
+       
+(b)  Next we will determine the molar ity of dissolved air in water:  
+ 
+ 1molair29.18mL22,414 mLmolarity =    0.0013M1 Lu
+ .   
+ 
+The molality of the solution is also 0.0013 m.  The freezing-point depression by this dissolved air is 
+'Tf = 1.86 °C m 1 u 0.0013 m = 0.0024 °C. 
+ 
+The effect of lowering the pressure on the system and removing the dissolved air would be to raise the 
+melting point of the ice by (0.00745 + 0.0024) °C | 0.0098 °C, which is what we set out to show. 
+ 
+95. ( M )  First we determine the molality of the benzene solution, and then the number of moles of 
+solute in the sample.  
+ 
+ mm KT
+ 0900 . 0C/  12 . 5C  533 . 5 C  072 . 5ffmolality  qq q '
+  
+ 
+ solute  mol  00396 . 0solvent  kg  1solute  mol  0900 . 0
+g  1000kg  1
+mL  1g  0.879mL  00 . 50  solute  of amount  uu u   
+  
+ W e  u s e  t h i s  a m o u n t  t o  d e t e r m i n e  t h e  a m o u n t  o f  e ach acid in the solute, with the added data of 
+the molar masses of stearic acid, C 18H36O2, 284.5 g/mol, and palmitic acid, C 18H36O2, 
+256.4 g/mol. We let x represent the amount in moles of palmitic acid. 
+ 
+ 1.115 g sample (0.00396 ) mol 284.5 g/mol  mol 256.4 g/mol
+1.127 284.5 256.4 1.127 28.1 
+1.127 1.1150.00043 mol palmitic acid   28.1
+0.00396 0.00043 0.00353 mol stearic acidxx
+xx x
+x  u  u
+    
+  
+  
+  
+ m a s s  p a l m i t i c  a c i d  =  0 . 0 0 0 4 3  m o l  ×  2 5 6 . 4  g / m o l  =  0 . 1 1  g  p a l m i t i c  a c i d  
+ 
+ 1 0.11 g palmitic acid% palmitic acid 100% 1 10  % palmitic acid (about 10%)1.115 g sample u  u  
+ 
+
+=== PDF PAGE 594 ===
+Chapter 13: Solutions and Their Physical Properties 
+ 
+594  
+96. (M) Let us first consider a solution in which nitrobenzene, Kf = 8.1 °C/ m, is the solvent. For 
+this solution to freeze at 0.0 °C,. C 5.7 ΔTo
+f   
+ 
+ 66 f
+f6 5 20.70 mol C H 5.7 Cmolality 0.70 8.1 C/ 1 kg C H NOTmKm'q    q 
+ 
+ 65 2
+65 2
+66
+65 2 66
+66
+65 21000 g C H NO% C H NO 100%78.1 g C H1000 g C H NO 0.70 mol C H1 mol C H
+95% C H NO (by mass) u
+u
+  
+ 
+ T h e n  w e  c o n s i d e r  a  s o l u t i o n  i n  w h i c h  b e n z e n e, Kf = 5.12 °C/m, is the solvent. For this 
+solution to freeze at 0.0 °C, ΔTf = –5.5 ° C.  
+  
+ 65 2
+661.07 mol C H NO 5.5 C fmolality 1.07 5.12 C/ 1 kg C HfT
+mKm'q    q 
+ 
+   65 2
+65 2
+65 2
+65 2
+65 2
+65 2 66
+65 2
+65 2123.1 g C H NO1.07 mol C H NO1 mol C H NO  % C H NO 100%123.1 g C H NO1.07 mol C H NO 1000 g C H1 mol C H NO
+ 12% C H NO (by mass)u
+ u
+u
+  
+ 
+97. (D) We first determine the amount in moles of each substance. 
+ 
+ 22
+22 22 22
+22
+2
+22 2
+2
+12 22 11 12 22 111  mol  CO(NH )amount  CO(NH ) 0.515 g CO(NH ) 0.00858  mol  CO(NH )60.06  g  CO(NH )
+1  mol  H Oamount  H O  with  urea 92.5 g H O 5.13  mol  H O18.015  g  H O
+1  moamount  C H O 2.50 g C H O u  
+ u  
+ u12 22 11
+12 22 11
+12 22 11
+2
+22 2
+2l  C H O0.00730  mol C H O342.3  g  C H O
+1  mol  H Oamount  H O  with sucrose 85.0 g  H O 4.72  mol  H O18.015  g  H O 
+ u   
+ 
+ T h e  v a p o r  p r e s s u r e  o f  w a t e r  w i ll be the same above both soluti ons when their mole fractions 
+are equal. We assume that the amount of water present as water vapor is negligible. The total 
+
+=== PDF PAGE 595 ===
+Chapter 13: Solutions and Their Physical Properties 
+ 5 9 5  amount of water in the two soluti ons is (4.72 + 5.13 =) 9.85 mol H 2O. We let nwater designate 
+the amount of water in the urea solution. The am ount of water in the sucrose solution is then 
+9.85 mole – nwater. Note that we can compute the mole  f raction of  solute f o r com p arison ,  
+since when the two solute mole fractions are equa l, the mole fractions of solvent will also be 
+equal ) 0000 . 1 (solute solventFF . 
+ 
+ )water(9.85 sucrose  mol  00730 . 0sucrose  mol  00730 . 0
+sucrose urea
+waterurea  mol  00858 . 0urea  mol  00857 . 0
+n n    FF  
+ 
+ We “cross multiply’’ to begin the solution for watern . 
+ 
+ 
+mol  32 . 500857 . 0 00730 . 00000626 . 0 0845 . 0
+water  water 00730 . 0 0000626 . 0water 00857 . 0 0845 . 0)water(0.00858  00730 . 0 )water9.85 (0.00730  00857 . 0
+     
+nn nn n
+ 
+  
+ W e  c h e c k  t h e  a n s w e r  b y  s u b s t i t u t i on into the mole fraction equation. 
+ 
+ 0.00857 mol urea 0.00730 mol sucrose0.00161 0.00161 urea sucrose0.00857 mol 5.324 0.00730 mol (9.85 5.324)molFF        
+  
+ T h e  m o l e  f r a c t i o n  o f  w a t e r  i n  e a c h  s o l u t i on is (1.00000 – 0.00161 =) 0.99839, or 99.839 mol% 
+ 
+98. (M) We would expect the movement of the so lvent molecules across the semipermeable 
+membrane to cease as soon as the concentratio n of solute particles becomes the same on 
+both sides of the membrane. This equality of co ncentration is achieved in two ways.  (1) The 
+solvent molecules move across the membrane into  the sucrose solution and dilute it.  (2) the 
+sucrose solution overflows out of  the funnel into the liquid that originally was pure water.  
+In order to overflow the f unnel, the water moving across the membrane must push the 
+solution up the funnel.  This requires a small pr essure, an osmotic pressu re, that is generated 
+by a difference in concentration of the two solutions.  Because this difference in 
+concentration is required, the flow of water w ill stop when the concentrations are almost the 
+same.  At that point, the difference in concentr ations will be insufficient to raise the solution 
+to the top of the tube. 
+ 
+99.  (E) The reason that the cooling curve is not hori zontal at the freezing poi nt is that as the 
+solution freezes, the composition of the liquid changes. The solid phase which forms at the 
+freezing point is pure solvent. Consequently, as freezing occurs, the concentration of the 
+solution increases, and the freezing point decreases. 
+ 
+
+=== PDF PAGE 596 ===
+Chapter 13: Solutions and Their Physical Properties 
+ 
+596 100.  (M)  
+(a) Surface area of a particle = 4 Sr2  =  4(3.1416)(1 x10-7m)2  = 1.26 x10-13 m2/particle. We 
+need to find the number of pa rticles present (not atoms!) 
+  
+3- 7 3
+21 3
+3
+21 3 14
+33
+34r 4( 11 0 m )particle volume  4.19 1033
+19.3 g (100 )particle mass  density  volume   4.19 10 8.09 10 g/particlecm (1 )
+mass of Au 1.00 10 g Anumber of Au particlesparticle massm
+cmmmSS
+
+u   u
+ u u u  u
+u  10
+14
+-13 2 10 3 2u1.24 10 particles8.09 10 g/particle
+total surface area (1.26 10  m /particle)(1.24 10 particles) 1.56 10 m
+ uu
+ u u  u
+ 
+  
+(b)  For 1.00 mg Au the volume of Au is: (1.00 mg)(1 g/1000 mg)/(19.3 g/cm3) = 5.18 ×  10-5 
+cm3 
+  
+ V o l u m e  o f  a  c u b e  i s  L3, where L is the edge length, so  
+3- 53 - 2L = 5.18 10  cm  = 3.73 10  cm uu  
+  
+ a r e a  =  6 × L2 = 6×(3.73×10-2 cm)2 × (1m/100cm)2 = 8.34×10-7 m2 
+ 
+101. (D) 
+(a) Assume that there is 100.00 mL of solution. Then, since the volumes of the components 
+are additive, the volume of benzene in the solution is numerically equal to its volume 
+percent, V. The volume of toluene is 100.00 mL – V. Now we determine the mass of the 
+solution. 
+ 
+  toluene mL 1 toluene g  0.867  toluene mL  ) 00 . 100 (benzene mL 1benzene  g  879 . 0 benzene  mL  mass solution u  u  V V  
+   
+  The density of the solution is given by its mass divided by its volume, 100.00 mL. 
+ 
+mass (mL) 0.879(g/mL) (100.00 )mL 0.867(g/mL)density     volume 100.00 mL
+This is the equation requested in (c).VV u  u  
+ 
+  
+We now calculate the density for a number of solutions of varying volume percent benzene  
+ 
+ 
+
+=== PDF PAGE 597 ===
+Chapter 13: Solutions and Their Physical Properties 
+ 5 9 7  20 % by volume =  
+ 
+-120.0 mL  0.879 g mL  + (100.0  20) mL 0.869 g/mL= 0.871 g/mL100 mLu u
+ 
+ 
+40 % by volume =  
+ 
+-140.0 mL  0.879 g mL  + (100.0  40) mL 0.869 g/mL= 0.873 g/mL100 mLu u
+ 
+ 
+60 % by volume =  
+ 
+-160.0 mL  0.879 g mL  + (100.0  60) mL 0.869 g/mL= 0.875 g/mL100 mLu u
+ 
+ 
+-180 % by volume 
+80.0 mL  0.879 g mL  + (100.0  80.0) mL 0.869 g/mL= 0.877 g/mL100 mL 
+u u
+ 
+ 
+ (b) The data is plotted below and includes the density  of pure benzene (100 %) and toluene (0 %) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ (c) The equation relating density of solution with volume percent Benzene was developed 
+above and reprinted here. 
+ 
+  mass (mL) 0.879(g/mL) (100.00 )mL 0.867(g/mL)density     volume 100.00 mLVVu u   
+ Plot of Solution Densities vs Volume Percent Benzene
+y = 0.00012286x + 0.86685714
+R2 = 0.99676550
+0.8660.8680.870.8720.8740.8760.8780.88
+01 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 1 0 0
+Volume Percent BenzeneDenisty (g/cm3)
+
+=== PDF PAGE 598 ===
+Chapter 13: Solutions and Their Physical Properties 
+ 
+598 102. (M) Separation by fractional distilla tion is based on a difference in the boiling points of the 
+two substances being separated.   Since the boiling points of meta - and para -xylene differ 
+by only 0.7 °C, their separation by fractional di stillation is impractical.  However, the 
+freezing points of these two isomers differ by more than 60°C. Separation by fractional 
+solidification should be possibl e, freezing out primarily pure para -xylene at 13.3 °C, 
+thereby leaving a solution rich in meta -xylene.  
+ 
+103. (M) As the fraction of ethylene glycol in the solu tion increases, we even tually reach a point 
+where the ethylene glycol, rather than water, is the solvent in the solution.  After the 
+fraction of ethylene glycol in the solution has increased past this point, the solution will 
+freeze at the depressed freezing point of ethylene glycol, rather than at the depressed 
+freezing point of water.  That is, solid ethylen e glycol, rather than solid water, will freeze 
+out of the solution.  The freezing point of et hylene glycol (-13 °C) is higher than –34 °C. 
+ 
+104. (D)  
+ ( a )  Let’s begin with the definition of molality fo r an aqueous solution. We assume that the 
+mass of the solvent is essentially equal to th e mass of the solution, since the solution is a 
+dilute one. 
+ 
+ N e x t  w e  a s s u m e  t h a t  t h e  d e n s i t y  o f  t h i s  d i lute solution is that of pure water, 1.00 g/mL, 
+and then apply some definitions (1 kg = 1000 g and 1 L = 1000 mL). 
+ -3 moles solute 1 kg solution 1.00 g solution moles solutemolality molarity1 kg solution 1000 g solution 1 L solution 1  10 L solution|u u | u 
+(b) We begin with the definition of mole fraction for the solute. Then we assume that the 
+amount of solute is quite small compared to the amount of solvent, and use the molar mass 
+(M) of the solvent, along with the fact that 1 kg = 1000 g. 
+ 
+ 
+solventg/kg  1000molality
+solventg/kg  1000
+solvent  kg  1solute  moles
+solvent  kg  1solvent solute  moles g/kg  1000  solvent  kg  1solvent  g  1000
+solvent  g  solvent  mol  1
+solvent  molessolute  moles
+solvent  moles  solute  molessolute  moles
+solute
+M M MM
+u u  uu|u u | F
+ 
+ 
+ Thus, mole fraction of a solute indeed is pr oportional to its molality in a dilute solution. 
+ 
+(c) For a dilute aqueous solution, we begin with  t h e  r e s u l t  o f  p a r t  ( b )  a n d  f i r s t  u s e  t h e  
+definition of molality and then assume that the mass of the solvent is essentially equal to 
+the mass of the solution. 
+ 
+ 1000 g/kg moles solute 1000 g/kg 1 kg solventmolalitysolute 1 kg solvent 1 kg solutionsolvent solventMMF|u | u u  
+ 
+ N o w  w e  a s s u m e  t h a t  t h e  d e n s i t y  o f  t h i s  d i l u te solution is that of pure water, 1.00 g/mL, 
+and then apply some definitions (1 kg = 1000 g and 1 L = 1000 mL). 
+ 
+
+=== PDF PAGE 599 ===
+Chapter 13: Solutions and Their Physical Properties 
+ 5 9 9   moles solute 1000 g/kg 1 kg solvent 1 kg soln 1.00 g soln 1000 mL soln
+solute 1 kg solvent 1 kg soln 1000 g soln 1 mL soln 1 L solnsolvent
+moles solute 1000 g/kg 1000 g/kg  molarity 1 L solutionsolventM
+MF|u u u u u
+|u  u
+solventM 
+ 
+ T h u s  m o l a r i t y  o f  d i l u t e  a q u e o u s  s o l u t i o n s  i s  proportional to mole fraction of the solute. 
+ 
+105. (M) We determine the volumes of O 2 a n d  N 2 t h a t  d i s s o l v e  u n d e r  t h e  a p p r o p r i a t e  p a r t i a l  
+pressures of  0.2095 atm O 2 and 0.7808 atm N 2, and at a temperature of 25 °C, with both 
+gas volumes measured at 1.00 atm and 25 °C. Note that the percent by volume and the 
+percent by partial pressures of the at mosphere are numerically the same. 
+ 
+22
+2
+22
+2
+2
+2
+228.31 mL O mL OO  volume 0.2095 atm 5.931 1 atm L soln L solution
+14.34 mL N mL NN  volume 0.7808 atm 11.20 1 atm L soln L solution
+mL N11.20 L solutionvolume % NmL N mL O11.20 5.931 L solution u  
+ u  
+ 
+2
+2
+22100% 65.38% N  by volume
+L solution
+volume % O   100.00% 65.38% 34.62% O  by volumeu 
+    
+ 
+ 
+106. (D) The vapor pressure values at 100 °C, that is, 1350.5 mmHg for benzene and 556.3 for 
+toluene, can be found in data tables, or esti mated from the graphs in Figure 13-12 on page 
+576. 
+ 
+If the curve representing the liquid composition in Figure 13-13 were a straight line, the two 
+end points on the curve (111 °C, mole fraction of benzene = 0 and 80 °C, mole fraction of 
+benzene = 1) would have to lie on this line.  But then all other liquid composition points 
+would also have to be on this line, since tw o points determine a stra ight line.  The basic 
+requirement is to choose one or a few conditi ons on the graph and show that they do not  fall 
+on the line just mentioned.  
+ 
+The normal boiling point of a liquid mixture of  the two volatile components, benzene and 
+toluene, is given by the expression  
+ 
+benz benz tol tol benz benz benz tol (1 ) 760 mmHg xP x P xP x PRRR R      
+ 
+Thus, for a normal boiling point of 100 °C, 
+ 
+benz benz 1350.5 556.3(1 ) 760 xx    
+ 
+
+=== PDF PAGE 600 ===
+Chapter 13: Solutions and Their Physical Properties 
+ 
+600 resulting in  
+ 
+benz 0.256 x and tol benz(1 ) 0.744 xx    
+ 
+The expected result at a boiling point of 100 °C for a straight-line liquid composition graph 
+would be about  benz 0.33 x  and tol0.67 x  
+ 
+Additionally, the calculated results at a temperature of  90 °C were found to be 
+ 
+benz benz 1021 406.7(1 ) 760 xx   andbenz 0.575 x  and tol0.425 x  
+ 
+Again, these results are different than the straight-line estimates at 90 °C, which are  
+ 
+benz 0.67 x  and tol0.33 x . 
+ 
+Thus, the graph of boiling point versus li quid composition cannot be a straight line. 
+ 
+ 
+107. (D) First we determine the mass of CuSO 4 in the original solution at 70 °C. 
+ 
+ 4
+432.0 g CuSO335 g sample 107.2 g CuSO100.0 g solnu  
+ 
+ W e  l e t  x r e p r e s e n t  t h e  m a s s  o f  C u S O 4 removed from the solution when the 
+CuSO 45H2O     recrystallizes. Then the mass of H 2O present in the recrystallized 
+product is determined. 
+ 
+  O H  g  565 . 0O H  mol  1O H  g  02 . 18
+CuSO  mol  1O H  mol  5
+CuSO  g  6 . 159CuSO  mol  1CuSO  g  O H  mass2
+22
+42
+44
+4 2 x x  u u u   
+ 
+  N o w  w e  d e t e r m i n e  t h e  v a l u e  o f  x by using the concentration of the saturated solution at 
+0 °C. 
+  44
+43 4 3
+3
+4
+4
+42 412.5 g CuSO (107.2 ) g CuSO
+100.0 g soln (335 0.565 ) g soln
+1.072 10 100.0 4.19 10 19.6 (100.0 19.6) 1.072 10 4.19 10
+6.53 1081 g CuSO80.4
+1.000 g CuSO 0.565 gmass CuSO 5H O 81 g CuSOx
+xx
+xxx
+x 
+u  u  u  u
+u  
+ u2 2
+42
+4 H O1.3 10  g CuSO 5H O1.000 g CuSO u  
+
+=== PDF PAGE 601 ===
+Chapter 13: Solutions and Their Physical Properties 
+ 6 0 1   
+108. (E)   
+6
+4 11.5 10 mol Ar 40.0 g Ar gmass of Ar = 4.60 10L of seawater 1 mol L
+ uu u  
+Partial pressure can be determined from Henry’s Law: 
+63 1
+6
+3111.5 10  M 1.5 10 M atm
+11.5 10  M0.0077 atm1.5 10 M atmH Ck P
+P
+P 
+
+ 
+u u 
+u  u 
+ 
+109. (E)   
+6
+22
+2445 10 mol N 28.0 g N gmass of N  = 0.0125Lo f  s e a w a t e r 1m o l Luu  
+Partial pressure can be determined from Henry’s Law: 
+63 1
+6
+31445 10  M 0.61 10 M atm
+445 10  M0.73 atm0.61 10 M atmH Ck P
+P
+P 
+
+ 
+u u 
+u  u 
+ 
+ 
+110. (M)  
+(a) density = m/V 
+750g 85.0gD1 . 0 3 g / m L810.0 mL   
+(b)  
+sucrose
+sucrose ethanolmass 85.0 gwt% 100% 100% 10.2%mass mass 85.0 g + 750 g u  u   
+(c) 
+ suc
+EtOH
+suc1molmol 85.0 g 0.4722 mol180.0 g
+1molmol 750.0 g 22.01 mol34.07 g
+0.4722 mol0.0210 mol0.4722 mol 22.01 molF u  
+ u 
+   
+ 
+(d) molality = mol/kg solvent.  We note that the density of ethanol is 0.789 g/mL or 
+0.789 kg/L. 
+10.4722 molmolality 0.740 M0.810 L 0.789 kg L  u 
+ 
+
+=== PDF PAGE 602 ===
+Chapter 13: Solutions and Their Physical Properties 
+ 
+602 (e) molarity = mol/Vol solvent 
+ 
+ 0.4722 molMolarity 0.583 M0.810 L   
+ 
+111. ( M )  First, determine what molality of ethylene glycol is needed to cause a 10.0 °C freezing-
+point depression: 
+ff
+1TK m
+10 C 1.86 C m m
+m5 . 3 7 6  m' 
+   
+ DD 
+ 
+Then, determine the num\ber of moles of ethylen e glycol, which can be used to determine the 
+volume, using the density of  ethylene glycol given. 
+ 
+262 22
+262 262
+22
+262
+262 262
+262 2625.376 mol C H O 1k g  H O 2 0 . 0L  H Omol C H O = 107.53 mol C H O /sample1k g  H O 1L  H O s a m p l e
+62.09 g C H O 1m LVol C H O  = 107.53 mol C H O 5961 mL = 5.96 L1m o l  C H O 1 . 1 2g  C H Ouu  
+uu   
+ 
+112. (E)  
+(a) solute 53 6 0 . 1 4F   
+(b) Solvent has the higher vapor pressure 
+(c) %solute vapor = 1/6×100 = 16.7% 
+ 
+ 
+FEATURE PROBLEMS 
+ 
+113. (D) 
+ ( a )  T h e  t e m p e r a t u r e  a t  w h i c h  t h e  t o t a l  v a p o r  p r essure is equal to 760 mm Hg corresponds to 
+the boiling point for the cinnamaldehyde/H 2O mixture.  Consequently, to find the 
+temperature at which steam distillation begins under 1 atm pressure, we must construct a 
+plot of P total against the temperature.  The data need ed for this graph and a separate graph 
+required for the answer to part (c ) are given in the table below. 
+ 
+Temperature 
+(qC) 2HOP 
+(mmHg)98CHOP  
+(mmHg)totalP 
+(mmHg)Mole fraction  
+of C 9H8O 
+76.1 308 1 309 3.24 u 10-3 
+105.8 942 5 947 5.28 u 10-3 
+120.0 1489 10 1499 6.67 u 10-3 
+ 
+
+=== PDF PAGE 603 ===
+Chapter 13: Solutions and Their Physical Properties 
+ 6 0 3   
+   T h e  g r a p h  o f  t o t a l  v a p o r  p r e s s u re vs temperature is drawn below: 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+  A c c o r d i n g  t o  t h i s  p l o t ,  w h e n  t h e  b a r o m e tric pressure is 1 atm. (i.e., 760 mmHg), 
+distillation occurs at 99.6 qC.  Thus, as one would expect  for a steam distillation, the 
+boiling point for the mixture is below the boiling point for the lower boiling point 
+component, viz. water.  Moreover, the gr aph shows that the boiling point for this 
+mixture is close to that for pure water and, once again, this is the anticipated result 
+since the mixture contains very little cinnamaldehyde. 
+ 
+(b) The condensate that is collect ed in a steam distillation is  the liquefied form of the 
+gaseous mixture generated in the distilla tion pot.  The composition of the gaseous 
+mixture and that of the derived condensate is determined not by the composition of the 
+liquid mixture but rather by the vapor pressure  for each component at the boiling point.  
+The boiling point of the cinnamaldehyde/H 2O mixture will stay fixed at 99.6 qC and the 
+composition will remain at 99.54   mole % H 2O and 0.464  % cinnamaldehyde as long as 
+there is at least a modicum of each component present. 
+ 
+(c) T o  a n s w e r  t h i s  p a r t  o f  t h e  q u e s t i o n ,  w e  m u st construct a plot of the mole fraction of 
+cinnamaldehyde against temperature.  The gr aph, which is drawn below, shows that 
+the mole fraction for cinnamaldehyde at the boiling point (99.6 qC) is 0.00464 . 
+Because the concentration of each component in the vapor is directly proportional to 
+its vapor pressure, the numb er of moles of component A divided by the moles of 
+component B is equal to the partial pressu re for component A divided by the partial 
+pressure of component B. Total Vapor Pressure vs Temperature
+0400800120016002000
+70 75 80 85 90 95 100 105 110 115 120
+Temperature (oC)Total Vapor Pressure 
+(mm Hg)
+
+=== PDF PAGE 604 ===
+Chapter 13: Solutions and Their Physical Properties 
+ 
+604  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ A
+Bcomponent A component A
+component B component BPPn mass A molar mass component A
+nP mass B P molar mass component B   u  
+ I f  w e  m a k e  c i n n a m a l d e h y d e  c o m p o n e n t  A  and water component B, and then plug in 
+the appropriate numbers into the seco nd equation involving masses, we obtain 
+ 
+ P cinn = 0.00464 u (760 mmHg) = ~3.53 mmHg;  
+ P H2O = (760-3.53) mmHg = ~ 756 mmHg  
+ 98
+98 98
+2 2
+2132 g C H O
+mass C H O 1 mol C H O 3.53 mmHg
+18.0 g H O mass H O  756 mm Hg
+1 mol H O u = 3.42 u 10-2 
+ C l e a r l y  t h e n ,  w a t e r  c o n d e n s e s  i n  t h e  g r e a t e r  quantity by mass.  In fact, every gram of 
+cinnamaldehyde that condenses is accompanied by ~29 g of water in the collection flask! 
+ 
+114. ( D )  
+ ( a )  A solution with FHCl=0 . 5 0 b e g i n s  t o  b o i l  a t  a b o u t 1 8DC.  A t  t h a t  t e m p e r a t u r e ,  t h e  
+composition of the vapor is aboutFHCl=0 . 6 3,  r e a d i n g  d i r e c t l y  a c r o s s  t h e  t i e  l i n e  a t  
+18° C. The vapor hasFHCl!0.50. 
+(b) The composition of HCl(aq) changes as the so lution boils in an open container because 
+the vapor has a different composition than does the liquid. Thus, the component with 
+the lower boiling point is depleted as th e solution boils.  The boiling point of the 
+remaining solution must change as the va por escapes due to changing composition. 
+ 
+(c) The azeotrope occurs at the maximum of the curve: at FHCl=0 . 1 2 a n d  a  b o i l i n g  
+temperature of 110DC. 
+ 
+(d) We first determine the amount of HCl in the sample. 
+ 
+1 L 1.006 mol NaOH 1 mol HClamount HCl = 30.32 mL NaOH1000 mL 1 L 1 mol NaOH
+amount HCl = 0.03050 mol HCluu u Mole Fraction of C 9H8O vs Temperature
+00.0020.0040.0060.008
+70 75 80 85 90 95 100 105 110 115 120
+Temperature (oC)Mole fraction of 
+C9H8O
+
+=== PDF PAGE 605 ===
+Chapter 13: Solutions and Their Physical Properties 
+ 6 0 5  The mass of water is the difference between  the mass of solution and that of HCl. 
+mass H O  mL soln g
+ mL mol HCl g HCl
+ mol HCl g2=5 . 0 01.099
+10.0305036.46
+1=4 . 3 8 uFHGIKJuFHGIKJ  
+Now we determine the amount of 2HO  and then the mole fraction of HCl. 
+2
+22 2
+21 mol H Oamount H O = 4.38 g H O = 0.243 mol H O18.02 g H Ou  
+HCl
+20.03050 mol HCl== 0 . 1 1 20.03050 mol HCl + 0.243 mol H OF  
+ 
+115. (M) 
+ ( a )  At 20DC, the solubility of NaCl is 35.9 g NaCl / 100 g H O2. We determine the mole 
+fraction of H O2 in this solution 
+2
+22 2
+21 mol H Oamount H O = 100 g H O  = 5.549 mol H O18.02 g H O
+1 mol NaClamount NaCl = 35.9 g NaCl 0.614 mol NaCl58.44 g NaClu
+u  
+2
+water
+25.549 mol H O== 0 . 9 0 0 40.614 mol NaCl + 5.549 mol H OF  
+The approximate relative humidity then will be 90% (90.04%), because the water vapor 
+pressure above the NaCl saturated solution wi ll be 90.04% of the vapor pressure of pure 
+water at 20D C . 
+ 
+(b) CaCl  H O226 deliquesces if the relative hum idity is over 32%. Thus, CaCl  H O226 
+will deliquesce (i.e., it will absorb water from the atmosphere). 
+ 
+(c) If the substance in the bottom of the desicc ator has high water solubility, its saturated 
+solution will have a lowFwater, which in turn will produce a low relative humidity. 
+Thus, a relative humidity lower than 32% is needed to keep CaCl  H O226 dry. 
+ 
+116. (D) 
+ ( a )  We first compute the molality of a 0. 92% mass/volume solution, assuming the 
+solution's density is about 1.00 g/mL, mean ing that 100.0 mL solution has a mass of 
+100.0 g. 
+ 1 mol NaCl0.92 g NaCl58.44 g NaClmolality = 0.161 kg solvent(100.0 g soln 0.92 g NaCl)1000 gmu
+ 
+u 
+Then we compute the freezing-point  depression of this solution. 
+ff 2.0 mol ions 1.86 C== 0 . 1 6 = 0 . 6 0 C mol NaClTi K m mm' uu D
+D 
+
+=== PDF PAGE 606 ===
+Chapter 13: Solutions and Their Physical Properties 
+ 
+606 The van't Hoff factor of NaCl mo st likely is not equal to 2. 0, but a bit less and thus the 
+two definitions are in fair agreement. 
+ 
+(b) We calculate the amount of each solute, assume 1.00 L of solution has a mass of 
+1000 g, and subtract the mass of all solu tes to determine the mass of solvent. 
+1 mol NaCl 2 mol ionsamount NaCl ions = 3.5 g NaCl = 0.12 mol ions58.44 g NaCl 1 mol NaCluu  
+amount KCl ions  g mol KCl
+ g KCl mol ions
+ mol KCl mol ions =1 . 51
+74.552
+1=0 . 0 4 0 uu  
+36 5 7
+36 57
+36 57 36 57
+36 571 mol Na C H  O 4 mol ionsamount Na C H O  ions = 2.9 g258.07 g Na C H O 1 mol Na C H O
+amount Na C H O  ions = 0.045 mol ionsuu
+ 
+61 26
+61 26 61 26 61 26
+61 261 mol C H Oamount C H O = 20.0 g C H O = 0.111 mol C H O180.2 g C H Ou  2
+2solvent mass = 1000.0 g 3.5 g +1.5 g + 2.9 g + 20.0 g = 972.1 g H O
+solvent mass = 0.9721 kg H O 
+
+20.120 + 0.040 + 0.045 + 0.111  molsolution molality = = 0.3250.9721 kg H Om 
+ff== 1 . 8 6 C / 0 . 3 2 5 = 0 . 6 0 CTK m m m'  u DD 
+This again is close to th e defined freezing point of 0.52DC, with the error most likely 
+arising from the  van't Hoff factors not being integral.  We can conclude, therefore, that 
+the solution is isotonic. 
+ 
+ 
+SELF-ASSESSMENT EXERCISES 
+ 
+117. (E)   
+(a) xB: Mole fraction of solute B 
+(b) o
+AP: Vapor pressure of pure solvent A 
+(c) Kf : Molal freezing point constant 
+(d) i: van’t Hoff factor, a designation for th e number of components per formula unit 
+(e) Activity: The effective (as opposed to stoich iometric) concentration of a solution, which 
+takes into account solu te-solute and solute-solvent interactions 
+ 
+118. (E)  
+(a) Henry’s law: A law stating that, at a given temperature, th e ratio between the 
+concentration of a gas in a liquid and the partia l pressure of that gas above the liquid is a 
+constant 
+(b) Freezing-point depression:  The decrease in th e freezing point of a solvent compared to its 
+normal freezing point because of the presence of a solute 
+
+=== PDF PAGE 607 ===
+Chapter 13: Solutions and Their Physical Properties 
+ 6 0 7  (c) Recrystallization: A process of purifying a solid, whereby a solution saturated in the 
+species that we need to purify is cooled just enough to fractionally crystallize the pure 
+solid, while the impurities remain in the solu tion because the temperature is too high for 
+them to crystallize 
+(d) Hydrated ion:  An anion or cation surr ounded by a cluster of water molecules which 
+interact electrostatically 
+(e) Deliquescence: A phenomenon in wh ich a solid begins to diss olve by the moisture that 
+condenses on its surface from the water vapor in air 
+ 
+119. (E) 
+(a) Molality and molarity:  Molal ity is a measure of concentrat ion expressed as the ratio of 
+moles of solute and kilograms of solvent.  Molarity is a measure of concentration 
+expressed as the ratio between the moles of solute and the volume of the final solution. 
+(b) Ideal and non-ideal solutions: In an ideal so lution, the properties of the solution can be 
+determined from the properties of the bulk pha ses of solutes and solvent.  Furthermore, 
+there are no interactions between solute particles.  In case of  non-ideal solutions, forces of 
+attraction between unlike molecules exceed those between like molecules, and the 
+properties of such solutions generally cannot  be predicted from bulk pure components. 
+(c) Unsaturated and supersaturated solution:  An  unsaturated solution is one that can still 
+accommodate the dissolution of more solute in it.  A supersaturated solution is one that for 
+various reasons has more solute dissolved in it than otherwise would be possible at that 
+given temperature.   
+(d) Fractional crystallization and fractional disti llation: Fractional crystallization is a process 
+of purifying a solid, whereby a so lution saturated in the species that we need to purify is 
+cooled just enough to fractionally  crystallize the pure solid.  Fractional distillation is a 
+process of purifying a mixture of solvents by raising and/or lowering the temperature just 
+enough to selectively distill away a lower boiling point component of a solution. 
+(e) Osmosis and reverse osmosis:  Osmosis is the process by which water migrates across a 
+water-permeable membrane from one side wi th lower molality to the side with higher 
+ionic molality.  Reverse osmosis is the pro cess of forcing water to go from a region of 
+high molality to a lower one by exerting a pres sure greater than the osmotic pressure, 
+thereby concentrating the solution with the higher molality. 
+ 
+120. (E)  The answer is (b), because molality is mo les solute/kg solvent.  Assuming a volume of 
+1 L, at a concentration of 0.010 m, the mass of the water (~1 kg) is nearly the same as the 
+volume of the solution (1 L). 
+ 
+121. (E)  The answer is (d), because the other choices  either don’t form a solution because they are 
+immiscible or the solute-solvent  interactions are st ronger than intramolecu lar interactions for 
+either of the pure solute or solven t, making the solutions non-ideal. 
+ 
+122. (E)  The answer is (a).  As partial pressure of  the gas increases, Henry’s law shows that the 
+concentration of the gas in the liquid increases. 
+ 
+123. (E)  The answer is (d), because the total ionic molality of the MgCl 2 is 3×0.008 = 0.024.  
+ 
+
+=== PDF PAGE 608 ===
+Chapter 13: Solutions and Their Physical Properties 
+ 
+608 124. (E)  The answer is (c), because nothing in the information provided suggests that the 
+concentrations of the two vol atile species are the same. 
+ 
+125. (E)  The mass of NH 4Cl is: 1.12 mol NH 4Cl × (53.45 g/mol) = 59.86 g.   
+Solubility is 59.86 g NH 4Cl / 150.0 g H 2O = 0.40, or 40 g/100 g. 
+ Based on Figure 13-8, the concentration limit of NH 4Cl is 42 g per 100 g of H 2O.  Since the 
+amount of NH 4Cl is below the solubility limit, no crystals will form. 
+ 
+126. ( M )  
+(a) 
+20.92 g NaCl 1 mol NaCl 1 mol Na 1000 mLNa 0.16 M Na100 mL H O 58.45 g NaCl 1 mol NaCl 1 L
+ ªº uu u  ¬¼ 
+(b) 1m o l  N a C l 2m o l  i o n stotal molarity of ions  0.16 M Na  0.32 M1m o l  N a 1m o l  N a C l
+ u u   
+(c) 1MRT 0.32 M 0.08206 L atm K 310 K 8.1atm3     
+(d) Determine the solution molality first, then determine freezing-point depression. 
+ 
+ 2
+oo
+f0.32 mol ions 1 L solutionmolality H O 0.31841L  s o l u t i o n 1 . 0 0 5k g  s o l u t i o n
+T1 . 8 6 C / 0 . 3 1 8 4 0 . 6 0 Cm
+mm u  
+'    
+ 
+127. ( M )   
+ 
+(a) 
+ >@383 383
+383
+383
+38362.0 g C H O  1m o l  C H O 1.159g sol'n 1000 mL sol'nCHO100 g sol'n 1 mL sol'n 1 L sol'n 92.11 g C H O
+7.80 M C H O u u u
+  
+(b)  
+>@22
+2
+2
+238.0 g H O 1m o l  H O 1.159g sol'n 1000 mL sol'nHO100 g sol'n 1 mL sol'n 1 L sol'n 18.02 g H O
+24.4 M H O uu u
+   
+(c)  
+>@22
+2
+383 2
+238.0 g H O 1m o l  H O 1000 g solventHO62.0 g C H O 1kg solvent 18.02 g H O
+34.0  H O uu
+ m 
+ 
+(d) We can determine the moles of C 3H8O3 and H 2O from the above calculations.   
+moles of H 2O = 2.11 mol. 
+moles of C 3H8O3 = 0.673 mol. 
+ 
+383383
+CHO
+383 20.673 mol C H O  0.2420.673 mol C H O 2.11 mol H O  x  
+
+=== PDF PAGE 609 ===
+Chapter 13: Solutions and Their Physical Properties 
+ 6 0 9  (e) 2
+2
+383 22.11 mol H O mol% H O 100 75.8%0.673 mol C H O 2.11 mol H O u   
+ 
+128. (E)   
+(1) Solution with lowe st conductivity: (b) 0.15 m C12H22O11, because it is a non-electrolyte. 
+(2) Lowest boiling point: (d) 0.05 m NaCl, because the molality of the solute is the smallest, 
+making boiling-point elevati on the smallest value. 
+(3) Highest vapor pressure of water:  (d), for the same reason as above. 
+(4) Lowest freezing point: (a), because the mola lity of the solute is the highest (2×0.10 m). 
+ 
+129. (E)  The answer is (c).  It shows solvation of  individual ions by orie nted water molecules. 
+ 
+130. (E)  The answer is (b), because the charge in all species is the same (+1 or -1), but F– is the 
+smallest. 
+ 
+131. (E)  The magnitude of ΔHlattice is larger than the sum of the ΔHhydration  of the individual ions.  
+Since the test tube turns cold, dissolution of NH 4Cl is endothermic, which means that the final 
+energy of the system, the hydration of the individual ions, is less th an the initial energy of the 
+system, which is the lattice energy of the solid. 
+ 
+132. (E)  The answer is (a).  Lowering temperature increases solubility.  
+ 
+133. (E)  The answer is (b), because the HCl dissociat es completely in water to give cations and 
+anions, which are then solvated with water (and are none-volatile). 
+ 
+134. (E)  The answer is (a).  Use Raoult’s law to determine the mole fraction: 
+ CH CH CH61 4 61 4 61 4
+CH61 4
+solute*
+solutePP
+600 mm Hg = 760 mm Hg
+0.789
+10 . 7 8 9 0 . 2 1 1 
+
+ 
+   x
+x
+x
+x 
+ 
+135. ( M )  The answer is (e). 
+MRT3  
+10.312 M 0.08206 L atm K 348 K 8.91 atm
+1.0135 barrP(barr) = 8.91 atm 9.03 barr1 atm3   
+u  
+ 
+136. ( E )  The answer is (c). 
+2
+22
+218.0 g H O10.5 mol H O 189g H O1 mol H Ou  
+23.4mass% 100 11.0%189 23.4 u   
+
+=== PDF PAGE 610 ===
+Chapter 13: Solutions and Their Physical Properties 
+ 
+610  
+137. (M)  Clearly the concept of concentr ation is overarching in this discussion.  It can be broken 
+down into several subtopics: mass percent, volume percent, mass/volume percent, parts per 
+million/trillion, mole fraction/percent, molar ity, molality.  These concepts can be further 
+defined with the more basic te rms of mole, mass and volume. 
+ 
+138. (M) The concept of colligative properties has four major components: boi ling-point elevation, 
+freezing-point depression, vapor pressure lowering,  and osmotic pressure. They are all related 
+to each other by the effects of solute concentration. 
+ 
+
+=== PDF PAGE 611 ===
+611 CHAPTER 14 
+CHEMICAL KINETICS 
+ 
+PRACTICE EXAMPLES 
+ 
+1A (E) The rate of consumption for a reactant is expre ssed as the negative of the change in molarity 
+divided by the time interval. The rate of reaction is expressed as the rate of consumption of a 
+reactant or production of a product divide d by its stoichiometric coefficient. 
+rate of consumption of A >@51 A 0.3187 M 0.3629 M 1min= = = 8.93 10  M s8.25 min 60 s t 'uu' 
+rate of reaction = rate of consumption of A y2 = 51
+51 8.93 10  M s4.46 10  M s2
+ u u  
+ 
+1B (E) We use the rate of reaction of A to determine the rate of formation of B, noting from the 
+balanced equation that 3 moles of  B form (+3 moles B) when 2 moles of A react (–2 moles A). 
+(Recall that “M” means “moles per liter.”) 
+41 0.5522 M A 0.5684 M A 3moles Brateof B formation= 1.62 10 M s60s 2m o l e s A2.50 min1minu uu 
+ 
+2A (M)  
+ ( a )  The 2400-s tangent line intersects the 1200-s ve rtical line at 0.75 M and reaches 0 M at 
+3500 s. The slope of that tangent line is thus 
+41 0 M 0.75 Mslope = = 3.3 10  M s =  instantaneous rate3500 s 1200 s u  of reaction   
+  The instantaneous rate of 41reaction = 3.3 10  M su . 
+ 
+(b) >@>@22 22 At 2400 s, H O = 0.39 M.  At 2450 s, H O = 0.39 M +  rate tu' 
+>@41 1
+22 22 At 2450 s, H O = 0.39 M + 3.3 10 mol H O  L s 50s
+=0 . 3 9  M 0 . 0 1 7  M=0 . 3 7  M u u
+ªº¬¼ 
+ 
+2B (M) With only the data of Table 14.2 we can use only the reaction rate during the first 400 s, 
+>@41
+22 H O / = 15.0 10  M s t' ' u , and the initial concentration, >@22 0HO = 2 . 3 2 M.  
+We calculate the change in >@22 H O  and add it to >@22 0 H O  to determine >@22 100 H O . 
+ 
+>@41
+22 22HO = r a t e  o f  r e a c t i o n  o f  HO = 1 5 . 0 1 0  M  s 1 0 0s = 0 . 1 5  M t'u 'u u 
+ 
+>@>@>@22 22 22 100 0HO = HO + HO = 2 . 3 2  M + 0 . 1 5  M = 2 . 1 7  M '  
+ 
+ 
+This value differs from the value of 2.15 M determined in text Example 14-2b because 
+the text used the initial rate of reaction 4117.1 10  M su , which is a bit faster than the average 
+rate over the first 400 seconds. 
+
+=== PDF PAGE 612 ===
+Chapter 14: Chemical Kinetics 
+612 3A (M) We write the equation for each rate, divide them into each other, and solve for n. 
+
+51
+12 5 1
+51
+22 5 2=N O = 5 . 4 5 1 0  M  s = 3 . 1 5  M
+=N O = 1 . 3 5 1 0  M  s = 0 . 7 8  Mn n
+n nRk k
+Rk k ªº
+«»¬¼
+ ªº
+«»¬¼uu
+uu 
+
+51
+25 11
+51
+2 25 2NO 3.15 M 5.45 10  M s 3.15== 4 . 0 4 = = = = 4 . 0 41.35 10  M s 0.78 0.78 M NOn n n
+n
+nnk k R
+R k k ªº
+«»¬¼
+ªº
+«»¬¼u u §·
+¨¸u ©¹ u 
+We kept an extra significant figure (4) to emphasize that the value of n=1.   T h u s ,   t h e  r e a c t i o n  i s  
+first-order in25 N O .  
+ 
+3B (E) For the reaction, we know that  >@21 2
+22 4 rate =  HgCl C O kªº¬¼. Here we will compare Expt. 4 to 
+Expt. 1 to find the rate. 
+
+21 2 2
+22 44 4
+22 511 2122 4HgCl C O 0.025 M 0.045 M rate rate== = 0 . 0 2 1 4 =rate 1.8 10  M min 0.105 M 0.150 M HgCl C Ok
+kªº
+«»¬¼
+ ªºªº«»«»¬¼¬¼ªºu ¬¼
+u u 
+The desired rate is 51 7 1
+4rate = 0.0214 1.8 10  M min = 3.9 10  M min uu u . 
+ 
+4A (E) We place the initial concentrations and the in itial rates into the rate law and solve fork. 
+>@>@ 2 2 21rate = A B = 4.78 10  M s = 1.12 M 0.87 M kku   
+ 
+21
+22 1
+24.78 10  M s= = 4.4 10  M  s
+1.12 M 0.87 Mk uu  
+ 
+4B (E) We know that 21 2
+22 4 rate = HgCl C O kªº
+«»¬¼ªº¬¼ and k=7 . 6 1 032 1u Mm i n.   
+Thus, insertion of the star ting concentrations and the k value into the rate law yields:  
+ 12 32 1 7 1Rate = 7.6 10  M min 0.050 M 0.025 M = 2.4 10  M min  uu  
+ 
+5A (E) Here we substitute directly into the integrated rate law equation. 
+ln A ln A  s  s lntkt=+ = 3 . 0 2 1 0 3 2 5 +2 . 8 0 = 0 . 9 8 2 + 1 . 0 3 0 = 0 . 0 4 8031 u u b g  
+A e  Mt== 1 . 000 4 8 
+ 
+5B (M) This time we substitute the provided values into text Equation 14.13. 
+22 41
+22 0HO 1.49 M 0.443ln = = 600 s = ln = 0.443 = = 7.38 10  sHO 2 . 3 2  M 6 0 0  stkt k kªº
+«»¬¼
+ªº
+«»¬¼ u  u 
+22 22 0Now we choose H O = 1.49 M,  H O = 0.62, = 1800 s 600 s = 1200 sttªº ªº
+«» «»¬¼ ¬¼   
+22 41
+22 0HO 0.62 M 0.88ln = = 1200 s = ln = 0.88 = = 7.3 10  sHO 1 . 4 9  M 1 2 0 0  stkt k kªº
+«»¬¼
+ªº
+«»¬¼ u  u 
+These two values agree within the limits of the experimental error and th us, the reaction is first-
+order in [H 2O2]. 
+
+=== PDF PAGE 613 ===
+Chapter 14: Chemical Kinetics 
+ 6 1 3  6A (M) We can use the integrated ra te equation to find the ratio of the final and initial 
+concentrations. This ratio equals  the fraction of the initial con centration that remains at time t. 
+ 
+>@>@
+>@
+>@>@31
+0
+04 4 3
+0
+0Aln = = 2.95 10  s 150 s = 0.443A
+A=  = 0.642; 64.2% of A  remains.At
+tkt
+e
+u u 
+ 
+ 
+6B (M) After two-thirds of the sample has decomp osed, one-third of the sample remains. 
+Thus22 22 0HO = HO 3tªº ªº
+«» «»¬¼ ¬¼y, and we have  
+ 
+22 22 41 0
+22 22 00
+3
+41HO HO 3ln = = ln =l n 1 /3 = 1 . 0 9 9= 7 . 3 0 1 0  sHO HO
+1.099 1 min= =1 . 5 1 1 0  s =2 5 . 1  m i n7.30 10  s 60 stkt t
+tªº ªº
+«» «»¬¼ ¬¼
+ªº ªº
+«» «»¬¼ ¬¼
+y  u
+uuu 
+ 
+7A (M) At the end of one half-life the pressure of DTBP will have been halved, to 400 mmHg. At the 
+end of another half-life, at 160 min, the pressure of DTBP will have halv ed again, to 200 mmHg. 
+Thus, the pressure of DTBP at 125 min will be intermediate between the pressure at 
+80.0 min (400 mmHg) and that at  160 min (200 mmHg). To obtain an exact answer, first we 
+determine the value of the rate constant from the half-life. 
+ 
+
+1
+1/2
+DTBP 1
+DTBP 00.693 0.693== = 0 . 0 0 8 6 6 m i n80.0 min
+ln = = 0.00866 min 125 min = 1.08tkt
+P
+ktP
+ u  
+ 
+
+
+ DTBP 10 8
+DTBP 0
+DTBP DTBP 0= =0 . 3 4 0
+=0 . 3 4 0 =0 . 3 4 0 8 0 0  m m H g=2 7 2  m m H gt
+tPeP
+PP
+uu 
+ 
+7B (M)  
+ ( a )  We use partial pressures in place of concentr ations in the integrated first-order rate 
+equation. Notice first that more than 30 half-liv es have elapsed, and t hus the ethylene oxide 
+pressure has declined to at most 0.5 = 9 1030 10 b g u of its initial value.    
+  41 22 1 10 30 30
+0 03600 sln = = 2.05 10  s 30.0 h = 22.1 =  = 2.4 101 hPPkt ePP  u u u  u 
+ 
+  10 10 7
+30 0 =2 . 4 1 0  = 2 . 4 1 0 7 8 2  m m H g  = 1 . 9 1 0  m m H gPP uu uu u  
+ 
+
+=== PDF PAGE 614 ===
+Chapter 14: Chemical Kinetics 
+614 (b) P ethylene oxide  initially 782 mmHg o 1.9 u 107 mmHg (~ 0).  Essentially all of the ethylene 
+oxide is converted to CH 4 and CO.  Since pressure is proportional to moles, the final 
+pressure will be twice the initial pressure (1 mole gas o 2 moles gas;  
+ 782 mmHg o 1564 mmHg).  The final pressure will be 1.56 u 103 mmHg. 
+ 
+8A (D) We first begin by looking for a cons tant rate, indicative of a zero-or der reaction. If the rate is 
+constant, the concentration will decrease by the same quantity during the same time period. If we 
+choose a 25-s time period, we note th at the concentr ation decreases  0.88 M 0.74 M =  0.14 M   
+during the first 25 s, 0.74 M 0.62 M = 0.12 M  during the second 25 s, 
+0.62 M 0.52 M =  0.10 M  during the third 25 s, and  0.52 M 0.44 M = 0.08 M   during the 
+fourth 25-s period. This is hardly  a constant rate and we thus conclude that  the reaction is not 
+zero-order. 
+ 
+We next look for a constant half-life, indicative of a first-order reaction. The initial concentration 
+of 0.88 M decreases to one half of that value,  0.44 M, during the firs t 100 s, indicating a 100-s 
+half-life. The concentration halves again to 0. 22 M in the second 100 s, another 100-s half-life. 
+Finally, we note that the concentration halves also  from 0.62 M at 50 s to 0.31 M at 150 s, yet 
+another 100-s half-life. The rate is established as first-order. The rate constant is 
+kt=0.693=0.693
+100=6 . 9 3 1 0
+1/231
+ s s u. 
+That the reaction is first-order is made apparent by the fact that th e ln[B] vs time plot is a straight 
+line with slope = - k (k = 6.85 u 103 s1).   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Plot of [B] 
+versus Time 
+0.150.250.350.450.550.650.750.85
+01 0 0 2 0 0 3 0 0
+Time(s)[B] (M)Plot of ln([B]) versus 
+Time
+-2-1.8-1.6-1.4-1.2-1-0.8-0.6-0.4-0.20
+02 0 0 4 0 0
+Time(s)ln([B])Plot of 1/[B] versus 
+Time
+1234567
+01 0 0 2 0 0 3 0 0
+Time (s)1/[B] (M-1)
+
+=== PDF PAGE 615 ===
+Chapter 14: Chemical Kinetics 
+ 6 1 5  8B ( D )  We plot the data in three ways to determine the order. (1) A plot of [A] vs. time is linear if 
+the reaction is zero-order. (2) A plot of ln [A] vs . time will be linear if the reaction is first-order. 
+(3) A plot of 1/[A] vs. time will be linear if the reaction is second-order. It is obvious from the 
+plots below that the reaction is  zero-order. The negative of the slope of the line equals 
+3=0 . 0 8 3  M 0 . 2 5 0  M 1 8 . 0 0 m i n = 9 . 2 8 1 0  M / m i nky u (k = 9.30 u 103 M/min using a 
+graphical approach). 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+9A (M) First we compute the value of the rate constant at 75.0 qC with the Arrhenius equation. We 
+know that the activation energy is Ea=1 . 0 6 1 05u J/mol, and that k=3 . 4 6 1 051u s  at 298 K. 
+The temperature of o75.0 C = 348.2  K. 
+ 
+ln ln s J / mol
+ J mol  K  K  Kk
+kkE
+RT Ta 2
+12
+51
+125
+11=3.46 10=11=1.06 10
+8.31451
+298.21
+348.2=6 . 1 4uFHGIKJuFHGIKJ  
+ 
+51 + 6 1 4 51 2 1
+2=3 . 4 6 1 0  s  =3 . 4 6 1 0  s 4 . 6 1 0 =0 . 0 1 6  ske  uu uu u  
+ 
+1/2 10.693 0.693= = = 43 s at 75 C0.016 stkq 
+ 
+9B (M) We use the integrated rate equation to determin e the rate constant, realizing that one-third 
+remains when two-thirds have decomposed.  
+ 
+25 25 0
+25 25 00NO NO 3 1ln = ln = ln = = 1.50 h = 1.099NO NO 3tkt kªº ªº
+«» «»¬¼ ¬¼
+ªº ªº
+«» «»¬¼ ¬¼y   
+ 
+41 1.099 1 h== 2 . 0 3 1 0  s1.50 h 3600 skuu  
+ Plot of [A] 
+versus Time
+y = -0.00930x + 0.2494
+0.070.090.110.130.150.170.190.210.230.25
+01 02 0
+Time (min)[A] (M)Plot of ln([A])
+ versus Time
+-2.5-2.3-2.1-1.9-1.7-1.501 0 2 0
+Time (min)ln([A])Plot of 1/[A] 
+versus Time
+456789101112
+01 0 2 0
+Time (min)1/[A] (M-1)
+
+=== PDF PAGE 616 ===
+Chapter 14: Chemical Kinetics 
+616 Now use the Arrhenius equation to determine the temperature at which the rate constant is 2.04 u 
+104 s1. 
+ 
+ln ln s
+ s J / mol
+ J mol  K  Kk
+kE
+RT T Ta 2
+141
+51
+125
+11
+2=2.04 10
+3.46 10=1 . 7 7=11=1.06 10
+8.31451
+2981 u
+uFHGIKJuFHGIKJ
+   
+1=1
+2981.77 8.3145
+1.06 10=3 . 2 2 1 0 =3 1 1
+21
+531
+2TT K K K  K u
+uu
+ 
+ 
+10A (M) The two steps of the mechanism must add, in  a Hess's law fashion, to produce the overall 
+reaction. 
+ 
+22 22 Overall reaction: CO + NO  CO + NO or  CO + NO  CO + NO o  o  
+ 
+ 32 22 23 Second step: NO + CO  NO + CO or + NO + CO  NO + CO   o  o  
+ 
+First step:      2 +23 NO  NO NO o   
+ 
+ 
+If the first step is the slow step, then it will be the rate-determining step, a nd the rate of that step 
+will be the rate of the reaction, namely, rate of >@2
+12 reaction = NO k .   
+  
+10B ( M )  
+(1) The steps of the mechanism must add, in a Hess's law fashion, to produce the overall reaction. 
+This is done below. The two intermediates, NO F g22bgand F(g), are each produced in one step 
+and consumed in the next one. 
+ 
+Fast:  22 2 2NO g +  F g  NO F gZXYZ   
+Slow:  NO F g NO F g F g22 2 + bg bg bg o   
+Fast:  F g NO g NO F g bg bg bg +22o   
+Net:  2 + 222 2 NO g  F g  NO F gbg bg bg o  
+ 
+(2) The proposed mechanism must ag ree with the rate law. We e xpect the rate-determining step 
+to determine the reaction rate:>@32 2 Rate = NO F k . To eliminate NO F22, we recognize that 
+the first elementary reaction is very fast and will have the same rate forward as 
+reverse: >@>@>@12 2 22 2=N O F =N O F =frRkk R . We solve for the concentration of 
+intermediate: >@>@>@22 1 2 2 2NO F = NO F / kk . We now substitute this expression for NO F22 
+into the rate equation:>@>@13 2 2 2 Rate = / NO F kk k . Thus the predicted rate law agrees with 
+the experimental rate law. 
+
+=== PDF PAGE 617 ===
+Chapter 14: Chemical Kinetics 
+ 6 1 7   
+INTEGRATIVE EXAMPLE 
+ 
+A.  (M) 
+(a) The time required for the fixed ( c) process of souring is three times  as long at 3 °C refrigerator 
+temperature (276 K) as at 20 °C room temperature (293 K). 
+4 aa a 21
+12 1 2
+11
+4
+a 41 41/ 64 h 11 1 1ln ln ln 1.10 (2 . 1 0 1 0 )
+/ 36 4  h 293 K 276 K
+1.10 1.10 8.3145 J mol  K4.4 10  J/mol 44 kJ/mol2.10 10  K 2.10 10  KEE E ct t
+ct t RT T R R
+RE
+
+           u
+u§· §·¨¸ ¨¸©¹ ©¹
+u   u  uu 
+(b) Use the E a determined in part (a) to calculate the souring time at 40 °C = 313 K. 
+4
+a 1 1
+11
+21 2
+11 5 1
+111 4 . 4 1 0  J / m o l 1 1ln 1.15 ln8.3145 J mol  K 313 K 293 K 64 h
+0.317 0.317 64 h 20. h64 hEtt
+tR T T
+tet
+§· u §·       ¨¸ ¨¸©¹ ©¹
+   u  
+ 
+B. ( M )  The species A* is a reactive intermediate.  Let’s deal with this species by using a steady state 
+approximation. 
+ d [ A*]/dt = 0 = k 1[A]2 – k -1[A*][A] – k 2[A*].  Solve for [A*]. k -1[A*][A] + k 2[A*] = k 1[A]2  
+ 2
+1
+-1 2k[ A ][A*] = k[ A ]   k  T h e  r a t e  o f  r e a c t i o n  i s :   R a t e  =  k 2[A*] = 2
+21
+-1 2kk[ A ] k[ A ]   k  
+ At low pressures ([A] ~ 0 and hence k 2 >> k -1[A]), the denominator becomes ~ k 2 and the rate law is 
+ 2
+2 21
+1
+2kk[ A ]Rate =   =  k [A] k  Second-order with respect to [A] 
+ At high pressures ([A] is large and k -1[A] >>  K 2), the denominator becomes ~ k -1[A]  and the rate law 
+is 
+ 2
+21 21
+-1 -1kk[ A ] kk[ A ]Rate =   =   k [A]  k  First-order with respect to [A] 
+ 
+ 
+EXERCISES 
+ 
+Rates of Reactions 
+1. (M) 2A + B o C + 3D [A]
+t''= 6.2 u 104 M s1 
+ (a)  Rate = 1[ A ]
+2t'
+'= 1/2(6.2 u 104 M s1) = 3.1 u 104 Ms1 
+ (b)  Rate of disappearance of B = 1[ A ]
+2t''= 1/2(6.2 u 104 M s1) = 3.1 u 104  Ms1 
+ ( c )   Rate of appearance of D =  3[ A ]
+2t''= 3(6.2 u 104 M s1) = 9.3 u 104  Ms1 
+
+=== PDF PAGE 618 ===
+Chapter 14: Chemical Kinetics 
+618  
+2. (M) In each case, we draw the tangent line to the plotted curve. 
+ ( a )  The slope of the line is >@22 41 HO 1.7 M 0.6 M== 9 . 2 1 0  M  s400 s 1600 s t ' u' 
+ >@22 41 HOreaction rate = = 9.2 10  M st 'u' 
+ 
+(b)  Read the value where the horizontal line [H 2O2] = 0.50 M intersects the curve,  
+ | 2150 s or | 36 minutes 
+ 
+3. (E) >@31 A 0.474 M 0.485 MRate = = = 1.0 10  M s82.4 s 71.5 s t '  u' 
+ 
+4. (M)  
+ ( a )  RateA  M  M
+min min M min ==0.1498 0.1565
+1.00 0.00=0 . 0 0 6 71'
+'
+
+t 
+ RateA  M  M
+min min M min ==0.1433 0.1498
+2.00 1.00=0 . 0 0 6 51'
+'
+
+t 
+ 
+(b) The rates are not equal because , in all except zero-order reac tions, the rate depends on the 
+concentration of reactant. And, of course, as  the reaction proceeds, reactant is consumed 
+and its concentration de creases, so the rate of the reaction decreases. 
+ 
+5. (M)  
+ ( a )  AA A  M  M  M=+ = 0 . 5 8 80 . 0 1 3 = 0 . 5 7 5i' 
+ 
+(b) 'A M  M  M=0 . 5 6 5 0 . 5 8 8 = 0 . 0 2 3  
+>@>@
+20.023 M=A = = 1 . 0  m i n       A2 . 2 1 0  M / m i n
+time = + = 4.40 +1.0 min =5.4 mintt
+tt'''' u
+' 
+ 
+6. (M) Initial concentrations are HgCl2=0 . 1 0 5 M  a n d  CO242=0 . 3 0 0 M.  
+The initial rate of the reaction is 7.1 1051u M min . Recall that the reaction is:  
+2
+22 4 2 2 2 2 HgCl (aq) + C O (aq)  2 Cl (aq) + 2 CO (g) + Hg Cl (aq)o . 
+The rate of reaction equals the rate of disappearance of C O42
+2. Then, after 1 hour, assuming that 
+the rate is the same as the initial rate, 
+ 
+(a)
+  >@2
+5 24 2
+2 2
+24 mol C O 2 mol HgCl 60 minHgCl = 0.105 M 7.1 10 1 h 0.096 M L  s 1 h 1 mol C O
+
+§·u u u u  ¨¸ ©¹ 
+  
+(b)  CO  M mol
+ L min hmin
+ h M42
+25=0 . 3 0 0 7 . 1 1 0 160
+1=0 . 2 9 6uuuFHGIKJ  
+
+=== PDF PAGE 619 ===
+Chapter 14: Chemical Kinetics 
+ 6 1 9  7.    (M)  
+ ( a )   >@>@>@51
+51 5ACRate = = = 1.76 10  M s      2
+C=2 1 . 7 6 1 0  M  s =3 . 5 2 1 0  M / stt
+t
+ ' 'u''
+'uu u' 
+(b)  '
+''
+'u AC M s  Assume this rate is constanttt=2=1 . 7 61 0 .51 
+ >@51 60 sA= 0 . 3 5 8 0  M + 1 . 7 61 0  M  s 1 . 0 0 m i n = 0 . 3 5 7  M1min §·u u u¨¸©¹ 
+(c)
+  >@>@51
+2
+55A=1 . 7 61 0 M  s
+A 0.3500 M 0.3580 M== = 4 . 5 1 0  s1.76 10  M/s 1.76 10  M/st
+t
+'u'
+' 'uu u 
+ 
+8. (M)  
+ ( a )  >@4
+2 4 22 2
+2
+22O 5.7 10  mol H O 1 mol O= 1.00 L soln = 2.9 10  mol O /s1 L soln  s 2 mol H On
+t
+ ' uuu u' 
+(b) '
+'uu u n
+tO  mol O
+ s s
+min mol O min2 4 2 2
+2 =2 . 9 1 060
+1=1 . 7 1 0 /  
+(c) '
+'uuu V
+tO  mol O
+min mL O  at STP
+ mol O mL O  at STP
+min2 2 22
+22
+2=1 . 7 1 022,414
+1=3.8 10 
+ 
+9. ( M )  Notice that, for every 1000 mmHg drop in the pre ssure of A(g), there will be a corresponding 
+2000 mmHg rise in the pressure of B(g) plus a 1000 mmHg rise in th e pressure of C(g). 
+ 
+(a) We set up the calculation with three lines of information below the balanced equation: (1) 
+the initial conditions, (2) the changes that occu r, which are related to each other by reaction 
+stoichiometry, and (3) the final conditions, whic h simply are initial conditions +  changes. 
+A(g)  o 2 B ( g )   +  C ( g )  
+Initial  1000. mmHg  0. mmHg  0. mmHg 
+Changes  –1000. mmHg  +2000. mmHg  +1000. mmHg 
+Final  0. mmHg  2000. MmHg  1000. mmHg 
+ 
+Total final  pressure mmHgmmHgmmHg mmHg=0 . +2 0 0 0 . + 1 0 0 0 . =3 0 0 0 .  
+ 
+(b)   A ( g )   o 2 B ( g )   +  C ( g )  
+Initial  1000. mmHg  0. mmHg  0. mmHg 
+Changes  –200. mmHg  +400. mmHg  +200. mmHg 
+Final  800 mmHg  400. mmHg  200. mmHg 
+ 
+Total  pressure  mmHgmmHgmmHg mmHg=8 0 0 . +4 0 0 . +2 0 0 . =1 4 0 0 .  
+ 
+
+=== PDF PAGE 620 ===
+Chapter 14: Chemical Kinetics 
+620 10. (M)  
+ ( a )  We will use the ideal gas law to determine N O25 pressure 
+  25
+251m o lN O L atm1.00 g× ×0.08206 × 273 + 65  K
+108.0 g mol K nRT 760 mmHgP{N O } = = ×  = 13 mmHg
+V1 5  L1  a t m §·
+¨¸©¹ 
+(b) After 2.38 min, one half-life passes.  The initial pressure of NO25 decreases by half to 6.5 
+mmHg. 
+(c) From the balanced chemical equa tion, the reaction of 2 mol N O g25bg produces 4 mol 
+NO g2bg and 1 mol O g2bg. That is, the consumption of 2 mol of reactant gas produces 5 
+mol of product gas. When measured at the sa me temperature and confined to the same 
+volume, pressures will behave as amounts: th e reaction of 2 mmHg of  reactant produces 5 
+mmHg of product. 
+total 25 25(product)
+initially) r eactant) (reactant)
+(reactant)((5 mmHg=1 3  m m H g  N O 6 . 5  m m H g  N O + 6 . 5  m m H g
+2 mmHgP u§·
+¨¸©¹
+(13 6.5 16) mmHg 23 mmHg    
+ 
+Method of Initial Rates 
+ 
+11. (M)  
+ ( a )  From Expt. 1 to Expt. 3, [A] is doubled, while [B] remains fixed.  This causes the rate to 
+increases by a factor of  6.75 10
+3.35 10=2 . 0 1 241
+41u
+u|
+ M s
+ M s. 
+  T h u s ,  t h e  r e a c t i o n  i s  f i r s t - o r d e r  w i t h  r e s p e c t  t o  A .  
+  F r o m  E x p t .  1  t o  E x p t .  2 ,  [ B ]  d o u b l e s ,  w h i l e  [A] remains fixed.  This causes the rate to 
+increases by a factor of 1.35 10
+3.35 10=4 . 0 3 431
+41u
+u|
+ M s
+ M s. 
+  T h u s ,  t h e  r e a c t i o n  i s  s e c o n d - o r d e r  w i t h  r e s p e c t  t o  B .  
+(b) Overall reaction order   order with respect to A  order with respect to B = 1  2 = 3.  The 
+reaction is third-order overall. 
+(c) Rate  M s  M  M =3 . 3 5 1 0 = 0 . 1 8 5 0 . 1 3 341 2ukb gb g  
+k=3.35 10
+0.185 0.133=0 . 1 0 241
+221 u
+  M s
+ M  M M  sb gb g 
+ 
+12. (M) From Expt. 1 and Expt. 2 we see that [B] rema ins fixed while [A] triples. As a result, the 
+initial rate increases from 4.2 103u M/min to 1.3 102u M/min, that is, the initial reaction rate 
+triples. Therefore, the reaction is first-order in [A]. Between Expt. 2 and Expt. 3, we see that [A] 
+doubles, which would double the rate , and [B] doubles. As a conse quence, the initial rate goes 
+from 1.3 102u M/min to 5.2 102u M/min, that is, the rate quadruples. Since an additional 
+doubling of the rate is due to the change in [B ], the reaction is first- order in [B]. Now we 
+determine the value of the rate constant. 
+
+=== PDF PAGE 621 ===
+Chapter 14: Chemical Kinetics 
+ 6 2 1  Rate A B Rate
+ A B M min
+ M  M L mol min == =5.2 10 /
+3.00 3.00=5 . 8 1 0112
+31 1kku
+uu
+  
+The rate law is Rate  L mol min A B = 5.8 1031 1 11u ch . 
+ 
+13. (M) From Experiment 1 to 2, [NO] remains constant while [Cl 2] is doubled.  At the same time the 
+initial rate of reaction is found to double.  Thus, the reaction is first-order with respect to [Cl 2], 
+since dividing reaction 2 by reaction 1 gives 2 = 2x when x = 1.  From Experiment 1 to 3, [Cl 2] 
+remains constant, while [NO] is doubled, resulting in  a quadrupling of the ini tial rate of reaction.  
+Thus, the reaction must be second-order in [ NO], since dividing reacti on 3 by reaction 1 gives 
+4 = 2x when x = 2.  Overall the reaction is third-order:  Rate = k [NO]2[Cl 2].  The rate constant 
+may be calculated from any one of the expe riments.  Using data from Exp. 1,  
+ 
+k = 51
+22
+2Rate 2.27 10 M s=[NO] [Cl ] (0.0125 M) (0.0255M)u= 5.70 M2 s1 
+ 
+ 
+14. (M)  
+ ( a )  From Expt. 1 to Expt. 2, [B] remains consta nt at 1.40 M and [C] remains constant at 
+1.00 M, but [A] is halvedu0.50b g. At the same time the rate is halved u0.50b g. Thus, the 
+reaction is first-order with respect to A, since 0.50 = 0.50x whenx=1.  
+ F r o m  E x p t .  2  t o  E x p t .  3 ,  [ A ]  r e m a i n s  c o n s tant at 0.70 M and [C] remains constant at 
+1.00 M, but [B] is halvedu0.50b g, from 1.40 M to 0.70 M. At the same time, the rate is 
+quartered u0.25b g. Thus, the reaction is second-order with respect to B, since 0.50 = 0.25y 
+wheny=2.  
+ 
+ F r o m  E x p t .  1  t o  E x p t .  4 ,  [ A ]  r e m a i n s  c o n s tant at 1.40 M and [B] remains constant at 
+1.40 M, but [C] is halved0.50u, from 1.00 M to 0.50 M. At the same time, the rate is 
+increased by a factor of 2.0.  
+ 
+43 2 2 1111Rate = 16 Rate = 16 Rate = 4 Rate = 4 Rate = 2 Rate .42ªºuu u«»¬¼ 
+ 
+Thus, the order of the reaction with respect to C is 1, since 0.5 =2.0z when  z=1. 
+ 
+ 
+(b)
+   
+  12 1
+12 1
+5
+1+2 1 2
+12 1 12 111 1 1
+11 1 22 2 41.40 M 1.40 M 1.00 Mrate = 0.70 M 0.70 M 0.50 M =222
+111.40 M 1.40 M 1.00 M = rate = rate = rate22kk
+k
+
+
+ §· §· §·
+¨¸ ¨¸ ¨¸©¹ ©¹ ©¹
+§· §· ¨¸ ¨¸©¹ ©¹ 
+This is based on   12 1
+1rate = 1.40 M 1.40 M 1.00 M k 
+ 
+
+=== PDF PAGE 622 ===
+Chapter 14: Chemical Kinetics 
+622 First -Order Reactions 
+ 
+15. (E)  
+ ( a )  TRUE The rate of the reaction does decrease as more and more of B and C are formed, 
+but not because more and more of B and C are formed. Rather, the rate decreases 
+because the concentration of A must decr ease to form more and more of B and 
+C. 
+ 
+(b) FALSE The time required for one half of substance A to react—the half-life—is 
+independent of the quantity of A present. 
+ 
+16. (E) 
+ ( a )  FALSE For first-order reactions, a plot of ln [A] or log [A] vs. time yields a straight line. 
+A graph of [A] vs. time yields a curved line. 
+ ( b )  TRUE The rate of formation of C is relate d to the rate of disappearance of A by the 
+stoichiometry of the reaction. 
+ 
+17. (M)  
+ ( a )  Since the half-life is 180 s, afte r 900 s five half-lives have elap sed, and the original quantity 
+of A has been cut in half five times. 
+  final quantity of A  initial =0 . 55b g u quantity of A initial =0 . 0 3 1 2 5u quantity of A 
+  A b o u t  3 . 1 3 %  o f  t h e  o r i g i n a l  q u a n t i t y  o f  A  r e m a i n s  u n r e a c t e d  a f t e r  9 0 0  s .  
+  o r  
+  M o r e  g e n e r a l l y ,  w e  w o u l d  calculate the value of the rate constant, k, using  
+  1
+1/2ln  2 0.693== = 0 . 0 0 3 8 5  s180 skt    N o w  l n ( %  u n r e a c t e d )  =  - k t  =  - 0 . 0 0 3 8 5  s-1×(900s) = -
+3.465  
+  ( %  u n r e a c t e d )  =  0 . 0 3 1 3  ×  1 0 0 %  =  3.13% of the original quantity. 
+ 
+(b) Rate A  s  M  M / s == 0 . 0 0 3 8 5 0 . 5 0 = 0 . 0 0 1 9 31ku  
+ 
+18. (M)  
+ ( a )  The reaction is first-order, thus 
+>@>@1
+0A 0.100 M 2.08ln = = ln = 54 min( )      = = 0.0385 minA0 . 8 0 0  M 5 4  m i ntkt kk    
+  W e  m a y  n o w  d e t e r m i n e  t h e  t i m e  r e q u i r e d to achieve a concentration of 0.025 M 
+  >@>@1
+1
+0A 0.025 M 3.47ln = = ln = 0.0385 min ( )   =  = 90. minA0 . 8 0 0  M 0 . 0 3 8 5 m i ntkt tt
+ 
+(b) Since we know the rate constant  for this reaction (see above), 
+>@1 14Rate = A = 0.0385 min 0.025 M = 9.6 10 kuu M/min 
+ 
+
+=== PDF PAGE 623 ===
+Chapter 14: Chemical Kinetics 
+ 6 2 3  19. ( M )  
+ ( a )  The mass of A has decreased to one fourth of  its original value, from 1.60 g to  
+0.40 g. Since  1
+4=1
+21
+2u, we see that two half-lives have elapsed.  
+  Thus, 2 = 381/2ut min,  or t1/2=1 9 m i n.  
+ (b) >@>@11
+1/2
+0A 0.693=0 . 6 9 3 / = =0 . 0 3 6m i n    l n = = 0 . 0 3 6m i n 6 0m i n= 2 . 219 min Atkt ktu   
+>@>@>@ >@22
+0
+0A= e =0 . 1 1 o r A = A  = 1 . 6 0  g  A 0 . 1 1 =0 . 1 8  g  AAkt t
+teu  
+ 
+20. (M) 
+ ( a )  >@>@1
+0A 0.632 M 0.256ln = = ln = 0.256      = = 0.0160 minA0 . 8 1 6  M 1 6 . 0 m i ntkt k    
+(b) 1/2 10.693 0.693== = 4 3 . 3  m i n0.0160  mintk 
+ 
+(c) We need to solve the integrated ra te equation to find the elapsed time. 
+ 
+>@
+>@1
+0A 0.235 Mln = = ln = 1.245 = 0.0160 minA0 . 8 1 6  Mtkt t  u   
+11.245= =7 7 . 8m i n0.0160 mint 
+ 
+(d) lnA
+A0=kt becomes >@>@0A=Akte which in turn becomes 
+>@>@1
+060 minA=A  = 0 . 8 1 6  M e x p 0 . 0 1 6 0 m i n 2 . 5  h = 0 . 8 1 6 0 . 0 9 0 7 = 0 . 0 7 4  M
+1 hkteu u u§·¨¸©¹ 
+ 
+21. ( M )  We determine the value of the first-order rate constant and from that we can calculate the 
+half-life. If the reactant is 99% decomposed in 137 min, then only 1% (0.010) of the initial 
+concentration remains. 
+>@>@1
+0A 0.010 4.61ln = = ln = 4.61 = 137min = = 0.0336 minA1 . 0 0 0 1 3 7 m i ntkt k k  u 
+tk1/2 1=0.0693=0.693
+0.0336=2 0 . 6minmin 
+ 
+
+=== PDF PAGE 624 ===
+Chapter 14: Chemical Kinetics 
+624 22. (E) If 99% of the radioactivity of 32P i s  l o s t ,  1 %  ( 0 . 0 1 0 )  o f  t h a t  radioactivity remains. First we 
+compute the value of the rate constant from the half-life. kt=0.693=0.693
+14.3=0 . 0 4 8 5
+1/21
+ d d 
+Then we use the integrated rate equation to determine the elapsed time. 
+ lnA
+AlnA
+A dln  daysttkt tk001==1=1
+0.04850.010
+1.000=9 5   
+ 
+23.    (D) 
+ ( a )  0
+035[A]100ln[A]§·
+¨¸
+¨¸
+¨¸
+©¹= ln(0.35) = kt = (4.81 u 103 min1)t     t = 218 min. 
+  N o t e :  W e  d i d  n o t  n e e d  t o  k n o w  t h e  i n i t i a l  c oncentration of acetoaceti c acid to answer the 
+question. 
+ 
+(b) L e t ’ s  a s s u m e  t h a t  t h e  r e a c t i o n  t a kes place in a 1.00L container.   
+ 1 0 . 0  g  a c e t o a c e t i c  a c i d  u 1 mol acetoacetic acid
+102.090 g acetoacetic acid = 0.09795  mol acetoacetic acid. 
+After 575 min. (~ 4 half lives, hence, we expect ~ 6.25% remains as a rough 
+approximation), use integrated form  of the rate law to find [A] t = 575 min. 
+0[A]ln[A]t§·
+¨¸
+©¹= kt = (4.81 u 103 min1)(575 min) = 2.766  
+0[A]
+[A]t= e2.766 = 0.06293  (~ 6.3% remains)       [A]
+0.09795molest= 0.063   [A] t = 6.2 u103 
+moles.   
+ [A] reacted  = [A] o  [A] t = (0.098  6.2 u 103) moles = 0.092 moles acetoacetic acid.  The 
+stoichiometry is such that for every mole of acetoacetic acid cons umed, one mole of CO 2 
+forms.  Hence, we need to determine the volume of 0.0918 moles CO 2 at 24.5 qC (297.65  
+K) and  748 torr (0.984 atm) by using the Ideal Gas law. 
+V = La tm0.0918mol 0.08206 297.65KKm o l=0.984atmnRT
+P§·
+¨¸©¹= 2.3 L CO 2 
+ 
+24. (M)  
+ ( a )  >@>@41
+0
+3
+41A 2.5 gln = = ln = 3.47 = 6.2 10 sA8 0 . 0  g
+3.47== 5 . 6 1 0  s 9 3  m i n6.2 10  stkt t
+t
+  u
+u|u 
+  W e  s u b s t i t u t e d  m a s s e s  f o r  c o n c e n t r a t i o n s ,  b e c a u s e  t h e  s a m e  s u b s t a n c e  ( w i t h  t h e  s a m e  
+molar mass) is present initially at time ,t and because it is a closed system. 
+ 
+
+=== PDF PAGE 625 ===
+Chapter 14: Chemical Kinetics 
+ 6 2 5  (b) amount O  g N O mol N O
+ g N O mol O
+ mol N O mol O22 525
+252
+252 =7 7 . 51
+108.01
+2=0 . 3 5 9 uu  
+2
+2La t m0.359 mol O 0.08206 (45 273) Kmol K9.56 L O1a t m745 mmHg760 mmHgnRTVPuu 
+   
+u 
+ 
+25. (D)  
+ ( a )  If the reaction is first-order, we will obtain the same value of the rate constant from several 
+sets of data. 
+ >@>@31
+0A 0.497 M 0.188ln = = ln = 100 s = 0.188, = = 1.88 10  sA0 . 6 0 0  M 1 0 0  stkt k k u u  
+ >@>@31
+0A 0.344 M 0.556ln = = ln = 300 s = 0.556, = = 1.85 10  sA0 . 6 0 0  M 3 0 0  stkt k k u u
+ 
+ >@>@31
+0A 0.285 M 0.744ln = = ln = 400 s = 0.744, = = 1.86 10  sA0 . 6 0 0  M 4 0 0  stkt k k u u
+ 
+ >@>@31
+0A 0.198 M 1.109ln = = ln = 600 s = 1.109, = = 1.85 10  sA0 . 6 0 0  M 6 0 0  stkt k k u u
+ 
+ >@>@31
+0A 0.094 M 1.854ln = = ln = 1000 s = 1.854, = = 1.85 10  sA0 . 6 0 0  M 1 0 0 0  stkt k k u u  
+The virtual constancy of the ra te constant throughout the time of the reaction confirms that 
+the reaction is first-order. 
+(b) For this part, we assume that the rate constant  equals the average of the values obtained in 
+part (a). 
+k=1.88 +1.85 +1.86 +1.85
+410 = 1.86 1031 31uu  s  s  
+(c) We use the integrated first-order rate equation: 
+>@>@>@31
+750 0
+1.40
+750 A =  A exp = 0.600 M exp 1.86 10  s 750 s
+ A = 0.600 M e = 0.148 Mkt
+ uu
+ 
+26. (D)  
+ ( a )  If the reaction is first-order, we will obtain the same value of the rate constant from several 
+sets of data. 
+  
+0264 mmHgln = = ln =3 9 0  s = 0 . 1 6 7312 mmHgtPkt kP u, k=0.167
+390=4 . 2 8 1 041
+ s s u 
+  
+0224 mmHgln = = ln =7 7 7  s = 0 . 3 3 1312 mmHgtPkt kP u, k=0.331
+777=4 . 2 6 1 041
+ s s u 
+  
+0187 mmHgln = = ln = 1195 s = 0.512312 mmHgtPkt kP u , k=0.512
+1195=4 . 2 8 1 041
+ s s u 
+
+=== PDF PAGE 626 ===
+Chapter 14: Chemical Kinetics 
+626   
+078.5 mmHgln = = ln = 3155 s = 1.38312 mmHgtPkt kP u , 41 1.38== 4 . 3 7 1 0  s3155 sku 
+  T h e  v i r t u a l  c o n s t a n c y  o f  t h e  r a t e  c o n s t a n t  confirms that the reaction is first-order. 
+ 
+(b) For this part we assume the rate constant  is the average of the values in part 
+(a): 4.3 1041u s . 
+ 
+(c) At 390 s, the pressure of dimethyl ether has dropped to 264 mmHg. Thus, an amount of 
+dimethyl ether equivalent to a pressure of 312 264 =  mmHg  mmHgb g 48 mmHg has 
+decomposed. For each 1 mmHg pressure of di methyl ether that decomposes, 3 mmHg of 
+pressure from the products is produced. Thus, th e increase in the pressu re of the products is 
+34 8 = 1 4 4u  mmHg. The total pressure at  this point is 264 +144 = 408 mmHg mmHg 
+mmHg. Below, this calculation is done in a more systematic fashion: 
+ 
+CH O g32b g bg  o C H g4bg +  H g2bg  + CO g bg 
+ I n i t i a l  3 1 2  m m H g   0  m m H g   0  m m H g  0  m m H g  
+ C h a n g e s  –  4 8  m m H g   +  4 8  m m H g   +  4 8  m m H g  +  4 8  m m H g  
+ F i n a l  2 6 4  m m H g   4 8  m m H g   4 8  m m H g  4 8  m m H g  
+ 
+PP P P Ptotal DME methane hydrogen CO +
+mmHg 48 mmHg 48 mmHg 48 mmHg 408 mmHg=+ +
+264      
+ 
+(d) This question is solved in the same manner as part (c).  The results are summarized below. 
+ 
+CH O g  CH g  H g  CO g
+Initial 312 mmHg 0 mmHg 0 mmHg 0 mmHg
+Changes mmHg mmHg mmHg + 312 mmHg
+Final mmHg mmHg mmHg mmHg
++
+mmHg mmHg mmHg mmHg mmHgtotal DME methane hydrogen CO32 42 +
+312 312 312
+03 1 2 3 1 2 3 1 2
+=+ +
+03 1 23 1 23 1 29 3 6bg b g b g b g b g o
+ 
+     PP P P P 
+(e) We first determine PDME at 1000 s. ln  s  sP
+Pkt1000
+041== 4 . 3 1 0 1 0 0 0 = 0 . 4 3 u u  
+04 3 1000
+1000
+0= =0 . 6 5 = 312 mmHg 0.65 = 203 mmHgPePPu  
+Then we use the same approach as was used for parts (c) and (d) 
+ 
+   34 22
+total DME methane hydrogen CO CH O g  CH g +  H g +  CO g
+Initial 312 mmHg 0 mmHg 0 mmHg 0 mmHg
+Changes 109 mmHg 109 mmHg 109 mmHg 109 mmHg
+Final 203 mmHg 109 mmHg 109 mmHg 109 mmHg
+=+ + +
+= 203 mmHg +109 mmHg +109 mmHPPP P Po
+ 
+g +109 mmHg = 530. mmHg 
+ 
+
+=== PDF PAGE 627 ===
+Chapter 14: Chemical Kinetics 
+ 6 2 7  Reactions of Various Orders 
+ 
+27. (M)  
+(a) Set II is data from a zero-order reaction. We know this because the rate of set II is constant.  
+0.25 M/25  s  M s =0 . 0 1 01. Zero-order reactions have constant rates of reaction. 
+ 
+(b) A first-order reaction has a constant half-life. In set I, the first half-life is slightly less than 
+75 sec, since the concentration decreases by slig htly more than half (from 1.00 M to 0.47 M) 
+in 75 s. Again, from 75 s to 150 s the concentr ation decreases from 0.47 M to 0.22 M, again 
+by slightly more than half, in a time of 75 s. Finally, two half-lives should see the 
+concentration decrease to one-fourth of its initial value. This, in fact, is what we see.  From 
+100 s to 250 s, 150 s of elapsed time, the con centration decreases from  0.37 M to 0.08 M, 
+i.e., to slightly less than one-fourth of its ini tial value. Notice that we cannot make the same 
+statement of constancy of half-life for set III. The first half-life is 100 s, but it takes more 
+than 150 s (from 100 s to 250 s) for [A] to again decrease by half. 
+ 
+(c) For a second-order reaction, 1/ 1/ =0AAtkt. For the initial 100 s in set III, we have 
+11 1 11= 1.0 L mol = 100 s,    = 0.010 L mol  s0.50 M 1.00 Mkk  
+For the initial 200 s, we have 
+11 1 11= 2.0 L mol = 200 s,    = 0.010 L mol  s0.33 M 1.00 Mkk  
+Since we obtain the same value of the rate constant using the e quation for second-order 
+kinetics, set III must be second-order. 
+ 
+28. (E) For a zero-order reaction (set II), the slope equals the rate constant:  
+>@=A / = 1 . 0 0  M / 1 0 0  s = 0 . 0 1 0 0  M / skt' '  
+ 
+29. ( M )  Set I is the data for a first-order reaction; we can analyze those items of data to determine the 
+half-life. In the first 75 s, the concentration decr eases by a bit more than half. This implies a half-
+life slightly less than 75 s, perhaps 70 s. This is consistent with the other time periods noted in the 
+answer to Review Question 18 (b) and also to the f act that in the 150-s interval from 50 s to 200 s, 
+the concentration decreases from 0.61 M to 0.14 M, which is a bit more than a factor-of-four 
+decrease. The factor-of-four decrease, to one-fourth of the initial value, is what we would expect 
+for two successive half-lives. We can determin e the half-life more accu rately, by obtaining a 
+value of k from the relation >@>@0ln A / A =tkt followed by tk1/2=0 . 6 9 3/   For instance, 
+ln(0.78/1.00) = - k (25 s);  
+k = 9.94  ×10-3 s-1.  Thus, t1/2 = 0.693/9.94  ×10-3 s-1 = 70 s. 
+ 
+30. (E) We can determine an approximate initial rate by using data from the first 25 s. 
+>@1 A 0.80 M 1.00 MRate = = = 0.0080 M s25 s 0 s t' ' 
+ 
+
+=== PDF PAGE 628 ===
+Chapter 14: Chemical Kinetics 
+628 31. (M) The approximate rate at 75 s can be taken as the rate over the time period from 50 s to 100 s. 
+(a) RateA  M  M
+ s  s M sII==0.00 0.50
+100 50=0 . 0 1 01'
+'
+
+t 
+ 
+(b) RateA  M  M
+ s  s M sI==0.37 0.61
+100 50=0 . 0 0 4 81'
+'
+
+t 
+ 
+(c) RateA  M  M
+ s  s M sIII==0.50 0.67
+100 50=0 . 0 0 3 41'
+'
+
+t 
+Alternatively we can use [A] at 75 s (the  values given in the table) in the 
+relationship Rate A =km, where m=0,  1 ,  o r  2 .  
+(a) 0 11
+IIRate = 0.010 M s 0.25 mol/L = 0.010 M su  
+ 
+(b) 1
+1/2 Since 70s,  0.693 / 70s 0.0099s tk     
+11 1
+IRate 0.0099 (0.47 mol/L) 0.0047 Ms s u   
+ 
+(c) 2 11 1
+IIIRate = 0.010 L mol  s 0.57 mol/L = 0.0032 M s u  
+ 
+ 
+32. (M) We can combine the approximate rates from Exercise 31, with the fact that 10 s have 
+elapsed, and the concentration at 100 s. 
+(a) >@IIA= 0 . 0 0  M      T h e r e  i s  n o  r e a c t a n t  l e f t  a f t e r  1 0 0  s .  
+ 
+(b) AA  s  r a t e  M  s  M  s  MI=1 0 = 0 . 3 7 1 0 0 . 0 0 4 7 = 0 . 3 21001u u bg c h  
+ 
+(c) AA  s  r a t e  M  s  M  s  MIII=1 0 = 0 . 5 0 1 0 0 . 0 0 3 2 = 0 . 4 71001u u bg c h  
+ 
+33. (E) Substitute the given values into the rate  equation to obtain the rate of reaction. 
+Rate A B  M min  M  M  M min == 0 . 0 1 0 3 0 . 1 1 6 3 . 8 3 = 1 . 3 9 1 0 /20 11 20 4k u ch bg b g  
+ 
+34. (M)  
+ ( a )  A first-order reaction has a consta nt half-life. Thus, half of the initial concentration remains 
+after 30.0 minutes, and at the end of another half-life—60.0 minutes total—half of the 
+concentration present at 30.0 minutes will have  reacted: the concentra tion has decreased to 
+one-quarter of its initial value.  Or, we could say that the reac tion is 75% complete after two 
+half-lives—60.0 minutes. 
+ 
+ ( b )  A zero-order reaction proceeds at a constant rate. Thus, if the reaction is 50% complete in 
+30.0 minutes, in twice the time—60.0 minutes—the reaction will be 100% complete. (And 
+in one-fifth the time—6.0 minutes—the reacti on will be 10% complete. Alternatively, we 
+can say that the rate of re action is 10%/6.0 min.) Theref ore, the time required for the 
+reaction to be 75% 60.0  mincomplete = 75% = 45 min.100%u  
+ 
+ 
+
+=== PDF PAGE 629 ===
+Chapter 14: Chemical Kinetics 
+ 6 2 9  35. (M)  For reaction: HI(g) o 1/2 H 2(g)  1/2 I 2(g) (700 K) 
+ 
+Time 
+(s) [HI] (M) ln[HI] 1/[HI](M1)
+0 1.00 0 1.00 
+100 0.90 0.105 1.11 
+200 0.81 0.211 1.235  
+300 0.74 0.301 1.35 
+400 0.68 0.386 1.47 
+ 
+From data above, a plot of 1/[HI] vs. t yields  
+a straight line.  The r eaction is second-order  
+in HI at 700 K.  Rate = k[HI]2.  The slope of  
+the line = k = 0.00118 M1s1 
+ Plot of 1/[HI] vs time
+y = 0.00118x + 0.997
+1.001.201.401.60
+02 5 0 5 0 0
+Time(s)1/[HI] (M-1)
+ 
+ 
+36. (D)  
+ ( a )  We can graph 1/[ArSO 2H] vs. time and obtain a straight  line. We can also graph [ArSO 2H] 
+vs. time and ln([ArSO 2H]) vs. time to demonstrate that th ey do not yield a straight line. 
+Only the plot of 1/[ArSO 2H] versus time is shown. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+  T h e  l i n e a r i t y  o f  t h e  l i n e  i n d i c a t e s that the reaction is second-order. 
+ 
+(b) We solve the rearranged integrated second-orde r rate law for the rate  constant, using the 
+longest time interval.     11=11 1=
+00AA AAttkttk FHGIKJ 
+11 11 1== 0 . 1 3 7  L  m o l m i n300 min 0.0196 M 0.100 Mk §· ¨¸©¹ 
+ 
+(c) We use the same equation as in part (b), but solved for t, rather than k. 
+>@>@11
+011 1 1 1 1== = 7 3 . 0 m i nAA 0 . 1 3 7  L  m o l m i n 0 . 0 5 0 0  M 0 . 1 0 0  Mttk§· §·¨¸ ¨¸ ¨¸©¹ ©¹     
+y = 0.137x + 9.464
+1050
+05 0 1 0 0 1 5 0 2 0 0 2 5 0 3 0 0
+Time (min) 1/[ArSO 2H] (M-1) Plot of 1/[ArSO 2H] versus Time 
+
+=== PDF PAGE 630 ===
+Chapter 14: Chemical Kinetics 
+630 (d) We use the same equation as in part (b), but solve for t, rather than k. 
+>@>@11
+011 1 1 1 1== = 2 1 9 m i nAA 0 . 1 3 7  L  m o l m i n 0 . 0 2 5 0  M 0 . 1 0 0  Mttk§· §·¨¸ ¨¸ ¨¸©¹ ©¹ 
+ 
+(e) We use the same equation as in part (b), but solve for t, rather than k. 
+>@>@11
+011 1 1 1 1== = 1 3 6  m i nAA 0 . 1 3 7  L  m o l m i n 0 . 0 3 5 0  M 0 . 1 0 0  Mttk§· §·¨¸ ¨¸ ¨¸©¹ ©¹ 
+ 
+37. (M)  
+ ( a )  Plot [A] vs t, ln[A] vs t, and 1/[A] vs t and see which yields a straight line. 
+ y = -0.0050x + 0.7150
+R2 = 1.0000
+00.10.20.30.40.50.60.70.8
+01 50Time(s)[A] (mol/L)y = -0.0191x 
+- 0.1092
+R2 = 0.9192
+-3.5-3-2.5-2-1.5-1-0.50
+01 50
+Time(s)ln[A] 
+y = 0.1228x 
+       - 0.9650
+R2 = 0.7905
+05101520
+01 5 0Time(s)1/[A] 
+ 
+Clearly we can see that the reaction is zero-order in reactant A with a rate constant of 5.0 ×10-3. 
+ 
+ 
+(b) The half-life of this reaction is the time needed  for one half of the initial [A] to react.  
+Thus, >@A= 0 . 7 1 5  M 2 = 0 . 3 5 8'y M and t1/2 3=0.358
+5.0 10=7 2 M
+ M / s u s. 
+ 
+
+=== PDF PAGE 631 ===
+Chapter 14: Chemical Kinetics 
+ 6 3 1  38. (D)  
+ ( a )  We can either graph 1/46CH  v s .  t i m e  a n d  o b t a i n  a  s t r a i g h t  line, or we can determine the 
+second-order rate constant from several data points. Then, if k indeed is a constant, the 
+reaction is demonstrated to be second-order. We  shall use the second te chnique in this case. 
+First we do a bit of algebra. 
+  11=11 1=
+00AA AAttkttk FHGIKJ 
+  k=1
+12.181
+0.01441
+0.0169=0 . 8 4 311
+min  M  M L mol min FHGIKJ 
+  k=1
+24.551
+0.01241
+0.0169=0 . 8 7 511
+min  M  M L mol min FHGIKJ 
+  k=1
+42.501
+0.01031
+0.0169=0 . 8 9 211
+min  M  M L mol min FHGIKJ 
+  k=1
+68.051
+0.008451
+0.0169=0 . 8 7 011
+min  M  M L mol min FHGIKJ 
+  T h e  f a c t  t h a t  e a c h  c a l c u l a t i on generates similar values for the rate constant indicates that 
+the reaction is second-order. 
+  (b) The rate constant is the average of the values obtained in part (a). 
+11 11 0.843 + 0.875 + 0.892 + 0.870= L  m o l m i n = 0 . 8 7  L  m o l m i n4k  
+ 
+(c) We use the same equation as in part (a), but solve for t, rather thank. 
+>@>@2
+11
+011 1 1 1 1== = 2 . 0 1 0 m i nAA 0 . 8 7 0  L  m o l m i n 0 . 0 0 4 2 3  M 0 . 0 1 6 9  Mttk§· §· u¨¸ ¨¸ ¨¸©¹ ©¹ 
+ 
+(d) We use the same equation as in part (a), but solve for t, rather thank. 
+>@>@2
+11
+011 1 1 1 1== = 1 . 6 1 0 m i nAA 0 . 8 7 0  L  m o l m i n 0 . 0 0 5 0  M 0 . 0 1 6 9  Mttk§· §· u¨¸ ¨¸ ¨¸©¹ ©¹ 
+ 
+39. (E)  
+ ( a )  >@A 1.490 M 1.512 Minitial rate = = =+ 0 . 0 2 2  M/m i n1.0 min 0.0 min t' ' 
+  >@A 2.935 M 3.024 Minitial rate = = = +0.089 M / min1.0 min 0.0 min t' ' 
+ 
+(b) When the initial concentration is doubledu2.0b g, from 1.512 M to 3.024 M, the initial rate 
+quadruples u4.0b g. Thus, the reaction is sec ond-order in A (since 2.0 = 4.0x when x=2) .  
+ 
+
+=== PDF PAGE 632 ===
+Chapter 14: Chemical Kinetics 
+632 40. (M)  
+ ( a )  Let us assess the possibilities. If the reaction is zero-order, its rate will be constant. During 
+the first 8 min, the rate is 0.60 M 0.80 M /8 min = 0.03 M/min . Then, during the first 
+24 min, the rate is 0.35 M 0.80 M /24 min = 0.019 M/min . Thus, the reaction is not 
+zero-order.  If the reaction is first-order, it will have a constant half-life that is consistent 
+with its rate constant. The half-life can be a ssessed from the fact that 40 min elapse while 
+the concentration drops from 0.80 M to 0.20 M, that is, to one-fourth of its initial value. 
+Thus, 40 min equals two half-lives and 1/2=2 0  m i nt .  
+  T h i s  g i v e s  kt=0 . 6 9 3/ =0 . 6 9 3/2 0 =0 . 0 3 51/21min min. Also 
+  kt k kt==0.35
+0.80=0 . 8 2 7= 2 4 =0.827
+24=0 . 0 3 4
+01 ulnA
+Aln M
+ Mminminmin  
+  T h e  c o n s t a n c y  o f  t h e  v a l u e  o f  k indicates that the reaction is first-order. 
+ 
+(b) The value of the rate constant is k=0 . 0 3 41min. 
+ 
+(c) Reaction  rate =1
+2 (rate of formation of B) =1kA F i r s t  w e  n e e d  [ A ]  a t  t=3 0.  m i n  
+>@>@>@>@11 02
+2
+0 0AAln = = 0.034 min 30. min = 1.0 =  = 0.36AAkt e u   
+A M  M=0 . 3 6 0 . 8 0 =0 . 2 9 u  
+ rate of formation of B min  M  M min =2 0 . 0 3 4 0 . 2 9 =2 . 0 1 012 1uu u  
+ 
+41. ( M )  The half-life of the reaction de pends on the concentration of A and, thus, this reaction cannot 
+be first-order. For a second-orde r reaction, the half-life varies inversely with the reaction rate: 
+tk1/2 0=1/  Ac horkt=1/1/2 0 Ac h. Let us attempt to verify the second-order nature of this 
+reaction by seeing if the ra te constant is fixed. 
+11 1= =0 . 0 2 0  L  m o l m i n1.00 M 50 mink
+u 
+11 1== 0 . 0 2 0  L  m o l m i n2.00 M 25 mink
+u 
+k=1
+0.50 100=0 . 0 2 011
+ M min L mol minu 
+The constancy of the rate constant demonstrates th at this reaction indeed is  second-order. The rate 
+equation is  Rate A =2k  and k=0 . 0 2 011L mol min. 
+  
+
+=== PDF PAGE 633 ===
+Chapter 14: Chemical Kinetics 
+ 6 3 3  42. (M)  
+ ( a )  The half-life depends on the initial NH3 and, thus, the reaction can not be first-order. Let 
+us attempt to verify second-order kinetics. 
+11
+31 / 2011= f o r  a  s e c o n d - o r d e r  r e a c t i o n = = 4 2  M m i nNH 0.0031 M 7.6 minkkt
+ªº
+«»¬¼ u  
+11 11 11== 1 8 0  M m i n == 8 6 5  M m i n0.0015 M 3.7 min 0.00068 M 1.7minkk 
+uu 
+The reaction is not second-order. But, if the reaction is zero-order, its rate will be constant. 
+>@4 0
+1/2A/ 2 0.0031 M 2Rate = = = 2.0 10  M/min7.6 min t yu  
+4 0.0015 M 2Rate = =2 . 0 1 0  M / m i n3.7 min yu  
+ 4 0.00068 M 2Rate = 2.0 10 M / min1.7 min y u   Z e r o - o r d e r  r e a c t i o n  
+ 
+(b) The constancy of the rate indicates that  the decomposition of  ammonia under these 
+conditions is zero-order, a nd the rate constant is k=2 . 0 1 04u M/min. 
+ 
+43. (M)  Zero-order: t1/2 =0[A]
+2k   Second-order: t1/2 =
+01
+[A]k  
+A zero-order reaction has a half life that varies proportionally to [A] 0, therefore, increasing [A] 0 
+increases the half-life for the reaction.  A second-order re action's half-life varies inversely 
+proportional to [A] 0, that is, as [A] 0 increases, the half-life decreases.  The reason for the 
+difference is that a zero-order reaction has a c onstant rate of reacti on (independent of [A] 0).  The 
+larger the value of [A] 0, the longer it will take to  react.  In a second-orde r reaction, the rate of 
+reaction increases as th e square of the [A] 0, hence, for high [A] 0, the rate of reaction is large and 
+for very low [A] 0, the rate of reaction is very slow.  If  we consider a bimolecular elementary 
+reaction, we can easily see that a reaction will not take place unless two molecules of reactants 
+collide.  This is more likely when the [A] 0 is large than when it is small. 
+ 
+44. (M)   
+ (a) 0[A]
+2k= 0.693
+k H e n c e ,  0[A]
+2= 0.693 or [A] 0 = 1.39 M 
+ 
+ (b) 0
+0[A] 1
+2[ A ]kk , Hence, 2
+0[A]
+2= 1 or [A] 02 = 2.00 M       [A] 0 = 1.414  M 
+ 
+ ( c )  
+o0.693 1
+[A] kk , Hence, 0.693 = 
+01
+[A] or [A] 0 = 1.44 M 
+ 
+
+=== PDF PAGE 634 ===
+Chapter 14: Chemical Kinetics 
+634 Collision Theory; Activation Energy 
+ 
+45. (M)  
+ ( a )  The rate of a reaction depends on at least two factors other than the frequency of collisions. 
+The first of these is whether each collisi on possesses sufficient energy to get over the 
+energy barrier to products. This depends on th e activation energy of th e reaction; the higher 
+it is, the smaller will be the fraction of successf ul collisions. The second factor is whether 
+the molecules in a given collision are properly oriented for a successful reaction. The more 
+complex the molecules are, or the more free dom of motion the molecules have, the smaller 
+will be the fraction of collisions that are correctly oriented. 
+ 
+(b) Although the collision frequency increases relativ ely slowly with temp erature, the fraction 
+of those collisions that have sufficient en ergy to overcome the activation energy increases 
+much more rapidly. Therefore, the rate of  reaction will increase dramatically with 
+temperature. 
+ 
+(c) The addition of a catalyst has the net effect  of decreasing the ac tivation energy of the 
+overall reaction, by enabling an  alternative mechanism. The lower activation energy of the 
+alternative mechanism, (compared to the unc atalyzed mechanism), means that a larger 
+fraction of molecules have suffi cient energy to react.  Thus the rate increas es, even though 
+the temperature does not. 
+ 
+46. (M)  
+ ( a )  The activation energy for the reaction of hydrogen with oxygen is  quite high, too high, in 
+fact, to be supplied by the ener gy ordinarily available in a mixture of the two gases at 
+ambient temperatures. However, the spark supp lies a suitably concentrated form of energy 
+to initiate the reaction of at least a few molecules. Since th e reaction is highly exothermic, 
+the reaction of these first few molecules suppl ies sufficient energy for yet other molecules 
+to react and the reaction proceeds to comple tion or to the elimination of the limiting 
+reactant. 
+ 
+(b) A larger spark simply means that a larger number of molecules react initially. But the 
+eventual course of the reaction remains the same, with the initia l reaction producing enough 
+energy to initiate still more molecules, and so on. 
+ 
+47. (M)  
+ ( a )  The products are 21 kJ/mol closer in energy to  the energy activated complex than are the 
+reactants. Thus, the activation en ergy for the reverse reaction is 
+  8 4 2 1 = 6 3 .  kJ / mol  kJ / mol kJ / mol   
+ 
+
+=== PDF PAGE 635 ===
+Chapter 14: Chemical Kinetics 
+ 6 3 5  (b) The reaction profile for the reaction in Figure 14-10 is sketched below. 
+ 
+  
+ 
+48. (M) In an endothermic reaction (right), Eamust be larger than the'H for the reaction. For an 
+exothermic reaction (left), the magnitude of Ea may be either larger or smaller than that of'H. 
+In other words, a small activation energy can be a ssociated with a large decrease in the enthalpy, 
+or a large Ea can be connected to a small decrease in enthalpy. 
+  
+ 
+ 
+49. (E)  
+ ( a )  T h e r e  a r e  t w o  i n t e r m e d i a t e s  ( B  a n d  C ) .  
+ 
+ (b) T h e r e  a r e  t h r e e  t r a n s i t i o n  s t a t e s  ( p e a k s / m a x i m a )  i n  t h e  e n e r g y  d i a g r a m .  
+ 
+ (c) T h e  f a s t e s t  s t e p  h a s  t h e  s m a l l e s t  Ea, hence, step 3 is the fastes t step in the reaction with 
+step 2 a close second. 
+ 
+ (d) R e a c t a n t  A  ( s t e p  1 )  h a s  t h e  h i g h e s t  Ea, and therefore the slowest smallest constant 
+ 
+ (e) E n d o t h e r m i c ;  e n e r g y  i s  n e e d e d  t o  g o  f r o m  A  t o  B .  
+ 
+ ( f )  E x o t h e r m i c ;  e n e r g y  i s  r e l e a s e d  m o v i n g  f r o m  A  t o  D .  
+  reactants 
+products ǻH<0 reactants products 
+ǻH>0 Transiton State
+Ea(forward) = 84 kJEa(reverse) = 63 kJ
+'H = +21 kJ
+A + BC + DA . . . . B
+ReactantsProductsPotential Energy (kJ)
+Progress of Reaction
+
+=== PDF PAGE 636 ===
+Chapter 14: Chemical Kinetics 
+636 50. (E)  
+ (a) T h e r e  a r e  t w o  i n t e r m e d i a t e s  ( B  a n d  C ) .  
+ 
+ (b) T h e r e  a r e  t h r e e  t r a n s i t i o n  s t a t e s  ( p e a k s / m a x i m a )  i n  t h e  e n e r g y  d i a g r a m .  
+ 
+(c) The fastest step has the smallest Ea, hence, step 2 is the fast est step in the reaction. 
+ 
+ (d) R e a c t a n t  A  ( s t e p  1 )  h a s  t h e  h i g h e s t  Ea, and therefore the slowest smallest constant 
+ 
+ (e) E n d o t h e r m i c ;  e n e r g y  i s  n e e d e d  t o  g o  f r o m  A  t o  B .    
+ 
+ ( f )  E n d o t h e r m i c ,  e n e r g y  i s  n e e d e d  t o  g o  f r o m  A  t o  D .  
+ 
+Effect of Temperature on Rates of Reaction 
+ 
+51. (M)  
+ln ln L mol  s
+ L mol  s  K  Kk
+kE
+RT TE
+Raa 1
+22 141 1
+21 1=11=5.4 10
+2.8 10=1
+6831
+599FHGIKJu
+uFHGIKJ 
+  
+ u u3.95 = 2.05 104REa  
+ER
+a=3.95
+2.05 10=1 . 9 3 1 0 8 . 3 1 4 5 =1 . 6 0 1 0 =1 6 0441 11 5
+uuu u  K  J mol  K  J / mol  kJ / mol  
+ 
+52. (M)  
+ 31 1 5
+1
+21 1 11
+22 111 5 . 0 1 0  L  m o l  s 1 . 6 0 1 0  J / m o l 1 1ln = = ln =683 K 2.8 10  L mol  s 8.3145 J mol  KaE k
+kR T T T 
+   §· uu §·¨¸ ¨¸u ©¹ ©¹ 
+4 5
+411 11 1 . 7 21.72 = 1.92 10              == 8 . 9 6 1 0683 K 683 K 1.92 10 TT  §· §·u    u ¨¸ ¨¸u ©¹ ©¹ 
+53 3 1=8 . 9 6 1 0 + 1 . 4 6 1 0 =1 . 5 5 1 0       =6 4 5  K TTuuu  
+ 
+53. (D)  
+ ( a )  First we need to compute values of ln k and 1/T. Then we plot the graph of ln k versus 
+1/T. 
+,CTD 0  qC 10 qC 20 qC 30 qC T, K 273 K 283 K 293 K 303 K 
+1/ ,1T K 0 . 0 0 3 6 6  0 . 0 0 3 5 3  0 . 0 0 3 4 1  0 . 0 0 3 3 0  
+1, sk 5 . 6 1 06u 3 . 2 1 05u 1 . 6 1 04u 7 . 6 1 04u 
+ln k 12.09  10.35 8.74  7.18 
+
+=== PDF PAGE 637 ===
+Chapter 14: Chemical Kinetics 
+ 6 3 7   
+ 
+ 
+ 
+  
+   
+   
+  
+ 
+ 
+ 
+ 
+(b) The slope = ERa/.  
+4
+a2J 1 kJ kJ= s l o p e = 8 . 3 1 4 5 1 . 3 5 1 0  K  = 1 1 2mol K 1000 J molER u  u u u   
+(c) We apply the Arrhenius equation, with k=5 . 6 1 061us a t  0DC (273 K), k=? a t  4 0 qC 
+(313 K), and Ea=1 1 3 1 03u J/mol. 
+3
+a
+61 1 1
+1211 1 1 2 1 0  J / m o l 1 1ln = = = 6.306273 K 313 K 5.6 10  s 8.3145 J mol  KE k
+RT T §· u §·¨¸ ¨¸u ©¹ ©¹ 
+63 0 6 61 31
+61 = 5 4 8 = =5 4 8 5 . 6 1 0  s =3 . 0 7 1 0  s5.6 10  skek 
+uu uu 
+ 
+ 
+ 
+ 
+ 
+54. (D) 
+ ( a )  Here we plot ln k vs.1/T. The slope of the straight line equals ERa/. First we tabulate 
+the data to plot. (the plot is shown below). 
+  
+,T Cq 1 5 . 8 3  3 2 . 0 2   5 9 . 7 5  9 0 . 6 1    T , K 288.98 305.17  332.90 363.76   
+1/T, K1 0 . 0 0 3 4 6 0 4  0 . 0 0 3 2 7 6 9  0 . 0 0 3 0 0 3 9  0 . 0 0 2 7 4 9 1   k, M1s1 5 . 0 3 1 05u 3 . 6 8 1 04u 6 . 7 1 1 03u 0 . 1 1 9    
+ln k 9.898 7.907   5.004  2.129   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Plot of ln k versus 1/T
+y = -13520x + 37.4
+-12.1-11.1-10.1-9.1-8.1-7.10.00325 0.00345 0.003651/T (K-1)ln k
+Plot of ln k versus 1/T
+y = -10890x + 27.77
+-12-10-8-6-4-200.0027 0.0029 0.0031 0.0033 0.0035 1/T (K-1)ln k2
+1/2 310.693 0.693== = 2 . 3 1 0  s3.07 10  stkuu
+
+=== PDF PAGE 638 ===
+Chapter 14: Chemical Kinetics 
+638   T h e  s l o p e  o f  t h i s   g r a p h  Ka =1 . 0 91 0 = /4u ER  
+  44
+aJ J1  k J k J=1 . 0 8 9 1 0  K 8 . 3 1 4 5   =  9 . 0 5 4 1 0    = 9 0 . 5  mol K mol 1000 J molE  u u uu  
+  
+ 
+(b) We calculate the activation energy with the A rrhenius equation using the two extreme data 
+points. 
+aa 2
+5
+11 2
+11
+41 4 a
+a 410.119 11 11ln = ln = +7.77 = =5.03 10 288.98 K 363.76 K
+7.769 8.3145 J mol  K=7 . 1 1 3 8 1 0  K    = =9 . 0 8 1 0  J / m o l7.1138 10  KEE k
+kR TT R
+EER
+
+
+§· §·¨¸ ¨¸u ©¹ ©¹
+uuuu 
+a=9 1E kJ/mol.  The two Ea values are in quite good agreemen t, within experimental limits. 
+  
+(c) We apply the Arrhenius equation, with Ea=9 . 0 8 0 1 04u J/mol,  
+ k=5 . 0 3 1 051 1u  M  s at 15.83 C q (288.98 K), and k=? at 100.0 C q (373.2 K). 
+ 3
+a
+51 1 11
+21
+85 2 8 3
+51 1 51 111 9 0 . 8 0 1 0  J / m o l 1 1ln = =5.03 10  M  s 8.3145 J mol  K 288.98 K 373.2 K
+ln = 8.528 = 5.05 10 =5.03 10  M  s 5.03 10  M  sE k
+RT T
+kke  
+   §· u §·¨¸ ¨¸u ©¹ ©¹
+uuu  
+ 35 1 11 1=5 . 0 5 1 0 5 . 0 3 1 0  M  s =0 . 2 5 4  M  sk uu u  
+ 
+55. ( M )  The half-life of a first-order reaction is i nversely proportional to  its rate constant: 
+kt=0 . 6 9 3/1/2. Thus we can apply a modified vers ion of the Arrhenius equation to find Ea. 
+(a) 
+ 1/2 aa 2 1
+11 / 2 1 2 211 4 6 . 2 m i n 1 1ln = ln = = ln =2.6 min 298 K 102 + 273  Kt EE k
+kt R T T R§· §· ¨¸ ¨¸ ¨¸©¹ ©¹ 
+11
+4 a
+a 412.88 8.3145 J mol  K 1 kJ2.88 = 6.89 10 = = 34.8 kJ/mol6.89 10  K 1000 JEER
+
+uuuu 
+(b)   10.0
+46.2=34.8 10
+8.314511
+298=1 . 5 3 = 4 . 1 91 011
+2983
+113lnmin
+min J / mol
+ J mol  KuFHGIKJ u FHGIKJTT 
+43 o
+311 1 . 5 3 1== 3 . 6 5 1 0 = 2 . 9 9 1 0 = 3 3 4  K = 6 1 C298 4.19 10TTT  §· u u¨¸u ©¹ 
+ 
+56. (M) The half-life of a first-or der reaction is inversely proportional to its rate 
+constant: kt=0 . 6 9 3/1/2. Thus, we can apply a modified ve rsion of the Arrhenius equation. 
+(a) 
+ 1/2 aa 2 1
+11 / 2 1 2 211 2 2 . 5  h 1 1ln = ln = = ln =1.5 h 293 K 40 + 273  Kt EE k
+kt R T T R§· §· ¨¸ ¨¸ ¨¸©¹ ©¹ 
+11
+4 a
+a 412.71 8.3145 J mol  K 1 kJ2.71 = 2.18 10 ,      = = 103 kJ/mol2.18 10 K 1000 JEER
+
+uuuu 
+
+=== PDF PAGE 639 ===
+Chapter 14: Chemical Kinetics 
+ 6 3 9  (b) The relationship is kA ER T=/ expabg  
+31
+1113 1 13 1 40 9 5 1 103 10  J mol
+8.3145 J mol  K 273 + 30  K=2 . 0 5 1 0  s e x p =2 . 0 5 1 0  s  3 . 5 1 0 s ke
+    u
+u§·uu u  u ¨¸
+©¹ 
+57. (M)  
+ ( a )  It is the change in the value of the rate cons tant that causes the r eaction to go faster. Let k1 
+be the rate constant at room temperature, 20 CD (293 K). Then, ten degrees higher (30 ° C 
+or 303 K), the rate constant21=2kku. 
+  41 aa 21
+11 1 22 11 1 1ln = ln = 0.693 = = = 1.13 10  K293 303 Ka EE E kk
+kk R T T R R §· u §· u¨¸ ¨¸©¹ ©¹ 
+  Ea J mol  K
+ K J / mol  kJ / mol =0.693 8.3145
+1.13 10=5 . 1 1 0 =5 111
+414 u
+uu
+ 
+(b) Since the activation energy for the depicted reaction (i.e., N 2O + NO o N2 + NO 2) is 209 
+kJ/mol, we would not exp ect this reaction to follow the rule of thumb. 
+ 
+58. (M) Under a pressure of 2.00 atm, the boi ling point of water is approximately 121 Cq or 394 K. 
+Under a pressure of 1 atm, the boiling point of water is 100DC o r  3 7 3  K .  W e  a s s u m e  a n  
+activation energy of 5.1 104u J / mol  and compute the ratio of the two rates. 
+ln Rate
+ Rate J / mol
+ J mol  K  K2
+11 24
+11=11=5.1 10
+8.31451
+3731
+394=0 . 8 8E
+RT TaFHGIKJuFHGIKJ 
+08 8
+21 1Rate =   Rate = 2.4 Rate  . e   Cooking will occur 2.4 times fa ster in the pressure cooker. 
+ 
+Catalysis 
+ 
+59. (E)  
+ ( a )  Although a catalyst is recovered unchanged from the  reaction mixture , it does “take part in 
+the reaction.” Some catalysts ac tually slow down the rate of  a reaction. Usually, however, 
+these negative catalysts are called inhibitors. 
+  
+(b) The function of a catalyst is to change the mechanism of a reaction . The new mechanism is 
+one that has a different (lower) activation ener gy (and frequently a diffe rent A value), than 
+the original reaction. 
+ 
+60. (M) If the reaction is first-order, its half-life is 10 0 min, for in this time period [S] decreases from 
+1.00 M to 0.50 M, that is, by one half . This gives a rate constant of  
+kt=0 . 6 9 3/ =0 . 6 9 3/1 0 0 =0 . 0 0 6 9 31/21min min.  
+The rate constant also can be determined from any two of the other sets of data. 
+>@>@1 0A 1.00 M 0.357=l n =l n =0 . 3 5 7= 6 0m i n = =0 . 0 0 5 9 5m i nA0 . 7 0  M 6 0 m i ntkt k ku  
+This is not a very good agreement between the two k values, so the reaction is probably not first-
+order in [A]. Let's try zero-order, where the rate should be constant. 
+
+=== PDF PAGE 640 ===
+Chapter 14: Chemical Kinetics 
+640 0.90 M 1.00 M 0.50 M 1.00 MRate = =0 . 0 0 5 0  M / m i n          R a t e= =0 . 0 0 5 0  M / m i n20 min 100 min
+0.20 M 0.90 M 0.50 M 0.90 MRate = =0 . 0 0 5 0  M / m i n        R a t e= =0 . 0 0 5 0  M / m i n160 min 20 min 100 min 20 min 
+Thus, this reaction is zero-order with respect to [S]. 
+ 
+ 
+61. ( E )  Both platinum and an enzyme have a metal cente r that acts as the ac tive site.  Generally 
+speaking, platinum is not dissolved in the react ion solution (heterogeneous), whereas enzymes are 
+generally soluble in the reacti on media (homogeneous).  The most  important difference, however, 
+is one of specificity. Platinum is rather nons pecific, catalyzing many different reactions. An 
+enzyme, however, is quite specific, usually catal yzing only one reaction rath er than all reactions 
+of a given class. 
+ 
+62. (E) In both the enzyme and the metal surface cases, th e reaction occurs in a specialized location: 
+either within the enzyme pocket or on the surf ace of the catalyst. At high concentrations of 
+reactant, the limiting factor in determining the rate  is not the concentration of reactant present but 
+how rapidly active sites become available for reac tion to occur. Thus, the rate of the reaction 
+depends on either the quantity of enzyme present or the surface area of the catalyst, rather than on 
+how much reactant is present (i.e., the reaction is zero-order). At low concentrations or gas 
+pressures the reaction rate depends  on how rapidly molecules can re ach the available active sites. 
+Thus, the rate depends on concentration or pressure of reactant and is first-order. 
+ 
+63. (E) For the straight-line graph of Rate versus [Enz yme], an excess of substrate must be present. 
+ 
+64. (E) For human enzymes, we would expect the maximum in the curve to appear around 37 qC, i.e., 
+normal body temperature (or possibly at  slightly elevated temperatur es to aid in the control of 
+diseases (37 - 41 qC). At lower temperatures, the reaction rate of enzyme-ac tivated reactions 
+decreases with decreasing temperature, followi ng the Arrhenius equation. However, at higher 
+temperatures, these temperature sensitive biochemical processes become inhibited, probably by 
+temperature-induced structural modifications to  the enzyme or the substrate, which prevent 
+formation of the enzyme-substrate complex. 
+ 
+Reaction Mechanisms 
+ 
+65. ( E )  The molecularity of an elementary process is the number of reactant molecules in the process. 
+This molecularity is equal to the order of the overall reaction only if the elementary process in 
+question is the slowest and, thus, the rate-determi ning step of the overall r eaction. In addition, the 
+elementary process in question shou ld be the only elementary step that influences the rate of the 
+reaction. 
+ 
+66. (E) If the type of molecule that is expressed in the rate law as being first-or der collides with other 
+molecules that are present in much larger con centrations, the reaction will seem to depend only 
+on the amount of those types of molecules presen t in smaller concentration, since the larger 
+concentration will be essentially unchanged during th e course of the reaction. Such a situation is 
+quite common, and has been given the name pseudo first-order. It is al so possible  to have 
+molecules which, do not participate directly in the reaction— including product molecules—

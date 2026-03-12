@@ -1,0 +1,4319 @@
+
+
+=== PDF PAGE 1041 ===
+Chapter 20: Electrochemistry 
+ 1 0 4 1  72. (D) (a) Anode, oxidation: +
+222H O(l) 4H aq + 4e + O go      o=1 . 2 2 9 VE  
+Cathode, reduction: +{Ag aq + e Ag s }  4ou   o=+ 0 . 8 0 0VE  
+  N e t :  ++
+222H O(l) + 4Ag aq 4H aq + O g + 4Ag s o  o
+cell=0 . 4 2 9 VE  
+ 
+(b) 1m o l  A g 1m o l  e 9 6 ,4 8 5Ccharge = 25.8639 25.0782 g Ag = 702.8C107.87 g Ag 1 mol Ag 1m o l  e
+u u u  
+ currentC
+hh
+sA =702.8
+2.001
+3600=0 . 0 9 7 6 u  
+ 
+(c) The gas is molecular oxygen. 
+ 
+ 
+ 2
+221mol O 1m o l e La t m702.8 C 0.08206 (23+273) K96485 C mol K 4m o le
+1a t m755 mmHg760 mmHg
+1000 mL0.0445 L O 44.5 mL of O1LnRTVP
+§·uu¨¸©¹  
+u
+ u   
+ 
+73. ( D )  (a) The electrochemical reaction is: 
+ A n o d e  ( o x i d a t i o n ) :  { A g ( s ) oAg+(aq)+e-(aq)} u2  Eo 0.800 V 
+ C a t h o d e  ( r e d u c t i o n ) :  C u2+(aq)+2e-oCu(s)    Eo 0.340 V 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  
+ N e t :     2 A g ( s ) + C u2+(aq)oCu(s)+2Ag+(aq)  Ecello 0.46V 
+ T h e r e f o r e ,  c o p p e r  s h o u l d  p l a t e  o u t  f i r s t .  
+ (b) current =charge
+2.50hminu1h
+3600 s=0 . 7 5 Acharge  6750C  
+ m a s s = 6 7 5 0  C u1 mole-
+96485 Cu1mol Cu
+2 mol e-u63.546 g Cu
+1 mol Cu=2.22 g Cu  
+ (c)  The total mass of the metal is 3.50 g out of which 2.22g is copper.  Therefore, the mass 
+ o f  s i l v e r  i n  t h e  s a m p l e  i s  3 . 5 0 g - 2 . 2 2 g = 1 . 2 8 g  o r  ( 1 . 2 8 / 3 . 5 0 ) x 1 0 0 = 3 7 % .  
+ 
+74. (D) First, calculate the number of moles of electrons invol ved in the electrolysis: 
+ 1 . 2 0 C/su32.0 min u60sec
+1minu1mole e-
+96485 C 0.0239mol e- 
+ F r o m  t h e  k n o w n  m a s s  o f  p l a t i n u m ,  determine the number of moles: 
+ 2 . 1 2 g P t u1mol Pt
+195.078gPt 0.0109molPt  
+ D e t e r m i n e  t h e  n u m b e r  o f  e l e c t r o n s  t r a n s f e r r e d :  
+ 0.0239 mol e-
+0.0109 mol Pt 2.19  
+
+=== PDF PAGE 1042 ===
+Chapter 20: Electrochemistry  
+1042  T h e r e f o r e ,  2 . 1 9  i s  s h a r e d  b e t w e e n  P t2+ and Ptx+.  Since we know the mole ratio between 
+ P t2+ and Ptx+, we can calculate x: 
+ 2 . 1 9 = 0 . 9 0 u(+2) + 0.10 u (x). 
+ 2.19  1.80 0.10 uxx|4 
+ (a)  The oxidation state of the contaminant is +4. 
+ 
+ 
+INTEGRATIVE AND ADV ANCED EXERCISES 
+ 
+75. (M) 32
+2 Oxidation:     V H O VO 2 H eaE  o  q  
+o
+32 o
+2c e l l
+o
+aReduction:     Ag  e Ag(s)                                              0.800 V
+Net:               V H O Ag VO 2 H Ag(s)      0.439 V
+0.439 V 0.800 V                   0aE
+E
+EE
+   o 
+  o  
+   q .800 V 0.439 V 0.361 V   
+ 
+2 3 o
+23 o
+2
+22 3
+2Oxidation:                             V V e                        
+Reduction:     VO 2 H e V H O                      0.361 V 
+Net:               V  VO 2 H 2 V H O    bE
+E 
+  
+  o 
+   o  
+   oo
+cell
+oo
+32 o              0.616 V
+0.616 V  0.361 V 0.361 V 0.616 V 0.255 V
+Thus, for the cited reaction: V V                     =  0 . 2 5 5  V  bbE
+EE
+eE  
+      
+ o 
+ 
+76. (M)The cell reaction for discharging a lead  storage battery is  equation (20.24). 
+ O(l) H  2 (s) PbSO (aq) HSO  2   aq) ( H  2 s) ( PbO Pb(s)2 4 4 2  o    
+ T h e  h a l f - r e a c t i o n s  w i t h  w h i c h  t h i s  e q u a t i o n  w a s  derived indicates that two moles of electrons 
+are transferred for every two moles of sulfate ion consumed. We first compute the amount of 
+H2SO 4 initially present and then the amount of H 2SO 4 consumed. 
+M  63 . 4L  50 . 1mol  56 . 0  mol  50 . 7] SO [H  finalSO H  mol  0.56    SO  mol  1SO H  mol  1
+e  mol  2SO  mol  2
+C  96485e  mol  1
+s 1C  50 . 2
+h 1s  3600 h  6.0   consumed SO H amount SO H  mol  50 . 7soln  L  1SO H  mol  5.00L  50 . 1 SO H amount  initial
+42422
+4422
+4
+424242
+42
+   u uu u u   u 
+  
+  
+ 
+77. (M) The cell reaction is (g)Cl (g) H (aq) OH  2 O(l) H  2   (aq) Cl  22 2 2  o   
+We first determine the charge transferred per 1000 kg Cl 2. 
+9 2
+2
+221 mol Cl 1000 g 2 mol e 96, 485 Ccharge  1000 kg Cl   2.72 10  C1 kg 70.90 g Cl 1 mol Cl 1 mol e
+ u uu u  u  
+
+=== PDF PAGE 1043 ===
+Chapter 20: Electrochemistry 
+ 1 0 4 3  (a) kJ  10 38 . 9J 1000kJ  1
+CV 1J 1C  10  2.72  V  3.45  energy 6 9u uuu u   
+(b) kWh  10 61 . 2hW1000kWh  1
+s 3600h 1
+J 1s  W 1J  10  9.38  energy 3 9u uuuu  
+ 
+78. (D) We determine the equilibrium constant for the reaction. 
+ 3+ 2+ 2+ °
+cell Net:           Fe(s) + 2 Cr (aq) Fe (aq) + 2 Cr (aq)       E  = +0.016 V o  
+ 
+  'Go nFEcello RTlnKlnK nFEcello
+RT 
+ 3.3 e 2.1K 298 K mol  J   8.3145V 016 . 0 e Coul/mol 96485 e mol 2ln 1 2
+1- 1-_ _
+   uu u K K  
+ 32 2Reaction: Fe(s) 2 Cr (aq) Fe (aq) 2Cr (aq)
+Initial :                         1.00 M             0 M                0 M
+Changes  : –2   M                M         2 M
+Equil:                           (xx x 
+U
+22 2 2
+32 21.00  –  2 )M      M               2 M
+[Fe ][Cr ] (2 )3.3[Cr ] (1.00 2 )xx x
+xxKx
+    
+  
+ L e t  u s  s i m p l y  s u b s t i t u t e  v a l u e s  o f  x into this cubic equation to find a solution. Notice that x 
+cannot be larger than 0.50, (values > 0.5  w ill result in a negative value for the denominator. 
+ 
+3.3 8.3
+) 76 . 0 00 . 1 ((0.76)  38 . 0     38 . 0 3.3 0.3
+) 74 . 0 00 . 1 ((0.74)  37 . 0     37 . 0       3.3   9 . 1
+) 70 . 0 00 . 1 ((0.70)  35 . 0     35 . 0 3.3   4 . 6
+) 80 . 0 00 . 1 ((0.80)  40 . 0     40 . 0       
+22
+2222
+22
+! 
+   
+  ! 
+  ! 
+  
+K x K xK x K x
+ 
+ 
+ Thus, we conclude that x = 0.37 M = [Fe2+]. 
+ 
+79. (D) First we calculate the standard cell potential. 
+ 23 o
+o
+23 o
+cellOxidation:     Fe (aq) Fe (aq) e 0.771 V
+Reduction:    Ag (aq) e Ag(s) 0.800 V
+Net:              Fe (aq) Ag (aq) Fe (aq) Ag(s) 0.029 V  E
+E
+E 
+
+ o   
+ o 
+  o   
+ Next, we use the given concentrations to calculate the cell voltage with the Nernst equation. 
+ 3
+o
+cell cell 20.0592 [Fe ] 0.0050 log 0.029 0.0592 log 0.029 0.018 0.047 V
+1 0.0050 2.0 [Fe ][Ag ]EE
+      
+u 
+ T h e  r e a c t i o n  w i l l  c o n t i n u e  t o  m o v e  i n  t h e  f o r w ard direction until concentrations of reactants 
+decrease and those of products increa se a bit more.   At equilibrium, Ecell = 0, and we have the 
+following. V 424 . 0 2  (aq)} Cr e aq) ( Cr { : ReductionV 440 . 0 2e (aq) Fe Fe(s) : Oxidation
+2 _ 3_
+ q u o q   o
+ 
+EE
+
+=== PDF PAGE 1044 ===
+Chapter 20: Electrochemistry  
+1044  33
+o
+cell 22
+2 30.0592 [Fe ] [Fe ] 0.029 log 0.029 log 0.491[ F e ] [ A g ] [Fe ][Ag ] 0.0592
+Reaction:    Fe (aq)      Ag (aq)                  Fe (aq)    Ag(s)
+Initial:         0.0050 M      2.0 M            E
+ 
+     
+ U
+3
+04 9
+2      0.0050 M    
+Changes:       M           M                 M    
+Equil:          (0.0050  ) M   (2.0 - ) M         (0.0050  ) M    
+[Fe ] 0.005010 3.1[Fe ][Ag ] (0.0050 )(2.0 )xx x
+xx x
+x
+xx
+  
+ 
+   0.0050
+2.0(0.0050 )
+0.0266.2(0.0050 ) 0.0050 0.031 6.2      7.2 0.026     0.0036 M7.2x
+x
+xx x x x|
+        
+ N o t e  t h a t  t h e  a s s u m p t i o n  t h a t  2.0  x  is valid. [Fe2+] = 0.0050 M – 0.0036 M = 0.0014 M 
+ 
+80. (D) W e  f i r s t  n o t e  t h a t  w e  a r e  d e a l i n g  w i t h  a  c oncentration cell, one in  w h i c h  t h e  s t a n d a r d  
+oxidation reaction is the reverse of the standa rd reduction reaction, and consequently its 
+standard cell potential is precisely zero volts. For this cell, the Nernst equation permits us to 
+determine the ratio of the two silver ion concentrations. 
+cell
+14 50.0592 [Ag (satd AgI)]      0.000 V  log 0.0860 V1 [Ag (satd AgCl,   M Cl )]
+[Ag (satd AgI)] 0.0860 [Ag (satd AgI)]      log 1.45 100.0592 [Ag (satd AgCl,  M Cl )] [Ag (satd AgCl,  M Cl )]E
+x
+xx
+
+ 
+
+    
+     0.035 
+ 
+ We can determine the numerator concentration fro m the solubility product expression for AgI(s) 
+ 9 17 2 17
+sp 10 2 . 9 10 5 . 8 10 5 . 8 ] I ][ Ag [   u u   u  ss K M 
+ This permits the determination of the concentration in the denominator. 
+ M  10 6 . 2035 . 010 2 . 9)] Cl  M   AgCl,  (satd Ag [79
+
+ u u x  
+ We now can determine the value of x. Note: Cl–  arises from two sources , one being the dissolved 
+ A g C l .  
+           
+] [Cl M 10 9 . 6
+10 6 . 210 8 . 6 10 8 . 1       10 6 . 2 10 8 . 6 ) 10 6 . 2 )( 10 6 . 2 ( 10 8 . 1 ] Cl ][ Ag [       
+4
+714 107 14 7 7 10
+sp
+ 
+      
+ u  
+uu u u u  u u u   
+xx x K
+ 
+ 
+81. (M) The Faraday constant can be evaluated by measuring the electric charge needed to 
+produce a certain quantity of chemical change. Fo r instance, let’s imagine that an electric 
+circuit contains the half-reaction 2Cu (aq) 2 e  Cu(s)U . The electrode on which the 
+solid copper plates out is weighed before a nd after the passage of electric current. The mass 
+gain is the mass of copper reduced, which th en is converted into the moles of copper 
+reduced. The number of moles of electrons invol ved in the reduction then  is computed from 
+the stoichiometry for the reduction half-reaction.  In addition, the amperage is measured 
+during the reduction, and the time is recorded. For simplicity, we assume the amperage is 
+constant. Then the total charge (in coulombs ) equals the current (in amperes, that is, 
+
+=== PDF PAGE 1045 ===
+Chapter 20: Electrochemistry 
+ 1 0 4 5  coulombs per second) multiplied by the time (in seconds).  The ratio of the total charge (in 
+coulombs) required by the reductio n divided by the amount (in mo les) of electrons is the 
+Faraday constant.  To determine the Avogadro c onstant, one uses the ch arge of the electron, 
+1.602 × 10–19 C and the Faraday constant in  the following calculation.  
+ 
+ moleelectrons10 023 . 6
+C  10 602 . 1electron  1
+electrons  mol  1C  485 , 9623
+19 A u 
+uu  N  
+ 
+82. (M) In this problem we are asked to determine 'Gfo for N 2H4(aq) using the electrochemical 
+data for hydrazine fuel cell.  We first determine the value of oG' f o r  t h e  c e l l  r e a c t i o n ,  a  
+reaction in which n = 4. 'Gfo can then be determined using data in Appendix D. 
+ Stewise approach: 
+ Calculate oG' for the cell reaction (n=4): 
+ 'Go n FEcello4 mol e- u96,485 C
+1 mol eu1.559 V  6.017 u105 J 601.7 kJ  
+ Using the data in Appendix D, determine 'Gfofor hydrazine (N 2H4): 
+  -601.7 kJ   'Go
+f[N2(g)]2 'Go
+f[H2O(l)] 'Go
+f[N2H4(aq)] 'Go
+f[O2(g)]
+                   0.00 kJ 2u (237.2 kJ) 'Go
+f[N2H4(aq)] 0.00 kJ
+'Go
+f[N2H4(aq)]  2u(237.2 kJ)  601.7 kJ  127.3 kJ 
+ Conversion pathway approach: 
+ 'Go n FEcello4 mol e- u96,485 C
+1 mol eu1.559 V  6.017 u105 J 601.7 kJ  
+  -601.7 kJ   'Go
+f[N2(g)]2 'Go
+f[H2O(l)] 'Go
+f[N2H4(aq)] 'Go
+f[O2(g)]
+                   0.00 kJ 2u (237.2 kJ) 'Go
+f[N2H4(aq)] 0.00 kJ
+'Go
+f[N2H4(aq)]  2u(237.2 kJ)  601.7 kJ  127.3 kJ 
+ 
+83. (M) In general, we shall assume that both ions are present initially at concentrations of 1.00 M. 
+Then we shall compute the concentration of the more easily reduced ion when its reduction 
+potential has reached the point at which the other cation starts  being reduced by electrolysis. In 
+performing this calculation we use the Nernst equation, but modified for use with a half-
+reaction. We find that, in genera l, the greater the difference in E° values for two reduction 
+half-reactions, the more effective the separation. 
+ 
+(a) In this case, no calculation is necessary. If th e electrolysis takes place in aqueous solution, 
+H2(g) rather than K(s) will be produced at the cathode. Cu2+ can be separated from K+ by 
+electrolysis. 
+ 
+(b) 2o oCu (aq) 2 e  Cu(s) 0.340 V Ag (aq) e Ag(s)     0.800 V EE o   o    
+  A g+ will be reduced first. Now we ask what [Ag+] will be when E = +0.337 V. 
+  77 . 70592 . 0340 . 0 800 . 0
+] Ag [1 log
+] Ag [1 log  10592 . 0V  0.800 V  337 . 0      
+
+=== PDF PAGE 1046 ===
+Chapter 20: Electrochemistry  
+1046   [ A g+] = 1.7 × 10–8 M.  Separation of the two ca tions is essentially complete. 
+ 
+(c) 2o 2  oPb (aq) 2 e Pb(s) 0.125 V Sn (aq) 2 e Sn(s)  0.137 V EE o   o    
+ P b2+ will be reduced first. We now ask what [Pb2+] will be when E° = –0.137 V. 
+220.0592 1 12 ( 0 . 1 3 7 0 . 1 2 5 )0.137 V 0.125 V  log       log 0.412 0.0592 [Pb ] [Pb ]      
+[Pb2+] = 10–0.41 = 0.39 M  Separation of Pb2+ from Sn2+ is not complete. 
+ 
+84. (D) The efficiency value for a fuel cell will be  greater than 1.00 for any exothermic reaction 
+( 0o'H ) that has 'Gq that is more negative than its oH' value. Since o oo ST H G' '  ', this 
+means that the value of oS' must be positive. Moreover, for this to be the case, 'ngas is usually 
+greater than zero.  Let us consider the situation that might lead to this type of reaction. The 
+combustion of carbon-hydrogen-oxygen comp ounds leads to the formation of H 2O(l) and 
+CO 2(g). Since most of the oxygen in these compounds comes from O 2(g) (some is present in 
+the C-H-O compound), there is a balance in the number of moles of gas produced—CO 2(g)—
+and those consumed—O 2(g)—which is offset in a negative direction by the H 2O(l) produced. 
+Thus, the combustion of these types of co mpounds will only have a positive value of gasn' if 
+the number of oxygens in the formula of the compound is more than twice the number of 
+hydrogens.  By comparison, the decomposition of  NOCl(g), an oxychloride of nitrogen, does 
+produce more moles of gas than it consumes. Le t us investigate this decomposition reaction. 
+ 
+278 . 1kJ/mol  71 . 51kJ/mol  08 . 66      kJ/mol  08 . 66 kJ/mol  08 . 66 kJ/mol)  0.00   kJ/mol  0.00   kJ/mol  (0.00  0.500          NOCl(g)] [ (g)] Cl [ (g)] O [ (g)] N [ G       kJ/mol  71 . 51 kJ/mol  71 . 51 kJ/mol)  0.00 kJ/mol  0.00   kJ/mol  (0.00  0.500          NOCl(g)] [ (g)] Cl [ (g)] O [ (g)] N [       (g) Cl  g) ( O  (g) N NOCl(g)      
+oofo
+2fo
+21
+2fo
+21
+2fo
+21 ofo
+2fo
+21
+2fo
+21
+2fo
+21 o2 21
+2 21
+2 21
+  ''      ' ' ' ' '     ' ' ' ' ' o
+HGG G G GH H H HH
+H 
+ 
+ Y e t  a n o t h e r  s i m p l e  r e a c t i o n  t h at meets the requirement that o oHG' ' is the combustion of 
+graphite: g) ( CO g) ( O ) C(graphite2 2 o  We see from Appendix D that 
+kJ/mol  4 . 394 g)] ( CO [2o
+f  'G  is more negative than kJ/mol  5 . 393 g)] ( CO [2o
+f  'H . (This 
+reaction is accompanied by an increase in entropy; 'S =213.7-5.74-205.1 =2.86 J/K, H = 1.002.) 
+ o oHG' ' i s  t r u e  o f  t h e  r e a c t i o n  in which CO(g) is formed from the elements. From 
+Appendix D, kJ/mol 5 . 110 CO(g)} {o
+f  'H , and kJ/mol  2 . 137 g)} ( CO {o
+f  'G , producing H 
+= (–137.2/–110.5) = 1.242. 
+ 
+ N o t e  t h a t  a n y  r e a c t i o n  t h a t  h a s  H >  1 . 0 0  w i l l  b e  s p o n t a n e o u s  under standard cond itions at all 
+temperatures. (There, of course, is another category, namely,  an  e n d o t h e r m i c  r e a c t i o n  t h a t  h a s  
+0o'S . This type of reaction is nonspontaneous  under standard conditions at all temperatures. As 
+such it consumes energy while it is running, which is clearly not a desirable result for a fuel cell.) 
+ 
+
+=== PDF PAGE 1047 ===
+Chapter 20: Electrochemistry 
+ 1 0 4 7  85. (M) W e  f i r s t  w r i t e  t h e  t w o  h a l f - e q u a t i o n s  a n d  t h e n  c a l c u l a t e  a  v a l u e  o f  oG' f r o m  
+thermochemical data. This value then is us ed to determine the standard cell potential. 
+ _
+32 2 2
+_
+22
+32 2 2 2Oxidation: CH CH OH(g) 3 H O(l) 2 CO ( ) 12 H (aq) 12  e
+Reduction:    {O (g ) 4 H (aq) 4e 2 H O(l)} 3
+Overall:         CH CH OH(g) 3 O (g ) 3 H O(l) 2 CO ( )g
+g
+  o 
+   ou
+  o 
+ T h u s ,  1 2 n  
+ 
+(a) g)] ( O [ 3 OH(g)] CH CH [ O(l)] H [ G 3 g)] ( CO [ 22o
+f 23o
+f 2o
+f 2o
+foG G GG ' ' ' ' '  
+          2( 394.4 kJ/mol) 3( 237.1 kJ/mol) ( 168.5 kJ/mol) 3(0.00 kJ/mol) 1331.6 kJ/mol         
+ 3
+cell1331.6 10 J/mol1.1501 V12 mol e 96,485 C/mol eGEnFu '     u 
+(b) V 1501 . 1 )] OH(g CH /CH ) g ( CO [ O] (g)/H O [23 2 2 2 cell  q q E E E  
+  
+V 079 . 0 1501 . 1 1.229 OH(g)] CH CH / ) g ( [COOH(g)] CH CH / ) g ( CO [ V 1.229
+23 223 2
+   qq  
+EE 
+ 
+86. (M) First we determine the change in the amount of H+ in each compartment. 
+ 
+22 2        Oxidation: 2 H O(l) O ( ) 4 H (aq) 4 e Reduction: 2 H (aq)  2 e H (g)
+60 s 1.25 C 1 mol e 1 mol H       amount H 212 min 0.165 mol H1m i n 1s 9 6 ,4 8 5C 1m o leg 
+
+ 
+o  o
+' u u u u   
+ 
+ B e f o r e  e l e c t r o l y s i s ,  t h e r e  i s  0 . 5 0 0  m o l  H 2PO 4– and 0.500 mol HPO 42– in each compartment. The 
+electrolysis adds 0.165 mol H+ to the anode compartment, which has the effect of transforming 
+0.165 mol HPO 42– into 0.165 mol H 2PO 4–, giving a total of 0.335 mol HPO 42– (0.500 mol – 0.165 
+mol) and 0.665 mol H 2PO 4– ( 0 . 5 0 0  m o l  +  0 . 1 6 5  m o l ) .  W e  c a n  u s e  t h e  H e n d e r s o n - H a s s e l b a l c h  
+equation to determine the pH of the solution in the anode compartment. 
+ 
+ 90 . 6
+L 500 . 0 / PO H mol 665 . 0L 500 . 0 / HPO mol 335 . 0log 20 . 7] PO H [] HPO [log p  pH
+422
+4
+422
+4
+2    
+aK  
+ 
+ A g a i n  w e  u s e  t h e  H e n d e r s o n - H a s s e l b a l c h  e q u a t i o n  i n  the cathode compartment.   After electrolysis 
+there is 0.665 mol HPO 42– a n d  0 . 3 3 5  m o l  H 2PO 4–. Again we use the Henderson-Hasselbalch 
+equation. 
+ 
+ 50 . 7
+L 500 . 0 / PO H  mol 335 . 0L 500 . 0 / HPO mol 665 . 0log 20 . 7
+] PO H [] HPO [log p pH
+422
+4
+422
+4
+2   
+
+aK  
+ 
+ 
+ 
+87. (M) We first determine the change in the amount of M2+ ion in each compartment. 
+ 
+ 'M2+=10.00h u3600 s
+1 hu0.500 C
+1 su1mol e-
+96485 Cu1mol M2+
+2mol e-=0.0933 mol M2+
+ 
+ T h i s  c h a n g e  i n  a m o u n t  i s  t h e  i n c r e a s e  i n  t h e  a m o u n t  o f  C u2+ and the decrease in the amount of 
+Zn2+. We can also calculate the change  in each of the concentrations. 
+
+=== PDF PAGE 1048 ===
+Chapter 20: Electrochemistry  
+1048  22
+22 0.0933 mol Cu 0.0933 mol Zn[Cu ] 0.933 M  [Zn ] 0.933 M0.1000 L 0.1000 L
+'   '    
+ T h e n  t h e  c o n c e n t r a t i o n s  o f  t h e  t w o  i o n s  a r e  d e t e r m i n e d .  
+ 22[Cu ] 1.000 M 0.933 M 1.933 M [Zn ] 1.000 M 0.933 M 0.067 M     
+ N o w  w e  r u n  t h e  c e l l  a s  a  v o l t a i c  c e l l ,  f i r s t  d e t e r m i n i n g  t h e  v a l u e  o f  Ecell°. 
+ 2
+2
+2
+cellOxidation : Zn(s) Zn (aq) 2 e 0.763 V
+Reduction :  Cu (aq) 2 e Cu(s) 0.340 V
+Net: Zn(s) Cu (aq) Cu(s) 1.103 VE
+E
+E
+
+o  q  
+q  
+ o  
+ T h e n  w e  u s e  t h e  N e r n s t  e q u a t i o n  t o  d e t e r m i n e  t h e  v o l t a g e  o f  t h i s  c e l l .  
+ 2
+cell cell 20.067 M 0.0592 [Zn ] 0.0592log 1.103 log 1.103 0.043 1.146 V22 1 . 9 3 3 M [Cu ]EE
+ q      
+88. (M)(a)
+ 2 Anode: Zn(s) Zn (aq) 2e 0.763 V Eo q    
+  --
+2+ -
+cellCathode: {AgCl(s) + e (aq) Ag(s) + Cl (1 M)} × 2 E°=+0.2223 V
+Net: Zn(s) + 2AgCl(s) Zn (aq) + 2Ag(s) + 2Cl (1 M) E° = +0.985 Vo
+o 
+ 
+(b) The major reason why this electrode is easier to use than the standard hydrogen 
+electrode is that it does not involve a gas. Thus there are not the practical difficulties 
+involved in handling gases.  Another reas on is that it yields a higher value of  cellqE , 
+thus, this is a more spontaneous system. 
+ 
+(c)  oOxidation:                 Ag(s)  Ag (aq) e 0.800 V Eo     
+  
+o
+cellReduction:     AgCl(s) e Ag(s) Cl (aq)  0.2223 V
+Net: AgCl(s) Ag (aq) Cl (aq) 0.578 VE
+E
+ o  
+o   
+   T h e  n e t  r e a c t i o n  i s  t h e  s o l u b i l i t y  r e a c t i on, for which the equilibrium constant is K sp.  
+   sp lnK RT nFE G  q  q '  
+  sp 11
+22 5 10
+sp
+-1096485 C 1J1m o le (0 . 5 7 8V )1V . C 1m o leln 22.58.3145 J mol K 298.15 K
+e1 . 7 1 0
+This value is in good agreement with the value of 1.8 × 10  given in Table 18-1.nFEKRT
+K
+
+
+uu u
+q   u
+  u  
+ 
+89. (D) (a)          Ag(s)   o A g+(aq) + e-   - E q =  -0.800 V 
+   AgCl(s) + e-o A g ( s )  +  C l-(aq)    E q  =  0.2223 V  
+   AgCl(s)  o A g+(aq) + Cl-(aq)   E qcell = -0.5777  V 
+ Ecell=E  cell-0.0592
+1log[Ag+][Cl-]
+1§
+©¨·
+¹¸=- 0 . 5 7 7 7  V0.0592
+1log[1.00][1.00 u10-3]
+1§
+©¨·
+¹¸=- 0 . 4 0 0 V
+ 
+ 
+  (b) 10.00 mL of 0.0100 M CrO 42-  + 100.0 mL of 1.00 × 10-3 M Ag+  (V total = 110.0 mL) 
+
+=== PDF PAGE 1049 ===
+Chapter 20: Electrochemistry 
+ 1 0 4 9     Concentration of CrO 42-after dilution: 0.0100 M×10.00 mL /110.00 mL = 0.000909 M 
+   Concentration of Ag+  after dilution: 0.00100 M×100.0 mL /110.00 mL = 0.000909 M 
+   A g 2CrO 4(s)      12111 0spK uZZZZZZZ X YZZZZZZ Z  2Ag+(aq)  +  CrO 42-(aq)   
+   I n i t i a l         0 . 0 0 0 9 0 9  M  0 . 0 0 0 9 0 9  M   
+   C h a n g e ( 1 0 0 %  r x n )    - 0 . 0 0 0 9 0 9  M  - 0 . 0 0 0 4 5 5  M  
+   N e w  i n i t i a l      0  M    0 . 0 0 0 4 5 5  M  
+   C h a n g e      + 2 x   +x 
+   E q u i l i b r i u m     2 x   0 . 0 0 0 4 5 5  M + x | 0.000455 M 
+   1 . 1  ×  1 0-12 = (2 x)2(0.000454)   
+x = 0.0000246 M  Note: 5.4% of 0.000455 M (assumption may be considered valid) 
+(Answer would be x = 0.0000253 using method of successive approx.) 
+[Ag+] = 2 x = 0.0000492 M (0.0000506 M using method of successive approx.) 
+-4
+cell cell0.0592 0.0592log [ ][Cl ] 0.5777 log [1.00 ][4.92 10 ]11
+0.323 V (-0.306 V for method of successive approximations)EEAgMM  q    u
+  
+ 
+(c) 1 0 . 0 0  m L  0 . 0 1 0 0  M  N H 3 + 10.00 mL  0.0100 M CrO 42- + 100.0 mL 1.00×10-3 M Ag+   
+(Vtotal = 120.0 mL) 
+   Concentration of NH 3 after dilution: 10.0 M×10.00 mL /120.00 mL = 0.833 M 
+Concentration of CrO 42-after dilution: 0.0100 M×10.00 mL /110.00 mL = 0.000833 M 
+   Concentration of Ag+  after dilution: 0.00100 M×100.0 mL /110.00 mL = 0.000833 M 
+ 
+ I n  o r d e r  t o  d e t e r m i n e  t h e  e q u i l i b r i u m  c o n c e n t r a t i o n  o f  f r e e  A g+(aq), we first consider 
+complexation of  Ag+(aq) by NH 3(aq) and then check to see if precipitation occurs.   
+ 
+       Ag+(aq)  +  2NH 3(aq)716 1 0fK uZZZZZZX YZZZZZ Z  Ag(NH 3)2+(aq) 
+   I n i t i a l     0 . 0 0 0 8 3 3  M  0 . 8 3 3  M    0  M  
+   C h a n g e ( 1 0 0 %  r x n )  - 0 . 0 0 0 8 3 3  M  - 0 . 0 0 1 6 7  M    + 0 . 0 0 0 8 3 3  M  
+   N e w  i n i t i a l    0  M    0 . 8 3 1  M    0 . 0 0 0 8 3 3  M  
+   C h a n g e    + x   + 2x    -x 
+   E q u i l i b r i u m   x   ( 0 . 8 3 1 + 2 x) M  (0.000833 – x) M 
+   E q u i l i b r i u m  ( x |0) x   0.831 M   0.000833 M 
+ 
+   1 . 6  ×  1 07 = 0.000833 / x(0.831)2 x = 7.54 ×10-11 M = [Ag+]    
+Note: The assumption is valid 
+   N o w  w e  l o o k  t o  s e e  i f  a  p r e c i p i t a t e  f o r m s :  Q sp = (7.54 ×10-11)2(0.000833) = 4.7 ×10-24  
+   S i n c e  Q sp < K sp (1.1 × 10-12), no precipitate forms and [Ag+] = 7.54 × 10-11 M 
+ 
++- -11
+cell cell
+cell0.0592 0.0592E= E ° - l o g [ A g ] [ C l ] = - 0 . 5 7 7 7  V - l o g [ 1 . 0 0 M ] [ 7 . 5 4  ×  1 0 M ]11
+E= 0 . 0 2 1 5 V   
+ 
+90. (M) W e  a s s u m e  t h a t  t h e  P b2+(aq) is “ignored” by the silver el ectrode, that is, the silver 
+electrode detects only si lver ion in solution. 
+ 
+
+=== PDF PAGE 1050 ===
+Chapter 20: Electrochemistry  
+1050 V 800 . 0 Ag(s) 2 (aq) H 2 Ag 2 (g) H : NetV 800 . 0 2 Ag(s)} e (aq) {Ag : ReductionV 000 . 0 e 2 aq) ( H 2 (g) H : Oxidation
+cell 22
+ q  o  q u o q   o
+   
+EEE
+ 
+2 2
+cell cell 2 20.0592 [H ] 0.0592 1.00log 0.503 V 0.800 V log22 [Ag ] [Ag ]EE
+  q     
+ 10 0 10
+22
+22
+10 0 . 1 10
+] Ag [00 . 10 . 100592 . 0) 503 . 0 800 . 0 ( 2
+] Ag [00 . 1log u    
+  
+  
+  [Ag+]2=1.0 u10-10M2[Ag+]=1.0 u10-5 
+ 
+Ag g 10 4 . 5Ag mol 1Ag g 87 . 107
+Ag mol 1Ag mol 1
+soln L 1Ag mol 10 0 . 1L 0.500 Ag  mass        45
+
+ 
+u u uuu  
+Ag % 051 . 0 % 100sample g 050 . 1Ag g 10 5.4Ag %4
+ uu 
+(by mass) 
+91. (M) 250.0 mL of 0.1000 M CuSO 4  = 0.02500 moles Cu2+ initially. 
+ 
+ moles of Cu2+ plated out 
+ =3.512C
+su1368 s u1 mol e-
+96,485 Cu1 mol Cu2+
+2 mole- 0.02490mol Cu2+ 
+ 
+moles of Cu2+ in solution = 0.02500 mol – 0.02490 mol = 0.00010 mol Cu2+ 
+ 
+ [Cu2+] = 0.00010 mol Cu2+/0.250 L = 4.0 × 10-4 M 
+ 
+      Cu2+(aq)  +  4NH 3(aq)1311 1 0fK uZZZZZZX YZZZZZ Z  Cu(NH 3)42+(aq) 
+  I n i t i a l     0 . 0 0 0 4 0  M   0 . 1 0  M    0  M  
+  C h a n g e ( 1 0 0 %  r x n )  - 0 . 0 0 0 4 0 M   m a i n t a i n e d    + 0 . 0 0 0 4 0  M  
+  N e w  i n i t i a l    0  M    0 . 1 0  M    0 . 0 0 0 4 0  M  
+  C h a n g e    + x   maintained    -x 
+  E q u i l i b r i u m   x   0.10 M   (0.00040 – x) M | 0.00040 M 
+ 
+ 2+
+13 2+ 13 34
+f 2+ 42 + 4
+3[Cu(NH ) ] 0.00040K= = 1 . 1 1 0 [ C u ]  =  3 . 6 1 0
+[Cu ][NH ] [Cu ](0.10)M u u 
+ H e n c e ,  t h e  a s s u m p t i o n  i s  v a l i d .  The concentration of Cu(NH 3)42+(aq) = 0.00040 M which is 
+40 times greater than the 1 × 10-5 detection limit.   Thus, th e blue color should appear. 
+ 
+92.  (M) First we determine the molar solubility of AgBr in 1 M NH 3 . 
+26
+33 s p f um         AgBr(s) 2NH (aq)    Ag(NH ) (aq) Br (aq) K K  K 8.0 10
+Initial                     1.00 M                         0  M         0 M
+quil.                       1.00-2s                 S
+E  u u U
+2
+2 63 3
+2
+3
+13
+sp 10
+3       s                s     {s AgBr molar solubility}
+[Ag(NH ) ][Br ]K 8.0 10   s2 . 8 1 1 0  M  ( a l s o  [ B r ] )[NH (aq)] (1 2 )
+K 5.0 10So  [Ag ]  1.8 10[Br ] 2.81 10s
+s
+M
+ 
+
+
+
+   u u
+u   uu
+
+=== PDF PAGE 1051 ===
+(empty)
+
+=== PDF PAGE 1052 ===
+Chapter 20: Electrochemistry  
+1052 95. (M) The overall reaction for the electrolytic cell is: 
+  Cu(s)+Zn2+(aq)oCu2+(aq)+Zn(s)   Ecello 1.103V  
+ N e x t ,  w e  c a l c u l a t e  t h e  n u m b e r  o f  m o l e s  o f  Z n2+(aq) plated out and number of moles of 
+ C u2+(aq) formed: 
+ 
+  n(Cu2+) =0.500C
+su10 h u60min
+1hu60s
+1min u1 mol e-
+96,485 Cu1 mol Cu2+
+2 mol e- 0.0935mol Cu2+
+n(Zn2+) n(Cu2+)=0.0935mol 
+ I n i t i a l l y ,  s o l u t i o n  c o n t a i n e d   1.00molL-1u0.100L=0.100 mol Zn2+(aq).  Therefore, at the end 
+ o f  e l e c t r o l y s i s  w e  a r e  l e f t  w i t h :  
+ 
+ n(Zn2+)LEFT=(0.100-0.0935)mol=6.5 u10-3mol[Zn2+]=6.5u10-3mol
+0.1L=6.5 u10-2M
+n(Cu2+)FORMED=0.0935mol [Cu2+]=0.0935mol
+0.1L=0.936M 
+ T h e  n e w  p o t e n t i a l  a f t e r  t h e  c e l l  w a s  s w i t c h e d  t o  a voltaic one can be calculated using Nernst
+ e q u a t i o n :  
+ 
+  Ecell Eqcell0.0592
+2log[Zn2]
+[Cu2] 1.103 0.0592
+2log6.5u103M
+0.935 M 1.103 0.064  1.167 V  
+ 
+96. (M) (a)  T h e  m e t a l  h a s  t o  h a v e  a  r e d u c t i o n  p o t e n t ial more negative than -0.691 V, so that 
+its oxidation can reverse the tarnishing re action’s -0.691 V reduction potential.  
+Aluminum is a good candidate, b ecause it is inexpensive, read ily available, will not react 
+with water and has an Eo of -1.676 V.  Zinc is also  a possibility with an Eo of -0.763 V, 
+but we don't choose it because there may be an overpotential associated with the 
+tarnishing reaction. 
+ 
+3
+-2
+2Oxidation:     {Al(s)  Al (aq)   3 e  }  2                               
+          Reduction:     {Ag S(s) 2 e Ag(s)   S (aq)  }  3                           
+          Net:       
+o u
+ o u(b)       
+32
+2         2 Al(s) 3 Ag S(s)  6Ag(s)  2 Al (aq)   3 S (aq)   o   
+  
+ ( c )   The dissolved NaHCO 3(s) serves as an electrolyte. It would also enhance the electrical 
+contact between the two objects. 
+ 
+ ( d )  T h e r e  a r e  s e v e r a l  c h e m i c a l s  i n v o l v e d :  A l ,  H 2O, and NaHCO 3.  Although the aluminum 
+plate will be consumed very slowly because  s i l v e r  t a r n i s h  i s  v e r y  t h i n ,  i t  w i l l ,  
+nonetheless, eventually erode away.  We shoul d be able to detect  l o s s  o f  m a s s  a f t e r  
+many uses. 
+ 
+97. (M) (a)        Overall:            C3H8(g) + 5 O 2(g)  o 3  C O 2(g) + 4 H 2O(l) 
+           Anode:         6 H 2O(l) + C 3H8(g)  o 3  C O 2(g) + 20 H+(g) + 20 e- 
+             C a t h o d e :  2 0  e- + 20 H+(g) + 5 O 2(g)  o 1 0  H 2O(l) 
+ 
+    'Gqrxn = 3(-394.4 kJ/mol) + 4(-237.1 kJ/mol) – 1(-23.3 kJ/mol) = -2108.3 kJ/mol
+ 
+
+=== PDF PAGE 1053 ===
+Chapter 20: Electrochemistry 
+ 1 0 5 3  'Gqrxn = -2108.3 kJ/mol = -2,108,300 J/mol  
+    'Gqrxn = -nFE qcell = -20 mol e- × (96485 C/mol e-) × E qcell 
+    E qcell = +1.0926 V 
+ 
+    2 0  e- + 20 H+(g) + 5 O 2(g)  o 1 0  H 2O(l) E qcathode  = +1.229 V 
+ 
+  H e n c e   E qcell = Eqcathode  Eqanode  +1.0926 V = +1.229 V  Eqanode 
+ 
+  Eqanode = +0.136 V (reduction potential for 3 CO 2(g) + 20 H+(g) + 20 e- o 6 H 2O(l) + C 3H8(g)) 
+ 
+ (b) Use thermodynamic tables for 3 CO 2(g) + 20 H+(g) + 20 e-o 6  H 2O(l) + C 3H8(g)     
+  'Gqrxn = 6(-237.1 kJ/mol) + 1(-23.3 kJ/mol)  [(-394.4 kJ/mol) + 20( 0kJ/mol)]= -262.7 kJ/mol
+ 
+  'Gqred = -262.7 kJ/mol = -262,700 J/mol = -nFE qred = -20 mol e-×(96,485 C/mol e-)×Eqred 
+ 
+  E qred  = 0.136 V (Same value, as found in (a)) 
+ 
+98. (D) (a) Equation 20.15 ( 'Go zFEcello) gives the relationship between the standard Gibbs 
+energy of a reaction and the sta ndard cell potential.  Gibbs fr ee energy also varies with 
+temperature ( 'Go 'HoT'So).  If we assume that 'Ho a n d  'Sodo not vary 
+significantly over a small temperature range, we can derive an equation for the temperature 
+variation of Ecello: 
+  'Go 'HoT'So zFEcelloEcello 'HoT'So
+zF 
+  C o n s i d e r i n g  t w o  d i f f e r e n t  temperatures one can write: 
+  Ecello(T1) 'HoT1'So
+zFand Ecello(T2) 'HoT2'So
+zF
+Ecello(T1)Ecello(T2) 'HoT1'So
+zF'HoT2'So
+zF
+Ecello(T1)Ecello(T2) T1'SoT2'So
+zF 'So
+zFT2T1  
+  (b)  Using this equation, we  can now calculate the cell pote ntial of a Daniel cell at 50 oC: 
+  Ecello(25oC)Ecello(50oC) 10.4JK1mol1
+2u96485 Cmol15025K 0.00135
+Ecello(50oC) 1.103 V0.00135  1.104 V 
+ 
+99. (D) Recall that under non-standard conditions 'G 'GoRTlnK.  Substituting 
+'Go 'HoT'So and 'G zFEcellone obtains: 
+  zFEcell 'HoT'SoRTlnQ 
+  F o r  t w o  d i f f e r e n t  t e m p e r a t u r e s  ( T 1 and T 2) we can write: 
+
+=== PDF PAGE 1054 ===
+Chapter 20: Electrochemistry  
+1054   zFEcell(T1) 'HoT1'SoRT1lnQ
+zFEcell(T2) 'HoT2'SoRT2lnQ
+Ecell(T1)Ecell(T2) 'HoT1'SoRT1lnQ'HoT2'SoRT2lnQ
+zF
+Ecell(T1)Ecell(T2) T1'SoRT1lnQT2'SoRT2lnQ
+zF
+Ecell(T1)Ecell(T2) T1'SoRT1lnQ
+zFT2'SoRT2lnQ
+zF
+Ecell(T1)Ecell(T2) T1'SoRlnQ
+zF§
+©¨·
+¹¸T2'SoRlnQ
+zF§
+©¨·
+¹¸
+Ecell(T1)Ecell(T2) (T1T2)'SoRlnQ
+zF§
+©¨·
+¹¸ 
+  The value of Q at 25 oC can be calculated from Ecello and Ecell. First calculate Ecello: 
+  O x i d a t i o n :  C u ( s ) oCu2+(aq)+2e-     Eo 0.340 V 
+  Reduction: 2Fe3+(aq)+2e-o2Fe2+(aq)     Eo 0.771 V 
+   _____________________________________________________________________________________________________________ 
+  Overall:  Cu(s)+2Fe3oCu2+(aq)+2Fe2   Ecello 0.431 V 
+  0.370  0.431 0.0592
+2logQ0.296 log Q 0.431 0.370  0.061
+logQ 0.206 Q 1002 0 6 1.61 
+  Now, use the above derived equation and solve for 'So: 
+  0.394 0.370  (5025)'So8.314 uln1.61
+2u96485§
+©¨·
+¹¸
+0.024  25u('So3.96
+192970)'So3.96  185.3 'So 189.2JK-1 
+  S i n c e  'Go 'HoT'So zFEcellowe can calculate 'Go, K (at 25 oC) and 'Ho: 
+  'Go zFEcello 2u96485 u0.431  83.2kJ
+'Go RTlnK83.2 u1000  8.314 u298.15 ulnK
+lnK 33.56 K e33 56 3.77 u1014
+-83.2kJ= 'Ho298.15 u189.2
+1000kJ'Ho 83.2 56.4  26.8kJ 
+  S i n c e  w e  h a v e  'Hoand 'Sowe can calculate the value of the equilibrium constant at 50 
+oC: 
+  'Go 'HoT'So 26.8kJ (273.15 50)K u189.2
+1000kJK-1 87.9kJ
+87.9 u1000J  8.314JK-1mol-1u(273.15 50)K ulnK
+lnK 32.7 K e32 7 1.59u1014 
+
+=== PDF PAGE 1055 ===
+Chapter 20: Electrochemistry 
+ 1 0 5 5    Choose the values for th e concentrations of Fe2+, Cu2+ and Fe3+ that will give the value of 
+the above calculated Q. For example: 
+  Q=Fe2+ª¬º¼2Cu2+ª¬º¼
+Fe3+ª¬º¼2 =1.61
+0.12u1.61
+0.12 1.61 
+  D e t e r m i n e  t h e  e q u i l i b r i u m  c o n c e n t r a t i o n s  a t  5 0  oC.  Notice that since Q<K, a net change 
+occurs from left to right (the direction of the forward reaction): 
+     C u ( s ) + 2 F e3oCu2+(aq)+2Fe2 
+  I n i t i a l :   0 . 1   1 . 6 1     0 . 1  
+  C h a n g e :           0 . 1 - x            1 . 6 1 + x   0 . 1 + x  
+  K=Fe2+ª¬º¼eq2Cu2+ª¬º¼eq
+Fe3+ª¬º¼eq2 =1.59 u1014 (0.1x)2u(1.61 x)
+(0.1x)2 
+  O b v i o u s l y ,  t h e  r e a c t i o n  i s  a l m o s t  c o m p l e t e l y  s h i f t e d  t o w a r d s  p r o d u c t s .   F i r s t  a s s u m e  t h a t  
+the reaction goes to completion, and then let th e equilibrium be shifte d towards reactants: 
+      C u ( s ) + 2 F e3oCu2+(aq)+2Fe2 
+  I n i t i a l :   0 . 1   1 . 6 1     0 . 1  
+  F i n a  l                    0                  1 . 7 1       0 . 2  
+  E q u i l i b r i u m         0 + x             1 . 7 1 - x     0 . 2 - x  
+  K=Fe2+ª¬º¼eq2Cu2+ª¬º¼eq
+Fe3+ª¬º¼eq2 =1.59 u1014 (0.2x)2u(1.71 x)
+(x)2|0.22u1.71
+x2
+x2|0.22u1.71
+1.59 u1014|4.3u1016x|2.1u108M 
+  T h e r e f o r e ,  [ C u2+]|1.7M, [Fe2+]|0.2M and [Fe3+]|2.1x10-8M 
+ 
+100. (D) This problem can be solved by utilizing the relationship between 'Goand Ecello('Go=-
+zFEcello): 
+  Consider a hypothetical set of the following reactions: 
+     AneoAn     E1o and 'G1o
+BmeoBm   E2o and 'G2o 
+  O v e r a l l :   ABnemeoAnBm    Erxno ? a n d  'Grxno 'G1o'G2o 
+   'Grxno 'G1o'G2o nFE1omFE2o
+(nm)FErxno nFE1omFE2o
+(nm)FErxno nFE1omFE2oErxno nFE1omFE2o
+nm 
+  T h e r e f o r e ,  f o r  n - s e ts of half-reactions: 
+
+=== PDF PAGE 1056 ===
+Chapter 20: Electrochemistry  
+1056   Eo niEio¦
+ni¦ 
+The E o for the given half-reaction can be determ ined by combining four half-reactions: 
+H6IO6+H++2e-oIO3-+3H2O     Eo 1.60V
+IO3-+6H++5e-o1
+2I2+3H2O       Eo 1.19V
+I2+2H2Oo2HIO+2H++2e-Eo 1.45V
+2IoI22eEo 0.535 V
+Overall :
+H6IO6+H++2e-IO3-+6H++5e-I2+2H2O+2IoIO3-+3H2O+1
+2I2+3H2O+2HIO+2H++2e-I22e
+H6IO6+5H++2I-+3e-o1
+2I2+4H2O+2HIO
+Eo 1.60 u31.19 u51.45 u20.535 u2
+2522 2.26V
+ 
+ 
+FEATURE PROBLEMS 
+ 
+ 
+101. (D) (a) Anode: +
+2Hg , 1 a t m 2 H1 M + 2 eo           o=0 . 0 0 0 0 VE  
+  Cathode: +{Ag M + e Ag s }  2 xou     o=0 . 8 0 0VE  
+             
+  N e t :  ++
+2Hg , 1 a t m + 2 A ga q 2 H1 M + 2 A g s o   o
+cell=0 . 8 0 0E  
+ 
+(b) Since the voltage in the anode half-cell remains constant, we  use the Nernst equation to 
+calculate the half-cell voltage  in the cathode half-cell, with two moles of electrons. 
+This is then added to E for the anode half-cell. Because Eo=0 . 0 0 0 f o r  t h e  a n o d e  
+half cell, EEcell cathode= 
+o +
+2+0.0592 1=l o g 0 . 8 0 0 + 0 . 0 5 9 2 l o g A g 0 . 8 0 0 0 . 0 5 9 2 l o g2 AgEE x ªº   ¬¼ªº¬¼ 
+(c) (i) Initially +Ag = 0.0100ªº¬¼;   cell =0 . 8 0 0+0 . 0 5 9 2l o g0 . 0 1 0 0=0 . 6 8 2V=EE  
+Note that 50.0 mL of titrant is required for the titration, since both AgNO3 and 
+KI have the same concentrations an d they react in equimolar ratios. 
+ 
+(ii) A f t e r  2 0 . 0  m L  o f  t i t r a n t  i s  a d d e d ,  t h e  t o t a l  v o l u m e  o f  s o l u t i o n  i s  7 0 . 0  m L  a n d  t h e  
+unreacted Ag+ is that in the untitrated 30.0 mL of 0.0100 M AgNO3aq. 
+ 
+
+=== PDF PAGE 1057 ===
+Chapter 20: Electrochemistry 
+ 1 0 5 7  +
++
+cell30.0 mL 0.0100 M AgAg = = 0.00429M70.0 mL
+=0 . 8 0 0+0 . 0 5 9 2l o g 0 . 0 0 4 2 9 =0 . 6 6 0V=EEuªº¬¼ 
+ 
+(iii) A f t e r  4 9 . 0  m L  o f  t i t r a n t  i s  a d d e d ,  t h e  t o t a l  v o l u m e  o f  s o l u t i o n  i s  9 9 . 0  m L  a n d  t h e  
+unreacted Ag+ is that in the untitrated 1.0 mL of 0.0100 M AgNO3aq. 
+ 
++
++
+cell1.0 mL 0.0100 M AgAg = = 0.00010 M99.0 mL
+=0 . 8 0 0+0 . 0 5 9 2l o g 0 . 0 0 0 1 0 =0 . 5 6 3V=EEuªº¬¼ 
+ 
+(iv) A t  t h e  e q u i v a l e n c e  p o i n t ,  w e  h a v e  a  saturated solution of AgI, for which  
+ 
++1 7 9
+sp Ag = (AgI) 8.5 10 9.2 10 Kªº  u u¬¼ 
+ 9
+cell =0 . 8 0 0+0 . 0 5 9 2l o g 9 . 2 1 0 =0 . 3 2 4V=EEu . 
+ 
+After the equivalence point, the Ag+ is determined by the I resulting from 
+the excess KI(aq). 
+ 
+ (v) When 51.0 mL of titrant is added, the total volume of solution is 101.0 mL and 
+the excess I is that in 1.0 mL of 0.0100 M KI(aq). 
+ 
+  I-ª¬º¼=1.0 mL u0.0100 M I-
+101.0 mL=9.9 u10-5M Ag+ª¬º¼=Ksp
+I-ª¬º¼=8.5u10-17
+0.000099=8.6 u10-13M13
+cell =0 . 8 0 0+0 . 0 5 9 2l o g 8 . 6 1 0 =0 . 0 8 6V=EEu  
+ 
+(vi) When 60.0 mL of titrant is added, the total volume of solution is 110.0 mL and 
+the excess I is that in 10.0 mL of 0.0100 M KI(aq). 
+-
+-
+-17
+sp +- 1 4
+-10.0 mL×0.0100 M II= =0.00091 M110.0 mL
+K 8.5×10Ag  =  =  = 9.3×10  M0.00091 Iªº¬¼
+ªº¬¼ªº¬¼
+E=0 . 8 0 0+0 . 0 5 9 2 l o g 9 . 3 u1014=0 . 0 2 9V= Ecell 
+ 
+
+=== PDF PAGE 1058 ===
+Chapter 20: Electrochemistry  
+1058 (d) The titration curve is presented below. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+102. ( D )  ( a )  ( 1 )  a n o d e :  N a s oNa+in ethylamine+e 
+   c a t h o d e :  N a ( i n e t h y l a m i n e ) N a ( a m a l g a m , 0 . 2 0 6 % )o  
+            
+   N e t :     Na s Na amalgam, 0.206% o  
+ 
+  (2) a n o d e :  +2Na amalgam, 0.206% 2Na 1 M + 2eo  
+   c a t h o d e :  +
+2 2H (aq,1M) + 2e H g,1 atmo  
+               
+   N e t :  ++
+2 2Na (amalgam, 0.206 %) +2H (aq,1M) 2 Na ( 1 M) + H (g,1 atm) o  
+ 
+(b) (1) 4 96, 485 C=1 m o l  e 0 . 8 4 5 3 V =8 . 1 5 61 0 J1mol eG
+' u u  u  or 81.56 kJ 
+  ( 2 )  4 96, 485C=2 m o l  e 1 . 8 6 7 3 V =3 6 . 0 3 3 1 0 J1m o l  eG
+' u u  u  or –360.33 kJ 
+  
+  (c) (1)  4
+1 2Na(s) 2Na(amalgam, 0.206%) 28 . 1 5 61 0 J G o'  uu 
+  (2) +
+2 2Na (amalg, 0.206%) + 2H (aq,1M) 2 Na (1M) + H (g, 1 atm)o  
+  4
+2 36.033 10 J G'  u  
+ O v e r a l l :  2 2 Na(s) + 2H aq) Na (1M) + H g, 1 atm)+
+2 ((o 
+ 44 4
+12 =+= 1 6 . 3 1 2 1 0 J 3 6 . 0 3 3 1 0 J = 5 2 . 3 4 5 1 0 JGGG'''  u u  u  or –523.45 kJ 
+ S i n c e  s t a n d a r d  c o n d i t i o n s  a r e  implied in the overall reaction, oGG' ' . 
+ 
+(d)  ^`  ^`4
+oo + o +
+252.345 10 J== H 1  M / H 1 a t m N a 1 M / N a s96, 485 C 1 J2m o l  e1V C 1m o l  ecellEE E
+
+u
+uu 
+ ^`o+Na 1 M /Na s = 2.713VE . This is precisely the same as the value in 
+Appendix D. 
+ Plot of Voltage versus volum e of I-(aq)
+00.20.40.60.8
+02 0 4 0 6 0 Volume of I- (mL)Voltage (V)
+
+=== PDF PAGE 1059 ===
+Chapter 20: Electrochemistry 
+ 1 0 5 9  103. (D) The question marks in the original Latimer diag ram have been replaced with letters in the 
+diagram below to make the solution easier to follow: 
+ 
+ B y  r e f e r r i n g  t o  A p p e n d i x  D  a n d  b y  e m p l o y i n g  t h e correct procedure for adding together half-
+reactions of the same type we obtain: 
+(c) 2Br (l) 2e 2 Br (aq)o      o
+c1.065V E   (Appendix D) 
+ ( d )  2 BrO (aq) H O(l) 2e Br (aq) 2OH (aq)  o   o
+d0.766 V E   (Appendix D) 
+ ( b )  22 2B r O ( a q ) 2H O ( l ) 2e B r ( l ) 4O H ( a q )  o   o
+b0.455V E   (Appendix D) 
+ ( a )  32 {BrO (aq) 2H O(l) 4e BrO (aq) 4OH (aq)}  2   o  u  o
+a? E  
+ ( b )  22 2B r O ( a q ) 2H O ( l ) 2e B r ( l ) 4O H ( a q )  o     o
+b0.455V E  
+ ( c )  2Br (l) 2e 2 Br (aq)o        o
+c1.065V E  
+            
+ (e) 32 2 BrO (aq) 6 H O(l) 12e 12OH (aq) 2 Br (aq)   o    o
+e0.584 V E  
+ 
+oo o o
+(a) (b) (c) TotalGG G G' '  '  '  
+ 
+ oo o o
+ea b c 12 8 -2 -2FE FE FE FE    
+ o
+a 12 0.584 V 8 -2 0.455V -2 1.065VFF EF F     
+o
+a12 0.584 V 2 0.455V 2 1.065V=0 . 4 9 6  V8FFFEF   
+  
+104. ( D )  ( a )  T h e  c a p a c i t a n c e  o f  t h e  c e l l  m e m b r a n e  is given by the following equation,  
+ 
+ 
+0AClHH  where H0H = 3 u 8.854 u 1012 C2 N1 m2;  
+A = 1 u 106 cm2;  and l = 1 u 106 cm.   
+Together with the factors necessary to convert  
+from cm to m and from cm2 to m2, these data yield 
+ 
+  2 2
+12 6 2
+12
+6C1  m 3  8 . 8 5 4 1 0 ( 11 0  c m) N  m 100 cm  1 m(1 10 cm)100 cmC
+§· §·uu ¨¸ ¨¸©¹ ©¹ 
+§·u¨¸©¹= 2.66 u 1013 2C
+Nm 
+ 
+2
+13 13
+2C1 F  2 . 6 6 1 0 =   2 . 6 6 1 0 FC Nm1NmC§·
+¨¸§·¨¸  u u¨¸¨¸ ©¹¨¸©¹ BrO4-BrO3-BrO-Br2 Br- (a) (b) (c)
+(d)1.025 V
+0.584 V(e)
+
+=== PDF PAGE 1060 ===
+Chapter 20: Electrochemistry  
+1060  
+(b) Since the capacitance C is the charge in coulombs per volt, the charge on the membrane, 
+Q, is given by the product of the capacitance and the potential across the cell membrane. 
+Q = 2.66 u 1013 C
+Vu 0.085 V = 2.26 u 1014 C 
+ 
+(c) The number of K+ ions required to produce this charge is 
+14
+5+  
+192.26 10 C=1 . 4 1 1 0  K i o n se1 . 6 0 2 1 0 C / i o nQ
+u uu 
+ 
+(d) The number of K+ ions in a typical cell is 
+23 3 83 11
+3ions mol 1L6.022 10 155 10 (1 10 cm )=  9.3 10  ionsmol L1 0 0 0 c m§· §· §·uu uu ¨¸ ¨¸ ¨¸©¹ ©¹ ©¹ 
+ 
+(e) The fraction of the ions involved in establis hing the charge on the cell membrane is  
+5
+7
+111.4 10 ions=1.5 10  (~ 0.000015 %)9.3 10 ions uuu 
+Thus, the concentration of K+ ions in the cell remains constant at 155 mM. 
+ 
+105. ( M )  Reactions with a positive cell pot ential are reactions for which 'Go0,  o r  r e a c t i o n s  
+  f o r  w h i c h  K > 1 .   'So,'Hoand 'Uocannot be used alone to determine whether a  
+  p a r t i c u l a r  e l e c t r o c h e m i c a l  r e a c t i o n  will have a positive or negative value. 
+ 
+106. (M) The half-reactions for the first cell are: 
+  A n o d e  ( o x i d a t i o n ) :  X ( s ) oX+(aq)+e-  EX/Xo 
+  C a t h o d e  ( r e d u c t i o n ) :  2 H+(aq)+2e-oH2(g)  Eo 0V 
+  S i n c e  t h e  e l e c t r o n s  a r e  f l o w i n g  f r o m  m e tal X to the standard hydrogen electrode,  
+  EX/Xo0V. 
+  T h e  h a l f - r e a c t i o n s  f o r  t h e  s e c o n d  c e l l  a r e :  
+  A n o d e  ( o x i d a t i o n ) :  X ( s ) oX+(aq)+e-  EX/Xo 
+  C a t h o d e  ( r e d u c t i o n ) :  Y2++2e-oY(s)   EY2/Yo 
+  S i n c e  t h e  e l e c t r o n s  a r e  f l o w i n g  f r o m  m e t a l  X  t o  m e t a l  Y ,  EX/Xo+EY2/Yo>0. 
+  F r o m  t h e  f i r s t  c e l l  w e  k n o w  t h a t  EX/Xo0V.  Therefore, EX/Xo>EY2/Yo. 
+107. ( M )  The standard reduction potential of the Fe2+(aq)/Fe(s) couple can be determined from: 
+  Fe2+(aq)oFe3+(aq)+e-Eo 0.771 V
+Fe3+(aq)+3e-oFe(s)   Eo 0.04V
+Overall:
+Fe2+(aq)+2e-oFe(s) 
+  W e  p r o c e e d  s i m i l a r l y  t o  t h e  s o l u t i o n  f o r  1 0 0 :  
+
+=== PDF PAGE 1061 ===
+Chapter 20: Electrochemistry 
+ 1 0 6 1    Eo niEio¦
+ni¦ 0.771 u(1)0.04 u3
+31 0.445 V 
+ 
+SELF-ASSESSMENT EXERCISES 
+ 
+108. (E) (a) A standard electrode potential Eomeasures the tendency for a reduction process to 
+ o c c u r  a t  a n  e l e c t r o d e .    
+ (b) F is the Faraday constant, or the electric charge per mole of electrons (96485 C/mol). 
+ (c) The anode is the electrode at which oxidation occurs. 
+ (d) T h e  c a t h o d e  i s  t h e  e l e c t r o d e  at which reduction occurs. 
+ 
+109. (E) (a) A salt bridge is a devise us ed to connect the oxidation and reduction half-cells of a 
+ g a l v a n i c  ( v o l t a i c )  c e l l .  
+ (b) The standard hydrogen electrode (abbrev iated SHE), also called normal hydrogen 
+ electrode (NHE), is a redox electrode which forms the basis of the thermodynamic scale of 
+ o x i d a t i o n - r e d u c t i o n  p o t e n t i a l s .   B y  d e f i nition electrode potential for SHE is 0. 
+ (c) C a t h o d i c  p r o t e c t i o n  i s  a  t e c hnique commonly used to contro l the corrosion of a metal 
+ s u r f a c e  b y  m a k i n g  i t  w o r k  a s  a  c a t h o d e  o f  a n  electrochemical cell.  This is achieved by 
+ p l a c i n g  i n  c o n t a c t  w i t h  t h e  m e t a l  t o  b e  p r o t e c ted another more easily corroded metal to act as 
+ t h e  a n o d e  o f  t h e  e l e c t r o c h e m i c a l  c e l l .  
+ (d) A fuel cell is an electrochemical cell that pr oduces electricity from fuels.  The essential 
+ p r o c e s s  i n  a  f u e l  c e l l  i s  f u e l + o x y g e n ooxidation products. 
+ 
+110. (E) (a) An overall cell reaction is a combina tion of oxidation and reduction half-
+ r e a c t i o n s .  
+ (b) I n  a  g a l v a n i c  ( v o l t a i c )  c e l l ,  c h e m i c a l  c h a nge is used to produce electricity.  In an 
+ e l e c t r o l y t i c  c e l l ,  e l e c tricity is used to produ ce a nonspontaneous rection. 
+ (c) In a primary cell, the cell reaction is not reversible.  In a secondary cell, the cell 
+ r e a c t i o n  c a n  b e  r e v e r s e d  b y  p a s s i n g  e l ectricity through the cell (charging). 
+ ( d )  Ecellorefers to the standard cell potential (t he ionic species are present in aqueous 
+ s o l u t i o n  a t  u n i t  a c t i v i t y  ( a p p r o x i m a t e l y  1 M ) ,  a n d  gases are at 1 bar pres sure (approximately 1 
+ a t m ) .  
+ 
+111. ( M )  ( a )  False.  The cathode is the positive electrode in a voltaic cell and negative in 
+ e l e c t r o l y t i c  c e l l .  
+ (b) False.  The function of the salt bridge is  to permit the migration of the ions not 
+ e l e c t r o n s .  
+ (c) True.  The anode is the negativ e electrode in a voltaic cell. 
+ (d) True. 
+ ( e )  True.  Reduction always occurs at the cathode of an electrochemical cell.  Because of 
+ t h e  r e m o v a l  o f  e l e c t r o n s  b y  t h e  r e d u c t i o n  h a lf-reaction, the cathode of a voltaic cell is 
+ p o s i t i v e .   B e c a u s e  o f  t h e  e l e c trons forced onto it, the cathode of an electrolytic cell is 
+ n e g a t i v e .   F o r  b o t h  t y p e s ,  t h e  c a t h o d e  i s  t h e electrode at which electrons enter the cell. 
+
+=== PDF PAGE 1062 ===
+Chapter 20: Electrochemistry  
+1062  (f) False.  Reversing the direction of the elec tron flow changes the voltaic cell into an 
+ e l e c t r o l y t i c  c e l l .  
+ (g) True.  The cell reaction is an oxidation-re duction reaction. 
+ 
+112. ( M )  The correct answer is (b), Hg2(aq)i s  m o r e  r e a d i l y  r e d u c e d  t h a n  H(aq). 
+ 
+113. ( M )  Under non-standard conditions, apply the Nernst equation to calculate Ecell: 
+ Ecell Ecello0.0592
+zlogQ
+Ecell 0.66 0.0592
+2log0.10
+0.01 0.63V 
+ T h e  c o r r e c t  a n s w e r  i s  ( d ) .  
+ 
+114. ( E )  ( c )  The displacement of Ni(s) from the soluti on will proceed to a considerable extent, 
+ b u t  t h e  r e a c t i o n  w i l l  n o t  g o  t o  c o m p l e t i o n .  
+ 
+115. ( E )  The gas evolved at the anode when K 2SO 4(aq) is electrolyzed be tween Pt electrodes is 
+ m o s t  l i k e l y  o x y g e n .  
+ 
+116. ( M )  The electrochemical reaction in the cell is: 
+ A n o d e  ( o x i d a t i o n ) :  { A l ( s ) oAl3+(aq)+3e-}u2 
+ C a t h o d e  ( r e d u c t i o n ) :  { H2(g)+2e-o2H+(aq)} u3 
+ O v e r a l l :    2 A l ( s ) + 3 H2(g)o2Al3+(aq)+6H+(aq)  
+ 4.5g Al u1mol Al
+26.98g Alu3 mol H2
+2 mol Al 0.250mol H2
+0.250 mol H2u22.4L H2
+1mol H2=5.6L H2 
+ 
+117. ( E )  The correct answer is (a) 'G. 
+ 
+118. ( M )  Anode (oxidation):{Zn(s) oZn2+(aq)+2e-}u3     Eo 0.763 V 
+  C a t h o d e  ( r e d u c t i o n ) : { N O3-(aq)+4H+(aq)+3e-oNO(g)+2H2O(l)} u2 Eo 0.956 V 
+  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  
+  Overall: 3Zn(s)+2NO3-(aq)+8H+(aq)o3Zn2+(aq)+2NO(g)+4H2O(l)  Ecello 1.719 V 
+  C e l l  d i a g r a m :  Z n ( s ) Z n2+(1M) H+(1M),NO3-(1M) NO(g,1atm) Pt(s)  
+ 
+119. ( M )  Apply the Nernst equation: 
+
+=== PDF PAGE 1063 ===
+Chapter 20: Electrochemistry 
+ 1 0 6 3   Ecell Ecello0.0592
+zlogQ
+0.108  00.0592
+2logx2logx2 3.65
+x2 1036 5x 0.0150 M
+pH log(0.0150)  1.82 
+ 
+120. ( M )  ( a )  Since we are given Ecello, we can calculate K for the given reaction: 
+ Ecello RT
+nFlnK
+0.0050 V 8.314 JK1mol1u298K
+2u96485 Cmol1lnKlnK 0.389K e03 8 9 0.68 
+ S i n c e  f o r  t h e  g i v e n  c o n d i t i o n s  Q = 1 ,  t h e  s y s t e m  i s  n o t  a t  e q u i l i b r i u m .  
+ (b) Because Q>K, a net reaction occurs to the left. 
+ 
+121. ( M )  ( a )  F e ( s ) + C u2+(1M) oFe2+(1M)+Cu(s) , Ecello 0.780 V, electron flow from B to A 
+ (b) Sn2+(1M)+2Ag+(1M) oSn4+(aq)+2Ag(s) , Ecello 0.646 V, electron flow from A to B. 
+ (c) Zn(s)+Fe2+(0.0010M) oZn2+(0.10M)+Fe(s) , Ecello 0.264 V,electron flow from A to 
+  B .  
+  
+122. ( M )  ( a )  Cl2(g) at anode and Cu(s) at cathode. 
+  (b) O 2(g) at anode and H 2(g) and OH-(aq) at cathode. 
+  (c) C l 2(g) at anode and Ba(l) at cathode. 
+  (d) O 2(g) at anode and H 2(g) and OH-(aq) at cathode. 
+ 
+
+=== PDF PAGE 1064 ===
+1064 CHAPTER 21 
+CHEMISTRY OF THE MAIN-GROUP ELEMENTS I: 
+GROUPS 1, 2, 13, AND 14 
+ 
+PRACTICE EXAMPLES  
+ 
+1A (E) From Figure 21-2, the route from sodium ch loride to sodium nitrate begins with 
+electrolysis of NaCl(aq) to form NaOH(aq).  
+2N a Cl a q +2 H2Ol electrolysiso2 NaOH aq+H2g+C l2g followed by addition of  
+NO2g to NaOH(aq).  23 2 2 NaOH aq +3 NO  g 2 NaNO  aq +  NO g +  H O(l) o  
+ 
+1B (E) From Figure 21-2, we see that the route from  sodium chloride to sodium thiosulfate  
+begins with the elect rolysis of NaCl(aq) to produce NaOH(aq), 
+2 NaCl aq +2 H2Ol electrolysiso2 NaOH aq+H2g+C l2g 
+and continues through the reaction of SO2g with the NaOH(aq) in an acid-base reaction  
+ [ S O2g is an acid anhydride] to produce 
+ 23 2 23 2 Na SO aq : 2 NaOH aq +  SO g  Na SO aq +  H O(l) o  and (3) concludes with 
+the addition of S to the boiling solution:  boil
+23 2 2 3Na SO aq +S(s) Na S O aq o . 
+ 
+2A (M) The first reaction indicat es that 0.1 mol of NaNO 2 reacts with 0.3 mol of Na to yield 
+0.2 mol of compound X and 0.05 mol of N 2.  Since this reaction liberates nitrogen gas, it is 
+very likely that compound X is an oxide of  sodium.  The two possibilities include Na 2O 
+and Na 2O2.  Na 2O2 will not react with oxygen, but Na 2O will.  Therefore, compound X is 
+most likely Na 2O and compound Y is Na 2O2.  The balanced chemical equations for two 
+processes are: 
+ NaNO2(s)+3Na(s) o2Na2O(s)+1
+2N2(g)
+Na2O(s)+1
+2O2(g)oNa2O2(s) 
+ 
+2B (M) Since compound X is used in plaster of Pari s it must contain calcium.  Calcium reacts 
+with carbon to form calcium carbide, accord ing to the following chemical equation:  
+Ca(s)+2C(s) oCaC2(s)  
+ 
+Furthermore, compound X or calcium carbide reacts with nitrogen gas to form compound 
+Y or calcium cyanamide: 
+CaC2(s)+N2(g)oCaCN2(s)+C(s)  
+ 
+CN 22- anion is isoelectronic with CO 2 and it therefore contains 16 electrons.  The structure 
+of this anion is:  
+NC N
+  
+
+=== PDF PAGE 1065 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+ 1 0 6 5  3A (M) The first two reactions, are those from Example 21-3, used to produce 23BO.  
+247 2 2 4 24 2 3
+23 2 3Na B O 10 H O(s) + H SO (l) 4 B OH (s) + Na SO (s) + 5H O(l)
+2B O H ( s) B O ( s)+3 H O ( g )' o
+o 
+The next reaction is conversion to 3BCl  with heat, carbon, and chlorine. 
+  23 2 3 2 2B O s +3C s +6Cl g 4B Cl g +3CO g'o  
+4 LiAlH  is used as a reducing agent to produce diborane. 
+34 2 6 3 4B Cl g +3L i A l H ( s) 2B H g +3L iCl ( s )+3A l Cl ( s) o  
+ 
+3B (M) Na 2B4O7.10 H 2O(s) + H 2SO 4(aq) o 4 B(OH) 3(s) + Na 2SO 4(aq) + 5 H 2O(l) 
+2 B(OH) 3(s) 'o  B2O3(s) + 3 H 2O(l)  
+B2O3(s) + 3 CaF 2(s) + 3 H 2SO 4(l) 'o 2 BF 3(g)  + 3 CaSO 4(s) + 3 H 2O(g) 
+ 
+INTEGRATIVE EXAMPLE 
+A (M) NaCN and Al(NO 3)3 dissociate in water accordi ng to the following equations: 
+ NaCN(aq) oNa+(aq)+CN-(aq)
+Al(NO3)3(aq)oAl3+(aq)+3NO3-(aq) 
+ N a C N  i s  a  s a l t  o f  s t r o n g  b a s e  ( N a O H )  a n d  w eak acid (HCN) and its solution is therefore 
+ b a s i c .  
+ W e  p r o c e e d  b y  f i r s t  d e t e r m i n i n g  t h e  [ O H ]- concentration in a solution which is 1.0M in 
+ N a C N :  
+CN-+H2OÉHCN+OH- 
+      1 . 0                      /          /  
+      1 . 0 - x                  x          x  
+ Kb Kw
+Ka(HCN ) 1.0u1014
+6.2u1010 1.6u105
+Kb [HCN ][OH]
+[CN] xux
+1.0x x2
+1.0x 1.6u105 
+ Assume, x<<1 and 1.0-x |1.0 
+ x2 1.6u105x 1.6u105 4.0u103
+[OH] 4.0u103 
+ O n  m i x i n g ,  [ O H-]=2.0 u10-3 M and [Al3+]=0.50 M.  The precipitation will occur according 
+ t o  t h e  f o l l o w i n g  e q u a t i o n :  
+ Al3+(aq)+3OH-(aq)ÉAl(OH)3(s)  
+ T h e  p r o d u c t  [ A l3+][OH-]3=0.50 u(2.0u10-3)3=4.0u10-9 is much greater than K SP for Al(OH) 3 
+ ( 1 . 3 u10-33) and therefore precipitation will occur. 
+ 
+
+=== PDF PAGE 1066 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+1066 B (M) When 22 BeCl 4H O  is heated, it decomposes to Be(OH) 2(s), H 2O(g), and HCl(g), as 
+ d i s c u s s e d  i n  S e c t i o n  2 1 - 3 .  22 BeCl 4H Ocomprises [Be(H 2O)4]2+ and Clí ions. Because of 
+ t h e  h i g h  p o l a r i z i n g  p o w e r  o f  B e2+, it is difficult to remove the coordinated water molecules 
+ b y  h e a t i n g  t h e  s o l i d  a n d  t h e  acidity of the coordinated H 2O molecules is enhanced. When 
+ 22 BeCl 4H O  is dissolved in water, [Be(H 2O)4]2+ ions react with water, and 
+ [ B e ( H 2O)3(OH)]+ and H 3O+ ions are produced. Hence, a solution of 22 BeCl 4H O  is 
+ e x p e c t e d  t o  b e  a c i d i c .  
+ W h e n  22 CaCl 6H O  is heated, CaCl 2(s) and H 2O(g) are produced. Because the charge 
+ d e n s i t y  a n d  p o l a r i z i n g  p o w e r  o f  C a2+ is much less than that of Be2+, it is much easier to  
+ d r i v e  o f f  t h e  c o o r d i n a t e d  w a t e r  m o lecules by heating the solid. When 22 CaCl 6H O  is 
+ d i s s o l v e d  i n  w a t e r ,  C a2+(aq) and Clí(aq) are produced. However, the charge density of the 
+ C a2+ ion is too low to affect the acidity of wa ter molecules in the hydr ation sphere of the 
+ C a2+ ion. Hence, a solution of 22 CaCl 6H O has a neutral pH. 
+ 
+ 
+ 
+EXERCISES 
+ 
+Group 1: The Alkali Metals 
+ 
+1. (E) (a) 2 2 Cs(s)  +  Cl (g)    2 CsCl(s) o   
+  (b)  22 2 2 N a ( s )   +   O ( g )     N a O ( s ) o  
+  ( c )   23 2 2      Li CO s Li O s +  CO g'o   
+  ( d )    24 2 Na SO s + 4 C s  Na S s + 4 CO g o  
+  ( e )   22 Ks +  O g    K O s o  
+ 
+2. (a)  2 Rb s + 2  H2Ol  o  2RbOH aq + H2g 
+ ( b )  32 32 2 2 KHCO s      K CO aq  +  H O(l) +  CO g'o  
+ ( c )   22 2 2 Li s  +  O g     Li O s o  
+ ( d )    24 24 2 KCl s  +  H SO aq     K SO aq  +  2 HCl g o  
+ ( e )   22 LiH s  +  H O l     LiOH aq  +  H g o  
+ 
+3. ( E )  Both LiCl and KCl are soluble in water, but Li PO34  is not very soluble. Hence the 
+addition of KPO (aq)34  to a solution of the white solid will produce a precipitate if the 
+white solid is LiCl, but no precipitate if the white solid is KCl. The best method is a flame 
+test; lithium gives a red color to a flame, while the potassium flame test is violet. 
+ 
+
+=== PDF PAGE 1067 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+ 1 0 6 7  4. (E) When heated, Li CO23  decomposes to 2CO (g)  and 22 3Li O(l). K CO (s)  simply melts when 
+heated. The evolution of CO (g)2 bubbles should be sufficient indication of the difference in 
+behavior. The flame test affords a violet flame if K+ is present, and a red flame if Li+ is present. 
+ 
+5. (M) First we note that sodium carbonate ionizes  virtually completely when dissolved in H 2O and 
+thus is described as highly sol uble in water.  This is made ev ident by the fact that there is no Ksp 
+value for Na 2CO 3.  By contrast, the existence of Ksp values for MgCO 3 and Li 2CO 3 shows that 
+these compounds have lower solubilities in water than Na 2CO 3.  To decide whether MgCO 3 is 
+more or less soluble than Li 2CO 3, we must calculate the molar so lubility for each salt and then 
+compare the two values.  Clearly, the salt that has the larger molar solubility will be more soluble 
+in water.  The molar solubilities can be found using the respective Ksp expressions for the two 
+salts. 
+ 
+1. MgCO 3 -8
+sp = 3.5  10K uZZZZZZZZ X YZZZZZZZ Z  Mg2+(aq)  +  CO 32-(aq)    Let “ s” = molar solubility of MgCO 3 
+  excess – s     s      s 
+  s2 = 3.5×10-8 s = 1.9×10-4 M 
+ 
+2. Li 2CO 3 -2
+sp = 2.5  10K uZZZZZZZZ X YZZZZZZZ Z  2 Li+(aq)  +  CO 32-(aq)    Let “ s” = molar solubility of Li 2CO 3 
+  excess – s     2 s      s 
+  ( 2 s )2×(s) = 2.5×10-8 4s3 = 2.5×10-8 s = -8
+32.5×10
+4 =  0.18 M 
+We can conclude that Li 2CO 3 is more soluble than MgCO 3.  Thus, the expected order of 
+increasing solubility in water is: MgCO 3  <  Li 2CO 3  <  Na 2CO 3. 
+ 
+6. (M) We know sodium metal was produced at th e cathode from the reduction of sodium 
+ion, Na+. Thus, hydroxide must have been i nvolved in oxidation at the anode. The 
+hydrogen in hydroxide ion alrea dy is in its highest oxidati on state and thus cannot be 
+oxidized. This leaves oxidation of the hydroxide  ion to elemental oxygen as the remaining 
+reaction. 
+ 
+ C a t h o d e ,  r e d u c t i o n  :  { N a e N a ( l ) }  4+ ou 
+Anode, oxidation : 4 OH O (g) + 2 H O(g) + 4e22o 
+ 
+   N e t  :   4 4 4 Na OH Na(l) + O (g) + 2 H O(g)+
+22o 
+ 
+7. (M) (a) H( g )2 and Cl (g)2are produced during the electrolysis of NaCl(aq). 
+  T h e  e l e c t r o d e  r e a c t i o n s  a r e :  
+ 
+  A n o d e ,  o x i d a t i o n :  2 C l ( a q ) C l ( g ) + 2 e2o  
+ 
+  C a t h o d e ,  r e d u c t i o n :  222H O ( l )  +  2 e H ( g )  +  2O H ( a q )o  
+ 
+ 
+  W e  c a n  c o m p u t e  t h e  a m o u n t  o f  O Hproduced at the cathode. 
+ 
+
+=== PDF PAGE 1068 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+1068  
+ 
+mol OH 2.50 min u60s
+1minu0.810C
+1su1mole
+96,500Cu2m o lO H
+2m o le 1.26 u103molOH
+ 
+ 
+  T h e n  w e  c o m p u t e  t h e  [ O H] and, from  that, the pH of the solution. 
+ 
+  [OHmol OH
+LsolnM
+ u u ].
+..126 10
+08 7 2145 103
+3 p O H = l o g ( 1 . 4 5 1 0 u  328 3 9). 
+  p H = 1 4 . 0 0 0 2 . 8 3 9 1 1 . 1 6 1   
+   
+ 
+(b) As long as NaCl is in excess and the volum e of the solution is nearly constant, the 
+solution pH only depends on the numb er of electrons transferred. 
+ 
+ 
+8. (M) (a) total energy = 3 3600s 1C/s 1J3.0V 0.50A h 5.4 10 J1hr 1A 1V C xuu u u  u  
+ 
+  W e  o b t a i n e d  t h e  f i r s t  c o n v e r s i o n  f a c t o r  f o r  t i m e  a s  f o l l o w s .  
+ 
+  5015 0 1 066
+..PPW11 0W
+1WJ/s
+1WJ
+1suuu u
+ 
+ 
+  t i m e  =  39
+61s 1hr 1day 1y5.4 10 J 1.1 10 s 34 y51 0J 3600s 24 hr 365daysuu  uu u u  u 
+ 
+ ( b )  The capacity of the battery is dete rmined by the mass of Li present. 
+  1 C/s 3600 s 1 mol e 1 mol Li 6.941 g Limass Li = 0.50 A h = 0.13 g Li1 A 1 h 96485 C 1 mol Li 1 mol e
+uu u u u  
+ 
+9. (M) (a) We first compute the mass of NaHCO 3 that should be produced from 1.00 ton 
+NaCl, assuming that all of the Na in the NaCl ends up in the NaHCO 3. We use the 
+unit, ton-mole, to simplify the calculations. 
+  3
+33
+3
+31 ton-mol NaCl 1ton-mol Namass NaHCO 1.00 ton NaCl58.4 ton NaCl 1ton-mol NaCl
+1tol-molNaHCO 84.0 ton NaHCO=1 . 4 4 t o n  N a H C O1ton-molNa 1 ton mol NaHCO u u
+uu 
+  % yield ton NaHCO  produced
+ ton NaHCO  expected yield =1.03
+1.44100% = 71.5%3
+3u  
+   
+ ( b )  NH3 is used in the principal step of the So lvay process to produce a solution in which 
+NaHCO3 is formed and from which it will precipitate. The filtrate contains NH Cl,4 
+from which NH3 is recovered by treatment with Ca(OH)2. Thus, NH3 is simply used 
+
+=== PDF PAGE 1069 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+ 1 0 6 9  during the Solvay process to produce the proper conditions for the desired reactions. 
+Any net consumption of NH3 is the result of unavoida ble losses during production. 
+ 
+10. (M) (a) 2
+24 4 Ca(OH) (s) SO (aq) CaSO (s) 2OH (aq)ZZXYZZ  
+ 
+(b) We sum two solubility reactions  and combine their values of Ksp 
+     
+  2
+2 Ca(OH) (s) Ca (aq) 2OH (aq)  ZZXYZZ     Ksp u55 106.  
+22
+44 Ca (aq) SO (aq) CaSO (s) ZZXYZZ     11 9 1 1 06// .Ksp u 
+      2
+44 2Ca OH s +SO aq CaSO s + 2 OH aqZZXYZZ  Keq=5.5 10
+9.1 10=0 . 6 06
+6u
+u
+ 
+   
+  B e c a u s e   Keq is close to 1.00, we conclude that the reaction lies neithe r very far to the 
+right (it does not go to comp letion) nor to the left. 
+ 
+ ( c )  Reaction:      2
+24 4 Ca(OH) (s) SO (aq)    CaSO (s) 2OH (aq)ZZXYZZ    
+ 
+Initial:  — 1.00 M    — |0 M 
+Changes:    — - x M    — + 2 x M 
+Equil:    — ( 1 . 0 0 – x) M   — 2 x M 
+ 
+Kx
+xxx x x == 0 . 6 0 =4
+1.004= 0 . 6 0 0 . 6 0 4+ 0 . 6 0 0 . 6 0 = 02
+422
+22 OH
+ SO
+  
+   
+xbb a c
+a=4
+2=0.60 0.36 + 9.60
+8=0 . 3 22r   r M 
+   
+ SO  M OH  M42=1 . 0 0 =0 . 6 8 =2 =0 . 6 4 xx  
+ 
+11. ( M )  Use 'Gfo values to calculate 'Go for the reaction and then the equilibrium constant 
+ K  a t  2 9 8  K .    
+     Na2O2(s)ÉNa2O(s)+1
+2O2(g)  
+  'Gfo(kJmol-1)       - 4 4 9 . 6 3           - 3 7 9 . 0 9  
+ 'Go 379.09 (449.63)  70.54kJmol-1
+'Go RTlnK
+8.314JK-1mol-1u298K ulnK 70.54 u1000Jmol-1
+lnK 70.54 u1000Jmol-1
+8.314JK-1mol-1u298K 28.47 K e28 47 4.32 u1013 
+
+=== PDF PAGE 1070 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+1070  S i n c e K pO21
+2pO2 K2 1.87 u1025.  The equilibrium constant and partial pressure of 
+ o x y g e n  a r e  b o t h  v e r y  s m a l l  a t  2 9 8  K .   T h e r e f o r e ,  N a 2O2(s) is thermodynamically stable 
+ w i t h  r e s p e c t  t o  N a 2O(s) and O 2(g) at 298 K. 
+ 
+12. (M) Use 'Gfo values to calculate 'Go for the reaction and then the equilibrium constant 
+ K  a t  2 9 8  K .  
+     2KO2(s)ÉK2O(s)+3
+2O2(g)  
+  'Gfo(kJmol-1)       - 2 4 0 . 5 9         - 3 2 2 . 0 9  
+ 'Go 322.09 (2u240.59)  159.1kJmol-1
+'Go RTlnK
+8.314JK-1mol-1u298K ulnK 159.1 u1000Jmol-1
+lnK 159.1 u1000Jmol-1
+8.314JK-1mol-1u298K 64K e64 1.604 u1028 
+ S i n c e K pO23
+2pO2 K2
+3 2.952 u1019.  The equilibrium constant and partial pressure 
+of  oxygen are both very small at 298 K.  Therefore, KO 2(s) is thermodynamically stable 
+ w i t h  r e s p e c t  t o  K 2O(s) and O 2(g) at 298 K. 
+ 
+Group 2: The Alkaline Earth Metals 
+ 
+13. (M)  
+ 
+ 
+ 
+  
+       
+       22 2
+,electrolysis
+22 2 3 2 2
+32 2 4 4 2 2The reactions are as follows.  Ca OH s + 2 HCl aq  CaCl aq + 2H O(l)
+CaCl l Ca l + Cl g Ca OH s + CO g  CaCO s +  H O g
+CaCO s CaO s + CO g Ca OH s +  H SO aq  CaSO s + 2 H O(l)'
+'o
+ oo
+oo
+ 
+    34 42 2Ca OH s +  H PO aq  CaHPO aq + 2H O(l) o . Actually CaO s is the industrial 
+starting material from which 2 Ca(OH)  is made. 22 CaO(s) + H O(l) Ca(OH) (s) o  
+ 
+ 
+14. (M)  
+ 
+ 
+ 
+Once we return to Mg(OH) 2 from MgSO 4, the other substances can be made by the indicated 
+pathways. The return reaction is: 42 2 4 MgSO (aq) + 2 NaOH(aq) Mg(OH) (s) + Na SO (aq). o   
+Then the other reactions are  CaO CaCO3CO2Ca(OH)2HClCaCl2Ca
+H2SO4CaSO4H3PO4CaHPO4' electrolysis
+ MgO MgCO3CO2Mg(OH)2HClMgCl2Mg
+H2SO4MgSO4H3PO4MgHPO4' electrolysis N2Mg3N2
+
+=== PDF PAGE 1071 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+ 1 0 7 1  22 2 Mg(OH) (s) + 2 HCl(aq) MgCl (aq) +2 H O(l) o  
+, electrolysis
+22 2 2 3 2 MgCl (l)  Mg(l) + Cl (g) ;       Mg(OH) (s) +CO (g) MgCO (s) + H O(g)' oo  
+32 2 2 4 4 2 MgCO (s)  MgO(s) +CO (g); Mg(OH) (s) + H SO (aq) MgSO (s) + 2H O(l)'oo  
+23 4 42 Mg(OH) (s)  +  H PO (aq)    MgHPO (aq)   +  2H O(l) o  
+ 
+15. (M) The reactions involved are: 
+Mg2+(aq) + Ca2+(aq) + 2OH(aq) o  Mg(OH) 2(s) + Ca2+(aq) 
+Mg(OH) 2(s) + 2 H+(aq) + 2 Cl(aq) o Mg2+(aq) + 2 H 2O(l) + 2 Cl(aq) 
+Mg2+(aq) + 2 Cl(aq) 'oMgCl 2(s) 
+MgCl 2(s)  (electrolysis) o Mg(l) + Cl 2(g)  
+Mg(l) o Mg(s)        
+Mg2+ + 2 Cl(aq) o Mg(s) + Cl 2(g)  (Overall reaction) 
+As can be seen, the process does not violat e the principle of conservation of charge. 
+ 
+16. (M) (a)  M g O  v s .  B a O :   M g O  w o u l d  h a v e  t h e  higher melting point because, although 
+Mg2+ and Ba2+ have the same charge, Mg2+ is a smaller ion.  Smaller ions have a 
+larger electrostatic attraction to anions  (here, in both cases, the anion is O2), which is 
+due to the smaller charge separation (Coulomb's law). 
+ 
+ ( b )  MgF 2 vs. MgCl 2 solubility in water.  F is smaller than Cl, hence, electrostatic attraction 
+between Mg2+ and the halide is greater in F than Cl.  If we assume that hydration of the 
+ions is similar, we expect that MgF 2 is less soluble than MgCl 2.  (Note: Ksp given for 
+MgF 2, which is sparingly soluble, while no Ksp value is given for readily soluble MgCl 2.) 
+17. (M) (a) 22BeF (s) + Mg(s)  Be(s) + MgF s'o  
+ ( b )  Ba s+B r2loBaBr2s 
+ ( c )  UO2s+2 C a s oUs+2 C a O s 
+ ( d )  33 2 MgCO CaCO s MgO s +  CaO s + 2 CO g'  o  
+ ( e )  2 H3PO4aq+3  C a O s oCa3PO42s+3H2Ol 
+ 
+ 
+18. (M) (a)   heat
+32 22Mg HCO s  MgO s + 2 CO g + H O(l) o  
+ (b) electrolysis
+22 BaCl l Ba l + Cl g o  
+ (c) Sr s+2 H B r a q oSrBr2aq+H2g 
+ ( d )    24 42 2HS O a q +  C a O H a q C a S O s + 2 HO l o  
+ ( e )  3 1
+42 4 2 2 22 CaSO 2 H O s CaSO H O s +  H O g'  o  
+ 
+19. ( D )  Let us compute the value of the equilibr ium constant for each reaction by combining 
+the two solubility product constants. Large valu es of equilibrium constants indicate that the 
+reaction is displaced far to the right. Values of K that are much smaller than 1 indicate 
+that the reaction is displaced far to the left. 
+ 
+(a)   2+ 2 10
+44 s p BaSO s Ba aq + SO aq 1.1 10 K u ZZXYZZ  
+
+=== PDF PAGE 1072 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+1072  2+ 2 9
+33 s p Ba aq + CO aq BaCO s 1/ =1/(5.1 10 )K u ZZXYZZ  
+     10
+22 2
+43 34 91.1 10BaSO s + CO aq BaCO s + SO aq = = 2.2 105.1 10K
+ 
+uuuZZXYZZ
+ T h u s ,  t h e  e q u i l i b r i u m  l i e s  s l i g h t l y  t o  t h e  l e f t .  
+ 
+ 
+(b)   2+ 3 25
+34 4 sp 2Mg PO s 3 Mg aq + 2 PO aq =2 . 1 1 0Ku ZZXYZZ  
+ 2+ 2 38 3
+33 s p 3{Mg aq + CO aq MgCO s } 1/( ) =1/(3.5 10 )K uZZXYZZ  
+  
+23
+34 3 3 4 2
+25
+3
+38Mg PO s + 3CO aq 3 MgCO s + 2 PO aq
+2.1 10= =4 . 9 1 0 T h u s ,  t h e  e q u i l i b r i u ml i e st ot h e l e f t .
+3.5 10K
+
+
+uu
+uZZXYZZ
+ 
+ 
+(c)   2+ 6
+sp 2Ca OH s Ca aq + 2 OH  aq =5 . 5 1 0Ku ZZXYZZ  
+ 2+ 9
+2s p Ca aq + 2 F aq CaF s 1/ 1/ (5.3 10 )K  u ZZXYZZ  
+  22 Ca(OH) s +  2F aq CaF s + 2 OH aqZZXYZZ  6
+3
+95.5 10== 1 . 0 1 05.3 10K
+uuu 
+Thus, the equilibrium  lies to the right.  
+ 
+20. (M) We expect the reaction to occur to a signifi cant extent in the forward direction if its 
+equilibrium constant is >> 1. 
+ ( a )    2+ 2 9
+33 s p BaCO s Ba aq + CO aq =5 . 1 1 0Ku ZZXYZZ  
+    2+2 5
+232 232 a 2 HC H O aq 2H aq + 2C H O aq = 1.8 10 Ku ZZXYZZ  
+   2+2 11
+33 a Ha q + C O a q H C O a q 1 / = 1 / ( 4 . 7 1 0) K u ZZXYZZ  
+ 1+ 7
+32 3 a Ha q + H C O a q H C Oa q 1 / = 1 / ( 4 . 2 1 0 ) K u ZZXYZZ
+ 
+   32 322 322 3 2BaCO s + 2 HC H O aq Ba C H O aq + H CO aqZZXYZZ  
+K=5.1u109u1.8u1052
+4.7u1011u4.2u107=8 . 4 u102   
+Thus, no significant reaction occurs (the equilibrium mixture contains appreciable 
+amounts of all four species involved in the reaction.  
+ 
+ (b)   2+ 6
+sp 2Ca OH s Ca aq + 2 OH aq =5 . 5 1 0Ku ZZXYZZ  
+   2+ 25
+43 2 b 2 NH aq + 2 OH aq 2 NH aq + 2 H O(l) 1/ =1/ 1.8 10 K u ZZXYZZ
+ 
+      
++2 +
+43 2 2
+6
+4
+25 Ca OH s + 2 NH aq Ca aq + 2 NH aq + 2 H O(l)
+5.5 10== 1 . 7 1 0 T h u s ,  t h i s  r e a c t i o n  w o u l d  o c c u r  t o  a  s i g n i f i c a n t  e x t e n t .
+1.8 10K
+uu
+uZZXYZZ
+ 
+ 
+
+=== PDF PAGE 1073 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+ 1 0 7 3    
+(c)   2+ 6
+2 sp BaF s Ba aq + 2 F aq =1 . 0 1 0Ku ZZXYZZ  
+   2+ 24
+32 a2 H O aq + 2 F aq 2 HF aq + 2 H O(l) 1/ = 1/ 6.6 10 K u ZZXYZZ
+ 
+        
+6
+2+
+23 2 241.0 10BaF s + 2H O aq Ba aq + 2HF aq + 2H O(l);  = = 2.3
+6.6 10K
+
+u
+uZZXYZZ  
+  T h i s  r e a c t i o n  w o u l d  o c c u r  t o  s o m e  e x tent, but certainly not to completion. 
+ 
+21. ( M )  The SO 42í ion is a large polarizable ion. A cation with a high polarizing power 
+will polarize the SO 42í ion and kinetically assi st the decomposition to SO 3. 
+Because Be2+ has the largest charge density of  the group 2 cations, we expect Be2+ 
+to be the most polarizing and thus, BeSO 4 will be the least stable with respect to 
+decomposition . 
+ 
+22. (M) The CO 32í ion is a large polarizable ion. A cation with a high polarizing power 
+will polarize the CO 32í ion and kinetically assist the decomposition to CO 2. A 
+cation with a low polarizing power will not  polarize the anion as much; thus, the 
+decomposition of CO 32í to CO 2 will not occur as readily in the presence of such a 
+cation. Because Ba2+ has the smallest charge density of the group 2 cations, we 
+expect Ba2+ to be the least polarizing; thus, BaSO 4 will be the most stable with 
+respect to decomposition. 
+ 
+Group 13: The Boron Family 
+ 
+23. (M) (a) 41 0BH c o n t a i n s  a  t o t a l  o f  43 + 1 01 = 2 2uu valence electrons or 11 pairs. Ten of 
+these pairs could be  allocated to form 10 B—H bonds , leaving but one pair to bond 
+the four B atoms together, which is clearly an electron deficient situation. 
+ 
+ (b) In our analysis in part (a), we noted that the four B atoms had but  one electron pair to 
+bond them together. To bond these four atom s into a chain requi res three electron 
+pairs. Since each electron pair in a bri dging bond replaces two “normal” bonds, there 
+must be at least two bridging bonds in the 41 0BH  m o l e c u l e s .  B y  a n a l o g y  w i t h26BH,  
+we might write the structure below left. Bu t this structure uses  only a total of 20 
+electrons. (The bridge bonds are shown as dots, normal bonds—electron pairs—as 
+dashes.) In the structure at  right below, we have reta ined some of the form of 26BH,  
+and produced a compound with the formula 41 0BH  a n d  1 1  e l e c t r o n  p a i r s .  ( T h e  
+experimentally determ ined structure of 41 0BH  c o n s i s t s  o f  a  f our-membered ring of 
+alternating B and H atoms, held togeth er by bridging bonds. Two of the B atoms 
+have two H atoms bonded to each of them  by normal covalent bonds. The other two 
+B atoms have one H atom covalently bonded to each. One final B—B bond joins 
+these last two B atoms, across the diameter  of the ring.).  See the diagram that 
+follows: 
+
+=== PDF PAGE 1074 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+1074         
+(c) 41 0CH c o n t a i n s  a  t o t a l  o f  44 + 1 01 = 2 6uu valence electrons or 13 pairs. A plausible 
+Lewis structure follows.  (Note that each  atom possess an octet of electrons.) 
+ 
+ 
+24.    (E) (a)     (b)  
+   
+ 
+ 
+ 
+25. (M) (a) 2 B B r 3(l) + 3H 2(g) o 2B(s)  +  6HBr(g) 
+   
+ (b) i )  B 2O3(s) + 3 C(s) o' 3 CO(g) + 2 B(s) 
+  ii) 2 B(s) + 3 F 2(g) o' 2 BF 3(g) 
+ 
+ (c) 2  B ( s )  +  3  N 2O(g) o' 3 N 2(g) + B 2O3(s) 
+ 
+26. (M) Each boron atom has an oxidation numb er of +3. The hydroxyl oxygens are each –2, 
+while the bridging oxygens are each –1. Fina lly, the hydroxyl H atoms are all in the +1 
+oxidation state. The oxidation numbers for the all the constituent atoms add up to the 
+charge on the perbor ate ion, namely, 2 .  
+ 
+27. (M) (a) 2 Al s+6 H C l a q o2 AlCl3aq+3  H2g 
+ 
+(b)           +
+22 42 NaOH aq + 2 Al s + 6 H O l 2 Na aq + 2 Al OH aq +3 H gªº o¬¼ 
+ 
+(c) Oxidation: 3+{Al s Al  aq + 3 e } 2ou  
+Reduction: 2 +
+42 2{SO aq + 4 H aq + 2e SO g + 2 H O(l)} 3 ou  
+_______________________________________________________________________________________________________________________________ __ 
+Net:    2 +3 +
+42 2 2 Al s +3 SO aq +12 H aq 2 Al aq +3 SO aq + 6 H O(l)o  
+ 
+28. (M) (a) 2 Al(s) + 3 Br 2(l) o 2 AlBr 3(s) 
+ 
+(b) 2 Al s+C r2O3sheato2Cr l+A l2O3s HCCCCHHH
+H
+HHHHH
+FBFF
+FFBF
+FNH
+HCH
+HCH
+HH_+HHHHHH
+BH
+BH
+BH
+BH
+x
+xx
+xx
+xx
+xx
+xx
+x
+HHHH
+BH
+BH
+BH
+x
+xx
+xx
+xx
+xBH
+HH
+
+=== PDF PAGE 1075 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+ 1 0 7 5   ( c )    23Fe O s + OH aq no reactiono  
+    23 2 4Al O s + 2 OH aq + 3 H O(l) 2 Al OH aqªºo¬¼ 
+ 
+29. ( M )  One method of analyzing this reaction is to envision the HCO3 ion as a combination 
+of CO2 and OH. Then the OH reacts with Al3+ and forms Al OH3.  This method of 
+envisioning  HCO3 does have its basis in reality. After all,  
+ 
+23 2 2 32 HC O = HO + C O + O H H C O + HO o  
+ 
+Al3+aq+3  H C O3aqoAl OH3s+3  C O2g 
+ 
+Another method is to consider the reaction as, first, the hyd rolysis of hydrated aluminum 
+ion to produce   3 Al OH s  and an acidic solution, followed by the reaction of the acid 
+with bicarbonate ion. 
+ 
+        3++
+22 2 3 63 3Al H O aq + 3H O(l) Al OH H O s + 3H O aqªº o¬¼ 
+ 
+ +
+33 2 23H O aq +3HCO aq 6H O(l)+3CO go  
+ 
+This gives the same net reaction:  
+ 
+          3+
+23 2 2 2 63 3Al H O aq + 3HCO aq Al OH H O s + 3CO g + 3H O(l)ªº o¬¼ 
+ 
+30. (E) The  Al3+aq ion hydrolyzes.   3+ +
+2 3Al aq + 3 H O(l) Al OH s + 3 H aq o  
+Subsequently, the hydrogen ion that is produ ced reacts with bicar bonate ion to liberate 2CO g . 
+ +
+32 2 Ha q + H C O a q H O ( l ) + C Ogo  
+ 
+31. ( M )  Aluminum and its oxide are soluble in both acid and base. 
+  
+    +3 +
+2
++3 +
+23 22 Al s + 6 H aq 2 Al aq +3 H g
+Al O s + 6 H aq 2 Al aq + 3 H O(l)o
+o 
+      22 42 Al s + 2 OH aq + 6 H O(l) 2 Al OH aq +3 H gªºo¬¼ 
+    23 2 4Al O s + 2 OH aq + 3 H O(l) 2 Al OH aqªºo¬¼ 
+Al(s) is resistant to corrosion onl y over the pH range 4.5 to 8.5.  Thus, aluminum is inert only 
+when the medium to which it is exposed is neither highly acidi c nor highly basic. 
+ 
+32. (M) Both Al and Mg are attacked by acid and th eir ions are both precipitated by hydroxide 
+ion. 
+  +3 +
+2 2 Al s +6 H aq 2 Al aq +3 H g o   +2 +
+2 Mg s + 2 H aq Mg aq + H g o  
+  3+
+3Al aq +3 OH aq Al OH so    2+
+2Mg aq + 2 OH Mg OH so  
+
+=== PDF PAGE 1076 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+1076 But, of these two solid hydroxides, only Al OH3s redissolves in excess OHaq. 
+Al OH3s+O HaqoAl OH4ª¬º¼aq 
+Thus, the analytical procedur e consists of dissolving the sample in HCl(aq) and then 
+treating the resulting solution with NaOH(aq) until a precipitate forms. If this precipitate 
+dissolves completely in excess NaOH(aq), the sa mple is aluminum 2S. If at least some of 
+the precipitate does not dissolve, the sample was magnesium. 
+ 
+33. ( M )  CO2g is, of course, the anhydride of an aci d. The reaction here is an acid-base 
+reaction. 
+Al OH4ª¬º¼aq+ C O2aqoAl OH3s+H C O3aq 
+HCl(aq), being a strong acid, can’t be used because it will dissolve the Al(OH) 3(s). 
+ 
+34. (M) (a) O e r s t e d :  2  A l2O3s+3  C s+6 C l2g'o4 AlCl3s+3  C O2g 
+ 
+(b) Wöhler:  AlCl3s+3  K s'oAl s+3  K C l s 
+ 
+35. (M) 2 KOH(aq) + 2 Al(s) + 6 H 2O(l) o  2 K[Al(OH) 4](aq) + 3 H 2(g) 
+ 
+          2 K[Al(OH) 4](aq) + 4 H 2SO 4(aq)  o   K 2SO 4(aq) + Al 2(SO 4)3(aq) + 8 H 2O(l) 
+ crystallize o 2 KAl(SO 4)2(s) 
+ 
+36. (E) HCO 3 and CO 32 solutions are basic (they produce an excess of OH).  Al3+(aq) in the 
+presence of OH(aq) will precipitate as the hydroxide Al(OH) 3(s). 
+ 
+37. ( E )  The structure of, and bonding in, digallane is  similar to the st ructure of and bonding 
+ i n  d i b o r a n e ,  B 2H6. 
+GaH
+HGaH
+HH
+H  
+ 
+38. (M) The structure of, and bonding in, GaH 2Cl2 is similar to the structure of and bonding 
+ i n  A l 2Cl6, except that the terminal Cl’s in Al 2Cl6 are replaced by H’s. 
+GaCl
+ClGaH
+HH
+H  
+ 
+Group 14: The Carbon Family 
+ 
+39. ( E )  In the sense that diamonds react imperceptibly  slowly at room temperature (either with 
+oxygen to form carbon dioxide, or in its transfor mation to the more stable graphite), it is 
+essentially true that “diamonds last forever. ” However, at elevated temperatures, diamond 
+will burn to form CO 2(g) and thus the statement is false. Also, the transformation 
+
+=== PDF PAGE 1077 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+ 1 0 7 7  C(diamond) ĺ C(graphite) might occur more rapidl y under other conditions. Eventually, of 
+course, the conversion to graphite occurs. 
+ 
+40.    (E) The graphite in the pencil “l ead” is a good dry lubricant th at will make slippery the 
+stickiness (or reluctance) in the lock and enab le it to work smoothly. The key carries the 
+graphite to the site that needs to be lubricated within the lock mechanism. 
+ 
+41. (M) (a) 3  S i O 2(s)   +   4 Al(s) o' 2  A l 2O3(s)  +  3 Si(s) 
+ 
+ (b) K 2CO 3(s)   +   SiO 2(s)  o'  CO 2(g)  +  K 2SiO 3(s) 
+ 
+ (c) A l 4C3(s)   +   12 H 2O(l)    o 3  C H 4(g)  +  4Al(OH) 3(s) 
+ 
+42. (M) (a) 2  K C N ( a q )  +  A g N O 3(aq) o K A g ( C N ) 2(aq) + KNO 3(aq) 
+  o r   K C N ( a q )  +  A g N O 3(aq) o A g ( C N ) ( s )  +  K N O 3(aq) 
+ 
+ (b) S i 3H8(l) + 5 O 2(g)      o  3 SiO 2(s) + 4 H 2O(l)  
+ 
+ (c) N 2(g) + CaC 2(s)         o' CaNCN(s) + C(s) 
+ 
+43. ( M )  A silane is a silicon-hydrogen co mpound, with the general formula 2+ 2 Si H .nn  A silanol is 
+a compound in which one or more of the hydrogens  of silane is replaced by an —OH group. 
+Then, the general formula becomes 2+ 1 Si H OHnn . In both of these classes of compounds, the 
+number of silicon atoms, n, ranges from 1 to 6. Silicones ar e produced when silanols condense 
+into chains, with the elimination of a water molecule between every two silanol molecules. 
+ 
+22 2 2 2 HO Si H OH + HO Si H OH HO Si H O Si H OH + H Onn nn nn nn     o     
+ 
+44. (M) Both the alkali metal carbonates and the alkali metal silicates are soluble in water. 
+Hence, they also are soluble in acids. Ho wever, the carbonates will produce gaseous carbon 
+dioxide—2CO—on reaction with acid, 
+2 +
+32 3 2 2CO (aq) + 2 H (aq) “H CO ” H O(l) + CO (g)o  o , while the silicates will 
+produce silica— 2SiO — in an analogous reaction 
+4 +
+44 4 2 2SiO (aq) + 4H (aq) “H SiO ” 2 H O(l) +SiO (s)o  o . The silica is produced in 
+many forms depending on reaction conditions: a colloidal dispersi on, a gelatinous precipitate, 
+or a semisolid gel. Silicates of cations other than those of alkali  metals are insoluble in water, 
+as are the analogous carbonates.  However, the carbonates will di ssolve in acids (witness the 
+reaction of acid rain on limestone carvi ngs and marble statues, both forms of 3 CaCO ), while 
+the silicates will not. (Sili cate rocks are not significantly affected by acid rain.) 
+45. (M) (1)   48 22 2C H g + S g 2C S g + 4HS g o  
+ 
+ (2)  22 4 2 2 CS g + 3 Cl g CCl l +S Cl l o  
+ 
+ (3)  22 2 4 8 4C S g + 8SC l g 4C C l l + 3S( s ) o  
+ 
+
+=== PDF PAGE 1078 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+1078 46. (M) (a) 32 333CH SiCl(l) + H O(l) CH Si OH(aq) + HCl(aq) o  
+  33 3 2 33 32 CH Si OH(aq)    CH Si O Si CH (s) +  H O(l)   o   
+ 
+ ( b )  A silicone polymer does not form from 33CH Si Cl . Only a dimer is produced. 
+ 
+ (c) The product that results from the treatment of 33CH SiCl  is two long Si—O—Si 
+chains, with 3CH  groups on the outside, linked by Si—O—Si bridges. Part of one of 
+these chains and the beginnings of  the bridges are shown below. 
+  
+47. (D) Muscovite or white mica has the formula KAl 2(OH) 2(AlSi 3O10).  Since they are not 
+segregated into O 2 units in the formula, all of the oxyge n atoms in the mineral must be in 
+the 2 oxidation state.  Potassium is obviously in the +1 oxidation state, as are the 
+hydrogen atoms in the hydroxyl groups.  Up to  this point, we have -24 from the twelve 
+oxygen atoms and +3 from the potassium and hy drogen atoms for a net number of -21 for 
+the oxidation state.  We  still have three aluminum atoms and three silicon atoms to account 
+for.  In oxygen-rich salts such as mica, we w ould expect that the silicon and the aluminum 
+atoms would be in their highest possible oxidatio n states, namely +4 and +3,  respectively.   
+Since the salt is neutral, the oxidation nu mbers for the silicon and aluminum atoms must 
+add up to +21.  This is precisely the total that  is obtained if the silicon and aluminum atoms 
+are in their highest possi ble oxidation states:  (3 u (+3) + 3 u (+4) = +21).   Consequently, 
+the empirical formula for white muscovite is consistent with the expected oxidation state 
+for each element present. 
+ 
+48. (D) Crysotile asbestos has the formula [Mg 3Si2O5(OH) 4].  Since they are not segregated to 
+O2 units in the formula, all of the oxygen atoms in the mineral must be in the 2 oxidation 
+state.  The three magnesium atoms are obviously  in the +2 oxidation state, while hydrogen 
+atoms in the hydroxyl groups have an oxidation stat e of +1.  Up to this point, then, the sum 
+of the oxidation numbers equals  8 (18 from O-atoms, +6 from Mg-atoms, and + 4 from 
+H-atoms).  Since the mineral is neutral, the two silicon atoms must have oxidation states 
+that sum to +8 ( 8 + 8 = neutral mineral), therefore, each silicon would need to be in the 
++4 oxidation state.  In oxygen rich salts such as asbestos, we would expect that the silicon 
+atoms would be in their highest possible oxid ation state, namely +4.  Thus, the oxidation 
+states for the element, in this mineral ar e precisely consistent  with expectations. 
+49. (M) (a) 33 2 2PbO s + 2 HNO aq Pb NO s + H O(l) o  
+ 
+ ( b )  SnCO3s'oSnO s+C O2g 
+ 
+(c) PbO s+C s'oPb l+C O g 
+ OS iO
+CH3OS iOO
+CH3SiO
+CH3OS iOO
+CH3SiO
+CH3OS iOO
+CH3
+
+=== PDF PAGE 1079 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+ 1 0 7 9  (d) 2 Fe3+aq+S n2+aqo2 Fe2+aq+S n4+aq 
+ 
+(e)  22 2 PbS s +3 O g 2 PbO s + 2 SO g'o  
+ 22 3 2 SO g + O g 2 SO g o    
+SO3g+P b O s oPbSO4s 
+ 
+Or perhaps simply: 24 PbS s + 2O g PbSO s o  
+ 
+Yet a third possibility: 
+ 23 PbO s +SO s PbSO s o , followed by  32 4 2 PbSO s +  O s 2PbSO s o  
+ 
+50. (M) (a) Treat tin(II) oxide with  hydrochloric acid. 
+  22 SnO s + 2 HCl aq SnCl aq + H O(l) o  
+ 
+(b) Attack tin with chlorine. Sn s+2 C l2goSnCl4s 
+ 
+(c) First we dissolve PbO2s in HNO3aq and then treat the resulting solution with 
+K2CrO4aq to precipitate PbCrO 4(s) 
+ 
+  23 32 222 PbO s + 4 HNO aq 2 Pb NO aq + O g + 2 H O(l) o  
+ 
+32 4 4 32Pb NO aq + K CrO aq PbCrO s + 2 KNO aq o  
+ 
+51. ( M )  We start by using the Nernst equation to de termine whether the cell voltage still is 
+positive when the reaction has gone to completion. 
+ 
+ ( a )  Oxidation: 2+ 3+Fe aq Fe aq + e }  2ou     =0 . 7 7 1  VE  
+Reduction: +2 +
+22PbO s + 4 H aq + 2 e Pb aq + 2 H O(l)o    =+ 1 . 4 5 5  VE  
+  N e t :   2+ + 3+ 2+
+2 2 2 Fe aq + PbO s + 4 H (aq) 2 Fe aq + Pb aq + 2 H O(l) o  
+ 
+  Ecell  V  V  V =0 . 7 7 1 + 1 . 4 5 5 = + 0 . 6 8 4  
+ 
+  I n  t h i s  c a s e ,  w h e n  t h e  r e a c t i o n  h a s  g o n e  t o  c o m p l e t i o n ,   
+ 
+   Fe  M  Fe2+ 3+=0 . 0 0 1 , =0 . 9 9 9 M ,  a n d   Pb2+=0 . 5 0 0 M .  
+  
+  E cell = Eo
+cell  32 2
+220.0592 [Fe ] [Pb ]log2[ F e ]
+ = 0.684 V 2
+20.0592 [0.999] [0.500]log2[ 0 . 0 0 1 ] = 0.515 V.  
+  T h u s ,  t h i s  r e a c t i o n  w i l l  g o  t o  c o m p l e t i o n .  
+ (b) Oxidation: 22
+42 8 2 SO aq S O aq + 2 eo    =2 . 0 1 VE  
+Reduction: +2 +
+22PbO s + 4 H aq + 2 e Pb aq + 2 H O(l)o     = + 1 . 4 5 5  VE  
+    22 +2 +
+42 2 8 2 2 SO aq + PbO s + 4 H (aq) S O aq + Pb aq + 2 H O(l)o  
+
+=== PDF PAGE 1080 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+1080 Ecell  V This reaction is not even spontaneous initially =2 . 0 1 + 1 . 4 5 5 =0 . 5 6 . 
+ 
+(c) Oxidation: {Mn2+1u10-4 M+4H2O(l)oMnO4aq+8H+aq+5 e-}u2;o=1 . 5 1  VE  
+Reduction: +2 +
+22 {PbO s +4 H aq +2 e Pb aq +2 H O(l)}×5o     o=+1.455 VE  
+Net:   -4 2+ + 2+
+24 211 0 M 2Mn + 5PbO s + 4H 2MnO aq + 5Pb aq + 2H O(l)u o  
+o
+cell=1 . 5 1 + 1 . 4 5 5 =0 . 0 6  V .E   The standard cell potential indicates that this reaction is 
+not spontaneous when all concentrations are 1 M. Since the concentration of a reactant 
+Mn2+ is lower than 1.00 M, this reaction is even less spontaneous than the standard 
+cell potential indicates. 
+ 
+52. (M) A positive value of Ecell indicates that a re action should occur. 
+(a) 2+ 4+Oxidation :  Sn aq Sn aq + 2 eo   =0 . 1 5 4  VE  
+2 Reduction :  I s + 2 e 2 I aqo       = + 0 . 5 3 5  V E  
+          
+  2+ 4+
+2 Net :  Sn aq + I s Sn aq + 2 I aqo     cell=+ 0 . 3 8 1  VE  
+Yes, Sn2+aq will reduce  I2 to I. 
+ 
+(b) 2+ 4+Oxidation :  Sn aq Sn aq + 2 e =0 . 1 5 4  VEo   
+2+Reduction :  Fe aq + 2 e Fe s =0 . 4 4 0  VEo  
+          
+2+ 2+ 4+
+cell Net :  Sn aq + Fe aq Sn aq +  Fe s = 0.594 V E o  
+No, Sn2+aq will not reduce Fe2+aq to Fe(s). 
+ 
+(c) 2+ 4+Oxidation :  Sn aq Sn aq + 2 e =0 . 1 5 4  VEo   
+2+Reduction :  Cu aq + 2 e Cu s =+ 0 . 3 3 7  VEo  
+          
+2+ 2+ 4+
+cell Net :  Sn aq + Cu aq Sn aq +  Cu s =+ 0 . 1 8 3  VE o  
+Yes, Sn2+aq will reduce Cu2+aq to Cu(s). 
+ 
+  (d)  2+ 4+Oxidation :  Sn aq Sn aq + 2 e =0 . 1 5 4  VEo   
+3+ 2+Reduction : {Fe aq + e Fe aq }  2 =+ 0 . 7 7 1  VEou  
+          
+2+ 3+ 4+ 2+
+cell Net :  Sn aq + 2 Fe aq Sn aq + 2 Fe aq = +0.617 V E o  
+Yes, Sn2+aq will reduce Fe3+aq to Fe2+aq. 
+ 
+53. ( M )  As we move down a group, the lower oxidati on state is generally favored. Thus, we 
+ e x p e c t  P b C l 2, with lead in the +2 oxidation state, to be the product.  
+ 
+
+=== PDF PAGE 1081 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+ 1 0 8 1  54. (M) As we move down a group, the lower oxidati on state is generally favored. The higher 
+ o x i d a t i o n  s t a t e  i s  f a v o r e d  f o r  e l e m e n t s  higher in the group. Thus, we expect GeF 4, with 
+ lead in the +4 oxidation state, to be the product. 
+ 
+ 
+ 
+INTEGRATIVE AND ADV ANCED EXERCISES 
+ 
+55. (M) What most likely happened is that a delique scent solid has absorbed water vapor from 
+the air over time and formed a saturated solution.  This saturated solution can be used in any 
+circumstance where the solid would be used to prepared an aqueous solution.  Of course, the 
+concentration will have to be  d e t e r m i n e d  b y  s o m e  m e a n s  o t h e r than weighing, such as a 
+gravimetric analysis or using a standard to react with the substance in a titration.  
+Alternatively, the saturated solution can be heat ed in a drying oven to drive off the water and 
+the solid may be recovered.  Often, unfortuna tely, a solid with an unknown percent of water 
+results from this treatment. 
+ 
+ 
+56. (D) (a)  A  s o l u t i o n  o f  C O 2(aq) has [CO 32-] = K a2[H2CO 3] = 5.6×10-11 M .   S i n c e  t h e  K sp =  
+2.8×10-9 f o r  C a C O 3, the [Ca2+] needed to form a precipitate from this solution can be 
+computed. 
+     [Ca2+] = -9
+sp
+2+ -112.8 10=  = 50. M
+[Ca ] 5.6 10K u
+u 
+ 
+  T h i s  i s  t o o  h i g h  t o  r e a c h  b y  d i s s o l v i n g  C a C l 2 in solution.  The reason a solid forms is that 
+the OH- produced by the Ca(OH) 2 neutralized some of the HCO 3- from the ionization of 
+CO 2(aq), thereby increasing the [CO 32-] above a value of 5.6×10-11 M. 
+  
+ (b) T h e  e q u a t i o n  f o r  r e d i s s o l v i n g  c a n  b e  o b t ained by combining several equations. 
+ 
+CaCO 3(s) U Ca2+(aq)  + CO 32-(aq)     Ksp = 2.8×10-9 
+CO 32-(aq) + H 3O+(aq) U HCO 3-(aq) + H 2O(l)   1/ Ka2 = 1/(5.6×10-11) 
+CO 2(aq) + 2 H 2O(l) U HCO 3-(aq) + H 3O+(aq)     Ka1 = 4.2×10-7 
+               
+CaCO 3(s) + CO 2(aq) + H 2O(l) U Ca2+(aq)  + 2 HCO 3-(aq) K = 
+  Kspu Ka1
+Ka2 
+ K = 
+ (2.8u10-9)u (4.2 u10-7)
+(5.6u10-11) = 2.1 u10-5 = [Ca2+][HCO3-]2
+[CO2] 
+  I f  C a C O 3(s) is precipitated from 0.005 M Ca2+(aq) and then redissolved, [Ca2+] = 
+0.005 M and [HCO 3-] = 2×0.005 M = 0.010 M.  We use these values in the above 
+expression to compute the [CO 2].  
+      [CO2] = [Ca2+][HCO3-]2
+(2.1u10-5) = 0.002 M  
+  W e  r e p e a t  t h e  c a l c u l a t i o n  f o r  s a t u r a t e d  C a ( O H ) 2, in which [OH-] = 2 × [OH-], after 
+first determining [Ca2+] in this solution. 
+
+=== PDF PAGE 1082 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+1082   K sp = [Ca2+][OH-]2 = 4×[Ca2+] = 5.5 × 10-6 [ C a2+] = 6
+35.5 10 = 0.011 M4u 
+ [CO2] = [Ca2+][HCO3-]2
+(2.1u10-5) = (0.011)(0.022)2
+2.1u10-5 = 0.25 M  
+Thus, to redissolve the CaCO 3 requires that the [CO 2] = 0.25 M, assuming the solution 
+is initially saturated with Ca(OH) 2(aq). 
+ (c) follow the solution for (b) above. 
+ 
+57. (M) There are two principal reasons why the electro lysis of NaCl(l) is used to produce sodium 
+commercially rather than the electrolysis of NaOH(l). First, NaCl is readily available whereas 
+NaOH is produced from the electrolysis of NaCl(aq) . Thus the raw material NaCl is much cheaper 
+than is NaOH. Second, but less important, when sodium is produced from the electrolysis of 
+NaCl(l), a by-product is Cl 2(g), whereas O 2(g) is a by-product of the production of NaOH(l). 
+Since O 2(g) can be produced more cheaply by th e fractional distillatio n of liquid air, Cl 2(g) can be 
+sold for a higher price than O 2(g). Thus, the two reasons fo r producing sodium from NaCl(l) 
+rather than NaOH(l) are a much cheaper raw material and a more profitable by-product. 
+  
+58. (M) The triiodide ion is linear (AX 2E3). The Li+ i o n  h a s  a  h i g h  c h a r g e  d e n s i t y  a n d  
+significant polarizing power. The Li+ ion will polarize the I 3í to a significant extent and 
+presumably assists the decomposition of I 3í to I 2 and Ií. 
+II I 
+59. (M) Use o
+fG' values to calculate oG' for the reaction and then K. Because 1
+2
+2O KP , the 
+value of K can then be used to calculate 
+2OP. 
+      Li2O2(s)ÉLi2O(s)+1
+2O2(g) 
+   'Gfo[kJ/mol]       -419.02        -466.40 
+  'Go 466.40 (419.02)  47.38kJmol-1
+'Go RTlnK
+8.314JK-1mol-1u1000K ulnK 47.38 u1000Jmol-1
+lnK 47.38 u1000Jmol-1
+8.314JK-1mol-1u1000K 5.70 K e57 0 298
+K PO21
+2PO2 K2 2982 8.8u104 
+ 
+60. (M) Use oo o 1
+hydr hydr hydr T SH G' ' '  to calculate o
+hydrS' values: 
+
+=== PDF PAGE 1083 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+ 1 0 8 3    
+  'Shydro(Li) 1
+298522(481)   0.14J/Kmol
+'Shydro(Na) 1
+298407(375)   0.11J/Kmol
+'Shydro(K) 1
+298324(304)   0.07J/Kmol
+'Shydro(Rb) 1
+298299(281)   0.06J/Kmol
+'Shydro(Cs) 1
+298274(258)   0.05J/Kmol 
+  A l l  t h e  o
+hydrS' values are negative because, in the proc ess, a gas is being converted into a 
+liquid solution. However, o
+hydrS' is most negative for Li+. The o
+hydrS' values increase as 
+we move down the group from Li+ to Cs+. As the charge density and polarizing power of 
+the metal cation decreases, so too does the degree of order (or or ganization) in the 
+hydration sphere. Thus, the entropy ch ange should be mo st negative for Li+ a n d  l e a s t  
+negative for Cs+. 
+ 
+61. (M) (a)  U s e  t h e  K a p u s t i n s k i i  e q u a t i o n  i n  t h e  f o r m  120, 200 34.51zzUrr rr
+ §·Q  ¨¸©¹, with 
+ r+ and rí in picometers, to calculate U in kJ molí1. For LiO 2, z+ = +1, zí = í1, and Q= 2. 
+ (b) When we apply the Born–Fajans–Habe r cycle to the r eaction Li(s) + O 2(g) ĺ LiO 2(s), 
+ w e  g e t  o
+fH' = o
+f,Li(g)H' + IE(1) Li í 43 + U. Values of o
+f,Li(g)H' and IE(1) Li are given in 
+ Appendix D and in Table 21.2, respectively. ( c) For the reaction 2 LiO 2(s) ĺ Li2O(s) + 
+ 3
+2O2(g), oH' = 
+2o
+f,Li O(s)H'í 2 
+2o
+f,LiO (s)H'. (d) The decomposition reaction is exothermic 
+ (oH' < 0) and, with the assumption that  entropy effects are not important, the 
+ decomposition of LiO 2(s) to Li 2O(s) and O 2(g) is thermodynamically favorable. 
+ 
+62. (M) (a) The mass of MgO(s) that would be produ ced can be determined with information 
+from the balanced chemical equa tion for the oxidation of Mg(s).  
+MgO(s)  2  ) g ( O Mg(s)  22 o  
+MgO  g  332 . 0MgO  mol  1MgO  g  30 . 40
+Mg  mol  2MgO  mol  2
+Mg  g  305 . 24Mg  mol  1Mg  g  0.200 MgO  mass  u u u   
+(b) If the mass of product formed from the starting Mg differs from the 0.332 g MgO 
+predicted, then the product could be a mi xture of magnesium nitride and magnesium 
+oxide. This scenario is not implausible since mo lecular nitrogen is readily available in the 
+atmosphere. (s) N Mg (g) N Mg(s)   323 2 o  
+ mass Mg3N2=0.200 g Mg u1 mol Mg
+24.305 g Mgu1 mol Mg3N2
+3 mol Mgu100.93 g Mg3N2
+1 mol Mg3N2=0.277 g Mg3N2 
+
+=== PDF PAGE 1084 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+1084  W e  c a n  u s e  a  t e c h n i q u e  s i m ilar to determining the percen t abundance of an isotope.  
+Let f = the mass fraction of MgO in the product. The (1.000 – f) is the mass fraction of 
+Mg 3N2 in the product. product mass = mass MgO × f + [mass Mg 3N2 × (1.000 – f)] 
+0.315 g product = 0.332 × f + [0.277 × (1.000 – f)] = 0.277 + f(0.332 – 0.277) 
+69 . 0277 . 0 332 . 0277 . 0 315 . 0  f   T h e  p r o d u c t  i s  6 9 %  b y  m a s s  M g O .  
+ 
+63. (M) R e a c t i o n  ( 2 1 . 4 )  i s  K(g)  NaCl(l)  Na(l) KCl(l)C 850 o  It is practical when the 
+reactant element is a liquid and the product el ement is a gas at the same temperature. 
+(a) S i n c e  L i  h a s  a  h i g h e r  b o i l i n g  p o i n t  ( 1 3 4 7 ° C )  t h a n  K  ( 7 7 3 . 9 ° C ) ,  a  r e a c t i o n  s i m i l a r  t o  
+(21.4) is not a feasible way of producing Li metal from LiCl. 
+(b) O n  o n e  h a n d ,  C s  h a s  a  l o w e r  b o i l i n g  p o i n t  ( 6 7 8 . 5 ° C )  t h a n  K  ( 7 7 3 . 9 ° C ) ,  a n d  t h u s  a  
+reaction similar to (21.4) is a feasible  m e t h o d  o f  p r o d u c i n g  C s  m e t a l  f r o m  C s C l .  
+However, the ionization energy of Na is cons iderably larger than that of Cs, making it 
+difficult to transfer an electron from Na to Cs+. 
+ 
+64. (M) (a) 2  A l ( s )  +  F e 2O3(s) o 2 Fe(s) + Al 2O3(s)   'H = -852 kJ
+ ( b )  4 Al(s) + 3 MnO 2(s) o 2 Al 2O3(s) + 3 Mn(s)  'H = -1792 kJ  
+ ( c )  2 Al(s) + 3 MgO(s) o Al 2O3(s) + 3 Mg(s)   'H = +129 kJ 
+ 
+65. (M) Li+(aq) + e- o Li(s) 'Gq = -293.3 kJ = -nFE q = -1 mol e- (96,485 C/mol e-)Eq  
+ E q = -3.040 V (this value is the same as  the one that app ears in Table 21.2.)
+ 
+66. (M) The partial pr essure of H 2 is 748 mmHg – 21 mmHg = 727 mmHg 
+ 
+  amount H2 P V
+RT 727 mm Hg u(1 atm/760 mmHg)  u0.104 L
+0.08206 Latm K-1mol-1u296 K=4.10 u103 mol H2 
+ T h e  e l e c t r o d e  r e a c t i o n s  a r e  t h e  f o l l o w i n g .  
+) ( H   aq) ( OH  2 e  2 O(l) H  2    : Cathode       e  2 g) ( Cl aq) ( Cl  2    : Anode        2 2 2 g  o  o   
+Thus 2 mol OH–(aq) are produced per mole of H 2(g); 8.20 × 10–3 mol OH–(aq) are produced. 
+M  0.0328 M  10 28 . 3soln  L  250 . 0OH  mol 10 20 . 8] OH [23
+ u  u  
+ 
+ T h e n  w e  c o m p u t e  t h e  i o n  p r o d u c t  a n d  compare its value to the value of Ksp for Mg(OH) 2. 
+2 sp11 4 2 2 2
+sp Mg(OH) for  10 8 . 1 10 37 . 2 ) 0328 . 0 )( 220 . 0 ( ] [OH ] Mg [ K Q  u !u        
+Thus, Mg(OH) 2 should precipitate. 
+ 
+
+=== PDF PAGE 1085 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+ 1 0 8 5  67. (D) (a) We determine the amount of Ca2+ associated with each anion in 106 g of the water.
+ 
+mol  44 . 1
+HCO  mol  2Ca  mol  1
+HCO  g  02 . 61HCO  mol  1
+HCO  g  176 ) (HCO  Ca amount mol  592 . 0
+SO  mol  1Ca  mol  1
+SO  g  06 . 96SO  mol  1SO  g  9 . 56 ) (SO  Ca amount  
+32
+33
+3 322
+42
+2
+42
+4 2
+42
+42
+– u u   u u  
+
+  
+
+  
+ 
+  T h e n  w e  d e t e r m i n e  t h e  t o t a l  m a s s  o f  C a2+, numerically equal to the ppm Ca2+. 
+  
+
+ o  u  2 2
+22
+2 2Ca  ppm  4 . 81 Ca  g  4 . 81
+Ca  mol  1Ca  g  08 . 40Ca  mol  ) 44 . 1 592 . 0 ( Ca  mass  
+(b) The reactions for the removal of HCO 3–(aq) begin with the formation of hydroxide ion 
+resulting from dissolving CaO(s). Hydroxide ion reacts with bicarbonate ion to form carbonate 
+ion, which then combines with calcium ion to form the CaCO 3(s) precipitate. 
+  aq)( OH  2 (aq) Ca O(l) H CaO(s)2
+2  o  
+s) ( CaCO  aq) ( CO aq) ( Ca  aq) ( CO O(l) H aq) ( HCO aq) ( OH
+32
+322
+3 2 3
+o  o 
+   
+ 
+For each 1.000 × 106 g of water, we need to remove 176 g HCO 3–(aq) with the added CaO(s). 
+CaO  g  7 . 48CaO  mol  1CaO  g  08 . 56
+OH mol  2CaO  mol  1HCO  mol  1OH  mol  1
+HCO  g  02 . 61HCO  mol  1
+ water g  10 000 . 1HCO  g  176 water g  10 602 CaO  mass
+3 33
+63 3
+ u uu u
+uu u 
+
+ 
+ 
+(c) H e r e  w e  d e t e r m i n e  t h e  t o t a l  a m o u n t  o f  C a2+ in 602 kg of water, and  that added as CaO. 
+        Ca2+=602 kg
+1u106 kg§
+©¨·
+¹¸(0.592+1.44) mol Ca2++4 8 . 7  g  C a O u1 mol CaO
+56.08 g CaOu1 mol Ca2+
+1 mol CaO§
+©¨·
+¹¸= 2.09 mol Ca2+ 
+ T h e  a m o u n t  o f  C a2+ that has precipitated equals the amount of HCO 3– in solution, since each 
+mole of HCO 3– is transformed into 1 mole of CO 32–, which reacts with and then precipitates 
+one mole of Ca2+. Thus the amount of Ca2+ that has precipitated is  (0.602)(1.44) = 0.867 mol 
+Ca2+ as CaCO 3(s). Then we can determine the concentration of Ca2+ remaining in solution. 
+ M  10 03 . 2 water L  1 water g  10
+ water g  10Ca  mol  867 . 0   total Ca  mol  2.09] Ca [33
+62 2
+2  
+u u  
+ T o  c o n s i d e r  t h e  C a2+ “removed”, its concentration should be decreased to 0.1% (0.001) of 
+its initial value, or 2.03 × 10–6 M. We use the Ksp expression for CaCO 3 to determine the 
+needed [CO 32–] 
+22 9 6
+sp 3
+9
+2
+3 6      [Ca ][CO ] 2.8 10 1.46 10  M 
+2.8 10      [CO ] 0.0014 M
+2.03 10K  
+
+
+  u  u
+u  
+u 
+
+=== PDF PAGE 1086 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+1086  T h i s  c a r b o n a t e  i o n  c o n c e n t r a t i o n  c a n  readily be achieve d by adding solid Na 2CO 3. 
+ 
+(d) T h e  a m o u n t  o f  C O 32– needed is that which ends up in the precipitate plus that needed to 
+attain the 0.0014 M concentration in the 602 kg = 602 L of water. 
+        nCO3-2= 602 L u0.00203 mol Ca2+
+1 L wateru1 mol CO32-
+1 mol Ca2+§
+©¨·
+¹¸+0.0014 mol CO32-
+1 L water§
+©¨·
+¹¸ = 2.1 mol CO32- 
+ T h i s  C O 32– comes from the added Na 2CO 3(s). 
+322
+3232
+332 2
+3 32 CO Na  g  10 2 . 2CO Na mol  1CO Na  g  99 . 105
+CO  mol  1CO Na  mol  1CO  mol  0 . 2 CO Na  mass        
+–2u u u  
+ 
+68. (M) (a) In the cell reaction, three mo les of electrons are required  to reduce each mole of Al 3+. 
+ 
+ mass Al  8.00 h u3600 s
+1 hu1.00 u105 C
+1 su1 mol e
+96,485 Cu1 mol Al
+3 mol eu26.98 g Al
+1 mol Al 2.68 u105 g Al  
+ T h e  3 8 %  e f f i c i e n c y  i s  n o t  c o n s i d e r e d  i n  t h i s  calculation.  All of the electrons produced 
+must pass through the electrolytic cell; they si mply require a higher than optimum voltage 
+to do so, leading to resistance heating (which consumes some of the electrical energy). 
+(b) total energy  4.5 V u8.00 h u3600 s
+1 hu1.00 u105 C
+1 su1 J
+1 VCu1 kJ
+1000 J 1.3u107 kJ 
+        mass coal = 1.3 u107 kJ electricity u1 kJ heat
+0.35 kJ electricityu1 g C
+32.8 kJu1 g coal
+0.85 g Cu1 metric ton
+106g
+       mass coal = 1.3 metric tons of coal 
+69. (M) We begin by rewriting Equation 21.25 for the electrolysis of Al 2O3(s) with n = 12 e-. 
+ 3  C ( s )  +  2  A l 2O3(s) o 4 Al(s) + 3 CO 2(g) 
+ 'Gq = 4(0 kJ/mol) + 3(-394 kJ) – [3(0 kJ/mol) + 2(-1520 kJ/mol)] = +1858 kJ  
+ 'Gq = 1.858 × 106 J = -nFE q = -12 mole e-(96,485 C/mol e-)Eq  
+ E q = -1.605 V Note: this is just an estimate because 'Gq values are at 298 K, whereas 
+the reaction occurs at a temperatur e that is much higher than 298 K. 
+ I f  t h e  o x i d a t i o n  o f  C ( s )  t o  C O 2(g) did not occur, then the cell reaction would just be the 
+reverse of the form ation reaction of Al 2O3 with n = 6 e-. 
+ E q = 
+ 'Eo='Go
+nF=1.520 u106J
+6mole-u96485C/mole- -2.626 V
+ 
+70. (M) I t  w o u l d  n o t  b e  u n r e a s o n a b l e  t o  p r e d ict that Raoult’s law holds under these 
+circumstances. This is predicated on the assumption, of course, that Pb(NO 3)2 is completely 
+ionized in aqueous solution. 
+
+=== PDF PAGE 1087 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+ 1 0 8 7   Pwater xwater Pqwater xwater Pwater
+Pqwater 97%  0.97  
+ T h u s ,  t h e r e  a r e  9 7  m o l  H 2O in every 100 mol solution. The remaining 3 moles are 1 mol 
+Pb2+ and 2 mol NO 3–. Thus there is 1 mol Pb(NO 3)2 for every 97 mol H 2O. Compute the 
+mass of Pb(NO 3)2 in 100 g H 2O. 
+   
+    massPb(NO3)2= 100.0 g H2Ou1 mol H2O
+18.02 g H2Ou1 mol Pb(NO3)2
+97 mol H2Ou331.2 g Pb(NO3)2
+1 mol Pb(NO3)2 = 19 g Pb(NO3)2 
+ I f  w e  d i d  n o t  a s s u m e  c o m p l e t e  i o n i z a t i o n  o f  P b ( N O 3)2, we would obtain 3 moles of un-
+ionized Pb(NO 3)2 i n  s o l u t i o n  f o r  e v e r y  9 7  m o l e s  o f  H 2O. Then there would be 57 g 
+Pb(NO 3)2 dissolved in 100 g H 2O. A handbook gives the sol ubility as 56 g Pb(NO 3)2/100 g 
+H2O, indicating only partial dissociation or, more  probably, extensive re-association into ion 
+pairs, triplets, quadruplets, etc. 
+ 
+71. (M) Considerable energy is required to produce the Pb4+ cation—four ionization steps, one 
+for the removal of each electron. It therefore needs quite a larg e lattice energy to compensate 
+for its energy of production. Both Br– and I– are large anions, and therefore the Pb4+—Br– 
+and Pb4+—I– interionic distances are l ong. But lattice energy depends on the charge of the 
+cation (which is quite large) multiplied by th e charge of the anion (which is reasonably 
+small) divided by the square of the interionic distance (long, as we have said). Thus, we 
+predict a small lattice energy that is insufficient to stabilize the Pb4+ c a t i o n .  W e  w o u l d  
+predict, however, that PbF 4 and PbCl 4 (both with sm all anions) and PbO 2 and PbS 2 (both 
+with small, highly charged anions) would be st able compounds.   In addition, notice that 
+Eo {Pb4+|Pb2+} = 1.5 V (from Table 21-6) is sufficient to oxidize Br– to Br 2 and I– to I 2, since 
+Eo {Br 2|Br–} = +1.065 V and Eo {I2|I–} = +0.535 V. Thus, even if PbI 4 or PbBr 4 could be 
+prepared they would be thermodynamically unstable. 
+ 
+72. (M) Na2B4O710 H 2O(s) + 6 CaF 2(s) + 8 H 2SO 4(aq) o  4 BF 3(aq)  + 6 CaSO 4(aq) + 17 H 2O(l) + 2 
+NaHSO 4(aq) 
+ 
+73. (D) (a) 1.00 M NH 4Cl is a somewhat acidic solu tion due to hydrolysis of NH 4+(aq); MgCO 3 
+should be most soluble in this solution. Th e remaining two solutions are buffer solutions, 
+and the 0.100 M NH 3–1.00 M NH 4Cl buffer is more acidic of the two.  In this solution, 
+MgCO 3 h a s  i n t e r m e d i a t e  s o l u b i l i t y .  M g C O 3 i s  l e a s t  s o l u b l e  i n  t h e  m o s t  a l k a l i n e  s o l u t i o n ,  
+namely, 1.00 M NH 3–1.00 M NH 4Cl. 
+ 22 8
+33 s p
+5
+43 2
+2 11
+33 32 2     MgCO (s)  Mg (aq) CO (aq)      3.5 10
+     NH (aq) OH (aq)  NH (aq) H O(l)      1/ 1/1.8 10
+     CO (aq) H O (aq) HCO (aq) H O(l)   1/ 1/ 4.7 10bK
+K
+K 
+ 
+   u
+  u
+  uZZXYZZ
+ZZXYZZ
+ZZXYZZ 
+  14
+23
+2
+34 3 3  2 H O(l)  H O (aq) OH (aq) 1.0 10
+MgCO (s)  NH (aq) Mg   HCO ( ) NH (aq)  wK
+aq 
+  u
+ ZZXYZZ
+ZZXYZZ 
+
+=== PDF PAGE 1088 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+1088   81 4
+sp w 7
+51 1
+b2KK 3.5 10 1.0 10K4 . 1 1 0KK 1.8 10 4.7 10u uu u   uu uu u 
+ I n  1 . 0 0  M  N H 4Cl 
+ 2
+34 3 3 Reaction:    MgCO (s)    NH  (aq)     Mg (aq)   HCO (aq) NH (aq)
+Initial:                     1.00 M 0 M  0 M 0 M
+Changes:                 M                  M           M             xx x x  
+
+ ZZXYZZ
+2 3
+33
+4
+37 3
+3 M
+Equil:                  (1.00 )M              M                M                  M
+[Mg ] [HCO ] [NH ]         
+[NH ] 1.00  1.00
+4.1 10 7.4 10  M  molar solubility of MgCO  in1.0xxx x
+xxxxKx
+x
+
+
+  |
+ u u  4 0 M NH Cl
+(  1.00 M, thus the approximation was valid)x 
+ 
+(b) I n  1 . 0 0  M  N H 3–1.00 M NH 4Cl 
+2
+34 3 3   Reaction:     MgCO (s)        NH (aq)   Mg (aq)    HCO (aq)   NH (aq)
+  Initial:      1.00 M  0 M 0 M 1.00 M
+  Changes:        M                M  M              M
+  Equil:   (1.00xx x x  
+
+  
+ZZXYZZ
+2 2
+33
+4)M           M         M              (1.00 )M
+[Mg ][HCO ][NH ]           (1.00 ) 1.00  [NH ] 1.00 1.00xxx x
+xx x xKx
+
+    | 
+74
+33 4  4 . 1 1 0 6 . 4 1 0  M  m o l a r  s o l u b i l i t y  o f  M g C O  i n  1 . 0 0  M  N H - 1 . 0 0  M  N H C lx u u   
+ ( 1 . 0 0  M ,  t h u s  t h e  a p p r o x i m a t i o n  w a s  v a l i d )x  
+(c) I n  0 . 1 0 0  M  N H 3–1.00 M NH 4Cl 
+2
+34 3 3            Reaction:     MgCO (s)  NH (aq) Mg (aq) HCO (aq)   NH (aq)
+           Initial:                              1.00 M                    0 M           0 M             0.100 M
+         
+ZZXYZZ
+    Changes:                           M                M          M                M
+           Equil:                           (1.00 )M                 M         M          (0.100 )Mxx xxxxx x  
+   
+2 2
+33
+4
+7
+3
+33 4[Mg ][HCO ][NH ]           (0.100 ) 0.100           1.00 1.00 [NH ]
+4.1 10           2.0 10  M solubility of MgCO  in 0.100 M NH -1.00 M NH Cl0.100
+          (  is 2 % of 0.100 M, so xx x xKx
+x
+x
+
+
+  u  |
+u  u  
+the approximation was valid) 
+ 
+
+=== PDF PAGE 1089 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+ 1 0 8 9  74. (M) If the value of the equilibrium constant for the reaction is quite large, then the 
+conversion will be almost complete. We write the net ionic equation and then add the two 
+solubility reactions to obtain  the net ionic equa tion for the conversion. The equilibrium 
+constants are multiplied together to give th e equilibrium constant for the conversion. 
+2
+23 3
+2 6
+2 sp
+22 9
+33 s p
+2
+23Net  ionic equation: Ca(OH) (s) CO (aq) CaCO (s) 2 OH (aq)
+Ca(OH) (s)  Ca (aq) 2 OH (aq)          5.5 10
+Ca (aq) CO (aq)  CaCO (s)           1/ 1/ 2.8 10
+Ca(OH) (s) CO (aqK
+K
+ 
+ 
+
+ u
+ u
+ZZXYZZ
+ZZXYZZ
+ZZXYZZ
+6
+3
+3o v e d r a l l 95.5 10)  CaCO (s)  2  OH (aq)   2.0 102.8 10K
+
+u  uuZZXYZZ 
+Because Koverall > 1000, the conversion is substantially complete. 
+ 
+75. (M) The density of each metal depends on two fact ors: its atomic size and the masses of the 
+individual atoms. Density is thus, proportional to the atomic mass divided by the cube of the 
+atomic radius. We calculate this ratio for each of the elements. 
+33 3
+33atomic mass atomic mass atomic massLi:         Na:             K:   (atomic radius) (atomic radius) (atomic radius)
+6.941 (g/mol) 22.99 (g/mol)      1.98          3 . 5 7       [1.52   ( A )] [1.86 (A)]    qq339.10 (g/mol)          3.34[2.27 (A)]  q
+ 
+We see that the calculated ratios follow the same pattern as the densities: Na ! K ! Li, thus 
+explaining why Na has a higher density than both Li and K . 
+ 
+76. ( M )  We would expect MgO(s) to have a larger value of lattice energy than MgS(s) because 
+of the smaller interionic distance in MgO(s). 
+ 
+Lattice energy of MgO: 
+ Enthalpy of formation:  MgO(s) (g) O Mg(s)2 o kJ 10 02 . 62
+fu  q ' H  
+ Sublimation of Mg(s):  (g) M Mg(s) g o   kJ 146 'subH  
+ Ionization of Mg(g) 
+Ionization of Mg(g):    o e (g) M Mg(g) g  
+   o e (g) M (g) Mg2g   kJ 7 . 7371 'I  
+kJ 14512 'I  
+ 21Dissociation O 2(g):  O(g) (g) O2 21o   kJ 7 . 48 2 4 . 97 4 DE21 u        
+ O(g) electron affinity:  (g) O e O(g) o   kJ 41 1 EA1   
+ O(g) electron affinity:  (g) O e (g) O2 -  o   kJ 744 EA2   
+ Lattice energy:  MgO(s) (g) O (g) M2 2o g  L.E = -3789 kJ(see below) 
+
+=== PDF PAGE 1090 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+1090  L.E = -602 kJ – 146 kJ – 737.7 kJ – 1451 kJ – 248.7 kJ + 141 kJ – 744 kJ = -3789 kJ  
+  
+     Lattice energy of MgS: 
+ Enthalpy of formation:  MgS(s) S(g) Mg(s) o  kJ 10 46 . 32
+fu  q ' H  
+ Sublimation of Mg(s):  (g) M Mg(s) g o   kJ 146 'subH  
+ Ionization of Mg(g) 
+Ionization of Mg(g):    o e (g) M Mg(g) g  
+   o e (g) M (g) Mg2g   kJ 7 . 7371 'I  
+kJ 14512 'I  
+ 21Dissociation of S 2(g):  S(g) (g) Srhombic 21o   kJ 8 . 78 2 6 . 557 DE21 u        
+ S(g) electron affinity:  (g) S e S(g) o   kJ 4 . 200 EA1   
+ S(g) electron affinity:  (g) S e (g) S2 -  o   kJ 456 EA2   
+ Lattice energy:  2+ 2-Mg (g) + S (g) MgS(s) o L.E = -3215 kJ 
+ L . E  =  - 3 4 6  k J  –  1 4 6  k J  –  7 3 7 . 7  k J  –  1 4 5 1  k J  –  2 7 8 . 8  k J  +  2 0 0 . 4  k J  –  4 5 6  k J  =  - 3 2 1 5  k J  
+ 
+77. ( M )  In one unit cell, there are 1
+8 × 8 + 1
+2 × 6 = 4 fulleride ions and 1
+4 × 12 + 1 + 8 = 12 
+alkali metal ions. The ratio of cations to anions  is 12:4 = 3:1, and so the fulleride ion is C 603í 
+and the empirical formula is M 3C60. 
+ 
+ 
+FEATURE PROBLEMS 
+ 
+78. (D) Li(s) o Li(g)  159.4 kJ; (Using 'Hqrxn = 6'Hfqproducts  6'Hfqreactants  in Appendix D) 
+ L i ( g )  o Li+(g) + e 5 2 0 . 2  k J ;  ( D a t a  g i v e n  i n  T a b l e  2 1 . 2 ,  C h a p t e r  2 1 )  
+Li+(g) o Li+(aq)  506 kJ ;  (Provided in the question) 
+Li(s) o Li+(aq) + e 174 kJ 
+ 
+1/2 H 2(g) o H(g)  218.0 kJ (Using 'Hqrxn = 6'Hfqproducts  6'Hfqreactants  in Appendix D) 
+H(g) o H+(g) + e 1312 kJ (Use R H(NA)Bohr theory = 2.179 u 1018 J(6.022 u 1023)) 
+H+(g) o H+(aq)  1079 kJ  ( P r o v i d e d  i n  t h e  q u e s t i o n )  
+1/2 H 2(g) o H+(aq) + e    451 kJ 
+(a) Li(s) + H+(aq) o Li+(aq) + 1/2 H 2(g) 'Hq = 174 kJ – 451 kJ = 277 kJ | 'Gq 
+  Eoxq = o3277 10  J J= 2.87 = 2.87 V C C1 mol e 96,485mol eG
+nF 
+' u  §· ¨¸©¹ 
+  
+
+=== PDF PAGE 1091 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+ 1 0 9 1  In this reaction, Li(s) is being oxidized to Li+(aq).  If we wish to compare this to the 
+reduction potential for Li+(aq) being reduced to Li(s), we would have to reverse the 
+reaction, which would result in the same answer only as a negative value.  
+Alternatively, we can change the sign of the oxidation potential (Li oLi+) to -2.87 V 
+for the reduction potential for Li+ o Li. 
+ 
+   (it apears as -3.040 V in Appendix D; here, we see much better agreement.)  
+ 
+ (b) 'S = 6Sqproducts - 6Sqreactants   
+= [1 molJ
+Kmol13.4§·
+¨¸©¹+ 0.5 molJ
+Kmol130.7§·
+¨¸©¹] 
+ [1 molJ
+Kmol29.12§·
+¨¸©¹ + 1 mol J
+Kmol0§·
+¨¸©¹] = 49.6J
+K 
+'Gq = 'Hq  T'Sq  = 277 kJ – 298.15 KJ49.6K§·
+¨¸©¹1kJ
+1000 Ju  292 u 103 J 
+Eoxq = o3292 10  J J= 3.03 = 3.03 V  C C1 mol e 96,485mol eG
+nF 
+' u  §· ¨¸©¹ 
+As mentioned in part (a) of this question,   we have calculated the oxidation potential 
+for the half reaction Li(s) o Li+(aq) + e-.  The reduction potential is the reverse half-
+reaction and has a potential of -3.03 V.  Th is is in excellent agreement with -3.040 V 
+given in Appendix D. 
+ 
+ 
+79.       (D) (a)   
+0. 438 mol NaCl
+L u 58.443 g NaCl
+1m o l  N a C l = 26.6 g NaCl 
+2 0. 0512 mol MgCl
+L u 2
+295.211 g MgCl
+1m o l  M g C l = 4.87 g MgCl 2 
+ 
+18 tbs NaHCO 3 u3
+310 g NaHCO
+1 tbs NaHCO= 180 g  NaHCO 3 
+10 tbs NaCl u10 g NaCl
+1 tbs NaCl= 100 g  NaCl 
+8 tsp MgSO 4 x 7 H 2Ou42
+421 tbs 10 g MgSO 7 H O
+3 tsp 1 tbs MgSO 7 H Oxux= 27 g MgSO 4 x 7 H 2O 
+ 
+  
+(b) The pH of the lake will be determined  by the amphiprotic bicarbonate ion, (HCO 3),  
+which hydrolyzes in water (
+1aK = 4.4 u 107
+ or 
+1apK = 6.36  and  
+2aK = 4.7 u 1011 
+or  
+2apK = 10.33).  We saw earlier (Chapter 18, Exercise 100) that the pH of a 
+solution of alanine, a diprotic species is i ndependent of concentration (as long as it is  31.5 g of salt  
+per liter of 
+seawater  
+307 g of salt per 
+gal. of lake water 
+(3.7854 L/gal) 
+
+=== PDF PAGE 1092 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+1092  
+relatively concentrated).  The pH = 12aa(p  p )
+2KK=  (6.36 10.33)
+2= 8.35 
+ 
+This is not as basic as the actual pH of the lake.  Addition of borax (sodium salt of 
+boric acid) would aid in increasing the pH of the solution (since borax contains an 
+anion that is the conjugate ba se of a weak acid).  The lake  may be more basic due to 
+the presence of other basic an ions, namely carbonate ion (CO 32). 
+ 
+(c) Tufa are mostly made of calcium carbonate (CaCO 3(s)).  Since they form near 
+underwater springs, one must assume that the springs ha ve a high concentration of 
+calcium ion (Ca2+(aq)).  We then couple this with the fact that the lake has a high 
+salinity (high carbonate and bica rbonate ion content).  We ca n thus conclude that two 
+major reactions are most likely responsible for the formation of a tufa (see below): 
+ 
+Ca2+(aq) + CO 32(aq) o  CaCO 3(s) 
+Ca2+(aq) + 2 HCO 3(aq) o  Ca(HCO 3)2(q) o  CaCO 3(s) + H 2O(l) + CO 2(g) 
+ 
+ 
+SELF-ASSESSMENT EXERCISES 
+ 
+80. (E) (a) A dimer is a chemical or biological entity  consisting of two structurally similar 
+subunits called monomers, which are joined by bonds, which can be strong or weak.   
+(b) An adduct is a product of a direct addition of  two or more distinct  molecules, resulting 
+in a single reaction product containing all atom s of all components, with formation of two 
+chemical bonds and a net reduction in bond multiplic ity in at least one of  the reactants.   
+(c) Calcination is a thermal treatment process applied to ores and other solid materials in 
+order to bring about a thermal decomposition, phase transition, or removal of a volatile 
+fraction.   
+(d)  An amphoteric oxide is an oxide that ca n act both as an acid and as a base.  An 
+example is aluminum oxide Al 2O3.   
+(e) A three-center two-electr on bond is an electron deficien t chemical bond where three 
+atoms share two electrons. The combination of three atomic orbitals form three molecular 
+orbitals: one bonding, one non-bonding, and one anti-bonding. The two electrons go into 
+the bonding orbital, resulting in a net bondi ng effect and constituting a chemical bond 
+among all three atoms. 
+ 
+81. (E) (a)   A diagonal relationship exists betw een certain pairs of diagonally adjacent 
+elements in the second and third periods of the periodic table.  These pairs (Li and Mg, Be 
+and Al, B and Si, etc.) exhibit similar propert ies.  For example boron and silicon are both 
+semiconductors.   
+(b)  One way to prepare deionized water is by passing it through an ion exchange column.  
+The latter is composed of insoluble chem icals which remove both positive and negative 
+ions from water.   
+(c) Thermite is a pyrotechnic composition of  a metal powder and a metal oxide, which 
+produces an aluminothermic reaction known as a thermite reaction.   
+
+=== PDF PAGE 1093 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+ 1 0 9 3  (d) The inert pair effect is the tendency of the outermost s electrons to remain un-ionized 
+or unshared in post-transition compounds. 
+ 
+82. (E) (a) A peroxide is a compound containing an  oxygen-oxygen single bond. Superoxide 
+is an anion with the chemical formula O2-.   
+(b)  Calcium oxide (CaO) is commonly known as  burnt lime, lime or quicklime.  Calcium 
+hydroxide (Ca(OH) 2) on the other hand is commonly known as slaked lime, hydrated lime, 
+or slack lime.   
+(c)  Soap is an anionic surfactant used in conj unction with water for washing and cleaning.  
+Soap consists of sodium or potassium salts  of fatty acids and is obtained by reacting 
+common oils or fats with a strong alkaline so lution in a process known as saponification.  
+Detergents, on the other hand, ar e prepared synthetically.   
+(d) A silicate is a compound containing an ion in which one or more central silicon atoms 
+are surrounded by electronega tive ligands. Silicones are compounds containing silicon-
+oxygen and silicon-carbon bonds that have the ca pability to act as bonding intermediates 
+between glass and organic compounds, and to form polymers with useful properties such 
+as impermeability to water, flexibility and resistance to chemical attack.   
+(e) The sol-gel process is a chemical soluti on deposition technique wi dely used in the 
+fields of materials science and ceramic engineering. Typical precursors are metal alkoxides 
+and metal chlorides, which undergo various  forms of hydrolysis and polycondensation 
+reactions. 
+ 
+83. ( E )  ( c )  MgO  
+ 
+84. ( E )  ( f )  PbO 2 
+ 
+85. (M) (a) BCl 3NH 3(g) (an adduct); (b) KO 2(s); (c) Li2O(s); (d) Ba(OH) 2(aq) and H 2O2(aq); 
+H2O2(aq) slowly disproportionates into H 2O(l) and O 2(g). 
+ 
+86.  (M) The thermite reaction is evidence that aluminum will readily extract oxygen from 
+Fe2O3. Aluminum can be used for making products that last and for structural purposes, 
+because aluminum develops a coating of Al 2O3 that protects the metal beneath it. 
+ 
+87. (M)  (b) Ca(s) and CaH 2(s) 
+ 
+88. (M)   (a)  Li2CO3(s)'oLi2O(s)+CO2(g) 
+  (b)  CaCO3(s)+2HCl(aq) oCaCl2(aq)+H2O(l)+CO2(g) 
+  (c)  2Al(s)+2NaOH(aq)+6H2O(l)o2Na[Al(OH)4](aq)+2H2(g) 
+  (d)  BaO(s)+H2O(l)oBa(OH)2(aq,limited solubility)  
+  (e)  2Na2O2(s)+2CO2(g)o2Na2CO3(s)+O2(g) 
+ 
+
+=== PDF PAGE 1094 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+1094 89. (M)  (a)  MgCO3(s)+2HCl(aq) oMgCl2(aq)+H2O(l)+CO2(g)  
+  (b)  2Na(s)+2H2O(l)o2NaOH(aq)+H2(g) followed by the reaction in Exercise  
+  8 2 ( c )  
+  (c)  2NaCl(s)+H2SO4(concd.,aq)'oNa2SO4(s)+2HCl(g)  
+ 
+90. (M)  (a)  K2CO3(aq)+Ba(OH)2(aq)oBaCO3(s)+2KOH(aq)  
+  (b)  Mg(HCO3)2(aq)'oMgCO3(s)+H2O(l)+CO2(g) 
+  (c)  SnO(s)+C(s)'oSn(l)+CO(g)  
+  (d)  CaF2(s)+H2SO4(concd. aq)'oCaSO4(s)+2HF(g)  
+  (e)  NaHCO3(s)+HCl(aq) oNaCl(aq)+H2O(l)+CO2(g) 
+  (f)  PbO2(s)+4HBr(aq) oPbBr2(s)+Br2(l)+2H2O(l) 
+  (g)  SiF4(g)+4Na(l) oSi(s)+4NaF(s)  
+ 
+91. (M)  CaSO4u2H2O(s)+(NH4)2CO3(aq)oCaCO3(s)+(NH4)2SO4(aq)+2H2O(l) .  The 
+reaction proceeds to the right because K sp for CaCO 3<K sp for CaSO 4 
+ 
+92. (M)  (a)  2B(OH)3(s)oB2O3(s)+3H2O(g)  
+  (b)  no reaction 
+  (c)  CaSO4u2H2O(s)[gypsum]'oCaSO4u1
+2H2O(s)[plaster of Paris]+3
+2H2O(g)  
+93. (M)  (a)  Pb(NO3)2(aq)+2NaHCO3(aq)oPbCO3(s)+2NaNO3(aq)+H2O(l)+CO2(g)   In 
+  N a H C O 3(aq) the concentration of CO 32-(aq) is high enough that K sp of PbCO 3 is  
+  e x c e e d e d .  
+  (b)  Li2O(s)+(NH4)2CO3(aq)oLi2CO3(s)+2NH3(g)+H2O(l) .  Li 2O(s) is the  
+  a n h y d r i d e  o f  t h e  s t r o n g  b a s e  LiOH, which reacts with acidic NH 4+(aq) to liberate  
+  N H 3(g).  Li 2CO 3(s) is only slightly soluble, so most of it precipitates. 
+  (c)  H2SO4(aq)+BaO2(aq)oH2O2(aq)+BaSO4(s) .  The forward reaction is  
+  f a v o r e d  b y  t h e  f o r m a t i o n  o f  a  p r e c i p i t a t e ,  B a S O 4(s). 
+  (d)  2PbO(s)+Ca(OCl)2(aq)oCaCl2(aq)+2PbO2(s) .  Hypochlorite ion oxidizes  
+  l e a d ( I I )  o x i d e  t o  l e a d ( I V )  o x i d e .  
+ 
+94. (M)  (a)  Stalactites are primarily CaCO 3(s).  (b)  Gypsum is CaSO 4x2H 2O(s).  (c)  
+Suspension of BaSO 4(s) in water.  (d)  Al 2O3(s) with Fe3+ and Ti4+ replacing some Al3+ in 
+the crystal structure. 
+95. (M)  Dolomite, molar mass of 184.4 g/mol yields 2 mol CO 2(g) per mol of dolomite on 
+ d e c o m p o s i t i o n .   T h e  5 . 0 0 u103 kg sample yields 5.42 u104 mol CO 2 which, under the 
+ s t a t e d  c o n d i t i o n s  o c c u p i e s  a  v o l u m e  o f  1 . 2 7 u103 m3. 
+
+=== PDF PAGE 1095 ===
+1095 CHAPTER 22 
+ 
+CHEMISTRY OF THE MAIN GROUP ELEMENTS II: 
+GROUPS 18, 17, 16, 15 AND HYDROGEN 
+ 
+ 
+PRACTICE EXAMPLES 
+ 
+1A (D) This question i nvolves calculating Eq for the reduction half-reaction: 
+ 
+ C l O 3(aq)  +  3 H 2O(l)  +  6 e  o  Cl(aq)  +  6 OH(aq) 
+ 
+Here we will consider just one of the se veral approaches available to solve this 
+problem.  The four half-reac tions (and their associated Eq values) that are used in this 
+method to come up with the “missing Eq value ” are given below.  (Note: the Eq for the 
+first reaction was determined in Example 22-1) 
+ 
+1)  ClO 3(aq)  +  H 2O(l)  +  2 e o  ClO 2(aq)  +  2 OH(aq) Eq = 0.295 V 'Gq1 = 2FEq
+ 
+2)  ClO 2(aq) +  H 2O(l)  +  2 e  o  OCl(aq)  +  2 OH(aq) Eq = 0.681 V 'Gq2 = 2FEq
+ 
+3)  OCl(aq)  +  H 2O(l)  +  1 e   o   1/2 Cl 2(aq) + 2 OH(aq) Eq = 0.421 V 'Gq3 = 1FEq
+ 
+4)  1/2 Cl 2(aq) + 1 e  o  Cl(aq)    Eq = 1.358 V 'Gq4 = 1FEq 
+ 
+Although the reactions themselves may be added to obtain the desired equation, the Eq 
+for this equation is not the sum of the Eq values for the above four reactions.  The Eq 
+value for the desired equation is actu ally the weighted average of the Eq values for 
+reactions (1) to (4).  It can be calculated by summing up the free energy changes for the 
+four reactions. (The standard voltages for half-reactions of the same type are not 
+additive. The 'Gq values for these reactions can, however, be summed together.) 
+ 
+When (1), (2), (3) and (4) are added together we obtain 
+ 
+   1) ClO 3(aq)  +  H 2O(l)  +  2 e  o  ClO 2(aq)  +  2 OH(aq) Eq1 = 0.295 V 
+ 
++ 2) ClO 2(aq) +  H 2O(l)  +  2 e   o  OCl(aq)  +  2 OH(aq) Eq2 = 0.681 V 
+ 
++ 3) OCl(aq)  +  H 2O(l)  +  1 e   o   1/2 Cl 2(aq) + 2 OH(aq) Eq3 = 0.421 V 
+ 
++ 4) 1/2 Cl 2(aq) + 1 e  o  Cl(aq)     Eq4 = 1.358 V  
+ C l O 3(aq)  +  3 H 2O(l)  +  6 e  o  Cl(aq)  +  6 OH(aq) Eq5 = ?  
+ 
+and 'Gq5 = 'Gq1 + 'Gq2 + 'Gq3 + 'Gq4   
+ 
+ s o ,  6FEq5 = 2F(0.295 V) + 2F(0.681V) + 1F(0.421 V) + 1F(1.358 V) 
+ 
+ H e n c e ,  Eq5 = 6F -V)  1F(1.358 -   V)  1F(0.421 -   2F(0.681V) -   V)  2F(0.295 -  = 0.622 V 
+ 
+
+=== PDF PAGE 1096 ===
+Chapter 22: Chemistry of the Main- Group Elements II: Groups 18, 17, 16, 15, and Hydrogen  
+ 
+1096 1B. (D) This question involves calculating Eq for the reduction half-reaction: 
+ 
+2 ClO 3(aq)  +  12H+(aq) +  10 e  o  Cl 2(aq)  +  6 H 2O(l)  
+ 
+The three half-reactions (and their associated Eq values) are given below: 
+ 
+(1) ClO 3(aq) + 3H+(aq) + 2 e o HClO 2(aq) +  H 2O(l)  Eq = 1.181 V 
+ 
+(2)      HClO 2(aq) + 2 H+(aq) + 2 e o  HClO(aq) +  H 2O(l)  Eq = 1.645 V
+ 
+(3) 2 HClO (aq) + 2 H+(aq) + 2 e o Cl2(aq) + 2 H 2O(l)  Eq = 1.611 V 
+ ( r e m e m b e r  t h a t  'Gq= nFEq) 
+ 
+Although the reactions themselves can be a dded to obtain the desired equation, the Eq 
+for this equation is not the sum of the Eq values for the above three reactions.  The Eq 
+for the desired equation is actual ly the weighted average of the Eq values for reactions 
+(1) to (3).   It can be obtained by su mming up the free energy changes for the three 
+reactions.  (For reactions of the same type, standard voltage s are not additive; 'Gq 
+values are additive, however.)  When (1) a nd (2) (each multiplied by two) are added to 
+(3) we obtain: 
+ 
+2u(1) 2 ClO 3(aq) + 6 H+(aq) + 4 e o 2 HClO 2(aq) + 2 H 2O(l)  Eq1 = 1.181 V 
+2u(2) 2 HClO 2(aq) + 4 H+(aq) + 4 e o 2 HClO(aq) + 2 H 2O(l)  Eq2 = 1.645 V
+ (3) 2 HClO (aq) + 2 H+(aq) + 2 e o Cl2(aq) + 2 H 2O(l)   Eq3 = 1.611 V 
+ 2  C l O 3(aq)  +  12 H+(aq)  +  10 e  o  Cl 2(aq)  +  6 H 2O(l) Eq4 = ?  
+ 
+and 'Gq4 = 'Gq1 + 'Gq2 + 'Gq3  
+ 
+ so, 10FEq4 = 4F(1.181 V) + 4F(1.645 V) + 2F(1.611 V)  
+ 
+ H e n c e ,  Eq4 = F 10 - V)  2F(1.611 -   V)  4F(1.645 -   V)  4F(1.181 -= 1.453 V 
+ 
+2A (M) The dissociation reaction is the revers e of the formation reaction, and thus G' for 
+the dissociation reaction is the negative of fG'  
+ 
+  11
+22 f 22 HF g H g + F (g) = = 273.2 kJ/mol GG o' '  
+ 
+ W e  k n o w  t h a t   
+ 
+ 31 1
+P P =l n + 2 7 3 . 2 1 0 J / m o l = 8 . 3 1 4 5 J  m o l K 2 9 8 K l nGR T K K' u uu  
+ 
+ 31
+110 48 48
+Pp 11273.2 10 J molln = = 110 = e = 1.7 10 2 108.3145 J mol K 298 KKK
+ 
+uu | uu 
+ 
+ V i r t u a l l y  n o  d i s s o c i a t i o n  o f  H F (g) into its elements occurs. 
+ 
+
+=== PDF PAGE 1097 ===
+Chapter 22: Chemistry of the Main- Group Elements II: Groups 18, 17, 16, 15, and Hydrogen 
+   
+ 1 0 9 7  2B (M) The dissociation reaction with all integer coefficients is twice the reverse of the 
+formation reaction. 
+ 
+ 
+  22 p 2HCl g H g + Cl g = 2 95.30 kJ / mol = +190.6 kJ / mol = ln GR T K ' u   U
+ 
+ 
+  lnKp='G
+RT=190.6 u103J/m o l
+8.3145 J mol1K1u298 K=76.9 Kp=e76 9=4u1034 
+ 
+ W e  a s s u m e  a n  i n i t i a l  H C l ( g )  p r e s s u r e  o f  P atm, and calculate the final pressure of 
+Cl2(g) and H 2(g), x atm. 
+ 
+ R e a c t i o n :  2  H C l ( g )  ZXZYZZ H 2(g) + Cl 2(g) 
+ I n i t i a l :  P atm  0 atm   0 atm 
+ C h a n g e s :   – 2 x atm  + x atm  + x atm 
+ E q u i l :   ( P – 2x) atm x atm  x atm 
+ 
+  
+ 2
+22 34 17
+p 2 2{H g } {Cl g }== = = 4 1 0 2 1 0{HCl g } 2 2 2PP xx x xKPP x P x Px §·u u ¨¸©¹ 
+ 
+ 17 17=2 1 0 2 2 1 0xPx Pu | u  
+ 
+ 17 15 2% decomposition = 100% =  2 2 10  100%  4 10  % decomposedx
+Puu u u  u  
+ 
+ 
+ INTEGRATIVE EXAMPLE 
+A ( M )   The half-reactions are: 
+ N O2-+2OH-oNO3-+H2O+2e-      Eo 0.04V 
+ { N O2-+H2O+e-oNO+2OH-}u2     Eo 0.46V 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  
+ 3 N O2-H2OoNO3+2NO+2OH     Ecello 0.42V 
+ Eo for the first reaction (oxidation) can be calculated by using the approach in Example 
+22-1.  The calculated value is very small, and so the Eo for the disproportionation 
+reaction is negative.  The disproportionation of NO 2- to NO 3- and NO is therefore not 
+spontaneous. 
+ 
+B (M)  The half-reactions are: 
+ H N O2+H2OoNO3-+3H++2e-     Eo 0.934V 
+ { H N O2+H++e-oNO+H2O}u2    Eo 0.996V 
+________________________________________________________________________________________________________________ 
+ 3 H N O2oNO3-+H++H2O+2NO     Ecello 0.062 V 
+ Eo for the first reaction (oxidation) can be calculated by using the approach in Example 
+22-1. Ecellofor the reaction is positive and th erefore disproportionation of HNO 2 to NO 3- 
+and NO is spontaneous under standard conditions. 
+
+=== PDF PAGE 1098 ===
+Chapter 22: Chemistry of the Main- Group Elements II: Groups 18, 17, 16, 15, and Hydrogen  
+ 
+1098  
+ EXERCISES 
+ 
+Periodic Trends in Bonding and Acid-Base Character of Oxides 
+ 
+1. ( E )  LiF, BeF 2, BF 3, CF 4, NF 3, OF 2. LiF is an ionic compound, BeF 2 is a network 
+ c o v a l e n t  c o m p o u n d ,  a n d  t h e  o t h e r s  are molecular covalent compounds. 
+ 
+2. (E) NaF, MgF 2, AlF 3, SiF 4, PF 5, SF 6, and ClF 5. NaF and MgF 2 are ionic compounds, 
+ A l F 3 is a network covalent compound, a nd the others are molecular covalent 
+ compounds. 
+ 
+3. ( E )  The metallic character of the elements increases as we move down a group, and 
+ s o  t o o  d o e s  t h e  b a s i c  c h a r a c t e r  o f  t h e  o x i d e s .  B i 2O3 is most basic, P 4O6 is least basic 
+ ( a n d  i s  a c t u a l l y  a c i d i c ) ,  a n d  S b 4O6 is amphoteric. 
+ 
+4.  (M)  The metallic character of  the elements increases as we move down a group, and 
+ s o  t o o  d o e s  t h e  b a s i c  c h a r a c t e r  o f  t h e  o x i d e s .  Stated another way, the acidic character 
+ o f  t h e  o x i d e s  d e c r e a s e s  a s  w e  m o v e  d o w n  a group. On this basis, we expect SeO 2 to 
+ b e  t h e  a c i d i c  o x i d e  a n d  T e O 2 to be the amphoteric oxide. 
+ 
+The Noble Gasses 
+ 
+5. ( M )  First we use the ideal gas law to de termine the amount in moles of argon. 
+ 
+2
+11145 atm 55 L3.25 10  mol Ar0.08206 L atm mol K 299 KPVnRTu   uu 
+ 
+2 5 22.414 L Ar STP 100.000 L airL air = 3.25  10  mol Ar = 7.8 10  L air1 mol Ar 0.934 L Aruu u u  
+ 
+6. (M) First we compute the volume occupied by 5.00 g of He at STP, and then the 
+volume of natural gas.  From Chapter 6 we saw that 1 mol of gas at STP occupied 
+22.414 L. 
+ 
+21 mol He 22.414 L He 100 L airnatural gas volume = 5.00 g He4.003 g He 1 mol He 8 L He
+natural gas volume = 3.5 10  L air at STP 300 Luu u
+u# 
+ 
+7.    (M) (a)    (b)   (c) 
+                                                                                        
+ 
+ 
+ 
+ OX eO
+O OX e O
+OO
+XeF
+F
+FFF+
+
+=== PDF PAGE 1099 ===
+Chapter 22: Chemistry of the Main- Group Elements II: Groups 18, 17, 16, 15, and Hydrogen 
+   
+ 1 0 9 9   (a) The Lewis structure has three lig ands and one lone pair on Xe. 3 XeO  has a 
+trigonal pyramidal shape. 
+ 
+ (b) The Lewis structure ha s four ligands on Xe. 4 XeO  has a tetrahedral shape. 
+ 
+ (c) There are five ligands and one lone pair on Xe in +
+5XeF .  Its shape is square 
+pyramidal. 
+ 
+8. (M) We use VSEPR theory to predict th e shapes of the species involved. 
+ 
+ ( a )  22OX e F  has a total of 26 + 8 + 27 = 3 4 v a l e n c e  e l e c t r o n s = 1 7 p a i r s .uu  
+ 
+ (b) 32OX e F h a s  a  t o t a l  o f  36 + 8 + 27 = 4 0 v a l e n c e  e l e c t r o n s = 2 0 p a i r s .uu  
+ 
+ (c) 4 OXeF  has a total of 6+8+4 7=4 2v a l e n c e  e l e c t r o n s=2 1p a i r s .u 
+ 
+ W e  d r a w  a  p l a u s i b l e  L e w i s  s t r u c t u r e  f o r  e a c h  s p e c i e s  b e l o w .  
+ 
+  
+ (a)    (b)    (c) 
+           
+  
+ 
+ 
+ (a) There are four ligands and one lone pair on Xe in 22OX e F .  Its shape is a see-saw. 
+ 
+ (b) There are five ligands and no lone pairs on Xe in 32OX e F.  I t s  s h a p e  i s  t r i g o n a l  
+bipyramidal. 
+ 
+ (c) The Lewis structure has five lig ands and one lone pair on Xe. 4 OXeF  has a 
+square pyramidal shape. 
+  
+9. (E) 3 XeF 4(aq)  +  6 H 2O(l)  o  2 Xe(g) +  3/2 O 2(g) + 12 HF(g) + XeO 3(s) 
+ 
+10. (E) 2 XeF 6(aq) + 16 OH(aq) o  Xe(g) + XeO 64(aq) + O 2(g) + 8 H 2O(l) + 12 F(aq) 
+ 
+11. ( E )  For these noble gases, the bond energy of the noble gas fluorine is too small to 
+ o f f s e t  t h e  e n e r g y  r e q u i r e d  t o  b r e a k  t h e  F — F  b o n d .  
+ 
+12.  (E)  The bond energy of the Xe=O bond is too sm all to offset the energy required to 
+ b r e a k  t h e  O = O  b o n d .  FX e F
+OF F
+OX e O
+OF F
+FX e F
+OO
+
+=== PDF PAGE 1100 ===
+Chapter 22: Chemistry of the Main- Group Elements II: Groups 18, 17, 16, 15, and Hydrogen  
+ 
+1100 The Halogens 
+ 
+13. ( M )  Iodide ion is slowly oxidized to iodi ne, which is yellow-brown in aqueous 
+solution, by oxygen in the air. 
+ 
+Oxidation: {  2 2I aq I aq + 2e } 2 =0 . 5 3 5 VEou    
+ R e d u c t i o n :    +
+22Og + 4 Ha q + 4 e 2 H O ( l ) =+ 1 . 2 2 9VEo  
+Net:     +
+22 2 c e l l 4I a q +O g +4H a q 2I a q +2H O ( l ) = + 0 . 6 9 4V Eo  
+ 
+Possibly followed by: 23Ia q + Ia q I a q o  
+ 
+14.  (E) 2
+65 4 6 4 3 2MnF + 2SbF MnF + 2SbF ; 2 MnF 2 MnF + F go  o   
+ 
+15.     (M) Displacement reactions involve one el ement displacing another element from 
+solution.  The element that dissolves in the solution is more “active ” than the element 
+supplanted from solution.  Within the haloge n group, the activity decreases from top to 
+bottom.  Thus, each halogen is able to di splace the members of the group below it, but 
+not those above it.  For instance, molecula r bromine can oxidize aqueous iodide ion but 
+molecular iodine is incapable  of oxidizing bromide ion: 
+ 
+ B r 2(aq) + 2 I(aq) o 2 Br(aq) + I 2(aq)    however,  I 2(aq) + 2 Br(aq) o  NO RXN 
+ 
+          The only halogen with  sufficient oxidizing power to displace O 2(g) from water is F 2(g): 
+ 
+ 2  H 2O(l) o  4 H+ + O 2(g) + 4 e  Eq1/2ox = 1.229 V 
+        {F 2(g) + 2 e o  2 F(aq)} u2   Eq1/2red = 2.866 V 
+            
+2 F 2(g) + 2 H 2O(l) o 4 H+ + O 2(g) + 4 F(aq) Eqcell = 1.637 V 
+ 
+The large positive standard reduction potential fo r this reaction indicates that the reaction will 
+occur spontaneously, with products being strongl y preferred under standard state conditions.  
+None of the halogens reacts with water to form H 2(g).  In order to di splace molecular hydrogen 
+from water, one must add a strong reduc ing agent, such as sodium metal. 
+ 
+16. (M) We first list the relevant valu es of halogen properties.  
+ 
+    F Cl  Br  I 
+ (a) Covalent radius (pm):    71 99 114 133  
+ ( b )  Ionic radius(pm):    133 181 196 220  
+ ( c )  First ionization energy (kJ/mol): 1681 1251 1140 1008  
+ (d) Electron affinity(kJ/mol):          –328.0       –349.0          –324.6         –295.2  
+ (e) Electronegativity:    4.0 3.0 2.8 2.5 
+ (f) Standard reduction potential:  +2.886 V +1.358 V +1.065 V +0.535 V 
+ 
+We can do a reasonably good job of pred icting the propertie s of astatine by 
+simply looking at the difference between Br and I and assuming that the same 
+difference exists between I and At. 
+ 
+
+=== PDF PAGE 1101 ===
+Chapter 22: Chemistry of the Main- Group Elements II: Groups 18, 17, 16, 15, and Hydrogen 
+   
+ 1 1 0 1    ( a )  Covalent radius: 152 pm |  (b) Ionic radius: 244 pm  
+ 
+  (c) 1st ionization energy: 876kJ/mol   (d) Electron affinity: 265kJ/mol |  
+ 
+(e) Electronegativity: 2.2|   (f) Eq 0.005V to 0.010V| 
+ 
+Depending on the technique that you use, you will arrive at different answers.  
+For example, 260 kJ/mol  is a reasonable estimation of the electron affinity by 
+the following reasoning. The difference between the value for Cl and Br is 24 
+kJ/mol, the difference between the values for Br and I is 29 kJ/mol, so the 
+difference between I and At should be about 35 kJ/mol. 
+ 
+17. (M) (a) 
+ 
+ mass F2=1k m3u1000 m
+1k mu100 cm
+1m§
+©¨·
+¹¸3
+u1.03 g
+1c m3u1l b
+454 gu1t o n
+2000 lbu1g  F
+1t o nu37.996 g F2
+18.998 g F
+=2u109g F2=2u106kg F2 
+ 
+ (b) Bromine can be extracted by di splacing it from solution with 2Cl g . Since there 
+is no chemical oxidizing agen t that is stronger than F 2(g),  this method of 
+displacement would not work for F 2(g).  Even if there were a chemical oxidizing 
+agent stronger than F 2(g), it would displace 2O( g )  b e f o r e  i t  d i s p l a c e d  F 2(g).  
+Obtaining F 2(g) would require electrolysis of one of its molten salts, obtained 
+from seawater evaporate. 
+ 
+18. (E) 
+34 2 2 3
+2
+34 2 21m o l3C a P O C a F
+1009 g1000 g 2m o l  FMass F = 1.00 10 kg  rock1k g 1m o l3C a P O C a F
+19.00 g F 1 kg=3 7 . 7k g  f l u o r i n e1m o l  F 1 0 0 0guu u u
+uu 
+  
+19. (M) In order for the disproportionation reaction to occur under standard conditions, the 
+Eq for the overall reaction must be greater than  zero.  To answer this question, we must 
+refer to the Latimer diagrams provided in  Figure 22-4 and the answer to Practice 
+Example 22-1B. 
+ 
+ ( i )  R e d u c t i o n  h a l f  r e a c t i o n  ( acidic solution)        
+Cl2(aq) + 2 e o  2 Cl(aq)   Eq1/2 red = 1.358 V 
+ 
+ ( i i )  O x i d a t i o n  h a l f  r e a c t i o n  ( a c i d i c  s o l u t i o n )         
+Cl2(aq) + 6 H 2O(l) o  2 ClO 3(aq) + 12 H+(aq) + 10 e    Eq1/2 ox = 1.453 V 
+ 
+ Combining (i) u 5 with (ii) u 1, we obtain the desired disproportionation reaction: 
+ 6 Cl 2(aq) + 6 H 2O(l) o  2 ClO 3(aq) + 12 H+(aq) + 10 Cl(aq) Eqcell = 0.095 V 
+ 
+        Since the final cell voltage is negative, the disproportionation reaction will not occur   
+
+=== PDF PAGE 1102 ===
+Chapter 22: Chemistry of the Main- Group Elements II: Groups 18, 17, 16, 15, and Hydrogen  
+ 
+1102          spontaneously under standard conditions.  Alternativel y, we can calculate Keq by using  
+lnKeq = 'Gq/RT and 'Gq = nFEq.  This method gives a Keq = 8.6 u 1017.  Clearly, 
+the  reaction will not go to comp letion under standard conditions. 
+ 
+20. (D) To find out whether the reaction will go to completion, we must first calculate the 
+standard potential for the disproportionation of hypochlorous acid (HOCl).  As was the 
+case for Exercise 15, we will use informati on contained in Fig. 22.4 to answer this 
+question. 
+ 
+ ( i )  2  H O C l ( a q )  +  2  H 2O(l) o  2 HClO 2(aq)  + 4 H+(aq) + 4 e -Eq(i) = 1.645 V) (oxidation)  
+ ( i i )  2  H O C l ( a q )  +  2  H+(aq) + 2 e o  Cl 2(aq) + 2 H 2O(l) Eq(ii) = +1.611 V  
+(iii) Cl 2(aq) + 2 e o  2 Cl(aq)        Eq(iii) =+1.358 V 
+ 
+ N e x t  w e  n e e d  t o  d e t e r m i n e  t h e  p o t e n t i a l  o f  t h e  f o l l o w i n g  h a l f  reaction using the 
+relationship between standard free energies and standard potential 
+  
+ (iv) 2 HOCl(aq) + 2 H+(aq) + 4 e o  2 Cl(aq)  + 2 H 2O(l)    Eq(iv) 
+ 
+We can determine this using half reaction (ii) and(iii) since adding (ii)  and (iii) give (iv). 
+Hence, 
+ 
+   4F Eq(iv) = 2F(1.611 V)  +  2F(1.358 V)  So, Eq(iv) = 1.485 V 
+ 
+ T h e r e f o r e ,  b y  a d d i n g  e q u a t i o n  ( i ) to equation (iv), we can obtain  the standard cell voltage for 
+the disproportionation of HOCl.  We  divide by 2 to give the target 
+ 
+ ( i ) y2 HOCl(aq) + H 2O(l) o  HClO 2(aq)  + 2 H+(aq) + 2 e  - Eq(i) = 1.645 V)  
+(iv)y2 HOCl(aq) + H+(aq) + 2 e o  Cl(aq)  + H 2O(l)     Eq1/2 red = 1.485 V 
+               
+   2 HOCl(aq) o  HClO 2(aq)  + Cl(aq)  + H+(aq)  Eqcell = 0.160 V 
+   ( d i s p r o p o r t i o n a t i o n  reaction of HOCl(aq)) 
+ 
+ 
+Since the standard cell potential is negative,  the equilibrium will favor the reactants and 
+thus the reaction will not go to completion as  written (i.e., reactants will predominate at 
+equilibrium and thus the reac tion will be far from complete).  Alternatively, we can 
+calculate Keq from the reaction by using ln Keq = 'Gq/RT and 'Gq = nFEq.  This 
+gives Keq = 3.9 u 106.  Clearly, the reaction will not go to completion because Keq is 
+very small (reactants strongly predominate at equilibrium, not products). 
+ 
+21. (M) First we must draw the Lewis structure for all of the species listed.  Following this, we 
+will deduce their electron-group geometries and molecular shapes following the VSEPR 
+approach. 
+  
+(a) BrF 3: 28 valence electrons  
+VSEPR class: AX 3E2 
+Thus BrF 3 is T-shaped F BrF
+F
+ 
+
+=== PDF PAGE 1103 ===
+(empty)
+
+=== PDF PAGE 1104 ===
+Chapter 22: Chemistry of the Main- Group Elements II: Groups 18, 17, 16, 15, and Hydrogen  
+ 
+1104  'Go RTlnK nFEo
+8.314JK-1mol-1u298.15K ln K 2u96485Cmol-1uEo
+Eo 8.314JK-1mol-1u298.15K ln 7.7 u102
+2u96485Cmol-1 0.085 V 
+ (b)  Set up the ICE table and solve for the equilibrium concentrations: 
+     I2(aq)   +   I-(aq)   ÉI3-(aq)  
+     0 . 0 0 1 0 M      0 . 0 0 5 0 M       0  
+     0 . 0 0 1 0 - x      0 . 0 0 5 0 - x        x  
+ K 7.7u102 x
+(0.0010 x)u(0.0050 x) x
+5.0u1060.0060 xx2
+7.7u102u(5.0u1060.0060 xx2) x
+7.7u102x25.62x3.85 u103 0 
+ S o l v i n g  t h e  q u a d r a t i c  e q u a t i o n  g i v e s  x=7.65 u10-3 M. 
+ 
+24. (M) (a) Cl3has the same structure as I3, which is given in Figure 22.7 
+ ( b )  Set up the ICE table and solve for the equilibrium concentrations: 
+     Cl3-(aq)   É    Cl-(aq)   +   Cl2(aq)  
+     0                       0 . 0 0 1 0 M       0 . 0 0 1 0 M  
+     x                       0 . 0 0 1 0 - x       0 . 0 0 1 0 - x  
+ K 5.5 (0.0010 x)u(0.0010 x)
+x|0.00102
+x 1.0u106
+x
+x 1.0u106
+5.5 1.8u107M 
+ 
+Oxygen 
+ 
+25. (E)(a)  2HgO(s) 2Hg(l) O (g)2'o   (b)  2KClO (s) 2KClO (s) O (g)43 2'o  
+ 
+26. (E) (a)    +
+32 2 2Og + 2  Ia q + 2  Ha q  Ia q +  H O ( l ) +  Ogo  
+(b)  Ss+ H2Ol+3  O3go H2SO4aq+3  O2g 
+(c)           43
+32 2 662F eC N a q+  O g+  H O ( l ) 2F eC N a q+  O g+ 2  O H a qªº ªºo¬¼ ¬¼ 
+ 
+27. ( M )  We first write the formulas of the four substances: N O  Al O  P O  CO24 23 46 2,, , .  T h e  
+one constant in all these substances is oxygen. If we compare amounts of substance 
+with the same amount (in moles) of oxygen, th e one with the smallest mass of the other 
+element will have the highest percent oxygen. 
+ 
+3 mol N O24 contains 12 mol O and 6 mol N: 6 14.0 = 84.0u g N 
+4 mol Al O23 contains 12 mol O and 8 mol Al: 8 27.0 = 216u g Al 
+2 mol P O46 contains 12 mol O and 8 mol P: 8 31.0 = 248u g P 
+
+=== PDF PAGE 1105 ===
+Chapter 22: Chemistry of the Main- Group Elements II: Groups 18, 17, 16, 15, and Hydrogen 
+   
+ 1 1 0 5  6 mol CO2 contains 12 mol O and 6 mol C: 6 12.0 = 72.0u g C 
+ 
+Thus, of the oxides listed, CO2 contains the larges t percent oxygen by mass. 
+28. (M) 2NH NO (s) 2N (g) O (g) + 4H O(g)43 22 2400oC  
+ 
+ 2H O (l) 2H O(l) O (g)22 22 o  
+ 
+2KClO (s) 2KCl(s) O (g)32'o 3 
+ 
+ (a) All three reactions have two moles of  reactant, and the decomposition of 
+potassium chlorate produces three moles of O2g, compared to one mole of 
+O2g for each of the others. The potassium chlorate decomposition produces 
+the most oxygen per mole of reactant. 
+ 
+ (b) If each reaction produced the same amount of O2g, then the one with the 
+lightest mass of reactant would produce th e most oxygen per gram of reactant. 
+When the first two reactions are co mpared, it is clear that 2 mol H O22 have less 
+mass than 2 mol NH NO43 . (Notice that each mole of NH NO43  contains the 
+amounts of elements—2 mol H and 2 mol O—present in each mole H O22 plus 
+some more.) So now we need to comp are hydrogen peroxide with potassium 
+chlorate. Notice that 622 H O  produces the same amount of O2g as 23  KClO . 
+ 6 mol H O22 has a mass of 34.01 6 = 204.1ug, while 2 mol KClO3 has a mass 
+of 122.2 2 = 244.2 u  g. Thus, H O22 produces the most O2g per gram of 
+reactant. 
+ 
+29. ( M )  Recall that fraction by volume and fraction by pressure are numerically equal. 
+Additionally, one atmosphere pressure is equivalent to 760 mmHg. We combine these 
+two facts. 
+ 
+5 3
+3 60.04 mmHg of O{O } = 760 mmHg = 3 10  mmHg10  mmHg of atmospherePuu  
+ 
+30. (M) 
+12 3
+23
+3
+31 mol O 0.08206 L atm51 0m o l e c u l e s 2 2 0  Kmolecule mol K6.022 10moleP1 L1 cm1000 cmnRT
+V§·
+¨¸
+uu u u¨¸
+¨¸ u ¨¸©¹  
+u 
+74 760 mmHg=1 . 5 1 0  a t m =1 . 1 1 0  m m H g1 atmPuu u  
+ 
+
+=== PDF PAGE 1106 ===
+Chapter 22: Chemistry of the Main- Group Elements II: Groups 18, 17, 16, 15, and Hydrogen  
+ 
+1106 31. ( M )  The electrolysis reaction is 2H2O(l)electrolysiso2H2(g)O2(g). In this reaction, 2 
+moles of H2g are produced for each mole of O2g. By the law of combining 
+volumes, we would expect the volume of  hydrogen to be twice the volume of oxygen 
+produced. (Actually the volumes are not exac tly in the ratio of 2:1 because of the 
+different solubilities of oxygen and hydrogen in water.) 
+ 
+32. (M) The electrolysis reaction is 2H2O(l)electrolysiso2H2(g)O2(g). In this reaction, 2 
+moles of water are decomposed  to produce each mole of O2g. We use the data in the 
+problem to determine the amount of O2g produced, which we then convert to the 
+mass of H O2 needed. 
+ 
+mass H2O(l)=736.7 mmHg u1 atm
+760 mmHg§
+©¨·
+¹¸22.83 mL u1 L
+1000 mL§
+©¨·
+¹¸
+0.08206 L atmmolKu(25.0 273.2)Ku2 mol H2O
+1 mol O2 
+2
+2
+218.02 g H O=0 . 0 3 2 5 9  g  H O  d e c o m p o s e d1 mol H Ou  
+ 
+33. (D) Since the pK a for H 2O2 had been provided to us , we can find the solution  pH simply 
+by solving an I.C.E. table for the hydrolysis of a 3.0 % H 2O2 solution (by mass).  Of 
+course, in order to use this method, the mass pe rcent must first be converted to molarity.  
+We must assume that the dens ity of the solution is 1.0 g mL1. 
+ 
+ [ H 2O2] = 22 3.0 g H O
+100 g solutionu solution mL 1solution g 1u22
+221m o lH O
+34.015 g H OuL1mL 1000= 0.88 M 
+ 
+ T h e  pKa for H 2O2 is 11.75.  The K a for H 2O2 is therefore 1011.75 or 1.8 u 1012.  By 
+comparison with pure water, which has a K a of 1.8 u 1016 at 25 qC, one can see that 
+H2O2 is indeed a stronger acid than water but  the difference in aci dity between the two 
+is not that great.  Consequently, we cannot ignore the contributi on of protons of pure 
+water when we work out the  pH of the solution at equilibrium. 
+ 
+ R e a c t i o n :  H 2O2(aq)   +    H 2O(l)  -12
+aK  = 1.8  10 uZZZZZZZXYZZZZZZZ     H 3O+(aq)       +       HO 2(aq)        
+ 
+Initial:  0.88 M                       1 . 0  u 107 M     0 M 
+Change:      x M                 +  x M       + x M 
+ E q u i l i b r i u m :  ( 0 . 8 8 x) M                 ( 1 . 0  u 107 + x)M     x M 
+   ( ~ 0 . 8 8  M )  
+ 
+So, 1.8 u 1012 = 7(1 . 0   1 0 )
+~0.88xxu    x2 + 1.0 u 107x  1.58 u 1012  =  0 
+ 
+ x = 71 41 21.0 x 10 1.0  10 4(1.58 10 )
+2 r u  u 
+
+=== PDF PAGE 1107 ===
+Chapter 22: Chemistry of the Main- Group Elements II: Groups 18, 17, 16, 15, and Hydrogen 
+   
+ 1 1 0 7   
+The root that makes sense in this context is x = 1.2 u 106 M.   
+Thus, the [H 3O+] = 1.2 u 106 M + 1.0 u 107 M  =   1.3 u 106 M 
+Consequently, the  pH for the 3.0 % H 2O2 solution (by mass) should be 5.89  
+(i.e., the solution is weakly acidic) 
+ 
+34. (E) Oxide ion reacts essentially  quantitatively with water to form hydroxide ion.  
+ 
+   +
+22Li O s + H O l 2 Li aq + 2 OH aqo  
+ 
+We first calculate OHªº¬¼ and then the solution ’s pH. 
+ 
+22
+220.050 g Li O 1000 mL 1 mol Li O 2 mol OHOH = = 0.00446 M750.0 mL 1 L 29.88 g Li O 1 mol Li O
+ªº uu u¬¼ 
+ 
+ pOH = log 0.00446 = 2.350 pH = 14.000 pOH = 14.000 2.350 = 11.650    
+ 
+35. (E) 3 O = O 2 O   O   O o       
+ 
+Bonds broken: 3 (O=O) = 3 498 kJ/mol = 1494 kJ/mol uu   
+ 
+Bonds formed: 4 (O   O) u    
+ 
+     o=+ 2 8 5k J / m o l=b o n d s  b r o k e n b o n d s  f o r m e d=1 4 9 4k J / m o l 4 ( O    O )H'  u 
+  
+    4( O    O ) = 1 4 9 4 k J / m o l 2 8 5 k J / m o l = 1 2 0 9 k J / m o l
+O   O = 1209 kJ/mol + 4 = 302 kJ/molu   
+ 
+ 
+36. (E)           (all gaseous species)  
+ 
+kJ498 +142  O==O +O—O kJ molAverage bond energy = = = 32022 m o l 
+ 
+37. (E) (a) 2HS ,  while polar, forms only weak hydrogen bonds. 2HO  forms much 
+stronger hydrogen bonds, leading to a higher boiling point. 
+ 
+(b) All electrons are paired in 3O,  p r o d u c i n g  a  d i a m a g n e t i c  m o l e c u l e  a n d  t h u s  a  
+liquid at room temperature.  
+ 
+38.    (M) (a) OO OOO HOOH 
+ 
+  T h e  O — O  b o n d  i n  2Ois a double bond, which should be  short (121 pm). That in 
+3O i s  a  “ o n e - a n d - a - h a l f ”  b o n d ,  o f  i n t e r m ediate length (128 pm). And that in 
+22HO  is a longer (148 pm) single bond. 
+ OOO2 3OO
+
+=== PDF PAGE 1108 ===
+Chapter 22: Chemistry of the Main- Group Elements II: Groups 18, 17, 16, 15, and Hydrogen  
+ 
+1108  (b) The +
+2O i o n  h a s  o n e  l e s s  e l e c t r o n  t h a n  d o e s  t h e  2O molecule. Based on Lewis 
+structures, 
+   
+  o n e  w o u l d  p r e d i c t  t h a t  +
+2O would have a bond order of 1.5, thereby making its 
+OO bond weaker than the double bond of 2O, and therefore longer, in 
+contradiction to the experimental eviden ce. The molecular orbital picture of the 
+two species suggests the opposite.  According to this model, O 2 has a bond order of 
+2.0 while that for O 2+ is 2.5.  Thus MO theory  predicts a shorter bond for O 2+. 
+  
+ 
+   V1s V1s V2s V2s V2p   S2p S2p V2p 
+  2O          
+  
+  
+bond order = no. bonding electrons no. antibonding electrons 2
+bond order = 10 6 + 2 = 2.0y
+ 
+ 
+   V1s V1s V2s V2s V2p      S2p  S2p V2p 
+  +
+2O              
+    bond order = no. bonding electrons no. antibonding electrons 2 = 10 5 2 = 2.5 y  y  
+ 
+39. (M) Reactions that have Keq values greater than 1000 are considered to be essentially 
+quantitative (i.e., they go virtua lly 100% to completion).  So to answer this question we need 
+only calculate the equilibrium constant  for each reaction using the equation Eqcell = 
+(0.0257/n)ln Keq. 
+ 
+ (a) H 2O2(aq) + 2 H+(aq) + 2 e ZXZYZZ 2 H 2O(l)  Eq1/2red = +1.763 V 
+          2  I(aq)  ZXZYZZ  I2(s) + 2 e   Eq1/2ox = 0.535 V 
+              
+  H 2O2(aq) + 2 H+(aq) +2 I(aq) ZXZYZZI2(s) + 2 H 2O(l) Eq1/2cell = +1.228 V(n = 2 e)  
+ 
+  l n Keq = 1.228 V  2
+0.0257 Vu =  9 5 . 5 6  Keq = 3.2 u 1041 
+  T h e r e f o r e  t h e  r e a c t i o n  g o e s  t o  completion (or very  nearly so). 
+ 
+ (b) O 2(g) + 2 H 2O(l) +4 e  ZXYZ 4 OH(aq)   Eq1/2red = +0.401 V 
+  4  C l(aq) ZXYZ  2 Cl 2(g) + 4 e     Eq1/2ox = 1.358 V 
+               
+  O 2(g) + 2 H 2O(l) +4 Cl(aq) ZXYZ 2 Cl 2(g) + 4 OH(aq)  Eq1/2cell = 0.957 V 
+             (n = 4 e) 
+ 
+  l n Keq = -0.957 V  4
+0.0257 Vu =  148.95 Keq = 2.1 u 1065 
+  OO OOx 
+
+=== PDF PAGE 1109 ===
+Chapter 22: Chemistry of the Main- Group Elements II: Groups 18, 17, 16, 15, and Hydrogen 
+   
+ 1 1 0 9   T h e  e x t r e m e l y  s m a l l  v a l u e  o f  Keq indicates that reactants are strongly preferred and 
+thus, the reaction does not even come  close to going to completion. 
+ 
+ ( c )  O 3(g) + 2 H+(aq) + 2 e ZXZYZZ O2(g) + H 2O(l)    Eq1/2red = +2.075 V 
+  P b2+(aq) + 2 H 2O(l) ZXZYZZ  PbO 2(s) + 4H+(aq) + 2 e   Eq1/2ox = 1.455 V 
+               
+  O 3(g) + Pb2+(aq) + H 2O(l) ZXZYZZ  PbO 2(s) + 2 H+(aq) + O 2(g) Eqcell = 0.620 V  
+ 
+  l n Keq = 0.62 V  2
+0.0257 Vu= 48.25 Keq = 9.0 u 1020 
+  T h e r e f o r e  t h e  r e a c t i o n  g o e s  t o  completion (or very  nearly so). 
+ ( d )  H O 2(aq) + H 2O(l) + 2 e ZXZYZZ 3 OH(aq)   Eq1/2red = +0.878 V 
+            2  B r(aq)  ZXZYZZ  Br 2(l) + 2 e    Eq1/2ox = 1.065 V 
+               
+  H O 2(aq) + H 2O(l) + 2 Br(aq)  ZXZYZZ  Br 2(s) + 3 OH(aq)  Eq1/2cell = 0.187 V 
+ 
+  l n Keq = -0.187 V  2
+0.0257 Vu =  14.55 Keq = 4.8 u 107 
+ 
+ T h e  e x t r e m e l y  s m a l l  v a l u e  o f  Keq indicates the reaction h eavily favors reactants at 
+equilibrium and thus, the reaction does not even come close to going to completion. 
+ 
+40. (M) (a) H g O ( s )  o'Hg(l) + 1/2 O 2(g) 
+ 
+ (b) K C l O 4(s) o'KCl(s) + 2 O 2(g) 
+ 
+ (c) H g ( N O 3)2(s) o'Hg(l) + 2 NO 2(g) + O 2(g)  
+           o r         
+ 
+  H g ( N O 3)2(s) o'Hg(NO 2)2(g) + O 2(g)    
+ 
+ (d) H 2O2(l) o'H2O(l) + 1/2 O 2(g) 
+ 
+ 
+41. ( M )  The reaction is 2 KClO 3(s) 
+2 MnO (s)'o 2 KCl(s) + 3 O 2(g).  
+ 1.0 gKClO3u1 mol
+122.549 gu3 molO2
+2 molKClO3u32 gO2
+1molO2 0.391gO2
+pV nRT V nRT
+p 0.01224 u8.314 JK1mol1u298.15 K
+101kPau1atm
+101.325 kPa 30L 
+ 
+42. (M) The reaction is 2 HgO(s) 'o 2 Hg(l) + O 2(g). Depending on  
+the temperature 
+
+=== PDF PAGE 1110 ===
+Chapter 22: Chemistry of the Main- Group Elements II: Groups 18, 17, 16, 15, and Hydrogen  
+ 
+1110  1.0 g HgO u1 mol
+216.589  g HgOu1 molO2
+2 mol HgO 2.31 u103mol O2
+pO2 (756 23.76)  752mmHg
+pV nRT V nRT
+p 2.31u103u8.314 JK1mol1u298.15 K
+752mmHg u1atm
+760mmHg 5.8L 
+ 
+Sulfur 
+ 
+43. (E) (a) ZnS, zinc sulfide    (b) 3 KHSO , potassium hydrogen sulfite 
+ (c) 22 3KSO ,  p o t a s s i u m  t h i o s u l f a t e    (d) 4SF, sulfur tetrafluoride 
+ 
+44. (E) (a)  42 CaSO 2H O, calcium sulfate dehydrate (b) 2HS a q , hydrosulfuric acid 
+ (c) 4 NaHSO , sodium hydrogen sulfate  (d) 22 7HSO a q , disulfuric acid 
+ 
+45. (M) (a)   22 FeS s + 2 HCl aq FeCl aq + H S aq o  MnS(s), ZnS(s), etc. also are 
+possible. 
+ 
+ (b)   32 2 2 CaSO s + 2 HCl aq CaCl aq + H O(l) +SO g o  
+ 
+ (c) Oxidation:  2 +
+22 4SO aq + 2 H O(l) SO aq + 4H aq + 2 e o  
+  R e d u c t i o n :   +2 +
+22 MnO s + 4 H aq + 2 e Mn aq + 2 H O(l)o  
+             
+  N e t :   2 2
+22 4SO aq + MnO s Mn aq +SO aq o  
+ 
+ (d) Oxidation:  2 +
+23 2 2SO a q + HO ( l ) 2 S O g + 2 H a q + 4 e o  
+  R e d u c t i o n :   2 +
+23 2SO a q + 6 H a q + 4 e 2 S s + 3 HO ( l ) o  
+            
+  N e t :   2 +
+23 2 2SO a q + 2 H a q S s + S O g + HO ( l )o  
+ 
+46. (M) (a)  22 Ss+ O g S O g o  
+  22 2N a s +2H O ( l ) 2N a O H a q +H g o  
+    22 32 2N a O H a q +S O g N a S O a q +H O ( l ) o  
+ 
+ (b)   22 Ss+ O g S O g o  
+    2 +
+22 2 4 c e l lSO g + 2H O(l) + Cl g SO aq + 2Cl aq + 4H aq = +1.19V E o  
+  22 2N a s +2H O ( l ) 2N a O H a q +H g o  
+   2 +
+42 4 2 2N a O H a q +2H a q +S O a q N a S O a q +2H O ( l )o  
+ 
+
+=== PDF PAGE 1111 ===
+Chapter 22: Chemistry of the Main- Group Elements II: Groups 18, 17, 16, 15, and Hydrogen 
+   
+ 1 1 1 1   (c)   22 Ss+ O g S O g o  
+  22 2N a s +2 H O ( l ) 2N a O H a q +H g o  
+    22 32 2N a O H a q +S O g N a S O a q +H O ( l ) o  
+    23 23 Na SO aq + S s NaS O aq o   
+  ( T h u s ,  o n e  m u s t  b o i l  t h e  r e a c tants in an alkaline solution.) 
+ 
+47. ( M )  The decomposition of thiosulfate ion is more highly favored in an acidic solution. If 
+the white solid is Na 2SO 4, there will be no reaction with strong acids such as HCl.  By 
+contrast, if the white solid is Na 2S2O3, SO 2(g) will be liberated and a pale yellow 
+precipitate of S(s,rhombic) will form upon addition of HCl(aq).   
+   2 +
+23 22 SO a q + 2 H a q S s + S O g + HO ( l )o  
+ C o n s e q u e n t l y ,  t h e  s o l i d  c a n  b e  i d e n t i f i e d  b y  a d d i n g  a  s t r o n g  m i n e r a l  a c i d  s u c h  a s  H C l ( a q ) .  
+ 
+48. (M) Sulfites are easily oxidized to sulfates by, for example, 2Oin the atmosphere. On the 
+other hand, there are no oxidizi ng agents naturally available in reasonable concentrations 
+that can oxidize 2
+4SO to a higher oxidation state, such as in 2
+28SO . Similarly, the 
+atmosphere of Earth is an oxidizing one, reducing agents are not present to reduce 2
+4SO 
+to a species with a lower oxidation state, except in localized areas. 
+ 
+49.     (D) +Na aq  will not hydrolyze, being only very weakly polarizing. But 4 HSO aq 
+will ionize further, 2
+2=1 . 1 1 0Ku for4 HSO aq. We set up the situation, and solve 
+the quadratic equation to obtain+
+3HOªº¬¼. 
+44 4
+4
+4412.5 g NaHSO 1000 mL 1 mol NaHSO 1 mol HSOHSO = = 0.416 M250.0 mL soln 1 L soln 120.1 g NaHSO 1 mol NaHSO
+ªº uu u¬¼ 
+Reaction:      2+
+42 43 HSO aq + H O(l) SO aq + H O aqZZXYZZ  
+Initial: 0.416M 0M 0M| 
+Changes: M  + M + Mxxx   
+Equil: 0.416 M M Mxxx   
+Noting the moderate value of the equilibrium constant ( K = 0.011), the full quadratic 
+equation must be solved (i.e. no assumption can be made here). 
+ 
++2234 2
+2
+4
+2HO S O
+== 0 . 0 1 1 = = 0 . 0 0 4 6 0 . 0 1 10.416 HSO
+0= +0 . 0 1 1 0 . 0 0 4 6xKx xx
+xx
+ªº ªº¬¼ ¬¼ ªº¬¼
+ 
+ 
+24 2
++
+340 . 0 1 1 1 . 2 1 0 + 1 . 8 1 0== = 0 . 0 6 2 = H O22bb a cxar   r u uªº¬¼ 
+ pH = log 0.062 = 1.21   
+
+=== PDF PAGE 1112 ===
+Chapter 22: Chemistry of the Main- Group Elements II: Groups 18, 17, 16, 15, and Hydrogen  
+ 
+1112  
+50. (M) Oxidation: 22 +
+32 4{SO aq + H O(l) SO aq + 2H aq + 2 e } 5 ou  
+Reduction: +2 +
+42 {MnO aq + 8 H aq + 5e Mn aq + 4 H O(l)} 2 ou  
+              
+Net:    22 +2 +
+34 4 2 5S O a q +2M n O a q +6 H a q 5 S O a q +2M n a q +3HO ( l ) o  
+ 
+2
+32 3 4
+23 2
+43
+23
+23
+235m o l  S O 1m o l  N a S O 1L 0 . 0 5 1 0m o l  M n Omass Na SO = 26.50 mL1000 mL 1 L soln 2m o l  M n O 1m o l  S O
+126.0 g Na SO=0 . 4 2 6g  N a S O1m o l  N a S O 
+uu u u
+u
+ 
+51. (M) The question is concerned with assaying for th e mass percent of copper in an ore.  The 
+assay in this instance involves the quantitative determination of the amou nt of metal in an ore 
+by chemical analysis.  The titration for coppe r in the sample does not  occur directly, but 
+rather indirectly via the number of moles of I 3(aq) produced from the reaction of Cu2+ with 
+I: 
+ 2  C u2+ + 5 I(aq) o 2 CuI(s) + I 3(aq) 
+ T h e  n u m b e r  o f  m o l e s  o f  I 3(aq) produced is determined by titrating the iodide-treated sample 
+with sodium thiosulfate.  The balanced oxidation reaction that forms the ba sis for the titration is: 
+ I 3(aq) + 2 S 2O32(aq) o 3 I(aq) + S 4O62(aq) 
+ T h e  s t o i c h i o m e t r i c  r a t i o  i s  o n e  I 3(aq) reacting with two S 2O32(aq) in this titration. 
+The number of moles of I 3 formed  
+ 
+ =  0 . 0 1 2 1 2  L  S 2O32(aq) u
+2
+322
+32
+OS  L  1O S moles 0.1000u
+2
+323
+O S  mol  2I mol 1= 6.060 u 104 moles I 3 
+Therefore, the number of moles of Cu2+ released when the sample is dissolved is 
+= 6.060 u 104 moles I 3 u 2
+32m o l  C u
+1m o lI= 1.212 u 103 moles of Cu2+ 
+Consequently, the mass percen t for copper in the ore is 
+ 
+1.212 u 103 moles of Cu2+ u 2
+263.546 g Cu
+1m o lC uuore Cu of g 1.1001u 100% = 7.002% 
+52. (M) First you must realize that pressure and te mperature are irrelevant to answering this 
+question.  The reaction is Pb2+(aq)  +  H 2S(aq)  o  2 H+(aq)  +  PbS(s) p 
+ This means that there is a one to one re lationship between the moles of PbS and H 2S. 
+ I f  w e  r e a l i z e  t h a t  1  m3 is 1000 L (40 times larger than the sample used), then we can 
+calculate the mass of PbS in 1 m3, namely, 40 × 0.535 g PbS = 21.4 g PbS. 
+ 
+ 
+The mass of sulfur can be calculated using stoichiometry. 
+ m a s s  o f  S  =   2 1 . 4  g  P b S  u PbS g 239.3PbS  mol  1u1m o lS
+1m o lP b S×32.066 g S
+1m o lS= 2.87 g S (per 1 m3) 
+ 
+
+=== PDF PAGE 1113 ===
+Chapter 22: Chemistry of the Main- Group Elements II: Groups 18, 17, 16, 15, and Hydrogen 
+   
+ 1 1 1 3   A l t e r n a t i v e l y ,  k n o w i n g  t h a t  t h e  mass percent of S in PbS is 13 .40 %.  We can calculate the 
+mass of sulfur as:  21.4 g PbS × 13.40 g S
+100 g PbS= 2.87 g S (per 1 m3 natural gas). 
+53. (E) (a) +4; (b) +5; (c) -2 and (d) +4 
+ 
+54. (E) (a) +1; (b) +2; (c) +2 and (d) +2.5  
+ 
+Nitrogen Family 
+ 
+55. (M) (a) The Haber-Bosch process is the prin cipal artificial method of fixing 
+atmospheric nitrogen.  22 3Ng + 3  Hg 2  N HgZZXYZZ  
+ 
+ (b) The first step of the Ostwald process: 
+32 2850 C, Pt4NH (g) 5 O (g) 4NO(g) 6H O(g)     o  
+ 
+ (c) The second and third steps of the process:  2 NO g+ O2go2 NO2g 
+3 NO2g+ H2Olo2 HNO3aq+ N O g
+ 
+56. (M) (a) 43 22 2400 C2 NH NO (s)    2 N (g)  +  O (g)  +  4 H O(g) o   
+ 
+  T h e  e q u a t i o n  w a s  b a l a n c e d  b y  i n s p e c t i o n ,  by realizing first that each mole of 
+NH4NO3s would produce 1 mol N2g and 2 mol H2Ol, with 1 mol O [or 
+1/2 mol O2g] remaining.  
+ 
+(b) NaNO3so NaNO2s+1/2 O2gor 2 NaNO3so2 NaNO2s+ O2g 
+(c) Pb NO32so PbO s+2 N O2g+1/2 O2g 
+2 Pb NO32so2 PbO s+4 N O2g+ O2g 
+ 
+57. ( D )  Begin with the chemical formulas of the species involved:  
+ 
+Na2CO3aq+ O2g+ N O g o NaNO2aq 
+ 
+Oxygen is reduced and nitrogen (in NO) is oxidized. We use the ion-electron method. 
+ 
+Two couples:   22 NO g NO aq      and       O  productsoo  
+Balance oxygens: H O  NO NO  O  H O22 2 2 +2 oo 
+Balance hydrogens: H O  NO NO  H  H  O  H O22++
+22 ++ 24 + 2 oo 
+Balance charge:  H O  NO NO  H  e  e  H  O  H O22++
+22 ++ 2+ 4 + 4+ 2 oo  
+Combine:  4 + 4 + 4 + 2 + 4 +82+
+22 2+ H O  NO  H  O  H O NO  H o 
+Simplify:  2 + 4 + 4 + 422 2+ H O  NO  O NO  H o 
+Add spectator ions:  4 + 2 4 + 2+
+32 +
+32 Na CO  Na COo  
+     23 2 2 22 2 2 Na CO + 2 H O + 4 NO +  O 4 NaNO + 2 H O + 2 CO o  
+
+=== PDF PAGE 1114 ===
+Chapter 22: Chemistry of the Main- Group Elements II: Groups 18, 17, 16, 15, and Hydrogen  
+ 
+1114 simplify:    
+ 2 Na2CO3aq+4 N O g + O2go4 NaNO2aq+2 C O2g 
+ 
+58. (E) mass % HNO mol HNO g HNO
+1 mol HNO
+1 L soln mL
+1 L g
+1 mL solnHNO33
+3
+3 31563 01
+1000 141100% 67%  u
+uuu .
+. 
+ 
+59. (E) 75 u 109 gal u 15 miles
+1g a l u 5g
+1m i l e u 1k g
+1000 g= 6 u 109 kg of nitrogen oxides released. 
+ 
+60. (E) 2 NH 3(g) + 3 NO(g) o 5/2 N 2(g) + 3 H 2O(g)  (or, dividing by 2):   
+ 
+NH 3(g) + 3/2NO(g) o 5/4N 2(g) + 3/2H 2O(g)   
+ 
+ 'Hqrxn = 6'Hqf products  - 6'Hqf reactants   
+ 
+ 'Hqrxn = [5/4 mol(0 kJ mol-1) + 3/2 mol(-241.8 kJ mol-1)]  
+      -[3/2 mol(90.25 kJ mol-1) + 1 mol(-46.11 kJ mol-1)] = -452 kJ 
+ 
+ 
+61. ( M )  ( a )    22 4 2N O g NO g ZZXYZZ   
+ 
+ (b)  i)  HNO 2(aq) + N 2H5+(aq) o HN 3(aq)  + 2H 2O(l)  +  H+(aq) 
+  i i )    H N 3(aq)  + HNO 2(aq)  o N2(g) + H 2O(l) + N 2O(g) 
+ 
+ (c)    H 3PO 4(aq) + 2 NH 3(aq) o (NH 4)2HPO 4(aq) 
+ 
+62. (M) (a)    +
+33 2 3A g s +4H a q +4N O a q 3A g N O a q +N O g +2HO ( l )o  
+ 
+ (b)   32 2 2 2 22CH NNH l + 4 O g 2 CO g + 4 H O l + N g o  
+ 
+(c) NaH 2PO 4(s) + 2Na 2HPO 4(s) 'o2H2O(l) + Na 5P3O10(s) 
+ 
+63. ( M )  
+(a) (CH 3)2NNH 2:   
+Each molecule has a total of  
+26 valence electrons. 
+ 
+ 
+ NN H
+HCCH
+HH
+HHH
+ 
+(b) ClNO 2: 
+Each molecule has a total of  
+24 valence electrons. 
+ 
+ NO ClO
+ 
+
+=== PDF PAGE 1115 ===
+Chapter 22: Chemistry of the Main- Group Elements II: Groups 18, 17, 16, 15, and Hydrogen 
+   
+ 1 1 1 5  (c) H3PO 3 
+Each molecule has a total of  
+26 valence electrons. 
+ PO OO
+H H
+H 
+ 
+64. (M) Hyponitrous acid is a weak diprotic  acid while nitramide has an amide 
+ g r o u p ,2NH 
+OHN N O HH
+HNONO OOH
+HNN
+12 3
+ 
+ B o t h  L e w i s  s t r u c t u r e s  f o r  n i t r a m i d e  a r e  p l ausible based on the information supplied. To 
+choose between them would require furthe r information about #2 and #3, such as 
+whether the molecule contains a nitr ogen-nitrogen bond. Experimental evidence 
+indicates the structure adopted  is the one with the nitrog en-nitrogen bond, i.e. structure 
+#3. 
+65. (E) (a) 2
+4 HPO, hydrogen phosphate ion    
+ (b) 22 7Ca P O , calcium pyrophosphate or  calcium diphosphate 
+ (c)  64 1 3HP O ,  t e t r a p o l y p h o s p h o r i c  a c i d  
+ 
+66. (E) (a) 2 HONH , hydroxylamine     
+ (b) 4 CaHPO , calcium hydrogen phosphate 
+ ( c )   3Li N , lithium nitride 
+ 
+67. (M) (i) 2 H+(aq) + N 2O4(aq) + 2 e o 2 HNO 2(aq)    Eq1 = +1.065 V 
+ ( i i )  2  H N O 2(aq) + 2 H+(aq) + 2 e o 2 NO(aq) + 2 H 2O(l) Eq2 = +0.996 V 
+           
+(iii) N 2O4(aq) + 4 H+(aq)  + 4 eo 2 NO(aq) + 2 H 2O(l)   Eq3 = ? V 
+ 
+ 
+Recall that 'Gq = nFEq and that 'Gq values, not standard voltages are additive for 
+reactions in which the number of electrons do not cancel out. 
+So, 4FEq3 = 2F(1.065 V) + 2F(0.996 V) Eq3 = 1.031 V (4 sig figs) 
+ 
+68. (M) (i)    2 NO 3(aq) + 2 H 2O(l) + 2 e o N2O4(aq) + 4 OH(aq) Eq1 = 0.86 V 
+ ( i i )    N 2O4(aq) + 2 e o  2 NO 2(aq)  Eq2 = +0.87 V 
+           
+(iii)    2 NO 3(aq) + 2 H 2O(l) + 4 e o 2 NO 2(aq) + 4 OH(aq) Eq3 = ? V 
+ 
+ 
+Recall that 'Gq = nFEq and that 'Gq values, not standard vo ltages, are additive for 
+reactions in which the numbers of electrons do not cancel out. 
+ 
+ 
+So,  4FEq3 = 2F(0.86 V) + 2F(0.87 V)  
+4FEq3 = 1.72 F 1.74 F = 0.02 F  (1 sig fig)  
+Eq3 = 0.005 V (1 sig fig) 
+
+=== PDF PAGE 1116 ===
+Chapter 22: Chemistry of the Main- Group Elements II: Groups 18, 17, 16, 15, and Hydrogen  
+ 
+1116 69. (M) (a) The nitrogen atom cannot bond to fi ve fluorine atoms because, as a 
+ s e c o n d - r o w  e l e m e n t ,  i t  c a n n o t  a c c o m m o d a t e  m o r e  t h a n  f o u r  e l e c t r o n  p a i r s .   
+(b) the  NF 3 molecule is trigonal pyramidal. The lone pair on the N atom causes the 
+F—N—F  bond angle to decrease from the ideal tetrahedral bond angle of 109° to 
+102.5°. 
+ 
+70. (M)  On the basis of electronegativities, th e N—H and N—F bonds are both quite polar. 
+However, the polarities of the bonds are opposite. In NH 3, the H atoms are slightly 
+positive and in NF 3, the N atom is slightly positive.  T h e  l o n e  p a i r  o n  N  p r e s u m a b l y  
+enhances the bond dipoles in NH 3 a n d  d i m i n i s h e s  t h e  b o n d  d i p o l e s  i n  N F 3. 
+Consequently, the NH 3 is very polar and NF 3 is less so. 
+ 
+Hydrogen 
+ 
+71. (M) The four reactions of interest are: (Note: 'Hq combustion  = 6'Hqf products  - 6'Hqf 
+reactants ) 
+ 
+ C H 4(g) + 2 O 2(g) o CO 2(g) + 2 H 2O(l)   'Hq combustion  = -890.3 kJ  
+(Molar mass CH 4 = 16.0428 g mol-1)
+ 
+ C 2H6(g) + 7/2 O 2(g) o 2 CO 2(g) + 3 H 2O(l)   'Hq combustion  = -1559.7 kJ  
+(Molar mass C 2H6 = 30.070 g mol-1) 
+ 
+ C 3H8(g) + 5 O 2(g) o  3 CO 2(g) + 4 H 2O(l)   'Hq combustion  = -2219.9 kJ  
+(Molar mass C 3H8 = 44.097 g mol-1) 
+ 
+ C 4H10(g)+13/2 O 2(g)o 4 CO 2(g) + 5 H 2O(l)  'Hq combustion  = -2877.4 kJ  
+(Molar mass C 4H10 = 58.123 g mol-1) 
+ 
+72. (M) Using the answers obtained in question 57, the per gram energy release is:  
+ C H 4(g) -55.5 kJ; C 2H6(g) -51.9 kJ; C 3H8(g) -50.3 kJ; C 4H10(g) -49.5 kJ 
+ 
+ (a) C 4H10(g) evolves the most energy on a per mole basis (-2877.4 kJ). 
+ (b) C H 4(g) evolves the most energy on a per gram basis (-55.5 kJ). 
+ (c) C H 4(g) is the most desirable alkane from  the standpoint of emission, producing 
+the least quantity of CO 2(g) per mole and/or per gram of fuel burned (as well per 
+kJ of energy produced). 
+ 
+73. (E) (a) 2 Al s+6 H C l a q o2 AlCl3aq+3  H2g 
+ ( b )  3 CO g+7  H2goC3H8g+3  H2Og 
+ ( c )  MnO (s) 2H (g) Mn(s) 2H O(g)22 2  o ' 
+ 
+74. (M) (a) 2H O(l) O (g) 2H (g)2electricity
+22 o  
+ ( b )  2 HI aq+ Z n so ZnI2aq+ H2g Any moderately active metal is 
+suitable. 
+ ( c )  Mg s+ H2SO4aqo MgSO4aq+ H2g Any strong acid is suitable. 
+
+=== PDF PAGE 1117 ===
+Chapter 22: Chemistry of the Main- Group Elements II: Groups 18, 17, 16, 15, and Hydrogen 
+   
+ 1 1 1 7  (d) CO g+ H2Ogo CO2g+ H2g 
+ 
+75. ( M )  22 2 2CaH s + 2 H O(l)  Ca OH aq + 2 H g o  
+ 22 2Ca s + 2 H O(l)  Ca OH aq +  H g o  
+22 2 Na s + 2 H O(l) 2 NaOH aq +  H g o  
+ 
+(a) The reaction that produces the largest volume of H2g per liter of water also 
+produces the largest amount of H 2(g) per mole of water used. All three reactions 
+use two moles of water a nd the reaction with CaH2s produces the most H 2(g). 
+ 
+ (b) We can compare three reactions that produce the same amount of hydrogen; the 
+one that requires the smallest mass of  solid produces the greatest amount of H2 
+per gram of solid. The amount of hydroge n we will choose, to simplify matters, 
+is 2 moles, which means that we compare 1 mol CaH2 (42.09 g) with 2 mol Ca 
+(80.16 g) and with 4 mol Na (91.96 g). Clearly CaH2 produces the greatest 
+amount of H2 per gram of solid. 
+ 
+76. (M) The balanced equation is C17H33COOH l+ H2go C17H35COOH s  . One 
+mole of oleic acid requires one mole of H2g. 
+ 
+  V nRT
+P 1.00 mol u0.08206L atm
+mol Ku298 K
+752 mm Hg u1 atm
+760 mmHgu0.95 L calculated
+1.0 L produced  23.5 L H2(g)  
+ 
+77. (M) Greatest mass percent hydrogen:  
+ T h e  a t m o s p h e r e  i s  m o s t l y  N 2(g) and O 2(g) with only a trace of hydrogen containing gas 
+molecules.  Seawater is H 2O(l), natural gas is CH 4(g) and ammonia is NH 3(g).  Each of 
+these compounds has one non-hydrogen atom, and the non-hydrogen atoms have 
+approximately the same mass (~14 +  2 g mol-1).  Since CH 4 has the highest hydrogen 
+atom to non-hydrogen atom ratio, this molecu le has the greatest mass percent hydrogen. 
+ 
+78. (M) The reaction is CaH2s+2 H2Olo Ca OH2aq+2 H2g 
+First we calculate the amount of H2g needed and then the mass of CaH2s 
+required. 
+ 
+mol Hmm Hg atm
+760 mmHgL
+ L atm mol K K mol H2 1 2   uu
+u PV
+RT7221235
+00 8 2 0 6 2 7 32 1 9792 91.( . .). 
+ 
+mass CaH  mol H mol CaH
+ mol H g CaH
+ mol CaH g CaH222
+22
+22 =9 . 2 91
+242.09
+1=1 9 6 uu  
+
+=== PDF PAGE 1118 ===
+Chapter 22: Chemistry of the Main- Group Elements II: Groups 18, 17, 16, 15, and Hydrogen  
+ 
+1118 79.  (M)  NH 2í has 8 valence electrons (a nd is isoelectronic with H 2O). The first four MO’s 
+ a r e  f u l l y  o c c u p i e d .  B e c a u s e  t h e  2 px orbital on N is strongl y bonding in the bent 
+ c o n f i g u r a t i o n ,  a s  s h o w n  i n  F i g u r e  2 2 - 2 7 ,  t h e  e n e r g y  o f  t h e  N H 2í will be much lower 
+ f o r  t h e  b e n t  c o n f i g u r a t i o n .  ( T he same argument applies to H 2O.) On the basis of 
+ m o l e c u l a r  o r b i t a l  t h e o r y ,  w e  e x p e c t  t h a t  N H 2í will be bent. 
+ 
+80. (M)  NH 2+ has 6 valence electrons and is isoelectronic with CH 2. On this basis, we 
+ a n t i c i p a t e  t h a t  s t r u c t u r e  o f  N H 2+ will be similar to that of CH 2: a slightly bent 
+ m o l e c u l e  w i t h  t w o  u n p a i r e d  e l e c t r o n s .   
+ 
+INTEGRATIVE AND ADV ANCED EXERCISES  
+ 
+81. ( M )   In step (1), oxygen is converted to H 2O by the reaction H 2(g) + 1
+2O2(g) ĺ 
+ H 2O(l). Step (2) ensures that unreacted hydrogen from step (1) is also converted to 
+ H 2O(l). The dehydrated zeolite has a very strong affinity for water molecules and 
+ t h u s ,  H 2O(l) is removed from the gas mixture. 
+ 
+82. (M) The AsF 6í is octahedral. The F—AsF bond angles are 90°. The most important 
+ L e w i s  s t r u c t u r e  f o r  t h e  H C N K r F+ ion is shown below. If we assume that the lone 
+ p a i r s  o n  K r  o c c u p y  e q u a t o r i a l  p o s i t i o n s  ( t o  minimize lone pair repulsions), then the 
+ H C N K r F+ ion is linear: 
+ 
++1H—C N —Kr:—F: { 
+  
+ 
+83. (E) The electrolysis reaction is 2 2 HO ( l ) H( g ) O( g )2electroysis
+22 o .  In this reaction, 2 
+moles of water are decomposed to produ ce one mole of oxygen and two moles of 
+hydrogen.  We use the data in the exerci se to determine the volumes of oxygen and 
+hydrogen produced. 
+ 
+  
+  n(H2O) m
+M 17.3g
+18.00g/mol 0.96mol
+V(O2)=nRT
+p 0.96molH2Ou1molO2
+2molH2Ou0.08206Latm/molK u298.15K
+755mmHg u1atm
+760mmHg 11.8L
+V(H2)=nRT
+p 0.96molH2Ou2molO2
+2molH2Ou0.08206Latm/molK u298.15K
+755mmHg u1atm
+760mmHg 23.6L 
+ 
+
+=== PDF PAGE 1119 ===
+Chapter 22: Chemistry of the Main- Group Elements II: Groups 18, 17, 16, 15, and Hydrogen 
+   
+ 1 1 1 9  84. (M) NaNO 2 decolorizes acidic solution of KMnO 4 according to the following balanced 
+chemical equation: 
+ 2KMnO 4 + 3H 2SO 4 + 5NaNO 2 o 5NaNO 3 + K 2SO 4 + 2MnSO 4 + 3H 2O 
+ N a N O 3 does not react with acidic solution of KMnO 4. 
+ 
+85. (D) First we balance the equation, then determine the number of millimoles of NH 3(g) 
+that are produced, and finally find the [NO 3–] in the original solution. 
+ T h e  s k e l e t o n  h a l f - e q u a t i o n s :  2-
+33 4NO (aq)  NH (g) Zn(s) Zn(OH) (aq)o o  
+ 33 2
+33 2Balance O's and H's: NO (aq)  NH (g) 3 H O(l)
+NO (aq) 9 H (aq)  NH (g) 3 H O(l)
+o
+  o 
+ 
+32 3 Balance charge and add OH (aq)     NO (aq) 6 H O(l) 8 e NH (g) 9 OH (aq)     o
+2-
+4 Add OH (aq)'s and then electrons: Zn(s)  4 OH (aq)  Zn(OH) (aq) 2 e   o  
+ 2-
+4
+--
+32 3
+3Oxidation:                               { Zn(s) 4 OH (aq)   Zn(OH) (aq) 2 e }    4
+Reduction:                     NO (aq) + 6 H O(l) + 8 e  NH (g) + 9 OH (aq)
+Net:  NO (aq)  +  4 Zn(s)  + 
+
+o u
+o
+-2 -
+24 3 6 H O(l)  + 7 OH (aq)  Zn(OH) (aq)  +  NH (g) o 
+ 
+ T h e  t i t r a t i o n  r e a c t i o n s  a r e  t h e  f o l l o w i n g .  
+ 23 4 HCl(aq) NaOH(aq)  NaCl(aq)  H O(l) NH (aq)  HCl(aq) NH Cl(aq)
+0.1000 mmol NaOH 1 mmol HClmmol excess HCl 32.10 mL 3.210 mmol HCl1 mL soln 1 mmol NaOH
+0.1500 mmol HClmmol HCl at start 50.00 mL1 mL s o    o
+ u u  
+ u
+3
+3 3
+3
+3
+37.500 mmol HCloln
+1 mmol NHmmol NH produced  (7.500 3.210) mmol  HCl 4.290 mmol NH1 mmol HCl
+1 mmol NO4.290 mmol NH31 mmol NH[NO ] 0.1716 M25.00 mL soln
+ 
+  u 
+u
+   
+ 
+ N o t i c e  t h a t  i t  w a s  n o t  n e c e s s a r y  to balance the equation, since NO 3– and NH 3 are the only 
+nitrogen-containing spec ies involved, and thus they must  be in a one-to-one molar ratio. 
+ 
+86. (M) First we compute the root-mean -square speed of O at 1500 K. 
+ m/s 10 5 . 1kg/mol  0.01601500 K mol  J  314 . 8 3 3
+rms311
+u u u  K
+MRTu  
+ K i n e t i c  E n e r g y   =  
+2
+21KE mu 32 20
+230.0160 kg/mol0.5 (1.5 10 m/s) 3.0 10 J/atom6.022 10  atoms/mol u uu  uu 
+
+=== PDF PAGE 1120 ===
+Chapter 22: Chemistry of the Main- Group Elements II: Groups 18, 17, 16, 15, and Hydrogen  
+ 
+1120  
+87. (M) Reduction:  { 2 NO3-(aq) + 10 H+(aq) + 8 e- o N2O(g) + 5 H2O(l)  }  u 7 
+ Oxidation:{C6H11O(aq)+3H2O(l)oHOOC(CH2)4COOH(aq)+7H+(aq)+7e-}u8
+Net:  14 NO3-(aq)   + 14 H+(aq)   + 8 C6H11O(aq) o 7 N2O(g) + 8 HOOC(CH2)4COOH(aq) + 11 H2O(l) 
+ 
+88. (D) The Lewis structures for the two compou nds are drawn below. The four bonded 
+groups in XeO 4 and no lone pairs on the central atom  give it a tetrahedral shape in which 
+there are four oxygen atoms on the periphery of  the molecule. These rounded tetrahedral 
+should not stick well together. In fact, each oxygen is slightly negatively charged and 
+they should repel each  o t h e r .   T h u s ,  w e  e x p e c t  w e a k  i n t e r m o l e c u l a r  f o r c e s  b e t w e e n  
+XeO 4 molecules. In XeO 3, on the other hand, the three bonds  and one lone pair produces 
+a trigonal pyramidal molecule in which the centr al Xe (carrying a slight positive charge), 
+is exposed to other molecules. There thus can  be strong dipole-dipol e forces leading to 
+strong intermolecular forces and a relatively high boiling point vis-à-vis XeO 4. 
+ 
+Xe O OO
+XeO
+O O
+O4+ 3+Note: You can also expand the octets to reduce 
+formal charges.  There are a number of 
+resonance forms, however, Lewis 
+structures(octets) are shown. 
+ 
+89. ( E )  The N center in the ammonium ion is the reducing agent, while Cl in the perchlorate anion 
+is the oxidizing agent. 
+ g) ( O  2 g) ( Cl O(g) H  4 g) ( N s) ( ClO NH  22 2 2 2 44   o  
+ 
+90.  (E) 'Hqf = Bonds broken in reactants – Bonds formed in products 
+  (a) ½ Cl 2(g) + ½ F 2(g) o Cl—F(g) 'Hqf = ½ (159 kJ) + ½ (243 kJ)  251 kJ = -50 kJ 
+ ( b )  ½ O 2(g) + F 2(g) o F—O—F(g) 'Hqf = ½ (498 kJ) + (159 kJ)  2(213 kJ) = -18 kJ
+ ( c )  ½ O 2(g) + Cl 2(g) o Cl—O—Cl(g) 'Hqf = ½ (498 kJ) + (243 kJ)  2(205 kJ) = +82 kJ
+ ( d )  ½ N 2(g) + 3/2 F 2(g) o NF 3(g) 'Hqf = ½ (946 kJ) + 1.5 (159 kJ)  3(280 kJ) = -128.5  kJ
+ 
+91. (E) The electrode reaction is: aq)( F  2 e  2 g) ( F        2 o  
+ 
+ 'Go 2 'Gfo[F(aq)] 'Gfo[F2(g)] 2(278.8 kJ/mol) (0 kJ/mol)
+'Go 557.6 kJ/mol 2nFEo 
+ V  890 . 2C/mol   485 , 96 2J/mol  10 6 . 5573
+o uu E   
+ T h i s  v a l u e  c o m p a r e s  f a v o r a b l y  w i t h  the value of +2.866 V in Appendix D. 
+ 
+92. ( M )  Each simple cubic unit cell has one Po atom at each of its eight corners, but each corner 
+is shared among eight unit cells. Thus, there is a total of one Po atom per unit cell. The edge 
+of that unit cell is 335 pm. From this info rmation we obtain the density of polonium. 

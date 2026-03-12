@@ -1,0 +1,201 @@
+pages=5
+
+===== PAGE 1 =====
+ 
+Chem 150    Answer Key   Term Test 2A  
+1.(2 marks) Write a dissociation equation for K2SO4 in water. 
+K2SO4(s) ↔ 2K+(aq) + SO42-(aq) 
+ 
+2.(2 marks) Write an ionization equation for HNO3 in water. 
+HNO3 (l) + H2O(l) → NO3-(aq) + H3O+(aq) 
+ 
+3. (2 marks) Sodium chloride dissolves spontaneously in water at room temperature. The standard 
+enthalpy for this process NaCl(s) →NaCl(aq) is + 5 kJ/mol. What can you confidently say about the 
+standard entropy for this process? 
+We know that sodium chloride dissolves spontaneous in water at room temperature (25 °C or 298 K) so 
+ΔG° must be negative, we also know that ΔH° is + 5 
+𝑘𝐽
+𝑚𝑜𝑙  so the entropy must be increasing (ΔS° must be 
+positive) which makes sense since we are increasing the randomness (the ions are free to move in x, y 
+and z direction in the salt solution but not in the crystal lattice). 
+We can be even more specific: TΔS° must be greater than 5 
+𝑘𝐽
+𝑚𝑜𝑙  to make ΔG° negative and since T is 
+298 K we can say: = TΔS° > ΔH° or (298 K) (ΔS°) >  5 
+𝑘𝐽
+𝑚𝑜𝑙  or ΔS° >  16.8 
+𝐽
+𝑚𝑜𝑙 𝐾   
+For the dissolution of sodium chloride in water the standard entropy must increase by at least 16.8 
+𝐽
+𝑚𝑜𝑙 𝐾   
+ 
+4. (3 marks) Calculate the pH of 0.00112 M Ca(OH)2(aq) 
+Calcium hydroxide is an ionic compound that has some solubility in water. All the Ca(OH)2 that dissolves 
+dissociates in water making the solution strongly basic. 
+Ca(OH)2(s) ↔ Ca2+(aq) + 2OH-(aq) 
+0.00112 M Ca(OH)2(aq) x 
+2 𝑚𝑜𝑙 𝑂𝐻−
+1 𝑚𝑜𝑙 𝐶𝑎(𝑂𝐻)₂ = 0.00224 M OH-(aq) 
+pOH = -log[0.00224] = 2.65 
+pH = 14 – pOH = 11.35 
+ 
+This study source was downloaded by 100000776013313 from CourseHero.com on 03-07-2026 22:27:05 GMT -06:00
+https://www.coursehero.com/file/249232830/Answer-Key-Term-Test-2Apdf/
+
+===== PAGE 2 =====
+5. (3 marks) As far as thermodynamics is concerned define a closed system. Write a sentence! Next give 
+an example of a closed system. 
+A closed system is any system in which energy can be transferred between the system and its 
+surroundings but matter cannot. 
+Example: a can of beer, the cylinder of compressed air in the lab (when not in use, valve closed)  
+ 
+6.(6 marks) Calculate the enthalpy of combustion of propene compound A and cyclopropane 
+compound B using the thermodynamic data given in the formulas and constants section. The final result 
+should have the unit kJ/mol and should be based on the heat produced per mole of compound 
+combusted. The two enthalpies for the isomers are different. Which compound is more stable and how 
+can you tell? 
+ 
+I am sorry about my drawing error. Thanks for pointing it out during the exam Trevor! 
+I corrected this on the board but this information would not have reached students who were 
+writing with CAL. See me if you feel that you lost marks because of this. 
+C3H6 (g) + 4.5O2(g) → 3CO2(g) + 3H2O(l)  Equation for both A and B (they are isomers) 
+ΔH° = ΣvpΔHf°(products) – ΣvrΔHf°(reactants) 
+Compound A: ΔH° = {(3 mol)(-393.5 
+𝑘𝐽
+𝑚𝑜𝑙) + (3 mol)(-285.8
+𝑘𝐽
+𝑚𝑜𝑙)} – {(1 mol)(+ 20.42 
+𝑘𝐽
+𝑚𝑜𝑙) + (4.5 mol)(0
+𝑘𝐽
+𝑚𝑜𝑙)} 
+ ΔH° = -2058.32 kJ for the reaction as written (combustion of one mol propene) so -2058.32 
+𝑘𝐽
+ 𝑚𝑜𝑙  
+Compound B: ΔH° = {(3 mol)(-393.5 
+𝑘𝐽
+𝑚𝑜𝑙) + (3 mol)(-285.8
+𝑘𝐽
+𝑚𝑜𝑙)} – {(1 mol)(+ 53.3 
+𝑘𝐽
+𝑚𝑜𝑙) + (4.5 mol)(0
+𝑘𝐽
+𝑚𝑜𝑙)} 
+ ΔH° = -2091.2 kJ for the reaction as written (raction of one mol cyclopropane) so -2091.2 
+𝑘𝐽
+ 𝑚𝑜𝑙  
+Propene is more stable as it releases less energy when combusting (it stores less energy as a fuel). We 
+can also see this from the enthalpy of formation which is less positive for propane (e.g. it takes less 
+energy to make propane from the elements compared to cyclopropane which stores a greater amount 
+of energy and is therefore less stable). 
+This study source was downloaded by 100000776013313 from CourseHero.com on 03-07-2026 22:27:05 GMT -06:00
+https://www.coursehero.com/file/249232830/Answer-Key-Term-Test-2Apdf/
+
+===== PAGE 3 =====
+7. (10 marks) Draw a hydrogen electrode properly connected to a gold half cell. Name all vital parts of 
+this Voltaic cell in your drawing. The hydrogen ion concentration in the hydrogen electrode is 0.010 M 
+and the H2(g) pressure is 0.1 atm. The gold electrode is dipping into a solution with a gold(III) ion 
+concentration of 0.0111 M. 
+ 
+ 
+Which electrode is the Anode and which electrode is the Cathode in your drawing?  
+The hydrogen electrode is anode (Pt) and the gold electrode is cathode 
+Give the half reactions that occur on both electrodes and give the overall cell reaction.  
+Cathode half reaction [Au3+(aq) + 3e-  →Au(s)]x2   + 1.52 V 
+Anode half reaction [H2(g) → 2H+(aq) + 2e-]x3    0 V 
+Overall cell reaction 2Au3+(aq) + 3H2(g) → 2Au(s) + 6H+(aq)  Ecell⁰ = + 1.52 V  
+   2Au3+(0.0111) + 3H2(0.1) → 2Au(s) + 6H+(0.01) 
+Calculate the cell potential Ecell 
+Ecell = Ecell° - 
+𝟎.𝟎𝟓𝟗𝟐  𝑽
+𝒏  logQ  = + 1.52 V  - 
+𝟎.𝟎𝟓𝟗𝟐 𝑽
+𝟔  log 
+[𝟏]²[𝟏𝟎⁻²]⁶
+[𝟎.𝟎𝟏𝟏𝟏]²[𝟎.𝟏]3
+      (Q= 8.116x10-6) 
+Ecell = + 1.52 V – (-0.050) V 
+Ecell = + 1.57 V 
+ 
+Draw an arrow in your cell diagram indicating the direction flow of electrons: Anode to Cathode 
+This study source was downloaded by 100000776013313 from CourseHero.com on 03-07-2026 22:27:05 GMT -06:00
+https://www.coursehero.com/file/249232830/Answer-Key-Term-Test-2Apdf/
+
+===== PAGE 4 =====
+8. (8 marks) Calculate the pH of 0.111 M aqueous sodium nitrite: NaNO2(aq). The acid ionization 
+constant for nitrous acid (HNO2) is Ka= 7.2 x 10-4 
+1) Dissociate the ionic compound in water 
+ 
+NaNO2(s) ↔ Na+(aq) + NO2-(aq)   
+ 
+after complete dissociation the concentration of sodium and nitrite ions will be 0.111 M 
+ 
+2) Hydrolyze (react with water) the ion of the weak acid 
+NO2-(aq) + H2O(aq) →     HNO2(aq) +      OH-(aq) now set up ICE table 
+Initial  0.111 M             0 M       0 M 
+Change       -x M             +x M    + x M 
+Equilibrium (0.111 – x)M              x M       x M 
+ 
+We are given ka for HNO2 but its on the wrong side of the equation, we need kb for the corresponding 
+base NO2- (aq). Use Ka x Kb = 10-14 which yields kb(NO2-) = 
+1𝑥10⁻¹⁴
+7.2 𝑥 10⁻⁴  = 1.388 x 10-11  
+1.388 x 10-11  = 
+[𝐻𝑁𝑂₂][𝑂𝐻−]
+[𝑁𝑂₂−]  = 
+𝑥²
+(0.111−𝑥) 
+We can solve the quadratic equation or try the approximation if x << 0.111 then  
+𝑥²
+(0.111−𝑥) ~ 
+𝑥²
+0.111 and 
+1.388 x 10-11 ~ 
+𝑥²
+0.111 Which gives x = 1.242 x 10-6 = [OH-]  and pOH = 5.91 
+pH = 14- 5.91  1.242 x 10-6 << 0.111, our simplifying assumption is valid. 
+pH = 8.09 This is mildly basic which makes sense for the salt of a strong base with a weak acid. 
+Some of you combined step 1 and 2 in one which can be done. The equation would be: 
+NaNO2(s) + H2O(l)    →     HNO2(aq)  +      NaOH(aq)  
+Initial  0.111 M             0 M       0 M 
+Change       -x M             +x M    + x M 
+Equilibrium (0.111 – x)M              x M       x M 
+The ICE table and the follow up would be the same! 
+This study source was downloaded by 100000776013313 from CourseHero.com on 03-07-2026 22:27:05 GMT -06:00
+https://www.coursehero.com/file/249232830/Answer-Key-Term-Test-2Apdf/
+
+===== PAGE 5 =====
+Formulas and constants: 
+Selected standard electrode half potentials:  
+Au3+(aq) + 3e- → Au(s)  +1.52 V 
+O2(g) + 4H+(aq) +4e- → 2H2O(l)  1.229 V 
+Fe3+(aq) + e- → Fe2+(aq) +0.771 V 
+Cu2+(aq) + 2e- → Cu(s)  + 0.340 V 
+ 2H+(aq) + 2e- → H2(g)  0 V (as defined) 
+Mo3+(aq) + 3e- → Mo(s) - 0.20 V 
+ Cr3+(aq) + e- → Cr2+(aq) - 0.424 V 
+Fe2+(aq) + 2e- → Fe(s)  - 0.440 V 
+Mn2+(aq) + 2e- → Mn(s) - 1.18 V 
+Mg2+(aq) + 2e- → Mg(s) - 2.356 V 
+Some useful equations:  S = klnW,  k = 1.38064852 × 10-23 JK-1 
+ΔH° = ΣvpΔHf°(products) – ΣvrΔHf°(reactants)  ΔG° = ΔH° - TΔS° 
+Selected standard enthalpy of formations: 
+CH3NO2 (l)    – 112.6 kJ/mol 
+Cyclopropane C3H6 (g)  + 53.3 kJ/mol 
+propene C3H6 (g)   + 20.42 kJ/mol 
+CO2(g)   - 393.5 kJ/mol 
+H2O(l)   -285.8 kJ/mol 
+E°cell =  E°reduction half cell - E°oxidation half cell (where E° refers to the reduction half potentials) 
+Ecell = Ecell° - 
+𝟎.𝟎𝟓𝟗𝟐  𝑽
+𝒏  logQ 
+pH = - log [H3O+] = - log[H+] pOH = - log [OH-] pH + pOH = 14 = pKw 
+For an acid HA that ionizes in water to give H3O+ and A- the acid constant Ka is defined as: 
+Ka = 
+[𝑯₃𝑶⁺][𝑨¯]
+[𝑯𝑨]           For an 
+acid and its conjugated base (or a base and its conjugated acid) in water:  Ka x Kb = Kw = 10-14 
+This study source was downloaded by 100000776013313 from CourseHero.com on 03-07-2026 22:27:05 GMT -06:00
+https://www.coursehero.com/file/249232830/Answer-Key-Term-Test-2Apdf/
+Powered by TCPDF (www.tcpdf.org)

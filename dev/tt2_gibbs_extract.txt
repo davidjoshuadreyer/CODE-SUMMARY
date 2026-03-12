@@ -1,0 +1,4654 @@
+
+===== TEXTBOOK PAGE 659 =====
+630 Chapter 13 Spontaneous Change: Entropy and Gibbs Energy
+Exercises
+Entropy and Spontaneous Change
+1. Consider a system of five distinguishable particles con-
+fined to a one-dimensional box of length L. Describe
+how the following actions affect the number of accessi-
+ble microstates and the entropy of the system:
+(a) increasing the length of the box to 2 L for fixed
+total energy
+(b) increasing the total energy for constant length L
+2. Consider a sample of ideal gas initially in a volume V
+at temperature T and pressure P. Does the entropy of
+this system increase, decrease, or stay the same in the
+following processes?
+(a) The gas expands isothermally.
+(b) The pressure is increased at constant temperature.
+(c) The gas is heated at constant pressure.
+3. The standard molar entropy of H
+2(g) is 
+130.7 J mol K at 298 K. Use this value, together
+with Boltzmann’s equation, to determine the number
+of microstates, W, for one mole of H
+2(g) at 298 K and 
+1 bar. Reflect on the magnitude of your calculated
+value by describing how to write the number in deci-
+mal form. [ Hint: To write the number , for
+example, in decimal form, we would write down a 1
+followed by 15 zeros. The relationship ln 
+log W might also be useful.]
+4. In a 1985 paper in the Journal of Chemical
+Thermodynamics, the standard molar entropy of chal-
+copyrite, CuFeS
+2, is given as 0.012 J mol K at 5 K.
+[See R. A. Robie et. al., J. Chem. Thermodyn., 17, 481
+(1985).] Use this value to estimate the number of
+microstates for one picogram ( g) of CuFeS
+2
+at 5 K and 1 bar. Report your answer in the manner
+described in Exercise 3.
+5. Indicate whether each of the following changes repre-
+sents an increase or a decrease in entropy in a system,
+and explain your reasoning: (a) the freezing of
+ethanol; (b) the sublimation of dry ice; (c) the burning
+of a rocket fuel.
+6. Arrange the entropy changes of the following
+processes, all at , in the expected order of
+increasing and explain your reasoning: 
+(a)
+(b)
+(c)
+7. Use ideas from this chapter to explain this famous
+remark attributed to Rudolf Clausius (1865): “Die
+Energie der Welt ist konstant; die Entropie der Welt
+strebt einem Maximum zu.” (“The energy of the
+world is constant; the entropy of the world increases
+toward a maximum.”)
+8. Comment on the difficulties of solving environmental
+pollution problems from the standpoint of entropy
+changes associated with the formation of pollutants
+and with their removal from the environment.
+H
+2O1g, 0.01 bar2H2O1l, 1 bar2 ¡
+0.01 bar2¡ CO21g,CO21s, 1 bar2
+H2O1g, 1 bar2H2O1l, 1 bar2 ¡
+¢S,
+25 °C
+1 * 10-12
+-1-1
+W = 2.303
+1 * 1015
+-1-1
+S° =
+The following thermodynamic properties of at are given: and
+Use these data, together with values from Appendix D, to obtain a value of , the standard
+molar entropy of at 25 °C.CH2(OH)CH2OH1l2
+S°¢fG° =- 323.1 kJ mol-1.
+¢fH° =- 454.8 kJ mol-125 °CCH2(OH)CH2OH1l2
+9. Indicate whether entropy increases or decreases in
+each of the following reactions. If you cannot be cer-
+tain simply by inspecting the equation, explain why.
+(a)
+(b)
+(c)
+(d)
+(not balanced)
+10. Which substance in each of the following pairs would
+have the greater entropy? Explain.
+(a) at and 1 bar: 1 mol or 1 mol 
+(b) at and 1 bar: 50.0 g Fe(s) or 0.80 mol Fe(s)
+(c) 1 mol (l, 1 bar, 8 ) or 1 mol (s, 1 bar, )
+(d) 0.312 mol (g, 0.110 bar, ) or 0.284 mol
+(g, 15.0 bar, )
+11. Without performing any calculations or using data from
+Appendix D, predict whether for each of the fol-
+lowing reactions is positive or negative. If it is not
+possible to determine the sign of from the infor-
+mation given, indicate why. 
+(a)
+(b)
+(c)
+(d)
+(e)
+12. By analogy to and how would you define
+standard entropy of formation? Which would have
+the largest standard entropy of formation: 
+or First make a qualitative
+prediction; then test your prediction with data from
+Appendix D.
+13. Calculate the entropy change, , for the following
+processes. If necessary, look up required data in
+Appendix D.
+(a) A mole of He(g) undergoes an expansion from V
+to 2V at 298 K.
+(b) The temperature of one mole of CH
+4(g) is
+increased from 298 K to 325 K at a constant pressure of
+1 bar.
+14. Calculate the entropy change, , for the following
+processes. If necessary, look up required data in
+Appendix D.
+(a) The pressure of one mole of O
+2(g) is increased
+from P to 2P at 298 K.
+(b) The temperature of one mole of CO 2(g) is
+increased from 298 K to 355 K at a constant volume of
+20.0 L.
+15. In Example 13-3, we dealt with and for
+water at 
+(a) Use data from Appendix D to determine values
+for these two quantities at 25 °C.
+100 °C.
+¢
+vapS°¢vapH°
+¢S
+¢S
+CS21l2?CH3CH2OH1l2,
+CH41g2,
+¢fG°¢fH°
+Si1s2 + 2 Cl21g2 ¡ SiCl41g2
+Fe2O31s2 + 3 CO1g2 ¡ 2 Fe1s2 + 3 CO21g2
+2 NaCl1l2 ¡ 2 Na1l2 + Cl21g2
+2 HgO1s2 ¡ 2 Hg1l2 + O21g2
+CaO1s2 + H2O1l2 ¡ Ca1OH221s2
+¢rS°
+¢rS°
+22.3 °CO2
+32.5 °CSO2
+-8 °CBr2°CBr2
+5 °C
+H2O1g2H2O1l275 °C
+H2S1g2 + O21g2 ¡ H2O1g2 + SO21g2
+SO31g2 + H21g2 ¡ SO21g2 + H2O1g2
+CuSO4 # 5 H2O1s2
+CuSO4 # 3 H2O1s2 + 2 H2O1g2 ¡
+CCl41l2 ¡ CCl41g2
+M13_PETR4521_10_SE_C13.QXD  1/7/16  5:12 PM  Page 630
+
+===== TEXTBOOK PAGE 660 =====
+Exercises 631
+(b) From your knowledge of the structure of liquid
+water, explain the differences in values and in
+values between and .
+16. Pentane is one of the most volatile of the hydrocarbons
+in gasoline. At 298.15 K, the following enthalpies of
+formation are given for pentane: 
+(a) Estimate the normal boiling point of pentane.
+(b) Estimate for pentane at 298 K.
+(c) Comment on the significance of the sign of 
+for pentane at 298 K.
+17. Which of the following substances would obey
+Trouton’s rule most closely: HF, (toluene),
+or (methanol)? Explain your reasoning.CH
+3OH
+C6H5CH3
+¢vapG°
+¢vapG°
+¢fH°3C5H121g24 =- 146.9 kJ mol-1.-173.5 kJ mol-1;
+¢fH°[C5H121l2] =
+100 °C25 °C¢vapS°
+¢vapH°
+18. Estimate the normal boiling point of bromine, in
+the following way: Determine for from
+data in Appendix D. Assume that remains
+constant and that Trouton’s rule is obeyed.
+19. In what temperature range can the following equilib-
+rium be established? Explain.
+20. Refer to Figure 12-28 and equation (13.13). Which has
+the lowest Gibbs energy at 1 atm and solid,
+liquid, or gaseous carbon dioxide? Explain.
+-60 °C:
+H
+2O1l, 0.50 bar2 Δ H2O1g, 0.50 bar2
+¢vapH°
+Br2¢vapH°
+Br2 ,
+Gibbs Energy and Spontaneous Change
+21. Which of the following changes in a thermodynamic
+property would you expect to find for the reaction
+at all temperatures? Explain. (a)
+(b) (c) (d)
+22. If a reaction can be carried out only because of an exter-
+nal influence, such as the use of an external source of
+power, which of the following changes in a thermody-
+namic property must apply? Explain. (a)
+(b) (c) (d) .
+23. Indicate which of the four cases in Table 13.3 applies
+to each of the following reactions. If you are unable to
+decide from only the information given, state why.
+(a)
+(b)
+(c)
+24. Indicate which of the four cases in Table 13.3 applies
+to each of the following reactions. If you are unable to
+decide from only the information given, state why.
+¢
+rH° =+ 159.2 kJ mol-1
+NH4CO2NH21s2 ¡ 2 NH31g2 + CO21g2
+¢rH° =+ 41.2 kJ mol-1
+CO21g2 + H21g2 ¡ CO1g2 + H2O1g2
+¢rH° =- 87.9 kJ mol-1
+PCl31g2 + Cl21g2 ¡ PCl51g2
+¢G 7 0¢G =¢ H;¢S 7 0;
+¢H 7 0;
+¢S 6 0.¢G 6 0;¢S 7 0;¢H 6 0;
+Br21g2 ¡ 2 Br1g2
+(a)
+(b)
+(c)
+25. For the mixing of ideal gases (see Figure 13-3), explain
+whether a positive, negative, or zero value is expected
+for and 
+26. In Chapter 14, we will see that, for the formation of an
+ideal solution of liquid components, . What
+would you expect for the values of and ? 
+(Is each value positive, negative, or zero?)
+27. Explain why (a) some exothermic reactions do not
+occur spontaneously, and (b) some reactions in which
+the entropy of the system increases do not occur 
+spontaneously.
+28. Explain why you would expect a reaction of the type
+always to be spontaneous
+at high rather than at low temperatures.
+AB1g2 ¡ A1g2 + B1g2
+¢G¢S
+¢H = 0
+¢G.¢H, ¢S,
+¢
+rH° =- 38.54 kJ mol-1
+NO1g2 + 1
+2
+  Cl21g2 ¡ NOCl1g2
+¢rH° =- 3135 kJ mol-1
+C6H61l2 + 15
+2
+  O21g2 ¡ 6 CO21g2 + 3 H2O1g2
+¢rH° =+ 105.5 kJ mol-1
+H2O1g2 + 1
+2
+  O21g2 ¡ H2O21g2
+Standard Gibbs Energy of Reaction, ≤rG°
+29. From the data given in the following table, determine
+for the reaction 
+All data are at 298 K.NH4Cl1s2.
+NH31g2 + HCl1g2 ¡¢rS°
+molar entropies, in J mol –1 K–1, are 
+and Determine (a)
+at 298 K and (b) whether the reaction proceeds sponta-
+neously in the forward or the reverse direction when
+reactants and products are in their standard states.
+32. At 298 K, for the reaction 
+and the standard molar entropies are
+Determine (a) at
+298 K and (b) whether the reaction proceeds sponta-
+neously in the forward or the reverse direction when
+reactants and products are in their standard states.
+33. The following values are given for 
+(1)
+¢
+rG° =- 33.0 kJ mol-1
+N21g2 + 3 H21g2 ¡ 2 NH31g2
+25 °C.¢rG°
+¢rG°135.6 J mol-1 K-1.HNO21aq2,
+152.2 J  mol-1 K-1;Br21l2,240.1 J mol-1 K-1;NO21g2,
+82.4 J mol-1 K-1;Br-1aq2,0 J mol-1 K-1;H+1aq2,
+-61.6 kJ mol-1
+¢rH° =2  NO21g2 ¡  Br21l2 +  2  HNO21aq2,
+2 H+1aq2 + 2 Br-1aq2 +
+¢rG°222.4.POCl31l2,205.1;O21g2,
+311.8;PCl31g2,
+¢fH°, kJ mol/H115461 ¢fG°, kJ mol/H115461
+NH31g2 -46.11 -16.48
+HCl(g) -92.31 -95.30
+NH4Cl1s2 -314.4 -202.9
+30. Use data from Appendix D to determine values of
+for the following reactions at 
+(a)
+(b)
+(c)
+(d)
+31. At 298 K, for the reaction 
+and the standard¢
+rH° =- 620.2 kJ mol-12 POCl31l2,
+2 PCl31g2 + O21g2 ¡
+2 Al1s2 + 6 H+1aq2 ¡ 2 Al3+1aq2 + 3 H21g2
+Fe3O41s2 + 4 H21g2 ¡ 3 Fe1s2 + 4 H2O1g2
+2 SO31g2 ¡ 2 SO21g2 + O21g2
+C2H21g2 + 2 H21g2 ¡ C2H61g2
+25 °C.¢rG°
+M13_PETR4521_10_SE_C13.QXD  1/7/16  5:38 PM  Page 631
+
+===== TEXTBOOK PAGE 661 =====
+632 Chapter 13 Spontaneous Change: Entropy and Gibbs Energy
+39. For each of the following reactions, write down the rela-
+tionship between K and either or , as appropriate.
+(a)
+(b)
+(c)
+40. can be prepared by passing steam over hot
+iron: 
+(a) Write an expression for the thermodynamic equi-
+librium constant for this reaction.
+(b) Explain why the partial pressure of is inde-
+pendent of the amounts of Fe(s) and present.
+(c) Can we conclude that the production of 
+from could be accomplished regardless ofH
+2O1g2
+H21g2
+Fe3O41s2
+H21g2
+3 Fe1s2 + 4 H2O1g2 Δ Fe3O41s2 + 4 H21g2.
+H21g2
+NH4HCO31s2 Δ NH31g2 + CO21g2 + H2O1l2
+HI1g2 Δ 1
+2
+  H21g2 + 1
+2
+  I21g2
+2 SO21g2 + O21g2 Δ 2 SO31g2
+KcKp
+the proportions of Fe(s) and present?
+Explain.
+41. In the synthesis of gaseous methanol from carbon
+monoxide gas and hydrogen gas, the following
+equilibrium concentrations were determined at 
+Calculate the equi-
+librium constant and for the reaction
+.
+42. Calculate the equilibrium constant and for the
+reaction 
+by using the data tables from Appendix D. [Hint: The
+value you obtain for K will be slightly different from
+the value you calculated in Exercise 41.]
+at 483 KCO1g2 + 2 H
+21g2 ¡ CH3OH1g2
+¢rG°
+CO1g2 + 2 H21g2 ¡ CH3OH1g2
+¢rG°
+and 3CH3OH1g24 = 0.00892 M.
+3H21g24 =  0.0822 M,483 K:  3CO1g24 =  0.0911 M,
+Fe3O41s2
+The Thermodynamic Equilibrium Constant
+43. Use data from Appendix D to determine K at 298 K for
+the reaction 
+44. Use data from Appendix D to establish for the reac-
+tion 
+(a) at 298 K for the reaction as written;
+(b) K at 298 K.
+¢
+rG°
+2 N2O41g2 + O21g2 Δ 2 N2O51g2:
+N2O1g2 + 1
+2 O21g2 Δ 2 NO1g2.
+45. Use data from Appendix D to determine values at 298 K
+of and K for the following reactions. ( Note: The
+equations are not balanced.)
+(a)
+(b)
+(c) Ag
++1aq2 + SO4
+ 
+2-1aq2 Δ Ag2SO41s2
+Fe2O31s2 + H21g2 Δ Fe3O41s2 + H2O1g2
+HCl1g2 + O21g2 Δ H2O1g2 + Cl21g2
+¢rG°
+Relationships Involving , ,Q , and K≤rG°≤rG
+(2)
+(3)
+(4)
+(5)
+Combine the preceding equations, as necessary, to
+obtain values for each of the following reactions.
+(a)
+(b)
+(c)
+Of reactions (a), (b), and (c), which would tend to go
+to completion at and which would reach an
+equilibrium condition with significant amounts of all
+reactants and products present?
+34. The following values are given for 
+(1)
+(2)
+(3)
+(4)
+Combine the preceding equations, as necessary, to
+obtain values for the following reactions.
+(a)
+(b)
+SO21g2 + CO21g2 + 3 H21g2 ¢rG° = ?
+COS1g2 + 3 H2O1g2 ¡
+SO21g2 + CO1g2 + 2 H21g2 ¢rG° = ?
+COS1g2 + 2 H2O1g2 ¡
+¢rG°
+¢rG° =- 28.6 kJ mol-1
+CO1g2 + H2O1g2 ¡ CO21g2 + H21g2
+¢rG° =+ 1.4 kJ mol-1
+CO1g2 + H2S1g2 ¡ COS1g2 + H21g2
+¢rG° =- 41.5 kJ mol-1
+CS21g2 + H2O1g2 ¡ COS1g2 + H2S1g2
+¢rG° =- 246.4 kJ mol-1
+SO21g2 + 3 CO1g2 ¡ COS1g2 + 2 CO21g2
+25 °C.¢rG°
+25 °C,
+¢rG° = ?
+2 NH31g2 + 2 O21g2 ¡ N2O1g2 + 3 H2O1l2
+¢rG° = ?2 H21g2 + O21g2 ¡ 2 H2O1l2
+¢rG° = ?N2O1g2 + 3
+2
+  O21g2 ¡ 2 NO21g2
+¢rG°
+¢rG° =+ 208.4 kJ mol-1
+2 N21g2 + O21g2 ¡ 2 N2O1g2
+¢rG° =+ 102.6 kJ mol-1
+N21g2 + 2 O21g2 ¡ 2 NO21g2
+¢rG° =+ 173.1 kJ mol-1
+N21g2 + O21g2 ¡ 2 NO1g2
+¢rG° =- 1010.5 kJ mol-1
+4 NH31g2 + 5 O21g2 ¡ 4 NO1g2 + 6 H2O1l2 (c)
+Of reactions (a), (b), and (c), which is spontaneous in
+the forward direction when reactants and products
+are present in their standard states?
+35. Write an equation for the combustion of one mole of
+benzene, and use data from Appendix D to
+determine at 298 K if the products of the com-
+bustion are (a) and and (b)
+and Describe how you might determine the
+difference between the values obtained in (a) and (b)
+without having either to write the combustion equa-
+tion or to determine values for the combustion
+reactions.
+36. Use molar entropies from Appendix D, together with
+the following data, to estimate the bond-dissociation
+energy of the molecule.
+Compare your result with the value listed in Table 10.3.
+37. Assess the feasibility of the reaction
+by determining each of the following quantities for
+this reaction at 
+(a) (The standard molar entropy of is
+)
+(b) (Use data from Table 10.3 and 
+and bond energies of 222 and 
+respectively.)
+(c)
+Is the reaction feasible? If so, is it favored at high or
+low temperatures?
+38. Solid ammonium nitrate can decompose to dinitrogen
+oxide gas and liquid water. What is at 298 K? Is
+the decomposition reaction favored at temperatures
+above or below 298 K?
+¢
+rG°
+¢rG°
+301 kJ mol-1,N¬ F
+F¬ O¢rH°
+301.2 J mol-1 K-1.
+N2F41g2¢rS°
+25 °C.
+N2H41g2 + 2 OF21g2 ¡ N2F41g2 + 2 H2O1g2
+F21g2 ¡ 2 F1g2 ¢rG° = 123.9 kJ mol-1
+F2
+¢rG°
+H2O1g2.
+CO21g2H2O1l2,CO21g2
+¢rG°
+C6H61l2,
+¢rG° = ?
+COS1g2 + H2O1g2 ¡ CO21g2 + H2S1g2
+M13_PETR4521_10_SE_C13.QXD  1/7/16  5:14 PM  Page 632
+
+===== TEXTBOOK PAGE 662 =====
+Exercises 633
+46. In Example 13-2, we were unable to conclude by
+inspection whether for the reaction 
+should be positive or
+negative. Use data from Appendix D to obtain at
+298 K.
+47. Use thermodynamic data at 298 K to decide in which
+direction the reaction
+is spontaneous when the partial pressures of
+0.20, and 0.10 bar,
+respectively.
+48. Use thermodynamic data at 298 K to decide in which
+direction the reaction
+is spontaneous when the partial pressures of 
+and HCl are all 0.5 bar.
+49. For the reaction below, at 298 K.
+Use this thermodynamic quantity to decide in
+which direction the reaction is spontaneous when
+the concentrations of 
+are 0.10 M, 
+M, respectively.
+50. For the reaction below, at 298 K.
+Use this thermodynamic quantity to decide in which
+direction the reaction is spontaneous when the con-
+centrations of are
+0.10 M, respectively.
+51. For the reaction 
+all but one of the following equations is correct.
+Which is incorrect, and why? (a) (b)
+(c) (d)
+52. Why is such an important property of a chemi-
+cal reaction, even though the reaction is generally car-
+ried out under nonstandard conditions?
+53. At 1000 K, an equilibrium mixture in the reaction
+contains
+0.276 mol 
+(a) What is K at 1000 K?
+(b) Calculate at 1000 K.
+(c) In which direction would a spontaneous reaction
+occur if the following were brought together at 
+1000 K: 0.0750 mol 0.095 mol 0.0340 mol CO,
+and 0.0650 mol 
+54. For the reaction 
+at 1000 K.
+(a) What is at 1000 K? [ Hint: What is K?]
+(b) If 0.40 mol are
+mixed in a 2.50 L flask at 1000 K, in what direction
+will a net reaction occur?
+SO
+2 , 0.18 mol O2 , and 0.72 mol SO3
+¢rG°
+Kc = 2.8 * 102 M-1
+2 SO21g2 + O21g2 Δ 2 SO31g2,
+H2O?
+H2 ,CO2 ,
+¢rG°
+0.224 mol H2O.
+and0.224  mol  CO,H2 ,  0.276  mol  CO2 , 
+CO21g2 + H21g2 Δ CO1g2 + H2O1g2
+¢rG°
+RT ln Q.¢rG° +
+¢rG =K = e-¢rG°>RT;1¢rH° -¢ rG°2>T;
+¢rS° =K = Kp ;
+2 NO1g2 + O21g2 ¡ 2 NO21g2
+and 1.0 * 10-3 M,1.0 * 10-3 M,
+NH4
+ 
++1aq2, and OH-1aq2NH31aq2,
+NH31aq2 + H2O1l2 Δ NH4
+ 
++1aq2 + OH-1aq2
+¢rG° = 29.05 kJ mol-1
+1.0 * 10-3
+1.0 *  10-3  M,  andand   H3O+1aq2
+CH3CO2H1aq2, CH3CO2
+ 
+-1aq2,
+CH3CO2
+ 
+-1aq2 + H3O+1aq2
+CH3CO2H1aq2 + H2O1l2 Δ
+¢rG° = 27.07 kJ mol-1
+H2 , Cl2 ,
+H21g2 + Cl21g2 Δ 2 HCl1g2
+and SO3 are 1.0 * 10-4,SO2 , O2 ,
+2 SO21g2 + O21g2 Δ 2 SO31g2
+¢rS°
+H2O1g2 ¡ CO21g2 + H21g2
+CO1g2 +¢rS°
+55. For the following equilibrium reactions, calculate
+at the indicated temperature. 
+(a)
+(b)
+(c)
+(d)
+56. Two equations can be written for the dissolution of
+in acidic solution.
+(a) Explain why these two equations have different
+values.
+(b) Will K for these two equations be the same or dif-
+ferent? Explain.
+57. At 298 K, and 
+for the reaction 
+Use these data to determine
+and compare your result with the
+value in Appendix D.
+58. Use thermodynamic data from Appendix D to calcu-
+late values of K for the reaction describing the dissolu-
+tion of the following sparingly soluble solutes: 
+(a) AgBr; (b) (c) [Hint: The dissolu-
+tion process is the reverse of the precipitation reaction.
+Precipitation reactions were discussed in Chapter 5.]
+59. To establish the law of conservation of mass, Lavoisier
+carefully studied the decomposition of mercury(II)
+oxide:
+At and 
+(a) Show that the partial pressure of in equilib-
+rium with HgO(s) and Hg(l) at is extremely low.
+(b) What conditions do you suppose Lavoisier used
+to obtain significant quantities of oxygen?
+60. Currently, is being studied as a source of carbon
+atoms for synthesizing organic compounds. One pos-
+sible reaction involves the conversion of to
+methanol, 
+With the aid of data from Appendix D, determine
+(a) if this reaction proceeds to any significant extent
+at 
+(b) if the production of is favored by rais-
+ing or lowering the temperature from 
+(c) K for this reaction at 500 K.
+25 °C;
+CH
+3OH1g2
+25 °C;
+CO21g2 + 3 H21g2 ¡ CH3OH1g2 + H2O1g2
+CH3OH.
+CO2
+CO2
+25 °C
+O21g2
++58.54 kJ mol-1.
+¢rG° =¢rH° =  +90.83  kJ  mol-125 °C,
+HgO1s2 ¡ Hg1l2 + 1
+2  O21g2
+Fe1OH23 .CaSO4 ;
+¢fG°3COCl21g24,
+COCl21g2.
+CO1g2 + Cl21g2 Δ6.5 * 1011
+K =¢fG°3CO1g24 =- 137.2 kJ mol-1
+¢rG°
+¢rG° =- 47.8 kJ mol-1
+1
+2
+  Mg1OH221s2 + H+1aq2 Δ 1
+2
+  Mg2+1aq2 + H2O1l2
+¢rG° =- 95.5 kJ mol-1
+Mg1OH221s2 + 2 H+1aq2 Δ Mg2+1aq2 + 2 H2O1l2
+Mg1OH221s2
+K = 9.14 * 10-6 at 25 °C
+2 Fe2+1aq2 + 2 Hg2+1aq2
+2 Fe3+1aq2 + Hg2
+ 
+2+1aq2 Δ
+K = 0.114 at 25 °CN2O41g2 Δ 2 NO21g2
+K = 8.5 * 10-13 at 25 °C
+N2O1g2 + 1
+2
+  O21g2 Δ 2 NO1g2
+H21g2 + I21g2 Δ 2 HI1g2  K = 50.2 at 445 °C
+¢rG°
+M13_PETR4521_10_SE_C13.QXD  1/7/16  5:15 PM  Page 633
+
+===== SOLUTION MANUAL PAGE 947 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 4 7  
+3B (M)  The entropy change for the reaction is expressed in terms of the standard entropies of 
+the reagents. 
+  
+  
+'So = So NO gª¬ º¼+ So NO2 gª¬ º¼So N2O3 gª¬ º¼ 
+  
+
+
+11 11 11
+23
+11
+23
+138.5 J mol K = 210.8 J mol K + 240.1 J mol K N O g
+=4 5 0 . 9J  m o l K N O g
+S
+S
+  
+
+ª º¬ ¼
+ ªº¬¼
+D
+D
+ 
+  
+
+11 11 1
+23NO g = 4 5 0 . 9J  m o l K 1 3 8 . 5J  m o l K = 3 1 2 . 4J  m o l KS   ªº¬¼
+D  
+ 
+4A (E) (a) Because 'ngas =2 1+3=2 f o r  t h e  s y n t h e s i s  o f  a m m o n i a ,  w e  w o u l d  p r e d i c t  
+'S0  for the reaction. We already know that 'H0 . Thus, the reaction falls into 
+case 2, namely, a reaction that is spontaneous at low temperatures and non-
+spontaneous at high temperatures. 
+  
+(b) For the formation of ethylene 'ngas =12+0=1 and thus 'S0.  W e  a r e  g i v e n  
+that '!H0 a n d ,  t h u s ,  t h i s  r e a c t i o n  corresponds to case 4, namely, a reaction that is 
+non-spontaneous at all temperatures. 
+ 
+4B (E) (a) Because 'ngas =+ 1  f o r  t h e  d e c o m p o s i t i o n  o f  c a l c i u m  c a r b o n a t e ,  w e  w o u l d  p r e d i c t  
+'!S0 f o r  t h e  r e a c t i o n ,  f a v o r i n g  t h e  r eaction at high temperatures. High 
+temperatures also favor this endothermic 'H o !0  reaction. 
+   
+(b) The “roasting” of ZnS(s) has ' ngas =2 3= 1  a n d ,  t h u s ,  'S0 . We are given that 
+'H0;  t h u s ,  t h i s  r e a c t i o n  c o r r e s p o n d s  t o  case 2, namely, a reaction that is 
+spontaneous at low temperatures, and non-spontaneous at high ones. 
+ 
+5A (E) The expression '' 'G HTSDD D=  is used with T=2 9 8 . 1 5K. 
+  
+'Go = 'H o T 'So = 1648 kJ 298.15 K u549.3 J K1
+ u1k J/1 0 0 0J 
+= 1648 kJ +163.8 kJ = 1484 kJ
+ 
+ 
+5B (M) We just need to substitute values from Appendix D into the supplied expression. 
+  
+   f2 f f2
+11 1 1
+=2 N O g 2 N O g O g
+=2 5 1 . 3 1k J  m o l 2 8 6 . 5 5k J  m o l 0 . 0 0k J  m o l = 7 0 . 4 8k J  m o l
+GG G G
+ 
+''  '  'ªº ª º ª º¬¼ ¬ ¼ ¬ ¼
+u u 
+D
+ 
+ 
+6A (M) Pressures of gases and molarities of solutes in aqueous solution appear in 
+thermodynamic equilibrium constant expressions. Pure solids and liquids (including 
+solvents) do not appear. 
+  
+(a) 
+  
+K =
+PSiCl4
+PCl2
+2  Kp   (b) K =
+HOClª¬ º¼H+ª¬ º¼Clª¬ º¼
+PCl2
+ 
+  p=KK  for (a) because all terms in the K  expression are gas pressures. 
+
+===== SOLUTION MANUAL PAGE 948 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+948 
+6B (M) We need the balanced chemical equation in order to write the equilibrium constant 
+expression. We start by translating names into formulas. 
+PbS s+H N O3 aqo Pb NO 32 aq+S s+N O g 
+The equation then is balanced with the ion-electron method. 
+  
+  
+   
+   
+2+
++
+32
+oxidation : {PbS s Pb aq + S s + 2e }3
+reduction :{NO aq + 4H aq + 3e NO g + 2H O(l) } 2
+
+ 
+ou
+ou
+ 
+   
+      
++2 +
+3 2net ionic : 3 PbS s + 2NO aq + 8H aq 3Pb aq + 3S s + 2NO g + 4H O(l)
+
+o  
+  
+  
+In writing the thermodynamic equilibrium constant, recall that 
+neither pure solids (PbS(s) and S(s)) nor pure liquids  2HO ( l )  
+appear in the thermodynamic equilibrium constant expression. Note 
+also that we have written H + aq here for brevity even though we 
+understand that H3O+ aq is the acidic species in aqueous solution. 
+K  [Pb2]3 pNO
+2
+[NO3
+]2[H ]8  
+  
+ 
+7A (M) Since the reaction is taking place at 298.15 K, we can use standard free energies of 
+formation to calculate the standard free energy change for the reaction: 
+        24 2NO( g )   2 N O( g )U  
+ f2 f 2 4= 2 NO g N O g 2 51.31 kJ/mol 97.89 kJ/mol 4.73kJGG G''  '  u   ªº ª º¬¼ ¬ ¼
+DD D  
+  
+'Go
+rxn = +4.73 kJ . Thus, the forward reaction is non-spontaneous as written at 298.15 K. 
+ 
+7B (M) In order to answer this question we must calculate the reaction quotient and compare 
+it to the Kp value for the reaction: 
+  
+ 
+2
+24 2 p
+(0.5)NO( g )   2 N O( g ) 0 . 5 0.5
+0.5 bar 0.5 bar
+Q   U  
+'Go
+rxn = +4.73 kJ = RTlnKp;   4.73 kJ/mol = (8.3145 u 10 –3 kJ/Kmol)(298.15 K)lnKp 
+ 
+Therefore, Kp =  0.148. Since Qp is greater than Kp, we can conclude that the reverse 
+reaction will proceed spontaneously, i.e. NO2 will spontaneously convert into N2O4. 
+ 
+8A (D) We first determine the value of 'GD and then set =l nGR T K'D  to determine K . 
+ 
++
+ff f Ag aq + [I (aq)] AgI s
+      [(77.11 51.57) ( 66.19)] kJ/mol 91.73
+GG G G ªº' ' '  ' ª º¬ ¼¬¼
+     
+DD D
+ 
+  
+
+===== SOLUTION MANUAL PAGE 949 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 4 9  
+11
+37 00 17
+91.73 kJ / mol 1000 Jln 37.00 1k J8.3145 J mol K 298.15 K
+e8 . 5 1 0
+GK RT
+K
+
+
+'   u   u
+  u
+D
+  
+This is precisely equal to the value for the Ksp  of AgI listed in Appendix D. 
+8B (D) We begin by translating names into formulas. 
+MnO2 s+H C l a qo Mn2+ aq+C l2 aq Then we produce a balanced net ionic 
+equation with the ion-electron method. 
+ 
+ 
+  
+    
+2
++2 +
+22
+oxidation : 2 Cl aq Cl g + 2e
+reduction : MnO s + 4H aq + 2e Mn aq + 2H O(l)
+
+
+o
+o
+ 
+     
++2 +
+22 2net ionic : MnO s + 4H aq + 2Cl aq Mn aq + Cl g + 2H O(l) o  
+ 
+ 
+Next we determine the value of 'GD for the reaction and then the value of K. 
+ 
+  
+    
+
+ 
+2+
+ff 2 f 2
++
+f2 f f
+=M n a q +C l g + 2 H O l
+          MnO s 4 H aq 2 Cl aq
+       = 228.1 kJ + 0.0 kJ + 2 237.1 kJ
+          465.1 kJ 4 0.0 kJ 2 131.2 kJ = +25.2 kJ
+GG G G
+GG G 
+ªº'' ' ' ªº ª º¬¼ ¬ ¼¬¼
+ª ºª º'  '  'ªº¬¼ ¬ ¼¬ ¼
+u 
+  u  u
+D
+DD
+ 
+ 
+31
+10 2 5
+-1 1
+(2 5 . 2 1 0 J m o l )ln 10.17 e 4 10 8.3145 J mol K 298.15
+GKK RT K
+
+ 
+
+ u'      u u
+D
+ 
+ 
+Because the value of K  is so much smaller than unity, we do not expect an appreciable 
+forward reaction. 
+ 
+9A (M) We set equal the two expressions for 'GD and solve for the absolute temperature. 
+ 
+ = =l n =l n = l nGH T SR T K H T S R T K T S R K''  '  ' '  ' DD D DD D  
+ 
+
+o3
+o 11
+114.1 10 J/mol== = 6 0 7 Kln 146.4 8.3145 ln 150 J mol K
+HT SR K 
+' u
+' ªº¬¼
+ 
+ 
+9B (D) We expect the value of the equilibrium constant to increase as the temperature 
+decreases since this is an exothermic reaction and exothermic reactions will have a larger 
+equilibrium constant (shift right to form more products), as the temperature decreases.  
+Thus, we expect K  to be larger than 1000, which is its value at 4.3 10 2u K. 
+ 
+(a) The value of the equilibrium constant at 25DC i s  o b t a i n e d  d i r e c t l y  f r o m  t h e  v a l u e  o f  
+'Go , since that value is also for 25DC.  N o t e :  
+ 
+oo o= =7 7 . 1 k J / m o l2 9 8 . 1 5 K 0 . 1 2 1 3 k J / m o l K =4 0 . 9 k J / m o lGH T S''  '      
+31
++16 5 7
+11
+(4 0 . 9 1 0 J m o l )ln 16.5 e 1.5 10 8.3145 J mol K 298.15 K
+GKK RT
+
+
+ u'     u u
+D
+ 
+ 
+
+===== SOLUTION MANUAL PAGE 950 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+950 
+(b) First, we solve for 'Go  at 75 = 348DC K  
+oo o
+3
+kJ 1000 J J= =7 7 . 1  3 4 8 . 1 5 K 1 2 1 . 3mol 1 kJ mol K
+=3 4 . 8 71 0  J / m o l
+GH T S §· §·''  '  u  u  ¨¸¨¸ ©¹©¹
+u
+ 
+Then we use this value to obtain the value of the equilibrium constant, as in part (a). 
+31
++12 05 5
+-1 1
+(3 4 . 8 7 1 0 J m o l )ln 12.05 e 1.7 108.3145 J mol K 348.15 K
+GKK RT
+
+
+ u'     u u
+D
+ 
+As expected, K for this exothermic reaction decreases with increasing temperature. 
+ 
+10A (M) We use the value of Kp =9 . 1 1 02u  at 800 K and ' uHo J/m o l=1 . 81 0 5 , for the 
+appropriate terms, in the van't Hoff equation. 
+25
+21 1 5
+5.8 10 1.8 10 J/mol 1 1 11 9 . 6 6 8 . 3 1 4 5ln = =9 . 6 6 ; =9.1 10 8.3145 J mol K 800 K K 800 1.8 10TT
+
+
+§·u u u  ¨¸uu ©¹
+ 
+ 
+34 41/ = 1.25 10 4.5 10 = 8.0 10 = 1240 K 970 CTT  u u u | D  
+ 
+This temperature is an estimate because it is an extrapolated point beyond the range of the 
+data supplied. 
+ 
+10B ( M )  The temperature we are considering is 235 = 508DC  K. We substitute the value of 
+Kp =9 . 1 1 02u  at 800 K and ' uHo =1 . 81 0 5  J/mol, for the appropriate terms, in the van't 
+Hoff equation. 
+6
+5
+p p +15 6
+621 1 2
+1.8 10 J/mol 1 1ln = = +15 ;   = e = 6 109.1 10 8.3145 J mol K 800 K 508 K 9.1 10
+KK
+
+§·u u¨¸uu ©¹
+ 
+62 9
+p =6 1 0 9 . 1 1 0 =5 1 0K uu u u   
+ 
+ 
+INTEGRATIVE EXAMPLE 
+11A (D)  The value of 'Go can be calculated by finding the value of the equilibrium constant Kp 
+at 25 oC.  The equilibrium constant fo r the reaction is simply given by Kp  p{N2O5 (g)} .  
+The vapor pressure of N 2O5(g) can be determined from th e Clausius-Clapeyron eqution, 
+which is a specialized version of the van’t Hoff equation.   
+ Stepwise approach: 
+ W e  f i r s t  d e t e r m i n e  t h e  v a l u e  o f  'Hsub . 
+ln p2
+p1
+ 'Hsub
+R
+1
+T1
+1
+T2
+§
+©¨
+·
+¹¸ ln 760 mmHg
+100 mmHg  'Hsub
+8.314Jmol-1K-1
+1
+7.5 273.15  1
+32.4 273.15
+§
+©¨
+·
+¹¸
+'Hsub  2.028
+3.49 u105  5.81u104 J/mol
+Using the same formula, we can now calculate the vapor pressure of N2O5 at 25 oC.   
+
+===== SOLUTION MANUAL PAGE 951 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 5 1  
+ln p3
+100 mmHg  5.81 u104 J/mol
+8.314Jmol-1K-1
+1
+280.7  1
+298.2
+§
+©¨
+·
+¹¸ 1.46  p3
+100 mmHg  e14 6  4.31
+p3  4.31u100mmHg u 1 atm
+760 mmHg  0.567atm  Kp
+'Go   RT ln Kp   (8.314 u103 kJmol-1K-1 u298.15K)ln(0.567)  1.42kJ/mol
+ 
+Conversion pathway approach: 
+ln p2
+p1
+ 'Hsub
+R
+1
+T1
+1
+T2
+§
+©¨
+·
+¹¸'Hsub  
+Rln p2
+p1
+1
+T1
+1
+T2
+§
+©¨
+·
+¹¸
+'Hsub  
+8.314Jmol-1K-1 uln 760mmHg
+100mmHg
+1
+7.5 273.15  1
+32.4 273.15
+§
+©¨ ·
+¹¸
+ 2.028
+3.49 u105 Jmol-1  5.81 u104 Jmol-1
+ 
+ln p3
+p1
+ 'Hsub
+R
+1
+T1
+1
+T2
+§
+©¨
+·
+¹¸ p3  p1e
+'Hsub
+R
+1
+T1
+1
+T2
+§
+©¨
+·
+¹¸
+p3  100mmHg ue
+58 1u104 Jmol-1
+83 1 4J K-1mol-1
+1
+280 7  1
+298 2
+§
+©¨ ·
+¹¸K-1
+ 431mmHg u 1atm
+760mmHg  0.567atm  Kp
+'Go   RT ln Kp   (8.314 u103 kJmol-1K-1 u298.15K)ln(0.567)  1.42kJ/mol
+ 
+ 
+11B ( D )   The standard entropy change for the reaction ('So ) can be calculated from the known 
+values of 'Ho and 'Go . 
+ Stepwise approach: 
+'Go  ' H o T 'So 'So  'H o 'Go
+T  454.8kJmol-1 (323.1kJmol-1)
+298.15K   441.7JK-1mol-1
+Plausible chemical reaction for the production of ethylene glycol can also be written as: 
+2C(s)+3H2 (g)+O2 (g) o CH2OHCH2OH(l)  
+Since 'So  {Sproducts
+o }  {Sreac tan ts
+o }¦¦  it follows that: 
+'Srxn
+o  So (CH2OHCH
+2
+OH(l))[2 uSo (C(s))3 uSo (H2 (g)) So (O2 (g))]
+441.7JK-1mol-1  So (CH2OHCH
+2
+OH(l))[2 u5.74JK -1mol-1 3 u130.7JK-1mol-1 205.1JK-1mol-1]
+So (CH2OHCH
+2
+OH(l))   441.7JK-1mol-1 608.68JK-1mol-1  167JK-1mol-1
+ 
+
+===== SOLUTION MANUAL PAGE 952 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+952 
+Conversion pathway approach: 
+'Go  ' H o T 'So 'So  'H o 'Go
+T  454.8kJmol-1 (323.1kJmol-1)
+298.15K   441.7JK-1mol-1
+441.7JK-1mol-1  So (CH2OHCH
+2
+OH(l))[2 u5.74JK -1mol-1 3 u130.7JK-1mol-1 205.1JK-1mol-1]
+So (CH2OHCH
+2
+OH(l))   441.7JK-1mol-1 608.68JK-1mol-1  167JK-1mol-1
+ 
+ 
+EXERCISES 
+ 
+ 
+Spontaneous Change and Entropy 
+ 
+1. (E) (a) The freezing of ethanol involves a decrease in the entropy of the system.  There is 
+a reduction in mobility and in the number of forms in which their energy can be 
+stored when they leave the solution and arrange themselves into a crystalline state. 
+ 
+(b) The sublimation of dry ice involves converting a solid that has little mobility into a 
+highly dispersed vapor which has a number of ways in which energy can be stored 
+(rotational, translational). Thus, the entropy of the system increases substantially. 
+ 
+(c) The burning of rocket fuel involves converting a liquid fuel into the highly dispersed 
+mixture of the gaseous combustion products. The entropy of the system increases 
+substantially. 
+ 
+2. (E) Although there is a substantial change in entropy involved in (a) changing HO2 (1iq., 1 
+atm) to HO2 (g, 1 atm), it is not as large as (c) converting the liquid to a gas at 10 mmHg. 
+The gas is more dispersed, (less ordered), at lower pressures. In (b), if we start with a solid 
+and convert it to a gas at the lower pressure, the entropy change should be even larger, 
+since a solid is more ordered (concentrated) than a liquid. Thus, in order of increasing'S, 
+the processes are: (a) (c) (b). 
+3. ( E )  The first law of thermodynamics states that energy is neither created nor destroyed (thus, 
+“The energy of the universe is constant”). A consequence of the second law of 
+thermodynamics is that entropy of the universe increases for all spontaneous, that is, naturally 
+occurring, processes (and therefore, “the entropy of the universe increases toward a 
+maximum”). 
+ 
+4. (E) When pollutants are produced they are usually dispersed throughout the environment. 
+These pollutants thus start in a relatively compact form and end up dispersed throughout a 
+large volume mixed with many other substances. The pollutants are highly dispersed, thus, 
+they have a high entropy. Returning them to their original compact form requires reducing 
+this entropy, which is a highly non-spontaneous process. If we have had enough foresight to 
+retain these pollutants in a reasonably compact form, such as disposing of them in a secure 
+landfill, rather than dispersing them in the atmosphere or in rivers and seas, the task of 
+permanently removing them from the environment, and perhaps even converting them to 
+useful forms, would be considerably easier. 
+ 
+
+===== SOLUTION MANUAL PAGE 953 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 5 3  
+5. (E) (a) Increase in entropy because a gas has been created from a liquid, a condensed 
+phase. 
+ 
+(b) Decrease in entropy as a condensed phase, a solid, is created from a solid and a gas. 
+ 
+(c) For this reaction we cannot be certain of the entropy change.  Even though the number 
+of moles of gas produced is the same as the number that reacted, we cannot conclude 
+that the entropy change is zero because not all gases have the same molar entropy.  
+ 
+(d) 2H2Sg+3 O2 go 2H2Og+2 S O2 g Decrease in entropy since five moles of 
+gas with high entropy become only four moles of gas, with about the same quantity 
+of entropy per mole. 
+ 
+6. (E) (a) At 75DC,  1  m o l  HO2  (g, 1 atm) has a greater entropy than 1 mol H O2  (1iq., 1 
+atm) since a gas is much more dispersed than a liquid. 
+ 
+(b) 1m o l  F e50.0 g Fe = 0.89655.8 g Feu  mol Fe has a higher entropy than 0.80 mol Fe, both (s) 
+at 1 atm and 5DC , because entropy is an extensive property that depends on the 
+amount of substance present. 
+ 
+(c) 1 mol Br2 (1iq., 1 atm, 8DC ) has a higher entropy than 1 mol Br2 (s, 1atm, 8DC)  
+because solids are more ordered (concentrated) substances than are liquids, and 
+furthermore, the liquid is at a higher temperature. 
+ 
+(d) 0.312 mol SO 2  (g, 0.110 atm, 32.5DC)  h a s  a  h i g h e r  e n t r o p y  t h a n  0 . 2 8 4  m o l  O2  (g, 
+15.0 atm, 22.3DC)  f o r  a t  l e a s t  t h r e e  r e a s o n s .  F i r s t , entropy is an extensive property 
+that depends on the amount of substance present (more moles of SO2 than O2). Second, 
+entropy increases with temperature (temperature of SO2 is greater than that for O2. 
+Third, entropy is greater at lower pressures (the O2 has a much higher pressure). 
+Furthermore, entropy generally is higher per mole for more complicated molecules. 
+ 
+7. (E) (a) Negative; A liquid (moderate entropy) combines with a solid to form another 
+solid. 
+ 
+(b) Positive; One mole of high entropy gas forms where no gas was present before. 
+ 
+(c) Positive; One mole of high entropy gas forms where no gas was present before. 
+ 
+(d) Uncertain; The number of moles of gaseous products is the same as the number of 
+moles of gaseous reactants. 
+ 
+(e) Negative; Two moles of gas (and a solid) combine to form just one mole of gas. 
+ 
+8. (M) The entropy of formation of a compound would be the difference between the absolute 
+entropy of one mole of the compound and the sum of the absolute entropies of the 
+appropriate amounts of the elements constituting the compound, with each species in its 
+most stable form.  
+  
+
+===== SOLUTION MANUAL PAGE 954 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+954 
+Stepwise approach:  
+ I t  s e e m s  a s  t h o u g h  C S2 1 would have the highest molar entropy of formation of the 
+compounds listed, since it is the only substance whose formation does not involve the 
+consumption of high entropy gaseous reactants.  This prediction can be checked by 
+determining 'Sf
+o values from the data in Appendix D: 
+ 
+(a)    24Cg r a p h i t e+ 2 H g C H gU  
+  
+'Sf
+o CH4 gª¬ º¼= So CH4 gª¬ º¼So Cg r a p h i t e ª¬ º¼2So H2 gª¬ º¼
+=1 8 6 . 3J  m o l1K1 5.74 J mol1K1 2 u130.7 J mol1K1
+= 80.8 J mol1K1
+ 
+ 
+(b)     1
+22 3 2 22C graphite + 3H g + O g CH CH OH lU  
+     
+oo o o o
+32 32 2 2f
+11 11 11 1 1 1
+2
+11
+1CH CH OH l = CH CH OH l 2 C graphite 3 H g O g 2
+=1 6 0 . 7J  m o l K 2 5 . 7 4 J  m o l K 3 1 3 0 . 7 J  m o l K 2 0 5 . 1J  m o l K
+=3 4 5 . 4 J  m o lK
+SS S S S
+   
+
+ªº ªº ª º ª º ª º¬¼ ¬¼ ¬ ¼ ¬ ¼ ¬ ¼'  
+u u u
+
+ 
+ 
+(c)   2C graphite + 2S rhombic CS lU  
+     
+oo o
+f2 2
+11 1 1 1 1
+11
+CS l = CS l C graphite 2 S rhombic
+=1 5 1 . 3J  m o l  K 5 . 7 4 J  m o l K 2 3 1 . 8 0 J  m o l K
+=8 2 . 0J  m o l K
+SSS S
+   
+
+' ªº ªº ª º ª º¬¼ ¬¼ ¬ ¼ ¬ ¼
+ u  
+ Conversion pathway approach: 
+ C S 2 would have the highest molar entropy of formation of the compounds listed, because 
+ it is the only substance whose formati on does not involve the consumption of high 
+ e n t r o p y  g a s e o u s  r e a c t a n t s .  
+ (a)    24Cg r a p h i t e+ 2 H g C H gU  
+  
+  
+'Sf
+o CH4 gª¬ º¼=1 8 6 . 3J  m o l1K1 5.74 J mol1K1 2 u130.7 J mol1K1
+  80.8 J mol1K1
+ 
+ (b)     1
+22 3 2 22C graphite + 3H g + O g CH CH OH lU  
+  
+  
+'Sf
+o CH3CH2OH lª¬ º¼=( 1 6 0 . 72 u5.74 3u130.71
+2 u205.1)J mol1 K1
+= 345.4 J mol1 K1
+ 
+ (c)   2C graphite + 2S rhombic CS lU  
+  
+  
+'Sf CS2 lª¬ º¼=1 5 1 . 3J  m o l1  K1 5.74 J mol1 K1 2 u31.80 J mol1 K1
+=8 2 . 0J  m o l1 K1
+ 
+
+===== SOLUTION MANUAL PAGE 955 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 5 5  
+Phase Transitions 
+     
+9. (M) (a)    
+vap f 2 f2[H O(g)] [H O(l)] 241.8 kJ/mol ( 285.8kJ/mol)
+44.0 kJ/mol
+HH H' '  '    
+ 
+ 
+   
+oo 1 11 1
+vap 2 2
+11
+=H O g H O l = 1 8 8 . 8  J  m o l  K 6 9 . 9 1 J  m o l K
+=1 1 8 . 9 J  m o l K
+SS S  
+
+' ªº ª º¬¼ ¬ ¼  
+  There is an alternate, bu t incorrect, method of obtaining 'Svap . 
+ 
+3
+vap 11
+vap
+44.0 10 J/mol== =1 4 8  J  m o l  K298.15K
+HS T
+ ' u'  
+  
+  T h i s  m e t h o d  i s  i n v a l i d  b e c a u s e  t h e  t e m perature in the denominator of the equation 
+must be the temperature at which the liquid-vapor transition is at equilibrium. Liquid 
+water and water vapor at 1 atm pressure (standard state, indicated byD) are in 
+equilibrium only at 100 = 373DC K .  
+ 
+(b) The reason why 'Hvap  is different at 25DC f r o m  i t s  v a l u e  a t  1 0 0D C  has to do with 
+the heat required to bring the reactants and products down to 298 K from 373 K. The 
+specific heat of liquid water is higher than the heat capacity of steam. Thus, more 
+heat is given off  by lowering the temperature of the liquid water from 100DC t o  
+25D C  than is given off by lowering the temperature of the same amount of steam. 
+Another way to think of this is that hydrogen bonding is more disrupted in water at 
+100DC than at 25DC (because the molecules are in rapid—thermal—motion), and 
+hence, there is not as much energy needed to convert liquid to vapor (thus vapH'  has 
+a smaller value at 100D C .  The reason why 'Svap  has a larger value at 25D C  than at 
+100D C  has to do with dispersion. A vapor at 1 atm pressure (the case at both 
+temperatures) has about the same entropy. On the other hand, liquid water is more 
+disordered (better able to disperse energy) at higher temperatures since more of the 
+hydrogen bonds are disrupted by thermal motion. (The hydrogen bonds are totally 
+disrupted in the two vapors). 
+ 
+10. (M) In this problem we are given standard enthalpies of the formation ( 'H f
+o ) of liquid 
+and gas pentane at 298.15 K and asked to estimate the normal boiling point of 
+pentane, 'Gvap
+o  and furthermore comment on the significance of the sign of 'Gvap
+o .  
+The general strategy in solving this problem is to first determine 'Hvap
+o from the 
+known enthalpies of formation.  Trouton’s rule can then be used to determine the 
+normal boiling point of pentane.  Lastly, 'Gvap,298 K
+o  can be calculated using 
+''  'GH T Svap vap vap= . 
+   
+
+===== SOLUTION MANUAL PAGE 956 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+956 
+Stepwise approach: 
+  Calculate 'Hvap
+o  from the known values of 'H f
+o  (part a): 
+     C 5H12(l)     ZXZYZZ    C5H12(g) 
+    'H f
+o  -173.5 kJmol-1              -146.9 kJmol-1 
+  'Hvap
+o   146.9 (173.5)kJmol-1  26.6kJmol-1  
+  D e t e r m i n e  n o r m a l  b o i l i n g  p o i n t  u s i n g  T r o u t o n ’ s  r u l e  ( p a r t  a ) :  
+   'Svap
+o  'Hvap
+o
+Tnbp
+ 87Jmol-1K-1  
+   Tnbp  'Hvap
+o
+'Svap
+o  26.6kJmol1
+87kJK1mol1
+1000
+ 306K  
+   Tnbp  32.9o C  
+           U s e  ''  'GH T Svap vap vap= to calculate 'Gvap,298K (part b): 
+  ''  'GH T Svap vap vap=  
+  'Gvap,298K  26.6kJmol-1 298.15K u87kJmol-1K-1
+1000
+'Gvap,298K  0.66kJmol-1
+ 
+  C o m m e n t  o n  t h e  v a l u e  o f  'Gvap,298K  (part c): 
+  T h e  p o s i t i v e  v a l u e  o f  'Gvap  indicates that normal boiling (having a vapor pressure 
+of 1.00 atm) for pentane should be non-spontaneous (will not occur) at 298. The 
+vapor pressure of pentane at 298 K should be less than 1.00 atm. 
+  Conversion pathway approach: 
+    C 5H12(l)     ZXZYZZ    C5H12(g) 
+    'H f
+o  -173.5 kJmol-1              -146.9 kJmol-1 
+  'Hvap
+o   146.9 (173.5)kJmol-1  26.6kJmol-1  
+  'Svap
+o  'Hvap
+o
+Tnbp
+ 87Jmol-1K-1  Tnbp  'Hvap
+o
+'Svap
+o  26.6kJmol-1
+87kJK-1mol-1
+1000
+ 306K  
+  'Gvap = 'Hvap T 'Svap  26.6kJmol-1 298.15K u87kJmol-1K-1
+1000  0.66kJmol-1  
+ 
+11. ( M )  Trouton's rule is obeyed most closely by liquids that do not have a high degree of 
+order within the liquid. In both HF and CH OH3 , hydrogen bonds create considerable order 
+within the liquid. In C H CH65 3 , the only attractive forces are non-directional London 
+forces, which have no preferred orientation as hydrogen bonds do. Thus, of the three 
+choices, liquid C H CH65 3  would most closely follow Trouton’s rule. 
+ 
+
+===== SOLUTION MANUAL PAGE 957 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 5 7  
+12. (E) vap f 2 f2[Br (g)] [Br (l)] 30.91 kJ/mol 0.00  kJ/mol = 30.91 kJ/molHH H' '  ' |   
+ 
+3
+vap vap 11 2
+vap vap 11
+vap vap
+30.91 10 J/mol=8 7 J  m o l  K o r = = 3 . 5 1 0 K 87 J mol K
+HHST TS
+ 
+ 
+'' u'| |u'  
+ 
+The accepted value of the boiling point of bromine is 258.8 C = 332 K = 3.32 10  KuD . 
+Thus, our estimate is in reasonable agreement with the measured value. 
+ 
+13. (M) The liquid water-gaseous water equilibrium 22HO  ( l ,  0 . 5 0  a t m ) HO  ( g ,  0 . 5 0  a t m )U  
+can only be established at one temperature, namely the boiling point for water under 0.50 
+atm external pressure.  We can estimate the boiling point for water under 0.50 atm external 
+pressure by using the Clausius-Clapeyron equation:   
+ 
+ln 2
+1
+P
+P = 
+vap
+oH
+R
+'
+12
+11
+TT
+§·¨¸
+©¹
+ 
+ 
+We know that at 373 K, the pressure of water vapor is 1.00 atm.  Let's make P1 = 1.00 
+atm, P2 = 0.50 atm and T1 = 373 K.  Thus, the boiling point under 0.50 atm pressure is T2.  
+To find T2 we simply insert the appropriate information into the Clausius-Clapeyron 
+equation and solve for T2:   
+ 
+ln 0.50 atm
+1.00 atm = 
+1
+31 1
+40.7 kJ mol
+8.3145 10 kJ K  mol
+
+ u 2
+11
+373 K T
+§· ¨¸
+©¹
+ 
+ 
+-1.416 u 104 K = 
+2
+11
+373 K T
+§· ¨¸
+©¹
+  
+ 
+Solving for T2 we find a temperature of 354 K or 81qC.  Consequently, to achieve an 
+equilibrium between gaseous and liquid water under 0.50 atm pressure, the temperature 
+must be set at 354 K. 
+ 
+14. (M) Figure 12-19 (phase diagram for carbon dioxide) shows that at 60qC and under 1 
+atm of external pressure, carbon dioxide exists as a gas.  In other words, neither solid nor 
+liquid CO2 can exist at this temperature and pressure.  Clearly, of the three phases, 
+gaseous CO2 must be the most stable and, hence, have the lowest free energy when T = 
+60 qC and Pext = 1.00 atm. 
+ 
+Gibbs Energy and Spontaneous Change 
+ 
+15. ( E )  Answer (b) is correct. Br—Br bonds are broken in this reaction, meaning that it is 
+endothermic, with '!H0 . Since the number of moles of gas increases during the 
+reaction, '!S0 . And, because ' ''GH T S=,  t h i s  r e a c t i o n  i s  n o n - s p o n t a n e o u s  
+( '!G 0 ) at low temperatures where the 'H term predominates and spontaneous 
+( 'G0 ) at high temperatures where the TS' term predominates. 
+ 
+
+===== SOLUTION MANUAL PAGE 958 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+958 
+16. (E) Answer (d) is correct. A reaction that proceeds only through electrolysis is a reaction 
+that is non-spontaneous. Such a reaction has '!G0.  
+ 
+17. (E) (a) 'Ho 0a n d  'So 0 ( s i n c e'ngas0)  f o r  t h i s  r e a c t i o n .  T h u s ,  t h i s  r e a c t i o n  i s  c a s e  
+2 of Table 19-1. It is spontaneous at low temperatures and non-spontaneous at high 
+temperatures. 
+ 
+(b) We are unable to predict the sign of 'So  for this reaction, since 'ngas =0.  T h u s ,  n o  
+strong prediction as to the temperature behavior of this reaction can be made. Since 
+'Ho > 0, we can, however, conclude that the reaction will be non-spontaneous at low 
+temperatures. 
+ 
+(c) '!Ho 0a n d  '!So 0 ( s i n c egas 0n'! ) for this reaction. This is case 3 of Table 19-1. 
+It is non-spontaneous at low temperatures, but spontaneous at high temperatures. 
+18. (E) (a) '!Ho 0a n d  'So 0 ( s i n c e'ngas0)  f o r  t h i s  r e a c t i o n .  T h i s  i s  c a s e  4  o f  T a b l e  
+19-1. It is non-spontaneous at all temperatures. 
+ 
+(b) 'Ho 0a n d  '!So 0 ( s i n c e'!ngas 0 ) for this reaction. This is case 1 of Table 19-1. 
+It is spontaneous at all temperatures. 
+ 
+(c) 'Ho 0a n d  'So 0 ( s i n c e'ngas0 ) for this reaction. This is case 2 of Table 19-1. 
+It is spontaneous at low temperatures and non-spontaneous at high temperatures. 
+ 
+19. ( E )  First of all, the process is clearly spontaneous, and therefore'G0.  I n  a d d i t i o n ,  t h e  
+gases are more dispersed when they are at a lower pressure and therefore '!S0.  W e  a l s o  
+conclude that 'H=0b e c a u s e  t h e  g a s e s  a r e  i d e a l  a n d  t h u s there are no forces of attraction 
+or repulsion between them. 
+ 
+20. (E) Because an ideal solution forms spontaneously,'G0.  A l s o ,  t h e  m o l e c u l e s  o f  s o l v e n t  
+and solute that are mixed together in the solution are in a more dispersed state than the 
+separated solvent and solute. Therefore,'!S0.  H o w e v e r ,  i n  a n  i d e a l  s o l u t i o n ,  t h e  
+attractive forces between solvent and solute molecules equal those forces between solvent 
+molecules and those between solute molecules. Thus, 'H=0.   T h e r e  i s  n o  n e t  e n e r g y  o f  
+interaction. 
+ 
+21. (M) (a) An exothermic reaction (one that gives off heat) may not occur spontaneously if, 
+at the same time, the system becomes more ordered (concentrated) that is, 'So0.  
+This is particularly true at a high temperature, where the TS' term dominates the 
+'G expression. An example of such a process is freezing water (clearly exothermic 
+because the reverse process, melting ice, is endothermic), which is not spontaneous 
+at temperatures above 0DC.  
+ 
+(b) A reaction in which '!S0 n e e d  n o t  b e  s p o n t a n e o u s  if that process also is 
+endothermic. This is particularly true at low temperatures, where the 'H term 
+dominates the 'G expression. An example is the vaporization of water (clearly an 
+endothermic process, one that requires heat, and one that produces a gas, so'!S0) ,  
+
+===== SOLUTION MANUAL PAGE 959 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 5 9  
+which is not spontaneous at low temperatures, that is, below100 DC ( a s s u m i n g  Pext = 
+1.00 atm). 
+ 
+22. (M)  In this problem we are asked to explain whether the reaction AB(g)oA(g)+B(g) is 
+always going to be spontaneous at high rather than low temperatures.  In order to answer 
+this question, we need to determine the signs of 'H, 'S and consequently 'G.  Recall 
+that 'G 'HT'S. 
+ Stepwise approach: 
+ D e t e r m i n e  t h e  s i g n  o f  'S: 
+ W e  a r e  g e n e r a t i n g  t w o  m o l e s  o f  g a s  f r o m  one mole.  The randomness of the system 
+ i n c r e a s e s  a n d  'S must be greater than zero. 
+ D e t e r m i n e  t h e  s i g n  o f  'H: 
+ I n  t h i s  r e a c t i o n ,  w e  a r e  b r e a k i n g  A - B  b o n d .   Bond breaking requires energy, so the reaction 
+ m u s t  b e  e n d o t h e r m i c .   T h e r e f o r e ,  'H is also greater than zero. 
+ U s e  'G 'HT'Sto determine the sign of 'G: 
+ 'G 'HT'S.  Since 'H is positive and 'S is positive there will be a temperature at 
+which T'S will become greater than 'H.  The reaction will be favored at high 
+temperatures and disfavored at low temperatures. 
+ Conversion pathway approach: 
+ 'S for the reaction is greater than zero because we are generating two moles of gas from 
+one mole. 'H for the reaction is also greater than zero because we are breaking A-B 
+(bond breaking requires energy).  Because 'G 'HT'S, there will be a temperature at 
+which T'S will become greater than 'H.  The reaction will be favored at high 
+temperatures and disfavored at low temperatures. 
+ 
+ 
+Standard Gibbs Energy Change 
+ 
+23. 
+  
+(M) 'H o = 'Hf NH4Cl sª¬ º¼'Hf NH3 gª¬ º¼'Hf HCl gª¬ º¼
+  314.4kJ/mol (46.11 kJ/mol92.31 kJ/mol)   176.0 kJ/mol
+'Go  ' Gf NH4Cl sª¬ º¼'Gf NH3 gª¬ º¼'Gf HCl gª¬ º¼
+  202.9kJ/mol (16.48 kJ/mol 95.30 kJ/mol)   91.1 kJ/mol
+'Go  ' H o T 'So
+'So  'H o 'Go
+T  176.0 kJ/mol91.1 kJ/mol
+298 K
+u1000 J
+1k J
+  285 J mol1
+ 
+ 
+24. (M) (a)   
+
+o
+f2 6 f2 2 f 2=C H g C H g 2 H g
+=3 2 . 8 2 k J / m o l2 0 9 . 2 k J / m o l2 0 . 0 0 k J / m o l =2 4 2 . 0 k J / m o l
+GG G G''  '  'ªº ªº ª º¬¼ ¬¼ ¬ ¼
+  
+ 
+ 
+(b) 'Go =2 'Gf SO2 gª¬ º¼+ 'Gf O2 gª¬ º¼2'Gf SO3 gª¬ º¼
+=2 300.2 kJ/mol +0 . 0 0 k J / m o l2 371.1 kJ/mol =+ 1 4 1 . 8k J / m o l
+ 
+
+===== SOLUTION MANUAL PAGE 960 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+960 
+ 
+(c)    
+     
+o
+ff 2 f 3 4 f 2=3 F e s +4 H O g F eO s 4 H g
+=3 0 . 0 0k J / m o l +4 2 2 8 . 6k J / m o l 1 0 1 5k J / m o l 4 0 . 0 0k J / m o l =1 0 1k J / m o l
+GG G G G'' '  '  'ªº ªº ª ºª º¬¼ ¬ ¼ ¬ ¼ ¬ ¼
+ 
+ 
+ 
+(d)    
+      
+o3 + +
+ff 2f f=2 A l a q +3 H g 2 A l s 6 H a q
+=2 4 8 5k J / m o l +3 0 . 0 0k J / m o l 2 0 . 0 0 k J / m o l 6 0 . 0 0k J / m o l = 9 7 0 .k J / m o l
+GG G G G ªº ª º'' '  '  ' ªº ª º¬¼ ¬ ¼¬¼ ¬¼
+ 
+ 
+25. (M) (a)   
+ 
+oo o o
+33 2=2 P O C l 1 2 P C l g O g
+=2 2 2 2 . 4J / K 2 3 1 1 . 7J / K 2 0 5 . 1J / K= 3 8 3 . 7J / K
+SS S S'  ªº ª º ª º¬¼ ¬ ¼ ¬ ¼
+ 
+ 
+    
+oo o 3 3= =6 2 0 . 2 1 0 J 2 9 8 K 3 8 3 . 7 J / K =5 0 6 1 0J =5 0 6 k JGH T S''  '  u   u   
+ 
+(b) The reaction proceeds spontaneously in the forward direction when reactants and 
+products are in their standard states, because the value of 'Go  is less than zero. 
+ 
+26. (M) (a) > @ > @   > @
+     
+oo o o+ o o
+22 2=B r l + 2 H N O a q2H a q2B r a q2N O g
+=1 5 2 . 2 J / K+2 1 3 5 . 6 J / K 2 0 J / K 2 8 2 . 4 J / K 2 2 4 0 . 1J / K = 2 2 1 . 6 J / K
+SS S SS S
+
+'  
+  
+ªº ª º¬¼ ¬ ¼   
+ 
+     oo o 3 3= =6 1 . 61 0 J 2 9 8 K 2 2 1 . 6 J / K = + 4 . 41 0 J = + 4 . 4 k JGH T S''  '  u   u  
+ 
+(b) The reaction does not proceed spontaneously in the forward direction when reactants and 
+products are in their standard states, because the value of 'Go  is greater than zero. 
+ 
+27. (M) We combine the reactions in the same way as for any Hess's law calculations. 
+ (a)     N2Ogo N2 g+ 1
+2 O2 g 'Go = 1
+2 +208.4 kJ = 104.2 kJ  
+ N2 g+2O 2 go 2N O2 g 'Go =+ 1 0 2 . 6k J 
+Net: N 2Og+ 3
+2 O2 go 2NO2 g 'Go = 104.2 +102.6 = 1.6 kJ  
+This reaction reaches an equilibrium condition, with significant amounts of all 
+species being present.  This conclusion is based on the relatively small absolute 
+value of 'Go . 
+ 
+(b) 2N2 g+6 H2 go 4NH3 g 'Go =2 33.0 kJ = 66.0 kJ  
+4NH3 g+5 O2 go 4NO g+6 H2Ol 'Go = 1010.5 kJ  
+4NO go 2N2 g+2 O2 g 'Go = 2+ 1 7 3 . 1 k J = 346.2 kJ  
+ N e t :  6 H 2 g+3 O2 go 6H2Ol'Go = 66.0 kJ1010.5 kJ346.2 kJ =1422.7 kJ  
+This reaction is three times the desired reaction, which therefore has  
+o =1 4 2 2 . 7 k J3 =4 7 4 . 3G' y   kJ.  
+The large negative 'Go  value indicates that this reaction will go to completion at 25DC.  
+ 
+
+===== SOLUTION MANUAL PAGE 961 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 6 1  
+(c) 4NH3 g+5 O2 go 4NO g+6 H2Ol 'Go = 1010.5 kJ  
+4NO go 2N2 g+2 O2 g 'Go = 2+ 1 7 3 . 1 k J = 346.2 kJ  
+  
+o
+22 22N g +O g 2N O g =+ 2 0 8 . 4k JGo'  
+    
+o
+32 2 24NH g + 4O g 2N O g +6H O l = 1010.5kJ 346.2kJ + 208.4kJ
+                                                                               = 1148.3kJ
+Go'  
+
+ 
+This reaction is twice the desired reaction, which, therefore, has 'Go = -574.2 kJ. 
+The very large negative value of the'Go  for this reaction indicates that it will go to 
+completion. 
+28. (M) We combine the reactions in the same way as for any Hess's law calculations. 
+ 
+ (a) COS g+2 C O2 go SO2 g+3 C O g 'Go = 246.4 kJ =+ 2 4 6 . 6k J 
+2CO g+2 H2Ogo 2CO2 g+2 H2 g 'Go =2 28.6 kJ = 57.2 kJ  
+ 
+COS g+2 H2Ogo SO2 g+C O g+2 H2 g'Go =+ 2 4 6 . 657.2 = +189.4 kJ
+ 
+This reaction is spontaneous in the reverse direction, because of the large positive 
+value of 'Go  
+ 
+(b) COS g+2 C O2 go SO2 g+3 C O g 'Go = 246.4 kJ =+ 2 4 6 . 6k J 
+3CO g+3 H2Ogo 3CO2 g+3 H2 g 'Go =3 28.6 kJ = 85.8 kJ  
+ C O S g +3 H2Ogo CO2 g+S O2 g+3 H2 g'Go =+ 2 4 6 . 685.8 = +160.8 kJ  
+This reaction is spontaneous in the reverse direction, because of the large positive value 
+of 'Go . 
+ 
+(c)      
+o
+22 COS g + H g CO g + H S g =+ 1 . 4 k JGo'   
+   
+o
+22 2CO g + H O g CO g + H g =2 8 . 6 k J =2 8 . 6 k JGo'    
+COS g+H 2Ogo CO2 g+H 2Sg 'Go = 1.4 kJ 28.6 kJ = 30.0 kJ  
+The negative value of the'Go  for this reaction indicates that it is spontaneous in the 
+forward direction.   
+ 
+29.  ( D )       The combustion reaction is : C6H6 l+ 15
+2 O2 go 6CO2 g+3 H2Og  o r  l  
+ 
+ (a)    
+   
+o 15
+f2 f 2 f 6 6 f 2 2
+15
+2
+= 6 CO g + 3 H O l C H l O g
+=6 3 9 4 . 4k J +3 2 3 7 . 1k J + 1 2 4 . 5k J 0 . 0 0k J = 3 2 0 2k J
+GG G G G'' '  '  'ªº ªº ª º ª º¬¼¬ ¼ ¬ ¼ ¬ ¼
+  
+ 
+ 
+ 
+ (b)
+    
+   
+o 15
+f2 f 2 f 6 6 f 2 2
+15
+2
+= 6 CO g + 3 H O g C H l O g
+=6 3 9 4 . 4k J +3 2 2 8 . 6k J + 1 2 4 . 5k J 0 . 0 0k J = 3 1 7 7k J
+GG G G G'' '  '  'ªº ªº ª º ª º¬¼¬¼ ¬ ¼ ¬ ¼
+  
+ 
+ 
+
+===== SOLUTION MANUAL PAGE 962 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+962 
+ We could determine the difference between the two values of 'Go  by noting the 
+difference between the two products: 3H 2Olo 3H2Ogand determining the 
+value of 'Go  for this difference: 
+   
+o
+f2 f2=3 H O g 3 H O l =3 2 2 8 . 6 2 3 7 . 1 k J=2 5 . 5k JGG G''  '   ªº ªº ª º¬¼ ¬ ¼ ¬ ¼  
+ 
+30. (M) We wish to find the value of the 'Ho  for the given reaction: F2 go 2F ( g )  
+    
+oo o 1 1 1
+2=2 F g F g =2 1 5 8 . 8  J  K 2 0 2 . 8  J  K =+ 1 1 4 . 8  J  KSS S  '  ªºª º¬¼¬ ¼  
+ 
+oo o 3=+ = 1 2 3 . 9 1 0 J + 2 9 8 K 1 1 4 . 8 J / K = 1 5 8 . 1 k J / m o l e  o f  b o n d sHG T S'' ' u u  
+The value in Table 10.3 is 159 kJ/mol, which is in quite good agreement with the value 
+found here. 
+31. (M) (a) 'Sqrxn = 6Sqproducts - 6Sqreactants  
+  =  [1 mol u 301.2 J K1mol1 + 2 mol u 188.8 J K1mol1]  [2 mol u 247.4 J K1mol1    
+            + 1 mol u 238.5 J K1mol1] = 54.5 J K1 
+ 'Sqrxn = = 0.0545 kJ K1 
+ 
+(b) 'Hqrxn= 6bonds broken in reactants (kJ/mol)) –6bonds broken in products(kJ/ mol)) 
+        =  [ 4  m o l  u (389 kJ mol1)N-H + 4 mol u (222 kJ mol1)O-F]  
+                       [4 mol u (301 kJ mol1)N-F + 4 mol u (464 kJ mol1)O-H]  
+ 'Hqrxn= 616 kJ 
+ 
+(c) 'Gqrxn = 'Hqrxn  T'Sqrxn =  616 kJ  298 K(0.0545 kJ K1) = 600 kJ 
+Since the 'Gqrxn is negative, the reaction is spontaneous, and hence feasible  
+(at 25 qC ). Because both the entropy and enthalpy changes are negative, this 
+reaction will be more highly favored at low temperatures (i.e., the reaction is 
+enthalpy driven) 
+ 
+32. (D)  In this problem we are asked to find 'Gq at 298 K for the decomposition of 
+ammonium nitrate to yield dinitrogen oxide gas and liquid water.  Furthermore, we are 
+asked to determine whether the decomposition will be favored at temperatures above or 
+below 298 K.  In order to answer these questions, we first need the balanced chemical 
+equation for the process.  From the data in Appendix D, we can determine 'Hqrxn and 
+'Sqrxn.  Both quantities will be required to determine 'Gqrxn ('Gqrxn='Hqrxn-T'Sqrxn).  
+Finally the magnitude of 'Gqrxn as a function of temperature can be judged depending on 
+the values of 'Hqrxn and 'Sqrxn. 
+ Stepwise approach: 
+ First we need the balanced chemical equation for the process: 
+ N H 4NO3(s) 'o N2O(g) + 2H2O(l) 
+ N o w  w e  c a n  d e t e r m i n e  'Hqrxn by utilizing 'H f
+o values provided in Appendix D: 
+ N H 4NO3(s)     'o      N2O(g)      +      2H2O(l) 
+         'H f
+o    -365.6 kJmol-1            82.05 kJmol-1      -285.6 kJmol-1 
+'Hqrxn=6'Hfqproducts  6'Hfqreactants 
+'Hqrxn=[2 mol(285.8 kJ mol1) + 1 mol(82.05 kJ mol1)] [1 mol (365.6 kJ  
+           m o l 1)] 
+
+===== SOLUTION MANUAL PAGE 963 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 6 3  
+'Hqrxn= 124.0 kJ 
+ S i m i l a r l y ,  'Sqrxn can be calculated utilizing Sq values provided in Appendix D 
+ N H 4NO3(s)     'o      N2O(g)      +      2H2O(l) 
+          So    15.1 Jmol-1K-1            219.9 Jmol-1K-1       69.91 Jmol-1K-1 
+          'Sqrxn=6Sqproducts  6Sqreactants 
+'Sqrxn=[2 mol u 69.91 J K1mol1 + 1 mol u 219.9 J K1mol1 ]  [1 mol u 151.1 J   
+K1mol1] 
+'Sqrxn=208.6 J K1 = 0.2086 kJ K1 
+         To find 'Gqrxn we can either utilize 'Gqf values provided in Appendix D or 'Gqrxn='Hqrxn-
+T'Sqrxn: 
+'Gqrxn='Hqrxn-T'Sqrxn=-124.0 kJ – 298.15 Ku0.2086 kJK-1 
+'Gqrxn=-186.1 kJ 
+        Magnitude of 'Gqrxn as a function of temperature can be judged depending on the values of 
+'Hqrxn and 'Sqrxn: 
+Since 'Hqrxn is negative and 'Sqrxn is positive, the decomposition of ammonium nitrate is 
+spontaneous at all temperatures.  However, as the temperature increases, the T'S term gets 
+larger and as a result, the decomposition reaction shift towards producing more products.  
+Consequently, we can say that the reaction is more highly favored above 298 K (it will also 
+be faster at higher temperatures) 
+ Conversion pathway approach: 
+ F r o m  t h e  b a l a n c e d  c h e m i c a l  e q u a t i o n  f o r  t h e  p r o c e s s  
+ N H 4NO3(s) 'o N2O(g) + 2H2O(l) 
+ w e  c a n  d e t e r m i n e  'Hqrxn and 'Sqrxn by utilizing 'H f
+o  and Sq values provided in Appendix 
+D: 
+ 'Hqrxn=[2 mol(285.8 kJ mol1) + 1 mol(82.05 kJ mol1)] [1 mol (365.6 kJ mol1)] 
+'Hqrxn= 124.0 kJ  
+        'Sqrxn=[2 mol u 69.91 J K1mol1 + 1 mol u 219.9 J K1mol1 ]  [1 mol u 151.1 J   
+K1mol1] 
+'Sqrxn=208.6 J K1 = 0.2086 kJ K1 
+'Gqrxn='Hqrxn-T'Sqrxn=-124.0 kJ – 298.15 Ku0.2086 kJK-1 
+'Gqrxn=-186.1 kJ 
+Since 'Hqrxn is negative and 'Sqrxn is positive, the decomposition of ammonium nitrate is 
+spontaneous at all temperatures.  However, as the temperature increases, the T'S term gets 
+larger and as a result, the decomposition reaction shift towards producing more products.  
+The reaction is highly favored above 298 K (it will also be faster). 
+ 
+ 
+The Thermodynamic Equilibrium Constant 
+ 
+33. ( E )  In all three cases, KKeq p=b e c a u s e  o n l y  g a s e s ,  p u r e  s o l i d s ,  a n d  p u r e  l i q u i d s  a r e  p r e s e n t  
+in the chemical equations. There are no factors for solids and liquids in Keq  expressions, 
+and gases appear as partial pressures in atmospheres. That makes Keq  the same as Kp  for 
+these three reactions.  
+
+===== SOLUTION MANUAL PAGE 964 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+964 
+We now recall that Kp = Kc RT
+'n
+.  Hence, in these three cases we have: 
+(a)      
+1
+22 3 g a s p c2SO g + O g 2SO g ;   = 2 2 +1 = 1;   = =nK K K R T 
+' U  
+ 
+(b)     11 11
+22 g as pc22 22HI g H g + I g ;         = 1 + = 0;     = =nK K K'U  
+ 
+(c)     
+  
+43 3 2 2
+2
+gas p c
+ NH HCO s NH g + CO g + H O l ;
+=2 0 =+ 2 = =nK K K RT'
+U
+ 
+ 
+34.    (M) (a)    
+
+4
+2
+4
+2
+{H g }= {H O g }
+PK P  
+ 
+(b) Terms for both solids, Fe(s) and Fe 3O4 s, are properly excluded from the 
+thermodynamic equilibrium constant expression. (Actually, each solid has an activity 
+of 1.00.) Thus, the equilibrium partial pressures of both H 2 g and H 2Og do not 
+depend on the amounts of the two solids present, as long as some of each solid is 
+present. One way to understand this is that any chemical reaction occurs on the 
+surface of the solids, and thus is unaffected by the amount present. 
+ 
+(c) We can produce H 2 g from H 2Og without regard to the proportions of Fe(s) and 
+Fe3O4 s with the qualification, that there must always be some Fe(s) present for the 
+production of H 2 g to continue. 
+ 
+35.  (M)  In this problem we are asked to determine the equilibrium constant and the change in 
+Gibbs free energy for the reaction between carbon monoxide and hydrogen to yield 
+methanol.  The equilibrium concentrations of each reagent at 483K were provided.  We 
+proceed by first determining the equilibrium constant.  Gibbs free energy can be 
+calculated using 'Go  RTlnK. 
+ Stepwise approach: 
+ First determine the equilibrium constant for the reaction at 483K: 
+ 23CO(g)+2H (g) CH OH(g)U  
+K  [CH3OH(g)]
+[CO(g)][H2 (g)]  0.00892
+0.0911u0.08222  14.5  
+ N o w  u s e  'Go  RTlnK to calculate the change in Gibbs free energy at 483 K: 
+ 'Go  RTlnK 
+ 'Go   8.314 u483 uln(14.5)Jmol-1   1.1 u104 Jmol-1
+'Go   11kJmol-1
+ 
+Conversion pathway approach: 
+K  [CH3OH(g)]
+[CO(g)][H2 (g)]  0.00892
+0.0911u0.08222  14.5  
+'Go   RT ln K   8.314 u483 uln(14.5)Jmol-1   1.1 u104 Jmol-1
+'Go   11kJmol-1
+ 
+
+===== SOLUTION MANUAL PAGE 965 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 6 5  
+36.  (M)  Gibbs free energy for the reaction ('Go 'HoT'So ) can be calculated using 'H f
+o  
+and So values for CO(g), H2(g) and CH3OH(g) from Appendix D. 
+'H o  ' H f
+o (CH3OH(g))['H f
+o (CO(g))2'H f
+o (H2 (g)]
+'H o   200.7kJmol-1 (110.5kJmol-1 0kJmol-1)   90.2kJmol-1
+ 
+'So  So (CH3OH(g))[So (CO(g))2So (H2 (g)]
+'So  239.8JK1mol-1 (197.7 JK1mol-1 2 u130.7JK1mol-1)   219.3JK-1mol-1  
+'Go   90.2kJmol-1 483K u(219.3)kJK-1mol-1
+1000  15.7kJmol-1  
+Equilibrium constant for the reaction can be calculated using 'Go  RTlnK 
+ln K  'Go
+RT  ln K  15.7 u1000Jmol1
+8.314JK1mol1 u483K   3.9  K  e39  2.0 u102  
+The values are different because in this case, the calculated K is the thermodynamic 
+equilibrium constant that represents the reactants and products in their standard states.  In 
+Exercise 35, the reactants and products were not in their standard states. 
+ 
+ 
+Relationships Involving 'G,  'G o, Q and K 
+ 
+37. ( M )    
+   
+ 
+o
+ff 2f 2
+31 1
+pp
+=2 N O g N O g 0 . 5 O g
+=2 8 6 . 5 5k J / m o l 1 0 4 . 2k J / m o l 0 . 5 0 . 0 0k J / m o l =6 8 . 9k J / m o l
+=l n = 8 . 3 1 4 5 1 0 k J  m o l K 2 9 8 K l n
+GG G G
+RT K K  
+''  '  'ªº ª º ª º¬¼ ¬ ¼ ¬ ¼
+
+ u
+ 
+p 31 1
+68.9 kJ/molln = = 27.88.3145 10 kJ mol K 298 KK   uu   27 8 13
+p =e =8 1 0K  u  
+ 
+38. (M) (a)   
+    
+o
+f2 5 f2 4 f2=2 N O g 2 N O g O g
+=2 1 1 5 . 1k J / m o l 2 9 7 . 8 9k J / m o l 0 . 0 0k J / m o l =3 4 . 4k J / m o l
+GG G G''  '  'ªº ªº ª º¬¼ ¬¼ ¬ ¼
+
+ 
+         (b)  
+o3
+o
+pp 11
+13 9 7
+p
+34.4 10 J/mol=l n l n = = = 1 3 . 9 8.3145 J mol K 298K
+=e =9 1 0
+GGR T K K RT
+K
+
+
+'u'    u
+u
+ 
+ 
+39. ( M )  We first balance each chemical equation, then calculate the value of 'Go  with data 
+from Appendix D, and finally calculate the value of Keq  with the use of 'GR T Ko ln=.  
+(a)    22 24HCl g + O g 2H O g + 2Cl sU  
+   
+o
+f2 f 2 f f2=2 H O g +2 C l g 4 H C l g O g
+kJ kJ kJ kJ kJ=2 2 2 8 . 6 +2 0 4 9 5 . 3 0 0 = 7 6 . 0  mol mol mol mol mol
+GG G G G'' '  '  'ªº ªº ª ºª º¬¼¬ ¼¬ ¼ ¬ ¼
+§· § ·u u u   ¨¸ ¨ ¸©¹ © ¹
+ 
+o3
++30 7 13
+11
++76.0 10 J/molln = = = +30.7 = e = 2 108.3145 J mol K 298 K
+GKK RT 
+' u uu  
+
+===== SOLUTION MANUAL PAGE 966 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+966 
+ (b)     23 2 34 23Fe O s + H g 2Fe O s + H O gU  
+ 
+   
+  
+o
+f3 4 f 2 f2 3 f 2=2 F eO s + H O g 3 F eO s H g
+=2 1 0 1 5k J / m o l 2 2 8 . 6k J / m o l 3 7 4 2 . 2k J / m o l 0 . 0 0k J / m o l
+=3 2 k J / m o l
+GG G G G'' '  '  'ªº ªºª º ª º¬¼ ¬ ¼ ¬¼ ¬ ¼
+u  u  
+
+ 
+o3
++13 5
+11
+32 10 J/molln = = = 13; = e = 4 108.3145 J mol K 298 K
+GKK RT 
+' u uu  
+ 
+(c)   
++2
+42 42Ag aq + SO aq Ag SO s U  
+'Go = 'Gf Ag2SO4 sª¬ º¼2'Gf Ag+ aqª¬ º¼'Gf SO4
+2 aqª¬ º¼
+= 618.4 kJ/mol2 u77.11kJ/mol 744.5 kJ/mol = 28.1kJ/mol
+ 
+o3
++11 3 4
+11
+28.1 10 J/molln = = = 11.3; = e = 8 108.3145 J mol K 298 K
+GKK RT 
+' u uu  
+ 
+40. (E)    
+oo o o o
+22 2
+11 11 11 11
+11
+={ C O g } +{ H g } { C O g } { H O g }
+=2 1 3 . 7J  m o l K + 1 3 0 . 7J  m o l K 1 9 7 . 7J  m o l  K 1 8 8 . 8J  m o l K
+=4 2 . 1 J  m o l K
+SS S S S
+   
+
+' 
+
+
+ 
+ 
+ 
+41. (M) In this problem we need to determine in which direction the reaction 
+   22 32SO g + O g 2SO gU  is spontaneous when the partial pressure of SO2, O2, and 
+ S O 3 are 1.0u10-4, 0.20 and 0.10 atm, respectively.  We proceed by first determining the 
+ standard free energy change for the reaction ( 'Go ) using tabulated data in Appendix D.  
+ Change in Gibbs free energy for the reaction ( 'G ) is then calculated by employing the 
+ e q u a t i o n  o ln pGG R T Q' '  ,where Qp is the reaction quotient.  Based on the sign of 
+ 'G, we can determine in which direction is the reaction spontaneous. 
+ Stepwise approach: 
+ F i r s t  d e t e r m i n e  'Go  for the reaction using data in Appendix D: 
+   22 32SO g + O g 2SO gU  
+ 
+  
+'Go =2 'Gf
+o SO3 gª¬ º¼2'Gf
+o SO2 gª¬ º¼'Gf
+o O2 gª¬ º¼
+'Go  2 u(371.1 kJ/mol) 2 u(300.2 kJ/mol) 0.0 kJ/mol
+ 
+ 'Go   141.8kJ 
+ C a l c u l a t e  'G  by employing the equation o ln pGG R T Q' '  , where Qp is the reaction 
+ q u o t i e n t :  
+ o ln pGG R T Q' '   
+ 
+ 
+2
+3
+p 2
+22
+{SO g }= {O g } {SO g }
+PQ PP  
+
+===== SOLUTION MANUAL PAGE 967 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 6 7  
+ 
+ 
+2
+6
+p 24
+0.10 atm=5 .0 10
+0.20 atm 1.0 10  atm
+Q
+
+ u
+u
+ 
+ G'  = 141.8 kJ + (8.3145 u 103 kJ/Kmol )(298 K)ln(5.0 u 106) 
+ G'  = 141.8 kJ + 38.2 kJ = 104 kJ. 
+ E x a m i n e  t h e  s i g n  o f  'G  to decide in which direction is the reaction spontaneous: 
+ S i n c e  G' is negative, the reaction is spontaneous in the forward direction. 
+ Conversion pathway approach: 
+ 
+  
+'Go =2 'Gf
+o SO3 gª¬ º¼2'Gf
+o SO2 gª¬ º¼'Gf
+o O2 gª¬ º¼
+'Go  2 u(371.1 kJ/mol) 2 u(300.2 kJ/mol) 0.0 kJ/mol=-141.8kJ
+ 
+ o ln pGG R T Q' '   
+ 
+  
+Qp =
+P{SO3 g}2
+P{O2 g}P{SO2 g}2  
+0.10 atm 
+2
+0.20 atm 1.0 u104  atm
+2  5.0 u106  
+ G'  = 141.8 kJ + (8.3145 u 103 kJ/Kmol )(298 K)ln(5.0 u 106)=-104 kJ. 
+ S i n c e  G'  is negative, the reaction is spontaneous in the forward direction. 
+ 
+42. (M) We begin by calculating the standard free energy change for the reaction:  
+                             22Hg + C lg 2 H C l gU  
+   ff 2f 2=2 H C l g C l g H g
+2( 9 5 . 3 0  k J / m o l )0 . 0  k J / m o l0 . 0  k J / m o l 1 9 0 . 6 k J
+GG G G''  '  'ªº ª º ª º¬¼ ¬ ¼ ¬ ¼
+ u     
+DD D D
+ 
+        
+Now we can calculate G'  by employing the equation o ln pGG R T Q' '  , where  
+ 
+ 
+2
+p
+22
+{HCl g }= {H g } {Cl g }
+PQ PP  ; 
+ 
+2
+p
+0.5 atm=1 0.5 atm 0.5 atmQ   
+ 
+ G'  = 190.6 kJ + (8.3145 u 103 kJ/Kmol )(298 K)ln(1) 
+ G'  = 190.6 kJ + 0 kJ = 190.6 kJ. 
+ 
+ S i n c e  G' is negative, the reaction is spontaneous in the forward direction. 
+ 
+43. (M) In order to determine the direction in which the reaction is spontaneous, we need to 
+calculate the non-standard free energy change for the reaction. To accomplish this, we will 
+employ the equation o ln cGG R T Q' '  , where  
+ 
+  
+
++
+33 2
+c
+32
+[H O aq ] [CH CO aq ]= [CH CO H aq ]Q
+
+ ;  
+23
+5
+c
+1.0 10  M
+=1 . 0 1 0  (0.10 M)Q
+
+u
+ u  
+ 
+G'  = 27.07 kJ + (8.3145 u 103 kJ/Kmol )(298 K)ln(1.0 u 105) 
+ G'  = 27.07 kJ + (28.53 kJ) = 1.46 kJ. 
+ 
+ S i n c e  G'  is negative, the reaction is spontaneous in the forward direction. 
+ 
+
+===== SOLUTION MANUAL PAGE 968 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+968 
+44. (M) As was the case for exercise 39, we need to calculate the non-standard free energy 
+change for the reaction. Once again, we will employ the equation o lnGG R T Q' '  , but 
+this time 
+  
+
++
+4
+c
+3
+[NH aq ] [OH aq ]= [NH aq ]Q
+
+ ;  
+23
+5
+c
+1.0 10  M
+=1 . 0 1 0  (0.10 M)Q
+
+u
+ u  
+ G'  = 29.05 kJ + (8.3145 u 103 kJ/Kmol)(298 K)ln(1.0 u 105) 
+ G'  = 29.05 kJ + (28.53 kJ) = 0.52 kJ. 
+ S i n c e  G' is positive, the reaction is spontaneous in the reverse direction. 
+ 
+45. (E) The relationship 'So = ('Go  'Ho)/T  (Equation (b)) is incorrect. Rearranging this 
+equation to put 'Go on one side by itself gives 'Go = 'Ho + T'So. This equation is not 
+valid. The T'So term should be subtracted from the 'Ho term, not added to it. 
+ 
+46. (E) The 'Go value is a powerful thermodynamic parameter because it can be used to 
+determine the equilibrium constant for the reaction at each and every chemically 
+reasonable temperature via the equation 'Go = RT ln K. 
+ 
+47. (M) (a) To determine Kp  we need the equilibrium partial pressures. In the ideal gas law, 
+each partial pressure is defined byPnRTV= /. Because R, T, and V  are the same for 
+each gas, and because there are the same number of partial pressure factors in the 
+numerator as in the denominator of the Kp  expression, we can use the ratio of amounts 
+to determine Kp . 
+  ^ `^ `
+^` ^ `
+^ `^ `
+^` ^ `
+22 2
+p
+22 2 2 2 2
+CO(g) H O(g) CO(g) H O(g) 0.224 mol CO 0.224 mol H O== = = 0 . 6 5 9CO (g) H (g) CO (g) H (g) 0.276 mol CO 0.276 mol H
+PP nnK PP nn
+u
+u
+ 
+ 
+(b)  
+o1 1
+1000K p
+3
+=l n = 8 . 3 1 4 5 J  m o l K 1 0 0 0 . K l n 0 . 6 5 9
+=3 . 4 6 7 1 0 J / m o l=3 . 4 6 7k J / m o l
+GR T K '  u u
+u
+ 
+(c) 
+2
+p p
+22
+0.0340 mol CO 0.0650 mol H O== 0 . 3 1 0 . 6 5 9 =0.0750 mol CO 0.095 mol HQK u u  
+Since Qp  is smaller than Kp , the reaction will proceed to the right, forming products, 
+to attain equilibrium, i.e., 'G = 0. 
+ 
+48. (M) (a) We know that Kp = Kc RT
+'n
+. For the reaction   22 32SO g + O g 2SO g ,U   
+   gas =2 2+ 1 = 1n'  , and therefore a value of Kp  can be obtained. 
+  
+  
+Kp = Kc RT
+1
+ 2.8 u102
+0.08206 L atm
+mol K u1000 K
+ 3.41  K  
+  W e  r e c o g n i z e  t h a t  p=KK  since all of the substances involved in the reaction are 
+gases. We can now evaluate'Go . 
+
+===== SOLUTION MANUAL PAGE 969 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 6 9  
+  
+o 4
+eq
+8.3145 J=l n = 1000 K ln 3.41 = 1.02 10 J/mol = 10.2 kJ/molmol KGR T K'  u u  u   
+(b) We can evaluate Qc  for this situation and compare the value with that of Kc =2 . 8 1 02u  to 
+determine the direction of the reaction to reach equilibrium. 
+2
+3
+2
+23
+c c22
+22 22
+0.72 mol SO
+2.50 L[SO ] 45 2.8 10[SO ] [O ] 0.40 mol SO 0.18 mol O
+2.50 L 2.50 L
+QK
+§·
+¨¸©¹    u  
+§· § · u¨¸ ¨ ¸©¹ © ¹
+ 
+Since Qc  is smaller than Kc  the reaction will shift right, producing sulfur trioxide 
+and consuming sulfur dioxide and molecular oxygen, until the two values are equal. 
+ 
+49. (M) (a) c=KK  
+           
+o3 1 1
+eq=l n = 8 . 3 1 4 5 1 0 k J  m o l K 4 4 5 + 2 7 3 K l n 5 0 . 2 = 2 3 . 4 k JGR T K  '  u   
+ (b)   
+gn1 /213 13
+pc== =1 . 7 1 0 0 . 0 8 2 1 2 9 8 =8 . 4 1 0KK K R T
+'  uuu  
+   
+o3 1 1 13
+p
+o
+=l n = 8 . 3 1 4 5 1 0 k J  m o l K 2 9 8 K l n 8 . 4 1 0
+=+ 6 8 . 9k J / m o l
+GR T K
+G
+  '  u u
+'
+ 
+ (c)   
++13
+pc== = 4 . 6 1 1 0 0 . 0 8 2 0 6 2 9 8 = 0 . 1 1 3
+n
+KK K R T
+' uu  
+'Go = RT ln Kp = 8.3145 u103 kJ mol1 K1
+ 298Kln 0.113=+ 5 . 4 0k J / m o l 
+ (d) 6
+c== 9 . 1 4 1 0KK u  
+              
+o3 1 1 6
+c
+o
+=l n = 8 . 3 1 4 5 1 0 k J  m o l K 2 9 8 K l n 9 . 1 4 1 0
+=+ 2 8 . 7k J / m o l
+GR T K
+G
+  '  u u
+'
+ 
+50. (M) (a) The first equation involves the formation of one mole of Mg 2+ aq from 
+Mg OH2 s and 
++2H aq , while the second equation involves the formation of 
+only half-a-mole of Mg2+ aq. We would expect a free energy change of half the 
+size if only half as much product is formed. 
+ 
+(b) The value of K  for the first reaction is the square of the value of K  for the second 
+reaction. The equilibrium constant expressions are related in the same fashion. 
+  
+ 
+K1 =
+Mg2+ª¬ º¼
+H+ª¬ º¼
+2 =
+Mg2+ª¬ º¼
+1/2
+H+ª¬ º¼
+§
+©
+¨¨
+·
+¹
+¸¸
+2
+= K2
+2
+ 
+ 
+(c) The equilibrium solubilities will be the same regardless which expression is used. 
+The equilibrium conditions (solubilities in this instance) are the same no matter how 
+we choose to express them in an equilibrium constant expression. 
+ 
+
+===== SOLUTION MANUAL PAGE 970 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+970 
+51. (E)    
+o3 1 1 11
+p= ln = 8.3145 10 kJ mol K 298K ln 6.5 10 = 67.4 kJ/molGR T K  '  u u  
+  22CO g + Cl g COCl go     o =6 7 . 4 k J / m o lG'  
+  1
+22Cg r a p h i t e+ O g C Ogo    f =1 3 7 . 2 k J / m o lG'  
+            
+   1
+22 22Cg r a p h i t e+ O g+ C l g C O C l go   f =2 0 4 . 6 k J / m o lG'  
+         'Gf  of COCl 2 g given in Appendix D is 204.6 kJ/mol, thus the agreement is excellent. 
+ 
+52. (M) In each case, we first determine the value of 'Go  for the solubility reaction. From 
+that, we calculate the value of the equilibrium constant, spK , for the solubility reaction. 
+(a)    
++AgBr s Ag aq + Br aq U  
+  
+
+o+
+ff f=A g a q +B r a q A g B r s
+=7 7 . 1 1k J / m o l 1 0 4 . 0k J / m o l 9 6 . 9 0k J / m o l =+ 7 0 . 0k J / m o l
+GG G G ªº ª º'' '  ' ª º ¬¼¬¼ ¬ ¼
+ 
+ 
+3o
+28 2 13
+sp11
+70.0 10 J/molln = = = 28.2; = e = 6 108.3145 J mol K 298.15 K
+GKK RT
+
+
+u' uu  
+ 
+(b)    
+2+ 2
+44CaSO s Ca aq + SO aq U  
+  
+
+oo 2oo2 +
+ff 4f 4=C a a q +S O a q C a S O s
+=5 5 3 . 6 k J / m o l7 4 4 . 5 k J / m o l 1 3 3 2 k J / m o l = + 3 4 k J / m o l
+GG G G
+ªºªº'' '  ' ªº¬¼¬¼ ¬¼
+  
+ 
+3o
+14 7
+sp11
+34 10 J/molln = = = 14; = e = 8 108.3145 J mol K 298.15 K
+GKK RT
+
+
+u' uu  
+ 
+ (c)      
+3+
+3Fe OH s Fe aq + 3OH aq U  
+'Go = 'Gf Fe3+ aqª¬ º¼+3 'Gf OH aqª¬ º¼'Gf Fe OH3 sª¬ º¼
+= 4.7 kJ/mol + 3u157.2 kJ/mol 696.5 kJ/mol =+ 2 2 0 . 2k J / m o l
+ 
+3o
+88 83 39
+sp11
+220.2 10 J/molln = = = 88.83 = e = 2.6 108.3145 J mol K 298.15 K
+GKK RT
+
+
+u' uu  
+ 
+53. ( M ) ( a )  We can determine the equilibrium partial pressure from the value of the equilibrium 
+constant. 
+  
+o3
+o
+pp 11
+58.54 10 J/mol=l n l n = = = 2 3 . 6 3 8.3145 J mol K 298.15 K
+GGR T K K RT 
+'u'    u  
+    
+21/2 23 63 11 11 21
+p2 2={ Og } = e = 5 . 5 1 0 { Og } = 5 . 5 1 0 = 3 . 0 1 0 a t mKP P  uu u  
+ 
+(b) Lavoisier did two things to increase the quantity of oxygen that he obtained. First, he ran 
+the reaction at a high temperature, which favors the products (i.e., the side with 
+molecular oxygen.) Second, the molecular oxygen was removed immediately after it was 
+formed, which causes the equilibrium to shift to the right continuously (the shift towards 
+products as result of the removal of the O2 is an example of Le Châtelier's principle). 
+
+===== SOLUTION MANUAL PAGE 971 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 7 1  
+ 
+54. (D) (a) We determine the values of 'Ho  and 'So  from the data in Appendix D, and then 
+the value of 'Go  at 25 = 298DC K .   
+   
+   
+o
+f3 f 2 f2 f 2=C H O H g +H O g C O g 3H g
+=2 0 0 . 7 k J / m o l + 2 4 1 . 8 k J / m o l 3 9 3 . 5 k J / m o l 3 0 . 0 0 k J / m o l =4 9 . 0 k J / m o l
+HH H H H'' ' '  'ªº ª º ª º ª º¬¼ ¬ ¼ ¬ ¼ ¬ ¼
+   
+ 
+   
+oo o o o
+32 2 2
+11 11
+=C H O H g +H O g C O g 3H g
+=( 2 3 9 . 8+ 1 8 8 . 8 2 1 3 . 7 3 1 3 0 . 7 )J  m o l K = 1 7 7 . 2J  m o l K
+SS SS S
+  
+' ªº ª º ª º ª º¬¼ ¬ ¼ ¬ ¼ ¬ ¼
+ u 
+ 
+ 
+oo o 11= = 49.0 kJ/mol 298 K 0.1772 kJ mol K = +3.81 kJ/molGH T S ''  '     
+Because the value of 'Go  is positive, this reaction does not proceed in the forward  
+        d i r e c t i o n  a t  2 5DC.  
+ 
+(b) Because the value of 'Ho  is negative and that of 'So  is negative, the reaction is non-
+spontaneous at high temperatures, if reactants and products are in their standard states. 
+The reaction will proceed slightly in the forward direction, however, to produce an 
+equilibrium mixture with small quantities of 3CH OH g  and H 2Og. Also, because 
+the forward reaction is exothermic, this reaction is favored by lowering the 
+temperature. That is, the value of K  increases with decreasing temperature. 
+ 
+(c)  
+oo o 11
+500K
+3
+p
+= =4 9 . 0 k J / m o l5 0 0 . K 0 . 1 7 7 2 k J  m o l K = 3 9 . 6 k J / m o l
+=3 9 . 6 1 0 J / m o l= l n
+GH T S
+RT K
+''  '  
+u
+ 
+3
+95 3 5
+p p11
+39.6 10 J/molln 9.53;     e 7.3 108.3145 J mol K 500. K
+GKK RT
+
+
+'  u      u u
+D
+ 
+ 
+(d) Reaction: CO 2 g+ 3 H 2 g ZXZYZZ C H3OH g + H 2Og 
+ Initial:       1.00 atm         1.00 atm                      0 atm     0 atm 
+ C h a n g e s :    x atm          3x atm                     +x atm    + x atm 
+ E q u i l :  ( 1 . 0 0  x) atm      1.003x  atm             x atm      x atm 
+^ `^ `
+^` ^ `   
+325 2
+p 33
+22
+CH OH H O=7 . 3 1 0 = =
+CO H 1.00 1.00 3
+PP xxKx
+PP x x
+ u|
+
+ 
+^`
+53
+37.3 10 8.5 10 atm P CH OHx  u  u    Our assumption, that 31 . 0 0x   atm, is valid. 
+ 
+'Go and K as Function of Temperature 
+ 
+55 (M)(a)    
+oo o o o
+23 2 2 3
+JJ J J J
+K mol K mol K mol K mol K mol
+=N a C O s +H O l + C O g 2 N a H C O s
+=1 3 5 . 0 +6 9 . 9 1 +2 1 3 . 7  2 1 0 1 . 7  = 2 1 5 . 2
+SS S S S' ªº ª º ª º ª º¬¼ ¬ ¼ ¬ ¼ ¬ ¼
+§·¨¸©¹
+ 
+ 
+
+===== SOLUTION MANUAL PAGE 972 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+972 
+(b)    
+o
+f2 3 f 2 f 2 f 3
+kJ kJ kJ kJ kJ
+mol mol mol mol mol
+=N a C O s +H O l + C O g 2 N a H C O s
+=1 1 3 1 2 8 5 . 8 3 9 3 . 5 2 9 5 0 . 8 = + 9 1
+HH H H H'' ' ' 'ªº ª º ª º ª º¬¼ ¬ ¼ ¬ ¼ ¬ ¼
+§·    ¨¸©¹
+ 
+ 
+(c)   
+oo o 31 1= =9 1k J / m o l 2 9 8K 2 1 5 . 2 1 0 k J  m o l K
+=9 1k J / m o l 6 4 . 1 3k J / m o l=2 7k J / m o l
+GH T S  ''  '  u
+
+ 
+ 
+(d) 
+3o
+o
+11
+27 10 J/mol=l n l n = = = 1 0 . 9 8.3145J mol K 298K
+GGR T K K RT 
+u''    u  
+  K =e 10 9 =2 u105  
+ 
+56. (M) (a)      32 2 2 3
+oo o o oo
+o
+o
+CH CH OH g H O g CO g H g CH OH g
+JJ J J J
+K mol K mol K mol K mol K mol
+J
+K mol
+=+ 2
+=2 8 2 . 7 + 1 8 8 . 8 1 9 7 . 7 2 1 3 0 . 7 2 3 9 . 8
+=2 2 7 . 4  
+SS SSS S
+S
+S
+ªº ª º ª º ª º ª º¬¼ ¬ ¼ ¬ ¼ ¬ ¼ ¬ ¼
+§·
+¨¸©¹
+'  
+'  
+'
+ 
+ 
+ 
+> @   > @ > @32 232
+o
+ff f f f
+o
+o
+CH CH OH g Hg C H O H gHOg C Og
+kJ kJ kJ kJ kJ
+mol mol mol mol mol
+kJ
+mol
+=+ 2
+=2 3 5 . 1 2 4 1 . 8 1 1 0 . 5 2 0 . 0 0 2 0 0 . 7
+=1 6 5 . 7
+HH HHH H
+H
+H
+ªºª º¬¼¬ ¼
+§· § · §·
+¨¸ ¨ ¸ ¨¸©¹ © ¹ ©¹
+'' ' '  '  '
+'      
+'
+  
+ 
+o3 kJ kJ kJ kJ kJ
+mol Km o l mol mol mol=1 6 5 . 7 2 9 8 K 2 2 7 . 4 1 0 =1 6 5 . 4 + 6 7 . 8 =9 7 . 9G §·
+¨¸¨¸©¹
+'   u    
+ 
+ 
+(b) 'Ho 0f o r  t h i s  r e a c t i o n .   T h u s  i t  i s  f a v o red at low temperatures. Also, because 
+' ngas =+ 2 4= 2,  w h i c h  i s  l e s s  t h a n  z e r o ,  t h e  r e a c t i o n  i s  f a v o r e d  a t  h i g h  p r e s s u r e s .  
+ 
+(c) First we assume that neither 'So  nor 'Ho  varies significantly with temperature. Then 
+we compute a value for 'Go  at 750 K. From this value of'Go , we compute a value 
+for Kp . 
+ 
+  
+'Go = 'H o T 'So = 165.7 kJ/mol 750.K227.4 u103 kJ mol1 K1
+ 
+= 165.7 kJ/mol + 170.6kJ/mol = +4.9kJ/mol =RT ln Kp
+ 
+ 
+  
+ln Kp = 'Go
+RT =  4.9 u103 J/mol
+8.3145 J mol1 K1 u750.K
+= 0.79 Kp =e 07 9 =0 . 5 
+ 
+57. ( E )  In this problem we are asked to determine the temperature for the reaction between 
+iron(III) oxide and carbon monoxide to yield iron and carbon dioxide given 'Go , 'Ho , 
+and 'So .  We proceed by rearranging 'Go ='HoT'So in order to express the 
+temperature as a function of 'Go , 'Ho , and 'So . 
+
+===== SOLUTION MANUAL PAGE 973 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 7 3  
+ Stepwise approach: 
+         Rearrange   'Go ='Ho T'So  in order to express T as a function of 'Go , 'Ho , and 'So : 
+ 
+  
+'Go ='H o T 'So
+T 'So ='H o 'Go
+T = 'H o 'Go
+'So
+ 
+ Calculate T: 
+ 
+  
+T =
+24.8 u103 J 45.5 u10 3 J
+15.2 J/K =1 . 3 6u103 K 
+ Conversion pathway approach: 
+ 
+  
+'Go ='H o T 'So  T  'H o 'Go
+'So  
+24.8 u103 J 45.5 u10 3 J 
+15.2 J/K =1 . 3 6u103 K 
+ 
+58. (E) We use the van't Hoff equation with o5
+1=1 . 8 1 0 J / m o l , = 8 0 0HT' u . K,  
+ 
+T2 =1 0 0 . =3 7 3DCK ,  a n d K1
+2=9 . 1 1 0u . 
+ 
+ln K2
+K1
+= 'H o
+R
+1
+T1
+1
+T2
+§
+©¨
+·
+¹¸= 1.8 u105 J/mol
+8.3145 J mol1 K1
+1
+800 K  1
+373K
+§
+©¨
+·
+¹¸=3 1 
+ 
+  
+31 13 13 2 1622
+22
+1
+=e =2 . 9 1 0 = =2 . 91 0 9 . 11 0 = 31 09.1 10
+KK KK uu u uu  
+ 
+59. ( M )  We first determine the value of 'Go  at 400 CD , from the values of 'Ho  and 'So , 
+which are calculated from information listed in Appendix D. 
+  
+    
+o
+f3 f 2 f 2
+2
+=2 N H g N g 3 H g
+=2 4 6 . 1 1 k J / m o l 0 . 0 0 k J / m o l 3 0 . 0 0  k J / m o l = 9 2 . 2 2 k J / m o l  N
+HH H H''  '  'ªº ªº ªº¬¼ ¬ ¼¬ ¼
+  
+ 
+ 
+  
+  
+oo o o
+32 2
+11 11 11 11
+=2 N H g N g 3 H g
+=2 1 9 2 . 5J  m o l K 1 9 1 . 6 J  m o l K 31 3 0 . 7J  m o l K = 1 9 8 . 7J  m o l K
+SS S S
+   
+'  ªº ª º ª º¬¼ ¬ ¼ ¬ ¼
+ 
+ 
+ 
+ 
+oo o 11
+p
+= =9 2 . 2 2 k J / m o l6 7 3 K 0 . 1 9 8 7 k J  m o l K
+=+ 4 1 . 5 1k J / m o l= l n
+GH T S
+RT K
+''  '   u 
+
+ 
+ 
+o3
+74 2 4
+p p11
+41.51 10 J/molln = = = 7.42;     = e = 6.0 108.3145J mol K 673K
+GKK RT
+ 
+
+'  u uu  
+
+===== SOLUTION MANUAL PAGE 974 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+974 
+60. (M) (a)
+    
+ 
+o
+f2 f 2 f f 2=C O g +H g C O g H O g
+=3 9 3 . 5 k J / m o l0 . 0 0 k J / m o l 1 1 0 . 5 k J / m o l 2 4 1 . 8 k J / m o l =4 1 . 2 k J / m o l
+HH H H H'' '  '  'ªº ªº ª º ª º¬¼ ¬ ¼ ¬ ¼ ¬¼
+     
+ 
+ 
+  
+   
+oo o o o
+22 2
+11 11 11 11
+11
+=C O g +H g C O g H O g
+=2 1 3 . 7J  m o l K + 1 3 0 . 7J  m o l K 1 9 7 . 7J  m o l K 1 8 8 . 8J  m o l K
+=4 2 . 1 J  m o l K
+SS S S S
+   
+
+' ªº ª º ª º ªº¬¼ ¬ ¼ ¬ ¼ ¬¼
+
+
+ 
+   
+  'Go  ' H o T 'So   41.2kJ/mol 298.15K u(42.1u103 )kJ/molK
+'Go   41.2kJ/mol 12.6kJ/mol 28.6kJ/mol
+ 
+ 
+(b) 'Go = 'H o T 'So = 41.2 kJ/mol  875 K42.1u103 kJ mol1 K1
+ 
+= 41.2 kJ/mol + 36.8 kJ/mol =4.4 kJ/mol = RT ln Kp
+ 
+o3
++0 60
+p p11
+4.4 10 J/molln = = = +0.60 = e = 1.88.3145J mol K 875K
+GKK RT 
+' u u  
+ 
+61. ( M )  We assume that both 'Ho  and 'So  are constant with temperature. 
+'H o =2 'Hf SO3 gª¬ º¼2'Hf SO2 gª¬ º¼'Hf O2 gª¬ º¼
+=2 395.7 kJ/mol 2 296.8 kJ/mol  0.00 kJ/mol = 197.8 kJ/mol
+ 
+  
+  
+oo o o
+32 2
+11 11 11
+11
+=2 S O g 2 S O g O g
+=2 2 5 6 . 8J  m o l K 2 2 4 8 . 2J  m o l K 2 0 5 . 1J  m o l K
+=1 8 7 . 9 J  m o l K
+SS S S
+  
+
+'  ªº ªº ª º¬¼ ¬¼ ¬ ¼
+
+
+o
+oo o o o
+o== l n= l n= ln
+HGH T SR T K H T S R T K T SR K
+'''  '  ' '  '  
+
+3
+11 11 6
+197.8 10 J/mol=6 5 0 K
+187.9 J mol K 8.3145 J mol K ln 1.0 10
+T  
+u |
+ u
+ 
+This value compares very favorably with the value of T=6 . 3 7 1 02u that was obtained in 
+Example 19-10. 
+ 
+62. (E) We use the van't Hoff equation to determine the value of o (448 C = 721 KH' D  and 
+350 C = 623 K)D . 
+ln K1
+K2
+= 'H o
+R
+1
+T2
+1
+T1
+§
+©¨
+·
+¹¸=l n 50.0
+66.9 = 0.291 = 'H o
+R
+1
+623  1
+721
+§
+©¨
+·
+¹¸= 'H o
+R 2.2 u104
+  
+o
+3
+4- 1
+o3 - 1 - 1 3 - 1 - 1
+0.291== 1 . 3 1 0  K ;2.2 10  K
+= 1.3 10 K 8.3145 J K  mol = 11 10 J mol = 11 kJ mol
+H
+R
+H
+
+' uu
+' uu  u 
+ 
+ 
+
+===== SOLUTION MANUAL PAGE 975 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 7 5  
+63. (M) (a) 
+o3
+2
+11
+11 2
+11 5 7 . 2 1 0 J / m o l 1 1ln = = = 2.11 8.3145 J mol K 298 K 273 K
+KH
+KR T T 
+§· §·'u  ¨¸ ¨¸©¹©¹
+ 
+  21 12
+2
+1
+=e =0 . 1 2 1 =0 . 1 2 1 0 . 1 1 3=0 . 0 1 4a t2 7 3KK KK
+ u  
+ 
+(b) ln K2
+K1
+= 'H o
+R
+1
+T1
+1
+T2
+§
+©¨
+·
+¹¸= 57.2 u103 J/mol
+8.3145 J mol1 K1
+1
+T1
+ 1
+298 K
+§
+©¨
+·
+¹¸=l n 0.113
+1.00 = 2.180  
+1
+T1
+ 1
+298K
+§
+©¨
+·
+¹¸= 2.180 u8.3145
+57.2 u103 K1 = 3.17 u104 K1  
+43 43 1
+1
+1
+11=3 . 1 7 1 0 = 3 . 3 6 1 0 3 . 1 7 1 0 = 3 . 0 4 1 0 K ; = 3 2 9 K298 TT
+  u uu u  
+ 
+64. (D) First we calculate 'Go  at 298 K to obtain a value for Keq  at that temperature. 
+  
+ 
+o
+f2 f f 2=2 N O g 2 N O g O g
+=2 5 1 . 3 1k J / m o l 2 8 6 . 5 5k J / m o l 0 . 0 0k J / m o l= 7 0 . 4 8k J / m o l
+GG G G''  '  'ªº ªº ª º¬¼ ¬ ¼ ¬ ¼
+ 
+ 
+3
+28 43 1270.48 10 J/mol Kln 28.43 e 2.2 10 8.3145 J 298.15 Kmol K
+GKK RT
+u'      u
+u
+D
+ 
+Now we calculate 'Ho  for the reaction, which then will be inserted into the van't Hoff equation. 
+'H o =2 'Hf NO2 gª¬ º¼2'Hf NO gª¬ º¼'Hf O2 gª¬ º¼
+=2 3 3 . 1 8k J / m o l 29 0 . 2 5 k J / m o l 0.00 kJ/mol = 114.14 kJ/mol
+ 
+o3
+2
+11
+11 2
+11 1 1 4 . 1 4 1 0 J / m o l 1 1ln = = = 9.26 8.3145 J mol K 298 K 373 K
+KH
+KR T T 
+§· §·' u  ¨¸ ¨¸©¹©¹
+ 
+92 6 5 5 12 82
+2
+1
+=e =9 . 5 1 0 ;  =9 . 5 1 0 2 . 2 1 0 =2 . 1 1 0K KK
+  uu u u u  
+Another way to find K at 100 ºC is to compute 'H o 114.14 kJ/mol  from 'Hf
+o
+ values 
+and 
+o1 1146.5 J mol KS '  from So  values. Then determine 'Go(59.5 kJ/mol), and 
+find Kp  with the expression 'GR T Ko
+pln= . Not surprisingly, we obtain the same 
+result, 8
+p =2 . 2 1 0K u . 
+ 
+65. ( M )  First, the van't Hoff equation is used to obtain a value of 'Ho . 200 = 473DC K and 
+260 = 533DC K. 
+o1 1o
+2
+81 1
+11 2
+11 2 . 1 5 1 0 11ln = =l n =6 . 1 5 6=4.56 10 8.3145 J mol K 533K 473 K
+KH H
+KR T T 
+§· §·'u ' ¨¸ ¨¸u ©¹©¹
+ 
+6.156 = 2.9 10 = 6.156
+2.9 10 =2 . 11 0 =2 . 11 05
+5
+52u ' ' u u u
+HHoo J/m o l k J/m o l  
+
+===== SOLUTION MANUAL PAGE 976 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+976 
+Another route to 'Ho  is the combination of standard enthalpies of formation. 
+   24 2CO g + 3H g CH g + H O gU  
+   
+
+o
+f4 f 2 f f 2=C H g +H O g C O g 3 H g
+=7 4 . 8 1 k J / m o l2 4 1 . 8  k J / m o l 1 1 0 . 5 30 . 0 0 k J / m o l =2 0 6 . 1 k J / m o l
+HH H H H'' '  '  'ªº ªº ª ºª º¬¼ ¬¼ ¬ ¼¬ ¼
+    u 
+ 
+ 
+Within the precision of the data supplied, the results are in good agreement. 
+ 
+66. (D) (a)  
+t,DC   T, K  1/ , 1T K   Kp   ln pK  
+ 
+30.  303  3.30 10 3u   1.66 10 5u   11.006 
+ 
+50.  323  3 . 1 0 1 03u   3 . 9 0 1 0 4u  7.849  
+ 
+70.  343  2.92 10 3u   6.27 10 3u  5.072  
+ 
+100.  373  2.68 10 3u   2.31 10 1u  1.465 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+          
+    
+o1 14 3=8 . 3 1 4 5  J  m o l K 1 . 5 4 1 0 K = 1 2 8 1 0 J / m o l = 1 2 8 k J / m o lH ' u u  
+ 
+(b) When the total pressure is 2.00 atm, and both gases have been produced from NaHCO3 s,  
+ 
+ 22{H O g } = {CO g } = 1.00 atmPP  
+ 
+ p2 2={ H O g } { C Og } = 1 . 0 01 . 0 0 = 1 . 0 0KP P  
+ 
+Thus, ln Kp =l n 1 . 0 0=0 . 0 0 0.  T h e  c o r r e s p o n d s  t o  311/ = 2.59 10 KT u ; 
+=3 8 6  KT . 
+We can compute the same temperature from the van't Hoff equation. 
+ 
+Plot of ln(Kp) versus 1/T
+y = -15402.12x + 39.83
+-12
+-10
+-8
+-6
+-4
+-2
+0
+0.0026 0.0029 0.0032 1/T(K-1)
+ln Kp
+
+===== SOLUTION MANUAL PAGE 977 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 7 7  
+ln K2
+K1
+= 'H o
+R
+1
+T1
+1
+T2
+§
+©¨
+·
+¹¸= 128 u103 J/mol
+8.3145 J mol1 K1
+1
+T1
+ 1
+303 K
+§
+©¨
+·
+¹¸=l n1.66 u105
+1.00 = 11.006
+ 
+ 
+1
+T1
+ 1
+303 K
+§
+©¨
+·
+¹¸= 11.006 u8.3145
+128 u103 K1 = 7.15 u104 K1  
+ 
+43 43 1
+1
+1
+11=7 . 1 5 1 0 = 3 . 3 0 1 0 7 . 1 5 1 0 = 2 . 5 9 1 0 K ;    = 3 8 6 K303 TT
+  u uu u  
+ 
+This temperature agrees well with the result obtained from the graph. 
+ 
+Coupled Reactions 
+ 
+67. (E) (a) We compute 'Go  for the given reaction in the following manner 
+ 
+  
+   
+  
+o
+f4 f 2 f 2 f 2=T i C l l +O g T i O s 2 C l g
+=8 0 4 . 2 k J / m o l + 0 . 0 0 k J / m o l 9 4 4 . 7 k J / m o l 2 0 . 0 0 k J / m o l
+=+ 1 4 0 . 5k J / m o l
+HH H H H'' '  '  'ªº ªº ª º ª º¬¼ ¬ ¼ ¬ ¼ ¬ ¼
+    
+ 
+  
+   
+ 
+11 11 11
+oo o o o
+42 2 2
+11
+11
+J mol K J mol K J mol K
+=T i C l l +O g T i O s2 C l g
+=2 5 2 . 3 +2 0 5 . 1J  m o l K 5 0 . 3 3 2 2 2 3 . 1
+=3 9 . 1 J  m o l K
+SS S S S
+  
+
+' ªº ª º ª º ª º¬¼ ¬ ¼ ¬ ¼ ¬ ¼
+
+
+ 
+ 
+    
+oo o 31 1= =+ 1 4 0 . 5k J / m o l 2 9 8K 3 9 . 1 1 0 k J  m o l K
+= +140.5 kJ/mol +11.6 kJ/mol = +152.1 kJ/mol
+GH T S  ''  '  u  
+ 
+  T h u s  t h e  r e a c t i o n  i s  n o n - s p o n t a n e o u s  a t 2 5DC.  ( w e  a l s o  c o u l d  h a v e  u s e d  v a l u e s  o f  'Gf
+o
+ 
+to calculate 'Go ). 
+ 
+(b) For the cited reaction, 'Go =2 'Gf CO2 gª¬ º¼2'Gf CO gª¬ º¼'Gf O2 gª¬ º¼ 
+ 
+'Go =2 394.4 kJ/mol 2 137.2 kJ/mol 0.00 kJ/mol = 514.4 kJ/mol  
+ 
+Then we couple the two reactions. 
+ 
+    22 4 2TiO s + 2Cl g TiCl l + O go   o =+ 1 5 2 . 1k J / m o lG'  
+ 
+  222CO g + O g 2CO go    o =5 1 4 . 4 k J / m o lG'  
+_________________________________________________________________       
+             
+o
+22 4 2TiO s + 2Cl g + 2CO g TiCl l + 2CO g ; = 362.3 kJ/mol Go'    
+ 
+The coupled reaction has 'Go0, and, therefore, is spontaneous. 
+ 
+
+===== SOLUTION MANUAL PAGE 978 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+978 
+68. (E) If 'Go 0 for the sum of coupled reactions, the reduction of the oxide with carbon is 
+spontaneous. 
+ 
+(a)   1
+22NiO s Ni s + O go    o =+ 1 1 5k JG'  
+  1
+22Cs+ O g C Og o    o =2 5 0 k JG'  
+               
+   Net : NiO + C s Ni s + CO gs o   o =+ 1 1 5k J 2 5 0k J= 1 3 5k JG'   
+Therefore the coupled reaction is spontaneous 
+ 
+(b)   1
+22MnO s Mn s + O go    o =+ 2 8 0k JG'  
+  1
+22Cs+ O g C Og o    o =2 5 0 k JG'  
+               
+   Net : MnO s +C s Mn s + CO go  o =+ 2 8 0k J 2 5 0k J=+ 3 0k JG'  
+Therefore the coupled reaction is non-spontaneous 
+ 
+(c)   22TiO s Ti s + O go    o =+ 6 3 0k JG'  
+   22C s + O g 2CO go     
+o =2 2 5 0  k J = 5 0 0  k JG'   
+               
+   2Net : TiO s + 2C s Ti s + 2CO go  o =+ 6 3 0k J 5 0 0k J=+ 1 3 0k JG'  
+Therefore the coupled reaction is non-spontaneous 
+ 
+69. ( E )  In this problem we need to determine if the phosphorylation of arginine with ATP is a 
+ spontaneous reaction.  We proceed by coup ling the two given reactions in order to 
+ c a l c u l a t e  'Gt
+o for the overall reaction.  The sign of 'Gt
+o  can then be used to determine 
+ w h e t h e r  t h e  r e a c t i o n  i s spontaneous or not. 
+ Stepwise approach: 
+ First determine 'Gt
+o for the coupled reaction: 
+ 
+ATP+H2O o ADP+P     'Gt
+o   31.5kJmol-1
+arginine+P o phosphorarginine+H2O      'Gt
+o   33.2kJmol-1    
+ 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+ ATP+arginine o phosphorarginine+ADP     
+'Go  (31.5 33.2)kJmol-1  1.7kJmol-1  
+ Examine the sign of 'Gt
+o : 
+ 'Gt
+o !0.   T h e r e f o r e ,  t h e  r e a c t i o n  i s  n o t  s p o n t a n e o u s .  
+ Conversion pathway approach: 
+ 'Gt
+o  for the coupled reaction is: 
+ ATP+arginine o phosphorarginine+ADP     
+'Go  (31.5 33.2)kJmol-1  1.7kJmol-1  
+ S i n c e  'Gt
+o !0 ,the reaction is not spontaneous. 
+  
+
+===== SOLUTION MANUAL PAGE 979 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 7 9  
+70. (E) By coupling the two reactions, we obtain: 
+ Glu- +NH4
++ o Gln+H2O     'Gt
+o  14.8kJmol-1
+ATP+H2O o ADP+P     'Gt
+o   31.5kJmol-1  
+ _________________________________________ 
+ Glu- +NH4
++ +ATP o Gln+ADP+P     'Go  (14.8 31.5)kJmol-1   16.7kJmol-1  
+ Therefore, the reaction is spontaneous. 
+ 
+ 
+INTEGRATIVE AND ADVANCED EXERCISES 
+ 
+ 
+71. (M) (a) The normal boiling point of mercury is th at temperature at which the mercury 
+vapor pressure is 1.00 atm, or where the equilibrium constant for the vaporization 
+equilibrium reaction has a numerical value of 1.00. This is also the temperature where 
+0 q 'G , since eqln K RT G q '  and 0 ) 00 . 1 ( ln . 
+ H g ( l ) H g ( g )U  
+111111
+ff
+K mol J 0 . 99 K mol J 02 . 76 K mol J 0 . 175 )] Hg(l [ )] Hg(g [       
+kJ/mol 32 . 61 kJ/mol 00 . 0 kJ/mol 32 . 61 )] Hg(l [ )] Hg(g [       
+   q  q  q '
+  q'  q'  q'
+SSS
+HHH
+113 K mol J 0 . 99J/mol 10 32 . 610 uu q '  q '  TST H  
+  K 619
+K mol J 0 . 99
+J/mol 10 32 . 61
+11
+3
+ u T  
+ 
+(b) The vapor pressure in atmospheres is the va lue of the equilibriu m constant, which is 
+related to the value of the free energy change for formation of Hg vapor. 
+ eqf lnkJ/mol 82 . 31 ] Hg(g) [K RTG   q '  
+ 
+3
+11
+31.82 10 J/molln 12.848.3145J mol K 298.15KK 
+u   u        12 84 6e2 . 6 5 1 0 a t mK   u  
+ T h e r e f o r e ,  t h e  v a p o r  p r e s s u r e of Hg at 25ºC is 2.65×10-6 atm. 
+ 
+72. (M) (a) TRUE;  It is the change in free energy for a process in which 
+reactants and products are all in their standard states (regardless of 
+whatever states might be mentioned in the statement of the problem).  
+When liquid and gaseous water are each  at 1 atm at 100 °C (the normal 
+boiling point), they are in equilibrium, so that 'G = 'G° = 0 is only true 
+when the difference of the standard free energies of products and reactants 
+is zero. A reaction with 'Gq = 0 would be at equilibrium when products 
+and reactants were all present under  s t a n d a r d  s t a t e  c o n d i t i o n s  a n d  t h e  
+pressure of H2O(g) = 2.0 atm is not the standard pressure for H2O(g). 
+ 
+(b) FALSE;  .0z'G  The system is not at equilibrium. 
+ 
+
+===== SOLUTION MANUAL PAGE 980 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+980 
+(c) FALSE;  'G° c a n  h a v e  o n l y  o n e  v a l u e  a t  a n y  g i v e n  t e m p e r a t u r e ,  a n d  t h a t  i s  t h e  
+value corresponding to all re actants and products in their standard states, 
+so at the normal boiling point 'G° = 0 [as was also the case in answering 
+part (a)]. Water will not vaporize spontaneously under standard conditions 
+to produce water vapor with a pressure of 2 atmospheres. 
+ 
+(d) TRUE;   .0!'G  The process of transforming water to vapor at 2.0 atm pressure  
+  a t  1 0 0 ° C  i s  n o t  a  s p o n t a n e o u s  p r o c ess; the condensation (reverse) process  
+   is spontaneous.  (i.e. for the system to reach equilibrium, some H 2O(l)  
+  m u s t  f o r m )  
+73. (D) ] BrCl(g) [ ] (g) Cl [ ] (g) Br [f2f2
+1
+2f2
+1 q'q'q '   q ' GGGG  
+ p2
+1
+2
+1 lnkJ/mol 54 . 2 ) kJ/mol 98 . 0 ( ) kJ/mol 00 . 0 ( ) kJ/mol 11 . 3 (K RT    
+ 
+ 02 . 1K 15 . 298 K mol J 3145 . 8
+J/mol 10 54 . 2ln 11
+3
+p  u
+u q' TR
+GK  10 2
+p e0 . 3 6 1K    
+ 
+ F o r  e a s e  o f  s o l v i n g  t h e  p r o b l e m ,  w e  d o u b l e  t he reaction, which squares the value of the 
+equilibrium constant. 130 . 0 ) 357 . 0 (2
+eq   K  
+ 
+22Reaction: 2BrCl(g) Br (g) Cl (g)
+Initial: 1.00 mol            0 mol      0 mol
+Changes: 2 mol mol mol
+Equil: (1.00 2 )mol mol mol
+xx x
+xx x
+
+ 
+
+U
+ 
+xxx
+x
+x
+x
+n
+nn
+V RTn
+V RTn V RTn
+P
+PPK
+722 . 0 361 . 0361 . 02 00 . 1) 361 . 0 () 2 00 . 1 (
+} BrCl(g) {
+} (g) Cl { } (g) Br {
+] / } BrCl(g) { [
+] / } (g) Cl { [ ] / )} (g Br { [
+} BrCl(g) {
+} (g) Cl { } (g) Br {      
+2
+2
+2
+2
+22
+2
+22
+2
+22
+p
+    
+   
+ 
+ BrCl mol 580 . 0 2 00 . 1 Cl mol 210 . 0 Br mol 210 . 0722 . 1
+361 . 0
+22     xx  
+ 
+74. (M) First we determine the value of Kp for the dissociation reaction. If I2(g) is 50% dissociated, 
+then for every mole of undissociated I 2(g), one mole of I 2(g) has dissociated, producing two 
+moles of I(g). Thus, the partial pressure of  I ( g )  i s  t w i c e  t h e  p a r t i a l  p r e s s u r e  o f  I2(g) 
+( 2I( g ) 2 I ( g )U ). 
+ atm 333 . 032atm 00 . 1 ) (g I(g) I(g) I(g) I ) I(g(g) Itotal 22222
+  u    PP P P P PP
+293 . 0 ln34 . 1333 . 0
+) 667 . 0 (
+p
+2
+) (g I
+2
+I(g)
+p
+2
+    KP
+PK
+111111
+2
+2ff
+K mol J 9 . 100 K mol J 7 . 260 K mol J 8 . 180 2 ] (g) I [ ] I(g) [ 2 S
+kJ/mol 2 . 151kJ/mol 44 . 62 kJ/mol 8 . 106 2 ] (g) I [ ] I(g) [ 2
+  u q  q  q '
+ u q'  q'  q'
+SS
+HHH
+  
+ N o w  w e  e q u a t e  t w o  e x p r e s s i o n s  f o r  q'G  and solve for T. 
+
+===== SOLUTION MANUAL PAGE 981 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 8 1  
+'Gq 'H qT 'Sq RT ln Kp  151.2 u103 100.9T   8.3145 uT u0.293
+151.2 u103  100.9T 2.44T  98.4TT  151.2 u103
+98.5  1535 K |1.5 u103 K
+ 
+75. (M) (a) The oxide with the most positive (least negative) value of fq'G  is the one that 
+most readily decomposes to the free metal and O 2(g), since the decomposition is the 
+reverse of the formation reaction. Thus th e oxide that decomposes most readily is 
+Ag2O(s). 
+ 
+(b) The decomposition reaction is (g)O Ag(s) 4 ) O(s Ag 222 o  F o r  t h i s  r e a c t i o n  
+(g) O p2
+PK . Thus, we need to find the temperature where 00 . 1p  K .Since 
+pln K RT G q '  a n d  0 ) 00 . 1 ( ln , we wish to know the temperature where 0 q'G . 
+Note also that the decomposition is the re verse of the formation reaction. Thus, the 
+following values are valid for the decomposition reaction at 298 K. 
+kJ/mol 20 . 11 GkJ/mol 05 . 31  q' q 'H  
+We use these values to determine the value of q'S  for the reaction. 
+11
+33
+K mol J 6 . 66K 298
+J/mol 10 20 . 11 J/mol 10 05 . 31 uu q '
+q'q' q ' q ' q '  q ' q ' q '  q '
+S
+T
+GHSG HS T S T HG
+ 
+Now we determine the value of T where 0 q'G . 
+C 193 K 466
+K mol J 6 . 66
+J/mol 0 . 0 J/mol 10 05 . 31
+11
+3
+q  
+
+u q'
+q'  q' S
+GHT  
+ 
+76. (M) At 127 °C = 400 K, the two phases are in equilibrium, meaning that 
+] (red)(yellow) [ ] (red)(yellow)[0      ff q qq'q' q ' q '   q ' SSTHHS T HG rxnrxnrxn  
+ 
+J/mol 10 20 . 7 yellow) ( K 400 J/mol 10 5 . 2
+] K mol J 180yellow) ( [ K 400 J 10 )] 4 . 105 ( 9 . 102 [
+43
+113
+u q u u 
+q u  u     
+S
+S  
+ 11
+34
+K mol J 186K 400
+J/mol ) 10 5 . 2 10 20 . 7 () yellow (  u u qS  
+ T h e n  w e  c o m p u t e  t h e  v a l u e  o f  t h e  “ e n t r o p y  of formation” of the yellow form at 298 K. 
+11 11
+f2 2      [HgI ] [Hg(l)] [I (s)] [186 76.02 116.1] J mol K 6 J mol KSS S S   'q  q  q  q       
+ N o w  w e  c a n  d e t e r m i n e  t h e  v a l u e  o f  t h e  f r e e  e n e r g y  o f  f o r m a t i o n  f o r  t h e  y e l l o w  f o r m .  
+ ff f
+kJ J1 k J kJ102.9 [298K ( 6 ) ] 101.1mol Km o l 1 0 0 0J m o lGH T S'q 'q ' q   u  u    
+ 
+77. (M) First we need a value for the equilibrium constant. 1% conversion means that 0.99 mol 
+N2(g) are present at equilibrium for every 1.00 mole present initially. 
+ 
+22
+2 22
+NO(g)
+p
+N( g ) O( g ) 2 2 2 2
+[{ N O ( g ) } R T / V ] {NO(g)}      [{ N( g ) } R T / V ] [{ O( g ) } R T / V ] { N( g ) } { O( g ) }
+P nnKK PP n n n n     
+ 
+
+===== SOLUTION MANUAL PAGE 982 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+982 
+ 
+22Reaction: N( g ) O( g ) 2 N O ( g )
+Initial: 1.00 mol 1.00 mol   0 mol
+Changes(1% rxn): 0.010 mol 0.010 mol   0.020 mol
+Equil: 0.99 mol 0.99 mol 0.020 mol
+
+ 
+U
+ 
+2
+4(0.020) 4.1 10(0.99)(0.99)K   u  
+ 
+The cited reaction is twice the formation reaction of NO(g), and thus 
+ 
+ 
+f
+22
+-1 -1 -1 -1 -1 -1 -1
+-1 -1 -
+H =  2 H °[ N O ( g ) ]  =  2 9 0 . 2 5 k J / m o l  =  1 8 0 . 5 0 k J / m o l
+S° = 2S°[NO(g)] - S°[N (g)] - S°[O (g)]
+       =2(210.7 J mol K)-191.5J mol K -205.0 J mol K = 24.9 J mol K
+G° = -RTlnK = -8.31447 JK mol (T)ln(4.1 10
+'q ' u
+'
+'u 4
+-1 -1
+-1 -1 3
+)=6 4 . 8 5 ( T )
+G° = H°-T S° = 64.85(T) = 180.5kJ/mol -(T)24.9 J mol K
+180.5  10 J/mol = 64.85(T) + ( T)24.9 J mol K = 89.75(T)      T = 2.01  10  K
+'' '
+uu
+ 
+ 
+78. (E) Sr(IO3)2(s) ZXZYZZ  Sr2+(aq) + 2 IO3
+-(aq) 
+ 
+'Gq = (2 mol×(-128.0 kJ/mol) + (1 mol ×-500.5 kJ/mol))  (1 mol × -855.1 kJ/mol) = -0.4 kJ 
+ 
+'Gq = -RTlnK = -8.31447 JK-1mol-1(298.15 K)ln K = -0.4 kJ = -400 J 
+ 
+ln K = 0.16  and K = 1.175 = [Sr2+][IO3
+-]2   Let x = solubility of Sr(IO3)2 
+ 
+[Sr2+][IO3
+-]2   = 1.175  = x(2x)2 = 4x3  x = 0.665 M for a saturated solution of Sr(IO3)2. 
+ 
+ 
+79. (M) PH2O = 75 torr or 0.0987 atm. K = (P H2O)2 = (0.0987)2 = 9.74 × 10-3 
+ 
+'Gq = (2 mol×(-228.6 kJ/mol) + (1 mol)×-918.1 kJ/mol) – (1 mol)×-1400.0 kJ/mol = 309.0 kJ 
+ 
+'Hq = (2 mol×(-241.8 kJ/mol) + (1 mol)×-1085.8.1 kJ/mol) – (1 mol)×-1684.3 kJ/mol = 114.9 kJ 
+ 
+'Sq = (2 mol×(188.J/K mol) + (1 mol×146.J/K mol) + (1 mol)×221.3.J/K mol = 302.3 J/K mol 
+ 
+-1 -1 -3
+eq
+-1 -1 -1
+-1 o
+G =  - R T l n K  =  - 8 . 3 1 4 5 J m o l K T l n ( 9 . 7 4 1 0 )  =  3 8 . 5 ( T )
+G° = 38.5(T) = H°-T S° = 114,900 J mol - (T) 302.3J K  mol
+114,900 = 340.8K (T)    Hence: T = 337 K = 64 C
+'q uu u
+'' ' u  
+80. (D) (a) 
+3
+11
+131 10 J/molln ln 52.8 8.3145J mol K 298.15K
+GGR T K K RT 
+u'q'q         u  
+ 
+ 52 8 23 21760 mmHge1 . 2 1 0 a t m 8 . 9 1 0 m m H g1atmK    u u  u  
+ 
+ S i n c e  t h e  s y s t e m  c a n n o t  p r o d u c e  a  v a c u u m  l o w e r  t h a n  1 0–9 mmHg, this partial pressure 
+of CO2(g) won't be detected in the system. 
+ 
+
+===== SOLUTION MANUAL PAGE 983 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 8 3  
+(b) Since we have the value of q'G  f o r  t h e  d e c o m p o s i t i o n  r e a c t i o n  a t  a  s p e c i f i e d  
+temperature (298.15 K), and we need q'H a n d  q'S  f o r  t h i s  s a m e  r e a c t i o n  t o  
+determine (g)} P{CO2  as a function of temperature, obtaining either q'H or q'S  will 
+enable us to determine the other. 
+ 
+ (c) ] (s) [CaCO] (g) CO [ )] CaO(s [3f2ff q'q' q'  q' HHHH  
+ kJ/mol 178 ) kJ/mol 1207 ( kJ/mol 5 . 393kJ/mol 1 . 635    
+ 
+  HGGH T S T SHG S T
+'q  'q'q  'q ' q ' q  ' q  'q ' q   
+ 
+  21 1178 kJ/mol 131 kJ/mol 1000 J 1.6 10 J mol K298. K 1 kJS  'q  u  u  
+ 
+  91 21a t m1.0 10 mmHg 1.3 10760 mmHgK  u u  u  
+ 
+ eqln K RT S T H G q '  q ' q ' lnHT SR T K'q ' q  
+ 
+ 
+3
+2
+2 1 1 1 1 12
+178 10 J/mol 4.6 10 K
+1.6 10 J mol K 8.3145 J mol K ln(1.3 10 )ln
+HT SR K
+  
+u  u
+u u
+'q 'q   
+ 
+81. (D) ] (g) PCl [ ] (g) Cl [ )] (g PCl [5f2f3f q'q' q'  q' HHHH  
+ 
+ 32 5
+-1 -1 -1 -1 -1 -1 -1 -1
+287.0 kJ/mol 0.00 kJ/mol ( 374.9 kJ/mol) 87.9 kJ/mol
+[PCl (g)] [Cl (g)] [PCl (g)]
+311.8 J mol  K  + 223.1 J mol  K   364.6 J mol  K  = +170.3 J mol  K
+SS S S
+      
+'q  q  q  q
+ 
+ 
+ 
+ 113 K mol J 3 . 170 K 500 J/mol 10 9 . 87uu q '  q '  q 'ST H G  
+ 
+ 'Gº 3
+p2.8 10 J/mol lnRTK u    
+ 
+ 06 7
+p p11
+2.8 10 J/molln 0.67 e 0.51 8.3145J mol K 500 K
+GKK RT
+
+
+
+u' q      u  
+ 
+ atm 74 . 2L 50 . 1
+K 500 K mol atm L 08206 . 0 mol 100 . 0] PCl [
+11
+5  uu  
+
+V
+nRTPi  
+ 
+ 
+53 2Reaction: PCl (g) PCl (g) Cl (g)
+Initial: 2.74 atm 0 atm         0 atm
+Changes: atm  atm atm
+Equil: (2.74 ) atm   atm  atm
+xx x
+xxx
+
+ 
+
+U
+ 
+ 
+
+===== SOLUTION MANUAL PAGE 984 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+984 
+32
+p
+5
+22
+[PCl ] [Cl ]      0.51 [PCl ] 2.74
+0.51(2.74 ) 1.4 0.51 0.51 1.4 0
+PP xxK Px
+xx x xx
+   
+      
+ 
+2 40 . 5 1 0 . 2 6 5 . 6 0.96atm, 1.47 atm22
+bb a cx a
+r   r      
+atm 70 . 3 96 . 0 74 . 2 74 . 2 ) 74 . 2 (
+235 ClPClPCltotal        xx x xPPPP  
+ 
+82. (M) The value of q'H determined in Exercise 64 is kJ/mol128 q'H . We use any one of 
+the values of eq pKK  to determine a value of q'G . At 30 °C = 303 K, 
+J/mol 10 77 . 2 ) 10 66 . 1 ln( ) K 303 )( K mol J 3145 . 8 ( ln       4511
+eq u  u  q ' K RT G  
+       Now we determine q'S . q'' q ' ST H G 
+ 11
+43
+K mol J 331K 303
+J/mol 10 77 . 2 J/mol 10 128 uu q'  q ' q ' T
+GHS  
+ B y  u s i n g  t h e  a p p r o p r i a t e  S° values in Appendix D, we calculate 11K mol J 334 q 'S . 
+ 
+83.  (M)  In this problem we are asked to estimate the temperature at which the vapor pressure of 
+cyclohexane is 100 mmHg.  We begin by using Trouton’s rule to determine the value of 
+vapH'  for cyclohexane.  The temperature at wh ich the vapor pressure is 100.00 mmHg can 
+then be determined using Clausius–Clapeyron equation. 
+ Stepwise approach: 
+ Use Trouton’s rule to find the value of vapH' : 
+ J/mol 10 31 K mol J 87 K 9 . 353311
+vapnbpvap u u '  ' ST H  
+ N e x t ,  u s e  C l a u s i u s – C l a p e y r o n  e q u a t ion to find the required temperature: 
+ 
+ln P2
+P1
+ 'Hvap
+R
+1
+T1
+1
+T2
+§
+©¨
+·
+¹¸ ln 100 mmHg
+760 mmHg
+ 31u103 J/mol
+8.3145 J mol1 K1
+1
+353.9 K 1
+T
+§
+©¨
+·
+¹¸  2.028
+1
+353.9 1
+T  2.028 u8.3145
+31u103   5.4 u104  
+2.826 u103 1
+T
+1
+T  3.37 u103 K 1
+          T  297 K  24qC
+ 
+  
+
+===== SOLUTION MANUAL PAGE 985 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 8 5  
+Conversion pathway approach: 
+ 
+ln P2
+P1
+ 'Hvap
+R
+1
+T1
+1
+T2
+§
+©¨
+·
+¹¸ Tnbp 'Svap
+R
+1
+T1
+1
+T2
+§
+©¨
+·
+¹¸
+1
+T1
+1
+T2
+§
+©¨
+·
+¹¸ R
+Tnbp 'Svap
+ln P2
+P1
+ 1
+T2
+ 1
+T1
+ R
+Tnbp 'Svap
+ln P2
+P1
+1
+T2
+ 1
+353.9K  8.314JK-1mol-1
+353.9K u87JK-1mol-1 ln 100mmHg
+760mmHg  3.37 u103
+T2  297K=24oC
+ 
+   
+  (M)(a) 2Ag(s) 1
+2 O2 (g) o Ag2 O
+'Gf
+o  ' Gf
+o (Ag 2 O(s))-{2'Gf
+o ( Ag(s)) 1
+2 'Gf
+o (O 2 )}
+'Gf
+o   -11.2 kJ-{2(0) 1
+2 (0)}   11.2 kJ  Ag2 O is thermodynamically stable at 25oC
+ 
+ 
+   
+(b)  Assuming 'Ho , 'So  are constant from 25-200oC (not so, but a reasonable assumption !)
+      'So  So (Ag2 O)-{2 So (Ag(s))1
+2  So (O2 )} 121.3 (2(42.6) 1
+2 (205.1))   66.5 J/K
+      'Go   31.0 kJ (473 K)(-66.5 J/K)
+1000 J/kJ  ' H o T 'So   0.45 kJ
+ thermodynamically unstable at 200oC
+ 
+ 
+85. (M) 'G = 0 since the system is at equilibrium.  As well, 'Gq = 0 because this process is 
+under standard conditions.  Since 'Gq = 'Hq - T'Sq = 0.  = 'Hq = T'Sq =273.15 K×21.99 J 
+K-1 mol-1 = 6.007 kJ mol-1. Since we are dealing with 2 moles of ice melting, the 
+values of 'Hq and 'Sq are doubled.  Hence, 'Hq = 12.01 kJ and 'Sq = 43.98 J K-1.    
+ Note: The densities are not necessary for the calculations required for this question.
+ 
+86. ( D )  First we determine the value of Kp that corresponds to 15% di ssociation. We represent 
+the initial pressure of phosgene as x atm.  
+ 
+ 
+22Reaction: COCl (g) CO(g) Cl (g)
+Initial :  atm   0 atm 0 atm
+Changes: 0.15 atm 0.15 atm 0.15 atm
+Equil: 0.85 atm 0.15 atm 0.15 atm
+x
+xx x
+xx x
+
+ 
+U
+ 
+84. 
+
+===== SOLUTION MANUAL PAGE 986 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+986 
+ 
+ 
+atm 870 . 015 . 1
+00 . 1atm 00 . 1 atm 15 . 1 atm 15 . 0 atm 15 . 0 atm 85 . 0       total      xxxxxP
+ 
+ 0230 . 0870 . 0 85 . 0
+) 870 . 0 15 . 0 (2
+COCl
+Cl CO
+p
+2
+2
+ u
+u  P
+PP
+K  
+ 
+ Next we find the value of q'H for the decomposition reaction. 
+ 
+) 10 18 . 1 (0 . 373
+1
+668
+171 . 1510 44 . 4
+10 7 . 6ln11ln        3
+2
+9
+122
+1 
+
+
+uq' ¸
+¹
+·¨
+©
+§ q'   u
+u ¸¸
+¹
+·
+¨¨
+©
+§ q' R
+H
+R
+H
+TTR
+H
+K
+K
+ 
+ 4
+3 10 33 . 1
+10 18 . 1
+71 . 15 u 
+u
+ q'
+R
+H ,
+kJ/mol 111 J/mol 10 111 3145 . 8 10 33 . 134  u uu  q 'H  
+ A n d  f i n a l l y  w e  f i n d  t he temperature at which K = 0.0230. 
+ 
+ 
+C 374 K 647
+10 546 . 11110 497 . 1 10 93 . 410 111
+3145 . 8 658 . 0 1
+668
+1
+658 . 01
+K 668
+1
+K mol J 3145 . 8
+J/mol 10 111
+0444 . 0
+0230 . 0ln11ln
+335
+3
+11
+3
+122
+1
+q  
+u u  u   u
+u 
+ ¸¸
+¹
+·
+¨¨
+©
+§ u  ¸¸
+¹
+·
+¨¨
+©
+§ q' 
+
+
+T
+TTT
+TTTR
+H
+K
+K
+ 
+ 
+87. ( D )  First we write the solubility reaction for AgBr. Then we calculate values of q'H and 
+ q'S  for the reaction: 2
+eq spAgBr(s) Ag (aq) Br (aq) [Ag ][Br ]KK s     U  
+ AgBr(s)] [ ] (aq) Br [ )] (aq Ag [fff q' q' q'  q'  HHHH  
+  kJ/mol4 . 84 ) kJ/mol 4 . 100 ( kJ/mol 6 . 121kJ/mol 6 . 105    
+ ] AgBr(s) [ ] (aq) Br [ ] (aq) Ag [q qq q '  SSSS  
+  11111111 K mol J 0 . 48 K mol J 1 . 107 K mol J 4 . 82 K mol J 68 . 72    
+ T h e s e  v a l u e s  a r e  t h e n  u s e d  t o  d e t e r m i n e  t h e  v a l u e  o f  q'G  for the solubility reaction, and the 
+standard free energy change, in turn, is used to obtain the value of K. 
+ 
+31 11 3
+3
+21 4 10 25
+sp
+      84.4 10 J mol (100 273) K 48.0 J mol K 66.5 10 J/mol
+66. 10      ln 21.4 e 5.0 10 s8.3145J 373Kmol K
+GH T S
+GKK KRT
+ 
+
+'q  'q ' q  u   u  u
+u' q       u  
+u
+ 
+ And now we compute the solubility of AgBr in mg/L. 
+ AgBr/L mg 2 . 4g1
+mg 1000
+AgBr mol 1
+AgBr g 187.7710 0 . 510  uuu s  
+ 
+
+===== SOLUTION MANUAL PAGE 987 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 8 7  
+88. (M) Sq298.15 = Sq274.68 + 'Sfusion + 'Sheating  
+ S q298.15 =  67.15 J K- mol-1 + 
+-112,660 J mol
+274.68 K + 
+298 15
+2274 68
+JJ97.78  + 0.0586 274.68mol K mol K Tu³  
+ S q298.15 =  67.15 J K-1 mol-1 + 46.09 J K-1 mol-1 + 8.07 J K-1 mol-1  = 121.3 J K-1 mol-1  
+ 
+89. (M) Sq = Sqsolid + 'Sfusion + 'Sheating + 'Svaporization + 'Spressure change  
+ S q = 128.82 J K-1 mol-1 + 
+-19866 J mol
+278.68 K +
+298 15
+278 68
+J134.0 mol K
+T
+dT
+³ + 
+-133,850 J mol
+298.15 K  
+      +  8 . 3 1 4 5  J  K -1 mol-1 × 95.13 torrln 760 torr
+§·
+¨¸©¹
+ 
+ S q = 128.82 J K-1 mol-1 + 35.40 J K-1 mol-1 + 9.05 J K-1 mol-1 + 113.5 J K-1 mol-1  + (-17.28 J K-1 mol-1 ) 
+ S q =  269.53 J K-1 mol-1  
+ 
+90. (D)  Start by labeling the particles A, B and C.  Now arrange the particles among the states.  
+One possibility includes A, B, and C occupying one energy state (H=0,1,2 or 3).  This counts as 
+one microstate.  Another possibility is two of the particles occupying one energy state with the 
+remaining one being in a different state.  This possibility includes a total of three microstates.  
+The final set of combinations is one with each particle being in different energy state.  This 
+combination includes a total of six microstates.  Therefore, the total number of microstates in the 
+system is 10.  See pictorial representation on the following page illustrating the three different 
+cases. 
+
+===== SOLUTION MANUAL PAGE 988 =====
+
+
+===== SOLUTION MANUAL PAGE 989 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 8 9  
+92. (D)  Because KNO3 is a strong electrolyte, its solution reaction will be: 
+ 32 3() ( ) ( )KNO s H O K aq NO aq U  
+ This reaction can be considered to be at equ ilibrium when the solid is in contact with a 
+saturated solution, i.e. the conditions when crystallization begins.  The solubility, s, of the 
+salt, in moles per liter, can be calculated fr om the amount of salt  w e i g h t e d  o u t  a n d  t h e  
+volume of the solution.  The equilibrium constant K for the reaction will be: 
+ K = [ K + (aq)][NO3
+- (aq)]=(s)(s)=s2  
+ I n  t h e  c a s e  o f  2 5 . 0  m L  s o l u t i o n  a t  340 K, the equilibrium constant K is: 
+ n(KNO3 )  m
+M  20.2g
+101.103gmol1  0.200mol  s= n
+V  0.200mol
+0.0250L  8.0molL-1
+K  s2  82  64
+ 
+ T h e  e q u i l i b r i u m  c o n s t a n t  K  c a n  b e  u s e d  t o  c a l c u l a t e  'G for the reaction using 'G=-RTlnK: 
+ 'G   8.314JK-1mol-1 u340Kuln 64 12kJmol-1  
+ T h e  v a l u e s  f o r  K  a n d  'G at all other temperatures are summarized in the table below.  
+  
+Volume (mL) T/(K) 1/T (K -1) s (molL -1) K lnK 'G (kJmol-1)
+25.0 340 0.00294 8.0 64 4.2 -12 
+29.2 329 0.00304 6.9 48 3.9 -11 
+33.4 320 0.00312 6.0 36 3.6 -9.6 
+37.6 313 0.00320 5.3 28 3.3 -8.6 
+41.8 310 0.00322 4.8 23 3.1 -8.0 
+46.0 306 0.00327 4.3 18.5 2.9 -7.4 
+51.0 303 0.00330 3.9 15 2.7 -6.8 
+  
+ The plot of lnK v.s. 1/T provides 'H (slope=- 'H/R) and 'S (y-intercept= 'S/R) for the 
+reaction: 
+25
+3
+35
+4
+45
+0.0029 0.003 0.0031 0.0032 0.0033 0.0034
+y = 16.468 - 4145.7x   R= 0.99156 
+ln K
+1/T (K
+-1
+)  
+'H   slope uR  4145.7 u8.314JK -1mol-1  34.5kJmol1
+'S  y int ercept uR  16.468 u8.314JK -1mol-1  136.9JK-1mol-1  
+
+===== SOLUTION MANUAL PAGE 990 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+990 
+ 'H for the crystallization process is -35.4 kJmol -1.  It is negative as expected because 
+crystallization is an exothermic proce ss.  Furthermore, the positive value for 'S shows that 
+crystallization is a process that decreases the entropy of a system. 
+ 
+ 
+FEATURE PROBLEMS 
+ 
+93. ( M )  ( a )  The first method involves combining the values of 'Gf
+o . The second uses  
+ 
+  ''  'G HTSoo o= 
+   
+
+o
+f2 f2=H O g H O l
+=2 2 8 . 5 7 2 k J / m o l 2 3 7 . 1 2 9 k J / m o l = + 8 . 5 5 7 k J / m o l
+GG G''  ' ªº ª º¬¼ ¬ ¼
+ 
+ 
+   
+
+o
+f2 f2=H O g H O l
+=2 4 1 . 8 1 8 k J / m o l 2 8 5 . 8 3 0 k J / m o l = + 4 4 . 0 1 2 k J / m o l
+HH H''  ' ªº ª º¬¼ ¬ ¼
+ 
+ 
+   
+oo o
+22
+11 11 11
+=H O g H O l
+= 188.825 J mol K 69.91 J mol K = +118.92 J mol K
+SS S
+  
+' ªº ª º¬¼ ¬ ¼
+
+ 
+  
+oo o
+31 1
+=
+=4 4 . 0 1 2k J / m o l 2 9 8 . 1 5K 1 1 8 . 9 2 1 0 k J  m o l K =+ 8 . 5 5 6k J / m o l
+GH T S
+ 
+''  '
+u u
+ 
+ 
+ (b) We use the average value: o3 =+ 8 . 5 5 8 1 0 J / m o l= l nGR T K'u   
+34 5 2
+11
+8558 J/molln = = 3.452; = e = 0.0317 bar8.3145 J mol K 298.15 KKK 
+ u  
+ 
+ (c) 2
+1atm 760mmHg{H O} = 0.0317 bar = 23.8 mmHg1.01325bar 1atmP uu  
+ 
+ (d) 11
+8590 J/molln = = 3.4658.3145 J mol K 298.15 KK  u ; 
+34 6 5
+7=e =0 . 0 3 1 2  a t mK  ; 
+2
+760 mmHg{H O} = 0.0313atm = 23.8 mmHg1atmP u  
+94. ( D )  ( a )  When we combine two reactions and obtain the overall value of 'Go , we subtract 
+the value on the plot of the reaction that becomes a reduction from the value on the 
+plot of the reaction that is an oxidation. Thus, to reduce ZnO with elemental Mg, we 
+subtract the values on the line labeled “2+ 2 2Zn O ZnOo ” from those on the line 
+labeled “ 2+ 2 2Mg O MgOo ”. The result for the overall 'Go  will always be 
+negative because every point on the “zinc” line is above the corresponding point on 
+the “magnesium” line 
+ 
+(b) In contrast, the “carbon” line is only below the “zinc” line at temperatures above about 
+1000DC.  T h u s ,  o n l y  a t  t h e s e  e l e v a t e d  t e m p e ratures can ZnO be reduced by carbon. 
+ 
+
+===== SOLUTION MANUAL PAGE 991 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 9 1  
+(c) The decomposition of zinc oxide to its elements is the reverse of the plotted reaction, 
+the value of 'Go  for the decomposition becomes negative, and the reaction becomes 
+spontaneous, where the value of 'Go  for the plotted reaction becomes positive. This 
+occurs above about 1850DC.  
+ 
+(d) The “carbon” line has a negative slope, indicating that carbon monoxide becomes 
+more stable as temperature rises. The point where CO(g) would become less stable 
+than 2C(s) and O2(g) looks to be below 1000DC ( b y  e x t r a p o l a t i n g  t h e  l i n e  t o  l o w e r  
+temperatures). Based on this plot, it is not possible to decompose CO(g) to C(s) and 
+O2 g in a spontaneous reaction. 
+ 
+(e)                            
+ 
+Reaction 1 
+2 CO(g) + O2(g) o 2 CO2(g) 
+ 
+Reaction 2 
+C(s) + O2(g) o CO2(g) 
+ 
+Reaction 3 
+2 C(s) + O2(g) o 2 CO(g) 
+All three lines are straight-line plots of 'Gq vs. T following the equation 'Gq = 'Hq  T'Sq. 
+ 
+The general equation for a straight line is given below with the slightly modified 
+Gibbs Free-Energy equation as a reference: 'Gq =   'SqT 'Hq (here 'Hq assumed 
+constant)
+ 
+y = mx + b       (m = 'Sq = slope of the line) 
+ 
+Thus, the slope of each line multiplied by minus one is equal to the 'Sq for the oxide 
+formation reaction. It is hardly surprising, therefore, that the slopes for these lines 
+differ so markedly because these three reactions have quite different 'Sq values ('Sq 
+for Reaction 1 = -173 J K1, 'Sq for Reaction 2 = 2.86 J K1, 'Sq for Reaction 3  
+= 178.8 J K1) 
+ 
+ ( f )  S i n c e  o t h e r  m e t a l  o x i d e s  a p p a r e n t l y  h a v e  positive slopes similar to Mg and Zn, we 
+can conclude that in general, the stability of metal oxides decreases as the 
+temperature increases.  Put another way, the decomposition of metal oxides to their 
+elements becomes more spontaneous as the temperature is increased.  By contrast, 
+the two reactions involving elemental carbon, namely Reaction 2 and Reaction 3, 
+have negative slopes, indicating that the formation of CO2(g) and CO(g) from 
+graphite becomes more favorable as the temperature rises.  This means that the 'Gq 
+for the reduction of metal oxides by carbon becomes more and more negative with 
+-700
+-600
+-500
+-400
+-300
+-200
+-100
+0
+05 0 0 1 0 0 0 1 5 0 0 2 0 0 0
+Temperature (°C)
+Standard Free Energy Change 
+(kJ)
+3
+1
+2
+
+===== SOLUTION MANUAL PAGE 992 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+992 
+increasing temperature.  Moreover, there must exist a threshold temperature for each 
+metal oxide above which the reaction with carbon will occur spontaneously.  Carbon 
+would appear to be an excellent reducing agent, therefore, because it will reduce 
+virtually any metal oxide to its corresponding metal as long as the temperature 
+chosen for the reaction is higher than the threshold temperature (the threshold 
+temperature is commonly referred to as the transition temperature). 
+ 
+  Consider for instance the reaction of  MgO(s) with graphite to give CO2(g) and Mg metal: 
+  2 MgO(s) + C(s) o 2 Mg(s) + CO2(g)  'Sqrxn = 219.4 J/K and '+qrxn = 809.9 kJ 
+  T transition =  
+o
+rxn
+o
+rxn
+H
+S
+'
+' = 1
+809.9 kJ
+0.2194 kJ K = 3691 K = Tthreshold 
+ C o n s e q u e n t l y ,  a b o v e  3 6 9 1  K ,  c a r b o n  w i l l  s p o n t a n e o u s l y  r e d u c e  M g O  t o  M g  m e t a l .
+ 
+95.   (D) (a) With a 36% efficiency and a condenser temperature (Tl) of 41 °C = 314 K, 
+  h1
+h
+efficiency 100% 36%TT
+T
+ u   h
+h
+314 0.36T
+T
+  ;    
+  Th = (0.36 u T h) + 314 K;   0.64 Th = 314 K;   Th = 4.9 u102 K 
+ 
+(b) T h e  o v e r a l l  e f f i c i e n c y  o f  t h e  p o w e r  p l a nt is affected by factors other than the 
+thermodynamic  efficiency.  For example, a portion of the heat of combustion of the 
+fuel is lost to parts of the surroundings other than the steam boiler; there are 
+frictional losses of energy in moving parts in the engine; and so on.  To compensate 
+for these losses, the thermodynamic efficiency must be greater than 36%.  To obtain 
+this higher thermodynamic efficiency, Th must be greater than 4.9 u 102 K. 
+ 
+(c)  The steam pressure we are seeking is the vapor pressure of water at 4.9 u 102 K. We 
+also know that the vapor pressure of water at 373 K (100 °C) is 1 atm.  The enthalpy of 
+vaporization of water at 298 K is 'H° = 'Hf°[H2O(g)  'Hf°[H2O(l)] = 241.8 kJ/mol 
+ (285.8 kJ/mol) = 44.0 kJ/mol.  Although the enthalpy of vaporization is somewhat 
+temperature dependent, we will assume that this value holds from 298 K to 4.9 u 102 
+K, and make appropriate substitutions into the Clausius-Clapeyron equation. 
+ 
+  
+1
+33 32
+31
+44.0 kJ mol 1 1ln = = 5.29 10 2.68 10 2.04 101a t m 8 . 3 1 4 5 1 0 k J  m o l 3 7 3 K 4 9 0K
+P 
+ 
+
+§· §· u u  u¨¸ ¨¸u ©¹©¹
+ 
+2ln = 3.391a t m
+P§·
+¨¸
+©¹
+;    
+  
+P2
+1a t m
+§
+©¨
+·
+¹¸=2 9 . 7;     P2 | 30 atm 
+The answer cannot be given with greater certainty because of the weakness of the 
+assumption of a constant H°vapn. 
+ 
+(d)   It is not possible to devise a heat engine with 100% efficiency or greater.  For 100% 
+efficiency, Tl = 0 K, which is unattainable.  To have an efficiency greater than 100 % 
+would require a negative Tl, which is also unattainable. 
+ 
+
+===== SOLUTION MANUAL PAGE 993 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 9 3  
+96.   (D) (a) Under biological standard conditions: 
+ 
+   ADP 3– + HPO4
+2– + H+ o ATP4–+ H2O   'Go' = 32.4 kJ/mol 
+ 
+ If all of the energy of combustion of 1 mole of glucose is employed in the  
+ c o n v e r s i o n  o f  A D P  t o  A T P ,  t h e n  t h e  maximum number of moles ATP produced is 
+ 
+ 
+1
+1
+2870 kJ molMaximum number = 88.6 moles ATP32.4 kJ mol
+
+   
+ 
+(b) I n  a n  a c t u a l  c e l l  t h e  n u m b e r  of ATP moles produced is 38, so that the efficiency is: 
+ number of ATP's actually produced 38Efficiency = 0.43Maximum number of ATP's that can be produced 88.6   
+ T h u s ,  t h e  c e l l ’ s  e f f i c i e n c y  i s  a b o u t  4 3 % .  
+ 
+(c)  The previously calculated efficiency is based upon the biological standard state.  We 
+now calculate the Gibbs energies involved under the actual conditions in the cell.  To 
+do this we require the relationship between 'G and 'G ' for the two coupled 
+reactions.  For the combustion of glucose we have 
+  
+'G  ' GocRT ln
+aCO2
+6 aH2O
+6
+aglu aO2
+6
+§
+©
+¨¨
+·
+¹
+¸¸       
+ F o r  t h e  c o n v e r s i o n  o f  A D P  t o  A T P  w e  h a v e  
+  
+'G  ' GocRT ln
+aATPaH2O
+aADPaPi
+H+ª¬ º¼/1 07
+
+§
+©
+¨
+¨
+·
+¹
+¸
+¸
+ 
+ 
+Using the concentrations and pressures provided we can calculate the Gibbs energy 
+for the combustion of glucose under biological conditions.  First, we need to replace 
+the activities by the appropriate effective concentrations. That is, 
+  
+'G  ' GocRT ln
+p / po
+CO2
+6
+aH2O
+6
+gluª¬ º¼/g l uª¬ º¼
+o
+p / po
+O2
+6
+§
+©
+¨
+¨¨
+·
+¹
+¸
+¸¸
+ 
+using 
+2HO 1a| for a dilute solution we obtain 
+
+>@ 
+6 6
+6
+0.050 bar /1 bar 1ln
+glu /1 0.132 bar /1 bar
+GG R T
+§· uc' '  ¨ ¸ ¨¸ u©¹
+D  
+ 
+The concentration of glucose is given in mg/mL and this has to be converted to 
+molarity as follows: 
+ 
+1
+1
+1.0 mg g 1000 mL 1[glu] = 0.00555 mol LmL 1000 mg L 180.16 g mol
+
+uuu  , 
+ 
+where the molar mass of glucose is 180.16 g mol1. 
+Assuming a temperature of 37 oC for a biological system we have, for one mole of 
+glucose: 
+ 
+
+===== SOLUTION MANUAL PAGE 994 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+994 
+
+
+6 6
+31
+6
+0.050 12870 10 J 8.314 JK 310K ln
+0.00555 /1 0.132
+G  §· u'  u  u u ¨¸¨¸ u©¹
+ 
+  
+'G   2870 u103 J 8.314JK 1 u310K uln 2.954 u103
+0.00555
+§
+©¨
+·
+¹¸ 
+ 
+312870 10 J 8.314 JK 310 K ln 0.5323G '  u  u u  
+ 
+ 
+312870 10 J 8.314 JK 310K 0.6305G '  u  u u   
+  
+'G   2870 u103 J 1.625 u103 J
+'G   2872 u103 J
+ 
+ 
+In a similar manner we calculate the Gibbs free energy change for the conversion of 
+ADP to ATP: 
+ 
+'G  ' GocRT ln ATP>@/1 u1
+ADP>@ /1 u Pi>@/1 u( H ª¬ º¼/10 7 )
+§
+©
+¨
+·
+¹
+¸ 
+ 
+31
+77
+0.000132.4 10 J 8.314 JK 310 K ln 0.0001 0.0001 (10 /10 )G 
+
+§·' u  u u ¨¸ uu©¹
+ 
+ 
+
+31 432.4 10 J 8.314 JK 310 K ln 10G ' u  u u  
+ 
+ 31 33 332.4 10 J 8.314 JK 310 K 9.2103) 32.4 10 J 23.738 10 J 56.2 10 JG ' u  u u  u  u  u  
+ 
+ (d) T h e  e f f i c i e n c y  u n d e r  b i o logical conditions is  
+ 
+number of ATP's actually produced 38Efficiency = 0.744Maximum number of ATP's that can be produced 2872/56.2   
+ 
+Thus, the cell’s efficiency is about 74%. 
+ 
+The theoretical efficiency of the diesel engine is: 
+ 
+h1
+h
+1923 873Efficiency 100% 100% 55% 1923
+TT
+T
+ u  u   
+Thus, the diesel’s actual efficiency is 0.78 u 55 % = 43 %. 
+The cell’s efficiency is 74% whereas that of the diesel engine is only 43 %. Why is 
+there such a large discrepancy?  The diesel engine supplies heat to the surroundings, 
+which is at a lower temperature than the engine.  This dissipation of energy raises the 
+temperature of the surroundings and the entropy of the surroundings.  A cell operates 
+under isothermal conditions and the energy not utilized goes only towards changing 
+the entropy of the cell’s surroundings.  The cell is more efficient since it does not 
+heat the surroundings. 
+ 
+
+===== SOLUTION MANUAL PAGE 995 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 9 5  
+97. (E) (a)  In this case CO can exist in two states, therefore, W=2.  There are N of these  
+ s t a t e s  i n  t h e  c r y s t a l ,  a n d  s o  w e  h a v e  
+ S kln 2N  1.381u1023JK-1u6.022u1023mol-1 ln 2 5.8JK-1mol-1  
+ ( b )   For water, W=3/2, which leads to 
+ S  k ln( 3
+2)N  1.381u1023JK-1 u6.022 u1023 mol-1 ln1.5  3.4JK-1mol-1  
+ 
+SELF-ASSESSMENT EXERCISES 
+ 
+98. (E)  (a) 'Suniv  or total entropy contains contributio ns from the entropy change of the 
+ s y s t e m  ( 'Ssys ) and the surroundings ( 'Ssurr ).  According to the second law of 
+ t h e r m o d y n a m i c s ,  'Suniv  is always greater then zero. 
+ ( b )  'Gf
+o  or standard free energy of formation is the free energy change for a reaction in 
+ w h i c h  a  s u b s t a n c e s  i n  i t s  s t a n d a r d  s t a t e  i s  formed from its elements in their reference 
+ f o r m s  i n  t h e i r  s t a n d a r d  s t a t e s .  
+(c) For a hypothetical chemical reaction aA+bB U cC+dD , the equilibrium constant K is 
+defined as K  [C]c[D]d
+[A]a[B]b . 
+ 
+99. (E)  (a)   A b s o l u t e  m o l a r  e n t r o p y  i s  t h e  e n t r o py at zero-point ener gy (lowest possible 
+ e n e r g y  s t a t e )  a n d  i t  i s  e q u a l  t o  z e r o .  
+ ( b )   Coupled reactions are spontaneous reactions ( 'G<0) that are obtained by pairing 
+ r e a c t i o n s  w i t h  p o s i t i v e  'G with the reactions with negative 'G. 
+ (c)  Trouton’s rule states that for many liquids at their normal boiling points, the standard 
+ m o l a r  e n t r o p y  o f  v a p o r i z a t i o n  h a s  a value of approximately 87 Jmol-1K-1. 
+(d) Equilibrium constant K for a certain chemical reaction can be evaluated using either 
+'Gf
+o  or 'H f
+o  in conjunction with So  (which are often tabulated).  The relationship used 
+to calculate K is 'Go  RTlnK. 
+ 
+100. (E)  (a)   A spontaneous process is a process that occurs in a system left to itself; once 
+ s t a r t e d ,  n o  e x t e r n a l  a c t i o n  f orm outsize the system is n ecessary to make the process 
+ c o n t i n u e .   A  n o n s p o n t a n e o u s  p r o c e s s  i s  a  p r o c e ss that will not occur unless some external 
+ a c t i o n  i s  c o n t i n u o u s l y  a p p l i e d .  
+ (b)  Second law of thermodynamics states that the entropy of universe is always greater 
+ t h a n  z e r o  o r  i n  o t h e r  w o r d s  t h a t  a l l  s p o n taneous processes produce an increase in the 
+ e n t r o p y  o f  t h e  u n i v e r s e .   T h e  t h i r d  l a w  o f  thermodynamics states that the entropy of 
+ p e r f e c t  p u r e  c r y s t a l  a t  0 K  i s  z e r o .  
+ (c) 'G is the Gibbs free energy defined as 'G='H-T'S. 'G0 is the standard free energy 
+ c h a n g e .  
+ 
+101. (E)  Second law of thermodynamics states that all spontaneous processes produce an 
+ i n c r e a s e  i n  t h e  e n t r o p y  o f  t h e  u n i v e r s e .   I n  o t h e r  w o r d s ,  'Suniv  ' Ssys 'Ssurr !0 .  
+ Therefore, the correct answer is (d). 
+
+===== SOLUTION MANUAL PAGE 996 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+996 
+ 
+102. ( E )   The Gibbs free energy is a function of 'H, 'S and temperature T.  It cannot be used 
+ t o  d e t e r m i n e  h o w  m u c h  h e a t  i s  a b s o r b e d  from the surroundings or  how much work the 
+ s y s t e m  d o e s  o n  t h e  s u r r o u n d i n g s .   F u r t h e r m o r e , it also cannot be us ed to determine the 
+ p r o p o r t i o n  o f  t h e  h e a t  e v o l v e d  in an exothermic reaction that can be converted to various 
+ f o r m s  o f  w o r k .   S i n c e  G i b b s  f r e e  e n e r g y  i s  related to the equili brium constant of a 
+ c h e m i c a l  r e a c t i o n  ('G RTlnK) its value can be used to access the net direction in 
+ w h i c h  t h e  r e a c t i o n  o c c u r s  t o  r e a c h  e q u i l i b r i u m .   Therefore, the correct answer is (c).   
+ 
+103. ( M )   In order to answer this question, we must first determine whether the entropy 
+ c h a n g e  f o r  t h e  g i v e n  r e a c t i o n  is positive or negative.  Th e reaction produces three moles 
+ o f  g a s  f r o m  t w o  m o l e s ,  t h e refore there is an increase in randomness of the system, i.e. 
+ e n t r o p y  c h a n g e  f o r  t h e  r e a c t i o n  i s  p o s i t i v e .   Gibbs free energy is a function of enthalpy, 
+ e n t r o p y  a n d  t e m p e r a t u r e  ('G 'HT'S).  Since 'H0 a n d  'S!0,  t h i s  r e a c t i o n  
+ will be spontaneous at any temperature.  The correct answer is (a). 
+104. ( M )   Recall that 'Go  RTlnK.  If 'Go 0,  t h e n  i t  f o l l o w s  t h a t  'Go  RTlnK 0.   
+ S o l v i n g  f o r  K  y i e l d s :  l nK  0  K  e0  1.  Therefore, the correct answer is (b ).  
+ 
+105. ( E )   In this reaction, the number of moles of reactants equals the number of moles of 
+ p r o d u c t s .   T h e r e f o r e ,  K  i s  e q u a l  t o  Kp and Kc.  The correct answers are (a) and (d).   
+ 
+106. ( M )   ( a )  The two lines will intersect at  the normal melting point of I 2(s) which is 113.6 
+ oC.  (b) 'Go  f o r  t h i s  p r o c e s s  m u s t  b e  e q u a l  t o  zero because solid and liquid are at 
+ e q u i l i b r i u m  a n d  a l s o  i n their standard states. 
+ 
+107. ( M )   ( a )  No reaction is expected because of the decrease in entropy and the expectation 
+ t h a t  t h e  r e a c t i o n  i s  e n d o t h e r m i c .   A s  a  c h e c k  w i t h  d a t a  f r o m  A p p e n d i x  D ,  'Go =326.4 
+ k J m o l -1 f o r  t h e  r e a c t i o n  a s  w r i t t e n - a  v e r y  l a r g e  v a l u e .   (b)  B a s e d  o n  t h e  i n c r e a s e  i n  
+ e n t r o p y ,  t h e  f o r w a r d  r e a c t i o n  s h o u l d  o c c u r ,  a t l e a s t  t o  s o m e  e x t e n t .   F o r  t h i s  r e a c t i o n  
+ 'Go =75.21 kJmol-1.  (c) 'S is probably small, and 'His probably also small (one Cl-Cl 
+ b o n d  a n d  o n e  B r - B r  b o n d s  a r e  b r o k e n  and two Br-Cl bonds are formed). 'Go  should be 
+ s m a l l  a n d  t h e  f o r w a r d  r e a c t i o n  s h o u l d  o c c u r  to a significant extent.  For this reaction 
+ 'Go =-5.07 kJmol-1.   
+ 
+108. ( M )   ( a )  Entropy change must be accessed for the system and its surroundings ('Suniv ), 
+ n o t  j u s t  f o r  t h e  s y s t e m  a l o n e .   (b)  E q u i l i b r i u m  c o n s t a n t  c a n  b e  c a l c u l a t e d  f r o m  
+ 'Go ( 'Go  RTlnK), and K permits equilibrium calculations for nonstandard 
+ c o n d i t i o n s .  
+ 
+109. ( D )   ( a )   First we need to determine 'Hvap
+o  w h i c h  i s  s i m p l y  e q u a l  t o :  
+'Hvap
+o  ' H f
+o[(C5 H10 (g)] 'H f
+o[(C5 H10 (l)]   77.2kJ/mol (105.9kJ/mol)  28.7kJ/mol .  Now 
+ w e  u s e  T r o u t o n ’ s  r u l e  t o  c a l c u l a t e the boiling point of cyclopentane: 
+
+===== SOLUTION MANUAL PAGE 997 =====
+Chapter 19: Spontaneous Change: Entropy and Gibbs Energy 
+ 9 9 7  
+ 
+'Svap
+o  'Hvap
+o
+Tbp
+ 87Jmol-1K-1  Tbp  'Hvap
+o
+87Jmol-1K-1  28.7 u1000Jmol-1
+87Jmol-1K-1  330K
+Tbp  330K 273.15K  57o C
+ 
+ (b)  If we assume that 'Hvap
+o  and 'Svap
+o are independent of T we can calculate 'Gvap
+o : 
+ 'Gvap,298 K
+o  ' Hvap
+o T 'Svap
+o  28.7kJmol-1 298.15K u 87
+1000 kJK-1mol-1  2.8kJmol-1  
+ (c)  Because 'Gvap,298 K
+o >0, the vapor pressure is less than  1 atm at 298 K, consistent with 
+ T bp=57 oC.   
+ 
+110. ( M )   ( a )   We can use the data from Appendix D to  determine the change in enthalpy and 
+ e n t r o p y  f o r  t h e  r e a c t i o n :  
+ 
+'H o  ' H f
+o (N2O(g)) 2'H f
+o (H2O(l)) 'H f
+o (NH4 NO3(s))
+'H o  82.05kJmol-1 2 u(285.8kJmol-1) (365.6kJmol-1)   124kJmol-1
+'So  So (N2O(g)) 2So (H2O(l)) So (NH4 NO3(s))
+'So  219.9JK-1mol-1 2 u69.91JK-1mol-1 151.1JK-1mol-1  208.6JK-1mol-1
+ 
+ (b)  From the values of 'Ho and 'So determined in part (a) we can calculate 'Go  a t  
+ 2 9 8 K :  
+ 
+'Go  ' H o T 'So
+'Go   124kJmol-1 298K u208.6kJmol-1K-1
+1000   186.1kJmol-1
+ 
+ A l t e r n a t i v e l y ,  'Go  c a n  a l s o  b e  c a l c u l a t e d  d i r e c t l y  u s i n g  'Gf
+o values tabulated in 
+ A p p e n d i x  D .  
+ (c)  The equilibrium constant for the reaction is calculated using 'Go  RTlnK: 
+ 'Go   RT ln K 186.1 u1000Jmol-1   8.314JK -1mol-1 u298K uln K
+186100Jmol-1   2477.6 lnK lnK 75.1 K e75 1 4.1u1032
+ 
+ (d)  The reaction has 'Ho 0 a n d  'So !0.   B e c a u s e  'Go 'Ho T'So , the reaction 
+ w i l l  b e  s p o n t a n e o u s  a t  a l l  t e m p e r a t u r e s .  
+ 
+111. (M)  Recall from exercise 104 that 'Go 0 w h e n  K = 1 .   T h e r e f o r e ,  w e  a r e  l o o k i n g  f o r  
+the diagram with smallest change in Gibbs  f r e e  e n e r g y  b e t w e e n  t h e  p r o d u c t s  a n d  t h e  
+reactants.  The correct answer is diagram (a).   Notice that diagrams (b) and (c) represent 
+chemical reactions with small and large values of equilibrium constants, respectively.   
+ 
+112. ( M )   Carbon dioxide is a gas at room temperature.  The melting point of carbon dioxide is 
+ e x p e c t e d  t o  b e  v e r y  l o w .   A t  r o o m  t e m perature and normal atmospheric pressure this 
+ p r o c e s s  i s  s p o n t a n e o u s .   T h e  e ntropy of the universe if positive. 
+  

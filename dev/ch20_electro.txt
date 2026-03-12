@@ -1,0 +1,4281 @@
+
+
+=== PDF PAGE 999 ===
+Chapter 20: Electrochemistry 
+ 9 9 9  EcelloVV V =+ 1 . 5 1 0 . 7 7 1 =+ 0 . 7 4   
+ 
+4A (M) We write down the oxidation half-equation following the method of Chapter 5, and 
+obtain the reduction half-equati on from Table 20-1, along with the reduction half-cell 
+potential. 
+ 
+Oxidation: +
+224 2{H C O (aq) 2CO (aq) 2H (aq) 2e } 3o  u         22 2 4 {CO /H C O }ED 
+Reduction: 2 +3 +
+27 2Cr O aq +14H aq + 6e 2Cr aq + 7 H O(l) o  o=+ 1 . 3 3 VE  
+Net:   2 +3 +
+27 224 2 2Cr O aq +8H aq + 3H C O aq 2Cr aq + 7 H O(l) + 6CO go  
+oo
+22 2 4 cell=+ 1 . 8 1 V=+ 1 . 3 3 V { C O / H C O } ; EE   o
+22 2 4{CO /H C O } = 1.33V 1.81V = 0.48 VE   
+ 
+4B (M) The 2nd half-reaction must have O2g as reactant and 2HO ( l )  as product. 
+Oxidation:2+ 3+{Cr (aq) Cr (aq) e }  4 o u   32{Cr /Cr }Eq  
+Reduction:   +
+22Og + 4 Ha q + 4 e 2 H O ( l )o      o= +1.229VE  
+           
+Net:   +2 + 3+
+22Og + 4 Ha q 4 C r ( a q ) 2 H O ( l ) + 4 C r a q o  
+o o3 2
+cell 1.653V 1.229V E {Cr / Cr } E     ; o3 2{Cr /Cr } 1.229V 1.653V 0.424VE    
+ 
+5A (M) First we write down the two half-equations, ob tain the half-cell potential for each, and 
+then calculate Ecello. From that value, we determine 'Go 
+Oxidation:   3+{Al s Al aq +3e }  2ou   o= +1.676VE  
+Reduction: 2{Br l +2e 2 Br aq }  3ou    o= +1.065VE  
+             
+Net:  3+ o
+2c ell 2A l s +3B r l 2A l a q +6B r a q =1 . 6 7 6V+1 . 0 6 5V=2 . 7 4 1V Eo  
+oo 6
+cell96, 485 C== 6 m o l  e 2 . 7 4 1 V = 1 . 5 8 7 1 0 J = 1 5 8 7 k J1mol eGn F E
+'  u u u   
+ 
+5B (M) First we write down the two half-equations, on e of which is the reduction equation from 
+the previous example. The other is the oxida tion that occurs in the standard hydrogen 
+electrode. 
+Oxidation:   +
+22H g 4H aq + 4eo  
+Reduction:   +
+22Og + 4 Ha q + 4 e 2 H O ( l )o  
+         
+Net:    22 22H g +O g 2HO l =4  i n  t h i s  r e a c t i o n . n o  
+This net reaction is simply twice the formation reaction for 2HO ( l )  and, therefore, 
+  o o 3o
+f2 cell =2 HO l =2 2 3 7 . 1  k J = 4 7 4 . 2 1 0  J=GG n F E'' u   u  ªº¬¼ 
+3o
+o o
+cell474.2 10  J
+= = 1.229V96,485C4m o lemol eGEEnF 
+ u'  
+u, as we might expect. 
+ 
+6A (M) Cu(s) will displace metal ions of a metal le ss active than copper. Silver ion is one 
+example. 
+
+=== PDF PAGE 1000 ===
+Chapter 20: Electrochemistry  
+1000 Oxidation:   2+ oCu s Cu aq + 2e =0 . 3 4 0 VEo  (from Table 20.1) 
+Reduction: +o{Ag aq + e Ag s }  2 = +0.800V Eou  
+Net:   +2 +o
+cell 2Ag aq + Cu s Cu aq + 2Ag s = 0.340V + 0.800V = +0.460V E o  
+ 
+6B (M) We determine the value for the hypo thetical reaction's cell potential. 
+Oxidation:   +{Na s Na aq + e }  2ou   o= +2.713VE  
+Reduction: 2+Mg aq +2e Mg so   o=2 . 3 5 6 VE 
+Net:   2+ +2N a s + M g a q 2N a a q  +  M g s o  o
+cell= 2.713V 2.356 V = +0.357 VE   
+The method is not feasible because another reaction occurs that has a more positive cell 
+potential, i.e., Na(s) reacts with water to form H2g and NaOH(aq): 
+Oxidation:   +{Na s Na aq + e }  2ou   o= +2.713VE  
+Reduction:  2H2O+2e-oH2(g)+2OH-(aq)  Eo=-0.828V  
+EcelloVV V =2 . 7 1 3 0 . 8 2 8 =+ 1 . 8 8 5  . 
+ 
+7A (M) The oxidation is that of SO 42 to S 2O82, the reduction is that of O 2 to H 2O.  
+ 
+Oxidation: 22 o
+42 8 {2 SO aq S O aq + 2e } 2 = 2.01V E ou   
+Reduction:   +o
+22Og + 4 Ha q + 4 e 2 H O ( l ) =+ 1 . 2 2 9VEo  
+               
+Net:    22 +
+24 2 8 2Og + 4 Ha q + 2 S O a q S O a q + 2 H O ( l )o  Eqcell = -0.78 V 
+Because the standard cell potential is negativ e, we conclude that this cell reaction is 
+nonspontaneous under standard conditions. This  would not be a feasib le method of producing 
+peroxodisulfate ion. 
+ 
+7B (M) (1) The oxidation is that of Sn2+aq to Sn4+aq; the reduction is that of O 2 to 
+H2O. 
+  O x i d a t i o n :  { S n2+aqoSn4+aq+2 e}u2 Eo=0.154 V  
+Reduction: +o
+22Og + 4 Ha q + 4 e 2 H O ( l ) = + 1 . 2 2 9 V Eo  
+          ___________    
+Net:  +2 +4 +
+2 2 Og + 4 Ha q + 2 S n a q 2 S n a q + 2 H O ( l ) oo
+cell=+ 1 . 0 7 5 VE  
+   
+  S i n c e  t h e  s t a n d a r d  c e l l  p o tential is positive, this ce ll reaction is spontaneous under 
+standard conditions. 
+ 
+ ( 2 )  The oxidation is that of Sn(s) to Sn2+aq; the reduction is still that of O 2 to H 2O. 
+  O x i d a t i o n :  { S n s oSn2+aq+2 e} u2 Eo=+ 0 . 1 3 7V 
+Reduction: +o
+22Og + 4 Ha q + 4 e 2 H O ( l ) = + 1 . 2 2 9 V Eo  
+           
+Net:  +2 +
+22Og + 4 Ha q + 2 S n s 2 S n a q + 2 H O ( l ) o  
+o
+cell=0 . 1 3 7V+ 1 . 2 2 9V=+ 1 . 3 6 6VE  
+
+=== PDF PAGE 1001 ===
+Chapter 20: Electrochemistry 
+ 1 0 0 1   T h e  s t a n d a r d  c e l l  p o t e n t i a l  f o r  t h i s  r e a c t i o n  i s  more positive than that for situation (1).  
+Thus, reaction (2) should occu r preferentially. Also, if Sn4+aq is formed, it should 
+react with Sn(s) to form Sn2+aq. 
+ O x i d a t i o n :  S n s oSn2+aq+2 eEo=+ 0 . 1 3 7 V 
+Reduction: 4+ 2+ oSn aq + 2e Sn aq = +0.154 V Eo  
+            
+Net: Sn4+aq+S n so2Sn2+aqEcello=+ 0 . 1 3 7 V+0 . 1 5 4V=+ 0 . 2 9 1 V 
+ 
+8A (M) For the reaction 2A l s+3 C u2+aqo2A l3+aq+3 C u s we know   n=6 a n d   
+EcelloV =+ 2 . 0 1 3 .  W e  c a l c u l a t e  t h e  v a l u e  o f  Keq. 
+o
+o 470 204 cell
+cell eq eq eq0.0257 6( + 2 . 0 1 3 )=l n ;    l n == =4 7 0 ;     =e =1 00.0257 0.0257nEEK K Knu 
+The huge size of the equilibrium constant in dicates that this reaction indeed will go to 
+essentially 100% to completion. 
+ 
+8B (M) We first determine the value of Ecello from the half-cell potentials. 
+Oxidation:   2+Sn s Sn aq +2eo    o–= + 0 . 1 3 7 VE  
+Reduction: 2+Pb aq +2e Pb so     o=0 . 1 2 5 VE 
+             
+Net:     2+ 2+Pb aq +Sn s Pb s +Sn aq o     o
+cell=+ 0 . 1 3 7V 0 . 1 2 5 V=+ 0 . 0 1 2 VE   
+o
+o 09 3 cell
+cell eq eq eq0.0257 2( + 0 . 0 1 2 )=l n l n == =0.93 = e  = 2.50.0257 0.0257nEEK K Knu 
+The equilibrium constant's small size (0.001 < K <1000)  indicates that  this reaction will not 
+go to completion. 
+ 
+9A (M) We first need to determine the sta ndard cell voltage and the cell reaction. 
+Oxidation:   3+{Al s Al aq + 3 e }  2ou   o=+ 1 . 6 7 6 VE  
+Reduction: 4+ 2+{Sn aq + 2 e Sn aq }  3ou     o=+ 0 . 1 5 4 VE  
+           
+Net:   4+ 3+ 2+2A l s + 3S n a q 2A l a q + 3S n a q oo
+cell=+ 1 . 6 7 6 V+0 . 1 5 4 V=+ 1 . 8 3 0 VE  
+ 
+Note that   n=6.  W e  n o w  s e t  u p  a n d  s u b s t i t u t e  i n t o  t h e  N e r n s t  e q u a t i o n .  
+Ecell=Ecello0.0592
+nlogAl3+ª¬º¼2Sn2+ª¬º¼3
+Sn4+ª¬º¼3 =+ 1 . 8 3 0 0.0592
+6log0.36 M20.54 M3
+0.086 M3
+=+ 1 . 8 3 0 V 0.0149V = +1.815V 
+ 
+9B (M) We first need to determine the sta ndard cell voltage and the cell reaction. 
+Oxidation: 2 2C l 1 . 0  M C l 1  a t m + 2 eo     o=1 . 3 5 8 VE  
+Reduction:  +2 +
+22PbO s + 4H aq + 2e Pb aq + 2H O(l)o     o=+ 1 . 4 5 5VE  
+            
+
+=== PDF PAGE 1002 ===
+Chapter 20: Electrochemistry  
+1002 Net:   +2 +
+22 2 PbO s + 4H 0.10 M + 2Cl 1.0 M Cl 1 atm + Pb 0.050 M + 2H O(l)o  
+EcelloVV V =1 . 3 5 8 + 1 . 4 5 5 = + 0 . 0 9 7        Note that n= 2. Substitute values  into the Nernst 
+equation. 
+  
+  2+
+2 o
+cell cell 42 4 2+P{Cl } Pb 1.0atm 0.050 M 0.0592 0.0592=l o g = + 0 . 0 9 7 l o g2 0.10 M 1.0 M HC l
+=+ 0 . 0 9 7V 0 . 0 8 0V=+ 0 . 0 1 7VEEnªº¬¼
+ªº ªº¬¼ ¬¼
+ 
+ 
+10A (M) The cell reaction is 3+ 2+ 2+2F e 0 . 3 5  M + C u s 2F e 0 . 2 5  M + C u 0 . 1 5  M o  with 
+  n=2 a n d  EcelloVV V =0 . 3 3 7 + 0 . 7 7 1 = 0 . 4 3 4      Next, substitute this voltage and the 
+concentrations into the Nernst equation. 
+ 
+22 2+ 2+
+o
+cell cell 223+Fe Cu 0.25 0.15 0.0592 0.0592=l o g = 0 . 4 3 4 l o g = 0 . 4 3 4 0 . 0 3 32 0.35 FeEEnªº ªº¬¼ ¬¼
+ªº¬¼ 
+cell=+ 0 . 4 6 7VE    Thus the reaction is spontaneous under standard conditions as written. 
+10B (M) The reaction is not spontane ous under standard conditions in either direction when 
+Ecell V =0 . 0 0 0 .  W e  u s e  t h e  s t a n d a r d  c e l l  p o t e n t i a l  f r o m  E x a m p l e  2 0 - 1 0 .  
+ 
+  Ecell=Ecello0.0592
+nlogAg+ª¬º¼2
+Hg2+ª¬º¼;     0.000 V = 0.054 V 0.0592
+2logAg+ª¬º¼2
+Hg2+ª¬º¼ 
+ 
+ logAg+ª¬º¼2
+Hg2+ª¬º¼=0.054 u2
+0.0592=1.82;      Ag+ª¬º¼2
+Hg2+ª¬º¼=1 018 2=0 . 0 1 5 0 
+ 
+ 
+11A (M) In this concentration cell EcelloV =0 . 0 0 0  b e c a u s e  t h e  s a m e  r e a c t i o n  o c c u r s  a t  a n o d e  a n d  
+cathode, only the concentrati ons of the ions differ. +Ag = 0.100 Mªº¬¼ in the cathode 
+compartment. The anode compartment cont ains a saturated solution of AgCl(aq). 
+ 
+Kssp Ag Cl =1 . 8 1 0 = =10 + 2u;     10 51.8 10 1.3 10 M s u  u  
+ 
+Now we apply the Nernst equation. The cell reaction is  
+ 
+Ag+0.100 M oAg+1.3u105M  
+ 
+Ecell logM
+MV =0 . 0 0 00.0592
+11.3 10
+0.100= +0.235
+u
+ 
+ 
+11B ( D )  Because the electrodes in this cell are identical, the stan dard electrode potentials are 
+numerically equal and subt racting one from the ot her leads to the value o
+cell=0 . 0 0 0V .E   
+However, because the ion concentrations differ,   there is a potential difference between the 
+
+=== PDF PAGE 1003 ===
+Chapter 20: Electrochemistry 
+ 1 0 0 3  two half cells (non-zero nonsta ndard voltage for the cell).  2+Pb = 0.100 Mªº¬¼ in the cathode 
+compartment, while the anode compartmen t contains a satura ted solution of PbI2.  
+We use the Nernst equation (with n=2)  t o  d e t e r m i n e  Pb2+ in the saturated solution. 
+ 
+cell0.0592 M M2 0 . 0 5 6 7=+ 0 . 0 5 6 7V=0 . 0 0 0 l o g ;     l o g = = 1 . 9 220 . 1 0 0 M 0 . 1 0 0 M 0 . 0 5 9 2xxEu 
+ 
+19 2 2+
+anodeM=1 0 =0 . 0 1 2 ; P b = M=0 . 0 1 2 0 . 1 0 0 M=0 . 0 0 1 2 M ;0.100 M
+I= 2 0 . 0 0 1 2 M 0 . 0 0 2 4  Mxx
+ªº u¬¼
+ªºu ¬¼ 
+ 
+Ksp=P b2+ª¬º¼Iª¬º¼2=0 . 0 0 1 20.00242=6 . 9 u109 compared with 7.1 109u in Appendix 
+D 
+ 
+12A (M) From Table 20-1 we choose one oxidations and one reductions reaction so as to get the 
+least negative cell voltage. This will be the most likely pair of ½ -reactions to occur. 
+Oxidation:   2 2I aq I s + 2 eo     o=0 . 5 3 5 VE  
+ +
+222H O ( l ) O g +4H a q +4eo   o=1 . 2 2 9 VE  
+Reduction:  +Ka q + e K so    o=2 . 9 2 4 VE  
+ 222H O ( l )+2e H g +2O H a qo   o=0 . 8 2 8 VE  
+The least negative standard cell potential 0.535V 0.828V = 1.363V occurs when I2s is 
+produced by oxidation at the anode, and H2g is produced by reduction at the cathode. 
+ 
+12B ( M )  We obtain from Table 20-1 all the possible oxi dations and reductions and choose one of each 
+to get the least negative cell voltage. That pair is the most likely pair of half-reactions to occur. 
+ 
+Oxidation: +o
+222H O ( l ) O g +4H a q +4 e =1 . 2 2 9 VEo  
+Ag soAg+aq+eEo=0.800V  
+[We cannot further oxidize NO3aq or Ag+aq.] 
+Reduction: +oAg aq + e Ag s =+ 0 . 8 0 0 VEo  o
+222H O ( l )+2 e H g +2O H a q =0 . 8 2 8 VEo  
+Thus, we expect to form silver metal at the cathode and Ag+aq at the anode. 
+ 
+13A ( M )  The half-cell equation is Cu2+aq+2 eoCu s, indicating that two moles of 
+electrons are required for each mole of copper depo sited. Current is measured in amperes, or 
+coulombs per second. We convert the mass of co pper to coulombs of el ectrons needed for the 
+reduction and the time in hours to seconds. 
+
+=== PDF PAGE 1004 ===
+Chapter 20: Electrochemistry  
+1004  Current  12.3 gCu u1m o lC u
+63.55gCuu2m o l e
+1m o lC uu96,485 C
+1mole
+5.50 h u60 min
+1hu60 s
+1min 3.735 u104C
+1.98 u104s 1.89 amperes  
+ 
+13B ( D )  We first determine the moles of O2g produced with the ideal gas equation. 
+2 21a t m738 mm Hg 2.62 L760 mm Hgmoles O (g) 0.104 mol O0.08206 Latm26.2 273.2 Kmol K§·uu ¨¸©¹  
+u 
+Then we determine the time needed to produce this amount of O 2. 
+elapsed time mol Omol e
+mol OC
+mol es
+Ch
+sh =0 . 1 0 44
+196,485
+11
+2.131
+3600=5 . 2 32
+2uuu u
+ 
+ 
+ 
+INTEGRATIVE EXAMPLE  
+14A (D) In this problem we are asked to determine Eo for the reduction of CO 2(g) to C 3H8(g) in 
+an acidic solution.  We proceed by first determining 'Go for the reaction using tabulated 
+values for 'Gfo in Appendix D.  Next, Ecello for the reaction can be determined using 
+'Go zFEcello.  Given reaction can be separated into  reduction and oxidation.  Since we are 
+in acidic medium, the reduction half-cell poten tial can be found in Table 20.1.  Lastly, the 
+oxidation half-cell potential can be calculated using 
+Ecello Eo(reduction half-cell) Eo(oxidation half-cell). 
+ Stepwise approach 
+ First determine 'Go for the reaction using tabulated values for 'Gfo in Appendix D: 
+C3H8(g)     +     5O 2(g)     o     3CO 2(g)     +     4H 2O(l) 
+  'Gfo    -23.3 kJ/mol        0 kJ/mol        -394.4 kJ/mol     -237.1 kJ/mol 
+ 'Go 3u'Gfo(CO2(g))4u'Gfo(H2O(l))['Gfo(C3H8(g))5u'Gfo(O2(g))]
+'Go 3u(394.4) 4u(237.1) [23.3 5u0]kJ/mol
+'Go 2108kJ/mol 
+ I n  o r d e r  t o  c a l c u l a t e  Ecello for the reaction using 'Go zFEcello, z must be first determined.  
+We proceed by separating the given r eaction into oxidation and reduction: 
+ R e d u c t i o n :  5 u{O2(g)+4H+(aq)+4e- o 2H 2O(l)}     Eo=+1.229 V 
+ O x i d a t i o n :  C 3H8(g) + 6H 2O(l) o 3CO 2(g) + 20H+ + 20e-     Eo=xV 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  
+ O v e r a l l :  C 3H8(g) + 5O 2(g) o 3CO 2(g) + 4H 2O(l)      Eo=+1.229 V-xV 
+ S i n c e  z = 2 0 ,  Ecello can now be calculated using 'Go zFEcello: 
+
+=== PDF PAGE 1005 ===
+Chapter 20: Electrochemistry 
+ 1 0 0 5   'Go zFEcello
+2108 u1000J/mol  20mol e-u96485C
+1mol e-uEcello
+Ecello 2108 u1000
+20u96485V 1.092 V 
+ F i n a l l y , Eo(reduction half-cell) can be calculated using 
+Ecello Eo(reduction half-cell) Eo(oxidation half-cell): 
+ 1 . 0 9 2  V  =  1 . 2 2 9  V  –  Eo(oxidation half-cell)  V 
+ Eo(oxidation half-cell) =1.229 V – 1.092 V = 0.137 V 
+ T h e r e f o r e ,  Eo for the reduction of CO 2(g) to C 3H8(g) in an acidic medium is 0.137 V. 
+ Conversion pathway approach: 
+ Reduction: 5 u{O2(g)+4H+(aq)+4e- o 2H 2O(l)}     Eo=+1.229 V 
+ O x i d a t i o n :  C 3H8(g) + 6H 2O(l) o 3CO 2(g) + 20H+ + 20e-     Eo=x V 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  
+ O v e r a l l :       C 3H8(g)      +      5O 2(g)      o      3CO 2(g)    +    4H 2O(l)      Eo=+1.229 V-x V 
+ 'Gfo       -23.3 kJ/mol        0 kJ/mol             -394.4 kJ/mol  -237.1 kJ/mol 
+ 'Go 3u'Gfo(CO2(g))4u'Gfo(H2O(l))['Gfo(C3H8(g))5u'Gfo(O2(g))]
+'Go 3u(394.4) 4u(237.1) [23.3 5u0]kJ/mol
+'Go 2108kJ/mol 
+ 'Go zFEcello
+2108 u1000J/mol  20mol e-u96485C
+1mol e-uEcello
+Ecello 2108 u1000
+20u96485V 1.092 V 
+ 1 . 0 9 2  V  =  1 . 2 2 9  V  –  Eo(oxidation half-cell)  V 
+ Eo(oxidation half-cell) =1.229 V – 1.092 V = 0.137 V 
+ 
+14B (D)  This is a multi component problem dealing with a flow battery in which oxidation 
+occurs at an aluminum anode and reduction at a carbon-air cathode.  Al3+ produced at the 
+anode is complexed with OH- anions from NaOH(aq) to form [Al(OH) 4]-.   
+ Stepwise approach: 
+ P a r t  ( a ) :  The flow battery consists of aluminum anode where oxidation occurs and the formed 
+Al3+ cations are complexes with OH- anions to form [Al(OH) 4]-.  The plausible half-reaction 
+for the oxidation is: 
+ O x i d a t i o n :  A l ( s )  +  4 O H-(aq) o [Al(OH) 4]- + 3e- 
+ T h e  c a t h o d e ,  o n  t h e  o t h e r  h a n d  c o n s i s t s  o f  c a r b o n  and air.  The plausible half-reaction for the 
+reduction involves the conversion of O 2 and water to form OH- anions (basic medium): 
+ R e d u c t i o n :  O 2(g) + 2H 2O(l) + 4e- o 4OH-(aq) 
+ C o m b i n i n g  t h e  o x i d a t i o n  a n d  r e d u c t i o n  h a l f -reactions we obtain ove rall reaction for the 
+process: 
+ O x i d a t i o n :  { A l ( s )  +  4 O H-(aq) o [Al(OH) 4]- + 3e-}u4 
+
+=== PDF PAGE 1006 ===
+Chapter 20: Electrochemistry  
+1006  Reduction: {O 2(g) + 2H 2O(l) + 4e- o 4OH-(aq)} u3 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  
+ Overall: 4Al(s) + 4OH-(aq) +3O 2(g) + 6H 2O(l)o 4[Al(OH) 4]-(aq) 
+ P a r t ( b ) :  In order to find E o for the reduction, use the known value for Ecelloas well as Eo for 
+the reduction half-reaction from Table 20.1: 
+ Ecello Eo(reduction half-cell) Eo(oxidation half-cell)
+Ecello 0.401 VEo(oxidation half-cell)  2.73V
+Eo(oxidation half-cell)  0.401 V2.73V 2.329 V 
+ P a r t  ( c ) :  From the given value for Ecello (+2.73V) first calculate 'Gousing 'Go zFEcello 
+(notice that z=12 from part (a) above): 
+ 'Go zFEcello 12mol e-u96485C
+1mol e-u2.73V
+'Go 3161kJ/mol 
+ G i v e n  t h e  o v e r a l l  r e action (part (a)) and 'Gfo for OH-(aq) anions and H 2O(l), we can 
+calculate the Gibbs energy of form ation of the aluminate ion, [Al(OH) 4]-: 
+ O v e r a l l  r e a c t i o n :         4 A l ( s )    +    4 O H-(aq)   +  3O 2(g)   +   6H 2O(l) o  4[Al(OH) 4]-(aq) 
+   'Gfo     0 kJ/mol       -157 kJ/mol     0 kJ/mol    -237.2 kJ/mol       x 
+ 'Go 4ux[4u04u(157) 3u06u(237.2)kJ/mol  3161kJ/mol
+4x 3161 2051.2  5212.2kJ/molx 1303kJ/mol 
+ T h e r e f o r e ,  'Gfo([Al(OH)4]) 1303kJ/mol  
+ P a r t ( d ) :   First calculate the numbe r of moles of electrons: 
+ number of mol e current( C/s)utime(s) u1mol e-
+96485 C
+number of mol e 4.00hu60 min
+1hu60s
+1minu10.0C
+su1mol e-
+96485 C
+number of mol e 1.49mol e- 
+ Now, use the oxidation half-reaction to determine the mass of Al(s) consumed: 
+ mass (Al) 1.49mol e-u1mol Al
+3mol e-u26.98g Al
+1mol Al 13.4g 
+ Conversion pathway approach: 
+ P a r t  ( a ) :  
+ O x i d a t i o n :  { A l ( s )  +  4 O H-(aq) o [Al(OH) 4]- + 3e-}u4 
+ Reduction: {O 2(g) + 2H 2O(l) + 4e- o 4OH-(aq)} u3 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  
+ O v e r a l l :  4 A l ( s )  +  4 O H-(aq) +3O 2(g) + 6H 2O(l)o 4[Al(OH) 4]-(aq) 
+ P a r t  ( b ) :  
+
+=== PDF PAGE 1007 ===
+Chapter 20: Electrochemistry 
+ 1 0 0 7   Ecello Eo(reduction half-cell) Eo(oxidation half-cell)
+Ecello 0.401 VEo(oxidation half-cell)  2.73V
+Eo(oxidation half-cell)  0.401 V2.73V 2.329 V 
+ P a r t  ( c ) :  
+ 'Go zFEcello 12mol e-u96485C
+1mol e-u2.73V
+'Go 3161kJ/mol 
+ O v e r a l l  r e a c t i o n :         4 A l ( s )    +    4 O H-(aq)   +  3O 2(g)   +   6H 2O(l) o  4[Al(OH) 4]-(aq) 
+   'Gfo     0 kJ/mol       -157 kJ/mol     0 kJ/mol    -237.2 kJ/mol       x 
+ 'Go 4ux[4u04u(157) 3u06u(237.2)kJ/mol  3161kJ/mol
+4x 3161 2051.2  5212.2kJ/mol
+x 'Gfo([Al(OH)4]) 1303kJ/mol 
+ P a r t  ( d ) :  
+ number of mol e current( C/s)utime(s) u1mol e-
+96485 C
+number of mol e 4.00hu60 min
+1hu60s
+1minu10.0C
+su1mol e-
+96485 C
+number of mol e 1.49mol e- 
+ mass (Al) 1.49mol e-u1mol Al
+3mol e-u26.98g Al
+1mol Al 13.4g 
+ 
+ 
+EXERCISES  
+ 
+Standard Electrode Potential 
+ 
+1. (E) (a) If the metal dissolves in HNO3, it has a reduction potential that is smaller than 
+  ^`o
+3NO aq /NO g = 0.956 VE. If it also does not diss olve in HCl, it has a 
+reduction potential that is larger than ^`o+
+2 Ha q / Hg= 0 . 0 0 0 VE . If it displaces 
+Ag+aq from solution, then it has a reduction potential that is smaller than 
+  ^`o+Ag aq /Ag s = 0.800 VE . But if it does not displace Cu2+aq from solution, 
+then its reduction potential is larger than   
+    ^`o2 + oCu aq /Cu s = 0.340V  Thus, 0.340 V 0.800VEE   
+ 
+(b) If the metal dissolves in HCl, it has a reduction potential that is smaller than 
+  ^`o+
+2 Ha q / Hg= 0 . 0 0 0 VE . If it does not displace Zn2+aq from solution, its 
+reduction potential is larger than ^`o2 +Zn aq /Zn s = 0.763 VE . If it also does not 
+displace Fe2+aq from solution, its reduction potential is larger than  
+
+=== PDF PAGE 1008 ===
+Chapter 20: Electrochemistry  
+1008    ^`o2 +Fe aq /Fe s = 0.440 VE .    0.440 0.000 VVoE  
+ 
+2. (E) We would place a strip of solid  indium metal into each of the metal ion solutions and see 
+if the dissolved metal plates out on the indium stri p.  Similarly, strips of all the other metals 
+would be immersed in a solution of In3+ to see if indium metal pl ates out.  Eventually, we 
+will find one metal whose ions are displaced by indium and another metal that displaces 
+indium from solution, which are adjacent to  each other in Table 20-1.  The standard 
+electrode potential for the In/In3+(aq) pair will lie between the standard reduction potentials 
+for these two metals.  This technique will work only if indium metal does not react with 
+water, that is, if the standard reduction potential of In3+aq/I n s is greater than about 
+1.8 V. The inaccuracy inherent in this technique is due to overpotentials, which can be as 
+much as 0.200 V. Its imprecision is limited by the closeness of the reduction potentials for 
+the two bracketing metals 
+ 
+3. ( M )  We separate the given equation into its two half-equations. One of them is the reduction 
+of nitrate ion in acidic solution, whose standard  half-cell potential we re trieve from Table 20-1 
+and use to solve the problem. 
+ 
+Oxidation: 2
+4 {Pt(s) 4Cl (aq) [PtCl ] (aq) 2 e } 3 o u ;       o2
+4 {[PtCl ] (aq)/Pt(s)}E  
+Reduction:  +
+32 {NO aq +4H aq +3e NO g +2H O(l)} 2 ou ; o=+ 0 . 9 5 6VE  
+Net: 3Pt s +2N O3aq+8H+aq+12Claqo3P t C l4>@2aq+2N O g +6H2Ol 
+oo 2
+cell 4 0.201V 0.956 V {[PtCl ] (aq)/Pt(s)} EE    
+o2
+4 {[PtCl ] (aq)/Pt(s)} 0.956V 0.201V 0.755VE    
+ 
+4. (M) In this problem, we are dealing with the el ectrochemical reaction in volving the oxidation 
+of Na(in Hg) to Na+(aq) and the reduction of Cl 2(s) to Cl-(aq). Given that Ecello 3.20V, we 
+are asked to find Eofor the reduction of Na+ to Na(in Hg).  We proceed by separating the 
+given equation into its two half-equations. One of them is the reduction of Cl (g)2 to Cl (aq) 
+whose standard half-cell potenti al we obtain from Table 20-1 a nd use to solve the problem. 
+ Stepwise approach: 
+ Separate the given equation into two half-equations: 
+ O x i d a t i o n : { N a ( i n H g ) N a ( a q ) e }   2o u   { N a ( a q ) / N a ( i n H g ) } ED 
+Reduction:2Cl (g) 2e 2Cl (aq)o      1 . 3 5 8 V E D 
+Net:2 2Na(in Hg) Cl (g) 2 Na (aq) 2Cl (aq)o     cell 3.20 V E  
+Use Ecello Eo(reduction half-cell) Eo(oxidation half-cell) to solve for 
+Eo(oxidation half-cell) : 
+  Ecello 3.20 V=+1.385 V Eo{Na(aq) / Na(in Hg)}  
+{Na (aq) / Na(in Hg)} 1.358 V 3.20 V 1.84 VE   D 
+Conversion pathway approach: 
+ O x i d a t i o n : { N a ( i n H g ) N a ( a q ) e }   2o u   { N a ( a q ) / N a ( i n H g ) } ED 
+
+=== PDF PAGE 1009 ===
+Chapter 20: Electrochemistry 
+ 1 0 0 9  Reduction:2Cl (g) 2e 2Cl (aq)o      1 . 3 5 8 V E D 
+Net:2 2Na(in Hg) Cl (g) 2 Na (aq) 2Cl (aq)o     cell 3.20 V E  
+3.20V 1.358 Eo{Na(aq)/Na(in Hg)}
+Eo{Na(aq)/Na(in Hg)}  1.358 V3.20V 1.84V 
+ 
+5. ( M )  We divide the net cell equa tion into two half-equations. 
+ 
+Oxidation:   4 {Al s + 4 OH aq [Al(OH) ] aq + 3 e } 4 ou ; o
+4 {[Al(OH) ] (aq)/Al(s)}E  
+Reduction: 22{O g + 2 H O(l) + 4e 4 OH aq }  3ou ;          o=+ 0 . 4 0 1 VE  
+Net:  22 4 4A l s  + 3O g  +  6H O ( l )  +  4O H a q 4 [ A l ( O H ) ] a qo  o
+cell=2 . 7 1 V E  
+oo
+cell 4=2.71V=+0.401V {[Al(OH) ] (aq)/Al(s)}EE  
+o
+4 {[Al(OH) ] (aq)/Al(s)} = 0.401V 2.71V = 2.31VE  
+ 
+6. (M) We divide the net cell equa tion into two half-equations. 
+ 
+Oxidation: +
+42 2CH g + 2H O(l) CO g +8H aq +8eo         ^`o
+24CO g /CH gE  
+Reduction:   +
+22{O g + 4H aq + 4e 2H O(l)}  2ou          o=+ 1 . 2 2 9VE  
+Net:  42 2 2CH g  + 2 O g CO g  + 2H O(l) o    o
+cell=1.06VE   ^` ^`oo
+cell 2 4
+o
+241.06V 1.229V CO g /CH g
+CO g /CH g 1.229V 1.06V 0.17 VEE
+E   
+    
+ 
+7. (M) (a)  We need standard reduction potentials for the given half-reactions from Table 10.1: 
+ A g+(aq)+e- oAg(s) E o=+0.800 V 
+ Z n2+(aq)+2e- oZn(s) E o=-0.763 V 
+ C u2+(aq)+2e- oCu(s) E o=+0.340 V 
+ A l3+(aq)+3e- oAl(s) E o=-1.676 V 
+ Therefore, the largest positive cell potential will be obtained for the reaction involving the 
+oxidation of Al(s) to Al3+(aq) and the reduction of Ag+(aq) to Ag(s): 
+ Al(s) + 3Ag+(aq) o 3Ag(s)+Al3+(aq) Ecello 1.676 V0.800 V 2.476 V 
+ A g  i s  t h e  a n o d e  a n d  A l  i s  t h e  c a t h o d e .  
+ (b)  Reverse to the above, the cell with the smalle st positive cell potential will be obtained for 
+the reaction involving the oxidation of Zn(s) to Zn2+(aq) (anode) and the reduction of Cu+2(aq) 
+to Cu(s) (cathode): 
+ Zn(s) + Cu2+(aq) o Cu(s)+Zn2+(aq) Ecello 0.763 V0.340 V 1.103 V 
+ 
+8. (M) (a) The largest positive cell potential w ill be obtained for the reaction: 
+ Zn(s) + 4NH 3(aq) + 2VO2+(aq) + 4H+(aq) o [Zn(NH 3)4]2+(aq)+2V3+(aq)+2H 2O(l) 
+ Ecello Eo(reduction half-cell) Eo(oxidation half-cell)  0.340 V(1.015 V) 1.355 V 
+ Z n  i s  t h e  a n o d e  a n d  V O2+ is the cathode. 
+
+=== PDF PAGE 1010 ===
+Chapter 20: Electrochemistry  
+1010  (b) Reverse to the above, the cell with the smallest  positive cell potential will be obtained for the 
+reaction involving the oxidation of Ti2+(aq) to Ti3+(aq) (anode) and the reduction of Sn+2(aq) to 
+Sn(s) (cathode): 
+ 2Ti2+(aq) + Sn2+(aq) o 2Ti3+(aq)+Sn(aq) 
+ Ecello Eo(reduction half-cell) Eo(oxidation half-cell)  0.14V(0.37V) 0.23V 
+ 
+Predicting Oxidation-Reduction Reactions 
+ 
+9. (E)  (a)  Ni2+, (b) Cd. 
+ 
+10. (E)   (a) potassium, (b) barium. 
+ 
+11. (M) (a) Oxidation: 2+Sn s Sn aq + 2eo   o=+ 0 . 1 3 7VE  
+  R e d u c t i o n :  2+Pb aq +2e Pb so    o=0 . 1 2 5 VE  
+             _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  
+  N e t :    2+ 2+Sn s + Pb aq Sn aq + Pb s o    o
+cell= +0.012 V SpontaneousE  
+ 
+ ( b )  Oxidation: 2 2I aq I s + 2eo    o=0 . 5 3 5 VE  
+  R e d u c t i o n :  2+Cu aq +2e Cu so     o= +0.340 VE  
+           
+  N e t :   2+
+2 2I aq  + Cu aq Cu s  + I so    o
+cell=0 . 1 9 5 VN o n s p o n t a n e o u sE   
+ 
+(c) Oxidation: +
+22{2H O(l) O g + 4H aq + 4 e }  3ou               o=1 . 2 2 9 VE  
+ R e d u c t i o n :  +
+32 {NO (aq) + 4H aq +3e NO g +2H O(l)}  4 ou      o = +0.956 VE  
+                
+  N e t :  +
+32 2 4N O a q  + 4H a q 3O g  +  4N O g  +  2H O ( l )o     o
+cell=0 . 2 7 3 VE   
+  N o n s p o n t a n e o u s  
+ 
+ ( d )  Oxidation: 2 Cl aq  +  2OH aq OCl aq  + H O(l) + 2e  o  o=0 . 8 9 0 VE  
+Reduction: 32 2 Og  +  H O ( l )  +  2  e Og  +  2 O Ha qo     o = +1.246 VE  
+Net:   32 Cl aq  +  O g OCl aq  +  O go (basic solution)   o
+cell = +0.356VE  
+Spontaneous 
+ 
+12. (M) It is more difficult to oxidize Hg(l) to Hg22+0.797V than it is to reduce H+ to H2 
+(0.000 V); Hg(l) will not dissolve in 1 M HCl. The standard reduction of  nitrate ion to NO(g) 
+in acidic solution is strongly spontaneous in ac idic media ( +0.956V ). This can help overcome 
+the reluctance of Hg to be oxidized. Hg(l ) will react with and dissolve in the HNO3aq. 
+ 
+13. (M) (a) Oxidation: 2+Mg s Mg aq  + 2 eo   o= +2.356 VE  
+Reduction: 2+Pb aq + 2 e Pb so     o= 0.125VE  
+            
+ N e t :    2+ 2+Mg s  + Pb aq Mg aq  + Pb s o     o
+cell=  +2.231VE  
+
+=== PDF PAGE 1011 ===
+Chapter 20: Electrochemistry 
+ 1 0 1 1   This reaction occurs to a significant extent. 
+ 
+(b) Oxidation: 2+Sn s Sn aq + 2eo    o=+ 0 . 1 3 7VE  
+Reduction: +
+2 2H a q H g o       o= 0.000VE  
+             
+Net:   +2 +
+2 Sn s  +  2H aq Sn aq  +  H g o     o
+cell=+ 0 . 1 3 7VE  
+This reaction will occur to a significant extent. 
+ 
+ 
+(c) Oxidation: 2+ 4+Sn aq Sn aq + 2eo      o=0 . 1 5 4 VE  
+Reduction: 2 +
+42 2SO aq + 4H aq +2e SO g +2H O(l) o     o=+0 . 1 7VE  
+               
+Net:  2 2+ + 4+
+42 2 Sn aq +SO aq + 4H aq Sn aq +SO g + 2H O(l)o    o
+cell= + 0.02VE  
+This reaction will occur, but not to a large extent. 
+ 
+(d) Oxidation: +
+22 2{H O aq O g + 2 H aq + 2e }  5ou      o=0 . 6 9 5 VE  
+Reduction: - +- 2 +
+42 {MnO aq +8H aq +5e Mn aq +4H O(l)}  2uo        o=+ 1 . 5 1 VE  
+Net: - +2 +
+22 4 2 2 5H O aq +2MnO aq +6H aq 5O g +2Mn aq +8H O(l) oo
+cell = +0.82VE  
+This reaction will occur to a significant extent. 
+ 
+(e) Oxidation: o
+2 2B r a q B r a q +2e =1 . 0 6 5 VEo  
+Reduction: o
+2I s + 2e 2 I aq  = +0.535VEo  
+            
+Net:   o
+22 c e l l 2B r a q +I s B r a q +2I a q = 0 . 5 3 0V Eo  
+This reaction will not occur to a significant extent. 
+ 
+14. (M) In this problem we are asked to determine whether the electrochem ical reaction between 
+Co(s) and Ni2+(aq) to yield Co2+(aq) + Ni(s) will proceed to  completion based on the known 
+Ecellovalue.  This question can be answered by si mply determining the equilibrium constant. 
+ Stepwise approach 
+ First comment on the value of  Ecello: 
+ The relatively small positive value of Ecello for the reaction indicates that the reaction will 
+proceed in the forward direction, but will stop short of completion. A much larger positive 
+value of Ecello would be necessary before we woul d conclude that the reaction goes to 
+completion.  
+ C a l c u l a t e  t h e  e q u i l i b r i u m  c onstant for the reaction using Ecello 0.0257
+nlnKeq: 
+ 
+  Ecello 0.0257
+nlnKeqln Keq nuEcello
+0.0257 2u0.02
+0.0257 2  
+ 2
+eqe7 K   
+ C o m m e n t  o n  t h e  v a l u e  o f  K eq: 
+
+=== PDF PAGE 1012 ===
+Chapter 20: Electrochemistry  
+1012  K eq is small. A value of 1000 or more is needed  before we can descri be the reaction as one 
+that goes to completion. 
+ Conversion pathway approach: 
+ 
+  Ecello 0.0257
+nlnKeq
+ln Keq nuEcello
+0.0257
+Keq enuEcello
+00 2 5 7 e2u00 2
+00 2 5 7 7 
+ K eq is too small. The reacti on does not go to completion.  
+15. ( M )  If Ecello is positive, the reaction will occur. For the reduction of Cr 2O72 to Cr3+aq:  
+ 2 +3 + o
+27 2Cr O aq +14H aq + 6e 2Cr aq + 7 H O(l) = +1.33V E o  
+If the oxidation has Eo smaller (more negative) than 1.33V , the oxidation will not occur.  
+ 
+(a)  2+ 4+ oSn aq Sn aq +2e =0 . 1 5 4 VEo  
+  H e n c e ,  S n2+aq can be oxidized to Sn4+aq by Cr2O72aq. 
+ 
+(b) +o
+22 3I s + 6H O(l) 2IO aq +12H aq +10e =1 . 2 0 VE o  
+  I2s can be oxidized to IO3aq by Cr2O72aq. 
+ 
+(c) 2+ + o
+24 Mn aq + 4H O(l) MnO aq +8H aq +5e =1 . 5 1 VE o  
+  Mn2+aq cannot be oxidized to MnO4aq by Cr2O72aq. 
+ 
+16. (M) In order to reduce Eu3+ to Eu2+, a stronger reducing agent than Eu2+ is required.  From 
+the list given, Al(s) and H 2C2O4(aq) are stronger reducing agen ts.  This is determined by 
+looking at the reduction pot entials (-1.676 V for Al3+/Al(s) and -0.49 V for CO 2, 
+H+/H2C2O4(aq)), are more negative than -0.43 V).   Co(s), H 2O2 and Ag(s) are not strong 
+enough reducing agents for this process.  A qui ck look at their reduc tion potentials shows 
+that they all have more positive redu ction potentials than that for Eu3+ to Eu2+ (-0.277 V for 
+Co2+/Co(s), +0.695 V for O 2, H+/H2O2(aq) and +0.800 V for Ag+/Ag(s). 
+ 
+17. (M) (a) Oxidation: +{Ag s Ag aq + e }  3ou        o=0 . 8 0 0 VE  
+Reduction: +
+32NO aq + 4 H aq + 3 e NO g + 2 H O(l) o       o=+ 0 . 9 5 6VE  
+               
+Net: ++
+32 3Ag s +NO aq +4H aq 3Ag aq +NO g +2H O(l)o   o
+cell=+ 0 . 1 5 6VE  
+Ag(s) reacts with HNO3aq to form a solution of AgNO3aq. 
+(b) Oxidation: 2+Zn s Zn aq + 2 eo   o=+ 0 . 7 6 3 VE  
+Reduction: +
+2 2H a q + 2e H go    o=0 . 0 0 0VE  
+Net:   +2 +
+2 Zn s + 2 H aq Zn aq + H g o    o
+cell=+ 0 . 7 6 3 VE  
+Zn(s) reacts with HI(aq) to form a solution of 2ZnI aq . 
+ 
+
+=== PDF PAGE 1013 ===
+Chapter 20: Electrochemistry 
+ 1 0 1 3  (c) Oxidation: 3+Au s Au aq + 3eo                   o=1 . 5 2 VE  
+Reduction: +
+32NO aq + 4 H aq + 3e NO g + 2H O(l) o                o=+ 0 . 9 5 6VE  
+Net:   +3 +
+32 Au s + NO aq + 4 H aq Au aq + NO g + 2 H O(l)o ;o
+cell=0 . 5 6 VE  
+Au(s) does not react with 1.00 M HNO3aq. 
+ 
+18. (M) In each case, we determine whether EcellR is greater than zero; if so, the reaction will 
+occur. 
+(a) Oxidation: 2+Fe s Fe aq + 2eo         o0.440 V E  
+Reduction: 2+Zn aq + 2e Zn so  o=0 . 7 6 3 VE  
+Net:   2+ 2+Fe s + Zn aq Fe aq + Zn s o  o
+cell 0.323V E   
+The reaction is not spontaneous under standard conditions as written 
+ 
+(b) Oxidation: 2 {2Cl aq Cl g + 2 e }  5ou           o=1 . 3 5 8 VE  
+Reduction: +2 +
+42 {MnO aq +8 H aq +5e Mn aq +4 H O(l)}×2 o ;o=1 . 5 1VE  
+Net:  +2 +
+42 2 10Cl aq + 2 MnO aq +16 H aq 5Cl g + 2 Mn aq +8H O(l) o  
+o
+cell=+ 0 . 1 5 VE . The reaction is spontaneous under standard conditions as written. 
+ 
+(c) Oxidation: +{Ag s Ag aq + e }  2ou          o=0 . 8 0 0 VE  
+Reduction: +
+2 2H a q +2e H go   o=+ 0 . 0 0 0VE  
+Net:   ++
+2 2A g s +2H a q 2A g a q +H g o   o
+cell=0 . 8 0 0 VE  
+The reaction is not spontaneous under standard conditions as written. 
+ 
+(d) Oxidation: 2 {2 Cl aq Cl g + 2 e }  2ou          o=1 . 3 5 8 VE  
+Reduction: +
+22Og + 4 Ha q + 4 e 2 H O ( l )o   o=+ 1 . 2 2 9VE  
+            
+Net:  +
+22 2 4Cl aq +4H aq +O g 2Cl g +2H O(l)o  o
+cell=0 . 1 2 9 VE  
+The reaction is not spontaneous under standard conditions as written. 
+ 
+Galvanic Cells 
+ 
+19. (M) (a) Oxidation: 3+{Al s Al aq + 3e }  2ou    o=+ 1 . 6 7 6VE  
+  R e d u c t i o n :  2+{Sn aq + 2e Sn s }  3ou       o=0 . 1 3 7 VE  
+             
+  N e t :   2+ 3+2A l s + 3S n a q 2A l a q + 3S n s o     o
+cell=+1 . 5 3 9VE  
+ ( b )  Oxidation: 2+ 3+Fe aq Fe aq + eo     o=0 . 7 7 1 VE  
+  R e d u c t i o n :  +Ag aq + e Ag so        o=+ 0 . 8 0 0VE  
+             
+  N e t :   2+ + 3+Fe aq + Ag aq Fe aq +Ag s o      o
+cell = +0.029 VE  
+ (c) Oxidation: {Cr(s) oCr2+(aq)+2e-}u3    Eo=0.90V  
+
+=== PDF PAGE 1014 ===
+Chapter 20: Electrochemistry  
+1014  Reduction: {Au3+(aq)+3e-oAu(s)} u2     Eo=1 . 5 2 V        
+           ____________________  
+  N e t :   3 C r ( s ) + 2 A u3+(aq)o3Cr2+(aq)+2Au(s)    Ecello=2 . 4 2 V  
+ (d) Oxidation: 2H2O(l)oO2(g)+4H+(aq)+4e-  Eo=1.229V  
+ Reduction: O2(g)+2H2O(l)+4e-o4OH-(aq)     Eo=0.401V    
+            
+  Net:  H2O(l)oH+(aq)+OH-(aq)    Ecello=0.828V  
+ 
+ 
+20. (M) In this problem we are asked to write th e half-reactions, balan ced chemical equation 
+and determine Ecello for a series of electrochemical cells. 
+ ( a )  Stepwise approach  
+  First write the oxidation and re duction half-reactions and find Eo values from 
+Appendix D: 
+  Oxidation: Cu(s) oCu2+(aq)+2e-     Eo=0.340 V  
+  R e d u c t i o n :   Cu+(aq)+e-oCu(s)      Eo=+ 0 . 5 2 0V 
+  In order to obtain bala nced net equation, the reduc tion half-reaction needs to be 
+multiplied by 2: 
+   2Cu+(aq)+2e-o2Cu(s)  
+  A d d  t h e  t w o  h a l f - r e a c t i o n s  to obtain the net reaction: 
+  C u ( s ) oCu2+(aq)+2e- 
+   2Cu+(aq)+2e-o2Cu(s)  
+             
+  N e t :    2Cu+(aq)oCu2+(aq)+Cu(s)         
+  D e t e r m i n e  Ecello: 
+    Ecello =-0.340V+0.520V= +0.18 V  
+  Conversion pathway approach: 
+  O x i d a t i o n :  C u ( s ) oCu2+(aq)+2e-     Eo=0.340 V  
+  R e d u c t i o n :   {Cu+(aq)+e-oCu(s)} u2    Eo=+ 0 . 5 2 0V 
+               
+  N e t :    2Cu+(aq)oCu2+(aq)+Cu(s)     Ecello 0.18V  
+  F o l l o w  t h e  s a m e  m e t h o d o l o g y  f o r parts (b), (c), and (d). 
+ ( b )  Oxidation:  Ag(s)+I-(aq)oAgI(s)+e-    Eo=0.152 V  
+  R e d u c t i o n :   AgCl(s)+e-oAg(s)+Cl-(aq)     Eo=0.2223 V  
+             
+  N e t :    AgCl(s)+I-(aq)oAgI(s)+Cl-(aq)       Ecello = +0.3743 V  
+ ( c )  Oxidation:  {Ce3+(aq)oCe4+(aq)+e-}u2      Eo=1.76V  
+  R e d u c t i o n :   I2(s)+2e-o2I-(aq)        Eo=+ 0 . 5 3 5V 
+             
+  N e t :    2Ce3+(aq)+I2(s)o2Ce4+(aq)+2I-(aq)     Ecello = -1.225 V  
+
+=== PDF PAGE 1015 ===
+Chapter 20: Electrochemistry 
+ 1 0 1 5    
+ 
+ ( d )  Oxidation:  {U(s) oU3+(aq)+3e-}u2       Eo=1.66V  
+  R e d u c t i o n :  { V2+(aq)+2e-oV(s)} u3          Eo=1.13V  
+             
+  N e t :    2U(s)+3V2+(aq)o2U3+(aq)+3V(s)      Ecello = +0.53 V  
+ 
+21. (M) In each case, we determine whether EcellR is greater than zero; if so, the reaction will 
+occur. 
+(a) Oxidation: 2H( g ) 2 H + 2 e a qo         o0.000 V E  
+Reduction: 2F( g ) +2 e 2 F a qo    o=2 . 8 6 6VE  
+Net: +-
+22H( g )  +  F ( g )   2  H( a q )  +  2  F ( a q ) o  o
+cell 2.866 V E   
+The reaction is spontaneous under standard conditions as written 
+ 
+(b) Oxidation: 2+Cu(s)  Cu (aq) + 2eo   o=0 . 3 4 0 VE  
+Reduction: 2+Ba (aq) + 2e  Ba(s)o;  Eo=2.92V  
+Net: 2+ 2+Cu(s) + Ba (aq) Cu (aq) + Ba(s) o    o
+cell=3 . 2 6  VE .  
+The reaction is not spontaneous under standard conditions as written. 
+ 
+(c) Oxidation: ^`2+ 3+Fe (aq) Fe (aq) + e 2ou         o=0 . 7 7 1  VE  
+Reduction: 2+Fe (aq) +  2e  Fe(s)o   o=0 . 4 4 0  VE   
+Net: 2+ 3+3 Fe (aq)  Fe(s) + 2 Fe (aq) o    o
+cell=1 . 2 1 1  VE   
+The reaction is not spontaneous as written. 
+ 
+(d) Oxidation: -
+22 2 Hg(l) + 2 Cl   Hg Cl (s) + 2 eo   o=( 0 . 2 6 7 6 ) VE  
+Reduction: -
+22 2 2 HgCl (aq) + 2 e  Hg Cl (s) + 2 Cl (aq)o  o=+ 0 . 6 3 VE                 
+Net: 22 2 2 Hg(l) + 2 HgCl (aq)  2 Hg Cl (s) o    o
+cell=0 . 3 6 VE  
+(divide by 2 to get 22 2 Hg(l) + HgCl (aq)  Hg Cl (s) o ) 
+The reaction is spontaneous under standard conditions as written. 
+
+=== PDF PAGE 1016 ===
+
+
+=== PDF PAGE 1017 ===
+
+
+=== PDF PAGE 1018 ===
+Chapter 20: Electrochemistry  
+1018 24. (M) (a) Fe s¨Fe2+aq¨¨ClaqCl2g¨Pt s 
+  O x i d a t i o n :  2+Fe s Fe aq + 2eo    o=+ 0 . 4 4 0VE  
+Reduction: 2Cl g + 2e 2Cl aqo      o=+ 1 . 3 5 8 VE  
+  N e t :   2+
+2 Fe s + Cl g Fe aq + 2Cl aqo     o
+cell=+ 1 . 7 9 8  VE  
+(b)     2+Zn s Zn aq Ag aq Ag s¨¨ ¨¨  
+ Oxidation: 2+Zn s Zn aq + 2 eo    o=+ 0 . 7 6 3 VE  
+Reduction: +{Ag aq + e Ag s }  2ou     o=+ 0 . 8 0 0VE  
+ N e t :    +2 +Zn s + 2 Ag aq Zn aq + 2 Ag s o     o
+cell=+ 1 . 5 6 3 VE  
+(c) Pt s¨Cu+aq,Cu2+aq¨¨Cu+aq¨Cu s 
+ O x i d a t i o n :  +2 +Cu aq Cu aq + eo    o=0 . 1 5 9 VE  
+Reduction: +Cu aq + e Cu so      o=+ 0 . 5 2 0VE  
+ N e t :   +2 +2Cu aq Cu aq +Cu s o      o
+cell=+ 0 . 3 6 1 VE  
+(d) Mg s¨Mg2+aq¨¨BraqBr2l¨Pt s 
+ O x i d a t i o n :  2+Mg s Mg aq + 2eo    o=+ 2 . 3 5 6 VE  
+Reduction: 2Br l + 2e 2 Br aqo      o=+ 1 . 0 6 5 VE  
+ N e t :   2+
+2 Mg s + Br l Mg aq + 2Br aqo               o
+cell=+ 3 . 4 2 1 VE  
+ PtFe
+Cl-salt bridgee-
+cathodeanodeCl2(g)
+Fe2+
+ 
+anode
+cathodee-
+salt bridge
+Zn2+ZnAg
+Ag+
+ 
+ 
+anodecathodee-
+salt bridge
+Cu+   Cu2+Cu+CuPt
+ 
+anode
+cathodee-
+salt bridge
+Mg2+MgPt
+Br2Br-
+ 24(a) 24(b) 
+24(c) 24(d) 
+
+=== PDF PAGE 1019 ===
+Chapter 20: Electrochemistry 
+ 1 0 1 9  'oG, o
+cellE, and K 
+ 
+25. (M) (a) Oxidation:  3+{Al s Al aq +3e }  2ou   o=+ 1 . 6 7 6VE  
+Reduction: 2+{Cu aq +2 e Cu s }  3ou       o=+ 0 . 3 3 7VE  
+           
+Net:   2+ 3+2A l s +3Cu a q 2A l a q +3Cu s o     o
+cell=+ 2 . 0 1 3 VE  
+oo
+cell
+o6 3== 6  m o l  e 9 6 , 4 8 5 C / m o l  e 2 . 0 1 3 V
+=1 . 1 6 5 1 0 J =1 . 1 6 5 1 0k JGn F E
+G' 
+'u u 
+ 
+(b) Oxidation: 2 {2I aq I s +2e }  2ou    o=0 . 5 3 5 VE  
+Reduction: +
+22Og + 4 Ha q + 4 e 2 H O ( l )o     o=+ 1 . 2 2 9 VE  
+           
+Net:   +
+22 2 4I a q +O g +4H a q 2I s +2H O ( l )o   o
+cell=+ 0 . 6 9 4 VE  
+oo 5
+cell == 4  m o l  e 9 6 , 4 8 5 C / m o l  e 0 . 6 9 4 V = 2 . 6 8 1 0 J = 2 6 8 k JGn F E'  u   
+ 
+(c) Oxidation: +{Ag s Ag aq + e }  6ou         o=0 . 8 0 0 VE  
+ R e d u c t i o n :  2 +3 +
+27 2Cr O aq +14 H aq +6 e 2 Cr aq +7 H O(l) o  o= +1.33VE  
+                
+ Net:    2 ++ 3 +
+27 2 6A g s + C rO a q + 1 4 H a q 6 A g a q + 2 C r a q + 7 HO ( l )o  
+ Ecello=0 . 8 0 0 V + 1 . 3 3 V = + 0 . 5 3 V  
+   oo 52
+cell == 6 m o l  e 9 6 , 4 8 5 C / m o l  e 0 . 5 3 V = 3 . 1 1 0 J = 3 . 1 1 0 k JGn F E'  u u  
+26. (M) In this problem we need to write the equilib rium constant expression for a set of redox 
+reactions and determine the value of K at 25 oC.  We proceed by calculating Ecello from 
+standard electrode reduction potentials (Table 20.1).  Then we use the expression 
+  'Go=nFEcello=RTlnKto calculate K. 
+ (a) 
+ Stepwise approach: 
+ D e t e r m i n e  Ecellofrom standard electrode reducti on potentials (Table 20.1): 
+  Oxidation:  Ni(s) oNi2+(aq)+2e-    Eo 0.257 V  
+Reduction:  {V3+(aq)+e-oV2+(aq)} u2       Eo 0.255 V  
+           
+Net:  Ni(s)+2V3+(aq)oNi2+(aq)+2V2+(aq)     Ecello=0.003V  
+ 
+Use the expression   'Go=nFEcello=RTlnKto calculate K: 
+
+=== PDF PAGE 1020 ===
+Chapter 20: Electrochemistry  
+1020   'Go=nFEcello=RTlnK;  
+'Go 2moleu96485C
+molu0.003 V 578.9 J
+'Go RTlnK578.9 J 8.314 JK1mol1u298.15 KlnK
+lnK 0.233 K e02 3 3 1.26
+K 1.26  Ni2+ª¬º¼V2+ª¬º¼2
+V3+ª¬º¼2 
+Conversion pathway approach: 
+ D e t e r m i n e  Ecellofrom standard electrode reducti on potentials (Table 20.1): 
+  Oxidation: Ni(s) oNi2+(aq)+2e-    Eo 0.257 V  
+Reduction:  {V3+(aq)+e-oV2+(aq)} u2        Eo 0.255 V  
+           
+Net:  Ni(s)+2V3+(aq)oNi2+(aq)+2V2+(aq)     Ecello=0.003V  
+  'Go=nFEcello=RTlnKlnKeq nFEcello
+RT nu96485 Cmol1
+8.314 JK1mol1u298.15 KEcello
+lnKeq n
+0.0257Ecello 2 mol eu0.003 V
+0.0257 0.233  
+ 
+ 
+  Keq e02 3 3 1.26  Ni2+ª¬º¼V2+ª¬º¼2
+V3+ª¬º¼2 
+Similar methodology can be used for parts (b) and (c) 
+(b) Oxidation: 2ClaqoCl2g+2e     EoV =1 . 3 5 8  
+ Reduction: +2 +
+22 MnO s + 4H aq + 2e Mn aq + 2H O(l)o     o=+ 1 . 2 3 VE  
+ N e t :    +2 + o
+22 2 cell 2C l a q + M n O s + 4H a q M n a q + C l g + 2HO ( l ) = 0 . 1 3 V Eo  
+ 2+
+2 10 1 5
+eq 1e q 24+Mn {Cl g } 2 mol e 0.13 Vln = = 10. ;   = e = 4 10 =0.0257 Cl HP
+KK
+
+ªº u ¬¼u
+ªº ªº¬¼ ¬¼ 
+(c) Oxidation: 22 4O H a q O g + 2 HO ( l ) + 4eo    o=0 . 4 0 1 VE  
+ R e d u c t i o n :  2 {OCl (aq)+H O(l)+2e Cl (aq)+2OH }  2 ou     o0.890 V E   
+                
+ N e t :  2 2OCI (aq) 2CI (aq) O (g)o         o
+cell 0.489 V E   
+ l n^`2
+2 76 1 33
+eq eq 2Cl P O (g) 4m o l  e ( 0 . 4 8 9V )76.1 e 1 100.0257 OClKK
+ªº¬¼    u  
+ªº¬¼ 
+27. ( M )  First calculate Ecellofrom standard electrode reduction pot entials (Table 20.1).  Then use 
+  'Go=nFEcello=RTlnK to determine 'Goand K. 
+
+=== PDF PAGE 1021 ===
+Chapter 20: Electrochemistry 
+ 1 0 2 1   (a) 
+ O x i d a t i o n :  { Ce3(aq)oCe4(aq)e}u5   Eo=1.61 V  
+ Reduction:  MnO4-(aq)+8H+(aq)+5e-oMn2+(aq)+4H2O(l)    Eo=+ 1 . 5 1 V  
+  N e t : M n O4-(aq)+8H+(aq)+5Ce3+(aq)oMn2+(aq)+4H2O(l)+5Ce4+(aq) Ecello 0.100 V 
+ (b) 
+  
+  'Go=nFEcello=RTlnK;  
+'Go 5u96485C
+molu(0.100 V) 48.24kJmol-1 
+ (c) 
+  
+  'Go RTlnK48.24 u1000Jmol-1 8.314JK-1mol-1u298.15K ln K
+lnK 19.46 K e19 46 3.5u109 
+  
+ (d)  Since K is very small the reaction will not go to completion. 
+ 
+28. (M) First calculate Ecellofrom standard electrode reduction pot entials (Table 20.1).  Then use 
+  'Go=nFEcello=RTlnK to determine 'Goand K. 
+ ( a )  Oxidation: Pb2+(aq)oPb4+(aq)+2e-    Eo 0.180 V 
+    Reduction:Sn4+(aq)+2e-oSn2+(aq)     Eo 0.154 V 
+                  
+    N e t : P b2+(aq)+Sn4+(aq)oPb4+(aq)+Sn2+(aq)    Ecello 0.026 V 
+ (b) 
+  'Go=nFEcello=RTlnK  'Go 2u96485C
+molu(0.026)  5017Jmol-1 
+ ( c )  
+  'Go RTlnK5017Jmol-1 8.314JK-1mol-1u298.15K ln K
+lnK 2.02 K e20 2 0.132 
+ ( d )  The value of K is small and the reaction does not go to completion.  
+ 
+29. (M) (a) A negative value of Ecello (0.0050 V ) indicates that oo
+cell =Gn F E'  is positive 
+which in turn indicates that Keq is less than one Keq1.00; 'GR T Ko
+eqln = .  
+ 
+  KeqCu Sn
+Cu Sn=2+22+
++24+  
+ 
+  Thus, when all concentrations  are the same, the ion product, Q, equals 1.00.  From the 
+negative standard cell potential, it is clear that Keq must be (slightly) less than one.  
+Therefore, all the concentrations ca nnot be 0.500 M at the same time. 
+ 
+ ( b )  In order to establish equilibrium, that is, to  have the ion product become less than 1.00, 
+and equal the equilibrium cons tant, the concentrations of  the products must decrease 
+and those of the reactants must increase. A net reaction to the left (towards the 
+reactants) will occur. 
+
+=== PDF PAGE 1022 ===
+Chapter 20: Electrochemistry  
+1022  
+30. (D) (a) First we must calculate the value of the equilibrium constant from the standard 
+cell potential. 
+  
+  Ecello=0.0257
+nlnKeq;l nKeq=nEcello
+0.0257=2m o l  eu(0.017) V
+0.0257=1.32
+Keq=e13 2=0 . 2 6 6 
+  T o  d e t e r m i n e  i f  t h e  d e s c r i b e d  s o l u t i o n  i s  p o s s i b l e ,  w e  c o m p a r e  
+  Keq with Q. Now 
+  Keq=BrO3-ª¬º¼Ce4+ª¬º¼2
+H+ª¬º¼2BrO4-ª¬º¼Ce3+ª¬º¼2. Thus, when 
+BrO4-ª¬º¼=C e4+ª¬º¼ 0.675 M , BrO3-ª¬º¼=C e3+ª¬º¼ 0.600 M  and pH=1 ( H+ª¬º¼=0.1M  
+  t h e  i o n  p r o d u c t ,  Q=0.600 u0.6752
+0.12u0.675 u0.6002=1 1 2 . 5 !0.266 = Keq. Therefore, the 
+described situation can occur 
+ 
+ ( b )  In order to establish equilibrium, that is, to  have the ion product (112.5) become equal 
+to 0.266, the equilibrium constant, the concen trations of the reactants must increase and 
+those of the products must decrease. Thus, a net reaction to the left (formation of 
+reactants) will occur. 
+ 
+31. ( M )  Cell reaction: Zn s +A g2OsoZnO s+2A g s. We assume that the cell operates at 
+298 K. 
+ 
+  oo o o o
+ff f f 2
+o
+cell=Z n O s + 2 A g s Z n s A g O s
+=3 1 8 . 3  k J / m o l + 2 0 . 0 0  k J / m o l 0 . 0 0  k J / m o l 1 1 . 2 0  k J / m o l
+=3 0 7 . 1  k J / m o l =GG G G G
+nFE'' '  '  ' ªºª º ª º ª º¬¼¬ ¼ ¬ ¼ ¬ ¼
+  
+  
+o3
+o
+cell307.1 10 J/mol== = 1 . 5 9 1 V2 mol e /mol rxn 96,485C/mol eGEnF' uu 
+ 
+32. (M) From equation (20.15) we know n=1 2 a n d  t h e  o v e r a l l  c e l l  r e a c t i o n .  F i r s t  w e  m u s t  
+compute value of 'Go. 
+oo 63
+cell96485 C== 1 2  m o l  e 2 . 7 1 V = 3 . 1 4 1 0 J = 3 . 1 4 1 0 k J1m o l  eGn F E
+'  u u  u  u  
+Then we will use this value, the balanced equation and values of 'Gfo to calculate 
+o
+f 4Al OHG'ª º¬¼. 
+     22 44A l s + 3 O g + 6 HO ( l ) + 4 O H a q 4 A l O H a qªºo¬¼ 
+>@   oo oo o o
+ff f 2 f 2 f 4=4 A l O H 4 [ A l s ] 3 [ O g ] 6 [ HO l ] 4 [ O H a q ]GG G G G G''  '  '  '  '  
+
+=== PDF PAGE 1023 ===
+Chapter 20: Electrochemistry 
+ 1 0 2 3  >@  
+>@3o
+f 4
+o
+f 43.14 10 kJ = 4 Al OH 4 0.00 kJ 3 0.00 kJ 6 237.1 kJ 4 157.2
+=4 A l O H +2 0 5 1 . 4k JG
+G
+u '  u  u  u   u 
+' 
+>@o
+f 433Al OH =3 . 1 4 1 0 k J 2 0 5 1 . 4 k J 4 = 1 . 3 0 1 0 k J / m o l G' u  yu  
+33. (D) From the data provided we can cons truct the following Latimer diagram. 
+Latimer diagrams are used to calculate the standard potentials of  non-adjacent half-cell 
+couples.  Our objective in this question is to  calculate the voltage differential between IrO 2 
+and iridium metal (Ir), which are separated in the diagram by Ir3+.  The process basically 
+involves adding two half-reactions  to obtain a third half-reacti on.  The potentials for the two 
+half-reactions cannot, however, simply be added to get the target half -cell voltage because 
+the electrons are not cancelled in the process of  adding the two half-rea ctions.  Instead, to 
+find Eq1/2 cell  for the target half-reaction, we must us e free energy changes, which are additive.  
+To begin, we will balance the relevant  half-reactions in acidic solution:  
+ 
+4 H+(aq) + IrO 2(s) + e     o  Ir3+(aq) + 2 H 2O(l)    Eq1/2red(a)  = 0.223 V 
+Ir3+(aq)+ 3 e o  Ir(s)                 Eq1/2red(b)  = 1.156V  
+               
+4 H+(aq) + IrO 2(s) + 4e    o  2 H 2O(l) + Ir(s)  Eq1/2red(c)  = ? 
+Eq1/2red(c) z Eq1/2red(a)  + Eq1/2red(b)  but   'Gq(a) + 'Gq(b)  =  'Gq(c)    and    'Gq = nFEq 
+4F(Eq1/2red(c) ) = 1F(Eq1/2red(a) )  +  3F(Eq1/2red(b)   
+4F(Eq1/2red(c) ) = 1F(0.223)  +  3F(1.156 
+Eq1/2red(c)  = 1( 0 . 2 2 3 ) 3( 1 . 1 5 6 )
+4FF
+F 
+= 1(0.223) 3(1.156)
+4
+= 0.923 V 
+In other words, Eq(c) is the weighted average of Eq(a) and Eq(b) 
+ 
+34. (D) This question will be answered in a manne r similar to that used to solve 31.   
+Let's get underway by writing down the appropriate Latimer diagram: 
+ T h i s  t i m e  w e  w a n t  t o  c a l c u l a t e  t h e  s t a n d a r d  v o l t a g e  c h a n g e  f o r  t h e  1  e reduction of MoO 2 to 
+Mo3+.  Once again, we must balance the ha lf-cell reactions in  acidic solution: 
+ 
+H2MoO 4(aq) + 2 e + 2 H+(aq) o  MoO 2(s) + 2 H 2O(l)    Eq1/2red(a)  = 0.646 V 
+       MoO 2(s) + 4 H+(aq) + 1 e o  Mo3+(aq) + 2 H 2O(l)     Eq1/2red(b)  = ? V 
+                
+H2MoO 4(aq) + 3 e + 6 H+(aq) o Mo3+(aq) + 4 H 2O(l) Eq1/2red(c)  = 0.428 V 
+ 
+So,  3F(Eq1/2red(c) ) = 2F(Eq1/2red(a) )  +  1F(Eq1/2red(b)   
+3F(0.428 V) = 2F(0.646)  +  1F(Eq1/2red(b) 
+1FEq1/2red(b)  = 3F(0.428 V) + 2 F(0.646)  IrO2
+(IV)Ir3+
+(III)Ir
+(0)(Acidic conditions) 0.223 V 1.156 V
+H2MoO4
+(VI)MoO2
+(IV)Mo3+
+(III)(Acidic conditions)  0.646 V ? V
+0.428 V
+
+=== PDF PAGE 1024 ===
+Chapter 20: Electrochemistry  
+1024 Eq1/2red(c)  = 3( 0 . 4 2 8  V )   2( 0 . 6 4 6 )  
+1FF
+F
+= 1.284 V  1.292 V  =  0.008 V 
+ 
+Concentration Dependence of Ecell—the Nernst Equation 
+ 
+35. (M)  In this problem we are asked to determine the concentration of [Ag+] ions in 
+electrochemical cell that is not under standard conditions.  We proceed by first determining 
+Ecello.  Using the Nerst equation and the known value of E, we can then calculate the 
+concentration of [Ag+]. 
+ Stepwise approach: 
+ First, determine Ecello: 
+ O x i d a t i o n :    2+Zn s Zn aq + 2 eo   o=+ 0 . 7 6 3 VE  
+Reduction: +{Ag aq + e Ag s } 2ou      o=+ 0 . 8 0 0VE  
+Net:   +2 + o
+cell Zn s  + 2 Ag aq Zn aq + 2Ag s = +1.563V E o  
+Use the Nerst equation and the know n value of E to solve for [Ag]+: 
+2+
+o
+cell 22+Zn 1.00 0.0592 0.0592=l o g = + 1 . 5 6 3 V l o g = + 1 . 2 5 0 V2 AgEEn xªº¬¼
+ªº¬¼ 
+21.00 M 2 (1.250 1.563)log 10.60.0592 xu   ; 11 62.5 10 5 10 M x u  u  
+Therefore, [Ag+] = 5 × 10-6 M 
+ Conversion pathway approach: 
+ O x i d a t i o n :    2+Zn s Zn aq + 2 eo   o=+ 0 . 7 6 3 VE  
+Reduction: +{Ag aq + e Ag s } 2ou      o=+ 0 . 8 0 0VE  
+Net:   +2 + o
+cell Zn s  + 2 Ag aq Zn aq + 2Ag s = +1.563V E o  
+ 
+  E=Ecello0.0592
+nlogZn2+ª¬º¼
+Ag+ª¬º¼2logZn2+ª¬º¼
+Ag+ª¬º¼2 n
+0.0592(EEcello)
+Ag+ª¬º¼2 Zn2+ª¬º¼
+10n
+00 5 9 2(EEcello)Ag+ª¬º¼ Zn2+ª¬º¼
+10n
+00 5 9 2(EEcello)
+Ag+ª¬º¼ 1.00
+102
+00 5 9 2(1 250 15 6 3 ) 5u106 
+36. (M) In each case, we employ the equation cell=0 . 0 5 9 2p HE . 
+(a) cell=0 . 0 5 9 2p H=0 . 0 5 9 2 5 . 2 5=0 . 3 1 1VEu 
+ 
+(b) pH = log 0.0103=1 . 9 8 7 Ecell=0 . 0 5 9 2p H=0 . 0 5 9 2u1.987 = 0.118V 
+ 
+
+=== PDF PAGE 1025 ===
+Chapter 20: Electrochemistry 
+ 1 0 2 5  (c) Ka=H+ª¬º¼C2H3O2ª¬º¼
+HC2H3O2ª
+¬«º
+¼»=1 . 8 u105=x2
+0.158 x|x2
+0.158 
+ 530.158 1.8 10 1.7 10 M x u u  u  
+ pH log (1.7 10 ) 2.773  u   
+ cell=0 . 0 5 9 2p H=0 . 0 5 9 2 2 . 7 7=0 . 1 6 4VEu 
+ 
+37. ( M )  We first calculate Ecello for each reaction and then use th e Nernst equation to calculate 
+Ecell. 
+(a) Oxidation: 3+{Al s Al 0.18 M + 3 e }  2ou           o=+ 1 . 6 7 6 VE  
+ Reduction: 2+{Fe 0.85M + 2e Fe s }  3ou           o=0 . 4 4 0 VE  
+ N e t :    2+ 3+2 Al s + 3Fe 0.85 M 2 Al 0.18 M + 3Fe s o      o
+cell=+ 1 . 2 3 6 VE  
+ 
+22 3+
+o
+cell cell 332+Al 0.18 0.0592 0.0592=l o g = 1 . 2 3 6 V l o g 1 . 2 4 9 V6 0.85 FeEEnªº¬¼  
+ªº¬¼ 
+ 
+(b) Oxidation: +{Ag s Ag 0.34 M + e }  2ou             o=0 . 8 0 0 VE  
+ Reduction: 2Cl 0.55 atm + 2 e 2 Cl 0.098 Mo               o=+ 1 . 3 5 8 VE  
+ N e t :  +
+2Cl 0.55atm + 2 Ag s 2 Cl 0.098M + 2Ag 0.34Mo ;o
+cell=+ 0 . 5 5 8 VE  
+  22+ 22
+2o
+cell cellCl Ag 0.34 0.098 0.0592 0.0592
+{Cl g } 2 0.55== l o g =+ 0 . 5 5 8 l o g =+ 0 . 6 3 8V
+nPEEªº ª º¬¼ ¬ ¼  
+38. (M) (a) Oxidation: 2+Mn s Mn 0.40 M + 2eo            o=+ 1 . 1 8 VE  
+Reduction: 3+ 2+{Cr 0.35 M +1e Cr 0.25 M }  2ou            o=0 . 4 2 4 VE  
+  N e t :  3+ 2+ 2+2Cr 0.35M +Mn s 2Cr 0.25M +Mn 0.40M o  o
+cell=+ 0 . 7 6 VE  
+   
+22 2+ 2+
+o
+cell cell 223+Cr Mn 0.25 0.40 0.0592 0.0592=l o g = + 0 . 7 6 V l o g = + 0 . 7 8 V2 0.35 CrEEnªº ª º¬¼ ¬ ¼
+ªº¬¼ 
+ 
+(b) Oxidation: 2+{Mg s Mg 0.016M + 2e }  3ou       o=+ 2 . 3 5 6 VE  
+ R e d u c t i o n : { Al OH4ª¬º¼
+0.25M+3 eo4OH0.042 M +Al s}u2;o=2 . 3 1 0 VE  
+               
+  N e t : 
+423M g s + 2 [ A l O H ] 0 . 2 5 M 3 M g 0 . 0 1 6M + 8 O H 0 . 0 4 2M + 2A l s o ;  
+ o
+cell=+ 0 . 0 4 6 VE  
+
+=== PDF PAGE 1026 ===
+Chapter 20: Electrochemistry  
+1026  Ecell=Ecello0.0592
+6logMg2+ª¬º¼3OHª¬º¼8
+Al OH4ª
+¬«º
+¼»ª
+¬º
+¼2=+ 0 . 0 4 6 0.0592
+6log0.01630.0428
+0.252
+=0 . 0 4 6V+0 . 1 5 0V=0 . 1 9 6V 
+ 
+39. ( M )  All these observations can be understood in terms of th e procedure we use to balance 
+half-equations: the ion—electron method. 
+ 
+(a) The reactions for which  E depends on pH are those that contain either H+aq or 
+OHaq in the balanced half-equation. These reactions involve oxoacids and 
+oxoanions whose central atom  changes oxidation state. 
+ 
+ ( b )  H+aqwill inevitably be on the left side of the reduction of an oxoanion because 
+reduction is accompanied by not only a decrease in oxidation state, but also by the loss 
+of oxygen atoms, as in32ClO CIOo, 2
+42SO SOo, and3NO NOo. These 
+oxygen atoms appear on the right-hand side as HO2 molecules. The hydrogens that are 
+added to the right-hand side with the wa ter molecules are then balanced with H+aq 
+on the left-hand side. 
+ 
+ ( c )  If a half-reaction with H+aq ions present is transferred to basic solution, it may be 
+re-balanced by adding to each side OHaq ions equal in number to the H+aq 
+originally present. This results in 2HO ( l )  on the side that had H+aq ions (the left 
+side in this case) and OHaq ions on the other side  (the right side.) 
+ 
+40. (M) Oxidation: 2 2Cl aq Cl g +2eo             o=1 . 3 5 8 VE  
+Reduction:  +2 +
+22PbO s + 4H aq + 2e Pb aq + 2H O(l)o   o=+ 1 . 4 5 5 VE  
+Net:   +2 +
+22 2 PbO s + 4H aq + 2Cl aq Pb aq + 2H O(l) + Cl go ; o
+cell=+ 0 . 0 9 7VE  
+We derive an expression for Ecell that depends on just the changing H+. 
+ 
+2
+o 2
+cell cell 42 4 2
++0.0592 P{Cl }[Pb ] (1.00 atm)(1.00 M)= log =+ 0 . 0 9 7 0 . 0 2 9 6 l o g2[ H ] [ C l ] [H ] (1.00)
+0.097 4 0.0296log[H ] 0.097 0.118log[H ] 0.097 0.118 pHEE
+ 
+
+   u       
+ 
+  (a) Ecell=+ 0 . 0 9 7+0 . 1 1 8 l o g 6 . 0=+ 0 . 1 8 9V  
+  ?Forward reaction is spontaneous under standard conditions 
+ 
+ ( b )  Ecell=+ 0 . 0 9 7+0 . 1 1 8 l o g 1 . 2=+ 0 . 1 0 6V  
+  ?Forward reaction is spontaneous under standard conditions 
+
+=== PDF PAGE 1027 ===
+Chapter 20: Electrochemistry 
+ 1 0 2 7   
+ ( c )  Ecell V =+ 0 . 0 9 7 0 . 1 1 8 4 . 2 5= 0 . 4 0 5 u  
+  ?Forward reaction is nonspontaneous under standard conditions 
+ 
+The reaction is spontaneous in strongly acidic solutions (very low pH), but is 
+nonspontaneous under standard conditions in basic,  neutral, and weakly acidic solutions. 
+ 
+41. ( M )  Oxidation: 2+Zn s Zn aq 2 eo          o=+ 0 . 7 6 3 VE  
+Reduction: 2+Cu aq + 2e Cu so   o=+ 0 . 3 3 7VE  
+ N e t :    2+ 2+Zn s + Cu aq Cu s + Zn aq o   o
+cell=+ 1 . 1 0 0 VE  
+ 
+ ( a )  We set E=0 . 0 0 0 V,  Zn M2+=1 . 0 0 ,  a n d  s o l v e  f o r  Cu2+ in the Nernst equation. 
+ 2+
+o
+cell cell 2+ 2+Zn 0.0592 1.0 M=l o g ;     0 . 0 0 0 = 1 . 1 0 0 0 . 0 2 9 6 l o g2 Cu CuEEªº¬¼ªº ªº¬¼ ¬¼ 
+ 2+ 37 2 38
+2+1.0 M 0.000 1.100log = = 37.2;    Cu = 10 = 6 10 M0.0296 Cu ªº u¬¼ ªº¬¼ 
+ 
+ ( b )  If we work the problem the other way,  by assuming initial concentrations of 
+2+Cu = 1.0M
+initialªº¬¼ and 2+Zn = 0.0 M
+initialªº¬¼, we obtain 2+ 38Cu = 6 10 M
+finalªº u¬¼ and 
+2+Zn = 1.0 M
+finalªº¬¼. Thus, we would conclude that th is reaction goes to completion. 
+ 
+42. (M) Oxidation: 2+ oSn s Sn aq + 2e =+ 0 . 1 3 7VEo  
+Reduction:  Pb2+aq+2eoPb s Eo=0.125 V  
+Net:   Sn s +P b2+aqoSn2+aq+P b sEcello=+ 0 . 0 1 2 V 
+Now we wish to find out if Pb2+aq will be completely di splaced, that is, will Pb2+ reach 
+0.0010 M, if Sn2+ is fixed at 1.00 M? We use the Nern st equation to determine if the cell 
+voltage still is positive under these conditions. 
+EEcell cellologSn
+Pblog V =0.0592
+2=+ 0 . 0 1 20.0592
+21.00
+0.0010= +0.012 0.089 = 0.0772+
+2+  
+The negative cell potential tells us that this re action will not go to completion under the conditions 
+stated. The reaction stops being spontaneous when Ecell=0. We can work this the another way as 
+well: assume that Pb2+ª¬º¼=1 . 0 x M a n d  c a l c u l a t e  Sn M2+=x  at equilibrium, that is, 
+where Ecell=0.       EEx
+xcell cellologSn
+Pblog =0 . 0 0=0.0592
+2=+ 0 . 0 1 20.0592
+21 . 02+
+2+ 
+
+=== PDF PAGE 1028 ===
+Chapter 20: Electrochemistry  
+1028 logx
+1.0x=2u0.012
+0.0592=0 . 4 1 x=1 004 11.0x =2 . 6 2.6xx =2.6
+3.6=0 . 7 2M 
+We would expect the final Sn2+ to equal 1.0 M (or at least 0. 999 M) if the reaction went to 
+completion. Instead it equals 0.72 M and conseque ntly, the reaction fails to go to completion. 
+ 
+43. (M) (a) The two half-equations and the cell equation are given below. EcelloV =0 . 0 0 0  
+Oxidation:  H2go2H+0.65 M KOH+2e 
+Reduction:  2H+1.0 M+2eoH2g 
+Net:  2H+1.0 Mo2H+0.65 M KOH 
+  14 2
++1 4 w
+base1.00 10  MH= = = 1 . 5 1 0 M0.65 M OHK
+
+uªº u¬¼ªº¬¼ 
+  Ecell=Ecello0.0592
+2logH+ª¬º¼base2
+H+ª¬º¼acid2=0 . 0 0 0 0.0592
+2log1.5u10142
+1.02 =+ 0 . 8 1 8V  
+(b) For the reduction of 2HO ( l )  to H2g in basic solution, 
+222HO ( l ) + 2e 2H g + 2O H a qo , EoV =0 . 8 2 8. This reduction is the 
+reverse of the reaction that occurs in the anode of th e cell described, with one small 
+difference: in the standard half-cell, [OH] = 1.00 M, while in the anode half-cell in 
+the case at hand, [OH] = 0.65 M. Or, viewed in a nother way, in 1.00 M KOH, [H+] 
+is smaller still than in 0.65 M KOH.  The forward reaction (dilution of H+) should be 
+even more spontaneous, (i.e. a more positive voltage will be created), with 1.00 M 
+KOH than with 0.65 M KOH. We expect that Ecello (1.000 M NaOH) should be a 
+little larger than Ecell (0.65 M NaOH), which, is in fact, the case. 
+44. (M) (a) Because NH3aq is a weaker base than KOH(aq), [OH]  will be smaller than in 
+the previous problem. Therefore the [H+] will be higher. Its logarithm will be less 
+negative, and the cell voltage will be less positive. Or, viewed as in Exercise 41(b), the 
+difference in [H+] between 1.0 M H+ and 0.65 M KOH is greater than the difference in 
+[H+] between 1.0 M H+ and 0.65 M NH 3. The forward reaction is “less spontaneous” 
+and cellE is less positive. 
+ 
+Reaction: 
+ 
+Initial: 
+Changes:  
+Equil:  32NH aq + H O(l)
+0.65M  
+xM 
+0.65 x  M ZXZYZZ+
+4NH aq +
+0M  
++xM xM OHaq |0M 
++xM xM 
+ +245
+3NH OH
+== 1 . 8 1 0 =NH 0.65 0.65bxxxKx
+
+ªº
+«»¬¼ªºªº ¬¼¬¼u| 
+ 14
+53 + 1 2
+3 31.00 10=O H = 0 . 6 51 . 81 0 3 . 41 0 M ;       [ H O ] 2 . 91 0 M3.4 10x
+  
+uªº uu  u   u¬¼u (b)
+
+=== PDF PAGE 1029 ===
+Chapter 20: Electrochemistry 
+ 1 0 2 9   EEcell cello base2
+acid2H]
+H]V =0.0592
+200 0 000 5 9 2
+229 1 0
+1006 8 312 2
+2 u 
+
+log[
+[..log(. )
+(.). 
+ 
+45. ( M )  First we need to find Ag+ in a saturated solution of 24Ag CrO . 
+Ksp=A g+ª¬º¼2CrO42ª¬º¼=2s2s=4s3=1 . 1 u1012s 1.1u1012
+43  6.5u105M 
+ T h e  c e l l  d i a g r a m m e d  i s  a  c o n c e n t r a t i o n  c e l l ,  f o r  w h i c h  EcelloV =0 . 0 0 0 ,  n=1,   
++4
+anodeAg = 2 = 1.3 10 M sªº u¬¼ 
+Cell reaction: Ag s+A g+0.125 M oAg s+A g+1.3u104M 
+EEcell cellologM
+MVV =0.0592
+11.3 10
+0.125=0 . 0 0 0+0 . 1 7 7 =0 . 1 7 74
+u
+ 
+ 
+46. (M) First we need to determine Ag+ in the saturated solution of Ag PO34 . 
+The cell diagrammed is a concentration cell, for which o
+cell=0 . 0 0 0 V ,  =1En . 
+Cell reaction: Ag s+A g+0.140 M oAg s+A g+xM 
+o
+cell cell0.0592 M M0 . 1 8 0=0 . 1 8 0 V= log ;    log = = 3.0410 . 1 4 0 M 0 . 1 4 0 M 0 . 0 5 9 2xxEE  
+30 4 4 4 +
+anodeM=0 . 1 4 0M 1 0 =0 . 1 4 0M 9 . 1 1 0 =1 . 3 1 0 M= A gx ªº uu u u¬¼ 
+  3 3 3 +3 4 4 1 7
+sp 4=A g P O =3 = 1 . 31 0 1 . 31 0 3= 9 . 51 0Ks s  ªº ª º uu y u¬¼ ¬ ¼ 
+ 
+47. (D) (a) Oxidation: 2+ oSn s Sn 0.075 M + 2 e =+ 0 . 1 3 7VEo  
+ R e d u c t i o n :   P b2+0.600 M +2eoPb s Eo=0.125 V  
+              
+ N e t :     2+ 2+ o
+cell Sn s + Pb 0.600 M Pb s + Sn 0.075 M ; = +0.012 V E o  
+ 2+
+o
+cell cell 2+Sn 0.0592 0.075=l o g = 0 . 0 1 2 0 . 0 2 9 6 l o g = 0 . 0 1 2 + 0 . 0 2 7 = 0 . 0 3 9 V2 0.600 PbEEªº¬¼
+ªº¬¼ 
+ 
+(b) As the reaction proceeds, [Sn2+] increases while [Pb2+] decreases.  These changes cause 
+the driving force behind the reaction to stead ily decrease with the passage of time.  
+This decline in driving force is manifested as a decrease in E cell with time. 
+ 
+(c) When Pb M M M2+=0 . 5 0 0 =0 . 6 0 0 0 . 1 0 0  , Sn M M2+=0 . 0 7 5 +0 . 1 0 0 ,  b e c a u s e  
+the stoichiometry of the reaction is 1:1 for  Sn2+ and Pb2+. 
+ 2+
+o
+cell cell 2+Sn 0.0592 0.175=l o g = 0 . 0 1 2 0 . 0 2 9 6 l o g = 0 . 0 1 2 + 0 . 0 1 3 = 0 . 0 2 5 V20 . 5 0 0 PbEEªº¬¼ªº¬¼ 
+
+=== PDF PAGE 1030 ===
+Chapter 20: Electrochemistry  
+1030 Reaction:  Sn(s)  +  2+Pb aq o Pb s     + Sn2+aq 
+Initial:      0 . 6 0 0  M      0.075 M 
+Changes:      xM    +xM 
+Final:      0.600 M x    0.075 + M x  
+ 
+ EEx
+xcell cellologSn
+Pblog =0.0592
+2=0 . 0 2 0=0 . 0 1 2 0 . 0 2 9 60.075 +
+0.6002+
+2+ 
+ 02 7 cell0.012 0.075 + 0.020 0.012 0.075 +log = = = 0.27; = 10 = 0.540.600 0.0296 0.0296 0.600Exx
+xx    
+ 0.324 0.0750.075 + = 0.54 0.600 = 0.324 0.54 ;   = = 0.162 M1.54xxx x  
+ Sn M2+=0 . 0 7 5+0 . 1 6 2=0 . 2 3 7  
+ 
+(e) Here we use the expression developed in part (d). 
+ logcell 0.075 +
+0.600=0.012
+0.0296=0.000 0.012
+0.0296=+ 0 . 4 1x
+xE
+
+ 
++0 41 0.075 +=1 0 =2 . 6 ; 0 . 0 7 5+ =2 . 6 0 . 6 0 0 =1 . 6 2 . 60.600xxxxx 
+  1.6 0.075== 0 . 4 2 M3.6x 
+2+ 2+Sn = 0.075 + 0.42 = 0.50 M; Pb = 0.600 0.42 = 0.18 Mªº ªº ¬¼ ¬¼ 
+ 
+48. (D) (a) Oxidation: +Ag s Ag 0.015 M + eo     o=0 . 8 0 0 VE  
+Reduction: 3+ 2+Fe 0.055 M + e Fe 0.045 Mo    o=+ 0 . 7 7 1 VE  
+  N e t :    3+ + 2+Ag s + Fe 0.055 M Ag 0.015 M + Fe 0.045 M o  o
+cell=0 . 0 2 9 VE  
+  +2 +
+o
+cell cell 3+Ag Fe 0.0592 0.015 0.045=l o g = 0 . 0 2 9 0 . 0 5 9 2 l o g10 . 0 5 5 Fe
+=0 . 0 2 9 V + 0 . 1 1 3 V = + 0 . 0 8 4 VEEªº ªº u ¬¼ ¬¼ ªº¬¼
+ 
+ 
+(b) A s  t h e  r e a c t i o n  p r o c e e d s ,  Ag+ and Fe2+ will increase, while Fe3+ decrease. These 
+changes cause the driving force behind the reac tion to steadily decrease with the passage 
+of time.  This decline in driving fo rce is manifested as a decrease in E cell with time. 
+ 
+(c) W h e n  Ag M M M+=0 . 0 2 0 =0 . 0 1 5 +0 . 0 0 5 ,  Fe M M M2+=0 . 0 4 5 +0 . 0 0 5 =0 . 0 5 0  a n d  
+Fe M M M3+=0 . 0 5 5 0 . 0 0 5 =0 . 5 0 0  , because, by the stoichiometry of the reaction, a mole 
+of Fe2+ is produced and a mole of Fe3+ is consumed for every mole of Ag+ produced. (d)
+
+=== PDF PAGE 1031 ===
+Chapter 20: Electrochemistry 
+ 1 0 3 1    EEcell cellologAg Fe
+Felog
+VV V=0.0592
+1=0 . 0 2 90 . 0 5 9 20.020 0.050
+0.050
+=0 . 0 2 9 + 0 . 1 0 1 = + 0 . 0 7 2+2 +
+3+ u
+ 
+ 
+Reaction: Ag s+ 3+Fe 0.055MZXZYZZAg+0.015 M+ F e2+0.045 M
+ Initial:  0.055 M  0.015 M 0.045 M 
+ Changes:  Mx + Mx + Mx 
+ Final:  0.055 M x 0.015 + M x  0.045 + M x  
+ Ecell=Ecello0.0592
+1logAg+ª¬º¼Fe2+ª¬º¼
+Fe3+ª¬º¼=0.029 0.0592 log0.015 + x  0.045 + x 
+0.055 x  
+ log0.015 + x  0.045 + x 
+0.055 x =Ecell+0 . 0 2 9
+0.0592=0.010 + 0.029
+0.0592=0.66  
+ 0.015 + x  0.045 + x
+0.055 x =1 006 6=0 . 2 2  
+ 0 . 0 0 0 6 8 + 0 . 0 6 0 x+x2=0 . 2 2 0 . 0 5 5 x=0 . 0 1 2 0.22xx2+0 . 2 8 x0.011 = 0  
+ xbb a c
+a=4
+2=0.28 (0.28) + 4 0.011
+2=0 . 0 3 52 2r  r uM 
+ Ag M M M+=0 . 0 1 5 +0 . 0 3 5 =0 . 0 5 0  
+ Fe M M M2+=0 . 0 4 5 +0 . 0 3 5 =0 . 0 8 0  
+ Fe M M M3+=0 . 0 5 5 0 . 0 3 5 =0 . 0 2 0   
+ (e) We use the expression that wa s developed in part (d). 
+ 
+ log0.015 + x  0.045 + x 
+0.055 x =Ecell+0 . 0 2 9
+0.0592=0.000 + 0.029
+0.0592=0.49  
+  
+ 0.015 + x  0.045 + x
+0.055 x =1 004 9=0 . 3 2  
+ 0 . 0 0 0 6 8 + 0 . 0 6 0 x+x2=0 . 3 2 0 . 0 5 5 x=0 . 0 1 8 0.32xx2+0 . 3 8 x0.017 = 0  
+ 
+ xbb a c
+a=4
+2=0.38 (0.38) + 4 0.017
+2=0 . 0 4 02 2r  r uM 
+ 
+ Ag M M M+=0 . 0 1 5 +0 . 0 4 0 =0 . 0 5 5   
+ 
+ Fe M M M2+=0 . 0 4 5 +0 . 0 4 0 =0 . 0 8 5  
+ 
+ Fe M M M3+=0 . 0 5 5 0 . 0 4 0 =0 . 0 1 5   
+  (d)
+
+=== PDF PAGE 1032 ===
+Chapter 20: Electrochemistry  
+1032 49. (M) First we will need to come up with a balanced equation for the overall redox reaction.  
+Clearly, the reaction must involve the oxidation of Cl(aq) and the reduction of Cr 2O72(aq): 
+ 
+14 H+(aq) + Cr 2O72(aq) + 6 e o 2 Cr3+(aq) + 7 H 2O(l)   Eq1/2red = 1.33 V 
+{Cl(aq) o 1/2 Cl 2(g) + 1 e} u 6       Eq1/2ox = 1.358 V 
+              
+14 H+(aq) + Cr 2O72(aq) + 6 Cl(aq) o 2 Cr3+(aq) + 7 H 2O(l) + 3 Cl 2(g) Eqcell = 0.03 V 
+ 
+ 
+A negative  cell potential means, the oxidation of Cl(aq) to Cl 2(g) by Cr 2O72(aq) at standard 
+conditions will not  occur spontaneously.  We could obtain some Cl 2(g) from this reaction by 
+driving it to the product side with  an external voltage.  In othe r words, the reverse reaction is 
+the spontaneous reaction at standard conditions and if we want to produce some Cl 2(g) from 
+the system, we must push the non-spontaneous reaction in its forwar d direction with an 
+external voltage, (i.e., a DC power source). Since Eqcell is only slightly negative, we could 
+also drive the reaction by removing products as they are formed and replenishing reactants as 
+they are consumed. 
+ 
+ (D)   We proceed by first deriving a balanced eq uation for the reaction occurring in the cell: 
+ O x i d a t i o n :  F e ( s ) oFe2+(aq)+2e- 
+ R e d u c t i o n :  { F e3+(aq)+e-oFe2+(aq)} u2 
+                 
+ N e t :   F e ( s ) + 2 F e3+(aq)o3Fe2+(aq)  
+ 
+(a)  'Goand the equilibrium constant Keq can be calculated using 
+  'Go=nFEcello RTlnKeq: 
+  'Go=nFEcello=2u96485Cmol-1u1.21V  233.5kJmol-1
+'Go RTlnK 8.314JK-1mol-1u298.15K ulnK 233.5 u1000Jmol-1
+lnK 94.2 K e94 2 8.1u1040 
+(b)  Before calculating voltage using the Nernst e quation, we need to re-write the net reaction 
+to take into account con centration gradient for Fe2+(aq): 
+ O x i d a t i o n :  F e ( s ) oFe2+(aq,1.0 u103M)+2e- 
+ R e d u c t i o n :  { F e3+(aq,1.0 u103M)+e-oFe2+(aq,0.10M)} u2 
+                 
+ N e t :   F e ( s ) + 2 F e3+(aq,1.0 u10-3)oFe2+(aq,1.0 u10-3M)+2Fe2+(aq,0.10M)  
+Therefore, 
+Q 1.0u103u(0.10)2
+(1.0u103)2 10 
+Now, we can apply the Nerst equation to calculate the voltage: 
+  Ecell Ecello0.0592
+nlogQ=1.21 V 0.0592
+2log10  1.18 V  
+(c)  From parts (a) and (b) we can conclude  that the reaction between Fe(s) and Fe3+(aq) is 
+spontaneous.  The reverse reacti on (i.e. disproportionation of Fe2+(aq)) must therefore be 
+nonspontaneous.   
+ 50.
+
+=== PDF PAGE 1033 ===
+Chapter 20: Electrochemistry 
+ 1 0 3 3  Batteries and Fuel Cells 
+ 
+51. ( M )  Stepwise approach:  
+ ( a )  The cell diagram begins with the anode and ends with the cathode. 
+  C e l l  d i a g r a m :  C r s |Cr2+aq,Cr3+aq||Fe2+aq,Fe3+aq|Fe s 
+ 
+(b) Oxidation: 2+ 3+Cr aq Cr aq + eo          o=+ 0 . 4 2 4 VE  
+ Reduction: 3+ 2+Fe aq + e Fe aqo    o=+ 0 . 7 7 1 VE  
+ N e t :    2+ 3+ 3+ 2+Cr aq + Fe aq Cr aq + Fe aq o  o
+cell=+ 1 . 1 9 5 VE  
+Conversion pathway approach: 
+Cr s|Cr2+aq,Cr3+aq||Fe2+aq,Fe3+aq|Fe s 
+ o=+ 0 . 4 2 4 VE   o=+ 0 . 7 7 1 VE  
+   Ecello=0.424 V0.771 V 1.195 V 
+52. (M) (a) Oxidation: 2+ oZn s Zn aq + 2 e =+ 0 . 7 6 3 VEo  
+Reduction: 22 23 2MnO s + H O(l) + 2e Mn O s + 2OH aqo  
+Acid-base: +
+43 2 {NH aq + OH aq NH g + H O l } 2ou  
+Complex: Zn2+aq+2 N H3aq+2 C laqoZn NH32ª¬º¼Cl2s 
+          _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  
+Net: +
+24 2 32 3 2 2Zn s + 2 MnO s + 2 NH aq + 2 Cl aq Mn O s + H O l + [Zn NH ]Cl so  
+ 
+(b) oo 5
+cell == 2 m o l  e 9 6 4 8 5 C / m o l  e 1 . 5 5 V = 2 . 9 9 1 0 J / m o lGn F E'  u  
+This is the standard free energy change for the entire reaction, which is composed of 
+the four reactions in part (a). We can determine the values of 'Go for the acid-base 
+and complex formation reactions by employi ng the appropriate data from Appendix D 
+and p Kf=4 . 8 1(the negative log of the Kf for [Zn(NH 3)2]2+). 
+ 
+  22 o1 1 5 4
+ab b=l n = 8 . 3 1 4 5 J  m o l K 2 9 8 . 1 5 K l n 1 . 8 1 0 = 5 . 4 1 7 1 0 J / m o l GR T K 
+'  uu  
+ 
+o 1 48 1 4
+cmplx=l n = 8 . 3 1 4 5 J  m o l K 2 9 8 . 1 5 K l n 1 0 = 2 . 7 4 6 1 0 J / m o lf GR T K'  u  
+oo o o
+total redox a b cmplx redox total a b cmplx
+54 4 5Then = + + =
+=2 . 9 91 0J / m o l5 . 4 1 71 0 + 2 . 7 4 61 0J / m o l =3 . 2 61 0J / m o loo o oGG G G G G G G '''' ''  '  '
+u  u u u 
+ 
+ T h u s ,  t h e  v o l t a g e  o f  t h e  redox reactions alone is  
+Eo J
+mol e C mol eV =3.26 10
+29 6 4 8 5 /=1 . 6 95u
+u ^`o
+22 3 1.69V = +0.763V + MnO /Mn O E  
+^`o
+22 3 MnO /Mn O = 1.69V 0.763V = +0.93VE   
+ 
+The electrode potentials were calculated by using equilibrium constants from Appendix D.  
+These calculations do not take into  account the cell’s own intern al resistance to the flow of 
+electrons, which makes the actual voltage developed by the electrodes less than the 
+theoretical values derived from equilibrium constants.  Also because the solid species 
+
+=== PDF PAGE 1034 ===
+Chapter 20: Electrochemistry  
+1034 (other than Zn) do not appear as compact rods , but rather are dispersed in a paste, and 
+since very little water is pres ent in the cell, the activities for the various species involved 
+in the electrochemical reactions will deviat e markedly from unity.  As a result, the 
+equilibrium constants for the reactions taking place in the cell will be substantially 
+different from those provided in Appendix D,  which apply only to dilute solutions and 
+reactions involving solid reac tants and products that posses small surface areas.  The 
+actual electrode voltages, therefore, will end up being different from those calculated here. 
+ 
+53. (M) (a) Cell reaction: 2H2g+O2go2H2Ol 
+  oo
+f2 =2 H O l =2 2 3 7 . 1  k J / m o l = 4 7 4 . 2  k J / m o lrxnGG''   ªº¬¼ 
+  o3
+o
+cell474.2 10 J/mol== = 1 . 2 2 9 V4m o l  e 9 6 4 8 5C / m o l  eGEnF' uu 
+ 
+(b) Anode, oxidation: 2+{Zn s Zn aq + 2e }  2ou         o=+ 0 . 7 6 3 VE  
+Cathode, reduction: +
+22Og + 4 Ha q + 4 e 2 H O ( l )o  o=+ 1 . 2 2 9VE  
+ N e t :    +2 +
+22 2Z n s +O g +4H a q 2Z n a q +2H O ( l ) o  o
+cell=+ 1 . 9 9 2 VE  
+ 
+(c) Anode, oxidation: 2+Mg s Mg aq + 2eo          o=+ 2 . 3 5 6 VE  
+ Cathode, reduction: 2Is + 2 e 2 Ia qo    o=+ 0 . 5 3 5 VE  
+ N e t :   2+
+2 Mg s + I s Mg aq + 2 I aqo    o
+cell=+ 2 . 8 9 1 VE  
+ 
+54. (M) (a)  O x i d a t i o n :  Z n ( s )  ZXZYZZ Zn2+(aq) + 2 e   
+  P r e c i p i t a t i o n :  Z n2+(aq) + 2 OH(aq) ZXZYZZ Zn(OH) 2(s) 
+  R e d u c t i o n :  2  M n O 2(s) + H 2)(l) + 2 e ZXZYZZ Mn 2O3(s) + 2 OH(aq) 
+  
+  N e t  :  Z n ( s )  +  2  M n O 2(s) + H 2O(l) + 2 OH(aq) ZXZYZZ Mn 2O3(s) + Zn(OH) 2(s) 
+ 
+(b) I n  5 0 ,  w e  d e t e r m i n e d  t h a t  t h e  s t a n d a r d  v o ltage for the reduction reaction is +0.93 V ( n 
+= 2 e).  To convert this voltage to  an equilibrium constant (at 25 qC) use: 
+  o
+red2(0.93)log 31.40.0592 0.0592nEK   ;  31 42 31
+red10 3 10 K  u 
+  a n d  f o r  Z n ( s )  ZXZYZZ Zn2+(aq) + 2 e   (Eq = 0.763 V and n = 2 e) 
+  o
+ox2(0.763)log  25.80.0592 0.0592nEK   ; 25 78 25
+ox  10   6 10 K   u  
+'Gqtotal = 'Gqprecipitation  + 'Gqoxidation  + 'Gqreduction  
+'Gqtotal = RT ln
+2 sp, Zn(OH)1
+K  +  (RT lnKox)  +  ( RT lnKred)  
+
+=== PDF PAGE 1035 ===
+Chapter 20: Electrochemistry 
+ 1 0 3 5  'Gqtotal = RT (ln
+2 sp, Zn(OH)1
+K  +  lnKox  +  ln Kred) 
+'Gqtotal = 0.0083145kJ
+Km o l(298 K) (ln171
+1.2 10u  +  ln(6.0 u 1025)  +  ln(2.6 u 1031)) 
+'Gqtotal = 423 kJ  = nFEqtotal 
+Hence, Eqtotal = Eqcell  = 3
+1423 10  J
+(2 mol)(96485 C mol )u
+ = 2.19 V 
+ 
+55. (M) Aluminum-Air Battery: 2 Al(s) + 3/2 O 2(g) o  Al 2O3(s) 
+Zinc-Air Battery:  Zn(s) + ½ O 2(g) o  ZnO(s) 
+Iron-Air Battery  Fe(s) + ½ O 2(g) o  FeO(s) 
+Calculate the quantity of charge transferred wh en 1.00 g of metal is consumed in each cell. 
+ 
+Aluminum-Air Cell:  
+4 1 mol Al(s) 3 mol e 96, 485C1.00 g Al(s) 1.07 10  C26.98 g Al(s) 1 mol Al(s) 1 mol e
+uu u  u  
+ 
+Zinc-Air Cell:  
+3 1 mol Zn(s) 2 mol e 96, 485 C1.00 g Zn(s) 2.95 10  C65.39 g Zn(s) 1 mol Zn(s) 1 mol e
+uu u  u  
+ 
+Iron-Air Cell:  
+3 1 mol Fe(s) 2 mol e 96, 485 C1.00 g Fe(s) 3.46 10  C55.847 g Fe(s) 1 mol Fe(s) 1 mol e
+uu u  u  
+ 
+As expected, aluminum has the greatest quan tity of charge transferred per unit mass  
+(1.00 g) of metal oxidized.  This is because aluminum has the smallest molar mass and forms 
+the most highly charged cation (3+ for aluminum vs 2+ for Zn and Fe). 
+ 
+56. (M) (a) A voltaic cell with a volt age of 0.1000 V would be possible by using two half-
+cells whose standard reducti on potentials differ by approxi mately 0.10 V, such as the 
+following pair. 
+  O x i d a t i o n :  2 3+ +
+7 22 2C r a q +7H O ( l ) C rO a q + 1 4H a q +6eo  o=1 . 3 3 VE  
+  R e d u c t i o n :  +2 +
+22 {PbO s + 4 H aq + 2e Pb aq + 2 H O(l)}  3ou     o=+ 1 . 4 5 5VE  
+           ______________________________  
+  N e t :    2- 3+ 2+ +
+22 2 7 2Cr aq +3PbO s +H O(l) Cr O aq +3Pb aq +2H aq oo
+cell=0.125 VE  
+  T h e  v o l t a g e  c a n  b e  a d j u s t e d  t o  0 . 1 0 0 0  V  b y  a suitable alteration of the concentrations. 
+Pb2+ or H+ could be increased or Cr3+ could be decreased, or any combination 
+of the three of these. 
+ 
+(b) To produce a cell with a voltage  of 2.500 V requires that one start with two half-cells 
+whose reduction potentials differ by about th at much. An interesting pair follows. 
+ 
+ O x i d a t i o n :  3+Al s Al aq + 3eo           o=+ 1 . 6 7 6 VE  
+
+=== PDF PAGE 1036 ===
+Chapter 20: Electrochemistry  
+1036  R e d u c t i o n :   +{Ag aq + e Ag s }  3ou    o=+ 0 . 8 0 0VE  
+             
+ N e t :    +3 +Al s + 3Ag aq Al aq + 3Ag s o   o
+cell=+ 2 . 4 7 6VE  
+ 
+ A g a i n ,  t h e  d e s i r e d  v o l t a g e  c a n  b e  o b t a i n e d  b y  adjusting the concentrations.  In this case 
+increasing Ag+ and/or decreasing Al3+ would do the trick. 
+ 
+(c) Since no known pair of half- cells has a potential difference larger than about 6 volts, 
+we conclude that producing a single cell with a potential of 10.00 V is currently 
+impossible. It is possible, however, to join several cells together into a battery that 
+delivers a voltage of 10.00 V. For instance, f our of the cells from part (b) would deliver 
+~10.0 V at the instant of hook-up. 
+57. (M) Oxidation (anode): Li(s) oLi+(aq)+e-    Eo 3.040 V 
+  R e d u c t i o n  ( c a t h o d e ) :  M n O2(s)+2H2O(l)+e-oMn(OH)3(s)+OH-(aq)  Eo 0.20V 
+  ________________________________________________________________________________________________________ 
+  N e t : M n O2(s)+2H2O(l)+Li(s) oMn(OH)3(s)+OH-(aq)+Li(aq)  Ecello 2.84V 
+  C e l l  d i a g r a m :  Li(s),Li(aq)KOH (satd)MnO2(s),Mn(OH)3(s) 
+58. (M) (a) Oxidation (anode): Zn(s) oZn+2(aq)+2e-    Eo 0.763 V 
+  R e d u c t i o n  ( c a t h o d e ) :  Br
+2(l)+2e-o2Br-(aq)    Eo 1.065 V 
+  ________________________________________________________________________________________________________ 
+  N e t :     Z n ( s ) + B r2(l)oZn2+(aq)+2Br-(aq)   Ecello 1.828 V 
+  ( b )  Oxidation (anode): {Li(s) oLi+(aq)+e-}u2   Eo 3.040 V 
+  R e d u c t i o n  ( c a t h o d e ) :  F
+2(g)+2e-o2F-(aq)    Eo 2.866 V 
+  ________________________________________________________________________________________________________ 
+  N e t :     2 L i ( s ) + F2(g)o2Li+(aq)+2F-(aq)   Ecello 4.868 V 
+ 
+Electrochemical Mechanism of Corrosion 
+ 
+59. (M) (a) Because copper is a less active metal than  is iron (i.e. a weaker reducing agent), 
+this situation would be similar to that of an  iron or steel can plat ed with a tin coating 
+that has been scratched. Oxidation of iron metal to Fe2+(aq) should be enhanced in the 
+body of the nail (blue precipitate), and hydroxide  ion should be produced in the vicinity 
+of the copper wire (pink color),  which serves as the cathode. 
+ 
+ ( b )  Because a scratch tears the iron and exposes “fresh” metal, it is more susceptible to 
+corrosion. We expect blue  precipitate in the vicinity of the scratch. 
+ 
+ ( c )  Zinc should protect the iron nail from co rrosion. There should be almost no blue 
+precipitate; the zinc corrodes instead. The pink color of OH should continue to form. 
+ 
+60. (M) The oxidation process involved at the a node reaction, is the formation of Fe2+(aq). This 
+occurs far below the water line. The reduction pr ocess involved at the cathode, is the formation 
+of OHaq from O 2(g).  It is logical that this reaction would occur at or near the water line 
+close to the atmosphere (which contains O 2). This reduction reaction requires O 2(g) from the 
+atmosphere and H 2O(l) from the water. The oxidation reaction, on the other hand simply 
+
+=== PDF PAGE 1037 ===
+Chapter 20: Electrochemistry 
+ 1 0 3 7  requires iron from the pipe together w ith an aqueous solution into which the Fe2+aq can 
+disperse and not build up to such a high concentration that corrosion is inhibited. 
+ 
+Anode, oxidation:  Fe soFe2+aq+2 e 
+ 
+Cathode, reduction:  22Og + 2 H O ( l ) + 4 e 4 O Ha qo  
+ 
+61. (M)During the process of corrosion, the metal that  corrodes loses electrons.  Thus, the metal 
+in these instances behaves as an anode and, henc e, can be viewed as bearing a latent negative 
+polarity.  One way in which we could retard oxi dation of the metal woul d be to convert it 
+into a cathode.  Once transformed into a cat hode, the metal would deve lop a positive charge 
+and no longer release electrons (or oxidize).  This change in polarity can be accomplished by 
+hooking up the metal to an inert electrode in the ground and then applying a voltage across 
+the two metals in such a way that the inert electrode becomes the anode and the metal that 
+needs protecting becomes the cathode.  This wa y, any oxidation that occurs will take place at 
+the negatively charged inert electrode rather than the positively charged metal electrode. 
+ 
+62. (M) As soon as the iron and copper came into direct contact, an electrochemical cell was 
+created, in which the more powerfully reducing metal (Fe) was oxidized.  In this way, the 
+iron behaved as a sacrificial anode, protecti ng the copper from corrosion.  The two half-
+reactions and the net cell reaction are shown below: 
+ 
+ A n o d e  ( o x i d a t i o n )      F e ( s )  o  Fe2+(aq) + 2 e   Eq = 0.440 V 
+ C a t h o d e  ( r e d u c t i o n )    Cu2+(aq) + 2 e o Cu(s)     Eq = 0.337 V  
+Net:    Fe(s) + Cu2+(aq) o  Fe2+(aq) + Cu(s)   Eqcell = 0.777 V 
+ 
+Note that because of the presence of iron a nd its electrical contact with the copper, any 
+copper that does corrode is re duced back to the metal. 
+ 
+Electrolysis Reactions 
+ 
+63. ( M )  Here we start by calculating the total amount of charge pa ssed and the number of moles 
+of electrons transferred. 
+60 s 2.15 C 1 mol emol e = 75 min = 0.10 mol e1m i n 1s 9 6 4 8 5C
+ uu u  
+(a) mass Zn mol emol Zn
+mol emol Zn
+mol Zng Zn
+mol Zng Zn =0 . 1 01
+21
+165.39
+1=3 . 32+
+2+
+uuu  
+ 
+(b) 3+
+3+1m o l  A l 1m o l  A l 2 6 . 9 8g  A lmass Al = 0.10 mol e = 0.90 g Al3m o l  e 1m o l  A l 1m o l  A l
+uuu  
+ 
+(c) mass Ag mol emol Ag
+mol emol Ag
+mol Agg Ag
+mol Agg Ag =0 . 1 01
+11
+1107.9
+1=1 1+
++
+uuu  
+ 
+
+=== PDF PAGE 1038 ===
+Chapter 20: Electrochemistry  
+1038 (d) 2+
+2+1m o l  N i 1m o l  N i 5 8 . 6 9g  N imass Ni = 0.10 mol e = 2.9 g Ni2m o l  e 1m o l  N i 1m o l  N i
+uuu  
+ 
+64. (M) We proceed by first writing down the net electrochemical reaction.  The number of 
+moles of hydrogen produced in the reacti on can be calculated from the reaction 
+stoichiometry.  Lastly, the volume of hydrogen can be determ ined using ideal gas law. 
+ Stepwise approach: 
+ The two half reactions follow: Cu2+aq+2eoCu sand 2 H+aq+2eoH2g 
+Thus, two moles of electrons are needed to produce each mole of Cu(s) and two moles of 
+electrons are needed to produce each mole of H2g. With this information, we can 
+compute the moles of H2g that will be produced. 
+2
+2 21mol H g 1m o l  C u 2m o l  emol H g = 3.28 g Cu = 0.0516 mol H g63.55g Cu 1 mol Cu 2mol e
+uu u  
+Then we use the ideal gas equation to find the volume of H2g. 
+Volume of H( g )0.0516 mol H0.08206 Latm
+mol K(273.2 28.2) K
+763 mmHg1a t m
+760 mmHg1.27 L22
+ uu 
+u  
+This answer assumes the H2g is not collected over water, and that the H 2(g) formed is the 
+only gas present in the containe r (i.e. no water vapor present) 
+Conversion pathway approach: 
+Cu2+aq+2eoCu sand 2 H+aq+2eoH2g 
+2
+2 21mol H g 1m o l  C u 2m o l  emol H g = 3.28 g Cu = 0.0516 mol H g63.55g Cu 1 mol Cu 2mol e
+uu u  
+V(H2(g)) 0.0516 molH2u0.08206 L atm
+molKu(273.2 28.2)K
+763 mmHg u1a t m
+760 mmHg 1.27 L  
+ 
+65. ( M )  Here we must determine the standard cell voltage of each chemical reaction. Those 
+chemical reactions that have a negative voltage are the ones that require electrolysis. 
+ 
+(a) Oxidation:+
+222H O ( l ) 4H a q +O g +4eo         o=1 . 2 2 9 VE  
+Reduction: +
+2 {2 H aq + 2 e H g }  2ou   o=0 . 0 0 0VE  
+ N e t :   22 22H O ( l ) 2H g +O g o     o
+cell=1 . 2 2 9 VE  
+ T h i s  r e a c t i o n  r e q u i r e s  e l e c t r o l y s i s ,  w i t h  a n  a p p l i e d  v o l t a g e  g r e a t e r  t h a n + 1 . 2 2 9 V .  
+ 
+(b) Oxidation: 2+Zn s Zn aq + 2 eo         o=+ 0 . 7 6 3VE  
+Reduction: 2+Fe aq + 2e Fe so   o=0 . 4 4 0 VE  
+
+=== PDF PAGE 1039 ===
+Chapter 20: Electrochemistry 
+ 1 0 3 9   N e t :    2+ 2+Zn s + Fe aq Fe s + Zn aq o   o
+cell=+ 0 . 3 2 3 VE  
+ T h i s  i s  a  s p o n t a n e o u s  r e a c t i o n  u n d e r  s t a n d a r d  c o n d i t i o n s .  
+ 
+(c) Oxidation: {Fe2+aqoFe3+aq+e}u2 Eo=0.771 V  
+ Reduction: o
+2Is + 2 e 2 Ia q =+ 0 . 5 3 5 VEo  
+ N e t :  2 F e2+aq+I2so2F e3+aq+2Iaq Ecello=0.236V  
+ T h i s  r e a c t i o n  r e q u i r e s  e l e c t r o l y s i s ,  w i t h  a n  a p p l i e d  v o l t a g e  g r e a t e r  t h a n  + 0 . 2 3 6 V .  
+ 
+(d) Oxidation:  2+ oCu s Cu aq + 2e =0 . 3 3 7 VEo  
+Reduction:  4+ 2+ o{Sn aq + 2e Sn aq }  2 =+ 0 . 1 5 4VEou  
+ N e t :    Cu s+S n4+aqoCu2+aq+S n2+aqEcello=0.183V  
+ T h i s  r e a c t i o n  r e q u i r e s  e l e c t r o l y s i s ,  w i t h  a n  a p p l i e d  v o l t a g e  g r e a t e r  t h a n  + 0 . 1 8 3 V .  
+ 
+66. (M) (a) Because oxidation occurs at the anode, we know that the product cannot be H2  
+(H2 is produced from the reduction of HO2), SO2, (which is a reduction product of 
+SO42), or SO3 (which is produced from SO42 without a change of oxidation state; 
+it is the dehydrati on product of H SO24 ). It is, in fact O 2 that forms at the anode.   
+The oxidation of water at the anode produces the O 2(g). 
+ 
+(b) Reduction should occur at the cathode. The po ssible species that can be reduced are 
+HO2 to H2g, K+aq to K s, and SO42aq to perhaps SO2g. Because 
+potassium is a highly active metal, it will not  be produced in aqueous solution. In order 
+for SO42aq to be reduced, it would have to migrate to the negatively charged 
+cathode, which is not very probable since like charges repel each other. Thus, H2g 
+is produced at the cathode. 
+ 
+(c) At the anode:  +
+222H O ( l ) 4H a q +O g +4eo  o=1 . 2 2 9 VE  
+At the cathode:  +
+2 {2H aq + 2 e H g }  2ou     o=0 . 0 0 0VE  
+ N e t  c e l l  r e a c t i o n :   22 22H O ( l ) 2H g +O g o      o
+cell=1 . 2 2 9 VE  
+ A  v o l t a g e  g r e a t e r  t h a n  1 . 2 2 9  V  i s  r e q u i r e d .  Because of the high overpotential required 
+for the formation of gases, we expect that a higher voltage will be necessary. 
+ 
+67. (M) (a) The two gases that are produced are H2g and O2g. 
+ ( b )  At the anode: +
+222HO ( l ) 4H a q + O g + 4 eo         o=1 . 2 2 9 VE  
+ At the cathode: +
+2 {2H aq + 2 e H g }  2ou    o=0 . 0 0 0VE  
+ N e t  c e l l  r e a c t i o n :  22 22H O ( l ) 2H g +O g o    o
+cell=1 . 2 2 9 VE  
+ 
+68. (M) The electrolysis of Na2SO4aq produces molecular oxygen at the anode. 
+^`o
+22Og / H O = 1 . 2 2 9 VE . The other possible product is S2O82aq. It is however, 
+
+=== PDF PAGE 1040 ===
+Chapter 20: Electrochemistry  
+1040 unlikely to form because it has a consider ably less favorable half-cell potential. 
+ ^`22 o
+28 4SO a q / S O a q = 2 . 0 1VE .  
+H2g is formed at the cathode. 
+mol O hs
+hC
+smol e
+Cmol O
+mol emol O22
+2 =3 . 7 53600
+12.83
+11
+964851
+4=0 . 0 9 9 0 uuu u
+ 
+The vapor pressure of water at 25DC,  f r o m  T a b l e  1 2 - 2 ,  i s  2 3 . 8  m m H g .  
+11
+20.0990 mol 0.08206 Latm mol K 298 K2.56 L O (g)1a t m(742 23.8) mmHg760 mmHgnRTVPuu   
+u 
+ 
+69. (M) (a) Zn2+aq+2 eoZn s 
+  65.39g Zn 60 s 1.87 C 1 mol e 1 mol Znmass of Zn = 42.5 min =1.62 g Zn1m i n 1s 9 6 ,4 8 5C 1m o l  Z n 2m o l  euu u u u  
+(b) 2IaqoI2s+2 e 
+ 2
+2
+221molI 2m o le 1s 1m i n 96, 485 Ctime needed = 2.79g I = 20.2 min253.8g I 1mol I 1.75C 60 s 1m o l  euuuu u  
+ 
+70. (M) (a) Cu2+aq+2 eoCu s 
+  2+
+2+
+2+2.68 C 1 mol e 1 mol Cu 1000 mmolmmol Cu consumed = 282 s1s 9 6 ,4 8 5C 1mol 2m o l  e
+=3 . 9 2m m o l  C u
+uu u u
+ 
+  decrease in Cummol Cu
+mLM2+2+
+=3.92
+425=0 . 0 0 9 2 2  
+  final Cu M M M2+=0 . 3 6 6 0 . 0 0 9 2 2 =0 . 3 5 7   
+ 
+(b) + +mmol Ag consumed = 255 mL 0.196 M 0.175 M = 5.36 mmol Ag   
+  
+ time needed = 5.36 mmol Ag+u1m o l  A g+
+1000 mmol Ag+u1m o l  e
+1m o l  A g+u96485C
+1m o l  eu1s
+1.84 C
+=2 8 1  s|2.8u102 s 
+ 
+ 
+71. (M) (a) charge g Agmol Ag
+g Agmol e
+mol AgC
+mol eC =1 . 2 0 61
+107.871
+196,485
+1=1 0 7 9 uu u
+ 
+ 
+ ( b )  currentC
+sA =1079
+1412=0 . 7 6 4 2  
+ 
+ 
+
+=== PDF PAGE 1041 ===
+Chapter 20: Electrochemistry 
+ 1 0 4 1  72. (D) (a) Anode, oxidation: +
+222H O(l) 4H aq + 4e + O go      o=1 . 2 2 9 VE  
+Cathode, reduction: +{Ag aq + e Ag s }  4ou   o=+ 0 . 8 0 0VE  
+  N e t :  ++
+222H O(l) + 4Ag aq 4H aq + O g + 4Ag s o  o
+cell=0 . 4 2 9 VE  
+ 
+(b) 1m o l  A g 1m o l  e 9 6 ,4 8 5Ccharge = 25.8639 25.0782 g Ag = 702.8C107.87 g Ag 1 mol Ag 1m o l  e
+u u u  
+ currentC
+hh
+sA =702.8
+2.001
+3600=0 . 0 9 7 6 u  
+ 
+(c) The gas is molecular oxygen. 
+ 
+ 
+ 2
+221mol O 1m o l e La t m702.8 C 0.08206 (23+273) K96485 C mol K 4m o le
+1a t m755 mmHg760 mmHg
+1000 mL0.0445 L O 44.5 mL of O1LnRTVP
+§·uu¨¸©¹  
+u
+ u   
+ 
+73. ( D )  (a) The electrochemical reaction is: 
+ A n o d e  ( o x i d a t i o n ) :  { A g ( s ) oAg+(aq)+e-(aq)} u2  Eo 0.800 V 
+ C a t h o d e  ( r e d u c t i o n ) :  C u2+(aq)+2e-oCu(s)    Eo 0.340 V 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  
+ N e t :     2 A g ( s ) + C u2+(aq)oCu(s)+2Ag+(aq)  Ecello 0.46V 
+ T h e r e f o r e ,  c o p p e r  s h o u l d  p l a t e  o u t  f i r s t .  
+ (b) current =charge
+2.50hminu1h
+3600 s=0 . 7 5 Acharge  6750C  
+ m a s s = 6 7 5 0  C u1 mole-
+96485 Cu1mol Cu
+2 mol e-u63.546 g Cu
+1 mol Cu=2.22 g Cu  
+ (c)  The total mass of the metal is 3.50 g out of which 2.22g is copper.  Therefore, the mass 
+ o f  s i l v e r  i n  t h e  s a m p l e  i s  3 . 5 0 g - 2 . 2 2 g = 1 . 2 8 g  o r  ( 1 . 2 8 / 3 . 5 0 ) x 1 0 0 = 3 7 % .  
+ 
+74. (D) First, calculate the number of moles of electrons invol ved in the electrolysis: 
+ 1 . 2 0 C/su32.0 min u60sec
+1minu1mole e-
+96485 C 0.0239mol e- 
+ F r o m  t h e  k n o w n  m a s s  o f  p l a t i n u m ,  determine the number of moles: 
+ 2 . 1 2 g P t u1mol Pt
+195.078gPt 0.0109molPt  
+ D e t e r m i n e  t h e  n u m b e r  o f  e l e c t r o n s  t r a n s f e r r e d :  
+ 0.0239 mol e-
+0.0109 mol Pt 2.19  
+
+=== PDF PAGE 1042 ===
+Chapter 20: Electrochemistry  
+1042  T h e r e f o r e ,  2 . 1 9  i s  s h a r e d  b e t w e e n  P t2+ and Ptx+.  Since we know the mole ratio between 
+ P t2+ and Ptx+, we can calculate x: 
+ 2 . 1 9 = 0 . 9 0 u(+2) + 0.10 u (x). 
+ 2.19  1.80 0.10 uxx|4 
+ (a)  The oxidation state of the contaminant is +4. 
+ 
+ 
+INTEGRATIVE AND ADV ANCED EXERCISES 
+ 
+75. (M) 32
+2 Oxidation:     V H O VO 2 H eaE  o  q  
+o
+32 o
+2c e l l
+o
+aReduction:     Ag  e Ag(s)                                              0.800 V
+Net:               V H O Ag VO 2 H Ag(s)      0.439 V
+0.439 V 0.800 V                   0aE
+E
+EE
+   o 
+  o  
+   q .800 V 0.439 V 0.361 V   
+ 
+2 3 o
+23 o
+2
+22 3
+2Oxidation:                             V V e                        
+Reduction:     VO 2 H e V H O                      0.361 V 
+Net:               V  VO 2 H 2 V H O    bE
+E 
+  
+  o 
+   o  
+   oo
+cell
+oo
+32 o              0.616 V
+0.616 V  0.361 V 0.361 V 0.616 V 0.255 V
+Thus, for the cited reaction: V V                     =  0 . 2 5 5  V  bbE
+EE
+eE  
+      
+ o 
+ 
+76. (M)The cell reaction for discharging a lead  storage battery is  equation (20.24). 
+ O(l) H  2 (s) PbSO (aq) HSO  2   aq) ( H  2 s) ( PbO Pb(s)2 4 4 2  o    
+ T h e  h a l f - r e a c t i o n s  w i t h  w h i c h  t h i s  e q u a t i o n  w a s  derived indicates that two moles of electrons 
+are transferred for every two moles of sulfate ion consumed. We first compute the amount of 
+H2SO 4 initially present and then the amount of H 2SO 4 consumed. 
+M  63 . 4L  50 . 1mol  56 . 0  mol  50 . 7] SO [H  finalSO H  mol  0.56    SO  mol  1SO H  mol  1
+e  mol  2SO  mol  2
+C  96485e  mol  1
+s 1C  50 . 2
+h 1s  3600 h  6.0   consumed SO H amount SO H  mol  50 . 7soln  L  1SO H  mol  5.00L  50 . 1 SO H amount  initial
+42422
+4422
+4
+424242
+42
+   u uu u u   u 
+  
+  
+ 
+77. (M) The cell reaction is (g)Cl (g) H (aq) OH  2 O(l) H  2   (aq) Cl  22 2 2  o   
+We first determine the charge transferred per 1000 kg Cl 2. 
+9 2
+2
+221 mol Cl 1000 g 2 mol e 96, 485 Ccharge  1000 kg Cl   2.72 10  C1 kg 70.90 g Cl 1 mol Cl 1 mol e
+ u uu u  u  
+
+=== PDF PAGE 1043 ===
+Chapter 20: Electrochemistry 
+ 1 0 4 3  (a) kJ  10 38 . 9J 1000kJ  1
+CV 1J 1C  10  2.72  V  3.45  energy 6 9u uuu u   
+(b) kWh  10 61 . 2hW1000kWh  1
+s 3600h 1
+J 1s  W 1J  10  9.38  energy 3 9u uuuu  
+ 
+78. (D) We determine the equilibrium constant for the reaction. 
+ 3+ 2+ 2+ °
+cell Net:           Fe(s) + 2 Cr (aq) Fe (aq) + 2 Cr (aq)       E  = +0.016 V o  
+ 
+  'Go nFEcello RTlnKlnK nFEcello
+RT 
+ 3.3 e 2.1K 298 K mol  J   8.3145V 016 . 0 e Coul/mol 96485 e mol 2ln 1 2
+1- 1-_ _
+   uu u K K  
+ 32 2Reaction: Fe(s) 2 Cr (aq) Fe (aq) 2Cr (aq)
+Initial :                         1.00 M             0 M                0 M
+Changes  : –2   M                M         2 M
+Equil:                           (xx x 
+U
+22 2 2
+32 21.00  –  2 )M      M               2 M
+[Fe ][Cr ] (2 )3.3[Cr ] (1.00 2 )xx x
+xxKx
+    
+  
+ L e t  u s  s i m p l y  s u b s t i t u t e  v a l u e s  o f  x into this cubic equation to find a solution. Notice that x 
+cannot be larger than 0.50, (values > 0.5  w ill result in a negative value for the denominator. 
+ 
+3.3 8.3
+) 76 . 0 00 . 1 ((0.76)  38 . 0     38 . 0 3.3 0.3
+) 74 . 0 00 . 1 ((0.74)  37 . 0     37 . 0       3.3   9 . 1
+) 70 . 0 00 . 1 ((0.70)  35 . 0     35 . 0 3.3   4 . 6
+) 80 . 0 00 . 1 ((0.80)  40 . 0     40 . 0       
+22
+2222
+22
+! 
+   
+  ! 
+  ! 
+  
+K x K xK x K x
+ 
+ 
+ Thus, we conclude that x = 0.37 M = [Fe2+]. 
+ 
+79. (D) First we calculate the standard cell potential. 
+ 23 o
+o
+23 o
+cellOxidation:     Fe (aq) Fe (aq) e 0.771 V
+Reduction:    Ag (aq) e Ag(s) 0.800 V
+Net:              Fe (aq) Ag (aq) Fe (aq) Ag(s) 0.029 V  E
+E
+E 
+
+ o   
+ o 
+  o   
+ Next, we use the given concentrations to calculate the cell voltage with the Nernst equation. 
+ 3
+o
+cell cell 20.0592 [Fe ] 0.0050 log 0.029 0.0592 log 0.029 0.018 0.047 V
+1 0.0050 2.0 [Fe ][Ag ]EE
+      
+u 
+ T h e  r e a c t i o n  w i l l  c o n t i n u e  t o  m o v e  i n  t h e  f o r w ard direction until concentrations of reactants 
+decrease and those of products increa se a bit more.   At equilibrium, Ecell = 0, and we have the 
+following. V 424 . 0 2  (aq)} Cr e aq) ( Cr { : ReductionV 440 . 0 2e (aq) Fe Fe(s) : Oxidation
+2 _ 3_
+ q u o q   o
+ 
+EE
+
+=== PDF PAGE 1044 ===
+Chapter 20: Electrochemistry  
+1044  33
+o
+cell 22
+2 30.0592 [Fe ] [Fe ] 0.029 log 0.029 log 0.491[ F e ] [ A g ] [Fe ][Ag ] 0.0592
+Reaction:    Fe (aq)      Ag (aq)                  Fe (aq)    Ag(s)
+Initial:         0.0050 M      2.0 M            E
+ 
+     
+ U
+3
+04 9
+2      0.0050 M    
+Changes:       M           M                 M    
+Equil:          (0.0050  ) M   (2.0 - ) M         (0.0050  ) M    
+[Fe ] 0.005010 3.1[Fe ][Ag ] (0.0050 )(2.0 )xx x
+xx x
+x
+xx
+  
+ 
+   0.0050
+2.0(0.0050 )
+0.0266.2(0.0050 ) 0.0050 0.031 6.2      7.2 0.026     0.0036 M7.2x
+x
+xx x x x|
+        
+ N o t e  t h a t  t h e  a s s u m p t i o n  t h a t  2.0  x  is valid. [Fe2+] = 0.0050 M – 0.0036 M = 0.0014 M 
+ 
+80. (D) W e  f i r s t  n o t e  t h a t  w e  a r e  d e a l i n g  w i t h  a  c oncentration cell, one in  w h i c h  t h e  s t a n d a r d  
+oxidation reaction is the reverse of the standa rd reduction reaction, and consequently its 
+standard cell potential is precisely zero volts. For this cell, the Nernst equation permits us to 
+determine the ratio of the two silver ion concentrations. 
+cell
+14 50.0592 [Ag (satd AgI)]      0.000 V  log 0.0860 V1 [Ag (satd AgCl,   M Cl )]
+[Ag (satd AgI)] 0.0860 [Ag (satd AgI)]      log 1.45 100.0592 [Ag (satd AgCl,  M Cl )] [Ag (satd AgCl,  M Cl )]E
+x
+xx
+
+ 
+
+    
+     0.035 
+ 
+ We can determine the numerator concentration fro m the solubility product expression for AgI(s) 
+ 9 17 2 17
+sp 10 2 . 9 10 5 . 8 10 5 . 8 ] I ][ Ag [   u u   u  ss K M 
+ This permits the determination of the concentration in the denominator. 
+ M  10 6 . 2035 . 010 2 . 9)] Cl  M   AgCl,  (satd Ag [79
+
+ u u x  
+ We now can determine the value of x. Note: Cl–  arises from two sources , one being the dissolved 
+ A g C l .  
+           
+] [Cl M 10 9 . 6
+10 6 . 210 8 . 6 10 8 . 1       10 6 . 2 10 8 . 6 ) 10 6 . 2 )( 10 6 . 2 ( 10 8 . 1 ] Cl ][ Ag [       
+4
+714 107 14 7 7 10
+sp
+ 
+      
+ u  
+uu u u u  u u u   
+xx x K
+ 
+ 
+81. (M) The Faraday constant can be evaluated by measuring the electric charge needed to 
+produce a certain quantity of chemical change. Fo r instance, let’s imagine that an electric 
+circuit contains the half-reaction 2Cu (aq) 2 e  Cu(s)U . The electrode on which the 
+solid copper plates out is weighed before a nd after the passage of electric current. The mass 
+gain is the mass of copper reduced, which th en is converted into the moles of copper 
+reduced. The number of moles of electrons invol ved in the reduction then  is computed from 
+the stoichiometry for the reduction half-reaction.  In addition, the amperage is measured 
+during the reduction, and the time is recorded. For simplicity, we assume the amperage is 
+constant. Then the total charge (in coulombs ) equals the current (in amperes, that is, 
+
+=== PDF PAGE 1045 ===
+Chapter 20: Electrochemistry 
+ 1 0 4 5  coulombs per second) multiplied by the time (in seconds).  The ratio of the total charge (in 
+coulombs) required by the reductio n divided by the amount (in mo les) of electrons is the 
+Faraday constant.  To determine the Avogadro c onstant, one uses the ch arge of the electron, 
+1.602 × 10–19 C and the Faraday constant in  the following calculation.  
+ 
+ moleelectrons10 023 . 6
+C  10 602 . 1electron  1
+electrons  mol  1C  485 , 9623
+19 A u 
+uu  N  
+ 
+82. (M) In this problem we are asked to determine 'Gfo for N 2H4(aq) using the electrochemical 
+data for hydrazine fuel cell.  We first determine the value of oG' f o r  t h e  c e l l  r e a c t i o n ,  a  
+reaction in which n = 4. 'Gfo can then be determined using data in Appendix D. 
+ Stewise approach: 
+ Calculate oG' for the cell reaction (n=4): 
+ 'Go n FEcello4 mol e- u96,485 C
+1 mol eu1.559 V  6.017 u105 J 601.7 kJ  
+ Using the data in Appendix D, determine 'Gfofor hydrazine (N 2H4): 
+  -601.7 kJ   'Go
+f[N2(g)]2 'Go
+f[H2O(l)] 'Go
+f[N2H4(aq)] 'Go
+f[O2(g)]
+                   0.00 kJ 2u (237.2 kJ) 'Go
+f[N2H4(aq)] 0.00 kJ
+'Go
+f[N2H4(aq)]  2u(237.2 kJ)  601.7 kJ  127.3 kJ 
+ Conversion pathway approach: 
+ 'Go n FEcello4 mol e- u96,485 C
+1 mol eu1.559 V  6.017 u105 J 601.7 kJ  
+  -601.7 kJ   'Go
+f[N2(g)]2 'Go
+f[H2O(l)] 'Go
+f[N2H4(aq)] 'Go
+f[O2(g)]
+                   0.00 kJ 2u (237.2 kJ) 'Go
+f[N2H4(aq)] 0.00 kJ
+'Go
+f[N2H4(aq)]  2u(237.2 kJ)  601.7 kJ  127.3 kJ 
+ 
+83. (M) In general, we shall assume that both ions are present initially at concentrations of 1.00 M. 
+Then we shall compute the concentration of the more easily reduced ion when its reduction 
+potential has reached the point at which the other cation starts  being reduced by electrolysis. In 
+performing this calculation we use the Nernst equation, but modified for use with a half-
+reaction. We find that, in genera l, the greater the difference in E° values for two reduction 
+half-reactions, the more effective the separation. 
+ 
+(a) In this case, no calculation is necessary. If th e electrolysis takes place in aqueous solution, 
+H2(g) rather than K(s) will be produced at the cathode. Cu2+ can be separated from K+ by 
+electrolysis. 
+ 
+(b) 2o oCu (aq) 2 e  Cu(s) 0.340 V Ag (aq) e Ag(s)     0.800 V EE o   o    
+  A g+ will be reduced first. Now we ask what [Ag+] will be when E = +0.337 V. 
+  77 . 70592 . 0340 . 0 800 . 0
+] Ag [1 log
+] Ag [1 log  10592 . 0V  0.800 V  337 . 0      
+
+=== PDF PAGE 1046 ===
+Chapter 20: Electrochemistry  
+1046   [ A g+] = 1.7 × 10–8 M.  Separation of the two ca tions is essentially complete. 
+ 
+(c) 2o 2  oPb (aq) 2 e Pb(s) 0.125 V Sn (aq) 2 e Sn(s)  0.137 V EE o   o    
+ P b2+ will be reduced first. We now ask what [Pb2+] will be when E° = –0.137 V. 
+220.0592 1 12 ( 0 . 1 3 7 0 . 1 2 5 )0.137 V 0.125 V  log       log 0.412 0.0592 [Pb ] [Pb ]      
+[Pb2+] = 10–0.41 = 0.39 M  Separation of Pb2+ from Sn2+ is not complete. 
+ 
+84. (D) The efficiency value for a fuel cell will be  greater than 1.00 for any exothermic reaction 
+( 0o'H ) that has 'Gq that is more negative than its oH' value. Since o oo ST H G' '  ', this 
+means that the value of oS' must be positive. Moreover, for this to be the case, 'ngas is usually 
+greater than zero.  Let us consider the situation that might lead to this type of reaction. The 
+combustion of carbon-hydrogen-oxygen comp ounds leads to the formation of H 2O(l) and 
+CO 2(g). Since most of the oxygen in these compounds comes from O 2(g) (some is present in 
+the C-H-O compound), there is a balance in the number of moles of gas produced—CO 2(g)—
+and those consumed—O 2(g)—which is offset in a negative direction by the H 2O(l) produced. 
+Thus, the combustion of these types of co mpounds will only have a positive value of gasn' if 
+the number of oxygens in the formula of the compound is more than twice the number of 
+hydrogens.  By comparison, the decomposition of  NOCl(g), an oxychloride of nitrogen, does 
+produce more moles of gas than it consumes. Le t us investigate this decomposition reaction. 
+ 
+278 . 1kJ/mol  71 . 51kJ/mol  08 . 66      kJ/mol  08 . 66 kJ/mol  08 . 66 kJ/mol)  0.00   kJ/mol  0.00   kJ/mol  (0.00  0.500          NOCl(g)] [ (g)] Cl [ (g)] O [ (g)] N [ G       kJ/mol  71 . 51 kJ/mol  71 . 51 kJ/mol)  0.00 kJ/mol  0.00   kJ/mol  (0.00  0.500          NOCl(g)] [ (g)] Cl [ (g)] O [ (g)] N [       (g) Cl  g) ( O  (g) N NOCl(g)      
+oofo
+2fo
+21
+2fo
+21
+2fo
+21 ofo
+2fo
+21
+2fo
+21
+2fo
+21 o2 21
+2 21
+2 21
+  ''      ' ' ' ' '     ' ' ' ' ' o
+HGG G G GH H H HH
+H 
+ 
+ Y e t  a n o t h e r  s i m p l e  r e a c t i o n  t h at meets the requirement that o oHG' ' is the combustion of 
+graphite: g) ( CO g) ( O ) C(graphite2 2 o  We see from Appendix D that 
+kJ/mol  4 . 394 g)] ( CO [2o
+f  'G  is more negative than kJ/mol  5 . 393 g)] ( CO [2o
+f  'H . (This 
+reaction is accompanied by an increase in entropy; 'S =213.7-5.74-205.1 =2.86 J/K, H = 1.002.) 
+ o oHG' ' i s  t r u e  o f  t h e  r e a c t i o n  in which CO(g) is formed from the elements. From 
+Appendix D, kJ/mol 5 . 110 CO(g)} {o
+f  'H , and kJ/mol  2 . 137 g)} ( CO {o
+f  'G , producing H 
+= (–137.2/–110.5) = 1.242. 
+ 
+ N o t e  t h a t  a n y  r e a c t i o n  t h a t  h a s  H >  1 . 0 0  w i l l  b e  s p o n t a n e o u s  under standard cond itions at all 
+temperatures. (There, of course, is another category, namely,  an  e n d o t h e r m i c  r e a c t i o n  t h a t  h a s  
+0o'S . This type of reaction is nonspontaneous  under standard conditions at all temperatures. As 
+such it consumes energy while it is running, which is clearly not a desirable result for a fuel cell.) 
+ 
+
+=== PDF PAGE 1047 ===
+Chapter 20: Electrochemistry 
+ 1 0 4 7  85. (M) W e  f i r s t  w r i t e  t h e  t w o  h a l f - e q u a t i o n s  a n d  t h e n  c a l c u l a t e  a  v a l u e  o f  oG' f r o m  
+thermochemical data. This value then is us ed to determine the standard cell potential. 
+ _
+32 2 2
+_
+22
+32 2 2 2Oxidation: CH CH OH(g) 3 H O(l) 2 CO ( ) 12 H (aq) 12  e
+Reduction:    {O (g ) 4 H (aq) 4e 2 H O(l)} 3
+Overall:         CH CH OH(g) 3 O (g ) 3 H O(l) 2 CO ( )g
+g
+  o 
+   ou
+  o 
+ T h u s ,  1 2 n  
+ 
+(a) g)] ( O [ 3 OH(g)] CH CH [ O(l)] H [ G 3 g)] ( CO [ 22o
+f 23o
+f 2o
+f 2o
+foG G GG ' ' ' ' '  
+          2( 394.4 kJ/mol) 3( 237.1 kJ/mol) ( 168.5 kJ/mol) 3(0.00 kJ/mol) 1331.6 kJ/mol         
+ 3
+cell1331.6 10 J/mol1.1501 V12 mol e 96,485 C/mol eGEnFu '     u 
+(b) V 1501 . 1 )] OH(g CH /CH ) g ( CO [ O] (g)/H O [23 2 2 2 cell  q q E E E  
+  
+V 079 . 0 1501 . 1 1.229 OH(g)] CH CH / ) g ( [COOH(g)] CH CH / ) g ( CO [ V 1.229
+23 223 2
+   qq  
+EE 
+ 
+86. (M) First we determine the change in the amount of H+ in each compartment. 
+ 
+22 2        Oxidation: 2 H O(l) O ( ) 4 H (aq) 4 e Reduction: 2 H (aq)  2 e H (g)
+60 s 1.25 C 1 mol e 1 mol H       amount H 212 min 0.165 mol H1m i n 1s 9 6 ,4 8 5C 1m o leg 
+
+ 
+o  o
+' u u u u   
+ 
+ B e f o r e  e l e c t r o l y s i s ,  t h e r e  i s  0 . 5 0 0  m o l  H 2PO 4– and 0.500 mol HPO 42– in each compartment. The 
+electrolysis adds 0.165 mol H+ to the anode compartment, which has the effect of transforming 
+0.165 mol HPO 42– into 0.165 mol H 2PO 4–, giving a total of 0.335 mol HPO 42– (0.500 mol – 0.165 
+mol) and 0.665 mol H 2PO 4– ( 0 . 5 0 0  m o l  +  0 . 1 6 5  m o l ) .  W e  c a n  u s e  t h e  H e n d e r s o n - H a s s e l b a l c h  
+equation to determine the pH of the solution in the anode compartment. 
+ 
+ 90 . 6
+L 500 . 0 / PO H mol 665 . 0L 500 . 0 / HPO mol 335 . 0log 20 . 7] PO H [] HPO [log p  pH
+422
+4
+422
+4
+2    
+aK  
+ 
+ A g a i n  w e  u s e  t h e  H e n d e r s o n - H a s s e l b a l c h  e q u a t i o n  i n  the cathode compartment.   After electrolysis 
+there is 0.665 mol HPO 42– a n d  0 . 3 3 5  m o l  H 2PO 4–. Again we use the Henderson-Hasselbalch 
+equation. 
+ 
+ 50 . 7
+L 500 . 0 / PO H  mol 335 . 0L 500 . 0 / HPO mol 665 . 0log 20 . 7
+] PO H [] HPO [log p pH
+422
+4
+422
+4
+2   
+
+aK  
+ 
+ 
+ 
+87. (M) We first determine the change in the amount of M2+ ion in each compartment. 
+ 
+ 'M2+=10.00h u3600 s
+1 hu0.500 C
+1 su1mol e-
+96485 Cu1mol M2+
+2mol e-=0.0933 mol M2+
+ 
+ T h i s  c h a n g e  i n  a m o u n t  i s  t h e  i n c r e a s e  i n  t h e  a m o u n t  o f  C u2+ and the decrease in the amount of 
+Zn2+. We can also calculate the change  in each of the concentrations. 
+
+=== PDF PAGE 1048 ===
+Chapter 20: Electrochemistry  
+1048  22
+22 0.0933 mol Cu 0.0933 mol Zn[Cu ] 0.933 M  [Zn ] 0.933 M0.1000 L 0.1000 L
+'   '    
+ T h e n  t h e  c o n c e n t r a t i o n s  o f  t h e  t w o  i o n s  a r e  d e t e r m i n e d .  
+ 22[Cu ] 1.000 M 0.933 M 1.933 M [Zn ] 1.000 M 0.933 M 0.067 M     
+ N o w  w e  r u n  t h e  c e l l  a s  a  v o l t a i c  c e l l ,  f i r s t  d e t e r m i n i n g  t h e  v a l u e  o f  Ecell°. 
+ 2
+2
+2
+cellOxidation : Zn(s) Zn (aq) 2 e 0.763 V
+Reduction :  Cu (aq) 2 e Cu(s) 0.340 V
+Net: Zn(s) Cu (aq) Cu(s) 1.103 VE
+E
+E
+
+o  q  
+q  
+ o  
+ T h e n  w e  u s e  t h e  N e r n s t  e q u a t i o n  t o  d e t e r m i n e  t h e  v o l t a g e  o f  t h i s  c e l l .  
+ 2
+cell cell 20.067 M 0.0592 [Zn ] 0.0592log 1.103 log 1.103 0.043 1.146 V22 1 . 9 3 3 M [Cu ]EE
+ q      
+88. (M)(a)
+ 2 Anode: Zn(s) Zn (aq) 2e 0.763 V Eo q    
+  --
+2+ -
+cellCathode: {AgCl(s) + e (aq) Ag(s) + Cl (1 M)} × 2 E°=+0.2223 V
+Net: Zn(s) + 2AgCl(s) Zn (aq) + 2Ag(s) + 2Cl (1 M) E° = +0.985 Vo
+o 
+ 
+(b) The major reason why this electrode is easier to use than the standard hydrogen 
+electrode is that it does not involve a gas. Thus there are not the practical difficulties 
+involved in handling gases.  Another reas on is that it yields a higher value of  cellqE , 
+thus, this is a more spontaneous system. 
+ 
+(c)  oOxidation:                 Ag(s)  Ag (aq) e 0.800 V Eo     
+  
+o
+cellReduction:     AgCl(s) e Ag(s) Cl (aq)  0.2223 V
+Net: AgCl(s) Ag (aq) Cl (aq) 0.578 VE
+E
+ o  
+o   
+   T h e  n e t  r e a c t i o n  i s  t h e  s o l u b i l i t y  r e a c t i on, for which the equilibrium constant is K sp.  
+   sp lnK RT nFE G  q  q '  
+  sp 11
+22 5 10
+sp
+-1096485 C 1J1m o le (0 . 5 7 8V )1V . C 1m o leln 22.58.3145 J mol K 298.15 K
+e1 . 7 1 0
+This value is in good agreement with the value of 1.8 × 10  given in Table 18-1.nFEKRT
+K
+
+
+uu u
+q   u
+  u  
+ 
+89. (D) (a)          Ag(s)   o A g+(aq) + e-   - E q =  -0.800 V 
+   AgCl(s) + e-o A g ( s )  +  C l-(aq)    E q  =  0.2223 V  
+   AgCl(s)  o A g+(aq) + Cl-(aq)   E qcell = -0.5777  V 
+ Ecell=E  cell-0.0592
+1log[Ag+][Cl-]
+1§
+©¨·
+¹¸=- 0 . 5 7 7 7  V0.0592
+1log[1.00][1.00 u10-3]
+1§
+©¨·
+¹¸=- 0 . 4 0 0 V
+ 
+ 
+  (b) 10.00 mL of 0.0100 M CrO 42-  + 100.0 mL of 1.00 × 10-3 M Ag+  (V total = 110.0 mL) 
+
+=== PDF PAGE 1049 ===
+Chapter 20: Electrochemistry 
+ 1 0 4 9     Concentration of CrO 42-after dilution: 0.0100 M×10.00 mL /110.00 mL = 0.000909 M 
+   Concentration of Ag+  after dilution: 0.00100 M×100.0 mL /110.00 mL = 0.000909 M 
+   A g 2CrO 4(s)      12111 0spK uZZZZZZZ X YZZZZZZ Z  2Ag+(aq)  +  CrO 42-(aq)   
+   I n i t i a l         0 . 0 0 0 9 0 9  M  0 . 0 0 0 9 0 9  M   
+   C h a n g e ( 1 0 0 %  r x n )    - 0 . 0 0 0 9 0 9  M  - 0 . 0 0 0 4 5 5  M  
+   N e w  i n i t i a l      0  M    0 . 0 0 0 4 5 5  M  
+   C h a n g e      + 2 x   +x 
+   E q u i l i b r i u m     2 x   0 . 0 0 0 4 5 5  M + x | 0.000455 M 
+   1 . 1  ×  1 0-12 = (2 x)2(0.000454)   
+x = 0.0000246 M  Note: 5.4% of 0.000455 M (assumption may be considered valid) 
+(Answer would be x = 0.0000253 using method of successive approx.) 
+[Ag+] = 2 x = 0.0000492 M (0.0000506 M using method of successive approx.) 
+-4
+cell cell0.0592 0.0592log [ ][Cl ] 0.5777 log [1.00 ][4.92 10 ]11
+0.323 V (-0.306 V for method of successive approximations)EEAgMM  q    u
+  
+ 
+(c) 1 0 . 0 0  m L  0 . 0 1 0 0  M  N H 3 + 10.00 mL  0.0100 M CrO 42- + 100.0 mL 1.00×10-3 M Ag+   
+(Vtotal = 120.0 mL) 
+   Concentration of NH 3 after dilution: 10.0 M×10.00 mL /120.00 mL = 0.833 M 
+Concentration of CrO 42-after dilution: 0.0100 M×10.00 mL /110.00 mL = 0.000833 M 
+   Concentration of Ag+  after dilution: 0.00100 M×100.0 mL /110.00 mL = 0.000833 M 
+ 
+ I n  o r d e r  t o  d e t e r m i n e  t h e  e q u i l i b r i u m  c o n c e n t r a t i o n  o f  f r e e  A g+(aq), we first consider 
+complexation of  Ag+(aq) by NH 3(aq) and then check to see if precipitation occurs.   
+ 
+       Ag+(aq)  +  2NH 3(aq)716 1 0fK uZZZZZZX YZZZZZ Z  Ag(NH 3)2+(aq) 
+   I n i t i a l     0 . 0 0 0 8 3 3  M  0 . 8 3 3  M    0  M  
+   C h a n g e ( 1 0 0 %  r x n )  - 0 . 0 0 0 8 3 3  M  - 0 . 0 0 1 6 7  M    + 0 . 0 0 0 8 3 3  M  
+   N e w  i n i t i a l    0  M    0 . 8 3 1  M    0 . 0 0 0 8 3 3  M  
+   C h a n g e    + x   + 2x    -x 
+   E q u i l i b r i u m   x   ( 0 . 8 3 1 + 2 x) M  (0.000833 – x) M 
+   E q u i l i b r i u m  ( x |0) x   0.831 M   0.000833 M 
+ 
+   1 . 6  ×  1 07 = 0.000833 / x(0.831)2 x = 7.54 ×10-11 M = [Ag+]    
+Note: The assumption is valid 
+   N o w  w e  l o o k  t o  s e e  i f  a  p r e c i p i t a t e  f o r m s :  Q sp = (7.54 ×10-11)2(0.000833) = 4.7 ×10-24  
+   S i n c e  Q sp < K sp (1.1 × 10-12), no precipitate forms and [Ag+] = 7.54 × 10-11 M 
+ 
++- -11
+cell cell
+cell0.0592 0.0592E= E ° - l o g [ A g ] [ C l ] = - 0 . 5 7 7 7  V - l o g [ 1 . 0 0 M ] [ 7 . 5 4  ×  1 0 M ]11
+E= 0 . 0 2 1 5 V   
+ 
+90. (M) W e  a s s u m e  t h a t  t h e  P b2+(aq) is “ignored” by the silver el ectrode, that is, the silver 
+electrode detects only si lver ion in solution. 
+ 
+
+=== PDF PAGE 1050 ===
+Chapter 20: Electrochemistry  
+1050 V 800 . 0 Ag(s) 2 (aq) H 2 Ag 2 (g) H : NetV 800 . 0 2 Ag(s)} e (aq) {Ag : ReductionV 000 . 0 e 2 aq) ( H 2 (g) H : Oxidation
+cell 22
+ q  o  q u o q   o
+   
+EEE
+ 
+2 2
+cell cell 2 20.0592 [H ] 0.0592 1.00log 0.503 V 0.800 V log22 [Ag ] [Ag ]EE
+  q     
+ 10 0 10
+22
+22
+10 0 . 1 10
+] Ag [00 . 10 . 100592 . 0) 503 . 0 800 . 0 ( 2
+] Ag [00 . 1log u    
+  
+  
+  [Ag+]2=1.0 u10-10M2[Ag+]=1.0 u10-5 
+ 
+Ag g 10 4 . 5Ag mol 1Ag g 87 . 107
+Ag mol 1Ag mol 1
+soln L 1Ag mol 10 0 . 1L 0.500 Ag  mass        45
+
+ 
+u u uuu  
+Ag % 051 . 0 % 100sample g 050 . 1Ag g 10 5.4Ag %4
+ uu 
+(by mass) 
+91. (M) 250.0 mL of 0.1000 M CuSO 4  = 0.02500 moles Cu2+ initially. 
+ 
+ moles of Cu2+ plated out 
+ =3.512C
+su1368 s u1 mol e-
+96,485 Cu1 mol Cu2+
+2 mole- 0.02490mol Cu2+ 
+ 
+moles of Cu2+ in solution = 0.02500 mol – 0.02490 mol = 0.00010 mol Cu2+ 
+ 
+ [Cu2+] = 0.00010 mol Cu2+/0.250 L = 4.0 × 10-4 M 
+ 
+      Cu2+(aq)  +  4NH 3(aq)1311 1 0fK uZZZZZZX YZZZZZ Z  Cu(NH 3)42+(aq) 
+  I n i t i a l     0 . 0 0 0 4 0  M   0 . 1 0  M    0  M  
+  C h a n g e ( 1 0 0 %  r x n )  - 0 . 0 0 0 4 0 M   m a i n t a i n e d    + 0 . 0 0 0 4 0  M  
+  N e w  i n i t i a l    0  M    0 . 1 0  M    0 . 0 0 0 4 0  M  
+  C h a n g e    + x   maintained    -x 
+  E q u i l i b r i u m   x   0.10 M   (0.00040 – x) M | 0.00040 M 
+ 
+ 2+
+13 2+ 13 34
+f 2+ 42 + 4
+3[Cu(NH ) ] 0.00040K= = 1 . 1 1 0 [ C u ]  =  3 . 6 1 0
+[Cu ][NH ] [Cu ](0.10)M u u 
+ H e n c e ,  t h e  a s s u m p t i o n  i s  v a l i d .  The concentration of Cu(NH 3)42+(aq) = 0.00040 M which is 
+40 times greater than the 1 × 10-5 detection limit.   Thus, th e blue color should appear. 
+ 
+92.  (M) First we determine the molar solubility of AgBr in 1 M NH 3 . 
+26
+33 s p f um         AgBr(s) 2NH (aq)    Ag(NH ) (aq) Br (aq) K K  K 8.0 10
+Initial                     1.00 M                         0  M         0 M
+quil.                       1.00-2s                 S
+E  u u U
+2
+2 63 3
+2
+3
+13
+sp 10
+3       s                s     {s AgBr molar solubility}
+[Ag(NH ) ][Br ]K 8.0 10   s2 . 8 1 1 0  M  ( a l s o  [ B r ] )[NH (aq)] (1 2 )
+K 5.0 10So  [Ag ]  1.8 10[Br ] 2.81 10s
+s
+M
+ 
+
+
+
+   u u
+u   uu
+
+=== PDF PAGE 1051 ===
+
+
+=== PDF PAGE 1052 ===
+Chapter 20: Electrochemistry  
+1052 95. (M) The overall reaction for the electrolytic cell is: 
+  Cu(s)+Zn2+(aq)oCu2+(aq)+Zn(s)   Ecello 1.103V  
+ N e x t ,  w e  c a l c u l a t e  t h e  n u m b e r  o f  m o l e s  o f  Z n2+(aq) plated out and number of moles of 
+ C u2+(aq) formed: 
+ 
+  n(Cu2+) =0.500C
+su10 h u60min
+1hu60s
+1min u1 mol e-
+96,485 Cu1 mol Cu2+
+2 mol e- 0.0935mol Cu2+
+n(Zn2+) n(Cu2+)=0.0935mol 
+ I n i t i a l l y ,  s o l u t i o n  c o n t a i n e d   1.00molL-1u0.100L=0.100 mol Zn2+(aq).  Therefore, at the end 
+ o f  e l e c t r o l y s i s  w e  a r e  l e f t  w i t h :  
+ 
+ n(Zn2+)LEFT=(0.100-0.0935)mol=6.5 u10-3mol[Zn2+]=6.5u10-3mol
+0.1L=6.5 u10-2M
+n(Cu2+)FORMED=0.0935mol [Cu2+]=0.0935mol
+0.1L=0.936M 
+ T h e  n e w  p o t e n t i a l  a f t e r  t h e  c e l l  w a s  s w i t c h e d  t o  a voltaic one can be calculated using Nernst
+ e q u a t i o n :  
+ 
+  Ecell Eqcell0.0592
+2log[Zn2]
+[Cu2] 1.103 0.0592
+2log6.5u103M
+0.935 M 1.103 0.064  1.167 V  
+ 
+96. (M) (a)  T h e  m e t a l  h a s  t o  h a v e  a  r e d u c t i o n  p o t e n t ial more negative than -0.691 V, so that 
+its oxidation can reverse the tarnishing re action’s -0.691 V reduction potential.  
+Aluminum is a good candidate, b ecause it is inexpensive, read ily available, will not react 
+with water and has an Eo of -1.676 V.  Zinc is also  a possibility with an Eo of -0.763 V, 
+but we don't choose it because there may be an overpotential associated with the 
+tarnishing reaction. 
+ 
+3
+-2
+2Oxidation:     {Al(s)  Al (aq)   3 e  }  2                               
+          Reduction:     {Ag S(s) 2 e Ag(s)   S (aq)  }  3                           
+          Net:       
+o u
+ o u(b)       
+32
+2         2 Al(s) 3 Ag S(s)  6Ag(s)  2 Al (aq)   3 S (aq)   o   
+  
+ ( c )   The dissolved NaHCO 3(s) serves as an electrolyte. It would also enhance the electrical 
+contact between the two objects. 
+ 
+ ( d )  T h e r e  a r e  s e v e r a l  c h e m i c a l s  i n v o l v e d :  A l ,  H 2O, and NaHCO 3.  Although the aluminum 
+plate will be consumed very slowly because  s i l v e r  t a r n i s h  i s  v e r y  t h i n ,  i t  w i l l ,  
+nonetheless, eventually erode away.  We shoul d be able to detect  l o s s  o f  m a s s  a f t e r  
+many uses. 
+ 
+97. (M) (a)        Overall:            C3H8(g) + 5 O 2(g)  o 3  C O 2(g) + 4 H 2O(l) 
+           Anode:         6 H 2O(l) + C 3H8(g)  o 3  C O 2(g) + 20 H+(g) + 20 e- 
+             C a t h o d e :  2 0  e- + 20 H+(g) + 5 O 2(g)  o 1 0  H 2O(l) 
+ 
+    'Gqrxn = 3(-394.4 kJ/mol) + 4(-237.1 kJ/mol) – 1(-23.3 kJ/mol) = -2108.3 kJ/mol
+ 
+
+=== PDF PAGE 1053 ===
+Chapter 20: Electrochemistry 
+ 1 0 5 3  'Gqrxn = -2108.3 kJ/mol = -2,108,300 J/mol  
+    'Gqrxn = -nFE qcell = -20 mol e- × (96485 C/mol e-) × E qcell 
+    E qcell = +1.0926 V 
+ 
+    2 0  e- + 20 H+(g) + 5 O 2(g)  o 1 0  H 2O(l) E qcathode  = +1.229 V 
+ 
+  H e n c e   E qcell = Eqcathode  Eqanode  +1.0926 V = +1.229 V  Eqanode 
+ 
+  Eqanode = +0.136 V (reduction potential for 3 CO 2(g) + 20 H+(g) + 20 e- o 6 H 2O(l) + C 3H8(g)) 
+ 
+ (b) Use thermodynamic tables for 3 CO 2(g) + 20 H+(g) + 20 e-o 6  H 2O(l) + C 3H8(g)     
+  'Gqrxn = 6(-237.1 kJ/mol) + 1(-23.3 kJ/mol)  [(-394.4 kJ/mol) + 20( 0kJ/mol)]= -262.7 kJ/mol
+ 
+  'Gqred = -262.7 kJ/mol = -262,700 J/mol = -nFE qred = -20 mol e-×(96,485 C/mol e-)×Eqred 
+ 
+  E qred  = 0.136 V (Same value, as found in (a)) 
+ 
+98. (D) (a) Equation 20.15 ( 'Go zFEcello) gives the relationship between the standard Gibbs 
+energy of a reaction and the sta ndard cell potential.  Gibbs fr ee energy also varies with 
+temperature ( 'Go 'HoT'So).  If we assume that 'Ho a n d  'Sodo not vary 
+significantly over a small temperature range, we can derive an equation for the temperature 
+variation of Ecello: 
+  'Go 'HoT'So zFEcelloEcello 'HoT'So
+zF 
+  C o n s i d e r i n g  t w o  d i f f e r e n t  temperatures one can write: 
+  Ecello(T1) 'HoT1'So
+zFand Ecello(T2) 'HoT2'So
+zF
+Ecello(T1)Ecello(T2) 'HoT1'So
+zF'HoT2'So
+zF
+Ecello(T1)Ecello(T2) T1'SoT2'So
+zF 'So
+zFT2T1  
+  (b)  Using this equation, we  can now calculate the cell pote ntial of a Daniel cell at 50 oC: 
+  Ecello(25oC)Ecello(50oC) 10.4JK1mol1
+2u96485 Cmol15025K 0.00135
+Ecello(50oC) 1.103 V0.00135  1.104 V 
+ 
+99. (D) Recall that under non-standard conditions 'G 'GoRTlnK.  Substituting 
+'Go 'HoT'So and 'G zFEcellone obtains: 
+  zFEcell 'HoT'SoRTlnQ 
+  F o r  t w o  d i f f e r e n t  t e m p e r a t u r e s  ( T 1 and T 2) we can write: 
+
+=== PDF PAGE 1054 ===
+Chapter 20: Electrochemistry  
+1054   zFEcell(T1) 'HoT1'SoRT1lnQ
+zFEcell(T2) 'HoT2'SoRT2lnQ
+Ecell(T1)Ecell(T2) 'HoT1'SoRT1lnQ'HoT2'SoRT2lnQ
+zF
+Ecell(T1)Ecell(T2) T1'SoRT1lnQT2'SoRT2lnQ
+zF
+Ecell(T1)Ecell(T2) T1'SoRT1lnQ
+zFT2'SoRT2lnQ
+zF
+Ecell(T1)Ecell(T2) T1'SoRlnQ
+zF§
+©¨·
+¹¸T2'SoRlnQ
+zF§
+©¨·
+¹¸
+Ecell(T1)Ecell(T2) (T1T2)'SoRlnQ
+zF§
+©¨·
+¹¸ 
+  The value of Q at 25 oC can be calculated from Ecello and Ecell. First calculate Ecello: 
+  O x i d a t i o n :  C u ( s ) oCu2+(aq)+2e-     Eo 0.340 V 
+  Reduction: 2Fe3+(aq)+2e-o2Fe2+(aq)     Eo 0.771 V 
+   _____________________________________________________________________________________________________________ 
+  Overall:  Cu(s)+2Fe3oCu2+(aq)+2Fe2   Ecello 0.431 V 
+  0.370  0.431 0.0592
+2logQ0.296 log Q 0.431 0.370  0.061
+logQ 0.206 Q 1002 0 6 1.61 
+  Now, use the above derived equation and solve for 'So: 
+  0.394 0.370  (5025)'So8.314 uln1.61
+2u96485§
+©¨·
+¹¸
+0.024  25u('So3.96
+192970)'So3.96  185.3 'So 189.2JK-1 
+  S i n c e  'Go 'HoT'So zFEcellowe can calculate 'Go, K (at 25 oC) and 'Ho: 
+  'Go zFEcello 2u96485 u0.431  83.2kJ
+'Go RTlnK83.2 u1000  8.314 u298.15 ulnK
+lnK 33.56 K e33 56 3.77 u1014
+-83.2kJ= 'Ho298.15 u189.2
+1000kJ'Ho 83.2 56.4  26.8kJ 
+  S i n c e  w e  h a v e  'Hoand 'Sowe can calculate the value of the equilibrium constant at 50 
+oC: 
+  'Go 'HoT'So 26.8kJ (273.15 50)K u189.2
+1000kJK-1 87.9kJ
+87.9 u1000J  8.314JK-1mol-1u(273.15 50)K ulnK
+lnK 32.7 K e32 7 1.59u1014 
+
+=== PDF PAGE 1055 ===
+Chapter 20: Electrochemistry 
+ 1 0 5 5    Choose the values for th e concentrations of Fe2+, Cu2+ and Fe3+ that will give the value of 
+the above calculated Q. For example: 
+  Q=Fe2+ª¬º¼2Cu2+ª¬º¼
+Fe3+ª¬º¼2 =1.61
+0.12u1.61
+0.12 1.61 
+  D e t e r m i n e  t h e  e q u i l i b r i u m  c o n c e n t r a t i o n s  a t  5 0  oC.  Notice that since Q<K, a net change 
+occurs from left to right (the direction of the forward reaction): 
+     C u ( s ) + 2 F e3oCu2+(aq)+2Fe2 
+  I n i t i a l :   0 . 1   1 . 6 1     0 . 1  
+  C h a n g e :           0 . 1 - x            1 . 6 1 + x   0 . 1 + x  
+  K=Fe2+ª¬º¼eq2Cu2+ª¬º¼eq
+Fe3+ª¬º¼eq2 =1.59 u1014 (0.1x)2u(1.61 x)
+(0.1x)2 
+  O b v i o u s l y ,  t h e  r e a c t i o n  i s  a l m o s t  c o m p l e t e l y  s h i f t e d  t o w a r d s  p r o d u c t s .   F i r s t  a s s u m e  t h a t  
+the reaction goes to completion, and then let th e equilibrium be shifte d towards reactants: 
+      C u ( s ) + 2 F e3oCu2+(aq)+2Fe2 
+  I n i t i a l :   0 . 1   1 . 6 1     0 . 1  
+  F i n a  l                    0                  1 . 7 1       0 . 2  
+  E q u i l i b r i u m         0 + x             1 . 7 1 - x     0 . 2 - x  
+  K=Fe2+ª¬º¼eq2Cu2+ª¬º¼eq
+Fe3+ª¬º¼eq2 =1.59 u1014 (0.2x)2u(1.71 x)
+(x)2|0.22u1.71
+x2
+x2|0.22u1.71
+1.59 u1014|4.3u1016x|2.1u108M 
+  T h e r e f o r e ,  [ C u2+]|1.7M, [Fe2+]|0.2M and [Fe3+]|2.1x10-8M 
+ 
+100. (D) This problem can be solved by utilizing the relationship between 'Goand Ecello('Go=-
+zFEcello): 
+  Consider a hypothetical set of the following reactions: 
+     AneoAn     E1o and 'G1o
+BmeoBm   E2o and 'G2o 
+  O v e r a l l :   ABnemeoAnBm    Erxno ? a n d  'Grxno 'G1o'G2o 
+   'Grxno 'G1o'G2o nFE1omFE2o
+(nm)FErxno nFE1omFE2o
+(nm)FErxno nFE1omFE2oErxno nFE1omFE2o
+nm 
+  T h e r e f o r e ,  f o r  n - s e ts of half-reactions: 
+
+=== PDF PAGE 1056 ===
+Chapter 20: Electrochemistry  
+1056   Eo niEio¦
+ni¦ 
+The E o for the given half-reaction can be determ ined by combining four half-reactions: 
+H6IO6+H++2e-oIO3-+3H2O     Eo 1.60V
+IO3-+6H++5e-o1
+2I2+3H2O       Eo 1.19V
+I2+2H2Oo2HIO+2H++2e-Eo 1.45V
+2IoI22eEo 0.535 V
+Overall :
+H6IO6+H++2e-IO3-+6H++5e-I2+2H2O+2IoIO3-+3H2O+1
+2I2+3H2O+2HIO+2H++2e-I22e
+H6IO6+5H++2I-+3e-o1
+2I2+4H2O+2HIO
+Eo 1.60 u31.19 u51.45 u20.535 u2
+2522 2.26V
+ 
+ 
+FEATURE PROBLEMS 
+ 
+ 
+101. (D) (a) Anode: +
+2Hg , 1 a t m 2 H1 M + 2 eo           o=0 . 0 0 0 0 VE  
+  Cathode: +{Ag M + e Ag s }  2 xou     o=0 . 8 0 0VE  
+             
+  N e t :  ++
+2Hg , 1 a t m + 2 A ga q 2 H1 M + 2 A g s o   o
+cell=0 . 8 0 0E  
+ 
+(b) Since the voltage in the anode half-cell remains constant, we  use the Nernst equation to 
+calculate the half-cell voltage  in the cathode half-cell, with two moles of electrons. 
+This is then added to E for the anode half-cell. Because Eo=0 . 0 0 0 f o r  t h e  a n o d e  
+half cell, EEcell cathode= 
+o +
+2+0.0592 1=l o g 0 . 8 0 0 + 0 . 0 5 9 2 l o g A g 0 . 8 0 0 0 . 0 5 9 2 l o g2 AgEE x ªº   ¬¼ªº¬¼ 
+(c) (i) Initially +Ag = 0.0100ªº¬¼;   cell =0 . 8 0 0+0 . 0 5 9 2l o g0 . 0 1 0 0=0 . 6 8 2V=EE  
+Note that 50.0 mL of titrant is required for the titration, since both AgNO3 and 
+KI have the same concentrations an d they react in equimolar ratios. 
+ 
+(ii) A f t e r  2 0 . 0  m L  o f  t i t r a n t  i s  a d d e d ,  t h e  t o t a l  v o l u m e  o f  s o l u t i o n  i s  7 0 . 0  m L  a n d  t h e  
+unreacted Ag+ is that in the untitrated 30.0 mL of 0.0100 M AgNO3aq. 
+ 
+
+=== PDF PAGE 1057 ===
+Chapter 20: Electrochemistry 
+ 1 0 5 7  +
++
+cell30.0 mL 0.0100 M AgAg = = 0.00429M70.0 mL
+=0 . 8 0 0+0 . 0 5 9 2l o g 0 . 0 0 4 2 9 =0 . 6 6 0V=EEuªº¬¼ 
+ 
+(iii) A f t e r  4 9 . 0  m L  o f  t i t r a n t  i s  a d d e d ,  t h e  t o t a l  v o l u m e  o f  s o l u t i o n  i s  9 9 . 0  m L  a n d  t h e  
+unreacted Ag+ is that in the untitrated 1.0 mL of 0.0100 M AgNO3aq. 
+ 
++
++
+cell1.0 mL 0.0100 M AgAg = = 0.00010 M99.0 mL
+=0 . 8 0 0+0 . 0 5 9 2l o g 0 . 0 0 0 1 0 =0 . 5 6 3V=EEuªº¬¼ 
+ 
+(iv) A t  t h e  e q u i v a l e n c e  p o i n t ,  w e  h a v e  a  saturated solution of AgI, for which  
+ 
++1 7 9
+sp Ag = (AgI) 8.5 10 9.2 10 Kªº  u u¬¼ 
+ 9
+cell =0 . 8 0 0+0 . 0 5 9 2l o g 9 . 2 1 0 =0 . 3 2 4V=EEu . 
+ 
+After the equivalence point, the Ag+ is determined by the I resulting from 
+the excess KI(aq). 
+ 
+ (v) When 51.0 mL of titrant is added, the total volume of solution is 101.0 mL and 
+the excess I is that in 1.0 mL of 0.0100 M KI(aq). 
+ 
+  I-ª¬º¼=1.0 mL u0.0100 M I-
+101.0 mL=9.9 u10-5M Ag+ª¬º¼=Ksp
+I-ª¬º¼=8.5u10-17
+0.000099=8.6 u10-13M13
+cell =0 . 8 0 0+0 . 0 5 9 2l o g 8 . 6 1 0 =0 . 0 8 6V=EEu  
+ 
+(vi) When 60.0 mL of titrant is added, the total volume of solution is 110.0 mL and 
+the excess I is that in 10.0 mL of 0.0100 M KI(aq). 
+-
+-
+-17
+sp +- 1 4
+-10.0 mL×0.0100 M II= =0.00091 M110.0 mL
+K 8.5×10Ag  =  =  = 9.3×10  M0.00091 Iªº¬¼
+ªº¬¼ªº¬¼
+E=0 . 8 0 0+0 . 0 5 9 2 l o g 9 . 3 u1014=0 . 0 2 9V= Ecell 
+ 
+
+=== PDF PAGE 1058 ===
+Chapter 20: Electrochemistry  
+1058 (d) The titration curve is presented below. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+102. ( D )  ( a )  ( 1 )  a n o d e :  N a s oNa+in ethylamine+e 
+   c a t h o d e :  N a ( i n e t h y l a m i n e ) N a ( a m a l g a m , 0 . 2 0 6 % )o  
+            
+   N e t :     Na s Na amalgam, 0.206% o  
+ 
+  (2) a n o d e :  +2Na amalgam, 0.206% 2Na 1 M + 2eo  
+   c a t h o d e :  +
+2 2H (aq,1M) + 2e H g,1 atmo  
+               
+   N e t :  ++
+2 2Na (amalgam, 0.206 %) +2H (aq,1M) 2 Na ( 1 M) + H (g,1 atm) o  
+ 
+(b) (1) 4 96, 485 C=1 m o l  e 0 . 8 4 5 3 V =8 . 1 5 61 0 J1mol eG
+' u u  u  or 81.56 kJ 
+  ( 2 )  4 96, 485C=2 m o l  e 1 . 8 6 7 3 V =3 6 . 0 3 3 1 0 J1m o l  eG
+' u u  u  or –360.33 kJ 
+  
+  (c) (1)  4
+1 2Na(s) 2Na(amalgam, 0.206%) 28 . 1 5 61 0 J G o'  uu 
+  (2) +
+2 2Na (amalg, 0.206%) + 2H (aq,1M) 2 Na (1M) + H (g, 1 atm)o  
+  4
+2 36.033 10 J G'  u  
+ O v e r a l l :  2 2 Na(s) + 2H aq) Na (1M) + H g, 1 atm)+
+2 ((o 
+ 44 4
+12 =+= 1 6 . 3 1 2 1 0 J 3 6 . 0 3 3 1 0 J = 5 2 . 3 4 5 1 0 JGGG'''  u u  u  or –523.45 kJ 
+ S i n c e  s t a n d a r d  c o n d i t i o n s  a r e  implied in the overall reaction, oGG' ' . 
+ 
+(d)  ^`  ^`4
+oo + o +
+252.345 10 J== H 1  M / H 1 a t m N a 1 M / N a s96, 485 C 1 J2m o l  e1V C 1m o l  ecellEE E
+
+u
+uu 
+ ^`o+Na 1 M /Na s = 2.713VE . This is precisely the same as the value in 
+Appendix D. 
+ Plot of Voltage versus volum e of I-(aq)
+00.20.40.60.8
+02 0 4 0 6 0 Volume of I- (mL)Voltage (V)
+
+=== PDF PAGE 1059 ===
+Chapter 20: Electrochemistry 
+ 1 0 5 9  103. (D) The question marks in the original Latimer diag ram have been replaced with letters in the 
+diagram below to make the solution easier to follow: 
+ 
+ B y  r e f e r r i n g  t o  A p p e n d i x  D  a n d  b y  e m p l o y i n g  t h e correct procedure for adding together half-
+reactions of the same type we obtain: 
+(c) 2Br (l) 2e 2 Br (aq)o      o
+c1.065V E   (Appendix D) 
+ ( d )  2 BrO (aq) H O(l) 2e Br (aq) 2OH (aq)  o   o
+d0.766 V E   (Appendix D) 
+ ( b )  22 2B r O ( a q ) 2H O ( l ) 2e B r ( l ) 4O H ( a q )  o   o
+b0.455V E   (Appendix D) 
+ ( a )  32 {BrO (aq) 2H O(l) 4e BrO (aq) 4OH (aq)}  2   o  u  o
+a? E  
+ ( b )  22 2B r O ( a q ) 2H O ( l ) 2e B r ( l ) 4O H ( a q )  o     o
+b0.455V E  
+ ( c )  2Br (l) 2e 2 Br (aq)o        o
+c1.065V E  
+            
+ (e) 32 2 BrO (aq) 6 H O(l) 12e 12OH (aq) 2 Br (aq)   o    o
+e0.584 V E  
+ 
+oo o o
+(a) (b) (c) TotalGG G G' '  '  '  
+ 
+ oo o o
+ea b c 12 8 -2 -2FE FE FE FE    
+ o
+a 12 0.584 V 8 -2 0.455V -2 1.065VFF EF F     
+o
+a12 0.584 V 2 0.455V 2 1.065V=0 . 4 9 6  V8FFFEF   
+  
+104. ( D )  ( a )  T h e  c a p a c i t a n c e  o f  t h e  c e l l  m e m b r a n e  is given by the following equation,  
+ 
+ 
+0AClHH  where H0H = 3 u 8.854 u 1012 C2 N1 m2;  
+A = 1 u 106 cm2;  and l = 1 u 106 cm.   
+Together with the factors necessary to convert  
+from cm to m and from cm2 to m2, these data yield 
+ 
+  2 2
+12 6 2
+12
+6C1  m 3  8 . 8 5 4 1 0 ( 11 0  c m) N  m 100 cm  1 m(1 10 cm)100 cmC
+§· §·uu ¨¸ ¨¸©¹ ©¹ 
+§·u¨¸©¹= 2.66 u 1013 2C
+Nm 
+ 
+2
+13 13
+2C1 F  2 . 6 6 1 0 =   2 . 6 6 1 0 FC Nm1NmC§·
+¨¸§·¨¸  u u¨¸¨¸ ©¹¨¸©¹ BrO4-BrO3-BrO-Br2 Br- (a) (b) (c)
+(d)1.025 V
+0.584 V(e)
+
+=== PDF PAGE 1060 ===
+Chapter 20: Electrochemistry  
+1060  
+(b) Since the capacitance C is the charge in coulombs per volt, the charge on the membrane, 
+Q, is given by the product of the capacitance and the potential across the cell membrane. 
+Q = 2.66 u 1013 C
+Vu 0.085 V = 2.26 u 1014 C 
+ 
+(c) The number of K+ ions required to produce this charge is 
+14
+5+  
+192.26 10 C=1 . 4 1 1 0  K i o n se1 . 6 0 2 1 0 C / i o nQ
+u uu 
+ 
+(d) The number of K+ ions in a typical cell is 
+23 3 83 11
+3ions mol 1L6.022 10 155 10 (1 10 cm )=  9.3 10  ionsmol L1 0 0 0 c m§· §· §·uu uu ¨¸ ¨¸ ¨¸©¹ ©¹ ©¹ 
+ 
+(e) The fraction of the ions involved in establis hing the charge on the cell membrane is  
+5
+7
+111.4 10 ions=1.5 10  (~ 0.000015 %)9.3 10 ions uuu 
+Thus, the concentration of K+ ions in the cell remains constant at 155 mM. 
+ 
+105. ( M )  Reactions with a positive cell pot ential are reactions for which 'Go0,  o r  r e a c t i o n s  
+  f o r  w h i c h  K > 1 .   'So,'Hoand 'Uocannot be used alone to determine whether a  
+  p a r t i c u l a r  e l e c t r o c h e m i c a l  r e a c t i o n  will have a positive or negative value. 
+ 
+106. (M) The half-reactions for the first cell are: 
+  A n o d e  ( o x i d a t i o n ) :  X ( s ) oX+(aq)+e-  EX/Xo 
+  C a t h o d e  ( r e d u c t i o n ) :  2 H+(aq)+2e-oH2(g)  Eo 0V 
+  S i n c e  t h e  e l e c t r o n s  a r e  f l o w i n g  f r o m  m e tal X to the standard hydrogen electrode,  
+  EX/Xo0V. 
+  T h e  h a l f - r e a c t i o n s  f o r  t h e  s e c o n d  c e l l  a r e :  
+  A n o d e  ( o x i d a t i o n ) :  X ( s ) oX+(aq)+e-  EX/Xo 
+  C a t h o d e  ( r e d u c t i o n ) :  Y2++2e-oY(s)   EY2/Yo 
+  S i n c e  t h e  e l e c t r o n s  a r e  f l o w i n g  f r o m  m e t a l  X  t o  m e t a l  Y ,  EX/Xo+EY2/Yo>0. 
+  F r o m  t h e  f i r s t  c e l l  w e  k n o w  t h a t  EX/Xo0V.  Therefore, EX/Xo>EY2/Yo. 
+107. ( M )  The standard reduction potential of the Fe2+(aq)/Fe(s) couple can be determined from: 
+  Fe2+(aq)oFe3+(aq)+e-Eo 0.771 V
+Fe3+(aq)+3e-oFe(s)   Eo 0.04V
+Overall:
+Fe2+(aq)+2e-oFe(s) 
+  W e  p r o c e e d  s i m i l a r l y  t o  t h e  s o l u t i o n  f o r  1 0 0 :  
+
+=== PDF PAGE 1061 ===
+Chapter 20: Electrochemistry 
+ 1 0 6 1    Eo niEio¦
+ni¦ 0.771 u(1)0.04 u3
+31 0.445 V 
+ 
+SELF-ASSESSMENT EXERCISES 
+ 
+108. (E) (a) A standard electrode potential Eomeasures the tendency for a reduction process to 
+ o c c u r  a t  a n  e l e c t r o d e .    
+ (b) F is the Faraday constant, or the electric charge per mole of electrons (96485 C/mol). 
+ (c) The anode is the electrode at which oxidation occurs. 
+ (d) T h e  c a t h o d e  i s  t h e  e l e c t r o d e  at which reduction occurs. 
+ 
+109. (E) (a) A salt bridge is a devise us ed to connect the oxidation and reduction half-cells of a 
+ g a l v a n i c  ( v o l t a i c )  c e l l .  
+ (b) The standard hydrogen electrode (abbrev iated SHE), also called normal hydrogen 
+ electrode (NHE), is a redox electrode which forms the basis of the thermodynamic scale of 
+ o x i d a t i o n - r e d u c t i o n  p o t e n t i a l s .   B y  d e f i nition electrode potential for SHE is 0. 
+ (c) C a t h o d i c  p r o t e c t i o n  i s  a  t e c hnique commonly used to contro l the corrosion of a metal 
+ s u r f a c e  b y  m a k i n g  i t  w o r k  a s  a  c a t h o d e  o f  a n  electrochemical cell.  This is achieved by 
+ p l a c i n g  i n  c o n t a c t  w i t h  t h e  m e t a l  t o  b e  p r o t e c ted another more easily corroded metal to act as 
+ t h e  a n o d e  o f  t h e  e l e c t r o c h e m i c a l  c e l l .  
+ (d) A fuel cell is an electrochemical cell that pr oduces electricity from fuels.  The essential 
+ p r o c e s s  i n  a  f u e l  c e l l  i s  f u e l + o x y g e n ooxidation products. 
+ 
+110. (E) (a) An overall cell reaction is a combina tion of oxidation and reduction half-
+ r e a c t i o n s .  
+ (b) I n  a  g a l v a n i c  ( v o l t a i c )  c e l l ,  c h e m i c a l  c h a nge is used to produce electricity.  In an 
+ e l e c t r o l y t i c  c e l l ,  e l e c tricity is used to produ ce a nonspontaneous rection. 
+ (c) In a primary cell, the cell reaction is not reversible.  In a secondary cell, the cell 
+ r e a c t i o n  c a n  b e  r e v e r s e d  b y  p a s s i n g  e l ectricity through the cell (charging). 
+ ( d )  Ecellorefers to the standard cell potential (t he ionic species are present in aqueous 
+ s o l u t i o n  a t  u n i t  a c t i v i t y  ( a p p r o x i m a t e l y  1 M ) ,  a n d  gases are at 1 bar pres sure (approximately 1 
+ a t m ) .  
+ 
+111. ( M )  ( a )  False.  The cathode is the positive electrode in a voltaic cell and negative in 
+ e l e c t r o l y t i c  c e l l .  
+ (b) False.  The function of the salt bridge is  to permit the migration of the ions not 
+ e l e c t r o n s .  
+ (c) True.  The anode is the negativ e electrode in a voltaic cell. 
+ (d) True. 
+ ( e )  True.  Reduction always occurs at the cathode of an electrochemical cell.  Because of 
+ t h e  r e m o v a l  o f  e l e c t r o n s  b y  t h e  r e d u c t i o n  h a lf-reaction, the cathode of a voltaic cell is 
+ p o s i t i v e .   B e c a u s e  o f  t h e  e l e c trons forced onto it, the cathode of an electrolytic cell is 
+ n e g a t i v e .   F o r  b o t h  t y p e s ,  t h e  c a t h o d e  i s  t h e electrode at which electrons enter the cell. 
+
+=== PDF PAGE 1062 ===
+Chapter 20: Electrochemistry  
+1062  (f) False.  Reversing the direction of the elec tron flow changes the voltaic cell into an 
+ e l e c t r o l y t i c  c e l l .  
+ (g) True.  The cell reaction is an oxidation-re duction reaction. 
+ 
+112. ( M )  The correct answer is (b), Hg2(aq)i s  m o r e  r e a d i l y  r e d u c e d  t h a n  H(aq). 
+ 
+113. ( M )  Under non-standard conditions, apply the Nernst equation to calculate Ecell: 
+ Ecell Ecello0.0592
+zlogQ
+Ecell 0.66 0.0592
+2log0.10
+0.01 0.63V 
+ T h e  c o r r e c t  a n s w e r  i s  ( d ) .  
+ 
+114. ( E )  ( c )  The displacement of Ni(s) from the soluti on will proceed to a considerable extent, 
+ b u t  t h e  r e a c t i o n  w i l l  n o t  g o  t o  c o m p l e t i o n .  
+ 
+115. ( E )  The gas evolved at the anode when K 2SO 4(aq) is electrolyzed be tween Pt electrodes is 
+ m o s t  l i k e l y  o x y g e n .  
+ 
+116. ( M )  The electrochemical reaction in the cell is: 
+ A n o d e  ( o x i d a t i o n ) :  { A l ( s ) oAl3+(aq)+3e-}u2 
+ C a t h o d e  ( r e d u c t i o n ) :  { H2(g)+2e-o2H+(aq)} u3 
+ O v e r a l l :    2 A l ( s ) + 3 H2(g)o2Al3+(aq)+6H+(aq)  
+ 4.5g Al u1mol Al
+26.98g Alu3 mol H2
+2 mol Al 0.250mol H2
+0.250 mol H2u22.4L H2
+1mol H2=5.6L H2 
+ 
+117. ( E )  The correct answer is (a) 'G. 
+ 
+118. ( M )  Anode (oxidation):{Zn(s) oZn2+(aq)+2e-}u3     Eo 0.763 V 
+  C a t h o d e  ( r e d u c t i o n ) : { N O3-(aq)+4H+(aq)+3e-oNO(g)+2H2O(l)} u2 Eo 0.956 V 
+  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  
+  Overall: 3Zn(s)+2NO3-(aq)+8H+(aq)o3Zn2+(aq)+2NO(g)+4H2O(l)  Ecello 1.719 V 
+  C e l l  d i a g r a m :  Z n ( s ) Z n2+(1M) H+(1M),NO3-(1M) NO(g,1atm) Pt(s)  
+ 
+119. ( M )  Apply the Nernst equation: 
+
+=== PDF PAGE 1063 ===
+Chapter 20: Electrochemistry 
+ 1 0 6 3   Ecell Ecello0.0592
+zlogQ
+0.108  00.0592
+2logx2logx2 3.65
+x2 1036 5x 0.0150 M
+pH log(0.0150)  1.82 
+ 
+120. ( M )  ( a )  Since we are given Ecello, we can calculate K for the given reaction: 
+ Ecello RT
+nFlnK
+0.0050 V 8.314 JK1mol1u298K
+2u96485 Cmol1lnKlnK 0.389K e03 8 9 0.68 
+ S i n c e  f o r  t h e  g i v e n  c o n d i t i o n s  Q = 1 ,  t h e  s y s t e m  i s  n o t  a t  e q u i l i b r i u m .  
+ (b) Because Q>K, a net reaction occurs to the left. 
+ 
+121. ( M )  ( a )  F e ( s ) + C u2+(1M) oFe2+(1M)+Cu(s) , Ecello 0.780 V, electron flow from B to A 
+ (b) Sn2+(1M)+2Ag+(1M) oSn4+(aq)+2Ag(s) , Ecello 0.646 V, electron flow from A to B. 
+ (c) Zn(s)+Fe2+(0.0010M) oZn2+(0.10M)+Fe(s) , Ecello 0.264 V,electron flow from A to 
+  B .  
+  
+122. ( M )  ( a )  Cl2(g) at anode and Cu(s) at cathode. 
+  (b) O 2(g) at anode and H 2(g) and OH-(aq) at cathode. 
+  (c) C l 2(g) at anode and Ba(l) at cathode. 
+  (d) O 2(g) at anode and H 2(g) and OH-(aq) at cathode. 
+ 
+
+=== PDF PAGE 1064 ===
+1064 CHAPTER 21 
+CHEMISTRY OF THE MAIN-GROUP ELEMENTS I: 
+GROUPS 1, 2, 13, AND 14 
+ 
+PRACTICE EXAMPLES  
+ 
+1A (E) From Figure 21-2, the route from sodium ch loride to sodium nitrate begins with 
+electrolysis of NaCl(aq) to form NaOH(aq).  
+2N a Cl a q +2 H2Ol electrolysiso2 NaOH aq+H2g+C l2g followed by addition of  
+NO2g to NaOH(aq).  23 2 2 NaOH aq +3 NO  g 2 NaNO  aq +  NO g +  H O(l) o  
+ 
+1B (E) From Figure 21-2, we see that the route from  sodium chloride to sodium thiosulfate  
+begins with the elect rolysis of NaCl(aq) to produce NaOH(aq), 
+2 NaCl aq +2 H2Ol electrolysiso2 NaOH aq+H2g+C l2g 
+and continues through the reaction of SO2g with the NaOH(aq) in an acid-base reaction  
+ [ S O2g is an acid anhydride] to produce 
+ 23 2 23 2 Na SO aq : 2 NaOH aq +  SO g  Na SO aq +  H O(l) o  and (3) concludes with 
+the addition of S to the boiling solution:  boil
+23 2 2 3Na SO aq +S(s) Na S O aq o . 
+ 
+2A (M) The first reaction indicat es that 0.1 mol of NaNO 2 reacts with 0.3 mol of Na to yield 
+0.2 mol of compound X and 0.05 mol of N 2.  Since this reaction liberates nitrogen gas, it is 
+very likely that compound X is an oxide of  sodium.  The two possibilities include Na 2O 
+and Na 2O2.  Na 2O2 will not react with oxygen, but Na 2O will.  Therefore, compound X is 
+most likely Na 2O and compound Y is Na 2O2.  The balanced chemical equations for two 
+processes are: 
+ NaNO2(s)+3Na(s) o2Na2O(s)+1
+2N2(g)
+Na2O(s)+1
+2O2(g)oNa2O2(s) 
+ 
+2B (M) Since compound X is used in plaster of Pari s it must contain calcium.  Calcium reacts 
+with carbon to form calcium carbide, accord ing to the following chemical equation:  
+Ca(s)+2C(s) oCaC2(s)  
+ 
+Furthermore, compound X or calcium carbide reacts with nitrogen gas to form compound 
+Y or calcium cyanamide: 
+CaC2(s)+N2(g)oCaCN2(s)+C(s)  
+ 
+CN 22- anion is isoelectronic with CO 2 and it therefore contains 16 electrons.  The structure 
+of this anion is:  
+NC N
+  
+
+=== PDF PAGE 1065 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+ 1 0 6 5  3A (M) The first two reactions, are those from Example 21-3, used to produce 23BO.  
+247 2 2 4 24 2 3
+23 2 3Na B O 10 H O(s) + H SO (l) 4 B OH (s) + Na SO (s) + 5H O(l)
+2B O H ( s) B O ( s)+3 H O ( g )' o
+o 
+The next reaction is conversion to 3BCl  with heat, carbon, and chlorine. 
+  23 2 3 2 2B O s +3C s +6Cl g 4B Cl g +3CO g'o  
+4 LiAlH  is used as a reducing agent to produce diborane. 
+34 2 6 3 4B Cl g +3L i A l H ( s) 2B H g +3L iCl ( s )+3A l Cl ( s) o  
+ 
+3B (M) Na 2B4O7.10 H 2O(s) + H 2SO 4(aq) o 4 B(OH) 3(s) + Na 2SO 4(aq) + 5 H 2O(l) 
+2 B(OH) 3(s) 'o  B2O3(s) + 3 H 2O(l)  
+B2O3(s) + 3 CaF 2(s) + 3 H 2SO 4(l) 'o 2 BF 3(g)  + 3 CaSO 4(s) + 3 H 2O(g) 
+ 
+INTEGRATIVE EXAMPLE 
+A (M) NaCN and Al(NO 3)3 dissociate in water accordi ng to the following equations: 
+ NaCN(aq) oNa+(aq)+CN-(aq)
+Al(NO3)3(aq)oAl3+(aq)+3NO3-(aq) 
+ N a C N  i s  a  s a l t  o f  s t r o n g  b a s e  ( N a O H )  a n d  w eak acid (HCN) and its solution is therefore 
+ b a s i c .  
+ W e  p r o c e e d  b y  f i r s t  d e t e r m i n i n g  t h e  [ O H ]- concentration in a solution which is 1.0M in 
+ N a C N :  
+CN-+H2OÉHCN+OH- 
+      1 . 0                      /          /  
+      1 . 0 - x                  x          x  
+ Kb Kw
+Ka(HCN ) 1.0u1014
+6.2u1010 1.6u105
+Kb [HCN ][OH]
+[CN] xux
+1.0x x2
+1.0x 1.6u105 
+ Assume, x<<1 and 1.0-x |1.0 
+ x2 1.6u105x 1.6u105 4.0u103
+[OH] 4.0u103 
+ O n  m i x i n g ,  [ O H-]=2.0 u10-3 M and [Al3+]=0.50 M.  The precipitation will occur according 
+ t o  t h e  f o l l o w i n g  e q u a t i o n :  
+ Al3+(aq)+3OH-(aq)ÉAl(OH)3(s)  
+ T h e  p r o d u c t  [ A l3+][OH-]3=0.50 u(2.0u10-3)3=4.0u10-9 is much greater than K SP for Al(OH) 3 
+ ( 1 . 3 u10-33) and therefore precipitation will occur. 
+ 
+
+=== PDF PAGE 1066 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+1066 B (M) When 22 BeCl 4H O  is heated, it decomposes to Be(OH) 2(s), H 2O(g), and HCl(g), as 
+ d i s c u s s e d  i n  S e c t i o n  2 1 - 3 .  22 BeCl 4H Ocomprises [Be(H 2O)4]2+ and Clí ions. Because of 
+ t h e  h i g h  p o l a r i z i n g  p o w e r  o f  B e2+, it is difficult to remove the coordinated water molecules 
+ b y  h e a t i n g  t h e  s o l i d  a n d  t h e  acidity of the coordinated H 2O molecules is enhanced. When 
+ 22 BeCl 4H O  is dissolved in water, [Be(H 2O)4]2+ ions react with water, and 
+ [ B e ( H 2O)3(OH)]+ and H 3O+ ions are produced. Hence, a solution of 22 BeCl 4H O  is 
+ e x p e c t e d  t o  b e  a c i d i c .  
+ W h e n  22 CaCl 6H O  is heated, CaCl 2(s) and H 2O(g) are produced. Because the charge 
+ d e n s i t y  a n d  p o l a r i z i n g  p o w e r  o f  C a2+ is much less than that of Be2+, it is much easier to  
+ d r i v e  o f f  t h e  c o o r d i n a t e d  w a t e r  m o lecules by heating the solid. When 22 CaCl 6H O  is 
+ d i s s o l v e d  i n  w a t e r ,  C a2+(aq) and Clí(aq) are produced. However, the charge density of the 
+ C a2+ ion is too low to affect the acidity of wa ter molecules in the hydr ation sphere of the 
+ C a2+ ion. Hence, a solution of 22 CaCl 6H O has a neutral pH. 
+ 
+ 
+ 
+EXERCISES 
+ 
+Group 1: The Alkali Metals 
+ 
+1. (E) (a) 2 2 Cs(s)  +  Cl (g)    2 CsCl(s) o   
+  (b)  22 2 2 N a ( s )   +   O ( g )     N a O ( s ) o  
+  ( c )   23 2 2      Li CO s Li O s +  CO g'o   
+  ( d )    24 2 Na SO s + 4 C s  Na S s + 4 CO g o  
+  ( e )   22 Ks +  O g    K O s o  
+ 
+2. (a)  2 Rb s + 2  H2Ol  o  2RbOH aq + H2g 
+ ( b )  32 32 2 2 KHCO s      K CO aq  +  H O(l) +  CO g'o  
+ ( c )   22 2 2 Li s  +  O g     Li O s o  
+ ( d )    24 24 2 KCl s  +  H SO aq     K SO aq  +  2 HCl g o  
+ ( e )   22 LiH s  +  H O l     LiOH aq  +  H g o  
+ 
+3. ( E )  Both LiCl and KCl are soluble in water, but Li PO34  is not very soluble. Hence the 
+addition of KPO (aq)34  to a solution of the white solid will produce a precipitate if the 
+white solid is LiCl, but no precipitate if the white solid is KCl. The best method is a flame 
+test; lithium gives a red color to a flame, while the potassium flame test is violet. 
+ 
+
+=== PDF PAGE 1067 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+ 1 0 6 7  4. (E) When heated, Li CO23  decomposes to 2CO (g)  and 22 3Li O(l). K CO (s)  simply melts when 
+heated. The evolution of CO (g)2 bubbles should be sufficient indication of the difference in 
+behavior. The flame test affords a violet flame if K+ is present, and a red flame if Li+ is present. 
+ 
+5. (M) First we note that sodium carbonate ionizes  virtually completely when dissolved in H 2O and 
+thus is described as highly sol uble in water.  This is made ev ident by the fact that there is no Ksp 
+value for Na 2CO 3.  By contrast, the existence of Ksp values for MgCO 3 and Li 2CO 3 shows that 
+these compounds have lower solubilities in water than Na 2CO 3.  To decide whether MgCO 3 is 
+more or less soluble than Li 2CO 3, we must calculate the molar so lubility for each salt and then 
+compare the two values.  Clearly, the salt that has the larger molar solubility will be more soluble 
+in water.  The molar solubilities can be found using the respective Ksp expressions for the two 
+salts. 
+ 
+1. MgCO 3 -8
+sp = 3.5  10K uZZZZZZZZ X YZZZZZZZ Z  Mg2+(aq)  +  CO 32-(aq)    Let “ s” = molar solubility of MgCO 3 
+  excess – s     s      s 
+  s2 = 3.5×10-8 s = 1.9×10-4 M 
+ 
+2. Li 2CO 3 -2
+sp = 2.5  10K uZZZZZZZZ X YZZZZZZZ Z  2 Li+(aq)  +  CO 32-(aq)    Let “ s” = molar solubility of Li 2CO 3 
+  excess – s     2 s      s 
+  ( 2 s )2×(s) = 2.5×10-8 4s3 = 2.5×10-8 s = -8
+32.5×10
+4 =  0.18 M 
+We can conclude that Li 2CO 3 is more soluble than MgCO 3.  Thus, the expected order of 
+increasing solubility in water is: MgCO 3  <  Li 2CO 3  <  Na 2CO 3. 
+ 
+6. (M) We know sodium metal was produced at th e cathode from the reduction of sodium 
+ion, Na+. Thus, hydroxide must have been i nvolved in oxidation at the anode. The 
+hydrogen in hydroxide ion alrea dy is in its highest oxidati on state and thus cannot be 
+oxidized. This leaves oxidation of the hydroxide  ion to elemental oxygen as the remaining 
+reaction. 
+ 
+ C a t h o d e ,  r e d u c t i o n  :  { N a e N a ( l ) }  4+ ou 
+Anode, oxidation : 4 OH O (g) + 2 H O(g) + 4e22o 
+ 
+   N e t  :   4 4 4 Na OH Na(l) + O (g) + 2 H O(g)+
+22o 
+ 
+7. (M) (a) H( g )2 and Cl (g)2are produced during the electrolysis of NaCl(aq). 
+  T h e  e l e c t r o d e  r e a c t i o n s  a r e :  
+ 
+  A n o d e ,  o x i d a t i o n :  2 C l ( a q ) C l ( g ) + 2 e2o  
+ 
+  C a t h o d e ,  r e d u c t i o n :  222H O ( l )  +  2 e H ( g )  +  2O H ( a q )o  
+ 
+ 
+  W e  c a n  c o m p u t e  t h e  a m o u n t  o f  O Hproduced at the cathode. 
+ 
+
+=== PDF PAGE 1068 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+1068  
+ 
+mol OH 2.50 min u60s
+1minu0.810C
+1su1mole
+96,500Cu2m o lO H
+2m o le 1.26 u103molOH
+ 
+ 
+  T h e n  w e  c o m p u t e  t h e  [ O H] and, from  that, the pH of the solution. 
+ 
+  [OHmol OH
+LsolnM
+ u u ].
+..126 10
+08 7 2145 103
+3 p O H = l o g ( 1 . 4 5 1 0 u  328 3 9). 
+  p H = 1 4 . 0 0 0 2 . 8 3 9 1 1 . 1 6 1   
+   
+ 
+(b) As long as NaCl is in excess and the volum e of the solution is nearly constant, the 
+solution pH only depends on the numb er of electrons transferred. 
+ 
+ 
+8. (M) (a) total energy = 3 3600s 1C/s 1J3.0V 0.50A h 5.4 10 J1hr 1A 1V C xuu u u  u  
+ 
+  W e  o b t a i n e d  t h e  f i r s t  c o n v e r s i o n  f a c t o r  f o r  t i m e  a s  f o l l o w s .  
+ 
+  5015 0 1 066
+..PPW11 0W
+1WJ/s
+1WJ
+1suuu u
+ 
+ 
+  t i m e  =  39
+61s 1hr 1day 1y5.4 10 J 1.1 10 s 34 y51 0J 3600s 24 hr 365daysuu  uu u u  u 
+ 
+ ( b )  The capacity of the battery is dete rmined by the mass of Li present. 
+  1 C/s 3600 s 1 mol e 1 mol Li 6.941 g Limass Li = 0.50 A h = 0.13 g Li1 A 1 h 96485 C 1 mol Li 1 mol e
+uu u u u  
+ 
+9. (M) (a) We first compute the mass of NaHCO 3 that should be produced from 1.00 ton 
+NaCl, assuming that all of the Na in the NaCl ends up in the NaHCO 3. We use the 
+unit, ton-mole, to simplify the calculations. 
+  3
+33
+3
+31 ton-mol NaCl 1ton-mol Namass NaHCO 1.00 ton NaCl58.4 ton NaCl 1ton-mol NaCl
+1tol-molNaHCO 84.0 ton NaHCO=1 . 4 4 t o n  N a H C O1ton-molNa 1 ton mol NaHCO u u
+uu 
+  % yield ton NaHCO  produced
+ ton NaHCO  expected yield =1.03
+1.44100% = 71.5%3
+3u  
+   
+ ( b )  NH3 is used in the principal step of the So lvay process to produce a solution in which 
+NaHCO3 is formed and from which it will precipitate. The filtrate contains NH Cl,4 
+from which NH3 is recovered by treatment with Ca(OH)2. Thus, NH3 is simply used 
+
+=== PDF PAGE 1069 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+ 1 0 6 9  during the Solvay process to produce the proper conditions for the desired reactions. 
+Any net consumption of NH3 is the result of unavoida ble losses during production. 
+ 
+10. (M) (a) 2
+24 4 Ca(OH) (s) SO (aq) CaSO (s) 2OH (aq)ZZXYZZ  
+ 
+(b) We sum two solubility reactions  and combine their values of Ksp 
+     
+  2
+2 Ca(OH) (s) Ca (aq) 2OH (aq)  ZZXYZZ     Ksp u55 106.  
+22
+44 Ca (aq) SO (aq) CaSO (s) ZZXYZZ     11 9 1 1 06// .Ksp u 
+      2
+44 2Ca OH s +SO aq CaSO s + 2 OH aqZZXYZZ  Keq=5.5 10
+9.1 10=0 . 6 06
+6u
+u
+ 
+   
+  B e c a u s e   Keq is close to 1.00, we conclude that the reaction lies neithe r very far to the 
+right (it does not go to comp letion) nor to the left. 
+ 
+ ( c )  Reaction:      2
+24 4 Ca(OH) (s) SO (aq)    CaSO (s) 2OH (aq)ZZXYZZ    
+ 
+Initial:  — 1.00 M    — |0 M 
+Changes:    — - x M    — + 2 x M 
+Equil:    — ( 1 . 0 0 – x) M   — 2 x M 
+ 
+Kx
+xxx x x == 0 . 6 0 =4
+1.004= 0 . 6 0 0 . 6 0 4+ 0 . 6 0 0 . 6 0 = 02
+422
+22 OH
+ SO
+  
+   
+xbb a c
+a=4
+2=0.60 0.36 + 9.60
+8=0 . 3 22r   r M 
+   
+ SO  M OH  M42=1 . 0 0 =0 . 6 8 =2 =0 . 6 4 xx  
+ 
+11. ( M )  Use 'Gfo values to calculate 'Go for the reaction and then the equilibrium constant 
+ K  a t  2 9 8  K .    
+     Na2O2(s)ÉNa2O(s)+1
+2O2(g)  
+  'Gfo(kJmol-1)       - 4 4 9 . 6 3           - 3 7 9 . 0 9  
+ 'Go 379.09 (449.63)  70.54kJmol-1
+'Go RTlnK
+8.314JK-1mol-1u298K ulnK 70.54 u1000Jmol-1
+lnK 70.54 u1000Jmol-1
+8.314JK-1mol-1u298K 28.47 K e28 47 4.32 u1013 
+
+=== PDF PAGE 1070 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+1070  S i n c e K pO21
+2pO2 K2 1.87 u1025.  The equilibrium constant and partial pressure of 
+ o x y g e n  a r e  b o t h  v e r y  s m a l l  a t  2 9 8  K .   T h e r e f o r e ,  N a 2O2(s) is thermodynamically stable 
+ w i t h  r e s p e c t  t o  N a 2O(s) and O 2(g) at 298 K. 
+ 
+12. (M) Use 'Gfo values to calculate 'Go for the reaction and then the equilibrium constant 
+ K  a t  2 9 8  K .  
+     2KO2(s)ÉK2O(s)+3
+2O2(g)  
+  'Gfo(kJmol-1)       - 2 4 0 . 5 9         - 3 2 2 . 0 9  
+ 'Go 322.09 (2u240.59)  159.1kJmol-1
+'Go RTlnK
+8.314JK-1mol-1u298K ulnK 159.1 u1000Jmol-1
+lnK 159.1 u1000Jmol-1
+8.314JK-1mol-1u298K 64K e64 1.604 u1028 
+ S i n c e K pO23
+2pO2 K2
+3 2.952 u1019.  The equilibrium constant and partial pressure 
+of  oxygen are both very small at 298 K.  Therefore, KO 2(s) is thermodynamically stable 
+ w i t h  r e s p e c t  t o  K 2O(s) and O 2(g) at 298 K. 
+ 
+Group 2: The Alkaline Earth Metals 
+ 
+13. (M)  
+ 
+ 
+ 
+  
+       
+       22 2
+,electrolysis
+22 2 3 2 2
+32 2 4 4 2 2The reactions are as follows.  Ca OH s + 2 HCl aq  CaCl aq + 2H O(l)
+CaCl l Ca l + Cl g Ca OH s + CO g  CaCO s +  H O g
+CaCO s CaO s + CO g Ca OH s +  H SO aq  CaSO s + 2 H O(l)'
+'o
+ oo
+oo
+ 
+    34 42 2Ca OH s +  H PO aq  CaHPO aq + 2H O(l) o . Actually CaO s is the industrial 
+starting material from which 2 Ca(OH)  is made. 22 CaO(s) + H O(l) Ca(OH) (s) o  
+ 
+ 
+14. (M)  
+ 
+ 
+ 
+Once we return to Mg(OH) 2 from MgSO 4, the other substances can be made by the indicated 
+pathways. The return reaction is: 42 2 4 MgSO (aq) + 2 NaOH(aq) Mg(OH) (s) + Na SO (aq). o   
+Then the other reactions are  CaO CaCO3CO2Ca(OH)2HClCaCl2Ca
+H2SO4CaSO4H3PO4CaHPO4' electrolysis
+ MgO MgCO3CO2Mg(OH)2HClMgCl2Mg
+H2SO4MgSO4H3PO4MgHPO4' electrolysis N2Mg3N2
+
+=== PDF PAGE 1071 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+ 1 0 7 1  22 2 Mg(OH) (s) + 2 HCl(aq) MgCl (aq) +2 H O(l) o  
+, electrolysis
+22 2 2 3 2 MgCl (l)  Mg(l) + Cl (g) ;       Mg(OH) (s) +CO (g) MgCO (s) + H O(g)' oo  
+32 2 2 4 4 2 MgCO (s)  MgO(s) +CO (g); Mg(OH) (s) + H SO (aq) MgSO (s) + 2H O(l)'oo  
+23 4 42 Mg(OH) (s)  +  H PO (aq)    MgHPO (aq)   +  2H O(l) o  
+ 
+15. (M) The reactions involved are: 
+Mg2+(aq) + Ca2+(aq) + 2OH(aq) o  Mg(OH) 2(s) + Ca2+(aq) 
+Mg(OH) 2(s) + 2 H+(aq) + 2 Cl(aq) o Mg2+(aq) + 2 H 2O(l) + 2 Cl(aq) 
+Mg2+(aq) + 2 Cl(aq) 'oMgCl 2(s) 
+MgCl 2(s)  (electrolysis) o Mg(l) + Cl 2(g)  
+Mg(l) o Mg(s)        
+Mg2+ + 2 Cl(aq) o Mg(s) + Cl 2(g)  (Overall reaction) 
+As can be seen, the process does not violat e the principle of conservation of charge. 
+ 
+16. (M) (a)  M g O  v s .  B a O :   M g O  w o u l d  h a v e  t h e  higher melting point because, although 
+Mg2+ and Ba2+ have the same charge, Mg2+ is a smaller ion.  Smaller ions have a 
+larger electrostatic attraction to anions  (here, in both cases, the anion is O2), which is 
+due to the smaller charge separation (Coulomb's law). 
+ 
+ ( b )  MgF 2 vs. MgCl 2 solubility in water.  F is smaller than Cl, hence, electrostatic attraction 
+between Mg2+ and the halide is greater in F than Cl.  If we assume that hydration of the 
+ions is similar, we expect that MgF 2 is less soluble than MgCl 2.  (Note: Ksp given for 
+MgF 2, which is sparingly soluble, while no Ksp value is given for readily soluble MgCl 2.) 
+17. (M) (a) 22BeF (s) + Mg(s)  Be(s) + MgF s'o  
+ ( b )  Ba s+B r2loBaBr2s 
+ ( c )  UO2s+2 C a s oUs+2 C a O s 
+ ( d )  33 2 MgCO CaCO s MgO s +  CaO s + 2 CO g'  o  
+ ( e )  2 H3PO4aq+3  C a O s oCa3PO42s+3H2Ol 
+ 
+ 
+18. (M) (a)   heat
+32 22Mg HCO s  MgO s + 2 CO g + H O(l) o  
+ (b) electrolysis
+22 BaCl l Ba l + Cl g o  
+ (c) Sr s+2 H B r a q oSrBr2aq+H2g 
+ ( d )    24 42 2HS O a q +  C a O H a q C a S O s + 2 HO l o  
+ ( e )  3 1
+42 4 2 2 22 CaSO 2 H O s CaSO H O s +  H O g'  o  
+ 
+19. ( D )  Let us compute the value of the equilibr ium constant for each reaction by combining 
+the two solubility product constants. Large valu es of equilibrium constants indicate that the 
+reaction is displaced far to the right. Values of K that are much smaller than 1 indicate 
+that the reaction is displaced far to the left. 
+ 
+(a)   2+ 2 10
+44 s p BaSO s Ba aq + SO aq 1.1 10 K u ZZXYZZ  
+
+=== PDF PAGE 1072 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+1072  2+ 2 9
+33 s p Ba aq + CO aq BaCO s 1/ =1/(5.1 10 )K u ZZXYZZ  
+     10
+22 2
+43 34 91.1 10BaSO s + CO aq BaCO s + SO aq = = 2.2 105.1 10K
+ 
+uuuZZXYZZ
+ T h u s ,  t h e  e q u i l i b r i u m  l i e s  s l i g h t l y  t o  t h e  l e f t .  
+ 
+ 
+(b)   2+ 3 25
+34 4 sp 2Mg PO s 3 Mg aq + 2 PO aq =2 . 1 1 0Ku ZZXYZZ  
+ 2+ 2 38 3
+33 s p 3{Mg aq + CO aq MgCO s } 1/( ) =1/(3.5 10 )K uZZXYZZ  
+  
+23
+34 3 3 4 2
+25
+3
+38Mg PO s + 3CO aq 3 MgCO s + 2 PO aq
+2.1 10= =4 . 9 1 0 T h u s ,  t h e  e q u i l i b r i u ml i e st ot h e l e f t .
+3.5 10K
+
+
+uu
+uZZXYZZ
+ 
+ 
+(c)   2+ 6
+sp 2Ca OH s Ca aq + 2 OH  aq =5 . 5 1 0Ku ZZXYZZ  
+ 2+ 9
+2s p Ca aq + 2 F aq CaF s 1/ 1/ (5.3 10 )K  u ZZXYZZ  
+  22 Ca(OH) s +  2F aq CaF s + 2 OH aqZZXYZZ  6
+3
+95.5 10== 1 . 0 1 05.3 10K
+uuu 
+Thus, the equilibrium  lies to the right.  
+ 
+20. (M) We expect the reaction to occur to a signifi cant extent in the forward direction if its 
+equilibrium constant is >> 1. 
+ ( a )    2+ 2 9
+33 s p BaCO s Ba aq + CO aq =5 . 1 1 0Ku ZZXYZZ  
+    2+2 5
+232 232 a 2 HC H O aq 2H aq + 2C H O aq = 1.8 10 Ku ZZXYZZ  
+   2+2 11
+33 a Ha q + C O a q H C O a q 1 / = 1 / ( 4 . 7 1 0) K u ZZXYZZ  
+ 1+ 7
+32 3 a Ha q + H C O a q H C Oa q 1 / = 1 / ( 4 . 2 1 0 ) K u ZZXYZZ
+ 
+   32 322 322 3 2BaCO s + 2 HC H O aq Ba C H O aq + H CO aqZZXYZZ  
+K=5.1u109u1.8u1052
+4.7u1011u4.2u107=8 . 4 u102   
+Thus, no significant reaction occurs (the equilibrium mixture contains appreciable 
+amounts of all four species involved in the reaction.  
+ 
+ (b)   2+ 6
+sp 2Ca OH s Ca aq + 2 OH aq =5 . 5 1 0Ku ZZXYZZ  
+   2+ 25
+43 2 b 2 NH aq + 2 OH aq 2 NH aq + 2 H O(l) 1/ =1/ 1.8 10 K u ZZXYZZ
+ 
+      
++2 +
+43 2 2
+6
+4
+25 Ca OH s + 2 NH aq Ca aq + 2 NH aq + 2 H O(l)
+5.5 10== 1 . 7 1 0 T h u s ,  t h i s  r e a c t i o n  w o u l d  o c c u r  t o  a  s i g n i f i c a n t  e x t e n t .
+1.8 10K
+uu
+uZZXYZZ
+ 
+ 
+
+=== PDF PAGE 1073 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+ 1 0 7 3    
+(c)   2+ 6
+2 sp BaF s Ba aq + 2 F aq =1 . 0 1 0Ku ZZXYZZ  
+   2+ 24
+32 a2 H O aq + 2 F aq 2 HF aq + 2 H O(l) 1/ = 1/ 6.6 10 K u ZZXYZZ
+ 
+        
+6
+2+
+23 2 241.0 10BaF s + 2H O aq Ba aq + 2HF aq + 2H O(l);  = = 2.3
+6.6 10K
+
+u
+uZZXYZZ  
+  T h i s  r e a c t i o n  w o u l d  o c c u r  t o  s o m e  e x tent, but certainly not to completion. 
+ 
+21. ( M )  The SO 42í ion is a large polarizable ion. A cation with a high polarizing power 
+will polarize the SO 42í ion and kinetically assi st the decomposition to SO 3. 
+Because Be2+ has the largest charge density of  the group 2 cations, we expect Be2+ 
+to be the most polarizing and thus, BeSO 4 will be the least stable with respect to 
+decomposition . 
+ 
+22. (M) The CO 32í ion is a large polarizable ion. A cation with a high polarizing power 
+will polarize the CO 32í ion and kinetically assist the decomposition to CO 2. A 
+cation with a low polarizing power will not  polarize the anion as much; thus, the 
+decomposition of CO 32í to CO 2 will not occur as readily in the presence of such a 
+cation. Because Ba2+ has the smallest charge density of the group 2 cations, we 
+expect Ba2+ to be the least polarizing; thus, BaSO 4 will be the most stable with 
+respect to decomposition. 
+ 
+Group 13: The Boron Family 
+ 
+23. (M) (a) 41 0BH c o n t a i n s  a  t o t a l  o f  43 + 1 01 = 2 2uu valence electrons or 11 pairs. Ten of 
+these pairs could be  allocated to form 10 B—H bonds , leaving but one pair to bond 
+the four B atoms together, which is clearly an electron deficient situation. 
+ 
+ (b) In our analysis in part (a), we noted that the four B atoms had but  one electron pair to 
+bond them together. To bond these four atom s into a chain requi res three electron 
+pairs. Since each electron pair in a bri dging bond replaces two “normal” bonds, there 
+must be at least two bridging bonds in the 41 0BH  m o l e c u l e s .  B y  a n a l o g y  w i t h26BH,  
+we might write the structure below left. Bu t this structure uses  only a total of 20 
+electrons. (The bridge bonds are shown as dots, normal bonds—electron pairs—as 
+dashes.) In the structure at  right below, we have reta ined some of the form of 26BH,  
+and produced a compound with the formula 41 0BH  a n d  1 1  e l e c t r o n  p a i r s .  ( T h e  
+experimentally determ ined structure of 41 0BH  c o n s i s t s  o f  a  f our-membered ring of 
+alternating B and H atoms, held togeth er by bridging bonds. Two of the B atoms 
+have two H atoms bonded to each of them  by normal covalent bonds. The other two 
+B atoms have one H atom covalently bonded to each. One final B—B bond joins 
+these last two B atoms, across the diameter  of the ring.).  See the diagram that 
+follows: 
+
+=== PDF PAGE 1074 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+1074         
+(c) 41 0CH c o n t a i n s  a  t o t a l  o f  44 + 1 01 = 2 6uu valence electrons or 13 pairs. A plausible 
+Lewis structure follows.  (Note that each  atom possess an octet of electrons.) 
+ 
+ 
+24.    (E) (a)     (b)  
+   
+ 
+ 
+ 
+25. (M) (a) 2 B B r 3(l) + 3H 2(g) o 2B(s)  +  6HBr(g) 
+   
+ (b) i )  B 2O3(s) + 3 C(s) o' 3 CO(g) + 2 B(s) 
+  ii) 2 B(s) + 3 F 2(g) o' 2 BF 3(g) 
+ 
+ (c) 2  B ( s )  +  3  N 2O(g) o' 3 N 2(g) + B 2O3(s) 
+ 
+26. (M) Each boron atom has an oxidation numb er of +3. The hydroxyl oxygens are each –2, 
+while the bridging oxygens are each –1. Fina lly, the hydroxyl H atoms are all in the +1 
+oxidation state. The oxidation numbers for the all the constituent atoms add up to the 
+charge on the perbor ate ion, namely, 2 .  
+ 
+27. (M) (a) 2 Al s+6 H C l a q o2 AlCl3aq+3  H2g 
+ 
+(b)           +
+22 42 NaOH aq + 2 Al s + 6 H O l 2 Na aq + 2 Al OH aq +3 H gªº o¬¼ 
+ 
+(c) Oxidation: 3+{Al s Al  aq + 3 e } 2ou  
+Reduction: 2 +
+42 2{SO aq + 4 H aq + 2e SO g + 2 H O(l)} 3 ou  
+_______________________________________________________________________________________________________________________________ __ 
+Net:    2 +3 +
+42 2 2 Al s +3 SO aq +12 H aq 2 Al aq +3 SO aq + 6 H O(l)o  
+ 
+28. (M) (a) 2 Al(s) + 3 Br 2(l) o 2 AlBr 3(s) 
+ 
+(b) 2 Al s+C r2O3sheato2Cr l+A l2O3s HCCCCHHH
+H
+HHHHH
+FBFF
+FFBF
+FNH
+HCH
+HCH
+HH_+HHHHHH
+BH
+BH
+BH
+BH
+x
+xx
+xx
+xx
+xx
+xx
+x
+HHHH
+BH
+BH
+BH
+x
+xx
+xx
+xx
+xBH
+HH
+
+=== PDF PAGE 1075 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+ 1 0 7 5   ( c )    23Fe O s + OH aq no reactiono  
+    23 2 4Al O s + 2 OH aq + 3 H O(l) 2 Al OH aqªºo¬¼ 
+ 
+29. ( M )  One method of analyzing this reaction is to envision the HCO3 ion as a combination 
+of CO2 and OH. Then the OH reacts with Al3+ and forms Al OH3.  This method of 
+envisioning  HCO3 does have its basis in reality. After all,  
+ 
+23 2 2 32 HC O = HO + C O + O H H C O + HO o  
+ 
+Al3+aq+3  H C O3aqoAl OH3s+3  C O2g 
+ 
+Another method is to consider the reaction as, first, the hyd rolysis of hydrated aluminum 
+ion to produce   3 Al OH s  and an acidic solution, followed by the reaction of the acid 
+with bicarbonate ion. 
+ 
+        3++
+22 2 3 63 3Al H O aq + 3H O(l) Al OH H O s + 3H O aqªº o¬¼ 
+ 
+ +
+33 2 23H O aq +3HCO aq 6H O(l)+3CO go  
+ 
+This gives the same net reaction:  
+ 
+          3+
+23 2 2 2 63 3Al H O aq + 3HCO aq Al OH H O s + 3CO g + 3H O(l)ªº o¬¼ 
+ 
+30. (E) The  Al3+aq ion hydrolyzes.   3+ +
+2 3Al aq + 3 H O(l) Al OH s + 3 H aq o  
+Subsequently, the hydrogen ion that is produ ced reacts with bicar bonate ion to liberate 2CO g . 
+ +
+32 2 Ha q + H C O a q H O ( l ) + C Ogo  
+ 
+31. ( M )  Aluminum and its oxide are soluble in both acid and base. 
+  
+    +3 +
+2
++3 +
+23 22 Al s + 6 H aq 2 Al aq +3 H g
+Al O s + 6 H aq 2 Al aq + 3 H O(l)o
+o 
+      22 42 Al s + 2 OH aq + 6 H O(l) 2 Al OH aq +3 H gªºo¬¼ 
+    23 2 4Al O s + 2 OH aq + 3 H O(l) 2 Al OH aqªºo¬¼ 
+Al(s) is resistant to corrosion onl y over the pH range 4.5 to 8.5.  Thus, aluminum is inert only 
+when the medium to which it is exposed is neither highly acidi c nor highly basic. 
+ 
+32. (M) Both Al and Mg are attacked by acid and th eir ions are both precipitated by hydroxide 
+ion. 
+  +3 +
+2 2 Al s +6 H aq 2 Al aq +3 H g o   +2 +
+2 Mg s + 2 H aq Mg aq + H g o  
+  3+
+3Al aq +3 OH aq Al OH so    2+
+2Mg aq + 2 OH Mg OH so  
+
+=== PDF PAGE 1076 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+1076 But, of these two solid hydroxides, only Al OH3s redissolves in excess OHaq. 
+Al OH3s+O HaqoAl OH4ª¬º¼aq 
+Thus, the analytical procedur e consists of dissolving the sample in HCl(aq) and then 
+treating the resulting solution with NaOH(aq) until a precipitate forms. If this precipitate 
+dissolves completely in excess NaOH(aq), the sa mple is aluminum 2S. If at least some of 
+the precipitate does not dissolve, the sample was magnesium. 
+ 
+33. ( M )  CO2g is, of course, the anhydride of an aci d. The reaction here is an acid-base 
+reaction. 
+Al OH4ª¬º¼aq+ C O2aqoAl OH3s+H C O3aq 
+HCl(aq), being a strong acid, can’t be used because it will dissolve the Al(OH) 3(s). 
+ 
+34. (M) (a) O e r s t e d :  2  A l2O3s+3  C s+6 C l2g'o4 AlCl3s+3  C O2g 
+ 
+(b) Wöhler:  AlCl3s+3  K s'oAl s+3  K C l s 
+ 
+35. (M) 2 KOH(aq) + 2 Al(s) + 6 H 2O(l) o  2 K[Al(OH) 4](aq) + 3 H 2(g) 
+ 
+          2 K[Al(OH) 4](aq) + 4 H 2SO 4(aq)  o   K 2SO 4(aq) + Al 2(SO 4)3(aq) + 8 H 2O(l) 
+ crystallize o 2 KAl(SO 4)2(s) 
+ 
+36. (E) HCO 3 and CO 32 solutions are basic (they produce an excess of OH).  Al3+(aq) in the 
+presence of OH(aq) will precipitate as the hydroxide Al(OH) 3(s). 
+ 
+37. ( E )  The structure of, and bonding in, digallane is  similar to the st ructure of and bonding 
+ i n  d i b o r a n e ,  B 2H6. 
+GaH
+HGaH
+HH
+H  
+ 
+38. (M) The structure of, and bonding in, GaH 2Cl2 is similar to the structure of and bonding 
+ i n  A l 2Cl6, except that the terminal Cl’s in Al 2Cl6 are replaced by H’s. 
+GaCl
+ClGaH
+HH
+H  
+ 
+Group 14: The Carbon Family 
+ 
+39. ( E )  In the sense that diamonds react imperceptibly  slowly at room temperature (either with 
+oxygen to form carbon dioxide, or in its transfor mation to the more stable graphite), it is 
+essentially true that “diamonds last forever. ” However, at elevated temperatures, diamond 
+will burn to form CO 2(g) and thus the statement is false. Also, the transformation 
+
+=== PDF PAGE 1077 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+ 1 0 7 7  C(diamond) ĺ C(graphite) might occur more rapidl y under other conditions. Eventually, of 
+course, the conversion to graphite occurs. 
+ 
+40.    (E) The graphite in the pencil “l ead” is a good dry lubricant th at will make slippery the 
+stickiness (or reluctance) in the lock and enab le it to work smoothly. The key carries the 
+graphite to the site that needs to be lubricated within the lock mechanism. 
+ 
+41. (M) (a) 3  S i O 2(s)   +   4 Al(s) o' 2  A l 2O3(s)  +  3 Si(s) 
+ 
+ (b) K 2CO 3(s)   +   SiO 2(s)  o'  CO 2(g)  +  K 2SiO 3(s) 
+ 
+ (c) A l 4C3(s)   +   12 H 2O(l)    o 3  C H 4(g)  +  4Al(OH) 3(s) 
+ 
+42. (M) (a) 2  K C N ( a q )  +  A g N O 3(aq) o K A g ( C N ) 2(aq) + KNO 3(aq) 
+  o r   K C N ( a q )  +  A g N O 3(aq) o A g ( C N ) ( s )  +  K N O 3(aq) 
+ 
+ (b) S i 3H8(l) + 5 O 2(g)      o  3 SiO 2(s) + 4 H 2O(l)  
+ 
+ (c) N 2(g) + CaC 2(s)         o' CaNCN(s) + C(s) 
+ 
+43. ( M )  A silane is a silicon-hydrogen co mpound, with the general formula 2+ 2 Si H .nn  A silanol is 
+a compound in which one or more of the hydrogens  of silane is replaced by an —OH group. 
+Then, the general formula becomes 2+ 1 Si H OHnn . In both of these classes of compounds, the 
+number of silicon atoms, n, ranges from 1 to 6. Silicones ar e produced when silanols condense 
+into chains, with the elimination of a water molecule between every two silanol molecules. 
+ 
+22 2 2 2 HO Si H OH + HO Si H OH HO Si H O Si H OH + H Onn nn nn nn     o     
+ 
+44. (M) Both the alkali metal carbonates and the alkali metal silicates are soluble in water. 
+Hence, they also are soluble in acids. Ho wever, the carbonates will produce gaseous carbon 
+dioxide—2CO—on reaction with acid, 
+2 +
+32 3 2 2CO (aq) + 2 H (aq) “H CO ” H O(l) + CO (g)o  o , while the silicates will 
+produce silica— 2SiO — in an analogous reaction 
+4 +
+44 4 2 2SiO (aq) + 4H (aq) “H SiO ” 2 H O(l) +SiO (s)o  o . The silica is produced in 
+many forms depending on reaction conditions: a colloidal dispersi on, a gelatinous precipitate, 
+or a semisolid gel. Silicates of cations other than those of alkali  metals are insoluble in water, 
+as are the analogous carbonates.  However, the carbonates will di ssolve in acids (witness the 
+reaction of acid rain on limestone carvi ngs and marble statues, both forms of 3 CaCO ), while 
+the silicates will not. (Sili cate rocks are not significantly affected by acid rain.) 
+45. (M) (1)   48 22 2C H g + S g 2C S g + 4HS g o  
+ 
+ (2)  22 4 2 2 CS g + 3 Cl g CCl l +S Cl l o  
+ 
+ (3)  22 2 4 8 4C S g + 8SC l g 4C C l l + 3S( s ) o  
+ 
+
+=== PDF PAGE 1078 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+1078 46. (M) (a) 32 333CH SiCl(l) + H O(l) CH Si OH(aq) + HCl(aq) o  
+  33 3 2 33 32 CH Si OH(aq)    CH Si O Si CH (s) +  H O(l)   o   
+ 
+ ( b )  A silicone polymer does not form from 33CH Si Cl . Only a dimer is produced. 
+ 
+ (c) The product that results from the treatment of 33CH SiCl  is two long Si—O—Si 
+chains, with 3CH  groups on the outside, linked by Si—O—Si bridges. Part of one of 
+these chains and the beginnings of  the bridges are shown below. 
+  
+47. (D) Muscovite or white mica has the formula KAl 2(OH) 2(AlSi 3O10).  Since they are not 
+segregated into O 2 units in the formula, all of the oxyge n atoms in the mineral must be in 
+the 2 oxidation state.  Potassium is obviously in the +1 oxidation state, as are the 
+hydrogen atoms in the hydroxyl groups.  Up to  this point, we have -24 from the twelve 
+oxygen atoms and +3 from the potassium and hy drogen atoms for a net number of -21 for 
+the oxidation state.  We  still have three aluminum atoms and three silicon atoms to account 
+for.  In oxygen-rich salts such as mica, we w ould expect that the silicon and the aluminum 
+atoms would be in their highest possible oxidatio n states, namely +4 and +3,  respectively.   
+Since the salt is neutral, the oxidation nu mbers for the silicon and aluminum atoms must 
+add up to +21.  This is precisely the total that  is obtained if the silicon and aluminum atoms 
+are in their highest possi ble oxidation states:  (3 u (+3) + 3 u (+4) = +21).   Consequently, 
+the empirical formula for white muscovite is consistent with the expected oxidation state 
+for each element present. 
+ 
+48. (D) Crysotile asbestos has the formula [Mg 3Si2O5(OH) 4].  Since they are not segregated to 
+O2 units in the formula, all of the oxygen atoms in the mineral must be in the 2 oxidation 
+state.  The three magnesium atoms are obviously  in the +2 oxidation state, while hydrogen 
+atoms in the hydroxyl groups have an oxidation stat e of +1.  Up to this point, then, the sum 
+of the oxidation numbers equals  8 (18 from O-atoms, +6 from Mg-atoms, and + 4 from 
+H-atoms).  Since the mineral is neutral, the two silicon atoms must have oxidation states 
+that sum to +8 ( 8 + 8 = neutral mineral), therefore, each silicon would need to be in the 
++4 oxidation state.  In oxygen rich salts such as asbestos, we would expect that the silicon 
+atoms would be in their highest possible oxid ation state, namely +4.  Thus, the oxidation 
+states for the element, in this mineral ar e precisely consistent  with expectations. 
+49. (M) (a) 33 2 2PbO s + 2 HNO aq Pb NO s + H O(l) o  
+ 
+ ( b )  SnCO3s'oSnO s+C O2g 
+ 
+(c) PbO s+C s'oPb l+C O g 
+ OS iO
+CH3OS iOO
+CH3SiO
+CH3OS iOO
+CH3SiO
+CH3OS iOO
+CH3
+
+=== PDF PAGE 1079 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+ 1 0 7 9  (d) 2 Fe3+aq+S n2+aqo2 Fe2+aq+S n4+aq 
+ 
+(e)  22 2 PbS s +3 O g 2 PbO s + 2 SO g'o  
+ 22 3 2 SO g + O g 2 SO g o    
+SO3g+P b O s oPbSO4s 
+ 
+Or perhaps simply: 24 PbS s + 2O g PbSO s o  
+ 
+Yet a third possibility: 
+ 23 PbO s +SO s PbSO s o , followed by  32 4 2 PbSO s +  O s 2PbSO s o  
+ 
+50. (M) (a) Treat tin(II) oxide with  hydrochloric acid. 
+  22 SnO s + 2 HCl aq SnCl aq + H O(l) o  
+ 
+(b) Attack tin with chlorine. Sn s+2 C l2goSnCl4s 
+ 
+(c) First we dissolve PbO2s in HNO3aq and then treat the resulting solution with 
+K2CrO4aq to precipitate PbCrO 4(s) 
+ 
+  23 32 222 PbO s + 4 HNO aq 2 Pb NO aq + O g + 2 H O(l) o  
+ 
+32 4 4 32Pb NO aq + K CrO aq PbCrO s + 2 KNO aq o  
+ 
+51. ( M )  We start by using the Nernst equation to de termine whether the cell voltage still is 
+positive when the reaction has gone to completion. 
+ 
+ ( a )  Oxidation: 2+ 3+Fe aq Fe aq + e }  2ou     =0 . 7 7 1  VE  
+Reduction: +2 +
+22PbO s + 4 H aq + 2 e Pb aq + 2 H O(l)o    =+ 1 . 4 5 5  VE  
+  N e t :   2+ + 3+ 2+
+2 2 2 Fe aq + PbO s + 4 H (aq) 2 Fe aq + Pb aq + 2 H O(l) o  
+ 
+  Ecell  V  V  V =0 . 7 7 1 + 1 . 4 5 5 = + 0 . 6 8 4  
+ 
+  I n  t h i s  c a s e ,  w h e n  t h e  r e a c t i o n  h a s  g o n e  t o  c o m p l e t i o n ,   
+ 
+   Fe  M  Fe2+ 3+=0 . 0 0 1 , =0 . 9 9 9 M ,  a n d   Pb2+=0 . 5 0 0 M .  
+  
+  E cell = Eo
+cell  32 2
+220.0592 [Fe ] [Pb ]log2[ F e ]
+ = 0.684 V 2
+20.0592 [0.999] [0.500]log2[ 0 . 0 0 1 ] = 0.515 V.  
+  T h u s ,  t h i s  r e a c t i o n  w i l l  g o  t o  c o m p l e t i o n .  
+ (b) Oxidation: 22
+42 8 2 SO aq S O aq + 2 eo    =2 . 0 1 VE  
+Reduction: +2 +
+22PbO s + 4 H aq + 2 e Pb aq + 2 H O(l)o     = + 1 . 4 5 5  VE  
+    22 +2 +
+42 2 8 2 2 SO aq + PbO s + 4 H (aq) S O aq + Pb aq + 2 H O(l)o  
+
+=== PDF PAGE 1080 ===
+Chapter 21: Chemistry of the Main-Group Elements I: Groups 1, 2, 13, and 14 
+1080 Ecell  V This reaction is not even spontaneous initially =2 . 0 1 + 1 . 4 5 5 =0 . 5 6 . 
+ 
+(c) Oxidation: {Mn2+1u10-4 M+4H2O(l)oMnO4aq+8H+aq+5 e-}u2;o=1 . 5 1  VE  
+Reduction: +2 +
+22 {PbO s +4 H aq +2 e Pb aq +2 H O(l)}×5o     o=+1.455 VE  
+Net:   -4 2+ + 2+
+24 211 0 M 2Mn + 5PbO s + 4H 2MnO aq + 5Pb aq + 2H O(l)u o  
+o
+cell=1 . 5 1 + 1 . 4 5 5 =0 . 0 6  V .E   The standard cell potential indicates that this reaction is 
+not spontaneous when all concentrations are 1 M. Since the concentration of a reactant 
+Mn2+ is lower than 1.00 M, this reaction is even less spontaneous than the standard 
+cell potential indicates. 
+ 
+52. (M) A positive value of Ecell indicates that a re action should occur. 
+(a) 2+ 4+Oxidation :  Sn aq Sn aq + 2 eo   =0 . 1 5 4  VE  
+2 Reduction :  I s + 2 e 2 I aqo       = + 0 . 5 3 5  V E  
+          
+  2+ 4+
+2 Net :  Sn aq + I s Sn aq + 2 I aqo     cell=+ 0 . 3 8 1  VE  
+Yes, Sn2+aq will reduce  I2 to I. 
+ 
+(b) 2+ 4+Oxidation :  Sn aq Sn aq + 2 e =0 . 1 5 4  VEo   
+2+Reduction :  Fe aq + 2 e Fe s =0 . 4 4 0  VEo  
+          
+2+ 2+ 4+
+cell Net :  Sn aq + Fe aq Sn aq +  Fe s = 0.594 V E o  
+No, Sn2+aq will not reduce Fe2+aq to Fe(s). 
+ 
+(c) 2+ 4+Oxidation :  Sn aq Sn aq + 2 e =0 . 1 5 4  VEo   
+2+Reduction :  Cu aq + 2 e Cu s =+ 0 . 3 3 7  VEo  
+          
+2+ 2+ 4+
+cell Net :  Sn aq + Cu aq Sn aq +  Cu s =+ 0 . 1 8 3  VE o  
+Yes, Sn2+aq will reduce Cu2+aq to Cu(s). 
+ 
+  (d)  2+ 4+Oxidation :  Sn aq Sn aq + 2 e =0 . 1 5 4  VEo   
+3+ 2+Reduction : {Fe aq + e Fe aq }  2 =+ 0 . 7 7 1  VEou  
+          
+2+ 3+ 4+ 2+
+cell Net :  Sn aq + 2 Fe aq Sn aq + 2 Fe aq = +0.617 V E o  
+Yes, Sn2+aq will reduce Fe3+aq to Fe2+aq. 
+ 
+53. ( M )  As we move down a group, the lower oxidati on state is generally favored. Thus, we 
+ e x p e c t  P b C l 2, with lead in the +2 oxidation state, to be the product.  
+ 

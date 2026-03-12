@@ -1,0 +1,2985 @@
+TEXTBOOK total pages: 1496
+
+===== TEXTBOOK PAGE 276 =====
+7-2 Heat 247
+happen—the bouncing ball soon comes to rest. All the energy originally
+invested in the ball as potential energy (by raising it to its initial position)
+eventually appears as additional kinetic energy of the atoms and molecules
+that make up the ball, the surface, and the surrounding air. This kinetic energy
+associated with random molecular motion is called thermal energy.
+In general, thermal energy is proportional to the temperature of a system, as sug-
+gested by the kinetic theory of gases (see page 222). The more vigorous the motion
+of the molecules in the system, the higher the temperature and the greater is its
+thermal energy. However, the thermal energy of a system also depends on the
+number of particles present, so that a small sample at a high temperature (for exam-
+ple, a cup of coffee at ) may have less thermal energy than a larger sample at
+a lower temperature (for example, a swimming pool at ). Thus, temperature
+and thermal energy must be carefully distinguished. Equally important, we need to
+distinguish between energy changes produced by the action of forces through 
+distances—work—and those involving the transfer of thermal energy—heat.
+30 °C
+75 °C
+7-1 CONCEPT ASSESSMENT
+Consider the following situations: a stick of dynamite exploding deep within a
+mountain cavern, the titration of an acid with base in a laboratory, and a cylinder
+of a steam engine with all of its valves closed. To what type of thermodynamic
+systems do these situations correspond?
+7-2 Heat
+Heat is energy transferred between a system and its surroundings as a result of
+a temperature difference. Energy that passes from a warmer body (with a higher
+temperature) to a colder body (with a lower temperature) is transferred as heat.
+At the molecular level, molecules of the warmer body, through collisions, lose
+kinetic energy to those of the colder body. Thermal energy is transferred—“heat
+flows”—until the average molecular kinetic energies of the two bodies become
+the same, until the temperatures become equal. Heat, like work, describes
+energy in transit between a system and its surroundings.
+Not only can heat transfer cause a change in temperature but, in some
+instances, it can also change a state of matter. For example, when a solid is
+heated, the molecules, atoms, or ions of the solid move with greater vigor and
+eventually break free from their neighbors by overcoming the attractive
+forces between them. Energy is required to overcome these attractive forces.
+During the process of melting, for example, the temperature remains constant
+as a thermal energy transfer (heat) is used to overcome the forces holding the
+solid together. A process occurring at a constant temperature is said to be
+isothermal . Once a solid has melted completely, any further heat flow will
+raise the temperature of the resulting liquid.
+Although we commonly use expressions like “heat is lost,” “heat is gained,”
+“heat flows,” and “the system loses heat to the surroundings,” you should not
+take these statements to mean that a system contains heat. It does not. The
+energy content of a system, as we shall see in Section 7-5, is a quantity called
+the internal energy. Heat is simply a form in which a quantity of energy may be
+transferred across a boundary between a system and its surroundings.
+It is reasonable to expect that the quantity of heat, q, required to change the
+temperature of a substance depends on
+• how much the temperature is to be changed
+• the quantity of substance
+• the nature of the substance (type of atoms or molecules)
+We will soon learn that the quantity of heat required to achieve a certain
+temperature change also depends on the conditions under which the substance
+▲ James Joule
+(1818–1889)—an amateur
+scientist
+Joule’s primary occupation
+was running a brewery, but 
+he also conducted scientific
+research in a home laboratory.
+His precise measurements 
+of quantities of heat formed
+the basis of the law of
+conservation of energy.
+Bilwissedition Ltd. & Co. KG / Alamy
+M07_PETR4521_10_SE_C07.QXD  1/7/16  3:14 PM  Page 247
+
+===== TEXTBOOK PAGE 277 =====
+248 Chapter 7 Thermochemistry
+is heated (for example, whether the substance is heated under the condition of
+constant volume or constant pressur e). Historically, the quantity of heat
+required to change the temperature of one gram of water by one degree Celsius
+has been called the calorie (cal). The calorie is a small unit of energy, and the
+unit kilocalorie(kcal) has also been widely used. The SI unit for heat is simply the
+basic SI energy unit, the joule (J).
+(7.2)
+Although the joule is used almost exclusively in this text, the calorie is widely
+encountered in older scientific literature. In the United States, the kilocalorie is
+commonly used for measuring the energy content of foods (see the Focus On fea-
+ture for Chapter 7 on www.masteringchemistry.com).
+Heat Capacity
+The quantity of heat required to change the temperature of a system by one
+degree is called the heat capacityof the system. Heat capacity is represented by
+the symbol C. To obtain the heat capacity of a system (for example, a reaction ves-
+sel or 10 grams of water), we deliver a known quantity of heat, q, and measure
+the temperature change produced, T. The heat capacity, C, is then calculated as
+(7.3)
+In equation (7.3), the temperature change is TT f – Ti, where Tf is the
+final temperature and Ti is the initial temperature. Since the unit of q is joules
+(J) and that of T is °C or K, heat capacity has units of J °C–1 or J K–1. The units
+J °C–1 and J K–1 are equivalent and interchangeable: a temperature change in °C
+is equal to a temperature change in K. For example, when temperature of a sys-
+tem changes from 0 °C (or 273.15 K) to 20 °C (or 293.15 K), the temperature
+change is 20 °C or 20 K.
+Once we know the heat capacity of a system, we can use it to convert an
+observed temperature change into a quantity of heat (or vice versa) by solving
+equation (7.3) for q or T. For example, 
+(7.4)
+For reasons made clear in the next section, heat capacity depends on whether
+the system is heated at constant pressure or at constant volume. To distinguish
+between the heat capacities for heating at constant pressure and at constant vol-
+ume, the symbols and C
+V are sometimes used. Most of the processes we will
+consider occur at constant pressure, so we will normally make use of constant-
+pressure heat capacities and often omit the subscript p on C.
+For pure substances, the heat capacity is often expressed per mole or per
+gram of substance. The molar heat capacity at constant pressure (symbol C
+p,m)
+is the quantity of heat required to raise the temperature of one mole of a sub-
+stance by one degree under the condition of constant pressure. The constant-
+pressure specific heat capacity (symbol, c
+P), sometimes called the specific heat,*
+is the quantity of heat required to change the temperature of one gram of a sub-
+stance by one degree at constant pressure. Here are the values for water at 25 °C. 
+For water at 25 °C:
+Furthermore, for a sample containing a known amount (n) or mass (m) of a
+single (pure) substance, the constant-pressure heat capacity of the sample is
+. Therefore, equation (7.4) takes the following form.
+(7.5)q = Cp¢T = nCp,m ¢T = mcp¢T
+C = nCp,m = mcp
+cp = 4.1813 J
+g °CCp,m = 75.326 J
+mol °C
+Cp
+q = C¢T
+¢
+¢
+=¢
+C =
+q
+¢T
+¢
+1 cal = 4.184 J
+The Greek letter delta, 
+indicates a change in some
+quantity. For example,
+, where 
+is the final temperature and
+Ti is the initial temperature.
+Tf¢T = Tf - Ti
+¢,
+▲
+Heat capacities and spe-
+cific heat capacities are some-
+what temperature dependent.
+For example, the specific 
+heat capacity of water is
+4.1813 J g °C at 25 °C and
+4.1794 J g °C at 40 °C.
+-1-1
+-1-1
+▲
+*The original meaning of specific heat was that of a ratio: the quantity of heat required 
+to change the temperature of a mass of substance divided by the quantity of heat required to
+produce the same temperature change in the same mass of water—this definition would make
+specific heat capacity dimensionless. The meaning given here is more commonly used.
+M07_PETR4521_10_SE_C07.QXD  1/7/16  3:14 PM  Page 248
+
+===== TEXTBOOK PAGE 278 =====
+7-2 Heat 249
+EXAMPLE 7-1 Calculating a Quantity of Heat
+How much heat is required to raise the temperature of 100.0 mL of water (approximately 100.0 g) from room
+temperature, typically 21.0 °C, to body temperature, typically 37.0 °C? (Assume the specific heat capacity of
+water is throughout this temperature range.)
+Analyze
+To answer this question, we begin by multiplying the specific heat capacity by the mass of water to obtain the
+heat capacity of the system. To find the amount of heat required to produce the desired temperature change we
+multiply the heat capacity by the temperature difference.
+Solve
+The specific heat capacity is the heat capacity of 1.00 g water:
+The heat capacity of the system (100.0 g water) is
+The required temperature change in the system is
+The heat required to produce this temperature change is
+Assess
+Remember that specific heat capacity is the heat capacity per gram of substance. Also note that the change in
+temperature is determined by subtracting the initial temperature from the final temperature. This will be impor-
+tant in determining the sign on the value you determine for heat, as will become apparent in the next section.
+PRACTICE EXAMPLE A: How much heat, in kilojoules (kJ), is required to raise the temperature of 237 g of water
+from 4.0 to ?
+PRACTICE EXAMPLE B: How much heat, in kilojoules (kJ), is required to raise the temperature of 
+from to Assume a density of and a molar heat capacity of for Hg1l2.28.0 J mol-1 °C-113.6 g>mL-6.0 °C?-20.0
+2.50 kg Hg1l2
+37.0 °C
+418 
+J
+°C * 16.0 °C = 6.69 * 103 J
+137.0 - 21.02 °C = 16.0 °C
+100.0 g water * 4.18 J
+g water °C = 418 
+J
+°C
+4.18 J
+g water °C
+4.18 J g-1 °C-1
+In Example 7-1, the objective is to calculate a quantity of heat based on the
+amount of a substance, the specific heat capacity of that substance, and its 
+temperature change. In solving the problem, we use the specific heat capacity
+as a conversion factor to convert a temperature change, in °C, to a quantity of
+heat in J.
+In equation (7.5), the temperature change is expressed as where
+is the final temperature and is the initial temperature. When the tempera-
+ture of a system increases and q are positive. A positive value of q
+signifies that heat is absorbed or gained by the system. When the temperature of
+a system decreases and q are negative. A negative value of q signi-
+fies that heat is evolved or lost by the system.
+Another idea that enters into calculations of quantities of heat is the law of
+conservation of energy: In interactions between a system and its surroundings,
+the total energy remains constant—energy is neither created nor destroyed.
+Applied to the exchange of heat, this means that
+1T
+f 6 Ti2, ¢T
+1Tf 7 Ti2, ¢T
+TiTf
+¢T = Tf - Ti,
+(7.6)qsystem + qsurroundings = 0
+The symbol means
+“greater than,” and means
+“less than.”
+6
+7
+▲
+M07_PETR4521_10_SE_C07.QXD  1/7/16  3:14 PM  Page 249
+
+===== TEXTBOOK PAGE 322 =====
+Exercises 293
+63. Only one of the following quantities is equal to the heat
+of a chemical reaction, regardless of how the reaction 
+is carried out. Which one and why? (a) (b)
+(c) (d) (e)
+64. Determine whether is equal to, greater than, or
+less than for the following processes. Keep in
+mind that “greater than” means more positive or less
+negative, and “less than” means less positive or more
+negative. Assume that the only significant change in
+volume during a constant pressure process is that
+associated with changes in the amounts of gases.
+(a) The complete combustion of one mole of 
+butan-1-ol.
+¢U
+¢H
+¢
+rH.¢U;¢U - w;
+qP;qV;
+(b) The complete combustion of one mole of glucose,
+(c) The decomposition of solid ammonium nitrate
+to produce liquid water and gaseous dinitrogen
+monoxide.
+65. The heat of combustion of propan-2-ol at 298.15 K,
+determined in a bomb calorimeter, is For
+the combustion of one mole of propan-2-ol, determine
+(a) and (b)
+66. Write an equation to represent the combustion of
+thymol referred to in Exercise 44. Include in this
+equation the values for and ¢H.¢U
+¢
+rH.¢U,
+-33.41 kJ>g.
+C6H12O61s2.
+First Law of Thermodynamics
+55. What is the change in internal energy of a system if
+the system (a) absorbs 58 J of heat and does 58 J of
+work; (b) absorbs 125 J of heat and does 687 J of work;
+(c) evolves 280 cal of heat and has 1.25 kJ of work
+done on it?
+56. What is the change in internal energy of a system if the
+surroundings (a) transfer 235 J of heat and 128 J of work
+to the system; (b) absorb 145 J of heat from the system
+while doing 98 J of work on the system; (c) exchange
+no heat, but receive 1.07 kJ of work from the system?
+57. The internal energy of a fixed quantity of an ideal gas
+depends only on its temperature. A sample of an ideal
+gas is allowed to expand at a constant temperature
+(isothermal expansion). (a) Does the gas do work?
+(b) Does the gas exchange heat with its surroundings?
+(c) What happens to the temperature of the gas?
+(d) What is for the gas?
+58. In an adiabaticprocess, a system is thermally insulated—
+there is no exchange of heat between system and sur-
+roundings. For the adiabatic expansion of an ideal gas
+(a) does the gas do work? (b) Does the internal energy of
+the gas increase, decrease, or remain constant? (c) What
+¢U
+happens to the temperature of the gas? [Hint: Refer to
+Exercise 57.]
+59. Do you think the following observation is in any way
+possible? An ideal gas is expanded isothermally and
+is observed to do twice as much work as the heat
+absorbed from its surroundings. Explain your answer.
+[Hint: Refer to Exercises 57 and 58.]
+60. Do you think the following observation is any way pos-
+sible? A gas absorbs heat from its surroundings while
+being compressed. Explain your answer. [Hint: Refer to
+Exercises 55 and 56.]
+61. There are other forms of work besides P–V work. For
+example, electrical work is defined as the 
+in charge, If a charge in a system is
+changed from 10 C to 5 C in a potential of 100 V and
+45 J of heat is liberated, what is the change in the
+internal energy? (Note: 1 V 1 J C)
+62. Another form of work is extension, defined as the
+in length, A piece of
+DNA has an approximate tension of What
+is the change in the internal energy of the adiabatic
+stretching of DNA by 10 pm?
+f = 10
+ pN.
+w = f ¢l.tension * change
+>=
+w = f ¢q.change
+potential *
+Relating H and U≤≤
+Hess’s Law
+67. The standard enthalpy of formation of 
+is What is for the following 
+reaction?
+68. Use Hess’s law to determine for the reaction
+given that
+¢
+rH° =- 110.54 kJ mol-1
+C1graphite2 + 1
+2
+ O21g2 ¡ CO1g2
+CO1g2 + 1
+2  O21g2 ¡ CO21g2,
+¢rH°
+2
+3
+  NH31g2 ¡ 1
+3
+ N21g2 + H21g2  ¢rH° =
+¢rH°-46.11 kJ>mol.
+NH31g2
+69. Use Hess’s law to determine for the reaction
+given that
+¢rH° =- 2219.1 kJ mol-1
+C3H81g2 + 5 O21g2 ¡ 3 CO21g2 + 4 H2O1l2
+¢rH° =- 1937 kJ mol-1
+C3H41g2 + 4 O21g2 ¡ 3 CO21g2 + 2 H2O1l2
+¢rH° =- 285.8 kJ mol-1
+H21g2 + 1
+2
+  O21g2 ¡ H2O1l2
+C3H41g2 + 2 H21g2 ¡ C3H81g2,
+¢rH°
+¢rH° =- 393.51 kJ mol-1
+C1graphite2 + O21g2 ¡ CO21g2
+53. If 325 J of work is done by a system at a pressure of
+1.0 atm and 298 K, what is the change in the volume of
+the system?
+54. A movable piston in a cylinder holding 5.0 L is
+used to lift a 2.41 kg object to a height of 2.6 meters.
+How much work (in J) was done by the gas?
+N
+21g2
+M07_PETR4521_10_SE_C07.QXD  1/7/16  3:19 PM  Page 293
+
+===== TEXTBOOK PAGE 323 =====
+294 Chapter 7 Thermochemistry
+70. Given the following information:
+Determine for the following reaction, expressed
+in terms of and 
+71. For the reaction 
+determine given that
+72. Determine for this reaction from the data below.
+73. Substitute natural gas (SNG) is a gaseous mixture
+containing that can be used as a fuel. One
+reaction for the production of SNG is
+Use appropriate data from the following list to deter-
+mine for this SNG reaction.
+74. an important commercial solvent, is prepared
+by the reaction of with a carbon compound.
+Determine for the reaction
+CS
+21l2 + 3 Cl21g2 ¡ CCl41l2 + S2Cl21l2
+¢rH°
+Cl21g2
+CCl4,
+ ¢rH° =- 890.3 kJ mol-1
+ CH41g2 + 2 O21g2 ¡ CO21g2 + 2 H2O1l2
+ ¢rH° =- 74.81 kJ mol-1
+ C1graphite2 + 2 H21g2 ¡ CH41g2
+ ¢rH° =- 285.8 kJ mol-1 H21g2 + 1
+2
+  O21g2 ¡ H2O1l2
+ ¢rH° =- 283.0 kJ mol-1 CO1g2 + 1
+2
+  O21g2 ¡ CO21g2
+ ¢rH° =- 110.5 kJ mol-1
+ C1graphite2 + 1
+2
+  O21g2 ¡ CO1g2
+¢rH°
+3 CH41g2 + CO21g2 + 2 H2O1l2 ¢rH° = ?
+4 CO1g2 + 8 H21g2 ¡
+CH41g2
+¢rH° =- 187.8 kJ mol-1 H21g2 + O21g2 ¡ H2O21l2
+¢rH° =- 285.8 kJ mol-1 H21g2 + 1
+2
+ O21g2 ¡ H2O1l2
+¢rH° =- 622.2 kJ mol-1
+ N2H41l2 + O21g2 ¡ N21g2 + 2 H2O1l2
+¡ N21g2 + 4 H2O1l2N2H41l2 + 2 H2O21l2
+¢rH°
+C2H4Cl21l2 + H2O1l2 ¢rH° =- 318.7 kJ mol-1
+2 HCl1g2 + C2H41g2 + 1
+2
+ O21g2 ¡
+¢rH° =- 202.4 kJ mol-1
+4 HCl1g2 + O21g2 ¡ 2 Cl21g2 + 2 H2O1l2
+¢rH°,
+C2H41g2 + Cl21g2 ¡ C2H4Cl21l2,
+N21g2 + O21g2 ¡ 2 NO1g2 ¢rH° = ?
+¢rH3°.¢rH1°, ¢rH2°,
+¢rH°
+¢rH3°H21g2 + 1
+2
+  O21g2 ¡ H2O1l2
+¢rH2° NH31g2 + 5
+4
+  O21g2 ¡ NO1g2 + 3
+2
+ H2O1l2
+¢rH1° 1
+2
+  N21g2 + 3
+2 H21g2 ¡ NH31g2
+Use appropriate data from the following listing.
+75. Use Hess’s law and the following data
+to determine for the following reaction, an
+important source of hydrogen gas
+76. The standard heats of combustion of 
+buta-1,3-diene, butane, and 
+are and respec-
+tively. Use these data to calculate the heat of hydro-
+genation of buta-1,3-diene to butane.
+[Hint: Write equations for the combustion reactions.
+In each combustion, the products are and
+]
+77. One glucose molecule, is converted to
+two lactic acid molecules, 
+during glycolysis. Given the combustion reactions of
+glucose and lactic acid, determine the standard
+enthalpy for glycolysis.
+78. The standard enthalpy of fermentation of glucose to
+ethanol is
+Use the standard enthalpy of combustion for glu-
+cose to calculate the enthalpy of combustion for
+ethanol.
+¢
+rH° =- 72 kJ mol-1
+C6H12O61s2 ¡ 2 CH3CH2OH1l2 + 2 CO21g2
+3 CO21g2 + 3 H2O1l2 ¢rH° =- 1344 kJ mol-1
+CH3CH1OH2COOH1s2 + 3 O21g2 ¡
+¢rH° =- 2808 kJ mol-1
+C6H12O61s2 + 6 O21g2 ¡ 6 CO21g2 + 6 H2O1l2
+1OH2COOH1s2CH3CH
+C6H12O61s2,
+H2O1l2.
+CO21g2
+C4H61g2 + 2 H21g2 ¡ C4H101g2 ¢rH° = ?
+-285.8 kJ mol-1,-2540.2, -2877.6,
+H21g2C4H101g2;C4H61g2;
+1¢rH°2
+CH41g2 + 1
+2
+  O21g2 ¡ CO1g2 + 2 H21g2
+¢rH°
+ ¢rH° =+ 206 kJ mol-1
+ CH41g2 + H2O1g2 ¡ CO1g2 + 3 H21g2
+ ¢rH° =+ 247 kJ mol-1
+ CH41g2 + CO21g2 ¡ 2 CO1g2 + 2 H21g2
+ ¢rH° =- 802 kJ mol-1
+ CH41g2 + 2 O21g2 ¡ CO21g2 + 2 H2O1g2
+ ¢rH° =- 5.2 kJ mol-1
+ CCl41l2 + O21g2 ¡ COCl21g2 + Cl2O1g2
+ C1s2 + O21g2 ¡ CO21g2   ¢rH° =- 393.5 kJ mol-1
+ SO21g2 + Cl21g2 ¡ SO2Cl21l2   ¢rH° =+ 97.3 k mol-1
+ S1s2 + O21g2 ¡ SO21g2   ¢rH° =- 296.8 kJ mol-1
+ C1s2 + 2 Cl21g2 ¡ CCl41l2  ¢rH° =- 135.4 kJ mol-1
+ 2 S1s2 + Cl21g2 ¡ S2Cl21l2   ¢rH° =- 58.2 kJ mol-1
+ ¢rH° =- 1077 kJ mol-1
+ CS21l2 + 3 O21g2 ¡ CO21g2 + 2 SO21g2
+M07_PETR4521_10_SE_C07.QXD  1/7/16  4:27 PM  Page 294
+
+===== TEXTBOOK PAGE 324 =====
+Standard Enthalpies of Formation
+79. Use standard enthalpies of formation from Table 7.2
+and equation (7.22) to determine the standard enthalpy
+of reaction in the following reactions.
+(a)
+(b)
+80. Use standard enthalpies of formation from Tables 7.2
+and 7.3 and equation (7.22) to determine the standard
+enthalpy of reaction in the following reaction.
+81. Use the information given here, data from Appendix
+D, and equation (7.22) to calculate the standard
+enthalpy of formation per mole of ZnS(s).
+82. Use the data in Figure 7-18 and information from
+Section 3-7 to establish possible relationships between
+the molecular structure of the hydrocarbons and their
+standard enthalpies of formation.
+83. Use standard enthalpies of formation from Table 7.2
+to determine at for the following reaction.
+84. Use data from Appendix D to calculate for the
+following reaction at 
+85. Use data from Table 7.2 to determine the standard
+heat of combustion of if reactants and
+products are maintained at and 1 bar.
+86. Use data from Table 7.2, together with the fact that
+for the complete combustion
+of pentane, to calculate for the reac-
+tion below.
+¢
+rH° = ?
+5 CO1g2 + 11 H21g2 ¡ C5H121l2 + 5 H2O1l2
+¢rH°C5H121l2,
+¢rH° =- 3509 kJ mol-1
+25 °C
+C2H5OH1l2,
+¢rH° = ?
+Fe2O31s2 + 3 CO1g2 ¡ 2 Fe1s2 + 3 CO21g2
+25 °C.
+¢rH°
+¢rH° = ?
+2 Cl21g2 + 2 H2O1l2 ¡ 4 HCl1g2 + O21g2
+25 °C¢rH°
+¢rH° =- 878.2 kJ mol-1
+2 ZnS1s2 + 3 O21g2 ¡ 2 ZnO1s2 + 2 SO21g2
+NH4
++1aq2 + OH-1aq2 ¡ H2O1l2 + NH31g2.
+2 H2S1g2 + 3 O21g2 ¡ 2 SO21g2 + 2 H2O1l2.
+C3H81g2 + H21g2 ¡ C2H61g2 + CH41g2;
+87. Use data from Table 7.2 and for the following
+reaction to determine the standard enthalpy of forma-
+tion of at and 1 bar.
+88. Use data from Table 7.2 and for the following
+reaction to determine the standard enthalpy of forma-
+tion of hexane, at and 1 bar.
+89. Use data from Table 7.3 and Appendix D to determine
+the standard enthalpy change in the following reaction.
+90. Use data from Table 7.3 and Appendix D to determine
+the following reaction.
+91. The decomposition of limestone, into
+quicklime, CaO(s), and is carried out in a
+gas-fired kiln. Use data from Appendix D to deter-
+mine how much heat is required to decompose
+(Assume that heats of reac-
+tion are the same as at and 1 bar.)
+92. Use data from Table 7.2 to calculate the volume
+of butane, measured at and
+756 mmHg, that must be burned to liberate
+of heat.
+93. Ants release formic acid (HCOOH) when they bite.
+Use the data in Table 7.2 and the standard enthalpy of
+combustion for formic acid to
+calculate the standard enthalpy of formation for
+formic acid.
+94. Calculate the enthalpy of combustion for lactic acid by
+using the data in Table 7.2 and the standard enthalpy of
+formation for lactic acid :
+-694.0
+ kJ>mol.¢fH° =
+3CH3CH1OH2COOH1s24
+1¢rH° =- 255 kJ>mol2
+5.00 * 104 kJ
+24.6 °CC4H101g2,
+25 °C
+1.35 * 103 kg CaCO31s2.
+CO21g2
+CaCO31s2,
+Mg2+1aq2 + 2 H2O1l2 + 2 NH31g2 ¢rH° = ?
+Mg1OH221s2 + 2 NH4
++1aq2 ¡
+¢rH°
+Al3+1aq2 + 3 OH-1aq2 ¡ Al1OH231s2 ¢rH° = ?
+¢rH° =- 8326 kJ mol-1
+2 C6H141l2 + 19 O21g2 ¡ 12 CO21g2 + 14 H2O1l2
+25 °CC6H141l2,
+¢rH°
+¢rH° =- 397.3 kJ mol-1
+CH41g2 + 4 Cl21g2 ¡ CCl41g2 + 4 HCl1g2
+25 °CCCl41g2
+¢rH°
+Integrative and Advanced Exercises
+95. A British thermal unit (Btu) is defined as the quantity
+of heat required to change the temperature of 1 lb of
+water by Assume the specific heat capacity of
+water to be independent of temperature. How much
+heat is required to raise the temperature of the water
+in a 40 gal water heater from 48 to in (a) Btu;
+(b) kcal; (c) kJ?
+96. What volume of water must be added,
+together with a 1.23 kg piece of iron at so that
+the temperature of the water in the insulated container
+shown in the figure remains constant at ?25.6
+ °C
+68.5 °C,
+18.5 °C
+145 °F
+1 °F.
+Water
+Water
+1.23 kg iron 
+Temp. 68.5 /H11034C
+0.449 J g/H110021 /H11034C/H110021
+? mL water
+Temp. 18.5 /H11034C
+25.6 /H11034C25.6 /H11034C
+Integrative and Advanced Exercises 295
+M07_PETR4521_10_SE_C07.QXD  1/7/16  3:21 PM  Page 295
+
+===== TEXTBOOK PAGE 811 =====
+782 Chapter 16 Acids and Bases
+PRACTICE EXAMPLE A: The solubility of in at and under a pressure of 1 atm is 1.45 g
+Air contains 0.037% by volume. Use this information, together with data from Table 16.5, to show that
+rainwater saturated with has a (the normal pH for rainwater). [ Hint: Recall Henry’s law. What is the
+partial pressure of in air?]
+PRACTICE EXAMPLE B: Often the following generalization applies to oxoacids with the formula (where E
+is the central atom): If if if is large; and if is very large.
+(a) Show that this generalization works well for the oxoacids of chlorine: HOCl, HOClO, 
+(b) Estimate the value of for 
+(c) Write a Lewis structure for hypophosphorous acid, for which p Ka = 1.1.H3PO2,
+H3AsO4.Ka1
+HOClO2, pKa =- 3; HOClO3, pKa =- 8.
+pKa = 1.92;pKa = 7.52;
+m = 3, Kam = 2, Kam = 1, Ka L 10-2;m = 0, Ka L 10-7;
+EOm1OH2n
+CO21g2
+pH L 5.6CO2
+CO2CO2/L.
+CO21g225 °CH2OCO21g2
+Strong Acids, Strong Bases, and pH
+9. Calculate and for each solution: 
+(a) 0.00165 M (b) 0.0087 M KOH; (c) 0.00213 M
+(d) M HI.
+10. What is the pH of each of the following solutions? 
+(a) 0.0045 M HCl; (b)
+(c) 0.00683 M NaOH; (d)
+11. Calculate and pH in saturated 
+which contains 3.9 g per 100 mL of
+solution.
+12. A saturated aqueous solution of has a pH of
+12.35. What is the solubility of expressed in
+milligrams per 100 mL of solution?
+13. What is in a solution obtained by dissolving
+205 mL HCl(g), measured at and 751 mmHg, in
+4.25 L of aqueous solution?
+14. What is the pH of the solution obtained when 125 mL
+of 0.606 M NaOH is diluted to 15.0 L with water?
+15. How many milliliters of concentrated HCl(aq) (36.0%
+HCl by mass, ) are required to produce
+12.5 L of a solution with pH = 2.10?
+d = 1.18 g>mL
+23 °C
+3H
+3O+4
+Ca1OH22,
+Ca1OH22
+Ba1OH22 # 8 H2O
+Ba1OH221aq2,3H3O+4
+4.8 * 10-3 M Ba1OH22.
+6.14 *  10-4 M  HNO3;
+5.8 * 10-4Sr1OH22;
+HNO3;
+3OH-43H3O+4 16. How many milliliters of a 15.0%, by mass solution of
+KOH(aq) are required to produce
+25.0 L of a solution with 
+17. What volume of 6.15 M HCl(aq) is required to exactly
+neutralize 1.25 L of 
+18. A 28.2 L volume of HCl(g), measured at 742 mmHg
+and is dissolved in water. What volume of
+measured at 762 mmHg and must
+be absorbed by the same solution to neutralize 
+the HCl?
+19. 50.00 mL of 0.0155 M HI(aq) is mixed with 75.00 mL of
+0.0106 M KOH(aq). What is the pH of the final
+solution?
+20. 25.00 mL of a solution with a pH of 2.12 is
+mixed with 25.00 mL of a KOH(aq) solution with a pH
+of 12.65. What is the pH of the final solution?
+HNO
+31aq2
+21.0 °C,NH31g2,
+25.0 °C,
+NH31aq2 + H3O+1aq2 ¡ NH4
+ 
++1aq2 + H2O(l)
+0.265 M NH31aq2?
+pH = 11.55?
+1d = 1.14 g>mL2
+Exercises
+Brønsted–Lowry Theory of Acids and Bases
+1. According to the Brønsted–Lowry theory, label each
+of the following as an acid or a base. (a)
+(b) (c) (d) (e)
+2. Write the formula of the conjugate base in the reaction
+of each acid with water. (a) (b)
+(c) (d) .
+3. For each of the following, identify the acids and bases
+involved in both the forward and reverse directions.
+(a)
+(b)
+(c)
+(d)
+4. Which of the following species are amphiprotic
+in aqueous solution? For such a species, write one equa-
+tion showing it acting as an acid, and another equation
+showing it acting as a base. 
+.
+5. With which of the following bases will the ionization
+of acetic acid, proceed furthest towardCH
+3COOH,
+NO2
+-, HCO3
+-, HBr
+HS-,OH-, NH4
++, H2O,
+C6H5NH3
++ + OH- Δ C6H5NH2 + H2O
+HS- + H2O Δ H2S + OH-
+HSO4
+- + H2O Δ SO4
+2- + H3O+
+HOBr + H2O Δ OBr- + H3O+
+C2H5NH3
++HPO4
+2-;
+C6H5COOH;HIO3;
+CH3NH3
++NH4
++;NH2
+-;OCl-;
+HNO2;
+completion (to the right)? Explain your answer. 
+(a) (b) (c) (d)
+6. In a manner similar to equation (16.3), represent the
+self-ionization of the following liquid solvents: 
+(a) (b) HF; (c) (d)
+(e)
+7. With the aid of Table 16.2, predict the direction (for-
+ward or reverse) favored in each of the following
+acid–base reactions.
+(a)
+(b)
+(c)
+8. With the aid of Table 16.2, predict the direction (for-
+ward or reverse) favored in each of the following
+acid–base reactions.
+(a)
+(b)
+(c) H
+2CO3 + CO3
+2- Δ HCO3
+- + HCO3
+-
+HNO2 + ClO4
+- Δ HClO4 + NO2
+-
+CH3COOH + CO3
+2- Δ HCO3
+- + CH3COO
+CH3COOH + CH3O-CH3OH + CH3COO- Δ
+HSO4
+- + NO3
+- Δ HNO3 + SO4
+2-
+NH4
++ + OH- Δ H2O + NH3
+H2SO4.
+CH3COOH;CH3OH;NH3;
+NO3
+-.Cl-;NH3;H2O;
+M16_PETR4521_10_SE_C16.QXD  1/16/16  2:00 PM  Page 782
+
+===== TEXTBOOK PAGE 812 =====
+Exercises 783
+21. What are the and pH of 
+22. What are the and pH of 
+23. For the ionization of phenylacetic acid,
+(a) What is in 
+(b) What is the pH of 
+24. A 625 mL sample of an aqueous solution containing
+0.275 mol propionic acid, has
+What is the value of for
+propionic acid?
+25. Fluoroacetic acid occurs in gifblaar, one of the most
+poisonous of all plants. A 0.318 M solution of the acid
+is found to have a Calculate of fluo-
+roacetic acid.
+26. Caproic acid, found in small amounts in
+coconut and palm oils, is used in making artificial
+flavors. A saturated aqueous solution of the acid contains
+and has Calculate for the acid.
+27. What mass of benzoic acid, would you
+dissolve in 350.0 mL of water to produce a solution
+with a 
+28. What must be the molarity of an aqueous solution of
+trimethylamine, if it has a 
+29. What are pH, and pOH of 
+30. What are pH, and pOH of 0.386 M
+31. The solubility of 1-naphthylamine, a
+substance used in the manufacture of dyes, is given
+in a handbook as 1 g per What is the
+approximate pH of a saturated aqueous solution of
+1-naphthylamine?
+pK
+b = 3.92
+C10H7NH2 + H2O Δ C10H7NH3
++ + OH-
+590 g H2O.
+C10H7NH2,
+CH3NH2?
+3H3O+4, 3OH-4,
+M HClO2?
+0.55 M3H3O+4, 3OH-4,
+Kb = 6.3 * 10-5
+1CH323N + H2O Δ 1CH323NH+ + OH-
+pH = 11.12?1CH323N,
+Ka = 6.3 * 10-5
+C6H5COOH + H2O Δ H3O+ + C6H5COO-
+pH = 2.85?
+C6H5COOH,
+HC6H11O2 + H2O Δ H3O+ + C6H11O2
+- Ka = ?
+KapH = 2.94.11 g>L
+HC6H11O2,
+H3O+1aq2 + CH2FCOO-1aq2 Ka = ?
+CH2FCOOH1aq2 + H2O Δ
+KapH = 1.56.
+Ka = ?
+CH3CH2CO2H + H2O Δ H3O+ + CH3CH2CO2
+-
+Ka0.00239 M.3H3O+4 =
+CH3CH2CO2H,
+0.121 M C6H5CH2CO2H?
+C6H5CH2CO2H?
+0.186 M3C6H5CH2CO2
+ 
+-4
+Ka = 4.9 * 10-5
+C6H5CH2CO2H + H2O Δ H3O+ + C6H5CH2CO2
+-
+0.085 M C2H5NH2?3H3O+4
+0.143 M HNO2?3H3O+4
+32. A saturated aqueous solution of o–nitrophenol,
+has What is the solubility
+of o-nitrophenol in water, in grams per liter?
+33. A particular vinegar is found to contain 5.7% acetic
+acid, by mass. What mass of this vinegar
+should be diluted with water to produce 0.750 L of a
+solution with 
+34. A particular household ammonia solution
+is 6.8% by mass. How many
+milliliters of this solution should be diluted with
+water to produce 625 mL of a solution with
+35. A 275 mL sample of vapor in equilibrium with 
+propan-1-amine at is removed and dissolved
+in 0.500 L For propan-1-amine, and
+(a) What should be the pH of the aqueous solution?
+(b) How many mg of NaOH dissolved in 0.500 L of
+water give the same pH?
+36. One handbook lists a value of 9.5 for of quinoline,
+a weak base used as a preservative for
+anatomical specimens and to make dyes. Another
+handbook lists the solubility of quinoline in water at
+as Use this information to calcu-
+late the pH of a saturated solution of quinoline in
+water.
+37. In the diagram below, the sketch on the far left repre-
+sents the present in an acetic acid solution of
+molarity c. If the molarity of the solution is doubled,
+which of the sketches below best represents the
+resulting solution?
+38. In the diagram below, the sketch on the far left repre-
+sents the present in an ammonia solution of
+molarity c. If the solution is diluted to half its origi-
+nal molarity, which of the sketches below best repre-
+sents the resulting solution?
+(a) (b) (c) (d)
+3OH-4
+(a) (b) (c) (d)
+3H3O+4
+0.6 g>100 mL.25 °C
+C9H7N,
+pKb
+v.p. = 316 Torr.
+pKb = 3.43H2O.
+25.0 °C
+pH = 11.55?
+NH31d = 0.97 g>mL2
+pH = 4.52?
+CH3COOH,
+pKa = 7.23
+HOC6H4NO2 + H2O Δ H3O+ + -OC6H4NO2
+pH = 4.53.HOC6H4NO2,
+Weak Acids, Weak Bases, and pH
+(Use data from Table 16.4 as necessary.)
+M16_PETR4521_10_SE_C16.QXD  1/16/16  2:01 PM  Page 783
+
+===== TEXTBOOK PAGE 813 =====
+784 Chapter 16 Acids and Bases
+Percent Ionization
+39. What is the (a) degree of ionization and (b) percent
+ionization of propionic acid in a solution that is 0.45 M
+40. What is the (a) degree of ionization and (b) percent
+ionization of ethylamine, in a 0.85 M aque-
+ous solution?
+41. What must be the molarity of an aqueous solution of
+if it is 4.2% ionized?
+42. What must be the molarity of an acetic acid solution if
+it has the same percent ionization as 
+(propionic acid, )?K
+a = 1.3 * 10-5CH3CH2CO2H
+0.100 M
+NH3
+C2H5NH2,
+pKa = 4.89
+CH3CH2CO2H + H2O Δ H3O+ + CH3CH2CO2
+-
+CH3CH2CO2H?
+43. Continuing the dilutions described in Example 16-4,
+should we expect the percent ionization to be 13%
+in 0.0010 M and 42% in 0.00010 M
+Explain.
+44. What is the (a) degree of ionization and (b) percent
+ionization of trichloroacetic acid in a 0.035 M
+solution?
+pK
+a = 0.52
+CCl3COOH + H2O Δ H3O+ + CCl3COO-
+CCl3COOH
+CH3COOH?
+CH3COOH
+Polyprotic Acids
+(Use data from Table 16.5 as necessary.)
+45. Explain why in 1.00 M is not simply
+but much, much less than 
+46. Cola drinks have a phosphoric acid content that is
+described as “from 0.057 to 0.084% of 75% phosphoric
+acid, by mass.” Estimate the pH range of cola drinks
+corresponding to this range of content.
+47. Determine and for the following
+solutions: (a) 0.075 M (b) 0.0050 M 
+(c)
+48. For 0.045 M a weak diprotic acid, calculate 
+(a) (b) and (c) Use data
+from Table 16.5 as necessary.
+49. Calculate and in (a) 0.75 M
+(b) 0.075 M (c)
+[Hint: Check any assumptions that you make.]
+50. Adipic acid, is among the top
+50 manufactured chemicals in the United States
+HOOC1CH
+224COOH,
+7.5 * 10-4 M H2SO4.H2SO4;H2SO4;
+3SO4
+2-43H3O+4, 3HSO4
+-4,
+3CO3
+2-4.3HCO3
+-4,3H3O+4,
+H2CO3,
+1.0 * 10-5 M H2S.
+H2S;H2S;H2S1aq2
+3S2-43H3O+4, 3HS-4,
+H3PO4
+1
+3
+ 3H3O+4.1
+3
+ 3H3O+4,
+H3PO43PO4
+3-4
+(nearly 1 million metric tons annually). Its chief use
+is in the manufacture of nylon. It is a diprotic acid
+having and A sat-
+urated solution of adipic acid is about 0.10 M
+Calculate the concentration of
+each ionic species in this solution.
+51. The antimalarial drug quinine, is a
+diprotic base with a water solubility of 
+of solution.
+(a) Write equations for the ionization equilibria corre-
+sponding to and 
+(b) What is the pH of saturated aqueous quinine?
+52. For hydrazine, and 
+Draw a structural formula for hydrazine, and write
+equations to show the ionization of hydrazine in two
+distinctive steps. Calculate the pH of 0.245 M
+N
+2H41aq2.
+pKb2 = 15.05.N2H4, pKb1 = 6.07
+pKb2 = 9.8.pKb1 = 6.0
+1.00 g>1900 mL
+C20H24O2N2,
+HOOC1CH224COOH.
+Ka2 = 3.9 * 10-6.Ka1 = 3.9 * 10-5
+Ions as Acids and Bases (Hydrolysis)
+53. Codeine, is an opiate, has analgesic and
+antidiarrheal properties, and is widely used. In water,
+codeine is a weak base. A handbook gives 
+for protonated codeine, Write the
+reaction for and calculate for
+codeine.
+pK
+bC18H21O3NH+
+C18H21O3NH+.
+pKa = 6.05
+C18H21O3N, is coal tar. Quinoline is a weak base in water. A hand-
+book gives for protonated quino-
+line, Write the ionization reaction for
+and calculate for quinoline.pK
+bC9H7NH+
+C9H7NH+.
+Ka = 6.3 * 10-10
+Codeine
+H
+N
+H
+HO
+H3C
+CH3
+O
+O
+Quinoline
+N
+18
+45
+2
+3
+7
+6
+H
+H
+H
+H
+H
+HH
+N
+54. Approximately 4 metric tons of quinoline, is
+produced annually. The principal source of quinoline
+C9H7N,
+55. Complete the following equations in those instances
+in which a reaction (hydrolysis) will occur. If no reac-
+tion occurs, so state.
+(a)
+(b)
+(c) K
++1aq2 + C6H5COO-1aq2 + H2O ¡
+Na+1aq2 + NO2
+-1aq2 + H2O ¡
+NH4
++1aq2 + NO3
+-1aq2 + H2O ¡
+M16_PETR4521_10_SE_C16.QXD  1/16/16  2:01 PM  Page 784
+
+===== TEXTBOOK PAGE 814 =====
+Exercises 785
+Molecular Structure and Acid–Base Behavior
+65. Predict which is the stronger acid: (a) or
+(b) or (c) or 
+Explain.
+66. Explain why trichloroacetic acid, is a
+stronger acid than acetic acid, 
+67. Which is the stronger acid of each of the following
+pairs of acids? Explain your reasoning. (a) HBr or HI;
+(b) HOClO or HOBr; (c) or
+68. Indicate which of the following is the weakest acid,
+and give reasons for your choice: HBr; 
+CI3COOH.CH2FCH2COOH;CH3CH2COOH;
+CH2ClCOOH;
+CH3CH2CCl2COOH.
+I3CCH2CH2COOH
+CH3COOH.
+CCl3COOH,
+H3PO4.H2SiO3HNO2;H2CO3HClO3;
+HClO2
+(a) (b) (d)(c)
+(d)
+(e)
+56. From data in Table 16.4, determine (a) for
+(b) for (c) for 
+57. Predict whether a solution of each of the following
+salts is acidic, basic, or pH neutral: (a) KCl; (b) KF; 
+(c) (d) (e)
+58. Arrange the following 0.010 M solutions in order
+of increasing pH: 
+NaOH(aq), 
+59. What is the pH of an aqueous solution that is 0.089 M
+NaOCl?
+60. What is the pH of an aqueous solution that is 0.123 M
+61. Sorbic acid, 
+is widely used in the food industry as a preser-4.772,
+CH2CH“ CH“ CHCH2CO2H 1pKa =
+NH4Cl?
+NH4ClO41aq2.
+NH4CH3COO1aq2,CH3COOH1aq2,
+NaNO21aq2,HNO31aq2,NH31aq2,
+NH4NO2.Ca1OCl22;NaNO3;
+C6H5O-.KbHCOO-;KbC5H5NH+;
+Ka
+C6H5NH3
++1aq2 + Cl-1aq2 + H2O ¡
+H2O ¡
+K+1aq2 + Cl-1aq2 + Na+1aq2 + I-1aq2 + vative. For example, its potassium salt (potassium
+sorbate) is added to cheese to inhibit the formation of
+mold. What is the pH of 0.37 M potassium sorbate
+solution?
+62. Pyridine, forms a salt, pyri-
+dinium chloride, as a result of a reaction with HCl.
+Write an ionic equation to represent the hydrolysis of
+the pyridinium ion, and calculate the pH of 0.0482 M
+63. For each of the following ions, write two equations—
+one showing its ionization as an acid and the other as
+a base: (a) (b) (c) Then use data
+from Table 16.5 to predict whether each ion makes the
+solution acidic or basic.
+64. Suppose you wanted to produce an aqueous solution
+of by dissolving one of the following salts in
+water. Which salt would you use, and at what molar-
+ity? (a) (b) (c) (d) NaNO3.KNO2;KHSO4;NH4Cl;
+pH = 8.65
+HPO4
+ 
+-.HS-;HSO3
+ 
+-;
+C5H5NH+Cl-1aq2.
+1pKb = 8.822,C5H5N
+69. From the following bases, select the one with the
+smallest and the one with the largest and give
+reasons for your choices.
+(a) (b)
+(c) (d)
+70. For the molecular models shown, write the formula of
+the species that is the most acidic and the one that is
+most basic, and give reasons for your choices.
+N‚ CCH2NH2CH3CH2CH2NH2
+NH2H3C
+Cl
+NH2
+Kb,Kb
+71. For each reaction draw a Lewis structure for each species
+and indicate which is the acid and which is the base:
+(a)
+(b)
+(c)
+(d)
+72. In the following reactions indicate which is the Lewis
+acid and which is the Lewis base:
+(a)
+(b)
+73. Indicate whether each of the following is a Lewis acid
+or base. (a) (b) (c) CH3NH2.1C2H523B;OH-;
+HgCl3
+- + Cl- ¡ HgCl4
+2-
+SOI2 + BaSO3 ¡ Ba2+ + 2 I- + 2 SO2
+S2- + SO3 ¡ S2O3
+2-
+O2- + H2O ¡ 2 OH-
+H2O + BF3 ¡ H2OBF3
+CO2 + H2O ¡ H2CO3
+74. Each of the following is a Lewis acid–base reaction.
+Which reactant is the acid, and which is the base?
+Explain.
+(a)
+(b)
+75. The three following reactions are acid–base reactions
+according to the Lewis theory. Draw Lewis structures,
+and identify the Lewis acid and Lewis base in each
+reaction.
+(a)
+(b)
+(c) 1C2H522O + BF3 ¡ 1C2H522OBF3
+N2H4 + H3O+ ¡ N2H5
++ + H2O
+B1OH23 + OH- ¡ 3B1OH244-
+Zn(OH)2(s) + 2 OH-(aq) ¡ 3Zn(OH)442-(aq)
+SO3 + H2O ¡ H2SO4
+Lewis Theory of Acids and Bases
+M16_PETR4521_10_SE_C16.QXD  1/16/16  2:02 PM  Page 785
+
+===== TEXTBOOK PAGE 941 =====
+912 Chapter 19 Electrochemistry
+12. For the reduction half-cell reactions 
+Will Hg(l) react with and
+dissolve in HCl(aq)? in Explain.
+13. Use data from Table 19.1 to predict whether, to any
+significant extent,
+(a) Mg(s) will displace from aqueous solution;
+(b) Sn(s) will react with and dissolve in 1 M HCl;
+(c) will oxidize in acidic solution;
+(d) will oxidize in
+acidic solution;
+(e) will displace to produce 
+14. Consider the reaction 
+with If Co(s) is added
+to a solution with should the reaction go
+to completion? Explain.
+15. Dichromate ion in acidic solution is a good
+oxidizing agent. Which of the following oxidations
+can be accomplished with dichromate ion in acidic
+solution? Explain.
+(a)
+(b) I
+21s2 to IO3
+ 
+-1aq2
+Sn2+1aq2 to Sn4+1aq2
+1Cr2O7
+ 
+2-2
+[Ni2+] = 1 M,
+Ecell°  = 0.02 V.Co2+1aq2 + Ni1s2,
+Co1s2 + Ni2+1aq2 ¡
+Br21l2.Br-1aq2I21s2
+H2O21aq2 to O21g2MnO4
+ 
+-1aq2
+Sn2+ to Sn4+SO4
+ 
+2-
+Pb2+
+HNO31aq2?
+¡ 2 Hg1l2, E° = 0.797 V.
+2 e-Hg2
+ 
+2+1aq2 + (c)
+16. The standard electrode potential for the reduction of
+Use the data in
+Appendix D to determine which of the following
+is capable of reducing under
+standard-state conditions: Al(s), Co(s), 
+Ag(s), 
+17. Predict whether the following metals will react with
+the acid indicated. If a reaction does occur, write the
+net ionic equation for the reaction. Assume that reac-
+tants and products are in their standard states. (a) Ag
+in (b) Zn in HI(aq); (c) Au in (for
+the couple ).
+18. Predict whether, to any significant extent,
+(a) Fe(s) will displace 
+(b) will oxidize in
+acidic solution;
+(c) Ag(s) will react with 1 M HCl(aq);
+(d) will oxidize in acidic
+solution.
+Cl
+-1aq2 to Cl21g2O21g2
+Cl-1aq2 to Cl21g2MnO4
+ 
+-1aq2
+Zn2+1aq2;
+E° = 1.52 VAu3+>Au,
+HNO3HNO31aq2;
+H2C2O41aq2.
+H2O21aq2,
+Eu3+1aq2 to Eu2+1aq2
+Eu3+1aq2 to Eu2+1aq2 is -0.43 V.
+Mn2+1aq2 to MnO4
+ 
+-1aq2
+19. Write cell reactions for the electrochemical cells dia-
+grammed here, and use data from Table 19.1 to calcu-
+late for each reaction.
+(a)
+(b)
+(c)
+(d)
+20. Write the half-cell reactions and the balanced chemi-
+cal equation for the electrochemical cells diagrammed
+here. Use data from Table 19.1 and Appendix D to cal-
+culate for each reaction.
+(a)
+(b)
+(c)
+(d)
+21. Use the data in Appendix D to calculate the standard
+cell potential for each of the following reactions.
+Which reactions will occur spontaneously?
+(a)
+(b)
+(c)
+(d)
+22. In each of the following examples, sketch a voltaic 
+cell that uses the given reaction. Label the anode and
+Hg1l2 + HgCl
+21aq2 ¡ Hg2Cl21s2
+3 Fe2+1aq2 ¡ Fe1s2 + 2 Fe3+1aq2
+Cu1s2 + Ba2+1aq2 ¡ Cu2+1aq2 + Ba1s2
+H21g2 + F21g2 ¡ 2 H+1aq2 + 2 F-1aq2
+U1s2ƒU3+1aq2ƒƒV2+1aq2 ƒV1s2
+PtƒCe4+1aq2, Ce3+1aq2ƒƒI-1aq2ƒ I21s2ƒC1s2
+Ag1s2ƒAgI1s2ƒI-1aq2ƒƒCl-1aq2ƒAgCl1s2ƒAg1s2
+Cu1s2ƒCu2+1aq2ƒƒCu+1aq2ƒCu1s2
+Ecell°
+Pt1s2ƒO21g2ƒH+1aq2ƒƒOH-1aq2ƒO21g2ƒPt1s2
+Cr1s2ƒCr2+1aq2ƒƒAu3+1aq2ƒAu1s2
+Pt1s2ƒFe2+1aq2, Fe3+1aq2ƒƒAg+1aq2ƒAg1s2
+Al1s2ƒAl3+1aq2ƒƒSn2+1aq2ƒSn1s2
+Ecell°
+cathode; indicate the direction of electron flow; write
+a balanced equation for the cell reaction; and calculate
+(a)
+(b) is displaced from solution by Al(s)
+(c)
+(d)
+23. Use the data in Appendix D to calculate the standard
+cell potential for each of the following reactions.
+Which reactions will occur spontaneously?
+(a)
+(b)
+(c)
+(d)
+24. Write a cell diagram and calculate the value of for
+a voltaic cell in which
+(a) is reduced to and Fe(s) is oxidized
+to 
+(b) is displaced from solution by Zn(s);
+(c) The cell reaction is 
+(d) is produced from Mg(s) and Br
+21l2.MgBr21aq2
+Cu1s2;
+2 Cu+1aq2 ¡ Cu2+1aq2 + 
+Ag+1aq2
+Fe2+1aq2;
+Cl-1aq2Cl21g2
+Ecell°
+2 NO21g2 + 2 H2O1l2Zn2+1aq2 +
+2 NO3
+ 
+-1aq2 + 4 H+1aq2 + Zn1s2 ¡
+2 Hg2+1aq2 + 2 Br-1aq2 ¡ Hg2
+ 
+2+1aq2 + Br21l2
+Sn1s2 + Sn4+1aq2 ¡ 2 Sn2+1aq2
+Fe3+1aq2 + Ag1s2 ¡ Fe2+1aq2 + Ag+1aq2
+H2O1l2 + NO1g2
+Zn1s2 + H+ + NO3
+ 
+- ¡ Zn2+ +
+Cl21g2 + H2O1l2 ¡ Cl-1aq2 + O21g2 + H+1aq2
+Pb2+1aq2
+Cu1s2 + Fe3+1aq2 ¡ Cu2+1aq2 + Fe2+1aq2
+Ecell° .
+Galvanic Cells
+25. Determine the values of for the following reac-
+tions carried out in voltaic cells.
+(a)
+(b)
+(c)
+2 Cr
+3+1aq2 + 6 Ag+1aq2 + 7 H2O1l2
+Cr2O7
+ 
+2-1aq2 + 14 H+1aq2 + 6 Ag1s2 ¡
+2 H2O1l2 + 2 I21s2
+O21g2 + 4 I-1aq2 + 4 H+1aq2 ¡
+2 Al1s2 + 3 Cu2+1aq2 ¡ 2 Al3+1aq2 + 3 Cu1s2
+¢rG° 26. Write the equilibrium constant expression for each of
+the following reactions, and determine the value of K
+at Use data from Table 19.1.
+(a)
+(b)
+(c)
+(basic solution)
+2 OCl-1aq2 ¡ 2 Cl-1aq2 + O21g2
+Mn2+1aq2 + 2 H2O1l2 + Cl21g2
+MnO21s2 + 4 H+1aq2 + 2 Cl-1aq2 ¡
+2 V3+1aq2 + Ni1s2 ¡ 2 V2+1aq2 + Ni2+1aq2
+25 °C.
+and K≤ rG°, E°cell
+ ,
+M19_PETR4521_10_SE_C19.QXD  1/18/16  7:53 PM  Page 912
+
+===== TEXTBOOK PAGE 942 =====
+Exercises 913
+27. For the reaction
+use data from Table 19.1 to determine (a)
+(b) (c) K; (d) whether the reaction goes substan-
+tially to completion when the reactants and products
+are initially in their standard states.
+28. Consider the voltaic cell below.
+Use data from Appendix D to determine (a) the equation
+for the cell reaction; (b) ; (c) ; (d) K; (e) whether
+the reaction goes essentially to completion, or to a lim-
+ited extent only, when the reactants and products are ini-
+tially in their standard states.
+29. For the reaction 
+(a) can a solution be prepared at 298 K that is 0.500 M
+in each of the four ions?
+(b) If not, in which direction will a reaction occur?
+E
+cell° =- 0.0050 V,2 Cu2+1aq2 + Sn2+1aq2,
+2 Cu+1aq2 + Sn4+1aq2 ¡
+¢rG°Eo
+cell
+ƒƒV3+(aq), V2+(aq)ƒC(s)Pt(s)ƒCr3+(aq), Cr2+(aq)
+¢rG°;
+Ecell° ;
+5 Ce4+1aq2 + Mn2+1aq2 + 4 H2O1l2
+MnO4
+ 
+-1aq2 + 8 H+1aq2 + 5 Ce3+1aq2 ¡
+30. For the reaction 
+answer the following questions:
+(a) Can a solution be prepared at 298 K that 
+has  
+(b) If not, in which direction will a reaction occur?
+31. Use thermodynamic data from Appendix D to calcu-
+late a theoretical voltage of the silver–zinc button cell
+described on page 893.
+32. The theoretical voltage of the aluminum–air battery is
+Use data from Appendix D and equa-
+tion (19.28) to determine 
+33. By the method of combining reduction half-cell reac-
+tions illustrated on page 878, determine given 
+that and 
+34. Determine given that 
+and (See page 878).E°
+H2MoO4>Mo3+ = 0.428 V.0.646 V
+E°H2MoO4>MoO2 = E°MoO2>Mo3+ ,
+E°IrO2>Ir3+ = 0.223 V.EIr3+>Ir°  = 1.156 V
+EIrO2>Ir° ,
+¢fG° for Al31OH244-.
+Ecell° = 2.71 V.
+and pH = 1?0.600 M
+3BrO3
+ 
+-4 = 3Ce3+4 =3BrO4
+ 
+-4 = 3Ce4+4 = 0.675 M, 
+-0.017 V,
+Ecell°      =BrO3
+ 
+-1aq2 +  2 Ce 4+1aq2 +  H2O1l2,¡
+2 Ce3+1aq22 H+1aq2 + BrO4
+ 
+-1aq2 +
+35. A voltaic cell represented by the following cell diagram
+has What must be in the cell?
+36. For the cell pictured in Figure 19-11, what is if the
+unknown solution in the half-cell on the left (a) has
+(b) is 0.0103 M HCl; (c) is 0.158 M
+37. Use the Nernst equation and Table 19.1 to calculate
+for each of the following cells.
+(a)
+(b)
+38. Use the Nernst equation and data from Appendix D
+to calculate for each of the following cells.
+(a)
+(b)
+39. Consider the reduction half-cell reactions listed in
+Appendix D, and give plausible explanations for the
+following observations:
+(a) For some half-cell reactions E depends on pH; for
+others, it does not.
+(b) Whenever appears in a half-cell equation it is
+on the left side.
+(c) Whenever appears in a half-cell equation it
+is on the right side.
+40. Write an equation to represent the oxidation of
+in an acidic solution. Will
+this reaction occur spontaneously in the forward direc-
+tion if all other reactants and products are in their stan-
+dard states and (a) (b)
+(c) Explain.
+41. If is maintained at 1.0 M,
+(a) what is the minimum for which reaction
+(19.3) is spontaneous in the forward direction?
+3Cu
+2+4
+3Zn2+4
+pH = 4.25?
+3H+4 = 1.2 M;3H+4 = 6.0 M;
+Cl-1aq2 to Cl21g2 by PbO21s2
+OH-
+H+
+OH-10.042 M2ƒAl1s2
+Mg1s2ƒMg2+10.016 M2ƒƒ3Al1OH244-(0.25 M),
+Cr2+10.25 M2ƒPt1s2
+Mn1s2ƒMn2+10.40 M2ƒƒCr3+10.35 M2,
+Ecell
+Cl21g, 0.55 bar2ƒPt1s2
+Ag1s2ƒAg+10.34 M2ƒƒCl-10.098 M2,
+Al1s2ƒAl3+10.18 M2ƒƒFe2+10.85 M2ƒFe1s2
+Ecell
+CH3COOH 1Ka = 1.8 * 10-52?
+pH = 5.25;
+Ecell
+Zn1s2ƒZn2+(1.00 M)ƒƒAg+1x M2ƒAg1s2
+3Ag+4Ecell = 1.250 V.
+(b) Should the displacement of by Zn(s) go
+to completion? Explain.
+42. Can the displacement of Pb(s) from 1.0 M 
+be carried to completion by tin metal? Explain.
+43. A concentration cell is constructed of two hydrogen elec-
+trodes: one immersed in a solution with 
+and the other in 0.65 M KOH.
+(a) Determine for the reaction that occurs.
+(b) Compare this value of with for the reduc-
+tion of in basic solution, and explain
+the relationship between them.
+44. If the 0.65 M KOH of Exercise 43 is replaced by 0.65 M
+(a) will be higher or lower than in the cell with
+0.65 M KOH?
+(b) What will be the value of 
+45. Consider the voltaic cell 
+. What is the value
+of ? For .
+46. A voltaic cell, with is constructed as
+follows:
+What is the 
+47. For the voltaic cell,
+(a) what is initially?
+(b) If the cell is allowed to operate spontaneously,
+will increase, decrease, or remain constant with
+time? Explain.
+(c) What will be has fallen to 
+0.500 M?
+(d) What will be at the point at which
+(e) What are the ion concentrations when E
+cell = 0?
+Ecell = 0.020 V?
+3Sn2+4
+Ecell  when  3Pb2+4
+Ecell
+Ecell
+Sn1s2ƒSn2+10.075 M2ƒƒPb2+10.600 M2ƒPb1s2
+Ksp of Ag3PO4
+ ?
+Ag1s2ƒAg+1satd Ag3PO42ƒƒAg+10.140 M2ƒAg1s2
+Ecell = 0.180 V,
+Mg3(PO4)2, Ksp = 1.0 * 10-25Ecell
+Mg3(PO4)2)ƒƒMg2+(0.125 M)ƒMg(s)
+Mg(s)|Mg2+(satd
+Ecell
+ ?
+Ecell
+NH3 ,
+H2O to H21g2
+E°Ecell
+Ecell
+3H+4 = 1.0 M
+Pb1NO322
+Cu2+1aq2
+Concentration Dependence of —The Nernst EquationEcell
+M19_PETR4521_10_SE_C19.QXD  1/18/16  8:29 PM  Page 913
+
+===== TEXTBOOK PAGE 946 =====
+Integrative and Advanced Exercises 917
+90. An important source of Ag is recovery as a by-product
+in the metallurgy of lead. The percentage of Ag in lead
+was determined as follows. A 1.050-g sample was
+dissolved in nitric acid to produce and
+The solution was then diluted to 500.0 mL
+with water, a Ag electrode was immersed in the solu-
+tion, and the potential difference between this elec-
+trode and a SHE was found to be 0.503 V . What was
+the percent Ag by mass in the lead metal?
+91. A test for completeness of electrodeposition of Cu
+from a solution of is to add A blue
+color signifies the formation of the complex ion
+Let 250.0 mL of
+0.1000 M be electrolyzed with a 3.512 A
+current for 1368 s. At this time, add a sufficient quantity
+of to complex any remaining and to
+maintain a free If is
+detectable at concentrations as low as 
+should the blue color appear?
+92. A solution is prepared by saturating 100.0 mL of 1.00 M
+with AgBr. A silver electrode is immersed in
+this solution, which is joined by a salt bridge to a stan-
+dard hydrogen electrode. What will be the measured
+Is the standard hydrogen electrode the anode or
+the cathode?
+93. The electrolysis of is conducted in two
+separate half-cells joined by a salt bridge, as suggested
+by the cell diagram 
+(a) In one experiment, the solution in the anode com-
+partment becomes more acidic, and that in the cathode
+compartment more basic, during the electrolysis. When
+the electrolysis is discontinued and the two solutions
+are mixed, the resulting solution has Write
+half-cell equations and the overall electrolysis equation.
+(b) In a second experiment, a 10.00-mL sample of an
+unknown concentration of and a few
+drops of phenolphthalein indicator are added to the
+in the cathode compartment. Electrolysis
+is carried out with a current of 21.5 mA (milliamperes)
+for 683 s, at which point, the solution in the cathode
+compartment acquires a lasting pink color. What is
+the molarity of the unknown 
+94. A Ni anode and an Fe cathode are placed in a solution
+with and then connected to a battery.
+The Fe cathode has the shape shown. How long must
+electrolysis be continued with a current of 1.50 A to
+build a 0.050-mm-thick deposit of nickel on the iron?
+(Density of )nickel = 8.90 g>cm
+3.
+3Ni2+4 = 1.0 M
+H2SO41aq2?
+Na2SO41aq2
+H2SO41aq2
+pH = 7.
+ƒNa2SO41aq2ƒPt.PtƒNa2SO41aq2ƒ
+Na2SO41aq2
+Ecell ?
+NH31aq2
+1 * 10-5 M,
+3Cu1NH32442+3NH34 = 0.10 M.
+Cu2+NH31aq2
+CuSO41aq2
+3Cu1NH32442+ 1Kf = 1.1 * 10132.
+NH31aq2.Cu2+1aq2
+Ag+1aq2.
+Pb2+1aq2
+95. Initially, each of the half-cells in Figure 19-21 con-
+tained a 100.0-mL sample of solution with an ion con-
+centration of 1.000 M. The cell was operated as an
+electrolytic cell, with copper as the anode and zinc as
+the cathode. A current of 0.500 A was used. Assume
+that the only electrode reactions occurring were those
+involving Electrolysis was
+stopped after 10.00 h, and the cell was allowed to
+function as a voltaic cell. What was at that point?
+96. Silver tarnish is mainly 
+A tarnished silver spoon is placed in contact with a
+commercially available metallic product in a glass
+baking dish. Boiling water, to which some 
+has been added, is poured into the dish, and the prod-
+uct and spoon are completely covered. Within a short
+time, the removal of tarnish from the spoon begins.
+(a) What metal or metals are in the product?
+(b) What is the probable reaction that occurs?
+(c) What do you suppose is the function of the
+(d) An advertisement for the product appears to
+make two claims: (1) No chemicals are involved, and
+(2) the product will never need to be replaced. How
+valid are these claims? Explain.
+NaHCO
+3
+ ?
+NaHCO3
+E° =- 0.691 V
+Ag2S1s2 + 2 e- ¡ 2 Ag1s2 + S2-1aq2
+Ag2S:
+Ecell
+Cu>Cu2+ and Zn>Zn2+.
+2.50 cm
+1.00
+cm
+0.50 cm
+97. Your task is to determine for the reduction of
+in two different ways and to
+explain why each gives the same result. (a) Consider a
+fuel cell in which the cell reaction corresponds to the
+complete combustion of propane gas. Write the half-cell
+reactions and the overall reaction. Determine and
+for the reaction, then obtain (b) Without
+considering the oxidation that occurs simultaneously,
+obtain directly from tabulated thermody-
+namic data for the reduction half-cell reaction.
+98. Equation (19.15) gives the relationship between the
+standard Gibbs energy of a reaction and the standard
+cell potential. We know how the Gibbs energy varies
+with temperature. 
+(a) Making the assumption that do not
+vary significantly over a small temperature range,
+derive an equation for the temperature variation of 
+(b) Calculate the cell potential of a Daniell cell at 50 
+under standard conditions. The overall cell reaction for a
+Daniell cell is 
+99. Show that for nonstandard conditions the tempera-
+ture variation of a cell potential is
+E1T
+12 - E1T22 = 1T1 - T22
+1¢rS° - R ln Q2
+zF
+Zn(s) + Cu2+(aq) : Zn2+(aq) + Cu(s).
+°C
+Ecell° .
+¢rH° and ¢rS°
+E°CO2>C3H8
+E°CO2>C3H8.Ecell°
+¢rG°
+CO21g2 to C3H81g2
+E°
+M19_PETR4521_10_SE_C19.QXD  1/18/16  7:57 PM  Page 917
+
+===== TEXTBOOK PAGE 947 =====
+918 Chapter 19 Electrochemistry
+where are the cell potentials at
+respectively. We have assumed that the
+value of Q is maintained at a constant value. For the
+nonstandard cell below, the potential drops from
+0.394 V at 50.0 to 0.370 V at 25.0 Calculate Q,
+for the reaction, and calculate K for
+the two temperatures.
+Choose concentrations of the species involved in the
+cell reaction that give the value of Q that you have
+calculated, and then determine the equilibrium con-
+centrations of the species at 50.0 
+100. Show that for a combination of half-cell reactions
+that produce a standard reduction potential for a
+half-cell that is not directly observable, the standard
+reduction potential is
+E° = gn
+iEi 
+°
+gni
+°C.
+Cu1s2ƒCu2+1aq2ƒƒFe3+1aq2, Fe2+1aq2ƒPt(s)
+¢rH°, and ¢rS°
+°C.°C
+T1 and T2,
+E1T12 and E1T22 where is the number of electrons in each half-cell reac-
+tion of potential Use the following half-reactions:
+Calculate the standard reduction potential for
+1
+2 I2(s) + 4 H2O(l) + 2 HIO(aq)
+H6IO6(aq) + 5 H+(aq) + 2 I-(aq) + 3 e- ¡
+E° = 0.535 VI21s2 + 2 e- ¡ 2 I-1aq2
+E° = 1.45 V
+2 HIO1aq2 + 2 H+1aq2 + 2 e- ¡ I21s2 + 2 H2O1l2
+E° = 1.19 V
+IO3
+ 
+-1aq2 + 6 H+1aq2 + 5 e- ¡ 1
+2 I21s2 + 3 H2O1l2
+3 H2O1l2 E° = 1.60 VIO3
+-1aq2 +
+H5IO61aq2 + H+1aq2 + 2 e- ¡
+Ei°.
+ni
+101. Consider the following electrochemical cell:
+(a) What is —that is, the cell potential when
+(b) Use the Nernst equation to write an equation for
+(c) Now imagine titrating 50.0 mL of 0.0100 M
+in the cathode half-cell compartment with
+0.0100 M KI. The titration reaction is
+Calculate and then after addition of the fol-
+lowing volumes of 0.0100 M KI: (i) 0.0 mL; (ii) 20.0 mL;
+(iii) 49.0 mL; (iv) 50.0 mL; (v) 51.0 mL; (vi) 60.0 mL.
+(d) Use the results of part (c) to sketch the titration
+curve of versus volume of titrant.
+102. Ultimately, values must be based on experi-
+mental results; in many cases, these experimental
+results are themselves obtained from values.
+Early in the twentieth century, G. N. Lewis con-
+ceived of an experimental approach for obtaining
+standard potentials of the alkali metals. This
+approach involved using a solvent with which the
+alkali metals do not react. Ethylamine was the sol-
+vent chosen. In the following cell diagram,
+Na(amalg, 0.206%) represents a solution of 0.206%
+Na in liquid mercury.
+1.
+Although Na(s) reacts violently with water to produce
+at least for a short time, a sodium amalgam
+electrode does not react with water. This makes it pos-
+sible to determine for the following voltaic cell.
+2.
+H
+21g, 1 bar2 Ecell = 1.8673 V
+Na1amalg, 0.206%2ƒNa+11 M2ƒƒH+11 M2ƒ
+Ecell
+H21g2,
+Ecell = 0.8453 V
+Na1s2ƒNa+1in ethylamine2ƒNa1amalg, 0.206%2
+E°
+¢fG°
+Ecell
+Ecell3Ag+4
+Ag+1aq2 + I-1aq2 ¡ AgI1s2
+AgNO3
+Ecell when 3Ag+4 = x.
+3Ag+4 = 1 M?
+Ecell°
+Pt1s2ƒH21g, 1 bar2ƒH+11 M2ƒƒAg+1x M2ƒAg1s2
+(a) Write equations for the cell reactions that occur
+in the voltaic cells (1) and (2).
+(b) Use equation (19.14) to establish for the cell
+reactions written in part (a).
+(c) Write the overall equation obtained by combin-
+ing the equations of part (a), and establish for
+this overall reaction.
+(d) Use the value from part (c) to obtain 
+for the overall reaction. From this result, obtain
+Compare your result with the value listed
+in Appendix D.
+103. The following sketch is called an electrode potential
+diagram. Such diagrams summarize electrode
+potential data more efficiently than do listings such
+as that in Appendix D. In this diagram for bromine
+and its ions in basic solution,
+signifies
+Similarly,
+signifies
+With reference to Appendix D and to the method of
+determining values outlined on page 878, supply
+the missing data in the following diagram.
+E°
+Br
+-1aq2 + 6 OH-1aq2, EBrO3
+ 
+->Br-° = 0.584 V
+BrO3
+ 
+-1aq2 + 3 H2O1l2 + 6 e- ¡
+Br2
+0.584 V
+BrO3
+2
+BrO3
+ 
+-1aq2 + 2 OH-1aq2, EBrO4
+ 
+->BrO3
+ 
+-° = 1.025 V
+BrO4
+ 
+-1aq2 + H2O1l2 + 2 e- ¡
+BrO4
+ 
+-(aq)  1.025 V 
+ 
+" BrO3
+ 
+-(aq)
+ENa+>Na° .
+Ecell°¢rG°
+¢rG°
+¢rG
+Feature Problems
+M19_PETR4521_10_SE_C19.QXD  1/18/16  7:57 PM  Page 918
+
+
+SOLUTION MANUAL total pages: 1337
+
+===== SOLUTION MANUAL PAGE 282 =====
+Chapter 7: Thermochemistry 
+282 
+70. (M) The second reaction is the only one in which NO(g) appears; it must be run twice to produce 
+2NO(g). 
+    5
+32 2 2 22N H g + O g 2N O g + 3HO l         2 Hou ' D 
+ 
+The first reaction is the only one that eliminates NH3(g); it must be run twice to eliminate 2NH3. 
+   22 3 1Ng + 3 Hg 2 N Hg         2 Hou ' D 
+ 
+We triple and reverse the third reaction to eliminate 3 2Hgb g. 
+   3
+22 2 3 23HO l 3H g + O g         3 Ho u' D 
+ 
+  22Result : N g + O g 2 NO go   rxn 1 2 3=2 +2 3HH H H' u' u'  u'  
+ 
+71. (M)  
+2+ + +24
+1
+2 22 4 2 2HCl g C H g O g C H Cl l H O lb g b g b g b g b go  = 318.7 kJH'D  
+Cl g H O l HCl g O g22
+1
+2 2+2 +b g b g b g b go     =0 . 5 + 2 0 2 . 4 =+ 1 0 1 . 2  k JH' D  
+CH g C l g CHC l l24 2 24 2 +b g b g b go    = 2 1 7 . 5  k J H'D  
+ 
+72. (M)  
+NH l O g N g HOl24 2 2 2 ++ 2b g b g b g b go    = 6 2 2 . 2  k J H'D  
+    22 2 22H O l 2H g +2O go     =2 1 8 7 . 8  k J = + 3 7 5 . 6  k JH' D  
+2+ 222 2Hg Og H O lbg bg b g o      =2 2 8 5 . 8  k J = 5 7 1 . 6  k JH' D  
+    24 22 2 2NH l + 2 HO l N g + 4 HOlo   = 8 1 8 . 2  k JH'D  
+ 
+73. (M)  
+CO g O g CO gb g b g b g+ 1
+2 22 o     = 2 8 3 . 0  k J H'D  
+   243C graphite +6H g 3CH go     =3 7 4 . 8 1 = 2 2 4 . 4 3  k JH' D  
+   22 22H g +O g 2H O lo      =2 2 8 5 . 8 = 5 7 1 . 6  k JH' D  
+   3
+223CO g O g +3C graphiteo     =3 + 1 1 0 . 5 =+ 3 3 1 . 5  k JH' D  
+    224 24CO g +8H g CO g +3CH g +2H O lo =7 4 7 . 5  k JH'D  
+ 
+74. (M)  
+     22 2 2CS l + 3O g CO g + 2SO go   = 1077 kJ H'D  
+    22 22S s +Cl g S Cl lo     = 5 8 . 2  k J H'D  
+    24Cs+ 2 C l g C C l lo     =1 3 5 . 4  k JH'D  
+   222SO g 2S s +2O go      =2 2 9 6 . 8  k J = + 5 9 3 . 6  k JH' D  
+CO g C s O g22 +b g b g b go       =3 9 3 . 5  k J = + 3 9 3 . 5  k JH' D  
+    22 4 2 2CS l + 3Cl g CCl l + S Cl lo   =2 8 4  k JH'D  
+ 
+
+===== SOLUTION MANUAL PAGE 283 =====
+Chapter 7: Thermochemistry 
+ 2 8 3  
+75. (M)  
+   42 2CH g + CO g 2CO g + 2 H go   = + 2 4 7  k JH' D  
+   42 22CH g +2H O g 2CO g +6H go    =2 + 2 0 6  k J =+ 4 1 2  k JH' D  
+   42 22CH g + 2O g CO g + 2 H O go   =8 0 2  k JH'D  
+   42 24CH g +2O g 4CO g +8H go   = 1 4 3  k J H'D  
+   1
+42 2 24 produces CH g + O g CO g + 2H gyo  =3 5 . 8  k JH'D  
+ 
+76. (M)  
+The thermochemical combustion reactions follow. 
+CH g g g Ol46
+11
+2 22 2 +  O   4  C O  + 3  H  bg bg bg b g o   = 2540.2  kJH'D  
+CH g g g Ol41 0
+13
+2 22 2 +  O   4  C O  + 5  H   bg bg bg b g o   = 2877.6  kJH'D  
+Hg g O l2
+1
+2 22 +  O   H  bg bg b g o      = 285.85  kJH'D  
+ 
+Then these equations are combined in the following manner. 
+ 
+   11
+46 2 2 2 2CH g + O g 4 C O g + 3 HO lo   =2 5 4 0 . 2  k JH'D  
+    13
+22 4 1 0 2 24CO g +5H O l C H g + O go    =2 8 7 7 . 6  k J = + 2 8 7 7 . 6  k JH' D  
+   22 22H g +O g 2H O lo      =2 2 8 5 . 8  k J = 5 7 1 . 6  k JH' D  
+  46 24 1 0CH g + 2 H g CH go    =2 3 4 . 2  k JH'D  
+  
+77. ( M )   
+ C6H12O6(s)  +  6 O2(g) o  6 CO2(g) + 6 H2O(l)   'H° = -2808 kJ 
+ 6  C O 2(g) + 6 H2O(l) o  2 CH3CH(OH)COOH(s)  + 6 O2(g)  'H° = 2(1344) kJ 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  
+ C 6H12O6(s)  o    2 CH3CH(OH)COOH(s)    'H° = -120. kJ 
+ 
+78. (M)  
+ ½ [C6H12O6(s) + 6 O2(g) o  6 CO2(g) + 6 H2O(l)]   'H° =   ½  (-2808) kJ 
+ ½  [ 2  C H 3CH2OH(l)  +  2 CO2(g) o  C6H12O6(s) ]   'H° =   ½  (72) kJ 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  
+  C H 3CH2OH(l)  + 3 O2(g) o  2 CO2(g) + 3 H2O(l)   'H° =   -1368 kJ 
+  
+ 
+Standard Enthalpies of Formation 
+ 
+79. (M)  
+ ( a )  '' '  '  'HH H H HDD D D D=+ 26 4 38 2ff ffCH g C H g CH g H gbg bg bg bg  
+   =8 4 . 6 8 7 4 . 8 1 1 0 3 . 80 . 0 0 k J = 5 5 . 7  k JH'    D  
+ 
+
+===== SOLUTION MANUAL PAGE 284 =====
+Chapter 7: Thermochemistry 
+284 
+  (b) '' '  '  'HH H H HDD D D D=2 +2 2 322 2 2fff fSO g H O l H S g O gb g b g b g b g  
+      =2 2 9 6 . 8+ 2 2 8 5 . 8 2 2 0 . 6 3 3 0 . 0 0 k J = 1 1 2 4  k JH'     D  
+ 
+80. (E) '' '  '  ' HH H H HDD D D D=+ 23 4
++
+ff f fHOl N H g N H a q O H a qb g b g b g b g  
+    =2 8 5 . 8 +4 6 . 1 1 1 3 2 . 5 2 3 0 . 0 k J = + 3 0 . 6  k JH'   D  
+81. (M)  
+       3
+22 2ZnO s + SO g ZnS s + O g ; = 878.2 kJ /2 = +439.1 kJHo' D  
+ 439.1 = + 3
+2 22 kJ ZnS s O g ZnO s SO gff f f' ' '  'HH H HDD D D
+bg bg bg bg  
+     3
+f 2439.1 kJ = ZnS s + 0.00 kJ 348.3 kJ 296.8 kJH'   ªº¬¼
+D  
+   f ZnS s = 439.1 348.3 296.8 kJ = 206.0 kJ/molH ªº'  ¬¼
+D  
+ 
+82. (M)  Most clearly established in Figure 7-18 is the point that the enthalpies of formation 
+for alkane hydrocarbons are negative and that they become more negative as the length 
+of the hydrocarbon chain increases (~20 kJ per added CH2 unit).  For three hydrocarbons 
+of comparable chain length, C2H6, C2H4, and C2H6, we can also infer that the one having 
+only single bonds (C2H6) has the most negative enthalpy of formation.  The presence of 
+a carbon-to-carbon double bond (C2H4) makes the enthalpy of formation more positive, 
+while the presence of a triple bond (C2H2), makes it more positive still. 
+ 
+83. ( E )  ' HH H H HDD D42''' 'ff 2f 2f 2HCl(g)] + O g)] 2 Cl g)] H O(l)][[ ( [ ( [  
+= 4  9 2 . 3 1 + 0 . 0 0  2  0 . 0 0 2  2 8 5 . 8 = +2 0 2 . 4   k J b g b g b g b g  
+ 
+84. (E) '' '  '  'HH H H HDD D D D = 2     + 3          3    22 3ff f fFe s CO g Fe O s CO gb g b g b g b g  
+= 2  0 . 0 0 + 3  3 9 3 . 5  8 2 4 . 2  3  1 1 0 . 5 = 2 4 . 8   k Jb g b g b g b g     
+ 
+85. ( E )  Balanced equation: C H OH l O g CO g H O l25 2 22+3 2 +3bg b g b g bgo  
+ '' ' ' 'HH H H H  23 f2 f 2 f 2 5 f2CO g)] + 3 H O(l)] C H OH(l)] O (g)]DD D D[( [ [ [ 
+= 2  3 9 3 . 5 + 3  2 8 5 . 8  2 7 7 . 7   3  0 . 0 0 = 1 3 6 6 . 7   k J   b g b g b g b g  
+ 
+86. (M) First we must determine the value of 'Hf
+Dfor C H l51 2 b g. 
+Balanced combustion equation:      51 2 2 2 2CH l + 8 O g   5 C O g + 6 HO lo  
+> @ > @ > @ > @f2 f2 f5 1 2 f2 = 3509  kJ = 5  CO g  + 6  H O l    C H l   8  O gHH H H H' ' '  '  '
+DD D D D
+   > @ > @f5 1 2 f5 1 2=5 3 9 3 . 5 +6 2 8 5 . 8  CH l 8  0 . 0 0 = 3 6 8 2  k J  CH lHH  '    '
+DD
+ 
+f5 1 2CH l = 3 6 8 2 + 3 5 0 9 = 1 7 3  k J / m o lH' ªº¬¼
+D  
+Then use this value to determine the value of 'H° for the reaction in question. 
+'' '  '  'HH H H HDD D D D =   + 5     5     1 1   51 2 2 2ff f fCH l HOl C Og Hgb g b g b g b g  
+= 1 7 3  + 5  2 8 5 . 8  5  1 1 0 . 5  1 1  0 . 0 0 = 1 0 5 0   k J    b g b g b g  
+ 
+ 
+ 
+
+===== SOLUTION MANUAL PAGE 735 =====
+Chapter 16: Acids and Bases 
+ 7 3 5  
+8. (M) The principle we follow here is that, in terms of their concentrations, the weaker acid 
+and the weaker base predominate at equilibrium. This is because a strong acid will do a 
+good job of donating its protons and, having done so, its conjugate base will remain in 
+solution. The preferred direction is:  
+ 
+ 
+strong acid +  strong base o  weak (conjugate) base +  weak (conjugate) acid 
+ 
+ 
+(a) T h e  r e a c t i o n  w i l l  f a v o r  t h e  f o r w a r d  d i r e c t i o n  b e c a u s e  H C H O23 2  (a moderate acid) 
+!
+
+HCO3  (a rather weak acid) (acting as acids) and CO C H O3
+2
+23 2
+ 
+!  (acting as 
+bases). 
+ 
+(b) T h e  r e a c t i o n  w i l l  f a v o r  t h e  r e v e r s e  d i r e c t i o n  b e c a u s e  HClO4  (a strong acid) 
+!HNO2  (acting as acids), and NO ClO24
+
+!  (acting as bases). 
+ 
+(c) T h e  r e a c t i o n  w i l l  f a v o r  t h e  f o r w a r d  d i r e c t i o n ,  b e c a u s e  23 3HC O H C O
+
+!  (acting as 
+acids) (because KK12! ) and CO HCO3
+2
+3
+
+!  (acting as bases). 
+ 
+Strong Acids, Strong Bases, and pH 
+ 
+9. (M) All of the solutes are strong acids or strong bases.  
+(a) +
++ 3
+33
+3
+1m o l  HOHO =0 . 0 0 1 6 5M  H N O 0 . 0 0 1 6 5M1m o l  H N O
+ªº u ¬¼  
+14
+12w
++
+3
+1.0 10OH = = = 6.1 10 M0.00165MHO
+K 
+ uªº u¬¼ ªº¬¼
+ 
+ 
+(b) 1m o l  O HOH = 0.0087 M KOH 0.0087 M1m o l  K O H
+
+ªº u ¬¼  
+14
++1 2 w
+3
+1.0 10HO = =   =   1 . 1 1 0 M0.0087MOH
+K 
+
+
+uªº u¬¼ ªº¬¼
+ 
+ 
+ (c)    
+ 
+2
+2
+2m o l  O HOH = 0.00213 M Sr OH 0.00426 M1mol Sr OH
+
+ªº u ¬¼  
+ 14
++1 2w
+3
+1.0 10HO = =   =   2 . 3 1 0 M0.00426 MOH
+K 
+
+
+uªº u¬¼ ªº¬¼
+ 
+ 
+ 
+ (d) +
++4 4 3
+3
+1mol H OHO = 5 . 8 1 0 M  H I 5 . 8 1 0 M1mol HI
+ªº uu  u¬¼  
+ 14
+11w
+4+
+3
+1.0 10OH = =   1.7 10 M 5.8 10 MHO
+K 
+
+
+uªº  u¬¼ uªº¬¼
+ 
+ 
+
+===== SOLUTION MANUAL PAGE 736 =====
+Chapter 16: Acids and Bases 
+736 
+10. (M) Again, all of the solutes are strong acids or strong bases.  
+(a) 
+
++
++ 3
+3
+1m o l  HOHO =0 . 0 0 4 5M  H C l =0 . 0 0 4 5M1m o l  H C l
+pH = log 0.0045 = 2.35
+ªº u¬¼
+
+ 
+ 
+ (b) 
+
++
++4 4 3
+33
+3
+4
+1m o l  HOHO =6 . 1 4 1 0 M  H N O =6 . 1 4 1 0 M1m o l  H N O
+pH = log 6.14 10 = 3.21
+
+
+ªº uu u¬¼
+u
+ 
+ 
+ (c) 
+
+1m o l  O HOH = 0.00683 M NaOH = 0.00683M1m o l  N a O H
+pOH = log 0.00683 = 2.166 and pH = 14.000 pOH = 14.000 2.166 = 11.83
+
+ªº u¬¼
+ 
+ 
+ 
+ (d)  
+
+33
+2
+2
+3
+2m o l  O HOH = 4.8 10 M Ba OH = 9.6 10 M1m o l  B a O H
+pOH = log 9.6 10 = 2.02 pH = 14.00 2.02 = 11.98
+
+ 
+
+ªº uu u¬¼
+u 
+ 
+ 
+11. ( E )  
+ 
+ 
+2222
+2222
+3.9 g Ba OH 8H O 1m o l  B a O H 8 HO1000 mL 2m o l  O HOH =
+100 mL soln 1 L 315.5 g Ba OH 8H O 1 mol Ba OH 8H O
+=0 . 2 5M
+
+  uu u
+
+ªº¬¼  
+
+14
++1 4 w
+3
+141.0 10HO = = =4 . 0 1 0 M
+0.25 M OHOH
+pH = log 4.0 10 = 13.40K
+
+
+
+u uªº u¬¼ ªº¬¼
+ 
+ 
+12. (M) The dissolved Ca OHb g2  is completely dissociated into ions.  
+pOH pH=1 4 . 0 0 =1 4 . 0 0 1 2 . 3 5=1 . 6 5  
+pOH 1 65 2OH = 10 = 10 = 2.2 10  M OH = 0.022 M OH    ªº u¬¼  
+ 
+ 
+
+
+
+
+22 2
+22
+2
+2
+1m o l  C a O H 7 4 . 0 9g  C a O H 1 0 0 0m gC a O H0.022 mol OHsolubility = 1L  s o l n 2m o l  O H 1m o l  C a O H 1gC a O H
+8.1 10 mg Ca OH               = 1L  s o l n
+
+uu u
+u
+ 
+In 100 mL the solubility is  
+2
+2
+2
+8.1 10 mg Ca OH1L100 mL = 81 mg Ca OH1000 mL 1 L soln
+uuu  
+ 
+
+===== SOLUTION MANUAL PAGE 737 =====
+Chapter 16: Acids and Bases 
+ 7 3 7  
+13. ( M )  First we determine the moles of HCl, and then its concentration. 
+ 
+moles 3
+11
+1a t m751 mmHg 0.205 L760 mmHgHCl  =   8.34 10 mol HCl0.08206 L atm mol K 296 K
+PV
+RT
+
+
+§· uu¨¸©¹  u u   
+ 
++3
++ 33
+3
+1m o l  HO8.34 10 mol HClHO = =1 . 9 6 1 0 M4.25 L soln 1 mol HCl
+
+uªº uu¬¼  
+ 
+14. (E) First determine the concentration of NaOH, then of OH . 
+ 
+0.606 mol NaOH 1 mol OH0.125 L 1L 1m o lN a O HOH = = 0.00505 M 15.0 L final solution
+
+
+uu
+ªº¬¼  
+ 
+pOH = log 0.00505 M = 2.297 pH = 14.00 2.297 = 11.703  
+ 
+15. (E) First determine the amount of HCl, and then the volume of the concentrated solution 
+required. 
+amount HCl L mol H O
+L soln
+mol HCl
+mol H O mol HCl=1 2 . 5 10
+1
+1
+1 =0 . 0 9 9
+21 0
+3
++
+3
++uu
+
+ 
+ 
+solution
+36.46 g HCl 100.0 g soln 1 mL soln=0 . 0 9 9m o l  H C l =8 . 5m L  s o l n1m o l  H C l 3 6 . 0g  H C l 1 . 1 8g  s o l nV uuu  
+ 
+16. (E) First we determine the amount of KOH, and then the volume of the concentrated solution 
+required. 
+ 
+pOH pH OH MpOH=1 4 . 0 0 =1 4 . 0 0 1 1 . 5 5=2 . 4 5 =1 0 =1 0 =0 . 0 0 3 5 24 5    
+ 
+amount KOH L M mol OH
+L soln
+mol KOH
+mol OH mol KOH=2 5 . 0 0.0035
+1
+1
+1 =0 . 0 8 8uu
+
+  
+ 
+solution
+56.11 g KOH 100.0 g soln 1 mL soln=0 . 0 8 8m o l  K O H =2 9m L  s o l n1m o l  K O H 1 5 . 0g  K O H 1 . 1 4g  s o l nV uu u  
+ 
+17. (E) The volume of HCl(aq) needed is determined by first finding the amount of NH aq3b g 
+present, and then realizing that acid and base react in a 1:1 molar ratio. 
+ 
++
+33
+HCl +
+3 3
+0.265 mol NH 1 mol H O 1m o l  H C l 1L  a c i d=1 . 2 5 L  b a s e 1L  b a s e 1m o l  N H 6 . 1 5m o l  H C l1m o l  H O
+=0 . 0 5 3 9L  a c i d   o r  5 3 . 9  m L  a c i d .
+V uu u u  
+ 
+
+===== SOLUTION MANUAL PAGE 757 =====
+Chapter 16: Acids and Bases 
+ 7 5 7  
+58. (E) Our list in order of increasing pH is also in order of decreasing acidity. First we look 
+for the strong acids; there is just HNO3 . Next we look for the weak acids; there is only 
+one, HC H O23 2 . Next in order of decreasing acidity come salts with cations from weak 
+bases and anions from strong acids; NH ClO44 is in this category. Then come salts in 
+which both ions hydrolyze to the same degree; NH C H O42 32 is an example, forming a pH-
+neutral solution. Next are salts that have the cation of a strong base and the anion of a 
+weak acid; NaNO2 is in this category. Then come weak bases, of which NH aq3b g is an 
+example. And finally, we terminate the list with strong bases: NaOH is the only one. 
+Thus, in order of increasing pH of their 0.010 M aqueous solutions, the solutes are: 
+HNO HC H O NH ClO NH C H O NaNO NH NaOH32 3 2 4 4 4 2 3 2 2 3      
+ 
+59. (M) NaOCl dissociates completely in aqueous solution into Na aq+
+bg , which does not 
+hydrolyze, and OCl-(aq), which undergoes base hydrolysis. We determine [OH-] in a 0.089 M 
+solution of OCl, finding the value of the hydrolysis constant from the ionization constant of 
+HOCl, Ka =2 . 9 1 0 8u  . 
+ 
+
+ 
+2Equation : OCl (aq)       +      H O(l)     HOCl(aq) + OH (aq)
+Initial : 0.089 M 0 M 0 M
+Changes : M + M + M
+Equil : 0.089 M M M
+xx x
+xx x
+ 
+|
+
+
+ZXYZ
+ 
+ 
+K K
+K
+x
+x
+x
+b
+w
+a
+HOCl OH
+OCl
+== 1.0 10
+2.9 10 =3 . 4 1 0 = = 0.089 0.089
+14
+8
+7
+22u
+u u  |
+
+
+
+
+  
+ 
+41.7 10 M  0.089,  the assumption is valid.u   
+ 
+ 
+44=1 . 7 1 0 M= O H ; p O H= l o g 1 . 7 1 0 =3 . 7 7, p H=1 4 . 0 0 3 . 7 7=1 0 . 2 3x  ªºu u ¬¼  
+ 
+60. (M) dissociates completely in aqueous solution into NH aq4
++
+b g, which hydrolyzes, 
+and Cl aq
+bg , which does not. We determine HO3
++  in a 0.123 M solution of NH 4
++
+, finding 
+the value of the hydrolysis constant from the ionization constant of 3NH , 5
+b =1 . 8 1 0K u . 
+ 
+
++ +
+42 3 3Equation : NH (aq)       +     H O(l) NH (aq) H O (aq)
+Initial : 0.123M 0 M 0 M
+Changes : M + M + M
+Equil : 0.123 M M M
+xx x
+xx x
+
+|
+
+
+ZXYZ
+ 
+ 
+K K
+K
+x
+x
+x
+b
+w
+a
+3NH H O
+NH
+== 1.0 10
+1.8 10 =5 . 6 1 0 = 0123 0123
+14
+5
+10 3
+4
+22u
+u u  |
+
+
+
+
+
+[] [ ]
+[] ..  
+ 
+
+===== SOLUTION MANUAL PAGE 758 =====
+Chapter 16: Acids and Bases 
+758 
+68.3 10 M  << 0.123, the assumption is validu  
+ 
+ 
+6+ 6
+3=8 . 3 1 0 M= H O ; p H= l o g 8 . 3 1 0 =5 . 0 8x  ªºu u ¬¼  
+ 
+61. (M) KC H O672  dissociates completely in aqueous solution into K aq),+ ( w h i c h  d o e s  n o t  
+hydrolyze, and the ion C H O (aq)672
+
+, which undergoes base hydrolysis. We determine 
+OH  in 0.37 M KC H O672  solution using an I.C.E. table.  
+Note: p 47 7 5
+a =1 0 =1 0 =1 . 7 1 0KK   u  
+ 
+
+672 2 672Equation : C H O (aq)    +    H O(l)   HC H O (aq)      + OH (aq)
+Initial : 0.37 M 0 M 0 M
+Changes : M +M +M
+Equil : 0.37 M M M
+xx x
+xx x
+ 
+|
+
+
+ZXYZ
+ 
+ 
+K K
+K
+x
+x
+x
+b
+w
+a
+672
+67
+HC H O ][OH
+CHO
+  u
+u  u    |
+
+
+
+
+
+10 10
+17 10 59 1 0 03 7 03 7
+14
+5
+10
+2
+22.
+. . []
+[] ..  
+ 
+ 
+55=1 . 5 1 0 M= O H , p O H= l o g 1 . 5 1 0 =4 . 8 2, p H=1 4 . 0 0 4 . 8 2=9 . 1 8x  ªºu u¬¼  
+ 
+62. (M)  
+
+   
++ +
+55 2 55 3Equation : C H NH (aq) + H O(l)  C H N(aq)    + H O (aq)
+Initial : 0.0482 M   0 M 0 M
+Changes : M  + M + M
+Equil : 0.0482 M     M M
+xx x
+xx x
+|
+
+
+ZXYZ
+ 
+ 
+> @
++14 2 2
+55 36w
+a 9 +
+b 55
+CHN HO1.0 10== = 6 . 7 1 0 = =1.5 10 0.0482 0.0482 CHN H
+K x xK Kx
+
+
+
+ªºu ¬¼u|u ªº¬¼
+ 
+ 
+45.7 10 M << 0.0482 M, the assumption is validu  
+ 
+ 
+4+ 4
+3=5 . 7 1 0 M= H O , p H= l o g 5 . 7 1 0 =3 . 2 4x  ªºu u ¬¼  
+ 
+63. (M)  
+ ( a )  
+2
+2+8
+32 3 3a a , S u l f u r o u sHSO + H O H O + SO = = 6.2 10 KK
+ uZZ XYZZ  
+1
+14
+13w
+32 2 3 b 2
+a, S u l f u r o u s
+1.0 10HSO + H O OH + H SO = = = 7.7 10 1.3 10
+KK K
+
+  
+
+u uu
+ZZ XYZZ  
+Since KKab! , solutions of HSO 3
+
+ are acidic. 
+ 
+ 
+
+===== SOLUTION MANUAL PAGE 759 =====
+Chapter 16: Acids and Bases 
+ 7 5 9  
+ (b) 
+2
++2 19
+23 aa ,HydrosulfuricHS + H O H O + S = =1 1 0KK uZZ XYZZ  
+1
+14
+7w
+22 b 7
+a, H y d r o s u l f u r i c
+1.0 10HS + H O OH + H S = = = 1.0 10 1.0 10
+KK K
+
+ 
+
+u uu
+ZZ XYZZ  
+Since KKab , solutions of HS  are alkaline, or basic. 
+ 
+ (c) 
+3
+23 +1 3
+42 3 4 a a , P h o s p h o r i cHPO + H O H O + PO = = 4.2 10 KK
+ uZZ XYZZ  
+2
+14
+2 7w
+42 24 b 8
+a, P h o s p h o r i c
+1.0 10HPO + H O OH + H PO = = = 1.6 10 6.3 10
+KK K
+
+  
+
+u uu
+ZZ XYZZ  
+Since KKab , solutions of HPO 4
+2
+ are alkaline, or basic. 
+ 
+64. (M) pH = 8.65 (basic).  We need a salt made up of a weakly polarizing cation and an 
+anion of a weak acid, which will hydrolyze to produce a basic solution. The salt (c) KNO2 
+satisfies these requirements. (a) NH Cl4 is the salt of the cation of a weak base and the anion 
+of a strong acid, and should form an acidic solution. (b) KHSO 4 and (d) NaNO 3  have 
+weakly polarizing cations and anions of strong acids; they form pH-neutral solutions. 
+pOH OH M=1 4 . 0 0 8 . 6 5=5 . 3 5 =1 0 =4 . 5 1 053 5 6u     
+ 
+
+22 2
+66 6
+66 6
+Equation: NO (aq)   +   H O(l) HNO (aq) + OH (aq)
+Initial: 0M 0M
+Changes: 4.5 10 M +4.5 10 M +4.5 10 M
+Equil: 4.5 10 M 4.5 10 M 4.5 10 M
+S
+S
+ 
+ 
+ 
+|
+u  u u
+u  u u
+ZXYZ
+ 
+ 
+K K
+KS
+b
+w
+a
+HNO OH
+NO
+== 1.0 10
+7.2 10 =1 . 4 1 0 = =
+4.5 10
+4.5 10
+14
+4
+11 2
+2
+6 2
+6
+u
+u u
+u
+u
+
+
+
+
+
+
+
+ch  
+  >@
+26
+6 6
+211
+4.5 10
+4.5 10 = =1 . 4M =1 . 4M  +4 . 5 1 0 =1 . 4M = K N O1.4 10SS
+
+ 
+
+u
+u u u
+ 
+ 
+Molecular Structure and Acid-Base Behavior 
+ 
+65. (M)  
+ ( a )  H C l O 3 should be a stronger acid than is HClO2 . In each acid there is an H – O – Cl  
+grouping. The remaining oxygen atoms are bonded directly to Cl as terminal O 
+atoms. Thus, there are two terminal O atoms in HClO 3  and only one in HClO2 .  
+For oxoacids of the same element, the one with the higher number of terminal 
+oxygen atoms is the stronger.  With more oxygen atoms, the negative charge on the 
+conjugate base is more effectively spread out, which affords greater stability.  
+HClO3 :
+1
+2
+a =5 1 0K u  and HClO 2 : Ka =1 . 1 1 0 2u  . 
+ 
+
+===== SOLUTION MANUAL PAGE 1013 =====
+Chapter 20: Electrochemistry 
+ 1 0 1 3  
+(c) Oxidation:  
+3+Au s Au aq + 3e o                   o =1 . 5 2 VE  
+Reduction:   
++
+32NO aq + 4 H aq + 3e NO g + 2H O(l)
+  o                o =+ 0 . 9 5 6 VE  
+Net:      
++3 +
+32Au s + NO aq + 4 H aq Au aq + NO g + 2 H O(l)
+
+o ; o
+cell =0 . 5 6 VE   
+Au(s) does not react with 1.00 M HNO 3 aq. 
+ 
+18. (M) In each case, we determine whether Ecell
+R  is greater than zero; if so, the reaction will 
+occur. 
+(a) Oxidation:  
+2+Fe s Fe aq + 2e o         o 0.440 VE  
+Reduction:  
+2+Zn aq + 2e Zn s o   o =0 . 7 6 3 VE   
+Net:     
+2+ 2+Fe s + Zn aq Fe aq + Zn so  o
+cell 0.323VE    
+The reaction is not spontaneous under standard conditions as written 
+ 
+(b) Oxidation:  2{2Cl aq Cl g + 2 e }  5 ou           o =1 . 3 5 8 VE  
+Reduction:   
++2 +
+42{MnO aq +8 H aq +5e Mn aq +4 H O(l)}×2
+  o ; o =1 . 5 1VE  
+Net:     
++2 +
+42 210Cl aq + 2 MnO aq +16 H aq 5Cl g + 2 Mn aq + 8H O(l)
+ o  
+o
+cell =+ 0 . 1 5 VE . The reaction is spontaneous under standard conditions as written. 
+ 
+(c) Oxidation:  
++{Ag s Ag aq + e }  2 ou          o =0 . 8 0 0 VE  
+Reduction:  
++
+22H a q +2e H g o    o =+ 0 . 0 0 0 VE  
+Net:     
+++
+22A g s +2H a q 2A g a q +H go   o
+cell =0 . 8 0 0 VE   
+The reaction is not spontaneous under standard conditions as written. 
+ 
+(d) Oxidation:  2{2 Cl aq Cl g + 2 e }  2 ou          o =1 . 3 5 8 VE  
+Reduction:  
++
+22Og + 4 Ha q + 4 e 2 H O ( l ) o   o =+ 1 . 2 2 9 VE  
+            
+Net:    
++
+22 24Cl aq +4H a q +O g 2Cl g +2H O(l ) o  o
+cell =0 . 1 2 9 VE   
+The reaction is not spontaneous under standard conditions as written. 
+ 
+Galvanic Cells 
+ 
+19. (M) (a) Oxidation:  
+3+{Al s Al aq + 3e }  2 ou    o =+ 1 . 6 7 6VE  
+  R e d u c t i o n :   
+2+{Sn aq + 2e Sn s }  3 ou       o =0 . 1 3 7 VE   
+             
+  N e t :      
+2+ 3+2A l s + 3S n a q 2A l a q + 3S n so     o
+cell =+ 1 . 5 3 9 VE  
+ ( b )  Oxidation:  
+2+ 3+Fe aq Fe aq + e o     o =0 . 7 7 1 VE  
+  R e d u c t i o n :   
++Ag aq + e Ag s o         o =+ 0 . 8 0 0VE  
+             
+  N e t :      
+2+ + 3+Fe aq + Ag aq Fe aq +Ag so      o
+cell  = +0.029 VE  
+ (c) Oxidation: {Cr(s) o Cr2+ (aq)+2e- } u3    Eo = 0.90V  
+
+===== SOLUTION MANUAL PAGE 1014 =====
+Chapter 20: Electrochemistry 
+1014 
+ Reduction: {Au 3+ (aq)+3e- o Au(s)}u2     Eo =1 . 5 2 V       
+           ____________________  
+  N e t :   3 C r ( s ) + 2 A u 3+ (aq) o 3Cr2+ (aq)+2Au(s)    Ecell
+o =2 . 4 2 V 
+ (d) Oxidation: 2H 2O(l)o O2 (g)+4H+ (aq)+4e-   Eo = 1.229V  
+ Reduction: O 2 (g)+2H2O(l)+4e- o 4OH- (aq)     Eo = 0.401V    
+            
+  Net:  H 2O(l)o H+ (aq)+OH- (aq)    Ecell
+o = 0.828V  
+ 
+ 
+20. (M) In this problem we are asked to write the half-reactions, balanced chemical equation 
+and determine Ecell
+o  for a series of electrochemical cells. 
+ ( a )  Stepwise approach 
+  First write the oxidation and reduction half-reactions and find Eo  values from 
+Appendix D: 
+  Oxidation: Cu(s) o Cu2+ (aq)+2e-      Eo = 0.340 V  
+  R e d u c t i o n :   Cu+ (aq)+e- o Cu(s)      Eo =+ 0 . 5 2 0V 
+  In order to obtain bala nced net equation, the reduction half-reaction needs to be 
+multiplied by 2: 
+   2Cu+ (aq)+2e- o 2Cu(s)  
+  A d d  t h e  t w o  h a l f - r e a c t i o n s  to obtain the net reaction: 
+  C u ( s ) o Cu2+ (aq)+2e-  
+   2Cu+ (aq)+2e- o 2Cu(s)  
+             
+  N e t :    2Cu+ (aq) o Cu2+ (aq)+Cu(s)         
+  D e t e r m i n e  Ecell
+o : 
+    Ecell
+o  =-0.340V+0.520V= +0.18 V  
+  Conversion pathway approach: 
+  O x i d a t i o n :  C u ( s ) o Cu2+ (aq)+2e-      Eo = 0.340 V  
+  R e d u c t i o n :   {Cu+ (aq)+e- o Cu(s)}u2    Eo =+ 0 . 5 2 0V 
+               
+  N e t :    2Cu+ (aq) o Cu2+ (aq)+Cu(s)     Ecell
+o   0.18V  
+  F o l l o w  t h e  s a m e  m e t h o d o l o g y  f or parts (b), (c), and (d). 
+ ( b )  Oxidation:  Ag(s)+I- (aq) o AgI(s)+e-     Eo = 0.152 V  
+  R e d u c t i o n :   AgCl(s)+e- o Ag(s)+Cl- (aq)     Eo = 0.2223 V  
+             
+  N e t :    AgCl(s)+I- (aq) o AgI(s)+Cl- (aq)       Ecell
+o  = +0.3743 V  
+ ( c )  Oxidation:  {Ce3+ (aq) o Ce4+ (aq)+e-}u2      Eo = 1.76 V  
+  R e d u c t i o n :   I2 (s)+2e- o 2I- (aq)         Eo =+ 0 . 5 3 5V 
+             
+  N e t :    2Ce3+ (aq)+I2 (s) o 2Ce4+ (aq)+2I- (aq)      Ecell
+o  = -1.225 V  
+
+===== SOLUTION MANUAL PAGE 1018 =====
+Chapter 20: Electrochemistry 
+1018 
+24. (M) (a) Fe s¨Fe2+ aq¨¨Cl aqCl2 g¨Pt s 
+  O x i d a t i o n :   
+2+Fe s Fe aq + 2e o    o =+ 0 . 4 4 0 VE  
+Reduction:  2Cl g + 2e 2Cl aqo      o =+ 1 . 3 5 8 VE  
+  N e t :      
+2+
+2Fe s + Cl g Fe aq + 2Cl aq o     o
+cell =+ 1 . 7 9 8  VE  
+(b)      
+2+Zn s Zn aq Ag aq Ag s¨¨ ¨ ¨  
+ Oxidation:  
+2+Zn s Zn aq + 2 e o    o =+ 0 . 7 6 3 VE  
+Reduction:  
++{Ag aq + e Ag s }  2 ou     o =+ 0 . 8 0 0 VE  
+ N e t :      
++2 +Zn s + 2 Ag aq Zn aq + 2 Ag so     o
+cell =+ 1 . 5 6 3 VE  
+(c) Pt s¨Cu+ aq,Cu2+ aq¨¨Cu+ aq¨Cu s 
+ O x i d a t i o n :   
++2 +Cu aq Cu aq + e o    o =0 . 1 5 9 VE  
+Reduction:  
++Cu aq + e Cu s o       o =+ 0 . 5 2 0 VE  
+ N e t :    
++2 +2Cu aq Cu a q +Cu so      o
+cell =+ 0 . 3 6 1 VE  
+(d) Mg s¨Mg2+ aq¨¨Br aqBr2 l¨Pt s 
+ O x i d a t i o n :   
+2+Mg s Mg aq + 2e o    o =+ 2 . 3 5 6 VE  
+Reduction:  2Br l + 2e 2 Br aqo      o =+ 1 . 0 6 5 VE  
+ N e t :      
+2+
+2Mg s + Br l Mg aq + 2 Br aq o               o
+cell =+ 3 . 4 2 1 VE  
+ 
+PtFe
+Cl-
+salt bridge
+e-
+cathode
+anode
+Cl2(g)
+Fe2+
+ 
+anode
+cathode
+e-
+salt bridge
+Zn2+
+Zn Ag
+Ag+
+ 
+ 
+anode
+cathode
+e-
+salt bridge
+Cu+   Cu2+ Cu+
+CuPt
+ 
+anode
+cathode
+e-
+salt bridge
+Mg2+
+Mg Pt
+Br2Br-
+ 
+24(a) 24(b) 
+24(c) 24(d) 
+
+===== SOLUTION MANUAL PAGE 1050 =====
+Chapter 20: Electrochemistry 
+1050 
+V 800 . 0Ag(s) 2 (aq) H 2Ag 2 (g) H : Net
+V 800 . 02 Ag(s)}e (aq) {Ag : Reduction
+V 000 . 0e 2 aq) ( H 2 (g) H : Oxidation
+cell2
+2
+ qo
+ quo
+ q o
+
+
+
+E
+E
+E
+ 
+2 2
+cell cell 2 2
+0.0592 [H ] 0.0592 1.00log 0.503 V 0.800 V log22 [Ag ] [Ag ]EE
+
+  q     
+ 100 10
+2
+2
+2
+2
+10 0 . 1 10
+] Ag [
+00 . 10 . 100592 . 0
+) 503 . 0 800 . 0 ( 2
+] Ag [
+00 . 1log u    
+  
+  
+  [Ag+ ]2 =1.0 u10-10M2  [Ag+ ]=1.0 u10-5  
+ 
+Ag g 10 4 . 5Ag mol 1
+Ag g 87 . 107
+Ag mol 1
+Ag mol 1
+soln L 1
+Ag mol 10 0 . 1L 0.500 Ag  mass        4
+5
+
+
+
+u uuuu 
+Ag % 051 . 0 % 100sample g 050 . 1
+Ag g 10 5.4Ag %
+4
+ uu 
+
+(by mass) 
+91. (M) 250.0 mL of 0.1000 M CuSO4  = 0.02500 moles Cu2+ initially. 
+ 
+ moles of Cu2+ plated out 
+ 
+= 3.512C
+s u1368 s u1 mol e-
+96,485 C u1 mol Cu2+
+2 mole-  0.02490mol Cu 2+  
+ 
+moles of Cu2+ in solution = 0.02500 mol – 0.02490 mol = 0.00010 mol Cu2+ 
+ 
+ [Cu2+] = 0.00010 mol Cu2+/0.250 L = 4.0 × 10-4 M 
+ 
+      Cu2+(aq)  +  4NH 3(aq)
+1311 1 0fK  u
+ZZZZZZXYZZZZZZ  Cu(NH3)4
+2+(aq) 
+  I n i t i a l     0 . 0 0 0 4 0  M   0 . 1 0  M    0  M  
+  C h a n g e ( 1 0 0 %  r x n )  - 0 . 0 0 0 4 0 M   m a i n t a i n e d    + 0 . 0 0 0 4 0  M  
+  N e w  i n i t i a l    0  M    0 . 1 0  M    0 . 0 0 0 4 0  M  
+  C h a n g e    + x   maintained   -x 
+  E q u i l i b r i u m   x   0.10 M   (0.00040 – x) M | 0.00040 M 
+ 
+ 
+2+
+13 2+ 1334
+f 2+ 42 + 4
+3
+[Cu(NH ) ] 0.00040K= = 1 . 1 1 0 [ C u ]  =  3 . 6 1 0
+[Cu ][NH ] [Cu ](0.10)
+M u u  
+ H e n c e ,  t h e  a s s u m p t i o n  i s  v a l i d.  The concentration of Cu(NH 3)4
+2+(aq) = 0.00040 M which is 
+40 times greater than the 1 × 10-5 detection limit.   Thus, the blue color should appear. 
+ 
+92.  (M) First we determine the molar solubility of AgBr in 1 M NH3 . 
+26
+33 s p fum         AgBr(s) 2NH (aq)    Ag(NH ) (aq) Br (aq) K K  K 8.0 10
+Initial                     1.00 M                         0  M         0 M
+quil.                       1.00-2s                 
+S
+E
+   u  uU
+2
+2 633
+2
+3
+13
+sp 10
+3
+       s                s     {s AgBr molar solubility}
+[Ag(NH ) ][Br ]K 8.0 10   s2 . 8 1 1 0  M  ( a l s o  [ B r ] )[NH (aq)] (1 2 )
+K 5.0 10So  [Ag ]  1.8 10[Br ] 2.81 10
+s
+s
+M
+
+ 
+
+
+
+
+   u u 
+u   u u

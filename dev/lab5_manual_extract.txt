@@ -1,0 +1,180 @@
+
+===== PAGE 3 =====
+ 
+3 
+ 
+Table of contents 
+Lab 0  Safety in the Chemistry Laboratory   page 5 
+Lab 1  Densities of Liquids and Solids    page 7 
+Lab 2  Stoichiometry       page 11 
+Lab 3  Spectroscopic Determination of Nickel   page 15 
+Lab 4  Shape of molecules and Polarity    page 19 
+Lab 5  Distillation        page 27 
+Lab 6  Recycling Copper      page 31 
+Lab 7  Thermochemistry      page 37 
+Lab 8  Chemical Kinetics – The Bromination of Acetone page 41 
+Lab 9  Gravimetric Analysis of Chloride    page 45 
+Lab 10  Atomic Absorption Spectroscopy – Detecting Copper Ions in 
+Municipal Drinking Water     page 47 
+ 
+
+===== PAGE 26 =====
+ 
+26 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+===== PAGE 27 =====
+ 
+27 
+ 
+Lab 5: Distillation 
+Introduction 
+Distillation is a process by which a volatile liquid is heated to evaporation, passed through a condenser 
+which returns it to liquid state, and is collected.  If the liquid is part of a mixture, the liquid can be 
+separated from the mixture if the boiling point of the liquid is different from the boiling points of the 
+other components of the mixture.  One common example of distillation is the purification of water from 
+an impure source, such as waste water (rare) or sea water (first described by Aristotle but now common 
+in water deficient countries with low energy costs).  Another is the refining of crude oil to produce 
+various hydrocarbon fractions such as gasoline, diesel, kerosene, and bunker fuel (used by the Romans 
+to produce turpentine from pine oil) or to purify silicon for the electronic industry by fractional 
+distillation of HSiCl3. 
+Another example is the distillation of alcohol spirits from fermented product, such as whisky (malt), rum 
+(sugar or molasses), and vodka (wheat grain).  Brandy and schnapps are produced from wines or fruit 
+ferment.  Sometime around the sixth century AD, Arabs, possibly Egyptians, possibly Armenians, made 
+use of distillation to improve the quality of alcoholic beverages.  One problem with fermented spirits is 
+that methanol (CH3OH, bp 64.7@760 torr, and a toxic alcohol) is produced as a byproduct.  Because 
+methanol boils at a lower temperature than ethanol (CH3 CH2OH, bp 78.5@760 torr), discarding the 
+initial output and stopping the collection when the temperature increased resulted in better and safer 
+product. 
+Ethanol boils at 78.5ºC, while water boils at 100ºC.  In fact, ethanol forms an azeotrope with water, at 
+95.6% ethanol/4.4% water, bp 78.2@760 torr  If the temperature of the mixture can be held above 
+78ºC and below 100ºC, then a separation will occur.  The evaporated material is also a mixture of the 
+two components, as both are volatile.  In practice, this is a mixture of compounds depending on the 
+respective vapour pressures at the temperature.  A simple distillation will result in a new mixture with a 
+higher fraction of the lower boiling material, but not a pure product.  Permitting the evaporated 
+material to reach some equilibrium temperature as it passes to the condenser can improve the 
+efficiency of the separation, in effect by having a theoretical series of simple distillations occur en route. 
+In this exercise, you will compare a simple distillation of a cheap red wine to a fractional distillation of 
+the product of the first distillation.  The fractional distillation will start with considerable advantage, as 
+the feedstock will have already been concentrated in ethanol by the initial simple distillation. 
+Method 
+Prepare two evaporating dishes (ceramic).  When material is available, put a small amount of product 
+from the simple distillation, and a small amount of product from the fractional distillation on a glass, and 
+attempt to ignite the liquid with a burning splint. Keeping 5 ml of the product of the simple distillation 
+should suffice for the flammability test. Use the bulk of the product to carry out the fractional 
+distillation. 
+Set up the apparatus according to the demonstration by the instructor.  Charge a 500 mL round-bottom 
+flask with 250 mL of wine provided, add boiling chips (1 or 2).   
+
+===== PAGE 28 =====
+ 
+28 
+ 
+Set up the data collection to the Events with entry mode, with the entry column labeled Volume and the 
+units mL.  
+Apply heat carefully with a micro Bunsen burner.  Apply heat to keep the charge boiling gently, not 
+vigorously, so that the vapour just passes over to the condenser.  Start the data collection.  When  the 
+first drop of condensate drops into your collection vessel, press the Keep button    and 
+enter 0 as the volume.  Collect the condensate and record (Keep) the temperature at the head of the 
+condenser for each 5 mL of condensate.  Collect until the temperature at the condenser head reaches 
+98ºC or you collected 40 mL of distillate (whatever comes first).  Stop the data collection    
+and remove the Bunsen burner. 
+Simple distillation Fractional distillation
+Condenser
+Still head
+Vigreux column
+Still pot
+LabPro temperature probe
+ 
+Set up the apparatus again including the Vigreux column as shown by the instructor.  The Vigreux 
+column permits the vapour to equilibrate at various temperatures as it rises, enabling better separation 
+of the two volatile liquids.  Charge a small round-bottom flask with most of the product of the simple 
+distillation, add boiling chips, and apply heat.  Save the previous run in LoggerPro, and again, collect the 
+condensate and record the temperature in the same way.  Collect data as above, except every 2 mL.  
+Collect until the temperature starts to rise sharply. 
+
+
+===== PAGE 29 =====
+ 
+29 
+ 
+Data analysis and report 
+The object of this exercise is to compare simple to fractional distillation and make a comment on 
+relative efficiency. Support your claim with data and observations from this lab (flame test, temperature 
+profile for both distillation).  If this were an experiment, one would properly conduct each distillation 
+with the same feedstock, but experience has shown that although an improvement is seen, good 
+separation does not occur, as it should with successive simple then fractional distillation. 
+You should have both the simple and fractional distillation in the same LoggerPro graph. If you prefer 
+working with Excel you can copy the data columns into Excel and create your own graph. Use Insert Text 
+Annotation to label the two curves.  In the Graph options window, select Manual under Scaling, and 
+adjust the Y axis so that only the relevant data show. 
+Add a Text annotation to the graph, and briefly indicate the difference in burning of the two products, 
+with a very brief explanation. 
+Time permitting, we will determine the density of your final product from the fractional distillation using 
+the procedures for the densities of liquids from Lab 1. This will permit us to quantify the % vol ethanol 
+content in your sample. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+===== PAGE 30 =====
+ 
+30 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

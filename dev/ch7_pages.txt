@@ -1,0 +1,2019 @@
+
+
+=== PDF PAGE 263 ===
+Chapter 7: Thermochemistry 
+ 2 6 3  3B (E) The heat that is liberated by the benzoi c acid’s combustion serves to raise the 
+temperature of the assembly. We designa te the calorimeter’s heat capacity by C. 
+qqrxn calorim  g kJ
+ g kJ =1 . 1 7 626.42
+1=3 1 . 0 7 = u  
+qC t C Ccalorim  kJ C kJ
+C kJ C == 3 1 . 0 7 = 4 . 9 6 =31.07
+4.96=6 . 2 6 / 'uD
+DD 
+ 
+4A (M) The heat that is liberated by the reaction rais es the temperature of the reaction mixture.  
+We assume that this reaction mixture has the same density and specific heat as pure water. 
+3
+calorim1.00 g 4.18 J=2 0 0 . 0  m L 3 0 . 2 2 2 . 4C = 6 . 51 0  J =1 mL gCrxn qq§·uu u  u  ¨¸©¹D
+D 
+Owing to the 1:1 stoichiometry of the reaction, the number of mole s of AgCl(s) formed is equal 
+to the number of moles of AgNO 3(aq) in the original sample. 
+3
+31.00 M AgNO 1 L 1 mol AgClmoles AgCl = 100.0 mL = 0.100 mol AgCl1000 mL 1 L 1 mol AgNOuu u  
+3
+rxn6.5 10  J 1 kJ= = 65. kJ/mol0.100 mol 1000 Jquu  
+ 
+Because qrxn is a negative quantity, the precip itation reaction is exothermic. 
+ 
+4B (M) The assumptions include no heat loss to th e surroundings or to the calorimeter, a 
+solution density of 1.00 g/mL, a specific heat of 4.1811 J g CD, and that the initial and 
+final solution volumes are the same. The equation for the reaction that occurs is 
+ 2 NaOH aq + HCl aq NaCl aq + H O l . o  Since the two reactants combine in a one to 
+one mole ratio, the limiting reactant is the one present in smaller amount (i.e. the one with 
+a smaller molar quantity). 
+amount HCl  mL mmol HCl
+ mL soln mmol HCl =1 0 0 . 01.020
+1=1 0 2 . 0 u  
+  1.988 mmol NaOHamount NaOH = 50.0 mL = 99.4 mmol NaOH 1 mL soln
+Thus, NaOH is the limiting reactant.u
+ 
+22
+neutr
+221 mmol H O 1 mol H O 56 kJ=9 9 . 4  m m o l  N a O H = 5 . 5 7  k J1 mmol NaOH 1000 mmol H O 1 mol H Oquu u   
+  calorim neutr1.00 g 4.18 J 1 kJ== 5 . 5 7  k J = 1 0 0 . 0 + 5 0 . 0  m L 2 4 . 5 2 C1 mL g C 1000 Jqq t u uuuD
+D 
+5.57 +15.37=0 . 6 2 7 1 5 . 3 7 = =3 3 . 4C0.627ttD 
+ 
+5A (E) w = P'V = 0.750 atm(+1.50 L) = 1.125  L atm  u 101.33 J
+1La t m= 114 J   
+114 J of work is done by system 
+ 
+
+=== PDF PAGE 264 ===
+Chapter 7: Thermochemistry 
+264 5B (M) Determine the initial number of moles:   
+  n = 50.0 g N 2 u 2
+21 mol N
+28.014 g N = 1.785  moles of N 2 
+ V = nRT
+P= -1 -1
+2 (1.785 mol N )(0.08206 Latm K mol )(293.15 K)
+2.50 atm= 17.2 L 
+'V = 17.2 – 75.0 L = 57.8 L 
+ 
+ w = P'V = 2.50 atm( 57.8 L) u101.33 J
+1La t mu1 kJ
+1000 J=  +14.6 kJ  work done on system.  
+ 
+6A (E) The work is w= +355 J. The heat flow is q=1 8 5 J. These two are related to the energy 
+change of the system by the first law equation: = + , Uq w' which becomes 
+2=+ 3 5 5  J 1 8 5  J=+ 1 . 7 0 1 0  JU' u  
+ 
+6B (E) The internal energy change is =1 2 5U' J. The heat flow is q=+ 5 4 J .  T h e s e  t w o  a r e  
+related to the work done on the sy stem by the first law equation: =+Uq w', which becomes 
+125 J = +54 J + . w   The solution to this equation is w=1 2 5 5 4 =1 7 9J J  J ,  w h i c h  m e a n s  
+that 179 J of work is done by the system to the surroundings. 
+ 
+7A (E) Heat that is given off has a negative sign. In  addition, we use the molar mass of sucrose, 
+342.30 g/mol. 
+sucrose mass  kJ mol C H O
+ kJ g C H O
+ mol C H O g C H O =1 . 0 01 01
+5.65 10342.30
+1=6 0 . 63 12 22 11
+312 22 11
+12 22 1112 22 11 u uuu  
+ 
+7B (E) Although the equation does not say so  explicitly, the reaction of H+(aq) + OH-(aq) o 
+H2O(l) gives off 56 kJ of heat per mole of wa ter formed. The equation then is the source of 
+a conversion factor. 
+2
+21 L 0.1045 mol HCl 1 mol H O 56 kJ evolvedheat flow = 25.0 mL1000 mL 1 L soln 1 mol HCl 1 mol H O
+heat flow = 0.15 kJ heat evolveduu u u  
+  
+8A (M) Vice = (2.00 cm)3 = 8.00 cm3        
+ 
+mice = m water =  8.00 cm3 u0.917 g cm-3 = 7.34 g ice = 7.34 g H 2O   
+ 
+moles of ice = 7.34 g ice u2
+21 mol H O
+18.015  g H O= 0.407 moles of ice 
+qoverall  = qice(10 to 0 qC) + qfus +qwater(0 to 23.2 qC) 
+ 
+qoverall  = mice(sp. ht.) ice'T + nice'Hfus + mwater(sp. ht.) water'T
+ 
+qoverall = 7.34 g(10.0 qC)(2.01oJ
+g C) + 0.407 mol ice(6.01kJ
+mol) + 7.34 g(23.2 qC)(4.184oJ
+g C) 
+ 
+qoverall = 0.148 kJ + 2.45 kJ + 0.712 kJ 
+ 
+qoverall = +3.31 kJ (the system absorbs this much heat) 
+
+=== PDF PAGE 265 ===
+Chapter 7: Thermochemistry 
+ 2 6 5  8B (M) 5.00 u103 kJ = q ice(15 to 0 qC) + qfus + qwater (0 to 25 qC)+ qvap  
+ 
+ 
+ 
+5.00 u103 kJ = m ice(sp. ht.) ice'T + nice'H fus + m water(sp. ht.) water'T + nwater'H vap 
+ 
+ 
+ 5 . 0 0  u 106 J = m(15.0 qC)(2.01oJ
+g C)+(
+22m
+18.015 g H O/mol H Ou6.01 u 103J
+mol) 
++ m(25.0 qC)(4.184oJ
+g C) + 
+2m
+18.015 g H O/mol(44.0 u103 J
+mol) 
+ 
+ 
+  5 . 0 0  u 106 J = m(30.15  J/g) + m(333.6  J/g) + m(104.5  J/g) + m(2.44  u103 J/g) 
+ 
+ 
+5.00 u 106 J = m(2.91 u103 J/g)       m  = 6
+35.00 10 J
+2.91 10 J/gu
+u = 1718 g or 1.72 kg H 2O 
+ 
+9A (M) We combine the three combustion reactio ns to produce the hydrogenation reaction. 
+ 
+ 
+ 
+   9
+36 2 2 2 comb 1 2
+1
+222 comb2 2
+22 3 82 c omb3CH g + O g 3 C O g + 3 HO l == 2 0 5 8  k J
+Hg + Og H O l == 2 8 5 . 8  k J
+3CO g + 4H O l C H g + 5O g == + 2 2 1 9 . 9  k JHH
+HH
+HHo' ' 
+o' ' 
+o ' ' 
+  36 2 38 rxn 1 2 3 CH g + H g CH g =++= 1 2 4  k J HH H H o' ''' 
+ 
+9B (M) The combustion reaction has propanol and O 2(g) as reactants; the products are CO 2(g) 
+and H 2O(l). Reverse the reaction given and comb ine it with the combustion reaction of 
+CH g36bg. 
+ 
+CHO Hl CH g HOl37 36 2 + bg bg bg o   1=+ 5 2 . 3  k JH' 
+CH g O g C O g HOl369
+2 22 2 +3 + 3bg bg bg b g o  'H2=2 0 5 8  k J  
+CHO Hl O g C O g HOl379
+2 22 2 +3 + 4bg bg bg bg o  rxn 1 2=+= 2 0 0 6  k J HH H'''  
+ 
+10A (M) The enthalpy of formation is the enthalpy change  for the reaction in which one mole of the 
+product, C H O N s61 32bg, is produced from appropriate amount s of the reference forms of the 
+elements (in most cases, the most stable form of the elements).   
+ 13 1
+22 2 6 1 3 2 22 6C g r a p h i t e + H g + O g + N g CH ON s o  
+ 
+10B (M) The enthalpy of formation is the enthalpy cha nge for the reaction in  which one mole of 
+the product, NH g3bg, is produced from appropriate amou nts of the reference forms of the 
+elements, in this case from 0.5 mol N g2bg and 1.5 mol H g2bg, that is, for the reaction:  
+ 
+ 3 1
+22 3 22Ng + Hg N Hg o   
+ 
+The specified reaction is twice the reverse of th e formation reaction, and its enthalpy change is 
+minus two times the enthalpy of formation of NH g3bg:  
+ 
+u2 4 6 . 1 1 = + 9 2 . 2 2  kJ  kJb g  
+
+=== PDF PAGE 266 ===
+Chapter 7: Thermochemistry 
+266 11A (M)  o
+rxn 2 2 3 2 2=2× CO g +3× H O l CH CH OH l 3× O goo o o
+ff f f HH H H H '' '  ' ' ªº ªº ª º ª º¬¼ ¬¼ ¬ ¼ ¬ ¼ 
+ 
+>@>@=2 3 9 3 . 5  k J +3 2 8 5 . 8  k J 2 7 7 . 7  k J 30 . 0 0  k Ju u   u ªº ªº¬¼ ¬¼= 1367 kJ 
+ 
+11B (D) We write the combustion reaction for each compo und, and use that reaction to determine the 
+compound’s heat of combustion. 
+ 
+CH g O g C O g HOl38 2 22 +5 3 +4bg bg bg bg o  
+ 
+
+  >@ >@combustion 2 2 38 2
+38=3× CO g +4× H O l C H g 5× O g
+=3 × 3 9 3 . 5  k J +4 × 2 8 5 . 8  k J 1 0 3 . 8  k J 5 × 0 . 0 0  k J
+=1 1 8 1  k J1 1 4 3  k J  +  1 0 3 . 80 . 0 0  k J   =  2 2 2 0 .  k J / m o l C Hoo o o o
+ff f f HH H H H'' '  '  ' ªº ªºª º ª º¬¼ ¬¼¬ ¼ ¬ ¼
+   ªº ªº¬¼ ¬¼
+   
+ 
+CH g O g C O g HOl41 013
+2 22 2 +4 + 5bg bg bg bg o  
+ 
+ 
+  >@ > @o
+combustion 2 2 4 10 2
+41 0=4 C O g +5 HO l CH g 6 . 5 O g
+=4 3 9 3 . 5  k J +5 2 8 5 . 8  k J 1 2 5 . 6 6 . 50 . 0 0  k J
+=1 5 7 4  k J1 4 2 9  k J + 1 2 5 . 6  k J 0 . 0 0 k J =2 8 7 7  k J / m o l  C Hoo o o
+ff f f HH H H H
+K'u ' u ' '  u ' ªº ªºª º ª º¬¼ ¬¼¬ ¼ ¬ ¼
+u u   uªº ªº¬¼ ¬¼
+   
+In 1.00 mole of the mixture there are 0.62 mol C H g38bg and 0.38 mol C H g41 0bg. 
+ 
+38 41 0
+38 41 0
+33 32220. kJ 2877 kJheat of combustion = 0.62 mol C H +0 . 3 8  m o l  C H1 mol C H 1 mol C H
+=1 . 41 0  k J1 . 1 1 0  k J =2 . 5 1 0  k J / m o l e  o f  m i x t u r e§· §· uu ¨¸ ¨¸
+©¹ ©¹
+u u u 
+ 
+12A (M) 6 CO 2(g) + 6 H 2O(l) o  C6H12O6(s) + 6 O 2(g)    
+ 
+ 
+'Hqrxn = 2803 kJ = 6ofH'products  6ofH'reactants  
+2803 kJ = [1 mol(ofH'[C6H12O6(s)])  + 6 mol(0kJ
+mol)]  [6 mol( 393.5kJ
+mol) + 6 mol ( 285.8kJ
+mol)]  
+ 
+2803 kJ = ofH'[C6H12O6(s)]  [4075.8 kJ].   Thus,  ofH'[C6H12O6(s)] = 1273 kJ/mol C 6H12O6(s) 
+ 
+12B (M) 'Hqcomb[CH 3OCH 3(g)] = 31.70 kJ
+g m o l a r  m a s s  o f  C H 3OCH 3 = 46.069 g mol-1 
+'Hqcomb[CH 3OCH 3(g)] = 31.70 kJ
+gu46.069 g
+mol= 1460 kJ
+molkJ  'Hqrxn 
+ 
+'Hqrxn= 6ofH'products  6ofH'reactants    Reaction: CH 3OCH 3(g) + 3 O 2(g) o  2 CO 2(g) + 3 H 2O(l) 
+1460 kJ = [2 mol( 393.5kJ
+mol) + 3 mol ( 285.8 kJ
+mol)][1 mol(ofH' [CH 3OCH 3(g)]) + 3 mol(0kJ
+mol)] 
+ 
+1460 kJ = 1644.4 kJ ofH'[CH 3OCH 3(g)]   
+Hence, ofH'[CH 3OCH 3(g)] = 184 kJ/mol CH 3OCH 3(g) 
+
+=== PDF PAGE 267 ===
+Chapter 7: Th ermochemistry 
+ 2 6 7  13A (M) The net ionic equation is: Ag aq I aq AgI s++bg bg b go and we have the following: 
+  +
+rxn f f f=A g I s A g a q I a q HH H Hªºªºªº ªº ''  '  '¬¼¬¼¬¼ ¬¼DD D D 
+ =6 1 . 8 4  k J / m o l + 1 0 5 . 6  k J / m o l 5 5 . 1 9  k J / m o l =1 1 2 . 3  k J / m o l  A g I ( s )  f o r m e d ªº    ¬¼ 
+ 
+13B (M) 2 Ag+(aq) + CO 32-(aq) o  Ag 2CO 3(s)          
+'Hqrxn = 39.9 kJ = 6ofH'products   6ofH'reactants  =  
+ 39.9 kJ = ofH'[Ag 2CO 3(s)]  [2 mol(105.6 kJ
+mol) + 1 mol( 677.1 kJ
+mol)]  
+ 39.9 kJ =  ofH'[Ag 2CO 3(s)]+ 465.9 kJ  
+ H e n c e ,  ofH'[Ag 2CO 3(s)]=   505.8 kJ/mol Ag 2CO 3(s) formed. 
+  
+ 
+INTEGRATIVE EXAMPLE 
+ 
+ 
+A. (M) The combustion reactions of C 16H32 and C 16H34 are shown below 
+ 
+(1) C 16H32 + 24 O 2 ĺ 16 CO 2 + 16 H 2O 
+(2) 2 C 16H34 + 49 O 2 ĺ 32 CO 2 + 34 H 2O  ΔHf = -10539 kJ 
+ΔHf = -10699 kJ/mol = -21398 kJ 
+ 
+Since we are studying the hydrogenation of C 16H32 to give C 16H34, the final equation has to include the 
+former as the reactant and the la tter as the product.  This is done  by doubling equation 1 and reversing 
+equation 2: 
+ 
+(3) 2 C 16H32 + 48 O 2 ĺ 32 CO 2 + 32 H 2O 
+(4) 32 CO 2 + 34 H 2O ĺ 2 C 16H34 + 49 O 2  ΔHf = -21078 kJ 
+ΔHf = +21398  kJ 
+(5) 2 C 16H32 + 2 H 2O ĺ 2 C 16H34 + O 2  ΔHf = +320 kJ 
+ 
+Since a hydrogenation reaction involve s hydrogen as a reactant, and look ing at equation (5), we add 
+the following reaction to (5): 
+ 
+(6) H 2 + ½ O 2 ĺ  H2O  ΔHf = -285.5 kJ/mol 
+ 
+ 
+Double equation (6) and add it to equation 5: 
+ 
+(5) 2 C 16H32 + 2 H 2O ĺ 2 C 16H34 + O 2  ΔHf = +320 kJ 
+(7) 2H 2 + O 2 ĺ  2H 2O  ΔHf = -571 kJ 
+(8) 2 C 16H32 + 2 H 2 ĺ 2 C 16H34   ΔHf = -251 kJ 
+ 
+Since (8) is for 2 moles, ΔHf is -125.5 kJ/mol 
+ 
+
+=== PDF PAGE 268 ===
+Chapter 7: Th ermochemistry 
+268 B. (D) This is a multi-stage problem.  First, you must determine the amount of material reacted, then 
+you have to determine the amount of heat generated, and then you have to calcula te the effect of that 
+heat on water evaporation: 
+ 
+CaO + H 2O ĺ Ca(OH) 2 
+ 
+56 g CaO × (1 mol CaO/56.0 g CaO) = 1 mol CaO 
+100 g H 2O × (1 mol H 2O/18.0 g H 2O) = 5.56 mol H 2O 
+ 
+CaO is the limiting reagent.  Therefore, amount of unreacted H 2O is = 5.56 – 1.0 = 4.56 mol  
+The mass of water unreacted = 82.0 g H 2O 
+ 
+22
+2
+21m o l  C a ( O H ) 7 4 . 1 2g  C a ( O H ) 1m o l  C a O56 g CaO       = 74.1 g Ca(OH)56.0 g CaO 1 mol CaO 1 mol Ca(OH)uu u  
+ 
+   
+ oo o o
+rxn f 2 f f2
+o
+rxnHH C a ( O H ) m o l H C a O m o l H H O m o l
+H9 8 7 k J / m o l 1  m o l 6 3 5 k J / m o l 1  m o l 2 8 6 k J / m o l 1  m o l 6 6 k J' u  u u
+'  u   u   u   
+ 
+As stated before, we have to determine the effects of the heat on the water in  the reaction.  The water 
+first needs to be heated to 100 ºC, and then evapor ated. The energy needed to heat 82.0 g of the water 
+remaining in the reaction is: 
+1o 1 o oJm c T 8 2 . 0  g 4 . 1 8 7 J g C 1 0 0 C 2 0 C 2 7 . 4 7  k J   '       
+ 
+Therefore, 27.47 kJ of energy is used up for the wa ter in the reaction to go from 20 to 100 ºC.  The 
+energy remaining is -66 – (-27.47) = 38.53 kJ. 
+ 
+Since ΔHvap of water is 44.06 kJ/mol, we can cal culate the amount of water evaporated: 
+22
+2
+21m o l  H O 1 8g  H O38.53 kJ   15.74 g H O evaporated44.06 kJ 1 mol H Ouu  
+ 
+Based on the above, the contents of  the vessel after completion of the reaction are 74.1 g of Ca(OH) 2 
+and 66.3 g of H 2O. 
+
+=== PDF PAGE 269 ===
+Chapter 7: Th ermochemistry 
+ 2 6 9   
+EXERCISES 
+ 
+Heat Capacity (Specific Heat) 
+ 
+1.  (E) 
+ ( a )  3
+32 1000 cm 1.00 g 4.18 J=9 . 2 5  L 2 9 . 4C 2 2 . 0C =+ 2 .  k J
+1 L 1 cm 1 g C1 kJ91 01000 Jq uu u u  uDD
+D 
+ (b) q=5 . 8 51000
+10.90333.51
+1000=1 7 7     kg g
+ kgJ
+gCCkJ
+ J kJ uuu u DDch  
+ 
+2. (E) heat = mass sp ht T uu '   
+ ( a )  11+875  J  =   =  + 1 6 . 6 C  12.6  g  4.18  J g CT'uD
+D        += 2 2 . 9 C + 1 6 . 6 C = 3 9 . 5 CfiTT T 'DD D 
+ ( b )  1000cal1.05kcal1kcal21 C
+1000g cal1.59kg 0.0321kg g CTu
+'  q
+§·u¨¸q ©¹ += 2 2 . 9 C 2 1 . 0 C = 8 . 9 CfiTT T ' DD D 
+ 
+3. ( E )  heat gained by the water heat =  lost by the metal; heat = mass sp.ht. Tuu' 
+ ( a )    50.0 4.18 38.9 22.0 = 3.53 10 = 150.0 . . 38.9 100.03 gJ
+gCC J g s p h t C uu  u u DD D bg bg  
+   3
+11 3.53  10   Jsp.ht. =  = 0.385  J g  C  for Zn150.0  g  61.1 C u
+uD
+D 
+ ( b )   50.0 4.18 28.8 22.0 = 1.4 10 = 150.0 . 28.8 100.03 gJ
+gCCJ g s p h t . C u u  u u DD D b g b g  
+   3
+11 1.4  10   Jsp.ht. =  = 0.13   J g  C  for Pt150.0  g  71.2 C u
+uD
+D 
+ ( c )   50.0 4.18 52.7 22.0 = 6.42 10 = 150.0 . 52.7 100.03 gJ
+gCCJ g s p h t . C uu  u u DD D b g b g  
+   3
+11 6.42  10   Jsp.ht. =  = 0.905   J g  C  for Al150.0  g  47.3 C u
+uD
+D 
+4. (E) 50.0 4.18 27.6 23.2 = 9.2 10 = 75.0 g 27.6 80.02 gJ
+gCCJ s p . h t . C u u  u u DD D bg bg  
+2
+11 9.2  10   Jsp.ht. =  = 0.23   J g  C  for Ag75.0  g  52.4 C u
+uD
+D 
+ 
+5. ( M ) o4
+water iron oJ = 375  g  4.18  87  26 C = 9.56  10   J = gCqq uu   
+44 2
+ironJ=9 . 5 61 0  J = 4 6 5 g0 . 4 4 9 8 7 = 1 . 8 1 6 1 0 J2 . 0 8 8 1 0gCll qT T u u  u uD 
+
+=== PDF PAGE 270 ===
+Chapter 7: Th ermochemistry 
+270 44 4
+2
+229.56  10   1.816  10 11.38  10 =  5.448  10 C2.088  10 2.088  10lTu u  u  uu uD or  545 qC 
+The number of significant figures in the fina l answer is limited by the two significant  
+figures for the given temperatures. 
+ 
+ 
+6. (M) heat lost by steel = heat gained by water  
+J 1.00  g J  0 . 5 0   5 1 . 5  1 8 3 C  =  6 6   =  1 2 5   m L     4 . 1 8   gC 1  mL g Cmmu  uuD
+D D51.5  23.2 C D 
+466 = 1.48  10   Jm u   m = 1.48  10
+66 = 2 . 2   1 0   g  s t a i n l .4
+2 uu ess steel  
+The precision of this method of determining mass  is limited by the fact that some heat leaks 
+out of the system. When we deal  with temperatures far above (or far below) room temperature, 
+this assumption becomes less and less valid.  Furthermore, the precision of the method is 
+limited to two significant figures by the specific heat  of the steel. If the two specific heats were 
+known more precisely, then the te mperature difference would determine the final precision of 
+the method. It is unlikely that we could read ily measure temperatures more precisely than 
+r0.01DC,  w i t h o u t  e x p e n s i v e  e q u i p m e n t .  T h e  m a s s  o f  s t eel in this case woul d be measurable to 
+four significant figures, to r0.1g.  This is hardly comparable to modern analytical balances 
+which typically measure such masses to r0.1 mg. 
+ 
+7. ( M )  heat lost by Mg = heat gained by water  
+1000  g J 1 . 0 0   k g  M g   1 . 0 2 4   4 0 . 0C
+1  kg g CfT u §·¨¸©¹D
+D 3
+31000  cm 1.00  g J= 1.00  L   4.18    20.0 C
+1  L 1  cm g CfT uu §·
+¨¸©¹D
+D 
+34 34 1 . 0 2 4  1 0   + 4 . 1 0  1 0  = 4 . 1 8  1 0    8 . 3 6  1 0ffTT u u u  u  
+44 3 3 434.10 10 +8.36 10 = 4.18 10 +1.024 10 12.46 10 = 5.20 10ff TT uu u u o uu  
+4
+312.46  10 =  = 24.0 C 5.20  10fTu
+uD 
+ 
+8. (M) heat gained by the water = heat lost by the brass   
+ 3
+3J 8.40  g J150.0  g  4.18     22.4 C  =  15.2  cm    0.385    163 CgC 1  cm g Cf f TT§·uu   u  ¨¸©¹D D
+D D 
+24 36.27 10 1.40 10 = 49.2 + 8.01 10ffTT u u u ;    43
+21.40  10  + 8.01   10=  = 32.6 C6.27  10  + 49.2fTuuuD 
+9. ( M )  heat lost by copper =  heat  gained by glycerol 
+  0.385  J 1.26  g74.8  g  31.1 C  143.2 C  = 165  mL    sp.ht.  31.1 C  24.8 C
+gC 1  mLu u  uu u DD DD
+D  
+3
+33 1 1
+33.23  103.23  10  = 1.3  10 (sp.ht.) sp.ht. =  = 2.5  J g C1.3  10 uuu uuD 
+molar heat capacity CHOC = 2 . 5   J  g   92.1  g
+1  mol C = 2 . 3   1 0   J  m o l11
+38321 1  uuDD 
+ 
+
+=== PDF PAGE 271 ===
+Chapter 7: Th ermochemistry 
+ 2 7 1  10. (M) The additional water simply acts as a heat transfer medium. The essential relationship 
+is heat lost by iron =  heat  gained by water (of unknown mass). 
+ 2 oooo 1000  g J J1.23  kg   0.449  25.6  68.5 C =  g H O  4.18  25.6  18.5 C
+1  k g g C gCx u u §·
+¨¸©¹ 
+4
+4 2 2
+22
+21  mL H O 2.37  102.37 10 J = 29.7 = = 798  g H O = 8.0 10   mL H O 29.7 1.00  g H Oxxuuu u  
+ 
+11. (M) oenergy transferred 6.052 Jheat capacity =  = 1.21 J/KT (25.0 20.0 C) ' 
+*Note:  since 1K = 1°C, it is not necessary to convert the temperatures to Kelvin.  The change 
+in temperature in both K and °C is the same. 
+ 
+12. (E) heat = mass sp ht T uu '  
+o
+water o
+oJ = 6.052J = 1.24  g    4.18  T   20.0 CgC
+T 2 1 . 2  Cf
+fq u
+  
+ 
+Heats of Reaction 
+ 
+13. ( E )  
+ 5 2
+221  mo l C a OH 1000  g 65.2  kJheat = 283  kg       = 2.49  101  k g 7 4 . 0 9  g  C a O H 1  mo l C a OHuu u u  kJ of heat evolved. 
+ 
+14. (E)  3
+81 8
+81 8 81 81  mo l C H 3.785  L 1000 mL 0.703 g 5.48  10   kJheat energy = 1.00 gal1 g a l 1 L 1 mL 1 1 4 . 2  g  C H 1 mo l C Huuuuu u  
+ h e a t  e n e r g y  =  1 . 2 8   1 0   k J5u 
+ 
+15.  (M)  
+ ( a )  heat evolved  g C H mol C H
+ g C H kJ
+ mol C H kJ =1 . 3 2 51
+58.1232877
+1=6 5 . 5 941 041 0
+41 0 41 0uu  
+ ( b )  heat evolved  L  C H mol C H
+ L  C H kJ
+ mol C H kJSTP
+STP=2 8 . 41
+22.4142877
+1=3 . 6 5 1 041 041 0
+41 0 41 03uuu  
+ ( c )  Use the ideal gas equation to determine th e amount of propane in moles and multiply 
+this amount by 2877 kJ heat produced per mole. 
+ 
+  heat evolved =738 mmHg1atm
+760 mmHgL
+0.08206 Latm
+mol KKkJ
+1 mol C HkJ
+41 0uFHGIKJu
+uu u12 6
+273 2 23 62877145 103.
+(. . ). 
+ 
+16.  (M) 
+ (a) q=29.4
+0.58444.10
+1= 2.22 10
+3838
+383
+38u u kJ
+ g C H g C H
+ mol C H kJ / mol C H  
+
+=== PDF PAGE 272 ===
+Chapter 7: Th ermochemistry 
+272  ( b )  3 10 16
+10 16
+10 16 10 16152.24 g C H O 5.27 kJ== 5 . 9 0 1 0  k J / m o l  C H O0.136 g C H O 1 mol C H Oqu u  
+ ( c )  
+
+32
+33223
+3258.08 g CH CO 58.3 kJ
+2.35 mL CH CO 1 mol CH CO1 mL== 1 . 8 2 1 0  k J / m o l C H C O0.791 gquu u  
+ 
+17.     (M)  
+(a) 7 44
+4
+41  mo l C H 1 6 . 0 4  g  C H 1  k gmass = 2.80  10   kJ       = 504  kg CH .890.3  kJ 1   mol CH 1000  guu u u  
+(b) First determine the moles of CH4 present, with the ideal gas law. 
+   4
+4 41atm768mmHg 1.65 10 L760 mmHgmol CH 696 molCHLa tm0.08206 (18.6 273.2) Kmol K§·uu ¨¸©¹  
+u 
+   5
+4
+4890.3  kJheat energy = 696  mol CH    = 6.20  10   kJ of heat energy 1  mo l C Hu u  
+   ( c )  
+25
+63 2
+HO 21000 J6.21 10  kJ1mLH O 1kJV= 2 . 9 0 1 0  m L  =  2 . 9 0 1 0 L  H OJ 1g4.18 (60.0 8.8) CgCuu
+u u u
+qq 
+ 
+ 
+18. (M) The combustion of 1.00 L (STP) of synthe sis gas produces 11.13 kJ of heat. The 
+volume of synthesis gas needed to heat 40.0 gal of water is found by first determining the 
+quantity of heat needed to rais e the temperature of the water. 
+ heat waterJ
+gCC  = 4 0 . 0   g a l  3.785  L
+1  gal 1000  mL
+1  L  1.00  g
+1  mL 4.18  65.0  15.2
+= 3 . 1 5   1 0   J   1  kJ
+1000  J = 3 . 1 5   1 0   k J74uu uFHGIKJ 
+uu uDDb g
+ 
+ 43 1  L S T Pgas volume = 3.15  10   kJ   = 2.83  10  L at STP11.13  kJ of heatuu u   
+ 
+ 
+19. ( M )  Since the molar mass of H2 (2.0 g/mol) is 1
+16 of the molar mass of O2 (32.0 g/mol) 
+and only twice as many moles of H2 are needed as O2, we see that O g2bg is the limiting 
+reagent in this reaction. 
+3 2
+2
+221  mo l O 180. 241.8  kJ heat g O      = 1.36  10   kJ heat23 2 . 0   g  O 0 . 5 0 0   m o l  Ouu u  
+ 
+
+=== PDF PAGE 273 ===
+Chapter 7: Th ermochemistry 
+ 2 7 3  20. (M) The amounts of the two reactants provided are the same as their stoichiometric 
+coefficients in the balanced equation. Thus 852 kJ of heat is given off by the reaction. We 
+can use this quantity of heat, al ong with the specific heat of the mixture, to determine the 
+temperature change that will occur if all of th e heat is retained in the reaction mixture.  
+We make use of the fact that  mass  sp.ht.   Tuu'. 
+5 23
+23
+23102  g Al O 55.8  g Fe 0.8 Jheat = 8.52  10   J = 1   mol Al O  + 2  mol Fe       1  mol Al O 1  mo l Fe gCT§·§· §·uu u u '¨¸¨¸ ¨¸ ¨¸©¹ ©¹©¹D 
+5
+3
+118.52  10   J  =   = 5  10 C 214  g  0.8  J g CTu'uuD
+D 
+The temperature needs to increase from 25DC t o  1 5 3 0DC o r  3 = 1505 C = 1.5  10 CT'uDD. 
+Since the actual  T' is more than three times as large as this value, the iron indeed will 
+melt, even if a large fraction of the heat evolved is lost to the surroundings and is not 
+retained in the products. 
+ 
+21.  (M)  
+ ( a )  We first compute the heat produced by this reaction, then determine the value of 'H in 
+kJ/mol KOH. 
+   2
+calorimeter rxnJ = 0.205 + 55.9   g  4.18  24.4 C  23.5 C  = 2  10   J heat = gCqq u u DD
+D 
+  'H uu
+u  u21 0
+02 0 551 02
+1J1k J
+1000J
+g1mol KOH
+56.1g KOHkJ / mol
+. 
+ 
+ ( b )  The '7  here is known to just one significant figure (0.9 qC). Doubling the amount 
+of KOH should give a temperature change  known to two significant figures (1.6 qC) 
+and using twenty times the mass of KOH should give a temperature change known 
+to three significant figures (16.0 qC). This would require 4. 10 g KOH rather than the 
+0.205 g KOH actually used, and would increase the precision from one part in five 
+to one part in 500, or a0.2 %.  Note that as the mass of KOH is increased and the 
+mass of H 2O stays constant, the assu mption of a constant specific heat becomes less 
+valid. 
+ 
+22. (M) First we must determine the heat absorbed by the solute during the chemical reaction, 
+qrxn. This is the negative of the heat lost by the solution, qsoln. Since the solution (water plus 
+solute) actually gives up heat, the temperature of the solution drops. 
+rxn1  L 2.50  mol KI 20.3  kJheat of reaction = 150.0  mL ×  ×  ×  = 7.61  kJ = 1000  mL 1  L soln 1  mol KIq 
+rxn soln1.30  g 2.7  J== 1 5 0 . 0  m L  
+1  mL g Cqq T u uu'§·¨¸©¹D  37.61 10 J14 C1.30g 2.7 J150.0 mL
+1mL g CTu'  q
+uu
+q 
+final   = initial   +   = 23.5 C  14 C = 10. C TT T 'DD D 
+ 
+
+=== PDF PAGE 274 ===
+Chapter 7: Th ermochemistry 
+274 23. ( M )  Let x be the mass, (in grams), of NH Cl4 added to the water.        
+heat = mass  sp.ht.   T uu '  
+4
+4 41  mol NH Cl 14.7  kJ 1000  J × × ×
+53.49  g NH Cl 1  mol NH Cl 1  kJx 1.00  g J=  1400  mL  +  4.18  10. 25 C 
+1  mL gCx u §·§·¨¸¨¸©¹©¹D
+D 
+4
+42
+48.8  10275  = 8.8  10  + 63 ;   =  = 4.2  10   g NH Cl 275  63xx xuuu 
+Our final value is approximate because of the assumed density (1.00 g/mL). The solution’s 
+density probably is a bit larger than 1.00 g/ mL. Many aqueous solutions are somewhat more 
+dense than water. 
+ 
+24. (M) heat aOH
+HkJ = 5 0 0   m L   1  L
+1000  mL  7.0  mol N
+1  L soln  44.5  kJ
+1  mol NaO = 1 . 6   1 02uu uu  
+= h e a t  o f  r = h e a t  a b s o = eaction rbed by solution ORrxn soln  qq  
+51.6 10 J74 C1.08g 4.00 J500.mL1mL g CTu'  q
+uuq f i n a l  2 1 C + 7 4 C =  9 5  C T qq q  
+ 
+25. ( E )  We assume that the solution volumes are additive; that is, that 200.0 mL of solution is 
+formed. Then we compute the heat needed to warm the solution and the cup, and finally 
+' H for the reaction. 
+ 3 1.02  g J Jheat = 200.0  mL  4.02  27.8 C 21.1 C + 10 27.8 C  21.1 C  = 5.6  10   J 1  mL gC C§·u  u ¨¸©¹DD DD
+DD 
+3
+neutr5.6  10 J 1   kJ  =     =  5 6   k J / m o l 5 5 . 6   k J / m o l  t o  t h r e e  s i g n i f i c a n t  f i g u r e s  0.100  mol 1000  JHu'u    
+ 
+26. (M) Neutralization reaction:  2 NaOH aq  + HCl aq   NaCl aq  + H O(l) o  
+Since NaOH and HCl react in a one-to-one molar ratio, and since there is twice the volume 
+of NaOH solution as HCl solution, but the [H Cl] is not twice the [NaOH], the HCl solution 
+is the limiting reagent. 
+2
+2
+rxn soln1  mo l H O 1  L 1 . 8 6  mo l H C l 5 5 . 8 4  k Jheat released = 25.00  mL         = 2.60  kJ 1000  mL 1   L 1   mol HCl 1   mol H O
+= heat of reaction = heat absorbed by solution or  =  qquu u u 
+ 
+32.60 10 J8.54 C1.02g 3.98J75.00 mL1mL g CTu'  q
+uuq   'T = T final  Ti Tfinal = 'T + T i  
+8.54 C + 24.72 C =33.26 CfinalT  q q q  
+ 
+ 
+ 
+ 
+ 
+
+=== PDF PAGE 275 ===
+Chapter 7: Th ermochemistry 
+ 2 7 5  27.  (M) 
+3
+22 22 3
+2
+22
+221 m 1.0967 kg 1000 g 1 mol5.0 L C H  0.2106 mol C H1000 L m 1 kg 26.04 g
+1299.5 kJ heat evolved0.2106 mol C H = 272.9 kJ = 2.7 10  kJ heat evolvedmol C Huu uu  
+uu 
+ 
+28. (M) 
+3
+38 38 31 mol propane273.8 kJ  0.1233 mol propane2219.9 kJ
+44.09 g 1 kg 1 m 1000 L0.1233 mol C H  2.97 L C H1 mol 1000 g 1.83 kg 1 mu 
+uu uu  
+ 
+ 
+Enthalpy Changes and States of Matter 
+ 
+29. (M) qH2O(l) = qH2O(s)  m(sp. ht.) H2O(l)'TH2O(l) = mol H2O(s)'Hfus H 2O(s) 
+ ( 3 . 5 0  m o l  H 2O u2
+218.015 g H O
+1 mol H O)(4.184oJ
+g C)(50.0 qC) = (
+2
+218.015 g H O
+1 mol H Omu6.01u103J
+mol)  
+13.2 u103 J = m(333.6  J g-1)      Hence,  m = 39.6 g 
+ 
+30. (M) qlost by steam  = qgained by water  
+[(5.00 g H 2O u2
+21 mol H O
+18.015 g H O)(40.6 u103 J
+mol) + (5.00 g)(4.184oJ
+g C)(Tf –100.0 qC)]  
+ = (100.0 g)(4.184oJ
+g C)(Tf –25.0 qC) 
+11268.4  J – 20.92oJ
+C (Tf) + 2092  J = 418.4oJ
+C (Tf) – 10,460  J 
+ 1 1 , 2 6 8 . 4  J +  10,460  J  + 2092  J = 418.4oJ
+C (Tf) + 20.92oJ
+C (Tf)   or  23.8 u103 J = 439 J ( Tf) 
+ Tf = 54.2 qC 
+  
+31. (M) Assume H 2O(l) density = 1.00 g mL-1 (at 28.5 qC)  qlost by ball  = qgained by water  + qvap water  
+ [(125 g)(0.50 oJ
+g C)(100 qC –525 qC)] = [(75.0 g)(4.184oJ
+g C)(100.0 qC – 28.5 qC)] + nH2O'+qvap 
+ 2 6 5 6 2 . 5  J = 22436.7  J  + nH2O'+qvap (Note: nH2O =  2
+2HO
+HOmass
+molar mass) 
+4125.8  J = ( mH2O)(2
+21 mol H O
+18.015 g H O) (40.6 u103 J
+mol) 
+ mH2O = 1.83  g H 2O # 2 g H 2O ( 1 sig. fig.) 
+
+=== PDF PAGE 276 ===
+Chapter 7: Th ermochemistry 
+276  
+32. (E) qlost by ball  = qmelt ice 
+ [(125 g)(0.50 oJ
+g C)(0 qC –525 qC)] = n H2O'+qfus = (mH2O)(2
+21 mol H O
+18.015 g H O)(6.01 u103 J
+mol) 
+32812.5  J = m H2O(333.6  J g-1);   mH2O = 98.4  g H 2O #98 g H 2O. 
+ 
+33. ( E )  
+5
+5571 kJ 1000 J 5.71 10  J/kgkg 1 kJ
+1 kg 1000 g 1 L125.0 J  0.111 L5.71 10  J 1 kg 1.98 gu u
+uu u  u 
+ 
+34.  (M) Assume all N 2(l) is converted to N 2(g) when vaporized.  Th e number of moles of N 2(g) 
+can be found by using the ideal gas equation. 
+ PV nRT
+(1.0 atm)(1.0 L) = n(0.08206 L atm/K mol)(77.36 K)
+n = 0.1575 mol = 0.16 mol (2 sig figs) 
+   
+ 
+ I f  5 . 5 6  k J  o f  e n e r g y  i s  n e e d e d  t o  v a p o r i z e  1  m o l  o f  N 2(l), then 
+  2 5.56 kJ0.1575 mol  0.876 kJ = 8.8 10  J1 molu u are needed to vaporize 0.1575 mol. 
+   
+Calorimetry 
+ 
+35. (E)oheat absorbed 5228 cal 4.184 J 1 kJHeat capacity = = = 4.98 kJ / C4.39 C 1 cal 1000 Jo
+Tuu' 
+ 
+36. (M) heat absorbed by calorimeter comb
+combmoles=m o l e s = h e a t  c a p a c i t y  o r  =heat capacityqqT Tuuu ''  
+ ( a )  81 02 4
+81 02 41molC H O N kcal kJ1014.2 4.184 0.3268gmol kcal 194.19g C H O N1.390 C5.136 kJ/ CT§· §·uu ¨¸ ¨¸©¹ ©¹'  D
+D 
+  =+ = 2 2 . 4 3 C + 1 . 3 9 0 C = 2 3 . 8 2 CfiTT T 'DD D 
+ ( b )  48
+481 mol C H O 0.805g kJ2444 1.35mLmol 1mL 72.11g C H O7.17 C5.136 kJ/ CT§·uu¨¸
+©¹'  qq 
+  =2 2 . 4 3C+7 . 1 7C=2 9 . 6 0CfTDD D 
+ 
+
+=== PDF PAGE 277 ===
+Chapter 7: Th ermochemistry 
+ 2 7 7  37. (M)  
+ ( a )  heat
+massheat cap
+mass kJ C C
+ g kJ / g xylose =.=4.728 / 27.19 23.29
+1.183=1 5 . 6u' u tDDbg 
+  'uu HM==15.6
+1150.13
+151 0551 05heat given off / g  g / mol kJ
+ g C H O g C H O
+ molbg  
+  'H3
+51 05 = 2.34 10  kJ/mol C H Ou  
+ 
+  (b)  3
+51 05 2 2 2CH O g + 5 O g 5 C O g + 5 HO l H  =  - 2 . 3 4 1 0 k J o' u  
+ 
+38. (M) This is first a limiting reactant problem. There is 0.1000 0.300 = 0.0300 L Mu mol  
+HCl and 1.82 / 65.39 = 0.0278  mol Zn. Stoichiometry demands  2 mol HCl for every 1 mol 
+Zn.  Thus HCl is the limiting reactant. The re action is exothermic. We  neglect the slight 
+excess of Zn(s), and assume that the volume of solution remains 100.0 mL and its specific 
+heat, 4.1811 J g CD. The enthalpy change, in kJ/mol Zn, is 
+ 1.00g 4.18J100.0 mL (30.5 20.3) C1mL 1kJ gC284 kJ/mol Zn1molZn 1000 J0.0300 mol HCl2m o lH ClHuuu 
+'  u  
+uD
+D
+reacted 
+ 
+39.  (M)   
+ ( a )  Because the temperature of the mixture decreases, the reaction molecules (the 
+system) must have absorbed heat from the reaction mixture (the surroundings). 
+Consequently, the reaction must be endothermic. 
+ (b) W e  a s s u m e  t h a t  t h e  s p e c i f i c  h e a t  o f  t h e  s o l u t i o n  i s  4 . 1 811 J g CD. The enthalpy 
+change in kJ/mol KCl is obtained by the heat absorbed per gram KCl. 
+ '
+uu H=0.75 35.0 23 6 24 8
+0.751
+100074.55
+1=+ 1 8bg b g g4.18J
+gCC
+ g KCl kJ
+ J g KCl
+ mol KCl kJ / molDD..
+ 
+ 
+40. (M) As indicated by the negative sign for the enthalpy change, this is an exothermic 
+reaction.   Thus  the energy of the system should increase. 
+3
+rxn 2 3 2 calorim
+23215.3 kJ 1000 J=0 . 1 3 6  m o l  K C HO = 2 . 0 8 1 0  J=1 mol KC H O 1 kJqquu  u  
+Now, we assume that the density of water is 1.00 g/mL, the specific heat of the solution in 
+the calorimeter is 4.1811 J g CD, and no heat is lost by the calorimeter. 
+qcalorim  J  mL g
+ mL mol KC H O g
+ mol KC H O=2 . 0 8 1 0 = 5 2 51.00
+1+0 . 1 3 698.14
+13
+23 2
+23 2uuFHGIKJ uFHGIKJFHGIKJ 
+3 4.18 J=2 . 2 5 1 0gCTT uu ' u 'D   
+3
+32.08 10== + 0 . 9 2 4 C2.25 10Tu'uD  final initial=+ = 2 5 . 1 C + 0 . 9 2 4 C = 2 6 . 0 C TT T 'DD D 
+ 
+
+=== PDF PAGE 278 ===
+Chapter 7: Th ermochemistry 
+278 41. ( M )  To determine the heat capacity of the calor imeter, recognize that the heat evolved by 
+the reaction is the negative of  the heat of combustion. 
+10 8
+10 8
+10 8 10 81molC H 5156.1kJ1.620g C H128.2g C H 1molC H heat evolvedheat capacity =  = 7.72 kJ/ C 8 . 4 4 CTuu
+ q'q 
+ 
+42. (M) Note that the heat evolved is the negative of the heat absorbed. 
+763
+763 7631molC H O 3023kJ1.201g138.12g C H O 1molC H O heat evolvedheat capacity =  = 4.28kJ/ C ( 2 9 . 8 2 2 3 . 6 8 ) CTuu
+ q' q 
+43. ( M )  The temperature should increase  as the result of an exot hermic combustion reaction. 
+3
+12 22 11
+12 22 11
+12 22 11 12 22 111  mo l C H O 1C 5.65  10   kJ  =  1 . 2 2 7   g  CH O       =  5 . 2 3 C342.3  g C H O 1   mol C H O 3.87  kJTu'u u uD
+D 
+ 
+44. (M) qcomb
+10 1410 14
+10 1410 14C4 . 6 8 k J / C
+1.397 g C H O1molC H O
+150.2 g C H OkJ / mol C H O  q u q
+u  u112356 5 1 03 .. 
+ 
+45. ( M )  
+1 mol5.0 g NaCl  0.08556 mol NaCl58.44 g
+3.76 kJ0.08556 mol NaCl 0.322 kJ = 322 J1 molu 
+u  
+2
+2
+2HO
+HO
+HOqm a s s   s p e c i f i c  h e a t   T
+322 J = mass   4.18 J/g C  5.0 C
+mass  = 15 g u u '
+uuDD 
+ 
+46. (M) heat lost by gold = h eat gained by water 
+ 4.18 J10.5 g  specific heat of gold  (31.0-78.3 C) = 50 g  (31.0 23.7 C)gC
+496.65  specific heat of gold  1525.7
+JJ  specific heat of gold = 3.07  = 3.07 g K g Cu u uu 
+u DD
+D
+D 
+ S i n c e  t h e  s p e c i f i c  h e a t  o f  t h e  s a m p l e  d o e s  n o t  e q ual the specific heat of pure gold that is given  
+in the problem, the sample is not pure gold. 
+ 
+
+=== PDF PAGE 279 ===
+Chapter 7: Th ermochemistry 
+ 2 7 9  Pressure-Volume Work 
+ 
+47. (M)  
+ ( a )   - P'V = 3.5 L u(748 mmHg)1atm
+760 mmHg§·
+¨¸©¹ = -3.44  L atm  or  -3.4 L atm 
+ ( b )  1 L kPa = 1 J, hence, 
+  - 3 . 4 4  L atm u101.325 kPa 1J
+1 atm 1L kPa§· §·u¨¸ ¨¸©¹ ©¹= -3.49  u102 J  or -3.5 u 102 J 
+ (c) - 3 . 4 9  u102 J u1 cal
+4.184 J§·
+¨¸©¹= -83.4  cal  or  -83 cal
+48. (E) w = P'V = 1.23 atm u(3.37 L – 5.62 L) u101.325 kPa 1J
+1 atm 1L kPa§· §·u¨¸ ¨¸©¹ ©¹= 280. J 
+ T h a t  i s ,  2 8 0 .  J  o f  w o r k  i s  d o n e  o n  t h e  g a s  b y  t h e  s u r r o u n d i n g s .  
+ 
+49. (E) When the Ne(g) sample expands into an evacuated vessel it does not push aside any matter, 
+hence no work is done. 
+ 
+50. (E) Yes, the gas from the aerosol does wo rk.  The gas pushes aside the atmosphere. 
+ 
+51. (M) 
+ (a) N o  p r e s s u r e - v o l u m e  w o r k  i s  d o n e  ( n o gases are formed or consumed). 
+ (b) 2  N O 2(g) o N2O4(g)  'ngas = 1 mole.  Work is done on the system by the surroundings 
+(compression). 
+ (c) C a C O 3(s) o CaO(s) + CO 2(g).  Formation of a gas, 'ngas = +1 mole, results in an 
+expansion.  The system does work on the surroundings. 
+ 
+52. (M) 
+ (a) 2  N O ( g )  +  O 2(g) o  2 NO 2(g)   'ngas = 1 mole.  Work is done on the system by the 
+surroundings (compression). 
+ ( b )  M g C l 2(aq) + 2 NaOH(aq)  o  Mg(OH) 2(s) + 2 NaCl(aq)    'ngas = 0, no pressure-volume 
+work is done. 
+ ( c )  C u S O 4(s) + 5 H 2O(g) o CuSO 4x 5 H 2O(s)  'ngas = 5 moles.  Work is done on the system 
+by the surroundings (compression). 
+ 
+53. (E) We can either convert pressure from atm to Pascals, or convert work from Joules to 
+L·atm.We opt for the latter.  Since the convers ion between J and L·atm is 101.33 J/(L·atm), the 
+amount of work is 325 J × (1 L·atm/ 101.33 J) = 3.207 L·atm. Therefore, 
+ W  =  - P ΔV 
+ 3.207 L·atm = (1.0 atm) ΔV.  Solving for ΔV, we get a volume of 3.21 L. 
+ 
+
+=== PDF PAGE 280 ===
+Chapter 7: Th ermochemistry 
+280 54. (E) We note that the work done on the object imparts a potential energy in th at object after the 
+work is done.  Therefore, 
+p
+2
+pwork = -e
+e=  m g h  =1 . 2 3 k g 9 . 8 m / s 4 . 5 m 5 4 . 2 4 J
+work = -54 Juu   
+  
+First Law of Thermodynamics 
+ 
+55. (E) 
+ (a) 'U = q + w = +58 J + ( 58 J) = 0
+ ( b )  'U = q + w  = +125 J + ( 687 J) = 562 J 
+c) 2 8 0  c a l  u(4.184J
+cal) = 1171.52  J = 1.17 kJ    'U = q + w  = 1.17 kJ + 1.25 kJ = 0.08 kJ 
+56. (E) 
+ ( a )  'U = q + w  = +235 J + 128 J = 363 J
+ ( b )  'U = q + w  = 145 J + 98  J = 47 J 
+c) 'U = q + w  = 0 kJ + 1.07 kJ = 1.07 kJ 
+ 
+57. (E)  
+ ( a )  Y e s ,  t h e  g a s  d o e s  w o r k  ( w = negative value). 
+ (b) Y e s ,  t h e  g a s  e x c h a n g e s  e n e r g y  w i t h  the surroundings, it absorbs energy. 
+ (c) T h e  t e m p e r a t u r e  o f  t h e  g a s  s t a y s  t h e  same if the process is isothermal. 
+ (d) 'U for the gas must equal zero by defi nition (temperature is not changing).
+ 
+58. (E) 
+ ( a )  Y e s ,  t h e  g a s  d o e s  w o r k  ( w = negative value).   
+ (b) T h e  i n t e r n a l  e n e r g y  o f  t h e  g a s  d e c r e a ses (energy is expended to do work). 
+ (c) T h e  t e m p e r a t u r e  o f  t h e  g a s  s h o u l d  d e c r e a s e ,  as it cannot attain thermal equilibrium 
+with its surroundings.
+ 
+59. (E)  This situation is impossible.  An ideal  gas expanding isothermally means that  
+ 'U = 0 = q + w, or w = q, not w = 2q.   
+ 
+60. (E) If a gas is compressed adiabatically, the gas w ill get hotter.  Raise the temperature of the 
+surroundings to an even higher temperature a nd heat will be transferred to the gas. 
+ 
+61. (E)  We note that since the charge of the system is  going from 10 to 5, the net flow of the charge 
+is negative.  Therefore, w = (5 C – 10 C) = -5 C.  Voltage (V) is J/C.  The internal energy of the 
+system is: 
+ΔU = q + w = -45 J + (100 J/C)(-5 C) = -45 J + (-500 J) = -545 J 
+ 
+62. (E) Obviously, w = f ΔL.  Plugging in the appropriate values gives the following: 
+ ΔU = (10×10-12 N)(10×10-12 m) = 1×10-22 J 
+ 
+
+=== PDF PAGE 281 ===
+Chapter 7: Th ermochemistry 
+ 2 8 1  Relating 'H and 'U
+ 
+63(E) According to the First Law of Thermodynamics, the answer is (c).  Both (a) qv and (b) 
+qp are heats of chemical r eaction carried out under conditi ons of constant volume and 
+constant pressure, respectively.  Both 'U and 'H incorporate terms related to work as well 
+as heat. 
+ 
+64. (E) 
+ (a)  C 4H10O(l) + 6 O 2(g) o 4CO 2(g) + 5 H 2O(l) 'ngas = 2 mol, 'H < 'U 
+ (b)  C 6H12O6(s) + 6 O 2(g) o  6 CO 2(g) + 6 H 2O(l) 'ngas = 0 mol, 'H = 'U
+ (c)  N H 4NO 3(s)  o  2 H 2O(l) + N 2O(g)  'ngas = +1 mol, 'H > 'U 
+ 
+65. (M) C3H8O(l) + 9/2 O 2(g) o  3 CO 2(g) + 4 H 2O(l) 'ngas = 1.5 mol 
+ (a)    'U = 33.41kJ
+g u38
+3860.096 g C H O
+1 mol C H O= 2008kJ
+mol 
+ (b)    'H = 'U –w, = 'U  (P'V) = 'U  ('ngasRT) = 'U + 'ngasRT   
+'H = 2008kJ
+mol + (1.5 mol)(-3 8.3145  10  kJ
+K molu)(298.15 K) = 2012kJ
+mol 
+ 
+66. (M) C10H14O(l) + 13 O 2(g) o  10 CO 2(g) + 7 H 2O(l) 'ngas = 3 mol   
+qbomb = qv = 'U =  5.65 u103 kJ  = 'U   
+'H = 'U  w; where w = ('ngasRT) = (3 mol)(-3 8.3145  10  kJ
+K molu)(298.15 K) = +7.4 kJ 
+'H =  5.65 u103 kJ  7.4 kJ =  5.66 u103 kJ   
+ 
+Hess’s Law 
+ 
+67. ( E )  The formation reaction for NH g3bg is 1
+2 23
+2 23 + Ng Hg N Hgbg bg bg o . The given 
+reaction is two-thirds the reve rse of the formation reaction.  The sign of the enthalpy is 
+changed and it is multiplied by two-thirds. T hus, the enthalpy of the given reaction is 
+ u46.11 = +30.742
+3  kJ  kJ b g . 
+ 
+68. (M) 
+ 1bg CO g C graphite O gbg b g bg o +1
+2 2  =+ 1 1 0 . 5 4  k JH'D 
++2bg Cg r a p h i t e O g C O gb g bg bg +22o   = 3 9 3 . 5 1  k J H'D 
+CO g O g CO gbg bg bg +1
+2 22o    =2 8 2 . 9 7  k JH'D 
+ 
+69. (M)  
+3bg  22 3 82 3C O g +4 HO l CH g +5O g o =+ 2 2 1 9 . 1  k JH'D 
++2bg  34 2 2 2 CH g + 4O g 3C O g + 2 HO l o =1 9 3 7  k JH'D 
+2(1)  22 22H g + O g 2HO l o   = 5 7 1 . 6  k J H'D 
+CH g H g CH g34 2 38 +2bg bg bg o   =2 9 0 .  k JH'D 
+ 
+
+=== PDF PAGE 282 ===
+Chapter 7: Th ermochemistry 
+282 70. (M) The second reaction is the only one in which NO(g) appears; it must be run twice to produce 
+2NO(g).  
+ 5
+32 2 2 2 2N H g + O g 2N O g + 3HO l         2 H ou 'D 
+ 
+The first reaction is the only one that eliminates NH 3(g); it must be run twice to eliminate 2NH 3. 
+   22 3 1 Ng + 3 Hg 2 N Hg         2H ou 'D 
+ 
+We triple and reverse the third reaction to eliminate 32Hgbg. 
+  3
+22 2 3 2 3HO l 3H g + O g         3H o u'D 
+ 
+ 22 Result : N g + O g 2 NO g o   rxn 1 2 3 =2 +2 3 HH H H'u' u'  u'  
+ 
+71. (M)  
+2+ + +241
+2 22 4 2 2 HCl g C H g O g C H Cl l H O lbg bg bg bg bg o  = 318.7 kJH'D 
+Cl g H O l HCl g O g221
+2 2 +2 +bg bg bg bg o     =0 . 5 + 2 0 2 . 4 =+ 1 0 1 . 2  k JH'D 
+CH g C l g CHC l l24 2 24 2 +bg bg bg o    = 2 1 7 . 5  k J H'D 
+ 
+72. (M)  
+NH l O g N g HOl24 2 2 2 ++ 2 bg bg bg bg o    = 6 2 2 . 2  k J H'D 
+  22 2 2 2H O l 2H g +2O g o     =2 1 8 7 . 8  k J = + 3 7 5 . 6  k JH' D 
+2+ 222 2Hg Og H O lbg bg b g o      =2 2 8 5 . 8  k J = 5 7 1 . 6  k JH' D 
+  24 22 2 2 NH l + 2 HO l N g + 4 HOl o   = 8 1 8 . 2  k J H'D 
+ 
+73. (M)  
+CO g O g CO gbg bg bg +1
+2 22o     = 2 8 3 . 0  k J H'D 
+  24 3C graphite +6H g 3CH g o     =3 7 4 . 8 1 = 2 2 4 . 4 3  k JH' D 
+  22 22H g +O g 2H O l o      =2 2 8 5 . 8 = 5 7 1 . 6  k JH' D 
+  3
+2 2 3CO g O g +3C graphite o     =3 + 1 1 0 . 5 =+ 3 3 1 . 5  k JH'D 
+  224 2 4CO g +8H g CO g +3CH g +2H O l o =7 4 7 . 5  k JH'D 
+ 
+74. (M)  
+  22 2 2CS l + 3O g CO g + 2SO g o   = 1077 kJ H'D 
+  22 2 2S s +Cl g S Cl l o     = 5 8 . 2  k J H'D 
+  24 Cs+ 2 C l g C C l l o     =1 3 5 . 4  k JH'D 
+  22 2SO g 2S s +2O g o      =2 2 9 6 . 8  k J = + 5 9 3 . 6  k JH' D 
+CO g C s O g22 + bg bg bg o       =3 9 3 . 5  k J = + 3 9 3 . 5  k JH' D 
+  22 4 2 2CS l + 3Cl g CCl l +S Cl l o   =2 8 4  k JH'D 
+ 
+
+=== PDF PAGE 283 ===
+Chapter 7: Th ermochemistry 
+ 2 8 3  75. (M)  
+  42 2 CH g + CO g 2CO g + 2H g o   = + 2 4 7  k J H'D 
+ 42 2 2CH g +2H O g 2CO g +6H g o    =2 + 2 0 6  k J =+ 4 1 2  k JH'D 
+  42 22CH g + 2O g CO g + 2H O g o   =8 0 2  k JH'D 
+  42 2 4CH g +2O g 4CO g +8H g o   = 1 4 3  k J H'D 
+1
+42 2 2 4 produces CH g + O g CO g + 2H gyo  =3 5 . 8  k JH'D 
+ 
+76. (M)  
+The thermochemical combustion reactions follow. 
+CH g g g Ol4611
+2 22 2  +  O   4  C O  + 3  H  bg bg bg b g o   = 2540.2  kJH'D 
+CH g g g Ol41 013
+2 22 2  +  O   4  C O  + 5  H   bg bg bg b g o   = 2877.6  kJH'D 
+Hg g O l21
+2 22  +  O   H  bg bg b g o      = 285.85  kJH'D 
+ 
+Then these equations are combin ed in the following manner. 
+ 
+ 11
+46 2 2 2 2 CH g + O g 4 C O g + 3 HO l o   =2 5 4 0 . 2  k JH'D 
+ 13
+22 4 1 0 2 2 4CO g +5H O l C H g + O g o    =2 8 7 7 . 6  k J = + 2 8 7 7 . 6  k JH' D 
+  22 22H g +O g 2H O l o      =2 2 8 5 . 8  k J = 5 7 1 . 6  k JH' D 
+  46 24 1 0 CH g + 2 H g CH g o    =2 3 4 . 2  k JH'D 
+  
+77. ( M )   
+ C6H12O6(s)  +  6 O 2(g) o 6 CO 2(g) + 6 H 2O(l)   'H° = -2808 kJ 
+ 6  C O 2(g) + 6 H 2O(l) o 2 CH 3CH(OH)COOH(s)  + 6 O 2(g)  'H° = 2(1344) kJ 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  
+ C 6H12O6(s)  o   2 CH 3CH(OH)COOH(s)    'H° = -120. kJ 
+ 
+78. (M)  
+ ½ [C 6H12O6(s) + 6 O 2(g) o 6 CO 2(g) + 6 H 2O(l)]   'H° =   ½  (-2808) kJ 
+ ½  [ 2  C H 3CH 2OH(l)  +  2 CO 2(g) o C6H12O6(s) ]   'H° =   ½  (72) kJ 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  
+  C H 3CH 2OH(l)  + 3 O 2(g) o 2 CO 2(g) + 3 H 2O(l)   'H° =   -1368 kJ 
+  
+ 
+Standard Enthalpies of Formation 
+ 
+79. (M)  
+ ( a )  '' '  '  'HH H H HDD D D D=+26 4 38 2 ff ffCH g C H g CH g H gbg bg bg bg  
+   =8 4 . 6 8 7 4 . 8 1 1 0 3 . 80 . 0 0 k J = 5 5 . 7  k JH'   D 
+ 
+
+=== PDF PAGE 284 ===
+Chapter 7: Th ermochemistry 
+284   (b) '' '  '  'HH H H HDD D D D=2 +2 2 322 2 2 fff fSO g H O l H S g O gbg bg bg bg  
+    =2 2 9 6 . 8+ 2 2 8 5 . 8 2 2 0 . 6 3 3 0 . 0 0 k J = 1 1 2 4  k JH'     D 
+ 
+80. (E) '' '  '  'HH H H HDD D D D=+23 4+
+ff f fHOl N H g N H a q O H a qbg bg bg bg  
+   =2 8 5 . 8 +4 6 . 1 1 1 3 2 . 5 2 3 0 . 0 k J = + 3 0 . 6  k JH'   D 
+81. (M)  
+   3
+22 2 ZnO s + SO g ZnS s + O g ; = 878.2 kJ /2 = +439.1 kJ H o' D 
+ 439.1 = +3
+2 22  kJ ZnS s O g ZnO s SO gff f f' ' '  ' HH H HDD D Dbg b g bg b g  
+ 3
+f 2 439.1 kJ = ZnS s + 0.00 kJ 348.3 kJ 296.8 kJ H'   ªº¬¼D 
+   fZnS s = 439.1 348.3 296.8 kJ = 206.0 kJ/molHªº'  ¬¼D 
+ 
+82. (M)  Most clearly established in Figure 7-18 is the point that the enthalpies of formation 
+for alkane hydrocarbons are negative and that  they become more negative as the length 
+of the hydrocarbon chain increases (~20 kJ per added CH 2 unit).  For three hydrocarbons 
+of comparable chain length, C 2H6, C2H4, and C 2H6, we can also infer that the one having 
+only single bonds (C 2H6) has the most negative enthalpy of  formation.  The presence of 
+a carbon-to-carbon double bond (C 2H4) makes the enthalpy of formation more positive, 
+while the presence of a triple bond (C 2H2), makes it more positive still. 
+ 
+83. ( E )  '  HH H H HDD D42''''ff 2f 2f 2 HCl(g)] + O g)] 2 Cl g)] H O(l)][[ ( [ ( [  
+= 4  9 2 . 3 1 + 0 . 0 0  2  0 . 0 0 2  2 8 5 . 8 = +2 0 2 . 4   k J b g b g b g b g  
+ 
+84. (E) '' '  '  'HH H H HDD D D D = 2     + 3          3    22 3 ff f fFe s CO g Fe O s CO g bg bg bg bg  
+= 2  0 . 0 0 + 3  3 9 3 . 5  8 2 4 . 2 3  1 1 0 . 5 = 2 4 . 8   k Jb g b g b g b g  
+ 
+85. ( E )  Balanced equation: C H OH l O g CO g H O l25 2 22 +3 2 +3bg b g b g bg o  
+ '' ' ' 'HH H H H   23f2 f 2 f 2 5 f2 CO g)] + 3 H O(l)] C H OH(l)] O (g)]DD D D[( [ [ [ 
+= 2  3 9 3 . 5 + 3  2 8 5 . 8  2 7 7 . 7  3  0 . 0 0 = 1 3 6 6 . 7   k J b g b g b g b g  
+ 
+86. (M) First we must determine the value of 'HfDfor C H l51 2bg. 
+Balanced combustion equation:    51 2 2 2 2 CH l + 8 O g   5 C O g + 6 HO l o  >@>@>@>@f2 f2 f5 1 2 f2  = 3509  kJ = 5  CO g  + 6  H O l    C H l   8  O gHH H H H' ' '  '  'DD D D D
+  >@ >@f5 1 2 f5 1 2 =5 3 9 3 . 5 +6 2 8 5 . 8  CH l 8  0 . 0 0 = 3 6 8 2  k J  CH l HH   '   'DD 
+f5 1 2CH l = 3 6 8 2 + 3 5 0 9= 1 7 3  k J / m o lH' ªº¬¼D 
+Then use this value to determine the value of 'H° for the reaction in question. 
+'' '  '  'HH H H HDD D D D =   + 5     5     1 1   51 2 2 2 ff f fCH l HOl C Og Hg bg bg bg bg  
+= 1 7 3  + 5  2 8 5 . 8  5  1 1 0 . 5  1 1  0 . 0 0 = 1 0 5 0   k J b g b g b g  
+ 
+ 
+ 
+
+=== PDF PAGE 285 ===
+Chapter 7: Th ermochemistry 
+ 2 8 5  87. ( E )  ' ' '  '  'HH H H HDD D D D=3 9 7 . 3 = + 4  4  44 2  kJ CCl g HCl g CH g Cl gff ffbg bg bg bg  
+    f4 f4 =  CCl g  + 4 92.31   74.81   4 0.00 kJ  =  CCl g   294.4 kJHHªº ªº ' '¬¼ ¬¼D D 
+  f4 C C l g  =  3 9 7 . 3  +  2 9 4 . 4  k J  =  1 0 2 . 9   k J / m o lHªº' ¬¼D 
+ 
+88. (E) >@>@>@>@o
+f2 f2 f6 1 4 f2 =8 3 2 6  k J = 1 2  C O g + 1 4   H O g 2  C H l 1 9   O gHH H H H' ' '  '  'DD D D 
+ f6 1 4 f6 1 4 =12 393.5 +14 285.8 kJ 2 C H l 19 0 kJ = 8723 kJ 2  C H l H HH '   '   'ªºª º¬¼¬ ¼D DD 
+'   =  +8326  8723
+2 = 1 9 9   k J61 4 HfCH l /m o lDbg  
+89. (E) ''  '  'HH HHDD D D =       3   33+
+ff fAl OH s Al aq OH aq bg b g b g b g  
+   = 1276   531   3 230.0 kJ = 55  kJ      
+ 
+90. (M) >@>@2+
+ff 3 f 2 f 2+
+f4  = Mg aq  + 2 NH g  + 2 H O l   Mg OH s   2  NH aq HH HH H H '' ''  'ªº ªº ' ªº¬¼ ¬¼¬¼DD D D D D 
+  = 466.9  + 2 46.11  + 2 285.8   924.5   2 132.5 kJ = + 58.8  kJ      
+ 
+91. ( M )  Balanced equation: CaCO s CaO s CO g32 +bg bg bg o  
+
+ ff 2f 3  =  CaO s  +  CO g    CaCO s  
+= 635.1  393.5  1207 kJ = +178  kJHH H H ªºªºª º '' '  '¬¼¬¼¬ ¼
+ DD D D
+ 
+3 6 3
+3
+331  mol CaCO 1000  g 178  kJheat = 1.35×10  kg CaCO × × × = 2.40×10   kJ1  kg 100.09  g CaCO 1  mol CaCO 
+ 
+92. (M) First we determine the heat of combustion: 13
+41 0 2 2 2 2 CH g +  O g 4 C O g + 5 HOl o  
+ 
+    13
+f2 f 2 f 4 1 0 f 2 2  = 4  CO g  + 5  H O l    C H g     O g
+= 4 393.5  + 5 285.8   125.6   6.5 0.00 kJ = 2877.4  kJ/molHH H H H'' '  '  ' ªº ªºª º ª º¬¼ ¬¼¬ ¼ ¬ ¼
+    DD D D D
+ 
+Now compute the volume of gas needed, w ith the ideal gas equa tion, rearranged to: nRT=PV . 
+volume =5.00 10 kJ1molC H
+kJLatm
+mol KK
+756 mmHg1atm
+760 mmHgLCH4 41 0
+4uuFHGIKJ 
+u 2877 300 8 2 0 6 2 46 2 7 32
+427..( . . )
+ 
+ 
+
+=== PDF PAGE 286 ===
+Chapter 7: Th ermochemistry 
+286 93. (M) The reaction for the combustion of formic acid is:  
+  H C O O H ( s )   +  ½  O 2(g)  o  CO 2(g)  + H 2O(l) 
+ 
+   
+    
+1
+f2 f 2 f f 2 2
+f
+f =  CO g  +   H O l    HCOOH s    O g
+255 kJ = 1  393.5  + 1  285.8    HCOOH s  0.5 0.00 kJ 
+424 kJ  HCOOH sHH H H H
+H
+H'' '  ' ' ªºªºª º ª º¬¼¬¼¬ ¼ ¬ ¼
+   '  ªº¬¼
+ ' ªº¬¼DD D D D
+D
+D 
+ 
+94.  (M) The reaction for the combusti on of lactic acid is:   
+    C 3H6O3(s)  + 3 O 2(g)  o 3 CO 2(g)  + 3 H 2O(l) 
+ 
+  
+   f2 f2 f 3 6 3 f2  = 3  CO g  +  3  H O l    C H O s   3  O g
+= 3 393.5  + 3 285.8   ( 694)  3 0.00 kJ 
+ -1344 kJ  per mole of lactic acidHH H H H '' '  '  ' ªº ªºª º ª º¬¼ ¬¼¬ ¼ ¬ ¼
+   
+ DD D D D
+ 
+ 
+ 
+INTEGRATIVE AND ADV ANCED EXERCISES 
+ 
+95. (M) 
+ ( a )  2
+24 qt 1 L 1000 mL 1.00 g 1 kg 2.205 lbmass H O 40 gal 3.3 10 lb1 gal 1.06 qt 1 L 1 mL 1000 g 1 kg u u u uu u  u  
+  24 1 Btuheat (Btu)  3.3 10 lb (145 F 48 F) 3.2 10 Btulb F uu u q  q  uq 
+ 
+ ( b )  kcal 10 1 . 8cal  1000kcal  1
+F 9C 5F) 48 F 145 (C gcal  1g 10 1.5 (kcal) heat 3 5u uqquq q uquu   
+ 
+ ( c )  kJ  10 4 . 3kcal 1kJ  4.184 kcal 10  8.1 (kJ) heat 4 3u uu   
+ 
+96. (M) Potential energy = mgh = 7.26 kg ×9.81 ms-2 × 168 m = 1.20 × 104 J. This potential energy is 
+converted entirely into kinetic energy just befo re the object hits, and this kinetic energy is 
+converted entirely into heat  when the object strikes. 
+ C 5 . 3
+C gJ  47 . 0
+kg  1g  1000 kg  26 . 7J 10 20 . 1
+ht.  sp.  massheat4
+q 
+quuu u 't  
+ T h i s  l a r g e  a  t e m p e r a t u r e  r i s e  i s  u n l i k e l y ,  a s  s o me of the kinetic energy will be converted into 
+forms other than heat, such as sound and the fr acturing of the object al ong with the surface it 
+strikes.  In addition, some heat ener gy would be transferred to the surface. 
+ 
+
+=== PDF PAGE 287 ===
+Chapter 7: Th ermochemistry 
+ 2 8 7  97. (M) 2Jheat  [heat cap. (mass H O 4.184 )]g Ct '  uD    
+2heat Jheat cap. (mass H O 4.184 )g C t  u'q 
+The heat of combustion of anthracene is 7067 kJ/mol, meaning that burning one mole of 
+anthracene releases 7067 kJ of heat to the calorimeter. 
+       14 10
+14 10
+3 14 10 14 101 mol C H 7067 kJ1.354 g C H
+178.23 g C H 1 mol C H kJheat cap.  983.5 g 4.184 10
+(35.63 - 24.87) C g C
+(4.990 4.115) kJ/ C 0.875 kJ/ Cuu
+  u u
+qq
+  q  q§·
+¨¸©¹ 
+ kJ  7 . 10 )] C  g  kJ 10  4.184 O H  g  (968.6 C kJ/  [0.875  C  ) 01 . 25  (27.19  heat 11 3
+2  q uu q q  
+3 687
+687
+687 687192.1 g C H O 10.7 kJ1.95 10 kJ/mol C H O1.053 g C H O 1 mol C H Oqrxn u  u  
+ 
+98. (M) heat absorbed by calorimeter and reactionof heat water  
+ 4
+762
+76226.42 kJ 1000 J1.148  g C H O 3.033 10 J1g  CHO 1 k J  u u  u  
+ h e a t  a b s o r b e d  b y  4
+24.184 Jwater 1181 g  H O (30.25 C 24.96 C) 2.61 10 JgC u u q  q  uq 
+ h e a t  a b s o r b e d  b y  44 3calorimeter 3.033 10 J 2.61 10 J 4.2 10 J  u  u  u  
+ h e a t  3
+2 4.2 10 Jcapacity of the calorimeter 7.9 10 J/ C30.25 C 24.96 Cu  u qq q 
+ 
+ heat absorbed by 4
+24.184 Jwater 1162g H O (29.81 C 24.98 C) 2.35 10 JgC u u q  q  uq 
+ h e a t  a b s o r b e d  b y  J 10 8 . 3 ) C 98 . 24 C 81 . 29 ( C J/ 10 9 . 7 r calorimete3 2u q  q u q u  
+ heat of kJ/g 5 . 30J 1000kJ 1
+g 895 . 0J 10 8 . 3 J 10 35 . 2combustion3 4
+ uu u  
+ 
+ mass tons metric 5 . 70kg 1000ton metric 1
+g 1000kg 1
+kJ 5 . 30coal g 1kJ 10 15 . 2 coal9 uuuu   
+99. (M) The difference is due to the enthalpy of va porization of water. Less heat is evolved 
+when steam is formed because some of the heat  of combustion is used to vaporize the water. 
+The difference between these two heats of vaporization is computed first. 
+  
+ 22
+2
+22 22.016  g  H 2  mol  H kcal 4.184  kJdifference (33.88 28.67) 43.9 kJ/mol  H Og  H 1 mol H 2  mol  H O 1  kcal  u u u   
+  
+  
+
+=== PDF PAGE 288 ===
+Chapter 7: Th ermochemistry 
+288 This difference should equal the heat  of vaporization, that is, the enthalpy change for the following 
+reaction. 
+ 22HO ( l ) HO ( g ) o    W e  u s e  v a l u e s  f r o m  T a b l e  7 - 2 .  
+ rxn f2 f2 [H O(g)] [H O(l)] 241.8kJ ( 285.8kJ) 44.0kJ/mol HH H'q 'q  'q        
+The two values are in good agreement. 
+ 
+100. (M) 
+ (1) 22 2N( g ) 2 O( g ) 2 N O   o       rxn f2 2[ N O ( g ) ] 2 3 3 . 1 8 k J 6 6 . 3 6 k J HH'q ' q  u   
+ ( 2 )22 2N( g ) 2 O( g ) 2 N O   o    kJ36 . 66 'H  
+ 12 22 3 2
+12 22 2 322N O ( g ) N O ( g )  O ( g )      1 6 . 0 2  k J
+N( g ) 2 O( g ) NO( g )  O( g )   8 2 . 3 8  k Jo '  
+  o'  H
+H 
+ 
+101. (M) First we determine the moles of  gas, then th e heat produced by burning each of the components. 
+  
+ 111atm739 mm Hg 385L760 mmHg15.4 mol(22.6 273.2)K 0.08206Latmmol KPVnRTuu
+   u 
+  
+4 4
+4
+4
+3 26
+26
+26
+38
+3883.0 molCH 890.3kJ      CH heat 15.4mol 1.14 10 kJ100.0  molgas 1molCH
+11.2  mol C H 1559.7 kJ       C H heat 15.4mol 2.69 10 kJ100.0 molgas 1molC H
+5.8 mol  C H       C H heat 15.4mol100.0  molgas u u   u
+ u u   u
+ u u3
+38
+43 3 4 42219.1kJ2.0 10 kJ1molC H
+       total heat 1.14 10 kJ 2.69 10 kJ 2.0 10 kJ 1.61 10 kJ or 1.61 10 kJ heat evolved  u
+  u  u  u   u  u 
+ 
+102. (M) 
+ 24 2 CO(g) 3H (g) CH (g) H O(g)   o         ( m e t h a n a t i o n )  
+ 22
+22 2
+24 22C(s) 2H O(g) 2CO(g) 2H (g) 2 (7.24)
+CO(g) H O(g)  CO (g) +   H( g ) ( 7 . 2 5 )
+2C(s) 2H O(g) CH (g) CO (g)  o u
+  o
+  o 
+ 
+103. (D) We first compute the heats of comb ustion of the combustible gases. 
+ 42 22CH (g) 2O (g) CO (g) 2H O(l)   o  
+  rxn f2 f2 f f2 [CO (g)] 2 [H O(l)] [CH (g)] 2 [O (g)]4
+393.5kJ 2 ( 285.8kJ) ( 74.81kJ) 2 0.00 kJ 890.3kJHH H H H'q  'q 'q  'q 'q
+   u    u   
+
+=== PDF PAGE 289 ===
+Chapter 7: Th ermochemistry 
+ 2 8 9   38 2 22 CH( g ) 5 O( g ) 3 C O( g ) 4 HO ( l )   o  
+  rxn f2 f2 f3 8 2 3[ C O ( g ) ] 4[ H O ( l ) ] [ C H ( g ) ] 5 [ O ( g ) ]f
+3( 3 9 3 . 5 k J ) 4( 2 8 5 . 8 k J ) ( 1 0 3 . 8 k J )50 . 0 0 k J 2 2 2 0 . k JHH H H H'q  'q 'q  'q 'q
+ u  u    u   
+ 12 22 2H( g ) O( g ) HO ( l )   o rxn f2[H O(l)] 285.8kJ HH'q ' q    
+ 12 22 CO(g) O (g) CO (g)   o  
+ rxn f2 f f2 [CO (g)] [CO(g)] 0.5 [O (g)] 393.5 110.5 283.0kJ HH H H'q 'q  'q  'q       
+ 
+ T h e n ,  f o r  e a c h  g a s e o u s  m i x t u r e ,  w e  c o m p u t e  the enthalpy of combustion per mole of gas. 
+The enthalpy of combustion per STP liter is 1/22.414 of this value. Recall that volume 
+percents are equal to mole percents. 
+ 
+ (a) kJ 142H mol 1kJ 8 . 285H mol 497 . 0 combustionH
+22 2  u   
+  44
+4
+38 38
+38890.3kJCH combustion 0.299 molCH 266 kJ1molCH
+283.0 kJCOcombustion 0.069molCO 20kJ1molCO
+2220.kJCH c o m b u s t i o n 0 . 0 3 1 m o l CH 69 kJ1molC H
+(1 4 2 2 6 6 2 0 6 9 ) k J 1 m o l g atotalenthalpyof combustion1molgas u  
+ u  
+ u  
+  us22.2kJ/L22.414 LSTP  
+ 
+ ( b )  4CH  is the only combustible ga s present in sewage gas. 
+   t o t a l  e n t h a l p y  o f  4
+4890.3kJ 1molgascombustion 0.660 molCH 26.2 kJ/L1molCH 22.414LSTP u u    
+        T h u s ,  s e w a g e  g a s  p r o d u c e s  m o r e  heat per liter at STP than does coal gas. 
+ 
+104. (M) 
+ ( a )  ) O(l H 2 ) (g CO ) (g O 2 (g) CH2 2 2 4  o is the combustion reaction 
+ rxn f2 f2 f4 2      [CO (g)] 2 [H O(l)] [CH (g)] 2 [O (g)]f
+(3 9 3 . 5 k J ) 2 (2 8 5 . 8 k J ) (7 4 . 8 1 k J ) 2 0 . 0 0 k J 8 9 0 . 3 k JHH H H H'q  'q 'q  'q 'q
+  u  u   
+ 4CH  mol 00400 . 01K1mol atm L 08206 . 0 K 2 . 298L 100 . 0mmHg 760atm 1Hg mm 744
+     uu u
+  RTPVn  
+     h e a t  a v a i l a b l e  f r o m  c o m b u s t i o n  =  0 . 0 0 4 0 0  m o l  ×   - 8 9 0 . 3  k J / m o l  =  - 3 . 5 6  k J  
+     2
+21 mole H O(s) 6.01 kJheat used to melt ice 9.53 g ice 3.18 kJ18.02 g ice 1 mol H O(s) u u   
+
+=== PDF PAGE 290 ===
+Chapter 7: Th ermochemistry 
+290  S i n c e  3 . 5 6  k J  o f  h e a t  w a s  a v a i l a b l e ,  a n d  only 3.18 kJ went into melting the ice, the 
+combustion       must be incomplete. 
+  
+  (b)  One possible reaction is: 442 2 2 CH (g) 7O (g) 2 CO (g) 2CO(g) 8H O(l)   o  , but 
+this  would generate but 3.00 kJ of en ergy under the stated co nditions.  The molar 
+production of CO 2 (g) must be somewhat greater than that of CO(g). 
+ 
+105. (E)   
+(a) The heat of reaction would be smaller (less negative) if the OH2 were obtained as a 
+gas rather than as a liquid. 
+  
+(b) The reason why the heat of r eaction would be less negative is that some of the 1410.9 
+kJ of heat produced by the reaction will be needed to convert the OH2 from liquid to 
+gas. 
+  
+(c) 22 2 42 2[ C O ( g ) ] 2[ H O ( g ) ] [ C H ( g ) ] 3[ O ( g ) ]ff f f
+2( 393.5) 2( 241.8) (52.26) 3(0.00) 1322.9 kJHH H H H'q  'q 'q  'q 'q
+       
+           
+ 
+106.  (D)  First we compute the amount of butane in the cylinder before and after some is 
+withdrawn; the difference is the amount of butane withdrawn.   
+ T = (26.0 + 273.2)K = 299.2 K 
+  
+ 1 11
+2 112.35atm 200.0 L19.1mol butane0.08206 Latm mol K 299.2 K
+1.10atm 200.0 L8.96 mol butane0.08206 Latm mol K 299.2 KPVnRT
+PVnRT
+u   u
+u   u 
+ 
+  
+ a m o u n t  butane mol 1 . 10 mol 96 . 8 mol 1 . 19 withdrawn   
+ T h e n  w e  c o m p u t e  t h e  e n t h a l p y  c h a n g e  f o r  o n e  mole of butane and from that the heat 
+produced by burning the withdrawn butane. 
+  
+ O(l) H 5 (g) CO 4 ) (g O ) (g H C2 2 2 213
+10 4  o  
+  
+ 13
+f2 f 2 f 4 1 0 f 2 2 4[ C O ( g ) ] 5[ H O ( l ) ] [ C H ( g ) ] [ O ( g ) ]
+4( 3 9 3 . 5 k J )5( 2 8 5 . 8 k J )( 1 2 5 . 6 k J )6 . 50 . 0 0 k J 2 8 7 7  k JrxnHH H H H'q 'q 'q  'q 'q
+ u  u     u   
+  
+ N o w  w e  c o m p u t e  t h e  h e a t  p r o d u c e d by the combustion of the butane. 
+  
+   
+ 4
+41 0
+41 02877 kJheat 10.1molC H 2.91 10 kJ1molC H u   u
+ 
+  
+
+=== PDF PAGE 291 ===
+Chapter 7: Th ermochemistry 
+ 2 9 1   T o  b e g i n  t h e  c a l c u l a t i o n  o f  t h e  h e a t  a b s o r b ed by the water, we compute the mass of the 
+water. 
+ 3
+5
+2 2
+5 4
+4
+41000cm 1.00gmass H O 132.5L 1.33 10 g H O3 1L1cm
+4.184 J 1kJheat absorbed 1.33 10 g (62.2 C 26.0 C) 2.01 10 kJgC 1000 J
+2.01 10 kJ absorbed%e ff ic ienc y 100% 69.1%efficient2.91 10 kJ produced u u  u
+ uu u q q u  uq
+u u  u 
+ 
+107. (M) kJ 10 30 . 3J 1000kJ 1m 1450 s m 807 . 9 kg 0 . 58 4 4 work3 2u u u uu  u  mgh  
+ W e  c o m p u t e  t h e  e n t h a l p y  c h a n g e  f o r  t h e metabolism (combustion) of glucose. 
+ 61 26 2 22 CH O( s ) 6 O( g ) 6 C O( g ) 6 HO ( l )   o 
+ rxn f2 f2 f6 1 2 6 f2 6[ C O ( g ) ] 6[ H O ( l ) ] [ C H O ( s ) ] 6[ O ( g ) ]
+6( 3 9 3 . 5 k J )6( 2 8 5 . 8 k J )( 1 2 7 3 . 3 k J )60 . 0 0 k J 2 8 0 2 . 5 k JHH H H H'q  'q 'q  'q 'q
+ u  u    u   
+ T h e n  w e  c o m p u t e  t h e  m a s s  o f  g l u c o s e  needed to perform the necessary work. 
+ 3 61 26 61 26
+61 26
+61 26
+61 261molC H O 180.2gC H O 1kJheatmass  C H O 3.30 10 kJ0.70 kJ work 2802.5kJ 1molC H O
+303g  C H O u u u u
+  
+ 
+108. (M)  kJ/mol 6 . 125 ] (g) H C [10 4 f  q'H  from Table 7-2. 
+ T h e  d i f f e r e n c e  b e t w e e n  10 4HC a n d  16 7HC a m o u n t s  t o  t h r e e  2CH  groups. The difference in 
+their standard enthalpies of formation is determined as follows. 
+ 2
+221kJdifference 3molCH groups 63kJ/molmol CH groups u    
+ T h u s  f7 1 6[C H (l)] 125.6kJ/mol 63kJ/mol 189kJ/molH'q |      
+ N o w  w e  c o m p u t e  t h e  e n t h a l p y  c h a n g e  for the combustion of heptane. 
+ 71 6 2 2 2 CH ( l ) 1 1  O( g ) 7  C O( g ) 8  HO ( l )   o  
+ rxn f2 f2 f7 1 6 f2 7[ C O ( g ) ] 8[ H O ( l ) ] [ C H ( l ) ] 1 1[ O ( g ) ]
+7( 3 9 3 . 5 k J )8( 2 8 5 . 8 k J )( 1 8 9 k J )1 10 . 0 0 k J 4 8 5 2 k JHH H H H'q  'q 'q  'q  'q
+ u  u    u   
+ 
+109.  (M) First determine the molar heats of combustion for 4CH  and62HC.  
+ 42 22CH (g) 2O (g) CO (g) 2H O(l)   o  
+ f2 f2 f 4 f2 [CO (g)] 2 [H O(l)] [CH (g)] 2 [O (g)]
+(3 9 3 . 5 ) 2 (2 8 5 . 8 ) (7 4 . 8 1 ) 2 ( 0 . 0 0 )k J 8 9 0 . 3 k J / m o lHH H H H'q  'q 'q  'q 'q
+        
+ 72 26 2 2 2CH( g ) O( g ) 2 C O( g ) 3 HO ( l )   o  
+
+=== PDF PAGE 292 ===
+Chapter 7: Th ermochemistry 
+292  72 f2 f 2 f 2 6 f 2
+722[ C O ( g ) ] 3[ H O ( l ) ] [ C H ( g ) ] [ O ( g ) ]
+2( 393.5) 3( 285.8) ( 84.68) (0.00) kJ 1559.7 kJHH H H H'q  'q 'q  'q 'q
+         
+ S i n c e  t h e  S T P  m o l a r  v o l u m e  o f  a n  i d e a l  g a s  i s  22.4 L, there is 1/ 22.4 of a mole of gas 
+present in the sample. We first compute the h eat produced by one mole (that is 22.4 L at 
+STP) of the mixed gas. 
+ 
+ kJ/mol 977mol 1L 4 . 22
+L 00 . 1kJ 6 . 43heat  u  
+ 
+ T h e n ,  i f  w e  l e t  t h e  n u m b e r  o f  m o l e s  o f  4CH  be represented by x, the number of moles of 
+62HC i s  r e p r e s e n t e d  b y  ) 00 . 1 (x. Now we can construct an equation for the heat evolved 
+per mole of mixture and solve this equation for x. 
+ 
+4977 kJ 890.3 1559.7 (1.00 ) 1559.7 (890.3 1559.7) 1559.7 669.4
+1559.7 9770.870molCH /mol mixture669.4xxx x
+x       
+   
+  
+ B y  t h e  i d e a l  g a s  l a w ,  g a s e s  a t  the same temperature and pressu re have the same volume ratio 
+as their molar ratio. Hence, th is gas mixture contains 87.0% 4CH  and 13.0% 62HC,  b o t h  b y  
+volume. 
+ 
+110. (D)   
+ (a) V a l u e s  a r e  n o t  t h e  s a m e  b e c a u s e  e n t h a l p i e s  o f  f o r m a t i o n s  i n  s o l u t i o n  d e p e n d  o n  t h e  
+solute concentration. 
+ 
+ 
+ ( b )  T h e  d a t a  t h a t  w e  c a n  c i t e  t o  c o n f i r m  t h a t  t h e  'Ho
+f [H2SO 4(aq)] = -909.3 kJ/mol in an 
+infinitely dilute solution is the same for the 'Ho
+f [SO 42-] from Table 7.3.  This is 
+expected because an infini tely dilute solution of H 2SO 4 is 2 H+(aq) + SO 42-(aq).  Since  
+'Ho
+f [H+] = 0 kJ/mol, it is expected that SO 42-(aq) will have the same 'Ho
+f  as 
+H2SO 4(aq). 
+ 
+ 
+ ( c )  5 0 0 . 0  m L  o f  1 . 0 0  M  H 2SO 4 is prepared from pure H 2SO 4.  Note: ½ mole H 2SO 4 used. 
+ 
+  R e a c t i o n  H 2SO 4(l)  o  H 2SO 4(aq) ~ 1.00M 
+  'Ho
+f  -814.0 kJ/mol  -909.3 kJ/mol 
+  q  =  ½  m o l ( - 9 0 9 . 3  k J / m o l )  –  ½  m o l ( - 8 1 4 . 0  k J / m o l )  =  - 4 7 . 6 5  k J   
+  ?47650 J released by dilution and absorbed by the water. 
+  Use q = mc 't  -1 -147650 Jt = 23°C500 g(4.2 J g  °C )'|    
+ 
+111. (M)   
+ CO(g) + 3 H 2(g)  o  CH 4(g) + H2O(g) (methanation)  -206.1 kJ  
+ 2 C(s) + 2 H 2O(g)  o  2 CO(g)  + 2 H 2(g) (2 × 7.24)  +262.6 kJ  
+CO(g)  +  H 2O(g)   o  CO 2(g) + H2(g) (7.25)   -41.2 kJ  
+ 2  C ( s )  +  2  H 2O(g)  o  CH 4(g) + CO 2(g)    15.3 kJ 
+ 
+
+=== PDF PAGE 293 ===
+Chapter 7: Th ermochemistry 
+ 2 9 3  112.  (M) 
+ 2
+-1 -1
+2
+2
+2(765.5/760)atm 0.582Ln2 . 4 0 1 0 m o l       (0.08206 L atm K  mol ) 298.15K
+1.103gmolar mass  46.0 g/mol2.40 10 mol
+moles of CO   2.108/44.01  0.04790   (0.0479 mol C in unknown)
+moles of H O  1.294/1
+  u
+  u
+  
+ 
+-18.02  0.0719   (0.144 mol H in unknown)
+1.103 g - 0.04790 g (12.011g C/mol)-0.144(1.00794)moles of O in unknown  0.0239 mol O15.9994 g mol 
+   
+    
+ 26
+oo o
+3
+22 6 2 2So  C:H:O ratio is  2:6:1  and the molecular formula is C H O.
+ΔT  31.94 - 25.00 6.94 C q 6.94 C 5.015kJ/ C 34.8kJ
+34.8kJΔH 1.45 10 kJ/mol      3 O (g)  C H O(g) 2 CO ( )  3 H O(l)0.0240molg   u  
+   u o  
+ 
+113.  (M) Energy needed = mc ΔT = (250 g)((50-4) oC)(4.2J/g oC) = 4.8×104 J 
+ A  7 0 0 - w a t t  o v e n  d e l i v e r s  a  j oule of energy/sec.    
+ t i m e  =  4
+-14.8 10  J  = 69 seconds700 J sec§·u
+¨¸©¹ 
+ 
+114.  (M) w = -P ΔV, V i = (3.1416)(6.00 cm)2(8.10 cm) = 916.1 cm3 
+ 
+        23 2
+22
+4
+4
+11 2 2 -1
+2force (3.1416)(5.00) (25.00)(7.75g/cm )(1kg/1000g)(9.807m/sec )Parea (3.1416)(6.00 cm) (1m/100cm)
+1.320 10  Pa  1.320 10  Pa  0.130 atm difference       Use: P V  P V101325 Pa atm
+((745/760)V  
+u u    
+ 0.130atm) (0.9161L)1.04 L(745/760)atm
+745 101 J-PΔV  (1.04 0.916) 0.121 L atm = w ( 0.121 L atm) 12 J760 La t mu 
+ u         
+ 
+115. (M)  
+ Na2CO 3•10 H 2O(s) o Na 2CO 3•7 H 2O(s) + 3 H 2O(g)  + 155.3 kJ 
+ Na2CO 3•7 H 2O(s) o Na 2CO 3• H 2O(s) + 6 H 2O(g)  + 320.1 kJ 
+ Na2CO 3•H2O(s) o Na 2CO 3(s) + H 2O(g)   + 57.3 kJ  
+Na2CO 3•10 H 2O(s) o Na 2CO 3(s) + 10 H 2O(g)   +532.7 kJ 
+ 
+Thus, using Hess's Law, 'H = +532.7 kJ.   For 'U we must assume a temperature, say, 373 K. 
+'U = 'H -'ngasRT = +532.7 kJ – 10 mol(8.314472 J K-1 mol-1)(373 L)(1 kJ/1000 J) = +501.7 kJ 
+The value for 'U is only an estimate because it is based on a 'H value that has been obtained 
+using Hess’s law.  Hess’s law provides only an ap proximate value for the enthalpy change.  To 
+
+=== PDF PAGE 294 ===
+Chapter 7: Th ermochemistry 
+294 obtain a more precise value for the 'U, one would use bomb calorimetry.  As well, the water 
+formed is assumed to be a vapor (gas).  In re ality, a portion of that water will exist as a liquid.
+ 
+116. (M) First, list all of the pertinent reactions, normalizi ng them so that each uses the same amount of NH 3: 
+ ( r x n - 1 )  4  N H 3(g) + 3 O 2(g) ĺ 2 N 2(g) + 6 H 2O(g)  
+ 'Hqrxn-1 = 2×(0 kJ/mol) + 6×(-241.8 kJ/mol) – [4 ×(-46.11 kJ) + 3×(0 kJ/mol)] = -1266.4 kJ 
+ 
+ ( r x n - 2 )  4  N H 3(g) + 4 O 2(g) ĺ 2 N 2O(g) + 6 H 2O(g)    
+ 'Hqrxn-2 = 4×(82.05 kJ/mol) + 6×(-241.8 kJ/mol) – [4×(-46.11 kJ) + 3×(0 kJ/mol)] = -938.2 kJ 
+ 
+ ( r x n - 3 )  4  N H 3(g) + 5 O 2(g) ĺ 4 NO(g) + 6 H 2O(g)    
+ 'Hqrxn-3 = 2×(90.25 kJ/mol) + 6×(-241.8 kJ/mol) – [4×(-46.11 kJ) + 3×(0 kJ/mol)] = -1085.9 kJ 
+ 
+ ( r x n - 4 )  4  N H 3(g) + 7 O 2(g) ĺ 4 NO 2(g) + 6 H 2O(g)    
+ 'Hqrxn-4 = 4×(33.18 kJ/mol) + 6×(-241.8 kJ/mol) – [4×(-46.11 kJ) + 3×(0 kJ/mol)] = -1133.6 kJ 
+ 
+Clearly, rxn-1, the oxidation of NH 3(g) to N 2(g) is the most exothermic reaction. 
+ 
+117. (D) 
+ 373 K  373 K5- 2
+ 298 K  298 K
+ 373 K  373 K  373 K5- 2
+2 298K  298K  298K
+37
+298 KH = Cpdt = (28.58 + 0.00377T -0.5 10 T )dt 
+JJ J  KH = 28.58 dt  + 0.00377 Tdt +  0.5 10  T dt  K mol  mol K m o l
+JH = 28.58 TK mol'u
+' u
+'u³³
+³³ ³
+
+ 373 K 373 K 2
+3 K 5
+2
+298 K 298 K
+22
+2
+5JT J  K 1+ 0.00377 0.5 102 m o l T K m o l
+373 K 298 K JJH = 28.58 (373 K 298 K) + 0.00377   K mol 2 2 K m o l
+J K 1 1+ 0.5 10 mol 373 K 298 K
+JH = 2143.5 §· §·¨¸u u u  ¨¸¨¸ ¨¸©¹ ©¹
+§·
+¨¸ 'u  u ¨¸©¹
+§·uu ¨¸©¹
+'JJJ k J + 94.9   33.7  2205  = 2.205 mol mol mol mol mol  
+ 
+ 
+118. (D)  In this problem, there are four distinct heatin g regimes:  (1) heating the ice from -5 ºC to 
+the melting point at 0 ºC, (2) he at required to melt the ice, ΔHfus, (3) heating the water from 0 ºC to the 
+boiling point at 100 ºC, a nd (4) heat required to vaporize the water, ΔHvap.  Each part is solved 
+separately below.  However, we must first calcula te the temperature dependent heat capacity of ice 
+and water in their given temperature ranges.  We al so note that melting ice to  water at 273 K requires 
+an enthalpy ( ΔHfus) of 6.01 kJ/mol, and boiling water requires an enthalpy ( ΔHvap) of 44.0 kJ/mol.  
+ 
+
+=== PDF PAGE 295 ===
+Chapter 7: Th ermochemistry 
+ 2 9 5  2732273K22 1 1
+p268K
+268TC( i c e ) 1 . 0 1 8 7T 1 . 4 9 1 0 1 . 0 1 8 7 1 . 4 9 1 0 T 1 3 3 7 . 7 1 k Jk g K2   ªº   u   u    «»¬¼³ 
+ 
+373K73 42 2
+p273K
+37343 2
+74 2 1 1
+273C( w a t e r ) 1 . 0 1 0 T 1 . 0 1 0 T 3 . 9 2 1 0 T 8 . 7 8 5 4
+TT T1.0 10 1.0 10 3.92 10 8.7854 T 318.95 kJ kg K43 2 
+     u   u  u  
+ªº  u   u   u      «»¬¼³
+ 
+Now we use the above data to determine the q values: 
+ 
+
+ 11
+1
+2
+2
+11 11
+3
+4q( i c e , 2 6 8 K 2 7 3 K ) 0 . 0 1 0 k g 1 3 3 7 . 7 1 k J k g K 2 7 3 K 2 6 8 K 6 8 . 8 9 k J
+1 mol H O 6.01 kJq( i c e w a t e r ) 0 . 0 1 0 k g i c e 3 . 3 4 k J0.01801 kg mol
+q (water,273K 373K) 0.010 kg 318.95 kJ kg K 373K 273K 318.95 kJ kg K
+q( w a t e r o    
+o u u 
+o    
+o2
+TOT1 mol H O 44.0 kJsteam) 0.010 kg water 24.41 kJ0.01801 kg mol
+q4 1 5 . 5 9 k J u u  
+  
+ 
+ 
+119.  (D) Reaction of interest:         H 2(g)       +        ½ O 2(g)     o      H 2O(g) 
+Molar heat capacities: 28.84 J K-1mol-1 29.37 J K-1mol-1 33.58 J K-1mol-1 
+'T           75.0 K          75.0 K      75.0 K 
+ q = n×C p×'7  ( 1 ) ( 2 8 . 8 4 ) ( 7 5 . 0 )  J  ( ½ ) ( 2 9 . 3 7 ) ( 7 5 . 0) J     (1)(33.58)(75.0) J
+     =  2 1 6 3  J  = 1101.4 J  = 2518.5  J 
+  
+qprod = 2518.5  J = 2.52 kJ   q react = (2163  J + 1101.4 J) = 3264.4 J = 3.26 kJ 
+ 
+See diagram below. 
+H2(g) + 1/2O2(g)
+H2O(g)
+25 oC 100 oC3.26 kJ
+2.52 kJ-241.82 kJ-242.56 kJ
+H2O(g)H2(g) + 1/2O2(g)
+   Thus, 'Hqf H2O(g) at 100.0 q C is approximately -243 kJ/mol H 2O(g) formed.
+
+=== PDF PAGE 296 ===
+
+
+=== PDF PAGE 297 ===
+Chapter 7: Th ermochemistry 
+ 2 9 7  122. ( D )  The plot’s maximum is the equivalence point. (Assume 'T = 0 at 0 mL of added NaOH, 
+(i.e.,  only 60 mL of citric acid are present), and that 'T = 0 at 60 mL of NaOH (i.e. no citric acid 
+added).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(a) The equivalence point occurs with 45.0  mL of 1.00 M NaOH(aq) [45.0 mmol NaOH] 
+added and 15.0 mL of 1.00 M citric acid [15.0 mmol citric acid].  Again, we assume 
+that 'T = zero if no NaOH added ( VNaOH = 0 mL) and 'T = 0 if no citric acid is added 
+(VNaOH = 60). 
+  
+(b) Heat is a product of the reaction, as ar e chemical species (products). Products are 
+maximized at the exact stoichiometric propor tions. Since each reac tion mixture has the 
+same volume, and thus about the same ma ss to heat, the temperature also is a 
+maximum at this point. 
+  
+(c)   3
+36 57 2 6 5 7HCHO s + 3 O H a q 3 HO ( l ) + CHO a q o  
+ 
+123. (M)  
+(a) T h e  r e a c t i o n s ,  a n d  t h e i r  t e m p e r a t u r e  c h a n g e s ,  a r e  a s  f o l l o w s .  
+ (1st) NH conc HCl aq NH Cl aq34 . aq +bg b g b g o   =3 5 . 8 2 3 . 8C = 1 2 . 0 CT'DD  
+(2nd,a) NH conc NH g33 . aqb g bg o     =1 3 . 2 1 9 . 3 C = 6 . 1 CT' DD 
+(2nd,b) NH g HCl aq NH Cl aq34+bg b g b g o    =4 2 . 9 2 3 . 8C = 1 9 . 1 CT'DD 
+The sum of reactions 2nd,a 2nd,b b gb g +  produces the same change as the 1st reaction.   
+(b) W e  n o w  c o m p u t e  t h e  h e a t  a b s o r b e d  b y  t h e  s u r r o u n d i n g s  f o r  e a c h .  H e s s ’ s  l a w  i s  
+demonstrated if '''HH H1=+2a 2b , where in each case 'Hq=.  
+  
+q H111 3
+1 =1 0 0 . 0 + 8 . 0 0  1 . 0 0 4 . 1 8 1 2 . 0 = 5 . 4 21 0 =  mL  mL  g / mL  J g C C  Jb guu u'DD 
+11 3
+2a 2a = 100.0 mL 1.00 g/mL 4.18 J g C 6.1 C = 2.55 10  J =qHªº uu   u  '¬¼DD 
+qH2b 2b  mL  g / mL  J g C C  J =1 0 0 . 0 1 . 0 0 4 . 1 8 19.1 = 7.98 10 =11 3uu u ' b g chDD 
+33 3 3
+2a 2b 1 + = +2.55 10  J 7.98 10  J = 5.43 10  J 5.42 10  J =HH H '' u u  u#  u ' (QED) 
+ Plot of 'T versus Volume of NaOH
+0123456789
+05 1 0 1 5 2 0 2 5 3 0 3 5 4 0 4 5 5 0 5 5 6 0
+Volume of NaOH (mL)'T (oC)
+
+=== PDF PAGE 298 ===
+Chapter 7: Th ermochemistry 
+298 124. (D) According to the kinetic-molecular theory of ga ses, the internal energy of an ideal gas, 
+U, is proportional to the aver age translational kinetic ener gy for the gas particles, e k, 
+which in turn is proportional to 3/2 RT.  Thus the internal ener gy for a fixed amount of an 
+ideal gas depends only on its temperature, i.e., U = 3/2 nRT, where U is the internal energy 
+(J), n is the number of moles of gas particles, R is the gas constant (J K-1 mol-1), and T is 
+the temperature (K).  If the temperature of th e gas sample is changed, the resulting change 
+in internal energy is given by 'U = 3/2 nR'T. 
+  
+  (a)  At constant volume, qv = nCv'T.  Assuming that no work is done 'U = q v so,  
+  'U = qv = 3/2 nR'T = nCv'T.  (divide both sides by n 'T) C v = 3/2 R= 12.5 J/K.mol. 
+  
+ (b) The heat flow at constant pressure qp is the 'H for the process (i.e., qp = 'H) and 
+  we know that 'H = 'U  w   and  w = P'V = nR'T. 
+  H e n c e ,  qp = 'U  w = 'U  (nR'T) = 'U + nR'T  and qp = nCp'T and  
+'U = 3/2 nR'T  Consequently  q p = nC p'T = nR 'T + 3/2 nR 'T  (divide both sides 
+by n'T) Now, C p = R + 3/2 R̓ =  5/2 R = 20.8 J/K.mol. 
+   
+125.  (D)  
+ ( a )  Here we must determine the volume between 2.40 atm and 1.30 atm using PV = nRT  
+    V = L atm0.100 mol ×0.08206 ×298 K K mol
+P = 2.445Latm
+P 
+  F o r  P = 2.40 atm:  V = 1.02 L  
+  F o r  P = 2.30 atm:  V = 1.06 L P'V = 2.30 atm u 0.04 L = 0.092  L atm 
+  F o r  P = 2.20 atm:  V = 1.11 L P'V = 2.20 atm u 0.05 L = 0.11 L atm 
+  F o r  P = 2.10 atm:  V = 1.16 L P'V = 2.10 atm u 0.05 L = 0.11 L atm 
+  F o r  P = 2.00 atm:  V = 1.22 L P'V = 2.00 atm u 0.06 L = 0.12 L atm 
+  F o r  P = 1.90 atm:  V = 1.29 L P'V = 1.90 atm u 0.06 L = 0.12 L atm 
+  F o r  P = 1.80 atm:  V = 1.36 L P'V = 1.80 atm u 0.07 L = 0.13 L atm 
+  F o r  P = 1.70 atm:  V = 1.44 L P'V = 1.70 atm u 0.08 L = 0.14 L atm 
+  F o r  P = 1.60 atm:  V = 1.53 L P'V = 1.60 atm u 0.09 L = 0.14 L atm 
+  F o r  P = 1.50 atm:  V = 1.63 L P'V = 1.50 atm u 0.10 L = 0.15 L atm 
+  F o r  P = 1.40 atm:  V = 1.75 L P'V = 1.40 atm u 0.12 L = 0.17 L atm 
+  F o r  P = 1.30 atm:  V = 1.88 L P'V = 1.30 atm u 0.13 L = 0.17 L atm 
+            
+      t o t a l  w o r k  =     6 P'V   = 1.45 L atm 
+ 
+       Expressed in joules, the work is 1.45 L atm u 101.325 J/L atm = 147 J. 
+
+=== PDF PAGE 299 ===
+
+
+=== PDF PAGE 300 ===
+
+
+=== PDF PAGE 301 ===
+
+
+=== PDF PAGE 302 ===
+Chapter 7: Th ermochemistry 
+302 (b) Heat vs. work: Heat is the flow of thermal energy.  Work involves physical movement of an 
+entity (whether microscopic or macroscopic) 
+(c) Specific heat vs. heat capacity:  Heat capacity  is the quantity of en ergy required to change 
+the temperature of a substance by 1 degree.  Spec ific heat is the heat capacity of 1 g of a 
+substance. 
+(d) Constant volume vs. constant pressure proces s: A system where the reaction is done at a 
+constant volume to eliminate work done by the system is a constant volume system.  In a 
+constant pressure system, there can be expans ion and contraction and therefore work can be 
+done. 
+ 
+130. (E)  The answer is (b), Al, because it has the highest heat capacity. 
+ 
+131. (E)  The answer is (c).  We know that m 1cΔT1=- m 2cΔT2, where m 1 and m 2 are the masses of 
+each quantity of water.  Therefore, the equa tion above can be expanded and simplified as 
+follows: 
+75 (T f-80) = -100 (T f-20) 
+Solving for T f gives a value of 45.7 °C. 
+132. (E)  The answer is (d). U = q + w.  Since q = -100  J, w = +200 J, or the system has 200 J of work 
+done on it. 
+133. (E)  The answer is (a).  The heat generated by NaOH is absorbed by the system. 
+134. ( E )  The answer is (b).  As graphite is burned in O 2, it generates CO 2.  Enthalpy of formation of 
+CO 2 is therefore the same as enthalpy of combustion of C.  
+135. (E)  The answer is (a), because qV and qP are not the same. 
+136. (E)   
+(a) We have to solve for the heat capacity (C p) of Fe: 
+m·C p·ΔT (H 2O) = - m·C p·ΔT (Fe) 
+P(Fe) (981g)(4.189)(12.3 C) = (1220)(C )( 92.1 C) DD 
+Solving for Cp Fe, the heat capacity of Fe is 0.449 J·g-1·°C-1 
+ 
+(b) Now knowing the Cp of Fe, we can calculate the T f of the iron-glycerol system: 
+ 
+ff (409.5)(2.378)(T 26.2) = (1220)(0.4489)(T 99.8)    
+ 
+Solving T f = 52.7 °C 
+ 
+137. (E)  
+(a) 2 N 2 + O 2 ĺ 2 N 2O 
+(b) S + O 2 + Cl 2 ĺ SO 2Cl2 
+(c) 2 CH 3CH 2COOH + 7 O 2 ĺ 6 CO 2 + 6 H 2O 
+ 
+138. (D) First, determine the o
+fH' of CO, which is used to make COCl 2.  This is done by using the 
+equations for the combustion of C and CO gases: 
+ 
+(1) CO + ½  O 2 ĺ CO 2  - 2 8 3 . 0  kJ/mol 
+(2) C + O 2 ĺ CO 2  - 3 9 3 . 5  kJ/mol 
+
+=== PDF PAGE 303 ===
+Chapter 7: Th ermochemistry 
+ 3 0 3   
+To determine the o
+fH' of CO, reverse and double equa tion (1) and double equation (2): 
+ 
+(1) 2 CO 2 ĺ 2 CO + O 2   566.0 kJ 
+(2) 2C + 2 O 2 ĺ 2 CO 2  - 7 8 7 . 0  kJ 
+(3) 2 C + O 2 ĺ 2 CO  -221.0 kJ  
+or -110.5 kJ/mol of CO 
+ 
+Now, we use the equation for the formation of COCl 2 with equation (3) times ½. 
+ 
+(4) CO  + Cl 2 ĺ COCl 2   -108.0 kJ 
+(3) C + ½ O 2 ĺ  CO  -110.5 kJ 
+(3) C + ½ O 2 + Cl 2 ĺ COCl 2  -218.5 kJ  
+ 
+Therefore, o
+fH' of COCl 2 is -218 kJ/mol. 
+ 
+139. (E)  Enthalpy of formation for elements (even molecular ones, such as O 2 or Cl 2) is by 
+convention set to 0.  While it is possible for th e enthalpy of formation of a compound to be near 
+zero, it is unlikely. 
+ 
+140. ( M )  We note that ΔH = ΔU + Δ(PV).  From a theoretical stan dpoint, one can have a situation 
+where the ΔU < 0, but there is enough work  done on the system that makes ΔH > 0.  In reality, 
+because the Δ(PV) is relatively small, ΔH and ΔU often have the same sign. 
+ 
+141. (M) A gas stove works by combustion of a flam mable fuel.  The amount of heat can be 
+controlled by a valve.  Once shut off, the heat so urce instantly disappears.  However, an electric 
+stove works by the principle of h eat conduction, where the heat coil  on the stove transfers heat to 
+the pot through direct contact.  Ev en after the electricity is shut off to the heating coil, it takes 
+time for the coil to cool because of  its heat capacity, and therefore it continues to supply heat to 
+the pot. 
+ 
+142. (E)  The answer is (a), 0.  This is because there is no loss of energy to or gain of energy from the 
+surroundings. 
+ 
+143. ( M )  The answer is (b), the temperature decreases (or at least it increases at a slower rate than it 
+would if there was no moisture on the outside).  The moisture put outside of the pot evaporates 
+mainly because of removing heat from the pot.  Th erefore, the moisture on the outside of the pot 
+removes heat from the pot as it evapor ates, therefore slightly cooling the pot. 
+ 
+144. (M)  To construct a concept map, one must first start with the most general concepts.  These 
+concepts are not defined by or in terms of other concepts discusse d in those sections.  In this 
+case, we are constructing a map for the first law of thermodynamics.  After giving the definition, 
+the concept can be broken up into two subtopics:  functions of stat e, path-dependent functions.  
+Functions of state should contain a discussion of ΔU.  Path dependent functions should have a 
+discussion of work (w) and heat (q).  In the pa th dependent functions su bsection, there should be 
+a discussion on the nomenclature for determining heat  and work flow in and out of the system.  
+
+=== PDF PAGE 304 ===
+Chapter 7: Th ermochemistry 
+304 Then, there should be a subheading for work, disc ussing the various forms of work (such as P-V 
+work, for instance).  A discussion of heat shou ld contain subheadings fo r enthalpy at constant 
+volume and pressure. 
+ 
+145. (M) The concept map of the use of enthalpy in chemical reactions has several major 
+subheadings.  After the definition of enthal py, there should be th ree major subheadings: 
+(1) expressing enthalpy graphically  using enthalpy diagrams, (2) en thalpy of change for phase 
+transformation, and (3) standard states and st andard transformations.  Then, under standard 
+states and transformations, there would be furt her subheadings discussing (1) enthalpy of 
+reaction, and (2) enthalpy of formation.  Hess’s law would be a subtopic for #1. 
+ 
+146. (M) This concept map starts with the root term, terms in thermodynamics.  It is then split into 
+the major subheadings, (1) path-dependent and (2 ) path-independent quantities.  The remainder 
+is very similar to question 144. 
