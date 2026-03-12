@@ -221,6 +221,7 @@
   <a href="#exam-b">Practice B</a>
   <a href="#exam-c">Practice C</a>
   <a href="#data">Data Sheet</a>
+  <a href="#petrucci">Petrucci Qs</a>
   <a href="review.html#crosswalk">Crosswalk</a>
 </nav>
 
@@ -376,6 +377,288 @@
     </div>
 
     <div id="questions-c"></div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       PETRUCCI PRACTICE QUESTIONS
+       ═══════════════════════════════════════════════════════ -->
+  <section id="petrucci" style="scroll-margin-top:68px;margin-bottom:48px;">
+    <div class="section-header"><div>
+      <h2>Petrucci Practice Questions</h2>
+      <p>Actual textbook questions (10th ed.) — attempt first, then reveal step-by-step solution</p>
+    </div></div>
+
+    <!-- Strong Acid & Base -->
+    <div style="background:#1e1e30;border:1px solid #1e3a2a;border-radius:16px;padding:20px 24px;margin-bottom:20px;">
+      <div style="font-size:0.76rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#10b981;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid #1e3a2a;">Strong Acid &amp; Base — pH Calculations · Ch. 16</div>
+
+      <div class="question-card">
+        <div class="q-header"><span class="q-num">Q9</span><span class="q-section">Ch.16 · [H₃O⁺] and [OH⁻]</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('ps-q9')">Solution</button></div></div>
+        <div class="prob-q">For each of the following, determine [H₃O⁺], [OH⁻], and whether acidic/basic/neutral:<br>(a) 0.00165 M HNO₃ &nbsp; (b) 0.0087 M KOH &nbsp; (c) 0.00213 M Sr(OH)₂ &nbsp; (d) 5.8×10⁻⁴ M HI</div>
+        <div class="sol-box" id="ps-q9">
+          All strong — complete dissociation.<br><br>
+          <strong>(a)</strong> [H₃O⁺] = 0.00165 M · [OH⁻] = 1.0×10⁻¹⁴/0.00165 = 6.1×10⁻¹² M → <span class="answer">acidic</span><br>
+          <strong>(b)</strong> [OH⁻] = 0.0087 M · [H₃O⁺] = 1.1×10⁻¹² M → <span class="answer">basic</span><br>
+          <strong>(c)</strong> Sr(OH)₂ → 2 OH⁻: [OH⁻] = 0.00426 M · [H₃O⁺] = 2.3×10⁻¹² M → <span class="answer">basic</span><br>
+          <strong>(d)</strong> [H₃O⁺] = 5.8×10⁻⁴ M · [OH⁻] = 1.7×10⁻¹¹ M → <span class="answer">acidic</span>
+        </div>
+      </div>
+
+      <div class="question-card">
+        <div class="q-header"><span class="q-num">Q10</span><span class="q-section">Ch.16 · Calculate pH</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('ps-q10')">Solution</button></div></div>
+        <div class="prob-q">Calculate the pH of each solution:<br>(a) 0.0045 M HCl &nbsp; (b) 6.14×10⁻⁴ M HNO₃ &nbsp; (c) 0.00683 M NaOH &nbsp; (d) 4.8×10⁻³ M Ba(OH)₂</div>
+        <div class="sol-box" id="ps-q10">
+          <strong>(a)</strong> pH = −log(0.0045) = <span class="answer">2.35</span><br>
+          <strong>(b)</strong> pH = −log(6.14×10⁻⁴) = <span class="answer">3.21</span><br>
+          <strong>(c)</strong> pOH = −log(0.00683) = 2.166 → pH = 14.00 − 2.166 = <span class="answer">11.83</span><br>
+          <strong>(d)</strong> Ba(OH)₂ → 2OH⁻: [OH⁻] = 9.6×10⁻³ M → pOH = 2.02 → pH = <span class="answer">11.98</span>
+        </div>
+      </div>
+
+      <div class="question-card">
+        <div class="q-header"><span class="q-num">Q11</span><span class="q-section">Ch.16 · pH from mass of Ba(OH)₂·8H₂O</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('ps-q11')">Solution</button></div></div>
+        <div class="prob-q">Calculate the pH of the solution prepared by dissolving 3.9 g of Ba(OH)₂·8H₂O (M = 315.5 g/mol) in water to give 100.0 mL of solution.</div>
+        <div class="sol-box" id="ps-q11">
+          n = 3.9/315.5 = 0.01236 mol in 0.100 L → [Ba(OH)₂] = 0.1236 M<br>
+          Ba(OH)₂ → 2 OH⁻ → [OH⁻] = 0.247 M<br>
+          pOH = 0.607 → <span class="answer">pH = 13.40</span>
+        </div>
+      </div>
+
+      <div class="question-card">
+        <div class="q-header"><span class="q-num">Q12</span><span class="q-section">Ch.16 · Solubility of Ca(OH)₂ from pH</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('ps-q12')">Solution</button></div></div>
+        <div class="prob-q">A saturated solution of Ca(OH)₂ has pH = 12.35 at 25°C. What is the solubility of Ca(OH)₂ in g per 100 mL?</div>
+        <div class="sol-box" id="ps-q12">
+          pOH = 14.00 − 12.35 = 1.65 → [OH⁻] = 10⁻¹·⁶⁵ = 0.022 M<br>
+          [Ca(OH)₂] = 0.022/2 = 0.011 mol/L<br>
+          mass/100 mL = 0.011 × 0.100 × 74.09 g/mol = <span class="answer">0.081 g (81 mg) per 100 mL</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Weak Acid & Base -->
+    <div style="background:#1e1e30;border:1px solid #1e3a2a;border-radius:16px;padding:20px 24px;margin-bottom:20px;">
+      <div style="font-size:0.76rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#10b981;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid #1e3a2a;">Weak Acid &amp; Base — pH &amp; Percent Ionization · Ch. 16</div>
+
+      <div class="question-card">
+        <div class="q-header"><span class="q-num">Q21</span><span class="q-section">Ch.16 · Weak acid pH — HNO₂</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('ps-q21')">Solution</button></div></div>
+        <div class="prob-q">Calculate the pH of 0.143 M HNO₂. K<sub>a</sub>(HNO₂) = 7.2×10⁻⁴.</div>
+        <div class="sol-box" id="ps-q21">
+          HNO₂ + H₂O ⇌ H₃O⁺ + NO₂⁻<br>
+          <div class="sol-step">ICE table</div>
+          I: 0.143 / 0 / 0 &nbsp; C: −x / +x / +x &nbsp; E: 0.143−x / x / x<br>
+          x = √(0.143 × 7.2×10⁻⁴) ≈ 0.010 (7% — use successive approx)<br>
+          x = √((0.133) × 7.2×10⁻⁴) = 0.0098 M = [H₃O⁺]<br>
+          <span class="answer">pH = −log(0.0098) = 2.01</span>
+        </div>
+      </div>
+
+      <div class="question-card">
+        <div class="q-header"><span class="q-num">Q22</span><span class="q-section">Ch.16 · Weak base pH — ethylamine</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('ps-q22')">Solution</button></div></div>
+        <div class="prob-q">Calculate the pH of 0.085 M ethylamine (C₂H₅NH₂). K<sub>b</sub> = 4.3×10⁻⁴.</div>
+        <div class="sol-box" id="ps-q22">
+          C₂H₅NH₂ + H₂O ⇌ C₂H₅NH₃⁺ + OH⁻<br>
+          Kb = x²/0.085 = 4.3×10⁻⁴ → successive approx → [OH⁻] = 0.0058 M<br>
+          pOH = 2.24 → <span class="answer">pH = 11.76</span>
+        </div>
+      </div>
+
+      <div class="question-card">
+        <div class="q-header"><span class="q-num">Q29</span><span class="q-section">Ch.16 · Weak acid, quadratic — HClO₂</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('ps-q29')">Solution</button></div></div>
+        <div class="prob-q">Calculate the pH of 0.55 M HClO₂. K<sub>a</sub> = 1.1×10⁻².</div>
+        <div class="sol-box" id="ps-q29">
+          Ka large → must use quadratic: x² + 0.011x − 0.00605 = 0<br>
+          x = [−0.011 + √(0.000121 + 0.0242)] / 2 = 0.073 M = [H₃O⁺]<br>
+          <span class="answer">pH = 1.14</span>
+        </div>
+      </div>
+
+      <div class="question-card">
+        <div class="q-header"><span class="q-num">Q30</span><span class="q-section">Ch.16 · Weak base pH — methylamine</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('ps-q30')">Solution</button></div></div>
+        <div class="prob-q">Calculate the pH of 0.386 M methylamine (CH₃NH₂). K<sub>b</sub> = 4.2×10⁻⁴.</div>
+        <div class="sol-box" id="ps-q30">
+          x² / 0.386 = 4.2×10⁻⁴ → x = 0.013 M = [OH⁻] &nbsp;(3.4% — valid)<br>
+          pOH = 1.89 → <span class="answer">pH = 12.11</span>
+        </div>
+      </div>
+
+      <div class="question-card">
+        <div class="q-header"><span class="q-num">Q39</span><span class="q-section">Ch.16 · % Ionization — benzoic acid</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('ps-q39')">Solution</button></div></div>
+        <div class="prob-q">Calculate the degree of ionization and percent ionization of benzoic acid (pK<sub>a</sub> = 4.89) in 0.45 M solution.</div>
+        <div class="sol-box" id="ps-q39">
+          Ka = 10⁻⁴·⁸⁹ = 1.3×10⁻⁵ → x = √(0.45 × 1.3×10⁻⁵) = 2.4×10⁻³ M<br>
+          α = 2.4×10⁻³ / 0.45 = 0.0053 → <span class="answer">% ionization = 0.53%</span>
+        </div>
+      </div>
+
+      <div class="question-card">
+        <div class="q-header"><span class="q-num">Q40</span><span class="q-section">Ch.16 · % Ionization — ethylamine</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('ps-q40')">Solution</button></div></div>
+        <div class="prob-q">Calculate the degree of ionization and percent ionization of 0.85 M ethylamine (C₂H₅NH₂). K<sub>b</sub> = 4.3×10⁻⁴.</div>
+        <div class="sol-box" id="ps-q40">
+          x = √(0.85 × 4.3×10⁻⁴) = 0.019 M = [OH⁻]<br>
+          α = 0.019/0.85 = 0.022 → <span class="answer">% ionization = 2.2%</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hydrolysis -->
+    <div style="background:#1e1e30;border:1px solid #1e3a2a;border-radius:16px;padding:20px 24px;margin-bottom:20px;">
+      <div style="font-size:0.76rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#10b981;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid #1e3a2a;">Anion &amp; Cation Hydrolysis (Salt Solutions) · Ch. 16</div>
+
+      <div class="question-card">
+        <div class="q-header"><span class="q-num">Q59</span><span class="q-section">Ch.16 · Anion hydrolysis — NaOCl</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('ps-q59')">Solution</button></div></div>
+        <div class="prob-q">Calculate the pH of 0.089 M NaOCl. K<sub>a</sub>(HOCl) = 2.9×10⁻⁸.</div>
+        <div class="sol-box" id="ps-q59">
+          OCl⁻ + H₂O ⇌ HOCl + OH⁻<br>
+          Kb = Kw/Ka = 1.0×10⁻¹⁴ / 2.9×10⁻⁸ = 3.4×10⁻⁷<br>
+          x² / 0.089 = 3.4×10⁻⁷ → x = 1.7×10⁻⁴ M = [OH⁻]<br>
+          pOH = 3.77 → <span class="answer">pH = 10.23</span>
+        </div>
+      </div>
+
+      <div class="question-card">
+        <div class="q-header"><span class="q-num">Q60</span><span class="q-section">Ch.16 · Cation hydrolysis — NH₄Cl</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('ps-q60')">Solution</button></div></div>
+        <div class="prob-q">Calculate the pH of 0.123 M NH₄Cl. K<sub>b</sub>(NH₃) = 1.8×10⁻⁵.</div>
+        <div class="sol-box" id="ps-q60">
+          NH₄⁺ + H₂O ⇌ NH₃ + H₃O⁺<br>
+          Ka = Kw/Kb = 5.6×10⁻¹⁰<br>
+          x² / 0.123 = 5.6×10⁻¹⁰ → x = 8.3×10⁻⁶ M = [H₃O⁺]<br>
+          <span class="answer">pH = 5.08</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Calorimetry -->
+    <div style="background:#1e1e30;border:1px solid #1e3a2a;border-radius:16px;padding:20px 24px;margin-bottom:20px;">
+      <div style="font-size:0.76rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#10b981;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid #1e3a2a;">Calorimetry · Ch. 7</div>
+
+      <div class="question-card">
+        <div class="q-header"><span class="q-num">Q38</span><span class="q-section">Ch.7 · Coffee-cup — Zn + HCl</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('ps-q38')">Solution</button></div></div>
+        <div class="prob-q">1.82 g Zn is added to 100.0 mL of 0.300 M HCl in a coffee-cup calorimeter. Temperature rises from 20.3°C to 30.5°C. Specific heat = 4.18 J g⁻¹ °C⁻¹, density ≈ 1.00 g/mL. Calculate ΔH per mol Zn. [M(Zn) = 65.39]<br>Zn(s) + 2 HCl(aq) → ZnCl₂(aq) + H₂(g)</div>
+        <div class="sol-box" id="ps-q38">
+          <div class="sol-step">Limiting reagent</div>
+          mol HCl = 0.0300 mol; mol Zn = 1.82/65.39 = 0.02783 mol<br>
+          Need 2 mol HCl per mol Zn → HCl limits; mol Zn reacted = 0.0150 mol<br>
+          <div class="sol-step">Calorimetry</div>
+          q = 100.0 g × 4.18 × (30.5 − 20.3) = 4264 J = 4.26 kJ<br>
+          ΔH = −4.26 kJ / 0.0150 mol = <span class="answer">−284 kJ/mol Zn</span>
+        </div>
+      </div>
+
+      <div class="question-card">
+        <div class="q-header"><span class="q-num">Q40</span><span class="q-section">Ch.7 · Coffee-cup — final temperature</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('ps-q40c')">Solution</button></div></div>
+        <div class="prob-q">13.3 g of KC₂H₃O₂ (M = 98.14 g/mol, ΔH_sol = −15.3 kJ/mol) dissolves in 525 mL of water (T₀ = 25.1°C, c = 4.18 J g⁻¹ °C⁻¹). What is T_final?</div>
+        <div class="sol-box" id="ps-q40c">
+          n = 13.3/98.14 = 0.1355 mol<br>
+          q_rxn = 0.1355 × (−15.3 kJ/mol) × 1000 = −2073 J → q_soln = +2073 J<br>
+          mass = 525 + 13.3 = 538.3 g<br>
+          ΔT = 2073 / (538.3 × 4.18) = +0.92°C<br>
+          <span class="answer">T_final = 25.1 + 0.92 = 26.0°C</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hess's Law -->
+    <div style="background:#1e1e30;border:1px solid #1e3a2a;border-radius:16px;padding:20px 24px;margin-bottom:20px;">
+      <div style="font-size:0.76rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#10b981;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid #1e3a2a;">Hess's Law &amp; Combustion Enthalpy · Ch. 7</div>
+
+      <div class="question-card">
+        <div class="q-header"><span class="q-num">Q68</span><span class="q-section">Ch.7 · Combine reactions</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('ps-q68')">Solution</button></div></div>
+        <div class="prob-q">Calculate ΔH° for CO(g) + ½O₂(g) → CO₂(g) using:<br>(1) C(graphite) + ½O₂(g) → CO(g) &nbsp; ΔH° = −110.54 kJ<br>(2) C(graphite) + O₂(g) → CO₂(g) &nbsp; ΔH° = −393.51 kJ</div>
+        <div class="sol-box" id="ps-q68">
+          Reverse (1): CO → C + ½O₂ &nbsp; +110.54 kJ<br>
+          Keep (2): C + O₂ → CO₂ &nbsp; −393.51 kJ<br>
+          <span class="answer">ΔH° = −282.97 kJ</span>
+        </div>
+      </div>
+
+      <div class="question-card">
+        <div class="q-header"><span class="q-num">Q69</span><span class="q-section">Ch.7 · Hydrogenation of propyne</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('ps-q69')">Solution</button></div></div>
+        <div class="prob-q">Calculate ΔH° for CH₃C≡CH(g) + 2H₂(g) → CH₃CH₂CH₃(g) using:<br>(1) CH₃C≡CH + 4O₂ → 3CO₂ + 2H₂O &nbsp; ΔH° = −1937 kJ<br>(2) C₃H₈ + 5O₂ → 3CO₂ + 4H₂O &nbsp; ΔH° = −2219.1 kJ<br>(3) H₂ + ½O₂ → H₂O &nbsp; ΔH° = −285.8 kJ</div>
+        <div class="sol-box" id="ps-q69">
+          Keep (1): −1937 kJ &nbsp;|&nbsp; Reverse (2): +2219.1 kJ &nbsp;|&nbsp; 2×(3): −571.6 kJ<br>
+          <span class="answer">ΔH° = −1937 + 2219.1 − 571.6 = −290 kJ</span>
+        </div>
+      </div>
+
+      <div class="question-card">
+        <div class="q-header"><span class="q-num">Q76</span><span class="q-section">Ch.7 · Hydrogenation of 1-butene</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('ps-q76')">Solution</button></div></div>
+        <div class="prob-q">Calculate ΔH° for C₄H₈(g) + H₂(g) → C₄H₁₀(g) using:<br>C₄H₈ + 6O₂ → 4CO₂ + 4H₂O &nbsp; ΔH° = −2540.2 kJ<br>C₄H₁₀ + 13/2 O₂ → 4CO₂ + 5H₂O &nbsp; ΔH° = −2877.6 kJ<br>H₂ + ½O₂ → H₂O &nbsp; ΔH° = −285.85 kJ</div>
+        <div class="sol-box" id="ps-q76">
+          Keep butene combustion: −2540.2 kJ<br>
+          Reverse butane combustion: +2877.6 kJ<br>
+          Keep H₂ combustion: −285.85 kJ<br>
+          <span class="answer">ΔH° = −234.2 kJ/mol</span><br>
+          Less negative = more stable; more strained isomers release more heat.
+        </div>
+      </div>
+
+      <div class="question-card">
+        <div class="q-header"><span class="q-num">Q78</span><span class="q-section">Ch.7 · Fermentation → ethanol combustion</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('ps-q78')">Solution</button></div></div>
+        <div class="prob-q">Calculate ΔH° for CH₃CH₂OH(l) + 3O₂(g) → 2CO₂(g) + 3H₂O(l) using:<br>(1) C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O &nbsp; ΔH° = −2808 kJ<br>(2) C₆H₁₂O₆ → 2CH₃CH₂OH + 2CO₂ &nbsp; ΔH° = −72 kJ</div>
+        <div class="sol-box" id="ps-q78">
+          ½×(1): −1404 kJ &nbsp;|&nbsp; ½×reverse(2): +36 kJ<br>
+          <span class="answer">ΔH° = −1368 kJ</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gibbs -->
+    <div style="background:#1e1e30;border:1px solid #1e3a2a;border-radius:16px;padding:20px 24px;margin-bottom:20px;">
+      <div style="font-size:0.76rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#10b981;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid #1e3a2a;">Gibbs Energy &amp; Spontaneity · Ch. 19 (textbook)</div>
+
+      <div class="question-card">
+        <div class="q-header"><span class="q-num">Q21</span><span class="q-section">Ch.19 · Exothermic but non-spontaneous</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('ps-g21')">Solution</button></div></div>
+        <div class="prob-q">Give an example of an exothermic process that is non-spontaneous, and explain why using ΔG = ΔH − TΔS.</div>
+        <div class="sol-box" id="ps-g21">
+          Example: <strong>Freezing water above 0°C</strong>.<br>
+          ΔH &lt; 0 (exothermic), but ΔS &lt; 0 (solid is more ordered).<br>
+          At high T: ΔG = ΔH − TΔS = (−) − T×(−) = (−) + (+). If T large enough, ΔG &gt; 0 → <span class="answer">non-spontaneous</span> despite releasing heat.
+        </div>
+      </div>
+
+      <div class="question-card">
+        <div class="q-header"><span class="q-num">Q22</span><span class="q-section">Ch.19 · AB(g) → A(g) + B(g) temperature dependence</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('ps-g22')">Solution</button></div></div>
+        <div class="prob-q">Is AB(g) → A(g) + B(g) spontaneous at high or low temperatures? Explain in terms of ΔH, ΔS, and ΔG.</div>
+        <div class="sol-box" id="ps-g22">
+          ΔS &gt; 0 (1 mol gas → 2 mol gas, more disorder)<br>
+          ΔH &gt; 0 (bond breaking is endothermic)<br>
+          ΔG = ΔH − TΔS: at low T, ΔH dominates → ΔG &gt; 0. At high T, TΔS dominates → ΔG &lt; 0.<br>
+          <span class="answer">Spontaneous only at high temperatures.</span>
+        </div>
+      </div>
+
+      <div class="question-card">
+        <div class="q-header"><span class="q-num">Q23</span><span class="q-section">Ch.19 · ΔH°, ΔG°, ΔS° for NH₃ + HCl → NH₄Cl</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('ps-g23')">Solution</button></div></div>
+        <div class="prob-q">Calculate ΔH°, ΔG°, and ΔS° at 25°C for NH₃(g) + HCl(g) → NH₄Cl(s).<br>ΔH°f: NH₃ = −46.11, HCl = −92.31, NH₄Cl(s) = −314.4 kJ/mol<br>ΔG°f: NH₃ = −16.48, HCl = −95.30, NH₄Cl(s) = −202.9 kJ/mol</div>
+        <div class="sol-box" id="ps-g23">
+          <div class="sol-step">ΔH°</div>
+          −314.4 − (−46.11) − (−92.31) = <span class="answer">−176.0 kJ/mol</span><br>
+          <div class="sol-step">ΔG°</div>
+          −202.9 − (−16.48) − (−95.30) = <span class="answer">−91.1 kJ/mol</span><br>
+          <div class="sol-step">ΔS°</div>
+          ΔS° = (ΔH° − ΔG°)/T = (−176.0 − (−91.1))×1000 / 298 = <span class="answer">−285 J mol⁻¹ K⁻¹</span><br>
+          (Two gases → one solid: large entropy decrease makes sense.)
+        </div>
+      </div>
+    </div>
+
+    <!-- Electrochemistry -->
+    <div style="background:#1e1e30;border:1px solid #1e3a2a;border-radius:16px;padding:20px 24px;margin-bottom:20px;">
+      <div style="font-size:0.76rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#10b981;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid #1e3a2a;">Electrochemistry · Ch. 20 (textbook)</div>
+
+      <div class="question-card">
+        <div class="q-header"><span class="q-num">Q19(c)</span><span class="q-section">Ch.20 · Cr|Cr²⁺ ‖ Au³⁺|Au cell</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('ps-e19')">Solution</button></div></div>
+        <div class="prob-q">For the cell Cr(s) | Cr²⁺(aq) ‖ Au³⁺(aq) | Au(s):<br>(a) Write the half-reactions. &nbsp; (b) Write the balanced net ionic equation. &nbsp; (c) Calculate E°<sub>cell</sub>.<br>E°(Cr²⁺/Cr) = −0.90 V &nbsp;|&nbsp; E°(Au³⁺/Au) = +1.52 V</div>
+        <div class="sol-box" id="ps-e19">
+          <strong>Anode:</strong> Cr → Cr²⁺ + 2e⁻ &nbsp;×3<br>
+          <strong>Cathode:</strong> Au³⁺ + 3e⁻ → Au &nbsp;×2<br>
+          <strong>Net:</strong> 3Cr(s) + 2Au³⁺(aq) → 3Cr²⁺(aq) + 2Au(s)<br>
+          E°cell = E°cathode − E°anode = 1.52 − (−0.90) = <span class="answer">+2.42 V</span>
+        </div>
+      </div>
+    </div>
+
   </section>
 
 </div>
@@ -947,6 +1230,11 @@ function resetExam(id) {
   document.getElementById('reset-' + id).style.display = 'none';
   document.getElementById('results-' + id).style.display = 'none';
   buildExam(id);
+}
+
+function toggleP(id) {
+  const box = document.getElementById(id);
+  box.style.display = box.style.display === 'block' ? 'none' : 'block';
 }
 
 // Init
