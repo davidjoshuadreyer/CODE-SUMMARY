@@ -149,6 +149,30 @@
   }
   .arrow-up   { color: #34d399; font-size: 1rem; }
   .arrow-down { color: #f87171; font-size: 1rem; }
+
+  /* ── TT2A Question-reveal blocks ───────────────────────── */
+  .q-block { margin-bottom: 14px; }
+  .q-pts { font-size: 0.76rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px; }
+  .q-stem { color: #e2e8f0; font-size: 0.92rem; line-height: 1.7; margin-bottom: 10px; }
+  .q-stem sub, .q-stem sup { font-size: 0.78em; }
+  details.sol { margin-top: 8px; }
+  details.sol summary {
+    cursor: pointer; color: #10b981; font-weight: 700; font-size: 0.82rem;
+    padding: 7px 12px; background: #052e1c; border: 1px solid #059669;
+    border-radius: 8px; list-style: none; user-select: none;
+  }
+  details.sol summary::-webkit-details-marker { display: none; }
+  details.sol summary::before { content: '▶  '; font-size: 0.68rem; }
+  details.sol[open] summary::before { content: '▼  '; }
+  details.sol .sol-body {
+    margin-top: 10px; padding: 14px 16px; background: #0d1a10;
+    border: 1px solid #1e3a2a; border-radius: 10px; font-size: 0.88rem;
+    color: #94a3b8; line-height: 1.75;
+  }
+  details.sol .sol-body strong { color: #e2e8f0; }
+  details.sol .sol-body .formula { margin: 8px 0; font-size: 0.85rem; }
+  .petrucci-ref { margin-top: 8px; font-size: 0.8rem; color: #64748b; }
+  .petrucci-ref strong { color: #0891b2; }
 </style>
 </head>
 <body>
@@ -163,6 +187,8 @@
   <a href="#imf">IMF</a>
   <a href="#solutions">Solutions</a>
   <a href="#gases">Gases</a>
+  <a href="#crosswalk">Crosswalk</a>
+  <a href="#tt2a">TT 2A</a>
   <a href="#formulas">Formulas</a>
 </nav>
 
@@ -727,6 +753,417 @@ M (g/mol) = ρ × R × T / P   (ρ in g/L)
   </section>
 
   <!-- 
+       PAST EXAM CROSSWALK + TERM TEST PLAN
+   -->
+  <section id="crosswalk">
+    <div class="section-header">      <div>
+        <h2>Past Exam to Textbook Crosswalk</h2>
+        <p>Build exam pattern recognition from past tests + equivalent Petrucci questions</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Strategy Loop (Use Before Every Term Test)</div>
+      <ol style="padding-left:18px;color:#cbd5e1;font-size:0.9rem;line-height:1.85;">
+        <li>Collect the latest past tests (target 3 to 5 papers).</li>
+        <li>Label each question by topic (e.g., ionization energy, Lewis resonance, VSEPR, gases).</li>
+        <li>Find 1 to 3 <strong>equivalent Petrucci exercise questions</strong> for each exam question.</li>
+        <li>Mark textbook pages with <strong>test year + question number</strong> so repeats are easy to spot.</li>
+        <li>Practice in cycles: past exam question -> textbook equivalent -> unseen variant.</li>
+      </ol>
+      <div class="tip"><strong>Execution rule:</strong> prioritize repeated patterns first, not random chapter order.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Current Crosswalk Examples (From Your Chem Test Files)</div>
+      <table>
+        <tr><th>Past Test Question</th><th>Closest Petrucci Match</th><th>Topic</th></tr>
+        <tr><td>Chem TT 1B Q1 (increasing ionization energy)</td><td>p.406 Q21; p.410 Q76</td><td>Periodic trends</td></tr>
+        <tr><td>Chem TT 1B Q2 (increasing ionic size)</td><td>p.406 Q15, Q18; p.410 Q78</td><td>Ionic radius / isoelectronic</td></tr>
+        <tr><td>Chem TT 1B Q3 (partial charges, bond polarity)</td><td>p.458 Q41, Q42</td><td>Electronegativity / polarity</td></tr>
+        <tr><td>Chem TT 1B Q5 (N2O Lewis + resonance)</td><td>p.459 Q49, Q51</td><td>Lewis / resonance</td></tr>
+        <tr><td>Chem TT 1B Q7 (lattice energy estimate)</td><td>p.572 Q86</td><td>Ionic crystal energetics</td></tr>
+        <tr><td>Midterm Practice A Q14 (first ionization energy comparison)</td><td>p.406 Q21; p.410 Q76</td><td>Ionization energy</td></tr>
+        <tr><td>Midterm Practice A Q16 (electron affinity)</td><td>p.410 Q77</td><td>Electron affinity</td></tr>
+        <tr><td>Midterm Practice A Q17 (isoelectronic pair)</td><td>p.406 Q18; p.410 Q78</td><td>Isoelectronic trend</td></tr>
+        <tr><td>Midterm Practice A Q26/Q27/Q28 (VSEPR shape/polarity)</td><td>p.460 Q59, Q60, Q67, Q68</td><td>Molecular geometry</td></tr>
+        <tr><td>TT 1A Q4 (balanced equations)</td><td>p.141 Q5-Q8; p.142 Q9-Q12</td><td>Balancing reactions</td></tr>
+      </table>
+      <div class="note"><strong>Page note:</strong> these are printed textbook page numbers. If using the local PDF viewer, page indexes may be offset.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Term Test II Seed Bank (New Week 9 + Week 10 Files)</div>
+      <table>
+        <tr><th>Source Pattern</th><th>Closest Petrucci Match</th><th>Priority</th></tr>
+        <tr><td>Thermochemistry: calorimetry (coffee-cup / bomb)</td><td>Ch. 7 p.292-293: Q37, Q38, Q40</td><td>High</td></tr>
+        <tr><td>Thermochemistry: Hess's Law and combustion enthalpy</td><td>Ch. 7 p.293-294: Q68, Q69, Q75, Q76, Q78</td><td>High</td></tr>
+        <tr><td>Strong acid/base pH and pOH conversions</td><td>Ch. 16 p.782-783: Q10, Q11, Q12, Q14, Q20, Q21, Q22, Q29, Q30</td><td>High</td></tr>
+        <tr><td>Weak acid/base + percent ionization</td><td>Ch. 16 p.784-785: Q39, Q40, Q44, Q59, Q60</td><td>High</td></tr>
+        <tr><td>Polyprotic and salt-solution pH</td><td>Ch. 16 p.786-788: Q82, Q90, Q95, Q98, Q117, Q119</td><td>Medium</td></tr>
+        <tr><td>Buffer prep + Henderson-Hasselbalch + titration curves</td><td>Ch. 17 p.822-824: Q9, Q13, Q14, Q15, Q16, Q17, Q19, Q20, Q39-Q42, Q49, Q50</td><td>High</td></tr>
+      </table>
+      <div class="tip"><strong>Solution check layer:</strong> use the Solution Manual PDF after attempting textbook questions (Ch. 7 around PDF p.263-304; Ch. 16 around PDF p.721-785).</div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Term Test 2A Direct Mapping (Old Paper You Added)</div>
+      <table>
+        <tr><th>TT2 Source</th><th>Closest Petrucci Match</th><th>Topic</th></tr>
+        <tr><td>Q2 (HNO3 ionization in water)</td><td>p.782 Q9; p.782 Q10</td><td>Strong acid ionization / pH setup</td></tr>
+        <tr><td>Q3 (NaCl dissolves spontaneously, +DeltaH)</td><td>p.631 Q21; p.631 Q22; p.631 Q23</td><td>DeltaG, DeltaH, DeltaS sign logic</td></tr>
+        <tr><td>Q4 (pH of 0.00112 M Ca(OH)2)</td><td>p.782 Q10; p.782 Q12</td><td>Strong base pH / hydroxide stoichiometry</td></tr>
+        <tr><td>Q5 (define closed system)</td><td>p.247 Concept Assessment 7-1</td><td>Thermodynamic system definitions</td></tr>
+        <tr><td>Q6 (combustion enthalpy + isomer stability)</td><td>p.293 Q68, Q69; p.294 Q76</td><td>Hess's Law / combustion and stability</td></tr>
+        <tr><td>Q7 (hydrogen electrode with metal-ion half-cell)</td><td>p.912 Q20(c); p.917 Q92</td><td>Voltaic cell setup, anode/cathode, half-reactions</td></tr>
+        <tr><td>Q8 (pH of 0.111 M NaNO2 with Ka(HNO2))</td><td>p.785 Q60</td><td>Weak base from conjugate-acid Ka</td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <div class="card-title">TT2 Exact Questions + Solved Textbook Parallels</div>
+      <table>
+        <tr><th>TT2 exact wording</th><th>Similar Petrucci question</th><th>Solution manual answer (textbook question)</th></tr>
+        <tr>
+          <td>Q1: Write a dissociation equation for K2SO4 in water.</td>
+          <td>Ch. 16 p.782 Q10(c): pH of 0.00683 M NaOH (strong electrolyte dissociation first).</td>
+          <td>Manual p.736 Q10(c): pOH = 2.166, pH = 11.83.</td>
+        </tr>
+        <tr>
+          <td>Q2: Write an ionization equation for HNO3 in water.</td>
+          <td>Ch. 16 p.782 Q10(b): pH of 6.14 x 10^-4 M HNO3.</td>
+          <td>Manual p.736 Q10(b): strong-acid ionization, pH = 3.21.</td>
+        </tr>
+        <tr>
+          <td>Q3: Sodium chloride dissolves spontaneously in water at room temperature. The standard enthalpy for NaCl(s) -&gt; NaCl(aq) is +5 kJ/mol. What can you confidently say about the standard entropy?</td>
+          <td>Ch. 13 p.660 Q22: external influence/spontaneity sign logic.</td>
+          <td>Manual p.958-959 (Q16/Q22): nonspontaneous needs DeltaG &gt; 0; if DeltaH &gt; 0 and DeltaS &gt; 0, process is favored only at high T.</td>
+        </tr>
+        <tr>
+          <td>Q4: Calculate the pH of 0.00112 M Ca(OH)2(aq).</td>
+          <td>Ch. 16 p.782 Q12: saturated Ca(OH)2 has pH 12.35; find solubility.</td>
+          <td>Manual p.736 Q12: complete dissociation of Ca(OH)2 gives 81 mg per 100 mL solubility.</td>
+        </tr>
+        <tr>
+          <td>Q5: As far as thermodynamics is concerned define a closed system. Write a sentence, then give one example.</td>
+          <td>Ch. 7 p.293 Q57: fixed-quantity ideal gas, isothermal expansion (closed-system behavior).</td>
+          <td>Manual p.280 Q57: gas does work; exchanges heat with surroundings; temperature constant; DeltaU = 0.</td>
+        </tr>
+        <tr>
+          <td>Q6: Calculate the enthalpy of combustion of propene (A) and cyclopropane (B) from provided thermodynamic data (kJ/mol per mole combusted). The two enthalpies differ; which compound is more stable and why?</td>
+          <td>Ch. 7 p.293 Q69 and p.294 Q76 (Hess-law combustion/hydrogenation set).</td>
+          <td>Manual p.282 Q69: DeltaH = -290 kJ. Manual p.283 Q76: hydrogenation DeltaH = -234.2 kJ.</td>
+        </tr>
+        <tr>
+          <td>Q7: Draw a hydrogen electrode connected to a gold half-cell; [H+] = 0.010 M, H2 = 0.1 atm, [Au3+] = 0.0111 M. Identify anode/cathode, write half-reactions, and compute Ecell.</td>
+          <td>Ch. 19 p.912 Q20(c): Cr(s)|Cr2+(aq)||Au3+(aq)|Au(s) half-cell writing and Ecell.</td>
+          <td>Manual p.1014 Q19(c): Ox Cr &rarr; Cr2+ + 2e-; Red Au3+ + 3e- &rarr; Au; net 3Cr + 2Au3+ &rarr; 3Cr2+ + 2Au; Ecell&deg; = 2.42 V.</td>
+        </tr>
+        <tr>
+          <td>Q8: Calculate the pH of 0.111 M NaNO2(aq), Ka(HNO2) = 7.2 x 10^-4.</td>
+          <td>Ch. 16 p.785 Q59: pH of 0.089 M NaOCl (weak-base anion hydrolysis).</td>
+          <td>Manual p.757 Q59: [OH-] = 1.7 x 10^-4 M, pOH = 3.77, pH = 10.23.</td>
+        </tr>
+      </table>
+      <div class="note"><strong>Reference note:</strong> TT2 wording is taken from <code>Answer_Key_Term_Test_2A.pdf (1).pdf</code> (pages 1-4). Some solution-manual chapter numbering is offset vs the textbook print chapter labels.</div>
+    </div>
+
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">14-Day Term Test Plan</div>
+        <ul>
+          <li><strong>Days 14-10:</strong> map 15 to 20 past questions into textbook equivalents.</li>
+          <li><strong>Days 9-7:</strong> redo only weak patterns (timed, no notes).</li>
+          <li><strong>Days 6-4:</strong> mixed set: 50% past exam style, 50% textbook equivalents.</li>
+          <li><strong>Days 3-2:</strong> full mock (exam conditions), then error log only.</li>
+          <li><strong>Day 1:</strong> one-page formula sheet + top 10 repeated traps.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title">When You Send New Potential Questions</div>
+        <p>I will cross-check each one into this format:</p>
+        <div class="formula" style="font-size:0.84rem;">
+Past question: [source test + Q#]
+Core topic: [e.g., Lewis resonance]
+Petrucci equivalents: [page + question #]
+Difficulty tag: Core / Medium / Stretch
+        </div>
+        <p style="margin-top:8px;">This keeps your study focused on repeatable test patterns and makes future course expansion easy (physics, math, etc.).</p>
+      </div>
+    </div>
+  </section>
+
+  <!--
+       TERM TEST 2A — 28 MARCH 2024
+   -->
+  <section id="tt2a">
+    <div class="section-header">
+      <div class="section-icon">📝</div>
+      <div>
+        <h2>Term Test 2A — 28 March 2024</h2>
+        <p>8 questions · 36 marks · Thermodynamics, pH, Electrochemistry · Full worked solutions + Petrucci parallels</p>
+      </div>
+    </div>
+
+    <div class="note"><strong>Source:</strong> <code>Chem 150 Term Test 2A_2.pdf</code>. Questions are identical to the earlier TT2A answer-key paper; this version includes full step-by-step solutions. Click <strong>Show Solution</strong> on each question to reveal the worked answer.</div>
+
+    <!-- Data Sheet -->
+    <div class="card">
+      <div class="card-title">Provided Data Sheet (as given on the test)</div>
+      <p style="margin-bottom:10px;">Selected standard reduction potentials:</p>
+      <table>
+        <tr><th>Half-Reaction</th><th>E° (V)</th></tr>
+        <tr><td>Au<sup>3+</sup>(aq) + 3e<sup>−</sup> → Au(s)</td><td>+1.52</td></tr>
+        <tr><td>O<sub>2</sub>(g) + 4H<sup>+</sup>(aq) + 4e<sup>−</sup> → 2H<sub>2</sub>O(l)</td><td>+1.229</td></tr>
+        <tr><td>Fe<sup>3+</sup>(aq) + e<sup>−</sup> → Fe<sup>2+</sup>(aq)</td><td>+0.771</td></tr>
+        <tr><td>Cu<sup>2+</sup>(aq) + 2e<sup>−</sup> → Cu(s)</td><td>+0.340</td></tr>
+        <tr><td>2H<sup>+</sup>(aq) + 2e<sup>−</sup> → H<sub>2</sub>(g)</td><td>0.000 (defined)</td></tr>
+        <tr><td>Fe<sup>2+</sup>(aq) + 2e<sup>−</sup> → Fe(s)</td><td>−0.440</td></tr>
+        <tr><td>Mg<sup>2+</sup>(aq) + 2e<sup>−</sup> → Mg(s)</td><td>−2.356</td></tr>
+      </table>
+      <p style="margin-top:12px;margin-bottom:8px;">Selected standard enthalpies of formation:</p>
+      <table>
+        <tr><th>Substance</th><th>ΔH°<sub>f</sub> (kJ/mol)</th></tr>
+        <tr><td>Propene C<sub>3</sub>H<sub>6</sub>(g)</td><td>+20.42</td></tr>
+        <tr><td>Cyclopropane C<sub>3</sub>H<sub>6</sub>(g)</td><td>+53.3</td></tr>
+        <tr><td>CO<sub>2</sub>(g)</td><td>−393.5</td></tr>
+        <tr><td>H<sub>2</sub>O(l)</td><td>−285.8</td></tr>
+      </table>
+      <div class="formula" style="margin-top:12px;">
+        <div class="label">Key equations on the test</div>
+ΔG° = ΔH° − TΔS°
+E_cell = E°_cell − (0.0592 V / n) log Q
+Ka × Kb = Kw = 1.0 × 10⁻¹⁴
+pH + pOH = 14
+      </div>
+    </div>
+
+    <!-- Q1 -->
+    <div class="card q-block">
+      <div class="q-pts">Q1 · 2 marks · Ionic dissociation</div>
+      <div class="q-stem">Write a dissociation equation for K<sub>2</sub>SO<sub>4</sub> in water.</div>
+      <details class="sol">
+        <summary>Show Solution</summary>
+        <div class="sol-body">
+          <p>K<sub>2</sub>SO<sub>4</sub> is a soluble ionic compound — it dissociates completely:</p>
+          <div class="formula">K₂SO₄(s)  →  2 K⁺(aq)  +  SO₄²⁻(aq)</div>
+          <p>Both ions are spectators (K⁺ does not hydrolyse; SO₄²⁻ is the conjugate base of a strong acid H<sub>2</sub>SO<sub>4</sub> and does not hydrolyse significantly). The solution is neutral.</p>
+          <div class="petrucci-ref"><strong>Petrucci parallel:</strong> Ch. 16 p.782 Q10(c) — pH of 0.00683 M NaOH requires writing the dissociation of NaOH first.</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- Q2 -->
+    <div class="card q-block">
+      <div class="q-pts">Q2 · 2 marks · Strong acid ionization</div>
+      <div class="q-stem">Write an ionization equation for HNO<sub>3</sub> in water.</div>
+      <details class="sol">
+        <summary>Show Solution</summary>
+        <div class="sol-body">
+          <p>HNO<sub>3</sub> is a strong acid — it ionizes completely (one-way arrow):</p>
+          <div class="formula">HNO₃(aq)  +  H₂O(l)  →  H₃O⁺(aq)  +  NO₃⁻(aq)</div>
+          <p>Or equivalently: HNO₃(aq) → H⁺(aq) + NO₃⁻(aq)</p>
+          <p>Key point: strong acid = complete ionization, single arrow, no equilibrium.</p>
+          <div class="petrucci-ref"><strong>Petrucci parallel:</strong> Ch. 16 p.782 Q10(b) — pH of 6.14 × 10⁻⁴ M HNO₃. pH = −log(6.14×10⁻⁴) = 3.21.</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- Q3 -->
+    <div class="card q-block">
+      <div class="q-pts">Q3 · 2 marks · Gibbs energy / entropy sign logic</div>
+      <div class="q-stem">
+        Sodium chloride dissolves spontaneously in water at room temperature. The standard enthalpy for this process NaCl(s) → NaCl(aq) is +5 kJ/mol. What can you <em>confidently</em> say about the standard entropy for this process?
+      </div>
+      <details class="sol">
+        <summary>Show Solution</summary>
+        <div class="sol-body">
+          <p><strong>Given:</strong> ΔG &lt; 0 (spontaneous), ΔH° = +5 kJ/mol (endothermic)</p>
+          <p><strong>From ΔG° = ΔH° − TΔS°:</strong></p>
+          <div class="formula">For ΔG° &lt; 0 with ΔH° &gt; 0:
+  TΔS° &gt; ΔH°   →   ΔS° &gt; ΔH°/T
+
+  At T = 298 K:  ΔS° &gt; 5000 J·mol⁻¹ / 298 K  ≈  +16.8 J·mol⁻¹·K⁻¹</div>
+          <p><strong>Answer:</strong> ΔS° must be <strong>positive</strong> (the entropy of the system increases) and must be large enough that TΔS° &gt; 5 kJ/mol at 25°C. Physically: dissolving creates more disorder (ions in solution vs. ordered crystal lattice).</p>
+          <div class="petrucci-ref"><strong>Petrucci parallel:</strong> Ch. 13 p.660 Q22 — spontaneity/sign logic for endothermic processes. Solution manual p.958–959: for ΔH &gt; 0, spontaneous only when TΔS &gt; ΔH (i.e., high T or large ΔS).</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- Q4 -->
+    <div class="card q-block">
+      <div class="q-pts">Q4 · 3 marks · Strong base pH</div>
+      <div class="q-stem">Calculate the pH of 0.00112 M Ca(OH)<sub>2</sub>(aq).</div>
+      <details class="sol">
+        <summary>Show Solution</summary>
+        <div class="sol-body">
+          <p>Ca(OH)<sub>2</sub> is a strong base — dissociates completely:</p>
+          <div class="formula">Ca(OH)₂(aq)  →  Ca²⁺(aq)  +  2 OH⁻(aq)
+
+[OH⁻] = 2 × 0.00112 M = 0.00224 M
+
+pOH = −log(0.00224) = −log(2.24 × 10⁻³) = 2.650
+
+pH = 14.00 − pOH = 14.00 − 2.650  =  11.35</div>
+          <p><strong>Key step:</strong> remember Ca(OH)<sub>2</sub> gives <em>two</em> OH<sup>−</sup> per formula unit. Do not forget to multiply the concentration by 2 before taking the log.</p>
+          <div class="petrucci-ref"><strong>Petrucci parallel:</strong> Ch. 16 p.782 Q12 — saturated Ca(OH)₂ with pH 12.35; same complete-dissociation logic.</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- Q5 -->
+    <div class="card q-block">
+      <div class="q-pts">Q5 · 3 marks · Thermodynamic system definition</div>
+      <div class="q-stem">As far as thermodynamics is concerned define a <em>closed system</em>. Write a sentence! Next give an example of a closed system.</div>
+      <details class="sol">
+        <summary>Show Solution</summary>
+        <div class="sol-body">
+          <p><strong>Definition:</strong> A closed system can exchange <strong>energy</strong> (as heat or work) with its surroundings, but cannot exchange <strong>matter</strong>.</p>
+          <p><strong>Example:</strong> A sealed gas cylinder, a bomb calorimeter, a sealed water bottle — matter stays inside but heat can flow through the walls.</p>
+          <p style="margin-top:8px;"><em>Contrast:</em> an open system exchanges both energy and matter (e.g., a beaker). An isolated system exchanges neither (e.g., an ideal thermos).</p>
+          <div class="petrucci-ref"><strong>Petrucci parallel:</strong> Ch. 7 p.293 Q57 — fixed-quantity ideal gas in isothermal expansion; DeltaU = 0, heat and work exchanged with surroundings but no matter transfer.</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- Q6 -->
+    <div class="card q-block">
+      <div class="q-pts">Q6 · 6 marks · Hess's Law / combustion enthalpy / isomer stability</div>
+      <div class="q-stem">
+        Calculate the enthalpy of combustion of <strong>propene (A)</strong> and <strong>cyclopropane (B)</strong> using the ΔH°<sub>f</sub> data on the formula sheet. The final result should be in kJ/mol per mole combusted. The two enthalpies are different — which compound is more stable and how can you tell?
+      </div>
+      <details class="sol">
+        <summary>Show Solution</summary>
+        <div class="sol-body">
+          <p><strong>Balanced combustion equation (both are C<sub>3</sub>H<sub>6</sub>):</strong></p>
+          <div class="formula">C₃H₆(g)  +  9/2 O₂(g)  →  3 CO₂(g)  +  3 H₂O(l)</div>
+          <p>Using ΔH°<sub>rxn</sub> = Σ ΔH°<sub>f</sub>(products) − Σ ΔH°<sub>f</sub>(reactants) and ΔH°<sub>f</sub>(O₂) = 0:</p>
+
+          <p><strong>Compound A — Propene</strong> [ΔH°<sub>f</sub> = +20.42 kJ/mol]:</p>
+          <div class="formula">ΔH°_comb = [3(−393.5) + 3(−285.8)] − [20.42]
+         = [−1180.5 + (−857.4)] − 20.42
+         = −2037.9 − 20.42
+         = −2058.3 kJ/mol</div>
+
+          <p><strong>Compound B — Cyclopropane</strong> [ΔH°<sub>f</sub> = +53.3 kJ/mol]:</p>
+          <div class="formula">ΔH°_comb = [3(−393.5) + 3(−285.8)] − [53.3]
+         = −2037.9 − 53.3
+         = −2091.2 kJ/mol</div>
+
+          <p><strong>Stability conclusion:</strong> Propene (A) releases <em>less</em> energy on combustion (|−2058| &lt; |−2091|), meaning propene has a lower chemical potential energy → <strong>propene is more stable</strong>. Cyclopropane has ~33 kJ/mol extra energy from ring strain in its triangular C–C–C skeleton, making it less stable.</p>
+          <div class="tip" style="margin-top:10px;"><strong>Common error:</strong> using an unbalanced equation or multiplying through by an integer and forgetting to divide back to per-mole. Always check: 3C, 6H, sufficient O₂ → 3CO₂ + 3H₂O.</div>
+          <div class="petrucci-ref"><strong>Petrucci parallels:</strong> Ch. 7 p.293 Q69 (combustion Hess's Law); p.294 Q76 (hydrogenation enthalpy and isomer stability). Solution manual p.282–283.</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- Q7 -->
+    <div class="card q-block">
+      <div class="q-pts">Q7 · 10 marks · Voltaic cell / Nernst equation</div>
+      <div class="q-stem">
+        Draw a hydrogen electrode properly connected to a gold half-cell. Name all vital parts. The hydrogen ion concentration is <strong>0.010 M</strong>, H<sub>2</sub>(g) pressure is <strong>0.1 atm</strong>, and the gold(III) ion concentration is <strong>0.0111 M</strong>. Identify anode/cathode, write half-reactions and overall cell reaction, and calculate E<sub>cell</sub>.
+      </div>
+      <details class="sol">
+        <summary>Show Solution</summary>
+        <div class="sol-body">
+          <p><strong>Half-reactions (from E° table):</strong></p>
+          <div class="formula">Cathode (reduction — higher E°):
+  Au³⁺(aq) + 3e⁻  →  Au(s)          E° = +1.52 V
+
+Anode (oxidation — lower E°, SHE reversed):
+  H₂(g)  →  2H⁺(aq) + 2e⁻            E° = 0.00 V</div>
+
+          <p><strong>Balance electrons (LCM of 3 and 2 = 6):</strong></p>
+          <div class="formula">Cathode ×2:  2Au³⁺ + 6e⁻  →  2Au
+Anode  ×3:  3H₂  →  6H⁺ + 6e⁻
+────────────────────────────────────────
+Overall:    2Au³⁺(aq) + 3H₂(g)  →  2Au(s) + 6H⁺(aq)   n = 6</div>
+
+          <p><strong>Standard cell potential:</strong></p>
+          <div class="formula">E°_cell = E°_cathode − E°_anode = 1.52 − 0.00 = +1.52 V</div>
+
+          <p><strong>Reaction quotient Q:</strong></p>
+          <div class="formula">Q = [H⁺]⁶ / ([Au³⁺]² × p(H₂)³)
+
+  = (0.010)⁶ / ((0.0111)² × (0.1)³)
+  = 1.000×10⁻¹² / (1.232×10⁻⁴ × 1.0×10⁻³)
+  = 1.000×10⁻¹² / 1.232×10⁻⁷
+  = 8.12×10⁻⁶</div>
+
+          <p><strong>Nernst equation (E_cell):</strong></p>
+          <div class="formula">E_cell = E°_cell − (0.0592/n) log Q
+       = 1.52 − (0.0592/6) × log(8.12×10⁻⁶)
+       = 1.52 − (0.009867) × (−5.090)
+       = 1.52 + 0.0502
+       = 1.57 V</div>
+
+          <p><strong>Cell diagram:</strong> Pt(s) | H<sub>2</sub>(g, 0.1 atm) | H<sup>+</sup>(0.010 M) ‖ Au<sup>3+</sup>(0.0111 M) | Au(s)</p>
+          <p>Electrons flow: <strong>anode (Pt/H₂, left) → cathode (Au, right)</strong> through the external wire.</p>
+          <div class="tip" style="margin-top:10px;"><strong>Vital parts to name in the drawing:</strong> anode, cathode, salt bridge, external wire with electron-flow arrow, half-cell solutions with concentrations, Pt electrode (inert), Au electrode.</div>
+          <div class="petrucci-ref"><strong>Petrucci parallel:</strong> Ch. 19 p.912 Q20(c) — Cr|Cr²⁺ ‖ Au³⁺|Au cell. Solution manual p.1014: E°_cell = 2.42 V for that pair. Same Nernst procedure applies.</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- Q8 -->
+    <div class="card q-block">
+      <div class="q-pts">Q8 · 8 marks · Weak-base hydrolysis / salt pH</div>
+      <div class="q-stem">
+        Calculate the pH of 0.111 M aqueous sodium nitrite NaNO<sub>2</sub>(aq). The acid ionization constant for nitrous acid (HNO<sub>2</sub>) is K<sub>a</sub> = 7.2 × 10<sup>−4</sup>.
+      </div>
+      <details class="sol">
+        <summary>Show Solution</summary>
+        <div class="sol-body">
+          <p><strong>Step 1 — Identify the active species:</strong></p>
+          <p>NaNO<sub>2</sub> → Na<sup>+</sup> + NO<sub>2</sub><sup>−</sup>. Na<sup>+</sup> is a spectator. NO<sub>2</sub><sup>−</sup> is the conjugate base of the <em>weak</em> acid HNO<sub>2</sub>, so it hydrolyses to give a basic solution.</p>
+
+          <p><strong>Step 2 — Find K<sub>b</sub> for NO<sub>2</sub><sup>−</sup>:</strong></p>
+          <div class="formula">Kb = Kw / Ka = (1.00×10⁻¹⁴) / (7.2×10⁻⁴) = 1.389×10⁻¹¹</div>
+
+          <p><strong>Step 3 — Hydrolysis equilibrium:</strong></p>
+          <div class="formula">NO₂⁻(aq)  +  H₂O(l)  ⇌  HNO₂(aq)  +  OH⁻(aq)
+
+ICE:
+  [NO₂⁻]:  0.111 − x  ≈  0.111  (x small)
+  [OH⁻]:   x
+  [HNO₂]:  x
+
+Kb = x² / 0.111 = 1.389×10⁻¹¹
+x² = 1.542×10⁻¹²
+x  = 1.242×10⁻⁶ M  =  [OH⁻]
+
+Check: x / 0.111 = 1.12×10⁻⁵  ≪ 5%  ✓ approximation valid</div>
+
+          <p><strong>Step 4 — Calculate pH:</strong></p>
+          <div class="formula">pOH = −log(1.242×10⁻⁶) = 5.906
+
+pH  = 14.00 − 5.906  =  8.09</div>
+          <p>The solution is <strong>basic</strong> (pH &gt; 7), as expected for the salt of a weak acid and strong base.</p>
+          <div class="petrucci-ref"><strong>Petrucci parallel:</strong> Ch. 16 p.785 Q59 — pH of 0.089 M NaOCl (same weak-base anion hydrolysis pattern). Solution manual p.757: [OH⁻] = 1.7×10⁻⁴ M, pOH = 3.77, pH = 10.23.</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- Petrucci Crosswalk Table -->
+    <div class="card">
+      <div class="card-title">Petrucci Textbook Parallels — TT2A (28 Mar 2024)</div>
+      <table>
+        <tr><th>TT2A Question</th><th>Topic</th><th>Petrucci Match</th><th>Priority</th></tr>
+        <tr><td>Q1 — K₂SO₄ dissociation</td><td>Strong electrolyte dissociation</td><td>Ch. 16 p.782 Q10(c)</td><td><span class="tag tag-green">Core</span></td></tr>
+        <tr><td>Q2 — HNO₃ ionization</td><td>Strong acid ionization</td><td>Ch. 16 p.782 Q9, Q10(b)</td><td><span class="tag tag-green">Core</span></td></tr>
+        <tr><td>Q3 — NaCl dissolves, ΔH &gt; 0 → ΔS?</td><td>ΔG = ΔH − TΔS sign logic</td><td>Ch. 13 p.660 Q21, Q22, Q23</td><td><span class="tag tag-yellow">Medium</span></td></tr>
+        <tr><td>Q4 — pH of 0.00112 M Ca(OH)₂</td><td>Strong base with 2 OH⁻ per unit</td><td>Ch. 16 p.782 Q10, Q12</td><td><span class="tag tag-green">Core</span></td></tr>
+        <tr><td>Q5 — Define closed system</td><td>Thermodynamic system types</td><td>Ch. 7 p.247 Concept Assessment 7-1; p.293 Q57</td><td><span class="tag tag-green">Core</span></td></tr>
+        <tr><td>Q6 — Combustion enthalpy + isomer stability</td><td>Hess's Law / ΔH°_f</td><td>Ch. 7 p.293 Q68, Q69; p.294 Q76</td><td><span class="tag tag-blue">Stretch</span></td></tr>
+        <tr><td>Q7 — H₂/Au voltaic cell + Nernst</td><td>Electrochemistry + Nernst equation</td><td>Ch. 19 p.912 Q20(c); p.917 Q92</td><td><span class="tag tag-blue">Stretch</span></td></tr>
+        <tr><td>Q8 — pH of 0.111 M NaNO₂</td><td>Weak-base hydrolysis (Kb = Kw/Ka)</td><td>Ch. 16 p.785 Q59, Q60</td><td><span class="tag tag-green">Core</span></td></tr>
+      </table>
+      <div class="tip" style="margin-top:10px;"><strong>Study order:</strong> Core questions (Q1, Q2, Q4, Q5, Q8) are highest frequency on CHEM 150 tests. Stretch questions (Q6, Q7) require multi-step setups — practice the sub-skills (Hess's Law, Nernst) separately first.</div>
+    </div>
+  </section>
+
+  <!--
        KEY FORMULAS QUICK REFERENCE
    -->
   <section id="formulas">
