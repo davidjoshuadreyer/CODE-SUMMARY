@@ -235,6 +235,7 @@
 <nav>
   <span class="nav-brand">CHEM 150</span>
   <div class="divider"></div>
+  <a href="../index.html">Home</a>
   <a href="#matter">Matter</a>
   <a href="#bonding">Bonding</a>
   <a href="#lewis">Lewis</a>
@@ -1295,18 +1296,6 @@ If actual yield = 55.4 g  % yield = 55.4/64.6 × 100 = 85.7%
   </section>
 </div>
 
-<script>
-  (function(){
-    if(localStorage.getItem('chem-theme')==='dark'){
-      document.body.classList.add('dark');
-      document.getElementById('theme-btn').textContent='Light';
-    }
-  })();
-  function toggleTheme(){
-    const dark=document.body.classList.toggle('dark');
-    document.getElementById('theme-btn').textContent=dark?'Light':'Dark';
-    localStorage.setItem('chem-theme',dark?'dark':'light');
-  }
-</script>
+<script src="theme.js"></script>
 </body>
 </html>

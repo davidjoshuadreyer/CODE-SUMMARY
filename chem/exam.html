@@ -211,18 +211,140 @@
   .data-card h4 { font-size: 0.82rem; font-weight: 700; color: #10b981; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px; }
   .data-card .formula-line { font-family: 'Cascadia Code','Consolas',monospace; font-size: 0.84rem; color: #6ee7b7; line-height: 2; }
 </style>
+<style>
+  /* ── Light mode (default) ─────────────────────────────── */
+  body { background: #fff; color: #1a1a1a; }
+  nav { background: #fff; backdrop-filter: none; border-bottom: 1px solid #d1d5db; }
+  nav a { color: #555; }
+  nav a:hover { background: #f3f4f6; color: #111; }
+  nav .divider { background: #d1d5db; }
+  .nav-brand { background: none; -webkit-text-fill-color: #111; color: #111; }
+  .section-header { border-bottom-color: #d1d5db; }
+  .section-header h2 { background: none; -webkit-text-fill-color: #111; color: #111; }
+  .section-header p { color: #6b7280; }
+  p { color: #374151; }
+  ul { color: #374151; }
+  .note { background: #fffbeb; border-color: #fbbf24; border-left-color: #d97706; color: #78350f; }
+  .note strong { color: #92400e; }
+  .tip { background: #f0fdf4; border-color: #86efac; border-left-color: #16a34a; color: #14532d; }
+  .tip strong { color: #15803d; }
+  .exam-header-bar { background: #fff; border-color: #d1d5db; }
+  .exam-info h3 { color: #111; }
+  .exam-info p { color: #6b7280; }
+  .question-card { background: #fff; border-color: #d1d5db; }
+  .q-section { color: #6b7280; }
+  .btn-hint { background: #f9fafb; border-color: #d97706; color: #92400e; }
+  .btn-hint:hover { background: #fffbeb; }
+  .btn-sol { background: #f0fdf4; border-color: #16a34a; color: #15803d; }
+  .btn-sol:hover { background: #dcfce7; }
+  .prob-q { background: #f3f4f6; border-color: #d1d5db; border-left-color: #374151; color: #1a1a1a; }
+  .prob-q strong { color: #111; }
+  .mcq-opt label { color: #374151; }
+  .mcq-opt:hover:not(.locked) { background: #f0fdf4; border-color: #10b981; }
+  .mcq-opt.selected { background: #eff6ff; border-color: #0891b2; }
+  .mcq-opt.correct-opt { background: #f0fdf4; border-color: #10b981; }
+  .mcq-opt.correct-opt label { color: #15803d; }
+  .mcq-opt.wrong-opt { background: #fef2f2; border-color: #ef4444; }
+  .mcq-opt.wrong-opt label { color: #b91c1c; }
+  .mcq-opt.reveal-correct { background: #f0fdf4; border-color: #10b981; }
+  .mcq-opt.reveal-correct label { color: #15803d; }
+  .hint-box { background: #fffbeb; border-color: #fbbf24; border-left-color: #d97706; color: #78350f; }
+  .hint-box strong { color: #92400e; }
+  .sol-box { background: #f9fafb; border-color: #e5e7eb; border-left-color: #374151; color: #374151; }
+  .sol-box strong { color: #111; }
+  .sol-box .sol-step { color: #16a34a; }
+  .sol-box .answer { background: #f0fdf4; border-color: #86efac; color: #15803d; }
+  .sol-box .bad-answer { background: #fef2f2; border-color: #fca5a5; color: #b91c1c; }
+  .results-panel { background: #fff; border-color: #d1d5db; }
+  .results-panel h3 { color: #111; }
+  .score-sub { color: #6b7280; }
+  .res-cell { background: #f3f4f6; }
+  .res-cell-num { color: #16a34a; }
+  .data-card { background: #f9fafb; border-color: #e5e7eb; }
+  .data-card h4 { color: #374151; }
+  .data-card .formula-line { color: #1a1a1a; }
+  .p-group { background: #fff; border-color: #d1d5db; }
+  .p-group-title { color: #374151; border-bottom-color: #e5e7eb; }
+
+  /* ── Dark overrides ───────────────────────────────────── */
+  body.dark { background: #0f0f1a; color: #e2e8f0; }
+  body.dark nav { background: rgba(15,15,26,0.92); backdrop-filter: blur(12px); border-bottom-color: #1e3a2a; }
+  body.dark nav a { color: #94a3b8; }
+  body.dark nav a:hover { background: #1e2a20; color: #6ee7b7; }
+  body.dark nav .divider { background: #1e3a2a; }
+  body.dark .nav-brand { background: linear-gradient(135deg,#10b981,#0891b2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  body.dark .section-header { border-bottom-color: #1e3a2a; }
+  body.dark .section-header h2 { background: linear-gradient(135deg,#6ee7b7,#67e8f9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent; }
+  body.dark .section-header p { color: #64748b; }
+  body.dark p { color: #94a3b8 !important; }
+  body.dark ul { color: #94a3b8 !important; }
+  body.dark .note { background: #1a1a0a; border-color: #854d0e; border-left-color: #f59e0b; color: #fde68a; }
+  body.dark .note strong { color: #fbbf24; }
+  body.dark .tip { background: #052e1c; border-color: #059669; border-left-color: #10b981; color: #6ee7b7; }
+  body.dark .tip strong { color: #34d399; }
+  body.dark .exam-header-bar { background: #1e1e30; border-color: #1e3a2a; }
+  body.dark .exam-info h3 { color: #e2e8f0; }
+  body.dark .exam-info p { color: #64748b; }
+  body.dark .question-card { background: #1e1e30; border-color: #1e3a2a; }
+  body.dark .q-section { color: #64748b; }
+  body.dark .btn-hint { background: #1a1a2e; border-color: #059669; color: #6ee7b7; }
+  body.dark .btn-hint:hover { background: #0d2018; }
+  body.dark .btn-sol { background: #052e1c; border-color: #22c55e; color: #86efac; }
+  body.dark .btn-sol:hover { background: #14532d; }
+  body.dark .prob-q { background: #13132a; border-color: #1e3a2a; border-left-color: #0891b2; color: #cbd5e1; }
+  body.dark .prob-q strong { color: #67e8f9; }
+  body.dark .mcq-opt label { color: #cbd5e1; }
+  body.dark .mcq-opt:hover:not(.locked) { background: #0d2018; border-color: #10b981; }
+  body.dark .mcq-opt.selected { background: #0c1a2e; border-color: #0891b2; }
+  body.dark .mcq-opt.correct-opt { background: #052e1c; border-color: #10b981; }
+  body.dark .mcq-opt.correct-opt label { color: #6ee7b7; }
+  body.dark .mcq-opt.wrong-opt { background: #2d0a0a; border-color: #ef4444; }
+  body.dark .mcq-opt.wrong-opt label { color: #fca5a5; }
+  body.dark .mcq-opt.reveal-correct { background: #052e1c; border-color: #10b981; }
+  body.dark .mcq-opt.reveal-correct label { color: #6ee7b7; }
+  body.dark .hint-box { background: #1a1a0a; border-color: #854d0e; border-left-color: #f59e0b; color: #fde68a; }
+  body.dark .hint-box strong { color: #fbbf24; }
+  body.dark .sol-box { background: #0d0d20; border-color: #1e3a2a; border-left-color: #0891b2; color: #cbd5e1; }
+  body.dark .sol-box strong { color: #67e8f9; }
+  body.dark .sol-box .sol-step { color: #6ee7b7; }
+  body.dark .sol-box .answer { background: #052e1c; border-color: #22c55e; color: #4ade80; }
+  body.dark .sol-box .bad-answer { background: #2d0a0a; border-color: #ef4444; color: #f87171; }
+  body.dark .results-panel { background: #1e1e30; border-color: #1e3a2a; }
+  body.dark .results-panel h3 { color: #e2e8f0; }
+  body.dark .score-sub { color: #94a3b8; }
+  body.dark .res-cell { background: #111820; }
+  body.dark .res-cell-num { color: #6ee7b7; }
+  body.dark .data-card { background: #111820; border-color: #1e3a2a; }
+  body.dark .data-card h4 { color: #10b981; }
+  body.dark .data-card .formula-line { color: #6ee7b7; }
+  body.dark .p-group { background: #1e1e30; border-color: #1e3a2a; }
+  body.dark .p-group-title { color: #10b981; border-bottom-color: #1e3a2a; }
+
+  /* ── Theme toggle button ──────────────────────────────── */
+  #theme-btn {
+    margin-left: auto; flex-shrink: 0;
+    background: #f3f4f6; border: 1px solid #d1d5db; border-radius: 6px;
+    padding: 5px 11px; font-size: 0.78rem; font-weight: 600; color: #374151;
+    cursor: pointer; white-space: nowrap; transition: all 0.12s;
+  }
+  #theme-btn:hover { background: #e5e7eb; }
+  body.dark #theme-btn { background: #1e2a20; border-color: #1e3a2a; color: #6ee7b7; }
+  body.dark #theme-btn:hover { background: #052e1c; }
+</style>
 </head>
 <body>
 
 <nav>
   <span class="nav-brand">CHEM 150</span>
   <div class="divider"></div>
+  <a href="../index.html">Home</a>
   <a href="#exam-a">Practice A</a>
   <a href="#exam-b">Practice B</a>
   <a href="#exam-c">Practice C</a>
   <a href="#data">Data Sheet</a>
   <a href="#petrucci">Petrucci Qs</a>
   <a href="review.html#crosswalk">Crosswalk</a>
+  <button id="theme-btn" class="theme-btn" onclick="toggleTheme()">Dark</button>
 </nav>
 
 <div class="page">
@@ -389,8 +511,8 @@
     </div></div>
 
     <!-- Strong Acid & Base -->
-    <div style="background:#1e1e30;border:1px solid #1e3a2a;border-radius:16px;padding:20px 24px;margin-bottom:20px;">
-      <div style="font-size:0.76rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#10b981;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid #1e3a2a;">Strong Acid &amp; Base — pH Calculations · Ch. 16</div>
+    <div class="p-group" style="border-radius:16px;padding:20px 24px;margin-bottom:20px;">
+      <div class="p-group-title" style="font-size:0.76rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid;">Strong Acid &amp; Base — pH Calculations · Ch. 16</div>
 
       <div class="question-card">
         <div class="q-header"><span class="q-num">Q9</span><span class="q-section">Ch.16 · [H₃O⁺] and [OH⁻]</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('ps-q9')">Solution</button></div></div>
@@ -437,8 +559,8 @@
     </div>
 
     <!-- Weak Acid & Base -->
-    <div style="background:#1e1e30;border:1px solid #1e3a2a;border-radius:16px;padding:20px 24px;margin-bottom:20px;">
-      <div style="font-size:0.76rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#10b981;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid #1e3a2a;">Weak Acid &amp; Base — pH &amp; Percent Ionization · Ch. 16</div>
+    <div class="p-group" style="border-radius:16px;padding:20px 24px;margin-bottom:20px;">
+      <div class="p-group-title" style="font-size:0.76rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid;">Weak Acid &amp; Base — pH &amp; Percent Ionization · Ch. 16</div>
 
       <div class="question-card">
         <div class="q-header"><span class="q-num">Q21</span><span class="q-section">Ch.16 · Weak acid pH — HNO₂</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('ps-q21')">Solution</button></div></div>
@@ -502,8 +624,8 @@
     </div>
 
     <!-- Hydrolysis -->
-    <div style="background:#1e1e30;border:1px solid #1e3a2a;border-radius:16px;padding:20px 24px;margin-bottom:20px;">
-      <div style="font-size:0.76rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#10b981;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid #1e3a2a;">Anion &amp; Cation Hydrolysis (Salt Solutions) · Ch. 16</div>
+    <div class="p-group" style="border-radius:16px;padding:20px 24px;margin-bottom:20px;">
+      <div class="p-group-title" style="font-size:0.76rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid;">Anion &amp; Cation Hydrolysis (Salt Solutions) · Ch. 16</div>
 
       <div class="question-card">
         <div class="q-header"><span class="q-num">Q59</span><span class="q-section">Ch.16 · Anion hydrolysis — NaOCl</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('ps-q59')">Solution</button></div></div>
@@ -529,8 +651,8 @@
     </div>
 
     <!-- Calorimetry -->
-    <div style="background:#1e1e30;border:1px solid #1e3a2a;border-radius:16px;padding:20px 24px;margin-bottom:20px;">
-      <div style="font-size:0.76rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#10b981;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid #1e3a2a;">Calorimetry · Ch. 7</div>
+    <div class="p-group" style="border-radius:16px;padding:20px 24px;margin-bottom:20px;">
+      <div class="p-group-title" style="font-size:0.76rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid;">Calorimetry · Ch. 7</div>
 
       <div class="question-card">
         <div class="q-header"><span class="q-num">Q38</span><span class="q-section">Ch.7 · Coffee-cup — Zn + HCl</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('ps-q38')">Solution</button></div></div>
@@ -559,8 +681,8 @@
     </div>
 
     <!-- Hess's Law -->
-    <div style="background:#1e1e30;border:1px solid #1e3a2a;border-radius:16px;padding:20px 24px;margin-bottom:20px;">
-      <div style="font-size:0.76rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#10b981;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid #1e3a2a;">Hess's Law &amp; Combustion Enthalpy · Ch. 7</div>
+    <div class="p-group" style="border-radius:16px;padding:20px 24px;margin-bottom:20px;">
+      <div class="p-group-title" style="font-size:0.76rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid;">Hess's Law &amp; Combustion Enthalpy · Ch. 7</div>
 
       <div class="question-card">
         <div class="q-header"><span class="q-num">Q68</span><span class="q-section">Ch.7 · Combine reactions</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('ps-q68')">Solution</button></div></div>
@@ -604,8 +726,8 @@
     </div>
 
     <!-- Gibbs -->
-    <div style="background:#1e1e30;border:1px solid #1e3a2a;border-radius:16px;padding:20px 24px;margin-bottom:20px;">
-      <div style="font-size:0.76rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#10b981;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid #1e3a2a;">Gibbs Energy &amp; Spontaneity · Ch. 19 (textbook)</div>
+    <div class="p-group" style="border-radius:16px;padding:20px 24px;margin-bottom:20px;">
+      <div class="p-group-title" style="font-size:0.76rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid;">Gibbs Energy &amp; Spontaneity · Ch. 19 (textbook)</div>
 
       <div class="question-card">
         <div class="q-header"><span class="q-num">Q21</span><span class="q-section">Ch.19 · Exothermic but non-spontaneous</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('ps-g21')">Solution</button></div></div>
@@ -644,8 +766,8 @@
     </div>
 
     <!-- Electrochemistry -->
-    <div style="background:#1e1e30;border:1px solid #1e3a2a;border-radius:16px;padding:20px 24px;margin-bottom:20px;">
-      <div style="font-size:0.76rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#10b981;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid #1e3a2a;">Electrochemistry · Ch. 20 (textbook)</div>
+    <div class="p-group" style="border-radius:16px;padding:20px 24px;margin-bottom:20px;">
+      <div class="p-group-title" style="font-size:0.76rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid;">Electrochemistry · Ch. 20 (textbook)</div>
 
       <div class="question-card">
         <div class="q-header"><span class="q-num">Q19(c)</span><span class="q-section">Ch.20 · Cr|Cr²⁺ ‖ Au³⁺|Au cell</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('ps-e19')">Solution</button></div></div>
@@ -1242,5 +1364,6 @@ buildExam('a');
 buildExam('b');
 buildExam('c');
 </script>
+<script src="theme.js"></script>
 </body>
 </html>

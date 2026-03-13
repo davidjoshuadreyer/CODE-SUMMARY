@@ -213,6 +213,106 @@
   }
   .btn-weak:hover { background: rgba(245,158,11,0.12); }
 </style>
+<style>
+  /* ── Light mode (default) ─────────────────────────────── */
+  body { background: #fff; color: #1a1a1a; }
+  h1 { background: linear-gradient(135deg,#10b981,#0891b2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .subtitle { color: #6b7280; }
+  .quiz-card { background: #fff; border-color: #d1d5db; }
+  .quiz-card:hover { border-color: #10b981; background: #f0fdf4; box-shadow: 0 8px 24px rgba(16,185,129,0.1); }
+  .quiz-card h2 { color: #111; }
+  .quiz-card p { color: #6b7280; }
+  .btn-all { border-color: #16a34a; color: #15803d; }
+  .quiz-title-bar { color: #15803d; }
+  .score-badge { background: #f3f4f6; border-color: #d1d5db; color: #374151; }
+  .progress-bar-wrap { background: #e5e7eb; }
+  .question-card { background: #fff; border-color: #d1d5db; }
+  .q-unit { color: #6b7280; }
+  .btn-hint-q { border-color: #d97706; color: #92400e; }
+  .hint-box-q { background: #fffbeb; border-color: #fbbf24; border-left-color: #d97706; color: #78350f; }
+  .hint-box-q strong { color: #92400e; }
+  .q-text { color: #1a1a1a; }
+  .q-text strong { color: #15803d; }
+  .q-text em { color: #0891b2; }
+  .option { background: #f9fafb; border-color: #e5e7eb; color: #374151; }
+  .option:hover:not(.locked) { border-color: #10b981; background: #f0fdf4; }
+  .option .opt-letter { background: #e5e7eb; color: #374151; }
+  .option.selected { border-color: #0891b2; background: #eff6ff; }
+  .option.selected .opt-letter { background: #0891b2; color: #fff; }
+  .option.correct { border-color: #10b981; background: #f0fdf4; }
+  .option.correct .opt-letter { background: #10b981; color: #fff; }
+  .option.wrong { border-color: #ef4444; background: #fef2f2; }
+  .option.wrong .opt-letter { background: #ef4444; color: #fff; }
+  .option.show-correct { border-color: #10b981; background: #f0fdf4; }
+  .verdict.correct-v { background: #f0fdf4; color: #15803d; border-color: #86efac; }
+  .verdict.wrong-v { background: #fef2f2; color: #b91c1c; border-color: #fca5a5; }
+  .btn-sol-toggle { border-color: #0891b2; color: #0891b2; }
+  .sol-box { background: #f9fafb; border-color: #e5e7eb; border-left-color: #374151; color: #374151; }
+  .sol-box strong { color: #111; }
+  .sol-box .sol-step { color: #16a34a; }
+  .sol-box .sol-answer { background: #f0fdf4; border-color: #86efac; color: #15803d; }
+  .results-card { background: #fff; border-color: #d1d5db; }
+  .results-label { color: #6b7280; }
+  .breakdown-item { background: #f3f4f6; }
+  .breakdown-num { color: #16a34a; }
+  .breakdown-lbl { color: #6b7280; }
+  .btn-retry { border-color: #10b981; color: #15803d; }
+  .btn-back { border-color: #0891b2; color: #0891b2; }
+  #auth-bar .btn-auth { background: #f3f4f6; border-color: #d1d5db; color: #374151; }
+  #auth-bar .btn-auth:hover { border-color: #10b981; color: #15803d; }
+  #auth-label { color: #6b7280; }
+  .stat-badge { color: #6b7280; }
+  .btn-weak { border-color: #d97706; color: #92400e; }
+
+  /* ── Dark overrides ───────────────────────────────────── */
+  body.dark { background: #0f0f1a; color: #e2e8f0; }
+  body.dark .subtitle { color: #94a3b8; }
+  body.dark .quiz-card { background: #1e1e30; border-color: #1e3a2a; }
+  body.dark .quiz-card:hover { border-color: #10b981; background: #1a2520; box-shadow: 0 8px 24px rgba(16,185,129,0.2); }
+  body.dark .quiz-card h2 { color: #e2e8f0; }
+  body.dark .quiz-card p { color: #94a3b8; }
+  body.dark .btn-all { border-color: #10b981; color: #6ee7b7; }
+  body.dark .quiz-title-bar { color: #6ee7b7; }
+  body.dark .score-badge { background: #1e1e30; border-color: #1e3a2a; color: #94a3b8; }
+  body.dark .progress-bar-wrap { background: #1e1e30; }
+  body.dark .question-card { background: #1e1e30; border-color: #1e3a2a; }
+  body.dark .q-unit { color: #64748b; }
+  body.dark .btn-hint-q { border-color: #854d0e; color: #fde68a; }
+  body.dark .hint-box-q { background: #1a1505; border-color: #854d0e; border-left-color: #f59e0b; color: #fde68a; }
+  body.dark .hint-box-q strong { color: #fbbf24; }
+  body.dark .q-text { color: #e2e8f0; }
+  body.dark .q-text strong { color: #6ee7b7; }
+  body.dark .q-text em { color: #67e8f9; }
+  body.dark .option { background: #16162a; border-color: #2d2d50; color: #cbd5e1; }
+  body.dark .option:hover:not(.locked) { border-color: #10b981; background: #0d2018; }
+  body.dark .option .opt-letter { background: #2d2d50; color: #94a3b8; }
+  body.dark .option.selected { border-color: #0891b2; background: #0c1a2e; }
+  body.dark .option.selected .opt-letter { background: #0891b2; color: #fff; }
+  body.dark .option.correct { border-color: #10b981; background: #052e1c; }
+  body.dark .option.correct .opt-letter { background: #10b981; color: #fff; }
+  body.dark .option.wrong { border-color: #ef4444; background: #2d0a0a; }
+  body.dark .option.wrong .opt-letter { background: #ef4444; color: #fff; }
+  body.dark .option.show-correct { border-color: #10b981; background: #052e1c; }
+  body.dark .verdict.correct-v { background: #052e1c; color: #34d399; border-color: #059669; }
+  body.dark .verdict.wrong-v { background: #2d0a0a; color: #f87171; border-color: #dc2626; }
+  body.dark .btn-sol-toggle { border-color: #0891b2; color: #67e8f9; }
+  body.dark .sol-box { background: #0d1420; border-color: #1e3a2a; border-left-color: #0891b2; color: #cbd5e1; }
+  body.dark .sol-box strong { color: #67e8f9; }
+  body.dark .sol-box .sol-step { color: #6ee7b7; }
+  body.dark .sol-box .sol-answer { background: #052e1c; border-color: #22c55e; color: #4ade80; }
+  body.dark .results-card { background: #1e1e30; border-color: #1e3a2a; }
+  body.dark .results-label { color: #94a3b8; }
+  body.dark .breakdown-item { background: #111820; }
+  body.dark .breakdown-num { color: #6ee7b7; }
+  body.dark .breakdown-lbl { color: #64748b; }
+  body.dark .btn-retry { border-color: #10b981; color: #6ee7b7; }
+  body.dark .btn-back { border-color: #0891b2; color: #67e8f9; }
+  body.dark #auth-bar .btn-auth { background: #1e1e30; border-color: #2d2d50; color: #94a3b8; }
+  body.dark #auth-bar .btn-auth:hover { border-color: #10b981; color: #6ee7b7; }
+  body.dark #auth-label { color: #64748b; }
+  body.dark .stat-badge { color: #64748b; }
+  body.dark .btn-weak { border-color: #854d0e; color: #fde68a; }
+</style>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
@@ -223,6 +323,8 @@
     <span id="auth-label"></span>
     <button class="btn-auth" onclick="authLogout()">Sign out</button>
   </span>
+  <a href="../index.html" style="font-size:0.8rem;color:#6b7280;text-decoration:none;margin-right:4px;">Home</a>
+  <button class="btn-auth theme-btn" onclick="toggleTheme()" style="margin-right:4px;">Dark</button>
   <a href="../cafe.html?from=chem" style="margin-left:auto;font-size:0.8rem;color:#6ee7b7;text-decoration:none;opacity:0.8;">&#9749; Café</a>
 </div>
 
@@ -1130,5 +1232,6 @@ function renderHomeStats() {
 
 initAuth();
 </script>
+<script src="theme.js"></script>
 </body>
 </html>
