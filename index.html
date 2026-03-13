@@ -169,20 +169,84 @@
   footer {
     text-align: center;
     padding: 32px 24px;
-    border-top: 1px solid #1e1e30;
-    color: #334155;
+    border-top: 1px solid #e5e7eb;
+    color: #9ca3af;
     font-size: 0.8rem;
   }
 
-  footer a {
-    color: #475569;
-    text-decoration: none;
-  }
+  footer a { color: #6b7280; text-decoration: none; }
+  footer a:hover { color: #374151; }
 
-  footer a:hover { color: #94a3b8; }
+  /* ── Light mode (default) ─────────────────────────────── */
+  body { background: #f9fafb; color: #1a1a1a; }
+  .site-sub { color: #6b7280; }
+  .course-label { border-bottom-color: #e5e7eb; }
+  .course-label h2 { color: #111; }
+  .course-label span { color: #6b7280; }
+  .card { background: #fff; border-color: #d1d5db; }
+  .card:hover { box-shadow: 0 10px 28px rgba(0,0,0,0.08); }
+  .card-title { color: #111; }
+  .card-desc { color: #6b7280; }
+  .chem .course-label h2 { color: #15803d; }
+  .chem .card { border-color: #d1fae5; }
+  .chem .card:hover { border-color: #10b981; box-shadow: 0 10px 28px rgba(16,185,129,0.1); }
+  .chem .tag { background: #f0fdf4; color: #15803d; border-color: #86efac; }
+  .math .course-label h2 { color: #6d28d9; }
+  .math .card { border-color: #ede9fe; }
+  .math .card:hover { border-color: #7c3aed; box-shadow: 0 10px 28px rgba(124,58,237,0.1); }
+  .math .tag { background: #faf5ff; color: #6d28d9; border-color: #c4b5fd; }
+  .c .course-label h2 { color: #1d4ed8; }
+  .c .card { border-color: #dbeafe; }
+  .c .card:hover { border-color: #3b82f6; box-shadow: 0 10px 28px rgba(59,130,246,0.1); }
+  .c .tag { background: #eff6ff; color: #1d4ed8; border-color: #93c5fd; }
+  .world-card { border-color: #bae6fd !important; }
+  .world-card:hover { border-color: #0ea5e9 !important; box-shadow: 0 10px 28px rgba(14,165,233,0.1) !important; }
+  .room-pill { color: #0369a1; background: #f0f9ff; border-color: #bae6fd; }
+
+  /* ── Dark overrides ───────────────────────────────────── */
+  body.dark { background: #0f0f1a; color: #e2e8f0; }
+  body.dark footer { border-top-color: #1e1e30; color: #334155; }
+  body.dark footer a { color: #475569; }
+  body.dark footer a:hover { color: #94a3b8; }
+  body.dark .site-sub { color: #64748b; }
+  body.dark .course-label { border-bottom-color: #1e1e30; }
+  body.dark .course-label h2 { color: #e2e8f0; }
+  body.dark .course-label span { color: #64748b; }
+  body.dark .card { background: #1e1e30; border-color: #2d2d50; }
+  body.dark .card:hover { box-shadow: 0 10px 28px rgba(0,0,0,0.4); }
+  body.dark .card-title { color: #f1f5f9; }
+  body.dark .card-desc { color: #64748b; }
+  body.dark .chem .course-label h2 { color: #6ee7b7; }
+  body.dark .chem .card { border-color: #1e3a2a; }
+  body.dark .chem .card:hover { border-color: #10b981; box-shadow: 0 10px 28px rgba(16,185,129,0.15); }
+  body.dark .chem .tag { background: #052e1c; color: #34d399; border-color: #059669; }
+  body.dark .math .course-label h2 { color: #c4b5fd; }
+  body.dark .math .card { border-color: #2d1b4a; }
+  body.dark .math .card:hover { border-color: #7c3aed; box-shadow: 0 10px 28px rgba(124,58,237,0.15); }
+  body.dark .math .tag { background: #1a0a2e; color: #c4b5fd; border-color: #6d28d9; }
+  body.dark .c .course-label h2 { color: #93c5fd; }
+  body.dark .c .card { border-color: #1a2a3a; }
+  body.dark .c .card:hover { border-color: #3b82f6; box-shadow: 0 10px 28px rgba(59,130,246,0.15); }
+  body.dark .c .tag { background: #0c1a2e; color: #93c5fd; border-color: #1d4ed8; }
+  body.dark .world-card { border-color: #1b3a4a !important; }
+  body.dark .world-card:hover { border-color: #0ea5e9 !important; box-shadow: 0 10px 28px rgba(14,165,233,0.15) !important; }
+  body.dark .room-pill { color: #7dd3fc; background: #082636; border-color: #0369a1; }
+
+  /* ── Theme toggle ─────────────────────────────────────── */
+  #theme-btn {
+    position: fixed; top: 14px; right: 18px; z-index: 100;
+    background: #f3f4f6; border: 1px solid #d1d5db; border-radius: 6px;
+    padding: 5px 12px; font-size: 0.78rem; font-weight: 600; color: #374151;
+    cursor: pointer; transition: all 0.12s;
+  }
+  #theme-btn:hover { background: #e5e7eb; }
+  body.dark #theme-btn { background: #1e2a20; border-color: #1e3a2a; color: #6ee7b7; }
+  body.dark #theme-btn:hover { background: #052e1c; }
 </style>
 </head>
 <body>
+
+<button id="theme-btn" class="theme-btn" onclick="toggleTheme()">Dark</button>
 
 <header>
   <div class="site-title">Tesselate</div>
@@ -334,6 +398,19 @@
   &nbsp;·&nbsp; tesselate.ca
 </footer>
 
+<script>
+  (function(){
+    if(localStorage.getItem('chem-theme')==='dark'){
+      document.body.classList.add('dark');
+      document.getElementById('theme-btn').textContent='Light';
+    }
+  })();
+  function toggleTheme(){
+    const dark=document.body.classList.toggle('dark');
+    document.getElementById('theme-btn').textContent=dark?'Light':'Dark';
+    localStorage.setItem('chem-theme',dark?'dark':'light');
+  }
+</script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
   (function() {
