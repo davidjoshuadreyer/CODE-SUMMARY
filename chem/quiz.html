@@ -350,6 +350,8 @@
     </div>
     <div class="quiz-card" data-topic="gases" onclick="startQuiz('gases')">      <div><h2>Unit 7  Gases</h2><p>Gas laws, ideal gas law, Dalton, KMT, van der Waals · 10 questions</p></div>
     </div>
+    <div class="quiz-card" data-topic="acids" onclick="startQuiz('acids')">      <div><h2>Acids  Names &amp; Formulas</h2><p>Match common acids to their names and formulas — both directions · 20 questions</p></div>
+    </div>
   </div>
   <button class="btn-all" onclick="startQuiz('all')">Quiz All Topics (72 questions)</button>
 </div>
@@ -922,6 +924,150 @@ const QUESTIONS = {
       sol: "<div class='sol-step'>Ideal Gas Law</div>T = 11 + 273 = 284 K<br>V = nRT/P = (9.50 × 8.314 × 284) / 99.5<br>= 22,424 / 99.5 <span class='sol-answer'>= 225 L</span>"
     }
   ]
+  ,acids: [
+    // ── Formula → Name ──────────────────────────────────────────────────
+    {
+      q: "What is the name of <strong>HBr(aq)</strong>?",
+      opts: ["Hydric acid","Hydrobromic acid","Bromic acid","Bromous acid","Bromide acid"],
+      ans: 1,
+      hint: "Aqueous HX acids are named hydro- + halide root + -ic acid.",
+      sol: "<div class='sol-step'>Naming binary acids (HX in water)</div>Pattern: <strong>hydro-</strong> + root + <strong>-ic acid</strong><br>Br root = brom → <span class='sol-answer'>Hydrobromic acid</span>"
+    },
+    {
+      q: "What is the name of <strong>HNO₃(aq)</strong>?",
+      opts: ["Nitrous acid","Nitride acid","Nitric acid","Hyponitric acid","Nitrogen acid"],
+      ans: 2,
+      hint: "NO₃⁻ is the nitrate ion. Polyatomic oxoacid: -ate ion → -ic acid.",
+      sol: "<div class='sol-step'>Naming oxoacids</div>NO₃⁻ = nitrate → replace -ate with <strong>-ic acid</strong><br><span class='sol-answer'>Nitric acid</span>"
+    },
+    {
+      q: "What is the name of <strong>HClO₄(aq)</strong>?",
+      opts: ["Chloric acid","Chlorous acid","Hypochlorous acid","Perchloric acid","Hydrochloric acid"],
+      ans: 3,
+      hint: "ClO₄⁻ is the perchlorate ion. Per- prefix is kept; -ate → -ic.",
+      sol: "<div class='sol-step'>Naming oxoacids</div>ClO₄⁻ = perchlorate → <strong>per- + -ic acid</strong><br><span class='sol-answer'>Perchloric acid</span>"
+    },
+    {
+      q: "What is the name of <strong>CH₃COOH (HC₂H₃O₂)(aq)</strong>?",
+      opts: ["Acetate acid","Ethanoic acid only","Acetic acid","Carbonic acid","Methanoic acid"],
+      ans: 2,
+      hint: "This is the acid found in vinegar. Its anion is acetate (C₂H₃O₂⁻).",
+      sol: "<div class='sol-step'>Common acid name</div>CH₃COOH is the common acid of the acetate ion.<br><span class='sol-answer'>Acetic acid</span> (also called ethanoic acid in IUPAC)."
+    },
+    {
+      q: "What is the name of <strong>H₂CO₃(aq)</strong>?",
+      opts: ["Carbide acid","Carbon dioxide","Bicarbonic acid","Carbonic acid","Carbonous acid"],
+      ans: 3,
+      hint: "CO₃²⁻ is carbonate. Two-H acid of carbonate ion.",
+      sol: "<div class='sol-step'>Naming oxoacids</div>CO₃²⁻ = carbonate → <strong>-ic acid</strong><br><span class='sol-answer'>Carbonic acid</span> (H₂CO₃ = CO₂ dissolved in water)."
+    },
+    {
+      q: "What is the name of <strong>H₂SO₄(aq)</strong>?",
+      opts: ["Sulfurous acid","Sulfate acid","Bisulfuric acid","Hydrosulfuric acid","Sulfuric acid"],
+      ans: 4,
+      hint: "SO₄²⁻ is sulfate. Two-H oxoacid. -ate → -ic.",
+      sol: "<div class='sol-step'>Naming oxoacids</div>SO₄²⁻ = sulfate → <strong>-ic acid</strong><br><span class='sol-answer'>Sulfuric acid</span> (strong acid, diprotic)."
+    },
+    {
+      q: "What is the name of <strong>H₃PO₄(aq)</strong>?",
+      opts: ["Phosphorous acid","Phosphate acid","Phosphoric acid","Hypophosphoric acid","Triphosphoric acid"],
+      ans: 2,
+      hint: "PO₄³⁻ is phosphate. Three-H oxoacid. -ate → -ic.",
+      sol: "<div class='sol-step'>Naming oxoacids</div>PO₄³⁻ = phosphate → <strong>-ic acid</strong><br><span class='sol-answer'>Phosphoric acid</span> (weak triprotic acid)."
+    },
+    {
+      q: "What is the name of <strong>HCl(aq)</strong>?",
+      opts: ["Chloric acid","Chlorous acid","Hydrochloric acid","Perchloric acid","Hydrogen chloride acid"],
+      ans: 2,
+      hint: "HCl dissolved in water — binary acid. hydro- + root + -ic acid.",
+      sol: "<div class='sol-step'>Binary acid naming</div>HCl(aq): hydro- + chlor + -ic acid = <span class='sol-answer'>Hydrochloric acid</span>"
+    },
+    {
+      q: "What is the name of <strong>HNO₂(aq)</strong>?",
+      opts: ["Nitric acid","Nitrous acid","Dinitrogen acid","Hyponitrous acid","Nitrogen dioxide acid"],
+      ans: 1,
+      hint: "NO₂⁻ is the nitrite ion. -ite ion → -ous acid.",
+      sol: "<div class='sol-step'>Naming oxoacids</div>NO₂⁻ = nitrite → replace -ite with <strong>-ous acid</strong><br><span class='sol-answer'>Nitrous acid</span> (weak acid)."
+    },
+    {
+      q: "What is the name of <strong>HF(aq)</strong>?",
+      opts: ["Fluoric acid","Fluoride acid","Perfluoric acid","Hydrofluoric acid","Fluoroic acid"],
+      ans: 3,
+      hint: "Binary acid: HF in water. hydro- + halide root + -ic acid.",
+      sol: "<div class='sol-step'>Binary acid naming</div>HF(aq): hydro- + fluor + -ic acid = <span class='sol-answer'>Hydrofluoric acid</span> (weak acid despite being a haloacid)."
+    },
+    // ── Name → Formula ──────────────────────────────────────────────────
+    {
+      q: "Which formula represents <strong>Hydrobromic acid</strong>?",
+      opts: ["HBrO₃","HBrO","H₂Br","HBr","H₃Br"],
+      ans: 3,
+      hint: "Binary acid of bromine dissolved in water. No oxygen.",
+      sol: "<div class='sol-step'>Formula from name</div>hydro<em>brom</em>ic acid → HBr(aq) = <span class='sol-answer'>HBr</span>"
+    },
+    {
+      q: "Which formula represents <strong>Nitric acid</strong>?",
+      opts: ["HNO₂","NO₃H","H₂NO₃","HNO₃","H₂N₂O₃"],
+      ans: 3,
+      hint: "-ic acid of nitrate (NO₃⁻). One H + nitrate ion.",
+      sol: "<div class='sol-step'>Formula from name</div>Nitric acid → nitrate (NO₃⁻) + H⁺ → <span class='sol-answer'>HNO₃</span>"
+    },
+    {
+      q: "Which formula represents <strong>Perchloric acid</strong>?",
+      opts: ["HClO","HClO₂","HClO₃","HClO₄","H₂ClO₄"],
+      ans: 3,
+      hint: "Perchlorate ion is ClO₄⁻. 'Per-' means most oxygen.",
+      sol: "<div class='sol-step'>Chlorine oxoacids — oxygen count</div>hypo- (1 O) → HClO | -ous (2 O) → HClO₂ | -ic (3 O) → HClO₃ | <strong>per-…-ic (4 O)</strong> → <span class='sol-answer'>HClO₄</span>"
+    },
+    {
+      q: "Which formula represents <strong>Acetic acid</strong>?",
+      opts: ["HC₂H₃O₂","H₂CO₃","HCO₂H","H₂C₂O₄","HCH₂O"],
+      ans: 0,
+      hint: "Acetic acid is the acid in vinegar. Its anion is acetate, C₂H₃O₂⁻.",
+      sol: "<div class='sol-step'>Formula from name</div>Acetate = C₂H₃O₂⁻; add H⁺ → <span class='sol-answer'>HC₂H₃O₂</span> (also written CH₃COOH)."
+    },
+    {
+      q: "Which formula represents <strong>Carbonic acid</strong>?",
+      opts: ["HCO₃⁻","H₂CO₃","H₂CO","CO₂","H₂C₂O₄"],
+      ans: 1,
+      hint: "Carbonate is CO₃²⁻, a diprotic oxoacid.",
+      sol: "<div class='sol-step'>Formula from name</div>Carbonate (CO₃²⁻) + 2 H⁺ → <span class='sol-answer'>H₂CO₃</span> (CO₂ dissolved in water)."
+    },
+    {
+      q: "Which formula represents <strong>Sulfuric acid</strong>?",
+      opts: ["H₂SO₃","HSO₄","H₂SO₄","H₂S","HOSO₃H"],
+      ans: 2,
+      hint: "Sulfate is SO₄²⁻. Strong diprotic acid.",
+      sol: "<div class='sol-step'>Formula from name</div>Sulfate (SO₄²⁻) + 2 H⁺ → <span class='sol-answer'>H₂SO₄</span>"
+    },
+    {
+      q: "Which formula represents <strong>Phosphoric acid</strong>?",
+      opts: ["HPO₄","H₃PO₃","H₃PO₄","H₂PO₄","H₄PO₄"],
+      ans: 2,
+      hint: "Phosphate is PO₄³⁻. Weak triprotic acid.",
+      sol: "<div class='sol-step'>Formula from name</div>Phosphate (PO₄³⁻) + 3 H⁺ → <span class='sol-answer'>H₃PO₄</span>"
+    },
+    {
+      q: "Which formula represents <strong>Hydrochloric acid</strong>?",
+      opts: ["HClO","HCl₂","H₂Cl","HCl","HClO₃"],
+      ans: 3,
+      hint: "Binary acid of chlorine — no oxygen.",
+      sol: "<div class='sol-step'>Formula from name</div>hydro<em>chlor</em>ic acid → <span class='sol-answer'>HCl</span>(aq)"
+    },
+    {
+      q: "Which formula represents <strong>Nitrous acid</strong>?",
+      opts: ["HNO₃","H₂N₂O","HNO₂","NO₂","H₂NO₂"],
+      ans: 2,
+      hint: "-ous acid → nitrite ion (NO₂⁻).",
+      sol: "<div class='sol-step'>Formula from name</div>Nitrite (NO₂⁻) + H⁺ → <span class='sol-answer'>HNO₂</span> (weak acid)."
+    },
+    {
+      q: "Which formula represents <strong>Hydrofluoric acid</strong>?",
+      opts: ["H₂F","HFO","HF","HF₂","H₂F₂"],
+      ans: 2,
+      hint: "Binary acid of fluorine — no oxygen. Only one H.",
+      sol: "<div class='sol-step'>Formula from name</div>hydro<em>fluor</em>ic acid → <span class='sol-answer'>HF</span>(aq) — weak acid (strong H-bond keeps it from fully dissociating)."
+    }
+  ]
 };
 
 // Build 'all' category
@@ -951,6 +1097,7 @@ function startQuiz(cat, weak = false) {
     imf: 'Unit 5  Intermolecular Forces',
     solutions: 'Unit 6  Solutions',
     gases: 'Unit 7  Gases',
+    acids: 'Acids  Names & Formulas',
     all: 'All Topics'
   };
   const pool = weak ? getWeakQuestions(cat) : [...QUESTIONS[cat]];
