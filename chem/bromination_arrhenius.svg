@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="480" style="background:white;font-family:Arial,sans-serif">
+<rect x="72" y="50" width="608" height="365" fill="#fafafa" stroke="#ccc" stroke-width="1"/>
+<line x1="72.0" y1="50" x2="72.0" y2="415" stroke="#e0e0e0" stroke-width="1"/>
+<line x1="173.3" y1="50" x2="173.3" y2="415" stroke="#e0e0e0" stroke-width="1"/>
+<line x1="274.7" y1="50" x2="274.7" y2="415" stroke="#e0e0e0" stroke-width="1"/>
+<line x1="376.0" y1="50" x2="376.0" y2="415" stroke="#e0e0e0" stroke-width="1"/>
+<line x1="477.3" y1="50" x2="477.3" y2="415" stroke="#e0e0e0" stroke-width="1"/>
+<line x1="578.7" y1="50" x2="578.7" y2="415" stroke="#e0e0e0" stroke-width="1"/>
+<line x1="680.0" y1="50" x2="680.0" y2="415" stroke="#e0e0e0" stroke-width="1"/>
+<line x1="72" y1="415.0" x2="680" y2="415.0" stroke="#e0e0e0" stroke-width="1"/>
+<line x1="72" y1="354.2" x2="680" y2="354.2" stroke="#e0e0e0" stroke-width="1"/>
+<line x1="72" y1="293.3" x2="680" y2="293.3" stroke="#e0e0e0" stroke-width="1"/>
+<line x1="72" y1="232.5" x2="680" y2="232.5" stroke="#e0e0e0" stroke-width="1"/>
+<line x1="72" y1="171.7" x2="680" y2="171.7" stroke="#e0e0e0" stroke-width="1"/>
+<line x1="72" y1="110.8" x2="680" y2="110.8" stroke="#e0e0e0" stroke-width="1"/>
+<line x1="72" y1="50.0" x2="680" y2="50.0" stroke="#e0e0e0" stroke-width="1"/>
+<line x1="72" y1="50" x2="72" y2="415" stroke="#333" stroke-width="2"/>
+<line x1="72" y1="415" x2="680" y2="415" stroke="#333" stroke-width="2"/>
+<line x1="72.0" y1="415" x2="72.0" y2="420" stroke="#333" stroke-width="1.5"/>
+<text x="72.0" y="435" text-anchor="middle" font-size="11">0.00305</text>
+<line x1="173.3" y1="415" x2="173.3" y2="420" stroke="#333" stroke-width="1.5"/>
+<text x="173.3" y="435" text-anchor="middle" font-size="11">0.00316</text>
+<line x1="274.7" y1="415" x2="274.7" y2="420" stroke="#333" stroke-width="1.5"/>
+<text x="274.7" y="435" text-anchor="middle" font-size="11">0.00327</text>
+<line x1="376.0" y1="415" x2="376.0" y2="420" stroke="#333" stroke-width="1.5"/>
+<text x="376.0" y="435" text-anchor="middle" font-size="11">0.00339</text>
+<line x1="477.3" y1="415" x2="477.3" y2="420" stroke="#333" stroke-width="1.5"/>
+<text x="477.3" y="435" text-anchor="middle" font-size="11">0.00350</text>
+<line x1="578.7" y1="415" x2="578.7" y2="420" stroke="#333" stroke-width="1.5"/>
+<text x="578.7" y="435" text-anchor="middle" font-size="11">0.00361</text>
+<line x1="680.0" y1="415" x2="680.0" y2="420" stroke="#333" stroke-width="1.5"/>
+<text x="680.0" y="435" text-anchor="middle" font-size="11">0.00372</text>
+<line x1="67" y1="415.0" x2="72" y2="415.0" stroke="#333" stroke-width="1.5"/>
+<text x="64" y="419.0" text-anchor="end" font-size="11">-12.8</text>
+<line x1="67" y1="354.2" x2="72" y2="354.2" stroke="#333" stroke-width="1.5"/>
+<text x="64" y="358.2" text-anchor="end" font-size="11">-11.9</text>
+<line x1="67" y1="293.3" x2="72" y2="293.3" stroke="#333" stroke-width="1.5"/>
+<text x="64" y="297.3" text-anchor="end" font-size="11">-11.0</text>
+<line x1="67" y1="232.5" x2="72" y2="232.5" stroke="#333" stroke-width="1.5"/>
+<text x="64" y="236.5" text-anchor="end" font-size="11">-10.1</text>
+<line x1="67" y1="171.7" x2="72" y2="171.7" stroke="#333" stroke-width="1.5"/>
+<text x="64" y="175.7" text-anchor="end" font-size="11">-9.1</text>
+<line x1="67" y1="110.8" x2="72" y2="110.8" stroke="#333" stroke-width="1.5"/>
+<text x="64" y="114.8" text-anchor="end" font-size="11">-8.2</text>
+<line x1="67" y1="50.0" x2="72" y2="50.0" stroke="#333" stroke-width="1.5"/>
+<text x="64" y="54.0" text-anchor="end" font-size="11">-7.3</text>
+<line x1="72.0" y1="69.7" x2="680.0" y2="491.1" stroke="#c0392b" stroke-width="2" stroke-dasharray="6,3"/>
+<circle cx="72.0" cy="69.7" r="4" fill="#c0392b"/>
+<circle cx="387.3" cy="287.9" r="8" fill="#2980b9" stroke="white" stroke-width="2"/>
+<text x="401.3" y="301.9" text-anchor="start" font-size="11" fill="#2980b9" font-weight="bold">Run 3 (21 °C)</text>
+<circle cx="517.7" cy="378.8" r="8" fill="#27ae60" stroke="white" stroke-width="2"/>
+<text x="531.7" y="362.8" text-anchor="start" font-size="11" fill="#27ae60" font-weight="bold">Run 5 (9 °C)</text>
+<circle cx="201.3" cy="159.5" r="8" fill="#e67e22" stroke="white" stroke-width="2"/>
+<text x="215.3" y="173.5" text-anchor="start" font-size="11" fill="#e67e22" font-weight="bold">Run 6 (40 °C)</text>
+<rect x="462" y="58" width="210" height="62" fill="white" stroke="#bbb" rx="4"/>
+<text x="567" y="78" text-anchor="middle" font-size="11">Slope = -9505 K</text>
+<text x="567" y="96" text-anchor="middle" font-size="11">Eₐ = 79.0 kJ mol⁻¹</text>
+<text x="567" y="114" text-anchor="middle" font-size="10" fill="#666">Eₐ = −slope × R</text>
+<text x="376" y="30" text-anchor="middle" font-size="14" font-weight="bold">Bromination of Acetone</text>
+<text x="376" y="46" text-anchor="middle" font-size="11" fill="#555">(Runs 3, 5, 6: identical concentrations, varied temperature)</text>
+<text x="376" y="468" text-anchor="middle" font-size="12">1/T  (K⁻¹)</text>
+<text x="13" y="232" text-anchor="middle" font-size="12" transform="rotate(-90 13 232)">ln k  (L mol⁻¹ s⁻¹)</text>
+</svg>

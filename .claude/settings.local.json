@@ -25,7 +25,8 @@
       "Bash(py --version)",
       "Bash(cmd /c \"py --version 2>&1 && py -m pip --version 2>&1\")",
       "Bash(cmd /c \"where python\")",
-      "Bash(cmd /c \"python --version\")"
+      "Bash(cmd /c \"python --version\")",
+      "Bash(PYEXE=\"/c/Users/david/OneDrive/Documents/CODE/CODE SUMMARY/.venv_pdf/bin/python.exe\" \"$PYEXE\" -m pip list)"
     ]
   }
 }
