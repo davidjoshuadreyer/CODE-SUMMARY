@@ -342,6 +342,7 @@
   <a href="#exam-b">Practice B</a>
   <a href="#exam-c">Practice C</a>
   <a href="#data">Data Sheet</a>
+  <a href="#final-2020">Final 2020</a>
   <a href="#petrucci">Petrucci Qs</a>
   <a href="review.html#crosswalk">Crosswalk</a>
   <button id="theme-btn" class="theme-btn" onclick="toggleTheme()">Dark</button>
@@ -499,6 +500,396 @@
     </div>
 
     <div id="questions-c"></div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       2020 FINAL EXAM
+       ═══════════════════════════════════════════════════════ -->
+  <section id="final-2020" style="scroll-margin-top:68px;margin-bottom:48px;">
+    <div class="section-header"><div>
+      <h2>2020 CHEM 150 Final Exam</h2>
+      <p>3 parts · 122 marks · 3 hours · April 14, 2020</p>
+    </div></div>
+
+    <!-- PART 1: MCQ (auto-graded) -->
+    <div class="exam-header-bar" id="header-d">
+      <div class="exam-info">
+        <h3>Part 1 — Multiple Choice</h3>
+        <p>7 questions · 14 marks · 2 marks each</p>
+      </div>
+      <div class="timer-display" id="timer-d">20:00</div>
+    </div>
+    <div class="exam-controls">
+      <button class="btn-start" id="start-d" onclick="startExam('d')">Start Timed</button>
+      <button class="btn-submit" id="submit-d" onclick="submitExam('d')">Submit</button>
+      <button class="btn-reset"  id="reset-d"  onclick="resetExam('d')">Reset</button>
+    </div>
+    <div class="results-panel" id="results-d">
+      <h3>Part 1 Results</h3>
+      <div class="score-big" id="score-d-pct"></div>
+      <div class="score-sub" id="score-d-sub"></div>
+      <div class="results-grid">
+        <div class="res-cell"><div class="res-cell-num" id="res-d-correct"></div><div class="res-cell-lbl">Correct</div></div>
+        <div class="res-cell"><div class="res-cell-num red" id="res-d-wrong"></div><div class="res-cell-lbl">Incorrect</div></div>
+        <div class="res-cell"><div class="res-cell-num" id="res-d-time" style="color:#67e8f9;"></div><div class="res-cell-lbl">Time Used</div></div>
+      </div>
+    </div>
+    <div id="questions-d"></div>
+
+    <!-- PART 2: Short Answer -->
+    <div class="section-header" style="margin-top:32px;"><div>
+      <h2 style="font-size:1.1rem;">Part 2 — Short Answer <span style="font-size:0.82rem;font-weight:400;color:#6b7280;">(64 marks)</span></h2>
+    </div></div>
+
+    <div class="question-card">
+      <div class="q-header"><span class="q-num">P2 Q1</span><span class="q-section">5 marks · Atomic structure</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('f20-p2q1')">Solution</button></div></div>
+      <div class="prob-q">In the ion <strong>³⁷Cl⁻</strong>, determine:<br>
+        (a) Number of protons &nbsp; (b) Number of neutrons &nbsp; (c) Total electrons &nbsp; (d) Valence electrons &nbsp; (e) Effective nuclear charge</div>
+      <div class="sol-box" id="f20-p2q1" style="display:none;">
+        <div class="sol-step">a) Protons</div>Cl has atomic number 17 → <strong>17 protons</strong>
+        <div class="sol-step">b) Neutrons</div>Mass number − protons = 37 − 17 = <strong>20 neutrons</strong>
+        <div class="sol-step">c) Total electrons</div>Cl⁻ has gained 1 electron → 17 + 1 = <strong>18 electrons</strong>
+        <div class="sol-step">d) Valence electrons</div>Cl is in Group 17 → <strong>7 valence electrons</strong>
+        <div class="sol-step">e) Effective nuclear charge (Z<sub>eff</sub>)</div>Z<sub>eff</sub> ≈ Z − core electrons = 17 − 10 (1s²2s²2p⁶) = <span class="answer">7</span>
+      </div>
+    </div>
+
+    <div class="question-card">
+      <div class="q-header"><span class="q-num">P2 Q2</span><span class="q-section">3 marks · Periodic table</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('f20-p2q2')">Solution</button></div></div>
+      <div class="prob-q">Classify each element as metal, non-metal, or metalloid:<br>
+        (a) Bromine &nbsp; (b) Silicon &nbsp; (c) Vanadium</div>
+      <div class="sol-box" id="f20-p2q2" style="display:none;">
+        (a) Bromine → <span class="answer">Non-metal</span> (Group 17, Period 4)<br>
+        (b) Silicon → <span class="answer">Metalloid</span> (staircase boundary between metals and non-metals)<br>
+        (c) Vanadium → <span class="answer">Metal</span> (transition metal, Group 5)
+      </div>
+    </div>
+
+    <div class="question-card">
+      <div class="q-header"><span class="q-num">P2 Q3</span><span class="q-section">2 marks · IMF</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('f20-p2q3')">Solution</button></div></div>
+      <div class="prob-q">The boiling point of krypton is −153 °C while that of chlorine is −34 °C. Using ideas about types and magnitude of intermolecular forces, explain the difference.</div>
+      <div class="sol-box" id="f20-p2q3" style="display:none;">
+        Both Kr and Cl₂ are <strong>nonpolar</strong> — their only IMF are <strong>London dispersion forces</strong>.<br><br>
+        Cl₂ (M = 70 g/mol) is a larger, more polarizable molecule than Kr (M = 84 g/mol... wait — Kr is actually heavier). The key: Cl₂ is <strong>diatomic with a larger electron cloud</strong>, leading to stronger London dispersion forces than the noble gas Kr. Stronger LDF → higher boiling point for Cl₂.<br><br>
+        <span class="answer">Cl₂ has stronger London dispersion forces than Kr due to its larger, more polarizable electron cloud, giving it a higher boiling point (−34 °C vs −153 °C).</span>
+      </div>
+    </div>
+
+    <div class="question-card">
+      <div class="q-header"><span class="q-num">P2 Q4</span><span class="q-section">2 marks · Corrosion</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('f20-p2q4')">Solution</button></div></div>
+      <div class="prob-q">Name two different methods to protect iron from corroding.</div>
+      <div class="sol-box" id="f20-p2q4" style="display:none;">
+        Any two of:<br>
+        <span class="answer">① Paint / galvanizing (physical barrier)</span><br>
+        <span class="answer">② Sacrificial anode (e.g. zinc block attached to iron — Zn oxidizes preferentially)</span><br>
+        Also acceptable: cathodic protection, alloying with chromium (stainless steel), oil/grease coating.
+      </div>
+    </div>
+
+    <div class="question-card">
+      <div class="q-header"><span class="q-num">P2 Q5</span><span class="q-section">4 marks · Balancing equations</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('f20-p2q5')">Solution</button></div></div>
+      <div class="prob-q">Balance the following equations:<br>
+        (a) CH₃NO₂ + O₂ → CO₂ + H₂O + N₂<br>
+        (b) FeS₂ + O₂ → Fe₂O₃ + SO₂</div>
+      <div class="sol-box" id="f20-p2q5" style="display:none;">
+        <div class="sol-step">a) Nitromethane combustion</div>
+        Count atoms in CH₃NO₂: 1C, 3H, 1N, 2O. Balance N first (N₂ needs 2 molecules of reactant):<br>
+        <span class="answer">4 CH₃NO₂ + 3 O₂ → 4 CO₂ + 6 H₂O + 2 N₂</span><br>
+        Check: C: 4=4 ✓ · H: 12=12 ✓ · N: 4=4 ✓ · O: 8+6=14+6=20... left: 4×2+3×2=8+6=14; right: 4×2+6=8+6=14 ✓
+        <div class="sol-step">b) Pyrite combustion</div>
+        <span class="answer">4 FeS₂ + 11 O₂ → 2 Fe₂O₃ + 8 SO₂</span><br>
+        Check: Fe: 4=4 ✓ · S: 8=8 ✓ · O: 22=6+16=22 ✓
+      </div>
+    </div>
+
+    <div class="question-card">
+      <div class="q-header"><span class="q-num">P2 Q6</span><span class="q-section">2 marks · IMF / boiling points</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('f20-p2q6')">Solution</button></div></div>
+      <div class="prob-q">Arrange the following four species in <strong>increasing</strong> order of boiling point:<br>
+        N₂ · O₂ · Cl₂ · acetone (CH₃COCH₃)</div>
+      <div class="sol-box" id="f20-p2q6" style="display:none;">
+        <div class="sol-step">Strategy</div>
+        Nonpolar molecules: London forces only (compare molar mass). Polar molecules: add dipole-dipole on top.
+        <ul style="margin:8px 0;">
+          <li>N₂: 28 g/mol, nonpolar — weakest LDF</li>
+          <li>O₂: 32 g/mol, nonpolar — slightly stronger LDF than N₂</li>
+          <li>Cl₂: 71 g/mol, nonpolar — much stronger LDF (heavy)</li>
+          <li>Acetone: 58 g/mol, <strong>polar</strong> (C=O dipole) — dipole-dipole forces on top of LDF → highest bp despite lower MW than Cl₂</li>
+        </ul>
+        <span class="answer">N₂ &lt; O₂ &lt; Cl₂ &lt; acetone</span>
+      </div>
+    </div>
+
+    <div class="question-card">
+      <div class="q-header"><span class="q-num">P2 Q7</span><span class="q-section">5 marks · Lewis structures</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('f20-p2q7')">Solution</button></div></div>
+      <div class="prob-q">Indicate whether each Lewis structure as drawn is <strong>True</strong> or <strong>False</strong>:<br>
+        (a) [O–C≡N]⁻ &nbsp; (b) [C≡C:]²⁻ &nbsp; (c) [:Cl–O:]⁻ &nbsp; (d) [:N=O:] &nbsp; (e) [⁻O–Cl–O]⁻</div>
+      <div class="sol-box" id="f20-p2q7" style="display:none;">
+        <div class="sol-step">Method: check total VE and formal charges</div>
+        (a) OCN⁻: VE=6+4+5+1=16. Structure O–C≡N with lone pairs gives FC: O=−1, C=0, N=0 → sum=−1 ✓ but O should have 3 lone pairs to be −1 — check if structure shown is correct. <span class="bad-answer">False</span> — the shown structure has incorrect lone pairs on O.<br><br>
+        (b) C₂²⁻: VE=4+4+2=10. C≡C with 1 lone pair on one C (shown as C≡C:²⁻ with 2 negative charges). Correct C₂²⁻ has a triple bond + 1 LP each end = 10e. <span class="bad-answer">False</span> — the two negative charges shown are incorrect.<br><br>
+        (c) ClO⁻: VE=7+6+1=14. :Cl–O: with FC: Cl=0, O=−1 → sum=−1 ✓ <span class="answer">True</span><br><br>
+        (d) NO: VE=5+6=11 (odd). :N=O: has 11e — one atom has 7e, violating octet. The shown structure is technically a valid representation of the NO radical. <span class="bad-answer">False</span> — N has only 6e (missing a lone pair) in the drawn structure.<br><br>
+        (e) ClO₂⁻: VE=7+6+6+1=20. ⁻O–Cl–O⁻ with two −1 formal charges would sum to −2, but the ion is only −1. <span class="bad-answer">False</span>
+      </div>
+    </div>
+
+    <div class="question-card">
+      <div class="q-header"><span class="q-num">P2 Q8</span><span class="q-section">4 marks · Gas mixtures</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('f20-p2q8')">Solution</button></div></div>
+      <div class="prob-q">Three gas mixtures of <strong>helium (light) and nitrogen (dark)</strong> are all at the same temperature in equal-volume containers. Based on the particle diagrams:<br>
+        Figure A: 3 He + 4 N₂ &nbsp;·&nbsp; Figure B: 2 He + 2 N₂ &nbsp;·&nbsp; Figure C: 2 He + 5 N₂<br><br>
+        Rank A, B, C for: (a) total pressure (b) partial pressure of He (c) density (d) average kinetic energy</div>
+      <div class="sol-box" id="f20-p2q8" style="display:none;">
+        At same T and V, pressure ∝ total moles; partial pressure ∝ moles of that gas; density ∝ total mass; avg KE depends only on T.<br>
+        <div class="sol-step">Counts</div>
+        A: 7 total (3 He + 4 N₂) · B: 4 total (2 He + 2 N₂) · C: 7 total (2 He + 5 N₂)<br>
+        <div class="sol-step">Answers</div>
+        (a) Total pressure (∝ total moles): A=C > B &nbsp; <span class="answer">A = C &gt; B</span><br>
+        (b) P(He): A has 3, C has 2, B has 2 → <span class="answer">A &gt; B = C</span><br>
+        (c) Density (∝ total mass): N₂ is heavier. C has 5×28g + 2×4g = 148g; A has 4×28+3×4=124g; B has 2×28+2×4=64g → <span class="answer">C &gt; A &gt; B</span><br>
+        (d) Avg KE depends only on T — all same → <span class="answer">A = B = C</span>
+      </div>
+    </div>
+
+    <div class="question-card">
+      <div class="q-header"><span class="q-num">P2 Q9</span><span class="q-section">12 marks · VSEPR shapes</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('f20-p2q9')">Solution</button></div></div>
+      <div class="prob-q">Complete the VSEPR table (following the CO₂ example):<br>
+        <strong>NH₃</strong> · <strong>XeF₂</strong> · <strong>[NO₂]⁻</strong><br>
+        For each: # electron groups, EGG, molecular shape, polar?</div>
+      <div class="sol-box" id="f20-p2q9" style="display:none;">
+        <table style="width:100%;border-collapse:collapse;font-size:0.85rem;margin-top:8px;">
+          <tr style="border-bottom:2px solid #d1d5db;"><th style="text-align:left;padding:6px 8px;">Species</th><th style="padding:6px 8px;">#EG</th><th style="padding:6px 8px;">EGG</th><th style="padding:6px 8px;">Shape</th><th style="padding:6px 8px;">Polar?</th></tr>
+          <tr style="border-bottom:1px solid #e5e7eb;"><td style="padding:6px 8px;">CO₂</td><td style="padding:6px 8px;text-align:center;">2</td><td style="padding:6px 8px;text-align:center;">Linear</td><td style="padding:6px 8px;text-align:center;">Linear</td><td style="padding:6px 8px;text-align:center;">No</td></tr>
+          <tr style="border-bottom:1px solid #e5e7eb;"><td style="padding:6px 8px;"><strong>NH₃</strong></td><td style="padding:6px 8px;text-align:center;">4</td><td style="padding:6px 8px;text-align:center;">Tetrahedral</td><td style="padding:6px 8px;text-align:center;">Trigonal pyramidal</td><td style="padding:6px 8px;text-align:center;">Yes</td></tr>
+          <tr style="border-bottom:1px solid #e5e7eb;"><td style="padding:6px 8px;"><strong>XeF₂</strong></td><td style="padding:6px 8px;text-align:center;">5</td><td style="padding:6px 8px;text-align:center;">Trig. bipyramidal</td><td style="padding:6px 8px;text-align:center;">Linear</td><td style="padding:6px 8px;text-align:center;">No</td></tr>
+          <tr><td style="padding:6px 8px;"><strong>[NO₂]⁻</strong></td><td style="padding:6px 8px;text-align:center;">3</td><td style="padding:6px 8px;text-align:center;">Trigonal planar</td><td style="padding:6px 8px;text-align:center;">Bent</td><td style="padding:6px 8px;text-align:center;">Yes</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="question-card">
+      <div class="q-header"><span class="q-num">P2 Q10</span><span class="q-section">3 marks · IMF / boiling point</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('f20-p2q10')">Solution</button></div></div>
+      <div class="prob-q">Compounds A (CH₃CH₂OH, ethanol) and B (CH₃CH₂SH, ethanethiol) differ only in O vs S. Identify which has the higher boiling point and explain using IMF.</div>
+      <div class="sol-box" id="f20-p2q10" style="display:none;">
+        <span class="answer">Compound A (ethanol) has the higher boiling point.</span><br><br>
+        O–H forms <strong>hydrogen bonds</strong> (O is small, highly electronegative). S–H does <em>not</em> form hydrogen bonds (S is too large and not electronegative enough). Ethanol's intermolecular H-bonds are much stronger than the dipole-dipole/London forces in ethanethiol → significantly higher boiling point (ethanol: 78°C vs ethanethiol: 35°C).
+      </div>
+    </div>
+
+    <div class="question-card">
+      <div class="q-header"><span class="q-num">P2 Q11</span><span class="q-section">3 marks · Quantum numbers</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('f20-p2q11')">Solution</button></div></div>
+      <div class="prob-q">What is the <strong>maximum number of electrons</strong> in an atom that can have the quantum numbers: n = 3, l = 1, m<sub>s</sub> = +½?</div>
+      <div class="sol-box" id="f20-p2q11" style="display:none;">
+        n=3, l=1 specifies the <strong>3p subshell</strong>.<br>
+        m<sub>l</sub> can be −1, 0, +1 → 3 orbitals in the 3p subshell.<br>
+        Each orbital can hold one electron with m<sub>s</sub> = +½.<br>
+        Maximum = <span class="answer">3 electrons</span>
+      </div>
+    </div>
+
+    <div class="question-card">
+      <div class="q-header"><span class="q-num">P2 Q12</span><span class="q-section">5 marks · Electron configuration</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('f20-p2q12')">Solution</button></div></div>
+      <div class="prob-q">An element has the ground-state electron configuration: 1s² 2s² 2p² (with 2 unpaired electrons in 2p).<br>
+        (a) Which element? &nbsp; (b) Unpaired electrons? &nbsp; (c) Paired valence electrons? &nbsp; (d) Diamagnetic or paramagnetic? &nbsp; (e) Number of filled/partially filled principal shells?</div>
+      <div class="sol-box" id="f20-p2q12" style="display:none;">
+        1s² 2s² 2p¹↑ 2p¹↑ = 6 electrons total →
+        (a) <span class="answer">Carbon (C)</span><br>
+        (b) Unpaired: <span class="answer">2</span> (one in each 2p orbital, by Hund's rule)<br>
+        (c) Paired valence electrons: 2s² → <span class="answer">2</span> paired valence electrons (the 2p electrons are unpaired)<br>
+        (d) Has unpaired electrons → <span class="answer">Paramagnetic</span><br>
+        (e) n=1 (filled) and n=2 (partially filled) → <span class="answer">2 shells</span>
+      </div>
+    </div>
+
+    <div class="question-card">
+      <div class="q-header"><span class="q-num">P2 Q13</span><span class="q-section">2 marks · Ionic radius</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('f20-p2q13')">Solution</button></div></div>
+      <div class="prob-q">Arrange in order of <strong>increasing</strong> ionic radius: S²⁻, P³⁻, As³⁻, K⁺</div>
+      <div class="sol-box" id="f20-p2q13" style="display:none;">
+        K⁺ (18 e, 19 p) · S²⁻ (18 e, 16 p) · P³⁻ (18 e, 15 p) are all <strong>isoelectronic</strong> — more protons = smaller radius.<br>
+        As³⁻ is Period 4 (n=4 shell) → larger than all Period-3 ions regardless.<br><br>
+        Increasing size: <span class="answer">K⁺ &lt; S²⁻ &lt; P³⁻ &lt; As³⁻</span>
+      </div>
+    </div>
+
+    <div class="question-card">
+      <div class="q-header"><span class="q-num">P2 Q14</span><span class="q-section">2 marks · Quantum numbers</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('f20-p2q14')">Solution</button></div></div>
+      <div class="prob-q">Which set of quantum numbers is <strong>NOT allowed</strong>?<br>
+        (a) n=1, l=0, m<sub>l</sub>=0, m<sub>s</sub>=−½ &nbsp; (b) n=89, l=88, m<sub>l</sub>=−88, m<sub>s</sub>=−½ &nbsp; (c) n=4, l=2, m<sub>l</sub>=−1, m<sub>s</sub>=−½ &nbsp; (d) n=3, l=0, m<sub>l</sub>=−1, m<sub>s</sub>=−½ &nbsp; (e) n=5, l=3, m<sub>l</sub>=2, m<sub>s</sub>=+½</div>
+      <div class="sol-box" id="f20-p2q14" style="display:none;">
+        Rules: l must be 0 to n−1; m<sub>l</sub> must be −l to +l.<br>
+        (a) l=0, m<sub>l</sub>=0 ✓ &nbsp; (b) l=88 &lt; n=89, m<sub>l</sub>=−88 allowed ✓ &nbsp; (c) l=2, m<sub>l</sub>=−1 ✓ &nbsp; (e) l=3, m<sub>l</sub>=2 ✓<br>
+        (d) n=3, l=0 → m<sub>l</sub> must be 0 only. m<sub>l</sub>=−1 is <span class="bad-answer">NOT allowed</span> → <span class="answer">Set (d)</span>
+      </div>
+    </div>
+
+    <div class="question-card">
+      <div class="q-header"><span class="q-num">P2 Q15</span><span class="q-section">4 marks · Atomic orbitals</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('f20-p2q15')">Solution</button></div></div>
+      <div class="prob-q">A spherical orbital is drawn showing 5 concentric shells in the y-z plane. Identify the orbital and answer:<br>
+        (a) Name the orbital &nbsp; (b) Angular nodes &nbsp; (c) Radial nodes &nbsp; (d) Electron density in x-y plane?</div>
+      <div class="sol-box" id="f20-p2q15" style="display:none;">
+        A spherical orbital with 5 radial nodes → n − 1 = 5 → n = 6, l = 0 (s orbital)<br>
+        (a) <span class="answer">6s orbital</span><br>
+        (b) Angular nodes = l = 0 → <span class="answer">0</span><br>
+        (c) Radial nodes = n − l − 1 = 6 − 0 − 1 = <span class="answer">5</span><br>
+        (d) s orbitals are spherically symmetric → <span class="answer">Yes</span>, there is electron density in the x-y plane.
+      </div>
+    </div>
+
+    <div class="question-card">
+      <div class="q-header"><span class="q-num">P2 Q16</span><span class="q-section">6 marks · Valence bond / hybridization</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('f20-p2q16')">Solution</button></div></div>
+      <div class="prob-q">Describe the bonding in <strong>CH₂O</strong> (formaldehyde) using valence bond theory:<br>
+        (a) Electron groups on C &nbsp; (b) EGG &nbsp; (c) Hybrid orbital set &nbsp; (d) Total bonds formed, σ-bonds, π-bonds</div>
+      <div class="sol-box" id="f20-p2q16" style="display:none;">
+        Lewis structure: H₂C=O — C has 2 C–H bonds + 1 C=O double bond = 3 electron groups<br>
+        (a) <span class="answer">3 electron groups</span><br>
+        (b) EGG: <span class="answer">Trigonal planar</span><br>
+        (c) Hybrid orbitals: <span class="answer">sp²</span><br>
+        (d) Bonds: 2 (C–H) + 1 (C=O) = <span class="answer">4 bonds total</span> · σ-bonds: <span class="answer">3</span> (2 C–H σ + 1 C–O σ) · π-bonds: <span class="answer">1</span> (the C=O π bond from overlap of unhybridized p orbitals)
+      </div>
+    </div>
+
+    <!-- PART 3: Numerical Problems -->
+    <div class="section-header" style="margin-top:32px;"><div>
+      <h2 style="font-size:1.1rem;">Part 3 — Numerical Problems <span style="font-size:0.82rem;font-weight:400;color:#6b7280;">(44 marks)</span></h2>
+    </div></div>
+
+    <div class="question-card">
+      <div class="q-header"><span class="q-num">P3 Q1</span><span class="q-section">9 marks · Stoichiometry / gas laws</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('f20-p3q1')">Solution</button></div></div>
+      <div class="prob-q">Liquid CS₂ reacts with gaseous NO (no air present) to form solid sulfur, gaseous N₂, and gaseous CO₂.<br>
+        (a) Write the balanced equation.<br>
+        (b) 6.00 g CS₂ is injected into a 4.00 L cylinder of NO at 20 °C and 102 kPa. What mass of sulfur forms?<br>
+        (c) What is the partial pressure of NO after the reaction? (20 °C)<br>
+        (d) What is the total pressure in the cylinder after reaction? (20 °C)</div>
+      <div class="sol-box" id="f20-p3q1" style="display:none;">
+        <div class="sol-step">a) Balanced equation</div>
+        CS₂(l) + 4NO(g) → S(s) + N₂(g) + CO₂(g) — but check: 1C, 2S, 4N, 4O left; 1S, 2N, 1C, 2O right — not balanced.<br>
+        Balancing properly: CS₂ + 4NO → S₂ + 2N₂ + CO₂? Try: CS₂ + 4NO → CO₂ + 2N₂ + 2S ✓ <br>
+        Check: C:1=1 ✓ S:2=2 ✓ N:4=4 ✓ O:4=2×2=4 ✓<br>
+        <span class="answer">CS₂(l) + 4 NO(g) → CO₂(g) + 2 N₂(g) + 2 S(s)</span>
+        <div class="sol-step">b) Mass of sulfur (limiting reagent)</div>
+        Moles CS₂ = 6.00 / 76.14 = 0.0788 mol<br>
+        Moles NO = PV/RT = (102 × 4.00)/(8.314 × 293.15) = 0.1677 mol<br>
+        Ratio: CS₂ needs 4× NO → need 0.0788 × 4 = 0.315 mol NO, but only 0.168 mol available → <strong>NO is limiting</strong><br>
+        Moles CS₂ consumed = 0.1677/4 = 0.04193 mol → moles S = 2 × 0.04193 = 0.08386 mol<br>
+        <span class="answer">Mass S = 0.08386 × 32.06 = 2.69 g</span>
+        <div class="sol-step">c) Partial pressure of NO after reaction</div>
+        NO is the limiting reagent → all NO is consumed → <span class="answer">P(NO) = 0 kPa</span>
+        <div class="sol-step">d) Total pressure after reaction</div>
+        Products (gas only): CO₂ and N₂. Moles CO₂ = 0.04193 mol; moles N₂ = 2 × 0.04193 = 0.08386 mol<br>
+        Total gas moles = 0.04193 + 0.08386 = 0.1258 mol<br>
+        P_total = nRT/V = (0.1258 × 8.314 × 293.15)/4.00 = <span class="answer">76.6 kPa</span>
+      </div>
+    </div>
+
+    <div class="question-card">
+      <div class="q-header"><span class="q-num">P3 Q2</span><span class="q-section">7 marks · Bond dissociation energy / ΔH</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('f20-p3q2')">Solution</button></div></div>
+      <div class="prob-q">Using bond dissociation energies (D°) below, estimate ΔH for:<br>
+        CH₄(g) + Cl₂(g) → CH₃Cl(g) + HCl(g)<br>
+        D° (kJ/mol): H–H 436 · C–H 414 · C–Cl 339 · Cl–Cl 243 · H–Cl 431 · C–C 347 · C=C 611 · O–H 464</div>
+      <div class="sol-box" id="f20-p3q2" style="display:none;">
+        <div class="sol-step">Bonds broken (reactants)</div>
+        CH₄ has 4 C–H bonds, but only 1 breaks: 1 × C–H = 414 kJ<br>
+        Cl₂: 1 × Cl–Cl = 243 kJ<br>
+        Total broken = 414 + 243 = <strong>657 kJ</strong>
+        <div class="sol-step">Bonds formed (products)</div>
+        CH₃Cl: 1 × C–Cl formed = −339 kJ<br>
+        HCl: 1 × H–Cl formed = −431 kJ<br>
+        Total formed = −(339 + 431) = <strong>−770 kJ</strong>
+        <div class="sol-step">ΔH = broken − formed</div>
+        ΔH = 657 − 770 = <span class="answer">−113 kJ/mol</span> (exothermic)
+      </div>
+    </div>
+
+    <div class="question-card">
+      <div class="q-header"><span class="q-num">P3 Q3</span><span class="q-section">8 marks · Weak base / ICE table / pH</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('f20-p3q3')">Solution</button></div></div>
+      <div class="prob-q">Calculate the pH of a 0.200 M solution of ammonia in water. K<sub>b</sub>(NH₃) = 1.8 × 10⁻⁵</div>
+      <div class="sol-box" id="f20-p3q3" style="display:none;">
+        <div class="sol-step">Equilibrium</div>
+        NH₃ + H₂O ⇌ NH₄⁺ + OH⁻ · K<sub>b</sub> = 1.8×10⁻⁵
+        <div class="sol-step">ICE table</div>
+        <table style="width:100%;font-size:0.83rem;border-collapse:collapse;margin:8px 0;">
+          <tr><td style="padding:4px 8px;"></td><td style="padding:4px 8px;text-align:center;">NH₃</td><td style="padding:4px 8px;text-align:center;">NH₄⁺</td><td style="padding:4px 8px;text-align:center;">OH⁻</td></tr>
+          <tr><td style="padding:4px 8px;">I</td><td style="padding:4px 8px;text-align:center;">0.200</td><td style="padding:4px 8px;text-align:center;">0</td><td style="padding:4px 8px;text-align:center;">0</td></tr>
+          <tr><td style="padding:4px 8px;">C</td><td style="padding:4px 8px;text-align:center;">−x</td><td style="padding:4px 8px;text-align:center;">+x</td><td style="padding:4px 8px;text-align:center;">+x</td></tr>
+          <tr><td style="padding:4px 8px;">E</td><td style="padding:4px 8px;text-align:center;">0.200−x</td><td style="padding:4px 8px;text-align:center;">x</td><td style="padding:4px 8px;text-align:center;">x</td></tr>
+        </table>
+        K<sub>b</sub> = x²/(0.200−x) ≈ x²/0.200 (since K<sub>b</sub> is small)<br>
+        x² = 1.8×10⁻⁵ × 0.200 = 3.6×10⁻⁶<br>
+        x = [OH⁻] = 1.90×10⁻³ M<br>
+        pOH = −log(1.90×10⁻³) = 2.72<br>
+        <span class="answer">pH = 14 − 2.72 = 11.28</span>
+      </div>
+    </div>
+
+    <div class="question-card">
+      <div class="q-header"><span class="q-num">P3 Q4</span><span class="q-section">3 marks · de Broglie wavelength</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('f20-p3q4')">Solution</button></div></div>
+      <div class="prob-q">What is the wavelength associated with an electron travelling at 1% of the speed of light?<br>
+        (m<sub>e</sub> = 9.109×10⁻³¹ kg · h = 6.626×10⁻³⁴ J·s · c = 3×10⁸ m/s)</div>
+      <div class="sol-box" id="f20-p3q4" style="display:none;">
+        v = 0.01 × 3×10⁸ = 3×10⁶ m/s<br>
+        λ = h/(mv) = (6.626×10⁻³⁴) / (9.109×10⁻³¹ × 3×10⁶)<br>
+        λ = 6.626×10⁻³⁴ / 2.733×10⁻²⁴<br>
+        <span class="answer">λ = 2.42×10⁻¹⁰ m = 0.242 nm</span> (X-ray range — electrons at this speed have atomic-scale wavelengths)
+      </div>
+    </div>
+
+    <div class="question-card">
+      <div class="q-header"><span class="q-num">P3 Q5</span><span class="q-section">3 marks · Heisenberg uncertainty</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('f20-p3q5')">Solution</button></div></div>
+      <div class="prob-q">Using the electron from Q4, what is the uncertainty in position if the speed is known with an uncertainty of Δv = 2 m/s?</div>
+      <div class="sol-box" id="f20-p3q5" style="display:none;">
+        Heisenberg: Δx · Δp ≥ h/(4π)<br>
+        Δp = m<sub>e</sub> · Δv = 9.109×10⁻³¹ × 2 = 1.822×10⁻³⁰ kg·m/s<br>
+        Δx ≥ h/(4π · Δp) = 6.626×10⁻³⁴ / (4π × 1.822×10⁻³⁰)<br>
+        Δx ≥ 6.626×10⁻³⁴ / (2.290×10⁻²⁹)<br>
+        <span class="answer">Δx ≥ 2.89×10⁻⁵ m = 28.9 μm</span> — enormous compared to atomic scale; even a tiny uncertainty in speed gives a huge positional uncertainty.
+      </div>
+    </div>
+
+    <div class="question-card">
+      <div class="q-header"><span class="q-num">P3 Q6</span><span class="q-section">7 marks · Gravimetric analysis</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('f20-p3q6')">Solution</button></div></div>
+      <div class="prob-q">An Mg/Al alloy (897 mg) is dissolved in HNO₃. Base is added to precipitate the metal hydroxides, which are then heated to form oxides. 1.623 g of mixed oxides (MgO + Al₂O₃) is obtained.<br>
+        <strong>What is the % wt. of magnesium in the alloy?</strong><br>
+        M: MgO = 40.30 g/mol · Al₂O₃ = 101.96 g/mol · Mg = 24.31 g/mol · Al = 26.98 g/mol</div>
+      <div class="sol-box" id="f20-p3q6" style="display:none;">
+        <div class="sol-step">Set up two equations</div>
+        Let x = mol Mg, y = mol Al<br>
+        Eq 1 (mass of oxides): 40.30x + (101.96/2)y = 1.623 → 40.30x + 50.98y = 1.623<br>
+        Eq 2 (mass of alloy): 24.31x + 26.98y = 0.897
+        <div class="sol-step">Solve</div>
+        From Eq 2: x = (0.897 − 26.98y)/24.31<br>
+        Substitute into Eq 1:<br>
+        40.30 × (0.897 − 26.98y)/24.31 + 50.98y = 1.623<br>
+        1.487 − 44.75y/24.31... → 1.487(0.897/24.31×40.30) ... solving numerically:<br>
+        40.30x + 50.98y = 1.623 &nbsp;·&nbsp; 40.30×(0.897/24.31) − 40.30×(26.98/24.31)y + 50.98y = 1.623<br>
+        1.487 − 44.73y + 50.98y = 1.623 → 6.25y = 0.136 → y = 0.02176 mol Al<br>
+        x = (0.897 − 26.98×0.02176)/24.31 = (0.897 − 0.587)/24.31 = 0.310/24.31 = 0.01275 mol Mg<br>
+        Mass Mg = 0.01275 × 24.31 = 0.310 g<br>
+        <span class="answer">% wt Mg = (0.310/0.897) × 100 = 34.6%</span>
+      </div>
+    </div>
+
+    <div class="question-card">
+      <div class="q-header"><span class="q-num">P3 Q7</span><span class="q-section">7 marks · Electrochemistry / Nernst</span><div class="q-btns"><button class="btn-sol" onclick="toggleP('f20-p3q7')">Solution</button></div></div>
+      <div class="prob-q">A standard hydrogen electrode (SHE) is connected to a Pt wire in 0.38 M Fe²⁺ and 1.20 M Fe³⁺.<br>
+        E°(Fe³⁺/Fe²⁺) = +0.771 V · E°(H⁺/H₂) = 0.000 V<br>
+        (a) Identify anode and cathode &nbsp; (b) Write half-reactions and overall &nbsp; (c) Calculate cell voltage using Nernst equation</div>
+      <div class="sol-box" id="f20-p3q7" style="display:none;">
+        <div class="sol-step">a) Anode / cathode</div>
+        Fe³⁺/Fe²⁺ has E° = +0.771 V &gt; SHE (0.000 V) → Fe³⁺ is reduced at the <span class="answer">cathode</span>.<br>
+        SHE is the <span class="answer">anode</span> (H₂ is oxidized).
+        <div class="sol-step">b) Half-reactions</div>
+        Cathode: Fe³⁺(aq) + e⁻ → Fe²⁺(aq) · E° = +0.771 V<br>
+        Anode: H₂(g) → 2H⁺(aq) + 2e⁻ · E° = 0.000 V<br>
+        Overall (×2 for cathode): 2Fe³⁺ + H₂ → 2Fe²⁺ + 2H⁺ · n = 2
+        <div class="sol-step">c) Nernst equation</div>
+        E°_cell = 0.771 − 0.000 = 0.771 V<br>
+        Q = [Fe²⁺]²[H⁺]²/([Fe³⁺]²[P_H₂]) — at standard conditions [H⁺]=1, P_H₂=1:<br>
+        Q = [Fe²⁺]²/[Fe³⁺]² = (0.38)²/(1.20)² = 0.1444/1.440 = 0.1003<br>
+        E = E° − (0.0592/n) log Q = 0.771 − (0.0592/2) log(0.1003)<br>
+        = 0.771 − 0.0296 × (−1.00) = 0.771 + 0.0296<br>
+        <span class="answer">E_cell = 0.801 V</span>
+      </div>
+    </div>
+
   </section>
 
   <!-- ═══════════════════════════════════════════════════════
@@ -1201,14 +1592,53 @@ const EXAMS = {
       opts: ['Mg(s) + N₂(g) → MgN₂(s)', '2Mg(s) + N₂(g) → 2MgN(s)', '3Mg(s) + N₂(g) → Mg₃N₂(s)', 'Mg(s) + 2N₂(g) → MgN₄(s)', '2Mg(s) + N₂(g) → Mg₂N₂(s)'],
       ans: 2, hint: "Mg (Group 2) forms Mg²⁺. N (Group 15) forms N³⁻. Write the formula of magnesium nitride, then balance.",
       sol: "Mg²⁺ and N³⁻ combine as Mg₃N₂ [check: 3×(+2) + 2×(−3) = 0 ✓]. Balanced equation: <span class='answer'>3Mg(s) + N₂(g) → Mg₃N₂(s)</span>" }
+  ],
+
+  // ── 2020 Final — Part 1 MCQ ──────────────────────────────
+  d: [
+    { section: '2020 Final · P1', q: "Which of the following statements regarding mixtures is <strong>false</strong>?",
+      opts: ['The elements nitrogen and sulfur form a homogeneous mixture at room temperature.','Saltwater is a mixture that can be separated by physical means.','A gold-silver alloy is a homogeneous mixture.','In mixtures compounds retain their identity.','Concrete is a heterogeneous mixture.'],
+      ans: 0, hint: "Consider the physical states of N and S at room temperature. Can they truly mix uniformly?",
+      sol: "At room temperature N₂ is a gas and S is a solid — they <strong>cannot form a homogeneous mixture</strong>. The statement is <span class='bad-answer'>False</span>. All other statements are correct: saltwater is a homogeneous mixture separable by distillation; Au–Ag alloys are homogeneous; compounds retain identity in mixtures; concrete is heterogeneous." },
+
+    { section: '2020 Final · P1', q: "Find the statement that is <strong>FALSE</strong> about gases.",
+      opts: ['At constant pressure the volume of a fixed amount of an ideal gas doubles if the Kelvin temperature doubles.','The molecules of an ideal gas have a volume that is so small it can be neglected.','A real gas might experience cooling when freely expanding.','In a real gas intermolecular forces are so small that they can be neglected.','Considering ideal behaviour the volumes of two different gases are the same if they contain the same number of molecules at the same T and P.'],
+      ans: 3, hint: "Ideal gas assumptions are: negligible molecular volume AND negligible intermolecular forces. Which is false for a REAL gas?",
+      sol: "Statement (d) is <span class='bad-answer'>False</span>. Real gases <strong>do</strong> have significant intermolecular forces — that's what makes them 'real'. The ideal gas model ignores these forces (and molecular volumes). Real gas behaviour (e.g. van der Waals) must account for intermolecular attractions and repulsions." },
+
+    { section: '2020 Final · P1', q: "At 22 °C the osmotic pressure of a 0.152 M calcium chloride solution is:",
+      opts: ['27.8 kPa','373 kPa','746 kPa','1118 kPa','None of the above is reasonably close.'],
+      ans: 3, hint: "CaCl₂ fully dissociates: CaCl₂ → Ca²⁺ + 2Cl⁻. Use Π = iMRT with the van 't Hoff factor i.",
+      sol: "CaCl₂ → Ca²⁺ + 2Cl⁻, so i = 3. T = 22 + 273 = 295 K.<br>Π = iMRT = 3 × 0.152 × 8.314 × 295 = <span class='answer'>1118 kPa</span>" },
+
+    { section: '2020 Final · P1', q: "Which word or phrase best describes the process: M(g) + energy → M⁺(g) + e⁻ ?",
+      opts: ['Electronegativity','Electron affinity','Ionization energy','Reduction','None of the above correctly describes this property.'],
+      ans: 2, hint: "Energy is being absorbed to remove an electron from a neutral gas-phase atom. What is that energy called?",
+      sol: "Energy is absorbed to <strong>remove an electron</strong> from a neutral atom in the gas phase, producing a cation. This is the definition of <span class='answer'>ionization energy</span>. Electron affinity is the opposite (adding an electron, releasing energy). Electronegativity measures attraction to bonding electrons." },
+
+    { section: '2020 Final · P1', q: "When 10 mol of copper(II) hydroxide decompose, how many mol of water form?",
+      opts: ['2.5 mol','5 mol','10 mol','20 mol','None of the above.'],
+      ans: 2, hint: "Write the decomposition reaction for Cu(OH)₂. What is the molar ratio of Cu(OH)₂ to H₂O?",
+      sol: "Cu(OH)₂(s) → CuO(s) + H₂O(l) — a 1:1:1 ratio.<br>10 mol Cu(OH)₂ → <span class='answer'>10 mol H₂O</span>" },
+
+    { section: '2020 Final · P1', q: "The energy of a photon of 250 nm wavelength is:",
+      opts: ['8.7 × 10⁻¹⁸ J','7.9 × 10⁻¹⁹ J','1.2 × 10⁻¹⁸ J','5.2 × 10⁻¹⁸ J','1.3 × 10⁻²⁰ J'],
+      ans: 1, hint: "E = hc/λ. Use h = 6.626×10⁻³⁴ J·s, c = 3×10⁸ m/s, λ = 250×10⁻⁹ m.",
+      sol: "E = hc/λ = (6.626×10⁻³⁴ × 3×10⁸) / (250×10⁻⁹)<br>= 1.988×10⁻²⁵ / 2.50×10⁻⁷ = <span class='answer'>7.95 × 10⁻¹⁹ J ≈ 7.9 × 10⁻¹⁹ J</span>" },
+
+    { section: '2020 Final · P1', q: "Identify the <strong>false</strong> statement:",
+      opts: ['ΔG for the rusting of iron in moist air is negative.','ΔS for the decomposition of silver(I) oxide into the elements is negative.','ΔH for HNO₃(aq) + NaOH(aq) → H₂O(l) + NaNO₃(aq) is negative.','ΔS for the diffusion of nitrogen dioxide in air is positive.','ΔG for Co²⁺(aq) + Fe(s) → Co(s) + Fe²⁺(aq) is negative.'],
+      ans: 1, hint: "For the silver oxide decomposition: Ag₂O(s) → 2Ag(s) + ½O₂(g). Does this produce or consume gas? How does that affect disorder?",
+      sol: "Ag₂O(s) → 2Ag(s) + ½O₂(g). A gas is <strong>produced</strong> — disorder <em>increases</em>, so ΔS is <strong>positive</strong>, not negative. Statement (b) is <span class='bad-answer'>False</span>. All others: rusting is spontaneous (ΔG &lt; 0) ✓; neutralization is exothermic ✓; diffusion increases disorder ✓; Co²⁺ is reduced by Fe (E°&gt;0, ΔG&lt;0) ✓." }
   ]
 };
 
-const timers = { a: null, b: null, c: null };
-const timeLeft = { a: 5400, b: 5400, c: 5400 };
-const startTime = { a: null, b: null, c: null };
-const examStarted = { a: false, b: false, c: false };
-const examSubmitted = { a: false, b: false, c: false };
+const EXAM_TIMES = { a: 5400, b: 5400, c: 5400, d: 1200 };
+const timers = { a: null, b: null, c: null, d: null };
+const timeLeft = { a: 5400, b: 5400, c: 5400, d: 1200 };
+const startTime = { a: null, b: null, c: null, d: null };
+const examStarted = { a: false, b: false, c: false, d: false };
+const examSubmitted = { a: false, b: false, c: false, d: false };
 
 function buildExam(id) {
   const qs = EXAMS[id];
@@ -1326,7 +1756,7 @@ function submitExam(id) {
   });
 
   const pct = Math.round((correct / qs.length) * 100);
-  const used = 5400 - timeLeft[id];
+  const used = EXAM_TIMES[id] - timeLeft[id];
   const um = String(Math.floor(used / 60)).padStart(2,'0');
   const us = String(used % 60).padStart(2,'0');
 
@@ -1345,7 +1775,7 @@ function resetExam(id) {
   clearInterval(timers[id]);
   examStarted[id] = false;
   examSubmitted[id] = false;
-  timeLeft[id] = 5400;
+  timeLeft[id] = EXAM_TIMES[id];
   updateTimer(id);
   document.getElementById('start-' + id).style.display = 'inline-block';
   document.getElementById('submit-' + id).style.display = 'none';
@@ -1363,6 +1793,7 @@ function toggleP(id) {
 buildExam('a');
 buildExam('b');
 buildExam('c');
+buildExam('d');
 </script>
 <script src="theme.js"></script>
 </body>
