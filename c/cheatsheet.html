@@ -1012,6 +1012,11 @@ WORD nums[N_NUMS];
     </div>
 
     <!-- ── PRACTICE: FINAL TOPICS ────────────────────────── -->
+    <div class="tip" style="margin-bottom:14px;">
+      Each question shows the skeleton you'd see on the exam. Try to fill it in before opening the solution.
+      The <strong>OUTPUT</strong> block shows exactly what the program prints so you can verify your mental model.
+    </div>
+
     <div class="card">
       <div class="card-title" style="color:#7c3aed;">Practice Q1 — Array Stack: write push() and pop()</div>
       <p style="font-size:0.83rem;color:#374151;margin-bottom:12px;">
@@ -1050,6 +1055,14 @@ WORD nums[N_NUMS];
     <span class="cmt">// read array[top] THEN decrement top (post-decrement)</span>
     <span class="kw">return</span> s->array[s->top--];
 }</pre>
+        <div style="background:#1e293b;color:#e2e8f0;border-radius:6px;padding:10px 14px;font-family:monospace;font-size:0.8rem;margin-top:10px;line-height:1.7;">
+          <span style="color:#64748b;font-size:0.7rem;letter-spacing:0.08em;">OUTPUT — given: push(10); push(20); push(30); pop(); pop(); pop(); pop();</span><br>
+          <span style="color:#94a3b8;">// LIFO — last in, first out</span><br>
+          pop → <span style="color:#86efac;">30</span><br>
+          pop → <span style="color:#86efac;">20</span><br>
+          pop → <span style="color:#86efac;">10</span><br>
+          <span style="color:#fbbf24;">Stack empty</span>  ← printed to stderr, returns -1
+        </div>
       </details>
     </div>
 
@@ -1076,6 +1089,12 @@ WORD nums[N_NUMS];
     // same pattern as printVector: do one thing, shrink the problem</span>
     <span class="kw">return</span> *arr + <span class="fn">sumArray</span>(arr + <span class="num">1</span>, n - <span class="num">1</span>);
 }</pre>
+        <div style="background:#1e293b;color:#e2e8f0;border-radius:6px;padding:10px 14px;font-family:monospace;font-size:0.8rem;margin-top:10px;line-height:1.7;">
+          <span style="color:#64748b;font-size:0.7rem;letter-spacing:0.08em;">OUTPUT — int nums[] = {1,2,3,4,5};</span><br>
+          sumArray(nums, 5) → <span style="color:#86efac;">15</span>  &nbsp;<span style="color:#94a3b8;">// 1+2+3+4+5</span><br>
+          sumArray(nums, 3) → <span style="color:#86efac;">6</span>   &nbsp;<span style="color:#94a3b8;">// 1+2+3 only</span><br>
+          sumArray(nums, 0) → <span style="color:#86efac;">0</span>   &nbsp;<span style="color:#94a3b8;">// base case fires immediately</span>
+        </div>
       </details>
     </div>
 
@@ -1119,6 +1138,12 @@ WORD nums[N_NUMS];
     <span class="kw">return true</span>;
     <span class="cmt">// KEY ORDER: set n->next BEFORE updating s->top, or you lose the old chain</span>
 }</pre>
+        <div style="background:#1e293b;color:#e2e8f0;border-radius:6px;padding:10px 14px;font-family:monospace;font-size:0.8rem;margin-top:10px;line-height:1.7;">
+          <span style="color:#64748b;font-size:0.7rem;letter-spacing:0.08em;">OUTPUT — push(1); push(2); push(3);</span><br>
+          s.size → <span style="color:#86efac;">3</span><br>
+          Chain in memory:&nbsp; top → [3]→[2]→[1]→NULL<br>
+          <span style="color:#94a3b8;">// pop would return 3 first (LIFO)</span>
+        </div>
       </details>
     </div>
 
@@ -1162,6 +1187,11 @@ WORD nums[N_NUMS];
     // call averageGrade and print result inline</span>
     <span class="fn">printf</span>(<span class="str">"Student: %s, Average: %.2f\n"</span>, s->name, <span class="fn">averageGrade</span>(s));
 }</pre>
+        <div style="background:#1e293b;color:#e2e8f0;border-radius:6px;padding:10px 14px;font-family:monospace;font-size:0.8rem;margin-top:10px;line-height:1.7;">
+          <span style="color:#64748b;font-size:0.7rem;letter-spacing:0.08em;">OUTPUT — Student alice = {"Alice", 3, {85.0, 92.0, 78.0}}; printStudent(&amp;alice);</span><br>
+          <span style="color:#86efac;">Student: Alice, Average: 85.00</span><br>
+          <span style="color:#94a3b8;">// (85+92+78)/3 = 255/3 = 85.0</span>
+        </div>
       </details>
     </div>
 
@@ -1219,6 +1249,13 @@ WORD nums[N_NUMS];
     <span class="fn">free</span>(old);                         <span class="cmt">// free the ListNode wrapper (NOT the item)</span>
     <span class="kw">return</span> item;                       <span class="cmt">// caller uses then frees the item</span>
 }</pre>
+        <div style="background:#1e293b;color:#e2e8f0;border-radius:6px;padding:10px 14px;font-family:monospace;font-size:0.8rem;margin-top:10px;line-height:1.7;">
+          <span style="color:#64748b;font-size:0.7rem;letter-spacing:0.08em;">OUTPUT — enqueue 10, enqueue 20, enqueue 30, then dequeue twice:</span><br>
+          dequeue → <span style="color:#86efac;">10</span> &nbsp;<span style="color:#94a3b8;">// FIFO — first in, first out (opposite of stack)</span><br>
+          dequeue → <span style="color:#86efac;">20</span><br>
+          queue still holds: front→[30]→NULL  (rear also points to [30])<br>
+          dequeue on empty → <span style="color:#86efac;">NULL</span>
+        </div>
       </details>
     </div>
 
@@ -1250,6 +1287,299 @@ WORD nums[N_NUMS];
     <span class="fn">reverse</span>(arr, p1 + <span class="num">1</span>, p2 - <span class="num">1</span>);
 }
 <span class="cmt">// Rule: EVERY recursive function needs a base case that stops the recursion.</span></pre>
+        <div style="background:#1e293b;color:#e2e8f0;border-radius:6px;padding:10px 14px;font-family:monospace;font-size:0.8rem;margin-top:10px;line-height:1.7;">
+          <span style="color:#64748b;font-size:0.7rem;letter-spacing:0.08em;">OUTPUT — int arr[] = {1,2,3,4,5}; reverse(arr, 0, 4);</span><br>
+          Before: <span style="color:#94a3b8;">1 2 3 4 5</span><br>
+          After:  <span style="color:#86efac;">5 4 3 2 1</span><br>
+          <span style="color:#94a3b8;">// without the base case: infinite recursion → crash (stack overflow)</span>
+        </div>
+      </details>
+    </div>
+
+    <!-- ── NEW QUESTIONS ──────────────────────────────────── -->
+
+    <div class="card">
+      <div class="card-title" style="color:#7c3aed;">Practice Q7 — linearSearch() (Lab 6 pattern)</div>
+      <p style="font-size:0.83rem;color:#374151;margin-bottom:12px;">
+        <strong>Task:</strong> Write <code>linearSearch()</code>. Returns the <em>index</em> of the value if found, <code>-1</code> if not.
+        Then write the interactive search loop from Lab 6.
+      </p>
+<pre><span class="cmt">// ── YOUR JOB ──────────────────────────────────────────────────────────</span>
+<span class="kw">int</span> <span class="fn">linearSearch</span>(<span class="kw">const int</span> value, <span class="kw">const int</span> arr[], <span class="kw">int</span> n) {
+    <span class="cmt">/* fill in */</span>
+}
+
+<span class="cmt">// Also write the loop that reads a value from the user and prints the result
+// Hint: use scanf("%19s", input) and check input[0] != 'q' to quit</span></pre>
+      <details style="margin-top:8px;">
+        <summary style="cursor:pointer;font-size:0.82rem;font-weight:700;color:#0369a1;">Show solution</summary>
+<pre style="margin-top:8px;"><span class="kw">int</span> <span class="fn">linearSearch</span>(<span class="kw">const int</span> value, <span class="kw">const int</span> arr[], <span class="kw">int</span> n) {
+    <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i &lt; n; i++)
+        <span class="kw">if</span> (arr[i] == value) <span class="kw">return</span> i;   <span class="cmt">// found — return index immediately</span>
+    <span class="kw">return</span> -<span class="num">1</span>;   <span class="cmt">// loop finished without a match</span>
+}
+
+<span class="cmt">// Interactive loop (Lab 6 main pattern)</span>
+<span class="kw">char</span> input[<span class="num">20</span>];
+<span class="fn">printf</span>(<span class="str">"Enter value ('q' to quit): "</span>);
+<span class="kw">while</span> (<span class="fn">scanf</span>(<span class="str">"%19s"</span>, input) == <span class="num">1</span> &amp;&amp; input[<span class="num">0</span>] != <span class="str">'q'</span>) {
+    <span class="kw">int</span> target;
+    <span class="fn">sscanf</span>(input, <span class="str">"%d"</span>, &amp;target);   <span class="cmt">// convert string to int</span>
+    <span class="kw">int</span> idx = <span class="fn">linearSearch</span>(target, arr, n);
+    <span class="kw">if</span> (idx &gt;= <span class="num">0</span>) <span class="fn">printf</span>(<span class="str">"%d found at index %d\n"</span>, target, idx);
+    <span class="kw">else</span>          <span class="fn">printf</span>(<span class="str">"%d not found\n"</span>, target);
+    <span class="fn">printf</span>(<span class="str">"Enter value ('q' to quit): "</span>);
+}</pre>
+        <div style="background:#1e293b;color:#e2e8f0;border-radius:6px;padding:10px 14px;font-family:monospace;font-size:0.8rem;margin-top:10px;line-height:1.7;">
+          <span style="color:#64748b;font-size:0.7rem;letter-spacing:0.08em;">OUTPUT — int arr[] = {15, 3, 42, 7, 99}; user types 42, then 100, then q</span><br>
+          Enter value ('q' to quit): 42<br>
+          <span style="color:#86efac;">42 found at index 2</span><br>
+          Enter value ('q' to quit): 100<br>
+          <span style="color:#86efac;">100 not found</span><br>
+          Enter value ('q' to quit): q<br>
+          <span style="color:#94a3b8;">// loop exits because input[0] == 'q'</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="card">
+      <div class="card-title" style="color:#7c3aed;">Practice Q8 — LL Stack: write pop() (companion to Q3)</div>
+      <p style="font-size:0.83rem;color:#374151;margin-bottom:12px;">
+        <strong>Task:</strong> Given the same Node/Stack structs from Q3, write <code>pop()</code>.
+        It should write the value to <code>*out</code> and return <code>true</code>, or return <code>false</code> if empty.
+      </p>
+<pre><span class="cmt">// ── YOUR JOB ──────────────────────────────────────────────────────────</span>
+<span class="kw">bool</span> <span class="fn">pop</span>(Stack *s, <span class="kw">int</span> *out) {
+    <span class="cmt">/* fill in */</span>
+}</pre>
+      <details style="margin-top:8px;">
+        <summary style="cursor:pointer;font-size:0.82rem;font-weight:700;color:#0369a1;">Show solution</summary>
+<pre style="margin-top:8px;"><span class="kw">bool</span> <span class="fn">pop</span>(Stack *s, <span class="kw">int</span> *out) {
+    <span class="cmt">// 1. check empty — top == NULL means no nodes exist</span>
+    <span class="kw">if</span> (s->top == NULL) <span class="kw">return false</span>;
+
+    <span class="cmt">// 2. save the top node so we can free it after unlinking</span>
+    Node *tmp = s->top;
+
+    <span class="cmt">// 3. write value to caller's variable through the pointer</span>
+    *out = tmp->item;
+
+    <span class="cmt">// 4. advance top to the next node (the one below)</span>
+    s->top = tmp->next;
+    s->size--;
+
+    <span class="cmt">// 5. free the removed node — tmp still holds its address</span>
+    <span class="fn">free</span>(tmp);
+    <span class="kw">return true</span>;
+    <span class="cmt">// KEY: save tmp BEFORE changing s->top, or you can't free the old node</span>
+}</pre>
+        <div style="background:#1e293b;color:#e2e8f0;border-radius:6px;padding:10px 14px;font-family:monospace;font-size:0.8rem;margin-top:10px;line-height:1.7;">
+          <span style="color:#64748b;font-size:0.7rem;letter-spacing:0.08em;">OUTPUT — push(1); push(2); push(3); then pop three times:</span><br>
+          int v;<br>
+          pop(&amp;s, &amp;v) → true,  v = <span style="color:#86efac;">3</span><br>
+          pop(&amp;s, &amp;v) → true,  v = <span style="color:#86efac;">2</span><br>
+          pop(&amp;s, &amp;v) → true,  v = <span style="color:#86efac;">1</span><br>
+          pop(&amp;s, &amp;v) → <span style="color:#fbbf24;">false</span>  (stack empty, v unchanged)
+        </div>
+      </details>
+    </div>
+
+    <div class="card">
+      <div class="card-title" style="color:#7c3aed;">Practice Q9 — Recursive countEvens()</div>
+      <p style="font-size:0.83rem;color:#374151;margin-bottom:12px;">
+        <strong>Task:</strong> Write a recursive function that counts how many even numbers are in an array.
+        Same structure as <code>sumArray</code> — decide "does this element count?" then recurse on the rest.
+      </p>
+<pre><span class="cmt">// ── YOUR JOB ──────────────────────────────────────────────────────────</span>
+<span class="kw">int</span> <span class="fn">countEvens</span>(<span class="kw">const int</span> *arr, <span class="kw">int</span> n) {
+    <span class="cmt">/* fill in */</span>
+}
+<span class="cmt">// int a[] = {1,2,3,4,5,6};  countEvens(a, 6) should return 3</span></pre>
+      <details style="margin-top:8px;">
+        <summary style="cursor:pointer;font-size:0.82rem;font-weight:700;color:#0369a1;">Show solution</summary>
+<pre style="margin-top:8px;"><span class="kw">int</span> <span class="fn">countEvens</span>(<span class="kw">const int</span> *arr, <span class="kw">int</span> n) {
+    <span class="cmt">// BASE CASE: empty array has zero evens</span>
+    <span class="kw">if</span> (n == <span class="num">0</span>) <span class="kw">return</span> <span class="num">0</span>;
+
+    <span class="cmt">// Is the first element even? Add 1 if yes, 0 if no
+    // Then recurse on the rest — same shrink pattern as every Lab 8 function</span>
+    <span class="kw">int</span> thisOne = (*arr % <span class="num">2</span> == <span class="num">0</span>) ? <span class="num">1</span> : <span class="num">0</span>;
+    <span class="kw">return</span> thisOne + <span class="fn">countEvens</span>(arr + <span class="num">1</span>, n - <span class="num">1</span>);
+}
+<span class="cmt">// Shorter version (same thing):
+// return (*arr % 2 == 0) + countEvens(arr + 1, n - 1);</span></pre>
+        <div style="background:#1e293b;color:#e2e8f0;border-radius:6px;padding:10px 14px;font-family:monospace;font-size:0.8rem;margin-top:10px;line-height:1.7;">
+          <span style="color:#64748b;font-size:0.7rem;letter-spacing:0.08em;">OUTPUT — int a[] = {1,2,3,4,5,6};</span><br>
+          countEvens(a, 6) → <span style="color:#86efac;">3</span> &nbsp;<span style="color:#94a3b8;">// 2, 4, 6 are even</span><br>
+          countEvens(a, 3) → <span style="color:#86efac;">1</span> &nbsp;<span style="color:#94a3b8;">// only 2 in first 3</span><br>
+          countEvens(a, 0) → <span style="color:#86efac;">0</span> &nbsp;<span style="color:#94a3b8;">// base case</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="card">
+      <div class="card-title" style="color:#7c3aed;">Practice Q10 — File read loop + compute (Lab 5 pattern)</div>
+      <p style="font-size:0.83rem;color:#374151;margin-bottom:12px;">
+        <strong>Task:</strong> Write a complete <code>main</code> that opens a text file (filename from <code>argv[1]</code>),
+        reads integers one per line, and prints the count and sum.
+      </p>
+<pre><span class="cmt">// ── YOUR JOB ──────────────────────────────────────────────────────────</span>
+<span class="kw">int</span> <span class="fn">main</span>(<span class="kw">int</span> argc, <span class="kw">char</span> *argv[]) {
+    <span class="cmt">/* check argc, open file, read loop, print results, close */</span>
+}</pre>
+      <details style="margin-top:8px;">
+        <summary style="cursor:pointer;font-size:0.82rem;font-weight:700;color:#0369a1;">Show solution</summary>
+<pre style="margin-top:8px;"><span class="kw">int</span> <span class="fn">main</span>(<span class="kw">int</span> argc, <span class="kw">char</span> *argv[]) {
+    <span class="cmt">// 1. check argument count</span>
+    <span class="kw">if</span> (argc != <span class="num">2</span>) {
+        <span class="fn">printf</span>(<span class="str">"Usage: %s filename\n"</span>, argv[<span class="num">0</span>]);
+        <span class="kw">return</span> <span class="num">1</span>;
+    }
+
+    <span class="cmt">// 2. open file — always check NULL</span>
+    FILE *fp;
+    <span class="kw">if</span> ((fp = <span class="fn">fopen</span>(argv[<span class="num">1</span>], <span class="str">"r"</span>)) == NULL) {
+        <span class="fn">printf</span>(<span class="str">"%s: Cannot open \"%s\"\n"</span>, argv[<span class="num">0</span>], argv[<span class="num">1</span>]);
+        <span class="kw">return</span> <span class="num">1</span>;
+    }
+
+    <span class="cmt">// 3. read loop — fscanf returns 1 each successful read, EOF when done</span>
+    <span class="kw">int</span> x, count = <span class="num">0</span>, sum = <span class="num">0</span>;
+    <span class="kw">while</span> (<span class="fn">fscanf</span>(fp, <span class="str">"%d"</span>, &amp;x) == <span class="num">1</span>) {
+        sum += x;
+        count++;
+    }
+
+    <span class="cmt">// 4. close then print — always close before printing final results</span>
+    <span class="fn">fclose</span>(fp);
+    <span class="fn">printf</span>(<span class="str">"Count: %d, Sum: %d\n"</span>, count, sum);
+    <span class="kw">return</span> <span class="num">0</span>;
+}</pre>
+        <div style="background:#1e293b;color:#e2e8f0;border-radius:6px;padding:10px 14px;font-family:monospace;font-size:0.8rem;margin-top:10px;line-height:1.7;">
+          <span style="color:#64748b;font-size:0.7rem;letter-spacing:0.08em;">OUTPUT — file contains: 10  20  30  40</span><br>
+          <span style="color:#86efac;">Count: 4, Sum: 100</span><br>
+          <span style="color:#94a3b8;">// bad argc: "Usage: ./prog filename"</span><br>
+          <span style="color:#94a3b8;">// bad file: "./prog: Cannot open "bad.txt""</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="card">
+      <div class="card-title" style="color:#7c3aed;">Practice Q11 — Pointer swap adjacent pairs (Lab 7 pattern)</div>
+      <p style="font-size:0.83rem;color:#374151;margin-bottom:12px;">
+        <strong>Task:</strong> Given an int array of even length, swap every adjacent pair using pointer notation (<code>arr+i</code>, not <code>&amp;arr[i]</code>). Write the <code>swap()</code> function and the loop.
+      </p>
+<pre><span class="cmt">// ── YOUR JOB ──────────────────────────────────────────────────────────</span>
+<span class="kw">void</span> <span class="fn">swap</span>(<span class="kw">int</span> *x, <span class="kw">int</span> *y) { <span class="cmt">/* fill in */</span> }
+
+<span class="cmt">// Then write the loop that swaps pairs in: int arr[] = {1,2,3,4,5,6};</span></pre>
+      <details style="margin-top:8px;">
+        <summary style="cursor:pointer;font-size:0.82rem;font-weight:700;color:#0369a1;">Show solution</summary>
+<pre style="margin-top:8px;"><span class="kw">void</span> <span class="fn">swap</span>(<span class="kw">int</span> *x, <span class="kw">int</span> *y) {
+    <span class="kw">int</span> tmp = *x;   <span class="cmt">// save value at x</span>
+    *x = *y;        <span class="cmt">// write y's value to x's address</span>
+    *y = tmp;       <span class="cmt">// write saved value to y's address</span>
+}
+
+<span class="kw">int</span> arr[] = {<span class="num">1</span>,<span class="num">2</span>,<span class="num">3</span>,<span class="num">4</span>,<span class="num">5</span>,<span class="num">6</span>};
+<span class="kw">int</span> n = <span class="num">6</span>;
+
+<span class="cmt">// step by 2 — each iteration handles one pair (i and i+1)
+// pointer notation: arr+i is identical to &arr[i]</span>
+<span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i &lt; n - <span class="num">1</span>; i += <span class="num">2</span>)
+    <span class="fn">swap</span>(arr + i, arr + i + <span class="num">1</span>);
+
+<span class="cmt">// print to verify</span>
+<span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i &lt; n; i++) <span class="fn">printf</span>(<span class="str">"%d "</span>, arr[i]);
+<span class="fn">printf</span>(<span class="str">"\n"</span>);</pre>
+        <div style="background:#1e293b;color:#e2e8f0;border-radius:6px;padding:10px 14px;font-family:monospace;font-size:0.8rem;margin-top:10px;line-height:1.7;">
+          <span style="color:#64748b;font-size:0.7rem;letter-spacing:0.08em;">OUTPUT — arr = {1,2,3,4,5,6}</span><br>
+          Before: <span style="color:#94a3b8;">1 2 3 4 5 6</span><br>
+          After:  <span style="color:#86efac;">2 1 4 3 6 5</span><br>
+          <span style="color:#94a3b8;">// pair 0↔1 swapped, pair 2↔3 swapped, pair 4↔5 swapped</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="card">
+      <div class="card-title" style="color:#7c3aed;">Practice Q12 — Fix the bug: binary fread (Lab 6 pattern)</div>
+      <p style="font-size:0.83rem;color:#374151;margin-bottom:12px;">
+        <strong>Task:</strong> The code below tries to read <code>n</code> integers from a binary file. It compiles but crashes or reads garbage. Find and fix all bugs.
+      </p>
+<pre><span class="kw">int</span> n = <span class="num">5</span>;
+FILE *fp = <span class="fn">fopen</span>(argv[<span class="num">1</span>], <span class="str">"r"</span>);     <span class="cmt">// bug?</span>
+<span class="kw">int</span> arr[n];
+<span class="kw">size_t</span> got = <span class="fn">fread</span>(arr, n, <span class="kw">sizeof</span>(<span class="kw">int</span>), fp);  <span class="cmt">// bug?</span>
+<span class="kw">if</span> (got != n) <span class="fn">printf</span>(<span class="str">"Error\n"</span>);       <span class="cmt">// bug?</span></pre>
+      <details style="margin-top:8px;">
+        <summary style="cursor:pointer;font-size:0.82rem;font-weight:700;color:#0369a1;">Show solution</summary>
+<pre style="margin-top:8px;"><span class="cmt">// BUG 1: "r" opens as TEXT — binary files need "rb"
+//         On Windows, "r" translates \r\n → \n which corrupts binary data</span>
+FILE *fp = <span class="fn">fopen</span>(argv[<span class="num">1</span>], <span class="str">"rb"</span>);   <span class="cmt">// ✓ binary mode</span>
+
+<span class="kw">int</span> *arr = (<span class="kw">int</span>*) <span class="fn">malloc</span>(n * <span class="kw">sizeof</span>(<span class="kw">int</span>));  <span class="cmt">// ✓ heap array (VLAs are risky)</span>
+
+<span class="cmt">// BUG 2: fread argument order is (ptr, element_size, count, file)
+//         The original had them swapped: (arr, n, sizeof(int), fp)
+//         That reads sizeof(int)=4 elements each of size n=5 bytes — WRONG</span>
+<span class="kw">size_t</span> got = <span class="fn">fread</span>(arr, <span class="kw">sizeof</span>(<span class="kw">int</span>), n, fp);  <span class="cmt">// ✓ size first, count second</span>
+
+<span class="cmt">// BUG 3: comparing size_t (unsigned) to int (signed) — cast n to size_t</span>
+<span class="kw">if</span> (got != (<span class="kw">size_t</span>)n) {
+    <span class="kw">if</span> (<span class="fn">feof</span>(fp))   <span class="fn">printf</span>(<span class="str">"Unexpected EOF\n"</span>);
+    <span class="kw">else</span>            <span class="fn">printf</span>(<span class="str">"Read error\n"</span>);
+}
+<span class="fn">fclose</span>(fp);
+<span class="fn">free</span>(arr);</pre>
+        <div style="background:#1e293b;color:#e2e8f0;border-radius:6px;padding:10px 14px;font-family:monospace;font-size:0.8rem;margin-top:10px;line-height:1.7;">
+          <span style="color:#64748b;font-size:0.7rem;letter-spacing:0.08em;">3 BUGS SUMMARY</span><br>
+          1. <span style="color:#fbbf24;">"r"</span> → <span style="color:#86efac;">"rb"</span> &nbsp; binary file needs binary mode<br>
+          2. <span style="color:#fbbf24;">fread(arr, n, sizeof(int), fp)</span> → <span style="color:#86efac;">fread(arr, sizeof(int), n, fp)</span> &nbsp; size before count<br>
+          3. <span style="color:#fbbf24;">got != n</span> → <span style="color:#86efac;">got != (size_t)n</span> &nbsp; avoid signed/unsigned mismatch warning
+        </div>
+      </details>
+    </div>
+
+    <div class="card">
+      <div class="card-title" style="color:#7c3aed;">Practice Q13 — Fix the bug: midterm-style (void + braces)</div>
+      <p style="font-size:0.83rem;color:#374151;margin-bottom:12px;">
+        <strong>Task:</strong> This function should print all multiples of 3 from 0 to <code>n</code>. It has the same two mistakes as your midterm. Find and fix them.
+      </p>
+<pre><span class="fn">printMultiples</span>(<span class="kw">int</span> n)
+{
+    <span class="kw">int</span> i = <span class="num">0</span>;
+    <span class="fn">printf</span>(<span class="str">"Multiples of 3 up to %d: "</span>, n);
+    <span class="kw">while</span> (i &lt;= n)
+    {
+        <span class="kw">if</span> (i % <span class="num">3</span> == <span class="num">0</span>)
+            <span class="fn">printf</span>(<span class="str">"%d "</span>, i);
+            i++;
+    }
+}</pre>
+      <details style="margin-top:8px;">
+        <summary style="cursor:pointer;font-size:0.82rem;font-weight:700;color:#0369a1;">Show solution</summary>
+<pre style="margin-top:8px;"><span class="cmt">// BUG 1: missing return type void — always required
+// BUG 2: i++ looks indented inside the if, but WITHOUT braces it's NOT
+//         i++ runs every iteration (which is actually correct behavior here)
+//         but the indentation will cost marks — add braces to make intent clear</span>
+
+<span class="kw">void</span> <span class="fn">printMultiples</span>(<span class="kw">int</span> n)   <span class="cmt">// ✓ void return type</span>
+{
+    <span class="kw">int</span> i = <span class="num">0</span>;
+    <span class="fn">printf</span>(<span class="str">"Multiples of 3 up to %d: "</span>, n);
+    <span class="kw">while</span> (i &lt;= n)
+    {
+        <span class="kw">if</span> (i % <span class="num">3</span> == <span class="num">0</span>)
+            <span class="fn">printf</span>(<span class="str">"%d "</span>, i);
+        i++;           <span class="cmt">// ✓ unambiguously outside the if — always increments</span>
+    }
+    <span class="fn">printf</span>(<span class="str">"\n"</span>);       <span class="cmt">// ✓ newline at end of output</span>
+}</pre>
+        <div style="background:#1e293b;color:#e2e8f0;border-radius:6px;padding:10px 14px;font-family:monospace;font-size:0.8rem;margin-top:10px;line-height:1.7;">
+          <span style="color:#64748b;font-size:0.7rem;letter-spacing:0.08em;">OUTPUT — printMultiples(15);</span><br>
+          <span style="color:#86efac;">Multiples of 3 up to 15: 0 3 6 9 12 15</span><br>
+          <span style="color:#94a3b8;">// same two bugs as your midterm: no void, misleading indentation</span>
+        </div>
       </details>
     </div>
 
