@@ -92,6 +92,9 @@ tr:hover td { background: #f9fafb; }
   <a href="#stack-arr">Stack (array)</a>
   <a href="#stack-ll">Stack (LL)</a>
   <a href="#queue">Queue (LL)</a>
+  <a href="#queue-arr">Queue (array)</a>
+  <a href="#twod">2D Arrays</a>
+  <a href="#enum">Enum</a>
   <a href="#labs">Lab Templates</a>
   <a href="#formats">Formats</a>
   <a href="#midterm">Midterm Qs</a>
@@ -381,6 +384,64 @@ Vector *<span class="fn">vectorMath</span>(<span class="kw">const</span> Vector 
     </div>
   </section>
 
+  <!-- ── ENUM ─────────────────────────────────────────────── -->
+  <section id="enum">
+    <div class="sec-title">enum — named integer constants (quiz4 / Week 10 pattern)</div>
+    <div class="two">
+      <div class="card">
+        <div class="card-title">typedef enum + string name array (quiz4 exact pattern)</div>
+<pre><span class="cmt">// enum assigns integer values automatically: HR=0, SALES=1, IT=2, FINANCE=3
+// Use typedef so you can write "Department" not "enum Department" everywhere</span>
+<span class="kw">typedef enum</span> {
+    HR,
+    SALES,
+    IT,
+    FINANCE
+} Department;
+
+<span class="cmt">// Parallel string array: index matches the enum value
+// departmentName[SALES] == "SALES"  (SALES == 1, so index 1)</span>
+<span class="kw">const char</span> *departmentName[] = {<span class="str">"HR"</span>, <span class="str">"SALES"</span>, <span class="str">"IT"</span>, <span class="str">"FINANCE"</span>};
+
+<span class="cmt">// Struct that uses the enum as a field type</span>
+<span class="kw">typedef struct</span> {
+    <span class="kw">int</span>        id;
+    <span class="kw">char</span>       name[<span class="num">50</span>];
+    Department dept;       <span class="cmt">// stored as int, but readable as SALES etc.</span>
+} Employee;
+
+<span class="cmt">// Initialize and print</span>
+Employee e;
+e.id   = <span class="num">356</span>;
+e.dept = SALES;
+<span class="fn">snprintf</span>(e.name, <span class="kw">sizeof</span>(e.name), <span class="str">"Greg"</span>);  <span class="cmt">// safe string copy into struct field</span>
+<span class="fn">printf</span>(<span class="str">"%s %d %s\n"</span>, e.name, e.id, departmentName[e.dept]);
+<span class="cmt">// Output: Greg 356 SALES</span></pre>
+      </div>
+      <div class="card">
+        <div class="card-title">struct — pass by value vs pass by pointer (Week 10 trap)</div>
+<pre><span class="kw">typedef struct</span> { <span class="kw">int</span> level; <span class="kw">char</span> name[<span class="num">100</span>]; } Player;
+
+<span class="cmt">// BY VALUE — function gets a COPY — changes do NOT affect original</span>
+<span class="kw">void</span> <span class="fn">levelUpCopy</span>(Player p) {
+    p.level = <span class="num">99</span>;   <span class="cmt">// only changes the local copy — caller never sees this</span>
+}
+
+<span class="cmt">// BY POINTER — function gets the ADDRESS — changes DO affect original</span>
+<span class="kw">void</span> <span class="fn">levelUpReal</span>(Player *p) {
+    p->level = <span class="num">99</span>;  <span class="cmt">// modifies the actual struct through the pointer</span>
+}
+
+Player hero = {<span class="num">1</span>, <span class="str">"David"</span>};
+<span class="fn">levelUpCopy</span>(hero);           <span class="cmt">// hero.level is still 1</span>
+<span class="fn">levelUpReal</span>(&amp;hero);          <span class="cmt">// hero.level is now 99</span>
+<span class="fn">printf</span>(<span class="str">"%d\n"</span>, hero.level);  <span class="cmt">// prints 99</span>
+<span class="cmt">// Rule: if the function needs to MODIFY the struct, pass &struct (pointer)</span>
+<span class="cmt">//       if it only READS, you can pass by value (but pointer is faster for large structs)</span></pre>
+      </div>
+    </div>
+  </section>
+
   <!-- ── POINTERS ────────────────────────────────────────── -->
   <section id="pointers">
     <div class="sec-title">Pointers — notation, swap, bytes (Lab 7)</div>
@@ -446,6 +507,50 @@ Vector *<span class="fn">vectorMath</span>(<span class="kw">const</span> Vector 
 // p + sizeof(int) - 1 points at the final byte of the current int</span>
 <span class="kw">const unsigned char</span> *b = (<span class="kw">const unsigned char</span> *)p + <span class="kw">sizeof</span>(<span class="kw">int</span>) - <span class="num">1</span>;
 <span class="kw">for</span> (<span class="kw">int</span> j = <span class="num">0</span>; j &lt; (<span class="kw">int</span>)<span class="kw">sizeof</span>(<span class="kw">int</span>); j++) <span class="fn">printf</span>(<span class="str">"%hhu "</span>, *b--);</pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 2D ARRAYS ────────────────────────────────────────── -->
+  <section id="twod">
+    <div class="sec-title">2D Arrays — declaration, access, pointer notation, column sums</div>
+    <div class="two">
+      <div class="card">
+        <div class="card-title">Declare and access a 2D array</div>
+<pre><span class="cmt">// int array[ROWS][COLS] — row-major: rows stored consecutively in memory</span>
+<span class="kw">int</span> arr[<span class="num">3</span>][<span class="num">2</span>] = {{<span class="num">10</span>,<span class="num">20</span>},
+                 {<span class="num">30</span>,<span class="num">40</span>},
+                 {<span class="num">50</span>,<span class="num">60</span>}};
+
+<span class="cmt">// Three equivalent ways to access element at row i, col j:</span>
+arr[i][j];                  <span class="cmt">// standard — use this</span>
+*(arr[i] + j);              <span class="cmt">// arr[i] is pointer to row i</span>
+*(*(arr + i) + j);          <span class="cmt">// fully dereferenced pointer form</span>
+
+<span class="cmt">// Nested loop to print all elements:</span>
+<span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i &lt; <span class="num">3</span>; i++) {
+    <span class="kw">for</span> (<span class="kw">int</span> j = <span class="num">0</span>; j &lt; <span class="num">2</span>; j++)
+        <span class="fn">printf</span>(<span class="str">"%d "</span>, arr[i][j]);
+    <span class="fn">printf</span>(<span class="str">"\n"</span>);
+}</pre>
+      </div>
+      <div class="card">
+        <div class="card-title">Sum each column (classic exam pattern)</div>
+<pre><span class="cmt">// 2 rows, 3 cols — sum DOWN each column</span>
+<span class="kw">int</span> arr[<span class="num">2</span>][<span class="num">3</span>] = {{<span class="num">2</span>,<span class="num">8</span>,<span class="num">1</span>},
+                  {<span class="num">5</span>,<span class="num">6</span>,<span class="num">4</span>}};
+
+<span class="kw">int</span> colSums[<span class="num">3</span>] = {<span class="num">0</span>};   <span class="cmt">// one sum per column, init to 0</span>
+
+<span class="cmt">// Outer loop = columns, inner = rows
+// arr[row][col] → arr[j][i] when i=col, j=row</span>
+<span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i &lt; <span class="num">3</span>; i++) {          <span class="cmt">// i = column index</span>
+    <span class="kw">for</span> (<span class="kw">int</span> j = <span class="num">0</span>; j &lt; <span class="num">2</span>; j++) {      <span class="cmt">// j = row index</span>
+        colSums[i] += arr[j][i];         <span class="cmt">// add row j, col i to col total</span>
+    }
+    <span class="fn">printf</span>(<span class="str">"Col %d sum: %d\n"</span>, i, colSums[i]);
+}
+<span class="cmt">// Output: Col 0: 7  Col 1: 14  Col 2: 5</span></pre>
       </div>
     </div>
   </section>
@@ -717,6 +822,60 @@ ItemType *got = (ItemType *) <span class="fn">dequeue</span>(&amp;q);       <spa
 <span class="kw">typedef enum</span> {QUIT=-<span class="num">1</span>, ENQUEUE, DEQUEUE, PRINT, N_CHOICES} Choice;
 <span class="fn">scanf</span>(<span class="str">"%d"</span>, &amp;choice);
 <span class="kw">while</span> (<span class="fn">getchar</span>() != <span class="str">'\n'</span>) {}  <span class="cmt">// flush rest of input line after scanf</span></pre>
+    </div>
+  </section>
+
+  <!-- ── QUEUE (ARRAY) ─────────────────────────────────── -->
+  <section id="queue-arr">
+    <div class="sec-title">Queue — array-based (simple, fixed size) — your queue practice</div>
+    <div class="card">
+      <div class="card-title">Array queue — front/rear index pattern</div>
+<pre><span class="cmt">// Uses two indices into a fixed array — simpler than LL queue but limited to MAX items
+// front = -1 means queue is EMPTY
+// rear  = index of the last item added
+// Both start at -1 (empty). enqueue only moves rear. dequeue only moves front.</span>
+<span class="kw">#define</span> MAX <span class="num">100</span>
+<span class="kw">typedef struct</span> {
+    <span class="kw">int</span> array[MAX];
+    <span class="kw">int</span> front;   <span class="cmt">// -1 = empty, index of oldest item</span>
+    <span class="kw">int</span> rear;    <span class="cmt">// -1 = empty, index of newest item</span>
+} Queue;
+
+<span class="kw">void</span> <span class="fn">init</span>(Queue *q) { q->front = -<span class="num">1</span>; q->rear = -<span class="num">1</span>; }
+
+<span class="cmt">// enqueue: add at rear — only touches rear</span>
+<span class="kw">void</span> <span class="fn">enqueue</span>(Queue *q, <span class="kw">int</span> a) {
+    <span class="kw">if</span> (q->rear == MAX - <span class="num">1</span>) { <span class="fn">fprintf</span>(stderr, <span class="str">"Queue full\n"</span>); <span class="kw">return</span>; }
+    q->rear++;                         <span class="cmt">// move rear forward</span>
+    q->array[q->rear] = a;             <span class="cmt">// store new item at rear</span>
+    <span class="kw">if</span> (q->front == -<span class="num">1</span>) q->front = <span class="num">0</span>;  <span class="cmt">// first item: activate front</span>
+}
+
+<span class="cmt">// dequeue: remove from front — only touches front</span>
+<span class="kw">int</span> <span class="fn">dequeue</span>(Queue *q) {
+    <span class="kw">if</span> (q->front == -<span class="num">1</span>) { <span class="fn">fprintf</span>(stderr, <span class="str">"Queue empty\n"</span>); <span class="kw">return</span> -<span class="num">1</span>; }
+    <span class="kw">int</span> var = q->front;  <span class="cmt">// save front index before moving it</span>
+    q->front++;          <span class="cmt">// advance front past the removed item</span>
+    <span class="kw">if</span> (q->front > q->rear) { q->front = -<span class="num">1</span>; q->rear = -<span class="num">1</span>; }  <span class="cmt">// now empty — reset both</span>
+    <span class="kw">return</span> q->array[var];
+}
+
+<span class="kw">int</span> <span class="fn">peek</span>(Queue *q) {
+    <span class="kw">if</span> (q->front == -<span class="num">1</span>) { <span class="fn">fprintf</span>(stderr, <span class="str">"Queue empty\n"</span>); <span class="kw">return</span> -<span class="num">1</span>; }
+    <span class="kw">return</span> q->array[q->front];  <span class="cmt">// look at front without removing</span>
+}
+
+<span class="kw">void</span> <span class="fn">printQueue</span>(Queue *q) {
+    <span class="kw">for</span> (<span class="kw">int</span> i = q->front; i &lt;= q->rear; i++) <span class="fn">printf</span>(<span class="str">"%d "</span>, q->array[i]);
+    <span class="fn">printf</span>(<span class="str">"\n"</span>);
+}
+
+<span class="cmt">// Usage:</span>
+Queue q; <span class="fn">init</span>(&amp;q);
+<span class="fn">enqueue</span>(&amp;q, <span class="num">5</span>); <span class="fn">enqueue</span>(&amp;q, <span class="num">7</span>); <span class="fn">enqueue</span>(&amp;q, <span class="num">3</span>);  <span class="cmt">// front→[5,7,3]←rear</span>
+<span class="fn">dequeue</span>(&amp;q);   <span class="cmt">// removes 5, returns 5 — FIFO</span>
+<span class="fn">printQueue</span>(&amp;q); <span class="cmt">// prints: 7 3</span></pre>
+      <div class="tip"><strong>vs LL Queue:</strong> array queue is simpler but wastes slots as items are dequeued — items don't "slide down". LL queue (Lab 10) uses malloc/free per item with void* for any type.</div>
     </div>
   </section>
 
@@ -1013,8 +1172,9 @@ WORD nums[N_NUMS];
 
     <!-- ── PRACTICE: FINAL TOPICS ────────────────────────── -->
     <div class="tip" style="margin-bottom:14px;">
-      Each question shows the skeleton you'd see on the exam. Try to fill it in before opening the solution.
-      The <strong>OUTPUT</strong> block shows exactly what the program prints so you can verify your mental model.
+      <strong>Format:</strong> Each question gives an objective — write the code from scratch to achieve it.
+      The struct/header is given where noted (as it would be on the exam). Open the solution only after trying.
+      The <strong>OUTPUT</strong> block shows exactly what the program prints.
     </div>
 
     <div class="card">
@@ -1579,6 +1739,194 @@ FILE *fp = <span class="fn">fopen</span>(argv[<span class="num">1</span>], <span
           <span style="color:#64748b;font-size:0.7rem;letter-spacing:0.08em;">OUTPUT — printMultiples(15);</span><br>
           <span style="color:#86efac;">Multiples of 3 up to 15: 0 3 6 9 12 15</span><br>
           <span style="color:#94a3b8;">// same two bugs as your midterm: no void, misleading indentation</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="card">
+      <div class="card-title" style="color:#7c3aed;">Practice Q14 — average() + count above average (practice3 pattern)</div>
+      <p style="font-size:0.83rem;color:#374151;margin-bottom:12px;">
+        <strong>Objective:</strong> Write <code>float average(int *scores, int n)</code> that returns the average.
+        Then in <code>main</code>: read <code>n</code> scores from the user, call <code>average()</code>, and print
+        how many scores are strictly above the average.
+      </p>
+      <details style="margin-top:8px;">
+        <summary style="cursor:pointer;font-size:0.82rem;font-weight:700;color:#0369a1;">Show solution</summary>
+<pre style="margin-top:8px;"><span class="cmt">// Returns float so a 3-person total of 250 → 83.33, not 83</span>
+<span class="kw">float</span> <span class="fn">average</span>(<span class="kw">int</span> *scores, <span class="kw">int</span> n) {
+    <span class="kw">int</span> sum = <span class="num">0</span>;
+    <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i &lt; n; i++) sum += scores[i];
+    <span class="kw">return</span> (<span class="kw">float</span>)sum / n;  <span class="cmt">// cast to float BEFORE dividing — int/int truncates</span>
+}
+
+<span class="kw">int</span> <span class="fn">main</span>(<span class="kw">void</span>) {
+    <span class="kw">int</span> n;
+    <span class="fn">printf</span>(<span class="str">"How many students? "</span>);
+    <span class="fn">scanf</span>(<span class="str">"%d"</span>, &amp;n);
+
+    <span class="kw">int</span> scores[n];   <span class="cmt">// VLA — size known at runtime</span>
+    <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i &lt; n; i++) {
+        <span class="fn">printf</span>(<span class="str">"Score %d: "</span>, i + <span class="num">1</span>);
+        <span class="fn">scanf</span>(<span class="str">"%d"</span>, &amp;scores[i]);
+    }
+
+    <span class="kw">float</span> avg = <span class="fn">average</span>(scores, n);
+    <span class="fn">printf</span>(<span class="str">"Average: %.2f\n"</span>, avg);
+
+    <span class="kw">int</span> above = <span class="num">0</span>;
+    <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i &lt; n; i++)
+        <span class="kw">if</span> (scores[i] > avg) above++;   <span class="cmt">// strictly greater than average</span>
+    <span class="fn">printf</span>(<span class="str">"%d student(s) scored above average\n"</span>, above);
+    <span class="kw">return</span> <span class="num">0</span>;
+}</pre>
+        <div style="background:#1e293b;color:#e2e8f0;border-radius:6px;padding:10px 14px;font-family:monospace;font-size:0.8rem;margin-top:10px;line-height:1.7;">
+          <span style="color:#64748b;font-size:0.7rem;letter-spacing:0.08em;">OUTPUT — user enters n=3, scores: 70 85 90</span><br>
+          <span style="color:#86efac;">Average: 81.67</span><br>
+          <span style="color:#86efac;">2 student(s) scored above average</span><br>
+          <span style="color:#94a3b8;">// 85 and 90 are above 81.67</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="card">
+      <div class="card-title" style="color:#7c3aed;">Practice Q15 — Array-based queue: write enqueue() and dequeue()</div>
+      <p style="font-size:0.83rem;color:#374151;margin-bottom:12px;">
+        <strong>Objective:</strong> Given the struct below, write <code>enqueue()</code> and <code>dequeue()</code>
+        using front/rear indices. front = -1 means empty.
+      </p>
+<pre><span class="cmt">// ── GIVEN ─────────────────────────────────────────────────────────────</span>
+<span class="kw">#define</span> MAX <span class="num">100</span>
+<span class="kw">typedef struct</span> {
+    <span class="kw">int</span> array[MAX];
+    <span class="kw">int</span> front;   <span class="cmt">// -1 = empty</span>
+    <span class="kw">int</span> rear;    <span class="cmt">// -1 = empty</span>
+} Queue;
+<span class="kw">void</span> <span class="fn">init</span>(Queue *q) { q->front = -<span class="num">1</span>; q->rear = -<span class="num">1</span>; }</pre>
+      <details style="margin-top:8px;">
+        <summary style="cursor:pointer;font-size:0.82rem;font-weight:700;color:#0369a1;">Show solution</summary>
+<pre style="margin-top:8px;"><span class="cmt">// enqueue: always adds at rear — only rear changes</span>
+<span class="kw">void</span> <span class="fn">enqueue</span>(Queue *q, <span class="kw">int</span> a) {
+    <span class="kw">if</span> (q->rear == MAX - <span class="num">1</span>) { <span class="fn">fprintf</span>(stderr, <span class="str">"Queue full\n"</span>); <span class="kw">return</span>; }
+    q->rear++;                          <span class="cmt">// advance rear to next open slot</span>
+    q->array[q->rear] = a;              <span class="cmt">// store item there</span>
+    <span class="kw">if</span> (q->front == -<span class="num">1</span>) q->front = <span class="num">0</span>;   <span class="cmt">// first item ever: activate front</span>
+}
+
+<span class="cmt">// dequeue: always removes from front — only front changes</span>
+<span class="kw">int</span> <span class="fn">dequeue</span>(Queue *q) {
+    <span class="kw">if</span> (q->front == -<span class="num">1</span>) { <span class="fn">fprintf</span>(stderr, <span class="str">"Queue empty\n"</span>); <span class="kw">return</span> -<span class="num">1</span>; }
+    <span class="kw">int</span> idx = q->front;   <span class="cmt">// save current front index</span>
+    q->front++;            <span class="cmt">// advance front past the item we're removing</span>
+    <span class="kw">if</span> (q->front > q->rear) { q->front = -<span class="num">1</span>; q->rear = -<span class="num">1</span>; }  <span class="cmt">// now empty</span>
+    <span class="kw">return</span> q->array[idx]; <span class="cmt">// return the removed item's value</span>
+}</pre>
+        <div style="background:#1e293b;color:#e2e8f0;border-radius:6px;padding:10px 14px;font-family:monospace;font-size:0.8rem;margin-top:10px;line-height:1.7;">
+          <span style="color:#64748b;font-size:0.7rem;letter-spacing:0.08em;">OUTPUT — enqueue(5,7,8); dequeue(); dequeue(); printQueue();</span><br>
+          dequeue → <span style="color:#86efac;">5</span> &nbsp;<span style="color:#94a3b8;">// first in, first out</span><br>
+          dequeue → <span style="color:#86efac;">7</span><br>
+          printQueue → <span style="color:#86efac;">8</span> &nbsp;<span style="color:#94a3b8;">// only 8 remains</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="card">
+      <div class="card-title" style="color:#7c3aed;">Practice Q16 — enum + struct: Employee with department (quiz4 pattern)</div>
+      <p style="font-size:0.83rem;color:#374151;margin-bottom:12px;">
+        <strong>Objective:</strong> Define a <code>Department</code> enum (HR, SALES, IT, FINANCE),
+        an <code>Employee</code> struct with id, name, and dept, and print an employee's
+        name, id, and department name as a string.
+      </p>
+      <details style="margin-top:8px;">
+        <summary style="cursor:pointer;font-size:0.82rem;font-weight:700;color:#0369a1;">Show solution</summary>
+<pre style="margin-top:8px;"><span class="cmt">// enum values are ints: HR=0, SALES=1, IT=2, FINANCE=3
+// Use them as array indices to look up the matching string</span>
+<span class="kw">typedef enum</span> { HR, SALES, IT, FINANCE } Department;
+<span class="kw">const char</span> *deptName[] = {<span class="str">"HR"</span>, <span class="str">"SALES"</span>, <span class="str">"IT"</span>, <span class="str">"FINANCE"</span>};
+
+<span class="kw">typedef struct</span> {
+    <span class="kw">int</span>        id;
+    <span class="kw">char</span>       name[<span class="num">50</span>];
+    Department dept;
+} Employee;
+
+<span class="kw">int</span> <span class="fn">main</span>(<span class="kw">void</span>) {
+    Employee e;
+    e.id   = <span class="num">356</span>;
+    e.dept = SALES;
+    <span class="fn">snprintf</span>(e.name, <span class="kw">sizeof</span>(e.name), <span class="str">"Greg"</span>);  <span class="cmt">// snprintf = safe string write into fixed-size array</span>
+    <span class="fn">printf</span>(<span class="str">"%s %d %s\n"</span>, e.name, e.id, deptName[e.dept]);
+    <span class="kw">return</span> <span class="num">0</span>;
+}</pre>
+        <div style="background:#1e293b;color:#e2e8f0;border-radius:6px;padding:10px 14px;font-family:monospace;font-size:0.8rem;margin-top:10px;line-height:1.7;">
+          <span style="color:#64748b;font-size:0.7rem;letter-spacing:0.08em;">OUTPUT</span><br>
+          <span style="color:#86efac;">Greg 356 SALES</span><br>
+          <span style="color:#94a3b8;">// deptName[SALES] = deptName[1] = "SALES"</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="card">
+      <div class="card-title" style="color:#7c3aed;">Practice Q17 — 2D array: sum each column</div>
+      <p style="font-size:0.83rem;color:#374151;margin-bottom:12px;">
+        <strong>Objective:</strong> Given a 2×3 int array, write a nested loop that computes and prints
+        the sum of each column. Watch the index order carefully — outer loop is columns, inner is rows.
+      </p>
+      <details style="margin-top:8px;">
+        <summary style="cursor:pointer;font-size:0.82rem;font-weight:700;color:#0369a1;">Show solution</summary>
+<pre style="margin-top:8px;"><span class="kw">int</span> arr[<span class="num">2</span>][<span class="num">3</span>] = {{<span class="num">2</span>,<span class="num">8</span>,<span class="num">1</span>},
+                  {<span class="num">5</span>,<span class="num">6</span>,<span class="num">4</span>}};
+
+<span class="kw">int</span> colSums[<span class="num">3</span>] = {<span class="num">0</span>};   <span class="cmt">// one accumulator per column</span>
+
+<span class="cmt">// KEY: outer = column index (i), inner = row index (j)
+//      arr[j][i] → row j, column i</span>
+<span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i &lt; <span class="num">3</span>; i++) {          <span class="cmt">// i = column</span>
+    <span class="kw">for</span> (<span class="kw">int</span> j = <span class="num">0</span>; j &lt; <span class="num">2</span>; j++) {      <span class="cmt">// j = row</span>
+        colSums[i] += arr[j][i];
+    }
+    <span class="fn">printf</span>(<span class="str">"Col %d sum = %d\n"</span>, i, colSums[i]);
+}</pre>
+        <div style="background:#1e293b;color:#e2e8f0;border-radius:6px;padding:10px 14px;font-family:monospace;font-size:0.8rem;margin-top:10px;line-height:1.7;">
+          <span style="color:#64748b;font-size:0.7rem;letter-spacing:0.08em;">OUTPUT — arr = {{2,8,1},{5,6,4}}</span><br>
+          <span style="color:#86efac;">Col 0 sum = 7</span> &nbsp;<span style="color:#94a3b8;">// 2+5</span><br>
+          <span style="color:#86efac;">Col 1 sum = 14</span> &nbsp;<span style="color:#94a3b8;">// 8+6</span><br>
+          <span style="color:#86efac;">Col 2 sum = 5</span> &nbsp;<span style="color:#94a3b8;">// 1+4</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="card">
+      <div class="card-title" style="color:#7c3aed;">Practice Q18 — Recursive binary search</div>
+      <p style="font-size:0.83rem;color:#374151;margin-bottom:12px;">
+        <strong>Objective:</strong> Write <code>int binarySearch(int a[], int key, int low, int high)</code> recursively.
+        The array is sorted. Return the index if found, <code>-1</code> if not. Check mid, recurse left or right.
+      </p>
+      <details style="margin-top:8px;">
+        <summary style="cursor:pointer;font-size:0.82rem;font-weight:700;color:#0369a1;">Show solution</summary>
+<pre style="margin-top:8px;"><span class="cmt">// Binary search: each call cuts the search space in half
+// low = leftmost index to consider, high = rightmost
+// Call as: binarySearch(arr, key, 0, n-1)</span>
+<span class="kw">int</span> <span class="fn">binarySearch</span>(<span class="kw">int</span> a[], <span class="kw">int</span> key, <span class="kw">int</span> low, <span class="kw">int</span> high) {
+    <span class="cmt">// BASE CASE: search space exhausted — key not in array</span>
+    <span class="kw">if</span> (low > high) <span class="kw">return</span> -<span class="num">1</span>;
+
+    <span class="kw">int</span> mid = (low + high) / <span class="num">2</span>;   <span class="cmt">// middle index</span>
+
+    <span class="kw">if</span>      (key == a[mid]) <span class="kw">return</span> mid;                         <span class="cmt">// found!</span>
+    <span class="kw">else if</span> (key &lt;  a[mid]) <span class="kw">return</span> <span class="fn">binarySearch</span>(a, key, low, mid - <span class="num">1</span>);  <span class="cmt">// search left half</span>
+    <span class="kw">else</span>                    <span class="kw">return</span> <span class="fn">binarySearch</span>(a, key, mid + <span class="num">1</span>, high); <span class="cmt">// search right half</span>
+}
+
+<span class="cmt">// Usage:</span>
+<span class="kw">int</span> arr[] = {<span class="num">3</span>, <span class="num">7</span>, <span class="num">9</span>, <span class="num">10</span>, <span class="num">13</span>, <span class="num">20</span>};
+<span class="fn">printf</span>(<span class="str">"%d\n"</span>, <span class="fn">binarySearch</span>(arr, <span class="num">9</span>, <span class="num">0</span>, <span class="num">5</span>));   <span class="cmt">// prints 2</span>
+<span class="fn">printf</span>(<span class="str">"%d\n"</span>, <span class="fn">binarySearch</span>(arr, <span class="num">5</span>, <span class="num">0</span>, <span class="num">5</span>));   <span class="cmt">// prints -1</span></pre>
+        <div style="background:#1e293b;color:#e2e8f0;border-radius:6px;padding:10px 14px;font-family:monospace;font-size:0.8rem;margin-top:10px;line-height:1.7;">
+          <span style="color:#64748b;font-size:0.7rem;letter-spacing:0.08em;">OUTPUT — arr = {3,7,9,10,13,20}</span><br>
+          binarySearch(arr, 9,  0, 5) → <span style="color:#86efac;">2</span> &nbsp;<span style="color:#94a3b8;">// found at index 2</span><br>
+          binarySearch(arr, 5,  0, 5) → <span style="color:#86efac;">-1</span> &nbsp;<span style="color:#94a3b8;">// not in array</span><br>
+          binarySearch(arr, 20, 0, 5) → <span style="color:#86efac;">5</span> &nbsp;<span style="color:#94a3b8;">// found at last index</span><br>
+          <span style="color:#94a3b8;">// vs linearSearch: binary is O(log n) but REQUIRES sorted array</span>
         </div>
       </details>
     </div>
