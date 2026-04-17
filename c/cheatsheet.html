@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C Final Exam Cheat Sheet</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #f9fafb;
+  color: #111;
+  min-height: 100vh;
+  font-size: 14px;
+}
+
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: #fff; border-bottom: 1px solid #d1d5db;
+  padding: 0 20px; display: flex; align-items: center; gap: 4px;
+  overflow-x: auto; scrollbar-width: none; height: 48px; flex-wrap: nowrap;
+}
+nav::-webkit-scrollbar { display: none; }
+nav .brand { font-weight: 900; font-size: 0.95rem; color: #111; margin-right: 14px; flex-shrink: 0; }
+nav a { color: #555; text-decoration: none; font-size: 0.78rem; font-weight: 600;
+  padding: 5px 10px; border-radius: 6px; white-space: nowrap; flex-shrink: 0; }
+nav a:hover { background: #f3f4f6; color: #111; }
+nav .divider { width: 1px; height: 18px; background: #e5e7eb; margin: 0 4px; flex-shrink: 0; }
+
+.page { max-width: 1000px; margin: 0 auto; padding: 28px 18px 80px; }
+
+h1 { font-size: 1.8rem; font-weight: 900; color: #111; margin-bottom: 4px; }
+.subtitle { color: #6b7280; font-size: 0.85rem; margin-bottom: 36px; }
+
+section { margin-bottom: 40px; scroll-margin-top: 60px; }
+.sec-title {
+  font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em;
+  color: #6b7280; border-bottom: 2px solid #e5e7eb; padding-bottom: 6px; margin-bottom: 14px;
+}
+
+.card {
+  background: #fff; border: 1px solid #e5e7eb; border-radius: 10px;
+  padding: 16px 18px; margin-bottom: 12px;
+}
+.card-title {
+  font-size: 0.76rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em;
+  color: #374151; margin-bottom: 10px;
+}
+
+pre {
+  background: #f3f4f6; border: 1px solid #d1d5db; border-left: 3px solid #374151;
+  border-radius: 6px; padding: 12px 14px; font-family: 'Cascadia Code','Consolas','Courier New',monospace;
+  font-size: 0.8rem; line-height: 1.65; overflow-x: auto; margin: 6px 0; white-space: pre;
+  tab-size: 4;
+}
+
+.kw  { color: #0369a1; font-weight: 700; }
+.cmt { color: #6b7280; font-style: italic; }
+.str { color: #15803d; }
+.fn  { color: #7c3aed; font-weight: 600; }
+.num { color: #b45309; }
+.tip {
+  background: #f0fdf4; border: 1px solid #86efac; border-left: 3px solid #16a34a;
+  border-radius: 6px; padding: 9px 13px; font-size: 0.82rem; color: #14532d; margin: 6px 0;
+}
+.warn {
+  background: #fffbeb; border: 1px solid #fbbf24; border-left: 3px solid #d97706;
+  border-radius: 6px; padding: 9px 13px; font-size: 0.82rem; color: #78350f; margin: 6px 0;
+}
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media(max-width:640px){ .two { grid-template-columns: 1fr; } }
+
+table { width: 100%; border-collapse: collapse; font-size: 0.82rem; margin: 8px 0; }
+th { background: #f3f4f6; text-align: left; padding: 6px 10px; border-bottom: 2px solid #d1d5db; font-weight: 700; }
+td { padding: 5px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
+td:first-child { font-family: monospace; font-size: 0.82rem; color: #0369a1; white-space: nowrap; }
+tr:hover td { background: #f9fafb; }
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="brand">C Final</span>
+  <div class="divider"></div>
+  <a href="#boilerplate">Boilerplate</a>
+  <a href="#fileio">File I/O</a>
+  <a href="#malloc">malloc</a>
+  <a href="#structs">Structs</a>
+  <a href="#pointers">Pointers</a>
+  <a href="#recursion">Recursion</a>
+  <a href="#stack-arr">Stack (array)</a>
+  <a href="#stack-ll">Stack (LL)</a>
+  <a href="#queue">Queue (LL)</a>
+  <a href="#labs">Lab Templates</a>
+  <a href="#formats">Formats</a>
+  <a href="../index.html">&#8592; Home</a>
+</nav>
+
+<div class="page">
+  <h1>C Final Exam Cheat Sheet</h1>
+  <p class="subtitle">Copy-paste templates from every lab · All structures ready to go</p>
+
+  <!-- ── BOILERPLATE ─────────────────────────────────────── -->
+  <section id="boilerplate">
+    <div class="sec-title">Boilerplate — always start here</div>
+    <div class="card">
+      <div class="card-title">Standard main with argc/argv + file open</div>
+<pre><span class="kw">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+<span class="kw">#include</span> <span class="str">&lt;stdlib.h&gt;</span>
+<span class="kw">#include</span> <span class="str">&lt;string.h&gt;</span>
+<span class="kw">#include</span> <span class="str">&lt;math.h&gt;</span>
+<span class="kw">#include</span> <span class="str">"myheader.h"</span>
+
+<span class="kw">int</span> <span class="fn">main</span>(<span class="kw">int</span> argc, <span class="kw">char</span> *argv[]) {
+
+    <span class="cmt">// 1. Check argument count</span>
+    <span class="kw">if</span> (argc != 2) {
+        <span class="fn">printf</span>(<span class="str">"Usage: %s filename\n"</span>, argv[0]);
+        <span class="kw">return</span> <span class="num">1</span>;
+    }
+
+    <span class="cmt">// 2. Open input file</span>
+    FILE *fp;
+    <span class="kw">if</span> ((fp = <span class="fn">fopen</span>(argv[1], <span class="str">"r"</span>)) == NULL) {
+        <span class="fn">printf</span>(<span class="str">"%s: Unable to open \"%s\"\n"</span>, argv[0], argv[1]);
+        <span class="kw">return</span> <span class="num">1</span>;
+    }
+
+    <span class="cmt">// ... do work ...</span>
+
+    <span class="fn">fclose</span>(fp);
+    <span class="kw">return</span> <span class="num">0</span>;
+}</pre>
+    </div>
+
+    <div class="two">
+      <div class="card">
+        <div class="card-title">Header file template (.h)</div>
+<pre><span class="kw">#ifndef</span> MYHEADER_H
+<span class="kw">#define</span> MYHEADER_H
+
+<span class="kw">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+
+<span class="kw">#define</span> MAX_SIZE 100
+
+<span class="cmt">// type + format</span>
+<span class="kw">typedef int</span> ItemType;
+<span class="kw">#define</span> ITEM_FORMAT <span class="str">"%d"</span>
+
+<span class="cmt">// function declarations</span>
+<span class="kw">void</span> <span class="fn">myFunc</span>(<span class="kw">int</span> x);
+
+<span class="kw">#endif</span> <span class="cmt">/* MYHEADER_H */</span></pre>
+      </div>
+      <div class="card">
+        <div class="card-title">Implementation file template (.c)</div>
+<pre><span class="kw">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+<span class="kw">#include</span> <span class="str">&lt;stdlib.h&gt;</span>
+<span class="kw">#include</span> <span class="str">"myheader.h"</span>
+
+<span class="cmt">// Function definitions go here</span>
+<span class="kw">void</span> <span class="fn">myFunc</span>(<span class="kw">int</span> x) {
+    <span class="fn">printf</span>(<span class="str">"%d\n"</span>, x);
+}</pre>
+        <div class="tip"><strong>Rule:</strong> declarations in .h — definitions in .c — #include the .h in both</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FILE I/O ─────────────────────────────────────────── -->
+  <section id="fileio">
+    <div class="sec-title">File I/O — text and binary</div>
+    <div class="two">
+      <div class="card">
+        <div class="card-title">Text file read (Lab 5 pattern)</div>
+<pre><span class="cmt">// Read doubles one at a time</span>
+<span class="kw">double</span> x, sum = <span class="num">0.0</span>, sumsq = <span class="num">0.0</span>;
+<span class="kw">int</span> count = <span class="num">0</span>;
+
+<span class="kw">while</span> (<span class="fn">fscanf</span>(fp, <span class="str">"%lf"</span>, &amp;x) == <span class="num">1</span>) {
+    sum   += x;
+    sumsq += x * x;
+    count++;
+}
+<span class="fn">fclose</span>(fp);</pre>
+        <div class="tip">Check <code>fscanf</code> returns 1 — not just non-zero</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Binary file read with fread (Lab 6 pattern)</div>
+<pre><span class="cmt">// Open binary file</span>
+FILE *fp = <span class="fn">fopen</span>(argv[1], <span class="str">"rb"</span>);
+
+<span class="cmt">// Allocate array</span>
+<span class="kw">int</span> *arr = (<span class="kw">int</span> *) <span class="fn">malloc</span>(n * <span class="kw">sizeof</span>(<span class="kw">int</span>));
+
+<span class="cmt">// Read all at once</span>
+<span class="kw">size_t</span> got = <span class="fn">fread</span>(arr, <span class="kw">sizeof</span>(arr[0]), n, fp);
+
+<span class="kw">if</span> (got != (<span class="kw">size_t</span>)n) {
+    <span class="kw">if</span> (<span class="fn">feof</span>(fp))
+        <span class="fn">printf</span>(<span class="str">"Unexpected EOF\n"</span>);
+    <span class="kw">else if</span> (<span class="fn">ferror</span>(fp))
+        <span class="fn">printf</span>(<span class="str">"Read error\n"</span>);
+    <span class="fn">fclose</span>(fp);
+    <span class="fn">free</span>(arr);
+    <span class="kw">return</span> <span class="num">1</span>;
+}
+<span class="fn">fclose</span>(fp);</pre>
+      </div>
+    </div>
+    <div class="two">
+      <div class="card">
+        <div class="card-title">Write to output file (Lab 5 pattern)</div>
+<pre><span class="cmt">// Build output filename with malloc</span>
+<span class="kw">int</span> nChar = <span class="fn">strlen</span>(PREFIX) + <span class="fn">strlen</span>(argv[1]) + <span class="num">1</span>;
+<span class="kw">char</span> *outName = (<span class="kw">char</span> *) <span class="fn">malloc</span>(nChar);
+<span class="fn">snprintf</span>(outName, nChar, <span class="str">"%s%s"</span>, PREFIX, argv[1]);
+
+FILE *outFile;
+<span class="kw">if</span> ((outFile = <span class="fn">fopen</span>(outName, <span class="str">"w"</span>)) == NULL) {
+    <span class="fn">printf</span>(<span class="str">"Unable to open \"%s\"\n"</span>, outName);
+    <span class="fn">free</span>(outName);
+    <span class="kw">return</span> <span class="num">1</span>;
+}
+<span class="fn">fprintf</span>(outFile, <span class="str">"%d Values, Mean = %g\n"</span>, count, mean);
+<span class="fn">fclose</span>(outFile);
+<span class="fn">free</span>(outName);</pre>
+      </div>
+      <div class="card">
+        <div class="card-title">sscanf to parse a command-line argument</div>
+<pre><span class="cmt">// Convert argv[2] to int</span>
+<span class="kw">int</span> n;
+<span class="kw">if</span> (<span class="fn">sscanf</span>(argv[2], <span class="str">"%d"</span>, &amp;n) != <span class="num">1</span>) {
+    <span class="fn">printf</span>(<span class="str">"Bad number: %s\n"</span>, argv[2]);
+    <span class="kw">return</span> <span class="num">1</span>;
+}
+
+<span class="cmt">// fprintf to stderr</span>
+<span class="fn">fprintf</span>(stderr, <span class="str">"Error: %s\n"</span>, msg);</pre>
+        <div class="tip">fprintf(stdout, ...) == printf(...)  ·  fprintf(stderr, ...) for errors</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MALLOC ──────────────────────────────────────────── -->
+  <section id="malloc">
+    <div class="sec-title">Dynamic Memory — malloc / realloc / free</div>
+    <div class="two">
+      <div class="card">
+        <div class="card-title">malloc an array</div>
+<pre><span class="cmt">// Allocate array of n ints</span>
+<span class="kw">int</span> *arr = (<span class="kw">int</span> *) <span class="fn">malloc</span>(n * <span class="kw">sizeof</span>(<span class="kw">int</span>));
+<span class="kw">if</span> (arr == NULL) {
+    <span class="fn">fprintf</span>(stderr, <span class="str">"malloc failed\n"</span>);
+    <span class="kw">return</span> EXIT_FAILURE;
+}
+
+<span class="cmt">// use arr[i] ...</span>
+
+<span class="fn">free</span>(arr);   <span class="cmt">// always free!</span></pre>
+      </div>
+      <div class="card">
+        <div class="card-title">malloc a single struct / item</div>
+<pre><span class="cmt">// Allocate one node</span>
+Node *p = (Node *) <span class="fn">malloc</span>(<span class="kw">sizeof</span>(Node));
+<span class="kw">if</span> (p == NULL) { <span class="kw">return</span> NULL; }
+
+p->value = <span class="num">42</span>;
+p->next  = NULL;
+
+<span class="cmt">// To allocate and zero-initialize:</span>
+Node *p2 = (Node *) <span class="fn">calloc</span>(<span class="num">1</span>, <span class="kw">sizeof</span>(Node));</pre>
+        <div class="warn">Every malloc needs exactly one free. Never free stack variables.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── STRUCTS ─────────────────────────────────────────── -->
+  <section id="structs">
+    <div class="sec-title">Structs — typedef, access, pass by pointer (Lab 9 / Week 10)</div>
+    <div class="two">
+      <div class="card">
+        <div class="card-title">Define and use a struct</div>
+<pre><span class="cmt">// Define with typedef</span>
+<span class="kw">typedef struct</span> {
+    <span class="kw">int</span>    size;
+    <span class="kw">double</span> data[MAX_SIZE];
+} Vector;
+
+<span class="cmt">// Declare and initialise</span>
+Vector v1 = {<span class="num">3</span>, {<span class="num">1.0</span>, <span class="num">2.0</span>, <span class="num">3.0</span>}};
+
+<span class="cmt">// Access members</span>
+v1.size;
+v1.data[<span class="num">0</span>];
+
+<span class="cmt">// Pass by value (copy)</span>
+<span class="fn">printVector</span>(v1, stdout);
+
+<span class="cmt">// Pass by pointer (modify original)</span>
+<span class="fn">updateVector</span>(&amp;v1);</pre>
+      </div>
+      <div class="card">
+        <div class="card-title">Pointer to struct — arrow notation</div>
+<pre><span class="kw">typedef struct</span> {
+    <span class="kw">int</span>  age;
+    <span class="kw">char</span> name[<span class="num">100</span>];
+} Player;
+
+Player p  = {<span class="num">20</span>, <span class="str">"Alice"</span>};
+Player *ptr = &amp;p;
+
+<span class="cmt">// Arrow operator for pointer access</span>
+ptr->age  = <span class="num">21</span>;
+ptr->name[<span class="num">0</span>];
+
+<span class="cmt">// Equivalent (don't use this)</span>
+(*ptr).age = <span class="num">21</span>;</pre>
+        <div class="tip">Use <strong>dot (.)</strong> when you have a variable · use <strong>arrow (→)</strong> when you have a pointer</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Lab 9 — Vector struct with operations (full pattern)</div>
+<pre><span class="cmt">// vectorMath.h</span>
+<span class="kw">#define</span> MAX_VECTOR_SIZE <span class="num">20</span>
+<span class="kw">typedef struct</span> { <span class="kw">int</span> size; <span class="kw">double</span> data[MAX_VECTOR_SIZE]; } Vector;
+Vector *<span class="fn">vectorMath</span>(<span class="kw">const</span> Vector v1, <span class="kw">const</span> Vector v2, Vector *result, <span class="kw">char</span> op);
+<span class="kw">void</span>    <span class="fn">printVector</span>(<span class="kw">const</span> Vector v, FILE *stream);
+
+<span class="cmt">// vectorMath.c</span>
+Vector *<span class="fn">vectorMath</span>(<span class="kw">const</span> Vector v1, <span class="kw">const</span> Vector v2, Vector *result, <span class="kw">char</span> op) {
+    <span class="kw">if</span> (v1.size != v2.size) <span class="kw">return</span> NULL;   <span class="cmt">// size mismatch</span>
+    result->size = v1.size;
+    <span class="kw">switch</span> (op) {
+        <span class="kw">case</span> <span class="str">'+'</span>: <span class="kw">for</span> (<span class="kw">int</span> i=<span class="num">0</span>; i&lt;v1.size; i++) result->data[i] = v1.data[i] + v2.data[i]; <span class="kw">break</span>;
+        <span class="kw">case</span> <span class="str">'-'</span>: <span class="kw">for</span> (<span class="kw">int</span> i=<span class="num">0</span>; i&lt;v1.size; i++) result->data[i] = v1.data[i] - v2.data[i]; <span class="kw">break</span>;
+        <span class="kw">case</span> <span class="str">'*'</span>: <span class="kw">for</span> (<span class="kw">int</span> i=<span class="num">0</span>; i&lt;v1.size; i++) result->data[i] = v1.data[i] * v2.data[i]; <span class="kw">break</span>;
+        <span class="kw">case</span> <span class="str">'/'</span>: <span class="kw">for</span> (<span class="kw">int</span> i=<span class="num">0</span>; i&lt;v1.size; i++) {
+            <span class="kw">if</span> (v2.data[i] == <span class="num">0</span>) <span class="kw">return</span> NULL;   <span class="cmt">// div by zero</span>
+            result->data[i] = v1.data[i] / v2.data[i];
+        } <span class="kw">break</span>;
+        <span class="kw">default</span>: <span class="kw">return</span> NULL;    <span class="cmt">// invalid op</span>
+    }
+    <span class="kw">return</span> result;
+}
+<span class="kw">void</span> <span class="fn">printVector</span>(<span class="kw">const</span> Vector v, FILE *stream) {
+    <span class="kw">const double</span> *p = v.data;
+    <span class="kw">for</span> (<span class="kw">int</span> i=<span class="num">0</span>; i&lt;v.size; i++) <span class="fn">fprintf</span>(stream, <span class="str">"%.4f "</span>, *p++);
+    <span class="fn">fprintf</span>(stream, <span class="str">"\n"</span>);
+}</pre>
+    </div>
+  </section>
+
+  <!-- ── POINTERS ────────────────────────────────────────── -->
+  <section id="pointers">
+    <div class="sec-title">Pointers — notation, swap, bytes (Lab 7)</div>
+    <div class="two">
+      <div class="card">
+        <div class="card-title">Pointer basics</div>
+<pre><span class="kw">int</span>  x = <span class="num">5</span>;
+<span class="kw">int</span> *p = &amp;x;    <span class="cmt">// p holds address of x</span>
+*p = <span class="num">10</span>;        <span class="cmt">// dereference: changes x</span>
+
+<span class="cmt">// Pointer arithmetic</span>
+<span class="kw">int</span> arr[] = {<span class="num">1</span>,<span class="num">2</span>,<span class="num">3</span>};
+<span class="kw">int</span> *ptr = arr;
+*ptr++;         <span class="cmt">// advance to next element</span>
+*(ptr+1);       <span class="cmt">// peek at next without moving</span></pre>
+      </div>
+      <div class="card">
+        <div class="card-title">swap() — the canonical pattern</div>
+<pre><span class="kw">void</span> <span class="fn">swap</span>(<span class="kw">int</span> *x, <span class="kw">int</span> *y) {
+    <span class="kw">int</span> tmp = *x;
+    *x = *y;
+    *y = tmp;
+}
+
+<span class="cmt">// Call with addresses</span>
+<span class="fn">swap</span>(&amp;arr[i], &amp;arr[j]);
+<span class="fn">swap</span>(arr + i, arr + i + <span class="num">1</span>); <span class="cmt">// pointer notation</span></pre>
+      </div>
+    </div>
+
+    <div class="two">
+      <div class="card">
+        <div class="card-title">Print array with pointer post-increment</div>
+<pre><span class="kw">void</span> <span class="fn">printVector</span>(<span class="kw">const int</span> *vec, <span class="kw">int</span> n) {
+    <span class="kw">const int</span> *p = vec;
+    <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i &lt; n; i++)
+        <span class="fn">printf</span>(<span class="str">"%d "</span>, *p++);
+    <span class="fn">printf</span>(<span class="str">"\n"</span>);
+}</pre>
+      </div>
+      <div class="card">
+        <div class="card-title">Print raw bytes (cast to unsigned char*)</div>
+<pre><span class="kw">void</span> <span class="fn">printBytes</span>(<span class="kw">const int</span> *vec, <span class="kw">int</span> n) {
+    <span class="kw">const int</span> *p = vec;
+    <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i &lt; n; i++) {
+        <span class="kw">const unsigned char</span> *b = (<span class="kw">const unsigned char</span> *)p++;
+        <span class="kw">for</span> (<span class="kw">int</span> j = <span class="num">0</span>; j &lt; (<span class="kw">int</span>)<span class="kw">sizeof</span>(<span class="kw">int</span>); j++)
+            <span class="fn">printf</span>(<span class="str">"%hhu "</span>, *b++);
+        <span class="fn">printf</span>(<span class="str">" "</span>);   <span class="cmt">// extra space after word</span>
+    }
+    <span class="fn">printf</span>(<span class="str">"\n"</span>);
+}
+<span class="cmt">// Reverse endian: start at last byte, walk backward</span>
+<span class="kw">const unsigned char</span> *b = (<span class="kw">const unsigned char</span> *)p + <span class="kw">sizeof</span>(<span class="kw">int</span>) - <span class="num">1</span>;
+<span class="kw">for</span> (<span class="kw">int</span> j = <span class="num">0</span>; j &lt; (<span class="kw">int</span>)<span class="kw">sizeof</span>(<span class="kw">int</span>); j++) <span class="fn">printf</span>(<span class="str">"%hhu "</span>, *b--);</pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── RECURSION ───────────────────────────────────────── -->
+  <section id="recursion">
+    <div class="sec-title">Recursion — always: base case first (Lab 8)</div>
+    <div class="two">
+      <div class="card">
+        <div class="card-title">Recursive printVector (Lab 8)</div>
+<pre><span class="kw">void</span> <span class="fn">printVector</span>(<span class="kw">const int</span> *vec, <span class="kw">int</span> n) {
+    <span class="kw">if</span> (n == <span class="num">0</span>) { <span class="fn">printf</span>(<span class="str">"\n"</span>); <span class="kw">return</span>; } <span class="cmt">// base</span>
+    <span class="fn">printf</span>(<span class="str">"%d "</span>, *vec);
+    <span class="fn">printVector</span>(vec + <span class="num">1</span>, n - <span class="num">1</span>);           <span class="cmt">// recurse</span>
+}</pre>
+      </div>
+      <div class="card">
+        <div class="card-title">Recursive reverseVector (Lab 8)</div>
+<pre><span class="kw">void</span> <span class="fn">reverseVector</span>(<span class="kw">int</span> *vec, <span class="kw">int</span> p1, <span class="kw">int</span> p2) {
+    <span class="kw">if</span> (p1 &gt;= p2) <span class="kw">return</span>;       <span class="cmt">// base case</span>
+    <span class="kw">int</span> tmp  = vec[p1];
+    vec[p1]  = vec[p2];
+    vec[p2]  = tmp;
+    <span class="fn">reverseVector</span>(vec, p1 + <span class="num">1</span>, p2 - <span class="num">1</span>);
+}
+<span class="cmt">// Call: reverseVector(arr, 0, N-1);</span></pre>
+      </div>
+    </div>
+    <div class="two">
+      <div class="card">
+        <div class="card-title">Recursive factorial</div>
+<pre><span class="kw">int</span> <span class="fn">factorial</span>(<span class="kw">int</span> n) {
+    <span class="kw">if</span> (n &lt;= <span class="num">1</span>) <span class="kw">return</span> <span class="num">1</span>;   <span class="cmt">// base</span>
+    <span class="kw">return</span> n * <span class="fn">factorial</span>(n - <span class="num">1</span>);
+}</pre>
+      </div>
+      <div class="card">
+        <div class="card-title">Bit manipulation / binary print (Week 11)</div>
+<pre><span class="kw">void</span> <span class="fn">printBinary</span>(<span class="kw">int</span> num) {
+    <span class="kw">char</span> buf[<span class="num">33</span>];
+    buf[<span class="num">32</span>] = <span class="str">'\0'</span>;
+    <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">31</span>; i &gt;= <span class="num">0</span>; i--) {
+        buf[i] = (num &amp; <span class="num">1</span>) ? <span class="str">'1'</span> : <span class="str">'0'</span>;
+        num &gt;&gt;= <span class="num">1</span>;   <span class="cmt">// right-shift 1 bit</span>
+    }
+    <span class="fn">printf</span>(<span class="str">"%s\n"</span>, buf);
+}
+<span class="cmt">// Bit ops: &amp; AND  | OR  ^ XOR  ~ NOT  &lt;&lt; left  &gt;&gt; right</span></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── STACK (ARRAY) ───────────────────────────────────── -->
+  <section id="stack-arr">
+    <div class="sec-title">Stack — array-based (fixed size)</div>
+    <div class="card">
+      <div class="card-title">Full array stack (push / pop / peek / print)</div>
+<pre><span class="kw">#define</span> MAX <span class="num">100</span>
+
+<span class="kw">typedef struct</span> {
+    <span class="kw">int</span> array[MAX];
+    <span class="kw">int</span> top;        <span class="cmt">// -1 = empty</span>
+} Stack;
+
+<span class="kw">void</span> <span class="fn">init</span>(Stack *s)  { s->top = -<span class="num">1</span>; }
+
+<span class="kw">void</span> <span class="fn">push</span>(Stack *s, <span class="kw">int</span> a) {
+    <span class="kw">if</span> (s->top == MAX - <span class="num">1</span>) { <span class="fn">fprintf</span>(stderr, <span class="str">"Stack full\n"</span>); <span class="kw">return</span>; }
+    s->array[++s->top] = a;
+}
+
+<span class="kw">int</span> <span class="fn">pop</span>(Stack *s) {
+    <span class="kw">if</span> (s->top == -<span class="num">1</span>) { <span class="fn">fprintf</span>(stderr, <span class="str">"Stack empty\n"</span>); <span class="kw">return</span> -<span class="num">1</span>; }
+    <span class="kw">return</span> s->array[s->top--];
+}
+
+<span class="kw">int</span> <span class="fn">peek</span>(Stack *s) {
+    <span class="kw">if</span> (s->top == -<span class="num">1</span>) { <span class="fn">fprintf</span>(stderr, <span class="str">"Stack empty\n"</span>); <span class="kw">return</span> -<span class="num">1</span>; }
+    <span class="kw">return</span> s->array[s->top];
+}
+
+<span class="kw">void</span> <span class="fn">printStack</span>(Stack *s) {
+    <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i &lt;= s->top; i++) <span class="fn">printf</span>(<span class="str">"%d "</span>, s->array[i]);
+    <span class="fn">printf</span>(<span class="str">"\n"</span>);
+}
+
+<span class="cmt">// Usage:</span>
+Stack s; <span class="fn">init</span>(&amp;s);
+<span class="fn">push</span>(&amp;s, <span class="num">5</span>); <span class="fn">push</span>(&amp;s, <span class="num">7</span>);
+<span class="fn">pop</span>(&amp;s);    <span class="fn">peek</span>(&amp;s);</pre>
+    </div>
+  </section>
+
+  <!-- ── STACK (LINKED LIST) ─────────────────────────────── -->
+  <section id="stack-ll">
+    <div class="sec-title">Stack — linked list (dynamic, no size limit)</div>
+    <div class="card">
+      <div class="card-title">Linked-list stack (Week 12 / linked list practice)</div>
+<pre><span class="kw">#include</span> <span class="str">&lt;stdbool.h&gt;</span>
+
+<span class="kw">typedef struct</span> node {
+    <span class="kw">int</span>         item;
+    <span class="kw">struct</span> node *next;
+} Node;
+
+<span class="kw">typedef struct</span> {
+    <span class="kw">int</span>   size;
+    Node *top;       <span class="cmt">// NULL = empty</span>
+} Stack;
+
+<span class="cmt">// push — returns true on success</span>
+<span class="kw">bool</span> <span class="fn">push</span>(Stack *s, <span class="kw">int</span> val) {
+    Node *n = (Node *) <span class="fn">malloc</span>(<span class="kw">sizeof</span>(Node));
+    <span class="kw">if</span> (n == NULL) <span class="kw">return false</span>;
+    n->item = val;
+    n->next = s->top;   <span class="cmt">// new node points at old top</span>
+    s->top  = n;        <span class="cmt">// new node IS the new top</span>
+    s->size++;
+    <span class="kw">return true</span>;
+}
+
+<span class="cmt">// pop — returns true on success, value via *out</span>
+<span class="kw">bool</span> <span class="fn">pop</span>(Stack *s, <span class="kw">int</span> *out) {
+    <span class="kw">if</span> (s->top == NULL) <span class="kw">return false</span>;
+    Node *tmp = s->top;
+    *out    = tmp->item;
+    s->top  = tmp->next;
+    s->size--;
+    <span class="fn">free</span>(tmp);
+    <span class="kw">return true</span>;
+}
+
+<span class="kw">void</span> <span class="fn">printStack</span>(Stack *s) {
+    Node *cur = s->top;
+    <span class="kw">while</span> (cur != NULL) { <span class="fn">printf</span>(<span class="str">"%d\n"</span>, cur->item); cur = cur->next; }
+}
+
+<span class="cmt">// Usage:</span>
+Stack s = {<span class="num">0</span>, NULL};
+<span class="fn">push</span>(&amp;s, <span class="num">5</span>);
+<span class="kw">int</span> v; <span class="fn">pop</span>(&amp;s, &amp;v);</pre>
+    </div>
+  </section>
+
+  <!-- ── QUEUE (LINKED LIST) ─────────────────────────────── -->
+  <section id="queue">
+    <div class="sec-title">Queue — linked list with void* (Lab 10)</div>
+    <div class="card">
+      <div class="card-title">queue.h — types and declarations</div>
+<pre><span class="kw">typedef int</span> ItemType;
+<span class="kw">#define</span> ITEM_FORMAT <span class="str">"%d"</span>
+<span class="kw">#define</span> ITEM_PROMPT <span class="str">"an integer"</span>
+
+<span class="kw">typedef struct</span> listNode {
+    <span class="kw">struct</span> listNode *next;
+    <span class="kw">void</span>            *dataPtr;   <span class="cmt">// generic pointer</span>
+} ListNode;
+
+<span class="kw">typedef struct</span> {
+    ListNode *front;
+    ListNode *rear;
+    <span class="kw">int</span>       size;
+} Queue;
+
+<span class="kw">void</span> *<span class="fn">enqueue</span> (Queue *q, <span class="kw">void</span> *item);
+<span class="kw">void</span> *<span class="fn">dequeue</span> (Queue *q);
+<span class="kw">int</span>   <span class="fn">queueSize</span>(<span class="kw">const</span> Queue q);
+<span class="kw">void</span>  <span class="fn">printQueue</span>(<span class="kw">const</span> Queue q, FILE *stream);</pre>
+    </div>
+    <div class="card">
+      <div class="card-title">queue.c — enqueue / dequeue implementations</div>
+<pre><span class="kw">void</span> *<span class="fn">enqueue</span>(Queue *q, <span class="kw">void</span> *item) {
+    ListNode *node = (ListNode *) <span class="fn">malloc</span>(<span class="kw">sizeof</span>(ListNode));
+    <span class="kw">if</span> (node == NULL) <span class="kw">return</span> NULL;
+    node->next    = NULL;
+    node->dataPtr = item;
+    <span class="kw">if</span> (q->size == <span class="num">0</span>) {
+        q->front = q->rear = node;          <span class="cmt">// first item</span>
+    } <span class="kw">else</span> {
+        q->rear->next = node; q->rear = node; <span class="cmt">// add to back</span>
+    }
+    q->size++;
+    <span class="kw">return</span> item;
+}
+
+<span class="kw">void</span> *<span class="fn">dequeue</span>(Queue *q) {
+    <span class="kw">if</span> (q->size == <span class="num">0</span>) <span class="kw">return</span> NULL;
+    ListNode *old  = q->front;
+    <span class="kw">void</span>     *item = old->dataPtr;
+    q->front = old->next;
+    q->size--;
+    <span class="kw">if</span> (q->size == <span class="num">0</span>) q->rear = NULL;   <span class="cmt">// queue now empty</span>
+    <span class="fn">free</span>(old);
+    <span class="kw">return</span> item;
+}
+
+<span class="kw">void</span> <span class="fn">printQueue</span>(<span class="kw">const</span> Queue q, FILE *stream) {
+    <span class="kw">const</span> ListNode *p = q.front;
+    <span class="kw">while</span> (p != NULL) {
+        <span class="fn">fprintf</span>(stream, ITEM_FORMAT <span class="str">"\n"</span>, *(ItemType *)p->dataPtr);
+        p = p->next;
+    }
+}</pre>
+    </div>
+    <div class="card">
+      <div class="card-title">queueMain.c — interactive menu pattern</div>
+<pre><span class="cmt">// Init empty queue</span>
+Queue q = {NULL, NULL, <span class="num">0</span>};
+
+<span class="cmt">// Enqueue: malloc the item FIRST, then enqueue the pointer</span>
+ItemType *itemPtr = (ItemType *) <span class="fn">malloc</span>(<span class="kw">sizeof</span>(ItemType));
+<span class="fn">scanf</span>(ITEM_FORMAT, itemPtr);
+<span class="fn">enqueue</span>(&amp;q, itemPtr);
+
+<span class="cmt">// Dequeue: cast back to ItemType*, use, then free</span>
+ItemType *got = (ItemType *) <span class="fn">dequeue</span>(&amp;q);
+<span class="kw">if</span> (got != NULL) { <span class="fn">printf</span>(ITEM_FORMAT <span class="str">"\n"</span>, *got); <span class="fn">free</span>(got); }
+<span class="kw">else</span> <span class="fn">printf</span>(<span class="str">"Queue empty\n"</span>);
+
+<span class="cmt">// Enum menu pattern</span>
+<span class="kw">typedef enum</span> {QUIT=-<span class="num">1</span>, ENQUEUE, DEQUEUE, PRINT, N_CHOICES} Choice;
+<span class="fn">scanf</span>(<span class="str">"%d"</span>, &amp;choice);
+<span class="kw">while</span> (<span class="fn">getchar</span>() != <span class="str">'\n'</span>) {} <span class="cmt">// flush input line</span></pre>
+    </div>
+  </section>
+
+  <!-- ── LAB TEMPLATES ──────────────────────────────────── -->
+  <section id="labs">
+    <div class="sec-title">Lab Templates — exact patterns from your labs</div>
+
+    <div class="card">
+      <div class="card-title">Lab 5 — Statistics: read file → compute → write output file</div>
+<pre><span class="cmt">// statistics.h</span>
+<span class="kw">double</span> <span class="fn">mean</span>  (<span class="kw">const double</span> sum, <span class="kw">const int</span> count);
+<span class="kw">double</span> <span class="fn">ssdev</span> (<span class="kw">const double</span> sum, <span class="kw">const double</span> sumsq, <span class="kw">const int</span> count);
+
+<span class="cmt">// statistics.c</span>
+<span class="kw">double</span> <span class="fn">mean</span>(<span class="kw">const double</span> sum, <span class="kw">const int</span> count)  { <span class="kw">return</span> sum / count; }
+<span class="kw">double</span> <span class="fn">ssdev</span>(<span class="kw">const double</span> sum, <span class="kw">const double</span> sumsq, <span class="kw">const int</span> count) {
+    <span class="kw">return</span> <span class="fn">sqrt</span>(((count * sumsq) - (sum * sum)) / (count * (count - <span class="num">1</span>)));
+}
+
+<span class="cmt">// statsMain.c — key pattern</span>
+<span class="kw">#define</span> PREFIX <span class="str">"Result_"</span>
+<span class="kw">static void</span> <span class="fn">printStats</span>(FILE *dest, <span class="kw">const int</span> count,
+                        <span class="kw">const double</span> mean, <span class="kw">const double</span> stddev) {
+    <span class="fn">fprintf</span>(dest, <span class="str">"%d Values, Mean = %g, Sample Standard Deviation = %g\n"</span>,
+            count, mean, stddev);
+}
+<span class="cmt">// read loop:</span>
+<span class="kw">double</span> x, sum=<span class="num">0</span>, sumsq=<span class="num">0</span>; <span class="kw">int</span> count=<span class="num">0</span>;
+<span class="kw">while</span> (<span class="fn">fscanf</span>(inFile, <span class="str">"%lf"</span>, &amp;x) == <span class="num">1</span>) { sum+=x; sumsq+=x*x; count++; }
+<span class="cmt">// output filename with malloc+snprintf:</span>
+<span class="kw">int</span> nc = <span class="fn">strlen</span>(PREFIX) + <span class="fn">strlen</span>(argv[1]) + <span class="num">1</span>;
+<span class="kw">char</span> *outName = (<span class="kw">char</span>*)<span class="fn">malloc</span>(nc);
+<span class="fn">snprintf</span>(outName, nc, <span class="str">"%s%s"</span>, PREFIX, argv[1]);
+<span class="fn">free</span>(outName);</pre>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Lab 6 — Binary search: fread + linear search + interactive loop</div>
+<pre><span class="cmt">// arraySearch.h</span>
+<span class="kw">int</span> <span class="fn">linearSearch</span>(<span class="kw">const int</span> value, <span class="kw">const int</span> numbers[], <span class="kw">const int</span> n);
+
+<span class="cmt">// arraySearch.c</span>
+<span class="kw">int</span> <span class="fn">linearSearch</span>(<span class="kw">const int</span> value, <span class="kw">const int</span> numbers[], <span class="kw">const int</span> n) {
+    <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i &lt; n; i++)
+        <span class="kw">if</span> (numbers[i] == value) <span class="kw">return</span> i;
+    <span class="kw">return</span> -<span class="num">1</span>;
+}
+
+<span class="cmt">// searchMain.c — key pattern</span>
+<span class="cmt">// argv[1]=filename  argv[2]=count</span>
+<span class="kw">int</span> n; <span class="fn">sscanf</span>(argv[2], <span class="str">"%d"</span>, &amp;n);
+<span class="kw">int</span> *arr = (<span class="kw">int</span>*)<span class="fn">malloc</span>((<span class="kw">size_t</span>)n * <span class="kw">sizeof</span>(<span class="kw">int</span>));
+<span class="kw">size_t</span> got = <span class="fn">fread</span>(arr, <span class="kw">sizeof</span>(arr[<span class="num">0</span>]), n, fp);   <span class="cmt">// binary read</span>
+<span class="cmt">// interactive search loop:</span>
+<span class="kw">char</span> input[<span class="num">20</span>];
+<span class="fn">printf</span>(<span class="str">"Enter value ('q' to quit): "</span>);
+<span class="kw">while</span> (<span class="fn">scanf</span>(<span class="str">"%19s"</span>, input) == <span class="num">1</span> &amp;&amp; input[<span class="num">0</span>] != <span class="str">'q'</span>) {
+    <span class="kw">int</span> target; <span class="fn">sscanf</span>(input, <span class="str">"%d"</span>, &amp;target);
+    <span class="kw">int</span> idx = <span class="fn">linearSearch</span>(target, arr, n);
+    <span class="kw">if</span> (idx &gt;= <span class="num">0</span>) <span class="fn">printf</span>(<span class="str">"%d found at %d\n"</span>, target, idx);
+    <span class="kw">else</span>          <span class="fn">printf</span>(<span class="str">"%d not found\n"</span>, target);
+    <span class="fn">printf</span>(<span class="str">"Enter value ('q' to quit): "</span>);
+}
+<span class="fn">free</span>(arr);</pre>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Lab 7 — Pointers: swap adjacent pairs, print bytes</div>
+<pre><span class="kw">typedef int</span> WORD;
+<span class="kw">#define</span> WORD_FORMAT <span class="str">"%d "</span>
+<span class="kw">#define</span> N_NUMS <span class="num">10</span>
+<span class="kw">const</span> WORD START = <span class="num">1011</span>;
+
+WORD nums[N_NUMS];
+<span class="kw">for</span> (<span class="kw">int</span> i=<span class="num">0</span>; i&lt;N_NUMS; i++) nums[i] = START + i;
+
+<span class="cmt">// swap adjacent pairs using pointer notation</span>
+<span class="kw">for</span> (<span class="kw">int</span> i=<span class="num">0</span>; i&lt;N_NUMS-<span class="num">1</span>; i+=<span class="num">2</span>)
+    <span class="fn">swap</span>(nums+i, nums+i+<span class="num">1</span>);
+
+<span class="cmt">// swap back using array notation</span>
+<span class="kw">for</span> (<span class="kw">int</span> i=<span class="num">0</span>; i&lt;N_NUMS-<span class="num">1</span>; i+=<span class="num">2</span>)
+    <span class="fn">swap</span>(&amp;nums[i], &amp;nums[i+<span class="num">1</span>]);</pre>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Lab 8 — Recursion: printVector and reverseVector</div>
+<pre><span class="kw">void</span> <span class="fn">printVector</span>(<span class="kw">const</span> WORD *vec, <span class="kw">int</span> n) {   <span class="cmt">// recursive</span>
+    <span class="kw">if</span> (n == <span class="num">0</span>) { <span class="fn">printf</span>(<span class="str">"\n"</span>); <span class="kw">return</span>; }
+    <span class="fn">printf</span>(WORD_FORMAT, *vec);
+    <span class="fn">printVector</span>(vec+<span class="num">1</span>, n-<span class="num">1</span>);
+}
+<span class="kw">void</span> <span class="fn">reverseVector</span>(WORD *vec, <span class="kw">int</span> p1, <span class="kw">int</span> p2) {
+    <span class="kw">if</span> (p1 &gt;= p2) <span class="kw">return</span>;
+    WORD tmp=vec[p1]; vec[p1]=vec[p2]; vec[p2]=tmp;
+    <span class="fn">reverseVector</span>(vec, p1+<span class="num">1</span>, p2-<span class="num">1</span>);
+}</pre>
+    </div>
+  </section>
+
+  <!-- ── FORMAT SPECIFIERS ───────────────────────────────── -->
+  <section id="formats">
+    <div class="sec-title">Quick Reference</div>
+    <div class="two">
+      <div class="card">
+        <div class="card-title">printf / scanf format specifiers</div>
+        <table>
+          <tr><th>Type</th><th>printf</th><th>scanf</th></tr>
+          <tr><td>int</td><td>%d</td><td>%d</td></tr>
+          <tr><td>float</td><td>%f</td><td>%f</td></tr>
+          <tr><td>double</td><td>%f or %g</td><td>%lf</td></tr>
+          <tr><td>char</td><td>%c</td><td>%c</td></tr>
+          <tr><td>string</td><td>%s</td><td>%s</td></tr>
+          <tr><td>long</td><td>%ld</td><td>%ld</td></tr>
+          <tr><td>size_t</td><td>%zu</td><td>%zu</td></tr>
+          <tr><td>unsigned char</td><td>%hhu</td><td>—</td></tr>
+          <tr><td>hex</td><td>%x / %X</td><td>%x</td></tr>
+          <tr><td>pointer</td><td>%p</td><td>—</td></tr>
+        </table>
+      </div>
+      <div class="card">
+        <div class="card-title">Common patterns</div>
+        <table>
+          <tr><th>What</th><th>How</th></tr>
+          <tr><td>argv check</td><td>if (argc != N) { printf("Usage..."); return 1; }</td></tr>
+          <tr><td>fopen check</td><td>if ((fp=fopen(f,"r"))==NULL) { ... return 1; }</td></tr>
+          <tr><td>malloc check</td><td>if (ptr==NULL) { fprintf(stderr,...); return EXIT_FAILURE; }</td></tr>
+          <tr><td>fread check</td><td>if (got!=(size_t)n) { feof/ferror check }</td></tr>
+          <tr><td>flush stdin</td><td>while(getchar()!='\n'){}</td></tr>
+          <tr><td>free + NULL</td><td>free(p); p=NULL;</td></tr>
+          <tr><td>NULL pointer check</td><td>if (ptr == NULL) return NULL;</td></tr>
+          <tr><td>string length</td><td>strlen(s) + 1  (for the \0)</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Data structure comparison</div>
+      <table>
+        <tr><th>Structure</th><th>Access</th><th>Add</th><th>Remove</th><th>Key feature</th></tr>
+        <tr><td>Array stack</td><td>top (index)</td><td>push → ++top</td><td>pop → top--</td><td>Fixed size, simple</td></tr>
+        <tr><td>LL stack</td><td>top (pointer)</td><td>push: malloc, point to old top</td><td>pop: save top, advance, free</td><td>Dynamic size</td></tr>
+        <tr><td>LL queue</td><td>front + rear</td><td>enqueue → add at rear</td><td>dequeue → remove from front</td><td>FIFO, void* generic</td></tr>
+        <tr><td>Struct</td><td>dot or arrow</td><td>assign field</td><td>—</td><td>Groups related data</td></tr>
+      </table>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
