@@ -84,6 +84,7 @@ tr:hover td { background: #f9fafb; }
   <span class="brand">C Final</span>
   <div class="divider"></div>
   <a href="#boilerplate">Boilerplate</a>
+  <a href="#strings">Strings/Arrays</a>
   <a href="#fileio">File I/O</a>
   <a href="#malloc">malloc</a>
   <a href="#structs">Structs</a>
@@ -174,6 +175,91 @@ tr:hover td { background: #f9fafb; }
     <span class="fn">printf</span>(<span class="str">"%d\n"</span>, x);
 }</pre>
         <div class="tip"><strong>Rule:</strong> declarations in .h — definitions in .c — #include the .h in both</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── STRINGS & STRING ARRAYS ──────────────────────────── -->
+  <section id="strings">
+    <div class="sec-title">Strings & String Arrays — Labs 1, 2, 4 patterns (high exam probability)</div>
+    <div class="two">
+      <div class="card">
+        <div class="card-title">scanf number + unit string — Lab 2 / Midterm Q2 exact pattern</div>
+<pre><span class="cmt">// Read a double AND a short string in ONE scanf call
+// e.g. user types "24.5F" or "100^" — scanf splits at the number boundary
+// %10s reads up to 10 non-whitespace chars into line[]</span>
+<span class="kw">double</span> inputVal;
+<span class="kw">char</span>   line[<span class="num">11</span>];   <span class="cmt">// 10 chars + null terminator</span>
+<span class="kw">char</span>   type;
+
+<span class="fn">scanf</span>(<span class="str">"%lf%10s"</span>, &amp;inputVal, line);  <span class="cmt">// no & before line — array decays to pointer</span>
+type = line[<span class="num">0</span>];   <span class="cmt">// first character is the unit/operator</span>
+
+<span class="cmt">// Then dispatch with if-else on the character:</span>
+<span class="kw">if</span>      (type == <span class="str">'F'</span> || type == <span class="str">'f'</span>) { <span class="cmt">/* Fahrenheit */</span> }
+<span class="kw">else if</span> (type == <span class="str">'C'</span> || type == <span class="str">'c'</span>) { <span class="cmt">/* Celsius   */</span> }
+<span class="kw">else if</span> (type == <span class="str">'K'</span> || type == <span class="str">'k'</span>) { <span class="cmt">/* Kelvin    */</span> }
+<span class="kw">else</span>                                    { <span class="fn">printf</span>(<span class="str">"Unknown unit '%c'\n"</span>, type); }</pre>
+        <div class="tip">This exact pattern appeared in Midterm Q2 (power/remainder). Lab 2 is temperature conversion using the same scanf structure — very likely on the final.</div>
+      </div>
+      <div class="card">
+        <div class="card-title">String pointer as result variable — Lab 1 grade lookup pattern</div>
+<pre><span class="cmt">// const char* points to a string literal — no array needed
+// Set a default, then overwrite it in if-else chain
+// The pointer just changes where it points — no copying</span>
+<span class="kw">const char</span> *grade = <span class="str">"F"</span>;   <span class="cmt">// default — set before the if-else</span>
+
+<span class="kw">if</span>      (percent &gt;= <span class="num">90.0</span>) grade = <span class="str">"A+"</span>;
+<span class="kw">else if</span> (percent &gt;= <span class="num">85.0</span>) grade = <span class="str">"A"</span>;
+<span class="kw">else if</span> (percent &gt;= <span class="num">80.0</span>) grade = <span class="str">"A-"</span>;
+<span class="kw">else if</span> (percent &gt;= <span class="num">77.0</span>) grade = <span class="str">"B+"</span>;
+<span class="kw">else if</span> (percent &gt;= <span class="num">73.0</span>) grade = <span class="str">"B"</span>;
+<span class="kw">else if</span> (percent &gt;= <span class="num">70.0</span>) grade = <span class="str">"B-"</span>;
+<span class="cmt">// ... continue down to F ...</span>
+
+<span class="fn">printf</span>(<span class="str">"Letter grade: %s\n"</span>, grade);  <span class="cmt">// %s prints the string the pointer points to</span>
+
+<span class="cmt">// Also: input validation — always check scanf and range</span>
+<span class="kw">if</span> (<span class="fn">scanf</span>(<span class="str">"%lf"</span>, &amp;percent) != <span class="num">1</span>) { <span class="fn">fprintf</span>(stderr, <span class="str">"Invalid input\n"</span>); <span class="kw">return</span> <span class="num">1</span>; }
+<span class="kw">if</span> (percent &lt; <span class="num">0.0</span> || percent &gt; <span class="num">100.0</span>) { <span class="fn">fprintf</span>(stderr, <span class="str">"Out of range\n"</span>); <span class="kw">return</span> <span class="num">1</span>; }</pre>
+      </div>
+    </div>
+
+    <div class="two">
+      <div class="card">
+        <div class="card-title">Array of string literals — Lab 4 pattern</div>
+<pre><span class="cmt">// char *names[] = array of pointers, each pointing to a string literal
+// Access with names[i] — same as any array</span>
+<span class="kw">const char</span> *kSingleNames[] = {<span class="str">"Twenty"</span>, <span class="str">"Ten"</span>, <span class="str">"Five"</span>, <span class="str">"Toonie"</span>, <span class="str">"Loonie"</span>};
+<span class="kw">const char</span> *kPluralNames[] = {<span class="str">"Twenties"</span>, <span class="str">"Tens"</span>, <span class="str">"Fives"</span>, <span class="str">"Toonies"</span>, <span class="str">"Loonies"</span>};
+
+<span class="kw">int</span> count = <span class="num">3</span>;
+<span class="kw">const char</span> *label = (count == <span class="num">1</span>) ? kSingleNames[<span class="num">0</span>] : kPluralNames[<span class="num">0</span>]; <span class="cmt">// ternary</span>
+<span class="fn">printf</span>(<span class="str">"%d %s\n"</span>, count, label);   <span class="cmt">// "3 Twenties"</span>
+
+<span class="cmt">// Print all with a loop:</span>
+<span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i &lt; <span class="num">5</span>; i++)
+    <span class="fn">printf</span>(<span class="str">"%s\n"</span>, kSingleNames[i]);</pre>
+      </div>
+      <div class="card">
+        <div class="card-title">sizeof array count + formatted printf widths — Lab 4 / Lab 3</div>
+<pre><span class="cmt">// sizeof(arr)/sizeof(arr[0]) = number of elements — works for any type
+// Only works on the ACTUAL array, not a pointer to it</span>
+<span class="kw">const double</span> kValues[] = {<span class="num">20.0</span>, <span class="num">10.0</span>, <span class="num">5.0</span>, <span class="num">2.0</span>, <span class="num">1.0</span>};
+<span class="kw">size_t</span> n = <span class="kw">sizeof</span>(kValues) / <span class="kw">sizeof</span>(kValues[<span class="num">0</span>]);  <span class="cmt">// n = 5</span>
+<span class="kw">for</span> (<span class="kw">size_t</span> i = <span class="num">0</span>; i &lt; n; i++)
+    <span class="fn">printf</span>(<span class="str">"%.2f\n"</span>, kValues[i]);
+
+<span class="cmt">// Formatted column widths (Lab 3 table output):
+// %8.2f = field width 8, 2 decimal places — right-aligned by default</span>
+<span class="fn">printf</span>(<span class="str">"    Time    Height   Velocity\n"</span>);       <span class="cmt">// header</span>
+<span class="fn">printf</span>(<span class="str">"%8.2f  %8.1f   %8.2f\n"</span>, time, height, vel);  <span class="cmt">// data rows</span>
+
+<span class="cmt">// snprintf — safe way to write a formatted string into a char array:
+// snprintf(dest, sizeof(dest), format, ...)
+// NEVER use sprintf — it can overflow; always use snprintf</span>
+<span class="kw">char</span> buf[<span class="num">50</span>];
+<span class="fn">snprintf</span>(buf, <span class="kw">sizeof</span>(buf), <span class="str">"%s_%d"</span>, prefix, num);</pre>
       </div>
     </div>
   </section>
@@ -1927,6 +2013,112 @@ FILE *fp = <span class="fn">fopen</span>(argv[<span class="num">1</span>], <span
           binarySearch(arr, 5,  0, 5) → <span style="color:#86efac;">-1</span> &nbsp;<span style="color:#94a3b8;">// not in array</span><br>
           binarySearch(arr, 20, 0, 5) → <span style="color:#86efac;">5</span> &nbsp;<span style="color:#94a3b8;">// found at last index</span><br>
           <span style="color:#94a3b8;">// vs linearSearch: binary is O(log n) but REQUIRES sorted array</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="card">
+      <div class="card-title" style="color:#7c3aed;">Practice Q19 — Temperature converter (Lab 2 exact pattern)</div>
+      <p style="font-size:0.83rem;color:#374151;margin-bottom:12px;">
+        <strong>Objective:</strong> Read a temperature as a double immediately followed by a unit
+        (<code>F</code>, <code>C</code>, or <code>K</code>) in one <code>scanf</code> call (e.g. user types <code>100F</code>).
+        Convert and print all three equivalents. Print an error for unknown units.
+        Formulas: C=(F-32)×5/9 · F=C×9/5+32 · K=C+273.15
+      </p>
+      <details style="margin-top:8px;">
+        <summary style="cursor:pointer;font-size:0.82rem;font-weight:700;color:#0369a1;">Show solution</summary>
+<pre style="margin-top:8px;"><span class="kw">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+<span class="kw">#include</span> <span class="str">&lt;stdlib.h&gt;</span>
+
+<span class="kw">int</span> <span class="fn">main</span>(<span class="kw">void</span>) {
+    <span class="kw">double</span> inputTemp;
+    <span class="kw">char</span>   line[<span class="num">11</span>];
+    <span class="kw">char</span>   type;
+    <span class="kw">const double</span> kOffset = <span class="num">273.15</span>;  <span class="cmt">// named constant — never magic numbers</span>
+
+    <span class="fn">printf</span>(<span class="str">"Enter temperature with unit (e.g. 24.5C): "</span>);
+    <span class="cmt">// KEY: no & before line[] — array name is already a pointer
+    // %10s reads the unit string (e.g. "F" or "K") after the number</span>
+    <span class="fn">scanf</span>(<span class="str">"%lf%10s"</span>, &amp;inputTemp, line);
+    type = line[<span class="num">0</span>];   <span class="cmt">// first character of line is the unit letter</span>
+
+    <span class="kw">if</span> (type == <span class="str">'F'</span> || type == <span class="str">'f'</span>) {
+        <span class="kw">double</span> c = (inputTemp - <span class="num">32.0</span>) * <span class="num">5.0</span> / <span class="num">9.0</span>;
+        <span class="kw">double</span> k = c + kOffset;
+        <span class="fn">printf</span>(<span class="str">"%8.3fK = %8.3fC = %8.3fF\n"</span>, k, c, inputTemp);
+    } <span class="kw">else if</span> (type == <span class="str">'C'</span> || type == <span class="str">'c'</span>) {
+        <span class="kw">double</span> k = inputTemp + kOffset;
+        <span class="kw">double</span> f = inputTemp * <span class="num">9.0</span> / <span class="num">5.0</span> + <span class="num">32.0</span>;
+        <span class="fn">printf</span>(<span class="str">"%8.3fK = %8.3fC = %8.3fF\n"</span>, k, inputTemp, f);
+    } <span class="kw">else if</span> (type == <span class="str">'K'</span> || type == <span class="str">'k'</span>) {
+        <span class="kw">double</span> c = inputTemp - kOffset;
+        <span class="kw">double</span> f = c * <span class="num">9.0</span> / <span class="num">5.0</span> + <span class="num">32.0</span>;
+        <span class="fn">printf</span>(<span class="str">"%8.3fK = %8.3fC = %8.3fF\n"</span>, inputTemp, c, f);
+    } <span class="kw">else</span> {
+        <span class="fn">printf</span>(<span class="str">"Unknown unit '%c'\n"</span>, type);
+    }
+    <span class="kw">return</span> EXIT_SUCCESS;
+}</pre>
+        <div style="background:#1e293b;color:#e2e8f0;border-radius:6px;padding:10px 14px;font-family:monospace;font-size:0.8rem;margin-top:10px;line-height:1.7;">
+          <span style="color:#64748b;font-size:0.7rem;letter-spacing:0.08em;">OUTPUT — user types: 100C</span><br>
+          <span style="color:#86efac;"> 373.150K =  100.000C =  212.000F</span><br>
+          <span style="color:#64748b;font-size:0.7rem;letter-spacing:0.08em;">OUTPUT — user types: 32F</span><br>
+          <span style="color:#86efac;"> 273.150K =    0.000C =   32.000F</span><br>
+          <span style="color:#94a3b8;">// %8.3f = 8 chars wide, 3 decimal places, right-aligned</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="card">
+      <div class="card-title" style="color:#7c3aed;">Practice Q20 — Grade letter lookup (Lab 1 pattern)</div>
+      <p style="font-size:0.83rem;color:#374151;margin-bottom:12px;">
+        <strong>Objective:</strong> Read a percentage (0–100) from the user. Validate it (reject bad scanf
+        and out-of-range values). Print the letter grade using a <code>const char *</code> pointer and
+        a chained if-else. Grades: A+(≥90) A(≥85) A-(≥80) B+(≥77) B(≥73) B-(≥70) C+(≥65) C(≥60) D(≥50) F(below 50).
+      </p>
+      <details style="margin-top:8px;">
+        <summary style="cursor:pointer;font-size:0.82rem;font-weight:700;color:#0369a1;">Show solution</summary>
+<pre style="margin-top:8px;"><span class="kw">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+<span class="kw">#include</span> <span class="str">&lt;stdlib.h&gt;</span>
+
+<span class="kw">int</span> <span class="fn">main</span>(<span class="kw">void</span>) {
+    <span class="kw">double</span> percent;
+
+    <span class="fn">printf</span>(<span class="str">"Enter grade percent: "</span>);
+    <span class="cmt">// Validate scanf return — if user types "abc", scanf returns 0, not 1</span>
+    <span class="kw">if</span> (<span class="fn">scanf</span>(<span class="str">"%lf"</span>, &amp;percent) != <span class="num">1</span>) {
+        <span class="fn">fprintf</span>(stderr, <span class="str">"Invalid input.\n"</span>);
+        <span class="kw">return</span> <span class="num">1</span>;
+    }
+    <span class="cmt">// Validate range</span>
+    <span class="kw">if</span> (percent &lt; <span class="num">0.0</span> || percent &gt; <span class="num">100.0</span>) {
+        <span class="fn">fprintf</span>(stderr, <span class="str">"Percent must be between 0 and 100.\n"</span>);
+        <span class="kw">return</span> <span class="num">1</span>;
+    }
+
+    <span class="cmt">// const char* grade points at a string literal — just reassign the pointer
+    // Start with the default (lowest) and chain up</span>
+    <span class="kw">const char</span> *grade = <span class="str">"F"</span>;
+    <span class="kw">if</span>      (percent &gt;= <span class="num">90.0</span>) grade = <span class="str">"A+"</span>;
+    <span class="kw">else if</span> (percent &gt;= <span class="num">85.0</span>) grade = <span class="str">"A"</span>;
+    <span class="kw">else if</span> (percent &gt;= <span class="num">80.0</span>) grade = <span class="str">"A-"</span>;
+    <span class="kw">else if</span> (percent &gt;= <span class="num">77.0</span>) grade = <span class="str">"B+"</span>;
+    <span class="kw">else if</span> (percent &gt;= <span class="num">73.0</span>) grade = <span class="str">"B"</span>;
+    <span class="kw">else if</span> (percent &gt;= <span class="num">70.0</span>) grade = <span class="str">"B-"</span>;
+    <span class="kw">else if</span> (percent &gt;= <span class="num">65.0</span>) grade = <span class="str">"C+"</span>;
+    <span class="kw">else if</span> (percent &gt;= <span class="num">60.0</span>) grade = <span class="str">"C"</span>;
+    <span class="kw">else if</span> (percent &gt;= <span class="num">50.0</span>) grade = <span class="str">"D"</span>;
+
+    <span class="fn">printf</span>(<span class="str">"Letter grade: %s\n"</span>, grade);
+    <span class="kw">return</span> <span class="num">0</span>;
+}</pre>
+        <div style="background:#1e293b;color:#e2e8f0;border-radius:6px;padding:10px 14px;font-family:monospace;font-size:0.8rem;margin-top:10px;line-height:1.7;">
+          <span style="color:#64748b;font-size:0.7rem;letter-spacing:0.08em;">OUTPUT examples</span><br>
+          Input 92.5 → <span style="color:#86efac;">Letter grade: A+</span><br>
+          Input 73.0 → <span style="color:#86efac;">Letter grade: B</span><br>
+          Input 45.0 → <span style="color:#86efac;">Letter grade: F</span><br>
+          Input "abc" → <span style="color:#fbbf24;">Invalid input.</span> (stderr)<br>
+          Input 105  → <span style="color:#fbbf24;">Percent must be between 0 and 100.</span> (stderr)
         </div>
       </details>
     </div>
