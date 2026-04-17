@@ -1011,6 +1011,248 @@ WORD nums[N_NUMS];
       </div>
     </div>
 
+    <!-- ── PRACTICE: FINAL TOPICS ────────────────────────── -->
+    <div class="card">
+      <div class="card-title" style="color:#7c3aed;">Practice Q1 — Array Stack: write push() and pop()</div>
+      <p style="font-size:0.83rem;color:#374151;margin-bottom:12px;">
+        <strong>Task:</strong> The <code>Stack</code> struct and <code>init()</code> are given. Fill in <code>push()</code> and <code>pop()</code>.
+      </p>
+<pre><span class="cmt">// ── GIVEN (you see this on the exam) ──────────────────────────────────</span>
+<span class="kw">#define</span> MAX <span class="num">50</span>
+<span class="kw">typedef struct</span> {
+    <span class="kw">int</span> array[MAX];
+    <span class="kw">int</span> top;         <span class="cmt">// -1 = empty</span>
+} Stack;
+
+<span class="kw">void</span> <span class="fn">init</span>(Stack *s)  { s->top = -<span class="num">1</span>; }
+<span class="kw">void</span> <span class="fn">push</span>(Stack *s, <span class="kw">int</span> val);
+<span class="kw">int</span>  <span class="fn">pop</span> (Stack *s);
+
+<span class="cmt">// ── YOUR JOB ──────────────────────────────────────────────────────────</span>
+<span class="kw">void</span> <span class="fn">push</span>(Stack *s, <span class="kw">int</span> val) {
+    <span class="cmt">/* fill in */</span>
+}
+<span class="kw">int</span> <span class="fn">pop</span>(Stack *s) {
+    <span class="cmt">/* fill in */</span>
+}</pre>
+      <details style="margin-top:8px;">
+        <summary style="cursor:pointer;font-size:0.82rem;font-weight:700;color:#0369a1;">Show solution</summary>
+<pre style="margin-top:8px;"><span class="kw">void</span> <span class="fn">push</span>(Stack *s, <span class="kw">int</span> val) {
+    <span class="cmt">// check full: top == MAX-1 means every slot is used</span>
+    <span class="kw">if</span> (s->top == MAX - <span class="num">1</span>) { <span class="fn">fprintf</span>(stderr, <span class="str">"Stack full\n"</span>); <span class="kw">return</span>; }
+    <span class="cmt">// ++top increments FIRST, then uses the new index to store val</span>
+    s->array[++s->top] = val;
+}
+
+<span class="kw">int</span> <span class="fn">pop</span>(Stack *s) {
+    <span class="cmt">// check empty: top == -1 means nothing has been pushed</span>
+    <span class="kw">if</span> (s->top == -<span class="num">1</span>) { <span class="fn">fprintf</span>(stderr, <span class="str">"Stack empty\n"</span>); <span class="kw">return</span> -<span class="num">1</span>; }
+    <span class="cmt">// read array[top] THEN decrement top (post-decrement)</span>
+    <span class="kw">return</span> s->array[s->top--];
+}</pre>
+      </details>
+    </div>
+
+    <div class="card">
+      <div class="card-title" style="color:#7c3aed;">Practice Q2 — Recursion: write sumArray()</div>
+      <p style="font-size:0.83rem;color:#374151;margin-bottom:12px;">
+        <strong>Task:</strong> Write a <em>recursive</em> function that returns the sum of an int array.
+        No loops allowed. Pattern is the same as Lab 8 <code>printVector</code>.
+      </p>
+<pre><span class="cmt">// ── YOUR JOB ──────────────────────────────────────────────────────────</span>
+<span class="kw">int</span> <span class="fn">sumArray</span>(<span class="kw">const int</span> *arr, <span class="kw">int</span> n) {
+    <span class="cmt">/* fill in */</span>
+}
+
+<span class="cmt">// Expected usage:</span>
+<span class="kw">int</span> nums[] = {<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>, <span class="num">4</span>, <span class="num">5</span>};
+<span class="fn">printf</span>(<span class="str">"%d\n"</span>, <span class="fn">sumArray</span>(nums, <span class="num">5</span>));   <span class="cmt">// prints 15</span></pre>
+      <details style="margin-top:8px;">
+        <summary style="cursor:pointer;font-size:0.82rem;font-weight:700;color:#0369a1;">Show solution</summary>
+<pre style="margin-top:8px;"><span class="kw">int</span> <span class="fn">sumArray</span>(<span class="kw">const int</span> *arr, <span class="kw">int</span> n) {
+    <span class="cmt">// BASE CASE: empty array has sum 0 — without this it recurses forever</span>
+    <span class="kw">if</span> (n == <span class="num">0</span>) <span class="kw">return</span> <span class="num">0</span>;
+    <span class="cmt">// add first element (*arr), recurse on the rest (arr+1, n-1)
+    // same pattern as printVector: do one thing, shrink the problem</span>
+    <span class="kw">return</span> *arr + <span class="fn">sumArray</span>(arr + <span class="num">1</span>, n - <span class="num">1</span>);
+}</pre>
+      </details>
+    </div>
+
+    <div class="card">
+      <div class="card-title" style="color:#7c3aed;">Practice Q3 — LL Stack: write push() with malloc</div>
+      <p style="font-size:0.83rem;color:#374151;margin-bottom:12px;">
+        <strong>Task:</strong> The Node and Stack structs are given. Write <code>push()</code> that
+        mallocs a new node and returns <code>true</code> on success, <code>false</code> if malloc fails.
+      </p>
+<pre><span class="cmt">// ── GIVEN ─────────────────────────────────────────────────────────────</span>
+<span class="kw">typedef struct</span> node {
+    <span class="kw">int</span>         item;
+    <span class="kw">struct</span> node *next;
+} Node;
+
+<span class="kw">typedef struct</span> {
+    <span class="kw">int</span>   size;
+    Node *top;    <span class="cmt">// NULL = empty</span>
+} Stack;
+
+<span class="cmt">// ── YOUR JOB ──────────────────────────────────────────────────────────</span>
+<span class="kw">bool</span> <span class="fn">push</span>(Stack *s, <span class="kw">int</span> val) {
+    <span class="cmt">/* fill in */</span>
+}</pre>
+      <details style="margin-top:8px;">
+        <summary style="cursor:pointer;font-size:0.82rem;font-weight:700;color:#0369a1;">Show solution</summary>
+<pre style="margin-top:8px;"><span class="kw">bool</span> <span class="fn">push</span>(Stack *s, <span class="kw">int</span> val) {
+    <span class="cmt">// 1. malloc a new node — always check for NULL</span>
+    Node *n = (Node *) <span class="fn">malloc</span>(<span class="kw">sizeof</span>(Node));
+    <span class="kw">if</span> (n == NULL) <span class="kw">return false</span>;
+
+    <span class="cmt">// 2. fill in the node's data</span>
+    n->item = val;
+
+    <span class="cmt">// 3. wire it in: new node points DOWN at whatever was on top before</span>
+    n->next = s->top;
+
+    <span class="cmt">// 4. new node IS the new top</span>
+    s->top = n;
+    s->size++;
+    <span class="kw">return true</span>;
+    <span class="cmt">// KEY ORDER: set n->next BEFORE updating s->top, or you lose the old chain</span>
+}</pre>
+      </details>
+    </div>
+
+    <div class="card">
+      <div class="card-title" style="color:#7c3aed;">Practice Q4 — Struct: write a function that operates on a struct</div>
+      <p style="font-size:0.83rem;color:#374151;margin-bottom:12px;">
+        <strong>Task:</strong> Given the <code>Student</code> struct, write <code>averageGrade()</code>
+        that returns the average of the grades array. Then write <code>printStudent()</code>.
+      </p>
+<pre><span class="cmt">// ── GIVEN ─────────────────────────────────────────────────────────────</span>
+<span class="kw">#define</span> MAX_GRADES <span class="num">10</span>
+<span class="kw">typedef struct</span> {
+    <span class="kw">char</span>   name[<span class="num">50</span>];
+    <span class="kw">int</span>    numGrades;
+    <span class="kw">double</span> grades[MAX_GRADES];
+} Student;
+
+<span class="cmt">// ── YOUR JOB ──────────────────────────────────────────────────────────</span>
+<span class="kw">double</span> <span class="fn">averageGrade</span>(<span class="kw">const</span> Student *s) {
+    <span class="cmt">/* fill in */</span>
+}
+
+<span class="kw">void</span> <span class="fn">printStudent</span>(<span class="kw">const</span> Student *s) {
+    <span class="cmt">/* fill in: print name then average */</span>
+}</pre>
+      <details style="margin-top:8px;">
+        <summary style="cursor:pointer;font-size:0.82rem;font-weight:700;color:#0369a1;">Show solution</summary>
+<pre style="margin-top:8px;"><span class="kw">double</span> <span class="fn">averageGrade</span>(<span class="kw">const</span> Student *s) {
+    <span class="cmt">// use -> because s is a POINTER to a Student (not a Student variable)
+    // const Student* means we promise not to change anything through s</span>
+    <span class="kw">if</span> (s->numGrades == <span class="num">0</span>) <span class="kw">return</span> <span class="num">0.0</span>;  <span class="cmt">// guard against divide by zero</span>
+
+    <span class="kw">double</span> sum = <span class="num">0.0</span>;
+    <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i &lt; s->numGrades; i++)
+        sum += s->grades[i];
+    <span class="kw">return</span> sum / s->numGrades;
+}
+
+<span class="kw">void</span> <span class="fn">printStudent</span>(<span class="kw">const</span> Student *s) {
+    <span class="cmt">// s->name is a char array — %s prints it as a string
+    // call averageGrade and print result inline</span>
+    <span class="fn">printf</span>(<span class="str">"Student: %s, Average: %.2f\n"</span>, s->name, <span class="fn">averageGrade</span>(s));
+}</pre>
+      </details>
+    </div>
+
+    <div class="card">
+      <div class="card-title" style="color:#7c3aed;">Practice Q5 — Queue: write enqueue() and dequeue()</div>
+      <p style="font-size:0.83rem;color:#374151;margin-bottom:12px;">
+        <strong>Task:</strong> The Queue/ListNode structs are given (Lab 10 pattern). Write <code>enqueue()</code>
+        and <code>dequeue()</code>.
+      </p>
+<pre><span class="cmt">// ── GIVEN ─────────────────────────────────────────────────────────────</span>
+<span class="kw">typedef struct</span> listNode {
+    <span class="kw">struct</span> listNode *next;
+    <span class="kw">void</span>            *dataPtr;
+} ListNode;
+
+<span class="kw">typedef struct</span> {
+    ListNode *front;
+    ListNode *rear;
+    <span class="kw">int</span>       size;
+} Queue;
+
+<span class="cmt">// ── YOUR JOB ──────────────────────────────────────────────────────────</span>
+<span class="kw">void</span> *<span class="fn">enqueue</span>(Queue *q, <span class="kw">void</span> *item) {
+    <span class="cmt">/* fill in */</span>
+}
+<span class="kw">void</span> *<span class="fn">dequeue</span>(Queue *q) {
+    <span class="cmt">/* fill in */</span>
+}</pre>
+      <details style="margin-top:8px;">
+        <summary style="cursor:pointer;font-size:0.82rem;font-weight:700;color:#0369a1;">Show solution</summary>
+<pre style="margin-top:8px;"><span class="kw">void</span> *<span class="fn">enqueue</span>(Queue *q, <span class="kw">void</span> *item) {
+    <span class="cmt">// malloc a wrapper node (NOT the item — item is already malloc-ed by caller)</span>
+    ListNode *node = (ListNode *) <span class="fn">malloc</span>(<span class="kw">sizeof</span>(ListNode));
+    <span class="kw">if</span> (node == NULL) <span class="kw">return</span> NULL;
+    node->next    = NULL;    <span class="cmt">// new node goes at the END — nothing after it</span>
+    node->dataPtr = item;    <span class="cmt">// store the pointer (not a copy of the data)</span>
+
+    <span class="kw">if</span> (q->size == <span class="num">0</span>)
+        q->front = q->rear = node;             <span class="cmt">// first item: both ends point to it</span>
+    <span class="kw">else</span> {
+        q->rear->next = node;                  <span class="cmt">// link new node after current rear</span>
+        q->rear = node;                        <span class="cmt">// new node is now the rear</span>
+    }
+    q->size++;
+    <span class="kw">return</span> item;
+}
+
+<span class="kw">void</span> *<span class="fn">dequeue</span>(Queue *q) {
+    <span class="kw">if</span> (q->size == <span class="num">0</span>) <span class="kw">return</span> NULL;    <span class="cmt">// empty queue</span>
+    ListNode *old  = q->front;         <span class="cmt">// save front node pointer so we can free it</span>
+    <span class="kw">void</span>     *item = old->dataPtr;     <span class="cmt">// save item pointer BEFORE freeing the node</span>
+    q->front = old->next;              <span class="cmt">// advance front to the next node</span>
+    q->size--;
+    <span class="kw">if</span> (q->size == <span class="num">0</span>) q->rear = NULL; <span class="cmt">// queue now empty — clear rear too or it dangles</span>
+    <span class="fn">free</span>(old);                         <span class="cmt">// free the ListNode wrapper (NOT the item)</span>
+    <span class="kw">return</span> item;                       <span class="cmt">// caller uses then frees the item</span>
+}</pre>
+      </details>
+    </div>
+
+    <div class="card">
+      <div class="card-title" style="color:#7c3aed;">Practice Q6 — Fix the bug (like the midterm style)</div>
+      <p style="font-size:0.83rem;color:#374151;margin-bottom:12px;">
+        <strong>Task:</strong> The function below should reverse an array recursively. It compiles but
+        produces wrong output. Find and fix the bug.
+      </p>
+<pre><span class="kw">void</span> <span class="fn">reverse</span>(<span class="kw">int</span> *arr, <span class="kw">int</span> p1, <span class="kw">int</span> p2) {
+    <span class="kw">int</span> tmp  = arr[p1];    <span class="cmt">// swap p1 and p2</span>
+    arr[p1]  = arr[p2];
+    arr[p2]  = tmp;
+    <span class="fn">reverse</span>(arr, p1 + <span class="num">1</span>, p2 - <span class="num">1</span>);
+}</pre>
+      <details style="margin-top:8px;">
+        <summary style="cursor:pointer;font-size:0.82rem;font-weight:700;color:#0369a1;">Show solution</summary>
+<pre style="margin-top:8px;"><span class="cmt">// BUG: missing base case — the function recurses forever (stack overflow)
+// p1 and p2 will eventually cross (p1 >= p2) meaning reversal is done
+// Without the check, it keeps swapping and undoes its own work, then crashes</span>
+
+<span class="kw">void</span> <span class="fn">reverse</span>(<span class="kw">int</span> *arr, <span class="kw">int</span> p1, <span class="kw">int</span> p2) {
+    <span class="cmt">// ✓ BASE CASE: when pointers meet or cross, every pair has been swapped</span>
+    <span class="kw">if</span> (p1 >= p2) <span class="kw">return</span>;
+
+    <span class="kw">int</span> tmp  = arr[p1];
+    arr[p1]  = arr[p2];
+    arr[p2]  = tmp;
+    <span class="fn">reverse</span>(arr, p1 + <span class="num">1</span>, p2 - <span class="num">1</span>);
+}
+<span class="cmt">// Rule: EVERY recursive function needs a base case that stops the recursion.</span></pre>
+      </details>
+    </div>
+
     <!-- ── MIDTERM 1 · Q (printNumbers) ─────────────────── -->
     <div class="card">
       <div class="card-title">Midterm 1 — printNumbers even countdown &nbsp;·&nbsp; 3 / 5</div>
