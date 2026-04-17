@@ -106,60 +106,66 @@ tr:hover td { background: #f9fafb; }
     <div class="sec-title">Boilerplate — always start here</div>
     <div class="card">
       <div class="card-title">Standard main with argc/argv + file open</div>
-<pre><span class="kw">#include</span> <span class="str">&lt;stdio.h&gt;</span>
-<span class="kw">#include</span> <span class="str">&lt;stdlib.h&gt;</span>
-<span class="kw">#include</span> <span class="str">&lt;string.h&gt;</span>
-<span class="kw">#include</span> <span class="str">&lt;math.h&gt;</span>
-<span class="kw">#include</span> <span class="str">"myheader.h"</span>
+<pre><span class="cmt">// Always include these — add math.h if you use sqrt/pow/etc.</span>
+<span class="kw">#include</span> <span class="str">&lt;stdio.h&gt;</span>   <span class="cmt">// printf, scanf, fopen, fclose, fprintf, fscanf, FILE</span>
+<span class="kw">#include</span> <span class="str">&lt;stdlib.h&gt;</span>  <span class="cmt">// malloc, free, EXIT_SUCCESS, EXIT_FAILURE</span>
+<span class="kw">#include</span> <span class="str">&lt;string.h&gt;</span>  <span class="cmt">// strlen, strcpy, strcmp, strcat</span>
+<span class="kw">#include</span> <span class="str">&lt;math.h&gt;</span>    <span class="cmt">// sqrt, pow  (link with -lm if needed)</span>
+<span class="kw">#include</span> <span class="str">"myheader.h"</span> <span class="cmt">// your own header — use quotes, not angle brackets</span>
 
+<span class="cmt">// argc = number of arguments including program name
+// argv[0] = program name, argv[1] = first user argument, etc.</span>
 <span class="kw">int</span> <span class="fn">main</span>(<span class="kw">int</span> argc, <span class="kw">char</span> *argv[]) {
 
-    <span class="cmt">// 1. Check argument count</span>
-    <span class="kw">if</span> (argc != 2) {
-        <span class="fn">printf</span>(<span class="str">"Usage: %s filename\n"</span>, argv[0]);
-        <span class="kw">return</span> <span class="num">1</span>;
+    <span class="cmt">// argc != 2 means user gave 0 or 2+ args — we expect exactly 1 (the filename)</span>
+    <span class="kw">if</span> (argc != <span class="num">2</span>) {
+        <span class="fn">printf</span>(<span class="str">"Usage: %s filename\n"</span>, argv[<span class="num">0</span>]); <span class="cmt">// argv[0] is the program name</span>
+        <span class="kw">return</span> <span class="num">1</span>;  <span class="cmt">// non-zero = error exit</span>
     }
 
-    <span class="cmt">// 2. Open input file</span>
+    <span class="cmt">// FILE* is the type for a file handle.
+    // fopen returns NULL if the file can't be opened.
+    // "r" = read text  "w" = write text  "rb" = read binary  "wb" = write binary</span>
     FILE *fp;
-    <span class="kw">if</span> ((fp = <span class="fn">fopen</span>(argv[1], <span class="str">"r"</span>)) == NULL) {
-        <span class="fn">printf</span>(<span class="str">"%s: Unable to open \"%s\"\n"</span>, argv[0], argv[1]);
+    <span class="kw">if</span> ((fp = <span class="fn">fopen</span>(argv[<span class="num">1</span>], <span class="str">"r"</span>)) == NULL) {
+        <span class="fn">printf</span>(<span class="str">"%s: Unable to open \"%s\"\n"</span>, argv[<span class="num">0</span>], argv[<span class="num">1</span>]);
         <span class="kw">return</span> <span class="num">1</span>;
     }
 
-    <span class="cmt">// ... do work ...</span>
+    <span class="cmt">// ... do work with fp ...</span>
 
-    <span class="fn">fclose</span>(fp);
-    <span class="kw">return</span> <span class="num">0</span>;
+    <span class="fn">fclose</span>(fp);  <span class="cmt">// always close the file when done</span>
+    <span class="kw">return</span> <span class="num">0</span>;    <span class="cmt">// 0 = success (same as EXIT_SUCCESS)</span>
 }</pre>
     </div>
 
     <div class="two">
       <div class="card">
         <div class="card-title">Header file template (.h)</div>
-<pre><span class="kw">#ifndef</span> MYHEADER_H
-<span class="kw">#define</span> MYHEADER_H
+<pre><span class="cmt">// Include guard — prevents double-inclusion if multiple .c files include this header</span>
+<span class="kw">#ifndef</span> MYHEADER_H   <span class="cmt">// if not defined yet...</span>
+<span class="kw">#define</span> MYHEADER_H   <span class="cmt">// ...define it (so next include is skipped)</span>
 
-<span class="kw">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+<span class="kw">#include</span> <span class="str">&lt;stdio.h&gt;</span>   <span class="cmt">// needed here if you use FILE* in declarations</span>
 
-<span class="kw">#define</span> MAX_SIZE 100
+<span class="kw">#define</span> MAX_SIZE <span class="num">100</span>  <span class="cmt">// constant — use this instead of magic numbers</span>
 
-<span class="cmt">// type + format</span>
+<span class="cmt">// typedef lets you rename a type so you only change it in one place</span>
 <span class="kw">typedef int</span> ItemType;
-<span class="kw">#define</span> ITEM_FORMAT <span class="str">"%d"</span>
+<span class="kw">#define</span> ITEM_FORMAT <span class="str">"%d"</span>   <span class="cmt">// matching format string — change both together</span>
 
-<span class="cmt">// function declarations</span>
+<span class="cmt">// Function declarations (prototypes) — no body, just the signature + semicolon</span>
 <span class="kw">void</span> <span class="fn">myFunc</span>(<span class="kw">int</span> x);
 
-<span class="kw">#endif</span> <span class="cmt">/* MYHEADER_H */</span></pre>
+<span class="kw">#endif</span> <span class="cmt">/* MYHEADER_H */</span>  <span class="cmt">// closes the #ifndef block</span></pre>
       </div>
       <div class="card">
         <div class="card-title">Implementation file template (.c)</div>
 <pre><span class="kw">#include</span> <span class="str">&lt;stdio.h&gt;</span>
 <span class="kw">#include</span> <span class="str">&lt;stdlib.h&gt;</span>
-<span class="kw">#include</span> <span class="str">"myheader.h"</span>
+<span class="kw">#include</span> <span class="str">"myheader.h"</span>   <span class="cmt">// include the matching .h for this .c file</span>
 
-<span class="cmt">// Function definitions go here</span>
+<span class="cmt">// Function DEFINITION (has a body) — must match the prototype in the .h exactly</span>
 <span class="kw">void</span> <span class="fn">myFunc</span>(<span class="kw">int</span> x) {
     <span class="fn">printf</span>(<span class="str">"%d\n"</span>, x);
 }</pre>
@@ -173,37 +179,40 @@ tr:hover td { background: #f9fafb; }
     <div class="sec-title">File I/O — text and binary</div>
     <div class="two">
       <div class="card">
-        <div class="card-title">Text file read (Lab 5 pattern)</div>
-<pre><span class="cmt">// Read doubles one at a time</span>
+        <div class="card-title">Text file read loop (Lab 5 pattern)</div>
+<pre><span class="cmt">// fscanf reads one formatted value at a time from the file
+// returns the NUMBER of items successfully read (1 here)
+// returns EOF (-1) at end of file or on error — so check == 1, not != EOF</span>
 <span class="kw">double</span> x, sum = <span class="num">0.0</span>, sumsq = <span class="num">0.0</span>;
 <span class="kw">int</span> count = <span class="num">0</span>;
 
-<span class="kw">while</span> (<span class="fn">fscanf</span>(fp, <span class="str">"%lf"</span>, &amp;x) == <span class="num">1</span>) {
-    sum   += x;
-    sumsq += x * x;
+<span class="kw">while</span> (<span class="fn">fscanf</span>(fp, <span class="str">"%lf"</span>, &amp;x) == <span class="num">1</span>) {  <span class="cmt">// %lf for double (not %f!)</span>
+    sum   += x;         <span class="cmt">// running total</span>
+    sumsq += x * x;     <span class="cmt">// sum of squares (for standard deviation)</span>
     count++;
 }
-<span class="fn">fclose</span>(fp);</pre>
+<span class="fn">fclose</span>(fp);  <span class="cmt">// close after loop exits (EOF reached)</span></pre>
         <div class="tip">Check <code>fscanf</code> returns 1 — not just non-zero</div>
       </div>
       <div class="card">
         <div class="card-title">Binary file read with fread (Lab 6 pattern)</div>
-<pre><span class="cmt">// Open binary file</span>
-FILE *fp = <span class="fn">fopen</span>(argv[1], <span class="str">"rb"</span>);
+<pre><span class="cmt">// "rb" = read binary — MUST use this for binary files, not "r"</span>
+FILE *fp = <span class="fn">fopen</span>(argv[<span class="num">1</span>], <span class="str">"rb"</span>);
 
-<span class="cmt">// Allocate array</span>
+<span class="cmt">// Allocate a block of memory: n elements each sizeof(int) bytes</span>
 <span class="kw">int</span> *arr = (<span class="kw">int</span> *) <span class="fn">malloc</span>(n * <span class="kw">sizeof</span>(<span class="kw">int</span>));
 
-<span class="cmt">// Read all at once</span>
-<span class="kw">size_t</span> got = <span class="fn">fread</span>(arr, <span class="kw">sizeof</span>(arr[0]), n, fp);
+<span class="cmt">// fread(destination, size_of_one_element, how_many, file)
+// returns number of elements actually read — compare to expected n</span>
+<span class="kw">size_t</span> got = <span class="fn">fread</span>(arr, <span class="kw">sizeof</span>(arr[<span class="num">0</span>]), n, fp);
 
-<span class="kw">if</span> (got != (<span class="kw">size_t</span>)n) {
-    <span class="kw">if</span> (<span class="fn">feof</span>(fp))
+<span class="kw">if</span> (got != (<span class="kw">size_t</span>)n) {  <span class="cmt">// cast n to size_t to avoid signed/unsigned warning</span>
+    <span class="kw">if</span> (<span class="fn">feof</span>(fp))          <span class="cmt">// hit end of file before reading n items</span>
         <span class="fn">printf</span>(<span class="str">"Unexpected EOF\n"</span>);
-    <span class="kw">else if</span> (<span class="fn">ferror</span>(fp))
+    <span class="kw">else if</span> (<span class="fn">ferror</span>(fp))   <span class="cmt">// actual read error (disk problem etc.)</span>
         <span class="fn">printf</span>(<span class="str">"Read error\n"</span>);
     <span class="fn">fclose</span>(fp);
-    <span class="fn">free</span>(arr);
+    <span class="fn">free</span>(arr);   <span class="cmt">// free before returning on error — don't leak memory</span>
     <span class="kw">return</span> <span class="num">1</span>;
 }
 <span class="fn">fclose</span>(fp);</pre>
@@ -212,31 +221,39 @@ FILE *fp = <span class="fn">fopen</span>(argv[1], <span class="str">"rb"</span>)
     <div class="two">
       <div class="card">
         <div class="card-title">Write to output file (Lab 5 pattern)</div>
-<pre><span class="cmt">// Build output filename with malloc</span>
-<span class="kw">int</span> nChar = <span class="fn">strlen</span>(PREFIX) + <span class="fn">strlen</span>(argv[1]) + <span class="num">1</span>;
+<pre><span class="cmt">// Build a new filename by concatenating PREFIX + input filename
+// strlen gives length WITHOUT the null terminator, so +1 for '\0'</span>
+<span class="kw">int</span> nChar = <span class="fn">strlen</span>(PREFIX) + <span class="fn">strlen</span>(argv[<span class="num">1</span>]) + <span class="num">1</span>;
+
+<span class="cmt">// malloc allocates nChar bytes on the heap — holds the combined string</span>
 <span class="kw">char</span> *outName = (<span class="kw">char</span> *) <span class="fn">malloc</span>(nChar);
-<span class="fn">snprintf</span>(outName, nChar, <span class="str">"%s%s"</span>, PREFIX, argv[1]);
+
+<span class="cmt">// snprintf writes at most nChar chars into outName (safe — won't overflow)</span>
+<span class="fn">snprintf</span>(outName, nChar, <span class="str">"%s%s"</span>, PREFIX, argv[<span class="num">1</span>]);
 
 FILE *outFile;
-<span class="kw">if</span> ((outFile = <span class="fn">fopen</span>(outName, <span class="str">"w"</span>)) == NULL) {
+<span class="kw">if</span> ((outFile = <span class="fn">fopen</span>(outName, <span class="str">"w"</span>)) == NULL) {  <span class="cmt">// "w" creates or overwrites</span>
     <span class="fn">printf</span>(<span class="str">"Unable to open \"%s\"\n"</span>, outName);
     <span class="fn">free</span>(outName);
     <span class="kw">return</span> <span class="num">1</span>;
 }
+<span class="cmt">// fprintf is like printf but writes to a file instead of stdout</span>
 <span class="fn">fprintf</span>(outFile, <span class="str">"%d Values, Mean = %g\n"</span>, count, mean);
 <span class="fn">fclose</span>(outFile);
-<span class="fn">free</span>(outName);</pre>
+<span class="fn">free</span>(outName);  <span class="cmt">// free the heap string when done</span></pre>
       </div>
       <div class="card">
         <div class="card-title">sscanf to parse a command-line argument</div>
-<pre><span class="cmt">// Convert argv[2] to int</span>
+<pre><span class="cmt">// argv[] is always a string — use sscanf to convert it to a number
+// sscanf reads FROM a string (not a file or stdin)
+// returns number of items successfully parsed — check == 1</span>
 <span class="kw">int</span> n;
-<span class="kw">if</span> (<span class="fn">sscanf</span>(argv[2], <span class="str">"%d"</span>, &amp;n) != <span class="num">1</span>) {
-    <span class="fn">printf</span>(<span class="str">"Bad number: %s\n"</span>, argv[2]);
+<span class="kw">if</span> (<span class="fn">sscanf</span>(argv[<span class="num">2</span>], <span class="str">"%d"</span>, &amp;n) != <span class="num">1</span>) {
+    <span class="fn">printf</span>(<span class="str">"Bad number: %s\n"</span>, argv[<span class="num">2</span>]);
     <span class="kw">return</span> <span class="num">1</span>;
 }
 
-<span class="cmt">// fprintf to stderr</span>
+<span class="cmt">// stderr = error stream — shows even if stdout is redirected to a file</span>
 <span class="fn">fprintf</span>(stderr, <span class="str">"Error: %s\n"</span>, msg);</pre>
         <div class="tip">fprintf(stdout, ...) == printf(...)  ·  fprintf(stderr, ...) for errors</div>
       </div>
@@ -249,27 +266,32 @@ FILE *outFile;
     <div class="two">
       <div class="card">
         <div class="card-title">malloc an array</div>
-<pre><span class="cmt">// Allocate array of n ints</span>
+<pre><span class="cmt">// malloc(bytes) — allocates memory on the HEAP (survives the function call)
+// sizeof(int) = number of bytes in one int (usually 4)
+// cast (int*) tells the compiler what type the returned void* is</span>
 <span class="kw">int</span> *arr = (<span class="kw">int</span> *) <span class="fn">malloc</span>(n * <span class="kw">sizeof</span>(<span class="kw">int</span>));
+
+<span class="cmt">// ALWAYS check if malloc succeeded — returns NULL if out of memory</span>
 <span class="kw">if</span> (arr == NULL) {
     <span class="fn">fprintf</span>(stderr, <span class="str">"malloc failed\n"</span>);
     <span class="kw">return</span> EXIT_FAILURE;
 }
 
-<span class="cmt">// use arr[i] ...</span>
+<span class="cmt">// use arr[i] exactly like a normal array...</span>
 
-<span class="fn">free</span>(arr);   <span class="cmt">// always free!</span></pre>
+<span class="fn">free</span>(arr);   <span class="cmt">// MUST free when done — each malloc needs exactly one free</span></pre>
       </div>
       <div class="card">
         <div class="card-title">malloc a single struct / item</div>
-<pre><span class="cmt">// Allocate one node</span>
+<pre><span class="cmt">// Allocating one struct — sizeof(Node) gives total size of the struct</span>
 Node *p = (Node *) <span class="fn">malloc</span>(<span class="kw">sizeof</span>(Node));
-<span class="kw">if</span> (p == NULL) { <span class="kw">return</span> NULL; }
+<span class="kw">if</span> (p == NULL) { <span class="kw">return</span> NULL; }  <span class="cmt">// propagate failure up to caller</span>
 
+<span class="cmt">// Access struct fields via arrow -> when you have a POINTER to a struct</span>
 p->value = <span class="num">42</span>;
-p->next  = NULL;
+p->next  = NULL;  <span class="cmt">// always set next to NULL for the last node in a list</span>
 
-<span class="cmt">// To allocate and zero-initialize:</span>
+<span class="cmt">// calloc(count, size) — like malloc but also ZEROES the memory</span>
 Node *p2 = (Node *) <span class="fn">calloc</span>(<span class="num">1</span>, <span class="kw">sizeof</span>(Node));</pre>
         <div class="warn">Every malloc needs exactly one free. Never free stack variables.</div>
       </div>
@@ -282,23 +304,24 @@ Node *p2 = (Node *) <span class="fn">calloc</span>(<span class="num">1</span>, <
     <div class="two">
       <div class="card">
         <div class="card-title">Define and use a struct</div>
-<pre><span class="cmt">// Define with typedef</span>
+<pre><span class="cmt">// typedef struct { ... } Name;  — creates a new type called Name
+// Without typedef you'd have to write "struct Name" everywhere</span>
 <span class="kw">typedef struct</span> {
-    <span class="kw">int</span>    size;
-    <span class="kw">double</span> data[MAX_SIZE];
+    <span class="kw">int</span>    size;              <span class="cmt">// how many elements are in use</span>
+    <span class="kw">double</span> data[MAX_SIZE];    <span class="cmt">// fixed-size array inside the struct</span>
 } Vector;
 
-<span class="cmt">// Declare and initialise</span>
-Vector v1 = {<span class="num">3</span>, {<span class="num">1.0</span>, <span class="num">2.0</span>, <span class="num">3.0</span>}};
+<span class="cmt">// Declare on the stack (no malloc needed)</span>
+Vector v1 = {<span class="num">3</span>, {<span class="num">1.0</span>, <span class="num">2.0</span>, <span class="num">3.0</span>}};  <span class="cmt">// initializer list</span>
 
-<span class="cmt">// Access members</span>
+<span class="cmt">// Dot (.) accesses fields when you have a VARIABLE (not a pointer)</span>
 v1.size;
 v1.data[<span class="num">0</span>];
 
-<span class="cmt">// Pass by value (copy)</span>
+<span class="cmt">// Pass by VALUE — function gets a COPY, changes don't affect original</span>
 <span class="fn">printVector</span>(v1, stdout);
 
-<span class="cmt">// Pass by pointer (modify original)</span>
+<span class="cmt">// Pass by POINTER (&v1) — function can modify the original struct</span>
 <span class="fn">updateVector</span>(&amp;v1);</pre>
       </div>
       <div class="card">
@@ -308,46 +331,50 @@ v1.data[<span class="num">0</span>];
     <span class="kw">char</span> name[<span class="num">100</span>];
 } Player;
 
-Player p  = {<span class="num">20</span>, <span class="str">"Alice"</span>};
-Player *ptr = &amp;p;
+Player  p   = {<span class="num">20</span>, <span class="str">"Alice"</span>};
+Player *ptr = &amp;p;   <span class="cmt">// ptr is a pointer TO p (holds p's address)</span>
 
-<span class="cmt">// Arrow operator for pointer access</span>
+<span class="cmt">// Arrow (->) = dereference pointer + access field in one step
+// Use -> when you have a POINTER to a struct</span>
 ptr->age  = <span class="num">21</span>;
 ptr->name[<span class="num">0</span>];
 
-<span class="cmt">// Equivalent (don't use this)</span>
-(*ptr).age = <span class="num">21</span>;</pre>
+<span class="cmt">// This is identical to the arrow above — just harder to read</span>
+(*ptr).age = <span class="num">21</span>;   <span class="cmt">// (*ptr) dereferences first, then .age accesses field</span></pre>
         <div class="tip">Use <strong>dot (.)</strong> when you have a variable · use <strong>arrow (→)</strong> when you have a pointer</div>
       </div>
     </div>
 
     <div class="card">
       <div class="card-title">Lab 9 — Vector struct with operations (full pattern)</div>
-<pre><span class="cmt">// vectorMath.h</span>
+<pre><span class="cmt">// ── vectorMath.h ───────────────────────────────────────────────────────</span>
 <span class="kw">#define</span> MAX_VECTOR_SIZE <span class="num">20</span>
 <span class="kw">typedef struct</span> { <span class="kw">int</span> size; <span class="kw">double</span> data[MAX_VECTOR_SIZE]; } Vector;
+
+<span class="cmt">// Returns pointer to result on success, NULL on error (size mismatch / div by 0)
+// v1 and v2 passed by VALUE (copies) — result passed by POINTER (written to)</span>
 Vector *<span class="fn">vectorMath</span>(<span class="kw">const</span> Vector v1, <span class="kw">const</span> Vector v2, Vector *result, <span class="kw">char</span> op);
 <span class="kw">void</span>    <span class="fn">printVector</span>(<span class="kw">const</span> Vector v, FILE *stream);
 
-<span class="cmt">// vectorMath.c</span>
+<span class="cmt">// ── vectorMath.c ───────────────────────────────────────────────────────</span>
 Vector *<span class="fn">vectorMath</span>(<span class="kw">const</span> Vector v1, <span class="kw">const</span> Vector v2, Vector *result, <span class="kw">char</span> op) {
-    <span class="kw">if</span> (v1.size != v2.size) <span class="kw">return</span> NULL;   <span class="cmt">// size mismatch</span>
-    result->size = v1.size;
-    <span class="kw">switch</span> (op) {
+    <span class="kw">if</span> (v1.size != v2.size) <span class="kw">return</span> NULL;   <span class="cmt">// can't operate on different sizes</span>
+    result->size = v1.size;                  <span class="cmt">// set output size to match inputs</span>
+    <span class="kw">switch</span> (op) {                             <span class="cmt">// dispatch on operator character</span>
         <span class="kw">case</span> <span class="str">'+'</span>: <span class="kw">for</span> (<span class="kw">int</span> i=<span class="num">0</span>; i&lt;v1.size; i++) result->data[i] = v1.data[i] + v2.data[i]; <span class="kw">break</span>;
         <span class="kw">case</span> <span class="str">'-'</span>: <span class="kw">for</span> (<span class="kw">int</span> i=<span class="num">0</span>; i&lt;v1.size; i++) result->data[i] = v1.data[i] - v2.data[i]; <span class="kw">break</span>;
         <span class="kw">case</span> <span class="str">'*'</span>: <span class="kw">for</span> (<span class="kw">int</span> i=<span class="num">0</span>; i&lt;v1.size; i++) result->data[i] = v1.data[i] * v2.data[i]; <span class="kw">break</span>;
         <span class="kw">case</span> <span class="str">'/'</span>: <span class="kw">for</span> (<span class="kw">int</span> i=<span class="num">0</span>; i&lt;v1.size; i++) {
-            <span class="kw">if</span> (v2.data[i] == <span class="num">0</span>) <span class="kw">return</span> NULL;   <span class="cmt">// div by zero</span>
+            <span class="kw">if</span> (v2.data[i] == <span class="num">0</span>) <span class="kw">return</span> NULL;   <span class="cmt">// avoid division by zero</span>
             result->data[i] = v1.data[i] / v2.data[i];
         } <span class="kw">break</span>;
-        <span class="kw">default</span>: <span class="kw">return</span> NULL;    <span class="cmt">// invalid op</span>
+        <span class="kw">default</span>: <span class="kw">return</span> NULL;    <span class="cmt">// unknown operator</span>
     }
-    <span class="kw">return</span> result;
+    <span class="kw">return</span> result;  <span class="cmt">// return pointer to the filled result struct</span>
 }
 <span class="kw">void</span> <span class="fn">printVector</span>(<span class="kw">const</span> Vector v, FILE *stream) {
-    <span class="kw">const double</span> *p = v.data;
-    <span class="kw">for</span> (<span class="kw">int</span> i=<span class="num">0</span>; i&lt;v.size; i++) <span class="fn">fprintf</span>(stream, <span class="str">"%.4f "</span>, *p++);
+    <span class="kw">const double</span> *p = v.data;  <span class="cmt">// p starts at first element</span>
+    <span class="kw">for</span> (<span class="kw">int</span> i=<span class="num">0</span>; i&lt;v.size; i++) <span class="fn">fprintf</span>(stream, <span class="str">"%.4f "</span>, *p++);  <span class="cmt">// print then advance</span>
     <span class="fn">fprintf</span>(stream, <span class="str">"\n"</span>);
 }</pre>
     </div>
@@ -360,52 +387,62 @@ Vector *<span class="fn">vectorMath</span>(<span class="kw">const</span> Vector 
       <div class="card">
         <div class="card-title">Pointer basics</div>
 <pre><span class="kw">int</span>  x = <span class="num">5</span>;
-<span class="kw">int</span> *p = &amp;x;    <span class="cmt">// p holds address of x</span>
-*p = <span class="num">10</span>;        <span class="cmt">// dereference: changes x</span>
+<span class="kw">int</span> *p = &amp;x;   <span class="cmt">// & = "address of" — p holds the memory address of x</span>
+*p = <span class="num">10</span>;       <span class="cmt">// * = "dereference" — go to address in p and write 10 there → changes x</span>
 
-<span class="cmt">// Pointer arithmetic</span>
+<span class="cmt">// Arrays and pointers are closely related:
+// arr by itself IS a pointer to arr[0]
+// arr[i] is exactly equivalent to *(arr + i)</span>
 <span class="kw">int</span> arr[] = {<span class="num">1</span>,<span class="num">2</span>,<span class="num">3</span>};
-<span class="kw">int</span> *ptr = arr;
-*ptr++;         <span class="cmt">// advance to next element</span>
-*(ptr+1);       <span class="cmt">// peek at next without moving</span></pre>
+<span class="kw">int</span> *ptr = arr;       <span class="cmt">// ptr points at arr[0]</span>
+*ptr++;               <span class="cmt">// reads *ptr (value 1), THEN moves ptr forward one int</span>
+*(ptr+<span class="num">1</span>);             <span class="cmt">// peek at next element without moving ptr</span></pre>
       </div>
       <div class="card">
         <div class="card-title">swap() — the canonical pattern</div>
-<pre><span class="kw">void</span> <span class="fn">swap</span>(<span class="kw">int</span> *x, <span class="kw">int</span> *y) {
-    <span class="kw">int</span> tmp = *x;
-    *x = *y;
-    *y = tmp;
+<pre><span class="cmt">// Must take POINTERS so it can modify the caller's variables
+// If you took int x, int y (by value), you'd only swap local copies</span>
+<span class="kw">void</span> <span class="fn">swap</span>(<span class="kw">int</span> *x, <span class="kw">int</span> *y) {
+    <span class="kw">int</span> tmp = *x;  <span class="cmt">// save value at x</span>
+    *x = *y;       <span class="cmt">// write y's value to x's address</span>
+    *y = tmp;      <span class="cmt">// write saved value to y's address</span>
 }
 
-<span class="cmt">// Call with addresses</span>
-<span class="fn">swap</span>(&amp;arr[i], &amp;arr[j]);
-<span class="fn">swap</span>(arr + i, arr + i + <span class="num">1</span>); <span class="cmt">// pointer notation</span></pre>
+<span class="cmt">// Two equivalent ways to call swap on adjacent elements:</span>
+<span class="fn">swap</span>(&amp;arr[i], &amp;arr[j]);          <span class="cmt">// array notation — &arr[i] = address of arr[i]</span>
+<span class="fn">swap</span>(arr + i, arr + i + <span class="num">1</span>);     <span class="cmt">// pointer notation — arr+i points to element i</span></pre>
       </div>
     </div>
 
     <div class="two">
       <div class="card">
         <div class="card-title">Print array with pointer post-increment</div>
-<pre><span class="kw">void</span> <span class="fn">printVector</span>(<span class="kw">const int</span> *vec, <span class="kw">int</span> n) {
-    <span class="kw">const int</span> *p = vec;
+<pre><span class="cmt">// const int* = pointer to a constant int — you can move the pointer
+// but you can't change what it points to (good for read-only params)</span>
+<span class="kw">void</span> <span class="fn">printVector</span>(<span class="kw">const int</span> *vec, <span class="kw">int</span> n) {
+    <span class="kw">const int</span> *p = vec;     <span class="cmt">// local copy of the pointer so we can advance it</span>
     <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i &lt; n; i++)
-        <span class="fn">printf</span>(<span class="str">"%d "</span>, *p++);
+        <span class="fn">printf</span>(<span class="str">"%d "</span>, *p++);  <span class="cmt">// print value at p, THEN move p to next element</span>
     <span class="fn">printf</span>(<span class="str">"\n"</span>);
 }</pre>
       </div>
       <div class="card">
         <div class="card-title">Print raw bytes (cast to unsigned char*)</div>
-<pre><span class="kw">void</span> <span class="fn">printBytes</span>(<span class="kw">const int</span> *vec, <span class="kw">int</span> n) {
+<pre><span class="cmt">// Cast int* to unsigned char* so we can read ONE BYTE at a time
+// sizeof(int) = 4, so each int is printed as 4 separate byte values</span>
+<span class="kw">void</span> <span class="fn">printBytes</span>(<span class="kw">const int</span> *vec, <span class="kw">int</span> n) {
     <span class="kw">const int</span> *p = vec;
     <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i &lt; n; i++) {
+        <span class="cmt">// reinterpret the 4 bytes of this int as individual bytes</span>
         <span class="kw">const unsigned char</span> *b = (<span class="kw">const unsigned char</span> *)p++;
         <span class="kw">for</span> (<span class="kw">int</span> j = <span class="num">0</span>; j &lt; (<span class="kw">int</span>)<span class="kw">sizeof</span>(<span class="kw">int</span>); j++)
-            <span class="fn">printf</span>(<span class="str">"%hhu "</span>, *b++);
-        <span class="fn">printf</span>(<span class="str">" "</span>);   <span class="cmt">// extra space after word</span>
+            <span class="fn">printf</span>(<span class="str">"%hhu "</span>, *b++);  <span class="cmt">// %hhu = unsigned char</span>
+        <span class="fn">printf</span>(<span class="str">" "</span>);   <span class="cmt">// extra space between integers</span>
     }
     <span class="fn">printf</span>(<span class="str">"\n"</span>);
 }
-<span class="cmt">// Reverse endian: start at last byte, walk backward</span>
+<span class="cmt">// REVERSE endian: start at LAST byte and walk backward
+// p + sizeof(int) - 1 points at the final byte of the current int</span>
 <span class="kw">const unsigned char</span> *b = (<span class="kw">const unsigned char</span> *)p + <span class="kw">sizeof</span>(<span class="kw">int</span>) - <span class="num">1</span>;
 <span class="kw">for</span> (<span class="kw">int</span> j = <span class="num">0</span>; j &lt; (<span class="kw">int</span>)<span class="kw">sizeof</span>(<span class="kw">int</span>); j++) <span class="fn">printf</span>(<span class="str">"%hhu "</span>, *b--);</pre>
       </div>
@@ -418,44 +455,58 @@ Vector *<span class="fn">vectorMath</span>(<span class="kw">const</span> Vector 
     <div class="two">
       <div class="card">
         <div class="card-title">Recursive printVector (Lab 8)</div>
-<pre><span class="kw">void</span> <span class="fn">printVector</span>(<span class="kw">const int</span> *vec, <span class="kw">int</span> n) {
-    <span class="kw">if</span> (n == <span class="num">0</span>) { <span class="fn">printf</span>(<span class="str">"\n"</span>); <span class="kw">return</span>; } <span class="cmt">// base</span>
-    <span class="fn">printf</span>(<span class="str">"%d "</span>, *vec);
-    <span class="fn">printVector</span>(vec + <span class="num">1</span>, n - <span class="num">1</span>);           <span class="cmt">// recurse</span>
+<pre><span class="cmt">// PATTERN: base case → do one thing → recurse on smaller problem
+// vec+1 advances the pointer past the first element (smaller array)
+// n-1 reduces the count to match</span>
+<span class="kw">void</span> <span class="fn">printVector</span>(<span class="kw">const int</span> *vec, <span class="kw">int</span> n) {
+    <span class="cmt">// BASE CASE: nothing left to print — print newline and stop</span>
+    <span class="kw">if</span> (n == <span class="num">0</span>) { <span class="fn">printf</span>(<span class="str">"\n"</span>); <span class="kw">return</span>; }
+
+    <span class="fn">printf</span>(<span class="str">"%d "</span>, *vec);            <span class="cmt">// print first element</span>
+    <span class="fn">printVector</span>(vec + <span class="num">1</span>, n - <span class="num">1</span>);   <span class="cmt">// recurse on rest (vec+1 skips first element)</span>
 }</pre>
       </div>
       <div class="card">
         <div class="card-title">Recursive reverseVector (Lab 8)</div>
-<pre><span class="kw">void</span> <span class="fn">reverseVector</span>(<span class="kw">int</span> *vec, <span class="kw">int</span> p1, <span class="kw">int</span> p2) {
-    <span class="kw">if</span> (p1 &gt;= p2) <span class="kw">return</span>;       <span class="cmt">// base case</span>
+<pre><span class="cmt">// TWO POINTER approach: swap outermost elements, then recurse inward
+// p1 = left index, p2 = right index
+// Call initially as: reverseVector(arr, 0, N-1);</span>
+<span class="kw">void</span> <span class="fn">reverseVector</span>(<span class="kw">int</span> *vec, <span class="kw">int</span> p1, <span class="kw">int</span> p2) {
+    <span class="cmt">// BASE CASE: pointers met or crossed — nothing left to swap</span>
+    <span class="kw">if</span> (p1 &gt;= p2) <span class="kw">return</span>;
+
+    <span class="cmt">// Swap elements at p1 and p2</span>
     <span class="kw">int</span> tmp  = vec[p1];
     vec[p1]  = vec[p2];
     vec[p2]  = tmp;
-    <span class="fn">reverseVector</span>(vec, p1 + <span class="num">1</span>, p2 - <span class="num">1</span>);
-}
-<span class="cmt">// Call: reverseVector(arr, 0, N-1);</span></pre>
+
+    <span class="fn">reverseVector</span>(vec, p1 + <span class="num">1</span>, p2 - <span class="num">1</span>);  <span class="cmt">// move both pointers inward</span>
+}</pre>
       </div>
     </div>
     <div class="two">
       <div class="card">
         <div class="card-title">Recursive factorial</div>
-<pre><span class="kw">int</span> <span class="fn">factorial</span>(<span class="kw">int</span> n) {
-    <span class="kw">if</span> (n &lt;= <span class="num">1</span>) <span class="kw">return</span> <span class="num">1</span>;   <span class="cmt">// base</span>
-    <span class="kw">return</span> n * <span class="fn">factorial</span>(n - <span class="num">1</span>);
+<pre><span class="cmt">// Classic recursion: factorial(5) = 5 * factorial(4) = 5*4*3*2*1 = 120</span>
+<span class="kw">int</span> <span class="fn">factorial</span>(<span class="kw">int</span> n) {
+    <span class="cmt">// BASE CASE: factorial(0) = factorial(1) = 1</span>
+    <span class="kw">if</span> (n &lt;= <span class="num">1</span>) <span class="kw">return</span> <span class="num">1</span>;
+    <span class="kw">return</span> n * <span class="fn">factorial</span>(n - <span class="num">1</span>);  <span class="cmt">// recurse with smaller n</span>
 }</pre>
       </div>
       <div class="card">
         <div class="card-title">Bit manipulation / binary print (Week 11)</div>
-<pre><span class="kw">void</span> <span class="fn">printBinary</span>(<span class="kw">int</span> num) {
+<pre><span class="cmt">// Fill buffer from right to left: check lowest bit each time, then shift right</span>
+<span class="kw">void</span> <span class="fn">printBinary</span>(<span class="kw">int</span> num) {
     <span class="kw">char</span> buf[<span class="num">33</span>];
-    buf[<span class="num">32</span>] = <span class="str">'\0'</span>;
+    buf[<span class="num">32</span>] = <span class="str">'\0'</span>;  <span class="cmt">// null-terminate the string at position 32</span>
     <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">31</span>; i &gt;= <span class="num">0</span>; i--) {
-        buf[i] = (num &amp; <span class="num">1</span>) ? <span class="str">'1'</span> : <span class="str">'0'</span>;
-        num &gt;&gt;= <span class="num">1</span>;   <span class="cmt">// right-shift 1 bit</span>
+        buf[i] = (num &amp; <span class="num">1</span>) ? <span class="str">'1'</span> : <span class="str">'0'</span>;  <span class="cmt">// & 1 isolates the lowest bit</span>
+        num &gt;&gt;= <span class="num">1</span>;   <span class="cmt">// right-shift 1 bit (brings next bit into lowest position)</span>
     }
     <span class="fn">printf</span>(<span class="str">"%s\n"</span>, buf);
 }
-<span class="cmt">// Bit ops: &amp; AND  | OR  ^ XOR  ~ NOT  &lt;&lt; left  &gt;&gt; right</span></pre>
+<span class="cmt">// Bit ops: &amp; AND  | OR  ^ XOR  ~ NOT  &lt;&lt; left-shift  &gt;&gt; right-shift</span></pre>
       </div>
     </div>
   </section>
@@ -467,34 +518,42 @@ Vector *<span class="fn">vectorMath</span>(<span class="kw">const</span> Vector 
       <div class="card-title">Full array stack (push / pop / peek / print)</div>
 <pre><span class="kw">#define</span> MAX <span class="num">100</span>
 
+<span class="cmt">// Array holds the data; top tracks the index of the topmost element
+// top = -1 means the stack is empty (nothing has been pushed yet)</span>
 <span class="kw">typedef struct</span> {
     <span class="kw">int</span> array[MAX];
-    <span class="kw">int</span> top;        <span class="cmt">// -1 = empty</span>
+    <span class="kw">int</span> top;        <span class="cmt">// -1 = empty, 0 = one element, MAX-1 = full</span>
 } Stack;
 
+<span class="cmt">// init: set top to -1 so all operations know the stack is empty</span>
 <span class="kw">void</span> <span class="fn">init</span>(Stack *s)  { s->top = -<span class="num">1</span>; }
 
+<span class="cmt">// push: increment top FIRST, then store — top points at the new element</span>
 <span class="kw">void</span> <span class="fn">push</span>(Stack *s, <span class="kw">int</span> a) {
     <span class="kw">if</span> (s->top == MAX - <span class="num">1</span>) { <span class="fn">fprintf</span>(stderr, <span class="str">"Stack full\n"</span>); <span class="kw">return</span>; }
-    s->array[++s->top] = a;
+    s->array[++s->top] = a;  <span class="cmt">// ++top increments first, then uses new value as index</span>
 }
 
+<span class="cmt">// pop: read the top element, THEN decrement top (removes it)
+// Returns -1 as error sentinel if empty — check before trusting the result</span>
 <span class="kw">int</span> <span class="fn">pop</span>(Stack *s) {
     <span class="kw">if</span> (s->top == -<span class="num">1</span>) { <span class="fn">fprintf</span>(stderr, <span class="str">"Stack empty\n"</span>); <span class="kw">return</span> -<span class="num">1</span>; }
-    <span class="kw">return</span> s->array[s->top--];
+    <span class="kw">return</span> s->array[s->top--];  <span class="cmt">// read array[top], THEN decrement top</span>
 }
 
+<span class="cmt">// peek: read top WITHOUT removing — same empty check as pop</span>
 <span class="kw">int</span> <span class="fn">peek</span>(Stack *s) {
     <span class="kw">if</span> (s->top == -<span class="num">1</span>) { <span class="fn">fprintf</span>(stderr, <span class="str">"Stack empty\n"</span>); <span class="kw">return</span> -<span class="num">1</span>; }
-    <span class="kw">return</span> s->array[s->top];
+    <span class="kw">return</span> s->array[s->top];  <span class="cmt">// no top-- here — just look</span>
 }
 
+<span class="cmt">// printStack: index from 0 (bottom) to top (newest element)</span>
 <span class="kw">void</span> <span class="fn">printStack</span>(Stack *s) {
     <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i &lt;= s->top; i++) <span class="fn">printf</span>(<span class="str">"%d "</span>, s->array[i]);
     <span class="fn">printf</span>(<span class="str">"\n"</span>);
 }
 
-<span class="cmt">// Usage:</span>
+<span class="cmt">// Usage: declare on the stack (no malloc), call init, then push/pop/peek</span>
 Stack s; <span class="fn">init</span>(&amp;s);
 <span class="fn">push</span>(&amp;s, <span class="num">5</span>); <span class="fn">push</span>(&amp;s, <span class="num">7</span>);
 <span class="fn">pop</span>(&amp;s);    <span class="fn">peek</span>(&amp;s);</pre>
@@ -506,49 +565,55 @@ Stack s; <span class="fn">init</span>(&amp;s);
     <div class="sec-title">Stack — linked list (dynamic, no size limit)</div>
     <div class="card">
       <div class="card-title">Linked-list stack (Week 12 / linked list practice)</div>
-<pre><span class="kw">#include</span> <span class="str">&lt;stdbool.h&gt;</span>
+<pre><span class="kw">#include</span> <span class="str">&lt;stdbool.h&gt;</span>  <span class="cmt">// for bool, true, false</span>
 
+<span class="cmt">// Each node holds one value + a pointer to the node below it on the stack
+// "struct node" self-reference lets next point to another Node</span>
 <span class="kw">typedef struct</span> node {
     <span class="kw">int</span>         item;
-    <span class="kw">struct</span> node *next;
+    <span class="kw">struct</span> node *next;  <span class="cmt">// pointer to node below this one (NULL if bottom)</span>
 } Node;
 
+<span class="cmt">// Stack manages the chain: top = pointer to newest node, NULL = empty</span>
 <span class="kw">typedef struct</span> {
     <span class="kw">int</span>   size;
-    Node *top;       <span class="cmt">// NULL = empty</span>
+    Node *top;       <span class="cmt">// NULL = empty stack</span>
 } Stack;
 
-<span class="cmt">// push — returns true on success</span>
+<span class="cmt">// push: malloc a new node, wire it in at the top
+// new node's next = old top → then top = new node</span>
 <span class="kw">bool</span> <span class="fn">push</span>(Stack *s, <span class="kw">int</span> val) {
     Node *n = (Node *) <span class="fn">malloc</span>(<span class="kw">sizeof</span>(Node));
-    <span class="kw">if</span> (n == NULL) <span class="kw">return false</span>;
+    <span class="kw">if</span> (n == NULL) <span class="kw">return false</span>;  <span class="cmt">// malloc failed</span>
     n->item = val;
-    n->next = s->top;   <span class="cmt">// new node points at old top</span>
-    s->top  = n;        <span class="cmt">// new node IS the new top</span>
+    n->next = s->top;   <span class="cmt">// new node points DOWN to whatever was on top before</span>
+    s->top  = n;        <span class="cmt">// now the new node IS the top</span>
     s->size++;
     <span class="kw">return true</span>;
 }
 
-<span class="cmt">// pop — returns true on success, value via *out</span>
+<span class="cmt">// pop: save the top node, advance top to next, free the saved node
+// Returns value via *out pointer so we can also return success/failure</span>
 <span class="kw">bool</span> <span class="fn">pop</span>(Stack *s, <span class="kw">int</span> *out) {
-    <span class="kw">if</span> (s->top == NULL) <span class="kw">return false</span>;
-    Node *tmp = s->top;
-    *out    = tmp->item;
-    s->top  = tmp->next;
+    <span class="kw">if</span> (s->top == NULL) <span class="kw">return false</span>;  <span class="cmt">// empty stack</span>
+    Node *tmp = s->top;     <span class="cmt">// save pointer so we can free it</span>
+    *out    = tmp->item;    <span class="cmt">// write value to caller's variable through pointer</span>
+    s->top  = tmp->next;    <span class="cmt">// advance top to the node that was below</span>
     s->size--;
-    <span class="fn">free</span>(tmp);
+    <span class="fn">free</span>(tmp);             <span class="cmt">// free the removed node — tmp still holds the address</span>
     <span class="kw">return true</span>;
 }
 
+<span class="cmt">// Walk the chain from top to bottom and print each node</span>
 <span class="kw">void</span> <span class="fn">printStack</span>(Stack *s) {
     Node *cur = s->top;
     <span class="kw">while</span> (cur != NULL) { <span class="fn">printf</span>(<span class="str">"%d\n"</span>, cur->item); cur = cur->next; }
 }
 
-<span class="cmt">// Usage:</span>
+<span class="cmt">// Usage: initialize with size=0, top=NULL (no malloc needed for the Stack itself)</span>
 Stack s = {<span class="num">0</span>, NULL};
 <span class="fn">push</span>(&amp;s, <span class="num">5</span>);
-<span class="kw">int</span> v; <span class="fn">pop</span>(&amp;s, &amp;v);</pre>
+<span class="kw">int</span> v; <span class="fn">pop</span>(&amp;s, &amp;v);  <span class="cmt">// v is written by pop via the &v pointer</span></pre>
     </div>
   </section>
 
@@ -557,80 +622,100 @@ Stack s = {<span class="num">0</span>, NULL};
     <div class="sec-title">Queue — linked list with void* (Lab 10)</div>
     <div class="card">
       <div class="card-title">queue.h — types and declarations</div>
-<pre><span class="kw">typedef int</span> ItemType;
+<pre><span class="cmt">// Change ItemType and ITEM_FORMAT here to change the queue's data type everywhere</span>
+<span class="kw">typedef int</span> ItemType;
 <span class="kw">#define</span> ITEM_FORMAT <span class="str">"%d"</span>
 <span class="kw">#define</span> ITEM_PROMPT <span class="str">"an integer"</span>
 
+<span class="cmt">// Each node stores a GENERIC void* pointer — can point to any type
+// This lets the queue work for int, double, struct, etc. without changing queue.c
+// Caller is responsible for malloc-ing the item and casting back after dequeue</span>
 <span class="kw">typedef struct</span> listNode {
     <span class="kw">struct</span> listNode *next;
-    <span class="kw">void</span>            *dataPtr;   <span class="cmt">// generic pointer</span>
+    <span class="kw">void</span>            *dataPtr;   <span class="cmt">// generic pointer — points to the actual item data</span>
 } ListNode;
 
+<span class="cmt">// Queue tracks BOTH ends:
+//   front = where items come OUT (dequeue)
+//   rear  = where items go IN  (enqueue)
+// This gives O(1) enqueue and dequeue</span>
 <span class="kw">typedef struct</span> {
-    ListNode *front;
-    ListNode *rear;
+    ListNode *front;  <span class="cmt">// oldest item (next to be removed)</span>
+    ListNode *rear;   <span class="cmt">// newest item (most recently added)</span>
     <span class="kw">int</span>       size;
 } Queue;
 
-<span class="kw">void</span> *<span class="fn">enqueue</span> (Queue *q, <span class="kw">void</span> *item);
-<span class="kw">void</span> *<span class="fn">dequeue</span> (Queue *q);
+<span class="kw">void</span> *<span class="fn">enqueue</span> (Queue *q, <span class="kw">void</span> *item);   <span class="cmt">// returns item on success, NULL on malloc fail</span>
+<span class="kw">void</span> *<span class="fn">dequeue</span> (Queue *q);               <span class="cmt">// returns item pointer, NULL if empty</span>
 <span class="kw">int</span>   <span class="fn">queueSize</span>(<span class="kw">const</span> Queue q);
 <span class="kw">void</span>  <span class="fn">printQueue</span>(<span class="kw">const</span> Queue q, FILE *stream);</pre>
     </div>
     <div class="card">
       <div class="card-title">queue.c — enqueue / dequeue implementations</div>
-<pre><span class="kw">void</span> *<span class="fn">enqueue</span>(Queue *q, <span class="kw">void</span> *item) {
+<pre><span class="cmt">// enqueue: malloc a new ListNode, attach it at the REAR
+// The node wraps the item pointer — it does NOT copy the item data</span>
+<span class="kw">void</span> *<span class="fn">enqueue</span>(Queue *q, <span class="kw">void</span> *item) {
     ListNode *node = (ListNode *) <span class="fn">malloc</span>(<span class="kw">sizeof</span>(ListNode));
-    <span class="kw">if</span> (node == NULL) <span class="kw">return</span> NULL;
-    node->next    = NULL;
-    node->dataPtr = item;
+    <span class="kw">if</span> (node == NULL) <span class="kw">return</span> NULL;  <span class="cmt">// malloc failed — caller should check</span>
+    node->next    = NULL;           <span class="cmt">// new node is at the end — nothing after it</span>
+    node->dataPtr = item;           <span class="cmt">// store the pointer (not a copy of the data)</span>
     <span class="kw">if</span> (q->size == <span class="num">0</span>) {
-        q->front = q->rear = node;          <span class="cmt">// first item</span>
+        q->front = q->rear = node;            <span class="cmt">// first ever item: both front AND rear point to it</span>
     } <span class="kw">else</span> {
-        q->rear->next = node; q->rear = node; <span class="cmt">// add to back</span>
+        q->rear->next = node; q->rear = node; <span class="cmt">// link after current rear, then update rear</span>
     }
     q->size++;
-    <span class="kw">return</span> item;
+    <span class="kw">return</span> item;  <span class="cmt">// return the original item so caller can confirm success</span>
 }
 
+<span class="cmt">// dequeue: remove from the FRONT, free the ListNode, return the item pointer
+// Caller must free the item pointer (they malloc-ed it, they free it)</span>
 <span class="kw">void</span> *<span class="fn">dequeue</span>(Queue *q) {
-    <span class="kw">if</span> (q->size == <span class="num">0</span>) <span class="kw">return</span> NULL;
-    ListNode *old  = q->front;
-    <span class="kw">void</span>     *item = old->dataPtr;
-    q->front = old->next;
+    <span class="kw">if</span> (q->size == <span class="num">0</span>) <span class="kw">return</span> NULL;  <span class="cmt">// empty — nothing to remove</span>
+    ListNode *old  = q->front;      <span class="cmt">// save pointer to front node</span>
+    <span class="kw">void</span>     *item = old->dataPtr;  <span class="cmt">// save item pointer before we free the node</span>
+    q->front = old->next;           <span class="cmt">// advance front to the next node</span>
     q->size--;
-    <span class="kw">if</span> (q->size == <span class="num">0</span>) q->rear = NULL;   <span class="cmt">// queue now empty</span>
-    <span class="fn">free</span>(old);
-    <span class="kw">return</span> item;
+    <span class="kw">if</span> (q->size == <span class="num">0</span>) q->rear = NULL;   <span class="cmt">// queue is now empty — clear rear too</span>
+    <span class="fn">free</span>(old);     <span class="cmt">// free the ListNode wrapper (NOT the item — caller frees that)</span>
+    <span class="kw">return</span> item;   <span class="cmt">// return item pointer so caller can use then free it</span>
 }
 
+<span class="cmt">// printQueue: walk from front to rear, cast void* back to ItemType* to dereference</span>
 <span class="kw">void</span> <span class="fn">printQueue</span>(<span class="kw">const</span> Queue q, FILE *stream) {
     <span class="kw">const</span> ListNode *p = q.front;
     <span class="kw">while</span> (p != NULL) {
-        <span class="fn">fprintf</span>(stream, ITEM_FORMAT <span class="str">"\n"</span>, *(ItemType *)p->dataPtr);
+        <span class="fn">fprintf</span>(stream, ITEM_FORMAT <span class="str">"\n"</span>, *(ItemType *)p->dataPtr);  <span class="cmt">// cast void* → ItemType*</span>
         p = p->next;
     }
 }</pre>
     </div>
     <div class="card">
       <div class="card-title">queueMain.c — interactive menu pattern</div>
-<pre><span class="cmt">// Init empty queue</span>
+<pre><span class="cmt">// Init empty queue: front=NULL, rear=NULL, size=0</span>
 Queue q = {NULL, NULL, <span class="num">0</span>};
 
-<span class="cmt">// Enqueue: malloc the item FIRST, then enqueue the pointer</span>
-ItemType *itemPtr = (ItemType *) <span class="fn">malloc</span>(<span class="kw">sizeof</span>(ItemType));
-<span class="fn">scanf</span>(ITEM_FORMAT, itemPtr);
-<span class="fn">enqueue</span>(&amp;q, itemPtr);
+<span class="cmt">// ── ENQUEUE PATTERN ───────────────────────────────────────────────────
+// Step 1: malloc the ITEM (not the node — queue.c handles the node)
+// Step 2: read data into it via scanf
+// Step 3: pass pointer to enqueue</span>
+ItemType *itemPtr = (ItemType *) <span class="fn">malloc</span>(<span class="kw">sizeof</span>(ItemType));  <span class="cmt">// alloc one item</span>
+<span class="fn">scanf</span>(ITEM_FORMAT, itemPtr);                                 <span class="cmt">// read value into it</span>
+<span class="fn">enqueue</span>(&amp;q, itemPtr);                                       <span class="cmt">// queue stores the pointer</span>
 
-<span class="cmt">// Dequeue: cast back to ItemType*, use, then free</span>
-ItemType *got = (ItemType *) <span class="fn">dequeue</span>(&amp;q);
-<span class="kw">if</span> (got != NULL) { <span class="fn">printf</span>(ITEM_FORMAT <span class="str">"\n"</span>, *got); <span class="fn">free</span>(got); }
+<span class="cmt">// ── DEQUEUE PATTERN ───────────────────────────────────────────────────
+// dequeue returns void* — cast back to ItemType* to use it
+// After using the value, YOU must free the item (you malloc-ed it)</span>
+ItemType *got = (ItemType *) <span class="fn">dequeue</span>(&amp;q);       <span class="cmt">// remove from front</span>
+<span class="kw">if</span> (got != NULL) { <span class="fn">printf</span>(ITEM_FORMAT <span class="str">"\n"</span>, *got); <span class="fn">free</span>(got); }  <span class="cmt">// use then free</span>
 <span class="kw">else</span> <span class="fn">printf</span>(<span class="str">"Queue empty\n"</span>);
 
-<span class="cmt">// Enum menu pattern</span>
+<span class="cmt">// ── ENUM MENU PATTERN ─────────────────────────────────────────────────
+// QUIT=-1 means the enum starts negative — useful as a sentinel
+// N_CHOICES auto-counts how many non-quit choices exist</span>
 <span class="kw">typedef enum</span> {QUIT=-<span class="num">1</span>, ENQUEUE, DEQUEUE, PRINT, N_CHOICES} Choice;
 <span class="fn">scanf</span>(<span class="str">"%d"</span>, &amp;choice);
-<span class="kw">while</span> (<span class="fn">getchar</span>() != <span class="str">'\n'</span>) {} <span class="cmt">// flush input line</span></pre>
+<span class="kw">while</span> (<span class="fn">getchar</span>() != <span class="str">'\n'</span>) {}  <span class="cmt">// flush rest of input line after scanf</span></pre>
     </div>
   </section>
 
@@ -640,55 +725,67 @@ ItemType *got = (ItemType *) <span class="fn">dequeue</span>(&amp;q);
 
     <div class="card">
       <div class="card-title">Lab 5 — Statistics: read file → compute → write output file</div>
-<pre><span class="cmt">// statistics.h</span>
+<pre><span class="cmt">// ── statistics.h ───────────────────────────────────────────────────────
+// Functions take pre-computed sum/sumsq/count — main loop does the reading</span>
 <span class="kw">double</span> <span class="fn">mean</span>  (<span class="kw">const double</span> sum, <span class="kw">const int</span> count);
 <span class="kw">double</span> <span class="fn">ssdev</span> (<span class="kw">const double</span> sum, <span class="kw">const double</span> sumsq, <span class="kw">const int</span> count);
 
-<span class="cmt">// statistics.c</span>
+<span class="cmt">// ── statistics.c ───────────────────────────────────────────────────────</span>
 <span class="kw">double</span> <span class="fn">mean</span>(<span class="kw">const double</span> sum, <span class="kw">const int</span> count)  { <span class="kw">return</span> sum / count; }
 <span class="kw">double</span> <span class="fn">ssdev</span>(<span class="kw">const double</span> sum, <span class="kw">const double</span> sumsq, <span class="kw">const int</span> count) {
+    <span class="cmt">// sample standard deviation formula: sqrt((n*sumSq - sum^2) / (n*(n-1)))</span>
     <span class="kw">return</span> <span class="fn">sqrt</span>(((count * sumsq) - (sum * sum)) / (count * (count - <span class="num">1</span>)));
 }
 
-<span class="cmt">// statsMain.c — key pattern</span>
+<span class="cmt">// ── statsMain.c ────────────────────────────────────────────────────────
+// PREFIX is prepended to input filename to create output filename</span>
 <span class="kw">#define</span> PREFIX <span class="str">"Result_"</span>
+
+<span class="cmt">// Helper: prints to ANY stream (stdout for screen, a FILE* for file output)</span>
 <span class="kw">static void</span> <span class="fn">printStats</span>(FILE *dest, <span class="kw">const int</span> count,
                         <span class="kw">const double</span> mean, <span class="kw">const double</span> stddev) {
     <span class="fn">fprintf</span>(dest, <span class="str">"%d Values, Mean = %g, Sample Standard Deviation = %g\n"</span>,
             count, mean, stddev);
 }
-<span class="cmt">// read loop:</span>
+
+<span class="cmt">// Read loop: accumulate sum and sum-of-squares in one pass</span>
 <span class="kw">double</span> x, sum=<span class="num">0</span>, sumsq=<span class="num">0</span>; <span class="kw">int</span> count=<span class="num">0</span>;
 <span class="kw">while</span> (<span class="fn">fscanf</span>(inFile, <span class="str">"%lf"</span>, &amp;x) == <span class="num">1</span>) { sum+=x; sumsq+=x*x; count++; }
-<span class="cmt">// output filename with malloc+snprintf:</span>
-<span class="kw">int</span> nc = <span class="fn">strlen</span>(PREFIX) + <span class="fn">strlen</span>(argv[1]) + <span class="num">1</span>;
+
+<span class="cmt">// Build output filename: PREFIX + argv[1]
+// strlen+1 for null terminator; snprintf ensures no buffer overflow</span>
+<span class="kw">int</span> nc = <span class="fn">strlen</span>(PREFIX) + <span class="fn">strlen</span>(argv[<span class="num">1</span>]) + <span class="num">1</span>;
 <span class="kw">char</span> *outName = (<span class="kw">char</span>*)<span class="fn">malloc</span>(nc);
-<span class="fn">snprintf</span>(outName, nc, <span class="str">"%s%s"</span>, PREFIX, argv[1]);
+<span class="fn">snprintf</span>(outName, nc, <span class="str">"%s%s"</span>, PREFIX, argv[<span class="num">1</span>]);
 <span class="fn">free</span>(outName);</pre>
     </div>
 
     <div class="card">
       <div class="card-title">Lab 6 — Binary search: fread + linear search + interactive loop</div>
-<pre><span class="cmt">// arraySearch.h</span>
+<pre><span class="cmt">// ── arraySearch.h ──────────────────────────────────────────────────────
+// Returns INDEX of value if found, -1 if not found</span>
 <span class="kw">int</span> <span class="fn">linearSearch</span>(<span class="kw">const int</span> value, <span class="kw">const int</span> numbers[], <span class="kw">const int</span> n);
 
-<span class="cmt">// arraySearch.c</span>
+<span class="cmt">// ── arraySearch.c ──────────────────────────────────────────────────────
+// Walk every element; return index on match, -1 if we exhaust the array</span>
 <span class="kw">int</span> <span class="fn">linearSearch</span>(<span class="kw">const int</span> value, <span class="kw">const int</span> numbers[], <span class="kw">const int</span> n) {
     <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i &lt; n; i++)
-        <span class="kw">if</span> (numbers[i] == value) <span class="kw">return</span> i;
-    <span class="kw">return</span> -<span class="num">1</span>;
+        <span class="kw">if</span> (numbers[i] == value) <span class="kw">return</span> i;  <span class="cmt">// found — return its index</span>
+    <span class="kw">return</span> -<span class="num">1</span>;  <span class="cmt">// not found</span>
 }
 
-<span class="cmt">// searchMain.c — key pattern</span>
-<span class="cmt">// argv[1]=filename  argv[2]=count</span>
-<span class="kw">int</span> n; <span class="fn">sscanf</span>(argv[2], <span class="str">"%d"</span>, &amp;n);
-<span class="kw">int</span> *arr = (<span class="kw">int</span>*)<span class="fn">malloc</span>((<span class="kw">size_t</span>)n * <span class="kw">sizeof</span>(<span class="kw">int</span>));
-<span class="kw">size_t</span> got = <span class="fn">fread</span>(arr, <span class="kw">sizeof</span>(arr[<span class="num">0</span>]), n, fp);   <span class="cmt">// binary read</span>
-<span class="cmt">// interactive search loop:</span>
+<span class="cmt">// ── searchMain.c ───────────────────────────────────────────────────────
+// argv[1]=filename  argv[2]=number-of-ints-in-file (passed as string, need sscanf)</span>
+<span class="kw">int</span> n; <span class="fn">sscanf</span>(argv[<span class="num">2</span>], <span class="str">"%d"</span>, &amp;n);  <span class="cmt">// convert argv[2] string to int</span>
+<span class="kw">int</span> *arr = (<span class="kw">int</span>*)<span class="fn">malloc</span>((<span class="kw">size_t</span>)n * <span class="kw">sizeof</span>(<span class="kw">int</span>));  <span class="cmt">// heap array for n ints</span>
+<span class="kw">size_t</span> got = <span class="fn">fread</span>(arr, <span class="kw">sizeof</span>(arr[<span class="num">0</span>]), n, fp);    <span class="cmt">// read ALL n ints at once</span>
+
+<span class="cmt">// Interactive search loop: read a string, quit if 'q', else parse and search
+// scanf("%19s") reads up to 19 chars into input (prevents buffer overflow)</span>
 <span class="kw">char</span> input[<span class="num">20</span>];
 <span class="fn">printf</span>(<span class="str">"Enter value ('q' to quit): "</span>);
 <span class="kw">while</span> (<span class="fn">scanf</span>(<span class="str">"%19s"</span>, input) == <span class="num">1</span> &amp;&amp; input[<span class="num">0</span>] != <span class="str">'q'</span>) {
-    <span class="kw">int</span> target; <span class="fn">sscanf</span>(input, <span class="str">"%d"</span>, &amp;target);
+    <span class="kw">int</span> target; <span class="fn">sscanf</span>(input, <span class="str">"%d"</span>, &amp;target);    <span class="cmt">// parse the string to int</span>
     <span class="kw">int</span> idx = <span class="fn">linearSearch</span>(target, arr, n);
     <span class="kw">if</span> (idx &gt;= <span class="num">0</span>) <span class="fn">printf</span>(<span class="str">"%d found at %d\n"</span>, target, idx);
     <span class="kw">else</span>          <span class="fn">printf</span>(<span class="str">"%d not found\n"</span>, target);
@@ -699,34 +796,44 @@ ItemType *got = (ItemType *) <span class="fn">dequeue</span>(&amp;q);
 
     <div class="card">
       <div class="card-title">Lab 7 — Pointers: swap adjacent pairs, print bytes</div>
-<pre><span class="kw">typedef int</span> WORD;
+<pre><span class="cmt">// typedef + #define together: change int → double in ONE place and everything updates</span>
+<span class="kw">typedef int</span> WORD;
 <span class="kw">#define</span> WORD_FORMAT <span class="str">"%d "</span>
 <span class="kw">#define</span> N_NUMS <span class="num">10</span>
 <span class="kw">const</span> WORD START = <span class="num">1011</span>;
 
+<span class="cmt">// Fill array with consecutive values starting at START</span>
 WORD nums[N_NUMS];
 <span class="kw">for</span> (<span class="kw">int</span> i=<span class="num">0</span>; i&lt;N_NUMS; i++) nums[i] = START + i;
 
-<span class="cmt">// swap adjacent pairs using pointer notation</span>
-<span class="kw">for</span> (<span class="kw">int</span> i=<span class="num">0</span>; i&lt;N_NUMS-<span class="num">1</span>; i+=<span class="num">2</span>)
-    <span class="fn">swap</span>(nums+i, nums+i+<span class="num">1</span>);
+<span class="cmt">// Swap adjacent PAIRS (0↔1, 2↔3, 4↔5…) using POINTER notation
+// nums+i == &nums[i]  (pointer to element i)</span>
+<span class="kw">for</span> (<span class="kw">int</span> i=<span class="num">0</span>; i&lt;N_NUMS-<span class="num">1</span>; i+=<span class="num">2</span>)   <span class="cmt">// step by 2 to hit each pair once</span>
+    <span class="fn">swap</span>(nums+i, nums+i+<span class="num">1</span>);         <span class="cmt">// pointer notation: nums+i = address of nums[i]</span>
 
-<span class="cmt">// swap back using array notation</span>
+<span class="cmt">// Swap back using ARRAY notation (identical result, different syntax)</span>
 <span class="kw">for</span> (<span class="kw">int</span> i=<span class="num">0</span>; i&lt;N_NUMS-<span class="num">1</span>; i+=<span class="num">2</span>)
-    <span class="fn">swap</span>(&amp;nums[i], &amp;nums[i+<span class="num">1</span>]);</pre>
+    <span class="fn">swap</span>(&amp;nums[i], &amp;nums[i+<span class="num">1</span>]);      <span class="cmt">// array notation: &nums[i] = address of nums[i]</span></pre>
     </div>
 
     <div class="card">
       <div class="card-title">Lab 8 — Recursion: printVector and reverseVector</div>
-<pre><span class="kw">void</span> <span class="fn">printVector</span>(<span class="kw">const</span> WORD *vec, <span class="kw">int</span> n) {   <span class="cmt">// recursive</span>
-    <span class="kw">if</span> (n == <span class="num">0</span>) { <span class="fn">printf</span>(<span class="str">"\n"</span>); <span class="kw">return</span>; }
-    <span class="fn">printf</span>(WORD_FORMAT, *vec);
-    <span class="fn">printVector</span>(vec+<span class="num">1</span>, n-<span class="num">1</span>);
+<pre><span class="cmt">// RECURSIVE print: print first element, recurse on the rest
+// vec+1 advances the pointer to skip the first element
+// n-1 tells the next call there is one fewer element to process</span>
+<span class="kw">void</span> <span class="fn">printVector</span>(<span class="kw">const</span> WORD *vec, <span class="kw">int</span> n) {
+    <span class="kw">if</span> (n == <span class="num">0</span>) { <span class="fn">printf</span>(<span class="str">"\n"</span>); <span class="kw">return</span>; }   <span class="cmt">// BASE CASE: done, print newline</span>
+    <span class="fn">printf</span>(WORD_FORMAT, *vec);                <span class="cmt">// print first element (*vec dereferences)</span>
+    <span class="fn">printVector</span>(vec+<span class="num">1</span>, n-<span class="num">1</span>);                  <span class="cmt">// recurse: skip first, count down</span>
 }
+
+<span class="cmt">// RECURSIVE reverse: swap outer elements, recurse on inner subarray
+// p1 = left index (starts 0), p2 = right index (starts N-1)
+// Call as: reverseVector(arr, 0, N-1)</span>
 <span class="kw">void</span> <span class="fn">reverseVector</span>(WORD *vec, <span class="kw">int</span> p1, <span class="kw">int</span> p2) {
-    <span class="kw">if</span> (p1 &gt;= p2) <span class="kw">return</span>;
-    WORD tmp=vec[p1]; vec[p1]=vec[p2]; vec[p2]=tmp;
-    <span class="fn">reverseVector</span>(vec, p1+<span class="num">1</span>, p2-<span class="num">1</span>);
+    <span class="kw">if</span> (p1 &gt;= p2) <span class="kw">return</span>;               <span class="cmt">// BASE CASE: indices crossed — done</span>
+    WORD tmp=vec[p1]; vec[p1]=vec[p2]; vec[p2]=tmp;  <span class="cmt">// swap p1 and p2</span>
+    <span class="fn">reverseVector</span>(vec, p1+<span class="num">1</span>, p2-<span class="num">1</span>);      <span class="cmt">// recurse: move both pointers inward</span>
 }</pre>
     </div>
   </section>
@@ -741,9 +848,9 @@ WORD nums[N_NUMS];
           <tr><th>Type</th><th>printf</th><th>scanf</th></tr>
           <tr><td>int</td><td>%d</td><td>%d</td></tr>
           <tr><td>float</td><td>%f</td><td>%f</td></tr>
-          <tr><td>double</td><td>%f or %g</td><td>%lf</td></tr>
+          <tr><td>double</td><td>%f or %g</td><td>%lf  ← must use lf!</td></tr>
           <tr><td>char</td><td>%c</td><td>%c</td></tr>
-          <tr><td>string</td><td>%s</td><td>%s</td></tr>
+          <tr><td>string</td><td>%s</td><td>%s or %19s (safe width)</td></tr>
           <tr><td>long</td><td>%ld</td><td>%ld</td></tr>
           <tr><td>size_t</td><td>%zu</td><td>%zu</td></tr>
           <tr><td>unsigned char</td><td>%hhu</td><td>—</td></tr>
@@ -752,17 +859,17 @@ WORD nums[N_NUMS];
         </table>
       </div>
       <div class="card">
-        <div class="card-title">Common patterns</div>
+        <div class="card-title">Common patterns — copy these directly</div>
         <table>
           <tr><th>What</th><th>How</th></tr>
-          <tr><td>argv check</td><td>if (argc != N) { printf("Usage..."); return 1; }</td></tr>
-          <tr><td>fopen check</td><td>if ((fp=fopen(f,"r"))==NULL) { ... return 1; }</td></tr>
-          <tr><td>malloc check</td><td>if (ptr==NULL) { fprintf(stderr,...); return EXIT_FAILURE; }</td></tr>
-          <tr><td>fread check</td><td>if (got!=(size_t)n) { feof/ferror check }</td></tr>
-          <tr><td>flush stdin</td><td>while(getchar()!='\n'){}</td></tr>
-          <tr><td>free + NULL</td><td>free(p); p=NULL;</td></tr>
-          <tr><td>NULL pointer check</td><td>if (ptr == NULL) return NULL;</td></tr>
-          <tr><td>string length</td><td>strlen(s) + 1  (for the \0)</td></tr>
+          <tr><td>argc check</td><td>if (argc != N) { printf("Usage: %s ...\n", argv[0]); return 1; }</td></tr>
+          <tr><td>fopen check</td><td>if ((fp=fopen(f,"r"))==NULL) { printf("Can't open %s\n",f); return 1; }</td></tr>
+          <tr><td>malloc check</td><td>if (ptr==NULL) { fprintf(stderr,"malloc failed\n"); return EXIT_FAILURE; }</td></tr>
+          <tr><td>fread check</td><td>if (got!=(size_t)n) { if(feof(fp))… else if(ferror(fp))… }</td></tr>
+          <tr><td>flush stdin</td><td>while(getchar()!='\n'){}  ← after scanf, before fgets</td></tr>
+          <tr><td>free + NULL</td><td>free(p); p=NULL;  ← prevents double-free bugs</td></tr>
+          <tr><td>NULL check</td><td>if (ptr == NULL) return NULL;  ← propagate error up</td></tr>
+          <tr><td>string alloc</td><td>malloc(strlen(s) + 1)  ← +1 for the '\0' terminator</td></tr>
         </table>
       </div>
     </div>
@@ -771,10 +878,10 @@ WORD nums[N_NUMS];
       <div class="card-title">Data structure comparison</div>
       <table>
         <tr><th>Structure</th><th>Access</th><th>Add</th><th>Remove</th><th>Key feature</th></tr>
-        <tr><td>Array stack</td><td>top (index)</td><td>push → ++top</td><td>pop → top--</td><td>Fixed size, simple</td></tr>
-        <tr><td>LL stack</td><td>top (pointer)</td><td>push: malloc, point to old top</td><td>pop: save top, advance, free</td><td>Dynamic size</td></tr>
-        <tr><td>LL queue</td><td>front + rear</td><td>enqueue → add at rear</td><td>dequeue → remove from front</td><td>FIFO, void* generic</td></tr>
-        <tr><td>Struct</td><td>dot or arrow</td><td>assign field</td><td>—</td><td>Groups related data</td></tr>
+        <tr><td>Array stack</td><td>top index (-1=empty)</td><td>push: array[++top] = val</td><td>pop: return array[top--]</td><td>Fixed MAX size, no malloc per element</td></tr>
+        <tr><td>LL stack</td><td>top pointer (NULL=empty)</td><td>push: malloc node, node->next=top, top=node</td><td>pop: save top, top=top->next, free saved</td><td>Unlimited size, malloc/free each push/pop</td></tr>
+        <tr><td>LL queue</td><td>front (out) + rear (in)</td><td>enqueue: add node at rear</td><td>dequeue: remove node from front, free it</td><td>FIFO order, void* makes it generic</td></tr>
+        <tr><td>Struct</td><td>dot (variable) or arrow (pointer)</td><td>assign fields</td><td>—</td><td>Groups related data into one named type</td></tr>
       </table>
     </div>
   </section>
