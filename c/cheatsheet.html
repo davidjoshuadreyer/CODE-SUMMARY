@@ -94,6 +94,7 @@ tr:hover td { background: #f9fafb; }
   <a href="#queue">Queue (LL)</a>
   <a href="#labs">Lab Templates</a>
   <a href="#formats">Formats</a>
+  <a href="#midterm">Midterm Qs</a>
   <a href="../index.html">&#8592; Home</a>
 </nav>
 
@@ -884,6 +885,132 @@ WORD nums[N_NUMS];
         <tr><td>Struct</td><td>dot (variable) or arrow (pointer)</td><td>assign fields</td><td>—</td><td>Groups related data into one named type</td></tr>
       </table>
     </div>
+  </section>
+
+  <!-- ── MIDTERM QUESTIONS ─────────────────────────────── -->
+  <section id="midterm">
+    <div class="sec-title">Midterm Questions — your answers + corrections</div>
+
+    <!-- ── MIDTERM 1 · Q2 ─────────────────────────────────── -->
+    <div class="card">
+      <div class="card-title">Midterm 1 · Q2 — Power / Remainder calculator &nbsp;·&nbsp; 5.5 / 7</div>
+      <p style="font-size:0.83rem;color:#374151;margin-bottom:12px;">
+        <strong>Task:</strong> Read a <code>double</code> and an operator character (<code>^</code> or <code>/</code>),
+        then an <code>int</code>. For <code>^</code>: only allow exponent 2 or 3, then call <code>power()</code>.
+        For <code>/</code>: compute the floating-point remainder. Print an error for invalid inputs.
+        A <code>power()</code> function that multiplies in a loop is provided.
+      </p>
+
+      <div class="card-title" style="color:#b91c1c;">Your answer — errors marked</div>
+<pre><span class="kw">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+<span class="kw">#include</span> <span class="str">&lt;stdlib.h&gt;</span>
+<span class="cmt">// ✗ MISSING: #include &lt;math.h&gt;  — needed for fmod()</span>
+
+<span class="kw">double</span> <span class="fn">power</span>(<span class="kw">double</span> base, <span class="kw">int</span> exp);
+
+<span class="kw">int</span> <span class="fn">main</span>(<span class="kw">void</span>) {
+    <span class="kw">double</span> inputA;
+    <span class="kw">char</span>   line[<span class="num">11</span>];
+    <span class="kw">char</span>   type;
+    <span class="kw">int</span>    inputB;
+
+    <span class="fn">printf</span>(<span class="str">"Please enter the first number with an operator: "</span>);
+    <span class="fn">scanf</span>(<span class="str">"%lf%10s"</span>, &amp;inputA, line);  <span class="cmt">// reads double then operator string into line[]</span>
+    <span class="fn">printf</span>(<span class="str">"Please enter the second number: "</span>);
+    <span class="fn">scanf</span>(<span class="str">"%d"</span>, &amp;inputB);
+    type = line[<span class="num">0</span>];   <span class="cmt">// use first character of line as the operator</span>
+
+    <span class="cmt">// ✗ BUG — LOGIC ERROR (lost 0.5): || should be &&
+    //   With ||: (inputB != 2 || inputB != 3) is ALWAYS true for any number
+    //   e.g. inputB=2: (2!=2)=false || (2!=3)=true → TRUE (wrongly invalid)
+    //   Fix: use && so BOTH must be not-2 AND not-3 to be truly invalid</span>
+    <span class="kw">if</span> (type == <span class="str">'^'</span> &amp;&amp; (inputB != <span class="num">2</span> || inputB != <span class="num">3</span>))
+    {
+        <span class="fn">printf</span>(<span class="str">"The second number is not valid"</span>);
+    }
+    <span class="kw">else if</span> (type == <span class="str">'^'</span>)
+    {
+        <span class="fn">printf</span>(<span class="str">"The result is: %0.2lf"</span>, <span class="fn">power</span>(inputA, inputB));
+    }
+    <span class="kw">else if</span> (type == <span class="str">'/'</span>)
+    {
+        <span class="cmt">// ✗ BUG — TYPE ERROR (lost 0.5): % operator does NOT work on doubles
+        //   % is integer-only. For doubles, use fmod(a, b) from &lt;math.h&gt;</span>
+        <span class="kw">double</span> remainResult = inputA % inputB;
+        <span class="fn">printf</span>(<span class="str">"The result is: %0.2lf"</span>, remainResult);
+    }
+    <span class="kw">else</span>
+    {
+        <span class="fn">printf</span>(<span class="str">"The operator is not valid"</span>);
+    }
+    <span class="kw">return</span> EXIT_SUCCESS;
+}
+
+<span class="kw">double</span> <span class="fn">power</span>(<span class="kw">double</span> base, <span class="kw">int</span> exp) {
+    <span class="kw">double</span> result = <span class="num">1.0</span>;
+    <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i &lt; exp; i++)
+        result *= base;
+    <span class="kw">return</span> result;
+}</pre>
+
+      <div class="card-title" style="color:#15803d;margin-top:14px;">Corrected answer</div>
+<pre><span class="kw">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+<span class="kw">#include</span> <span class="str">&lt;stdlib.h&gt;</span>
+<span class="kw">#include</span> <span class="str">&lt;math.h&gt;</span>    <span class="cmt">// ✓ needed for fmod()</span>
+
+<span class="kw">double</span> <span class="fn">power</span>(<span class="kw">double</span> base, <span class="kw">int</span> exp);
+
+<span class="kw">int</span> <span class="fn">main</span>(<span class="kw">void</span>) {
+    <span class="kw">double</span> inputA;
+    <span class="kw">char</span>   line[<span class="num">11</span>];
+    <span class="kw">char</span>   type;
+    <span class="kw">int</span>    inputB;
+
+    <span class="fn">printf</span>(<span class="str">"Please enter the first number with an operator: "</span>);
+    <span class="fn">scanf</span>(<span class="str">"%lf%10s"</span>, &amp;inputA, line);
+    <span class="fn">printf</span>(<span class="str">"Please enter the second number: "</span>);
+    <span class="fn">scanf</span>(<span class="str">"%d"</span>, &amp;inputB);
+    type = line[<span class="num">0</span>];
+
+    <span class="cmt">// ✓ FIX 1: && instead of ||
+    //   "invalid if inputB is not 2 AND not 3" → both conditions must hold
+    //   Equivalent: !(inputB == 2 || inputB == 3)</span>
+    <span class="kw">if</span> (type == <span class="str">'^'</span> &amp;&amp; (inputB != <span class="num">2</span> &amp;&amp; inputB != <span class="num">3</span>))
+    {
+        <span class="fn">printf</span>(<span class="str">"The second number is not valid"</span>);
+    }
+    <span class="kw">else if</span> (type == <span class="str">'^'</span>)
+    {
+        <span class="fn">printf</span>(<span class="str">"The result is: %.2lf"</span>, <span class="fn">power</span>(inputA, inputB));
+    }
+    <span class="kw">else if</span> (type == <span class="str">'/'</span>)
+    {
+        <span class="cmt">// ✓ FIX 2: fmod(a, b) — floating-point remainder (same logic as %, but for doubles)
+        //   fmod(7.5, 2.0) = 1.5   (7.5 = 3*2.0 + 1.5)</span>
+        <span class="kw">double</span> remainResult = <span class="fn">fmod</span>(inputA, inputB);
+        <span class="fn">printf</span>(<span class="str">"The result is: %.2lf"</span>, remainResult);
+    }
+    <span class="kw">else</span>
+    {
+        <span class="fn">printf</span>(<span class="str">"The operator is not valid"</span>);
+    }
+    <span class="kw">return</span> EXIT_SUCCESS;
+}
+
+<span class="kw">double</span> <span class="fn">power</span>(<span class="kw">double</span> base, <span class="kw">int</span> exp) {
+    <span class="kw">double</span> result = <span class="num">1.0</span>;
+    <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i &lt; exp; i++)
+        result *= base;
+    <span class="kw">return</span> result;
+}</pre>
+
+      <div class="warn" style="margin-top:10px;">
+        <strong>The 2 mistakes to burn into memory:</strong><br>
+        1. <code>&amp;&amp;</code> vs <code>||</code> in "not valid" checks — "invalid if NOT 2 <em>AND</em> NOT 3" uses <code>&amp;&amp;</code><br>
+        2. <code>%</code> is integers only — use <code>fmod(a, b)</code> for doubles (needs <code>#include &lt;math.h&gt;</code>)
+      </div>
+    </div>
+
   </section>
 
 </div>
