@@ -1011,6 +1011,88 @@ WORD nums[N_NUMS];
       </div>
     </div>
 
+    <!-- ── MIDTERM 1 · Q (printNumbers) ─────────────────── -->
+    <div class="card">
+      <div class="card-title">Midterm 1 — printNumbers even countdown &nbsp;·&nbsp; 3 / 5</div>
+      <p style="font-size:0.83rem;color:#374151;margin-bottom:12px;">
+        <strong>Task:</strong> Write a function <code>printNumbers(int a)</code> that prints all even numbers
+        from <code>a</code> down to <code>0</code>. Call it with <code>printNumbers(20)</code>.
+      </p>
+
+      <div class="card-title" style="color:#b91c1c;">Your answer — errors marked</div>
+<pre><span class="kw">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+<span class="kw">#include</span> <span class="str">&lt;stdlib.h&gt;</span>
+
+<span class="cmt">// ✗ MISSING return type — implicit int is wrong, should be void
+//   In C, a function with no return type is treated as returning int (old C89 rule)
+//   Modern C requires an explicit type — always write void if nothing is returned</span>
+<span class="fn">printNumbers</span>(<span class="kw">int</span> a);
+
+<span class="kw">int</span> <span class="fn">main</span>(<span class="kw">void</span>) {
+    <span class="fn">printNumbers</span>(<span class="num">20</span>);
+    <span class="kw">return</span> EXIT_SUCCESS;
+}
+
+<span class="cmt">// ✗ MISSING return type here too — must match the declaration above</span>
+<span class="fn">printNumbers</span>(<span class="kw">int</span> a)
+{
+    <span class="kw">int</span> b = a;
+    <span class="fn">printf</span>(<span class="str">"David says even numbers within %d are: "</span>, a);
+
+    <span class="kw">while</span>(b > -<span class="num">1</span>)
+    {
+        <span class="cmt">// ✗ LOOP STRUCTURE — b -= 1 is indented to look like it's inside the if,
+        //   but WITHOUT braces only printf belongs to the if block.
+        //   b -= 1 actually ALWAYS runs (every loop iteration), not just when even.
+        //   The code happens to produce correct output, but the indentation is
+        //   misleading — this will cost marks every time. Always use {} on while body.</span>
+        <span class="kw">if</span>(b % <span class="num">2</span> == <span class="num">0</span>)
+            <span class="fn">printf</span>(<span class="str">"%d "</span>, b);  <span class="cmt">// ← only this line is inside the if</span>
+
+            b -= <span class="num">1</span>;            <span class="cmt">// ← looks indented inside if, but is NOT — runs every loop</span>
+    }
+    <span class="cmt">// ✗ OUTPUT — no newline printed at the end of the list</span>
+}</pre>
+
+      <div class="card-title" style="color:#15803d;margin-top:14px;">Corrected answer</div>
+<pre><span class="kw">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+<span class="kw">#include</span> <span class="str">&lt;stdlib.h&gt;</span>
+
+<span class="cmt">// ✓ void makes the return type explicit — function returns nothing</span>
+<span class="kw">void</span> <span class="fn">printNumbers</span>(<span class="kw">int</span> a);
+
+<span class="kw">int</span> <span class="fn">main</span>(<span class="kw">void</span>) {
+    <span class="fn">printNumbers</span>(<span class="num">20</span>);
+    <span class="kw">return</span> EXIT_SUCCESS;
+}
+
+<span class="kw">void</span> <span class="fn">printNumbers</span>(<span class="kw">int</span> a)
+{
+    <span class="kw">int</span> b = a;
+    <span class="fn">printf</span>(<span class="str">"David says even numbers within %d are: "</span>, a);
+
+    <span class="cmt">// ✓ LOOP STRUCTURE — braces on the while body make it crystal clear:
+    //   - the if only controls printf
+    //   - b -= 1 is UNCONDITIONAL (runs every iteration, not just when even)
+    //   Without braces on the while, a reader can't easily tell what's in the loop</span>
+    <span class="kw">while</span>(b > -<span class="num">1</span>)
+    {
+        <span class="kw">if</span>(b % <span class="num">2</span> == <span class="num">0</span>)
+            <span class="fn">printf</span>(<span class="str">"%d "</span>, b);   <span class="cmt">// print only even numbers</span>
+
+        b -= <span class="num">1</span>;               <span class="cmt">// ✓ always decrement — unambiguously outside the if</span>
+    }
+    <span class="fn">printf</span>(<span class="str">"\n"</span>);  <span class="cmt">// ✓ end the output line</span>
+}</pre>
+
+      <div class="warn" style="margin-top:10px;">
+        <strong>The 3 mistakes to burn into memory:</strong><br>
+        1. Always write <code>void</code> (or a real type) on every function — no implicit int<br>
+        2. Indentation means NOTHING to the compiler — <code>b -= 1</code> after an <code>if</code> without <code>{}</code> is NOT inside the if<br>
+        3. Add <code>printf("\n")</code> after printing a list so the output ends on its own line
+      </div>
+    </div>
+
   </section>
 
 </div>
