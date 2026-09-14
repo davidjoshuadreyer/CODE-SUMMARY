@@ -2,5 +2,8 @@
   "dependencies": {
     "katex": "^0.16.40",
     "marked": "^17.0.5"
+  },
+  "devDependencies": {
+    "pdf-parse": "^2.4.5"
   }
 }

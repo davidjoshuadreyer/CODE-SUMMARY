@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "LLDB (ARM64) - main.exe",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/main.exe",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "stopOnEntry": false
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "console": "externalTerminal",
+      "cwd": "c:/Users/david/OneDrive/Documents/CODE/COMP 166/LAB 3",
+      "program": "c:/Users/david/OneDrive/Documents/CODE/COMP 166/LAB 3/build/Debug/outDebug"
+    }
+  ]
+}

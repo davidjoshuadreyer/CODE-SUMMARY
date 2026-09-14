@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Stat 254 – Sets 1–32 Formula Sheet (Final Exam)</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$',right:'$',display:false}],throwOnError:false})"></script>
+<style>
+  @page { size: A4 portrait; margin: 2mm 3mm; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, sans-serif; font-size: 6.5pt; line-height: 1.2; color: #111; }
+
+  .katex { font-size: 1em; }
+  .f  { margin: 1px 0; font-size: 6.5pt; line-height: 1.65; }
+  .f .lbl { font-size: 5.4pt; color: var(--mid); }
+  .fl { margin: 0.5px 0; font-size: 6.5pt; line-height: 1.2; }
+
+  .grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 2px 3px; }
+  .full { grid-column: 1 / -1; }
+  .two  { grid-column: span 2; }
+
+  .card { padding: 2px 3px 2px 5px; border-left: 3px solid var(--h); background: var(--light); }
+  .card h2 {
+    font-size: 7pt; font-weight: bold; color: var(--h);
+    border-bottom: 0.5px solid var(--h); padding-bottom: 1px; margin-bottom: 1px;
+  }
+  .card h2 .s { font-weight: normal; font-size: 5.5pt; opacity: 0.7; margin-left: 3px; }
+  .when { font-size: 5.5pt; font-style: italic; color: var(--h); margin-bottom: 1px; opacity: 0.85; }
+  .kw  { font-size: 5.3pt; color: #444; margin-bottom: 0.5px; line-height: 1.3; }
+  .kw b { color: var(--h); }
+  .ex  { font-size: 5.3pt; color: #555; font-style: italic; margin: 0 0 1px; line-height: 1.3; }
+  .sep { font-size: 5.5pt; font-weight: bold; color: var(--h); margin: 1.5px 0 0.5px; border-top: 0.5px solid var(--h); padding-top: 1px; }
+  hr   { border: none; border-top: 0.4px solid #ddd; margin: 1px 0; }
+
+  .c-amber  { --h:#c84b00; --light:#fff8f2; --mid:#e65100; }
+  .c-teal   { --h:#00695c; --light:#f0faf8; --mid:#00897b; }
+  .c-purple { --h:#6a1b9a; --light:#faf0ff; --mid:#8e24aa; }
+  .c-blue   { --h:#1255a0; --light:#f0f5ff; --mid:#1565c0; }
+  .c-red    { --h:#b71c1c; --light:#fff5f5; --mid:#c62828; }
+  .c-green  { --h:#2a6e2e; --light:#f0faf0; --mid:#388e3c; }
+  .c-navy   { --h:#1a237e; --light:#f0f2ff; --mid:#283593; }
+  .c-brown  { --h:#5d4037; --light:#fdf6f0; --mid:#795548; }
+  .c-pink   { --h:#880e4f; --light:#fff0f6; --mid:#ad1457; }
+  .c-indigo { --h:#283593; --light:#f0f2ff; --mid:#3949ab; }
+  .c-orange { --h:#e65100; --light:#fff3e0; --mid:#f57c00; }
+
+  .inner2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 5px; }
+  .inner3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0 4px; }
+
+  .foot { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 0 4px; font-size: 6pt; }
+  .foot b { color: #1a237e; }
+
+  .la { color: #c84b00; font-weight: bold; }
+  .lt { color: #00695c; font-weight: bold; }
+  .lr { color: #b71c1c; font-weight: bold; }
+  .lb { color: #1255a0; font-weight: bold; }
+  .lp { color: #6a1b9a; font-weight: bold; }
+  .lg { color: #2a6e2e; font-weight: bold; }
+  .ln { color: #1a237e; font-weight: bold; }
+
+  /* Distribution reference table */
+  .dist-table { width: 100%; border-collapse: collapse; font-size: 6pt; line-height: 1.3; }
+  .dist-table colgroup col:nth-child(1) { width: 11%; }
+  .dist-table colgroup col:nth-child(2) { width: 18%; }
+  .dist-table colgroup col:nth-child(3) { width: 30%; }
+  .dist-table colgroup col:nth-child(4) { width: 18%; }
+  .dist-table colgroup col:nth-child(5) { width: 23%; }
+  .dist-table thead th {
+    background: #1a237e; color: #fff; font-size: 6pt; font-weight: bold;
+    padding: 1.5px 3px; text-align: left; border: 0.5px solid #3949ab;
+  }
+  .dist-table td {
+    vertical-align: top; padding: 1.5px 3px;
+    border: 0.5px solid #cfd8dc; font-size: 6pt;
+  }
+  .dist-table tr:nth-child(even) td { background: #f5f7ff; }
+  .dist-table td.dn {
+    font-weight: bold; background: #e8eaf6 !important;
+    border-left: 3px solid #1a237e; font-size: 5.8pt; white-space: nowrap;
+  }
+  .dist-table .math-line { display: block; margin: 0.5px 0; }
+  .dist-table .note { font-size: 5.3pt; color: #555; font-style: italic; }
+</style>
+</head>
+<body>
+<div class="grid">
+
+<!-- ══════════ ROW 1: PROBABILITY ══════════ -->
+
+<!-- Sets 1-4: Probability Rules -->
+<div class="card c-orange two">
+  <h2>Probability Rules <span class="s">Sets 1–4 · sample spaces, events, set operations</span></h2>
+  <div class="kw"><b>Look for:</b> "find P(A)", "what is the probability that…", "P(A and B)", "P(A or B)", "A or B but not both", "mutually exclusive", "complement"</div>
+  <div class="inner2">
+    <div>
+      <div class="fl"><b>Complement:</b> $P(A') = 1 - P(A)$</div>
+      <div class="fl"><b>Addition:</b> $P(A \cup B) = P(A) + P(B) - P(A \cap B)$</div>
+      <div class="fl"><b>Mutually exclusive</b> ($A \cap B = \emptyset$): $P(A \cup B) = P(A) + P(B)$</div>
+      <div class="fl"><b>Multiplication:</b> $P(A \cap B) = P(A|B)\cdot P(B) = P(B|A)\cdot P(A)$</div>
+    </div>
+    <div>
+      <div class="fl"><b>Independent</b> ($A \perp B$): $P(A \cap B) = P(A)\cdot P(B)$ &nbsp;and&nbsp; $P(A|B) = P(A)$</div>
+      <div class="ex">"P(defective) = 0.03, P(defective AND returned) = 0.01 → P(returned | defective) = 0.01/0.03 = 0.333"</div>
+      <div class="ex">"A card is drawn. A=heart, B=face card. P(A∩B)=3/52. P(A|B)=3/12=0.25=P(A)=13/52=0.25 → independent"</div>
+    </div>
+  </div>
+</div>
+
+<!-- Sets 5-7: Conditional Probability, Bayes -->
+<div class="card c-brown two">
+  <h2>Conditional Probability &amp; Bayes' Theorem <span class="s">Sets 5–7</span></h2>
+  <div class="kw"><b>Look for:</b> "given that…", "knowing that…", "P(B|A)", "prior probability", "what fraction of defectives came from machine X?", tree diagram problems</div>
+  <div class="inner2">
+    <div>
+      <div class="f">$P(A|B) = \dfrac{P(A \cap B)}{P(B)}$ <span class="lbl">Conditional probability</span></div>
+      <div class="f"><b>Total probability:</b> $P(A) = \sum_i P(A|B_i)\,P(B_i)$ <span class="lbl">partition $B_1,\ldots,B_k$</span></div>
+    </div>
+    <div>
+      <div class="f"><b>Bayes:</b> $P(B_k | A) = \dfrac{P(A|B_k)\,P(B_k)}{\displaystyle\sum_i P(A|B_i)\,P(B_i)}$</div>
+      <div class="ex">"3 machines B₁,B₂,B₃ make 30%/45%/25% of product; defect rates 2%/3%/2%. Given defective, P(B₃)?" → Bayes</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ ROWS 2–3: DISTRIBUTIONS TABLE ══════════ -->
+<table class="dist-table full">
+  <colgroup><col/><col/><col/><col/><col/></colgroup>
+  <thead>
+    <tr>
+      <th>Distribution</th>
+      <th>Conditions / When to use</th>
+      <th>PMF / PDF &amp; Key Formulas</th>
+      <th>Mean &amp; Variance</th>
+      <th>Standardize / Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Discrete RV -->
+    <tr>
+      <td class="dn">Discrete RV<br/><span class="note">Sets 8–10</span></td>
+      <td>Table of $x$ values &amp; probabilities $f(x)$; "find E(X)", "find V(X)", CDF</td>
+      <td>
+        <span class="math-line">$F(x) = P(X \le x) = \sum_{t \le x} f(t)$</span>
+        <span class="math-line">$E(X^2) = \sum x^2 f(x)$</span>
+        <span class="math-line note">Linear: $E(aX+b)=a\mu+b$ · $V(aX+b)=a^2\sigma^2$</span>
+      </td>
+      <td>$\mu = \sum x\,f(x)$<br/>$\sigma^2 = E(X^2) - \mu^2$</td>
+      <td><span class="note">No standardization — use table directly</span></td>
+    </tr>
+    <!-- Binomial -->
+    <tr>
+      <td class="dn">$X \sim B(n,p)$<br/><span class="note">Binomial · Set 11</span></td>
+      <td>$n$ fixed trials; P(success) $= p$; independent; $X$ = # successes; two outcomes</td>
+      <td>$b(x;\,n,p) = \dbinom{n}{x} p^x (1-p)^{n-x}$</td>
+      <td>$\mu = np$<br/>$\sigma^2 = npq$<br/><span class="note">$q = 1-p$</span></td>
+      <td>If $np \ge 5$ &amp; $nq \ge 5$:<br/>$Z = \dfrac{x - np}{\sqrt{npq}} \sim N(0,1)$<br/><span class="note">Poisson approx: if $n\ge100$, $np\le10$ → $\lambda=np$</span></td>
+    </tr>
+    <!-- Poisson -->
+    <tr>
+      <td class="dn">$X \sim \text{Pois}(\lambda)$<br/><span class="note">Poisson · Set 12</span></td>
+      <td>Events per time/area; avg rate $\lambda$; rare events; no fixed $n$</td>
+      <td>$p(x;\,\lambda) = \dfrac{e^{-\lambda}\lambda^x}{x!}$, $x = 0,1,2,\ldots$<br/><span class="note">Scale: rate $r$/unit over $t$ units → $\lambda = r \cdot t$</span></td>
+      <td>$\mu = \lambda$<br/>$\sigma^2 = \lambda$</td>
+      <td><span class="note">"5 calls/hr, 2 hrs" → $\lambda=10$<br/>"2 errors/page, next page" → $e^{-2}$</span></td>
+    </tr>
+    <!-- Uniform -->
+    <tr>
+      <td class="dn">$X \sim U(A,B)$<br/><span class="note">Uniform · Sets 13–14</span></td>
+      <td>Equally likely over interval $[A,B]$</td>
+      <td>$f(x) = \dfrac{1}{B-A}$, $A \le x \le B$<br/>$P(a \le X \le b) = \dfrac{b-a}{B-A}$<br/>$F(x) = \dfrac{x-A}{B-A}$, median: $F(m)=0.5$</td>
+      <td>$\mu = \dfrac{A+B}{2}$<br/>$\sigma^2 = \dfrac{(B-A)^2}{12}$</td>
+      <td><span class="note">"U(7,10). P(≤8.8)?" → $(8.8-7)/3 = 0.60$</span></td>
+    </tr>
+    <!-- Normal -->
+    <tr>
+      <td class="dn">$X \sim N(\mu,\sigma^2)$<br/><span class="note">Normal · Sets 15–17</span></td>
+      <td>Bell-shaped, symmetric; mean=median=mode; use z-table for probabilities</td>
+      <td>
+        <span class="math-line">$P(a < X < b) = \Phi\!\left(\tfrac{b-\mu}{\sigma}\right) - \Phi\!\left(\tfrac{a-\mu}{\sigma}\right)$</span>
+        <span class="math-line">$P(Z>z) = 1-\Phi(z)$ · $P(Z<-z) = 1-\Phi(z)$</span>
+        <span class="math-line note">Percentile: look up $z$ in table body → $x = \mu + z\sigma$</span>
+      </td>
+      <td>$E(X) = \mu$<br/>$V(X) = \sigma^2$</td>
+      <td>$Z = \dfrac{X - \mu}{\sigma} \sim N(0,1)$<br/><span class="note">Table gives $\Phi(z) = P(Z \le z)$ (left-tail area)</span></td>
+    </tr>
+    <!-- Exponential -->
+    <tr>
+      <td class="dn">$X \sim \text{Exp}(\lambda)$<br/><span class="note">Exponential · Set 18</span></td>
+      <td>Time between events / waiting time / component life; memoryless property</td>
+      <td>$f(x) = \lambda e^{-\lambda x}$, $x \ge 0$<br/>$P(X \le x) = 1-e^{-\lambda x}$ · $P(X > x) = e^{-\lambda x}$</td>
+      <td>$\mu = 1/\lambda$<br/>$\sigma^2 = 1/\lambda^2$</td>
+      <td>Memoryless:<br/>$P(X{>}s{+}t \mid X{>}s) = P(X{>}t)$<br/><span class="note">"Mean life=15d" → $\lambda=1/15$</span></td>
+    </tr>
+    <!-- CLT / Sample Mean -->
+    <tr>
+      <td class="dn">Sample Mean $\bar{X}$<br/><span class="note">CLT · Sets 19–20</span></td>
+      <td>i.i.d. sample size $n$; normal pop → any $n$; any pop → $n \ge 30$</td>
+      <td>$Z = \dfrac{\bar{X} - \mu}{\sigma/\sqrt{n}} \sim N(0,1)$<br/><span class="note">Sample size for CI: $n = \left(\dfrac{z_{\alpha/2}\,\sigma}{E}\right)^2$</span></td>
+      <td>$E(\bar{X}) = \mu$<br/>$\text{SE}(\bar{X}) = \sigma/\sqrt{n}$<br/>$V(\bar{X}) = \sigma^2/n$</td>
+      <td>$\bar{X} \sim N\!\left(\mu,\,\sigma^2/n\right)$<br/><span class="note">CLT applies when $n \ge 30$</span></td>
+    </tr>
+    <!-- Sample Proportion -->
+    <tr>
+      <td class="dn">Sample Prop. $\hat{p}$<br/><span class="note">CLT · Set 21</span></td>
+      <td>$np \ge 5$ &amp; $nq \ge 5$ required for normal approx; $\hat{p} = x/n$</td>
+      <td>$Z = \dfrac{\hat{p} - p}{\sqrt{pq/n}} \sim N(0,1)$<br/><span class="note">Sample size: $n = z^2_{\alpha/2}/(4E^2)$ if $p$ unknown</span></td>
+      <td>$E(\hat{p}) = p$<br/>$\text{SE}(\hat{p}) = \sqrt{pq/n}$<br/>$V(\hat{p}) = pq/n$</td>
+      <td>$\hat{p} \sim N\!\left(p,\,pq/n\right)$<br/><span class="note">$q = 1-p$</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- ══════════ ROW 4: INFERENCE — SINGLE SAMPLE ══════════ -->
+
+<!-- S22 Single Mean -->
+<div class="card c-amber">
+  <h2>Single Mean <span class="s">Set 22 · one sample, testing/estimating μ</span></h2>
+  <div class="kw"><b>Look for:</b> "mean/average of one group", "Is μ greater/less than X?", "estimate the mean", "one sample"</div>
+  <div class="sep">Case I — σ known (any n)</div>
+  <div class="fl">$Z = \dfrac{\bar{x} - \mu}{\sigma/\sqrt{n}} \sim N(0,1)$ &nbsp;·&nbsp; CI: $\bar{x} \pm z_{\alpha/2} \cdot \dfrac{\sigma}{\sqrt{n}}$</div>
+  <div class="sep">Case II — σ unknown, n ≥ 30</div>
+  <div class="f">$Z = \dfrac{\bar{x} - \mu}{s/\sqrt{n}} \sim N(0,1)$ &nbsp;·&nbsp; CI: $\bar{x} \pm z_{\alpha/2} \cdot \dfrac{s}{\sqrt{n}}$</div>
+  <div class="sep">Case III — σ unknown, n &lt; 30, normal pop.</div>
+  <div class="f">$T = \dfrac{\bar{x} - \mu}{s/\sqrt{n}} \sim t_{n-1}$ &nbsp;·&nbsp; df $= n-1$ &nbsp;·&nbsp; CI: $\bar{x} \pm t_{\alpha/2,\,n-1} \cdot \dfrac{s}{\sqrt{n}}$</div>
+</div>
+
+<!-- S23 Single Proportion -->
+<div class="card c-teal">
+  <h2>Single Proportion <span class="s">Set 23 · $\hat{p} = x/n$</span></h2>
+  <div class="kw"><b>Look for:</b> "proportion/% who…", yes/no outcome, one group, "is the rate greater than p₀?"</div>
+  <div class="ex">"200 voters; 54% support bill. Evidence &gt;50%?" → p₀=0.5, one-tail &nbsp;|&nbsp; "80 items, 12 defective. 90% CI for defect rate." → CI, use p̂</div>
+  <div class="f">$Z = \dfrac{\hat{p} - p_0}{\sqrt{p_0 q_0/n}} \sim N(0,1)$ <span class="lbl">test → use $p_0$</span></div>
+  <div class="f">CI: $\hat{p} \pm z_{\alpha/2}\sqrt{\dfrac{\hat{p}\,\hat{q}}{n}}$ <span class="lbl">CI → use $\hat{p}$</span></div>
+  <div class="f">$n = \dfrac{z^2_{\alpha/2}\,\hat{p}\,\hat{q}}{E^2}$ <span class="lbl">[$\hat{p}=0.5$ if unknown; $n = z^2/(4E^2)$]</span></div>
+</div>
+
+<!-- S26 Paired -->
+<div class="card c-red">
+  <h2>Paired Data <span class="s">Set 26 · same subjects, two conditions</span></h2>
+  <div class="kw"><b>Look for:</b> "before &amp; after", "same subjects measured twice", "matched pairs", "each unit got both treatments"</div>
+  <div class="fl"><span class="lr">1.</span> $D_i = X_i - Y_i$ &nbsp;·&nbsp; <span class="lr">2.</span> find $\bar{d}$ and $s_D$ (1-var stats on D values)</div>
+  <div class="fl" style="font-size:5.8pt;color:#666">$(\mu_D)_0 = 0$ usually. Non-zero only if claim says "differs by k".</div>
+  <div class="sep">Case I — n ≥ 30</div>
+  <div class="f">$Z = \dfrac{\bar{d} - (\mu_D)_0}{s_D / \sqrt{n}} \sim N(0,1)$ &nbsp;·&nbsp; CI: $\bar{d} \pm z_{\alpha/2} \cdot \dfrac{s_D}{\sqrt{n}}$</div>
+  <div class="sep">Case II — n &lt; 30, differences normal</div>
+  <div class="f">$T = \dfrac{\bar{d} - (\mu_D)_0}{s_D / \sqrt{n}} \sim t_{n-1}$ &nbsp;·&nbsp; CI: $\bar{d} \pm t_{\alpha/2,\,n-1} \cdot \dfrac{s_D}{\sqrt{n}}$</div>
+</div>
+
+<!-- S27 Two Proportions -->
+<div class="card c-purple">
+  <h2>Two Proportions <span class="s">Set 27</span></h2>
+  <div class="kw"><b>Look for:</b> "compare proportions of two groups", two yes/no outcomes, "difference in rates between A and B"</div>
+  <div class="ex">"Men: 24/80 smoke. Women: 18/100 smoke. Higher rate for men?" → test (pool p̂p) &nbsp;|&nbsp; "95% CI for difference" → no pool</div>
+  <div class="fl">$\hat{p}_p = (x_1+x_2)/(n_1+n_2)$ <span class="lbl">pool for test only</span></div>
+  <div class="f">$Z = \dfrac{\hat{p}_1-\hat{p}_2}{\sqrt{\hat{p}_p\hat{q}_p\!\left(\tfrac{1}{n_1}+\tfrac{1}{n_2}\right)}} \sim N(0,1)$</div>
+  <div class="f">CI: $(\hat{p}_1-\hat{p}_2)\pm z_{\alpha/2}\!\sqrt{\dfrac{\hat{p}_1\hat{q}_1}{n_1}+\dfrac{\hat{p}_2\hat{q}_2}{n_2}}$</div>
+</div>
+
+<!-- ══════════ ROW 5: TWO MEANS + CHI-SQUARE ══════════ -->
+
+<!-- S24-25 Two Independent Means -->
+<div class="card c-blue two">
+  <h2>Two Independent Means <span class="s">Sets 24–25 · two separate groups, compare μ₁ and μ₂</span></h2>
+  <div class="kw"><b>Look for:</b> "compare means of two separate/independent groups", "do A and B differ in average?" — <b>not</b> the same people measured twice (that's paired)</div>
+  <div class="kw"><b>Choose case:</b> σ₁,σ₂ given → I &nbsp;|&nbsp; n₁≥30 &amp; n₂≥30 → II &nbsp;|&nbsp; small n, $\max(s)/\min(s) \le 1.4$ → III (pooled) &nbsp;|&nbsp; ratio &gt; 1.4 → IV (unpooled)</div>
+  <div class="sep">Case I — σ₁, σ₂ known (any n)</div>
+  <div class="fl">$Z = \dfrac{\bar{x}-\bar{y}-(\mu_1-\mu_2)_0}{\sqrt{\sigma_1^2/n_1+\sigma_2^2/n_2}} \sim N(0,1)$ &nbsp;·&nbsp; CI: $(\bar{x}-\bar{y}) \pm z_{\alpha/2}\sqrt{\sigma_1^2/n_1+\sigma_2^2/n_2}$</div>
+  <div class="sep">Case II — σ unknown, n₁≥30 &amp; n₂≥30</div>
+  <div class="fl">$Z = \dfrac{\bar{x}-\bar{y}-(\mu_1-\mu_2)_0}{\sqrt{s_1^2/n_1+s_2^2/n_2}} \sim N(0,1)$ &nbsp;·&nbsp; CI: $(\bar{x}-\bar{y}) \pm z_{\alpha/2}\sqrt{s_1^2/n_1+s_2^2/n_2}$</div>
+  <div class="inner2">
+    <div>
+      <div class="sep">Case III — small n, ratio ≤ 1.4 (Pooled T)</div>
+      <div class="f">$s_p^2 = \dfrac{(n_1-1)s_1^2+(n_2-1)s_2^2}{n_1+n_2-2}$ &nbsp;·&nbsp; df $= n_1+n_2-2$</div>
+      <div class="f">$T = \dfrac{\bar{x}-\bar{y}-(\mu_1-\mu_2)_0}{\sqrt{s_p^2(1/n_1+1/n_2)}} \sim t_{n_1+n_2-2}$</div>
+      <div class="fl">CI: $(\bar{x}-\bar{y}) \pm t_{\alpha/2,\,\nu}\sqrt{s_p^2(1/n_1+1/n_2)}$</div>
+    </div>
+    <div>
+      <div class="sep">Case IV — small n, ratio &gt; 1.4 (Unpooled/Welch T)</div>
+      <div class="f">$T = \dfrac{\bar{x}-\bar{y}-(\mu_1-\mu_2)_0}{\sqrt{s_1^2/n_1+s_2^2/n_2}} \sim t_{\nu}$</div>
+      <div class="f">$\nu = \left\lfloor\dfrac{(s_1^2/n_1+s_2^2/n_2)^2}{\tfrac{(s_1^2/n_1)^2}{n_1-1}+\tfrac{(s_2^2/n_2)^2}{n_2-1}}\right\rfloor$</div>
+      <div class="fl">CI: $(\bar{x}-\bar{y}) \pm t_{\alpha/2,\,\nu}\sqrt{s_1^2/n_1+s_2^2/n_2}$</div>
+    </div>
+  </div>
+</div>
+
+<!-- Sets 31-32: Chi-Square -->
+<div class="card c-brown two">
+  <h2>Chi-Square Tests <span class="s">Sets 31–32 · $\chi^2 = \sum(O-E)^2/E$</span></h2>
+  <div class="kw"><b>Look for:</b> "does the data follow distribution X?" (GOF) &nbsp;|&nbsp; "are two categorical variables independent/related?" (independence) &nbsp;|&nbsp; observed vs expected counts in a table</div>
+  <div class="ex">"A die rolled 180 times — is it balanced?" → GOF, k=6 categories, E=30 each &nbsp;|&nbsp; "TV hours vs gender — are they independent?" → contingency table test</div>
+  <div class="inner2">
+    <div>
+      <div class="sep">Goodness-of-Fit (GOF) — Set 31</div>
+      <div class="fl"><b>H₀:</b> data follows the specified distribution</div>
+      <div class="fl">$E_i = n \cdot p_i$ &nbsp; (expected count for category $i$)</div>
+      <div class="f">$\chi^2 = \sum_{i=1}^{k} \dfrac{(O_i - E_i)^2}{E_i} \sim \chi^2_{k-1}$</div>
+      <div class="fl">df $= k - 1$ &nbsp; ($k$ = number of categories)</div>
+      <div class="fl">Reject H₀ if $\chi^2_\text{obs} > \chi^2_{\alpha,\,k-1}$ (upper tail only)</div>
+    </div>
+    <div>
+      <div class="sep">Test of Independence — Set 32</div>
+      <div class="fl"><b>H₀:</b> the two categorical variables are independent</div>
+      <div class="f">$E_{ij} = \dfrac{(\text{row}_i \text{ total})\times(\text{col}_j \text{ total})}{n}$</div>
+      <div class="f">$\chi^2 = \sum_{i,j} \dfrac{(O_{ij} - E_{ij})^2}{E_{ij}} \sim \chi^2_{(r-1)(c-1)}$</div>
+      <div class="fl">df $= (r-1)(c-1)$ &nbsp;($r$ rows, $c$ columns)</div>
+      <div class="fl">Reject H₀ if $\chi^2_\text{obs} > \chi^2_{\alpha,\,(r-1)(c-1)}$</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ ROW 6: REGRESSION ══════════ -->
+
+<!-- S28-30 Regression -->
+<div class="card c-green full">
+  <h2>Regression &amp; Correlation <span class="s">Sets 28–30 · $\hat{y} = b_0 + b_1 x$ · always compute $s_{xy}$, $s_x^2$, $s_y^2$ first</span></h2>
+  <div class="kw"><b>Look for:</b> "predict Y from X", "linear relationship", "for each unit increase in X, Y changes by…", "correlation", "fit a line to the data"</div>
+  <div class="kw"><b>Variables:</b> <b>x</b> = predictor (independent/explanatory) &nbsp;·&nbsp; <b>y</b> = response (dependent/outcome) &nbsp;·&nbsp; <b>ŷ</b> = predicted value of y &nbsp;·&nbsp; <b>b₀</b> = y-intercept (value of y when x=0) &nbsp;·&nbsp; <b>b₁</b> = slope (change in y for each +1 unit of x) &nbsp;·&nbsp; <b>β₁</b> = true (population) slope &nbsp;·&nbsp; <b>e = y−ŷ</b> = residual (actual minus predicted, positive = above line)</div>
+  <div class="kw"><b>s<sub>xy</sub></b> = sample covariance of x &amp; y &nbsp;·&nbsp; <b>s<sub>x</sub>², s<sub>y</sub>²</b> = sample variances of x and y &nbsp;·&nbsp; <b>r</b> = sample correlation coefficient (−1 ≤ r ≤ 1; sign = direction, magnitude = strength) &nbsp;·&nbsp; <b>ρ</b> = true (population) correlation &nbsp;·&nbsp; <b>R²</b> = coefficient of determination = % of variation in y explained by x &nbsp;·&nbsp; <b>SSE</b> = sum of squared residuals &nbsp;·&nbsp; <b>s<sub>ε</sub></b> = standard error of regression (typical distance of points from the line)</div>
+  <div class="inner3" style="margin-top:2px;">
+    <div>
+      <div class="sep">Step 1 — Compute summary statistics</div>
+      <div class="f">$s_{xy} = \dfrac{\displaystyle\sum x_i y_i - \dfrac{(\sum x_i)(\sum y_i)}{n}}{n-1}$</div>
+      <div class="f">$s_x^2 = \dfrac{\sum x_i^2 - (\sum x_i)^2/n}{n-1}$ &nbsp; (same form for $s_y^2$)</div>
+      <div class="fl" style="font-size:5.8pt;color:#555">Compute $\sum x_iy_i$ by hand (multiply pairs, sum up)</div>
+    </div>
+    <div>
+      <div class="sep">Step 2 — Regression line</div>
+      <div class="fl">$b_1 = s_{xy}/s_x^2$ &nbsp;·&nbsp; $b_0 = \bar{y} - b_1\bar{x}$</div>
+      <div class="fl">$\hat{y} = b_0 + b_1 x$ &nbsp;·&nbsp; residual: $e = y - \hat{y}$</div>
+      <div class="sep">Step 3 — Correlation &amp; fit</div>
+      <div class="fl">$r = s_{xy}/(s_x \cdot s_y)$ &nbsp;·&nbsp; $R^2 = r^2$</div>
+      <div class="f">$\text{SSE} = (n-1)\!\left(s_y^2 - s_{xy}^2/s_x^2\right)$ &nbsp;·&nbsp; $s_\varepsilon = \sqrt{\text{SSE}/(n-2)}$</div>
+    </div>
+    <div>
+      <div class="sep">Step 4 — Hypothesis tests (both use $t_{n-2}$)</div>
+      <div class="f">$s_{b_1} = \dfrac{s_\varepsilon}{\sqrt{(n-1)s_x^2}}$ <span class="lbl">e.s.e. of slope $b_1$</span></div>
+      <div class="fl"><span class="lg">Test slope:</span> $T = b_1/s_{b_1} \sim t_{n-2}$ &nbsp;·&nbsp; $H_0\!:\beta_1=0$ (no relationship)</div>
+      <div class="fl"><span class="lg">Test corr:</span> $T = r\sqrt{(n-2)/(1-r^2)} \sim t_{n-2}$ &nbsp;·&nbsp; $H_0\!:\rho=0$</div>
+      <div class="fl" style="font-size:5.8pt;color:#555">Both tests are equivalent — same t_obs and same p-value.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ FOOTER ══════════ -->
+<div class="card c-navy full">
+  <div class="foot">
+    <div>
+      <b>z critical values</b><br/>
+      Two-tail: 90%→1.645 · 95%→1.96 · 99%→2.576<br/>
+      One-tail: &nbsp;90%→1.28 &nbsp;· 95%→1.645 · 99%→2.33<br/>
+      Other: 94%→1.88 · 98%→2.326 · 99.5%→2.807
+    </div>
+    <div style="border-left:1.5px solid #9fa8da;padding-left:4px;">
+      <b>p-value from z-table</b> (table gives $P(Z < z)$)<b>:</b><br/>
+      $H_1\!:\theta > $ val → p $= 1 - \Phi(z_\text{obs})$ &nbsp;<span style="color:#666;font-style:italic">upper tail</span><br/>
+      $H_1\!:\theta < $ val → p $= \Phi(z_\text{obs})$ &nbsp;<span style="color:#666;font-style:italic">lower tail</span><br/>
+      $H_1\!:\theta \neq$ val → p $= 2(1 - \Phi(|z_\text{obs}|))$ &nbsp;<span style="color:#666;font-style:italic">two-tail</span>
+    </div>
+    <div style="border-left:1.5px solid #9fa8da;padding-left:4px;">
+      <b>Bracket p-value from t-table</b> (same tail rules):<br/>
+      $t_\text{obs}=2.49$, df$=11$, one-tail:<br/>
+      $t_{0.025,11}=2.201 < 2.49 < t_{0.01,11}=2.718$<br/>
+      → $0.01 < $ p $< 0.025$<br/>
+      Two-tail: double the bracket.
+    </div>
+    <div style="border-left:1.5px solid #9fa8da;padding-left:4px;">
+      <b>Key traps:</b><br/>
+      Prop CI → use $\hat{p}$; &nbsp;test → use $p_0$<br/>
+      2-prop test → pool $\hat{p}_p$; &nbsp;CI → no pool<br/>
+      $(\mu_1-\mu_2)_0=0$ unless claim says "by $k$"<br/>
+      Before/after same subject → paired, not 2-sample<br/>
+      $\chi^2$ always upper tail only
+    </div>
+  </div>
+</div>
+
+</div>
+</body>
+</html>

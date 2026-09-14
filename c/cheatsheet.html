@@ -90,6 +90,7 @@ tr:hover td { background: #f9fafb; }
   <a href="#structs">Structs</a>
   <a href="#pointers">Pointers</a>
   <a href="#recursion">Recursion</a>
+  <a href="#sorting">Sorting</a>
   <a href="#stack-arr">Stack (array)</a>
   <a href="#stack-ll">Stack (LL)</a>
   <a href="#queue">Queue (LL)</a>
@@ -701,6 +702,84 @@ arr[i][j];                  <span class="cmt">// standard — use this</span>
 <span class="cmt">// Bit ops: &amp; AND  | OR  ^ XOR  ~ NOT  &lt;&lt; left-shift  &gt;&gt; right-shift</span></pre>
       </div>
     </div>
+  </section>
+
+  <!-- SORTING METHODS -->
+  <section id="sorting">
+    <div class="sec-title">Sorting Methods - common exam patterns</div>
+    <div class="two">
+      <div class="card">
+        <div class="card-title">Bubble sort (ascending)</div>
+<pre><span class="cmt">// Repeatedly bubble the largest value to the end of the unsorted region</span>
+<span class="kw">void</span> <span class="fn">bubbleSort</span>(<span class="kw">int</span> a[], <span class="kw">int</span> n) {
+    <span class="kw">for</span> (<span class="kw">int</span> pass = <span class="num">0</span>; pass &lt; n - <span class="num">1</span>; pass++) {
+        <span class="kw">int</span> swapped = <span class="num">0</span>;
+        <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i &lt; n - <span class="num">1</span> - pass; i++) {
+            <span class="kw">if</span> (a[i] &gt; a[i + <span class="num">1</span>]) {
+                <span class="kw">int</span> t = a[i];
+                a[i] = a[i + <span class="num">1</span>];
+                a[i + <span class="num">1</span>] = t;
+                swapped = <span class="num">1</span>;
+            }
+        }
+        <span class="kw">if</span> (!swapped) <span class="kw">break</span>;  <span class="cmt">// already sorted</span>
+    }
+}</pre>
+      </div>
+      <div class="card">
+        <div class="card-title">Selection sort (ascending)</div>
+<pre><span class="cmt">// For each position i, find the smallest item in [i..n-1] and swap into i</span>
+<span class="kw">void</span> <span class="fn">selectionSort</span>(<span class="kw">int</span> a[], <span class="kw">int</span> n) {
+    <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i &lt; n - <span class="num">1</span>; i++) {
+        <span class="kw">int</span> minIdx = i;
+        <span class="kw">for</span> (<span class="kw">int</span> j = i + <span class="num">1</span>; j &lt; n; j++) {
+            <span class="kw">if</span> (a[j] &lt; a[minIdx]) minIdx = j;
+        }
+        <span class="kw">if</span> (minIdx != i) {
+            <span class="kw">int</span> t = a[i];
+            a[i] = a[minIdx];
+            a[minIdx] = t;
+        }
+    }
+}</pre>
+      </div>
+    </div>
+
+    <div class="two">
+      <div class="card">
+        <div class="card-title">Insertion sort (ascending)</div>
+<pre><span class="cmt">// Build a sorted prefix one element at a time by shifting larger values right</span>
+<span class="kw">void</span> <span class="fn">insertionSort</span>(<span class="kw">int</span> a[], <span class="kw">int</span> n) {
+    <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">1</span>; i &lt; n; i++) {
+        <span class="kw">int</span> key = a[i];
+        <span class="kw">int</span> j = i - <span class="num">1</span>;
+
+        <span class="kw">while</span> (j &gt;= <span class="num">0</span> &amp;&amp; a[j] &gt; key) {
+            a[j + <span class="num">1</span>] = a[j];
+            j--;
+        }
+        a[j + <span class="num">1</span>] = key;
+    }
+}</pre>
+      </div>
+      <div class="card">
+        <div class="card-title">qsort from stdlib.h (ascending ints)</div>
+<pre><span class="kw">#include</span> <span class="str">&lt;stdlib.h&gt;</span>
+
+<span class="cmt">// Comparator must return: negative if a&lt;b, 0 if equal, positive if a&gt;b</span>
+<span class="kw">int</span> <span class="fn">cmpIntAsc</span>(<span class="kw">const void</span> *p1, <span class="kw">const void</span> *p2) {
+    <span class="kw">int</span> a = *(<span class="kw">const int</span> *)p1;
+    <span class="kw">int</span> b = *(<span class="kw">const int</span> *)p2;
+    <span class="kw">return</span> (a &gt; b) - (a &lt; b);
+}
+
+<span class="kw">int</span> arr[] = {<span class="num">9</span>, <span class="num">4</span>, <span class="num">1</span>, <span class="num">7</span>, <span class="num">3</span>};
+<span class="kw">int</span> n = <span class="kw">sizeof</span>(arr) / <span class="kw">sizeof</span>(arr[<span class="num">0</span>]);
+
+<span class="fn">qsort</span>(arr, n, <span class="kw">sizeof</span>(arr[<span class="num">0</span>]), cmpIntAsc);  <span class="cmt">// arr becomes: 1 3 4 7 9</span></pre>
+      </div>
+    </div>
+    <div class="tip"><strong>Quick memory:</strong> Bubble/Selection/Insertion are all <code>O(n^2)</code>; <code>qsort</code> is typically <code>O(n log n)</code>.</div>
   </section>
 
   <!-- ── STACK (ARRAY) ───────────────────────────────────── -->

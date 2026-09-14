@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Stat 254 – Sets 22–30 Formula Sheet</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$',right:'$',display:false}],throwOnError:false})"></script>
+<style>
+  @page { size: A5 landscape; margin: 2mm 3mm; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, sans-serif; font-size: 6pt; line-height: 1.2; color: #111; }
+
+  /* KaTeX inherits body size; display fractions need breathing room */
+  .katex { font-size: 1em; }
+  .f { margin: 2px 0; font-size: 6pt; line-height: 1.7; } /* taller to fit dfrac */
+  .f .lbl { font-size: 5.3pt; color: var(--mid); }
+  .fl { margin: 1px 0; font-size: 6pt; line-height: 1.25; } /* short lines, no fractions */
+
+  .grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 3px 4px; }
+  .full { grid-column: 1 / -1; }
+  .two  { grid-column: span 2; }
+
+  .card { padding: 2px 3px 2px 5px; border-left: 3px solid var(--h); background: var(--light); }
+  .card h2 {
+    font-size: 6.4pt; font-weight: bold; color: var(--h);
+    border-bottom: 0.5px solid var(--h); padding-bottom: 1px; margin-bottom: 1.5px;
+  }
+  .card h2 .s { font-weight: normal; font-size: 5.5pt; opacity: 0.7; margin-left: 3px; }
+  .when { font-size: 5.5pt; font-style: italic; color: var(--h); margin-bottom: 1px; opacity: 0.8; }
+  .kw { font-size: 5pt; color: #555; margin-bottom: 1px; line-height: 1.3; }
+  .kw b { color: var(--h); }
+  .ex { font-size: 5pt; color: #555; font-style: italic; margin: 0 0 2px; line-height: 1.3; }
+  .sep { font-size: 5.2pt; font-weight: bold; color: var(--h); margin: 2px 0 1px; border-top: 0.5px solid var(--h); padding-top: 1.5px; }
+  hr { border: none; border-top: 0.4px solid #ddd; margin: 1px 0; }
+
+  .c-amber  { --h:#c84b00; --light:#fff8f2; --mid:#e65100; }
+  .c-teal   { --h:#00695c; --light:#f0faf8; --mid:#00897b; }
+  .c-purple { --h:#6a1b9a; --light:#faf0ff; --mid:#8e24aa; }
+  .c-blue   { --h:#1255a0; --light:#f0f5ff; --mid:#1565c0; }
+  .c-red    { --h:#b71c1c; --light:#fff5f5; --mid:#c62828; }
+  .c-green  { --h:#2a6e2e; --light:#f0faf0; --mid:#388e3c; }
+  .c-navy   { --h:#1a237e; --light:#f0f2ff; --mid:#283593; }
+
+  /* Decision table — plain text, very compact */
+  .dt {
+    display: grid;
+    grid-template-columns: 1.75fr 0.9fr 2.1fr 0.45fr  1.75fr 0.9fr 2.1fr 0.45fr;
+    gap: 0.5px 3px; font-size: 5.8pt; align-items: center;
+  }
+  .dt .hd { font-weight: bold; color: #1a237e; border-bottom: 0.5px solid #9fa8da; padding-bottom: 0.5px; margin-bottom: 0.5px; }
+  .ra{color:#c84b00;} .rt{color:#00695c;} .rr{color:#b71c1c;}
+  .rb{color:#1255a0;} .rp{color:#6a1b9a;} .rg{color:#2a6e2e;}
+
+  .pill {
+    display: inline-block; border-radius: 1.5px; font-size: 5pt;
+    font-weight: bold; padding: 0 2px; color: #fff; margin-right: 1px; line-height: 1.4;
+  }
+  .pa{background:#c84b00;} .pt{background:#00695c;} .pp{background:#6a1b9a;}
+  .pb{background:#1255a0;} .pr{background:#b71c1c;} .pg{background:#2a6e2e;}
+
+  .inner2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 6px; }
+
+  .foot { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 0 5px; font-size: 5.7pt; }
+  .foot b { color: #1a237e; }
+
+  /* coloured bold labels inside math lines */
+  .la { color: #c84b00; font-weight: bold; }
+  .lt { color: #00695c; font-weight: bold; }
+  .lr { color: #b71c1c; font-weight: bold; }
+  .lb { color: #1255a0; font-weight: bold; }
+  .lp { color: #6a1b9a; font-weight: bold; }
+  .lg { color: #2a6e2e; font-weight: bold; }
+  .ln { color: #1a237e; font-weight: bold; }
+</style>
+</head>
+<body>
+<div class="grid">
+
+<!-- ── S22 Single Mean ── -->
+<div class="card c-amber">
+  <h2>Single Mean <span class="s">Set 22 · one sample, σ unknown</span></h2>
+  <div class="kw"><b>Look for:</b> "mean/average", "one group/sample", "Is the mean greater/less than X?", "estimate the mean μ"</div>
+  <div class="ex">"σ=1.4 is known for this process…" → Case I &nbsp;|&nbsp; "Survey of 50 households, s=&#36;85" → n≥30, σ unknown → Case II &nbsp;|&nbsp; "Sample of 10 patients, s=1.4" → n&lt;30 → Case III</div>
+  <div class="sep">Case I — σ known (any n)</div>
+  <div class="fl">$Z = \dfrac{\bar{x} - \mu}{\sigma/\sqrt{n}} \sim N(0,1)$ &nbsp;·&nbsp; CI: $\bar{x} \pm z_{\alpha/2} \cdot \dfrac{\sigma}{\sqrt{n}}$</div>
+  <div class="sep">Case II — σ unknown, n ≥ 30</div>
+  <div class="f">$Z = \dfrac{\bar{x} - \mu}{s/\sqrt{n}} \sim N(0,1)$ &nbsp;·&nbsp; CI: $\bar{x} \pm z_{\alpha/2} \cdot \dfrac{s}{\sqrt{n}}$</div>
+  <div class="sep">Case III — σ unknown, n &lt; 30, normal population</div>
+  <div class="f">$T = \dfrac{\bar{x} - \mu}{s/\sqrt{n}} \sim t_{n-1}$ &nbsp;·&nbsp; df $= n-1$ &nbsp;·&nbsp; CI: $\bar{x} \pm t_{\alpha/2,\,n-1} \cdot \dfrac{s}{\sqrt{n}}$</div>
+</div>
+
+<!-- ── S23 Single Proportion ── -->
+<div class="card c-teal">
+  <h2>Single Proportion <span class="s">Set 23</span></h2>
+  <div class="when">$\hat{p} = x/n$ · e.s.e.(CI) $= \sqrt{\hat{p}(1-\hat{p})/n}$</div>
+  <div class="kw"><b>Look for:</b> "proportion/% who...", "more than half...", yes/no outcome, one group, "is the rate greater than p₀?"</div>
+  <div class="ex">"200 voters; 54% support bill. Evidence &gt;50% support?" → p₀=0.5, one-tail test &nbsp;|&nbsp; "80 items, 12 defective. Estimate true defect rate with 90% CI." → CI (use p̂, not p₀)</div>
+  <div class="f">$Z = \dfrac{\hat{p} - p_0}{\sqrt{p_0(1-p_0)/n}} \sim N(0,1)$ <span class="lbl">test → use $p_0$</span></div>
+  <div class="f">CI: $\hat{p} \;\pm\; z_{\alpha/2}\sqrt{\dfrac{\hat{p}(1-\hat{p})}{n}}$</div>
+  <div class="f">$n = \dfrac{z^2_{\alpha/2}\cdot\hat{p}(1-\hat{p})}{E^2}$ <span class="lbl">[$\hat{p}=0.5$ if unknown]</span></div>
+</div>
+
+<!-- ── S26 Paired ── -->
+<div class="card c-red">
+  <h2>Paired Data <span class="s">Set 26 · same subjects, two treatments</span></h2>
+  <div class="kw"><b>Look for:</b> "before &amp; after", "same subjects measured twice", "matched pairs", "each participant received both treatments"</div>
+  <div class="ex">"10 runners timed before and after training. Did training reduce mean time?" → D = before−after &nbsp;|&nbsp; "BP measured morning &amp; evening for 8 patients. Is there a difference?" → same person = paired, not 2-sample</div>
+  <div class="fl"><span class="lr">1.</span> Compute: $D_i = X_i - Y_i$ &nbsp;<span class="lbl">(e.g. after – before)</span></div>
+  <div class="fl"><span class="lr">2.</span> Find $\bar{d}$ and $s_D$ &nbsp;<span class="lbl" style="color:#b71c1c">← calculator 1-var stats on the $D_i$ values &nbsp;($\bar{x}=\bar{d}$, $s_x = s_D$)</span></div>
+  <div class="fl"><span class="lbl">Usually $(\mu_D)_0 = 0$ ("no difference"). Non-zero only if claim says "by <em>k</em>" — e.g. "reduces by 5" → $(\mu_D)_0 = 5$.</span></div>
+  <div class="sep">Case I — n ≥ 30 (large number of pairs)</div>
+  <div class="f"><span class="lr">3.</span> $Z = \dfrac{\bar{d} - (\mu_D)_0}{s_D / \sqrt{n}} \sim N(0,1)$ &nbsp;·&nbsp; CI: $\bar{d} \pm z_{\alpha/2} \cdot \dfrac{s_D}{\sqrt{n}}$</div>
+  <div class="sep">Case II — n &lt; 30, differences are normal</div>
+  <div class="f"><span class="lr">3.</span> $T = \dfrac{\bar{d} - (\mu_D)_0}{s_D / \sqrt{n}} \sim t_{n-1}$ &nbsp;·&nbsp; CI: $\bar{d} \pm t_{\alpha/2,\,n-1} \cdot \dfrac{s_D}{\sqrt{n}}$</div>
+</div>
+
+<!-- ── S27 Two Proportions ── -->
+<div class="card c-purple">
+  <h2>Two Proportions <span class="s">Set 27</span></h2>
+  <div class="when">pool $\hat{p}_p$ for test only; unpooled ese for CI</div>
+  <div class="kw"><b>Look for:</b> "compare proportions of two groups", two yes/no outcomes, "difference in rates/percentages between A and B"</div>
+  <div class="ex">"80 men, 24 smoke; 100 women, 18 smoke. Is smoking rate higher for men?" → test (pool p̂p) &nbsp;|&nbsp; "Find 95% CI for difference in support rates." → CI (no pooling)</div>
+  <div class="fl">$\hat{p}_p = (x_1+x_2)/(n_1+n_2)$ <span class="lbl">← H-test only</span></div>
+  <div class="f">$Z = \dfrac{\hat{p}_1-\hat{p}_2}{\sqrt{\hat{p}_p(1-\hat{p}_p)\!\left(\tfrac{1}{n_1}+\tfrac{1}{n_2}\right)}} \sim N(0,1)$</div>
+  <div class="f">CI: $(\hat{p}_1-\hat{p}_2)\pm z_{\alpha/2}\!\sqrt{\dfrac{\hat{p}_1(1-\hat{p}_1)}{n_1}+\dfrac{\hat{p}_2(1-\hat{p}_2)}{n_2}}$</div>
+</div>
+
+<!-- ── S24-25 Two Indep Means ── -->
+<div class="card c-blue two">
+  <h2>Two Independent Means <span class="s">Sets 24–25</span></h2>
+  <div class="kw"><b>Look for:</b> "compare means of two separate groups", "do A and B differ in average?", "two independent samples" — <b>not</b> the same people measured twice</div>
+  <div class="ex">σ₁,σ₂ given → Case I &nbsp;|&nbsp; n₁=50,n₂=45, σ unknown → Case II &nbsp;|&nbsp; small n, s ratio ≤1.4 → Case III &nbsp;|&nbsp; s ratio &gt;1.4 → Case IV</div>
+  <div class="sep">Case I — σ₁,σ₂ known (any n)</div>
+  <div class="fl">$Z = \dfrac{\bar{x}-\bar{y}-(\mu_1-\mu_2)_0}{\sqrt{\sigma_1^2/n_1+\sigma_2^2/n_2}} \sim N(0,1)$ &nbsp;·&nbsp; CI: $(\bar{x}-\bar{y}) \pm z_{\alpha/2}\sqrt{\sigma_1^2/n_1+\sigma_2^2/n_2}$</div>
+  <div class="sep">Case II — σ unknown, n₁≥30 &amp; n₂≥30</div>
+  <div class="fl">$Z = \dfrac{\bar{x}-\bar{y}-(\mu_1-\mu_2)_0}{\sqrt{s_1^2/n_1+s_2^2/n_2}} \sim N(0,1)$ &nbsp;·&nbsp; CI: $(\bar{x}-\bar{y}) \pm z_{\alpha/2}\sqrt{s_1^2/n_1+s_2^2/n_2}$</div>
+  <div class="inner2">
+    <div>
+      <div class="sep">Case III — small n, ratio ≤ 1.4 (equal var, Pooled T)</div>
+      <div class="f">$s_p^2 = \dfrac{(n_1-1)s_1^2+(n_2-1)s_2^2}{n_1+n_2-2}$</div>
+      <div class="f">$T = \dfrac{\bar{x}-\bar{y}-(\mu_1-\mu_2)_0}{\sqrt{s_p^2\!\left(\tfrac{1}{n_1}+\tfrac{1}{n_2}\right)}} \sim t_{n_1+n_2-2}$</div>
+      <div class="f">CI: $(\bar{x}-\bar{y}) \pm t_{\alpha/2,\nu}\sqrt{s_p^2\!\left(\tfrac{1}{n_1}+\tfrac{1}{n_2}\right)}$</div>
+    </div>
+    <div>
+      <div class="sep">Case IV — small n, ratio &gt; 1.4 (unequal var, Unpooled T)</div>
+      <div class="f">$T = \dfrac{\bar{x}-\bar{y}-(\mu_1-\mu_2)_0}{\sqrt{s_1^2/n_1+s_2^2/n_2}} \sim t_{\nu}$</div>
+      <div class="f">$\nu = \left\lfloor\dfrac{(s_1^2/n_1+s_2^2/n_2)^2}{\tfrac{(s_1^2/n_1)^2}{n_1-1}+\tfrac{(s_2^2/n_2)^2}{n_2-1}}\right\rfloor$</div>
+      <div class="f">CI: $(\bar{x}-\bar{y}) \pm t_{\alpha/2,\nu}\sqrt{s_1^2/n_1+s_2^2/n_2}$</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── S28-30 Regression ── -->
+<div class="card c-green two">
+  <h2>Regression &amp; Correlation <span class="s">Sets 28–30 · $\hat{Y} = b_0 + b_1 x$ · compute $s_{xy}$, $s_x^2$, $s_y^2$ first</span></h2>
+  <div class="kw"><b>Look for:</b> "predict Y from X", "linear relationship between X and Y", "for each unit increase in X, Y changes by...", "correlation"</div>
+  <div class="ex">"Hours studied (x) vs exam score (y). Find regression line; test if x is a significant predictor." · "Interpret b₁: each extra hour → score ↑ by b₁ pts" · "Predict score when x=6."</div>
+  <div class="kw"><b>Variables:</b> <b>x</b> = predictor (independent/explanatory) · <b>y</b> = response (dependent/outcome) · <b>ŷ</b> = predicted y · <b>b₀</b> = y-intercept (y when x=0) · <b>b₁</b> = slope (change in y per +1 x) · <b>β₁</b> = true slope · <b>e = y−ŷ</b> = residual (actual − predicted)</div>
+  <div class="kw"><b>s<sub>xy</sub></b> = sample covariance of x &amp; y · <b>s<sub>x</sub>², s<sub>y</sub>²</b> = sample variances · <b>r</b> = correlation (−1 ≤ r ≤ 1, strength &amp; direction) · <b>ρ</b> = true correlation · <b>R²</b> = % of variation in y explained by x · <b>SSE</b> = sum of squared residuals · <b>s<sub>ε</sub></b> = std error of regression (avg distance from line)</div>
+  <div class="inner2">
+    <div>
+      <div class="f">$s_{xy} = \dfrac{\displaystyle\sum x_i y_i - \dfrac{(\sum x_i)(\sum y_i)}{n}}{n-1}$<span class="lbl"> compute $\sum x_i y_i$ by hand</span></div>
+      <div class="f">$s_x^2 = \dfrac{\sum x_i^2 - (\sum x_i)^2/n}{n-1}$ &nbsp; same for $s_y^2$</div>
+      <div class="fl">$b_1 = s_{xy}/s_x^2$ &nbsp;·&nbsp; $b_0 = \bar{y} - b_1\bar{x}$ &nbsp;·&nbsp; residual: $e = y - \hat{y}$</div>
+      <div class="f">$\text{SSE} = (n-1)\!\left(s_y^2 - \dfrac{s_{xy}^2}{s_x^2}\right)$ &nbsp;·&nbsp; $s_\varepsilon = \sqrt{\dfrac{\text{SSE}}{n-2}}$</div>
+    </div>
+    <div>
+      <div class="fl">$r = s_{xy}/(s_x\!\cdot\! s_y)$ &nbsp;·&nbsp; $R^2 = r^2$</div>
+      <div class="f">$s_{b_1} = \dfrac{s_\varepsilon}{\sqrt{(n-1)s_x^2}}$ <span class="lbl">e.s.e. of $b_1$</span></div>
+      <div class="fl"><span class="lg">T (slope):</span> $T = b_1/s_{b_1} \sim t_{n-2}$ · $H_0\!:\beta_1=0$ vs $H_1\!:\beta_1\neq 0$</div>
+      <div class="fl"><span class="lg">T (corr):</span> $T = r\sqrt{(n-2)/(1-r^2)} \sim t_{n-2}$ · $H_0\!:\rho=0$</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<div class="card c-navy full">
+  <div class="foot">
+    <div>
+      <b>Critical values (c.v.):</b><br/>
+      Two-tail: 90%→1.645 · 95%→1.96 · 99%→2.576<br/>
+      One-tail: &nbsp;90%→1.28 &nbsp;· 95%→1.645 · 99%→2.33
+    </div>
+    <div style="border-left:1.5px solid #9fa8da;padding-left:4px;">
+      <b>p-value from z-table</b> <span style="font-style:italic;color:#666">(table gives $P(Z < z)$)</span><b>:</b><br/>
+      $H_1\!:\theta >$ val &nbsp;→&nbsp; p $= 1 -$ table$(z_\text{obs})$ &nbsp;<span style="color:#666;font-style:italic">upper tail</span><br/>
+      $H_1\!:\theta <$ val &nbsp;→&nbsp; p $=$ table$(z_\text{obs})$ &nbsp;<span style="color:#666;font-style:italic">lower tail</span><br/>
+      $H_1\!:\theta \neq$ val &nbsp;→&nbsp; p $= 2(1-$ table$(|z_\text{obs}|))$ &nbsp;<span style="color:#666;font-style:italic">two-tail</span>
+    </div>
+    <div style="border-left:1.5px solid #9fa8da;padding-left:4px;">
+      <b>p-value from t-table</b> (same tail rules, bracket $t_\text{obs}$ by df):<br/>
+      e.g. $t_\text{obs}=2.49$, df$=11$:<br/>
+      $t_{0.025,11}=2.201 < 2.49 < t_{0.01,11}=2.718$<br/>
+      → $0.01 <$ p $< 0.025$ (one-tail)
+    </div>
+    <div style="border-left:1.5px solid #9fa8da;padding-left:4px;">
+      <b>Traps:</b><br/>
+      CI prop → $\hat{p}$; &nbsp;test → $p_0$<br/>
+      2-prop test → pool $\hat{p}_p$; &nbsp;CI → no pool<br/>
+      $(\mu_1-\mu_2)_0=0$ unless claim says "by $k$"<br/>
+      Before/after → paired, not 2-sample
+    </div>
+  </div>
+</div>
+
+</div>
+</body>
+</html>

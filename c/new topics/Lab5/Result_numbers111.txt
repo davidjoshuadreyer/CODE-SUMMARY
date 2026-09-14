@@ -1,0 +1,1 @@
+111 Values, Mean = 52.4038, Sample Standard Deviation = 29.0565

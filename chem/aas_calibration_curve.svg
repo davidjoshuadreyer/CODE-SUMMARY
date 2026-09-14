@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="540" height="380" font-family="Georgia, serif">
+
+  <!-- Title -->
+  <text x="280" y="18" text-anchor="middle" font-size="12.5" font-weight="bold">Absorbance vs. [Cu²⁺] Calibration Curve</text>
+
+  <!-- Plot area background -->
+  <rect x="80" y="30" width="400" height="280" fill="#fff" stroke="#bbb" stroke-width="1"/>
+
+  <!-- Grid lines (horizontal) -->
+  <line x1="80" y1="275" x2="480" y2="275" stroke="#e0e0e0" stroke-width="0.7"/>
+  <line x1="80" y1="240" x2="480" y2="240" stroke="#e0e0e0" stroke-width="0.7"/>
+  <line x1="80" y1="205" x2="480" y2="205" stroke="#e0e0e0" stroke-width="0.7"/>
+  <line x1="80" y1="170" x2="480" y2="170" stroke="#e0e0e0" stroke-width="0.7"/>
+  <line x1="80" y1="135" x2="480" y2="135" stroke="#e0e0e0" stroke-width="0.7"/>
+  <line x1="80" y1="100" x2="480" y2="100" stroke="#e0e0e0" stroke-width="0.7"/>
+  <line x1="80" y1="65"  x2="480" y2="65"  stroke="#e0e0e0" stroke-width="0.7"/>
+  <line x1="80" y1="30"  x2="480" y2="30"  stroke="#e0e0e0" stroke-width="0.7"/>
+
+  <!-- Grid lines (vertical) -->
+  <line x1="147" y1="30" x2="147" y2="310" stroke="#e0e0e0" stroke-width="0.7"/>
+  <line x1="213" y1="30" x2="213" y2="310" stroke="#e0e0e0" stroke-width="0.7"/>
+  <line x1="280" y1="30" x2="280" y2="310" stroke="#e0e0e0" stroke-width="0.7"/>
+  <line x1="347" y1="30" x2="347" y2="310" stroke="#e0e0e0" stroke-width="0.7"/>
+  <line x1="413" y1="30" x2="413" y2="310" stroke="#e0e0e0" stroke-width="0.7"/>
+  <line x1="480" y1="30" x2="480" y2="310" stroke="#e0e0e0" stroke-width="0.7"/>
+
+  <!-- Trendline: A = 0.0532*C  (y_scale = 280/0.16 = 1750 px per absorbance unit) -->
+  <!-- origin_svg = (80, 310); plot height = 280 (from y=30 to y=310) -->
+  <!-- At C=0: y=310; At C=3: A=0.1596, y=310-0.1596*1750=310-279.3=30.7 -->
+  <line x1="80" y1="310" x2="480" y2="30.7" stroke="#888" stroke-width="1.2" stroke-dasharray="5,3"/>
+
+  <!-- Data points -->
+  <!-- origin (0, 0) → svg (80, 310) -->
+  <circle cx="80"    cy="310"    r="4.5" fill="#222" stroke="#222" stroke-width="1"/>
+  <!-- S1 (0.252, 0.014) → x=80+0.252*133.33=113.6  y=310-0.014*1750=310-24.5=285.5 -->
+  <circle cx="113.6" cy="285.5"  r="4.5" fill="#222" stroke="#222" stroke-width="1"/>
+  <!-- S2 (0.504, 0.026) → x=80+0.504*133.33=147.2  y=310-0.026*1750=310-45.5=264.5 -->
+  <circle cx="147.2" cy="264.5"  r="4.5" fill="#222" stroke="#222" stroke-width="1"/>
+  <!-- S3 (1.26, 0.067)  → x=80+1.26*133.33=248     y=310-0.067*1750=310-117.25=192.75 -->
+  <circle cx="248"   cy="192.75" r="4.5" fill="#222" stroke="#222" stroke-width="1"/>
+  <!-- S4 (2.52, 0.134)  → x=80+2.52*133.33=416     y=310-0.134*1750=310-234.5=75.5 -->
+  <circle cx="416"   cy="75.5"   r="4.5" fill="#222" stroke="#222" stroke-width="1"/>
+
+  <!-- Point labels -->
+  <text x="119" y="280"  font-size="10" fill="#333" font-style="italic">S1 (0.252, 0.014)</text>
+  <text x="153" y="259"  font-size="10" fill="#333" font-style="italic">S2 (0.504, 0.026)</text>
+  <text x="254" y="188"  font-size="10" fill="#333" font-style="italic">S3 (1.26, 0.067)</text>
+  <text x="358" y="70"   font-size="10" fill="#333" font-style="italic">S4 (2.52, 0.134)</text>
+
+  <!-- Axes -->
+  <line x1="80" y1="310" x2="480" y2="310" stroke="#333" stroke-width="1.5"/>
+  <line x1="80" y1="310" x2="80"  y2="30"  stroke="#333" stroke-width="1.5"/>
+
+  <!-- X-axis ticks and labels -->
+  <line x1="80"  y1="310" x2="80"  y2="317" stroke="#333" stroke-width="1"/>
+  <text x="80"   y="330" text-anchor="middle" font-size="10">0</text>
+  <line x1="147" y1="310" x2="147" y2="317" stroke="#333" stroke-width="1"/>
+  <text x="147"  y="330" text-anchor="middle" font-size="10">0.5</text>
+  <line x1="213" y1="310" x2="213" y2="317" stroke="#333" stroke-width="1"/>
+  <text x="213"  y="330" text-anchor="middle" font-size="10">1.0</text>
+  <line x1="280" y1="310" x2="280" y2="317" stroke="#333" stroke-width="1"/>
+  <text x="280"  y="330" text-anchor="middle" font-size="10">1.5</text>
+  <line x1="347" y1="310" x2="347" y2="317" stroke="#333" stroke-width="1"/>
+  <text x="347"  y="330" text-anchor="middle" font-size="10">2.0</text>
+  <line x1="413" y1="310" x2="413" y2="317" stroke="#333" stroke-width="1"/>
+  <text x="413"  y="330" text-anchor="middle" font-size="10">2.5</text>
+  <line x1="480" y1="310" x2="480" y2="317" stroke="#333" stroke-width="1"/>
+  <text x="480"  y="330" text-anchor="middle" font-size="10">3.0</text>
+
+  <!-- X-axis title -->
+  <text x="280" y="352" text-anchor="middle" font-size="12" font-style="italic">[Cu²⁺] (mg/L)</text>
+
+  <!-- Y-axis ticks and labels -->
+  <line x1="80" y1="310" x2="73" y2="310" stroke="#333" stroke-width="1"/>
+  <text x="69"  y="314" text-anchor="end" font-size="10">0</text>
+  <line x1="80" y1="275" x2="73" y2="275" stroke="#333" stroke-width="1"/>
+  <text x="69"  y="279" text-anchor="end" font-size="10">0.02</text>
+  <line x1="80" y1="240" x2="73" y2="240" stroke="#333" stroke-width="1"/>
+  <text x="69"  y="244" text-anchor="end" font-size="10">0.04</text>
+  <line x1="80" y1="205" x2="73" y2="205" stroke="#333" stroke-width="1"/>
+  <text x="69"  y="209" text-anchor="end" font-size="10">0.06</text>
+  <line x1="80" y1="170" x2="73" y2="170" stroke="#333" stroke-width="1"/>
+  <text x="69"  y="174" text-anchor="end" font-size="10">0.08</text>
+  <line x1="80" y1="135" x2="73" y2="135" stroke="#333" stroke-width="1"/>
+  <text x="69"  y="139" text-anchor="end" font-size="10">0.10</text>
+  <line x1="80" y1="100" x2="73" y2="100" stroke="#333" stroke-width="1"/>
+  <text x="69"  y="104" text-anchor="end" font-size="10">0.12</text>
+  <line x1="80" y1="65"  x2="73" y2="65"  stroke="#333" stroke-width="1"/>
+  <text x="69"  y="69"  text-anchor="end" font-size="10">0.14</text>
+  <line x1="80" y1="30"  x2="73" y2="30"  stroke="#333" stroke-width="1"/>
+  <text x="69"  y="34"  text-anchor="end" font-size="10">0.16</text>
+
+  <!-- Y-axis title -->
+  <text x="16" y="170" text-anchor="middle" font-size="12" font-style="italic"
+        transform="rotate(-90, 16, 170)">Absorbance</text>
+
+
+</svg>

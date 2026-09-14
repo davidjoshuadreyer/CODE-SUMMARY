@@ -6,7 +6,7 @@
 | **Students** | David Dreyer (C0561419), Dylan Fraser (C0558267) |
 | **Lab Section** | 2026W CHEM-150-X01AB |
 | **Date Performed** | March 23, 2026 |
-| **Unknown #** | [unknown number] |
+| **Unknown Number** | 379 |
 
 ## Introduction
 
@@ -28,7 +28,7 @@ AgCl initially forms as a colloid — particles too small to be caught by a filt
 
 ## Objective
 
-Determine the mass percentage of chloride (Cl⁻) in an unknown sample using gravimetric precipitation as AgCl, and report the average result from two independent trials.
+Determine the mass percentage of chloride (Cl⁻) in unknown sample 379 using gravimetric precipitation as AgCl, and report the average result from two independent trials.
 
 ---
 
@@ -40,7 +40,7 @@ For each trial, approximately 0.4 g of the unknown was weighed precisely into a 
 
 A pre-weighed filter paper was prepared. The supernatant was decanted through the filter, the precipitate washed into the filter with small amounts of 0.03 M HNO₃, then rinsed with approximately 15 mL of deionised water. The filter was spread on a watch glass and dried overnight in the oven. The dried filter and precipitate were weighed the following day.
 
-Trial 2 was started while Trial 1 was aging in the dark cupboard.
+Both trials were run simultaneously — Trial 1 by Dylan Fraser and Trial 2 by David Dreyer. Both beakers were placed in the dark cupboard at the same time and aged for 22 minutes.
 
 ---
 
@@ -48,65 +48,65 @@ Trial 2 was started while Trial 1 was aging in the dark cupboard.
 
 **Table 1.** Raw measurements for both trials.
 
-| Trial | Unknown mass (g) | Filter mass, initial (g) | Filter mass, final (g) | Mass of AgCl (g) |
-|:---:|:---:|:---:|:---:|:---:|
-| 1 | | | | |
-| 2 | | | | |
+| Measurement | Trial 1 | Trial 2 |
+|:---|:---:|:---:|
+| Mass of unknown (g) | 0.4160 | 0.4170 |
+| Initial mass of filter paper (g) | 0.4690 | 0.7280 |
+| Final mass of filter paper + AgCl (g) | 1.4050 | 1.6630 |
+| **Mass of AgCl (g)** | **0.9360** | **0.9350** |
 
 ---
 
 ## Results
 
-The mass of AgCl precipitate for each trial is:
-
-$$m_{\text{AgCl}} = m_{\text{filter, final}} - m_{\text{filter, initial}}$$
-
 Since Ag⁺ and Cl⁻ react in a 1:1 ratio, moles of AgCl equals moles of Cl⁻:
 
-$$n_{\text{Cl}^-} = n_{\text{AgCl}} = \frac{m_{\text{AgCl}}}{M_{\text{AgCl}}} = \frac{m_{\text{AgCl}}}{143.32\ \text{g/mol}}$$
+$$n_{\text{Cl}^-} = \frac{m_{\text{AgCl}}}{M_{\text{AgCl}}} = \frac{m_{\text{AgCl}}}{143.32\ \text{g/mol}}$$
 
-The mass of Cl⁻ in the sample:
-
-$$m_{\text{Cl}^-} = n_{\text{Cl}^-} \times 35.45\ \text{g/mol}$$
-
-The percentage of Cl⁻ in the unknown:
-
-$$\%\ \text{Cl}^- = \frac{m_{\text{Cl}^-}}{m_{\text{unknown}}} \times 100\%$$
-
-Combining into one expression:
+The percentage of Cl⁻ in the unknown combines these steps:
 
 $$\%\ \text{Cl}^- = \frac{m_{\text{AgCl}} \times 35.45}{143.32 \times m_{\text{unknown}}} \times 100\%$$
 
+**Trial 1:**
+
+$$\%\ \text{Cl}^- = \frac{0.9360 \times 35.45}{143.32 \times 0.4160} \times 100\% = 55.65\%$$
+
+**Trial 2:**
+
+$$\%\ \text{Cl}^- = \frac{0.9350 \times 35.45}{143.32 \times 0.4170} \times 100\% = 55.46\%$$
+
 **Table 2.** Calculated results for both trials.
 
-| Trial | Mass of AgCl (g) | Moles of Cl⁻ (mol) | Mass of Cl⁻ (g) | % Cl⁻ |
-|:---:|:---:|:---:|:---:|:---:|
-| 1 | | | | |
-| 2 | | | | |
+| | Trial 1 | Trial 2 |
+|:---|:---:|:---:|
+| Mass of AgCl (g) | 0.9360 | 0.9350 |
+| Moles of Cl⁻ (mol) | 0.006531 | 0.006524 |
+| Mass of Cl⁻ (g) | 0.2315 | 0.2313 |
+| % Cl⁻ | 55.65% | 55.46% |
 
 **Average % Cl⁻:**
 
-$$\overline{\%\ \text{Cl}^-} = \frac{\text{Trial 1} + \text{Trial 2}}{2} = $$
+$$\overline{\%\ \text{Cl}^-} = \frac{55.65 + 55.46}{2} = \boxed{55.56\%}$$
 
 ---
 
 ## Discussion
 
-**Ensuring complete precipitation.** AgNO₃ was added in excess beyond the point where precipitation stopped. According to the $K_{sp}$ expression, a large excess of Ag⁺ drives [Cl⁻] extremely low — on the order of $10^{-8}$ mol/L — so the amount of Cl⁻ left in solution is negligible compared to the amount precipitated.
+**Consistency between trials.** The two trials gave 55.65% and 55.46%, a difference of only 0.19 percentage points. This is excellent reproducibility for a manual gravimetric procedure and indicates that the precipitation was complete and consistent in both cases.
 
-**Coagulation.** AgCl initially forms a colloid that passes through filter paper. Heating and the presence of HNO₃ as electrolyte neutralise the surface charges on the colloidal particles, allowing them to coalesce into filterable clumps. Simmering until the solution cleared was used as the visual indicator that coagulation was complete.
+**Ensuring complete precipitation.** AgNO₃ was added beyond the point where precipitation stopped and confirmed with a few additional drops. With Ag⁺ in large excess, the $K_{sp}$ expression requires [Cl⁻] to fall to approximately $10^{-8}$ mol/L, meaning the amount of Cl⁻ remaining in solution is negligible.
 
-**Light sensitivity.** The mixture was kept in a dark cupboard during aging and handled quickly during filtering. Any purple or grey discolouration of the precipitate would indicate partial reduction of AgCl to Ag metal, which would add mass and give a high result for % Cl⁻.
+**Coagulation.** AgCl initially forms a colloid that passes through filter paper. Heating and the presence of HNO₃ neutralise the surface charges on the colloidal particles, allowing them to coalesce into filterable clumps. The solution clearing during simmering served as the visual indicator that coagulation was complete.
 
-**Agreement between trials.** [Comment on how close Trial 1 and Trial 2 results are. If within ~1%, the method is working well. If they differ more, consider whether a transfer loss or light exposure affected one trial.]
+**Light sensitivity.** The mixture was kept in a dark cupboard during aging and handled quickly during filtering. Neither precipitate showed significant purple or grey discolouration, suggesting light exposure was not a major source of error in either trial.
 
-**Sources of error.** The main sources of error are: incomplete transfer of precipitate from the beaker to the filter (leads to a low result), co-precipitation of AgNO₃ trapped in the colloid (leads to a high result), and light exposure darkening the precipitate (leads to a high result). Using the rubber policeman only as a last resort and minimising light exposure reduces these effects.
+**Sources of error.** The most likely sources of error are incomplete transfer of precipitate from the beaker to the filter (produces a low result) and co-precipitation of AgNO₃ trapped in the colloid during coagulation (produces a high result). Using minimal HNO₃ for washing and avoiding the rubber policeman where possible reduced these effects.
 
 ---
 
 ## Conclusion
 
-The percentage of Cl⁻ in the unknown (# [unknown number]) was determined by precipitating it as AgCl and weighing the dried precipitate. Trial 1 gave [  ]% and Trial 2 gave [  ]%, for an average of **[  ]% Cl⁻**. The two trials agreed to within [  ]%, indicating [good/acceptable] reproducibility.
+The percentage of Cl⁻ in unknown sample 379 was determined by precipitating it as AgCl and weighing the dried precipitate. Trial 1 gave 55.65% and Trial 2 gave 55.46%, for an average of **55.56% Cl⁻**. The two trials agreed to within 0.19 percentage points, indicating good reproducibility.
 
 ---
 

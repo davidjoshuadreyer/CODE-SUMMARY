@@ -1,0 +1,24 @@
+void *enqueue (Queue *queuePtr, void *newItem){
+    
+    //ListNode newNode = {NULL, newItem}; // This will be a local variable 
+    ListNode * pNewNode;
+    pNewNode = (ListNode *) malloc(sizeof(ListNode));
+ 
+    if (pNewNode != NULL){ //memory obtained
+        pNewNode->next = NULL;
+        pNewNode->dataPtr = newItem;
+
+        if (queuePtr->size != 0){
+            queuePtr->rear->next = pNewNode;
+            queuePtr->rear = pNewNode;
+        }else{
+            queuePtr->front = pNewNode;
+            queuePtr->rear = pNewNode;  
+        }
+        (queuePtr->size)++;
+
+        return newItem;
+    }else{
+        return NULL;
+    }
+}

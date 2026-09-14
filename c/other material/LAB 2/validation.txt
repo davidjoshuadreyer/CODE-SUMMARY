@@ -1,0 +1,13 @@
+Validation notes
+
+- Input: 98.6F
+  Output: 310.150K = 37.000C = 98.600F
+  Checked using F->C = (F-32)*5/9 and K = C+273.15.
+
+- Input: -30C
+  Output: 243.150K = -30.000C = -22.000F
+  Checked using C->F = C*9/5+32 and K = C+273.15.
+
+- Input: 53G
+  Output: Unknown temperature type 'G'
+  Verified invalid type handling.
