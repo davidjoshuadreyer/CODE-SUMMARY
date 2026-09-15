@@ -1,6 +1,6 @@
 ﻿# Tesselate study workspace
 
-Open `index.html` through your usual local static server or the deployed site. The dashboard uses plain HTML, CSS, and JavaScript; there is no build step or new runtime package dependency.
+Open `index.html` through your usual local static server or the deployed site. The dashboard uses plain HTML, CSS, and JavaScript; there is no build step. Optional online storage uses the pinned Supabase browser SDK loaded from jsDelivr.
 
 ## Everyday use
 
@@ -15,17 +15,31 @@ The four existing courses are grouped under Winter 2026 based on their existing 
 
 ## Storage and backups
 
-New courses, notes, reference metadata, and uploaded file bytes live in IndexedDB in the current browser and site origin. They are **not automatically published, synced to Supabase, or committed to this repository**. Localhost and the deployed domain have separate workspaces. Existing quiz progress, account features, and World pages retain their original storage and code.
+New courses, notes, reference metadata, and uploaded file bytes always save locally in IndexedDB. To also store them privately online, open **Online storage**, sign in with Google, and select **Save this device online**. This uploads existing originals and enables automatic online saves for subsequent edits and uploads while that account is signed in. The status changes to **Saved online** only after both files and the workspace restore point are saved. Failed uploads leave the local copy intact; use **Save this device online** to retry. A reconnection also retries pending changes.
+
+On another device, sign in and **Load** an online restore point. Loading replaces the local workspace, downloads and verifies originals, and retains a local recovery copy accessible through **Recover workspace from before last online restore**. Loading is explicit, not a live collaborative merge: use the latest restore point before working on another device. Each save creates a separate restore point rather than overwriting another device's work. The panel lists the 20 newest versions. Older restore points and their original files remain stored until an administrator removes them. Identical original bytes are deduplicated within an account.
+
+Without signing in and making the first online save, the workspace remains local. Localhost and the deployed domain have separate local copies. No material is automatically published or committed to the repository. Quiz progress and World pages retain their existing code and tables; Google sign-in shares the site's existing Supabase session.
+
+### One-time Supabase setup
+
+1. Open https://supabase.com/dashboard/project/xsscvdooviztaxzuwbmr/sql/new and run **dev/supabase_workspace_storage.sql**. It creates the private `workspace-references` bucket and the `tesselate_workspace_snapshots` table, with authenticated users restricted to their own rows and file paths.
+2. Under **Authentication → URL Configuration → Redirect URLs**, allow `https://tesselate.ca/index.html` (and the exact localhost URL if testing locally).
+3. Sign in on the site, save a small reference online, then load it in a second browser signed in to the same account. Confirm that a different account cannot see the restore point or download its files. The app's public key cannot perform the initial schema/policy setup; no service key belongs in the browser.
+
+Cloud adapters and UI are covered by mocked tests, including failure/retry, account path checks, integrity verification, automatic saves, and recovery. Live storage and RLS verification must be completed after running this SQL. Storage and bandwidth use your existing Supabase plan; this change does not upgrade it.
 
 Use **Export backup** regularly, especially before clearing browser data or changing devices. It downloads JSON containing workspace metadata and every uploaded original. Built-in repository files are linked, not duplicated in the backup. **Restore backup** validates the file and offers a merge: matching IDs are updated, unrelated entries remain, and uploaded bytes are restored. Keep backups private if your source files are private. Large backups require enough browser memory to encode/decode their files.
 
-Uploads are limited to 50 MB per file and 100 MB per batch; the browser's available storage is the total limit. Quota failures leave the prior state intact. Stale tabs cannot overwrite changes saved by another tab; reload the stale tab before saving.
+Uploads are limited to 50 MB per file and 100 MB per batch; both browser capacity and your Supabase plan apply. Quota failures leave the prior local state intact. Stale tabs cannot overwrite changes saved by another tab; reload the stale tab before saving.
 
 ## Updating the public catalog
 
 - `index.html`: accessible application shell and navigation.
 - `assets/workspace/workspace.css`: responsive light/dark styling.
 - `assets/workspace/workspace.js`: routing, forms, source relationships, IndexedDB transactions, and backup handling.
+- `assets/workspace/cloud.js`: Google sign-in, private original uploads, and verified online restore points.
+- `dev/supabase_workspace_storage.sql`: online table, private bucket, and access policies.
 - `assets/workspace/catalog.js`: generated public course/page/reference catalog.
 - `dev/build-workspace-catalog.cjs`: course definitions and filesystem indexing.
 
@@ -47,6 +61,7 @@ Install Playwright separately if it is not available; the site itself does not n
 npm install --prefix "$env:TEMP\tesselate-browser-check" --no-audit --no-fund playwright
 $env:NODE_PATH = "$env:TEMP\tesselate-browser-check\node_modules"
 node dev/workspace-smoke.cjs
+node dev/workspace-cloud-test.cjs
 ```
 
 This uses an installed Chrome browser. Screenshots and a test backup are written under the system temporary directory in `tesselate-workspace-check`.

@@ -64,7 +64,7 @@ const check = (label) => console.log('PASS '+label);
   await firstRow.locator('.badge.working').waitFor();assert.equal(await firstRow.locator('.badge').innerText(),'In progress');
   await firstRow.locator('[data-action=edit-reference]').click();await page.locator('[name=pageIds]').check();await page.locator('dialog [type=submit]').click();await page.locator('dialog').waitFor({state:'hidden'});
   check('Notes, safe text rendering, source linking, and reversible conversion status');
-  await page.locator('[data-nav=references]').click();await page.locator('#status-filter').selectOption('converted');
+  await page.locator('[data-nav=references]').click();await page.getByRole('heading',{name:'Reference library',exact:true}).waitFor();await page.locator('#status-filter').selectOption('converted');
   assert.equal(await page.locator('.library-row').count(),1);
   await page.locator('#reference-search').fill('no match');assert.equal(await page.locator('.library-row').count(),0);
   await page.locator('#reference-search').fill('week-1');assert.equal(await page.locator('.library-row').count(),1);
@@ -119,6 +119,29 @@ const check = (label) => console.log('PASS '+label);
   await page.setViewportSize({width:390,height:844});await page.goto(url+'/#overview');await page.locator('h1').waitFor();
   await page.screenshot({path:path.join(artifacts,'mobile.png'),fullPage:true});
   assert.deepEqual(errors,[]);check('Responsive layouts at 390, 760, 1024 px and no browser exceptions');
+  // Exercise cloud controls without sending test files to the live project.
+  const cloudContext=await browser.newContext();
+  await cloudContext.route('**/assets/workspace/cloud.js',route=>route.fulfill({contentType:'text/javascript',body:`
+   window.__cloud={versions:[],fail:false};
+   window.TesselateCloud={user:{id:'test-owner',email:'test@example.test'},async init(){return this.user;},async signOut(){this.user=null;},async signIn(){},
+    async list(){return __cloud.versions.map(v=>({id:v.id,created_at:v.savedAt}));},
+    async save(state,files){if(__cloud.fail)throw Error('Test connection failure');const v={id:crypto.randomUUID(),state:structuredClone(state),files:[...files].map(([id,blob])=>({id,blob})),owner:this.user.id,savedAt:new Date().toISOString()};__cloud.versions.push(v);return v;},
+    async load(id){return structuredClone(__cloud.versions.find(v=>v.id===id));}}
+  `}));
+  const cp=await cloudContext.newPage();await cp.goto(url);await cp.locator('h1').waitFor();await cp.locator('#cloud-button').click();
+  await cp.locator('[data-action=cloud-save]').click();await cp.locator('#online-versions [data-action=cloud-load]').waitFor();
+  await cp.getByRole('button',{name:'Done',exact:true}).click();
+  await cp.locator('[data-action=add-course]').first().click();await cp.locator('[name=code]').fill('CLOUD 101');await cp.locator('[name=name]').fill('Cloud test course');await cp.locator('dialog [type=submit]').click();await cp.locator('dialog').waitFor({state:'hidden'});
+  await cp.waitForFunction(()=>__cloud.versions.length===2);
+  await cp.evaluate(()=>__cloud.fail=true);await cp.locator('[data-action=edit-course]').click();await cp.locator('[name=description]').fill('Retained locally after connection failure');await cp.locator('dialog [type=submit]').click();
+  await cp.locator('#cloud-button').filter({hasText:'Upload pending'}).waitFor();
+  assert.ok((await cp.locator('main').textContent()).includes('Retained locally'));
+  await cp.evaluate(()=>__cloud.fail=false);await cp.locator('#cloud-button').click();await cp.locator('[data-action=cloud-save]').click();await cp.waitForFunction(()=>__cloud.versions.length===3);
+  await cp.locator('#online-versions [data-action=cloud-load]').first().click();await cp.locator('dialog [type=submit]').click();await cp.locator('dialog').waitFor({state:'hidden'});
+  assert.equal(await cp.locator('.course-card').filter({hasText:'Cloud test course'}).count(),0);
+  await cp.locator('#cloud-button').click();await cp.locator('[data-action=cloud-undo]').click();await cp.locator('dialog [type=submit]').click();await cp.locator('dialog').waitFor({state:'hidden'});
+  assert.equal(await cp.locator('.course-card').filter({hasText:'Cloud test course'}).count(),1);
+  check('Cloud UI: initial save, automatic updates, failure/retry, restore, and local recovery (mock storage)');
   console.log('Artifacts: '+artifacts);
  }finally{await browser.close();}
 })().catch(error=>{console.error(error);process.exitCode=1;}).finally(()=>server.close());

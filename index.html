@@ -4,6 +4,8 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f6f8">
 <title>Tesselate · Study workspace</title>
 <link rel="stylesheet" href="assets/workspace/workspace.css">
+<script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.116.0/dist/umd/supabase.js"></script>
+<script defer src="assets/workspace/cloud.js"></script>
 <script defer src="assets/workspace/catalog.js"></script><script defer src="assets/workspace/workspace.js"></script>
 </head>
 <body>
@@ -19,10 +21,10 @@
 </nav>
 <div class="side-label">TAKE A BREAK</div>
 <nav aria-label="Explore"><a href="town.html"><span aria-hidden="true">⌂</span> Tesselate World <span class="external">↗</span></a><a href="Tree.html"><span aria-hidden="true">♧</span> Fractal tree <span class="external">↗</span></a></nav>
-<div class="storage-card"><span class="storage-dot"></span><strong>Saved on this device</strong><p>New courses, uploads, and tracking stay in this browser. Back up to keep a portable copy.</p><button class="text-button" data-action="backup">Export backup ↗</button><button class="text-button" data-action="restore">Restore backup</button></div>
+<div class="storage-card"><span class="storage-dot"></span><strong id="cloud-status">Saved on this device</strong><p>Connect your account to keep originals and course tracking online, privately.</p><button class="text-button" data-action="cloud">Online storage →</button><button class="text-button" data-action="backup">Export backup ↗</button><button class="text-button" data-action="restore">Restore backup</button></div>
 <button class="theme-toggle" data-action="theme">◐ <span id="theme-label">Dark appearance</span></button>
 </aside>
-<div class="shell"><header class="topbar"><span>Study workspace <span class="crumb">/ <span id="breadcrumb">Overview</span></span></span><label class="semester-control">Active semester <select id="semester" aria-label="Active semester"></select></label></header>
+<div class="shell"><header class="topbar"><span>Study workspace <span class="crumb">/ <span id="breadcrumb">Overview</span></span></span><button class="small" data-action="cloud" id="cloud-button">☁ Online storage</button><label class="semester-control">Active semester <select id="semester" aria-label="Active semester"></select></label></header>
 <main id="main" tabindex="-1"><div class="empty">Opening your workspace…</div></main>
 <footer><span>Tesselate · A little more organized. A little more ready.</span><a href="https://github.com/davidjoshuadreyer/CODE-SUMMARY" target="_blank" rel="noopener">GitHub ↗</a></footer></div>
 <dialog id="editor" aria-labelledby="dialog-title"><div id="dialog-content"></div></dialog>

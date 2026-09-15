@@ -1,4 +1,4 @@
-/* Static-site workspace. No uploads leave the browser. */
+/* Local workspace with optional private Supabase restore points. */
 (() => {
 'use strict';
 const $ = (s, root=document) => root.querySelector(s);
@@ -7,6 +7,8 @@ const uid = () => crypto.randomUUID();
 const labels = {unused:'Unused',working:'In progress',converted:'Converted',unreviewed:'Needs review'};
 const catalog = window.TESSELATE_CATALOG;
 let db, state, tab='pages', search='', courseFilter='', statusFilter='', toastTimer;
+let cloudReady=false,cloudSaving=false,cloudTimer,cloudMessage='Saved on this device';
+const cloud=window.TesselateCloud;
 const dialog = $('#editor');
 const copy = value => structuredClone(value);
 const course = id => state.courses.find(c=>c.id===id);
@@ -36,7 +38,7 @@ function openDB(){return new Promise((resolve,reject)=>{
  req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error);
 });}
 function read(store,key){return new Promise((resolve,reject)=>{const req=db.transaction(store).objectStore(store).get(key);req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error);});}
-async function commit(next,files=[],removed=[]){
+async function commit(next,files=[],removed=[],options={}){
  next.semesters=[...new Set([...(state?.semesters||[]),state?.currentSemester,next.currentSemester,...next.courses.map(c=>c.semester)])].filter(Boolean);
  const expected=state?.revision||0;next.revision=expected+1;
  await new Promise((resolve,reject)=>{
@@ -45,12 +47,57 @@ async function commit(next,files=[],removed=[]){
   req.onsuccess=()=>{
    if((req.result?.revision||0)!==expected){conflict=true;tx.abort();return;}
    tx.objectStore('state').put(next,'workspace');
+   if(options.recovery)tx.objectStore('state').put(options.recovery,'before-cloud-restore');
    for(const item of files)tx.objectStore('files').put(item.blob,item.id);
    for(const id of removed)tx.objectStore('files').delete(id);
   };
   tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error||new Error('Unable to save.'));
   tx.onabort=()=>reject(new Error(conflict?'This workspace changed in another tab. Reload before saving.':'Could not save. Browser storage may be full or unavailable. Export a backup before clearing anything.'));
- });state=next;
+ });state=next;if(options.sync!==false)scheduleCloudSave();
+}
+function storageStatus(message){cloudMessage=message;$('#cloud-status').textContent=message;$('#cloud-button').textContent='☁ '+message;}
+function scheduleCloudSave(){
+ if(!cloudReady||!cloud.user||state.cloudOwner!==cloud.user.id)return;
+ clearTimeout(cloudTimer);storageStatus('Changes waiting to upload');
+ cloudTimer=setTimeout(()=>saveOnline().catch(error=>storageStatus('Upload pending — retry online')),1500);
+}
+function localSnapshot(){return new Promise((resolve,reject)=>{
+ const tx=db.transaction(['state','files']),s=tx.objectStore('state').get('workspace'),keys=tx.objectStore('files').getAllKeys(),values=tx.objectStore('files').getAll();
+ tx.oncomplete=()=>resolve({state:s.result,files:new Map(keys.result.map((key,i)=>[key,values.result[i]]))});tx.onerror=()=>reject(tx.error);
+});}
+async function saveOnline(){
+ if(cloudSaving)throw new Error('An upload is already running. Wait for it to finish.');
+ if(!cloudReady||!cloud.user)throw new Error('Sign in before saving online.');
+ if(state.cloudOwner&&state.cloudOwner!==cloud.user.id)throw new Error('This device holds another account’s workspace. Load your own online workspace or sign back in to that account.');
+ clearTimeout(cloudTimer);cloudSaving=true;storageStatus('Uploading…');
+ try{
+  const snapshot=await localSnapshot(),result=await cloud.save(snapshot.state,snapshot.files);
+  const current=state.revision===snapshot.state.revision,next=copy(state);
+  next.cloudOwner=result.owner;next.cloudSavedAt=result.savedAt;next.cloudSavedRevision=current?state.revision+1:0;
+  await commit(next,[],[],{sync:false});storageStatus(current?'Saved online':'Changes waiting to upload');
+  if(!current)scheduleCloudSave();
+ }catch(error){storageStatus('Upload pending — retry online');throw error;}finally{cloudSaving=false;}
+}
+async function cloudPanel(){
+ const signed=cloudReady&&cloud.user,other=signed&&state.cloudOwner&&state.cloudOwner!==cloud.user.id;
+ modal('Online storage',signed?'Signed in as '+cloud.user.email:'Keep your files and course collection available on another device.',
+ `<p class="notice">${signed?'Files are private to your account. After your first online save, edits and uploads on this device save automatically. Use a restore point to load them on another device.':'Sign in with the same Google account you use for quizzes. Your local workspace stays available without signing in.'}</p><p id="online-message" class="hint">${esc(cloudMessage)}</p><div class="actions">${signed?button('cloud-save','Save this device online','','primary')+button('cloud-signout','Sign out','','small'):button('cloud-signin','Sign in with Google','','primary')}</div>${other?'<p class="notice">This device contains a different account’s workspace. Saving is disabled; load your own restore point below.</p>':''}<div class="section-heading"><h3>Online restore points</h3></div><div id="online-versions">${signed?'Loading…':'Sign in to see your saved workspaces.'}</div><p class="hint">Restore points retain earlier files, including materials later removed locally. Loading a restore point preserves one local recovery copy.</p>${button('cloud-undo','Recover workspace from before last online restore','','text-button')}`,'Done',async()=>{});
+ if(other)$('[data-action=cloud-save]',dialog).disabled=true;
+ if(signed){try{const versions=await cloud.list();if(!$('#online-versions'))return;$('#online-versions').innerHTML=versions.length?versions.map(v=>`<div class="mini-row"><span class="row-copy">${esc(new Date(v.created_at).toLocaleString())}</span>${button('cloud-load','Load',v.id,'small')}</div>`).join(''):'<p class="hint">No restore points yet. Save this device online to upload your existing originals and courses.</p>';}catch(error){if($('#online-versions'))$('#online-versions').innerHTML='<p class="form-error">Online storage could not be reached. If this is the first setup, run the workspace storage SQL in Supabase. '+esc(error.message)+'</p>';}}
+}
+async function loadOnline(id){
+ if(cloudSaving)throw new Error('Wait for the current online save before loading a restore point.');
+ modal('Load online restore point','This replaces the course list and tracking on this device with the selected version.','<p class="notice">A recovery copy of your current workspace will be kept on this device. The selected originals will be downloaded and verified before anything changes.</p>','Load workspace',async()=>{
+  clearTimeout(cloudTimer);cloudSaving=true;
+  try{
+   const previous=await localSnapshot(),revision=state.revision,loaded=await cloud.load(id);
+   const fileData=[];for(const f of loaded.files)fileData.push({id:f.id,data:await toDataURL(f.blob)});
+   const validated=validateBackup({format:'tesselate-workspace',version:1,state:loaded.state,files:fileData});
+   if(state.revision!==revision)throw new Error('Local changes were made during download. Load the restore point again.');
+   const next=validated.state;next.cloudOwner=loaded.owner;next.cloudSavedAt=loaded.savedAt;next.cloudSavedRevision=state.revision+1;
+   await commit(next,validated.files,[],{sync:false,recovery:previous});storageStatus('Saved online');location.hash='overview';toast('Online workspace loaded with its original files.');
+  }finally{cloudSaving=false;}
+ });
 }
 function heading(eyebrow,title,sub,actions=''){return `<div class="page-heading"><div><p class="eyebrow">${esc(eyebrow)}</p><h1>${esc(title)}</h1><p class="sub">${esc(sub)}</p></div><div class="actions">${actions}</div></div>`;}
 function empty(title,description,action=''){return `<div class="empty"><h3>${esc(title)}</h3><p>${esc(description)}</p>${action}</div>`;}
@@ -108,7 +155,7 @@ function render(){
   const r=state.resources.find(r=>r.id===id);
   html=r?`<a class="back" href="#course/${esc(r.courseId)}">← Back to course</a>`+heading(r.kind,r.title,r.description,button('edit-page','Edit note',r.id))+`<article class="note-body">${esc(r.body)}</article>`:empty('Page not found','Open a study page from a course.');
  } else html=overview();
- $('#main').innerHTML=html+`<div class="mobile-tools"><p class="hint">Courses and uploads are saved in this browser.</p>${button('backup','Export backup','','text-button')}${button('restore','Restore backup','','text-button')}${button('theme','Toggle appearance','','text-button')}<a class="text-button" href="town.html">Tesselate World ↗</a><a class="text-button" href="Tree.html">Fractal tree ↗</a></div>`;
+ $('#main').innerHTML=html+`<div class="mobile-tools"><p class="hint">Local copies are kept in this browser. Use Online storage above to save to your account.</p>${button('backup','Export backup','','text-button')}${button('restore','Restore backup','','text-button')}${button('theme','Toggle appearance','','text-button')}<a class="text-button" href="town.html">Tesselate World ↗</a><a class="text-button" href="Tree.html">Fractal tree ↗</a></div>`;
 }
 function modal(title,description,fields,submit,onSave){
  $('#dialog-content').innerHTML=`<form><div class="dialog-heading"><h2 id="dialog-title">${esc(title)}</h2>${button('close','×','','close')}</div><p class="sub">${esc(description)}</p>${fields}<p class="form-error" role="alert"></p><div class="dialog-actions">${button('close','Cancel')}<button class="primary" type="submit">${esc(submit)}</button></div></form>`;
@@ -133,7 +180,7 @@ function semesterEditor(){
  modal('Start a semester','Your existing courses stay available under Past semesters.','<label>Semester name<input name="semester" required maxlength="60" placeholder="e.g. Fall 2026"></label>','Start semester',async data=>{const next=copy(state);next.currentSemester=required(data,'semester');await commit(next);location.hash='overview';toast('Your new semester is ready.');});
 }
 function uploadEditor(id=''){
- modal('Bring your references in','Upload lecture slides, readings, notes, or problem sets.',`<label>Course<select name="courseId">${courseOptions(id,true)}</select></label><label class="upload-zone">Drop files here or choose files<input name="files" id="upload-files" type="file" multiple required></label><p class="hint">Any file type · Up to 50 MB per file, 100 MB per batch. Originals are stored in this browser, not published to the site.</p><label>Notes <span class="hint">(optional, applied to this batch)</span><textarea name="notes" maxlength="2000" placeholder="e.g. Week 1 — turn into a summary and practice questions"></textarea></label>`,'Upload references',async(data,form)=>{
+ modal('Bring your references in','Upload lecture slides, readings, notes, or problem sets.',`<label>Course<select name="courseId">${courseOptions(id,true)}</select></label><label class="upload-zone">Drop files here or choose files<input name="files" id="upload-files" type="file" multiple required></label><p class="hint">Any file type · Up to 50 MB per file, 100 MB per batch. Originals save on this device. Connect Online storage to also save them privately to your account.</p><label>Notes <span class="hint">(optional, applied to this batch)</span><textarea name="notes" maxlength="2000" placeholder="e.g. Week 1 — turn into a summary and practice questions"></textarea></label>`,'Upload references',async(data,form)=>{
   const files=[...$('#upload-files',form).files];if(!files.length)throw new Error('Choose at least one file.');
   if(files.some(f=>f.size>50*1024*1024)||files.reduce((sum,f)=>sum+f.size,0)>100*1024*1024)throw new Error('Choose files up to 50 MB each and 100 MB in total.');
   const next=copy(state), newFiles=[];let skipped=0;
@@ -221,6 +268,19 @@ document.addEventListener('click',async event=>{
  const el=event.target.closest('[data-action]');if(!el||!state)return;const {action,id}=el.dataset;
  try{
   if(action==='close')dialog.close();
+  else if(action==='cloud')await cloudPanel();
+  else if(action==='cloud-signin'){if(!cloudReady)throw new Error('Sign-in is unavailable. Check your connection and reload.');await cloud.signIn();}
+  else if(action==='cloud-signout'){if(cloudSaving)throw new Error('Wait for the current upload before signing out.');clearTimeout(cloudTimer);await cloud.signOut();storageStatus('Saved on this device');await cloudPanel();}
+  else if(action==='cloud-save'){el.disabled=true;try{await saveOnline();await cloudPanel();}finally{el.disabled=false;}}
+  else if(action==='cloud-load')await loadOnline(id);
+  else if(action==='cloud-undo'){
+   const recovery=await read('state','before-cloud-restore');if(!recovery)throw new Error('No local recovery copy is available yet.');
+   modal('Recover previous local workspace','Restore the local copy kept before your last online restore.','<p class="notice">Automatic online saving will pause. Save online explicitly when you are ready to upload this recovered version.</p>','Recover workspace',async()=>{
+    if(cloudSaving)throw new Error('Wait for the current upload.');clearTimeout(cloudTimer);
+    const next=copy(recovery.state);delete next.cloudOwner;delete next.cloudSavedAt;delete next.cloudSavedRevision;
+    await commit(next,[...recovery.files].map(([id,blob])=>({id,blob})),[],{sync:false});storageStatus('Saved on this device');location.hash='overview';
+   });
+  }
   else if(action==='add-course')courseEditor();
   else if(action==='edit-course')courseEditor(id);
   else if(action==='upload')uploadEditor(id);
@@ -240,7 +300,7 @@ document.addEventListener('click',async event=>{
   else if(action==='theme'){const dark=document.body.classList.toggle('dark');try{localStorage.setItem('chem-theme',dark?'dark':'light');}catch{}$('#theme-label').textContent=dark?'Light appearance':'Dark appearance';}
   else if(action==='backup'){el.disabled=true;try{await backup();}finally{el.disabled=false;}}
   else if(action==='restore')$('#restore-file').click();
- }catch(error){toast(error.message);}
+ }catch(error){if(dialog.open&&$('.form-error',dialog))$('.form-error',dialog).textContent=error.message;else toast(error.message);}
 });
 document.addEventListener('input',event=>{
  if(event.target.id==='reference-search'){search=event.target.value;$('#reference-results').innerHTML=referenceResults(location.hash.startsWith('#course/')?location.hash.slice(8):'');}
@@ -262,7 +322,13 @@ async function init(){
   if(!state){const year=new Date().getFullYear(),month=new Date().getMonth(),season=month<4?'Winter':month<8?'Summer':'Fall';await commit({version:1,currentSemester:season+' '+year,courses:copy(catalog.courses),resources:copy(catalog.resources),references:copy(catalog.references)});}
   else {const next=copy(state);let changed=false;for(const key of ['courses','resources','references'])for(const item of catalog[key])if(!next[key].some(x=>x.id===item.id)){next[key].push(copy(item));changed=true;}if(changed)await commit(next);}
   render();
+  if(cloud)cloud.init(()=>{
+   clearTimeout(cloudTimer);
+   if(cloud.user&&state.cloudOwner===cloud.user.id){storageStatus(state.cloudSavedRevision===state.revision?'Saved online':'Changes waiting to upload');if(state.cloudSavedRevision!==state.revision)scheduleCloudSave();}
+   else storageStatus('Saved on this device');
+  }).then(()=>{cloudReady=true;if(cloud.user&&state.cloudOwner===cloud.user.id){storageStatus(state.cloudSavedRevision===state.revision?'Saved online':'Changes waiting to upload');if(state.cloudSavedRevision!==state.revision)scheduleCloudSave();}}).catch(()=>storageStatus('Local only — sign-in unavailable'));
  }catch(error){$('#main').innerHTML=empty('Your workspace couldn’t open.',error.message+' Enable browser storage and reload. Existing study pages are still available.')+`<div class="course-grid">${catalog.courses.map(c=>`<a class="course-card" href="${esc(catalog.resources.find(r=>r.courseId===c.id).url)}"><h3>${esc(c.name)}</h3><span>Open existing study pages ↗</span></a>`).join('')}</div>`;}
 }
 init();
+window.addEventListener('online',()=>{if(state)scheduleCloudSave();});
 })();
