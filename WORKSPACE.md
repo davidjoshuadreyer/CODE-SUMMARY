@@ -53,6 +53,8 @@ The generator includes HTML pages directly within course folders and PDFs within
 
 ## Verification
 
+MATH 250B is in Fall 2026 and uses the supplied Fall 2025 PDFs as references. Its eight lessons and 48 original practice questions cover multivariable and vector calculus. Edit `dev/math250b-content.cjs`, run `node dev/build-math250b.cjs`, and then run `node dev/build-workspace-catalog.cjs`. The builder validates TeX and renders static lesson equations with KaTeX; local KaTeX assets also render interactive questions and feedback, with no CDN needed. The shared practice engine keeps each course's attempts in separate localStorage entries. `dev/math250b-smoke.cjs` verifies equations, all question answers, persistence, timed tests, and mobile layouts. As with ENGR 290, practice attempts are separate from workspace backups.
+
 `dev/workspace-smoke.cjs` runs against a temporary local server and isolated Chrome contexts, covering catalog paths, course creation, uploads, persistent file bytes, reference linking/unlinking, note rendering, filtering, backup restore, invalid URLs/backups, stale-tab conflicts, and responsive layout. It does not touch your regular browser profile.
 
 Install Playwright separately if it is not available; the site itself does not need it. Example in PowerShell:

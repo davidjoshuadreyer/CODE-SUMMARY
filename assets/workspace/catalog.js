@@ -40,6 +40,14 @@ window.TESSELATE_CATALOG = {
       "semester": "Fall 2026",
       "description": "Crystal structures, bonding, defects, dislocations, and diffusion. Lessons and practice based on the supplied materials.",
       "symbol": "En"
+    },
+    {
+      "id": "math250b",
+      "code": "MATH 250B",
+      "name": "Multivariable & Vector Calculus",
+      "semester": "Fall 2026",
+      "description": "Partial derivatives, optimization, multiple integrals, and vector calculus. Typeset lessons and practice using the supplied 2025 references.",
+      "symbol": "∇"
     }
   ],
   "resources": [
@@ -438,6 +446,189 @@ window.TESSELATE_CATALOG = {
         "ref-RU5HUiAyOTAvRU5HUiAyOTBfQXNzaWduXzFfMjAyNi5kb2N4",
         "ref-RU5HUiAyOTAvRU5HUjI5MENvdXJzZU91dGxpbmVfMjAyNi5kb2N4",
         "ref-RU5HUiAyOTAvRU5HUi0yOTAtWDAxIGNvdXJzZSBzeWxsYWJ1c18yMDI2LmRvY3g"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-bWF0aDI1MGIvMDEtcGFydGlhbC1kZXJpdmF0aXZlcy5odG1s",
+      "courseId": "math250b",
+      "title": "01 · Surfaces and partial derivatives",
+      "kind": "Study notes",
+      "url": "math250b/01-partial-derivatives.html",
+      "body": "",
+      "description": "Read a surface, differentiate one variable at a time, and follow the multivariable chain rule.",
+      "referenceIds": [
+        "ref-TWF0aCAyNTBCLzI1MEItQTEtMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEJYMDEtVDFTb2wtMjAyNUYucGRm"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-bWF0aDI1MGIvMDItZ3JhZGllbnRzLmh0bWw",
+      "courseId": "math250b",
+      "title": "02 · Tangent planes, gradients, and error",
+      "kind": "Study notes",
+      "url": "math250b/02-gradients.html",
+      "body": "",
+      "description": "Use derivatives to approximate a surface and measure change in a chosen direction.",
+      "referenceIds": [
+        "ref-TWF0aCAyNTBCLzI1MEItQTEtMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEItQTItMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEJYMDEtVDFTb2wtMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEJYMDEtVDJTb2wtMjAyNUYucGRm"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-bWF0aDI1MGIvMDMtb3B0aW1pemF0aW9uLmh0bWw",
+      "courseId": "math250b",
+      "title": "03 · Optimization and constraints",
+      "kind": "Study notes",
+      "url": "math250b/03-optimization.html",
+      "body": "",
+      "description": "Classify critical points, check boundaries, and solve Lagrange multiplier equations.",
+      "referenceIds": [
+        "ref-TWF0aCAyNTBCLzI1MEItQTEtMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEItQTItMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEJYMDEtVDFTb2wtMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEJYMDEtVDJTb2wtMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEItZm9ybXVsYXNoZWV0LnBkZg"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-bWF0aDI1MGIvMDQtZG91YmxlLWludGVncmFscy5odG1s",
+      "courseId": "math250b",
+      "title": "04 · Double integrals and polar coordinates",
+      "kind": "Study notes",
+      "url": "math250b/04-double-integrals.html",
+      "body": "",
+      "description": "Describe a region, choose an integration order, and compute area, volume, or mass.",
+      "referenceIds": [
+        "ref-TWF0aCAyNTBCLzI1MEItQTItMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEJYMDEtVDJTb2wtMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEItZm9ybXVsYXNoZWV0LnBkZg"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-bWF0aDI1MGIvMDUtdHJpcGxlLWludGVncmFscy5odG1s",
+      "courseId": "math250b",
+      "title": "05 · Triple integrals and spherical coordinates",
+      "kind": "Study notes",
+      "url": "math250b/05-triple-integrals.html",
+      "body": "",
+      "description": "Translate three-dimensional boundaries into Cartesian, cylindrical, or spherical bounds.",
+      "referenceIds": [
+        "ref-TWF0aCAyNTBCLzI1MEItQTMtMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEJYMDEtVDJTb2wtMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEJYMDEtVDNTb2wtMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEItZm9ybXVsYXNoZWV0LnBkZg"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-bWF0aDI1MGIvMDYtamFjb2JpYW5zLXN1cmZhY2VzLmh0bWw",
+      "courseId": "math250b",
+      "title": "06 · Jacobians and surface area",
+      "kind": "Study notes",
+      "url": "math250b/06-jacobians-surfaces.html",
+      "body": "",
+      "description": "Use a transformation to simplify a region and a cross product to measure surface area.",
+      "referenceIds": [
+        "ref-TWF0aCAyNTBCLzI1MEItQTMtMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEJYMDEtVDNTb2wtMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEItZm9ybXVsYXNoZWV0LnBkZg"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-bWF0aDI1MGIvMDctbGluZS1pbnRlZ3JhbHMuaHRtbA",
+      "courseId": "math250b",
+      "title": "07 · Vector fields and line integrals",
+      "kind": "Study notes",
+      "url": "math250b/07-line-integrals.html",
+      "body": "",
+      "description": "Compute divergence and curl, parameterize a path, and recognize conservative fields.",
+      "referenceIds": [
+        "ref-TWF0aCAyNTBCLzI1MEItQTMtMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEItQTQtMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEJYMDEtVDNTb2wtMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEItZm9ybXVsYXNoZWV0LnBkZg"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-bWF0aDI1MGIvMDgtaW50ZWdyYWwtdGhlb3JlbXMuaHRtbA",
+      "courseId": "math250b",
+      "title": "08 · Green’s, divergence, and Stokes’ theorems",
+      "kind": "Study notes",
+      "url": "math250b/08-integral-theorems.html",
+      "body": "",
+      "description": "Choose the right theorem and keep the boundary orientation consistent.",
+      "referenceIds": [
+        "ref-TWF0aCAyNTBCLzI1MEItQTQtMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEItZm9ybXVsYXNoZWV0LnBkZg"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-bWF0aDI1MGIvZXhhbS5odG1s",
+      "courseId": "math250b",
+      "title": "Practice exams",
+      "kind": "Practice exam",
+      "url": "math250b/exam.html",
+      "body": "",
+      "description": "",
+      "referenceIds": [
+        "ref-TWF0aCAyNTBCLzI1MEItQTEtMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEItQTItMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEItQTMtMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEItQTQtMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEItZm9ybXVsYXNoZWV0LnBkZg",
+        "ref-TWF0aCAyNTBCLzI1MEJYMDEtVDFTb2wtMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEJYMDEtVDJTb2wtMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEJYMDEtVDNTb2wtMjAyNUYucGRm"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-bWF0aDI1MGIvcXVpei5odG1s",
+      "courseId": "math250b",
+      "title": "Practice quiz",
+      "kind": "Quiz",
+      "url": "math250b/quiz.html",
+      "body": "",
+      "description": "",
+      "referenceIds": [
+        "ref-TWF0aCAyNTBCLzI1MEItQTEtMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEItQTItMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEItQTMtMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEItQTQtMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEItZm9ybXVsYXNoZWV0LnBkZg",
+        "ref-TWF0aCAyNTBCLzI1MEJYMDEtVDFTb2wtMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEJYMDEtVDJTb2wtMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEJYMDEtVDNTb2wtMjAyNUYucGRm"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-bWF0aDI1MGIvcmV2aWV3Lmh0bWw",
+      "courseId": "math250b",
+      "title": "Review sheet",
+      "kind": "Study notes",
+      "url": "math250b/review.html",
+      "body": "",
+      "description": "",
+      "referenceIds": [
+        "ref-TWF0aCAyNTBCLzI1MEItQTEtMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEItQTItMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEItQTMtMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEItQTQtMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEItZm9ybXVsYXNoZWV0LnBkZg",
+        "ref-TWF0aCAyNTBCLzI1MEJYMDEtVDFTb2wtMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEJYMDEtVDJTb2wtMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEJYMDEtVDNTb2wtMjAyNUYucGRm"
       ],
       "builtin": true
     }
@@ -1065,6 +1256,171 @@ window.TESSELATE_CATALOG = {
       "name": "Week 2b Dislocations_2026.pptx",
       "url": "ENGR%20290/Week%202b%20Dislocations_2026.pptx",
       "size": 8127322,
+      "stage": "unreviewed",
+      "notes": "Existing reference. Check whether this was used in a study page, then link it here.",
+      "builtin": true,
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "ref-TWF0aCAyNTBCLzI1MEItQTEtMjAyNUYucGRm",
+      "courseId": "math250b",
+      "name": "250B-A1-2025F.pdf",
+      "url": "Math%20250B/250B-A1-2025F.pdf",
+      "size": 61443,
+      "stage": "unreviewed",
+      "notes": "Existing reference. Check whether this was used in a study page, then link it here.",
+      "builtin": true,
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "ref-TWF0aCAyNTBCLzI1MEItQTFTb2wtMjAyNUYucGRm",
+      "courseId": "math250b",
+      "name": "250B-A1Sol-2025F.pdf",
+      "url": "Math%20250B/250B-A1Sol-2025F.pdf",
+      "size": 580704,
+      "stage": "unreviewed",
+      "notes": "Existing reference. Check whether this was used in a study page, then link it here.",
+      "builtin": true,
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "ref-TWF0aCAyNTBCLzI1MEItQTItMjAyNUYucGRm",
+      "courseId": "math250b",
+      "name": "250B-A2-2025F.pdf",
+      "url": "Math%20250B/250B-A2-2025F.pdf",
+      "size": 104817,
+      "stage": "unreviewed",
+      "notes": "Existing reference. Check whether this was used in a study page, then link it here.",
+      "builtin": true,
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "ref-TWF0aCAyNTBCLzI1MEItQTJTb2wtMjAyNUYucGRm",
+      "courseId": "math250b",
+      "name": "250B-A2Sol-2025F.pdf",
+      "url": "Math%20250B/250B-A2Sol-2025F.pdf",
+      "size": 430626,
+      "stage": "unreviewed",
+      "notes": "Existing reference. Check whether this was used in a study page, then link it here.",
+      "builtin": true,
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "ref-TWF0aCAyNTBCLzI1MEItQTMtMjAyNUYucGRm",
+      "courseId": "math250b",
+      "name": "250B-A3-2025F.pdf",
+      "url": "Math%20250B/250B-A3-2025F.pdf",
+      "size": 122176,
+      "stage": "unreviewed",
+      "notes": "Existing reference. Check whether this was used in a study page, then link it here.",
+      "builtin": true,
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "ref-TWF0aCAyNTBCLzI1MEItQTNTb2wtMjAyNUYucGRm",
+      "courseId": "math250b",
+      "name": "250B-A3Sol-2025F.pdf",
+      "url": "Math%20250B/250B-A3Sol-2025F.pdf",
+      "size": 549796,
+      "stage": "unreviewed",
+      "notes": "Existing reference. Check whether this was used in a study page, then link it here.",
+      "builtin": true,
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "ref-TWF0aCAyNTBCLzI1MEItQTQtMjAyNUYucGRm",
+      "courseId": "math250b",
+      "name": "250B-A4-2025F.pdf",
+      "url": "Math%20250B/250B-A4-2025F.pdf",
+      "size": 78659,
+      "stage": "unreviewed",
+      "notes": "Existing reference. Check whether this was used in a study page, then link it here.",
+      "builtin": true,
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "ref-TWF0aCAyNTBCLzI1MEItQTRTb2wtMjAyNUYucGRm",
+      "courseId": "math250b",
+      "name": "250B-A4Sol-2025F.pdf",
+      "url": "Math%20250B/250B-A4Sol-2025F.pdf",
+      "size": 273533,
+      "stage": "unreviewed",
+      "notes": "Existing reference. Check whether this was used in a study page, then link it here.",
+      "builtin": true,
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "ref-TWF0aCAyNTBCLzI1MEItZm9ybXVsYXNoZWV0LnBkZg",
+      "courseId": "math250b",
+      "name": "250B-formulasheet.pdf",
+      "url": "Math%20250B/250B-formulasheet.pdf",
+      "size": 48877,
+      "stage": "unreviewed",
+      "notes": "Existing reference. Check whether this was used in a study page, then link it here.",
+      "builtin": true,
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "ref-TWF0aCAyNTBCLzI1MEJYMDEtVDFTb2wtMjAyNUYucGRm",
+      "courseId": "math250b",
+      "name": "250BX01-T1Sol-2025F.pdf",
+      "url": "Math%20250B/250BX01-T1Sol-2025F.pdf",
+      "size": 309322,
+      "stage": "unreviewed",
+      "notes": "Existing reference. Check whether this was used in a study page, then link it here.",
+      "builtin": true,
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "ref-TWF0aCAyNTBCLzI1MEJYMDEtVDJTb2wtMjAyNUYucGRm",
+      "courseId": "math250b",
+      "name": "250BX01-T2Sol-2025F.pdf",
+      "url": "Math%20250B/250BX01-T2Sol-2025F.pdf",
+      "size": 337213,
+      "stage": "unreviewed",
+      "notes": "Existing reference. Check whether this was used in a study page, then link it here.",
+      "builtin": true,
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "ref-TWF0aCAyNTBCLzI1MEJYMDEtVDNTb2wtMjAyNUYucGRm",
+      "courseId": "math250b",
+      "name": "250BX01-T3Sol-2025F.pdf",
+      "url": "Math%20250B/250BX01-T3Sol-2025F.pdf",
+      "size": 1141437,
+      "stage": "unreviewed",
+      "notes": "Existing reference. Check whether this was used in a study page, then link it here.",
+      "builtin": true,
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "ref-TWF0aCAyNTBCLzI1MEJYMDItVDFTb2wtMjAyNUYucGRm",
+      "courseId": "math250b",
+      "name": "250BX02-T1Sol-2025F.pdf",
+      "url": "Math%20250B/250BX02-T1Sol-2025F.pdf",
+      "size": 334461,
+      "stage": "unreviewed",
+      "notes": "Existing reference. Check whether this was used in a study page, then link it here.",
+      "builtin": true,
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "ref-TWF0aCAyNTBCLzI1MEJYMDItVDJTb2wtMjAyNUYucGRm",
+      "courseId": "math250b",
+      "name": "250BX02-T2Sol-2025F.pdf",
+      "url": "Math%20250B/250BX02-T2Sol-2025F.pdf",
+      "size": 319989,
+      "stage": "unreviewed",
+      "notes": "Existing reference. Check whether this was used in a study page, then link it here.",
+      "builtin": true,
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "ref-TWF0aCAyNTBCLzI1MEJYMDItVDNTb2wtMjAyNUYucGRm",
+      "courseId": "math250b",
+      "name": "250BX02-T3Sol-2025F.pdf",
+      "url": "Math%20250B/250BX02-T3Sol-2025F.pdf",
+      "size": 1133838,
       "stage": "unreviewed",
       "notes": "Existing reference. Check whether this was used in a study page, then link it here.",
       "builtin": true,

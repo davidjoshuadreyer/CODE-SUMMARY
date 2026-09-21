@@ -1,14 +1,14 @@
 (() => {
  'use strict';
- const bank=window.ENGR290, exam=location.pathname.endsWith('/exam.html');
- const $=s=>document.querySelector(s), key='engr290-practice-v1-'+(exam?'exam':'quiz');
- const esc=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
+ const bank=window.STUDY_COURSE||window.ENGR290, exam=location.pathname.endsWith('/exam.html');
+ const $=s=>document.querySelector(s), key=(bank.id||'engr290')+'-practice-v1-'+(exam?'exam':'quiz');
+ const esc=window.StudyMath?window.StudyMath.format:s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
  const question=id=>bank.questions.find(q=>q.id===id);
  let attempt=null, clock=null, saved=null;
  const requested=new URLSearchParams(location.search).get('topic');
- if(/^[0-4]$/.test(requested||'')) $('#topic').value=requested;
+ if(requested!==null && /^\d+$/.test(requested) && Number(requested)<bank.lessons.length) $('#topic').value=requested;
  function persist(){try{localStorage.setItem(key,JSON.stringify(attempt));}catch{$('#storage-note').textContent='Browser storage is unavailable; keep this page open to retain your attempt.';}}
- function valid(a){return a && a.version===1 && Array.isArray(a.ids) && a.ids.length>0 && a.ids.length<=30 && new Set(a.ids).size===a.ids.length && a.ids.every(id=>question(id)) && a.answers && typeof a.answers==='object' && !Array.isArray(a.answers) && Object.entries(a.answers).every(([id,n])=>a.ids.includes(id)&&Number.isInteger(n)&&n>=0&&n<4) && Array.isArray(a.checked) && a.checked.every(id=>a.ids.includes(id)) && typeof a.submitted==='boolean' && Number.isFinite(a.deadline);}
+ function valid(a){return a && a.version===1 && Array.isArray(a.ids) && a.ids.length>0 && a.ids.length<=bank.questions.length && new Set(a.ids).size===a.ids.length && a.ids.every(id=>question(id)) && a.answers && typeof a.answers==='object' && !Array.isArray(a.answers) && Object.entries(a.answers).every(([id,n])=>a.ids.includes(id)&&Number.isInteger(n)&&n>=0&&n<question(id).options.length) && Array.isArray(a.checked) && a.checked.every(id=>a.ids.includes(id)) && typeof a.submitted==='boolean' && Number.isFinite(a.deadline);}
  try{const value=JSON.parse(localStorage.getItem(key));if(valid(value))saved=value;}catch{}
  if(saved){$('#resume').hidden=false;$('#resume').textContent=saved.submitted?'View previous result':'Resume saved attempt';}
  function shuffle(items){const copy=[...items];for(let i=copy.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[copy[i],copy[j]]=[copy[j],copy[i]];}return copy;}
@@ -35,7 +35,7 @@
   if($('#retry'))$('#retry').addEventListener('click',()=>start(missed));
   $('#results').focus();
  }
- function start(ids){attempt={version:1,ids:shuffle(ids),answers:{},checked:[],submitted:false,deadline:Date.now()+30*60*1000};persist();render();}
+ function start(ids){attempt={version:1,ids:shuffle(ids),answers:{},checked:[],submitted:false,deadline:Date.now()+(bank.testMinutes||30)*60*1000};persist();render();}
  function reset(){clearInterval(clock);attempt=null;saved=null;try{localStorage.removeItem(key);}catch{}$('#setup').hidden=false;$('#session').hidden=true;$('#results').hidden=true;$('#resume').hidden=true;$('#start').focus();}
  $('#start').addEventListener('click',()=>{const topic=$('#topic').value;const ids=topic==='all'?bank.lessons.flatMap((_,i)=>shuffle(bank.questions.filter(q=>q.topic===i)).slice(0,exam?3:2).map(q=>q.id)):shuffle(bank.questions.filter(q=>q.topic===Number(topic))).map(q=>q.id);start(ids);});
  $('#resume').addEventListener('click',()=>{attempt=saved;if(attempt.submitted)showResults();else render();});

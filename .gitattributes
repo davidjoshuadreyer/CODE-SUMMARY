@@ -1,0 +1,7 @@
+# Preserve the bytes of source documents and bundled equation fonts.
+*.pdf binary
+*.docx binary
+*.pptx binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
