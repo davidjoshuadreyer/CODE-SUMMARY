@@ -11,7 +11,7 @@ Open `index.html` through your usual local static server or the deployed site. T
 5. **Add study page** to write plain-text notes or link a page, quiz, lab report, or exam. Select the reference materials used. Alternatively, open a reference and select the existing study pages made from it.
 6. A reference becomes **Converted** whenever at least one study page links to it. Removing its last link restores the previous progress. This is a tracking workflow; it does not automatically generate summaries or quizzes.
 
-The four existing courses are grouped under Winter 2026 based on their existing course materials. All old page URLs remain intact. The catalog also exposes Statistics and lab reports that weren't previously linked from the home page. Existing PDFs start as **Needs review**, since their conversion history is unknown.
+The four original courses are grouped under Winter 2026 based on their existing course materials. ENGR 290 Engineering Materials is under Fall 2026, with five lessons, a review index, a topic quiz, and a timed practice test. Its opening materials coverage uses the supplied slides and Assignment 1; later polymers, phase diagrams, and thermodynamics topics are not yet covered. All old page URLs remain intact. The catalog also exposes Statistics and lab reports that weren't previously linked from the home page. Existing PDFs start as **Needs review**, since their conversion history is unknown.
 
 ## Storage and backups
 
@@ -49,7 +49,7 @@ To add shared, repository-backed material, place the files in the appropriate co
 node dev/build-workspace-catalog.cjs
 ```
 
-The generator includes HTML pages directly within course folders and PDFs within its configured reference directories. New catalog entries merge into existing browser workspaces without replacing personal edits. Commit/deploy the referenced files together with the catalog; this workspace currently includes pre-existing untracked study material. To publish a wholly new course for everyone, add its definition and directory mapping in the generator. Courses added through the UI are personal to the browser.
+The generator includes HTML pages directly within course folders and PDFs within its configured reference directories. ENGR 290 also indexes its original DOCX and PPTX sources. Edit `engr290/content.json`, run `node dev/build-engr290.cjs`, then rebuild the catalog to update its static lessons and browser question bank. Quiz and test attempts save separately in localStorage; they are not included in workspace backups or online saves. New catalog entries merge into existing browser workspaces without replacing personal edits. Commit/deploy the referenced files together with the catalog; this workspace currently includes pre-existing untracked study material. To publish a wholly new course for everyone, add its definition and directory mapping in the generator. Courses added through the UI are personal to the browser.
 
 ## Verification
 

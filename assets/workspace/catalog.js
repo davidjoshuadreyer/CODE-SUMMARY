@@ -32,6 +32,14 @@ window.TESSELATE_CATALOG = {
       "semester": "Winter 2026",
       "description": "Probability, distributions, and statistical inference.",
       "symbol": "σ"
+    },
+    {
+      "id": "engr290",
+      "code": "ENGR 290",
+      "name": "Engineering Materials",
+      "semester": "Fall 2026",
+      "description": "Crystal structures, bonding, defects, dislocations, and diffusion. Lessons and practice based on the supplied materials.",
+      "symbol": "En"
     }
   ],
   "resources": [
@@ -308,6 +316,129 @@ window.TESSELATE_CATALOG = {
       "body": "",
       "description": "",
       "referenceIds": [],
+      "builtin": true
+    },
+    {
+      "id": "page-ZW5ncjI5MC8wMS1jcnlzdGFscy5odG1s",
+      "courseId": "engr290",
+      "title": "01 · Atomic structure and unit cells",
+      "kind": "Study notes",
+      "url": "engr290/01-crystals.html",
+      "body": "",
+      "description": "Connect atomic arrangement to crystal geometry and density.",
+      "referenceIds": [
+        "ref-RU5HUiAyOTAvV2VlayAxIEF0b21pYyBTdHJ1Y3R1cmVfMjAyNigxKS5wcHR4",
+        "ref-RU5HUiAyOTAvRU5HUiAyOTBfQXNzaWduXzFfMjAyNi5kb2N4"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-ZW5ncjI5MC8wMi1taWxsZXItaW5kaWNlcy5odG1s",
+      "courseId": "engr290",
+      "title": "02 · Directions and Miller indices",
+      "kind": "Study notes",
+      "url": "engr290/02-miller-indices.html",
+      "body": "",
+      "description": "Find crystal directions, plane intercepts, angles, and spacings.",
+      "referenceIds": [
+        "ref-RU5HUiAyOTAvV2VlayAxIEF0b21pYyBTdHJ1Y3R1cmVfMjAyNigxKS5wcHR4",
+        "ref-RU5HUiAyOTAvRU5HUiAyOTBfQXNzaWduXzFfMjAyNi5kb2N4"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-ZW5ncjI5MC8wMy1ib25kaW5nLWRlZmVjdHMuaHRtbA",
+      "courseId": "engr290",
+      "title": "03 · Bonding and point defects",
+      "kind": "Study notes",
+      "url": "engr290/03-bonding-defects.html",
+      "body": "",
+      "description": "Explain bond types and calculate equilibrium vacancy changes.",
+      "referenceIds": [
+        "ref-RU5HUiAyOTAvV2VlayAyYSBCb25kaW5nXzIwMjYucHB0eA",
+        "ref-RU5HUiAyOTAvRU5HUiAyOTBfQXNzaWduXzFfMjAyNi5kb2N4"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-ZW5ncjI5MC8wNC1kaXNsb2NhdGlvbnMuaHRtbA",
+      "courseId": "engr290",
+      "title": "04 · Dislocations and strengthening",
+      "kind": "Study notes",
+      "url": "engr290/04-dislocations.html",
+      "body": "",
+      "description": "Use Burgers vectors, Schmid’s law, and the Hall–Petch relation.",
+      "referenceIds": [
+        "ref-RU5HUiAyOTAvV2VlayAyYiBEaXNsb2NhdGlvbnNfMjAyNi5wcHR4"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-ZW5ncjI5MC8wNS1kaWZmdXNpb24uaHRtbA",
+      "courseId": "engr290",
+      "title": "05 · Diffusion and assignment practice",
+      "kind": "Study notes",
+      "url": "engr290/05-diffusion.html",
+      "body": "",
+      "description": "Solve diffusion-time problems with clear assumptions and units.",
+      "referenceIds": [
+        "ref-RU5HUiAyOTAvRU5HUiAyOTBfQXNzaWduXzFfMjAyNi5kb2N4",
+        "ref-RU5HUiAyOTAvRU5HUjI5MENvdXJzZU91dGxpbmVfMjAyNi5kb2N4"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-ZW5ncjI5MC9leGFtLmh0bWw",
+      "courseId": "engr290",
+      "title": "Practice exams",
+      "kind": "Practice exam",
+      "url": "engr290/exam.html",
+      "body": "",
+      "description": "",
+      "referenceIds": [
+        "ref-RU5HUiAyOTAvV2VlayAxIEF0b21pYyBTdHJ1Y3R1cmVfMjAyNigxKS5wcHR4",
+        "ref-RU5HUiAyOTAvV2VlayAyYSBCb25kaW5nXzIwMjYucHB0eA",
+        "ref-RU5HUiAyOTAvV2VlayAyYiBEaXNsb2NhdGlvbnNfMjAyNi5wcHR4",
+        "ref-RU5HUiAyOTAvRU5HUiAyOTBfQXNzaWduXzFfMjAyNi5kb2N4",
+        "ref-RU5HUiAyOTAvRU5HUjI5MENvdXJzZU91dGxpbmVfMjAyNi5kb2N4",
+        "ref-RU5HUiAyOTAvRU5HUi0yOTAtWDAxIGNvdXJzZSBzeWxsYWJ1c18yMDI2LmRvY3g"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-ZW5ncjI5MC9xdWl6Lmh0bWw",
+      "courseId": "engr290",
+      "title": "Practice quiz",
+      "kind": "Quiz",
+      "url": "engr290/quiz.html",
+      "body": "",
+      "description": "",
+      "referenceIds": [
+        "ref-RU5HUiAyOTAvV2VlayAxIEF0b21pYyBTdHJ1Y3R1cmVfMjAyNigxKS5wcHR4",
+        "ref-RU5HUiAyOTAvV2VlayAyYSBCb25kaW5nXzIwMjYucHB0eA",
+        "ref-RU5HUiAyOTAvV2VlayAyYiBEaXNsb2NhdGlvbnNfMjAyNi5wcHR4",
+        "ref-RU5HUiAyOTAvRU5HUiAyOTBfQXNzaWduXzFfMjAyNi5kb2N4",
+        "ref-RU5HUiAyOTAvRU5HUjI5MENvdXJzZU91dGxpbmVfMjAyNi5kb2N4",
+        "ref-RU5HUiAyOTAvRU5HUi0yOTAtWDAxIGNvdXJzZSBzeWxsYWJ1c18yMDI2LmRvY3g"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-ZW5ncjI5MC9yZXZpZXcuaHRtbA",
+      "courseId": "engr290",
+      "title": "Review sheet",
+      "kind": "Study notes",
+      "url": "engr290/review.html",
+      "body": "",
+      "description": "",
+      "referenceIds": [
+        "ref-RU5HUiAyOTAvV2VlayAxIEF0b21pYyBTdHJ1Y3R1cmVfMjAyNigxKS5wcHR4",
+        "ref-RU5HUiAyOTAvV2VlayAyYSBCb25kaW5nXzIwMjYucHB0eA",
+        "ref-RU5HUiAyOTAvV2VlayAyYiBEaXNsb2NhdGlvbnNfMjAyNi5wcHR4",
+        "ref-RU5HUiAyOTAvRU5HUiAyOTBfQXNzaWduXzFfMjAyNi5kb2N4",
+        "ref-RU5HUiAyOTAvRU5HUjI5MENvdXJzZU91dGxpbmVfMjAyNi5kb2N4",
+        "ref-RU5HUiAyOTAvRU5HUi0yOTAtWDAxIGNvdXJzZSBzeWxsYWJ1c18yMDI2LmRvY3g"
+      ],
       "builtin": true
     }
   ],
@@ -868,6 +999,72 @@ window.TESSELATE_CATALOG = {
       "name": "LabArraySearch.pdf",
       "url": "labs/lab5/LabArraySearch.pdf",
       "size": 59350,
+      "stage": "unreviewed",
+      "notes": "Existing reference. Check whether this was used in a study page, then link it here.",
+      "builtin": true,
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "ref-RU5HUiAyOTAvRU5HUiAyOTBfQXNzaWduXzFfMjAyNi5kb2N4",
+      "courseId": "engr290",
+      "name": "ENGR 290_Assign_1_2026.docx",
+      "url": "ENGR%20290/ENGR%20290_Assign_1_2026.docx",
+      "size": 41561,
+      "stage": "unreviewed",
+      "notes": "Existing reference. Check whether this was used in a study page, then link it here.",
+      "builtin": true,
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "ref-RU5HUiAyOTAvRU5HUi0yOTAtWDAxIGNvdXJzZSBzeWxsYWJ1c18yMDI2LmRvY3g",
+      "courseId": "engr290",
+      "name": "ENGR-290-X01 course syllabus_2026.docx",
+      "url": "ENGR%20290/ENGR-290-X01%20course%20syllabus_2026.docx",
+      "size": 92632,
+      "stage": "unreviewed",
+      "notes": "Existing reference. Check whether this was used in a study page, then link it here.",
+      "builtin": true,
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "ref-RU5HUiAyOTAvRU5HUjI5MENvdXJzZU91dGxpbmVfMjAyNi5kb2N4",
+      "courseId": "engr290",
+      "name": "ENGR290CourseOutline_2026.docx",
+      "url": "ENGR%20290/ENGR290CourseOutline_2026.docx",
+      "size": 50611,
+      "stage": "unreviewed",
+      "notes": "Existing reference. Check whether this was used in a study page, then link it here.",
+      "builtin": true,
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "ref-RU5HUiAyOTAvV2VlayAxIEF0b21pYyBTdHJ1Y3R1cmVfMjAyNigxKS5wcHR4",
+      "courseId": "engr290",
+      "name": "Week 1 Atomic Structure_2026(1).pptx",
+      "url": "ENGR%20290/Week%201%20Atomic%20Structure_2026(1).pptx",
+      "size": 2995967,
+      "stage": "unreviewed",
+      "notes": "Existing reference. Check whether this was used in a study page, then link it here.",
+      "builtin": true,
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "ref-RU5HUiAyOTAvV2VlayAyYSBCb25kaW5nXzIwMjYucHB0eA",
+      "courseId": "engr290",
+      "name": "Week 2a Bonding_2026.pptx",
+      "url": "ENGR%20290/Week%202a%20Bonding_2026.pptx",
+      "size": 3505133,
+      "stage": "unreviewed",
+      "notes": "Existing reference. Check whether this was used in a study page, then link it here.",
+      "builtin": true,
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "ref-RU5HUiAyOTAvV2VlayAyYiBEaXNsb2NhdGlvbnNfMjAyNi5wcHR4",
+      "courseId": "engr290",
+      "name": "Week 2b Dislocations_2026.pptx",
+      "url": "ENGR%20290/Week%202b%20Dislocations_2026.pptx",
+      "size": 8127322,
       "stage": "unreviewed",
       "notes": "Existing reference. Check whether this was used in a study page, then link it here.",
       "builtin": true,
