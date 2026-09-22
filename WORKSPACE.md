@@ -71,3 +71,5 @@ node dev/workspace-cloud-test.cjs
 ```
 
 This uses an installed Chrome browser. Screenshots and a test backup are written under the system temporary directory in `tesselate-workspace-check`.
+
+COMP 139E beginner support: `comp139e/beginner.js` supplies escaped C++ syntax colours, reading explanations, and tips for all 18 tutorials. `beginner-desk.js` synchronizes an accessible textarea with its coloured display and line numbers; compilation always uses the original textarea text. Beginner explanations default on and can be hidden with a saved browser preference. The line guide is a lexical reading aid, not a debugger or a full C++ parser. Lesson examples use the same renderer at build time. Run `node dev/comp139e-beginner-check.cjs` with Playwright and the local server on port 8765 to check text preservation, explanations, scrolling, themes, persistence, and mobile layout.

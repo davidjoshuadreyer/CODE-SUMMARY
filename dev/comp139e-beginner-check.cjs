@@ -1,0 +1,22 @@
+const assert=require('node:assert/strict'),{chromium}=require('playwright'),guide=require('../comp139e/beginner.js');
+const base=process.env.COMP139E_TEST_URL||'http://127.0.0.1:8765/comp139e/desk.html';
+const sample='#include <iostream>\n// if 42 is only a comment\nint main() {\n  std::cout << "<script>42</script>";\n  return 0;\n}\n';
+assert.equal(guide.tokens(sample).map(t=>t.text).join(''),sample);assert.ok(!guide.highlight(sample).includes('<script>'));
+assert.equal(guide.tokens('/*\n int value = 42;\n*/')[0].kind,'comment');assert.equal(guide.tokens('/*\n int value = 42;\n*/').length,1);
+assert.match(guide.explain(sample,1),/note/);assert.match(guide.explain(sample,3),/Send values/);assert.match(guide.explain(sample,4),/Finish/);
+(async()=>{const browser=await chromium.launch({channel:'chrome',headless:true});try{
+ const page=await browser.newPage({viewport:{width:1440,height:1000}}),errors=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.goto(base+'#tutorial%3A1');await page.waitForFunction(()=>!document.querySelector('#run').disabled);
+ assert.ok(await page.locator('#code-colours .cpp-type').count());assert.match(await page.locator('#beginner-goal').textContent(),/Variables/);
+ await page.locator('#source-code').fill(sample);assert.equal(await page.locator('#code-colours').textContent(),sample+'\n ');
+ await page.locator('#source-code').evaluate(e=>{e.focus();e.setSelectionRange(e.value.indexOf('std::cout'),e.value.indexOf('std::cout'));e.dispatchEvent(new Event('click'));});assert.match(await page.locator('#line-explanation').textContent(),/Send values/);
+ await page.locator('#next-line').click();assert.match(await page.locator('#line-explanation').textContent(),/Finish/);
+ await page.locator('#source-code').fill(Array.from({length:70},(_,i)=>'int number'+i+' = '+i+'; // '+ 'long line '.repeat(20)).join('\n'));
+ await page.locator('#source-code').evaluate(e=>{e.scrollTop=240;e.scrollLeft=300;e.dispatchEvent(new Event('scroll'));});
+ const metrics=await page.evaluate(()=>{const e=document.querySelector('#source-code'),p=document.querySelector('#code-colours');return {a:getComputedStyle(e).font,b:getComputedStyle(p).font,transform:p.style.transform,left:e.scrollLeft,top:e.scrollTop};});assert.equal(metrics.a,metrics.b);assert.equal(metrics.transform,`translate(${-metrics.left}px, ${-metrics.top}px)`);
+ await page.locator('#beginner-mode').uncheck();assert.ok(await page.locator('#line-help').isHidden());await page.reload();assert.ok(!await page.locator('#beginner-mode').isChecked());await page.locator('#beginner-mode').check();
+ await page.goto(base+'#tutorial%3A5');await page.waitForFunction(()=>document.querySelector('#beginner-goal').textContent.includes('pointer'));await page.locator('#theme').click();await page.screenshot({path:process.env.TEMP+'/comp139e-beginner-dark.png',fullPage:true});
+ await page.setViewportSize({width:390,height:844});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+ await page.goto(new URL('lesson-01.html',base).href);assert.ok(await page.locator('.source .cpp-string').count());assert.match(await page.locator('.beginner-card').textContent(),/Variables/);
+ assert.deepEqual(errors,[]);console.log('PASS syntax preservation/escaping, explanatory rules, live highlighting, cursor guide, scroll alignment, preference persistence, dark/mobile layout, and lesson colours.');
+}finally{await browser.close();}})().catch(e=>{console.error(e);process.exitCode=1;});

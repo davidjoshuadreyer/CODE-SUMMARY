@@ -8,6 +8,7 @@
  function save(){
   if(!selected||!activeFile)return;
   files[activeFile]=$('source-code').value;
+  CppDesk.refresh(selected.id,activeFile);
   drafts[selected.id]={files:Object.fromEntries(Object.entries(files).filter(([name,value])=>value!==originals[name])),input:$('stdin').value};
   try{localStorage.setItem(key,JSON.stringify(drafts));$('save-status').textContent='Edits saved in this browser only.';}catch{$('save-status').textContent='Browser storage is unavailable or full. Copy your edits before closing this page.';}
  }
@@ -19,7 +20,7 @@
   if(!matches.length)$('programs').textContent='No matches. Try another search or category.';
  }
  function open(id){if(decodeURIComponent(location.hash.slice(1))===id)select(programs.find(p=>p.id===id)||scratch);else location.hash=encodeURIComponent(id);}
- function showFile(){activeFile=$('file-select').value;$('source-code').value=files[activeFile]||'';$('source-status').textContent=activeFile+' · '+$('source-code').value.split('\n').length+' lines';}
+ function showFile(){activeFile=$('file-select').value;$('source-code').value=files[activeFile]||'';CppDesk.refresh(selected.id,activeFile);$('source-status').textContent=activeFile+' · '+$('source-code').value.split('\n').length+' lines';}
  function stop(message){if(controller){controller.abort();controller=null;$('run-status').textContent=message;}$('stop').hidden=true;$('run').disabled=!recipe||!activeFile;}
  async function select(p){
   save();stop('Stopped waiting. The remote run remains time-limited.');const ticket=++selection;selected=p;recipe=null;activeFile='';files={};originals={};
@@ -30,7 +31,7 @@
   $('stdin').value=typeof drafts[p.id]?.input==='string'?drafts[p.id].input:p.sample||'';$('input-hint').textContent=p.inputHint||scratch.inputHint;
   $('run').disabled=true;$('source-code').disabled=true;$('file-select').disabled=true;$('reset').disabled=true;$('copy-source').disabled=true;
   $('run-status').textContent=p.runnable?'Loading project...':'MATLAB scripts can be edited here; execution requires MATLAB.';
-  $('console').textContent='';$('diagnostics').textContent='';$('diagnostics-panel').hidden=true;$('source-code').value='';$('file-select').replaceChildren();$('source-status').textContent='Loading files...';$('save-status').textContent='';list();
+  $('console').textContent='';$('diagnostics').textContent='';$('diagnostics-panel').hidden=true;$('source-code').value='';CppDesk.refresh(p.id,'');$('file-select').replaceChildren();$('source-status').textContent='Loading files...';$('save-status').textContent='';list();
   const active=$('programs').querySelector('[aria-pressed="true"]');if(active)$('programs').scrollTop=active.offsetTop-8;
   try{
    const nextRecipe=p.id==='scratch'?scratchRecipe:recipes[p.id];
@@ -64,7 +65,7 @@
  $('search').addEventListener('input',list);$('category').addEventListener('change',list);
  $('file-select').addEventListener('change',()=>{save();showFile();});
  $('source-code').addEventListener('input',save);$('stdin').addEventListener('input',save);
- $('source-code').addEventListener('keydown',event=>{if(event.key==='Tab'){event.preventDefault();const editor=event.target;editor.setRangeText('    ',editor.selectionStart,editor.selectionEnd,'end');save();}});
+ $('source-code').addEventListener('keydown',event=>{if(event.key==='Tab'&&!event.shiftKey){event.preventDefault();const editor=event.target;editor.setRangeText('    ',editor.selectionStart,editor.selectionEnd,'end');save();}});
  $('run').addEventListener('click',run);$('stop').addEventListener('click',()=>stop('Stopped waiting. The remote run remains time-limited.'));
  $('scratch').addEventListener('click',()=>open('scratch'));
  $('sample-input').addEventListener('click',()=>{$('stdin').value=selected?.sample||'';save();});
