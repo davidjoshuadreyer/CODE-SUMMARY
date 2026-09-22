@@ -7,6 +7,10 @@ const read=f=>fs.readFileSync(path.join(root,f),'utf8').replace(/^\uFEFF/,'');
 const functions=['basics','inputAndDecisions','functions','arraysAndStrings','pointers','modulesAndTesting','classes','inheritance','templates','linkedLists','stacksAndQueues','files','exceptions','vectors','control','harmonicMotion','integration','referenceDemo'];
 const recipes={};
 for(const p of programs.filter(p=>p.runnable)){
+ if(p.kind==='lectures'){
+  recipes[p.id]={files:p.files.map(name=>({name,url:'workspace/'+name})),units:[{file:p.source}],includes:['.'],standard:17,args:[],output:p.output||[]};
+  continue;
+ }
  const [kind,id]=p.id.split(':'),includes=['.','labs/lab03','labs/lab05'];
  const queue=[...p.files],files=new Set(),defines={};let declaration,call;
  if(kind==='tutorial'){

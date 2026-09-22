@@ -27,7 +27,7 @@
   try{localStorage.setItem('comp139e-desk-selection',p.id);}catch{}
   $('program-title').textContent=p.title;$('program-kind').textContent=p.label+' · '+p.group;
   $('program-note').textContent=p.note||(p.kind==='tutorials'?'Predict the output, run the example, then change the code and try again.':'Edit the source and related files, then compile and run here.');
-  const tutorial=p.kind==='tutorials';$('lesson-link').hidden=!tutorial;if(tutorial)$('lesson-link').href='lesson-'+p.id.split(':')[1].padStart(2,'0')+'.html';
+  const tutorial=p.kind==='tutorials';$('lesson-link').hidden=!tutorial&&!p.lesson;if(tutorial||p.lesson)$('lesson-link').href=p.lesson||'lesson-'+p.id.split(':')[1].padStart(2,'0')+'.html';
   $('stdin').value=typeof drafts[p.id]?.input==='string'?drafts[p.id].input:p.sample||'';$('input-hint').textContent=p.inputHint||scratch.inputHint;
   $('run').disabled=true;$('source-code').disabled=true;$('file-select').disabled=true;$('reset').disabled=true;$('copy-source').disabled=true;
   $('run-status').textContent=p.runnable?'Loading project...':'MATLAB scripts can be edited here; execution requires MATLAB.';

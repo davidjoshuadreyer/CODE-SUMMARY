@@ -142,5 +142,45 @@
     "sources": [
       "comp139e/workspace/tutorials/18_reference_demo.cpp"
     ]
+  },
+  {
+    "slug": "slides-introduction",
+    "title": "C++ basics: input, numbers, and expressions",
+    "summary": "Covered lecture slides: Read a radius and calculate area; Integer division and increment",
+    "sources": [
+      "comp139e/lecture slides/0-1_Introduction_to_C++.pdf"
+    ]
+  },
+  {
+    "slug": "slides-functions",
+    "title": "Functions: values, references, and scope",
+    "summary": "Covered lecture slides: Compare copying with changing the original; Defaults, overloads, and a remembered counter",
+    "sources": [
+      "comp139e/lecture slides/1-1_Functions.pdf"
+    ]
+  },
+  {
+    "slug": "slides-pointers",
+    "title": "Pointers, arrays, and dynamic memory",
+    "summary": "Covered lecture slides: Change a value and redirect a pointer; Allocate, sort, find, and free an array",
+    "sources": [
+      "comp139e/lecture slides/1-2_Pointers_and_Dynamic_Memory_Management.pdf"
+    ]
+  },
+  {
+    "slug": "slides-classes",
+    "title": "Objects, classes, and string methods",
+    "summary": "Covered lecture slides: Explore a string with dot methods; Construct, copy, and inspect simple objects",
+    "sources": [
+      "comp139e/lecture slides/1-3_Objects_and_Classes.pdf"
+    ]
+  },
+  {
+    "slug": "slides-files-exceptions",
+    "title": "Files, stream states, and exceptions",
+    "summary": "Covered lecture slides: Write, append, and total a text file; Handle division by zero and keep going",
+    "sources": [
+      "comp139e/lecture slides/1-4_Files_and_Exception_Handling.pdf"
+    ]
   }
 ]

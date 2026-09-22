@@ -3402,5 +3402,197 @@
     "standard": 14,
     "args": [],
     "output": []
+  },
+  "lecture:area": {
+    "files": [
+      {
+        "name": "lectures/area.cpp",
+        "url": "workspace/lectures/area.cpp"
+      }
+    ],
+    "units": [
+      {
+        "file": "lectures/area.cpp"
+      }
+    ],
+    "includes": [
+      "."
+    ],
+    "standard": 17,
+    "args": [],
+    "output": []
+  },
+  "lecture:numbers": {
+    "files": [
+      {
+        "name": "lectures/numbers.cpp",
+        "url": "workspace/lectures/numbers.cpp"
+      }
+    ],
+    "units": [
+      {
+        "file": "lectures/numbers.cpp"
+      }
+    ],
+    "includes": [
+      "."
+    ],
+    "standard": 17,
+    "args": [],
+    "output": []
+  },
+  "lecture:references": {
+    "files": [
+      {
+        "name": "lectures/references.cpp",
+        "url": "workspace/lectures/references.cpp"
+      }
+    ],
+    "units": [
+      {
+        "file": "lectures/references.cpp"
+      }
+    ],
+    "includes": [
+      "."
+    ],
+    "standard": 17,
+    "args": [],
+    "output": []
+  },
+  "lecture:overloads": {
+    "files": [
+      {
+        "name": "lectures/overloads.cpp",
+        "url": "workspace/lectures/overloads.cpp"
+      }
+    ],
+    "units": [
+      {
+        "file": "lectures/overloads.cpp"
+      }
+    ],
+    "includes": [
+      "."
+    ],
+    "standard": 17,
+    "args": [],
+    "output": []
+  },
+  "lecture:pointer-alias": {
+    "files": [
+      {
+        "name": "lectures/pointer-alias.cpp",
+        "url": "workspace/lectures/pointer-alias.cpp"
+      }
+    ],
+    "units": [
+      {
+        "file": "lectures/pointer-alias.cpp"
+      }
+    ],
+    "includes": [
+      "."
+    ],
+    "standard": 17,
+    "args": [],
+    "output": []
+  },
+  "lecture:dynamic-array": {
+    "files": [
+      {
+        "name": "lectures/dynamic-array.cpp",
+        "url": "workspace/lectures/dynamic-array.cpp"
+      }
+    ],
+    "units": [
+      {
+        "file": "lectures/dynamic-array.cpp"
+      }
+    ],
+    "includes": [
+      "."
+    ],
+    "standard": 17,
+    "args": [],
+    "output": []
+  },
+  "lecture:strings": {
+    "files": [
+      {
+        "name": "lectures/strings.cpp",
+        "url": "workspace/lectures/strings.cpp"
+      }
+    ],
+    "units": [
+      {
+        "file": "lectures/strings.cpp"
+      }
+    ],
+    "includes": [
+      "."
+    ],
+    "standard": 17,
+    "args": [],
+    "output": []
+  },
+  "lecture:objects": {
+    "files": [
+      {
+        "name": "lectures/objects.cpp",
+        "url": "workspace/lectures/objects.cpp"
+      }
+    ],
+    "units": [
+      {
+        "file": "lectures/objects.cpp"
+      }
+    ],
+    "includes": [
+      "."
+    ],
+    "standard": 17,
+    "args": [],
+    "output": []
+  },
+  "lecture:file-total": {
+    "files": [
+      {
+        "name": "lectures/file-total.cpp",
+        "url": "workspace/lectures/file-total.cpp"
+      }
+    ],
+    "units": [
+      {
+        "file": "lectures/file-total.cpp"
+      }
+    ],
+    "includes": [
+      "."
+    ],
+    "standard": 17,
+    "args": [],
+    "output": [
+      "scores.txt"
+    ]
+  },
+  "lecture:exceptions": {
+    "files": [
+      {
+        "name": "lectures/exceptions.cpp",
+        "url": "workspace/lectures/exceptions.cpp"
+      }
+    ],
+    "units": [
+      {
+        "file": "lectures/exceptions.cpp"
+      }
+    ],
+    "includes": [
+      "."
+    ],
+    "standard": 17,
+    "args": [],
+    "output": []
   }
 }

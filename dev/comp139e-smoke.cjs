@@ -10,7 +10,7 @@ const server=http.createServer((req,res)=>{const file=path.resolve(root,'.'+deco
  try{
  const page=await browser.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto(base+'/index.html#course/comp139e');await page.getByRole('heading',{name:'C++ & Engineering Computing',exact:true}).waitFor();
- const catalog=await page.evaluate(()=>window.TESSELATE_CATALOG);assert.equal(catalog.resources.filter(r=>r.courseId==='comp139e').length,24);
+ const catalog=await page.evaluate(()=>window.TESSELATE_CATALOG);assert.equal(catalog.resources.filter(r=>r.courseId==='comp139e').length,30);
  for(const r of catalog.resources.filter(r=>r.courseId==='comp139e'))for(const id of r.referenceIds)assert.ok(catalog.references.some(ref=>ref.id===id));
  for(const file of fs.readdirSync(path.join(root,'comp139e')).filter(f=>f.endsWith('.html'))){
   await page.goto(base+'/comp139e/'+file);
@@ -18,7 +18,7 @@ const server=http.createServer((req,res)=>{const file=path.resolve(root,'.'+deco
   for(const href of links)assert.ok((await page.request.get(new URL(href,page.url()).href.split('#')[0])).ok(),file+' -> '+href);
  }
  await page.goto(base+'/comp139e/desk.html#tutorial%3A5');await page.getByRole('heading',{name:'Pointers & memory',exact:true}).waitFor();await page.waitForFunction(()=>document.querySelector('#source-code').value.includes('makeReadings'));
- assert.equal(await page.locator('.program').count(),86);await page.locator('#category').selectOption('labs');assert.equal(await page.locator('.program').count(),9);
+ assert.equal(await page.locator('.program').count(),programs.length+1);await page.locator('#category').selectOption('labs');assert.equal(await page.locator('.program').count(),9);
  await page.locator('[data-id="lab:8"]').click();await page.getByRole('heading',{name:'Harmonic motion',exact:true}).waitFor();assert.ok(await page.locator('#run').isDisabled());assert.match(await page.locator('#program-note').textContent(),/MATLAB/);
  await page.locator('#category').selectOption('all');await page.locator('#search').fill('no-matching-program');assert.match(await page.locator('#programs').textContent(),/No matches/);await page.locator('#search').fill('computeAverage');await page.locator('[data-id="example:computeAverage"]').click();await page.waitForFunction(()=>document.querySelector('#source-code').value.includes('computeAverage'));
  await page.reload();await page.waitForFunction(()=>document.querySelector('#source-code').value.includes('computeAverage'));
@@ -37,6 +37,6 @@ const server=http.createServer((req,res)=>{const file=path.resolve(root,'.'+deco
  native=spawn('python',[path.join(root,'comp139e/workspace/dashboard/server.py'),'--port','0','--no-browser'],{windowsHide:true});
  const local=await new Promise((resolve,reject)=>{const timeout=setTimeout(()=>reject(Error('Native server startup timed out')),15000);native.once('error',reject);native.stdout.on('data',data=>{const match=data.toString().match(/http:\/\/127\.0\.0\.1:\d+/);if(match){clearTimeout(timeout);resolve(match[0]);}});});
  await page.goto(local+'/?program=tutorial%3A1');await page.waitForFunction(()=>document.querySelector('#program-title').textContent==='Variables & arithmetic');await page.locator('#run').click();await page.waitForFunction(()=>document.querySelector('#status').textContent.includes('Finished'));assert.match(await page.locator('#console').textContent(),/3.0 \/ 2 = 1.5/);
- assert.deepEqual(errors,[]);console.log('PASS all 24 pages and links, 85 program entries, 36 answers, saved tests, mobile layouts, and native dashboard deep-link/run.');console.log('Screenshots: '+output);
+ assert.deepEqual(errors,[]);console.log('PASS all course pages and links, program entries, 36 answers, saved tests, mobile layouts, and native dashboard deep-link/run.');console.log('Screenshots: '+output);
  }finally{if(native)native.kill();await browser.close();server.close();}
 })().catch(e=>{console.error(e);server.close();process.exitCode=1;});

@@ -46,6 +46,7 @@
   ['A program can use a class defined in another file.','The header declares CircleX. CricleX.cpp supplies its functions; both are needed to build the program.','Change circle.r and predict whether the area gets bigger or smaller.']
  ];
  function overview(id){
+  if(id?.startsWith('lecture:'))return ['Practice the covered lecture material.','This is a complete small program. Find main(), predict its output, then run it. The linked lecture lesson explains the concepts and expected results.','Follow the change suggested above, or open Read lesson for a self-check and the source slides.'];
   if(id==='scratch')return ['Your first program: display a message.','C++ starts at main(). The instructions inside its braces run in order, unless a loop, branch, or function call changes the flow.','Change the text inside the quotation marks, then select Compile & run.'];
   if(id?.startsWith('tutorial:'))return lessons[Number(id.split(':')[1])-1];
   return ['Read one small piece at a time.','Find the function being called, then follow its statements. Some course files use an entry point in online_main.cpp instead of defining main() themselves.','Look for TODO comments in lab starters. These mark parts you are meant to complete. Start with Lesson 1 if this example feels unfamiliar.'];

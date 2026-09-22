@@ -1578,5 +1578,177 @@
     "inputHint": "This program normally runs without keyboard input.",
     "fileArgs": false,
     "readme": ""
+  },
+  {
+    "id": "lecture:area",
+    "kind": "lectures",
+    "title": "Read a radius and calculate area",
+    "label": "Lecture practice",
+    "group": "C++ basics: input, numbers, and expressions",
+    "source": "lectures/area.cpp",
+    "files": [
+      "lectures/area.cpp"
+    ],
+    "runnable": true,
+    "sample": "2",
+    "inputHint": "Enter a non-negative radius.",
+    "note": "Change the input to 3. Predict why the area grows by more than one half.",
+    "lesson": "slides-introduction.html",
+    "output": []
+  },
+  {
+    "id": "lecture:numbers",
+    "kind": "lectures",
+    "title": "Integer division and increment",
+    "label": "Lecture practice",
+    "group": "C++ basics: input, numbers, and expressions",
+    "source": "lectures/numbers.cpp",
+    "files": [
+      "lectures/numbers.cpp"
+    ],
+    "runnable": true,
+    "sample": "",
+    "inputHint": "This example needs no keyboard input.",
+    "note": "Change 5 to 7 in both divisions. Then move ++count into its own statement.",
+    "lesson": "slides-introduction.html",
+    "output": []
+  },
+  {
+    "id": "lecture:references",
+    "kind": "lectures",
+    "title": "Compare copying with changing the original",
+    "label": "Lecture practice",
+    "group": "Functions: values, references, and scope",
+    "source": "lectures/references.cpp",
+    "files": [
+      "lectures/references.cpp"
+    ],
+    "runnable": true,
+    "sample": "",
+    "inputHint": "This example needs no keyboard input.",
+    "note": "Call byReference twice. Explain why the result changes but byValue does not.",
+    "lesson": "slides-functions.html",
+    "output": []
+  },
+  {
+    "id": "lecture:overloads",
+    "kind": "lectures",
+    "title": "Defaults, overloads, and a remembered counter",
+    "label": "Lecture practice",
+    "group": "Functions: values, references, and scope",
+    "source": "lectures/overloads.cpp",
+    "files": [
+      "lectures/overloads.cpp"
+    ],
+    "runnable": true,
+    "sample": "",
+    "inputHint": "This example needs no keyboard input.",
+    "note": "Call nextTicket a third time. Change the default factor to 3.",
+    "lesson": "slides-functions.html",
+    "output": []
+  },
+  {
+    "id": "lecture:pointer-alias",
+    "kind": "lectures",
+    "title": "Change a value and redirect a pointer",
+    "label": "Lecture practice",
+    "group": "Pointers, arrays, and dynamic memory",
+    "source": "lectures/pointer-alias.cpp",
+    "files": [
+      "lectures/pointer-alias.cpp"
+    ],
+    "runnable": true,
+    "sample": "",
+    "inputHint": "This example needs no keyboard input.",
+    "note": "Change redirect to take int* instead of int*&. Predict the second printed number.",
+    "lesson": "slides-pointers.html",
+    "output": []
+  },
+  {
+    "id": "lecture:dynamic-array",
+    "kind": "lectures",
+    "title": "Allocate, sort, find, and free an array",
+    "label": "Lecture practice",
+    "group": "Pointers, arrays, and dynamic memory",
+    "source": "lectures/dynamic-array.cpp",
+    "files": [
+      "lectures/dynamic-array.cpp"
+    ],
+    "runnable": true,
+    "sample": "",
+    "inputHint": "This example needs no keyboard input.",
+    "note": "Search for 7. Keep the end check and explain why no Found line appears.",
+    "lesson": "slides-pointers.html",
+    "output": []
+  },
+  {
+    "id": "lecture:strings",
+    "kind": "lectures",
+    "title": "Explore a string with dot methods",
+    "label": "Lecture practice",
+    "group": "Objects, classes, and string methods",
+    "source": "lectures/strings.cpp",
+    "files": [
+      "lectures/strings.cpp"
+    ],
+    "runnable": true,
+    "sample": "",
+    "inputHint": "This example needs no keyboard input.",
+    "note": "Type name. on a new line to explore editor suggestions. Try name.empty() or name.at(0).",
+    "lesson": "slides-classes.html",
+    "output": []
+  },
+  {
+    "id": "lecture:objects",
+    "kind": "lectures",
+    "title": "Construct, copy, and inspect simple objects",
+    "label": "Lecture practice",
+    "group": "Objects, classes, and string methods",
+    "source": "lectures/objects.cpp",
+    "files": [
+      "lectures/objects.cpp"
+    ],
+    "runnable": true,
+    "sample": "",
+    "inputHint": "This example needs no keyboard input.",
+    "note": "Change the side in setSide to 5. Explain why the copied object still prints 9.",
+    "lesson": "slides-classes.html",
+    "output": []
+  },
+  {
+    "id": "lecture:file-total",
+    "kind": "lectures",
+    "title": "Write, append, and total a text file",
+    "label": "Lecture practice",
+    "group": "Files, stream states, and exceptions",
+    "source": "lectures/file-total.cpp",
+    "files": [
+      "lectures/file-total.cpp"
+    ],
+    "runnable": true,
+    "sample": "",
+    "inputHint": "This example needs no keyboard input.",
+    "note": "Append another number. Then append a word to see the non-numeric-data error.",
+    "lesson": "slides-files-exceptions.html",
+    "output": [
+      "scores.txt"
+    ]
+  },
+  {
+    "id": "lecture:exceptions",
+    "kind": "lectures",
+    "title": "Handle division by zero and keep going",
+    "label": "Lecture practice",
+    "group": "Files, stream states, and exceptions",
+    "source": "lectures/exceptions.cpp",
+    "files": [
+      "lectures/exceptions.cpp"
+    ],
+    "runnable": true,
+    "sample": "",
+    "inputHint": "This example needs no keyboard input.",
+    "note": "Change the second denominator to 2. Which statements are now reached?",
+    "lesson": "slides-files-exceptions.html",
+    "output": []
   }
 ]
