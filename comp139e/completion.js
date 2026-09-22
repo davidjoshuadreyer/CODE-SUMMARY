@@ -75,13 +75,14 @@
   const context=document.createElement('canvas').getContext('2d');context.font=style.font;
   const row=parseFloat(style.lineHeight),top=parseFloat(style.paddingTop)+(lines.length-1)*row-editor.scrollTop;
   const left=parseFloat(style.paddingLeft)+context.measureText(lines.at(-1).replace(/\t/g,'    ')).width-editor.scrollLeft;
-  panel.style.width=Math.min(560,editor.clientWidth-20)+'px';
+  panel.style.width=Math.min(320,editor.clientWidth-20)+'px';
   panel.style.left=Math.max(8,Math.min(left,editor.clientWidth-panel.offsetWidth-8))+'px';
-  panel.style.top=Math.max(8,Math.min(top+row,editor.clientHeight-panel.offsetHeight-8))+'px';
+  const below=top+row+4,above=top-panel.offsetHeight-4;
+  panel.style.top=Math.max(8,Math.min(below+panel.offsetHeight<=editor.clientHeight-8?below:above,editor.clientHeight-panel.offsetHeight-8))+'px';
  }
  function hide(){panel.hidden=true;result=null;editor.removeAttribute('aria-activedescendant');}
  function render(){
-  panel.replaceChildren(...result.items.map((item,i)=>{const b=document.createElement('button');b.type='button';b.id='member-option-'+i;b.setAttribute('role','option');b.setAttribute('aria-selected',String(i===chosen));b.textContent=item[1]+' — '+item[2];b.addEventListener('mousedown',e=>e.preventDefault());b.addEventListener('click',()=>accept(i));return b;}));
+  panel.replaceChildren(...result.items.map((item,i)=>{const b=document.createElement('button');b.type='button';b.id='member-option-'+i;b.setAttribute('role','option');b.setAttribute('aria-selected',String(i===chosen));b.textContent=item[3]?item[0]+' (…) { … }':item[1];b.title=item[1]+' — '+item[2];b.setAttribute('aria-label',b.title);b.addEventListener('mousedown',e=>e.preventDefault());b.addEventListener('click',()=>accept(i));return b;}));
   panel.hidden=false;editor.setAttribute('aria-activedescendant','member-option-'+chosen);
   positionPanel();
   const active=panel.children[chosen];
