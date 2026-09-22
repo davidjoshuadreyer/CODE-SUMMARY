@@ -1,0 +1,46 @@
+// Generated entry point for @EXAMPLE_FUNCTION@. Edit the original example to experiment.
+#include <iostream>
+#include <exception>
+#ifdef _WIN32
+#include <direct.h>
+#else
+#include <unistd.h>
+#endif
+@EXAMPLE_DECLARATION@
+
+int main()
+{
+    // Reproduce the old examples' expected src/... file layout using copied data.
+#ifdef _WIN32
+    int changed = _chdir("@EXAMPLE_WORK@");
+#else
+    int changed = chdir("@EXAMPLE_WORK@");
+#endif
+    if (changed != 0)
+    {
+        std::cerr << "Example data folder is missing. Rebuild the project.\n";
+        return 1;
+    }
+    try
+    {
+        // Stop cleanly if an interactive example is given EOF or invalid input,
+        // rather than allowing it to calculate with an uninitialized variable.
+        std::cin.exceptions(std::ios::failbit | std::ios::badbit);
+        @EXAMPLE_CALL@
+    }
+    catch (const std::ios_base::failure&)
+    {
+        std::cerr << "Input ended or did not match the example's prompt.\n";
+        return 1;
+    }
+    catch (const std::exception& error)
+    {
+        std::cerr << "Example error: " << error.what() << '\n';
+        return 1;
+    }
+    catch (...)
+    {
+        std::cerr << "The reference example threw an uncaught exception.\n";
+        return 1;
+    }
+}

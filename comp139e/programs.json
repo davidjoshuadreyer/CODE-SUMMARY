@@ -1,0 +1,1582 @@
+[
+  {
+    "id": "lab:1",
+    "kind": "labs",
+    "title": "Surveying & streetlights",
+    "label": "Lab 01",
+    "group": "Course assignments",
+    "source": "labs/lab01/lab.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "labs/lab01/lab.cpp",
+      "labs/lab01/lab.hpp",
+      "labs/lab01/survey.cpp",
+      "labs/lab01/survey.hpp"
+    ],
+    "sample": "100\n100\n30",
+    "inputHint": "Enter the radius, peg distance, and maximum light spacing, in that order.",
+    "fileArgs": false,
+    "readme": "labs/lab01/README.md"
+  },
+  {
+    "id": "lab:2",
+    "kind": "labs",
+    "title": "Grades & input validation",
+    "label": "Lab 02",
+    "group": "Course assignments",
+    "source": "labs/lab02/lab.cpp",
+    "runnable": true,
+    "note": "Contains starter functions. A TODO message means that part of the lab still needs implementing.",
+    "files": [
+      "labs/lab02/lab.cpp",
+      "labs/lab02/grades.cpp",
+      "labs/lab02/grades.hpp",
+      "labs/lab02/lab.hpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": "labs/lab02/README.md"
+  },
+  {
+    "id": "lab:3",
+    "kind": "labs",
+    "title": "Spherical coordinates",
+    "label": "Lab 03",
+    "group": "Course assignments",
+    "source": "labs/lab03/lab.cpp",
+    "runnable": true,
+    "note": "Contains starter functions. A TODO message means that part of the lab still needs implementing.",
+    "files": [
+      "labs/lab03/lab.cpp",
+      "labs/lab03/lab.hpp",
+      "labs/lab03/spherical.cpp",
+      "labs/lab03/spherical.hpp",
+      "labs/lab03/testTrigMain.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": "labs/lab03/README.md"
+  },
+  {
+    "id": "lab:4",
+    "kind": "labs",
+    "title": "Files & text processing",
+    "label": "Lab 04",
+    "group": "Course assignments",
+    "source": "labs/lab04/lab.cpp",
+    "runnable": true,
+    "note": "Contains starter functions. A TODO message means that part of the lab still needs implementing.",
+    "files": [
+      "labs/lab04/lab.cpp",
+      "labs/lab04/lab.hpp",
+      "labs/lab04/text_processing.cpp",
+      "labs/lab04/text_processing.hpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": true,
+    "inputFile": "labs/lab04/data/textAndNumbers.txt",
+    "outputFile": "labs/lab04/output.txt",
+    "readme": "labs/lab04/README.md"
+  },
+  {
+    "id": "lab:5",
+    "kind": "labs",
+    "title": "Digital controllers",
+    "label": "Lab 05",
+    "group": "Course assignments",
+    "source": "labs/lab05/controllerMain.cpp",
+    "runnable": true,
+    "note": "Contains starter functions. A TODO message means that part of the lab still needs implementing.",
+    "files": [
+      "labs/lab05/controllerMain.cpp",
+      "labs/lab05/Controller.hpp",
+      "labs/lab05/lab.hpp",
+      "labs/lab05/PID_Controller.cpp",
+      "labs/lab05/PID_Controller.hpp",
+      "labs/lab05/Plant.cpp",
+      "labs/lab05/Plant.hpp",
+      "labs/lab05/ProportionalController.cpp",
+      "labs/lab05/ProportionalController.hpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": "labs/lab05/README.md"
+  },
+  {
+    "id": "lab:6",
+    "kind": "labs",
+    "title": "Linked stacks",
+    "label": "Lab 06",
+    "group": "Course assignments",
+    "source": "labs/lab06/lab.cpp",
+    "runnable": true,
+    "note": "Contains starter functions. A TODO message means that part of the lab still needs implementing.",
+    "files": [
+      "labs/lab06/lab.cpp",
+      "labs/lab06/lab.hpp",
+      "labs/lab06/Square.cpp",
+      "labs/lab06/Square.hpp",
+      "labs/lab06/Stack.hpp",
+      "labs/lab06/StackException.hpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": "labs/lab06/README.md"
+  },
+  {
+    "id": "lab:7",
+    "kind": "labs",
+    "title": "STL vectors",
+    "label": "Lab 07",
+    "group": "Course assignments",
+    "source": "labs/lab07/lab.cpp",
+    "runnable": true,
+    "note": "Contains starter functions. A TODO message means that part of the lab still needs implementing.",
+    "files": [
+      "labs/lab07/lab.cpp",
+      "labs/lab07/lab.hpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": "labs/lab07/README.md"
+  },
+  {
+    "id": "lab:8",
+    "kind": "labs",
+    "title": "Harmonic motion",
+    "label": "Lab 08",
+    "group": "Course assignments",
+    "source": "labs/lab08/harmonicScript.m",
+    "runnable": false,
+    "note": "Open this script in MATLAB to run it.",
+    "files": [
+      "labs/lab08/harmonicScript.m",
+      "labs/lab08/harmonicMotion.m",
+      "labs/lab08/harmonicMotionArgumentValidation.m"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": "labs/lab08/README.md"
+  },
+  {
+    "id": "lab:9",
+    "kind": "labs",
+    "title": "Numerical integration",
+    "label": "Lab 09",
+    "group": "Course assignments",
+    "source": "labs/lab09/integrationError.m",
+    "runnable": false,
+    "note": "Open this script in MATLAB to run it.",
+    "files": [
+      "labs/lab09/integrationError.m",
+      "labs/lab09/simpsonsRuleLoop.m",
+      "labs/lab09/simpsonsRuleSum.m",
+      "labs/lab09/trapezoidalRule.m"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": "labs/lab09/README.md"
+  },
+  {
+    "id": "tutorial:1",
+    "kind": "tutorials",
+    "title": "Variables & arithmetic",
+    "label": "Lesson 01",
+    "group": "Guided lessons",
+    "source": "tutorials/01_basics.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "tutorials/01_basics.cpp",
+      "tutorials/Tutorials.hpp",
+      "tutorials/Tutorials.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "tutorial:2",
+    "kind": "tutorials",
+    "title": "Input & decisions",
+    "label": "Lesson 02",
+    "group": "Guided lessons",
+    "source": "tutorials/02_input_and_decisions.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "tutorials/02_input_and_decisions.cpp",
+      "tutorials/Tutorials.hpp",
+      "tutorials/Tutorials.cpp"
+    ],
+    "sample": "-1\n25\nq",
+    "inputHint": "Enter temperatures from 0 to 40. Enter q to finish.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "tutorial:3",
+    "kind": "tutorials",
+    "title": "Functions & references",
+    "label": "Lesson 03",
+    "group": "Guided lessons",
+    "source": "tutorials/03_functions.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "tutorials/03_functions.cpp",
+      "tutorials/Tutorials.hpp",
+      "tutorials/Tutorials.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "tutorial:4",
+    "kind": "tutorials",
+    "title": "Arrays & strings",
+    "label": "Lesson 04",
+    "group": "Guided lessons",
+    "source": "tutorials/04_arrays_and_strings.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "tutorials/04_arrays_and_strings.cpp",
+      "tutorials/Tutorials.hpp",
+      "tutorials/Tutorials.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "tutorial:5",
+    "kind": "tutorials",
+    "title": "Pointers & memory",
+    "label": "Lesson 05",
+    "group": "Guided lessons",
+    "source": "tutorials/05_pointers.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "tutorials/05_pointers.cpp",
+      "tutorials/Tutorials.hpp",
+      "tutorials/Tutorials.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "tutorial:6",
+    "kind": "tutorials",
+    "title": "Modules & testing",
+    "label": "Lesson 06",
+    "group": "Guided lessons",
+    "source": "tutorials/06_modules_and_testing.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "tutorials/06_modules_and_testing.cpp",
+      "tutorials/Tutorials.hpp",
+      "tutorials/Tutorials.cpp",
+      "tutorials/support/Geometry.hpp",
+      "tutorials/support/Geometry.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "tutorial:7",
+    "kind": "tutorials",
+    "title": "Objects & classes",
+    "label": "Lesson 07",
+    "group": "Guided lessons",
+    "source": "tutorials/07_classes.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "tutorials/07_classes.cpp",
+      "tutorials/Tutorials.hpp",
+      "tutorials/Tutorials.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "tutorial:8",
+    "kind": "tutorials",
+    "title": "Inheritance & polymorphism",
+    "label": "Lesson 08",
+    "group": "Guided lessons",
+    "source": "tutorials/08_inheritance.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "tutorials/08_inheritance.cpp",
+      "tutorials/Tutorials.hpp",
+      "tutorials/Tutorials.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "tutorial:9",
+    "kind": "tutorials",
+    "title": "Templates",
+    "label": "Lesson 09",
+    "group": "Guided lessons",
+    "source": "tutorials/09_templates.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "tutorials/09_templates.cpp",
+      "tutorials/Tutorials.hpp",
+      "tutorials/Tutorials.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "tutorial:10",
+    "kind": "tutorials",
+    "title": "Linked lists",
+    "label": "Lesson 10",
+    "group": "Guided lessons",
+    "source": "tutorials/10_linked_lists.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "tutorials/10_linked_lists.cpp",
+      "tutorials/Tutorials.hpp",
+      "tutorials/Tutorials.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "tutorial:11",
+    "kind": "tutorials",
+    "title": "Stacks & queues",
+    "label": "Lesson 11",
+    "group": "Guided lessons",
+    "source": "tutorials/11_stacks_and_queues.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "tutorials/11_stacks_and_queues.cpp",
+      "tutorials/Tutorials.hpp",
+      "tutorials/Tutorials.cpp",
+      "tutorials/support/LearningStack.hpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "tutorial:12",
+    "kind": "tutorials",
+    "title": "Files & text processing",
+    "label": "Lesson 12",
+    "group": "Guided lessons",
+    "source": "tutorials/12_files.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "tutorials/12_files.cpp",
+      "tutorials/Tutorials.hpp",
+      "tutorials/Tutorials.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": true,
+    "inputFile": "tutorials/data/mixed.txt",
+    "outputFile": "tutorials/output/words-and-numbers.txt",
+    "readme": ""
+  },
+  {
+    "id": "tutorial:13",
+    "kind": "tutorials",
+    "title": "Exceptions",
+    "label": "Lesson 13",
+    "group": "Guided lessons",
+    "source": "tutorials/13_exceptions.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "tutorials/13_exceptions.cpp",
+      "tutorials/Tutorials.hpp",
+      "tutorials/Tutorials.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "tutorial:14",
+    "kind": "tutorials",
+    "title": "Vectors & iterators",
+    "label": "Lesson 14",
+    "group": "Guided lessons",
+    "source": "tutorials/14_vectors.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "tutorials/14_vectors.cpp",
+      "tutorials/Tutorials.hpp",
+      "tutorials/Tutorials.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "tutorial:15",
+    "kind": "tutorials",
+    "title": "Feedback control",
+    "label": "Lesson 15",
+    "group": "Guided lessons",
+    "source": "tutorials/15_control.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "tutorials/15_control.cpp",
+      "tutorials/Tutorials.hpp",
+      "tutorials/Tutorials.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "tutorial:16",
+    "kind": "tutorials",
+    "title": "Harmonic motion",
+    "label": "Lesson 16",
+    "group": "Guided lessons",
+    "source": "tutorials/16_harmonic_motion.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "tutorials/16_harmonic_motion.cpp",
+      "tutorials/Tutorials.hpp",
+      "tutorials/Tutorials.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "tutorial:17",
+    "kind": "tutorials",
+    "title": "Numerical integration",
+    "label": "Lesson 17",
+    "group": "Guided lessons",
+    "source": "tutorials/17_integration.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "tutorials/17_integration.cpp",
+      "tutorials/Tutorials.hpp",
+      "tutorials/Tutorials.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "tutorial:18",
+    "kind": "tutorials",
+    "title": "The CircleX reference demo",
+    "label": "Lesson 18",
+    "group": "Guided lessons",
+    "source": "tutorials/18_reference_demo.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "tutorials/18_reference_demo.cpp",
+      "tutorials/Tutorials.hpp",
+      "tutorials/Tutorials.cpp",
+      "reference/examples/Demo/AllTests.h"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:circleXDemo",
+    "kind": "examples",
+    "title": "Cricle X",
+    "label": "CricleX.cpp",
+    "group": "Demo",
+    "source": "reference/examples/Demo/CricleX.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Demo/CricleX.cpp",
+      "reference/examples/Demo/AllTests.h"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:appendFile",
+    "kind": "examples",
+    "title": "Append File",
+    "label": "AppendFile.cpp",
+    "group": "Files and Exception Handling",
+    "source": "reference/examples/Files_and_Exception_Handling/AppendFile.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Files_and_Exception_Handling/AppendFile.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:checkFile",
+    "kind": "examples",
+    "title": "Check File",
+    "label": "CheckFile.cpp",
+    "group": "Files and Exception Handling",
+    "source": "reference/examples/Files_and_Exception_Handling/CheckFile.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Files_and_Exception_Handling/CheckFile.cpp"
+    ],
+    "sample": "scores.txt",
+    "inputHint": "Enter a filename from the copied reference data, for example scores.txt.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:copyFile",
+    "kind": "examples",
+    "title": "Copy File",
+    "label": "CopyFile.cpp",
+    "group": "Files and Exception Handling",
+    "source": "reference/examples/Files_and_Exception_Handling/CopyFile.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Files_and_Exception_Handling/CopyFile.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:readCity",
+    "kind": "examples",
+    "title": "Read City",
+    "label": "ReadCity.cpp",
+    "group": "Files and Exception Handling",
+    "source": "reference/examples/Files_and_Exception_Handling/ReadCity.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Files_and_Exception_Handling/ReadCity.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:showStreamState",
+    "kind": "examples",
+    "title": "Show Stream State",
+    "label": "ShowStreamState.cpp",
+    "group": "Files and Exception Handling",
+    "source": "reference/examples/Files_and_Exception_Handling/ShowStreamState.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Files_and_Exception_Handling/ShowStreamState.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:testBadAllocExceptionDemo",
+    "kind": "examples",
+    "title": "Bad Alloc Exception Demo",
+    "label": "TestBadAllocExceptionDemo.cpp",
+    "group": "Files and Exception Handling",
+    "source": "reference/examples/Files_and_Exception_Handling/TestBadAllocExceptionDemo.cpp",
+    "runnable": true,
+    "note": "This demo uses a 1 MiB teaching allocation limit to demonstrate bad_alloc.",
+    "files": [
+      "reference/examples/Files_and_Exception_Handling/TestBadAllocExceptionDemo.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:testEndOfFile",
+    "kind": "examples",
+    "title": "End Of File",
+    "label": "TestEndOfFile.cpp",
+    "group": "Files and Exception Handling",
+    "source": "reference/examples/Files_and_Exception_Handling/TestEndOfFile.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Files_and_Exception_Handling/TestEndOfFile.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:testQuotientThrowRuntimeError",
+    "kind": "examples",
+    "title": "Quotient Throw Runtime Error",
+    "label": "TestQuotientThrowRuntimeError.cpp",
+    "group": "Files and Exception Handling",
+    "source": "reference/examples/Files_and_Exception_Handling/TestQuotientThrowRuntimeError.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Files_and_Exception_Handling/TestQuotientThrowRuntimeError.cpp"
+    ],
+    "sample": "12 3",
+    "inputHint": "Enter two integers. Try 12 0 to see the exception example.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:testQuotientWithException",
+    "kind": "examples",
+    "title": "Quotient With Exception",
+    "label": "TestQuotientWithException.cpp",
+    "group": "Files and Exception Handling",
+    "source": "reference/examples/Files_and_Exception_Handling/TestQuotientWithException.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Files_and_Exception_Handling/TestQuotientWithException.cpp"
+    ],
+    "sample": "12 3",
+    "inputHint": "Enter two integers. Try 12 0 to see the exception example.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:testQuotientWithFunction",
+    "kind": "examples",
+    "title": "Quotient With Function",
+    "label": "TestQuotientWithFunction.cpp",
+    "group": "Files and Exception Handling",
+    "source": "reference/examples/Files_and_Exception_Handling/TestQuotientWithFunction.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Files_and_Exception_Handling/TestQuotientWithFunction.cpp"
+    ],
+    "sample": "12 3",
+    "inputHint": "Enter two integers. Try 12 0 to see the exception example.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:textFileInput",
+    "kind": "examples",
+    "title": "Text File Input",
+    "label": "TextFileInput.cpp",
+    "group": "Files and Exception Handling",
+    "source": "reference/examples/Files_and_Exception_Handling/TextFileInput.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Files_and_Exception_Handling/TextFileInput.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:textFileOutput",
+    "kind": "examples",
+    "title": "Text File Output",
+    "label": "TextFileOutput.cpp",
+    "group": "Files and Exception Handling",
+    "source": "reference/examples/Files_and_Exception_Handling/TextFileOutput.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Files_and_Exception_Handling/TextFileOutput.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:writeFormattedData",
+    "kind": "examples",
+    "title": "Write Formatted Data",
+    "label": "WriteFormattedData.cpp",
+    "group": "Files and Exception Handling",
+    "source": "reference/examples/Files_and_Exception_Handling/WriteFormattedData.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Files_and_Exception_Handling/WriteFormattedData.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:staticVariableDemo",
+    "kind": "examples",
+    "title": "Static Variable Demo",
+    "label": "StaticVariableDemo.cpp",
+    "group": "Functions",
+    "source": "reference/examples/Functions/StaticVariableDemo.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Functions/StaticVariableDemo.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:testFunctionOverloading",
+    "kind": "examples",
+    "title": "Function Overloading",
+    "label": "TestFunctionOverloading.cpp",
+    "group": "Functions",
+    "source": "reference/examples/Functions/TestFunctionOverloading.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Functions/TestFunctionOverloading.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:testFunctionPrototype",
+    "kind": "examples",
+    "title": "Function Prototype",
+    "label": "TestFunctionPrototype.cpp",
+    "group": "Functions",
+    "source": "reference/examples/Functions/TestFunctionPrototype.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Functions/TestFunctionPrototype.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:testMax",
+    "kind": "examples",
+    "title": "Max",
+    "label": "TestMax.cpp",
+    "group": "Functions",
+    "source": "reference/examples/Functions/TestMax.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Functions/TestMax.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:testPassByValueOrRreference",
+    "kind": "examples",
+    "title": "Pass By Value Or Rreference",
+    "label": "TestPassByValueOrRreference.cpp",
+    "group": "Functions",
+    "source": "reference/examples/Functions/TestPassByValueOrRreference.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Functions/TestPassByValueOrRreference.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:testVoidFunction",
+    "kind": "examples",
+    "title": "Void Function",
+    "label": "TestVoidFunction.cpp",
+    "group": "Functions",
+    "source": "reference/examples/Functions/TestVoidFunction.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Functions/TestVoidFunction.cpp"
+    ],
+    "sample": "85",
+    "inputHint": "Enter a score from 0 to 100.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:variableScopeDemo",
+    "kind": "examples",
+    "title": "Variable Scope Demo",
+    "label": "VariableScopeDemo.cpp",
+    "group": "Functions",
+    "source": "reference/examples/Functions/VariableScopeDemo.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Functions/VariableScopeDemo.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:computeAreaWithConsoleInput",
+    "kind": "examples",
+    "title": "Compute Area With Console Input",
+    "label": "ComputeAreaWithConsoleInput.cpp",
+    "group": "Introduction",
+    "source": "reference/examples/Introduction/ComputeAreaWithConsoleInput.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Introduction/ComputeAreaWithConsoleInput.cpp"
+    ],
+    "sample": "2",
+    "inputHint": "Enter a radius.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:computeAverage",
+    "kind": "examples",
+    "title": "Compute Average",
+    "label": "ComputeAverage.cpp",
+    "group": "Introduction",
+    "source": "reference/examples/Introduction/ComputeAverage.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Introduction/ComputeAverage.cpp"
+    ],
+    "sample": "3 6 9",
+    "inputHint": "Enter three numbers, separated by spaces.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:testIntSLList",
+    "kind": "examples",
+    "title": "Int SLList",
+    "label": "TestIntSLList.cpp",
+    "group": "Linked Lists",
+    "source": "reference/examples/Linked_Lists/TestIntSLList.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Linked_Lists/TestIntSLList.cpp",
+      "reference/examples/Linked_Lists/IntSLList.h",
+      "reference/examples/Linked_Lists/IntSLList.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:ConstructorDestructorCallDemo",
+    "kind": "examples",
+    "title": "Constructor Destructor Call Demo",
+    "label": "ConstructorDestructorCallDemo.cpp",
+    "group": "Object-Oriented Programming",
+    "source": "reference/examples/Object-Oriented_Programming/ConstructorDestructorCallDemo.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Object-Oriented_Programming/ConstructorDestructorCallDemo.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:testMaxValue",
+    "kind": "examples",
+    "title": "Generic Max Value",
+    "label": "GenericMaxValue.cpp",
+    "group": "Object-Oriented Programming",
+    "source": "reference/examples/Object-Oriented_Programming/GenericMaxValue.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Object-Oriented_Programming/GenericMaxValue.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:TestGenericClass",
+    "kind": "examples",
+    "title": "Generic Class",
+    "label": "TestGenericClass.cpp",
+    "group": "Object-Oriented Programming",
+    "source": "reference/examples/Object-Oriented_Programming/TestGenericClass.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Object-Oriented_Programming/TestGenericClass.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:testGenericMaxValue",
+    "kind": "examples",
+    "title": "Generic Max Value",
+    "label": "TestGenericMaxValue.cpp",
+    "group": "Object-Oriented Programming",
+    "source": "reference/examples/Object-Oriented_Programming/TestGenericMaxValue.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Object-Oriented_Programming/TestGenericMaxValue.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:testGenericStack",
+    "kind": "examples",
+    "title": "Generic Stack",
+    "label": "TestGenericStack.cpp",
+    "group": "Object-Oriented Programming",
+    "source": "reference/examples/Object-Oriented_Programming/TestGenericStack.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Object-Oriented_Programming/TestGenericStack.cpp",
+      "reference/examples/Object-Oriented_Programming/GenericStack.h"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:testGenericStackWithTemplateFunction",
+    "kind": "examples",
+    "title": "Generic Stack With Template Function",
+    "label": "TestGenericStackWithTemplateFunction.cpp",
+    "group": "Object-Oriented Programming",
+    "source": "reference/examples/Object-Oriented_Programming/TestGenericStackWithTemplateFunction.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Object-Oriented_Programming/TestGenericStackWithTemplateFunction.cpp",
+      "reference/examples/Object-Oriented_Programming/GenericStack.h"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:testGeometricObject",
+    "kind": "examples",
+    "title": "Geometric Object",
+    "label": "TestGeometricObject.cpp",
+    "group": "Object-Oriented Programming",
+    "source": "reference/examples/Object-Oriented_Programming/TestGeometricObject.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Object-Oriented_Programming/TestGeometricObject.cpp",
+      "reference/examples/Object-Oriented_Programming/DerivedCircle.h",
+      "reference/examples/Object-Oriented_Programming/DerivedCircle.cpp",
+      "reference/examples/Object-Oriented_Programming/DerivedRectangle.h",
+      "reference/examples/Object-Oriented_Programming/DerivedRectangle.cpp",
+      "reference/examples/Object-Oriented_Programming/GeometricObject.h",
+      "reference/examples/Object-Oriented_Programming/GeometricObject.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:testPolymorphism",
+    "kind": "examples",
+    "title": "Polymorphism",
+    "label": "TestPolymorphism.cpp",
+    "group": "Object-Oriented Programming",
+    "source": "reference/examples/Object-Oriented_Programming/TestPolymorphism.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Object-Oriented_Programming/TestPolymorphism.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:testTwoDArrayUsingVector",
+    "kind": "examples",
+    "title": "Two DArray Using Vector",
+    "label": "TestTwoDArrayUsingVector.cpp",
+    "group": "Object-Oriented Programming",
+    "source": "reference/examples/Object-Oriented_Programming/TestTwoDArrayUsingVector.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Object-Oriented_Programming/TestTwoDArrayUsingVector.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:testVector",
+    "kind": "examples",
+    "title": "Vector",
+    "label": "TestVector.cpp",
+    "group": "Object-Oriented Programming",
+    "source": "reference/examples/Object-Oriented_Programming/TestVector.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Object-Oriented_Programming/TestVector.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:testVisibility",
+    "kind": "examples",
+    "title": "Visibility",
+    "label": "TestVisibility.cpp",
+    "group": "Object-Oriented Programming",
+    "source": "reference/examples/Object-Oriented_Programming/TestVisibility.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Object-Oriented_Programming/TestVisibility.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:testArrayOfObejctsTotalArea",
+    "kind": "examples",
+    "title": "Array Of Objects Total Area",
+    "label": "TestArrayOfObejctsTotalArea.cpp",
+    "group": "Objects and Classes",
+    "source": "reference/examples/Objects_and_Classes/TestArrayOfObejctsTotalArea.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Objects_and_Classes/TestArrayOfObejctsTotalArea.cpp",
+      "reference/examples/Objects_and_Classes/CircleWithPrivateDataFields.h",
+      "reference/examples/Objects_and_Classes/CircleWithPrivateDataFields.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:testCircle",
+    "kind": "examples",
+    "title": "Circle",
+    "label": "TestCircle.cpp",
+    "group": "Objects and Classes",
+    "source": "reference/examples/Objects_and_Classes/TestCircle.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Objects_and_Classes/TestCircle.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:testCircleWithHeader",
+    "kind": "examples",
+    "title": "Circle With Header",
+    "label": "TestCircleWithHeader.cpp",
+    "group": "Objects and Classes",
+    "source": "reference/examples/Objects_and_Classes/TestCircleWithHeader.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Objects_and_Classes/TestCircleWithHeader.cpp",
+      "reference/examples/Objects_and_Classes/Circle.h",
+      "reference/examples/Objects_and_Classes/Circle.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:testCircleWithPrivateDataFields",
+    "kind": "examples",
+    "title": "Circle With Private Data Fields",
+    "label": "TestCircleWithPrivateDataFields.cpp",
+    "group": "Objects and Classes",
+    "source": "reference/examples/Objects_and_Classes/TestCircleWithPrivateDataFields.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Objects_and_Classes/TestCircleWithPrivateDataFields.cpp",
+      "reference/examples/Objects_and_Classes/CircleWithPrivateDataFields.h",
+      "reference/examples/Objects_and_Classes/CircleWithPrivateDataFields.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:testCircleWithStaticDataFields",
+    "kind": "examples",
+    "title": "Circle With Static Data Fields",
+    "label": "TestCircleWithStaticDataFields.cpp",
+    "group": "Objects and Classes",
+    "source": "reference/examples/Objects_and_Classes/TestCircleWithStaticDataFields.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Objects_and_Classes/TestCircleWithStaticDataFields.cpp",
+      "reference/examples/Objects_and_Classes/CircleWithStaticDataFields.h",
+      "reference/examples/Objects_and_Classes/CircleWithStaticDataFields.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:testClassAssignmentOperator",
+    "kind": "examples",
+    "title": "Class Assignment Operator",
+    "label": "TestClassAssignmentOperator.cpp",
+    "group": "Objects and Classes",
+    "source": "reference/examples/Objects_and_Classes/TestClassAssignmentOperator.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Objects_and_Classes/TestClassAssignmentOperator.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:testLoanClass",
+    "kind": "examples",
+    "title": "Loan Class",
+    "label": "TestLoanClass.cpp",
+    "group": "Objects and Classes",
+    "source": "reference/examples/Objects_and_Classes/TestLoanClass.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Objects_and_Classes/TestLoanClass.cpp",
+      "reference/examples/Objects_and_Classes/Loan.h",
+      "reference/examples/Objects_and_Classes/Loan.cpp"
+    ],
+    "sample": "8.25\n5\n120000.95",
+    "inputHint": "Enter an interest rate, number of years, and loan amount, in that order.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:testStringClass",
+    "kind": "examples",
+    "title": "String Class",
+    "label": "TestStringClass.cpp",
+    "group": "Objects and Classes",
+    "source": "reference/examples/Objects_and_Classes/TestStringClass.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Objects_and_Classes/TestStringClass.cpp"
+    ],
+    "sample": "banana na NA",
+    "inputHint": "Enter a word, the text to replace, and the replacement, separated by spaces.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:testTV",
+    "kind": "examples",
+    "title": "TV",
+    "label": "TV.cpp",
+    "group": "Objects and Classes",
+    "source": "reference/examples/Objects_and_Classes/TV.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Objects_and_Classes/TV.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:reverseArrayUsingPointer",
+    "kind": "examples",
+    "title": "Reverse Array Using Pointer",
+    "label": "ReverseArrayUsingPointer.cpp",
+    "group": "Pointers and DMM",
+    "source": "reference/examples/Pointers_and_DMM/ReverseArrayUsingPointer.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Pointers_and_DMM/ReverseArrayUsingPointer.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:testArrayPointer",
+    "kind": "examples",
+    "title": "Array Pointer",
+    "label": "TestArrayPointer.cpp",
+    "group": "Pointers and DMM",
+    "source": "reference/examples/Pointers_and_DMM/TestArrayPointer.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Pointers_and_DMM/TestArrayPointer.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:testPointer",
+    "kind": "examples",
+    "title": "Pointer",
+    "label": "TestPointer.cpp",
+    "group": "Pointers and DMM",
+    "source": "reference/examples/Pointers_and_DMM/TestPointer.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Pointers_and_DMM/TestPointer.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:testPointerArgument",
+    "kind": "examples",
+    "title": "Pointer Argument",
+    "label": "TestPointerArgument.cpp",
+    "group": "Pointers and DMM",
+    "source": "reference/examples/Pointers_and_DMM/TestPointerArgument.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Pointers_and_DMM/TestPointerArgument.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:testUsefulArrayFunctions",
+    "kind": "examples",
+    "title": "Useful Array Functions",
+    "label": "TestUsefulArrayFunctions.cpp",
+    "group": "Pointers and DMM",
+    "source": "reference/examples/Pointers_and_DMM/TestUsefulArrayFunctions.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Pointers_and_DMM/TestUsefulArrayFunctions.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:testArrayQueue",
+    "kind": "examples",
+    "title": "Array Queue",
+    "label": "TestQueue.cpp",
+    "group": "Stacks and Queues",
+    "source": "reference/examples/Stacks_and_Queues/TestQueue.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Stacks_and_Queues/TestQueue.cpp",
+      "reference/examples/Stacks_and_Queues/GenArrayQueue.h",
+      "reference/examples/Stacks_and_Queues/GenListQueue.h"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:testListQueue",
+    "kind": "examples",
+    "title": "List Queue",
+    "label": "TestQueue.cpp",
+    "group": "Stacks and Queues",
+    "source": "reference/examples/Stacks_and_Queues/TestQueue.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Stacks_and_Queues/TestQueue.cpp",
+      "reference/examples/Stacks_and_Queues/GenArrayQueue.h",
+      "reference/examples/Stacks_and_Queues/GenListQueue.h"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:testArrayStack",
+    "kind": "examples",
+    "title": "Array Stack",
+    "label": "TestStack.cpp",
+    "group": "Stacks and Queues",
+    "source": "reference/examples/Stacks_and_Queues/TestStack.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Stacks_and_Queues/TestStack.cpp",
+      "reference/examples/Stacks_and_Queues/GenArrayStack.h",
+      "reference/examples/Stacks_and_Queues/GenSinglyLinkedStack.h",
+      "reference/examples/Stacks_and_Queues/GenVectorStack.h",
+      "reference/examples/Stacks_and_Queues/GenListStack.h",
+      "reference/examples/Stacks_and_Queues/StackException.h",
+      "reference/examples/Linked_Lists/GenSLList.h"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:testSinglyLinkedStack",
+    "kind": "examples",
+    "title": "Singly Linked Stack",
+    "label": "TestStack.cpp",
+    "group": "Stacks and Queues",
+    "source": "reference/examples/Stacks_and_Queues/TestStack.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Stacks_and_Queues/TestStack.cpp",
+      "reference/examples/Stacks_and_Queues/GenArrayStack.h",
+      "reference/examples/Stacks_and_Queues/GenSinglyLinkedStack.h",
+      "reference/examples/Stacks_and_Queues/GenVectorStack.h",
+      "reference/examples/Stacks_and_Queues/GenListStack.h",
+      "reference/examples/Stacks_and_Queues/StackException.h",
+      "reference/examples/Linked_Lists/GenSLList.h"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:testVectorStack",
+    "kind": "examples",
+    "title": "Vector Stack",
+    "label": "TestStack.cpp",
+    "group": "Stacks and Queues",
+    "source": "reference/examples/Stacks_and_Queues/TestStack.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Stacks_and_Queues/TestStack.cpp",
+      "reference/examples/Stacks_and_Queues/GenArrayStack.h",
+      "reference/examples/Stacks_and_Queues/GenSinglyLinkedStack.h",
+      "reference/examples/Stacks_and_Queues/GenVectorStack.h",
+      "reference/examples/Stacks_and_Queues/GenListStack.h",
+      "reference/examples/Stacks_and_Queues/StackException.h",
+      "reference/examples/Linked_Lists/GenSLList.h"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:testListStack",
+    "kind": "examples",
+    "title": "List Stack",
+    "label": "TestStack.cpp",
+    "group": "Stacks and Queues",
+    "source": "reference/examples/Stacks_and_Queues/TestStack.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/examples/Stacks_and_Queues/TestStack.cpp",
+      "reference/examples/Stacks_and_Queues/GenArrayStack.h",
+      "reference/examples/Stacks_and_Queues/GenSinglyLinkedStack.h",
+      "reference/examples/Stacks_and_Queues/GenVectorStack.h",
+      "reference/examples/Stacks_and_Queues/GenListStack.h",
+      "reference/examples/Stacks_and_Queues/StackException.h",
+      "reference/examples/Linked_Lists/GenSLList.h"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:shapeExample",
+    "kind": "examples",
+    "title": "Shapes & polymorphism",
+    "label": "shapeMain.cpp",
+    "group": "Course reference drivers",
+    "source": "reference/course/labs/files/ShapeExample/shapeMain.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/course/labs/files/ShapeExample/shapeMain.cpp",
+      "reference/course/labs/files/ShapeExample/Rectangle.hpp",
+      "reference/course/labs/files/ShapeExample/Rectangle.cpp",
+      "reference/course/labs/files/ShapeExample/Circle.hpp",
+      "reference/course/labs/files/ShapeExample/Circle.cpp",
+      "reference/course/labs/files/ShapeExample/Shape.hpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:controllerExample",
+    "kind": "examples",
+    "title": "Proportional controller",
+    "label": "controllerMain.cpp",
+    "group": "Course reference drivers",
+    "source": "reference/course/labs/files/DigitalController/controllerMain.cpp",
+    "runnable": true,
+    "note": "",
+    "files": [
+      "reference/course/labs/files/DigitalController/controllerMain.cpp",
+      "reference/course/labs/files/DigitalController/Plant.hpp",
+      "reference/course/labs/files/DigitalController/Plant.cpp",
+      "reference/course/labs/files/DigitalController/ProportionalController.hpp",
+      "reference/course/labs/files/DigitalController/ProportionalController.cpp",
+      "reference/course/labs/files/DigitalController/Controller.hpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  },
+  {
+    "id": "example:trigTests",
+    "kind": "examples",
+    "title": "Lab 3 instructor tests",
+    "label": "testTrigMain.cpp",
+    "group": "Course reference drivers",
+    "source": "reference/course/labs/files/testTrigMain.cpp",
+    "runnable": true,
+    "note": "Uses your Lab 3 functions; unfinished functions report TODO errors.",
+    "files": [
+      "reference/course/labs/files/testTrigMain.cpp"
+    ],
+    "sample": "",
+    "inputHint": "This program normally runs without keyboard input.",
+    "fileArgs": false,
+    "readme": ""
+  }
+]

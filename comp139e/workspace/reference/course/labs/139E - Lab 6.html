@@ -1,0 +1,91 @@
+﻿<!DOCTYPE doctype PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<!-- saved from url=(0085)https://deepblue.camosun.bc.ca/shpak/comp139e/2022f/Labs/06StackClass/StackClass.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="Author" content="Dale Shpak"><title>139E - Lab 6</title>
+  
+  <style>
+	<!--
+		@page { size: 8.27in 11.69in; margin-top: 0.39in; margin-bottom: 0.56in }
+	-->
+
+	</style></head>
+<body><center>
+<font size="+1">COMP 139E Lab</font> <br>
+<font size="+1">Due: BEFORE your next lab</font></center>
+<p><br>
+</p>
+<center>
+<h2>Structures, Classes, Linked Lists, Templates, and Exceptions</h2>
+</center>
+
+<p>
+C-style <b>struct</b>s containing self-referential pointers are often used to implement dynamic
+data structures such as linked lists, stacks, queues, and trees.
+This lab combines several topics from this course to realize a linked stack <b>class</b> that stores objects.
+</p>
+
+<h4>Assignment</h4>
+<ol>
+<li>Create a new C++ project and copy all of the following files into your project.  These are the complete files for the Shape example that we did in class.
+<p>
+<a href="./files/ShapeExample/Shape.hpp">Shape.hpp</a>
+<a href="./files/ShapeExample/Circle.cpp">Circle.cpp</a>
+<a href="./files/ShapeExample/Rectangle.cpp">Rectangle.cpp</a>
+<a href="./files/ShapeExample/Circle.hpp">Circle.hpp</a>
+<a href="./files/ShapeExample/Rectangle.hpp">Rectangle.hpp</a>
+<a href="./files/ShapeExample/shapeMain.cpp">shapeMain.cpp</a>
+</p>
+</li>
+<li>Create a new class Square that inherits the class Rectangle.
+</li>
+<li>I have declared the <code>template</code> class <code>Stack</code> in the file
+<a href="./files/ShapeExample/StackGiven.hpp">Stack.hpp</a>
+</li>
+<li>Implement the functions <code>push(), pop(), and top()</code> that have been declared in Stack.hpp.
+Because Stack is a template class, these functions <u>must</u> be implemented in the header file.
+Be sure to <b>throw</b> a
+<a href="./files/ShapeExample/StackException.hpp">StackException</a>
+where appropriate.<br>
+Also, remember to use the C++ <code>new</code> and <code>delete</code> for dynamic memory allocation.
+</li>
+<li>
+Modify shapeMain.cpp so that your Shapes are stored in a <code>Stack&lt;Shape*&gt;</code>
+(get rid of the array).
+Then, use a <b>while</b> loop to draw() each Shape as you pop it off of the stack.
+Be sure to use your stack operations inside of a <b>try</b> so that you can
+<b>catch</b> the exception!<br>
+Note that we <i>must</i> create a stack of  <code>Shape*</code> rather than <code>Shape</code> because
+<ul>
+  <li><code>Shape</code> is an <i>abstract</i> class so we cannot create any Shapes.</li>
+  <li>We need to use a pointer from the base class for polymorphism to work.</li>
+</ul>
+</li>
+<li>Make sure that you use ALL of your functions in your main() so that you can
+verify that they work!
+</li>
+<li>Do something "extra" in your main() that causes an exception to be thrown so that
+you can use your <b>catch</b> block.
+</li></ol>
+
+<ul>
+<li>Hand In:<br>
+  Stack.hpp, Square.cpp, Square.hpp, shapeMain.cpp
+</li>
+<!--
+<li>Show Me:
+  <ol>
+  <li>Your well-documented implementation (no need to print).</li>
+  </ol>
+</li>
+<li>Demonstrate:
+  <ol>
+  <li>Your working solution, including catching an exception.</li>
+  </ol>
+</li>
+-->
+
+</ul>
+<br>
+
+</body></html>

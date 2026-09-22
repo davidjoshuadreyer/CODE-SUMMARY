@@ -1,0 +1,12 @@
+/build/
+/reference/original-setup/build/
+/reference/original-setup/failed-arm64-build/
+*.obj
+*.o
+*.pdb
+*.ilk
+*.exe
+/labs/lab04/output.txt
+__pycache__/
+*.pyc
+/tutorials/output/*.txt

@@ -1,0 +1,84 @@
+﻿<!DOCTYPE doctype PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="Author" content="Dale Shpak"><title>139E - Lab 3</title>
+  
+  <style>
+	<!--
+		@page { size: 8.27in 11.69in; margin-top: 0.39in; margin-bottom: 0.56in }
+	-->
+
+	</style></head><body><center><span style="font-size: xx-small;">COMP 139E LAB 3</span> <br><span style="font-size: xx-small;">Due: BEFORE your next lab</span></center>
+<p></p>
+<center>
+<h2>Modules, Testing, and Trigonometry</h2>
+</center>
+<p>In the lectures, I have emphasized the importance of testing when developing reliable software. Quite often, developing tests is much more work than writing the code being tested. Luckily (for you), I have written the tests and you only need to write a few functions.</p>
+<p>My code for testing your module is <a href="files/testTrigMain.cpp">testTrigMain.cpp</a>. Do NOT modify this file but be SURE that you understand what it is doing! I have not documented testTrigMain.cpp because you are required to figure it out.</p>
+<h4>Assignment</h4>
+<ol>
+<li>This lab is a multi-file project (3 files), so you need to write a header file <i>spherical.hpp</i> that contains your function prototypes (and anything else that should go in that file...). Define 'M_PI' manually if it is not declared in NetBeans.
+<p>#ifndef M_PI<br>&nbsp; &nbsp; #define M_PI 3.14159265358979323846<br>#endif</p>
+</li>
+<li>Write a C++ module named <i>spherical.cpp</i> containing the implementation of the following functions:
+<pre><code>
+    // sphericalToRectangular returns the a <i>unique, persistent</i> array [x,y,z]
+    double *sphericalToRectangular (double r, double azimuth, double inclination);
+
+    // Returns a SphericalCoords struct ... be sure to declare one, put data in it, and return it!
+    SphericalCoords rectangularToSpherical (double x, double y, double z);  
+</code></pre>
+where the valid ranges for the spherical coordinates are:<br>radius &gt;= 0.0, -pi &lt; azimuth &lt;= pi, -pi &lt; inclination &lt;= pi,<br>all angles are in radians (of course), and<br>and we have defined <code></code>
+<pre><code>typedef struct {
+    double radius;
+    double azimuth;
+    double inclination;
+} SphericalCoords;
+</code></pre>
+</li>
+<li>You will need to find out how to convert to and from this particular 3-D coordinate system.</li>
+<li>Write an <b>inline</b> function to compute the radius (and you <i>must</i> be sure to use it!):
+<pre><code>    inline double getRadius (double x, double y, double z);
+</code></pre>
+(Remember that when an <b>inline</b> function is used in your program, the function call gets replaced by the code).</li>
+<li>Use default arguments so that all of your functions work with 2-D data. Some of the tests won't work if you forget to do this.</li>
+<li>When we have a known number of nameable data items to return, it is preferable to return a <b>struct</b> rather than an array.
+<ul>
+<li>One big advantage is that the fields of the <b>struct</b> are named, rather than having to remember array indices.</li>
+<li>As you can see from this lab, the <b>struct</b> is best when we are returning a fixed number of items (3 in this case).</li>
+<li>Arrays are OK if we are returning a large or variable number of items from the function but we must be careful with arrays!</li>
+<li>In this lab, I want you to try both ways. Therefore, one function returns a struct and the other returns a pointer to an array.</li>
+</ul>
+Remember that, to return an array from a function, that array cannot be a local variable in the function (and, of course, it cannot be a global variable or a file-scoped (static) variable)!</li>
+<li>An example of a successful run:
+<pre>testGetRadius1 Passed
+testGetRadius2 Passed
+testRectangularToSpherical1 Passed
+testRectangularToSpherical2 Passed
+testSphericalToRectangular1 Passed
+testSphericalToRectangular2 Passed
+
+testTrigMain.cpp: Result for 6 tests = Passed
+</pre>
+</li>
+</ol>
+<ul>
+<li>Hand In:
+<ol>
+<li>The well-documented source code that <u>you</u> wrote.</li>
+<li>The output from a successful run.</li>
+</ol>
+</li>
+<!--
+<li>Show Me:
+  <ol>
+  <li>Your well-documented code (no need to print).</li>
+  <li>That you understand what is going on in testMain.cpp</li>
+  </ol>
+</li>
+<li>Demonstrate:
+  <ol>
+  <li>Your working solution with your functions passing the tests.</li>
+  </ol>
+</li> --></ul>
+<p></p></body></html>

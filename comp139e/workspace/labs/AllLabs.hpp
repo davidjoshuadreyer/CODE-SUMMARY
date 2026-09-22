@@ -1,0 +1,21 @@
+#pragma once
+
+#include "lab01/lab.hpp"
+#include "lab02/lab.hpp"
+#include "lab03/lab.hpp"
+#include "lab04/lab.hpp"
+#include "lab05/lab.hpp"
+#include "lab06/lab.hpp"
+#include "lab07/lab.hpp"
+
+#include "lab01/survey.hpp"
+#include "lab02/grades.hpp"
+#include "lab03/spherical.hpp"
+#include "lab04/text_processing.hpp"
+#include "lab05/PID_Controller.hpp"
+#include "lab05/Plant.hpp"
+#include "lab05/ProportionalController.hpp"
+#include "lab06/Stack.hpp"
+#include "lab06/Square.hpp"
+#include "common/shapes/Circle.hpp"
+#include "common/shapes/Rectangle.hpp"

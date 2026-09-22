@@ -1,0 +1,163 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx,color}
+\usepackage{amsmath}
+
+\usepackage{fancyhdr}
+
+\setlength{\marginparwidth}{0in}
+\setlength{\oddsidemargin}{-0.5in}
+\setlength{\topmargin}{-0.25in}
+\setlength{\headheight}{14pt}
+\setlength{\textheight}{8.5in}
+\setlength{\textwidth}{7.5in}
+\renewcommand{\baselinestretch}{1.16}
+
+
+\pagestyle{fancyplain}
+\fancyhf{}
+\lhead{\fancyplain{}{COMP Lab Assignment}}
+\rfoot{\fancyplain{}{\thepage}}
+\lfoot{\fancyplain{}{\copyright D.J. Shpak}}
+
+\begin{document}
+\begin{center}
+{\Large \bf{Digital Control Algorithms in an Object-Oriented Framework}}
+\end{center}
+
+\section{Description}
+Control systems are pervasive in Electrical and Mechanical engineering.
+Digital control is increasingly popular because the required electronic components have become inexpensive and because
+digital control algorithms are easily modified and can even be made to be adaptive or better handle non-linear systems.
+
+
+\section{Digital Control Systems}
+We will consider a plant and control system of the following type:
+
+ \vspace{0.1in}
+\includegraphics[width=0.8\textwidth]{PlantController.eps}
+ \vspace{0.1in}
+ 
+ Note that this figure shows the entire system simplified as a digital system.  In real industrial systems, the plant will be a continuous-time system (i.e., analogue)
+and there will therefore be a D/A converter at the plant input and an A/D converter for measuring the plant output.
+
+
+With digital control, the input to the plant to be controlled is 
+\begin{align}
+x(z) &= s(z) + H(z)e(z)\\
+       &= s(z) + H(z)[s(z) - y(z)]
+\end{align}
+where\\
+\[  \begin{array}{rcl}
+s(z) &=& \mbox{setpoint value}\\
+y(z) &=& \mbox{plant output}\\
+G(z) &=& \mbox{plant transfer function}\\
+H(z) &=& \mbox{controller transfer function}
+\end{array} \]
+I have given you this as a z-transform domain representation, which is convenient for this type of system.
+I will explain why I did this this in class.
+
+
+There are numerous types of digital control algorithms.  We will look at two of them.
+
+
+\subsection{Proportional Control}
+With proportional control the error signal is fed back to the input, multiplied by some constant $k_c$, i.e., $H(z) = k_c$:
+\[
+x(z) = s(z) + k_c e(z)
+\]
+We want to implement this in the discrete time domain.  Because this is a very simple system, the discrete time-domain representation is simply
+\[
+x(nT) = s(nT) + k_c e(nT)
+\]
+where\\
+\[  \begin{array}{rcl}
+T &=& \mbox{sampling interval}\\
+n &=& \mbox{sample number}
+\end{array} \]
+When you implement this function, $x(nT)$ means ``the current value of $x$''.
+Similarly, $x((n-1)T)$ means ``the value of $x$ from the previous time step''.
+Therefore, \emph{we do not see $nT$ or $(n-1)T$ in our code}! ... but you may need to save the current value of a variable so that you
+can use it as the ``previous'' value during the next time step.
+
+I have given you this function as \texttt{ProportionalController.cpp} and the class header file\\ \texttt{ProportionalController.hpp}.
+
+At this juncture, it is appropriate to look at the following figure:
+
+ \vspace{0.1in}
+\includegraphics[width=0.9\textwidth]{DigitalControllers.eps}
+ \vspace{0.1in}
+ 
+ There are three sets of curves, each showing the plant input $x(n)$ and the plant output $y(n)$:
+ \begin{enumerate}
+ \item When there is no controller (open loop response).
+ \item With a proportional controller having a gain $k_c = 0.3$.
+ \item With a PID controller having a $k_c = 0.5$, $t_I = 25$, and $t_D = 2.5$.  More on PID in the next section.
+ \end{enumerate}
+ 
+ Looking at the outputs for the first two cases.
+ \begin{enumerate}
+\item When there is no controller, a step input (i.e., setpoint changing from 0 to 1), the output rises, overshoots the setpoint, and exhibits a damped oscillation as it settle to the setpoint.
+\item With proportional feedback, the output more quickly approaches the setpoint but overshoots and oscillates more.
+\end{enumerate}
+We see that proportional control can accelerate the response, but it is ineffective at reducing overshoot and oscillation.
+
+
+\subsection{Proportional-Integral-Derivative (PID) Control}
+With PID control the error signal is fed back to the input, but a more complicated calculation is performed.
+In addition to proportional control, the integral of the error signal is used to reduce the effect of accumulated error and the derivative
+of the error signal is used for predictive compensation.
+This algorithm is best shown in the discrete-time domain, rather than in the z-domain (ref. section 11.4 of http://pc-textbook.mcmaster.ca/Marlin-Ch11.pdf)
+\begin{align}
+x(nT) = s(nT) + k_c \left[e(nT) + \frac{T}{t_I}\sum_{i=1}^n e(i) - \frac{t_D}{T} \left[ y(nT) - y((n-1)T) \right] \right]
+\end{align}
+where $t_I$ is the integration time constant and $t_D$ is the derivative time constant.  For better performance, we will replace the integral portion with a ``leaky'' approximation to the integral $\frac{T}{t_I} q(nT)$ where 
+\[
+q(nT) = 0.9q((n-1)T) + 0.1e(nT)
+\]
+and the variable $q$ is initialized to zero.
+In the figure above, you can see that the PID controller gives us faster response, less overshoot, and quicker settling time!
+
+You are to write the function  \texttt{PID\_Controller.cpp} and the class header file \texttt{PID\_Controller.hpp}.
+
+\section{Object-Oriented Programming Considerations}
+I have given you five C++ files: 
+\begin{itemize}
+\item \texttt{main.cpp} that instantiates a Plant and a Controller and then runs the system for 50 time intervals.
+\item \texttt{Plant.hpp, Plant.cpp} defines a linear plant model, i.e., a linear model of a physical plant.
+\item \texttt{Controller.hpp} is an \emph{abstract} class that defines the requirements for a generic controller.
+\item \texttt{ProportionalController.hpp, ProportionalController.cpp} is an implementation of a Controller.  Specifically, a ProportionalController ``is-a'' Controller.
+\end{itemize}
+
+You will notice that in \texttt{main.cpp}, I have the following lines:
+\begin{verbatim}
+    Controller *controller;
+    ProportionalController propController(0.3);
+    // Use the following line after you write your code and then 
+    // make controller point to your object.
+    //PID_Controller pidController(0.5, 25, 2.5);               
+    controller = &propController;
+ \end{verbatim}
+{\bf N.B.} The pointer variable \texttt{controller} can point at \emph{anything} that ``is-a'' Controller!  Later, in the \texttt{for} loop, 
+\texttt{controller} refers to whichever Controller we are using.  This is an example of \emph{polymorphism}.
+
+\section{A Bit of MATLAB$^{TM}$}
+The output of the program can be pasted directly  into MATLAB to create an array of data $Y$ that can then be plotted using the following commands:
+\begin{verbatim}
+figure(1);
+plot(Y);
+\end{verbatim}
+
+\section{Assignment}
+\begin{enumerate}
+\item Write the code for \texttt{PID\_Controller.hpp} and \texttt{PID\_Controller.cpp}.
+\item Plot your step response curve in MATLAB.
+\end{enumerate}
+
+\section{Requirements}
+\begin{enumerate}
+\item Hand in your well-documented \texttt{PID\_Controller.hpp} and \texttt{PID\_Controller.cpp}.
+\item Show me your plot.
+\end{enumerate}
+BTW, the reason that these pages look marvellous is that the document was typeset using \LaTeX.
+
+\end{document}

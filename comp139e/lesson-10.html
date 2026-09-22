@@ -1,0 +1,65 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>10 · Linked lists · COMP 139E</title><link rel="stylesheet" href="../engr290/course.css"><link rel="stylesheet" href="../assets/vendor/katex/katex.min.css"><link rel="stylesheet" href="course.css"><script defer src="../engr290/theme.js"></script></head><body><a class="skip" href="#main">Skip to content</a><header><a class="brand" href="../index.html#course/comp139e">tesselate<span>.</span></a><nav aria-label="Course navigation"><a href="review.html">Lessons</a><a href="desk.html">Code Desk</a><a href="labs.html">Labs</a><a href="quiz.html">Quiz</a><a href="exam.html">Practice test</a><button id="theme" type="button" aria-label="Toggle dark appearance">◐</button></nav></header><main id="main"><p class="eyebrow">COMP 139E / FALL 2026</p><a href="review.html">← All lessons</a><h1>10 · Linked lists</h1><p class="lead">Linked lists follow addresses</p><section><h2>Learn the idea</h2><div class="prose"><p>Draw <code>head -&gt; 10 -&gt; 20 -&gt; 30 -&gt; nullptr</code>. Moving a traversal pointer does not move
+or delete nodes. During deletion, advance the head before deleting its old node.
+A doubly linked node also points backward. The example&#39;s backward-linked nodes
+are local objects, so they need no <code>delete</code>.</p>
+</div></section><section class="worked"><h2>Predict, run, change</h2><ul><li>Prerequisite: 5-7. Run: main.exe tutorial 10</li><li>Expect: forward = 10 20 30; backward = 2 1.</li><li>Try: prepend a fourth node. Draw the pointers on paper first.</li></ul><p>Read the expected result, trace the statements, then try the change suggested above. Use the local runner to compile and execute your edited C++.</p><div class="actions"><a class="button primary" href="desk.html#tutorial%3A10">Open in Code Desk</a><a class="button" href="setup.html">Run on your computer</a></div></section><section><h2>The commented example</h2><p><a href="workspace/tutorials/10_linked_lists.cpp" download>Download 10_linked_lists.cpp</a></p><pre class="source"><code>/*
+ * LESSON 10: Nodes and singly/doubly linked lists.
+ * Prerequisite: 5-7. Run: main.exe tutorial 10
+ * Expect: forward = 10 20 30; backward = 2 1.
+ * Try: prepend a fourth node. Draw the pointers on paper first.
+ * Connects to Lab 6 and reference/examples/Linked_Lists.
+ */
+#include &quot;Tutorials.hpp&quot;
+#include &lt;iostream&gt;
+using namespace std;
+
+namespace tutorial10 {
+struct Node {
+    int value;
+    Node* next; // A node points to the next node of the same type.
+};
+struct DoubleNode {
+    int value;
+    DoubleNode* next;
+    DoubleNode* previous;
+};
+}
+
+int tutorials::linkedLists()
+{
+    tutorial10::Node* head = nullptr;
+    // Prepending reverses insertion order: new node -&gt; old head.
+    head = new tutorial10::Node{30, head};
+    head = new tutorial10::Node{20, head};
+    head = new tutorial10::Node{10, head};
+    tutorial10::Node* current = head;
+    cout &lt;&lt; &quot;Forward = &quot;;
+    while (current != nullptr)
+    {
+        cout &lt;&lt; current-&gt;value &lt;&lt; &quot; &quot;;
+        current = current-&gt;next;
+    }
+    cout &lt;&lt; endl;
+
+    while (head != nullptr)
+    {
+        tutorial10::Node* oldHead = head;
+        head = head-&gt;next; // Save the next link BEFORE deleting the node.
+        delete oldHead;
+    }
+
+    // Two local nodes are enough to illustrate backward links.
+    tutorial10::DoubleNode first{1, nullptr, nullptr};
+    tutorial10::DoubleNode second{2, nullptr, &amp;first};
+    first.next = &amp;second;
+    tutorial10::DoubleNode* cursor = &amp;second;
+    cout &lt;&lt; &quot;Backward = &quot;;
+    while (cursor != nullptr)
+    {
+        cout &lt;&lt; cursor-&gt;value &lt;&lt; &quot; &quot;;
+        cursor = cursor-&gt;previous;
+    }
+    cout &lt;&lt; endl;
+    return 0;
+}
+</code></pre><details><summary>Related headers and source files</summary><ul><li><a href="workspace/tutorials/Tutorials.hpp">tutorials/Tutorials.hpp</a></li><li><a href="workspace/tutorials/Tutorials.cpp">tutorials/Tutorials.cpp</a></li></ul></details></section><div class="actions"><a class="button primary" href="quiz.html?topic=9">Check your understanding</a><a class="button" href="lesson-11.html">Next lesson →</a></div></main><footer><a href="../index.html#course/comp139e">← COMP 139E workspace</a><p>C++ and MATLAB study material from your existing course setup.</p></footer></body></html>

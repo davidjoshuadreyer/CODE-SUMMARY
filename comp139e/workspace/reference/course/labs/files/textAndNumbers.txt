@@ -1,0 +1,2 @@
+This file contains words and integers such as 47 or 983.
+It is your task to separate the words and at least 3 numbers.

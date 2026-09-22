@@ -2,7 +2,8 @@
  'use strict';
  const bank=window.STUDY_COURSE||window.ENGR290, exam=location.pathname.endsWith('/exam.html');
  const $=s=>document.querySelector(s), key=(bank.id||'engr290')+'-practice-v1-'+(exam?'exam':'quiz');
- const esc=window.StudyMath?window.StudyMath.format:s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
+ const formatter=window.StudyFormat||window.StudyMath;
+ const esc=formatter?formatter.format:s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
  const question=id=>bank.questions.find(q=>q.id===id);
  let attempt=null, clock=null, saved=null;
  const requested=new URLSearchParams(location.search).get('topic');
@@ -37,7 +38,7 @@
  }
  function start(ids){attempt={version:1,ids:shuffle(ids),answers:{},checked:[],submitted:false,deadline:Date.now()+(bank.testMinutes||30)*60*1000};persist();render();}
  function reset(){clearInterval(clock);attempt=null;saved=null;try{localStorage.removeItem(key);}catch{}$('#setup').hidden=false;$('#session').hidden=true;$('#results').hidden=true;$('#resume').hidden=true;$('#start').focus();}
- $('#start').addEventListener('click',()=>{const topic=$('#topic').value;const ids=topic==='all'?bank.lessons.flatMap((_,i)=>shuffle(bank.questions.filter(q=>q.topic===i)).slice(0,exam?3:2).map(q=>q.id)):shuffle(bank.questions.filter(q=>q.topic===Number(topic))).map(q=>q.id);start(ids);});
+ $('#start').addEventListener('click',()=>{const topic=$('#topic').value;const ids=topic==='all'?bank.lessons.flatMap((_,i)=>shuffle(bank.questions.filter(q=>q.topic===i)).slice(0,exam?(bank.testPerTopic||3):(bank.quizPerTopic||2)).map(q=>q.id)):shuffle(bank.questions.filter(q=>q.topic===Number(topic))).map(q=>q.id);start(ids);});
  $('#resume').addEventListener('click',()=>{attempt=saved;if(attempt.submitted)showResults();else render();});
  document.addEventListener('visibilitychange',()=>{if(attempt&&!attempt.submitted&&exam&&!document.hidden)timer();});
 })();

@@ -1,0 +1,67 @@
+<!DOCTYPE doctype PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="Author" content="Dale Shpak"><title>139E - Lab 1</title>
+  
+  <style>
+	<!--
+		@page { size: 8.27in 11.69in; margin-top: 0.39in; margin-bottom: 0.56in }
+	-->
+
+	</style></head><body><center><span style="font-size: xx-small;">COMP 139E LAB 1</span> </center>
+<p></p>
+<center>
+<h2>A Surveying Problem</h2>
+</center>
+<p>When streetlights are installed on a curve in the road, they should be equally-spaced and not more than a specified distance apart along the arc. We would like to do this efficiently with a two-person crew and not have to move the transit or theodolite.</p>
+<p></p>
+<p>The road, sidewalk, and curb are not yet installed. There are survey pegs at each end of the curve and no other markers.</p>
+<p></p>
+<h4>Assignment</h4>
+<p>With reference to the sketch:<br><a href="files/figure001.jpg"> <img src="files/figure001.jpg" alt="Fig. 1" height="228" width="351"></a><br>Write a C++ application that, given the radius of curvature (R), the distance between the two survey pegs (chord), and the maximum streetlight spacing (<i>along the arc</i>, not the straight-line distance), will display:</p>
+<ol>
+<li>The required number of streetlights.</li>
+<li>The required distances (d) and angles (α) referenced from the location of the transit/theodolite (i.e., at peg1).</li>
+</ol>
+<p></p>
+<p>Assumptions:</p>
+<ol>
+<li>The transit or theodolite is placed at one of the survey pegs (peg1).</li>
+<li>The angles (α) are referenced from the chord between the two survey pegs.</li>
+<li>A streetlight will be located at each of the two given survey pegs.</li>
+</ol>
+<p></p>
+<p>To get you started, I have provided some useful C++ functions <a href="files/lab1_helper.cpp">here</a>. <br>Notice that there are ampersands (&amp;) in the function prototype:<br><code>void getUserInput (double &amp;radius, double &amp;pegDist, double &amp;spacing);</code><br><br>This lets us call the function like this:<br><code>
+double radius, pDistance, space;<br>
+getUserInput (radius, pDistance, space);<br>
+</code> More on this later...</p>
+<ul>
+<li><a href="files/Streetlight.zip">Windows executable - zipped</a>.</li>
+<li><a href="files/survey.zip">Mac executable - zipped</a>.</li>
+</ul>
+<!--
+<li>View my <a href="javadoc/index.html">Javadoc</a>.
+The Javadoc was easily generated simply by putting Javadoc-style comments in my code.</li>
+</ul>
+-->
+<h4>Dynamic Allocation of Arrays</h4>
+<p>Since we don't know the number of streetlights that are required when we write the program, we want to dynamically allocate arrays of the correct size at run time.<br>With most compilers, you can do the following after you compute numLights:</p>
+<pre>double angles[numLight];  // Notice that I pluralize the names of arrays.
+</pre>
+<p>This code gets memory from the heap (as with malloc()) but hides all of the nasty-looking malloc() and free() that is actually done. (The array is returned to the heap when it goes out of scope.) However, it isn't supported by some compilers that strictly adhere to the standard. In standard C++ we can<br><code>
+double *angles = new double[numLight];
+</code> More on this later. </p>
+<ul>
+<li>Hand In:
+<ol>
+<li>Your trigonometric calculations and brief description of how you will approach this software design problem <b>before your lab starts!</b> (4 marks).<br><i>Hint: isoceles triangles are your friends here.</i></li>
+</ol>
+</li>
+<li>Show me:
+<ol>
+<li>Your <i>well-documented</i> program listing. (example on course home page)</li>
+<li>Your working solution.</li>
+</ol>
+</li>
+</ul>
+<p></p></body></html>

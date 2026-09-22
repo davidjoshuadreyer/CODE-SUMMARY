@@ -1,0 +1,77 @@
+﻿<!DOCTYPE doctype PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<!-- saved from url=(0085)https://deepblue.camosun.bc.ca/shpak/comp139e/2022f/Labs/04FileParser/FileParser.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="Author" content="Dale Shpak"><title>139E - Lab 4</title>
+  
+  <style>
+	<!--
+		@page { size: 8.27in 11.69in; margin-top: 0.39in; margin-bottom: 0.56in }
+	-->
+
+	</style></head>
+<body><center>
+<font size="+1">COMP 139E LAB 4</font> <br>
+<font size="+1">Due: BEFORE your next lab</font></center>
+<p><br>
+</p>
+<center>
+<h2>Files and Text Processing</h2>
+</center>
+
+<p>
+Computer programs are often used to parse files containing various types of data.
+For example, a text file could contain words and integers that need to be separated.
+</p>
+<p>
+However, as the file is processed, we can't predict if the next character to be
+processed is numeric or alphabetic...
+</p>
+<h4>Assignment</h4>
+Write a C++ program that processes a text file such that:
+<ol>
+<li>The name of the input file and the name of the output file are specified on the command line 
+(i.e., using <code>argv</code> and <code>argc</code>).</li>
+<li>The output file is opened using append mode.</li>
+<li>White space is ignored</li>
+<li>Words are printed one per line, preceded by the identifier "Found a xx character word: ",
+where xx is the length of the word.</li>
+<li>Classify by peeking only at the first character and then read in the entire word (as a string) or number (as an integer).
+  Note that integers must be read from the file directly into an <code>int</code> variable.
+</li><li>You are only allowed to look at one character to make this classification! (There is another way, but I want you to try this way...)</li>
+<li>Integer numbers are printed one per line, preceded by the identifier
+"Found an integer: "</li>
+<li>You can assume that the input file contains only textual words and valid integers (no floating-point).</li>
+<li>There are some useful functions
+<a href="http://www.cplusplus.com/reference/cctype/">here</a><br>
+</li></ol>
+You must use object-oriented C++ strings and C++ string functions.<br>
+
+<a href="./files/textAndNumbers.txt">Example input file</a><br>
+<a href="./files/results.txt">Example output file</a><br>
+
+
+<ul>
+<li>Hand In:
+<!--  <ol>
+  <li>Nothing.</li>
+  </ol>
+</li>
+<li>Show Me: -->
+  <ol> 
+  <li>Your well-documented code (no need to print).</li>
+  <li>Your input file and your output file.</li>
+  <li>Put these files in the D2L assignment dropbox as a .cpp file and two .txt files.<br>
+  (No zip or rar files please)</li>
+  </ol>
+</li>
+<!--
+<li>Demonstrate:
+  <ol>
+  <li>Your working solution that generates the required output file</li>
+  </ol>
+</li> -->
+</ul>
+<br>
+
+</body></html>

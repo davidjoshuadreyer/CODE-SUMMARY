@@ -1,0 +1,146 @@
+[
+  {
+    "slug": "lesson-01",
+    "title": "01 · Variables & arithmetic",
+    "summary": "Variables store values",
+    "sources": [
+      "comp139e/workspace/tutorials/01_basics.cpp"
+    ]
+  },
+  {
+    "slug": "lesson-02",
+    "title": "02 · Input & decisions",
+    "summary": "Input failure differs from a value outside the allowed range",
+    "sources": [
+      "comp139e/workspace/tutorials/02_input_and_decisions.cpp"
+    ]
+  },
+  {
+    "slug": "lesson-03",
+    "title": "03 · Functions & references",
+    "summary": "Parameters decide what a function can change",
+    "sources": [
+      "comp139e/workspace/tutorials/03_functions.cpp"
+    ]
+  },
+  {
+    "slug": "lesson-04",
+    "title": "04 · Arrays & strings",
+    "summary": "Array indices start at zero",
+    "sources": [
+      "comp139e/workspace/tutorials/04_arrays_and_strings.cpp"
+    ]
+  },
+  {
+    "slug": "lesson-05",
+    "title": "05 · Pointers & memory",
+    "summary": "Pointers require a clear owner",
+    "sources": [
+      "comp139e/workspace/tutorials/05_pointers.cpp"
+    ]
+  },
+  {
+    "slug": "lesson-06",
+    "title": "06 · Modules & testing",
+    "summary": "Declarations and definitions connect separate files",
+    "sources": [
+      "comp139e/workspace/tutorials/06_modules_and_testing.cpp"
+    ]
+  },
+  {
+    "slug": "lesson-07",
+    "title": "07 · Objects & classes",
+    "summary": "Classes manage data and behavior together",
+    "sources": [
+      "comp139e/workspace/tutorials/07_classes.cpp"
+    ]
+  },
+  {
+    "slug": "lesson-08",
+    "title": "08 · Inheritance & polymorphism",
+    "summary": "Virtual functions select behavior at run time",
+    "sources": [
+      "comp139e/workspace/tutorials/08_inheritance.cpp"
+    ]
+  },
+  {
+    "slug": "lesson-09",
+    "title": "09 · Templates",
+    "summary": "Templates leave the type open until use",
+    "sources": [
+      "comp139e/workspace/tutorials/09_templates.cpp"
+    ]
+  },
+  {
+    "slug": "lesson-10",
+    "title": "10 · Linked lists",
+    "summary": "Linked lists follow addresses",
+    "sources": [
+      "comp139e/workspace/tutorials/10_linked_lists.cpp"
+    ]
+  },
+  {
+    "slug": "lesson-11",
+    "title": "11 · Stacks & queues",
+    "summary": "Stacks and queues differ in removal order",
+    "sources": [
+      "comp139e/workspace/tutorials/11_stacks_and_queues.cpp"
+    ]
+  },
+  {
+    "slug": "lesson-12",
+    "title": "12 · Files & text processing",
+    "summary": "File streams use familiar operators",
+    "sources": [
+      "comp139e/workspace/tutorials/12_files.cpp"
+    ]
+  },
+  {
+    "slug": "lesson-13",
+    "title": "13 · Exceptions",
+    "summary": "Throwing skips to a matching catch",
+    "sources": [
+      "comp139e/workspace/tutorials/13_exceptions.cpp"
+    ]
+  },
+  {
+    "slug": "lesson-14",
+    "title": "14 · Vectors & iterators",
+    "summary": "Vectors manage resizable sequences",
+    "sources": [
+      "comp139e/workspace/tutorials/14_vectors.cpp"
+    ]
+  },
+  {
+    "slug": "lesson-15",
+    "title": "15 · Feedback control",
+    "summary": "Controllers retain information between steps",
+    "sources": [
+      "comp139e/workspace/tutorials/15_control.cpp"
+    ]
+  },
+  {
+    "slug": "lesson-16",
+    "title": "16 · Harmonic motion",
+    "summary": "A signal can be sampled at selected times",
+    "sources": [
+      "comp139e/workspace/tutorials/16_harmonic_motion.cpp"
+    ]
+  },
+  {
+    "slug": "lesson-17",
+    "title": "17 · Numerical integration",
+    "summary": "Integration adds weighted samples",
+    "sources": [
+      "comp139e/workspace/tutorials/17_integration.cpp"
+    ]
+  },
+  {
+    "slug": "lesson-18",
+    "title": "18 · The CircleX reference demo",
+    "summary": "Reference code needs both a header and its implementation",
+    "sources": [
+      "comp139e/workspace/tutorials/18_reference_demo.cpp"
+    ]
+  }
+]

@@ -1,0 +1,33 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run selected lab, tutorial, or example",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/bin/main.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "preLaunchTask": "Build all labs"
+        },
+        {
+            "name": "Debug reference example directly",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/bin/examples/example_${input:referenceExample}.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}/build/reference-work",
+            "console": "integratedTerminal",
+            "preLaunchTask": "Build all labs"
+        }
+    ],
+    "inputs": [
+        {
+            "id": "referenceExample",
+            "type": "promptString",
+            "description": "Example function name (see main.exe example --list)",
+            "default": "testCircleWithHeader"
+        }
+    ]
+}

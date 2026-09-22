@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html><head></head><body style="color: rgb(32, 33, 34); font-family: verdana, sans-serif; font-size: 12px;"><pre>/* This program reads in two numbers and 
+ * prints out the results for their addition and subtraction
+ *
+ * Dale Shpak
+ * October 7, 2009
+ * Revised September 16, 2020
+ */
+#include &lt;cstdlib&gt;
+#include &lt;iostream&gt;
+
+using namespace std;
+
+// Function prototypes for forward-referenced functions in this file
+void getUserInput (int &amp;p, int &amp;q);
+int performAddition (int x, int y);
+int performSubtraction (int x, int y);
+
+/*
+ * The main() calls functions for user input and computations.
+ * It also prints out the results.
+ */
+int main(void) {
+    int a, b;
+    
+    // Get values from the user
+    getUserInput (a, b);
+    
+    // Do the arithmetic calculations
+    int sum = performAddition(a, b);
+    int diff = performSubtraction(a, b);
+    
+    // Output the results
+    cout &lt;&lt; "The sum of " &lt;&lt; a &lt;&lt; " and " &lt;&lt; b &lt;&lt; " is " &lt;&lt; sum &lt;&lt; endl
+         &lt;&lt; "and their difference is " &lt;&lt; diff &lt;&lt; endl;
+    
+    
+    return EXIT_SUCCESS;
+}
+
+/**
+ * Gets the values for two integers from the user.
+ * 
+ * @param p A pointer to the first number
+ * @param q A pointer to the second number
+ */
+void getUserInput (int &amp;p, int &amp;q) {
+     cout &lt;&lt; "Enter the first number: ";
+     cin &gt;&gt; p;
+     cout &lt;&lt; "Enter the second number: ";
+     cin &gt;&gt; q;
+}
+
+/**
+ * Adds two integers.
+ *
+ * @param x The first integer
+ * @param y The second integer
+ *
+ * @return The sum
+ */
+int performAddition (int x, int y) {
+    return (x + y);
+}
+
+/**
+ * Subtracts two integers.
+ *
+ * @param x The first integer
+ * @param y The second integer
+ *
+ * @return The difference
+ */
+int performSubtraction (int x, int y) {
+    return (x - y);
+}</pre></body></html>

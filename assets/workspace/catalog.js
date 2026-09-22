@@ -48,6 +48,14 @@ window.TESSELATE_CATALOG = {
       "semester": "Fall 2026",
       "description": "Partial derivatives, optimization, multiple integrals, and vector calculus. Typeset lessons and practice using the supplied 2025 references.",
       "symbol": "∇"
+    },
+    {
+      "id": "comp139e",
+      "code": "COMP 139E",
+      "name": "C++ & Engineering Computing",
+      "semester": "Fall 2026",
+      "description": "18 tutorials, nine lab guides, a searchable Code Desk, and C++/MATLAB practice from your existing course setup.",
+      "symbol": "C++"
     }
   ],
   "resources": [
@@ -629,6 +637,480 @@ window.TESSELATE_CATALOG = {
         "ref-TWF0aCAyNTBCLzI1MEJYMDEtVDFTb2wtMjAyNUYucGRm",
         "ref-TWF0aCAyNTBCLzI1MEJYMDEtVDJTb2wtMjAyNUYucGRm",
         "ref-TWF0aCAyNTBCLzI1MEJYMDEtVDNTb2wtMjAyNUYucGRm"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-Y29tcDEzOWUvZGVzay5odG1s",
+      "courseId": "comp139e",
+      "title": "Code Desk · 85 programs",
+      "kind": "Study notes",
+      "url": "comp139e/desk.html",
+      "body": "",
+      "description": "",
+      "referenceIds": [
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wMV9iYXNpY3MuY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wMl9pbnB1dF9hbmRfZGVjaXNpb25zLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wM19mdW5jdGlvbnMuY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wNF9hcnJheXNfYW5kX3N0cmluZ3MuY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wNV9wb2ludGVycy5jcHA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wNl9tb2R1bGVzX2FuZF90ZXN0aW5nLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wN19jbGFzc2VzLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wOF9pbmhlcml0YW5jZS5jcHA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wOV90ZW1wbGF0ZXMuY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xMF9saW5rZWRfbGlzdHMuY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xMV9zdGFja3NfYW5kX3F1ZXVlcy5jcHA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xMl9maWxlcy5jcHA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xM19leGNlcHRpb25zLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xNF92ZWN0b3JzLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xNV9jb250cm9sLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xNl9oYXJtb25pY19tb3Rpb24uY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xN19pbnRlZ3JhdGlvbi5jcHA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xOF9yZWZlcmVuY2VfZGVtby5jcHA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDEvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDIvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDMvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDQvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDUvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDYvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDcvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDgvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDkvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL1JFQURNRS5tZA"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-Y29tcDEzOWUvZXhhbS5odG1s",
+      "courseId": "comp139e",
+      "title": "Practice exams",
+      "kind": "Practice exam",
+      "url": "comp139e/exam.html",
+      "body": "",
+      "description": "",
+      "referenceIds": [
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wMV9iYXNpY3MuY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wMl9pbnB1dF9hbmRfZGVjaXNpb25zLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wM19mdW5jdGlvbnMuY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wNF9hcnJheXNfYW5kX3N0cmluZ3MuY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wNV9wb2ludGVycy5jcHA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wNl9tb2R1bGVzX2FuZF90ZXN0aW5nLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wN19jbGFzc2VzLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wOF9pbmhlcml0YW5jZS5jcHA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wOV90ZW1wbGF0ZXMuY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xMF9saW5rZWRfbGlzdHMuY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xMV9zdGFja3NfYW5kX3F1ZXVlcy5jcHA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xMl9maWxlcy5jcHA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xM19leGNlcHRpb25zLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xNF92ZWN0b3JzLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xNV9jb250cm9sLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xNl9oYXJtb25pY19tb3Rpb24uY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xN19pbnRlZ3JhdGlvbi5jcHA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xOF9yZWZlcmVuY2VfZGVtby5jcHA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDEvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDIvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDMvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDQvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDUvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDYvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDcvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDgvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDkvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL1JFQURNRS5tZA"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-Y29tcDEzOWUvbGFicy5odG1s",
+      "courseId": "comp139e",
+      "title": "Lab guides · C++ and MATLAB",
+      "kind": "Study notes",
+      "url": "comp139e/labs.html",
+      "body": "",
+      "description": "",
+      "referenceIds": [
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wMV9iYXNpY3MuY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wMl9pbnB1dF9hbmRfZGVjaXNpb25zLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wM19mdW5jdGlvbnMuY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wNF9hcnJheXNfYW5kX3N0cmluZ3MuY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wNV9wb2ludGVycy5jcHA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wNl9tb2R1bGVzX2FuZF90ZXN0aW5nLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wN19jbGFzc2VzLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wOF9pbmhlcml0YW5jZS5jcHA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wOV90ZW1wbGF0ZXMuY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xMF9saW5rZWRfbGlzdHMuY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xMV9zdGFja3NfYW5kX3F1ZXVlcy5jcHA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xMl9maWxlcy5jcHA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xM19leGNlcHRpb25zLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xNF92ZWN0b3JzLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xNV9jb250cm9sLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xNl9oYXJtb25pY19tb3Rpb24uY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xN19pbnRlZ3JhdGlvbi5jcHA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xOF9yZWZlcmVuY2VfZGVtby5jcHA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDEvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDIvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDMvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDQvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDUvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDYvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDcvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDgvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDkvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL1JFQURNRS5tZA"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-Y29tcDEzOWUvbGVzc29uLTAxLmh0bWw",
+      "courseId": "comp139e",
+      "title": "01 · Variables & arithmetic",
+      "kind": "Study notes",
+      "url": "comp139e/lesson-01.html",
+      "body": "",
+      "description": "Variables store values",
+      "referenceIds": [
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wMV9iYXNpY3MuY3Bw"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-Y29tcDEzOWUvbGVzc29uLTAyLmh0bWw",
+      "courseId": "comp139e",
+      "title": "02 · Input & decisions",
+      "kind": "Study notes",
+      "url": "comp139e/lesson-02.html",
+      "body": "",
+      "description": "Input failure differs from a value outside the allowed range",
+      "referenceIds": [
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wMl9pbnB1dF9hbmRfZGVjaXNpb25zLmNwcA"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-Y29tcDEzOWUvbGVzc29uLTAzLmh0bWw",
+      "courseId": "comp139e",
+      "title": "03 · Functions & references",
+      "kind": "Study notes",
+      "url": "comp139e/lesson-03.html",
+      "body": "",
+      "description": "Parameters decide what a function can change",
+      "referenceIds": [
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wM19mdW5jdGlvbnMuY3Bw"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-Y29tcDEzOWUvbGVzc29uLTA0Lmh0bWw",
+      "courseId": "comp139e",
+      "title": "04 · Arrays & strings",
+      "kind": "Study notes",
+      "url": "comp139e/lesson-04.html",
+      "body": "",
+      "description": "Array indices start at zero",
+      "referenceIds": [
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wNF9hcnJheXNfYW5kX3N0cmluZ3MuY3Bw"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-Y29tcDEzOWUvbGVzc29uLTA1Lmh0bWw",
+      "courseId": "comp139e",
+      "title": "05 · Pointers & memory",
+      "kind": "Study notes",
+      "url": "comp139e/lesson-05.html",
+      "body": "",
+      "description": "Pointers require a clear owner",
+      "referenceIds": [
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wNV9wb2ludGVycy5jcHA"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-Y29tcDEzOWUvbGVzc29uLTA2Lmh0bWw",
+      "courseId": "comp139e",
+      "title": "06 · Modules & testing",
+      "kind": "Study notes",
+      "url": "comp139e/lesson-06.html",
+      "body": "",
+      "description": "Declarations and definitions connect separate files",
+      "referenceIds": [
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wNl9tb2R1bGVzX2FuZF90ZXN0aW5nLmNwcA"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-Y29tcDEzOWUvbGVzc29uLTA3Lmh0bWw",
+      "courseId": "comp139e",
+      "title": "07 · Objects & classes",
+      "kind": "Study notes",
+      "url": "comp139e/lesson-07.html",
+      "body": "",
+      "description": "Classes manage data and behavior together",
+      "referenceIds": [
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wN19jbGFzc2VzLmNwcA"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-Y29tcDEzOWUvbGVzc29uLTA4Lmh0bWw",
+      "courseId": "comp139e",
+      "title": "08 · Inheritance & polymorphism",
+      "kind": "Study notes",
+      "url": "comp139e/lesson-08.html",
+      "body": "",
+      "description": "Virtual functions select behavior at run time",
+      "referenceIds": [
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wOF9pbmhlcml0YW5jZS5jcHA"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-Y29tcDEzOWUvbGVzc29uLTA5Lmh0bWw",
+      "courseId": "comp139e",
+      "title": "09 · Templates",
+      "kind": "Study notes",
+      "url": "comp139e/lesson-09.html",
+      "body": "",
+      "description": "Templates leave the type open until use",
+      "referenceIds": [
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wOV90ZW1wbGF0ZXMuY3Bw"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-Y29tcDEzOWUvbGVzc29uLTEwLmh0bWw",
+      "courseId": "comp139e",
+      "title": "10 · Linked lists",
+      "kind": "Study notes",
+      "url": "comp139e/lesson-10.html",
+      "body": "",
+      "description": "Linked lists follow addresses",
+      "referenceIds": [
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xMF9saW5rZWRfbGlzdHMuY3Bw"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-Y29tcDEzOWUvbGVzc29uLTExLmh0bWw",
+      "courseId": "comp139e",
+      "title": "11 · Stacks & queues",
+      "kind": "Study notes",
+      "url": "comp139e/lesson-11.html",
+      "body": "",
+      "description": "Stacks and queues differ in removal order",
+      "referenceIds": [
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xMV9zdGFja3NfYW5kX3F1ZXVlcy5jcHA"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-Y29tcDEzOWUvbGVzc29uLTEyLmh0bWw",
+      "courseId": "comp139e",
+      "title": "12 · Files & text processing",
+      "kind": "Study notes",
+      "url": "comp139e/lesson-12.html",
+      "body": "",
+      "description": "File streams use familiar operators",
+      "referenceIds": [
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xMl9maWxlcy5jcHA"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-Y29tcDEzOWUvbGVzc29uLTEzLmh0bWw",
+      "courseId": "comp139e",
+      "title": "13 · Exceptions",
+      "kind": "Study notes",
+      "url": "comp139e/lesson-13.html",
+      "body": "",
+      "description": "Throwing skips to a matching catch",
+      "referenceIds": [
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xM19leGNlcHRpb25zLmNwcA"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-Y29tcDEzOWUvbGVzc29uLTE0Lmh0bWw",
+      "courseId": "comp139e",
+      "title": "14 · Vectors & iterators",
+      "kind": "Study notes",
+      "url": "comp139e/lesson-14.html",
+      "body": "",
+      "description": "Vectors manage resizable sequences",
+      "referenceIds": [
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xNF92ZWN0b3JzLmNwcA"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-Y29tcDEzOWUvbGVzc29uLTE1Lmh0bWw",
+      "courseId": "comp139e",
+      "title": "15 · Feedback control",
+      "kind": "Study notes",
+      "url": "comp139e/lesson-15.html",
+      "body": "",
+      "description": "Controllers retain information between steps",
+      "referenceIds": [
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xNV9jb250cm9sLmNwcA"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-Y29tcDEzOWUvbGVzc29uLTE2Lmh0bWw",
+      "courseId": "comp139e",
+      "title": "16 · Harmonic motion",
+      "kind": "Study notes",
+      "url": "comp139e/lesson-16.html",
+      "body": "",
+      "description": "A signal can be sampled at selected times",
+      "referenceIds": [
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xNl9oYXJtb25pY19tb3Rpb24uY3Bw"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-Y29tcDEzOWUvbGVzc29uLTE3Lmh0bWw",
+      "courseId": "comp139e",
+      "title": "17 · Numerical integration",
+      "kind": "Study notes",
+      "url": "comp139e/lesson-17.html",
+      "body": "",
+      "description": "Integration adds weighted samples",
+      "referenceIds": [
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xN19pbnRlZ3JhdGlvbi5jcHA"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-Y29tcDEzOWUvbGVzc29uLTE4Lmh0bWw",
+      "courseId": "comp139e",
+      "title": "18 · The CircleX reference demo",
+      "kind": "Study notes",
+      "url": "comp139e/lesson-18.html",
+      "body": "",
+      "description": "Reference code needs both a header and its implementation",
+      "referenceIds": [
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xOF9yZWZlcmVuY2VfZGVtby5jcHA"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-Y29tcDEzOWUvcXVpei5odG1s",
+      "courseId": "comp139e",
+      "title": "Practice quiz",
+      "kind": "Quiz",
+      "url": "comp139e/quiz.html",
+      "body": "",
+      "description": "",
+      "referenceIds": [
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wMV9iYXNpY3MuY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wMl9pbnB1dF9hbmRfZGVjaXNpb25zLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wM19mdW5jdGlvbnMuY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wNF9hcnJheXNfYW5kX3N0cmluZ3MuY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wNV9wb2ludGVycy5jcHA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wNl9tb2R1bGVzX2FuZF90ZXN0aW5nLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wN19jbGFzc2VzLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wOF9pbmhlcml0YW5jZS5jcHA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wOV90ZW1wbGF0ZXMuY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xMF9saW5rZWRfbGlzdHMuY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xMV9zdGFja3NfYW5kX3F1ZXVlcy5jcHA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xMl9maWxlcy5jcHA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xM19leGNlcHRpb25zLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xNF92ZWN0b3JzLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xNV9jb250cm9sLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xNl9oYXJtb25pY19tb3Rpb24uY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xN19pbnRlZ3JhdGlvbi5jcHA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xOF9yZWZlcmVuY2VfZGVtby5jcHA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDEvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDIvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDMvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDQvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDUvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDYvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDcvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDgvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDkvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL1JFQURNRS5tZA"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-Y29tcDEzOWUvcmV2aWV3Lmh0bWw",
+      "courseId": "comp139e",
+      "title": "Review sheet",
+      "kind": "Study notes",
+      "url": "comp139e/review.html",
+      "body": "",
+      "description": "",
+      "referenceIds": [
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wMV9iYXNpY3MuY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wMl9pbnB1dF9hbmRfZGVjaXNpb25zLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wM19mdW5jdGlvbnMuY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wNF9hcnJheXNfYW5kX3N0cmluZ3MuY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wNV9wb2ludGVycy5jcHA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wNl9tb2R1bGVzX2FuZF90ZXN0aW5nLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wN19jbGFzc2VzLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wOF9pbmhlcml0YW5jZS5jcHA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wOV90ZW1wbGF0ZXMuY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xMF9saW5rZWRfbGlzdHMuY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xMV9zdGFja3NfYW5kX3F1ZXVlcy5jcHA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xMl9maWxlcy5jcHA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xM19leGNlcHRpb25zLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xNF92ZWN0b3JzLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xNV9jb250cm9sLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xNl9oYXJtb25pY19tb3Rpb24uY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xN19pbnRlZ3JhdGlvbi5jcHA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xOF9yZWZlcmVuY2VfZGVtby5jcHA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDEvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDIvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDMvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDQvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDUvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDYvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDcvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDgvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDkvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL1JFQURNRS5tZA"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-Y29tcDEzOWUvc2V0dXAuaHRtbA",
+      "courseId": "comp139e",
+      "title": "Local runner setup & download",
+      "kind": "Study notes",
+      "url": "comp139e/setup.html",
+      "body": "",
+      "description": "",
+      "referenceIds": [
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wMV9iYXNpY3MuY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wMl9pbnB1dF9hbmRfZGVjaXNpb25zLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wM19mdW5jdGlvbnMuY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wNF9hcnJheXNfYW5kX3N0cmluZ3MuY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wNV9wb2ludGVycy5jcHA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wNl9tb2R1bGVzX2FuZF90ZXN0aW5nLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wN19jbGFzc2VzLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wOF9pbmhlcml0YW5jZS5jcHA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wOV90ZW1wbGF0ZXMuY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xMF9saW5rZWRfbGlzdHMuY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xMV9zdGFja3NfYW5kX3F1ZXVlcy5jcHA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xMl9maWxlcy5jcHA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xM19leGNlcHRpb25zLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xNF92ZWN0b3JzLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xNV9jb250cm9sLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xNl9oYXJtb25pY19tb3Rpb24uY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xN19pbnRlZ3JhdGlvbi5jcHA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xOF9yZWZlcmVuY2VfZGVtby5jcHA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDEvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDIvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDMvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDQvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDUvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDYvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDcvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDgvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDkvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL1JFQURNRS5tZA"
       ],
       "builtin": true
     }
@@ -1425,6 +1907,369 @@ window.TESSELATE_CATALOG = {
       "notes": "Existing reference. Check whether this was used in a study page, then link it here.",
       "builtin": true,
       "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "ref-Y29tcDEzOWUvd29ya3NwYWNlL3JlZmVyZW5jZS9jb3Vyc2UvbGFicy9DT01QIDEzOSBMYWIgQXNzaWdubWVudCAjOS5wZGY",
+      "courseId": "comp139e",
+      "name": "COMP 139 Lab Assignment #9.pdf",
+      "url": "comp139e/workspace/reference/course/labs/COMP%20139%20Lab%20Assignment%20%239.pdf",
+      "size": 181395,
+      "stage": "unreviewed",
+      "notes": "Existing reference. Check whether this was used in a study page, then link it here.",
+      "builtin": true,
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "ref-Y29tcDEzOWUvd29ya3NwYWNlL3JlZmVyZW5jZS9jb3Vyc2UvbGFicy9maWxlcy8wOEhhcm1vbmljTW90aW9uL0hhcm1vbmljTW90aW9uLnBkZg",
+      "courseId": "comp139e",
+      "name": "HarmonicMotion.pdf",
+      "url": "comp139e/workspace/reference/course/labs/files/08HarmonicMotion/HarmonicMotion.pdf",
+      "size": 40400,
+      "stage": "unreviewed",
+      "notes": "Existing reference. Check whether this was used in a study page, then link it here.",
+      "builtin": true,
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "ref-Y29tcDEzOWUvd29ya3NwYWNlL3JlZmVyZW5jZS9jb3Vyc2UvbGFicy9maWxlcy8wOEhhcm1vbmljTW90aW9uL3NpbmdsZVBsb3QucGRm",
+      "courseId": "comp139e",
+      "name": "singlePlot.pdf",
+      "url": "comp139e/workspace/reference/course/labs/files/08HarmonicMotion/singlePlot.pdf",
+      "size": 4963,
+      "stage": "unreviewed",
+      "notes": "Existing reference. Check whether this was used in a study page, then link it here.",
+      "builtin": true,
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "ref-Y29tcDEzOWUvd29ya3NwYWNlL3JlZmVyZW5jZS9jb3Vyc2UvbGFicy9maWxlcy8wOEhhcm1vbmljTW90aW9uL3N1YnBsb3RzLnBkZg",
+      "courseId": "comp139e",
+      "name": "subplots.pdf",
+      "url": "comp139e/workspace/reference/course/labs/files/08HarmonicMotion/subplots.pdf",
+      "size": 5068,
+      "stage": "unreviewed",
+      "notes": "Existing reference. Check whether this was used in a study page, then link it here.",
+      "builtin": true,
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "ref-Y29tcDEzOWUvd29ya3NwYWNlL3JlZmVyZW5jZS9jb3Vyc2UvbGFicy9maWxlcy9EaWdpdGFsQ29udHJvbGxlci9EaWdpdGFsQ29udHJvbC5wZGY",
+      "courseId": "comp139e",
+      "name": "DigitalControl.pdf",
+      "url": "comp139e/workspace/reference/course/labs/files/DigitalController/DigitalControl.pdf",
+      "size": 61793,
+      "stage": "unreviewed",
+      "notes": "Existing reference. Check whether this was used in a study page, then link it here.",
+      "builtin": true,
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wMV9iYXNpY3MuY3Bw",
+      "courseId": "comp139e",
+      "name": "01_basics.cpp",
+      "url": "comp139e/workspace/tutorials/01_basics.cpp",
+      "size": 1040,
+      "stage": "unreviewed",
+      "notes": "Imported from the existing COMP 139E course setup.",
+      "builtin": true,
+      "createdAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wMl9pbnB1dF9hbmRfZGVjaXNpb25zLmNwcA",
+      "courseId": "comp139e",
+      "name": "02_input_and_decisions.cpp",
+      "url": "comp139e/workspace/tutorials/02_input_and_decisions.cpp",
+      "size": 1383,
+      "stage": "unreviewed",
+      "notes": "Imported from the existing COMP 139E course setup.",
+      "builtin": true,
+      "createdAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wM19mdW5jdGlvbnMuY3Bw",
+      "courseId": "comp139e",
+      "name": "03_functions.cpp",
+      "url": "comp139e/workspace/tutorials/03_functions.cpp",
+      "size": 2114,
+      "stage": "unreviewed",
+      "notes": "Imported from the existing COMP 139E course setup.",
+      "builtin": true,
+      "createdAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wNF9hcnJheXNfYW5kX3N0cmluZ3MuY3Bw",
+      "courseId": "comp139e",
+      "name": "04_arrays_and_strings.cpp",
+      "url": "comp139e/workspace/tutorials/04_arrays_and_strings.cpp",
+      "size": 1199,
+      "stage": "unreviewed",
+      "notes": "Imported from the existing COMP 139E course setup.",
+      "builtin": true,
+      "createdAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wNV9wb2ludGVycy5jcHA",
+      "courseId": "comp139e",
+      "name": "05_pointers.cpp",
+      "url": "comp139e/workspace/tutorials/05_pointers.cpp",
+      "size": 1531,
+      "stage": "unreviewed",
+      "notes": "Imported from the existing COMP 139E course setup.",
+      "builtin": true,
+      "createdAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wNl9tb2R1bGVzX2FuZF90ZXN0aW5nLmNwcA",
+      "courseId": "comp139e",
+      "name": "06_modules_and_testing.cpp",
+      "url": "comp139e/workspace/tutorials/06_modules_and_testing.cpp",
+      "size": 1494,
+      "stage": "unreviewed",
+      "notes": "Imported from the existing COMP 139E course setup.",
+      "builtin": true,
+      "createdAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wN19jbGFzc2VzLmNwcA",
+      "courseId": "comp139e",
+      "name": "07_classes.cpp",
+      "url": "comp139e/workspace/tutorials/07_classes.cpp",
+      "size": 2600,
+      "stage": "unreviewed",
+      "notes": "Imported from the existing COMP 139E course setup.",
+      "builtin": true,
+      "createdAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wOF9pbmhlcml0YW5jZS5jcHA",
+      "courseId": "comp139e",
+      "name": "08_inheritance.cpp",
+      "url": "comp139e/workspace/tutorials/08_inheritance.cpp",
+      "size": 1137,
+      "stage": "unreviewed",
+      "notes": "Imported from the existing COMP 139E course setup.",
+      "builtin": true,
+      "createdAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wOV90ZW1wbGF0ZXMuY3Bw",
+      "courseId": "comp139e",
+      "name": "09_templates.cpp",
+      "url": "comp139e/workspace/tutorials/09_templates.cpp",
+      "size": 1038,
+      "stage": "unreviewed",
+      "notes": "Imported from the existing COMP 139E course setup.",
+      "builtin": true,
+      "createdAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xMF9saW5rZWRfbGlzdHMuY3Bw",
+      "courseId": "comp139e",
+      "name": "10_linked_lists.cpp",
+      "url": "comp139e/workspace/tutorials/10_linked_lists.cpp",
+      "size": 1622,
+      "stage": "unreviewed",
+      "notes": "Imported from the existing COMP 139E course setup.",
+      "builtin": true,
+      "createdAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xMV9zdGFja3NfYW5kX3F1ZXVlcy5jcHA",
+      "courseId": "comp139e",
+      "name": "11_stacks_and_queues.cpp",
+      "url": "comp139e/workspace/tutorials/11_stacks_and_queues.cpp",
+      "size": 1311,
+      "stage": "unreviewed",
+      "notes": "Imported from the existing COMP 139E course setup.",
+      "builtin": true,
+      "createdAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xMl9maWxlcy5jcHA",
+      "courseId": "comp139e",
+      "name": "12_files.cpp",
+      "url": "comp139e/workspace/tutorials/12_files.cpp",
+      "size": 2194,
+      "stage": "unreviewed",
+      "notes": "Imported from the existing COMP 139E course setup.",
+      "builtin": true,
+      "createdAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xM19leGNlcHRpb25zLmNwcA",
+      "courseId": "comp139e",
+      "name": "13_exceptions.cpp",
+      "url": "comp139e/workspace/tutorials/13_exceptions.cpp",
+      "size": 1378,
+      "stage": "unreviewed",
+      "notes": "Imported from the existing COMP 139E course setup.",
+      "builtin": true,
+      "createdAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xNF92ZWN0b3JzLmNwcA",
+      "courseId": "comp139e",
+      "name": "14_vectors.cpp",
+      "url": "comp139e/workspace/tutorials/14_vectors.cpp",
+      "size": 2039,
+      "stage": "unreviewed",
+      "notes": "Imported from the existing COMP 139E course setup.",
+      "builtin": true,
+      "createdAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xNV9jb250cm9sLmNwcA",
+      "courseId": "comp139e",
+      "name": "15_control.cpp",
+      "url": "comp139e/workspace/tutorials/15_control.cpp",
+      "size": 1505,
+      "stage": "unreviewed",
+      "notes": "Imported from the existing COMP 139E course setup.",
+      "builtin": true,
+      "createdAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xNl9oYXJtb25pY19tb3Rpb24uY3Bw",
+      "courseId": "comp139e",
+      "name": "16_harmonic_motion.cpp",
+      "url": "comp139e/workspace/tutorials/16_harmonic_motion.cpp",
+      "size": 1358,
+      "stage": "unreviewed",
+      "notes": "Imported from the existing COMP 139E course setup.",
+      "builtin": true,
+      "createdAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xN19pbnRlZ3JhdGlvbi5jcHA",
+      "courseId": "comp139e",
+      "name": "17_integration.cpp",
+      "url": "comp139e/workspace/tutorials/17_integration.cpp",
+      "size": 1407,
+      "stage": "unreviewed",
+      "notes": "Imported from the existing COMP 139E course setup.",
+      "builtin": true,
+      "createdAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xOF9yZWZlcmVuY2VfZGVtby5jcHA",
+      "courseId": "comp139e",
+      "name": "18_reference_demo.cpp",
+      "url": "comp139e/workspace/tutorials/18_reference_demo.cpp",
+      "size": 762,
+      "stage": "unreviewed",
+      "notes": "Imported from the existing COMP 139E course setup.",
+      "builtin": true,
+      "createdAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDEvUkVBRE1FLm1k",
+      "courseId": "comp139e",
+      "name": "labs/lab01 guide",
+      "url": "comp139e/workspace/labs/lab01/README.md",
+      "size": 596,
+      "stage": "unreviewed",
+      "notes": "Imported from the existing COMP 139E course setup.",
+      "builtin": true,
+      "createdAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDIvUkVBRE1FLm1k",
+      "courseId": "comp139e",
+      "name": "labs/lab02 guide",
+      "url": "comp139e/workspace/labs/lab02/README.md",
+      "size": 457,
+      "stage": "unreviewed",
+      "notes": "Imported from the existing COMP 139E course setup.",
+      "builtin": true,
+      "createdAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDMvUkVBRE1FLm1k",
+      "courseId": "comp139e",
+      "name": "labs/lab03 guide",
+      "url": "comp139e/workspace/labs/lab03/README.md",
+      "size": 713,
+      "stage": "unreviewed",
+      "notes": "Imported from the existing COMP 139E course setup.",
+      "builtin": true,
+      "createdAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDQvUkVBRE1FLm1k",
+      "courseId": "comp139e",
+      "name": "labs/lab04 guide",
+      "url": "comp139e/workspace/labs/lab04/README.md",
+      "size": 616,
+      "stage": "unreviewed",
+      "notes": "Imported from the existing COMP 139E course setup.",
+      "builtin": true,
+      "createdAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDUvUkVBRE1FLm1k",
+      "courseId": "comp139e",
+      "name": "labs/lab05 guide",
+      "url": "comp139e/workspace/labs/lab05/README.md",
+      "size": 658,
+      "stage": "unreviewed",
+      "notes": "Imported from the existing COMP 139E course setup.",
+      "builtin": true,
+      "createdAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDYvUkVBRE1FLm1k",
+      "courseId": "comp139e",
+      "name": "labs/lab06 guide",
+      "url": "comp139e/workspace/labs/lab06/README.md",
+      "size": 843,
+      "stage": "unreviewed",
+      "notes": "Imported from the existing COMP 139E course setup.",
+      "builtin": true,
+      "createdAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDcvUkVBRE1FLm1k",
+      "courseId": "comp139e",
+      "name": "labs/lab07 guide",
+      "url": "comp139e/workspace/labs/lab07/README.md",
+      "size": 504,
+      "stage": "unreviewed",
+      "notes": "Imported from the existing COMP 139E course setup.",
+      "builtin": true,
+      "createdAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDgvUkVBRE1FLm1k",
+      "courseId": "comp139e",
+      "name": "labs/lab08 guide",
+      "url": "comp139e/workspace/labs/lab08/README.md",
+      "size": 564,
+      "stage": "unreviewed",
+      "notes": "Imported from the existing COMP 139E course setup.",
+      "builtin": true,
+      "createdAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDkvUkVBRE1FLm1k",
+      "courseId": "comp139e",
+      "name": "labs/lab09 guide",
+      "url": "comp139e/workspace/labs/lab09/README.md",
+      "size": 607,
+      "stage": "unreviewed",
+      "notes": "Imported from the existing COMP 139E course setup.",
+      "builtin": true,
+      "createdAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "ref-Y29tcDEzOWUvd29ya3NwYWNlL1JFQURNRS5tZA",
+      "courseId": "comp139e",
+      "name": "README.md",
+      "url": "comp139e/workspace/README.md",
+      "size": 7785,
+      "stage": "unreviewed",
+      "notes": "Imported from the existing COMP 139E course setup.",
+      "builtin": true,
+      "createdAt": "2026-09-21T00:00:00.000Z"
     }
   ]
 };

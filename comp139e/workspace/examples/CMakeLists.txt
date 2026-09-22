@@ -1,0 +1,98 @@
+# Each reference entry point gets a separate executable. Never combine examples
+# merely because they share a directory: many contain conflicting class names.
+set(EXAMPLE_WORK "${CMAKE_BINARY_DIR}/reference-work")
+file(MAKE_DIRECTORY "${EXAMPLE_WORK}/src/Files_and_Exception_Handling/Files")
+file(GLOB fixtures "${PROJECT_SOURCE_DIR}/reference/examples/Files_and_Exception_Handling/Files/*")
+foreach(fixture IN LISTS fixtures)
+    get_filename_component(name "${fixture}" NAME)
+    set(destination "${EXAMPLE_WORK}/src/Files_and_Exception_Handling/Files/${name}")
+    if(NOT EXISTS "${destination}")
+        configure_file("${fixture}" "${destination}" COPYONLY)
+    endif()
+endforeach()
+
+set(EXAMPLE_CATALOG "static const Example catalog[] = {\n")
+function(add_reference_example entry source)
+    get_filename_component(stem "${source}" NAME_WE)
+    set(EXAMPLE_FUNCTION "${entry}")
+    set(EXAMPLE_DECLARATION "int ${entry}();")
+    set(EXAMPLE_CALL "return ${entry}();")
+    if(entry STREQUAL "circleXDemo")
+        set(EXAMPLE_DECLARATION "#include \"${PROJECT_SOURCE_DIR}/reference/examples/Demo/AllTests.h\"")
+        set(EXAMPLE_CALL "CircleX circle; circle.printArea(); return 0;")
+    elseif(entry STREQUAL "shapeExample" OR entry STREQUAL "trigTests")
+        set(EXAMPLE_DECLARATION "int ${entry}(int, char*[]);")
+        set(EXAMPLE_CALL "char name[] = \"${entry}\"; char* args[] = {name, nullptr}; return ${entry}(1, args);")
+    elseif(entry STREQUAL "controllerExample")
+        set(EXAMPLE_DECLARATION "int ${entry}(int, const char*[]);")
+        set(EXAMPLE_CALL "const char* args[] = {\"${entry}\", nullptr}; return ${entry}(1, args);")
+    endif()
+    set(wrapper "${CMAKE_CURRENT_BINARY_DIR}/${entry}_main.cpp")
+    configure_file("${CMAKE_CURRENT_SOURCE_DIR}/ExampleMain.cpp.in" "${wrapper}" @ONLY)
+    set(target "example_${entry}")
+    add_executable(${target} "${wrapper}" "${PROJECT_SOURCE_DIR}/${source}" ${ARGN})
+    # Older examples use random_shuffle, which was removed in C++17.
+    set_target_properties(${target} PROPERTIES CXX_STANDARD 14
+        RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/examples/$<0:>"
+        VS_DEBUGGER_WORKING_DIRECTORY "${EXAMPLE_WORK}")
+    if(MSVC)
+        target_compile_definitions(${target} PRIVATE _CRT_SECURE_NO_WARNINGS)
+    endif()
+    add_dependencies(main ${target})
+    set(EXAMPLE_CATALOG "${EXAMPLE_CATALOG}    {\"${entry}\", \"${stem}\", \"${source}\", \"$<TARGET_FILE:${target}>\"},\n" PARENT_SCOPE)
+endfunction()
+
+file(GLOB_RECURSE reference_sources CONFIGURE_DEPENDS "${PROJECT_SOURCE_DIR}/reference/examples/*.cpp")
+foreach(source IN LISTS reference_sources)
+    file(RELATIVE_PATH relative "${PROJECT_SOURCE_DIR}" "${source}")
+    get_filename_component(directory "${source}" DIRECTORY)
+    get_filename_component(stem "${source}" NAME_WE)
+    set(dependencies "")
+    if(stem STREQUAL "TestCircleWithHeader")
+        list(APPEND dependencies "${directory}/Circle.cpp")
+    elseif(stem STREQUAL "TestCircleWithPrivateDataFields" OR stem STREQUAL "TestArrayOfObejctsTotalArea")
+        list(APPEND dependencies "${directory}/CircleWithPrivateDataFields.cpp")
+    elseif(stem STREQUAL "TestCircleWithStaticDataFields")
+        list(APPEND dependencies "${directory}/CircleWithStaticDataFields.cpp")
+    elseif(stem STREQUAL "TestLoanClass")
+        list(APPEND dependencies "${directory}/Loan.cpp")
+    elseif(stem STREQUAL "TestGeometricObject")
+        list(APPEND dependencies "${directory}/GeometricObject.cpp" "${directory}/DerivedCircle.cpp" "${directory}/DerivedRectangle.cpp")
+    elseif(stem STREQUAL "TestIntSLList")
+        list(APPEND dependencies "${directory}/IntSLList.cpp")
+    elseif(stem STREQUAL "TestBadAllocExceptionDemo")
+        list(APPEND dependencies "${CMAKE_CURRENT_SOURCE_DIR}/BoundedAllocation.cpp")
+    endif()
+
+    # All supplied demo entry functions return int and take no parameters.
+    # Parameter-taking helpers and class implementation files aren't entry points.
+    file(READ "${source}" contents)
+    set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS "${source}")
+    string(REGEX MATCHALL "(^|\n)int[ \t]+[A-Za-z_][A-Za-z_0-9]*[ \t]*\\([ \t]*(void)?[ \t]*\\)[ \t\r\n]*\\{" entries "${contents}")
+    foreach(entry IN LISTS entries)
+        string(REGEX REPLACE "^[\r\n]*int[ \t]+([A-Za-z_][A-Za-z_0-9]*).*" "\\1" function_name "${entry}")
+        add_reference_example("${function_name}" "${relative}" ${dependencies})
+    endforeach()
+endforeach()
+add_reference_example(circleXDemo "reference/examples/Demo/CricleX.cpp")
+
+# The course also supplies standalone drivers. Rename their main only for their
+# own executable so the common wrapper can prepare paths and report exceptions.
+set(course "${PROJECT_SOURCE_DIR}/reference/course/labs/files")
+set_source_files_properties("${course}/ShapeExample/shapeMain.cpp" PROPERTIES COMPILE_DEFINITIONS "main=shapeExample")
+add_reference_example(shapeExample "reference/course/labs/files/ShapeExample/shapeMain.cpp"
+    "${course}/ShapeExample/Circle.cpp" "${course}/ShapeExample/Rectangle.cpp")
+set_source_files_properties("${course}/DigitalController/controllerMain.cpp" PROPERTIES COMPILE_DEFINITIONS "main=controllerExample")
+add_reference_example(controllerExample "reference/course/labs/files/DigitalController/controllerMain.cpp"
+    "${course}/DigitalController/Plant.cpp" "${course}/DigitalController/ProportionalController.cpp")
+# The handout references a student-created PID header; the working lab provides it.
+target_include_directories(example_controllerExample PRIVATE "${PROJECT_SOURCE_DIR}/labs/lab05")
+set_source_files_properties("${course}/testTrigMain.cpp" PROPERTIES COMPILE_DEFINITIONS "main=trigTests")
+add_reference_example(trigTests "reference/course/labs/files/testTrigMain.cpp"
+    "${PROJECT_SOURCE_DIR}/labs/lab03/spherical.cpp")
+target_include_directories(example_trigTests PRIVATE "${PROJECT_SOURCE_DIR}/labs/lab03")
+
+string(APPEND EXAMPLE_CATALOG "};\n")
+file(GENERATE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/ExampleCatalog.inc" CONTENT "${EXAMPLE_CATALOG}")
+target_sources(main PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/Examples.cpp")
+target_include_directories(main PRIVATE "${CMAKE_CURRENT_BINARY_DIR}")

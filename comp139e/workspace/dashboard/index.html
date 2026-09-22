@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>COMP 139E · Code desk</title>
+  <link rel="icon" href="/favicon.svg">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Code desk home"><span class="mark">c<span>›</span></span><span>code desk<span class="brand-sub">COMP 139E</span></span></a>
+    <div class="top-right"><span class="local"><i></i> Local workspace</span><button id="build" class="button secondary">↻ <span>Build programs</span></button></div>
+  </header>
+  <div class="layout">
+    <aside class="sidebar" aria-label="Program library">
+      <div class="sidebar-heading"><span>YOUR LIBRARY</span><span id="total" class="count">—</span></div>
+      <nav id="filters" aria-label="Program categories">
+        <button class="filter active" data-kind="all"><span>▦ &nbsp; All programs</span><span data-count="all">—</span></button>
+        <button class="filter" data-kind="labs"><span>◈ &nbsp; Labs</span><span data-count="labs">—</span></button>
+        <button class="filter" data-kind="tutorials"><span>▤ &nbsp; Tutorials</span><span data-count="tutorials">—</span></button>
+        <button class="filter" data-kind="examples"><span>⌘ &nbsp; Reference examples</span><span data-count="examples">—</span></button>
+      </nav>
+      <label class="search-box"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Find a program…" aria-label="Search programs" autocomplete="off"></label>
+      <div class="list-heading"><span id="list-label">ALL PROGRAMS</span><span id="shown-count"></span></div>
+      <div id="programs" class="programs" role="list" aria-label="Programs"><p class="muted">Loading your library…</p></div>
+      <div class="sidebar-footer"><span class="tiny-mark">{ }</span><div>Small programs. Big ideas.<small>Edit in VS Code. Explore here.</small></div></div>
+    </aside>
+    <main>
+      <div class="page-heading"><p class="eyebrow">LEARN BY RUNNING</p><h1>Your coding workspace<span>.</span></h1><p class="intro">Pick a program. Follow the code. See what happens.</p></div>
+      <div id="notice" class="notice" role="alert" hidden></div>
+      <section class="selection" aria-labelledby="program-title">
+        <div class="selection-copy"><div class="selection-meta"><span id="kind-label" class="pill">REFERENCE EXAMPLE</span><span id="group-label" class="muted"></span></div><h2 id="program-title">Choose a program</h2><p id="source-path" class="source-path"></p></div>
+        <div class="run-actions"><button id="stop" class="button danger" disabled>■ &nbsp; Stop</button><button id="run" class="button primary" disabled>▶ &nbsp; Run program</button></div>
+      </section>
+      <p id="program-note" class="program-note" hidden></p>
+      <div id="file-arguments" class="file-arguments" hidden>
+        <label>Input file<input id="input-file" spellcheck="false"></label>
+        <label>Output file <span>(append)</span><input id="output-file" spellcheck="false"></label>
+      </div>
+      <div class="workbench">
+        <section class="console-card" aria-label="Program console">
+          <div class="panel-heading"><div><span class="terminal-icon">&gt;_</span> Console</div><span id="status" class="status ready">Ready</span></div>
+          <div id="console-wrap" class="console-wrap">
+            <div id="console-empty" class="console-empty"><span class="empty-symbol">&gt;_</span><h3>Ready when you are.</h3><p>Run this program to see its output here.<br>Keyboard prompts will appear as it runs.</p></div>
+            <pre id="console" tabindex="0" aria-label="Console output" hidden></pre>
+          </div>
+          <div class="console-footer"><span id="run-detail">No run yet</span><button id="copy-output" class="text-button" disabled>Copy output</button></div>
+          <div class="input-area">
+            <div class="input-heading"><label for="program-input">Program input</label><button id="sample" class="text-button">Use example input ↙</button></div>
+            <p id="input-hint">This program normally runs without keyboard input.</p>
+            <textarea id="program-input" rows="2" placeholder="Type input before Run, or send it when the program asks…" spellcheck="false" maxlength="2048"></textarea>
+            <div class="input-actions"><button id="close-input" class="text-button" disabled>Finish input (EOF)</button><button id="send-input" class="button small" disabled>Send input ↵</button></div>
+            <p id="input-feedback" class="input-feedback" role="status"></p>
+          </div>
+        </section>
+        <section class="source-card" aria-label="Code and generated files">
+          <div class="panel-heading source-tabs" role="tablist" aria-label="File view"><button id="source-tab" role="tab" aria-selected="true" class="tab active">Source code</button><button id="outputs-tab" role="tab" aria-selected="false" class="tab">Output files <span id="output-count">0</span></button></div>
+          <label class="file-picker"><span class="sr-only">File to preview</span><select id="file-select"></select></label>
+          <div class="code-scroll"><pre id="source-code" tabindex="0" aria-label="File contents">Select a program to view its code.</pre></div>
+          <div class="source-footer"><span id="file-note">Read here · edit in VS Code</span><span id="line-count"></span></div>
+        </section>
+      </div>
+      <footer class="page-footer"><span><span class="key">01</span> Choose <span class="footer-arrow">→</span> <span class="key">02</span> Run <span class="footer-arrow">→</span> <span class="key">03</span> Experiment</span><span id="connection">Connected to your course folder</span></footer>
+    </main>
+  </div>
+</body>
+</html>

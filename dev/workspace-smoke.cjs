@@ -26,7 +26,7 @@ const check = (label) => console.log('PASS '+label);
   await page.goto(url);await page.locator('h1').waitFor();
   assert.equal(await page.locator('[data-nav=overview]').getAttribute('aria-current'),'page');
   const catalog=await page.evaluate(()=>window.TESSELATE_CATALOG);
-  assert.equal(catalog.courses.length,6);assert.equal(catalog.resources.length,44);
+  assert.equal(catalog.courses.length,7);assert.equal(catalog.resources.length,68);
   for(const item of [...catalog.resources,...catalog.references])assert.ok(fs.existsSync(path.join(root,decodeURIComponent(item.url))),item.url);
   await page.screenshot({path:path.join(artifacts,'overview-desktop.png'),fullPage:true});
   check('Initial dashboard and all catalog paths');

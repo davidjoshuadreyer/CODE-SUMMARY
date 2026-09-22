@@ -1,0 +1,151 @@
+﻿<!DOCTYPE doctype PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<!-- saved from url=(0077)https://deepblue.camosun.bc.ca/shpak/comp139e/2022f/Labs/02Grades/Grades.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="Author" content="Dale Shpak"><title>139E - Lab 2</title>
+  
+  <style>
+	<!--
+		@page { size: 8.27in 11.69in; margin-top: 0.39in; margin-bottom: 0.56in }
+	-->
+
+	</style></head>
+<body><center>
+<font size="+1">COMP 139E LAB 2</font> <br>
+<font size="+1">Due: BEFORE your next lab</font></center>
+<p><br>
+</p>
+<center>
+<h2>Computing Grades - Input Validation and Selection Statements</h2>
+</center>
+
+<p>
+Computing the final mark and grade for a course entails the computation of the weighted average
+of several contributing marks and the determination of a letter grade based on the
+conversion of the mark in percentage.
+</p>
+<p>
+
+</p><h4>Assignment</h4>
+<p>
+Write a C++ application that will compute the final mark and letter grade for 
+the weighted average of several marks:
+</p><ol>
+<li>The number of marks is NOT entered by the user.  Instead, the entry of 
+marks is terminated by entering a non-numeric character (such as <i>q</i>)
+when the user is prompted for a mark or a weight.</li>
+<li>Your program must perform input validation:<br>
+The permissible range for a mark is 0.0 to 100.0 (inclusive).<br>
+The permissible range for a weight is 1.0 to 50.0 (inclusive).<br>
+N.B.:
+  <ol>
+  <li>The numbers for these permissible ranges must be named constants in your program. <i>i.e., do not put numbers like 50.0 inside of your function.</i></li>
+  <li>Write a function to validate the input:
+<pre><code>
+/**
+ * A reusable function for getting validated in-range numbers.
+ * Repeatedly asks for the value if an out-of-range number gets entered
+ *
+ * @param prompt A string such as "Enter the mark"
+ * @param number A pointer to the number we are trying to read
+ * @param min The minimum permissible value
+ * @param max The maximum permissible value  
+ *
+ * @return true if the input contains only numeric characters, false otherwise
+ */
+bool getValidNumber(string prompt, double *value, const double min, const double max);
+</code></pre>
+  If the user enters an out-of-range value, this function must print a message, prompt again,
+  and read the number again (run my program, below). <br>
+  Note that this function does not know that it is being used for marks, weights, or even potatoes!
+  It just prints the prompt, puts the value in your variable, does a range check, etc.
+  </li>
+  </ol>
+</li><li>Your program must check that the weights add up to 100%, with an allowable error of 0.1% <i>Use named constants.</i></li>
+<li>Do NOT use any arrays.</li>
+<li>Write a function that uses the Camosun College conversions to get the letter grades (this is on the course outline).
+Note that your function must return a <b>string</b> and that string will be printed from your main() ... do not print from inside of the function.  
+The function declaration is:
+<pre><code>
+string gradeFromMark(const double mark);
+</code></pre>
+Since you are comparing ranges, use an if-elseif-else chain.  
+Although it would be better to do so, you don't need need to use named constants for this function ... saving you from some tedium.
+</li>
+</ol>
+<p></p>
+<p>
+Run my program (below) to get a better idea of what you need to accomplish.
+Be sure to try some invalid values!
+</p><p>
+Since members of the class have been asking how to handle the case
+when a user enters data using an invalid format (e.g., entering a string when
+prompted for a number), this functionality is included in this lab.<br>
+We use it to detect the "non-numeric character".
+</p>
+<p></p>
+To use a C++ <code>string</code>, you need to <br>
+<code>#include&lt;string&gt;</code><br><br>
+A useful code snippet is:<br>
+<code><pre>         cin &gt;&gt; value;    // This needs to be the numeric variable, NOT its address
+         if (cin.good() == false) {           // Invalid Input (not a number in this case)
+             cin.clear();             // Clear the error flags
+             cin.ignore(255, '\n');   // Throw away the line of input
+	     // This cout should be where your call to this function returns false
+             cout &lt;&lt; "Input data terminated." &lt;&lt; endl; // Illustrative only
+             return false;
+         }
+</pre></code>
+I will explain this code in class prior to the lab.
+<ul>
+<li><a href="./files/Grades.zip">Download my executable</a>.  
+<!--
+<li>View my <a href="javadoc/index.html">Javadoc</a>.
+The Javadoc was easily generated simply by putting Javadoc-style comments in my code.</li>
+</ul>
+-->
+<h4>Sample Run</h4>
+<code><pre>This program computes a letter grade from a weighted sum of marks
+For marks, minimum allowable value is 0, maximum is 100
+For weights, minimum allowable value is 1, maximum is 50
+The weights must total 100%
+Enter a non-number (such as 'q') to terminate your list of marks
+
+Enter a mark in percent: 85
+       Enter the weight: 30
+Enter a mark in percent: 92
+       Enter the weight: 50
+Enter a mark in percent: 88
+       Enter the weight: 20
+Enter a mark in percent: q
+Input data terminated.
+
+Mark is 89.1 and grade is A
+</pre></code>
+
+<h4>Sample Run With Out-of-Range Values</h4>
+<code><pre>This program computes a letter grade from a weighted sum of marks
+For marks, minimum allowable value is 0, maximum is 100
+For weights, minimum allowable value is 1, maximum is 50
+The weights must total 100%
+Enter a non-number (such as 'q') to terminate your list of marks
+
+Enter a mark in percent: 75
+       Enter the weight: 60
+Number is out of range.  Try again.
+       Enter the weight: 55
+Number is out of range.  Try again.
+       Enter the weight: 40
+</pre></code>
+<br>
+<br>
+</li><li>Hand in or show me:
+  <ol>
+  <li>Your well-documented program.</li>
+<!--  <li>Your working solution.</li> -->
+  </ol>
+</li>
+</ul>
+<br>
+
+</body></html>

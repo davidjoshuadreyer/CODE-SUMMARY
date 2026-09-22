@@ -1,0 +1,95 @@
+﻿<!DOCTYPE doctype PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<!-- saved from url=(0071)https://deepblue.camosun.bc.ca/shpak/comp139e/2022f/Labs/07STL/STL.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="Author" content="Dale Shpak"><title>139E - Lab</title>
+  
+  <style>
+	<!--
+		@page { size: 8.27in 11.69in; margin-top: 0.39in; margin-bottom: 0.56in }
+	-->
+
+	</style></head>
+<body><center>
+<font size="+1">COMP 139E LAB</font> <br>
+<font size="+1">Due: BEFORE your next lab</font></center>
+<p><br>
+</p>
+<center>
+<h2>Using the Standard Template Library</h2>
+</center>
+
+<p>
+We have seen the power and flexibility of the C++ STL, and now it is time
+to exercise this power.
+</p>
+<p>
+And, as a bonus, we get to use the code from the Shapes example from class so that you can see
+polymorphism in action!
+</p>
+<h4>Assignment</h4>
+<ol>
+<li>Create a new C++ project and copy all of the following files into your project.  These are the complete files for the Shape example that we did in class.
+You can use the <code>main()</code> for some ideas, but it is NOT part of this lab.
+<p>
+<a href="./files/ShapeExample/Shape.hpp">Shape.hpp</a>
+<a href="./files/ShapeExample/Circle.cpp">Circle.cpp</a>
+<a href="./files/ShapeExample/Rectangle.cpp">Rectangle.cpp</a>
+<a href="./files/ShapeExample/Circle.hpp">Circle.hpp</a>
+<a href="./files/ShapeExample/Rectangle.hpp">Rectangle.hpp</a>
+<a href="./files/ShapeExample/shapeMain.cpp">shapeMain.cpp</a>
+</p>
+</li>
+<li>
+Write a new <code>main()</code> and create a <b>vector</b> that stores pointers to Shapes.
+</li>
+<li>
+Use all of the following vector methods in some useful manner:<br>
+push_back, [], front, back, size, capacity, insert, pop_back, at, max_size.<br>
+<a href="https://cplusplus.com/reference/vector/">Here</a> 
+is a link to a C++ reference.  Be sure to look at it!
+</li>
+<li>
+After you put some Shapes into the vector, write a <b>for</b> loop that uses
+iterators to draw all of the Shapes.  You will need to use begin() and end() for this.
+Be sure to step the iterator through the vector.
+(Remember that the iterator acts like a <i>"smart" pointer</i> to the item stored in the vector,
+which in our case is a <code>Shape*</code>)
+</li>
+<li>
+Be sure to use your vector operations inside of a <b>try</b> so that you can
+<b>catch</b> any useful exceptions that might be thrown.
+You will need to look at the documentation for the vector functions to see
+what exceptions that you will need to <b>catch</b>.  There is one particularly useful exception...
+</li>
+<li>
+Do something that will cause a "useful" exception from a vector class function to be
+thrown so that you can catch it.
+</li>
+<li>
+Your program does not need to be interactive.  i.e., it does not need to get input from the user.
+You can simply write code that exercises your <code>vector&lt;Shape*&gt;</code>, similar to the main() in the MathVector lab.
+</li>
+</ol>
+
+<ul>
+<li>Hand In:
+  <ol>
+  <li>Your main().</li>
+  </ol>
+</li>
+<!--
+<li>Show Me:
+  <ol>
+  <li>Your code (no need to print).</li>
+  </ol>
+</li>
+<li>Demonstrate:
+  <ol>
+  <li>Your working solution, including catching an exception.</li>
+  </ol>
+</li> -->
+</ul>
+<br>
+
+</body></html>
