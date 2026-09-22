@@ -54,7 +54,7 @@ window.TESSELATE_CATALOG = {
       "code": "COMP 139E",
       "name": "C++ & Engineering Computing",
       "semester": "Fall 2026",
-      "description": "18 tutorials, nine lab guides, a searchable Code Desk, and C++/MATLAB practice from your existing course setup.",
+      "description": "18 tutorials, nine lab guides, an online C++ compiler, and C++/MATLAB practice from your existing course setup.",
       "symbol": "C++"
     }
   ],
@@ -643,7 +643,7 @@ window.TESSELATE_CATALOG = {
     {
       "id": "page-Y29tcDEzOWUvZGVzay5odG1s",
       "courseId": "comp139e",
-      "title": "Code Desk · 85 programs",
+      "title": "Online Code Desk - C++ compiler",
       "kind": "Study notes",
       "url": "comp139e/desk.html",
       "body": "",
@@ -1077,7 +1077,7 @@ window.TESSELATE_CATALOG = {
     {
       "id": "page-Y29tcDEzOWUvc2V0dXAuaHRtbA",
       "courseId": "comp139e",
-      "title": "Local runner setup & download",
+      "title": "Optional desktop setup",
       "kind": "Study notes",
       "url": "comp139e/setup.html",
       "body": "",

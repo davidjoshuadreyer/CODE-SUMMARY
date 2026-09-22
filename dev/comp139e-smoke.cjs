@@ -17,11 +17,11 @@ const server=http.createServer((req,res)=>{const file=path.resolve(root,'.'+deco
   const links=await page.locator('a[href]').evaluateAll(items=>items.map(a=>a.getAttribute('href')).filter(h=>!h.startsWith('http')&&!h.startsWith('#')));
   for(const href of links)assert.ok((await page.request.get(new URL(href,page.url()).href.split('#')[0])).ok(),file+' -> '+href);
  }
- await page.goto(base+'/comp139e/desk.html#tutorial%3A5');await page.getByRole('heading',{name:'Pointers & memory',exact:true}).waitFor();await page.waitForFunction(()=>document.querySelector('#source-code').textContent.includes('makeReadings'));
- assert.equal(await page.locator('.program').count(),85);await page.locator('#category').selectOption('labs');assert.equal(await page.locator('.program').count(),9);
- await page.locator('[data-id="lab:8"]').click();await page.getByRole('heading',{name:'Harmonic motion',exact:true}).waitFor();assert.ok(await page.locator('#local-link').isHidden());assert.match(await page.locator('#program-note').textContent(),/MATLAB/);
- await page.locator('#category').selectOption('all');await page.locator('#search').fill('no-matching-program');assert.match(await page.locator('#programs').textContent(),/No matches/);await page.locator('#search').fill('computeAverage');await page.locator('[data-id="example:computeAverage"]').click();await page.waitForFunction(()=>document.querySelector('#source-code').textContent.includes('computeAverage'));
- await page.reload();await page.waitForFunction(()=>document.querySelector('#command').textContent.includes('example computeAverage'));
+ await page.goto(base+'/comp139e/desk.html#tutorial%3A5');await page.getByRole('heading',{name:'Pointers & memory',exact:true}).waitFor();await page.waitForFunction(()=>document.querySelector('#source-code').value.includes('makeReadings'));
+ assert.equal(await page.locator('.program').count(),86);await page.locator('#category').selectOption('labs');assert.equal(await page.locator('.program').count(),9);
+ await page.locator('[data-id="lab:8"]').click();await page.getByRole('heading',{name:'Harmonic motion',exact:true}).waitFor();assert.ok(await page.locator('#run').isDisabled());assert.match(await page.locator('#program-note').textContent(),/MATLAB/);
+ await page.locator('#category').selectOption('all');await page.locator('#search').fill('no-matching-program');assert.match(await page.locator('#programs').textContent(),/No matches/);await page.locator('#search').fill('computeAverage');await page.locator('[data-id="example:computeAverage"]').click();await page.waitForFunction(()=>document.querySelector('#source-code').value.includes('computeAverage'));
+ await page.reload();await page.waitForFunction(()=>document.querySelector('#source-code').value.includes('computeAverage'));
  for(const p of programs)for(const file of p.files)assert.ok(fs.existsSync(path.join(root,'comp139e/workspace',file)),p.id+' '+file);
  for(let topic=0;topic<18;topic++){
   await page.goto(base+'/comp139e/quiz.html?topic='+topic);await page.locator('#start').click();assert.equal(await page.locator('fieldset').count(),2);
@@ -32,7 +32,7 @@ const server=http.createServer((req,res)=>{const file=path.resolve(root,'.'+deco
  await page.setViewportSize({width:390,height:844});
  for(const file of ['review.html','desk.html','labs.html','setup.html','lesson-05.html','lesson-17.html','quiz.html']){await page.goto(base+'/comp139e/'+file);if(file==='quiz.html')await page.locator('#start').click();assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),file);}
  await page.goto(base+'/comp139e/lesson-05.html');await page.screenshot({path:path.join(output,'lesson-mobile.png'),fullPage:true});
- await page.setViewportSize({width:1440,height:1000});await page.goto(base+'/comp139e/desk.html#tutorial%3A5');await page.waitForFunction(()=>document.querySelector('#source-code').textContent.includes('makeReadings'));await page.screenshot({path:path.join(output,'desk-desktop.png'),fullPage:true});
+ await page.setViewportSize({width:1440,height:1000});await page.goto(base+'/comp139e/desk.html#tutorial%3A5');await page.waitForFunction(()=>document.querySelector('#source-code').value.includes('makeReadings'));await page.screenshot({path:path.join(output,'desk-desktop.png'),fullPage:true});
  // Check that the downloaded dashboard understands hosted program-selection links.
  native=spawn('python',[path.join(root,'comp139e/workspace/dashboard/server.py'),'--port','0','--no-browser'],{windowsHide:true});
  const local=await new Promise((resolve,reject)=>{const timeout=setTimeout(()=>reject(Error('Native server startup timed out')),15000);native.once('error',reject);native.stdout.on('data',data=>{const match=data.toString().match(/http:\/\/127\.0\.0\.1:\d+/);if(match){clearTimeout(timeout);resolve(match[0]);}});});

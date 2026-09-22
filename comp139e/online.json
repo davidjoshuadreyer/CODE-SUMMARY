@@ -1,0 +1,3406 @@
+{
+  "lab:1": {
+    "files": [
+      {
+        "name": "labs/lab01/lab.cpp",
+        "url": "workspace/labs/lab01/lab.cpp"
+      },
+      {
+        "name": "labs/lab01/lab.hpp",
+        "url": "workspace/labs/lab01/lab.hpp"
+      },
+      {
+        "name": "labs/lab01/survey.cpp",
+        "url": "workspace/labs/lab01/survey.cpp"
+      },
+      {
+        "name": "labs/lab01/survey.hpp",
+        "url": "workspace/labs/lab01/survey.hpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\n#include \"labs/lab01/lab.hpp\"\nint main(int argc, char* argv[]) {\n try {\n  return lab01::run();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "labs/lab01/lab.cpp"
+      },
+      {
+        "file": "labs/lab01/survey.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 17,
+    "args": [],
+    "output": []
+  },
+  "lab:2": {
+    "files": [
+      {
+        "name": "labs/lab02/lab.cpp",
+        "url": "workspace/labs/lab02/lab.cpp"
+      },
+      {
+        "name": "labs/lab02/grades.cpp",
+        "url": "workspace/labs/lab02/grades.cpp"
+      },
+      {
+        "name": "labs/lab02/grades.hpp",
+        "url": "workspace/labs/lab02/grades.hpp"
+      },
+      {
+        "name": "labs/lab02/lab.hpp",
+        "url": "workspace/labs/lab02/lab.hpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\n#include \"labs/lab02/lab.hpp\"\nint main(int argc, char* argv[]) {\n try {\n  return lab02::run();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "labs/lab02/lab.cpp"
+      },
+      {
+        "file": "labs/lab02/grades.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 17,
+    "args": [],
+    "output": []
+  },
+  "lab:3": {
+    "files": [
+      {
+        "name": "labs/lab03/lab.cpp",
+        "url": "workspace/labs/lab03/lab.cpp"
+      },
+      {
+        "name": "labs/lab03/lab.hpp",
+        "url": "workspace/labs/lab03/lab.hpp"
+      },
+      {
+        "name": "labs/lab03/spherical.cpp",
+        "url": "workspace/labs/lab03/spherical.cpp"
+      },
+      {
+        "name": "labs/lab03/spherical.hpp",
+        "url": "workspace/labs/lab03/spherical.hpp"
+      },
+      {
+        "name": "labs/lab03/testTrigMain.cpp",
+        "url": "workspace/labs/lab03/testTrigMain.cpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\n#include \"labs/lab03/lab.hpp\"\nint main(int argc, char* argv[]) {\n try {\n  return lab03::run(argc, argv);\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "labs/lab03/lab.cpp"
+      },
+      {
+        "file": "labs/lab03/spherical.cpp"
+      },
+      {
+        "file": "labs/lab03/testTrigMain.cpp",
+        "rename": "lab03InstructorMain"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 17,
+    "args": [],
+    "output": []
+  },
+  "lab:4": {
+    "files": [
+      {
+        "name": "labs/lab04/lab.cpp",
+        "url": "workspace/labs/lab04/lab.cpp"
+      },
+      {
+        "name": "labs/lab04/lab.hpp",
+        "url": "workspace/labs/lab04/lab.hpp"
+      },
+      {
+        "name": "labs/lab04/text_processing.cpp",
+        "url": "workspace/labs/lab04/text_processing.cpp"
+      },
+      {
+        "name": "labs/lab04/text_processing.hpp",
+        "url": "workspace/labs/lab04/text_processing.hpp"
+      },
+      {
+        "name": "labs/lab04/data/textAndNumbers.txt",
+        "url": "workspace/labs/lab04/data/textAndNumbers.txt"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\n#include \"labs/lab04/lab.hpp\"\nint main(int argc, char* argv[]) {\n try {\n  return lab04::run(argc, argv);\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "labs/lab04/lab.cpp"
+      },
+      {
+        "file": "labs/lab04/text_processing.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 17,
+    "args": [
+      "labs/lab04/data/textAndNumbers.txt",
+      "labs/lab04/output.txt"
+    ],
+    "output": [
+      "labs/lab04/output.txt"
+    ]
+  },
+  "lab:5": {
+    "files": [
+      {
+        "name": "labs/lab05/controllerMain.cpp",
+        "url": "workspace/labs/lab05/controllerMain.cpp"
+      },
+      {
+        "name": "labs/lab05/Controller.hpp",
+        "url": "workspace/labs/lab05/Controller.hpp"
+      },
+      {
+        "name": "labs/lab05/lab.hpp",
+        "url": "workspace/labs/lab05/lab.hpp"
+      },
+      {
+        "name": "labs/lab05/PID_Controller.cpp",
+        "url": "workspace/labs/lab05/PID_Controller.cpp"
+      },
+      {
+        "name": "labs/lab05/PID_Controller.hpp",
+        "url": "workspace/labs/lab05/PID_Controller.hpp"
+      },
+      {
+        "name": "labs/lab05/Plant.cpp",
+        "url": "workspace/labs/lab05/Plant.cpp"
+      },
+      {
+        "name": "labs/lab05/Plant.hpp",
+        "url": "workspace/labs/lab05/Plant.hpp"
+      },
+      {
+        "name": "labs/lab05/ProportionalController.cpp",
+        "url": "workspace/labs/lab05/ProportionalController.cpp"
+      },
+      {
+        "name": "labs/lab05/ProportionalController.hpp",
+        "url": "workspace/labs/lab05/ProportionalController.hpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\n#include \"labs/lab05/lab.hpp\"\nint main(int argc, char* argv[]) {\n try {\n  return lab05::run();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "labs/lab05/controllerMain.cpp"
+      },
+      {
+        "file": "labs/lab05/PID_Controller.cpp"
+      },
+      {
+        "file": "labs/lab05/Plant.cpp"
+      },
+      {
+        "file": "labs/lab05/ProportionalController.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 17,
+    "args": [],
+    "output": []
+  },
+  "lab:6": {
+    "files": [
+      {
+        "name": "labs/lab06/lab.cpp",
+        "url": "workspace/labs/lab06/lab.cpp"
+      },
+      {
+        "name": "labs/lab06/lab.hpp",
+        "url": "workspace/labs/lab06/lab.hpp"
+      },
+      {
+        "name": "labs/lab06/Square.cpp",
+        "url": "workspace/labs/lab06/Square.cpp"
+      },
+      {
+        "name": "labs/lab06/Square.hpp",
+        "url": "workspace/labs/lab06/Square.hpp"
+      },
+      {
+        "name": "labs/lab06/Stack.hpp",
+        "url": "workspace/labs/lab06/Stack.hpp"
+      },
+      {
+        "name": "labs/lab06/StackException.hpp",
+        "url": "workspace/labs/lab06/StackException.hpp"
+      },
+      {
+        "name": "labs/common/shapes/Circle.hpp",
+        "url": "workspace/labs/common/shapes/Circle.hpp"
+      },
+      {
+        "name": "labs/common/shapes/Circle.cpp",
+        "url": "workspace/labs/common/shapes/Circle.cpp"
+      },
+      {
+        "name": "labs/common/shapes/Rectangle.hpp",
+        "url": "workspace/labs/common/shapes/Rectangle.hpp"
+      },
+      {
+        "name": "labs/common/shapes/Rectangle.cpp",
+        "url": "workspace/labs/common/shapes/Rectangle.cpp"
+      },
+      {
+        "name": "labs/common/shapes/Shape.hpp",
+        "url": "workspace/labs/common/shapes/Shape.hpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\n#include \"labs/lab06/lab.hpp\"\nint main(int argc, char* argv[]) {\n try {\n  return lab06::run();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "labs/lab06/lab.cpp"
+      },
+      {
+        "file": "labs/lab06/Square.cpp"
+      },
+      {
+        "file": "labs/common/shapes/Circle.cpp"
+      },
+      {
+        "file": "labs/common/shapes/Rectangle.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 17,
+    "args": [],
+    "output": []
+  },
+  "lab:7": {
+    "files": [
+      {
+        "name": "labs/lab07/lab.cpp",
+        "url": "workspace/labs/lab07/lab.cpp"
+      },
+      {
+        "name": "labs/lab07/lab.hpp",
+        "url": "workspace/labs/lab07/lab.hpp"
+      },
+      {
+        "name": "labs/common/shapes/Circle.hpp",
+        "url": "workspace/labs/common/shapes/Circle.hpp"
+      },
+      {
+        "name": "labs/common/shapes/Circle.cpp",
+        "url": "workspace/labs/common/shapes/Circle.cpp"
+      },
+      {
+        "name": "labs/common/shapes/Rectangle.hpp",
+        "url": "workspace/labs/common/shapes/Rectangle.hpp"
+      },
+      {
+        "name": "labs/common/shapes/Rectangle.cpp",
+        "url": "workspace/labs/common/shapes/Rectangle.cpp"
+      },
+      {
+        "name": "labs/common/shapes/Shape.hpp",
+        "url": "workspace/labs/common/shapes/Shape.hpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\n#include \"labs/lab07/lab.hpp\"\nint main(int argc, char* argv[]) {\n try {\n  return lab07::run();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "labs/lab07/lab.cpp"
+      },
+      {
+        "file": "labs/common/shapes/Circle.cpp"
+      },
+      {
+        "file": "labs/common/shapes/Rectangle.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 17,
+    "args": [],
+    "output": []
+  },
+  "tutorial:1": {
+    "files": [
+      {
+        "name": "tutorials/01_basics.cpp",
+        "url": "workspace/tutorials/01_basics.cpp"
+      },
+      {
+        "name": "tutorials/Tutorials.hpp",
+        "url": "workspace/tutorials/Tutorials.hpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\n#include \"tutorials/Tutorials.hpp\"\nint main(int argc, char* argv[]) {\n try {\n  return tutorials::basics();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "tutorials/01_basics.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 17,
+    "args": [],
+    "output": []
+  },
+  "tutorial:2": {
+    "files": [
+      {
+        "name": "tutorials/02_input_and_decisions.cpp",
+        "url": "workspace/tutorials/02_input_and_decisions.cpp"
+      },
+      {
+        "name": "tutorials/Tutorials.hpp",
+        "url": "workspace/tutorials/Tutorials.hpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\n#include \"tutorials/Tutorials.hpp\"\nint main(int argc, char* argv[]) {\n try {\n  return tutorials::inputAndDecisions();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "tutorials/02_input_and_decisions.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 17,
+    "args": [],
+    "output": []
+  },
+  "tutorial:3": {
+    "files": [
+      {
+        "name": "tutorials/03_functions.cpp",
+        "url": "workspace/tutorials/03_functions.cpp"
+      },
+      {
+        "name": "tutorials/Tutorials.hpp",
+        "url": "workspace/tutorials/Tutorials.hpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\n#include \"tutorials/Tutorials.hpp\"\nint main(int argc, char* argv[]) {\n try {\n  return tutorials::functions();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "tutorials/03_functions.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 17,
+    "args": [],
+    "output": []
+  },
+  "tutorial:4": {
+    "files": [
+      {
+        "name": "tutorials/04_arrays_and_strings.cpp",
+        "url": "workspace/tutorials/04_arrays_and_strings.cpp"
+      },
+      {
+        "name": "tutorials/Tutorials.hpp",
+        "url": "workspace/tutorials/Tutorials.hpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\n#include \"tutorials/Tutorials.hpp\"\nint main(int argc, char* argv[]) {\n try {\n  return tutorials::arraysAndStrings();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "tutorials/04_arrays_and_strings.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 17,
+    "args": [],
+    "output": []
+  },
+  "tutorial:5": {
+    "files": [
+      {
+        "name": "tutorials/05_pointers.cpp",
+        "url": "workspace/tutorials/05_pointers.cpp"
+      },
+      {
+        "name": "tutorials/Tutorials.hpp",
+        "url": "workspace/tutorials/Tutorials.hpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\n#include \"tutorials/Tutorials.hpp\"\nint main(int argc, char* argv[]) {\n try {\n  return tutorials::pointers();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "tutorials/05_pointers.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 17,
+    "args": [],
+    "output": []
+  },
+  "tutorial:6": {
+    "files": [
+      {
+        "name": "tutorials/06_modules_and_testing.cpp",
+        "url": "workspace/tutorials/06_modules_and_testing.cpp"
+      },
+      {
+        "name": "tutorials/Tutorials.hpp",
+        "url": "workspace/tutorials/Tutorials.hpp"
+      },
+      {
+        "name": "tutorials/support/Geometry.hpp",
+        "url": "workspace/tutorials/support/Geometry.hpp"
+      },
+      {
+        "name": "tutorials/support/Geometry.cpp",
+        "url": "workspace/tutorials/support/Geometry.cpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\n#include \"tutorials/Tutorials.hpp\"\nint main(int argc, char* argv[]) {\n try {\n  return tutorials::modulesAndTesting();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "tutorials/06_modules_and_testing.cpp"
+      },
+      {
+        "file": "tutorials/support/Geometry.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 17,
+    "args": [],
+    "output": []
+  },
+  "tutorial:7": {
+    "files": [
+      {
+        "name": "tutorials/07_classes.cpp",
+        "url": "workspace/tutorials/07_classes.cpp"
+      },
+      {
+        "name": "tutorials/Tutorials.hpp",
+        "url": "workspace/tutorials/Tutorials.hpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\n#include \"tutorials/Tutorials.hpp\"\nint main(int argc, char* argv[]) {\n try {\n  return tutorials::classes();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "tutorials/07_classes.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 17,
+    "args": [],
+    "output": []
+  },
+  "tutorial:8": {
+    "files": [
+      {
+        "name": "tutorials/08_inheritance.cpp",
+        "url": "workspace/tutorials/08_inheritance.cpp"
+      },
+      {
+        "name": "tutorials/Tutorials.hpp",
+        "url": "workspace/tutorials/Tutorials.hpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\n#include \"tutorials/Tutorials.hpp\"\nint main(int argc, char* argv[]) {\n try {\n  return tutorials::inheritance();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "tutorials/08_inheritance.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 17,
+    "args": [],
+    "output": []
+  },
+  "tutorial:9": {
+    "files": [
+      {
+        "name": "tutorials/09_templates.cpp",
+        "url": "workspace/tutorials/09_templates.cpp"
+      },
+      {
+        "name": "tutorials/Tutorials.hpp",
+        "url": "workspace/tutorials/Tutorials.hpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\n#include \"tutorials/Tutorials.hpp\"\nint main(int argc, char* argv[]) {\n try {\n  return tutorials::templates();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "tutorials/09_templates.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 17,
+    "args": [],
+    "output": []
+  },
+  "tutorial:10": {
+    "files": [
+      {
+        "name": "tutorials/10_linked_lists.cpp",
+        "url": "workspace/tutorials/10_linked_lists.cpp"
+      },
+      {
+        "name": "tutorials/Tutorials.hpp",
+        "url": "workspace/tutorials/Tutorials.hpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\n#include \"tutorials/Tutorials.hpp\"\nint main(int argc, char* argv[]) {\n try {\n  return tutorials::linkedLists();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "tutorials/10_linked_lists.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 17,
+    "args": [],
+    "output": []
+  },
+  "tutorial:11": {
+    "files": [
+      {
+        "name": "tutorials/11_stacks_and_queues.cpp",
+        "url": "workspace/tutorials/11_stacks_and_queues.cpp"
+      },
+      {
+        "name": "tutorials/Tutorials.hpp",
+        "url": "workspace/tutorials/Tutorials.hpp"
+      },
+      {
+        "name": "tutorials/support/LearningStack.hpp",
+        "url": "workspace/tutorials/support/LearningStack.hpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\n#include \"tutorials/Tutorials.hpp\"\nint main(int argc, char* argv[]) {\n try {\n  return tutorials::stacksAndQueues();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "tutorials/11_stacks_and_queues.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 17,
+    "args": [],
+    "output": []
+  },
+  "tutorial:12": {
+    "files": [
+      {
+        "name": "tutorials/12_files.cpp",
+        "url": "workspace/tutorials/12_files.cpp"
+      },
+      {
+        "name": "tutorials/Tutorials.hpp",
+        "url": "workspace/tutorials/Tutorials.hpp"
+      },
+      {
+        "name": "tutorials/data/mixed.txt",
+        "url": "workspace/tutorials/data/mixed.txt"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\n#include \"tutorials/Tutorials.hpp\"\nint main(int argc, char* argv[]) {\n try {\n  return tutorials::files();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "tutorials/12_files.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 17,
+    "args": [],
+    "output": [
+      "tutorials/output/words-and-numbers.txt"
+    ]
+  },
+  "tutorial:13": {
+    "files": [
+      {
+        "name": "tutorials/13_exceptions.cpp",
+        "url": "workspace/tutorials/13_exceptions.cpp"
+      },
+      {
+        "name": "tutorials/Tutorials.hpp",
+        "url": "workspace/tutorials/Tutorials.hpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\n#include \"tutorials/Tutorials.hpp\"\nint main(int argc, char* argv[]) {\n try {\n  return tutorials::exceptions();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "tutorials/13_exceptions.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 17,
+    "args": [],
+    "output": []
+  },
+  "tutorial:14": {
+    "files": [
+      {
+        "name": "tutorials/14_vectors.cpp",
+        "url": "workspace/tutorials/14_vectors.cpp"
+      },
+      {
+        "name": "tutorials/Tutorials.hpp",
+        "url": "workspace/tutorials/Tutorials.hpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\n#include \"tutorials/Tutorials.hpp\"\nint main(int argc, char* argv[]) {\n try {\n  return tutorials::vectors();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "tutorials/14_vectors.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 17,
+    "args": [],
+    "output": []
+  },
+  "tutorial:15": {
+    "files": [
+      {
+        "name": "tutorials/15_control.cpp",
+        "url": "workspace/tutorials/15_control.cpp"
+      },
+      {
+        "name": "tutorials/Tutorials.hpp",
+        "url": "workspace/tutorials/Tutorials.hpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\n#include \"tutorials/Tutorials.hpp\"\nint main(int argc, char* argv[]) {\n try {\n  return tutorials::control();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "tutorials/15_control.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 17,
+    "args": [],
+    "output": []
+  },
+  "tutorial:16": {
+    "files": [
+      {
+        "name": "tutorials/16_harmonic_motion.cpp",
+        "url": "workspace/tutorials/16_harmonic_motion.cpp"
+      },
+      {
+        "name": "tutorials/Tutorials.hpp",
+        "url": "workspace/tutorials/Tutorials.hpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\n#include \"tutorials/Tutorials.hpp\"\nint main(int argc, char* argv[]) {\n try {\n  return tutorials::harmonicMotion();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "tutorials/16_harmonic_motion.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 17,
+    "args": [],
+    "output": []
+  },
+  "tutorial:17": {
+    "files": [
+      {
+        "name": "tutorials/17_integration.cpp",
+        "url": "workspace/tutorials/17_integration.cpp"
+      },
+      {
+        "name": "tutorials/Tutorials.hpp",
+        "url": "workspace/tutorials/Tutorials.hpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\n#include \"tutorials/Tutorials.hpp\"\nint main(int argc, char* argv[]) {\n try {\n  return tutorials::integration();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "tutorials/17_integration.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 17,
+    "args": [],
+    "output": []
+  },
+  "tutorial:18": {
+    "files": [
+      {
+        "name": "tutorials/18_reference_demo.cpp",
+        "url": "workspace/tutorials/18_reference_demo.cpp"
+      },
+      {
+        "name": "tutorials/Tutorials.hpp",
+        "url": "workspace/tutorials/Tutorials.hpp"
+      },
+      {
+        "name": "reference/examples/Demo/AllTests.h",
+        "url": "workspace/reference/examples/Demo/AllTests.h"
+      },
+      {
+        "name": "reference/examples/Demo/CricleX.cpp",
+        "url": "workspace/reference/examples/Demo/CricleX.cpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\n#include \"tutorials/Tutorials.hpp\"\nint main(int argc, char* argv[]) {\n try {\n  return tutorials::referenceDemo();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "tutorials/18_reference_demo.cpp"
+      },
+      {
+        "file": "reference/examples/Demo/CricleX.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 17,
+    "args": [],
+    "output": []
+  },
+  "example:circleXDemo": {
+    "files": [
+      {
+        "name": "reference/examples/Demo/CricleX.cpp",
+        "url": "workspace/reference/examples/Demo/CricleX.cpp"
+      },
+      {
+        "name": "reference/examples/Demo/AllTests.h",
+        "url": "workspace/reference/examples/Demo/AllTests.h"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\n#include \"reference/examples/Demo/AllTests.h\"\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  CircleX circle; circle.printArea(); return 0;\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Demo/CricleX.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:appendFile": {
+    "files": [
+      {
+        "name": "reference/examples/Files_and_Exception_Handling/AppendFile.cpp",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/AppendFile.cpp"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/city.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/city.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/EOF.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/EOF.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/formattedscores.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/formattedscores.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/scores.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/scores.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/state.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/state.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/state_copy.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/state_copy.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/temp.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/temp.txt"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint appendFile();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return appendFile();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Files_and_Exception_Handling/AppendFile.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": [
+      "src/Files_and_Exception_Handling/Files/city.txt",
+      "src/Files_and_Exception_Handling/Files/EOF.txt",
+      "src/Files_and_Exception_Handling/Files/formattedscores.txt",
+      "src/Files_and_Exception_Handling/Files/scores.txt",
+      "src/Files_and_Exception_Handling/Files/state.txt",
+      "src/Files_and_Exception_Handling/Files/state_copy.txt",
+      "src/Files_and_Exception_Handling/Files/temp.txt"
+    ]
+  },
+  "example:checkFile": {
+    "files": [
+      {
+        "name": "reference/examples/Files_and_Exception_Handling/CheckFile.cpp",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/CheckFile.cpp"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/city.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/city.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/EOF.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/EOF.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/formattedscores.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/formattedscores.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/scores.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/scores.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/state.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/state.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/state_copy.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/state_copy.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/temp.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/temp.txt"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint checkFile();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return checkFile();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Files_and_Exception_Handling/CheckFile.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": [
+      "src/Files_and_Exception_Handling/Files/city.txt",
+      "src/Files_and_Exception_Handling/Files/EOF.txt",
+      "src/Files_and_Exception_Handling/Files/formattedscores.txt",
+      "src/Files_and_Exception_Handling/Files/scores.txt",
+      "src/Files_and_Exception_Handling/Files/state.txt",
+      "src/Files_and_Exception_Handling/Files/state_copy.txt",
+      "src/Files_and_Exception_Handling/Files/temp.txt"
+    ]
+  },
+  "example:copyFile": {
+    "files": [
+      {
+        "name": "reference/examples/Files_and_Exception_Handling/CopyFile.cpp",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/CopyFile.cpp"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/city.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/city.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/EOF.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/EOF.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/formattedscores.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/formattedscores.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/scores.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/scores.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/state.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/state.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/state_copy.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/state_copy.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/temp.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/temp.txt"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint copyFile();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return copyFile();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Files_and_Exception_Handling/CopyFile.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": [
+      "src/Files_and_Exception_Handling/Files/city.txt",
+      "src/Files_and_Exception_Handling/Files/EOF.txt",
+      "src/Files_and_Exception_Handling/Files/formattedscores.txt",
+      "src/Files_and_Exception_Handling/Files/scores.txt",
+      "src/Files_and_Exception_Handling/Files/state.txt",
+      "src/Files_and_Exception_Handling/Files/state_copy.txt",
+      "src/Files_and_Exception_Handling/Files/temp.txt"
+    ]
+  },
+  "example:readCity": {
+    "files": [
+      {
+        "name": "reference/examples/Files_and_Exception_Handling/ReadCity.cpp",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/ReadCity.cpp"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/city.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/city.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/EOF.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/EOF.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/formattedscores.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/formattedscores.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/scores.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/scores.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/state.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/state.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/state_copy.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/state_copy.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/temp.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/temp.txt"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint readCity();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return readCity();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Files_and_Exception_Handling/ReadCity.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": [
+      "src/Files_and_Exception_Handling/Files/city.txt",
+      "src/Files_and_Exception_Handling/Files/EOF.txt",
+      "src/Files_and_Exception_Handling/Files/formattedscores.txt",
+      "src/Files_and_Exception_Handling/Files/scores.txt",
+      "src/Files_and_Exception_Handling/Files/state.txt",
+      "src/Files_and_Exception_Handling/Files/state_copy.txt",
+      "src/Files_and_Exception_Handling/Files/temp.txt"
+    ]
+  },
+  "example:showStreamState": {
+    "files": [
+      {
+        "name": "reference/examples/Files_and_Exception_Handling/ShowStreamState.cpp",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/ShowStreamState.cpp"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/city.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/city.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/EOF.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/EOF.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/formattedscores.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/formattedscores.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/scores.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/scores.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/state.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/state.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/state_copy.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/state_copy.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/temp.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/temp.txt"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint showStreamState();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return showStreamState();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Files_and_Exception_Handling/ShowStreamState.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": [
+      "src/Files_and_Exception_Handling/Files/city.txt",
+      "src/Files_and_Exception_Handling/Files/EOF.txt",
+      "src/Files_and_Exception_Handling/Files/formattedscores.txt",
+      "src/Files_and_Exception_Handling/Files/scores.txt",
+      "src/Files_and_Exception_Handling/Files/state.txt",
+      "src/Files_and_Exception_Handling/Files/state_copy.txt",
+      "src/Files_and_Exception_Handling/Files/temp.txt"
+    ]
+  },
+  "example:testBadAllocExceptionDemo": {
+    "files": [
+      {
+        "name": "reference/examples/Files_and_Exception_Handling/TestBadAllocExceptionDemo.cpp",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/TestBadAllocExceptionDemo.cpp"
+      },
+      {
+        "name": "examples/BoundedAllocation.cpp",
+        "url": "workspace/examples/BoundedAllocation.cpp"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/city.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/city.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/EOF.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/EOF.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/formattedscores.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/formattedscores.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/scores.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/scores.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/state.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/state.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/state_copy.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/state_copy.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/temp.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/temp.txt"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint testBadAllocExceptionDemo();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return testBadAllocExceptionDemo();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Files_and_Exception_Handling/TestBadAllocExceptionDemo.cpp"
+      },
+      {
+        "file": "examples/BoundedAllocation.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": [
+      "src/Files_and_Exception_Handling/Files/city.txt",
+      "src/Files_and_Exception_Handling/Files/EOF.txt",
+      "src/Files_and_Exception_Handling/Files/formattedscores.txt",
+      "src/Files_and_Exception_Handling/Files/scores.txt",
+      "src/Files_and_Exception_Handling/Files/state.txt",
+      "src/Files_and_Exception_Handling/Files/state_copy.txt",
+      "src/Files_and_Exception_Handling/Files/temp.txt"
+    ]
+  },
+  "example:testEndOfFile": {
+    "files": [
+      {
+        "name": "reference/examples/Files_and_Exception_Handling/TestEndOfFile.cpp",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/TestEndOfFile.cpp"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/city.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/city.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/EOF.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/EOF.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/formattedscores.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/formattedscores.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/scores.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/scores.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/state.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/state.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/state_copy.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/state_copy.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/temp.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/temp.txt"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint testEndOfFile();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return testEndOfFile();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Files_and_Exception_Handling/TestEndOfFile.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": [
+      "src/Files_and_Exception_Handling/Files/city.txt",
+      "src/Files_and_Exception_Handling/Files/EOF.txt",
+      "src/Files_and_Exception_Handling/Files/formattedscores.txt",
+      "src/Files_and_Exception_Handling/Files/scores.txt",
+      "src/Files_and_Exception_Handling/Files/state.txt",
+      "src/Files_and_Exception_Handling/Files/state_copy.txt",
+      "src/Files_and_Exception_Handling/Files/temp.txt"
+    ]
+  },
+  "example:testQuotientThrowRuntimeError": {
+    "files": [
+      {
+        "name": "reference/examples/Files_and_Exception_Handling/TestQuotientThrowRuntimeError.cpp",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/TestQuotientThrowRuntimeError.cpp"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/city.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/city.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/EOF.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/EOF.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/formattedscores.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/formattedscores.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/scores.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/scores.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/state.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/state.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/state_copy.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/state_copy.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/temp.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/temp.txt"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint testQuotientThrowRuntimeError();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return testQuotientThrowRuntimeError();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Files_and_Exception_Handling/TestQuotientThrowRuntimeError.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": [
+      "src/Files_and_Exception_Handling/Files/city.txt",
+      "src/Files_and_Exception_Handling/Files/EOF.txt",
+      "src/Files_and_Exception_Handling/Files/formattedscores.txt",
+      "src/Files_and_Exception_Handling/Files/scores.txt",
+      "src/Files_and_Exception_Handling/Files/state.txt",
+      "src/Files_and_Exception_Handling/Files/state_copy.txt",
+      "src/Files_and_Exception_Handling/Files/temp.txt"
+    ]
+  },
+  "example:testQuotientWithException": {
+    "files": [
+      {
+        "name": "reference/examples/Files_and_Exception_Handling/TestQuotientWithException.cpp",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/TestQuotientWithException.cpp"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/city.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/city.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/EOF.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/EOF.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/formattedscores.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/formattedscores.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/scores.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/scores.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/state.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/state.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/state_copy.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/state_copy.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/temp.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/temp.txt"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint testQuotientWithException();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return testQuotientWithException();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Files_and_Exception_Handling/TestQuotientWithException.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": [
+      "src/Files_and_Exception_Handling/Files/city.txt",
+      "src/Files_and_Exception_Handling/Files/EOF.txt",
+      "src/Files_and_Exception_Handling/Files/formattedscores.txt",
+      "src/Files_and_Exception_Handling/Files/scores.txt",
+      "src/Files_and_Exception_Handling/Files/state.txt",
+      "src/Files_and_Exception_Handling/Files/state_copy.txt",
+      "src/Files_and_Exception_Handling/Files/temp.txt"
+    ]
+  },
+  "example:testQuotientWithFunction": {
+    "files": [
+      {
+        "name": "reference/examples/Files_and_Exception_Handling/TestQuotientWithFunction.cpp",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/TestQuotientWithFunction.cpp"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/city.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/city.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/EOF.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/EOF.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/formattedscores.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/formattedscores.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/scores.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/scores.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/state.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/state.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/state_copy.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/state_copy.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/temp.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/temp.txt"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint testQuotientWithFunction();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return testQuotientWithFunction();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Files_and_Exception_Handling/TestQuotientWithFunction.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": [
+      "src/Files_and_Exception_Handling/Files/city.txt",
+      "src/Files_and_Exception_Handling/Files/EOF.txt",
+      "src/Files_and_Exception_Handling/Files/formattedscores.txt",
+      "src/Files_and_Exception_Handling/Files/scores.txt",
+      "src/Files_and_Exception_Handling/Files/state.txt",
+      "src/Files_and_Exception_Handling/Files/state_copy.txt",
+      "src/Files_and_Exception_Handling/Files/temp.txt"
+    ]
+  },
+  "example:textFileInput": {
+    "files": [
+      {
+        "name": "reference/examples/Files_and_Exception_Handling/TextFileInput.cpp",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/TextFileInput.cpp"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/city.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/city.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/EOF.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/EOF.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/formattedscores.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/formattedscores.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/scores.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/scores.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/state.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/state.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/state_copy.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/state_copy.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/temp.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/temp.txt"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint textFileInput();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return textFileInput();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Files_and_Exception_Handling/TextFileInput.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": [
+      "src/Files_and_Exception_Handling/Files/city.txt",
+      "src/Files_and_Exception_Handling/Files/EOF.txt",
+      "src/Files_and_Exception_Handling/Files/formattedscores.txt",
+      "src/Files_and_Exception_Handling/Files/scores.txt",
+      "src/Files_and_Exception_Handling/Files/state.txt",
+      "src/Files_and_Exception_Handling/Files/state_copy.txt",
+      "src/Files_and_Exception_Handling/Files/temp.txt"
+    ]
+  },
+  "example:textFileOutput": {
+    "files": [
+      {
+        "name": "reference/examples/Files_and_Exception_Handling/TextFileOutput.cpp",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/TextFileOutput.cpp"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/city.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/city.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/EOF.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/EOF.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/formattedscores.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/formattedscores.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/scores.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/scores.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/state.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/state.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/state_copy.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/state_copy.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/temp.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/temp.txt"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint textFileOutput();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return textFileOutput();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Files_and_Exception_Handling/TextFileOutput.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": [
+      "src/Files_and_Exception_Handling/Files/city.txt",
+      "src/Files_and_Exception_Handling/Files/EOF.txt",
+      "src/Files_and_Exception_Handling/Files/formattedscores.txt",
+      "src/Files_and_Exception_Handling/Files/scores.txt",
+      "src/Files_and_Exception_Handling/Files/state.txt",
+      "src/Files_and_Exception_Handling/Files/state_copy.txt",
+      "src/Files_and_Exception_Handling/Files/temp.txt"
+    ]
+  },
+  "example:writeFormattedData": {
+    "files": [
+      {
+        "name": "reference/examples/Files_and_Exception_Handling/WriteFormattedData.cpp",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/WriteFormattedData.cpp"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/city.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/city.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/EOF.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/EOF.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/formattedscores.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/formattedscores.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/scores.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/scores.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/state.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/state.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/state_copy.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/state_copy.txt"
+      },
+      {
+        "name": "src/Files_and_Exception_Handling/Files/temp.txt",
+        "url": "workspace/reference/examples/Files_and_Exception_Handling/Files/temp.txt"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint writeFormattedData();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return writeFormattedData();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Files_and_Exception_Handling/WriteFormattedData.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": [
+      "src/Files_and_Exception_Handling/Files/city.txt",
+      "src/Files_and_Exception_Handling/Files/EOF.txt",
+      "src/Files_and_Exception_Handling/Files/formattedscores.txt",
+      "src/Files_and_Exception_Handling/Files/scores.txt",
+      "src/Files_and_Exception_Handling/Files/state.txt",
+      "src/Files_and_Exception_Handling/Files/state_copy.txt",
+      "src/Files_and_Exception_Handling/Files/temp.txt"
+    ]
+  },
+  "example:staticVariableDemo": {
+    "files": [
+      {
+        "name": "reference/examples/Functions/StaticVariableDemo.cpp",
+        "url": "workspace/reference/examples/Functions/StaticVariableDemo.cpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint staticVariableDemo();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return staticVariableDemo();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Functions/StaticVariableDemo.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:testFunctionOverloading": {
+    "files": [
+      {
+        "name": "reference/examples/Functions/TestFunctionOverloading.cpp",
+        "url": "workspace/reference/examples/Functions/TestFunctionOverloading.cpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint testFunctionOverloading();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return testFunctionOverloading();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Functions/TestFunctionOverloading.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:testFunctionPrototype": {
+    "files": [
+      {
+        "name": "reference/examples/Functions/TestFunctionPrototype.cpp",
+        "url": "workspace/reference/examples/Functions/TestFunctionPrototype.cpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint testFunctionPrototype();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return testFunctionPrototype();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Functions/TestFunctionPrototype.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:testMax": {
+    "files": [
+      {
+        "name": "reference/examples/Functions/TestMax.cpp",
+        "url": "workspace/reference/examples/Functions/TestMax.cpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint testMax();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return testMax();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Functions/TestMax.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:testPassByValueOrRreference": {
+    "files": [
+      {
+        "name": "reference/examples/Functions/TestPassByValueOrRreference.cpp",
+        "url": "workspace/reference/examples/Functions/TestPassByValueOrRreference.cpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint testPassByValueOrRreference();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return testPassByValueOrRreference();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Functions/TestPassByValueOrRreference.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:testVoidFunction": {
+    "files": [
+      {
+        "name": "reference/examples/Functions/TestVoidFunction.cpp",
+        "url": "workspace/reference/examples/Functions/TestVoidFunction.cpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint testVoidFunction();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return testVoidFunction();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Functions/TestVoidFunction.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:variableScopeDemo": {
+    "files": [
+      {
+        "name": "reference/examples/Functions/VariableScopeDemo.cpp",
+        "url": "workspace/reference/examples/Functions/VariableScopeDemo.cpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint variableScopeDemo();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return variableScopeDemo();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Functions/VariableScopeDemo.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:computeAreaWithConsoleInput": {
+    "files": [
+      {
+        "name": "reference/examples/Introduction/ComputeAreaWithConsoleInput.cpp",
+        "url": "workspace/reference/examples/Introduction/ComputeAreaWithConsoleInput.cpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint computeAreaWithConsoleInput();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return computeAreaWithConsoleInput();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Introduction/ComputeAreaWithConsoleInput.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:computeAverage": {
+    "files": [
+      {
+        "name": "reference/examples/Introduction/ComputeAverage.cpp",
+        "url": "workspace/reference/examples/Introduction/ComputeAverage.cpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint computeAverage();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return computeAverage();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Introduction/ComputeAverage.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:testIntSLList": {
+    "files": [
+      {
+        "name": "reference/examples/Linked_Lists/TestIntSLList.cpp",
+        "url": "workspace/reference/examples/Linked_Lists/TestIntSLList.cpp"
+      },
+      {
+        "name": "reference/examples/Linked_Lists/IntSLList.h",
+        "url": "workspace/reference/examples/Linked_Lists/IntSLList.h"
+      },
+      {
+        "name": "reference/examples/Linked_Lists/IntSLList.cpp",
+        "url": "workspace/reference/examples/Linked_Lists/IntSLList.cpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint testIntSLList();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return testIntSLList();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Linked_Lists/TestIntSLList.cpp"
+      },
+      {
+        "file": "reference/examples/Linked_Lists/IntSLList.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:ConstructorDestructorCallDemo": {
+    "files": [
+      {
+        "name": "reference/examples/Object-Oriented_Programming/ConstructorDestructorCallDemo.cpp",
+        "url": "workspace/reference/examples/Object-Oriented_Programming/ConstructorDestructorCallDemo.cpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint ConstructorDestructorCallDemo();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return ConstructorDestructorCallDemo();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Object-Oriented_Programming/ConstructorDestructorCallDemo.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:testMaxValue": {
+    "files": [
+      {
+        "name": "reference/examples/Object-Oriented_Programming/GenericMaxValue.cpp",
+        "url": "workspace/reference/examples/Object-Oriented_Programming/GenericMaxValue.cpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint testMaxValue();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return testMaxValue();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Object-Oriented_Programming/GenericMaxValue.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:TestGenericClass": {
+    "files": [
+      {
+        "name": "reference/examples/Object-Oriented_Programming/TestGenericClass.cpp",
+        "url": "workspace/reference/examples/Object-Oriented_Programming/TestGenericClass.cpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint TestGenericClass();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return TestGenericClass();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Object-Oriented_Programming/TestGenericClass.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:testGenericMaxValue": {
+    "files": [
+      {
+        "name": "reference/examples/Object-Oriented_Programming/TestGenericMaxValue.cpp",
+        "url": "workspace/reference/examples/Object-Oriented_Programming/TestGenericMaxValue.cpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint testGenericMaxValue();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return testGenericMaxValue();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Object-Oriented_Programming/TestGenericMaxValue.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:testGenericStack": {
+    "files": [
+      {
+        "name": "reference/examples/Object-Oriented_Programming/TestGenericStack.cpp",
+        "url": "workspace/reference/examples/Object-Oriented_Programming/TestGenericStack.cpp"
+      },
+      {
+        "name": "reference/examples/Object-Oriented_Programming/GenericStack.h",
+        "url": "workspace/reference/examples/Object-Oriented_Programming/GenericStack.h"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint testGenericStack();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return testGenericStack();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Object-Oriented_Programming/TestGenericStack.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:testGenericStackWithTemplateFunction": {
+    "files": [
+      {
+        "name": "reference/examples/Object-Oriented_Programming/TestGenericStackWithTemplateFunction.cpp",
+        "url": "workspace/reference/examples/Object-Oriented_Programming/TestGenericStackWithTemplateFunction.cpp"
+      },
+      {
+        "name": "reference/examples/Object-Oriented_Programming/GenericStack.h",
+        "url": "workspace/reference/examples/Object-Oriented_Programming/GenericStack.h"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint testGenericStackWithTemplateFunction();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return testGenericStackWithTemplateFunction();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Object-Oriented_Programming/TestGenericStackWithTemplateFunction.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:testGeometricObject": {
+    "files": [
+      {
+        "name": "reference/examples/Object-Oriented_Programming/TestGeometricObject.cpp",
+        "url": "workspace/reference/examples/Object-Oriented_Programming/TestGeometricObject.cpp"
+      },
+      {
+        "name": "reference/examples/Object-Oriented_Programming/DerivedCircle.h",
+        "url": "workspace/reference/examples/Object-Oriented_Programming/DerivedCircle.h"
+      },
+      {
+        "name": "reference/examples/Object-Oriented_Programming/DerivedCircle.cpp",
+        "url": "workspace/reference/examples/Object-Oriented_Programming/DerivedCircle.cpp"
+      },
+      {
+        "name": "reference/examples/Object-Oriented_Programming/DerivedRectangle.h",
+        "url": "workspace/reference/examples/Object-Oriented_Programming/DerivedRectangle.h"
+      },
+      {
+        "name": "reference/examples/Object-Oriented_Programming/DerivedRectangle.cpp",
+        "url": "workspace/reference/examples/Object-Oriented_Programming/DerivedRectangle.cpp"
+      },
+      {
+        "name": "reference/examples/Object-Oriented_Programming/GeometricObject.h",
+        "url": "workspace/reference/examples/Object-Oriented_Programming/GeometricObject.h"
+      },
+      {
+        "name": "reference/examples/Object-Oriented_Programming/GeometricObject.cpp",
+        "url": "workspace/reference/examples/Object-Oriented_Programming/GeometricObject.cpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint testGeometricObject();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return testGeometricObject();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Object-Oriented_Programming/TestGeometricObject.cpp"
+      },
+      {
+        "file": "reference/examples/Object-Oriented_Programming/DerivedCircle.cpp"
+      },
+      {
+        "file": "reference/examples/Object-Oriented_Programming/DerivedRectangle.cpp"
+      },
+      {
+        "file": "reference/examples/Object-Oriented_Programming/GeometricObject.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:testPolymorphism": {
+    "files": [
+      {
+        "name": "reference/examples/Object-Oriented_Programming/TestPolymorphism.cpp",
+        "url": "workspace/reference/examples/Object-Oriented_Programming/TestPolymorphism.cpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint testPolymorphism();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return testPolymorphism();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Object-Oriented_Programming/TestPolymorphism.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:testTwoDArrayUsingVector": {
+    "files": [
+      {
+        "name": "reference/examples/Object-Oriented_Programming/TestTwoDArrayUsingVector.cpp",
+        "url": "workspace/reference/examples/Object-Oriented_Programming/TestTwoDArrayUsingVector.cpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint testTwoDArrayUsingVector();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return testTwoDArrayUsingVector();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Object-Oriented_Programming/TestTwoDArrayUsingVector.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:testVector": {
+    "files": [
+      {
+        "name": "reference/examples/Object-Oriented_Programming/TestVector.cpp",
+        "url": "workspace/reference/examples/Object-Oriented_Programming/TestVector.cpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint testVector();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return testVector();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Object-Oriented_Programming/TestVector.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:testVisibility": {
+    "files": [
+      {
+        "name": "reference/examples/Object-Oriented_Programming/TestVisibility.cpp",
+        "url": "workspace/reference/examples/Object-Oriented_Programming/TestVisibility.cpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint testVisibility();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return testVisibility();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Object-Oriented_Programming/TestVisibility.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:testArrayOfObejctsTotalArea": {
+    "files": [
+      {
+        "name": "reference/examples/Objects_and_Classes/TestArrayOfObejctsTotalArea.cpp",
+        "url": "workspace/reference/examples/Objects_and_Classes/TestArrayOfObejctsTotalArea.cpp"
+      },
+      {
+        "name": "reference/examples/Objects_and_Classes/CircleWithPrivateDataFields.h",
+        "url": "workspace/reference/examples/Objects_and_Classes/CircleWithPrivateDataFields.h"
+      },
+      {
+        "name": "reference/examples/Objects_and_Classes/CircleWithPrivateDataFields.cpp",
+        "url": "workspace/reference/examples/Objects_and_Classes/CircleWithPrivateDataFields.cpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint testArrayOfObejctsTotalArea();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return testArrayOfObejctsTotalArea();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Objects_and_Classes/TestArrayOfObejctsTotalArea.cpp"
+      },
+      {
+        "file": "reference/examples/Objects_and_Classes/CircleWithPrivateDataFields.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:testCircle": {
+    "files": [
+      {
+        "name": "reference/examples/Objects_and_Classes/TestCircle.cpp",
+        "url": "workspace/reference/examples/Objects_and_Classes/TestCircle.cpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint testCircle();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return testCircle();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Objects_and_Classes/TestCircle.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:testCircleWithHeader": {
+    "files": [
+      {
+        "name": "reference/examples/Objects_and_Classes/TestCircleWithHeader.cpp",
+        "url": "workspace/reference/examples/Objects_and_Classes/TestCircleWithHeader.cpp"
+      },
+      {
+        "name": "reference/examples/Objects_and_Classes/Circle.h",
+        "url": "workspace/reference/examples/Objects_and_Classes/Circle.h"
+      },
+      {
+        "name": "reference/examples/Objects_and_Classes/Circle.cpp",
+        "url": "workspace/reference/examples/Objects_and_Classes/Circle.cpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint testCircleWithHeader();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return testCircleWithHeader();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Objects_and_Classes/TestCircleWithHeader.cpp"
+      },
+      {
+        "file": "reference/examples/Objects_and_Classes/Circle.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:testCircleWithPrivateDataFields": {
+    "files": [
+      {
+        "name": "reference/examples/Objects_and_Classes/TestCircleWithPrivateDataFields.cpp",
+        "url": "workspace/reference/examples/Objects_and_Classes/TestCircleWithPrivateDataFields.cpp"
+      },
+      {
+        "name": "reference/examples/Objects_and_Classes/CircleWithPrivateDataFields.h",
+        "url": "workspace/reference/examples/Objects_and_Classes/CircleWithPrivateDataFields.h"
+      },
+      {
+        "name": "reference/examples/Objects_and_Classes/CircleWithPrivateDataFields.cpp",
+        "url": "workspace/reference/examples/Objects_and_Classes/CircleWithPrivateDataFields.cpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint testCircleWithPrivateDataFields();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return testCircleWithPrivateDataFields();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Objects_and_Classes/TestCircleWithPrivateDataFields.cpp"
+      },
+      {
+        "file": "reference/examples/Objects_and_Classes/CircleWithPrivateDataFields.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:testCircleWithStaticDataFields": {
+    "files": [
+      {
+        "name": "reference/examples/Objects_and_Classes/TestCircleWithStaticDataFields.cpp",
+        "url": "workspace/reference/examples/Objects_and_Classes/TestCircleWithStaticDataFields.cpp"
+      },
+      {
+        "name": "reference/examples/Objects_and_Classes/CircleWithStaticDataFields.h",
+        "url": "workspace/reference/examples/Objects_and_Classes/CircleWithStaticDataFields.h"
+      },
+      {
+        "name": "reference/examples/Objects_and_Classes/CircleWithStaticDataFields.cpp",
+        "url": "workspace/reference/examples/Objects_and_Classes/CircleWithStaticDataFields.cpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint testCircleWithStaticDataFields();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return testCircleWithStaticDataFields();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Objects_and_Classes/TestCircleWithStaticDataFields.cpp"
+      },
+      {
+        "file": "reference/examples/Objects_and_Classes/CircleWithStaticDataFields.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:testClassAssignmentOperator": {
+    "files": [
+      {
+        "name": "reference/examples/Objects_and_Classes/TestClassAssignmentOperator.cpp",
+        "url": "workspace/reference/examples/Objects_and_Classes/TestClassAssignmentOperator.cpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint testClassAssignmentOperator();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return testClassAssignmentOperator();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Objects_and_Classes/TestClassAssignmentOperator.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:testLoanClass": {
+    "files": [
+      {
+        "name": "reference/examples/Objects_and_Classes/TestLoanClass.cpp",
+        "url": "workspace/reference/examples/Objects_and_Classes/TestLoanClass.cpp"
+      },
+      {
+        "name": "reference/examples/Objects_and_Classes/Loan.h",
+        "url": "workspace/reference/examples/Objects_and_Classes/Loan.h"
+      },
+      {
+        "name": "reference/examples/Objects_and_Classes/Loan.cpp",
+        "url": "workspace/reference/examples/Objects_and_Classes/Loan.cpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint testLoanClass();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return testLoanClass();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Objects_and_Classes/TestLoanClass.cpp"
+      },
+      {
+        "file": "reference/examples/Objects_and_Classes/Loan.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:testStringClass": {
+    "files": [
+      {
+        "name": "reference/examples/Objects_and_Classes/TestStringClass.cpp",
+        "url": "workspace/reference/examples/Objects_and_Classes/TestStringClass.cpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint testStringClass();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return testStringClass();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Objects_and_Classes/TestStringClass.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:testTV": {
+    "files": [
+      {
+        "name": "reference/examples/Objects_and_Classes/TV.cpp",
+        "url": "workspace/reference/examples/Objects_and_Classes/TV.cpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint testTV();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return testTV();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Objects_and_Classes/TV.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:reverseArrayUsingPointer": {
+    "files": [
+      {
+        "name": "reference/examples/Pointers_and_DMM/ReverseArrayUsingPointer.cpp",
+        "url": "workspace/reference/examples/Pointers_and_DMM/ReverseArrayUsingPointer.cpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint reverseArrayUsingPointer();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return reverseArrayUsingPointer();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Pointers_and_DMM/ReverseArrayUsingPointer.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:testArrayPointer": {
+    "files": [
+      {
+        "name": "reference/examples/Pointers_and_DMM/TestArrayPointer.cpp",
+        "url": "workspace/reference/examples/Pointers_and_DMM/TestArrayPointer.cpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint testArrayPointer();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return testArrayPointer();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Pointers_and_DMM/TestArrayPointer.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:testPointer": {
+    "files": [
+      {
+        "name": "reference/examples/Pointers_and_DMM/TestPointer.cpp",
+        "url": "workspace/reference/examples/Pointers_and_DMM/TestPointer.cpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint testPointer();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return testPointer();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Pointers_and_DMM/TestPointer.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:testPointerArgument": {
+    "files": [
+      {
+        "name": "reference/examples/Pointers_and_DMM/TestPointerArgument.cpp",
+        "url": "workspace/reference/examples/Pointers_and_DMM/TestPointerArgument.cpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint testPointerArgument();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return testPointerArgument();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Pointers_and_DMM/TestPointerArgument.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:testUsefulArrayFunctions": {
+    "files": [
+      {
+        "name": "reference/examples/Pointers_and_DMM/TestUsefulArrayFunctions.cpp",
+        "url": "workspace/reference/examples/Pointers_and_DMM/TestUsefulArrayFunctions.cpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint testUsefulArrayFunctions();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return testUsefulArrayFunctions();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Pointers_and_DMM/TestUsefulArrayFunctions.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:testArrayQueue": {
+    "files": [
+      {
+        "name": "reference/examples/Stacks_and_Queues/TestQueue.cpp",
+        "url": "workspace/reference/examples/Stacks_and_Queues/TestQueue.cpp"
+      },
+      {
+        "name": "reference/examples/Stacks_and_Queues/GenArrayQueue.h",
+        "url": "workspace/reference/examples/Stacks_and_Queues/GenArrayQueue.h"
+      },
+      {
+        "name": "reference/examples/Stacks_and_Queues/GenListQueue.h",
+        "url": "workspace/reference/examples/Stacks_and_Queues/GenListQueue.h"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint testArrayQueue();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return testArrayQueue();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Stacks_and_Queues/TestQueue.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:testListQueue": {
+    "files": [
+      {
+        "name": "reference/examples/Stacks_and_Queues/TestQueue.cpp",
+        "url": "workspace/reference/examples/Stacks_and_Queues/TestQueue.cpp"
+      },
+      {
+        "name": "reference/examples/Stacks_and_Queues/GenArrayQueue.h",
+        "url": "workspace/reference/examples/Stacks_and_Queues/GenArrayQueue.h"
+      },
+      {
+        "name": "reference/examples/Stacks_and_Queues/GenListQueue.h",
+        "url": "workspace/reference/examples/Stacks_and_Queues/GenListQueue.h"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint testListQueue();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return testListQueue();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Stacks_and_Queues/TestQueue.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:testArrayStack": {
+    "files": [
+      {
+        "name": "reference/examples/Stacks_and_Queues/TestStack.cpp",
+        "url": "workspace/reference/examples/Stacks_and_Queues/TestStack.cpp"
+      },
+      {
+        "name": "reference/examples/Stacks_and_Queues/GenArrayStack.h",
+        "url": "workspace/reference/examples/Stacks_and_Queues/GenArrayStack.h"
+      },
+      {
+        "name": "reference/examples/Stacks_and_Queues/GenSinglyLinkedStack.h",
+        "url": "workspace/reference/examples/Stacks_and_Queues/GenSinglyLinkedStack.h"
+      },
+      {
+        "name": "reference/examples/Stacks_and_Queues/GenVectorStack.h",
+        "url": "workspace/reference/examples/Stacks_and_Queues/GenVectorStack.h"
+      },
+      {
+        "name": "reference/examples/Stacks_and_Queues/GenListStack.h",
+        "url": "workspace/reference/examples/Stacks_and_Queues/GenListStack.h"
+      },
+      {
+        "name": "reference/examples/Stacks_and_Queues/StackException.h",
+        "url": "workspace/reference/examples/Stacks_and_Queues/StackException.h"
+      },
+      {
+        "name": "reference/examples/Linked_Lists/GenSLList.h",
+        "url": "workspace/reference/examples/Linked_Lists/GenSLList.h"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint testArrayStack();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return testArrayStack();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Stacks_and_Queues/TestStack.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:testSinglyLinkedStack": {
+    "files": [
+      {
+        "name": "reference/examples/Stacks_and_Queues/TestStack.cpp",
+        "url": "workspace/reference/examples/Stacks_and_Queues/TestStack.cpp"
+      },
+      {
+        "name": "reference/examples/Stacks_and_Queues/GenArrayStack.h",
+        "url": "workspace/reference/examples/Stacks_and_Queues/GenArrayStack.h"
+      },
+      {
+        "name": "reference/examples/Stacks_and_Queues/GenSinglyLinkedStack.h",
+        "url": "workspace/reference/examples/Stacks_and_Queues/GenSinglyLinkedStack.h"
+      },
+      {
+        "name": "reference/examples/Stacks_and_Queues/GenVectorStack.h",
+        "url": "workspace/reference/examples/Stacks_and_Queues/GenVectorStack.h"
+      },
+      {
+        "name": "reference/examples/Stacks_and_Queues/GenListStack.h",
+        "url": "workspace/reference/examples/Stacks_and_Queues/GenListStack.h"
+      },
+      {
+        "name": "reference/examples/Stacks_and_Queues/StackException.h",
+        "url": "workspace/reference/examples/Stacks_and_Queues/StackException.h"
+      },
+      {
+        "name": "reference/examples/Linked_Lists/GenSLList.h",
+        "url": "workspace/reference/examples/Linked_Lists/GenSLList.h"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint testSinglyLinkedStack();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return testSinglyLinkedStack();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Stacks_and_Queues/TestStack.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:testVectorStack": {
+    "files": [
+      {
+        "name": "reference/examples/Stacks_and_Queues/TestStack.cpp",
+        "url": "workspace/reference/examples/Stacks_and_Queues/TestStack.cpp"
+      },
+      {
+        "name": "reference/examples/Stacks_and_Queues/GenArrayStack.h",
+        "url": "workspace/reference/examples/Stacks_and_Queues/GenArrayStack.h"
+      },
+      {
+        "name": "reference/examples/Stacks_and_Queues/GenSinglyLinkedStack.h",
+        "url": "workspace/reference/examples/Stacks_and_Queues/GenSinglyLinkedStack.h"
+      },
+      {
+        "name": "reference/examples/Stacks_and_Queues/GenVectorStack.h",
+        "url": "workspace/reference/examples/Stacks_and_Queues/GenVectorStack.h"
+      },
+      {
+        "name": "reference/examples/Stacks_and_Queues/GenListStack.h",
+        "url": "workspace/reference/examples/Stacks_and_Queues/GenListStack.h"
+      },
+      {
+        "name": "reference/examples/Stacks_and_Queues/StackException.h",
+        "url": "workspace/reference/examples/Stacks_and_Queues/StackException.h"
+      },
+      {
+        "name": "reference/examples/Linked_Lists/GenSLList.h",
+        "url": "workspace/reference/examples/Linked_Lists/GenSLList.h"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint testVectorStack();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return testVectorStack();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Stacks_and_Queues/TestStack.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:testListStack": {
+    "files": [
+      {
+        "name": "reference/examples/Stacks_and_Queues/TestStack.cpp",
+        "url": "workspace/reference/examples/Stacks_and_Queues/TestStack.cpp"
+      },
+      {
+        "name": "reference/examples/Stacks_and_Queues/GenArrayStack.h",
+        "url": "workspace/reference/examples/Stacks_and_Queues/GenArrayStack.h"
+      },
+      {
+        "name": "reference/examples/Stacks_and_Queues/GenSinglyLinkedStack.h",
+        "url": "workspace/reference/examples/Stacks_and_Queues/GenSinglyLinkedStack.h"
+      },
+      {
+        "name": "reference/examples/Stacks_and_Queues/GenVectorStack.h",
+        "url": "workspace/reference/examples/Stacks_and_Queues/GenVectorStack.h"
+      },
+      {
+        "name": "reference/examples/Stacks_and_Queues/GenListStack.h",
+        "url": "workspace/reference/examples/Stacks_and_Queues/GenListStack.h"
+      },
+      {
+        "name": "reference/examples/Stacks_and_Queues/StackException.h",
+        "url": "workspace/reference/examples/Stacks_and_Queues/StackException.h"
+      },
+      {
+        "name": "reference/examples/Linked_Lists/GenSLList.h",
+        "url": "workspace/reference/examples/Linked_Lists/GenSLList.h"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint testListStack();\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return testListStack();\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/examples/Stacks_and_Queues/TestStack.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:shapeExample": {
+    "files": [
+      {
+        "name": "reference/course/labs/files/ShapeExample/shapeMain.cpp",
+        "url": "workspace/reference/course/labs/files/ShapeExample/shapeMain.cpp"
+      },
+      {
+        "name": "reference/course/labs/files/ShapeExample/Rectangle.hpp",
+        "url": "workspace/reference/course/labs/files/ShapeExample/Rectangle.hpp"
+      },
+      {
+        "name": "reference/course/labs/files/ShapeExample/Rectangle.cpp",
+        "url": "workspace/reference/course/labs/files/ShapeExample/Rectangle.cpp"
+      },
+      {
+        "name": "reference/course/labs/files/ShapeExample/Circle.hpp",
+        "url": "workspace/reference/course/labs/files/ShapeExample/Circle.hpp"
+      },
+      {
+        "name": "reference/course/labs/files/ShapeExample/Circle.cpp",
+        "url": "workspace/reference/course/labs/files/ShapeExample/Circle.cpp"
+      },
+      {
+        "name": "reference/course/labs/files/ShapeExample/Shape.hpp",
+        "url": "workspace/reference/course/labs/files/ShapeExample/Shape.hpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint shapeExample(int, char*[]);\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return shapeExample(argc, argv);\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/course/labs/files/ShapeExample/shapeMain.cpp",
+        "rename": "shapeExample"
+      },
+      {
+        "file": "reference/course/labs/files/ShapeExample/Rectangle.cpp"
+      },
+      {
+        "file": "reference/course/labs/files/ShapeExample/Circle.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:controllerExample": {
+    "files": [
+      {
+        "name": "reference/course/labs/files/DigitalController/controllerMain.cpp",
+        "url": "workspace/reference/course/labs/files/DigitalController/controllerMain.cpp"
+      },
+      {
+        "name": "reference/course/labs/files/DigitalController/Plant.hpp",
+        "url": "workspace/reference/course/labs/files/DigitalController/Plant.hpp"
+      },
+      {
+        "name": "reference/course/labs/files/DigitalController/Plant.cpp",
+        "url": "workspace/reference/course/labs/files/DigitalController/Plant.cpp"
+      },
+      {
+        "name": "reference/course/labs/files/DigitalController/ProportionalController.hpp",
+        "url": "workspace/reference/course/labs/files/DigitalController/ProportionalController.hpp"
+      },
+      {
+        "name": "reference/course/labs/files/DigitalController/ProportionalController.cpp",
+        "url": "workspace/reference/course/labs/files/DigitalController/ProportionalController.cpp"
+      },
+      {
+        "name": "reference/course/labs/files/DigitalController/Controller.hpp",
+        "url": "workspace/reference/course/labs/files/DigitalController/Controller.hpp"
+      },
+      {
+        "name": "labs/lab05/PID_Controller.hpp",
+        "url": "workspace/labs/lab05/PID_Controller.hpp"
+      },
+      {
+        "name": "labs/lab05/PID_Controller.cpp",
+        "url": "workspace/labs/lab05/PID_Controller.cpp"
+      },
+      {
+        "name": "labs/lab05/Controller.hpp",
+        "url": "workspace/labs/lab05/Controller.hpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint controllerExample(int, const char*[]);\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  const char* args[] = {\"controllerExample\", nullptr}; return controllerExample(1, args);\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/course/labs/files/DigitalController/controllerMain.cpp",
+        "rename": "controllerExample"
+      },
+      {
+        "file": "reference/course/labs/files/DigitalController/Plant.cpp"
+      },
+      {
+        "file": "reference/course/labs/files/DigitalController/ProportionalController.cpp"
+      },
+      {
+        "file": "labs/lab05/PID_Controller.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  },
+  "example:trigTests": {
+    "files": [
+      {
+        "name": "reference/course/labs/files/testTrigMain.cpp",
+        "url": "workspace/reference/course/labs/files/testTrigMain.cpp"
+      },
+      {
+        "name": "labs/lab03/spherical.hpp",
+        "url": "workspace/labs/lab03/spherical.hpp"
+      },
+      {
+        "name": "labs/lab03/spherical.cpp",
+        "url": "workspace/labs/lab03/spherical.cpp"
+      },
+      {
+        "name": "online_main.cpp",
+        "content": "// Entry point for this course program. Edit its source files using the selector.\n#include <iostream>\n#include <exception>\nint trigTests(int, char*[]);\nint main(int argc, char* argv[]) {\n try {\n  std::cin.exceptions(std::ios::failbit | std::ios::badbit);\n  return trigTests(argc, argv);\n } catch (const std::exception& e) { std::cerr << e.what() << '\\n'; return 1; }\n catch (...) { std::cerr << \"Uncaught exception\\n\"; return 1; }\n}\n"
+      }
+    ],
+    "units": [
+      {
+        "file": "reference/course/labs/files/testTrigMain.cpp",
+        "rename": "trigTests"
+      },
+      {
+        "file": "labs/lab03/spherical.cpp"
+      },
+      {
+        "file": "online_main.cpp"
+      }
+    ],
+    "includes": [
+      ".",
+      "labs/lab03",
+      "labs/lab05"
+    ],
+    "standard": 14,
+    "args": [],
+    "output": []
+  }
+}

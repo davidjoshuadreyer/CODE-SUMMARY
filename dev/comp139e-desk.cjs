@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Online Code Desk · COMP 139E</title><link rel="stylesheet" href="../engr290/course.css"><link rel="stylesheet" href="../assets/vendor/katex/katex.min.css"><link rel="stylesheet" href="course.css?v=online-1"><script defer src="../engr290/theme.js"></script><script defer src="compiler.js?v=1"></script><script defer src="desk.js?v=online-1"></script></head><body><a class="skip" href="#main">Skip to content</a><header><a class="brand" href="../index.html#course/comp139e">tesselate<span>.</span></a><nav aria-label="Course navigation"><a href="review.html">Lessons</a><a href="desk.html">Code Desk</a><a href="labs.html">Labs</a><a href="quiz.html">Quiz</a><a href="exam.html">Practice test</a><button id="theme" type="button" aria-label="Toggle dark appearance">◐</button></nav></header><main id="main" class="wide"><p class="eyebrow">COMP 139E / FALL 2026</p><h1>Online Code Desk</h1>
+module.exports=`<h1>Online Code Desk</h1>
 <p class="lead">Edit, compile, and run C++ here. No workspace download or installation needed.</p>
 <div class="actions"><button id="scratch" type="button">Open C++ scratchpad</button><a href="setup.html">Optional local setup</a></div>
 <div class="desk-layout"><aside class="library">
@@ -16,4 +16,4 @@
 <p class="hint">Run sends this program's source files and input to <a href="https://ce.judge0.com/" target="_blank" rel="noopener">Judge0</a> for compilation. Requires internet and compiler availability. C++ runs are limited to 5 seconds of CPU time.</p>
 <p id="run-status" role="status" aria-live="polite">Loading...</p><h3>Program output</h3><pre id="console" tabindex="0" aria-label="Program output"></pre>
 <details id="diagnostics-panel" hidden><summary>Compiler messages and errors</summary><pre id="diagnostics" tabindex="0"></pre></details>
-</section></div><noscript><p>Enable JavaScript to use the online compiler, or <a href="review.html">read the lessons</a>.</p></noscript></main><footer><a href="../index.html#course/comp139e">← COMP 139E workspace</a><p>C++ and MATLAB study material from your existing course setup.</p></footer></body></html>
+</section></div><noscript><p>Enable JavaScript to use the online compiler, or <a href="review.html">read the lessons</a>.</p></noscript>`;

@@ -10,7 +10,7 @@ const courses = [
  {id:'stats',code:'STAT 254',name:'Statistics',semester:'Winter 2026',description:'Probability, distributions, and statistical inference.',symbol:'σ'},
  {id:'engr290',code:'ENGR 290',name:'Engineering Materials',semester:'Fall 2026',description:'Crystal structures, bonding, defects, dislocations, and diffusion. Lessons and practice based on the supplied materials.',symbol:'En'},
  {id:'math250b',code:'MATH 250B',name:'Multivariable & Vector Calculus',semester:'Fall 2026',description:'Partial derivatives, optimization, multiple integrals, and vector calculus. Typeset lessons and practice using the supplied 2025 references.',symbol:'∇'},
- {id:'comp139e',code:'COMP 139E',name:'C++ & Engineering Computing',semester:'Fall 2026',description:'18 tutorials, nine lab guides, a searchable Code Desk, and C++/MATLAB practice from your existing course setup.',symbol:'C++'}
+ {id:'comp139e',code:'COMP 139E',name:'C++ & Engineering Computing',semester:'Fall 2026',description:'18 tutorials, nine lab guides, an online C++ compiler, and C++/MATLAB practice from your existing course setup.',symbol:'C++'}
 ];
 const titles = {'review':'Review sheet','quiz':'Practice quiz','exam':'Practice exams','cheatsheet':'Final exam cheat sheet','ref':'Quick reference','intro':'Getting started','fundamentals':'Fundamentals','functions':'Functions','arrays-pointers':'Arrays & pointers','char-pointers':'Characters & pointers','file-io':'File I/O','flow-control':'Flow control','Sets1-32_FormulaSheet':'Formula sheet · Sets 1–32','Sets22-30_FormulaSheet':'Formula sheet · Sets 22–30','Sets22-30_FormulaSheet_keywords':'Formula sheet with keywords · Sets 22–30','SampleTest3_SolutionKey':'Sample test 3 · Solution key'};
 const url = p => p.split('/').map(encodeURIComponent).join('/');
@@ -19,7 +19,7 @@ const resources = [];
 const compLessons=require('../comp139e/lessons.json');
 const compSources=[...compLessons.flatMap(l=>l.sources),...Array.from({length:9},(_,i)=>`comp139e/workspace/labs/lab${String(i+1).padStart(2,'0')}/README.md`),'comp139e/workspace/README.md'];
 const studyCourses={engr290:{data:require('../engr290/content.json'),sourceDir:'ENGR 290'},math250b:{data:require('./math250b-content.cjs'),sourceDir:'Math 250B'},comp139e:{data:{lessons:compLessons,sources:compSources},sourceDir:''}};
-const courseTitles={desk:'Code Desk · 85 programs',setup:'Local runner setup & download',labs:'Lab guides · C++ and MATLAB'};
+const courseTitles={desk:'Online Code Desk - C++ compiler',setup:'Optional desktop setup',labs:'Lab guides · C++ and MATLAB'};
 for (const [dir,courseId] of [['chem','chem'],['matrix','matrix'],['c','c'],['Statistics','stats'],['engr290','engr290'],['math250b','math250b'],['comp139e','comp139e']]) {
  for (const file of fs.readdirSync(path.join(root,dir)).filter(f=>f.endsWith('.html')).sort()) {
   const stem=path.basename(file,'.html'), rel=dir+'/'+file;
