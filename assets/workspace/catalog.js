@@ -117,6 +117,149 @@ window.TESSELATE_CATALOG = {
       "builtin": true
     },
     {
+      "id": "page-cGh5czIxMC9sZWFybi1jYXBhY2l0b3JzLmh0bWw",
+      "courseId": "phys210",
+      "title": "Capacitance, combinations, and dielectrics",
+      "kind": "Study notes",
+      "url": "phys210/learn-capacitors.html",
+      "body": "",
+      "description": "Weeks 7–9 · 24.1–24.4",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
+      "id": "page-cGh5czIxMC9sZWFybi1jaGFyZ2UtYW5kLWZvcmNlLmh0bWw",
+      "courseId": "phys210",
+      "title": "Charge and Coulomb’s law",
+      "kind": "Study notes",
+      "url": "phys210/learn-charge-and-force.html",
+      "body": "",
+      "description": "Weeks 1–2 · 21.1–21.4",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
+      "id": "page-cGh5czIxMC9sZWFybi1jb250aW51b3VzLWZpZWxkcy5odG1s",
+      "courseId": "phys210",
+      "title": "Fields from continuous charge",
+      "kind": "Study notes",
+      "url": "phys210/learn-continuous-fields.html",
+      "body": "",
+      "description": "Weeks 2–3 · 21.5",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
+      "id": "page-cGh5czIxMC9sZWFybi1kYy1uZXR3b3Jrcy5odG1s",
+      "courseId": "phys210",
+      "title": "Current, resistance, and Kirchhoff’s laws",
+      "kind": "Study notes",
+      "url": "phys210/learn-dc-networks.html",
+      "body": "",
+      "description": "Weeks 8–9 · 25.1–25.5; 26.1–26.2",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
+      "id": "page-cGh5czIxMC9sZWFybi1maWVsZHMtYW5kLWRpcG9sZXMuaHRtbA",
+      "courseId": "phys210",
+      "title": "Electric fields, motion, and dipoles",
+      "kind": "Study notes",
+      "url": "phys210/learn-fields-and-dipoles.html",
+      "body": "",
+      "description": "Weeks 2–3 · 21.4–21.7",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
+      "id": "page-cGh5czIxMC9sZWFybi1nYXVzcy1hbmQtY29uZHVjdG9ycy5odG1s",
+      "courseId": "phys210",
+      "title": "Flux, Gauss’s law, and conductors",
+      "kind": "Study notes",
+      "url": "phys210/learn-gauss-and-conductors.html",
+      "body": "",
+      "description": "Weeks 3–5 · 22.1–22.5",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
+      "id": "page-cGh5czIxMC9sZWFybi1pbmR1Y3RhbmNlLW1heHdlbGwuaHRtbA",
+      "courseId": "phys210",
+      "title": "Inductance, LR circuits, and Maxwell’s equations",
+      "kind": "Study notes",
+      "url": "phys210/learn-inductance-maxwell.html",
+      "body": "",
+      "description": "Weeks 13–14 · 30.1–30.4; 29.7",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
+      "id": "page-cGh5czIxMC9sZWFybi1pbmR1Y3Rpb24uaHRtbA",
+      "courseId": "phys210",
+      "title": "Faraday’s law, Lenz’s law, and motional emf",
+      "kind": "Study notes",
+      "url": "phys210/learn-induction.html",
+      "body": "",
+      "description": "Weeks 12–13 · 29.1–29.5",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
+      "id": "page-cGh5czIxMC9sZWFybi1sYWItc2tpbGxzLmh0bWw",
+      "courseId": "phys210",
+      "title": "Lab skills: uncertainty, graphs, and reports",
+      "kind": "Study notes",
+      "url": "phys210/learn-lab-skills.html",
+      "body": "",
+      "description": "Weeks 1–14 · Course lab manual",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
+      "id": "page-cGh5czIxMC9sZWFybi1tYWduZXRpYy1mb3JjZXMuaHRtbA",
+      "courseId": "phys210",
+      "title": "Magnetic fields and forces",
+      "kind": "Study notes",
+      "url": "phys210/learn-magnetic-forces.html",
+      "body": "",
+      "description": "Weeks 10–11 · 27.1–27.7",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
+      "id": "page-cGh5czIxMC9sZWFybi1tYWduZXRpYy1zb3VyY2VzLmh0bWw",
+      "courseId": "phys210",
+      "title": "Biot–Savart and Ampère’s law",
+      "kind": "Study notes",
+      "url": "phys210/learn-magnetic-sources.html",
+      "body": "",
+      "description": "Weeks 11–12 · 28.1–28.7",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
+      "id": "page-cGh5czIxMC9sZWFybi1wb3RlbnRpYWwuaHRtbA",
+      "courseId": "phys210",
+      "title": "Electric potential and energy",
+      "kind": "Study notes",
+      "url": "phys210/learn-potential.html",
+      "body": "",
+      "description": "Weeks 5–7 · 23.1–23.5",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
+      "id": "page-cGh5czIxMC9sZWFybi1yYy1jaXJjdWl0cy5odG1s",
+      "courseId": "phys210",
+      "title": "RC charging and discharging",
+      "kind": "Study notes",
+      "url": "phys210/learn-rc-circuits.html",
+      "body": "",
+      "description": "Weeks 9–10 · 26.4",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
       "id": "page-cGh5czIxMC9tYXRlcmlhbHMuaHRtbA",
       "courseId": "phys210",
       "title": "D2L course materials · Fall 2026",
@@ -128,9 +271,20 @@ window.TESSELATE_CATALOG = {
       "builtin": true
     },
     {
+      "id": "page-cGh5czIxMC9xdWl6Lmh0bWw",
+      "courseId": "phys210",
+      "title": "Practice quiz",
+      "kind": "Quiz",
+      "url": "phys210/quiz.html",
+      "body": "",
+      "description": "",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
       "id": "page-cGh5czIxMC9yZXZpZXcuaHRtbA",
       "courseId": "phys210",
-      "title": "Start here · Study guide",
+      "title": "Review sheet",
       "kind": "Study notes",
       "url": "phys210/review.html",
       "body": "",
@@ -174,7 +328,7 @@ window.TESSELATE_CATALOG = {
     {
       "id": "page-ZWNldDI1MGUvcmV2aWV3Lmh0bWw",
       "courseId": "ecet250e",
-      "title": "Start here · Study guide",
+      "title": "Review sheet",
       "kind": "Study notes",
       "url": "ecet250e/review.html",
       "body": "",

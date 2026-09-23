@@ -91,3 +91,17 @@ Run `node dev/build-math252-lessons.cjs`, `node dev/build-math252.cjs`, and `nod
 `dev/d2l-materials.cjs` records verified visible material titles and source URLs for all six Fall courses. It contains 38 Physics topics, 26 Circuits topics, six Engineering references, 42 Computing topics, and five Math resource/assignment links. D2L links require the student's existing Camosun access; no credentials, grades, submissions, or class lists are stored. Source files were not downloaded by this import. Empty or unreleased modules are not presented as completed content. Links are a dated snapshot, not an automatic sync.
 
 Run `node dev/build-fall-courses.cjs` and `node dev/build-workspace-catalog.cjs` after editing the source manifests. The first command builds six searchable material libraries and six original introductory Physics/Circuits lessons with typeset equations and labeled diagrams. Related D2L topic links are contextual reading, not claims that the instructor's file contents were reproduced. The previously created Physics Tutorial 2 worked-solutions PDF is included. Existing Math, Engineering, and Computing lessons remain intact. Existing browser workspaces receive new catalog entries without overwriting personal edits.
+
+## September 23 course learning paths
+
+Course pages now open on ordered **Lessons**, with separate **Practice**, **References**, and **My pages & tools** views. The managed path is read from `assets/workspace/learning-paths.js`, so existing personal course/page edits are not overwritten. Rebuild with `node dev/build-learning-paths.cjs`.
+
+Physics source package: `2026F PHYS-210-X01A - Electricity and Magnetism - 9232026 - 112 PM.zip`, supplied by the user. The source package and the full Young/Freedman textbook remain outside this public repository. D2L originals remain authenticated links.
+
+`dev/physics-course.cjs` contains 13 concise guides spanning the Fall 2026 syllabus and 14-week timeline, including a lab-skills companion. `dev/physics-practice.cjs` contains all seven problems from Homework 1 and 2 (source numbers 21.1, 21.3, 21.9, 21.63, 21.65, 21.78, 21.79). Values and requests are preserved; prompts and explanations are rewritten. Each answer and method was visually compared against the supplied instructor solution PDFs. Page references in the practice UI refer to those PDFs, not the 15th edition textbook. Other lesson examples are original practice, not claimed as instructor solutions.
+
+Build: `node dev/build-physics-course.cjs`, `node dev/build-learning-paths.cjs`, then `node dev/build-workspace-catalog.cjs`. `build-fall-courses.cjs` also invokes the first two to avoid replacing the Physics hub with its old introduction. Verify with `node dev/check-physics-course.cjs`.
+
+Practice notes and self-checks use the `tesselate-phys210-practice-v1:` localStorage namespace. They are browser-local and are not included in workspace cloud backup. A storage failure leaves practice usable and is reported in the status line. Numeric answer checks cover the specifically labelled result, allow 2% rounding, and never gate access to solutions.
+
+Coverage is explicit in the learning-path data: Engineering remains limited to the supplied materials topics, Circuits has three introductory lessons, and Calculus uses the supplied 2025 references. These are not represented as full current-course conversions.
