@@ -1,0 +1,3 @@
+'use strict';
+const search=document.getElementById('material-search');
+if(search){const cards=[...document.querySelectorAll('.material[data-search]')],groups=[...document.querySelectorAll('.material-group')];search.addEventListener('input',()=>{const q=search.value.trim().toLowerCase();let count=0;for(const card of cards){card.hidden=!card.dataset.search.includes(q);if(!card.hidden)count++;}for(const group of groups)group.hidden=![...group.querySelectorAll('.material')].some(card=>!card.hidden);document.getElementById('material-count').textContent=`${count} of ${cards.length} resources`;document.getElementById('no-materials').hidden=count!==0;});}
