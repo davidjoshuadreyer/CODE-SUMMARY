@@ -6,7 +6,7 @@ window.TESSELATE_CATALOG = {
       "code": "MATH 252",
       "name": "Applied Differential Equations",
       "semester": "Fall 2026",
-      "description": "Complete course library: first-order equations, higher-order models, series, Laplace transforms, and linear systems.",
+      "description": "21 beginner-friendly lessons, 27 worked examples, and 21 practice solutions. Includes the complete course source library.",
       "symbol": "DE"
     },
     {
@@ -68,9 +68,298 @@ window.TESSELATE_CATALOG = {
   ],
   "resources": [
     {
+      "id": "page-bWF0aDI1Mi8wMS1yZWFkaW5nLWVxdWF0aW9ucy5odG1s",
+      "courseId": "math252",
+      "title": "Reading a differential equation",
+      "kind": "Study notes",
+      "url": "math252/01-reading-equations.html",
+      "body": "",
+      "description": "Understand what you are solving for, what a derivative means, and what an initial condition adds.",
+      "referenceIds": [
+        "ref-math252-1VK-DrHMhB3P0eleViryVN94zc9Y4YKkS",
+        "ref-math252-1qR5D4LtxBUXBWFJTkKFfXP5nrUAFMTAl"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-bWF0aDI1Mi8wMi1zZXBhcmFibGUuaHRtbA",
+      "courseId": "math252",
+      "title": "Separable equations",
+      "kind": "Study notes",
+      "url": "math252/02-separable.html",
+      "body": "",
+      "description": "Separate the two variables, integrate, and recover the constant solutions that division can hide.",
+      "referenceIds": [
+        "ref-math252-1SwV32XvOBxKRbNLp0Za2VkZ0S1AxNRSj"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-bWF0aDI1Mi8wMy1saW5lYXItZmlyc3Qtb3JkZXIuaHRtbA",
+      "courseId": "math252",
+      "title": "First-order linear equations",
+      "kind": "Study notes",
+      "url": "math252/03-linear-first-order.html",
+      "body": "",
+      "description": "Turn the left side into one product derivative using an integrating factor.",
+      "referenceIds": [
+        "ref-math252-1OOXrWKRiJ8pNbCuz5tfv2y9eseImniDX"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-bWF0aDI1Mi8wNC1leGFjdC5odG1s",
+      "courseId": "math252",
+      "title": "Exact equations",
+      "kind": "Study notes",
+      "url": "math252/04-exact.html",
+      "body": "",
+      "description": "Recognize a hidden total derivative and reconstruct its potential function.",
+      "referenceIds": [
+        "ref-math252-1knMY9-WB3VgSrl2VvxySi6RsY8y0fWh-"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-bWF0aDI1Mi8wNS1zdWJzdGl0dXRpb25zLmh0bWw",
+      "courseId": "math252",
+      "title": "Substitutions: homogeneous and Bernoulli",
+      "kind": "Study notes",
+      "url": "math252/05-substitutions.html",
+      "body": "",
+      "description": "Replace a difficult expression with a new variable so a familiar method becomes available.",
+      "referenceIds": [
+        "ref-math252-1g1QrvLFe639Bvxndfy0JM0gNRTfkHgZ3"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-bWF0aDI1Mi8wNi1maXJzdC1vcmRlci1tb2RlbHMuaHRtbA",
+      "courseId": "math252",
+      "title": "Growth, cooling, and mixing",
+      "kind": "Study notes",
+      "url": "math252/06-first-order-models.html",
+      "body": "",
+      "description": "Translate a short word problem into a rate equation with consistent units.",
+      "referenceIds": [
+        "ref-math252-1ygFwTGn424WH6InYD6PzuESfm5ahmwKB"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-bWF0aDI1Mi8wNy1saW5lYXItdGhlb3J5Lmh0bWw",
+      "courseId": "math252",
+      "title": "Linear theory and reduction of order",
+      "kind": "Study notes",
+      "url": "math252/07-linear-theory.html",
+      "body": "",
+      "description": "Understand why solutions combine, and find a second solution when one is already known.",
+      "referenceIds": [
+        "ref-math252-1DawjzD-RC_ZHIGoY47r5w7V1vh1LzHd_",
+        "ref-math252-1vhMEKFLgzm2TZpvTRUrnTbYwzRDJcJZL"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-bWF0aDI1Mi8wOC1jaGFyYWN0ZXJpc3RpYy1yb290cy5odG1s",
+      "courseId": "math252",
+      "title": "Constant coefficients and characteristic roots",
+      "kind": "Study notes",
+      "url": "math252/08-characteristic-roots.html",
+      "body": "",
+      "description": "Turn differentiation into a polynomial, then translate its roots into real solutions.",
+      "referenceIds": [
+        "ref-math252-1nBb2OveF7vFM1T3fyJrVst3umF3Flwm_"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-bWF0aDI1Mi8wOS11bmRldGVybWluZWQtY29lZmZpY2llbnRzLmh0bWw",
+      "courseId": "math252",
+      "title": "Undetermined coefficients and resonance",
+      "kind": "Study notes",
+      "url": "math252/09-undetermined-coefficients.html",
+      "body": "",
+      "description": "Choose a trial particular solution and determine its coefficients by substitution.",
+      "referenceIds": [
+        "ref-math252-1VVMrZ_iND9B1wDyizAC1vYG1zLGqlkeL"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-bWF0aDI1Mi8xMC12YXJpYXRpb24tb2YtcGFyYW1ldGVycy5odG1s",
+      "courseId": "math252",
+      "title": "Variation of parameters",
+      "kind": "Study notes",
+      "url": "math252/10-variation-of-parameters.html",
+      "body": "",
+      "description": "Use a general method when a simple trial function will not work.",
+      "referenceIds": [
+        "ref-math252-1iyT2sCAOmGMrWm_zT76JJbXgxUcnsV7X"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-bWF0aDI1Mi8xMS1jYXVjaHktZXVsZXIuaHRtbA",
+      "courseId": "math252",
+      "title": "Cauchy–Euler equations",
+      "kind": "Study notes",
+      "url": "math252/11-cauchy-euler.html",
+      "body": "",
+      "description": "Use powers of x for equations whose coefficients match the derivative order.",
+      "referenceIds": [
+        "ref-math252-19dIDuWVV1omYRtGCqs2YT2CikF0xWb_l"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-bWF0aDI1Mi8xMi1tb3Rpb24tY2lyY3VpdHMuaHRtbA",
+      "courseId": "math252",
+      "title": "Springs, damping, and circuits",
+      "kind": "Study notes",
+      "url": "math252/12-motion-circuits.html",
+      "body": "",
+      "description": "Build a second-order model and connect the solution to physical behaviour.",
+      "referenceIds": [
+        "ref-math252-1eodb-glfRaErKruvKEIcunCQ4eXgxZXn",
+        "ref-math252-1yslcJLub13HONqDZsloXW0jYgcO2LysK",
+        "ref-math252-1OhiSFzkmgAIMMYK-3EURNpBIA0l-6TDt"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-bWF0aDI1Mi8xMy1zZXJpZXMtcmV2aWV3Lmh0bWw",
+      "courseId": "math252",
+      "title": "Power series essentials",
+      "kind": "Study notes",
+      "url": "math252/13-series-review.html",
+      "body": "",
+      "description": "Read sigma notation, differentiate a series, and line up powers before comparing coefficients.",
+      "referenceIds": [
+        "ref-math252-1J8WZVLl01JFgkeSE6EN3XgcGLSH1-zsb"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-bWF0aDI1Mi8xNC1zZXJpZXMtc29sdXRpb25zLmh0bWw",
+      "courseId": "math252",
+      "title": "Solving with a power series",
+      "kind": "Study notes",
+      "url": "math252/14-series-solutions.html",
+      "body": "",
+      "description": "Turn a differential equation into a recurrence that builds the solution one coefficient at a time.",
+      "referenceIds": [
+        "ref-math252-1hA9-u4f8Z9MUWtyy1BlBhkfJY4BdwXyC"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-bWF0aDI1Mi8xNS1sYXBsYWNlLWJhc2ljcy5odG1s",
+      "courseId": "math252",
+      "title": "The Laplace transform",
+      "kind": "Study notes",
+      "url": "math252/15-laplace-basics.html",
+      "body": "",
+      "description": "Understand the transform as a new representation of a function and learn the core transform pairs.",
+      "referenceIds": [
+        "ref-math252-1c1FCab6ipvqqkRnPu20K2RaLoSj06RqE"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-bWF0aDI1Mi8xNi1pbnZlcnNlLWxhcGxhY2UuaHRtbA",
+      "courseId": "math252",
+      "title": "Inverse transforms and initial-value problems",
+      "kind": "Study notes",
+      "url": "math252/16-inverse-laplace.html",
+      "body": "",
+      "description": "Use algebra and partial fractions to recover a time-domain solution.",
+      "referenceIds": [
+        "ref-math252-1Yrxv0emjgblL9crE2mr4cVidSvDkILUh"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-bWF0aDI1Mi8xNy1zaGlmdHMtYW5kLXN0ZXBzLmh0bWw",
+      "courseId": "math252",
+      "title": "Shifts, switches, and piecewise inputs",
+      "kind": "Study notes",
+      "url": "math252/17-shifts-and-steps.html",
+      "body": "",
+      "description": "Distinguish exponential shifts from time delays and write switched inputs correctly.",
+      "referenceIds": [
+        "ref-math252-1Dk5gFuCMtIm1ITrAzybGME4REV4sQXSI"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-bWF0aDI1Mi8xOC1jb252b2x1dGlvbi5odG1s",
+      "courseId": "math252",
+      "title": "Convolution and transform operations",
+      "kind": "Study notes",
+      "url": "math252/18-convolution.html",
+      "body": "",
+      "description": "Recognize products of transforms and handle time factors without starting a new integral from scratch.",
+      "referenceIds": [
+        "ref-math252-1aRHr_ujChkIzHlF7IqL5jSV9zWCexzd8"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-bWF0aDI1Mi8xOS1pbXB1bHNlcy5odG1s",
+      "courseId": "math252",
+      "title": "Impulse inputs and the Dirac delta",
+      "kind": "Study notes",
+      "url": "math252/19-impulses.html",
+      "body": "",
+      "description": "Model a short kick and understand the jump it causes.",
+      "referenceIds": [
+        "ref-math252-1osmh-VG3gU7RtWKEHSzx1ZaxcCeiNNIs"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-bWF0aDI1Mi8yMC1saW5lYXItc3lzdGVtcy5odG1s",
+      "courseId": "math252",
+      "title": "Linear systems and eigenvectors",
+      "kind": "Study notes",
+      "url": "math252/20-linear-systems.html",
+      "body": "",
+      "description": "Solve coupled equations by identifying independent directions of motion.",
+      "referenceIds": [
+        "ref-math252-1V8f-RedmlmyDeq_7VhJIWwVrWXUsJjPh",
+        "ref-math252-17D5BcoFLI9pM31k3Ko3qNngJr4Vn6tav"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-bWF0aDI1Mi8yMS1mb3JjZWQtc3lzdGVtcy5odG1s",
+      "courseId": "math252",
+      "title": "Nonhomogeneous systems",
+      "kind": "Study notes",
+      "url": "math252/21-forced-systems.html",
+      "body": "",
+      "description": "Combine the system’s natural modes with a response to external forcing.",
+      "referenceIds": [
+        "ref-math252-15ZlkmC3tOAWsP2XFu_RakzFqe3rtG_YU"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-bWF0aDI1Mi9sZXNzb25zLmh0bWw",
+      "courseId": "math252",
+      "title": "Start here · Simplified lessons",
+      "kind": "Study notes",
+      "url": "math252/lessons.html",
+      "body": "",
+      "description": "",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
       "id": "page-bWF0aDI1Mi9yZXZpZXcuaHRtbA",
       "courseId": "math252",
-      "title": "Course library and study map",
+      "title": "Original course materials",
       "kind": "Study notes",
       "url": "math252/review.html",
       "body": "",
