@@ -1,9 +1,10 @@
-﻿/* Rebuild the public, read-only catalog after adding repository study pages or PDFs.
+/* Rebuild the public, read-only catalog after adding repository study pages or PDFs.
    Run: node dev/build-workspace-catalog.cjs. Browser uploads are separate. */
 const fs = require('node:fs');
 const path = require('node:path');
 const root = path.resolve(__dirname, '..');
 const courses = [
+ {id:'math252',code:'MATH 252',name:'Applied Differential Equations',semester:'Fall 2026',description:'Complete course library: first-order equations, higher-order models, series, Laplace transforms, and linear systems.',symbol:'DE'},
  {id:'chem',code:'CHEM 150',name:'Engineering Chemistry',semester:'Winter 2026',description:'Matter, bonding, equilibrium, and the chemistry lab.',symbol:'Ch'},
  {id:'matrix',code:'MATH 251',name:'Matrix Algebra',semester:'Winter 2026',description:'Linear systems, matrices, and transformations.',symbol:'Mx'},
  {id:'c',code:'COMP',name:'C Programming',semester:'Winter 2026',description:'From the fundamentals to pointers and data structures.',symbol:'C'},
@@ -20,14 +21,20 @@ const compLessons=require('../comp139e/lessons.json');
 const compSources=[...compLessons.flatMap(l=>l.sources),...Array.from({length:9},(_,i)=>`comp139e/workspace/labs/lab${String(i+1).padStart(2,'0')}/README.md`),'comp139e/workspace/README.md'];
 const studyCourses={engr290:{data:require('../engr290/content.json'),sourceDir:'ENGR 290'},math250b:{data:require('./math250b-content.cjs'),sourceDir:'Math 250B'},comp139e:{data:{lessons:compLessons,sources:compSources},sourceDir:''}};
 const courseTitles={slides:'Covered lecture slides ? Start here',desk:'Online Code Desk - C++ compiler',setup:'Optional desktop setup',labs:'Lab guides · C++ and MATLAB'};
-for (const [dir,courseId] of [['chem','chem'],['matrix','matrix'],['c','c'],['Statistics','stats'],['engr290','engr290'],['math250b','math250b'],['comp139e','comp139e']]) {
+for (const [dir,courseId] of [['math252','math252'],['chem','chem'],['matrix','matrix'],['c','c'],['Statistics','stats'],['engr290','engr290'],['math250b','math250b'],['comp139e','comp139e']]) {
  for (const file of fs.readdirSync(path.join(root,dir)).filter(f=>f.endsWith('.html')).sort()) {
   const stem=path.basename(file,'.html'), rel=dir+'/'+file;
   const study=studyCourses[courseId],lesson=study?.data.lessons.find(l=>l.slug===stem);
-  resources.push({id:'page-'+id(rel),courseId,title:lesson?lesson.title:courseTitles[stem]||titles[stem]||stem.replaceAll('_',' '),kind:stem==='quiz'?'Quiz':stem==='exam'?'Practice exam':stem.includes('Report')?'Lab report':'Study notes',url:url(rel),body:'',description:lesson?lesson.summary:'',referenceIds:study?(lesson?lesson.sources:study.data.sources).map(s=>'ref-'+id(study.sourceDir?study.sourceDir+'/'+s:s)):[],builtin:true});
+  resources.push({id:'page-'+id(rel),courseId,title:courseId==='math252'?'Course library and study map':lesson?lesson.title:courseTitles[stem]||titles[stem]||stem.replaceAll('_',' '),kind:stem==='quiz'?'Quiz':stem==='exam'?'Practice exam':stem.includes('Report')?'Lab report':'Study notes',url:url(rel),body:'',description:lesson?lesson.summary:'',referenceIds:study?(lesson?lesson.sources:study.data.sources).map(s=>'ref-'+id(study.sourceDir?study.sourceDir+'/'+s:s)):[],builtin:true});
  }
 }
 const references=[];
+// Library navigation is not a conversion: originals remain available for study-page tracking.
+for(const material of require('../math252/materials.json')) {
+ const rel=material.localPath?'math252/'+material.localPath:null;
+ references.push({id:'ref-math252-'+(material.driveId||id(material.url)),courseId:'math252',name:material.title,url:rel?url(rel):material.url,size:rel?fs.statSync(path.join(root,rel)).size:0,stage:'unreviewed',notes:'Collected from Gilles Cazelais’s course pages on 2026-09-22. Original: '+material.url,builtin:true,createdAt:'2026-09-22T00:00:00.000Z'});
+}
+
 function walk(dir,courseId){
  if(!fs.existsSync(path.join(root,dir)))return;
  for(const entry of fs.readdirSync(path.join(root,dir),{withFileTypes:true})){

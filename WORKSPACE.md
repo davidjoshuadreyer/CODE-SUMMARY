@@ -1,4 +1,4 @@
-﻿# Tesselate study workspace
+# Tesselate study workspace
 
 Open `index.html` through your usual local static server or the deployed site. The dashboard uses plain HTML, CSS, and JavaScript; there is no build step. Optional online storage uses the pinned Supabase browser SDK loaded from jsDelivr.
 
@@ -73,3 +73,9 @@ node dev/workspace-cloud-test.cjs
 This uses an installed Chrome browser. Screenshots and a test backup are written under the system temporary directory in `tesselate-workspace-check`.
 
 COMP 139E beginner support: `comp139e/beginner.js` supplies escaped C++ syntax colours, reading explanations, and tips for all 18 tutorials. `beginner-desk.js` synchronizes an accessible textarea with its coloured display and line numbers; compilation always uses the original textarea text. Beginner explanations default on and can be hidden with a saved browser preference. The line guide is a lexical reading aid, not a debugger or a full C++ parser. Lesson examples use the same renderer at build time. Run `node dev/comp139e-beginner-check.cjs` with Playwright and the local server on port 8765 to check text preservation, explanations, scrolling, themes, persistence, and mobile layout.
+
+## MATH 252 course library
+
+MATH 252 Applied Differential Equations is in Fall 2026. `math252/materials.json` records all 52 distinct resources linked from Gilles Cazelais’s course and notes pages on September 22, 2026, including 44 original PDFs (566 pages). Original URLs and download metadata are retained. A Desmos graph image is also preserved locally. The seven remaining items link to videos, further reading, and suggested homework. The homework page cites the 10th textbook edition while the notes page cites the 11th; the library displays this distinction. The catalog keeps originals unreviewed until users link actual study pages, rather than marking everything converted merely because the library lists it.
+
+Run `node dev/build-math252.cjs` and `node dev/build-workspace-catalog.cjs` after changing the manifest or materials. The static library works without JavaScript; JavaScript adds filtering and the shared theme control. PDFs are preserved unmodified. No recurring sync is configured.
