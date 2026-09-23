@@ -1,0 +1,175 @@
+[
+  {
+    "slug": "01-reading-equations",
+    "title": "Reading a differential equation",
+    "summary": "Understand what you are solving for, what a derivative means, and what an initial condition adds.",
+    "sources": [
+      "1VK-DrHMhB3P0eleViryVN94zc9Y4YKkS",
+      "1qR5D4LtxBUXBWFJTkKFfXP5nrUAFMTAl"
+    ]
+  },
+  {
+    "slug": "02-separable",
+    "title": "Separable equations",
+    "summary": "Separate the two variables, integrate, and recover the constant solutions that division can hide.",
+    "sources": [
+      "1SwV32XvOBxKRbNLp0Za2VkZ0S1AxNRSj"
+    ]
+  },
+  {
+    "slug": "03-linear-first-order",
+    "title": "First-order linear equations",
+    "summary": "Turn the left side into one product derivative using an integrating factor.",
+    "sources": [
+      "1OOXrWKRiJ8pNbCuz5tfv2y9eseImniDX"
+    ]
+  },
+  {
+    "slug": "04-exact",
+    "title": "Exact equations",
+    "summary": "Recognize a hidden total derivative and reconstruct its potential function.",
+    "sources": [
+      "1knMY9-WB3VgSrl2VvxySi6RsY8y0fWh-"
+    ]
+  },
+  {
+    "slug": "05-substitutions",
+    "title": "Substitutions: homogeneous and Bernoulli",
+    "summary": "Replace a difficult expression with a new variable so a familiar method becomes available.",
+    "sources": [
+      "1g1QrvLFe639Bvxndfy0JM0gNRTfkHgZ3"
+    ]
+  },
+  {
+    "slug": "06-first-order-models",
+    "title": "Growth, cooling, and mixing",
+    "summary": "Translate a short word problem into a rate equation with consistent units.",
+    "sources": [
+      "1ygFwTGn424WH6InYD6PzuESfm5ahmwKB"
+    ]
+  },
+  {
+    "slug": "07-linear-theory",
+    "title": "Linear theory and reduction of order",
+    "summary": "Understand why solutions combine, and find a second solution when one is already known.",
+    "sources": [
+      "1DawjzD-RC_ZHIGoY47r5w7V1vh1LzHd_",
+      "1vhMEKFLgzm2TZpvTRUrnTbYwzRDJcJZL"
+    ]
+  },
+  {
+    "slug": "08-characteristic-roots",
+    "title": "Constant coefficients and characteristic roots",
+    "summary": "Turn differentiation into a polynomial, then translate its roots into real solutions.",
+    "sources": [
+      "1nBb2OveF7vFM1T3fyJrVst3umF3Flwm_"
+    ]
+  },
+  {
+    "slug": "09-undetermined-coefficients",
+    "title": "Undetermined coefficients and resonance",
+    "summary": "Choose a trial particular solution and determine its coefficients by substitution.",
+    "sources": [
+      "1VVMrZ_iND9B1wDyizAC1vYG1zLGqlkeL"
+    ]
+  },
+  {
+    "slug": "10-variation-of-parameters",
+    "title": "Variation of parameters",
+    "summary": "Use a general method when a simple trial function will not work.",
+    "sources": [
+      "1iyT2sCAOmGMrWm_zT76JJbXgxUcnsV7X"
+    ]
+  },
+  {
+    "slug": "11-cauchy-euler",
+    "title": "Cauchy–Euler equations",
+    "summary": "Use powers of x for equations whose coefficients match the derivative order.",
+    "sources": [
+      "19dIDuWVV1omYRtGCqs2YT2CikF0xWb_l"
+    ]
+  },
+  {
+    "slug": "12-motion-circuits",
+    "title": "Springs, damping, and circuits",
+    "summary": "Build a second-order model and connect the solution to physical behaviour.",
+    "sources": [
+      "1eodb-glfRaErKruvKEIcunCQ4eXgxZXn",
+      "1yslcJLub13HONqDZsloXW0jYgcO2LysK",
+      "1OhiSFzkmgAIMMYK-3EURNpBIA0l-6TDt"
+    ]
+  },
+  {
+    "slug": "13-series-review",
+    "title": "Power series essentials",
+    "summary": "Read sigma notation, differentiate a series, and line up powers before comparing coefficients.",
+    "sources": [
+      "1J8WZVLl01JFgkeSE6EN3XgcGLSH1-zsb"
+    ]
+  },
+  {
+    "slug": "14-series-solutions",
+    "title": "Solving with a power series",
+    "summary": "Turn a differential equation into a recurrence that builds the solution one coefficient at a time.",
+    "sources": [
+      "1hA9-u4f8Z9MUWtyy1BlBhkfJY4BdwXyC"
+    ]
+  },
+  {
+    "slug": "15-laplace-basics",
+    "title": "The Laplace transform",
+    "summary": "Understand the transform as a new representation of a function and learn the core transform pairs.",
+    "sources": [
+      "1c1FCab6ipvqqkRnPu20K2RaLoSj06RqE"
+    ]
+  },
+  {
+    "slug": "16-inverse-laplace",
+    "title": "Inverse transforms and initial-value problems",
+    "summary": "Use algebra and partial fractions to recover a time-domain solution.",
+    "sources": [
+      "1Yrxv0emjgblL9crE2mr4cVidSvDkILUh"
+    ]
+  },
+  {
+    "slug": "17-shifts-and-steps",
+    "title": "Shifts, switches, and piecewise inputs",
+    "summary": "Distinguish exponential shifts from time delays and write switched inputs correctly.",
+    "sources": [
+      "1Dk5gFuCMtIm1ITrAzybGME4REV4sQXSI"
+    ]
+  },
+  {
+    "slug": "18-convolution",
+    "title": "Convolution and transform operations",
+    "summary": "Recognize products of transforms and handle time factors without starting a new integral from scratch.",
+    "sources": [
+      "1aRHr_ujChkIzHlF7IqL5jSV9zWCexzd8"
+    ]
+  },
+  {
+    "slug": "19-impulses",
+    "title": "Impulse inputs and the Dirac delta",
+    "summary": "Model a short kick and understand the jump it causes.",
+    "sources": [
+      "1osmh-VG3gU7RtWKEHSzx1ZaxcCeiNNIs"
+    ]
+  },
+  {
+    "slug": "20-linear-systems",
+    "title": "Linear systems and eigenvectors",
+    "summary": "Solve coupled equations by identifying independent directions of motion.",
+    "sources": [
+      "1V8f-RedmlmyDeq_7VhJIWwVrWXUsJjPh",
+      "17D5BcoFLI9pM31k3Ko3qNngJr4Vn6tav"
+    ]
+  },
+  {
+    "slug": "21-forced-systems",
+    "title": "Nonhomogeneous systems",
+    "summary": "Combine the system’s natural modes with a response to external forcing.",
+    "sources": [
+      "15ZlkmC3tOAWsP2XFu_RakzFqe3rtG_YU"
+    ]
+  }
+]
