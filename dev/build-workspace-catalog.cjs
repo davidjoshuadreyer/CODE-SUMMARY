@@ -16,6 +16,7 @@ const courses = [
  {id:'comp139e',code:'COMP 139E',name:'Data Structures & Applications',semester:'Fall 2026',description:'Five covered lecture decks with ten simple programs, 18 tutorials, nine lab guides, and an online C++ editor with member suggestions.',symbol:'C++'}
 ];
 const fallLessons=require('./fall-lessons.cjs');
+const physicsLessons=require('./physics-course.cjs').map(u=>({...u,slug:'learn-'+u.slug,summary:'Weeks '+u.weeks+' · '+u.chapter}));
 const d2lMaterials=require('./d2l-materials.cjs');
 const titles = {'review':'Review sheet','quiz':'Practice quiz','exam':'Practice exams','cheatsheet':'Final exam cheat sheet','ref':'Quick reference','intro':'Getting started','fundamentals':'Fundamentals','functions':'Functions','arrays-pointers':'Arrays & pointers','char-pointers':'Characters & pointers','file-io':'File I/O','flow-control':'Flow control','Sets1-32_FormulaSheet':'Formula sheet · Sets 1–32','Sets22-30_FormulaSheet':'Formula sheet · Sets 22–30','Sets22-30_FormulaSheet_keywords':'Formula sheet with keywords · Sets 22–30','SampleTest3_SolutionKey':'Sample test 3 · Solution key'};
 const url = p => p.split('/').map(encodeURIComponent).join('/');
@@ -29,8 +30,8 @@ const courseTitles={slides:'Covered lecture slides ? Start here',desk:'Online Co
 for (const [dir,courseId] of [['phys210','phys210'],['ecet250e','ecet250e'],['math252','math252'],['chem','chem'],['matrix','matrix'],['c','c'],['Statistics','stats'],['engr290','engr290'],['math250b','math250b'],['comp139e','comp139e']]) {
  for (const file of fs.readdirSync(path.join(root,dir)).filter(f=>f.endsWith('.html')).sort()) {
   const stem=path.basename(file,'.html'), rel=dir+'/'+file;
-  const study=studyCourses[courseId],lesson=fallLessons[courseId]?.find(l=>l.slug===stem)||(courseId==='math252'?math252Lessons.find(l=>l.slug===stem):study?.data.lessons.find(l=>l.slug===stem));
-  resources.push({id:'page-'+id(rel),courseId,title:stem==='materials'?'D2L course materials · Fall 2026':fallLessons[courseId]?(lesson?lesson.title:'Start here · Study guide'):courseId==='math252'?(lesson?lesson.title:stem==='lessons'?'Start here · Simplified lessons':'Original course materials'):lesson?lesson.title:courseTitles[stem]||titles[stem]||stem.replaceAll('_',' '),kind:stem==='quiz'?'Quiz':stem==='exam'?'Practice exam':stem.includes('Report')?'Lab report':'Study notes',url:url(rel),body:'',description:lesson?lesson.summary:'',referenceIds:fallLessons[courseId]?[]:courseId==='math252'?(lesson?lesson.sources.map(id=>'ref-math252-'+id):[]):study?(lesson?lesson.sources:study.data.sources).map(s=>'ref-'+id(study.sourceDir?study.sourceDir+'/'+s:s)):[],builtin:true});
+  const study=studyCourses[courseId],lesson=(courseId==='phys210'?physicsLessons.find(l=>l.slug===stem):null)||fallLessons[courseId]?.find(l=>l.slug===stem)||(courseId==='math252'?math252Lessons.find(l=>l.slug===stem):study?.data.lessons.find(l=>l.slug===stem));
+  resources.push({id:'page-'+id(rel),courseId,title:stem==='materials'?'D2L course materials · Fall 2026':fallLessons[courseId]?(lesson?lesson.title:titles[stem]||'Start here · Study guide'):courseId==='math252'?(lesson?lesson.title:stem==='lessons'?'Start here · Simplified lessons':'Original course materials'):lesson?lesson.title:courseTitles[stem]||titles[stem]||stem.replaceAll('_',' '),kind:stem==='quiz'?'Quiz':stem==='exam'?'Practice exam':stem.includes('Report')?'Lab report':'Study notes',url:url(rel),body:'',description:lesson?lesson.summary:'',referenceIds:fallLessons[courseId]?[]:courseId==='math252'?(lesson?lesson.sources.map(id=>'ref-math252-'+id):[]):study?(lesson?lesson.sources:study.data.sources).map(s=>'ref-'+id(study.sourceDir?study.sourceDir+'/'+s:s)):[],builtin:true});
  }
 }
 const references=[];

@@ -6,7 +6,7 @@ const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;',
 const uid = () => crypto.randomUUID();
 const labels = {unused:'Unused',working:'In progress',converted:'Converted',unreviewed:'Needs review'};
 const catalog = window.TESSELATE_CATALOG;
-let db, state, tab='pages', search='', courseFilter='', statusFilter='', toastTimer;
+let db, state, tab='learn', search='', courseFilter='', statusFilter='', toastTimer;
 let cloudReady=false,cloudSaving=false,cloudTimer,cloudMessage='Saved on this device';
 const cloud=window.TesselateCloud;
 const dialog = $('#editor');
@@ -122,12 +122,22 @@ function courseResults(list){
  return [...new Set(list.map(c=>c.semester))].map(semester=>`<div class="section-heading"><h2>${esc(semester)} <span class="count">${list.filter(c=>c.semester===semester).length} courses</span></h2></div><div class="course-grid">${list.filter(c=>c.semester===semester).map(courseCard).join('')}</div>`).join('');
 }
 function resourceCard(r){return `<article class="resource-card"><span class="badge">${esc(r.kind)}</span><h3>${esc(r.title)}</h3><p>${esc(r.description||'Part of your '+(course(r.courseId)?.name||'study')+' collection.')}</p><p>${r.referenceIds.length?`${r.referenceIds.length} linked source${r.referenceIds.length===1?'':'s'}`:'No sources linked yet'}</p><div class="actions">${resourceLink(r)}${button('edit-page','Edit / link sources',r.id,'small')}</div></article>`;}
+function learningOverview(id){
+ const path=window.TESSELATE_PATHS?.[id];
+ if(!path)return `<div class="resource-grid">${pages(id).map(resourceCard).join('')}</div>`;
+ return `<div class="panel guide"><h2>Your learning path</h2><p>${esc(path.coverage)}</p><div class="actions"><a class="button primary" href="${esc(path.lessons[0].url)}">Start the first lesson →</a>${button('tab-practice','Open practice',id)}${button('tab-references','Browse references',id)}</div></div><ol class="course-learning-path">${path.lessons.map((l,i)=>`<li><span class="lesson-number">${String(i+1).padStart(2,'0')}</span><div><h3><a href="${esc(l.url)}">${esc(l.title)}</a></h3><p>${esc(l.summary)}</p></div><a class="button small" href="${esc(l.url)}" aria-label="${esc('Open '+l.title)}">Learn →</a></li>`).join('')}</ol>`;
+}
+function practiceOverview(id){
+ const path=window.TESSELATE_PATHS?.[id];
+ const items=path?.practice||pages(id).filter(p=>['Quiz','Practice exam'].includes(p.kind));
+ return items.length?`<div class="resource-grid">${items.map(p=>`<article class="resource-card"><span class="badge">Practice</span><h3>${esc(p.title)}</h3><p>${esc(p.summary||p.description||'')}</p><a class="button primary" href="${esc(safeURL(p.url))}">Start practising →</a></article>`).join('')}</div>`:empty('No practice set yet.','Your lessons and references are available in the other tabs.','');
+}
 function courseView(id){
  const c=course(id);if(!c)return empty('Course not found','Choose a course from your workspace.','<a class="button" href="#courses">My courses</a>');
- return `<a class="back" href="#${c.semester===state.currentSemester?'courses':'archive'}">← Back to courses</a>`+heading(c.semester+' / '+c.code,c.name,c.description||'Build your study collection, one resource at a time.',button('edit-course','Edit course',c.id)+button('upload','↑ Upload references',c.id)+button('add-page','+ Add study page',c.id,'primary'))+
- (id==='math252'?'<div class="panel guide"><h2>Learn differential equations step by step</h2><p>21 structured lessons, 27 worked examples, and 21 practice solutions. Start at the beginning or find the method you need.</p><div class="actions"><a class="button primary" href="math252/lessons.html">Start the lessons →</a><a class="button" href="math252/lessons.html#choose">Choose a method</a><a class="button" href="math252/review.html">Original materials</a></div></div>':'')+
- `<div class="tabs" role="group" aria-label="Course content">${button('tab-pages',`Study pages (${pages(id).length})`,id,tab==='pages'?'active':'')}${button('tab-references',`References (${refs(id).length})`,id,tab==='references'?'active':'')}</div>`+
- (tab==='pages'?(pages(id).length?`<div class="resource-grid">${pages(id).map(resourceCard).join('')}</div>`:empty('Your study collection starts here.','Write a note or link an existing study page, quiz, or practice exam.',button('add-page','+ Add study page',id,'primary'))):library(id));
+ const subtitle=window.TESSELATE_PATHS?.[id]?'Learn a topic, practise it, and use the references when you need more detail.':c.description;
+ return `<a class="back" href="#${c.semester===state.currentSemester?'courses':'archive'}">← Back to courses</a>`+heading(c.semester+' / '+c.code,c.name,subtitle||'Build your study collection, one resource at a time.','')+
+ `<div class="tabs" role="group" aria-label="Course content">${button('tab-learn','Lessons',id,tab==='learn'?'active':'')}${button('tab-practice','Practice',id,tab==='practice'?'active':'')}${button('tab-references',`References (${refs(id).length})`,id,tab==='references'?'active':'')}${button('tab-pages','My pages & tools',id,tab==='pages'?'active':'')}</div>`+
+ (tab==='learn'?learningOverview(id):tab==='practice'?practiceOverview(id):tab==='references'?library(id):`<div class="actions">${button('edit-course','Edit course',c.id)}${button('upload','↑ Upload references',c.id)}${button('add-page','+ Add study page',c.id,'primary')}</div>`+(pages(id).length?`<div class="resource-grid">${pages(id).map(resourceCard).join('')}</div>`:empty('Your study collection starts here.','Write a note or link an existing study page, quiz, or practice exam.',button('add-page','+ Add study page',id,'primary'))));
 }
 function courseOptions(selected='',unassigned=false){return (unassigned?'<option value="">Unassigned</option>':'')+state.courses.map(c=>`<option value="${esc(c.id)}" ${selected===c.id?'selected':''}>${esc(c.code+' · '+c.name+' ('+c.semester+')')}</option>`).join('');}
 function library(id=''){
@@ -297,7 +307,7 @@ document.addEventListener('click',async event=>{
   else if(action==='delete-page')confirmDelete('page',id);
   else if(action==='delete-reference')confirmDelete('reference',id);
   else if(action==='download')await downloadReference(id);
-  else if(action==='tab-pages'||action==='tab-references'){tab=action.slice(4);search='';courseFilter='';statusFilter='';render();}
+  else if(['tab-learn','tab-practice','tab-pages','tab-references'].includes(action)){tab=action.slice(4);search='';courseFilter='';statusFilter='';render();}
   else if(action==='theme'){const dark=document.body.classList.toggle('dark');try{localStorage.setItem('chem-theme',dark?'dark':'light');}catch{}$('#theme-label').textContent=dark?'Light appearance':'Dark appearance';}
   else if(action==='backup'){el.disabled=true;try{await backup();}finally{el.disabled=false;}}
   else if(action==='restore')$('#restore-file').click();
@@ -314,7 +324,7 @@ document.addEventListener('change',async event=>{
   if(event.target.id==='restore-file'){const file=event.target.files[0];event.target.value='';await restore(file);}
  }catch(error){toast(error.message);}
 });
-window.addEventListener('hashchange',()=>{if(!state)return;search='';courseFilter='';statusFilter='';tab='pages';render();window.scrollTo(0,0);});
+window.addEventListener('hashchange',()=>{if(!state)return;search='';courseFilter='';statusFilter='';tab='learn';render();window.scrollTo(0,0);});
 async function init(){
  try{
   try{document.body.classList.toggle('dark',localStorage.getItem('chem-theme')==='dark');}catch{}
