@@ -7,5 +7,8 @@ validateattributes(nIntervals,{'numeric'},{'real','finite','scalar','integer','>
 if rem(nIntervals,2)~=0, error('nIntervals must be even'); end
 h=(xN-x0)/nIntervals;
 x=linspace(x0,xN,nIntervals+1);
-area=h/3*(f(x0)+f(xN)+4*sum(f(x(2:2:end-1)))+2*sum(f(x(3:2:end-2))));
+values=f(x);
+if isscalar(values), values=values+zeros(size(x)); end
+if ~isvector(values)||numel(values)~=numel(x), error('f must return one value per x'); end
+area=h/3*(values(1)+values(end)+4*sum(values(2:2:end-1))+2*sum(values(3:2:end-2)));
 end

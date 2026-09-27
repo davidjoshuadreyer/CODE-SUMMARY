@@ -145,7 +145,7 @@ Live SQL verifies RLS owner reads, cross-account isolation, and anonymous denial
 
 ## Worked references (September 27, 2026)
 
-`solutions.html` links from daily tasks and Upcoming by stable event ID. Prepared content: MATH 252 Assignment 1, ENGR Assignment 1 (vacancy-data ambiguity flagged), Physics lab analysis guides, and COMP Labs 3–9 reference implementations. C++ Labs 3–7 compiled; Lab 3 passed seven instructor tests. MATLAB implementations are reviewed but unexecuted. Released Physics HW1–2 and ECET PS1–3 solutions link to D2L. Other items explicitly remain unprepared pending exact handouts.
+`solutions.html` links from daily tasks and Upcoming by stable event ID. Prepared content: MATH 250B Assignment 1, MATH 252 Assignment 1, ENGR Assignment 1 (vacancy-data ambiguity flagged), Physics lab analysis guides, and COMP Labs 3–9 reference implementations. C++ Labs 3–7 compiled; Lab 3 passed seven instructor tests. MATLAB implementations are reviewed but unexecuted. Released Physics HW1–2 and ECET PS1–3 solutions link to D2L. Other items explicitly remain unprepared pending exact handouts.
 
 The user-provided Physics manual is **not in Git or public hosting**. A prepared bundle imports page JPEGs into owner-filtered `tesselate_study_items` keys `refpage/phys-manual/<page>`; a small `reference/phys-manual` manifest appears only after all pages save. The daily planner excludes refpage keys at query time. The viewer fetches one page on demand and clears it on sign-out. Imports are repeatable after a failure. The OCR-based problem index may include cross-references; browse adjacent pages for continued solutions. No service role key or new persistent credential is used.
 

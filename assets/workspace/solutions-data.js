@@ -707,5 +707,46 @@ window.TESSELATE_SOLUTIONS={
         "url": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448809/View"
       }
     ]
+  },
+  "f26-25": {
+    "title": "MATH 250B · Assignment 1",
+    "status": "Worked study reference · 4 of 4 questions",
+    "source": "https://www.leahhoward.com/m250B/250B-A1-2026.pdf",
+    "sections": [
+      {
+        "title": "1 · Identify each surface",
+        "steps": [
+          "(a) z=1−x²−y² is a downward-opening circular paraboloid, vertex (0,0,1).",
+          "(b) z=1−√(x²+y²) is the lower nappe of a circular cone, vertex (0,0,1). The restriction z≤1 matters: squaring alone would introduce the upper nappe.",
+          "(c) z²=1−x²−y² means x²+y²+z²=1: the unit sphere centred at the origin."
+        ]
+      },
+      {
+        "title": "2 · Partial derivatives",
+        "steps": [
+          "Treat the other variables as constants in each derivative, and apply the chain rule to both trigonometric arguments.",
+          "fx=2e^(2x)cos(y−3z)+3z²cos(3x−2y).",
+          "fy=−e^(2x)sin(y−3z)−2z²cos(3x−2y).",
+          "fz=3e^(2x)sin(y−3z)+2z sin(3x−2y). The first term is positive because two negative signs cancel."
+        ]
+      },
+      {
+        "title": "3 · Horizontal tangent plane",
+        "steps": [
+          "Set both first partial derivatives to zero: 6x+5y−3=0 and 5x+4y−2=0.",
+          "Solving gives x=−2 and y=3. Substitution in the original surface gives z=7.",
+          "The only point is (−2,3,7), with tangent plane z=7. A horizontal tangent plane need not indicate a maximum or minimum; this point is a saddle."
+        ]
+      },
+      {
+        "title": "4 · Absolute minimum on the bounded region",
+        "steps": [
+          "The region is −1≤x≤1, x²≤y≤1. Since ∂z/∂y=3>0, for each fixed x the smallest z occurs on the lower boundary y=x².",
+          "Along this boundary z=5x²−2x=5(x−1/5)²−1/5. Its minimum occurs at x=1/5, which lies within [−1,1].",
+          "Thus the absolute minimum is −1/5 at (x,y)=(1/5,1/25). The corresponding surface point is (1/5,1/25,−1/5).",
+          "Boundary cross-check: at y=1 the minimum is 5/2; the two end points give 7 and 3. Both are larger than −1/5."
+        ]
+      }
+    ]
   }
 };
