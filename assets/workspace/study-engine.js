@@ -7,7 +7,7 @@ const days=(a,b)=>Math.round((Date.parse(b+'T12:00:00Z')-Date.parse(a+'T12:00:00
 const today=()=>new Intl.DateTimeFormat('en-CA',{timeZone:'America/Vancouver',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
 const defaults={preset:'fall2026',weekday:75,weekend:90,awayStart:'',awayEnd:'',awayMinutes:15,start:'2026-09-27'};
 function settings(records){return {...defaults,...records.settings?.value};}
-function events(data,records){return [...data.events.map(e=>({...e,...records['event/'+e.id]?.value})),...Object.entries(records).filter(([k])=>k.startsWith('custom/')).map(([k,r])=>({...r.value,id:k}))].filter(e=>!e.archived).sort((a,b)=>(a.date||'9999').localeCompare(b.date||'9999')||a.id.localeCompare(b.id));}
+function events(data,records,includeHidden=false){return [...data.events.map(e=>({...e,...records['event/'+e.id]?.value})),...Object.entries(records).filter(([k])=>k.startsWith('custom/')).map(([k,r])=>({...r.value,id:k}))].filter(e=>includeHidden||!e.archived).sort((a,b)=>(a.date||'9999').localeCompare(b.date||'9999')||a.id.localeCompare(b.id));}
 function status(records,id){return records['work/'+id]?.value.status||'new';}
 function away(date,s){return Boolean(s.awayStart&&s.awayEnd&&date>=s.awayStart&&date<=s.awayEnd);}
 function budget(date,s){return away(date,s)?s.awayMinutes:[0,6].includes(new Date(date+'T12:00:00Z').getUTCDay())?s.weekend:s.weekday;}
@@ -21,6 +21,11 @@ function target(event,s){
 function topics(paths){
  const all=[];
  for(const [course,path] of Object.entries(paths))path.lessons.forEach((t,i)=>all.push({id:course+'-'+i,course,title:t.title,url:t.url,summary:t.summary}));
+ // The calculus lessons span several textbook sections. Test tasks use the
+ // actual section names so, for example, Test 1 includes unconstrained
+ // optimization but does not pull forward gradients or Lagrange multipliers.
+ const calc=[['11.7','Cylinders and quadric surfaces',0],['12.1','Introduction to partial differentiation',0],['12.2','Functions of several variables',0],['12.3','Limits and continuity',0],['12.4','Partial derivatives',0],['12.5','Multivariable optimization problems',2],['12.6','Increments and linear approximations',1],['12.7','The multivariable chain rule',0],['12.8','Directional derivatives and gradients',1],['12.9','Lagrange multipliers and constraints',2],['12.10','Critical points of functions of two variables',2],['13.1','Double integrals',3],['13.2','Double integrals over general regions',3],['13.3','Area and volume by double integration',3],['13.4','Double integrals in polar coordinates',3],['13.5','Applications of double integrals',3],['13.6','Triple integrals',4],['11.8','Cylindrical and spherical coordinates',4],['13.7','Integration in cylindrical and spherical coordinates',4],['13.8','Surface area',5],['13.9','Change of variables and Jacobians',5],['14.1','Vector fields',6],['14.2','Line integrals',6]];
+ for(const [section,title,index] of calc)all.push({id:'calc-'+section,course:'math250b',title:'§'+section+' · '+title,url:paths.math250b?.lessons[index]?.url||'math250b/review.html',summary:'2026 outline section '+section+'. Focus on this section; the linked lesson may cover broader material.'});
  // Later circuits chapters do not yet have site lessons: link to the source course.
  [1,2,3,4,6,7,8,9,10,11,5,13,12].forEach(n=>all.push({id:'ecet-ch'+n,course:'ecet250e',title:'Chapter '+n+' · circuit problems',url:'https://online.camosun.ca/d2l/home/347548',summary:'Use the assigned textbook problems and instructor notes.'}));
  return all;
@@ -29,15 +34,19 @@ const ranges=(course,nums)=>nums.map(i=>course+'-'+i);
 function scope(e){
  if(e.coverage)return {label:(e.coverageConfirmed?'Instructor-confirmed: ':'Personal review scope: ')+e.coverage,confirmed:Boolean(e.coverageConfirmed),topics:[]};
  const id=e.id;
- if(id==='f26-29')return {label:'Confirmed: §§11.7, 12.1–12.7. Use the course references for every listed section.',confirmed:true,topics:ranges('math250b',[0,1])};
- if(id==='f26-30')return {label:'Confirmed: §§12.8–12.10, 13.1–13.6.',confirmed:true,topics:ranges('math250b',[2,3,4])};
- if(id==='f26-31')return {label:'Confirmed: §§11.8, 13.7–13.9, 14.1–14.2. Check the outline; lesson titles span wider material.',confirmed:true,topics:ranges('math250b',[5,6,7])};
+ if(id==='f26-29')return {label:'Posted scope: §§11.7, 12.1–12.7. The pacing sheet labels coverage tentative; check for instructor updates.',confirmed:true,topics:['11.7','12.1','12.2','12.3','12.4','12.5','12.6','12.7'].map(s=>'calc-'+s)};
+ if(id==='f26-30')return {label:'Posted scope: §§12.8–12.10, 13.1–13.6. Subject to instructor updates.',confirmed:true,topics:['12.8','12.9','12.10','13.1','13.2','13.3','13.4','13.5','13.6'].map(s=>'calc-'+s)};
+ if(id==='f26-31')return {label:'Posted scope: §§11.8, 13.7–13.9, 14.1–14.2. Subject to instructor updates.',confirmed:true,topics:['11.8','13.7','13.8','13.9','14.1','14.2'].map(s=>'calc-'+s)};
  if(id==='f26-63')return {label:'Confirmed: chapters 1, 2, 3, 4, 6. X01A / Group A.',confirmed:true,topics:[1,2,3,4,6].map(n=>'ecet-ch'+n)};
  if(['f26-60','f26-61','f26-62'].includes(id)){const ns=id==='f26-60'?[1,2]:id==='f26-61'?[7,8,9]:[10,11,5];return {label:'Confirmed: chapters '+ns.join(', ')+'.',confirmed:true,topics:ns.map(n=>'ecet-ch'+n)};}
  const suggested={'f26-13':ranges('phys210',[0,1,2,3]),'f26-14':ranges('phys210',[3,4,5]),'f26-15':ranges('phys210',[6,7,8,9]),'f26-33':ranges('math252',[0,1,2,3,4,5]),'f26-34':ranges('math252',[6,7,8,9,10,11]),'f26-35':ranges('math252',[12,13,14,15,16,17,18])};
  return {label:e.coverage||'Suggested review from course pacing; exact test scope needs instructor confirmation.',confirmed:Boolean(e.coverageConfirmed),topics:suggested[id]||[]};
 }
-function confidence(records,id){return records['topic/'+id]?.value||{rating:0,last:''};}
+function confidence(records,id){
+ const c={rating:0,last:'',...records['topic/'+id]?.value};
+ for(const [key,row] of Object.entries(records)){if(key.startsWith('done/')&&key.endsWith('/topic/'+id)&&row.value.done){const d=row.value.practiceDate||key.slice(5,15);if(d>c.last)c.last=d;}}
+ return c;
+}
 function dueReview(date,c){return !c.last||days(c.last,date)>=[0,1,3,7][c.rating||0];}
 function candidates(date,data,paths,records){
  const s=settings(records),ev=events(data,records),ts=topics(paths),out=[];
@@ -53,7 +62,7 @@ function candidates(date,data,paths,records){
    const sc=scope(e),pool=ts.filter(t=>sc.topics.includes(t.id));
    if(!pool.length)add({id:date+'/test/'+e.id,type:'study',course:e.course,event:e.id,title:'Prepare for '+e.title,detail:e.coverage||'Confirm the scope, then solve three representative problems without notes and correct each error.',reason:'Test '+e.date+'. '+sc.label,url:e.source,minutes:25,score:130-until*4});
    for(const t of pool){const c=confidence(records,t.id),elapsed=c.last?days(c.last,date):100;
-    add({id:date+'/topic/'+t.id,type:'study',course:e.course,event:e.id,topic:t.id,title:t.title,detail:'Recall the method without notes. Solve 2–3 problems, check your work, and explain one mistake. Rate your confidence afterwards.',reason:e.title+' · '+e.date+'. '+(sc.confirmed?'Linked to confirmed scope.':'Suggested scope — confirm with instructor.'),url:t.url,minutes:25,score:94-until*2+(3-(c.rating||1))*5+(dueReview(date,c)?8:-35)+Math.min(elapsed,10)});
+    add({id:date+'/topic/'+t.id,type:'study',course:e.course,event:e.id,topic:t.id,title:t.title,detail:'Recall the method without notes. Solve 2–3 problems on this topic, check your work, and explain one mistake. Rate your confidence afterwards. Linked lessons may cover broader material.',reason:e.title+' · '+e.date+'. '+(sc.confirmed?'Linked to posted scope; check for instructor updates.':'Suggested scope — confirm with instructor.'),url:t.url,minutes:25,score:94-until*2+(3-(c.rating||1))*5+(dueReview(date,c)?8:-35)+Math.min(elapsed,10)});
    }
   }
   if(e.type==='labweek'&&until>=-6&&until<=5)add({id:date+'/lab/'+e.id,type:'study',course:e.course,event:e.id,title:'Prepare '+e.title,detail:'Open the lab handout, confirm the next lab and due time, and implement or test one section.',reason:'Week of '+e.date+'; this is not a confirmed deadline.',url:e.source,minutes:25,score:65-Math.abs(until)});

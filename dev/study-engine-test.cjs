@@ -16,4 +16,9 @@ assert.equal(E.plan('2027-01-01',D,P,r).tasks.length,0);
 const testDay=E.plan('2026-09-28',D,P,r);const topic=testDay.tasks.find(t=>t.topic);assert(topic);r['topic/'+topic.topic]={value:{rating:3,last:'2026-09-28'}};assert(!E.plan('2026-09-28',D,P,r).tasks.some(t=>t.topic===topic.topic));
 const custom={...r,'custom/test':{value:{title:'New test',course:'comp139e',type:'test',date:'2026-09-30',coverage:'Recursion',source:'https://example.com'}}};assert(E.events(D,custom).some(e=>e.id==='custom/test'));assert(E.plan('2026-09-30',D,P,custom).tasks.some(t=>t.event==='custom/test'));
 for(const t of E.topics(P)){if(!/^https?:/.test(t.url))assert(fs.existsSync(t.url),'Missing lesson '+t.url);}
+assert(E.scope(D.events.find(e=>e.id==='f26-29')).topics.includes('calc-12.5'));
+assert(!E.scope(D.events.find(e=>e.id==='f26-29')).topics.includes('calc-12.8'));
+assert(!E.scope(D.events.find(e=>e.id==='f26-31')).topics.includes('math250b-7'));
+assert.equal(E.confidence({'done/2026-09-27/topic/calc-12.4':{value:{done:true,practiceDate:'2026-09-27'}}},'calc-12.4').last,'2026-09-27');
+assert.equal(E.confidence({'done/2026-09-27/topic/calc-12.4':{value:{done:true}}},'calc-12.4').rating,0);
 console.log('PASS: full-term budgets, trip protection, submitted work, date targets, scope overrides, confidence adaptation, custom tests, lesson links.');

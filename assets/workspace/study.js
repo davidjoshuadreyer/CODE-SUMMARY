@@ -50,7 +50,7 @@ function todayHTML(){
 function upcomingHTML(){
  const es=events().filter(e=>!courseFilter||e.course===courseFilter);
  const unknown=es.filter(e=>!e.date),dated=es.filter(e=>e.date>=E.today());
- return `<div class="toolbar"><select id="course-filter" aria-label="Filter course">${courseOptions()}</select>${btn('add-event','+ Add assignment or test','','primary')}</div><div class="study-warning">Source snapshot: September 27, 2026. D2L updates are not automatic. Weekly check-ins prompt you to add new work and confirm dates. “Lab week” and quiz availability windows are not exam dates.</div>${unknown.length?`<div class="study-card"><h2>Dates to confirm</h2>${unknown.map(e=>eventHTML(e)).join('')}</div>`:''}<div class="study-card"><h2>Upcoming work</h2>${dated.map(e=>eventHTML(e)).join('')||'<p>No dated events.</p>'}</div><details class="study-card"><summary>Earlier events and submissions</summary>${es.filter(e=>e.date&&e.date<E.today()).map(e=>eventHTML(e)).join('')}</details>`;
+ return `<div class="toolbar"><select id="course-filter" aria-label="Filter course">${courseOptions()}</select>${btn('add-event','+ Add assignment or test','','primary')}</div><div class="study-warning">Source snapshot: September 27, 2026. D2L updates are not automatic. Weekly check-ins prompt you to add new work and confirm dates. “Lab week” and quiz availability windows are not exam dates.</div>${unknown.length?`<div class="study-card"><h2>Dates to confirm</h2>${unknown.map(e=>eventHTML(e)).join('')}</div>`:''}<div class="study-card"><h2>Upcoming work</h2>${dated.map(e=>eventHTML(e)).join('')||'<p>No dated events.</p>'}</div><details class="study-card"><summary>Hidden events</summary>${E.events(D,records,true).filter(e=>e.archived).map(e=>`<div class="study-event"><span>${esc(name(e.course)+' · '+e.title)}</span>${btn('restore-event','Restore',e.id)}</div>`).join('')||'<p>No hidden events.</p>'}</details><details class="study-card"><summary>Earlier events and submissions</summary>${es.filter(e=>e.date&&e.date<E.today()).map(e=>eventHTML(e)).join('')}</details>`;
 }
 function courseOptions(){return '<option value="">All courses</option>'+D.courses.map(c=>`<option value="${c.id}" ${courseFilter===c.id?'selected':''}>${esc(c.name)}</option>`).join('');}
 function confidenceHTML(){
@@ -85,6 +85,7 @@ document.addEventListener('click',async e=>{
   if(a==='signin')await C.signIn('study.html');
   else if(a==='refresh')await load();
   else if(a==='setup'){await write('settings',{...E.settings({}),start:E.today()});await ensureToday();}
+  else if(a==='restore-event'){const key=id.startsWith('custom/')?id:'event/'+id;await write(key,{...val(key),archived:false});notice('Event restored');}
   else if(a==='replan'){await replan();notice('Remaining blocks updated. Completed work kept.');}
   else if(b.dataset.rating!==undefined){const key='topic/'+b.dataset.topic,c=val(key)||{};await write(key,{...c,rating:Number(b.dataset.rating),last:Number(b.dataset.rating)?E.today():c.last||''});notice('Confidence saved. Future plans will adapt.');}
  }catch(err){notice(err.message,true);}finally{busy=false;render();}
@@ -94,7 +95,7 @@ document.addEventListener('change',async e=>{
  if(el.id==='course-filter'){courseFilter=el.value;render();return;}
  if(busy||(!el.dataset.task&&!el.dataset.work))return;
  busy=true;el.disabled=true;
- try{if(el.dataset.task)await write('done/'+el.dataset.task,{done:el.checked,at:new Date().toISOString()});else await write('work/'+el.dataset.work,{status:el.value,at:new Date().toISOString()});notice('Saved to your account');}
+ try{if(el.dataset.task)await write('done/'+el.dataset.task,{done:el.checked,at:new Date().toISOString(),practiceDate:E.today()});else await write('work/'+el.dataset.work,{status:el.value,at:new Date().toISOString()});notice('Saved to your account');}
  catch(err){notice(err.message,true);}finally{busy=false;render();}
 });
 $('#auth').onclick=async()=>{if(busy)return;try{if(C.user)await C.signOut();else await C.signIn('study.html');}catch(e){notice(e.message,true);}};
