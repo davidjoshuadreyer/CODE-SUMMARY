@@ -31,7 +31,7 @@
   async signOut(){const {error}=await client.auth.signOut();fail(error);user=null;},
   async studyRead(){
    const owner=needUser();let rows=[],offset=0;
-   while(true){const {data,error}=await client.from('tesselate_study_items').select('key,value,revision,updated_at').eq('user_id',owner).order('key').range(offset,offset+499);fail(error);rows.push(...data);if(data.length<500)break;offset+=500;}
+   while(true){const {data,error}=await client.from('tesselate_study_items').select('key,value,revision,updated_at').eq('user_id',owner).not('key','like','refpage/%').order('key').range(offset,offset+499);fail(error);rows.push(...data);if(data.length<500)break;offset+=500;}
    if(needUser()!==owner)throw new Error('Account changed. Reload your study plan.');
    return Object.fromEntries(rows.map(row=>[row.key,row]));
   },
@@ -41,6 +41,27 @@
    const {data,error}=await query.select('key,value,revision,updated_at');
    if(error?.code==='23505'||(!error&&!data?.length))throw new Error('This item changed on another device. Refresh the plan, then try again.');
    fail(error);if(needUser()!==owner)throw new Error('Account changed. Reload your study plan.');return data[0];
+  },
+  async referencePage(id,page){
+   const owner=needUser();
+   if(!/^[a-z0-9-]+$/.test(id)||!Number.isInteger(page)||page<1)throw new Error('Invalid reference page.');
+   const {data,error}=await client.from('tesselate_study_items').select('value').eq('user_id',owner).eq('key','refpage/'+id+'/'+page).maybeSingle();fail(error);
+   if(needUser()!==owner)throw new Error('Account changed.');return data?.value||null;
+  },
+  async importReference(bundle,onProgress){
+   const owner=needUser();
+   if(bundle.format!=='tesselate-reference-v1'||!/^[-a-z0-9]+$/.test(bundle.id)||!Array.isArray(bundle.pages)||bundle.pages.length>1000)throw new Error('Invalid reference bundle.');
+   const m=bundle.manifest;
+   if(!m||!Number.isInteger(m.pages)||!Number.isInteger(m.firstPage)||m.firstPage<1||m.pages>1000||m.pages<m.firstPage||bundle.pages.length!==m.pages-m.firstPage+1)throw new Error('Incomplete reference bundle.');
+   const seen=new Set();
+   for(const p of bundle.pages){if(!Number.isInteger(p.page)||p.page<m.firstPage||p.page>m.pages||seen.has(p.page)||typeof p.image!=='string'||p.image.length>3000000||!/^\/9j\/[A-Za-z0-9+/=]+$/.test(p.image))throw new Error('Invalid reference image.');seen.add(p.page);}
+   for(let n=0;n<bundle.pages.length;n+=8){
+    if(needUser()!==owner)throw new Error('Account changed.');
+    const rows=bundle.pages.slice(n,n+8).map(p=>({user_id:owner,key:'refpage/'+bundle.id+'/'+p.page,value:{image:p.image},revision:1,updated_at:new Date().toISOString()}));
+    const {error}=await client.from('tesselate_study_items').upsert(rows,{onConflict:'user_id,key'});fail(error);onProgress?.(Math.min(n+8,bundle.pages.length),bundle.pages.length);
+   }
+   if(needUser()!==owner)throw new Error('Account changed.');
+   const {error}=await client.from('tesselate_study_items').upsert({user_id:owner,key:'reference/'+bundle.id,value:bundle.manifest,revision:1,updated_at:new Date().toISOString()},{onConflict:'user_id,key'});fail(error);
   },
   async list(){const owner=needUser();const {data,error}=await client.from(TABLE).select('id,created_at').eq('user_id',owner).order('created_at',{ascending:false}).limit(20);fail(error);return data;},
   async save(workspace,localFiles){

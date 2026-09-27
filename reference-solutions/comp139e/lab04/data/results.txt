@@ -1,0 +1,50 @@
+Found a 4 character word: This
+Found a 4 character word: file
+Found a 8 character word: contains
+Found a 5 character word: words
+Found a 3 character word: and
+Found a 8 character word: integers
+Found a 4 character word: such
+Found a 2 character word: as
+Found an integer: 47
+Found a 2 character word: or
+Found an integer: 983
+Found a 1 character word: .
+Found a 2 character word: It
+Found a 2 character word: is
+Found a 4 character word: your
+Found a 4 character word: task
+Found a 2 character word: to
+Found a 8 character word: separate
+Found a 3 character word: the
+Found a 5 character word: words
+Found a 3 character word: and
+Found a 2 character word: at
+Found a 5 character word: least
+Found an integer: 3
+Found a 8 character word: numbers.
+Found a 4 character word: This
+Found a 4 character word: file
+Found a 8 character word: contains
+Found a 5 character word: words
+Found a 3 character word: and
+Found a 8 character word: integers
+Found a 4 character word: such
+Found a 2 character word: as
+Found an integer: 47
+Found a 2 character word: or
+Found an integer: 983
+Found a 1 character word: .
+Found a 2 character word: It
+Found a 2 character word: is
+Found a 4 character word: your
+Found a 4 character word: task
+Found a 2 character word: to
+Found a 8 character word: separate
+Found a 3 character word: the
+Found a 5 character word: words
+Found a 3 character word: and
+Found a 2 character word: at
+Found a 5 character word: least
+Found an integer: 3
+Found a 8 character word: numbers.
