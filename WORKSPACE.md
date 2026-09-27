@@ -105,3 +105,40 @@ Build: `node dev/build-physics-course.cjs`, `node dev/build-learning-paths.cjs`,
 Practice notes and self-checks use the `tesselate-phys210-practice-v1:` localStorage namespace. They are browser-local and are not included in workspace cloud backup. A storage failure leaves practice usable and is reported in the status line. Numeric answer checks cover the specifically labelled result, allow 2% rounding, and never gate access to solutions.
 
 Coverage is explicit in the learning-path data: Engineering remains limited to the supplied materials topics, Circuits has three introductory lessons, and Calculus uses the supplied 2025 references. These are not represented as full current-course conversions.
+
+## Daily study planner
+
+`study.html` is the signed-in planner linked from the workspace sidebar. It shares
+Google/Supabase authentication with the workspace. The Fall 2026 schedule facts
+in `study-data.js` were checked on September 27, 2026; source URLs and
+posted/planned/derived/unknown distinctions are retained. It is not a live D2L
+integration. Personal preferences and imported submission states are seeded
+privately through the dashboard, never in the public repository.
+
+Run `dev/supabase_study_plan.sql` once for a new Supabase project. The deployed
+project already has this migration. `tesselate_study_items` uses `(user_id,key)`
+rows with RLS for the authenticated owner, no anonymous privileges, and no client
+delete grant. Keys contain settings, event overrides/custom events, per-assignment
+status, per-topic confidence, daily plans, and individual task completion. Each
+write checks the previous revision; conflicts prompt a refresh instead of
+silently overwriting another device. Writes are confirmed online before the UI
+claims they saved. There is no offline progress queue or public progress storage.
+
+`study-engine.js` caps work at the personal daily budget, mixes assignment work
+with active recall, prioritizes upcoming tests and weaker topics, sets finish
+targets two days early, and pulls break-adjacent deadlines before the break. The
+site saves a stable checklist on the first visit each day (Vancouver time).
+Future dates are previews using current progress. Replanning retains completed
+blocks; missed assignment work remains eligible without creating an unlimited
+backlog of old daily tasks. Self-ratings drive 1/3/7-day reviews; they are not
+scores or evidence of mastery. Checking a block does not submit coursework.
+
+Only MATH 250B and ECET scopes are explicitly confirmed in the imported sources;
+PHYS and MATH 252 topic links are pacing-based suggestions. Editing a test's
+coverage uses the new text and source instead of silently retaining old topic
+links. ENGR/COMP midterms and individual finals remain undated until confirmed.
+
+Validation: `node dev/study-engine-test.cjs`, `node dev/study-cloud-test.cjs`,
+and `node dev/workspace-cloud-test.cjs`. Browser checks use an isolated local
+fixture so sample completions never become the student's actual progress.
+Live SQL verifies RLS owner reads, cross-account isolation, and anonymous denial.

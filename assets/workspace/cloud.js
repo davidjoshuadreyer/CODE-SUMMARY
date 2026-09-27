@@ -18,8 +18,21 @@
    client.auth.onAuthStateChange((_event,session)=>{user=session?.user||null;onChange(user);});
    return user;
   },
-  async signIn(){const {error}=await client.auth.signInWithOAuth({provider:'google',options:{redirectTo:new window.URL('index.html',location.href).href.split('#')[0]}});fail(error);},
+  async signIn(page='index.html'){const {error}=await client.auth.signInWithOAuth({provider:'google',options:{redirectTo:new window.URL(page,location.href).href.split('#')[0]}});fail(error);},
   async signOut(){const {error}=await client.auth.signOut();fail(error);user=null;},
+  async studyRead(){
+   const owner=needUser();let rows=[],offset=0;
+   while(true){const {data,error}=await client.from('tesselate_study_items').select('key,value,revision,updated_at').eq('user_id',owner).order('key').range(offset,offset+499);fail(error);rows.push(...data);if(data.length<500)break;offset+=500;}
+   if(needUser()!==owner)throw new Error('Account changed. Reload your study plan.');
+   return Object.fromEntries(rows.map(row=>[row.key,row]));
+  },
+  async studyWrite(key,value,revision=0){
+   const owner=needUser(),row={user_id:owner,key,value,revision:revision+1,updated_at:new Date().toISOString()};
+   const query=revision?client.from('tesselate_study_items').update(row).eq('user_id',owner).eq('key',key).eq('revision',revision):client.from('tesselate_study_items').insert(row);
+   const {data,error}=await query.select('key,value,revision,updated_at');
+   if(error?.code==='23505'||(!error&&!data?.length))throw new Error('This item changed on another device. Refresh the plan, then try again.');
+   fail(error);if(needUser()!==owner)throw new Error('Account changed. Reload your study plan.');return data[0];
+  },
   async list(){const owner=needUser();const {data,error}=await client.from(TABLE).select('id,created_at').eq('user_id',owner).order('created_at',{ascending:false}).limit(20);fail(error);return data;},
   async save(workspace,localFiles){
    const owner=needUser(),manifest=[];
