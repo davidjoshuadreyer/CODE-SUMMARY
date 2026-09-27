@@ -1856,7 +1856,7 @@ window.TESSELATE_SOLUTIONS={
     "source": "https://online.camosun.ca/d2l/lms/dropbox/dropbox.d2l?ou=348967"
   },
   "f26-52": {
-    "title": "ECET 130 · Lab 4 · Resistive DC Circuits",
+    "title": "ECET 250E · Lab 4 · Resistive DC Circuits",
     "status": "Calculated values ready · add your measured values and observations",
     "source": "https://online.camosun.ca/d2l/le/content/347548/viewContent/5366830/View",
     "diagram": "divider",
