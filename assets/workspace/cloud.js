@@ -16,9 +16,18 @@
    client=window.supabase.createClient(URL,KEY);
    const {data,error}=await client.auth.getSession();fail(error);user=data.session?.user||null;
    client.auth.onAuthStateChange((_event,session)=>{user=session?.user||null;onChange(user);});
+   // The project already allows index.html as an OAuth return URL. Use that
+   // existing route and resume the planner locally, without widening redirects.
+   try{if(user&&sessionStorage.getItem('tesselate-after-auth')==='study.html'){
+    sessionStorage.removeItem('tesselate-after-auth');
+    if(!location.pathname.endsWith('/study.html'))location.replace(new window.URL('study.html',location.href).href);
+   }}catch{}
    return user;
   },
-  async signIn(page='index.html'){const {error}=await client.auth.signInWithOAuth({provider:'google',options:{redirectTo:new window.URL(page,location.href).href.split('#')[0]}});fail(error);},
+  async signIn(page='index.html'){
+   try{if(page==='study.html')sessionStorage.setItem('tesselate-after-auth','study.html');else sessionStorage.removeItem('tesselate-after-auth');}catch{}
+   const {error}=await client.auth.signInWithOAuth({provider:'google',options:{redirectTo:new window.URL('index.html',location.href).href.split('#')[0]}});fail(error);
+  },
   async signOut(){const {error}=await client.auth.signOut();fail(error);user=null;},
   async studyRead(){
    const owner=needUser();let rows=[],offset=0;
