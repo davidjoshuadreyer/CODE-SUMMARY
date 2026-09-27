@@ -21,4 +21,6 @@ assert(!E.scope(D.events.find(e=>e.id==='f26-29')).topics.includes('calc-12.8'))
 assert(!E.scope(D.events.find(e=>e.id==='f26-31')).topics.includes('math250b-7'));
 assert.equal(E.confidence({'done/2026-09-27/topic/calc-12.4':{value:{done:true,practiceDate:'2026-09-27'}}},'calc-12.4').last,'2026-09-27');
 assert.equal(E.confidence({'done/2026-09-27/topic/calc-12.4':{value:{done:true}}},'calc-12.4').rating,0);
+const near={...r,'work/f26-25':{value:{status:'submitted'}},'work/f26-51':{value:{status:'submitted'}}};
+const sunday=E.plan('2026-09-27',D,P,near);assert(sunday.tasks.some(t=>t.event==='f26-2'));assert(sunday.tasks.some(t=>t.event==='f26-39'));
 console.log('PASS: full-term budgets, trip protection, submitted work, date targets, scope overrides, confidence adaptation, custom tests, lesson links.');

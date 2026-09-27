@@ -56,7 +56,7 @@ function candidates(date,data,paths,records){
   const until=days(date,e.date),aim=target(e,s),ahead=days(date,aim);
   if(e.type==='assignment'&&until>=-14&&ahead<=8){
    const st=status(records,e.id),verb=st==='ready'?'Check and submit':st==='working'?'Continue':'Start';
-   add({id:date+'/assignment/'+e.id,type:'assignment',course:e.course,event:e.id,title:verb+' '+e.title,detail:st==='ready'?'Check units, missing pages and upload requirements. Record Submitted only after handing it in.':'Work through the next unsolved questions. Flag blockers, then update the assignment status.',reason:(until<0?'Past posted deadline — check submission status. ':e.certainty!=='posted'?'Date needs confirmation. ':'')+'Aim to finish '+aim+'; due '+e.date+'.',url:e.source,minutes:25,score:100-ahead*6+(st==='ready'?12:0)});
+   add({id:date+'/assignment/'+e.id,type:'assignment',course:e.course,event:e.id,title:verb+' '+e.title,detail:st==='ready'?'Check units, missing pages and upload requirements. Record Submitted only after handing it in.':'Work through the next unsolved questions. Flag blockers, then update the assignment status.',reason:(until<0?'Past posted deadline — check submission status. ':e.certainty!=='posted'?'Date needs confirmation. ':'')+'Aim to finish '+aim+'; due '+e.date+'.',url:e.source,minutes:25,score:100-ahead*6+(until>=0&&until<=1?35:0)+(st==='ready'?12:0)});
   }
   if(e.type==='test'&&until>=0&&until<=21){
    const sc=scope(e),pool=ts.filter(t=>sc.topics.includes(t.id));
