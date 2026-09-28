@@ -42,10 +42,18 @@
    if(error?.code==='23505'||(!error&&!data?.length))throw new Error('This item changed on another device. Refresh the plan, then try again.');
    fail(error);if(needUser()!==owner)throw new Error('Account changed. Reload your study plan.');return data[0];
   },
-  async referencePage(id,page){
+  async sharedReferenceManifest(id){
    const owner=needUser();
-   if(!/^[a-z0-9-]+$/.test(id)||!Number.isInteger(page)||page<1)throw new Error('Invalid reference page.');
-   const {data,error}=await client.from('tesselate_study_items').select('value').eq('user_id',owner).eq('key','refpage/'+id+'/'+page).maybeSingle();fail(error);
+   if(!/^[a-z0-9-]+$/.test(id))throw new Error('Invalid reference.');
+   const {data,error}=await client.from('tesselate_shared_reference_items').select('value').eq('key','reference/'+id).maybeSingle();fail(error);
+   if(needUser()!==owner)throw new Error('Account changed.');return data?.value||null;
+  },
+  async referencePage(id,page,scope='private'){
+   const owner=needUser();
+   if(!/^[a-z0-9-]+$/.test(id)||!Number.isInteger(page)||page<1||!['private','shared'].includes(scope))throw new Error('Invalid reference page.');
+   const query=client.from(scope==='shared'?'tesselate_shared_reference_items':'tesselate_study_items').select('value');
+   if(scope==='private')query.eq('user_id',owner);
+   const {data,error}=await query.eq('key','refpage/'+id+'/'+page).maybeSingle();fail(error);
    if(needUser()!==owner)throw new Error('Account changed.');return data?.value||null;
   },
   async importReference(bundle,onProgress){
