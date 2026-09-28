@@ -134,6 +134,12 @@ backlog of old daily tasks. FSRS-6 schedules each studied topic independently
 from flashcards, using Again/Hard/Good/Easy recall ratings and a 90% retention
 target. Labelled colours show recall priorities per course and topic. Checking
 a block records study without inventing a recall grade or submitting coursework.
+The morning recall set offers up to ten multiple-choice questions, chosen from
+due and new questions in studied or introduced topics. It saves each answer,
+resumes unfinished sets, and adjusts card intervals based on correctness and
+uncertainty. The bank has 188 questions covering all 109 current topic entries;
+users can select a course, topic, or include unstudied material. Quick-check
+accuracy and session history are recorded separately from whole-topic mastery.
 See `dev/STUDY-FSRS.md` for record types, legacy handling, and verification.
 
 Only MATH 250B and ECET scopes are explicitly confirmed in the imported sources;
