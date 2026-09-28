@@ -13,7 +13,7 @@ assert.equal(E.scope(D.events.find(e=>e.id==='f26-29')).confirmed,true);assert.e
 assert.deepEqual(E.scope({...D.events.find(e=>e.id==='f26-29'),coverage:'Only chapter 2',coverageConfirmed:true}).topics,[]);
 assert.equal(E.scope({...D.events.find(e=>e.id==='f26-29'),coverage:'Only chapter 2',coverageConfirmed:true}).label,'Instructor-confirmed: Only chapter 2');
 assert.equal(E.plan('2027-01-01',D,P,r).tasks.length,0);
-const testDay=E.plan('2026-09-28',D,P,r);const topic=testDay.tasks.find(t=>t.topic);assert(topic);r['topic/'+topic.topic]={value:{rating:3,last:'2026-09-28'}};assert(!E.plan('2026-09-28',D,P,r).tasks.some(t=>t.topic===topic.topic));
+const testDay=E.plan('2026-09-28',D,P,r);const topic=testDay.tasks.find(t=>t.topic);assert(topic);r['topic/'+topic.topic]={value:require('../assets/workspace/study-memory.js').review({},3,'2026-09-28')};assert(!E.plan('2026-09-28',D,P,r).tasks.some(t=>t.topic===topic.topic));
 const custom={...r,'custom/test':{value:{title:'New test',course:'comp139e',type:'test',date:'2026-09-30',coverage:'Recursion',source:'https://example.com'}}};assert(E.events(D,custom).some(e=>e.id==='custom/test'));assert(E.plan('2026-09-30',D,P,custom).tasks.some(t=>t.event==='custom/test'));
 for(const t of E.topics(P)){if(!/^https?:/.test(t.url))assert(fs.existsSync(t.url),'Missing lesson '+t.url);}
 assert(E.scope(D.events.find(e=>e.id==='f26-29')).topics.includes('calc-12.5'));

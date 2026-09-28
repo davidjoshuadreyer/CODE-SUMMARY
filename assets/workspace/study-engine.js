@@ -1,6 +1,7 @@
 /* Pure planning functions; the UI stores today's chosen tasks separately. */
 (function(root){
 'use strict';
+const M=typeof module!=='undefined'&&module.exports?require('./study-memory.js'):root.TesselateMemory;
 const dayMs=86400000;
 const plus=(date,n)=>new Date(Date.parse(date+'T12:00:00Z')+n*dayMs).toISOString().slice(0,10);
 const days=(a,b)=>Math.round((Date.parse(b+'T12:00:00Z')-Date.parse(a+'T12:00:00Z'))/dayMs);
@@ -18,7 +19,7 @@ function target(event,s){
  if(s.awayStart&&s.awayEnd&&event.date>=s.awayStart&&event.date<=plus(s.awayEnd,1))date=plus(s.awayStart,-1);
  return event.date>=s.start&&date<s.start?s.start:date;
 }
-function topics(paths){
+function topics(paths,records={}){
  const all=[];
  for(const [course,path] of Object.entries(paths))path.lessons.forEach((t,i)=>all.push({id:course+'-'+i,course,title:t.title,url:t.url,summary:t.summary}));
  // The calculus lessons span several textbook sections. Test tasks use the
@@ -28,6 +29,7 @@ function topics(paths){
  for(const [section,title,index] of calc)all.push({id:'calc-'+section,course:'math250b',title:'§'+section+' · '+title,url:paths.math250b?.lessons[index]?.url||'math250b/review.html',summary:'2026 outline section '+section+'. Focus on this section; the linked lesson may cover broader material.'});
  // Later circuits chapters do not yet have site lessons: link to the source course.
  [1,2,3,4,6,7,8,9,10,11,5,13,12].forEach(n=>all.push({id:'ecet-ch'+n,course:'ecet250e',title:'Chapter '+n+' · circuit problems',url:'https://online.camosun.ca/d2l/home/347548',summary:'Use the assigned textbook problems and instructor notes.'}));
+ for(const [key,row] of Object.entries(records))if(key.startsWith('material/'))all.push({...row.value,id:key});
  return all;
 }
 const ranges=(course,nums)=>nums.map(i=>course+'-'+i);
@@ -47,9 +49,9 @@ function confidence(records,id){
  for(const [key,row] of Object.entries(records)){if(key.startsWith('done/')&&key.endsWith('/topic/'+id)&&row.value.done){const d=row.value.practiceDate||key.slice(5,15);if(d>c.last)c.last=d;}}
  return c;
 }
-function dueReview(date,c){return !c.last||days(c.last,date)>=[0,1,3,7][c.rating||0];}
+function dueReview(date,c){return M.status(c,date).due;}
 function candidates(date,data,paths,records){
- const s=settings(records),ev=events(data,records),ts=topics(paths),out=[];
+ const s=settings(records),ev=events(data,records),ts=topics(paths,records),out=[];
  const add=x=>out.push(x);
  for(const e of ev){
   if(!e.date||e.date<s.start||status(records,e.id)==='submitted')continue;
@@ -71,7 +73,7 @@ function candidates(date,data,paths,records){
  const weekDay=new Date(date+'T12:00:00Z').getUTCDay();
  if(weekDay===0)add({id:date+'/weekly',type:'check',title:'Look one week further ahead',detail:'Check D2L announcements and new assignments. Confirm any unknown test dates and scope; update Upcoming here. Choose one blocker to ask about in class.',reason:'The imported schedule is a snapshot, not a live D2L connection.',url:'https://online.camosun.ca/d2l/home',minutes:15,score:110});
  // Spaced practice continues between tests, without pulling the entire term forward.
- for(const t of ts){const c=confidence(records,t.id);if(c.last&&dueReview(date,c))add({id:date+'/topic/'+t.id,type:'study',course:t.course,topic:t.id,title:t.title,detail:'Redo one previously missed problem without notes. Explain each step and rate your confidence.',reason:'Spaced review: '+(c.rating===3?'keep a strong topic fresh.':'give a weaker topic another pass.'),url:t.url,minutes:25,score:55+(3-c.rating)*3});}
+ for(const t of ts){const c=confidence(records,t.id);if(c.last&&dueReview(date,c))add({id:date+'/topic/'+t.id,type:'study',course:t.course,topic:t.id,title:t.title,detail:'Redo one previously missed problem without notes. Explain each step and rate your confidence.',reason:'FSRS topic review · due '+M.status(c,date).dueDate+'. Review the whole topic, including worked problems and explanations.',url:t.url,minutes:25,score:75+(M.status(c,date).tone==='weak'?15:0)+Math.min(30,Math.max(0,days(M.status(c,date).dueDate,date)))});}
  return out.sort((a,b)=>b.score-a.score||a.id.localeCompare(b.id));
 }
 function plan(date,data,paths,records){
@@ -91,6 +93,6 @@ function plan(date,data,paths,records){
  }
  return {tasks:out,minutes,budget:limit,away:false};
 }
-const api={today,plus,days,settings,events,status,budget,target,topics,scope,confidence,plan};
+const api={today,plus,days,settings,events,status,budget,target,topics,scope,confidence,dueReview,plan};
 if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.TesselateStudyEngine=api;
 })(typeof window!=='undefined'?window:globalThis);

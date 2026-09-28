@@ -1,0 +1,25 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),http=require('node:http');
+const {chromium}=require('playwright'),root=path.resolve(__dirname,'..');
+const server=http.createServer((req,res)=>{const p=path.resolve(root,'.'+new URL(req.url,'http://localhost').pathname);if(!p.startsWith(root+path.sep)||!fs.existsSync(p)||!fs.statSync(p).isFile())return res.writeHead(404).end();res.setHeader('Content-Type',({'.html':'text/html','.js':'text/javascript','.css':'text/css'})[path.extname(p)]||'text/plain');fs.createReadStream(p).pipe(res);});
+(async()=>{await new Promise(r=>server.listen(0,'127.0.0.1',r));const browser=await chromium.launch({channel:'chrome',headless:true});try{
+ const page=await browser.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.route('**/supabase.js',r=>r.fulfill({body:''}));
+ await page.route('**/assets/workspace/cloud.js*',r=>r.fulfill({contentType:'text/javascript',body:`window.TesselateCloud={user:{id:'test',email:'test@example.test'},init:async()=>{},studyRead:async()=>JSON.parse(localStorage.getItem('test-records')||'{"settings":{"value":{"start":"2026-09-27"}}}'),studyWrite:async(key,value,revision)=>{if(window.failSave)throw Error('Offline test');let rows=await window.TesselateCloud.studyRead();if((rows[key]?.revision||0)!==revision)throw Error('Changed on another device');rows[key]={value,revision:revision+1};localStorage.setItem('test-records',JSON.stringify(rows));return rows[key];}};`}));
+ await page.goto('http://127.0.0.1:'+server.address().port+'/study.html');
+ await page.getByRole('button',{name:'Topic confidence',exact:true}).click();
+ const topic=page.locator('.memory-topic').filter({has:page.getByRole('heading',{name:'Charge and Coulomb’s law',exact:true})});
+ await topic.getByRole('button',{name:'I have studied this',exact:true}).click();await topic.getByText('Needs focus',{exact:true}).waitFor();
+ await topic.getByRole('button',{name:'Review & rate recall'}).click();await page.locator('[data-grade="3"]').click();await topic.getByText('On track',{exact:true}).waitFor();
+ const before=await page.evaluate(()=>JSON.parse(localStorage.getItem('test-records'))['topic/phys210-0'].value);
+ await page.getByRole('button',{name:'Flashcards',exact:true}).click();await page.getByRole('button',{name:'Review',exact:true}).first().click();
+ assert.equal(await page.locator('[data-grade="3"]').isVisible(),false);await page.getByRole('button',{name:'Show answer'}).click();await page.locator('#card-answer').waitFor();
+ await page.evaluate(()=>window.failSave=true);await page.locator('[data-grade="3"]').click();await page.getByText('Offline test',{exact:true}).waitFor();assert(await page.locator('#study-dialog').isVisible());
+ await page.evaluate(()=>window.failSave=false);await page.locator('[data-grade="3"]').click();await page.locator('#study-dialog').waitFor({state:'hidden'});
+ assert.deepEqual(await page.evaluate(()=>JSON.parse(localStorage.getItem('test-records'))['topic/phys210-0'].value),before);
+ await page.getByRole('button',{name:'+ Create flashcard'}).click();await page.locator('[name=front]').fill('What is a test?');await page.locator('[name=back]').fill('A check.');await page.getByRole('button',{name:'Save',exact:true}).click();await page.locator('#study-dialog').waitFor({state:'hidden'});
+ await page.getByRole('button',{name:'Topic confidence',exact:true}).click();await page.getByRole('button',{name:'+ Add topic'}).click();await page.locator('[name=title]').fill('Lab recall');await page.getByRole('button',{name:'Save',exact:true}).click();await page.getByRole('heading',{name:'Lab recall',exact:true}).waitFor();
+ await page.reload();await page.getByRole('button',{name:'Topic confidence',exact:true}).click();await topic.getByText('On track',{exact:true}).waitFor();
+ await page.setViewportSize({width:390,height:844});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Mobile overflow');await page.screenshot({path:'/tmp/study-fsrs-mobile.png',fullPage:true});
+ await page.setViewportSize({width:1440,height:1000});await page.screenshot({path:'/tmp/study-fsrs-desktop.png'});
+ assert.deepEqual(errors,[]);console.log('PASS: topic review, answer reveal, failed-save recovery, independent schedules, card/topic creation, persistence, mobile layout, no browser errors.');
+ }finally{await browser.close();server.close();}})().catch(e=>{console.error(e);server.close();process.exitCode=1;});

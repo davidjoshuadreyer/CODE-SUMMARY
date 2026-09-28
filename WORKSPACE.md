@@ -130,8 +130,11 @@ targets two days early, and pulls break-adjacent deadlines before the break. The
 site saves a stable checklist on the first visit each day (Vancouver time).
 Future dates are previews using current progress. Replanning retains completed
 blocks; missed assignment work remains eligible without creating an unlimited
-backlog of old daily tasks. Self-ratings drive 1/3/7-day reviews; they are not
-scores or evidence of mastery. Checking a block does not submit coursework.
+backlog of old daily tasks. FSRS-6 schedules each studied topic independently
+from flashcards, using Again/Hard/Good/Easy recall ratings and a 90% retention
+target. Labelled colours show recall priorities per course and topic. Checking
+a block records study without inventing a recall grade or submitting coursework.
+See `dev/STUDY-FSRS.md` for record types, legacy handling, and verification.
 
 Only MATH 250B and ECET scopes are explicitly confirmed in the imported sources;
 PHYS and MATH 252 topic links are pacing-based suggestions. Editing a test's
