@@ -808,22 +808,27 @@ window.TESSELATE_SOLUTIONS={
   },
   "f26-3": {
     "title": "PHYS 210 · Homework 4",
-    "status": "5 assigned questions · worked references and diagrams",
+    "status": "5 of 5 questions · full worked steps, diagrams and answer checks",
     "sections": [
       {
         "problem": "22.15",
         "title": "22.15 · Excess electrons on a sphere",
         "steps": [
-          "The diameter is 26.0 cm, so R = 0.130 m. At the surface, E = k|Q|/R².",
-          "|Q| = 4πε₀R²E = 2.16×10⁻⁹ C. Divide by the elementary charge: N = |Q|/e = 1.35×10¹⁰ excess electrons.",
-          "The sphere’s net charge is negative and its field points inward. The magnitude 1150 N/C is positive. Manual 22.15 is a different question."
-        ]
+          "R = 0.260/2 = 0.130 m. A spherical Gaussian surface gives |Q| = ε₀E4πR².",
+          "|Q| = 2.16×10⁻⁹ C; N = |Q|/e = 1.35×10¹⁰ excess electrons.",
+          "Q is negative and E points inward. Use the radius, not the diameter. Manual 22.15 is a different question."
+        ],
+        "diagram": "hw4-22-15"
       },
       {
         "problem": "22.19",
         "title": "22.19 · Charge inside a conducting shell",
         "steps": [
-          "Use zero electric field in the metal to find the induced inner charge, then conserve the shell’s total charge to find its outer charge."
+          "Given: outer radius b = 0.250 m, cavity radius a = 0.200 m, initial σ = +6.37×10⁻⁶ C/m², central q = −0.500 µC.",
+          "Qshell = σ4πb² = +5.003 µC. E = 0 in the metal requires Qinner = −q = +0.500 µC. Charge conservation gives Qouter = +4.503 µC.",
+          "(a) σouter = Qouter/(4πb²) = +5.73×10⁻⁶ C/m².",
+          "(b) E = Qouter/(4πε₀b²) = 6.48×10⁵ N/C, outward. The manual’s 6.47×10⁵ N/C uses rounded intermediate values.",
+          "(c) Just inside the cavity wall the Gaussian sphere encloses only q, so Φ = q/ε₀ = −5.65×10⁴ N·m²/C."
         ],
         "manual": {
           "problem": "22.19",
@@ -831,13 +836,17 @@ window.TESSELATE_SOLUTIONS={
             79,
             80
           ]
-        }
+        },
+        "diagram": "hw4-22-19"
       },
       {
         "problem": "22.21",
         "title": "22.21 · Uniformly charged insulating sphere",
         "steps": [
-          "Use the external field to obtain total charge; inside, only the enclosed volume contributes: E(r) = ρr/(3ε₀)."
+          "The observation point is 0.145 m beyond a sphere of radius 0.355 m: rout = 0.500 m from the centre.",
+          "|Q| = ε₀E4πrout² = 4.87×10⁻⁸ C. Divide by the sphere volume: |ρ| = |Q|/[(4/3)π(0.355)³] = 2.60×10⁻⁷ C/m³.",
+          "At r = 0.200 m, Qenc = ρ(4/3)πr³ and |E| = |ρ|r/(3ε₀) = 1.96×10³ N/C.",
+          "Only field magnitude is given, so the charge sign is undetermined. For positive charge, E points outward; for negative charge, inward."
         ],
         "manual": {
           "problem": "22.21",
@@ -845,20 +854,25 @@ window.TESSELATE_SOLUTIONS={
             80,
             81
           ]
-        }
+        },
+        "diagram": "hw4-22-21"
       },
       {
         "problem": "22.33",
         "title": "22.33 · Sphere suspended beside a charged sheet",
         "steps": [
-          "Use E = |σ|/(2ε₀), T cos θ = mg and T sin θ = |q|E. The deflection is about 10.2° toward the negative sheet."
+          "Given: m = 4.00×10⁻⁶ kg, q = +5.00×10⁻⁸ C and σ = −2.50×10⁻⁹ C/m². The positive sphere is attracted toward the negative sheet.",
+          "E = |σ|/(2ε₀) = 141.2 N/C. Electric force qE = 7.06×10⁻⁶ N; weight mg = 3.92×10⁻⁵ N.",
+          "At equilibrium, T cos θ = mg and T sin θ = qE. Divide: tan θ = qE/(mg) = 0.1801.",
+          "θ = 10.2° from vertical, toward the sheet. The matching manual question is 22.31."
         ],
         "manual": {
           "problem": "22.31",
           "pages": [
             84
           ]
-        }
+        },
+        "diagram": "hw4-22-33"
       },
       {
         "problem": "22.37",
@@ -868,10 +882,17 @@ window.TESSELATE_SOLUTIONS={
           "The first field points out: Φ₁ = +(2.50×10⁴)A cos 60° = +37.5 N·m²/C. The other points in: Φ₂ = −(7.00×10⁴)A cos 60° = −105 N·m²/C.",
           "With no flux through other faces, Φnet = −67.5 N·m²/C and Qenclosed = ε₀Φnet = −5.98×10⁻¹⁰ C.",
           "Gauss’s law fixes the net enclosed charge. It does not separate the local field into internal and external contributions: outside charges can contribute field with zero net closed-surface flux. The flux calculation alone therefore cannot rule out outside charges."
-        ]
+        ],
+        "diagram": "hw4-22-37"
       }
     ],
-    "source": "https://online.camosun.ca/d2l/lms/dropbox/dropbox.d2l?ou=348967"
+    "source": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2ODQ/PHYS%20210%20Homework%20_4.pdf?ou=348967",
+    "files": [
+      {
+        "label": "Practise Homework 4 · hints, diagrams and answer checks",
+        "url": "phys210/quiz.html#q-22-15"
+      }
+    ]
   },
   "f26-4": {
     "title": "PHYS 210 · Homework 5",

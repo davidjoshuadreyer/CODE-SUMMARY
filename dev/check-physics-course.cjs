@@ -18,12 +18,25 @@ near(.0125/(800*(.5*(.260/5000)**2+(.260/5000)*(.560/5000))),2.18e3);
 // Midpoint integration independently checks the closed-form rod field.
 let integral=0;const a=.14,x=.50,n=100000;for(let j=0;j<n;j++)integral+=(a/n)/(x-(j+.5)*a/n)**2;
 near(integral/a,1/(x*(x-a)),1e-8);
-assert.equal(questions.length,7);assert.equal(new Set(questions.map(q=>q.id)).size,7);
+assert.equal(questions.length,12);assert.equal(new Set(questions.map(q=>q.id)).size,12);
 for(const q of questions)assert.deepEqual(q.steps.map(s=>s[0]),['Identify','Set up','Execute','Evaluate']);
 const ctx={window:{}};vm.runInNewContext(fs.readFileSync('assets/workspace/learning-paths.js','utf8'),ctx);
 for(const course of Object.values(ctx.window.TESSELATE_PATHS))for(const item of [...course.lessons,...course.practice])assert.ok(fs.existsSync(item.url),item.url);
 for(const file of fs.readdirSync('phys210').filter(f=>f.startsWith('learn-')||f==='quiz.html'||f==='review.html')){
  const html=fs.readFileSync('phys210/'+file,'utf8');assert.ok(!html.includes('katex-error'));assert.ok(!html.includes('href="undefined"'));
- for(const [,href] of html.matchAll(/href="([^"#]+)(?:#[^"]*)?"/g)){if(!/^https?:/.test(href))assert.ok(fs.existsSync(require('node:path').resolve('phys210',href)),file+': '+href)}
+ for(const [,href] of html.matchAll(/href="([^"#]+)(?:#[^"]*)?"/g)){if(!/^https?:/.test(href))assert.ok(fs.existsSync(require('node:path').resolve('phys210',href.split('?')[0])),file+': '+href)}
 }
 console.log('Passed: seven source answer checks, rod integral, solution stages, six course paths, and generated Physics links.');
+
+// Homework 4: Gaussian surfaces, charge conservation, field geometry and signs.
+const eps=8.8541878128e-12, four=require('./physics-homework4.cjs');
+near(4*Math.PI*eps*1150*.130**2/e,four[0].answer);
+const shell=6.37e-6*4*Math.PI*.250**2,inner=.500e-6,outer=shell-inner;
+near(outer/(4*Math.PI*.250**2),four[1].answer);
+near(outer/(4*Math.PI*eps*.250**2),6.48e5);
+near(-.500e-6/eps,-5.65e4);
+const rho=3*eps*1750*.500**2/.355**3;
+near(rho,four[2].answer);near(rho*.200/(3*eps),1.96e3);
+near(Math.atan((5e-8*2.5e-9/(2*eps))/(4e-6*9.8))*180/Math.PI,four[3].answer);
+near(eps*(2.5e4-7e4)*.05*.06*Math.cos(Math.PI/3),four[4].answer);
+console.log('Passed: Homework 4 numerical answers and all five question diagrams.');

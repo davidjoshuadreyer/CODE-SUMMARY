@@ -2370,6 +2370,17 @@ window.TESSELATE_CATALOG = {
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
     {
+      "id": "ref-d2l-phys210-hw4-2026",
+      "courseId": "phys210",
+      "name": "PHYS 210 Homework 4 · Gauss’s law",
+      "url": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2ODQ/PHYS%20210%20Homework%20_4.pdf?ou=348967",
+      "size": 0,
+      "stage": "unreviewed",
+      "notes": "Camosun login · Homework · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
+      "builtin": true,
+      "createdAt": "2026-09-23T00:00:00.000Z"
+    },
+    {
       "id": "ref-d2l-ecet250e-5366816",
       "courseId": "ecet250e",
       "name": "ECET 250E-WEEK 01-CHAPTER 01-BASIC CONCEPTS",

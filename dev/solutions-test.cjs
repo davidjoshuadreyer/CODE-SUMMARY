@@ -1,6 +1,6 @@
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
 const ctx={window:{}};vm.runInNewContext(fs.readFileSync('assets/workspace/solutions-data.js','utf8'),ctx);
-for(const e of Object.values(ctx.window.TESSELATE_SOLUTIONS)){assert(e.sections.length);for(const f of e.files||[])if(!f.url.startsWith('https://'))assert(fs.existsSync(f.url),f.url);}
+for(const e of Object.values(ctx.window.TESSELATE_SOLUTIONS)){assert(e.sections.length);for(const f of e.files||[])if(!f.url.startsWith('https://'))assert(fs.existsSync(f.url.split(/[?#]/)[0]),f.url);}
 const derivative=(f,x)=>(f(x+1e-5)-f(x-1e-5))/2e-5;
 for(const x of [.1,.3,.7]){
  const f1=x=>(2-Math.sqrt(1+x*x))**(-1/3),f2=x=>(Math.exp(2*x)*(2*x-1)/4+2)/x**3,f4=x=>-x/(Math.log(x)+5),f5=x=>1/(x*x*(Math.cos(x)+2)),f6=x=>Math.tan(x+Math.PI/4)-1-x;

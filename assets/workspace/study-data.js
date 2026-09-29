@@ -1,4 +1,4 @@
-/* Fall 2026 schedule facts checked September 27, 2026. No personal progress. */
+/* Schedule checked Sep 27; PHYS homework dates refreshed Sep 28, 2026. No personal progress. */
 window.TESSELATE_STUDY_DATA = {
   "checked": "2026-09-27",
   "start": "2026-09-07",
@@ -40,7 +40,8 @@ window.TESSELATE_STUDY_DATA = {
       "source": "https://online.camosun.ca/d2l/lms/dropbox/dropbox.d2l?ou=348967",
       "id": "f26-0",
       "type": "assignment",
-      "certainty": "posted"
+      "certainty": "posted",
+      "checked": "2026-09-28"
     },
     {
       "date": "2026-09-21",
@@ -52,139 +53,151 @@ window.TESSELATE_STUDY_DATA = {
       "source": "https://online.camosun.ca/d2l/lms/dropbox/dropbox.d2l?ou=348967",
       "id": "f26-1",
       "type": "assignment",
-      "certainty": "posted"
+      "certainty": "posted",
+      "checked": "2026-09-28"
     },
     {
-      "date": "2026-09-28",
+      "date": "2026-09-29",
       "course": "phys210",
       "title": "Homework 3",
       "time": "11:59 p.m.",
       "kind": "Due",
-      "note": "Posted due date.",
+      "note": "Instructor announcement Sep 28: homework deadlines move to Tuesdays at 11:59 p.m.; final homework remains Monday Dec 14.",
       "source": "https://online.camosun.ca/d2l/lms/dropbox/dropbox.d2l?ou=348967",
       "id": "f26-2",
       "type": "assignment",
-      "certainty": "posted"
+      "certainty": "posted",
+      "checked": "2026-09-28"
     },
     {
-      "date": "2026-10-05",
+      "date": "2026-10-06",
       "course": "phys210",
       "title": "Homework 4",
       "time": "11:59 p.m.",
       "kind": "Due",
-      "note": "Posted due date.",
-      "source": "https://online.camosun.ca/d2l/lms/dropbox/dropbox.d2l?ou=348967",
+      "note": "Instructor announcement Sep 28: homework deadlines move to Tuesdays at 11:59 p.m.; final homework remains Monday Dec 14.",
+      "source": "https://online.camosun.ca/d2l/lms/dropbox/user/folder_submit_files.d2l?db=470342&grpid=0&isprv=0&bp=0&ou=348967",
       "id": "f26-3",
       "type": "assignment",
-      "certainty": "posted"
+      "certainty": "posted",
+      "checked": "2026-09-28"
     },
     {
-      "date": "2026-10-12",
+      "date": "2026-10-13",
       "course": "phys210",
       "title": "Homework 5",
       "time": "11:59 p.m.",
       "kind": "Due",
-      "note": "Posted due date.",
+      "note": "Instructor announcement Sep 28: homework deadlines move to Tuesdays at 11:59 p.m.; final homework remains Monday Dec 14.",
       "source": "https://online.camosun.ca/d2l/lms/dropbox/dropbox.d2l?ou=348967",
       "id": "f26-4",
       "type": "assignment",
-      "certainty": "posted"
+      "certainty": "posted",
+      "checked": "2026-09-28"
     },
     {
-      "date": "2026-10-19",
+      "date": "2026-10-20",
       "course": "phys210",
       "title": "Homework 6",
       "time": "11:59 p.m.",
       "kind": "Due",
-      "note": "Posted due date.",
+      "note": "Instructor announcement Sep 28: homework deadlines move to Tuesdays at 11:59 p.m.; final homework remains Monday Dec 14.",
       "source": "https://online.camosun.ca/d2l/lms/dropbox/dropbox.d2l?ou=348967",
       "id": "f26-5",
       "type": "assignment",
-      "certainty": "posted"
+      "certainty": "posted",
+      "checked": "2026-09-28"
     },
     {
-      "date": "2026-10-26",
+      "date": "2026-10-27",
       "course": "phys210",
       "title": "Homework 7",
       "time": "11:59 p.m.",
       "kind": "Due",
-      "note": "Posted due date.",
+      "note": "Instructor announcement Sep 28: homework deadlines move to Tuesdays at 11:59 p.m.; final homework remains Monday Dec 14.",
       "source": "https://online.camosun.ca/d2l/lms/dropbox/dropbox.d2l?ou=348967",
       "id": "f26-6",
       "type": "assignment",
-      "certainty": "posted"
+      "certainty": "posted",
+      "checked": "2026-09-28"
     },
     {
-      "date": "2026-11-02",
+      "date": "2026-11-03",
       "course": "phys210",
       "title": "Homework 8",
       "time": "11:59 p.m.",
       "kind": "Due",
-      "note": "Posted due date.",
+      "note": "Instructor announcement Sep 28: homework deadlines move to Tuesdays at 11:59 p.m.; final homework remains Monday Dec 14.",
       "source": "https://online.camosun.ca/d2l/lms/dropbox/dropbox.d2l?ou=348967",
       "id": "f26-7",
       "type": "assignment",
-      "certainty": "posted"
+      "certainty": "posted",
+      "checked": "2026-09-28"
     },
     {
-      "date": "2026-11-09",
+      "date": "2026-11-10",
       "course": "phys210",
       "title": "Homework 9",
-      "time": "12:59 a.m.",
+      "time": "12:59 a.m. (D2L; conflicts with announcement)",
       "kind": "Due",
-      "note": "Posted early-morning deadline; confirm unusual time.",
+      "note": "Instructor announcement Sep 28: homework deadlines move to Tuesdays at 11:59 p.m.; final homework remains Monday Dec 14. D2L displays 12:59 a.m. for this deadline, conflicting with the announced 11:59 p.m. Check with the instructor; plan for the earlier listed time.",
       "source": "https://online.camosun.ca/d2l/lms/dropbox/dropbox.d2l?ou=348967",
       "id": "f26-8",
       "type": "assignment",
-      "certainty": "posted"
+      "certainty": "posted",
+      "checked": "2026-09-28"
     },
     {
-      "date": "2026-11-16",
+      "date": "2026-11-17",
       "course": "phys210",
       "title": "Homework 10",
-      "time": "12:59 a.m.",
+      "time": "12:59 a.m. (D2L; conflicts with announcement)",
       "kind": "Due",
-      "note": "Posted early-morning deadline; confirm unusual time.",
+      "note": "Instructor announcement Sep 28: homework deadlines move to Tuesdays at 11:59 p.m.; final homework remains Monday Dec 14. D2L displays 12:59 a.m. for this deadline, conflicting with the announced 11:59 p.m. Check with the instructor; plan for the earlier listed time.",
       "source": "https://online.camosun.ca/d2l/lms/dropbox/dropbox.d2l?ou=348967",
       "id": "f26-9",
       "type": "assignment",
-      "certainty": "posted"
+      "certainty": "posted",
+      "checked": "2026-09-28"
     },
     {
-      "date": "2026-11-23",
+      "date": "2026-11-24",
       "course": "phys210",
       "title": "Homework 11",
-      "time": "12:59 a.m.",
+      "time": "12:59 a.m. (D2L; conflicts with announcement)",
       "kind": "Due",
-      "note": "Posted early-morning deadline; confirm unusual time.",
+      "note": "Instructor announcement Sep 28: homework deadlines move to Tuesdays at 11:59 p.m.; final homework remains Monday Dec 14. D2L displays 12:59 a.m. for this deadline, conflicting with the announced 11:59 p.m. Check with the instructor; plan for the earlier listed time.",
       "source": "https://online.camosun.ca/d2l/lms/dropbox/dropbox.d2l?ou=348967",
       "id": "f26-10",
       "type": "assignment",
-      "certainty": "posted"
+      "certainty": "posted",
+      "checked": "2026-09-28"
     },
     {
-      "date": "2026-12-07",
+      "date": "2026-12-08",
       "course": "phys210",
       "title": "Homework 12",
-      "time": "12:59 a.m.",
+      "time": "12:59 a.m. (D2L; conflicts with announcement)",
       "kind": "Due",
-      "note": "Posted early-morning deadline; confirm unusual time.",
+      "note": "Instructor announcement Sep 28: homework deadlines move to Tuesdays at 11:59 p.m.; final homework remains Monday Dec 14. D2L displays 12:59 a.m. for this deadline, conflicting with the announced 11:59 p.m. Check with the instructor; plan for the earlier listed time.",
       "source": "https://online.camosun.ca/d2l/lms/dropbox/dropbox.d2l?ou=348967",
       "id": "f26-11",
       "type": "assignment",
-      "certainty": "posted"
+      "certainty": "posted",
+      "checked": "2026-09-28"
     },
     {
       "date": "2026-12-14",
       "course": "phys210",
       "title": "Homework 13",
-      "time": "12:59 a.m.",
+      "time": "12:59 a.m. (D2L; conflicts with announcement)",
       "kind": "Due",
-      "note": "Posted early-morning deadline; confirm unusual time.",
+      "note": "Instructor announcement Sep 28: homework deadlines move to Tuesdays at 11:59 p.m.; final homework remains Monday Dec 14. D2L displays 12:59 a.m. for this deadline, conflicting with the announced 11:59 p.m. Check with the instructor; plan for the earlier listed time.",
       "source": "https://online.camosun.ca/d2l/lms/dropbox/dropbox.d2l?ou=348967",
       "id": "f26-12",
       "type": "assignment",
-      "certainty": "posted"
+      "certainty": "posted",
+      "checked": "2026-09-28"
     },
     {
       "date": "2026-10-02",

@@ -35,7 +35,7 @@ for (const [dir,courseId] of [['phys210','phys210'],['ecet250e','ecet250e'],['ma
  }
 }
 const references=[];
-for(const [courseId,materials] of Object.entries(d2lMaterials)) for(const m of materials) references.push({id:'ref-d2l-'+courseId+'-'+m.id,courseId,name:m.title,url:m.url,size:0,stage:'unreviewed',notes:m.access+' · '+m.group+' · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.',builtin:true,createdAt:'2026-09-23T00:00:00.000Z'});
+for(const [courseId,materials] of Object.entries(d2lMaterials)) for(const m of materials) references.push({id:'ref-d2l-'+courseId+'-'+m.id,courseId,name:m.title,url:m.url,size:0,stage:'unreviewed',notes:m.access+' · '+m.group+' · Indexed '+(m.checked||'2026-09-23')+'. Original remains at its source; this is not an offline copy.',builtin:true,createdAt:'2026-09-23T00:00:00.000Z'});
 resources.push({id:'page-phys210-worked-pdf',courseId:'phys210',title:'Tutorial 2 · Illustrated worked solutions (21-page PDF)',kind:'Study notes',url:'phys210/electric-field-worked-solutions.pdf',body:'',description:'Given, Find, variables, diagrams, and steps for all ten questions.',referenceIds:['ref-d2l-phys210-5448798'],builtin:true});
 
 // Library navigation is not a conversion: originals remain available for study-page tracking.
