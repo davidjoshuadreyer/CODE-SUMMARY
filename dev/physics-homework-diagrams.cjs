@@ -7,6 +7,7 @@ const box=(x,y,w,h)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}"/>`;
 const cross=(x,y)=>line(x-4,y-4,x+4,y+4)+line(x-4,y+4,x+4,y-4);
 const dots=(out=false)=>[50,110,170,220].flatMap(x=>[45,95,150].map(y=>out?circle(x,y,2):cross(x,y))).join('');
 const res=(x,y,w=42)=>line(x,y,x+8,y)+box(x+8,y-7,w-16,14)+line(x+w-8,y,x+w,y);
+const battery=(x,y)=>line(x,y,x+12,y)+line(x+12,y-13,x+12,y+13)+line(x+19,y-7,x+19,y+7)+line(x+19,y,x+32,y)+text(x+1,y-17,'+');
 const cap=(x,y)=>line(x,y,x+18,y)+line(x+18,y-14,x+18,y+14)+line(x+25,y-14,x+25,y+14)+line(x+25,y,x+43,y);
 const branch=(y,label)=>line(20,y,80,y)+res(80,y,100)+line(180,y,235,y)+text(88,y-14,label);
 const wirepair=()=>line(35,65,230,65)+line(35,155,230,155)+line(70,51,140,51,true)+line(195,171,125,171,true)+line(25,65,25,155)+text(3,115,'d');
@@ -31,8 +32,10 @@ case'series':s=line(20,180,20,70)+res(20,70,95)+res(135,70,95)+line(115,70,135,7
 case'parallel':s=line(20,45,20,185)+line(235,45,235,185)+branch(55,'1.60 Ω')+branch(115,'2.40 Ω')+branch(175,'4.80 Ω');break;
 case'meter':s=line(50,45,50,177)+line(230,45,230,177)+line(50,45,90,45)+res(90,45,100)+line(190,45,230,45)+line(50,111,90,111)+res(90,111,100)+line(190,111,230,111)+line(50,177,65,177)+res(65,177,65)+res(155,177,65)+line(130,177,155,177)+line(220,177,230,177)+text(120,28,'25 Ω')+text(120,92,'15 Ω')+text(64,206,'15 Ω')+text(167,206,'10 Ω')+text(50,229,'Parallel subnetwork only');break;
 case'bulbs':s=line(20,50,230,50)+circle(82,50,18)+circle(170,50,18)+text(85,22,'series')+line(20,110,20,205)+line(230,110,230,205)+line(20,130,230,130)+line(20,185,230,185)+circle(125,130,18)+circle(125,185,18)+text(23,228,'parallel');break;
-case'twosource':s=box(25,35,195,160)+line(123,35,123,195)+box(113,75,20,45)+text(139,99,'30 Ω')+box(210,64,20,40)+text(160,59,'20 Ω')+text(4,110,'+10 V')+text(156,148,'+5 V')+text(145,174,'(top +)');break;
-case'threebranch':s=line(20,40,20,190)+line(235,40,235,190)+branch(45,'2 Ω  +10 V  3 Ω')+branch(120,'1 Ω  +5 V  4 Ω')+branch(190,'10 Ω')+text(182,71,'a')+text(182,146,'b');break;
+case'twosource':s=line(25,35,220,35)+line(25,195,220,195)+line(25,35,25,88)+line(25,132,25,195)+circle(25,110,22)+text(15,115,'10')+text(18,82,'+')+line(123,35,123,75)+box(113,75,20,45)+line(123,120,123,195)+text(137,99,'30 Ω')+line(220,35,220,65)+box(210,65,20,40)+line(220,105,220,133)+circle(220,151,18)+line(220,169,220,195)+text(214,155,'5')+text(209,128,'+')+text(165,58,'20 Ω')+text(45,221,'Sources labelled in volts');break;
+case'threebranch':s=line(15,50,15,190)+line(240,50,240,190);
+for(const [y,ra,emf,rb,node] of [[50,'2','10','3','a'],[120,'1','5','4','b']])s+=line(15,y,30,y)+res(30,y,48)+line(78,y,98,y)+battery(98,y)+line(130,y,175,y)+circle(156,y,3)+res(175,y,48)+line(223,y,240,y)+text(48,y-15,ra+' Ω')+text(96,y+31,emf+' V')+text(152,y-13,node)+text(190,y-15,rb+' Ω');
+s+=line(15,190,80,190)+res(80,190,90)+line(170,190,240,190)+text(108,216,'10 Ω');break;
 case'decay':case'rise':s=line(30,190,237,190,true)+line(30,190,30,25,true)+text(220,214,'t')+text(4,24,q.homework===13?'I':'Q,V')+(q.kind==='rise'?`<path d="M30 190C70 80 125 51 228 45"/>`:`<path d="M30 45C67 152 130 184 228 189"/>`)+line(30,45,228,45)+text(120,229,'Exponential response');break;
 case'cone':s=`<ellipse cx="40" cy="113" rx="12" ry="32"/><ellipse cx="211" cy="113" rx="18" ry="76"/><path d="M40 81L211 37M40 145L211 189"/><ellipse cx="117" cy="113" rx="15" ry="52" stroke-dasharray="3 3"/>`+line(40,210,211,210)+text(117,230,'h')+text(39,112,'r₁')+text(191,110,'r₂')+text(111,30,'slice dx');break;
 case'semipath':s=dots(true)+`<path d="M65 25V80A70 70 0 0 0 205 80" marker-end="url(#arrow)"/>`+text(95,210,'Negative charge');break;
@@ -43,7 +46,7 @@ case'bar':s=line(40,135,220,135)+line(130,133,130,45,true)+line(130,138,130,212,
 case'hinge':s=box(45,50,155,115)+line(45,32,45,190)+text(26,37,'b')+text(26,185,'a')+text(207,43,'c')+text(207,185,'d')+cross(45,112)+circle(200,112,6)+circle(200,112,1)+line(83,25,223,25,true)+text(93,16,'B')+text(56,224,'× in; ⊙ out');break;
 case'loop':s=box(60,45,155,125)+line(137,22,137,205)+text(130,220,'axis')+cross(32,55)+cross(32,147)+line(48,85,48,136,true)+text(28,112,'I')+text(71,238,'Initial orientation');break;
 case'tiltedloop':s=line(80,30,80,180)+line(80,30,170,180)+circle(125,105)+line(125,105,125,184,true)+text(139,182,'mg')+text(87,76,'30°')+line(215,187,215,42,true)+text(229,67,'B')+text(17,218,'Side view along hinge');break;
-case'rail':case'slidingrod':s=line(35,55,235,55)+line(35,180,235,180)+line(35,55,35,180)+line(165,55,165,180)+line(172,118,233,118,true)+text(205,100,q.kind==='rail'?'F':'v')+line(165,151,165,85,true)+text(177,151,'I')+cross(75,85)+cross(112,151)+text(57,225,'Top view; B into page');break;
+case'rail':case'slidingrod':s=line(35,55,235,55)+line(35,180,235,180)+line(35,55,35,180)+line(165,55,165,180)+line(172,118,233,118,true)+text(205,100,q.kind==='rail'?'F':'v')+line(165,151,165,85,true)+text(177,151,'I')+(q.kind==='rail'?circle(75,85,3)+circle(112,151,3):cross(75,85)+cross(112,151))+text(45,225,q.kind==='rail'?'Top view; B out of page':'Top view; B into page');break;
 case'wires':s=wirepair();break;
 case'semicircle':s=`<path d="M15 145H45A80 80 0 0 1 205 145H239"/>`+circle(125,145,3)+text(115,170,'P')+line(125,145,182,88)+text(158,111,'R')+line(15,165,48,165,true)+line(207,165,239,165,true)+text(97,217,'Clockwise arc current');break;
 case'ampere':s=`<ellipse cx="122" cy="112" rx="114" ry="102"/><ellipse cx="76" cy="114" rx="43" ry="90"/><ellipse cx="76" cy="62" rx="28" ry="25"/><ellipse cx="176" cy="60" rx="22" ry="15"/>`+cross(76,62)+circle(76,164,4)+circle(177,135,4)+text(69,57,'')+text(82,67,'I₁')+text(86,172,'I₂')+text(186,143,'I₃')+text(173,66,'a')+text(65,103,'b')+text(115,176,'c')+text(201,209,'d');break;
@@ -57,6 +60,7 @@ case'exitingloop':s=line(150,15,150,215)+box(80,50,110,135)+line(185,117,235,117
 case'inductor':s=line(20,125,55,125)+`<path d="M55 125c0-60 35-60 35 0s35 60 35 0s35-60 35 0s35 60 35 0"/>`+line(195,125,235,125)+text(23,154,'a')+text(221,154,'b')+text(111,199,'L');if(q.problem==='30.11')s+=line(187,38,67,38,true)+text(109,24,'i');break;
 default:throw Error('Missing diagram '+q.kind);
 }
+if(q.problem==='27.10')s='<path d="M35 150L95 110H215L155 150Z"/>'+line(125,125,125,40,true)+text(139,44,'+z, n̂')+line(172,74,172,196,true)+text(185,193,'Bz < 0')+text(35,181,'xy surface');
 let y=40; for(const label of q.labels){let lineText='';for(const word of label.split(' ')){if((lineText+' '+word).length>27&&lineText){s+=text(253,y,lineText);y+=20;lineText=word}else lineText+=(lineText?' ':'')+word;}s+=text(253,y,lineText);y+=37;}
 return s;
 }
