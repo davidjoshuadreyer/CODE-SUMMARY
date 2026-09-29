@@ -10,3 +10,6 @@ module.exports=[
 ];
 
 module.exports.push(...require("./physics-homework4.cjs"));
+
+module.exports.push(...require("./physics-more-homework.cjs"));
+module.exports.sort((a,b)=>a.homework-b.homework);

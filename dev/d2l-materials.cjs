@@ -67,9 +67,10 @@ add('ecet250e',347548,'Released solutions',`5366866|Problemset 1 - Chapter 1 - S
 5366867|Problemset 2 - Chapter 2 - Solution (PDF)
 5366868|Problemset 3 - Chapter 3 - Solution (PDF)`);
 add('engr290',347881,'Course information',`5421418|ENGR290CourseOutline_2026
-5421419|ENGR-290-X01 course syllabus_2026`);
+5421419|ENGR-290-X01 course syllabus_2026
+5475752|Ferguson_Timetable_Sept - Dec_2026`);
 add('engr290',347881,'Lecture slides',`5421421|Week 1 Atomic Structure_2026
-5421575|Week 2a Bonding_2026
+5475178|Week 2a Bonding_2026 (Revised)
 5421576|Week 2b Dislocations_2026`);
 add('engr290',347881,'Assignments',`5465527|ENGR 290_Assign_1_2026`);
 add('comp139e',347338,'Course information',`5457464|COMP 139E X01A Syllabus`);
@@ -117,4 +118,9 @@ add('comp139e',347338,'Weekly lectures',`5404940|Week 1 - Introduction to C++
 data.math252=[{id:'252-coursepack',title:'Suggested problems with answers - Math 252 coursepack',group:'Homework and practice',url:'https://www.leahhoward.com/252CP.pdf',access:'Public instructor resource'},{id:'252-assignments',title:'Current assignments and submission instructions',group:'Homework and practice',url:'https://online.camosun.ca/d2l/lms/dropbox/dropbox.d2l?ou=348506',access:'Camosun login'}];
 data.math250b=[{id:'250b-coursepack',title:'250B-CP.pdf - Suggested homework problems',group:'Homework and practice',url:'https://online.camosun.ca/d2l/le/news/widget/348474/FileProvider?newsId=707083&fileId=17250239',access:'Camosun login'},{id:'250b-website',title:'Leah Howard - current course materials',group:'Instructor resources',url:'https://www.leahhoward.com/',access:'Public instructor resource'},{id:'250b-assignments',title:'Current assignments and submission instructions',group:'Homework and practice',url:'https://online.camosun.ca/d2l/lms/dropbox/dropbox.d2l?ou=348474',access:'Camosun login'}];
 data.phys210.push({id:'hw4-2026',title:'PHYS 210 Homework 4 · Gauss’s law',group:'Homework',url:'https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2ODQ/PHYS%20210%20Homework%20_4.pdf?ou=348967',access:'Camosun login',checked:'2026-09-28'});
+for(const [key,source] of Object.entries(require('./physics-homework-sources.json'))){
+ if(['1','2','4'].includes(key))continue;
+ data.phys210.push({id:'hw'+key+'-2026',title:key==='9-supplement'?'PHYS 210 Homework 9 · Supplemental resistivity problem':`PHYS 210 Homework ${key}${key==='3'?' v2 · six questions':''}`,group:'Homework',url:source.url,access:'Camosun login',checked:'2026-09-28'});
+}
+for(const course of ['phys210','engr290'])for(const item of data[course])item.checked='2026-09-28';
 module.exports=data;

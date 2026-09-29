@@ -4,7 +4,7 @@ const path = require('node:path');
 const dir = path.join(__dirname, '../engr290');
 const data = require('../engr290/content.json');
 const esc = s => s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
-const sources = names => `<ul>${names.map(s=>`<li><a href="../ENGR%20290/${encodeURIComponent(s)}">${esc(s)}</a></li>`).join('')}</ul>`;
+const sources = names => `<p><a href="materials.html">Current D2L materials index →</a> · Includes the revised Bonding slides checked September 28, 2026. Files below are the originally supplied copies.</p><ul>${names.map(s=>`<li><a href="../ENGR%20290/${encodeURIComponent(s)}">${esc(s)}</a></li>`).join('')}</ul>`;
 const shell = (title,body,scripts='') => `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(title)} · ENGR 290</title><link rel="stylesheet" href="course.css"><script defer src="theme.js"></script>${scripts}</head>
 <body><a class="skip" href="#main">Skip to content</a><header><a class="brand" href="../index.html#course/engr290">tesselate<span>.</span></a><nav aria-label="Course navigation"><a href="review.html">Lessons</a><a href="quiz.html">Quiz</a><a href="exam.html">Practice test</a><button id="theme" type="button" aria-label="Toggle dark appearance">◐</button></nav></header><main id="main"><p class="eyebrow">ENGR 290 / FALL 2026</p>${body}</main><footer><a href="../index.html#course/engr290">← Engineering Materials workspace</a><p>Original study aids based on your supplied course materials.</p></footer></body></html>`;

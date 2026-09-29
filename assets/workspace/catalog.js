@@ -1958,7 +1958,7 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448870/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Administration · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Administration · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -1969,7 +1969,7 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5470883/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Administration · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Administration · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -1980,7 +1980,7 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448840/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Lab resources · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Lab resources · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -1991,7 +1991,7 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448838/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Lab resources · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Lab resources · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -2002,7 +2002,7 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448842/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Lab resources · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Lab resources · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -2013,7 +2013,7 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5458938/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Lab resources · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Lab resources · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -2024,7 +2024,7 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448835/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Handouts and review · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Handouts and review · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -2035,7 +2035,7 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448808/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Handouts and review · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Handouts and review · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -2046,7 +2046,7 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448806/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Handouts and review · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Handouts and review · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -2057,7 +2057,7 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448807/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Handouts and review · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Handouts and review · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -2068,7 +2068,7 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448813/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Handouts and review · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Handouts and review · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -2079,7 +2079,7 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448814/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Handouts and review · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Handouts and review · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -2090,7 +2090,7 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448812/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Handouts and review · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Handouts and review · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -2101,7 +2101,7 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448823/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Handouts and review · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Handouts and review · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -2112,7 +2112,7 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448829/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Handouts and review · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Handouts and review · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -2123,7 +2123,7 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448824/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Handouts and review · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Handouts and review · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -2134,7 +2134,7 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448825/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Handouts and review · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Handouts and review · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -2145,7 +2145,7 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448826/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Handouts and review · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Handouts and review · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -2156,7 +2156,7 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448827/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Handouts and review · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Handouts and review · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -2167,7 +2167,7 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448828/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Handouts and review · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Handouts and review · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -2178,7 +2178,7 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448834/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Handouts and review · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Handouts and review · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -2189,7 +2189,7 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448852/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Handouts and review · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Handouts and review · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -2200,7 +2200,7 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448796/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Homework · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Homework · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -2211,7 +2211,7 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448805/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Homework · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Homework · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -2222,7 +2222,7 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448810/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Released solutions · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Released solutions · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -2233,7 +2233,7 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448809/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Released solutions · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Released solutions · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -2244,7 +2244,7 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448797/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Tutorials · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Tutorials · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -2255,7 +2255,7 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448798/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Tutorials · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Tutorials · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -2266,7 +2266,7 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448843/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Tutorials · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Tutorials · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -2277,7 +2277,7 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448799/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Tutorials · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Tutorials · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -2288,7 +2288,7 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448800/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Tutorials · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Tutorials · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -2299,7 +2299,7 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448801/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Tutorials · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Tutorials · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -2310,7 +2310,7 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448802/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Tutorials · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Tutorials · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -2321,7 +2321,7 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448803/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Tutorials · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Tutorials · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -2332,7 +2332,7 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448804/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Tutorials · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Tutorials · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -2343,7 +2343,7 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448845/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Tutorials · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Tutorials · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -2354,7 +2354,7 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448846/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Tutorials · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Tutorials · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -2365,7 +2365,7 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448847/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Tutorials · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Tutorials · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -2374,6 +2374,127 @@ window.TESSELATE_CATALOG = {
       "courseId": "phys210",
       "name": "PHYS 210 Homework 4 · Gauss’s law",
       "url": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2ODQ/PHYS%20210%20Homework%20_4.pdf?ou=348967",
+      "size": 0,
+      "stage": "unreviewed",
+      "notes": "Camosun login · Homework · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
+      "builtin": true,
+      "createdAt": "2026-09-23T00:00:00.000Z"
+    },
+    {
+      "id": "ref-d2l-phys210-hw3-2026",
+      "courseId": "phys210",
+      "name": "PHYS 210 Homework 3 v2 · six questions",
+      "url": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2ODM/PHYS%20210%20Homework%203%20v2.pdf?ou=348967",
+      "size": 0,
+      "stage": "unreviewed",
+      "notes": "Camosun login · Homework · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
+      "builtin": true,
+      "createdAt": "2026-09-23T00:00:00.000Z"
+    },
+    {
+      "id": "ref-d2l-phys210-hw5-2026",
+      "courseId": "phys210",
+      "name": "PHYS 210 Homework 5",
+      "url": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2ODU/PHYS%20210%20Homework%205.pdf?ou=348967",
+      "size": 0,
+      "stage": "unreviewed",
+      "notes": "Camosun login · Homework · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
+      "builtin": true,
+      "createdAt": "2026-09-23T00:00:00.000Z"
+    },
+    {
+      "id": "ref-d2l-phys210-hw6-2026",
+      "courseId": "phys210",
+      "name": "PHYS 210 Homework 6",
+      "url": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2ODY/PHYS%20210%20Homework%206.pdf?ou=348967",
+      "size": 0,
+      "stage": "unreviewed",
+      "notes": "Camosun login · Homework · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
+      "builtin": true,
+      "createdAt": "2026-09-23T00:00:00.000Z"
+    },
+    {
+      "id": "ref-d2l-phys210-hw7-2026",
+      "courseId": "phys210",
+      "name": "PHYS 210 Homework 7",
+      "url": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2ODc/PHYS%20210%20Homework%207.pdf?ou=348967",
+      "size": 0,
+      "stage": "unreviewed",
+      "notes": "Camosun login · Homework · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
+      "builtin": true,
+      "createdAt": "2026-09-23T00:00:00.000Z"
+    },
+    {
+      "id": "ref-d2l-phys210-hw8-2026",
+      "courseId": "phys210",
+      "name": "PHYS 210 Homework 8",
+      "url": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2ODg/PHYS%20210%20Homework%208.pdf?ou=348967",
+      "size": 0,
+      "stage": "unreviewed",
+      "notes": "Camosun login · Homework · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
+      "builtin": true,
+      "createdAt": "2026-09-23T00:00:00.000Z"
+    },
+    {
+      "id": "ref-d2l-phys210-hw9-2026",
+      "courseId": "phys210",
+      "name": "PHYS 210 Homework 9",
+      "url": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2ODk/PHYS%20210%20Homework%209.pdf?ou=348967",
+      "size": 0,
+      "stage": "unreviewed",
+      "notes": "Camosun login · Homework · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
+      "builtin": true,
+      "createdAt": "2026-09-23T00:00:00.000Z"
+    },
+    {
+      "id": "ref-d2l-phys210-hw10-2026",
+      "courseId": "phys210",
+      "name": "PHYS 210 Homework 10",
+      "url": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2OTE/PHYS%20210%20Hmwk%2010.pdf?ou=348967",
+      "size": 0,
+      "stage": "unreviewed",
+      "notes": "Camosun login · Homework · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
+      "builtin": true,
+      "createdAt": "2026-09-23T00:00:00.000Z"
+    },
+    {
+      "id": "ref-d2l-phys210-hw11-2026",
+      "courseId": "phys210",
+      "name": "PHYS 210 Homework 11",
+      "url": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2OTI/PHYS%20210%20Homework%2011.pdf?ou=348967",
+      "size": 0,
+      "stage": "unreviewed",
+      "notes": "Camosun login · Homework · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
+      "builtin": true,
+      "createdAt": "2026-09-23T00:00:00.000Z"
+    },
+    {
+      "id": "ref-d2l-phys210-hw12-2026",
+      "courseId": "phys210",
+      "name": "PHYS 210 Homework 12",
+      "url": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2OTM/PHYS%20210%20Homework%2012.pdf?ou=348967",
+      "size": 0,
+      "stage": "unreviewed",
+      "notes": "Camosun login · Homework · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
+      "builtin": true,
+      "createdAt": "2026-09-23T00:00:00.000Z"
+    },
+    {
+      "id": "ref-d2l-phys210-hw13-2026",
+      "courseId": "phys210",
+      "name": "PHYS 210 Homework 13",
+      "url": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2OTQ/PHYS%20210%20Homework%2013%20new.pdf?ou=348967",
+      "size": 0,
+      "stage": "unreviewed",
+      "notes": "Camosun login · Homework · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
+      "builtin": true,
+      "createdAt": "2026-09-23T00:00:00.000Z"
+    },
+    {
+      "id": "ref-d2l-phys210-hw9-supplement-2026",
+      "courseId": "phys210",
+      "name": "PHYS 210 Homework 9 · Supplemental resistivity problem",
+      "url": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2OTA/PHYS%20210%20Homework%209%20Supplemental%20Chapter%2025%20Resistivity.pdf?ou=348967",
       "size": 0,
       "stage": "unreviewed",
       "notes": "Camosun login · Homework · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
@@ -2673,7 +2794,7 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/347881/viewContent/5421418/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Course information · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Course information · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -2684,7 +2805,18 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/347881/viewContent/5421419/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Course information · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Course information · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
+      "builtin": true,
+      "createdAt": "2026-09-23T00:00:00.000Z"
+    },
+    {
+      "id": "ref-d2l-engr290-5475752",
+      "courseId": "engr290",
+      "name": "Ferguson_Timetable_Sept - Dec_2026",
+      "url": "https://online.camosun.ca/d2l/le/content/347881/viewContent/5475752/View",
+      "size": 0,
+      "stage": "unreviewed",
+      "notes": "Camosun login · Course information · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -2695,18 +2827,18 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/347881/viewContent/5421421/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Lecture slides · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Lecture slides · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
     {
-      "id": "ref-d2l-engr290-5421575",
+      "id": "ref-d2l-engr290-5475178",
       "courseId": "engr290",
-      "name": "Week 2a Bonding_2026",
-      "url": "https://online.camosun.ca/d2l/le/content/347881/viewContent/5421575/View",
+      "name": "Week 2a Bonding_2026 (Revised)",
+      "url": "https://online.camosun.ca/d2l/le/content/347881/viewContent/5475178/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Lecture slides · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Lecture slides · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -2717,7 +2849,7 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/347881/viewContent/5421576/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Lecture slides · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Lecture slides · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },
@@ -2728,7 +2860,7 @@ window.TESSELATE_CATALOG = {
       "url": "https://online.camosun.ca/d2l/le/content/347881/viewContent/5465527/View",
       "size": 0,
       "stage": "unreviewed",
-      "notes": "Camosun login · Assignments · Indexed 2026-09-23. Original remains at its source; this is not an offline copy.",
+      "notes": "Camosun login · Assignments · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },

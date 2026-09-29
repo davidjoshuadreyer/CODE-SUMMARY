@@ -1,0 +1,63 @@
+/* Original SVG teaching schematics. Coordinates occupy a 460 × 230 canvas. */
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const text=(x,y,s)=>`<text x="${x}" y="${y}">${esc(s)}</text>`;
+const line=(x,y,a,b,arrow=false)=>`<path d="M${x} ${y}L${a} ${b}"${arrow?' marker-end="url(#arrow)"':''}/>`;
+const circle=(x,y,r=8)=>`<circle cx="${x}" cy="${y}" r="${r}"/>`;
+const box=(x,y,w,h)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}"/>`;
+const cross=(x,y)=>line(x-4,y-4,x+4,y+4)+line(x-4,y+4,x+4,y-4);
+const dots=(out=false)=>[50,110,170,220].flatMap(x=>[45,95,150].map(y=>out?circle(x,y,2):cross(x,y))).join('');
+const res=(x,y,w=42)=>line(x,y,x+8,y)+box(x+8,y-7,w-16,14)+line(x+w-8,y,x+w,y);
+const cap=(x,y)=>line(x,y,x+18,y)+line(x+18,y-14,x+18,y+14)+line(x+25,y-14,x+25,y+14)+line(x+25,y,x+43,y);
+const branch=(y,label)=>line(20,y,80,y)+res(80,y,100)+line(180,y,235,y)+text(88,y-14,label);
+const wirepair=()=>line(35,65,230,65)+line(35,155,230,155)+line(70,51,140,51,true)+line(195,171,125,171,true)+line(25,65,25,155)+text(3,115,'d');
+function diagram(q){let s='';switch(q.kind){
+case'flux':s=`<path d="M45 85L100 45L220 125L165 165Z"/>`+line(130,105,178,27,true)+text(185,28,'n̂')+line(130,105,232,105,true)+text(219,95,q.homework===10?'B':'E')+text(166,86,'θ');break;
+case'hemisphere':s=`<path d="M105 45A75 75 0 0 1 105 195"/><ellipse cx="105" cy="120" rx="18" ry="75" stroke-dasharray="4 4"/>`+line(25,120,225,120,true)+text(205,105,'E')+line(105,120,155,66)+text(126,83,'r');break;
+case'cube':s=`<path d="M45 75H155V175H45ZM45 75L95 35H205V135L155 175M155 75L205 35M205 135H95L45 175M95 135V35"/>`+text(160,125,'+y')+text(18,128,'−y')+text(97,200,'+x')+text(105,22,'+z');break;
+case'charges':s=circle(45,115)+circle(125,70)+circle(190,145)+text(30,145,'q₁')+text(112,53,'q₂')+text(177,177,'q₃')+`<ellipse cx="122" cy="116" rx="116" ry="90" stroke-dasharray="4 4"/>`+text(215,40,'S₅');break;
+case'shell':s=circle(115,113,70)+circle(115,113,48)+line(115,113,185,113)+text(143,100,'R')+line(232,113,190,113,true)+text(209,91,'E')+text(89,147,'E = 0');break;
+case'pair':s=circle(45,110,12)+circle(210,110,12)+text(31,85,'q₁')+text(196,85,'q₂')+line(45,150,210,150)+text(100,176,'r')+text(39,220,'Separation between charges');break;
+case'triangle':s=`<path d="M40 175L130 35L220 175Z"/>`+[ [40,175],[130,35],[220,175] ].map(([x,y])=>circle(x,y)).join('')+text(67,96,'r₁')+text(180,96,'r₂')+text(110,198,'base');break;
+case'ring':s=`<ellipse cx="82" cy="115" rx="27" ry="80"/>`+line(25,115,230,115,true)+circle(201,115)+text(65,22,'Ring')+text(199,95,'e⁻')+text(182,146,'x₀')+line(82,115,82,35)+text(91,72,'R');break;
+case'axes':s=line(75,165,225,165,true)+line(75,165,75,35,true)+line(75,165,25,210,true)+text(225,187,'x')+text(87,40,'y')+text(9,218,'z')+text(105,86,'i, j, k')+text(94,117,'right-handed axes');break;
+case'plates':s=line(55,35,55,182)+line(205,35,205,182)+text(40,23,'+')+text(196,23,'−')+line(75,110,185,110,true)+text(121,94,'E')+line(55,205,205,205)+text(119,224,'d');if(q.problem==='23.55')s=line(55,35,55,182)+line(205,35,205,182)+text(38,23,'−')+text(196,23,'+')+line(185,110,75,110,true)+text(121,94,'E')+text(45,214,'0')+text(197,214,'d');break;
+case'pendulum':s=line(75,25,150,25)+line(110,25,110,140)+line(110,25,170,140)+circle(170,140)+line(170,148,170,211,true)+text(181,206,'mg')+line(178,140,239,140,true)+text(203,124,'qE')+line(166,133,126,55,true)+text(134,78,'T')+text(115,98,'θ');break;
+case'coax':s=circle(120,110,25)+circle(120,110,67)+circle(120,110,83)+line(120,110,145,110)+text(119,97,'a')+line(120,110,169,64)+text(165,84,'b')+line(120,110,71,177)+text(89,157,'c / R')+`<circle cx="120" cy="110" r="46" stroke-dasharray="4 4"/>`+text(150,148,'r');if(q.problem==='29.42')s=circle(120,110,83)+`<circle cx="120" cy="110" r="42" stroke-dasharray="4 4"/>`+line(120,110,203,110)+text(175,97,'R')+text(137,137,'r')+text(52,219,'Plate viewed along axis');break;
+case'capnetwork':s=line(8,115,30,115)+cap(30,115)+line(73,115,95,115)+line(95,70,95,160)+line(95,70,108,70)+cap(108,70)+line(151,70,170,70)+line(95,160,108,160)+cap(108,160)+line(151,160,170,160)+line(170,70,170,160)+line(170,115,185,115)+cap(185,115)+text(24,92,'10')+text(123,42,'5')+text(123,192,'8')+text(194,92,'9')+text(65,219,'Capacitances in µF');break;
+case'dielectric':s=box(40,50,185,125)+box(133,50,92,125)+text(65,117,'air')+text(161,117,'κ')+text(46,211,'Plate area viewed face-on');break;
+case'fuel':s=box(45,28,170,175)+box(45,119,170,84)+text(95,76,'air')+text(91,165,'fuel')+line(27,119,27,203)+text(7,166,'h')+line(230,28,230,203)+text(233,116,'L');break;
+case'wire':s=`<path d="M40 65H215M40 145H215"/><ellipse cx="40" cy="105" rx="12" ry="40"/><ellipse cx="215" cy="105" rx="12" ry="40"/>`+line(70,105,175,105,true)+text(120,91,'I')+line(40,177,215,177)+text(119,201,'L')+text(48,223,'Cross-section area A');break;
+case'series':s=line(20,180,20,70)+res(20,70,95)+res(135,70,95)+line(115,70,135,70)+line(230,70,230,180)+line(20,180,230,180)+text(35,46,'R₁')+text(170,46,'R₂')+text(65,212,'Source across series chain');break;
+case'parallel':s=line(20,45,20,185)+line(235,45,235,185)+branch(55,'1.60 Ω')+branch(115,'2.40 Ω')+branch(175,'4.80 Ω');break;
+case'meter':s=line(50,45,50,177)+line(230,45,230,177)+line(50,45,90,45)+res(90,45,100)+line(190,45,230,45)+line(50,111,90,111)+res(90,111,100)+line(190,111,230,111)+line(50,177,65,177)+res(65,177,65)+res(155,177,65)+line(130,177,155,177)+line(220,177,230,177)+text(120,28,'25 Ω')+text(120,92,'15 Ω')+text(64,206,'15 Ω')+text(167,206,'10 Ω')+text(50,229,'Parallel subnetwork only');break;
+case'bulbs':s=line(20,50,230,50)+circle(82,50,18)+circle(170,50,18)+text(85,22,'series')+line(20,110,20,205)+line(230,110,230,205)+line(20,130,230,130)+line(20,185,230,185)+circle(125,130,18)+circle(125,185,18)+text(23,228,'parallel');break;
+case'twosource':s=box(25,35,195,160)+line(123,35,123,195)+box(113,75,20,45)+text(139,99,'30 Ω')+box(210,64,20,40)+text(160,59,'20 Ω')+text(4,110,'+10 V')+text(156,148,'+5 V')+text(145,174,'(top +)');break;
+case'threebranch':s=line(20,40,20,190)+line(235,40,235,190)+branch(45,'2 Ω  +10 V  3 Ω')+branch(120,'1 Ω  +5 V  4 Ω')+branch(190,'10 Ω')+text(182,71,'a')+text(182,146,'b');break;
+case'decay':case'rise':s=line(30,190,237,190,true)+line(30,190,30,25,true)+text(220,214,'t')+text(4,24,q.homework===13?'I':'Q,V')+(q.kind==='rise'?`<path d="M30 190C70 80 125 51 228 45"/>`:`<path d="M30 45C67 152 130 184 228 189"/>`)+line(30,45,228,45)+text(120,229,'Exponential response');break;
+case'cone':s=`<ellipse cx="40" cy="113" rx="12" ry="32"/><ellipse cx="211" cy="113" rx="18" ry="76"/><path d="M40 81L211 37M40 145L211 189"/><ellipse cx="117" cy="113" rx="15" ry="52" stroke-dasharray="3 3"/>`+line(40,210,211,210)+text(117,230,'h')+text(39,112,'r₁')+text(191,110,'r₂')+text(111,30,'slice dx');break;
+case'semipath':s=dots(true)+`<path d="M65 25V80A70 70 0 0 0 205 80" marker-end="url(#arrow)"/>`+text(95,210,'Negative charge');break;
+case'quarterpath':s=dots()+`<path d="M20 177H65A120 120 0 0 0 185 57V20" marker-end="url(#arrow)"/>`+text(67,220,'Quarter-circle arc');break;
+case'orbit':s=circle(125,115,77)+line(125,115,202,115)+text(158,105,'r')+line(125,38,200,38,true)+text(181,24,'v')+circle(202,115)+line(202,115,145,115,true)+text(133,138,'F inward');break;
+case'selector':s=line(40,50,225,50)+line(40,180,225,180)+text(100,36,'− − −')+text(100,205,'+ + +')+line(15,115,150,115,true)+text(32,97,'v')+line(180,152,180,82,true)+text(195,118,'E')+circle(105,80,3)+circle(145,151,3)+text(30,229,'Dots: B out of page');break;
+case'bar':s=line(40,135,220,135)+line(130,133,130,45,true)+line(130,138,130,212,true)+text(145,57,'ILB')+text(145,208,'mg')+cross(65,75)+cross(200,75)+line(70,158,175,158,true)+text(115,181,'I');break;
+case'hinge':s=box(45,50,155,115)+line(45,32,45,190)+text(26,37,'b')+text(26,185,'a')+text(207,43,'c')+text(207,185,'d')+cross(45,112)+circle(200,112,6)+circle(200,112,1)+line(83,25,223,25,true)+text(93,16,'B')+text(56,224,'× in; ⊙ out');break;
+case'loop':s=box(60,45,155,125)+line(137,22,137,205)+text(130,220,'axis')+cross(32,55)+cross(32,147)+line(48,85,48,136,true)+text(28,112,'I')+text(71,238,'Initial orientation');break;
+case'tiltedloop':s=line(80,30,80,180)+line(80,30,170,180)+circle(125,105)+line(125,105,125,184,true)+text(139,182,'mg')+text(87,76,'30°')+line(215,187,215,42,true)+text(229,67,'B')+text(17,218,'Side view along hinge');break;
+case'rail':case'slidingrod':s=line(35,55,235,55)+line(35,180,235,180)+line(35,55,35,180)+line(165,55,165,180)+line(172,118,233,118,true)+text(205,100,q.kind==='rail'?'F':'v')+line(165,151,165,85,true)+text(177,151,'I')+cross(75,85)+cross(112,151)+text(57,225,'Top view; B into page');break;
+case'wires':s=wirepair();break;
+case'semicircle':s=`<path d="M15 145H45A80 80 0 0 1 205 145H239"/>`+circle(125,145,3)+text(115,170,'P')+line(125,145,182,88)+text(158,111,'R')+line(15,165,48,165,true)+line(207,165,239,165,true)+text(97,217,'Clockwise arc current');break;
+case'ampere':s=`<ellipse cx="122" cy="112" rx="114" ry="102"/><ellipse cx="76" cy="114" rx="43" ry="90"/><ellipse cx="76" cy="62" rx="28" ry="25"/><ellipse cx="176" cy="60" rx="22" ry="15"/>`+cross(76,62)+circle(76,164,4)+circle(177,135,4)+text(69,57,'')+text(82,67,'I₁')+text(86,172,'I₂')+text(186,143,'I₃')+text(173,66,'a')+text(65,103,'b')+text(115,176,'c')+text(201,209,'d');break;
+case'cancel':s=line(20,116,235,116)+circle(91,116,7)+circle(220,116,7)+text(78,95,'25 A')+text(198,95,'75 A')+text(80,146,'0')+text(185,146,'0.400 m')+circle(123,116,3)+circle(27,116,3)+text(94,180,'+0.100')+text(3,65,'−0.200')+line(27,73,27,105);break;
+case'fieldgraph':s=circle(30,46,5)+cross(30,100)+text(42,49,'+a, out')+text(42,104,'−a, in')+line(120,90,177,58,true)+line(120,90,177,122,true)+line(120,90,230,90,true)+text(190,81,'Bnet')+line(15,214,233,214,true)+line(124,219,124,137,true)+`<path d="M20 208C65 204 81 160 124 150C167 160 183 204 226 208"/>`+text(201,234,'x')+text(7,147,'B(x)');break;
+case'wireloop':s=line(15,35,232,35)+line(150,22,216,22,true)+box(50,85,155,110)+line(90,73,161,73,true)+line(167,208,96,208,true)+line(27,35,27,85)+text(4,66,'r₁')+line(230,35,230,195)+text(231,124,'r₂');break;
+case'hangingwires':s=line(70,20,177,20)+line(124,20,55,171)+line(124,20,194,171)+line(124,20,124,171)+circle(55,171,8)+circle(194,171,8)+line(55,199,194,199)+text(117,221,'d')+text(80,80,'θ')+text(143,80,'θ');break;
+case'loopwire':s=circle(125,89,60)+line(16,205,235,205,true)+line(125,89,185,89)+text(149,79,'R')+line(214,89,214,205)+text(222,150,'D')+text(84,21,'I₂ clockwise')+text(37,227,'I₁ →');break;
+case'movingrod':s=dots()+line(45,184,199,30)+line(122,108,202,188,true)+text(206,205,'v')+text(28,206,'a')+text(206,28,'b')+line(143,86,80,149,true)+text(66,113,'E');break;
+case'exitingloop':s=line(150,15,150,215)+box(80,50,110,135)+line(185,117,235,117,true)+text(215,97,'v')+cross(40,55)+cross(40,110)+cross(40,172)+cross(110,82)+cross(110,147)+text(8,228,'B in')+text(173,228,'B = 0');break;
+case'inductor':s=line(20,125,55,125)+`<path d="M55 125c0-60 35-60 35 0s35 60 35 0s35-60 35 0s35 60 35 0"/>`+line(195,125,235,125)+text(23,154,'a')+text(221,154,'b')+text(111,199,'L');if(q.problem==='30.11')s+=line(187,38,67,38,true)+text(109,24,'i');break;
+default:throw Error('Missing diagram '+q.kind);
+}
+let y=40; for(const label of q.labels){let lineText='';for(const word of label.split(' ')){if((lineText+' '+word).length>27&&lineText){s+=text(253,y,lineText);y+=20;lineText=word}else lineText+=(lineText?' ':'')+word;}s+=text(253,y,lineText);y+=37;}
+return s;
+}
+module.exports=diagram;

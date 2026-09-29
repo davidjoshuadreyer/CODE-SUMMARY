@@ -1,4 +1,5 @@
-window.TESSELATE_SOLUTIONS={
+/* Assignment reference summaries and checked manual mappings. */
+window.TESSELATE_SOLUTIONS = {
   "f26-32": {
     "title": "MATH 252 · Assignment 1",
     "status": "Worked solutions · 8 of 8 questions",
@@ -674,7 +675,7 @@ window.TESSELATE_SOLUTIONS={
   },
   "f26-0": {
     "title": "PHYS 210 · Homework 1",
-    "status": "Released instructor solution linked",
+    "status": "3 assigned questions · full worked practice, diagrams and references",
     "sections": [
       {
         "title": "Check your completed work",
@@ -684,15 +685,21 @@ window.TESSELATE_SOLUTIONS={
       }
     ],
     "files": [
+      {
+        "label": "Homework 1 · full worked steps, diagrams and answer checks",
+        "url": "phys210/quiz.html?homework=1"
+      },
       {
         "label": "Open released homework solution in D2L",
         "url": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448810/View"
       }
-    ]
+    ],
+    "practice": "phys210/quiz.html?homework=1",
+    "source": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2ODE/PHYS%20210%20Homework%201.pdf?ou=348967"
   },
   "f26-1": {
     "title": "PHYS 210 · Homework 2",
-    "status": "Released instructor solution linked",
+    "status": "4 assigned questions · full worked practice, diagrams and references",
     "sections": [
       {
         "title": "Check your completed work",
@@ -703,10 +710,16 @@ window.TESSELATE_SOLUTIONS={
     ],
     "files": [
       {
+        "label": "Homework 2 · full worked steps, diagrams and answer checks",
+        "url": "phys210/quiz.html?homework=2"
+      },
+      {
         "label": "Open released homework solution in D2L",
         "url": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448809/View"
       }
-    ]
+    ],
+    "practice": "phys210/quiz.html?homework=2",
+    "source": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2ODI/PHYS%20210%20Homework%202.pdf?ou=348967"
   },
   "f26-25": {
     "title": "MATH 250B · Assignment 1",
@@ -751,7 +764,7 @@ window.TESSELATE_SOLUTIONS={
   },
   "f26-2": {
     "title": "PHYS 210 · Homework 3",
-    "status": "4 assigned questions · worked references and diagrams",
+    "status": "6 assigned questions · full worked practice, diagrams and references",
     "sections": [
       {
         "problem": "22.1",
@@ -764,7 +777,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             74
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=3#q-22-1"
       },
       {
         "problem": "22.2",
@@ -778,7 +792,8 @@ window.TESSELATE_SOLUTIONS={
             74,
             75
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=3#q-22-2"
       },
       {
         "problem": "22.5",
@@ -788,7 +803,8 @@ window.TESSELATE_SOLUTIONS={
           "Take E toward the dome. The base’s outward normal points opposite E, so Φbase = −Eπr². Therefore Φdome = +Eπr². Reversing E reverses the sign; the magnitude stays Eπr².",
           "The curved area is 2πr², but its normals are not all parallel to E. Use the projected circular area πr², not the curved area. This question differs from manual 22.5."
         ],
-        "diagram": "hemisphere"
+        "diagram": "hemisphere",
+        "practice": "phys210/quiz.html?homework=3#q-22-5"
       },
       {
         "problem": "22.6",
@@ -801,14 +817,55 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             76
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=3#q-22-6"
+      },
+      {
+        "problem": "22.8",
+        "title": "22.8 · Flux counts enclosed charge",
+        "steps": [
+          "Gauss’s law depends on total enclosed charge.",
+          "452, −881, −429, 723, −158 N m²/C, respectively.",
+          "Redistributing charge within each sphere changes local fields but not these fluxes, provided the same charges remain enclosed."
+        ],
+        "manual": {
+          "problem": "22.8",
+          "pages": [
+            76
+          ]
+        },
+        "practice": "phys210/quiz.html?homework=3#q-22-8"
+      },
+      {
+        "problem": "22.9",
+        "title": "22.9 · Charged paint on a sphere",
+        "steps": [
+          "Spherical symmetry makes the shell field zero inside and point-like outside.",
+          "0; 1.22 × 10⁸ N/C inward; 3.64 × 10⁷ N/C inward.",
+          "Both exterior fields point inward. Use 0.110 m from the centre for the last part."
+        ],
+        "manual": {
+          "problem": "22.9",
+          "pages": [
+            76,
+            77
+          ]
+        },
+        "practice": "phys210/quiz.html?homework=3#q-22-9"
       }
     ],
-    "source": "https://online.camosun.ca/d2l/lms/dropbox/dropbox.d2l?ou=348967"
+    "source": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2ODM/PHYS%20210%20Homework%203%20v2.pdf?ou=348967",
+    "practice": "phys210/quiz.html?homework=3",
+    "files": [
+      {
+        "label": "Homework 3 · full worked steps, diagrams and answer checks",
+        "url": "phys210/quiz.html?homework=3"
+      }
+    ]
   },
   "f26-3": {
     "title": "PHYS 210 · Homework 4",
-    "status": "5 of 5 questions · full worked steps, diagrams and answer checks",
+    "status": "5 assigned questions · full worked practice, diagrams and references",
     "sections": [
       {
         "problem": "22.15",
@@ -818,7 +875,8 @@ window.TESSELATE_SOLUTIONS={
           "|Q| = 2.16×10⁻⁹ C; N = |Q|/e = 1.35×10¹⁰ excess electrons.",
           "Q is negative and E points inward. Use the radius, not the diameter. Manual 22.15 is a different question."
         ],
-        "diagram": "hw4-22-15"
+        "diagram": "hw4-22-15",
+        "practice": "phys210/quiz.html?homework=4#q-22-15"
       },
       {
         "problem": "22.19",
@@ -837,7 +895,8 @@ window.TESSELATE_SOLUTIONS={
             80
           ]
         },
-        "diagram": "hw4-22-19"
+        "diagram": "hw4-22-19",
+        "practice": "phys210/quiz.html?homework=4#q-22-19"
       },
       {
         "problem": "22.21",
@@ -855,7 +914,8 @@ window.TESSELATE_SOLUTIONS={
             81
           ]
         },
-        "diagram": "hw4-22-21"
+        "diagram": "hw4-22-21",
+        "practice": "phys210/quiz.html?homework=4#q-22-21"
       },
       {
         "problem": "22.33",
@@ -872,7 +932,8 @@ window.TESSELATE_SOLUTIONS={
             84
           ]
         },
-        "diagram": "hw4-22-33"
+        "diagram": "hw4-22-33",
+        "practice": "phys210/quiz.html?homework=4#q-22-33"
       },
       {
         "problem": "22.37",
@@ -883,20 +944,22 @@ window.TESSELATE_SOLUTIONS={
           "With no flux through other faces, Φnet = −67.5 N·m²/C and Qenclosed = ε₀Φnet = −5.98×10⁻¹⁰ C.",
           "Gauss’s law fixes the net enclosed charge. It does not separate the local field into internal and external contributions: outside charges can contribute field with zero net closed-surface flux. The flux calculation alone therefore cannot rule out outside charges."
         ],
-        "diagram": "hw4-22-37"
+        "diagram": "hw4-22-37",
+        "practice": "phys210/quiz.html?homework=4#q-22-37"
       }
     ],
     "source": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2ODQ/PHYS%20210%20Homework%20_4.pdf?ou=348967",
     "files": [
       {
-        "label": "Practise Homework 4 · hints, diagrams and answer checks",
-        "url": "phys210/quiz.html#q-22-15"
+        "label": "Homework 4 · full worked steps, diagrams and answer checks",
+        "url": "phys210/quiz.html?homework=4"
       }
-    ]
+    ],
+    "practice": "phys210/quiz.html?homework=4"
   },
   "f26-4": {
     "title": "PHYS 210 · Homework 5",
-    "status": "6 assigned questions · worked references and diagrams",
+    "status": "6 assigned questions · full worked practice, diagrams and references",
     "sections": [
       {
         "problem": "23.1",
@@ -909,7 +972,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             115
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=5#q-23-1"
       },
       {
         "problem": "23.5",
@@ -923,7 +987,8 @@ window.TESSELATE_SOLUTIONS={
             116,
             117
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=5#q-23-5"
       },
       {
         "problem": "23.7",
@@ -936,7 +1001,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             118
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=5#q-23-7"
       },
       {
         "problem": "23.8",
@@ -949,7 +1015,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             118
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=5#q-23-8"
       },
       {
         "problem": "23.19",
@@ -962,7 +1029,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             123
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=5#q-23-19"
       },
       {
         "problem": "23.27",
@@ -976,14 +1044,22 @@ window.TESSELATE_SOLUTIONS={
             126,
             127
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=5#q-23-27"
       }
     ],
-    "source": "https://online.camosun.ca/d2l/lms/dropbox/dropbox.d2l?ou=348967"
+    "source": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2ODU/PHYS%20210%20Homework%205.pdf?ou=348967",
+    "practice": "phys210/quiz.html?homework=5",
+    "files": [
+      {
+        "label": "Homework 5 · full worked steps, diagrams and answer checks",
+        "url": "phys210/quiz.html?homework=5"
+      }
+    ]
   },
   "f26-5": {
     "title": "PHYS 210 · Homework 6",
-    "status": "6 assigned questions · worked references and diagrams",
+    "status": "6 assigned questions · full worked practice, diagrams and references",
     "sections": [
       {
         "problem": "23.44",
@@ -996,7 +1072,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             132
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=6#q-23-44"
       },
       {
         "problem": "23.55",
@@ -1009,7 +1086,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             139
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=6#q-23-55"
       },
       {
         "problem": "23.59",
@@ -1022,7 +1100,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             140
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=6#q-23-59"
       },
       {
         "problem": "24.1",
@@ -1035,7 +1114,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             158
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=6#q-24-1"
       },
       {
         "problem": "24.3",
@@ -1048,7 +1128,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             159
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=6#q-24-3"
       },
       {
         "problem": "24.7",
@@ -1061,14 +1142,22 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             160
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=6#q-24-7"
       }
     ],
-    "source": "https://online.camosun.ca/d2l/lms/dropbox/dropbox.d2l?ou=348967"
+    "source": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2ODY/PHYS%20210%20Homework%206.pdf?ou=348967",
+    "practice": "phys210/quiz.html?homework=6",
+    "files": [
+      {
+        "label": "Homework 6 · full worked steps, diagrams and answer checks",
+        "url": "phys210/quiz.html?homework=6"
+      }
+    ]
   },
   "f26-6": {
     "title": "PHYS 210 · Homework 7",
-    "status": "8 assigned questions · worked references and diagrams",
+    "status": "8 assigned questions · full worked practice, diagrams and references",
     "sections": [
       {
         "problem": "24.7",
@@ -1081,7 +1170,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             160
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=7#q-hw7-24-7"
       },
       {
         "problem": "24.8",
@@ -1095,7 +1185,8 @@ window.TESSELATE_SOLUTIONS={
             159,
             160
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=7#q-24-8"
       },
       {
         "problem": "24.12",
@@ -1108,7 +1199,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             161
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=7#q-24-12"
       },
       {
         "problem": "24.14",
@@ -1121,7 +1213,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             162
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=7#q-24-14"
       },
       {
         "problem": "24.24",
@@ -1134,7 +1227,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             167
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=7#q-24-24"
       },
       {
         "problem": "24.36",
@@ -1145,7 +1239,8 @@ window.TESSELATE_SOLUTIONS={
           "With 12.0 mm posterboard, A = Cd/(κε₀) = 0.452 m² (a square about 0.672 m on a side).",
           "For the same thickness and target capacitance, a smaller dielectric constant requires a larger area. Teflon therefore needs more area than paper. This question has no matching verified solution in the supplied manual."
         ],
-        "diagram": "capacitor"
+        "diagram": "capacitor",
+        "practice": "phys210/quiz.html?homework=7#q-24-36"
       },
       {
         "problem": "24.66",
@@ -1158,7 +1253,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             186
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=7#q-24-66"
       },
       {
         "problem": "24.68",
@@ -1171,14 +1267,22 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             187
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=7#q-24-68"
       }
     ],
-    "source": "https://online.camosun.ca/d2l/lms/dropbox/dropbox.d2l?ou=348967"
+    "source": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2ODc/PHYS%20210%20Homework%207.pdf?ou=348967",
+    "practice": "phys210/quiz.html?homework=7",
+    "files": [
+      {
+        "label": "Homework 7 · full worked steps, diagrams and answer checks",
+        "url": "phys210/quiz.html?homework=7"
+      }
+    ]
   },
   "f26-7": {
     "title": "PHYS 210 · Homework 8",
-    "status": "8 assigned questions · worked references and diagrams",
+    "status": "8 assigned questions · full worked practice, diagrams and references",
     "sections": [
       {
         "problem": "25.1",
@@ -1191,7 +1295,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             197
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=8#q-25-1"
       },
       {
         "problem": "25.2",
@@ -1204,7 +1309,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             197
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=8#q-25-2"
       },
       {
         "problem": "25.5",
@@ -1214,7 +1320,8 @@ window.TESSELATE_SOLUTIONS={
           "For L = 0.710 m, I = 4.85 A, n = 8.5×10²⁸ m⁻³ and d = 2.05 mm: vd = 1.08×10⁻⁴ m/s and t = 6.58×10³ s = 1.83 h.",
           "For d = 4.12 mm: vd = 2.67×10⁻⁵ m/s and t = 2.66×10⁴ s = 7.38 h. At fixed current, a larger area means a smaller drift speed and a longer transit time.",
           "This is electron drift, not the time for an electrical signal to propagate. Manual 25.5 is a different question."
-        ]
+        ],
+        "practice": "phys210/quiz.html?homework=8#q-25-5"
       },
       {
         "problem": "25.11",
@@ -1227,7 +1334,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             200
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=8#q-25-11"
       },
       {
         "problem": "25.12",
@@ -1240,7 +1348,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             200
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=8#q-25-12"
       },
       {
         "problem": "25.16",
@@ -1253,7 +1362,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             201
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=8#q-25-16"
       },
       {
         "problem": "25.25",
@@ -1267,7 +1377,8 @@ window.TESSELATE_SOLUTIONS={
             202,
             203
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=8#q-25-25"
       },
       {
         "problem": "25.21",
@@ -1280,14 +1391,22 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             202
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=8#q-25-21"
       }
     ],
-    "source": "https://online.camosun.ca/d2l/lms/dropbox/dropbox.d2l?ou=348967"
+    "source": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2ODg/PHYS%20210%20Homework%208.pdf?ou=348967",
+    "practice": "phys210/quiz.html?homework=8",
+    "files": [
+      {
+        "label": "Homework 8 · full worked steps, diagrams and answer checks",
+        "url": "phys210/quiz.html?homework=8"
+      }
+    ]
   },
   "f26-8": {
     "title": "PHYS 210 · Homework 9",
-    "status": "10 assigned questions · worked references and diagrams",
+    "status": "10 assigned questions · full worked practice, diagrams and references",
     "sections": [
       {
         "problem": "26.3",
@@ -1300,7 +1419,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             227
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=9#q-26-3"
       },
       {
         "problem": "26.6",
@@ -1313,7 +1433,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             228
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=9#q-26-6"
       },
       {
         "problem": "26.8",
@@ -1323,7 +1444,8 @@ window.TESSELATE_SOLUTIONS={
           "Currents through 1.60 Ω, 2.40 Ω and 4.80 Ω are 17.5 A, 11.7 A and 5.83 A, respectively. Their sum is Itotal = 35.0 A = 28.0/0.800.",
           "Power in each branch is V²/R: 490 W, 327 W and 163 W. Total power is 980 W, agreeing with VItotal.",
           "The voltage across each resistor is 28.0 V. Manual 26.8 uses different values; use these handout values."
-        ]
+        ],
+        "practice": "phys210/quiz.html?homework=9#q-26-8"
       },
       {
         "problem": "26.21",
@@ -1337,7 +1459,8 @@ window.TESSELATE_SOLUTIONS={
             235,
             236
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=9#q-26-21"
       },
       {
         "problem": "26.24",
@@ -1350,7 +1473,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             238
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=9#q-26-24"
       },
       {
         "problem": "26.28",
@@ -1363,7 +1487,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             240
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=9#q-26-28"
       },
       {
         "problem": "26.39",
@@ -1376,7 +1501,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             245
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=9#q-26-39"
       },
       {
         "problem": "26.43",
@@ -1389,7 +1515,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             246
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=9#q-26-43"
       },
       {
         "problem": "26.51",
@@ -1403,7 +1530,8 @@ window.TESSELATE_SOLUTIONS={
             248,
             249
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=9#q-26-51"
       },
       {
         "problem": "25.59",
@@ -1416,14 +1544,22 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             213
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=9#q-25-59"
       }
     ],
-    "source": "https://online.camosun.ca/d2l/lms/dropbox/dropbox.d2l?ou=348967"
+    "source": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2ODk/PHYS%20210%20Homework%209.pdf?ou=348967",
+    "practice": "phys210/quiz.html?homework=9",
+    "files": [
+      {
+        "label": "Homework 9 · full worked steps, diagrams and answer checks",
+        "url": "phys210/quiz.html?homework=9"
+      }
+    ]
   },
   "f26-9": {
     "title": "PHYS 210 · Homework 10",
-    "status": "9 assigned questions · worked references and diagrams",
+    "status": "9 assigned questions · full worked practice, diagrams and references",
     "sections": [
       {
         "problem": "27.1",
@@ -1436,7 +1572,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             271
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=10#q-27-1"
       },
       {
         "problem": "27.4",
@@ -1449,7 +1586,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             272
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=10#q-27-4"
       },
       {
         "problem": "27.7",
@@ -1459,7 +1597,8 @@ window.TESSELATE_SOLUTIONS={
           "qvy = (7.80×10⁻⁶)(−3.80×10³) = −0.02964. Thus Bz = (7.60×10⁻³)/(−0.02964) = −0.256 T and Bx = −(−5.20×10⁻³)/(−0.02964) = −0.175 T.",
           "By cannot be determined: a field parallel to the velocity produces no magnetic force.",
           "B·F = BxFx + BzFz = 0 using the unrounded components, so B and F are perpendicular. The supplied manual’s 27.7 is a different question."
-        ]
+        ],
+        "practice": "phys210/quiz.html?homework=10#q-27-7"
       },
       {
         "problem": "27.10",
@@ -1472,7 +1611,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             274
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=10#q-27-10"
       },
       {
         "problem": "27.19",
@@ -1485,7 +1625,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             277
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=10#q-27-19"
       },
       {
         "problem": "27.21",
@@ -1499,7 +1640,8 @@ window.TESSELATE_SOLUTIONS={
             277,
             278
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=10#q-27-21"
       },
       {
         "problem": "27.24",
@@ -1512,7 +1654,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             278
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=10#q-27-24"
       },
       {
         "problem": "27.27",
@@ -1525,7 +1668,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             278
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=10#q-27-27"
       },
       {
         "problem": "27.29",
@@ -1538,14 +1682,22 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             279
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=10#q-27-29"
       }
     ],
-    "source": "https://online.camosun.ca/d2l/lms/dropbox/dropbox.d2l?ou=348967"
+    "source": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2OTE/PHYS%20210%20Hmwk%2010.pdf?ou=348967",
+    "practice": "phys210/quiz.html?homework=10",
+    "files": [
+      {
+        "label": "Homework 10 · full worked steps, diagrams and answer checks",
+        "url": "phys210/quiz.html?homework=10"
+      }
+    ]
   },
   "f26-10": {
     "title": "PHYS 210 · Homework 11",
-    "status": "6 assigned questions · worked references and diagrams",
+    "status": "6 assigned questions · full worked practice, diagrams and references",
     "sections": [
       {
         "problem": "27.37",
@@ -1559,7 +1711,8 @@ window.TESSELATE_SOLUTIONS={
             281,
             282
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=11#q-27-37"
       },
       {
         "problem": "27.41",
@@ -1573,7 +1726,8 @@ window.TESSELATE_SOLUTIONS={
             283,
             284
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=11#q-27-41"
       },
       {
         "problem": "27.42",
@@ -1586,7 +1740,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             284
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=11#q-27-42"
       },
       {
         "problem": "27.56",
@@ -1599,7 +1754,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             290
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=11#q-27-56"
       },
       {
         "problem": "27.65",
@@ -1612,7 +1768,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             293
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=11#q-27-65"
       },
       {
         "problem": "27.69",
@@ -1626,14 +1783,22 @@ window.TESSELATE_SOLUTIONS={
             295,
             296
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=11#q-27-69"
       }
     ],
-    "source": "https://online.camosun.ca/d2l/lms/dropbox/dropbox.d2l?ou=348967"
+    "source": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2OTI/PHYS%20210%20Homework%2011.pdf?ou=348967",
+    "practice": "phys210/quiz.html?homework=11",
+    "files": [
+      {
+        "label": "Homework 11 · full worked steps, diagrams and answer checks",
+        "url": "phys210/quiz.html?homework=11"
+      }
+    ]
   },
   "f26-11": {
     "title": "PHYS 210 · Homework 12",
-    "status": "10 assigned questions · worked references and diagrams",
+    "status": "10 assigned questions · full worked practice, diagrams and references",
     "sections": [
       {
         "problem": "28.29",
@@ -1646,7 +1811,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             325
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=12#q-28-29"
       },
       {
         "problem": "28.34",
@@ -1659,7 +1825,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             325
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=12#q-28-34"
       },
       {
         "problem": "28.40",
@@ -1672,7 +1839,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             328
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=12#q-28-40"
       },
       {
         "problem": "28.43",
@@ -1685,7 +1853,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             329
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=12#q-28-43"
       },
       {
         "problem": "28.57",
@@ -1695,7 +1864,8 @@ window.TESSELATE_SOLUTIONS={
           "Same-direction currents: the zero lies between the wires. If x is measured from the 25.0 A wire, 25/x = 75/(0.400−x), so x = 0.100 m; it is 0.300 m from the 75.0 A wire.",
           "Opposite-direction currents: the fields add between the wires. Outside, on the 25.0 A side, 25/x = 75/(x+0.400), giving x = 0.200 m, or 0.600 m from the 75.0 A wire.",
           "Each location extends along a line parallel to the wires. The zero must be closer to the smaller current. Manual 28.51–28.52 illustrate the method with different values."
-        ]
+        ],
+        "practice": "phys210/quiz.html?homework=12#q-28-57"
       },
       {
         "problem": "28.61",
@@ -1704,7 +1874,8 @@ window.TESSELATE_SOLUTIONS={
           "The stated maximum electrical input power is P = 65 hp × 746 W/hp = 48,490 W. Current I = P/V = 48,490/600 = 80.8 A.",
           "The magnetic force per unit length has magnitude F/L = μ₀I²/(2πd) = (2×10⁻⁷)(80.8)²/0.55 = 2.38×10⁻³ N/m.",
           "Direction check: a two-cable DC supply has outgoing and return currents in opposite directions, so its magnetic force is repulsive. The handout calls it “attractive”; the magnitude above is unchanged, but attraction would require currents in the same direction."
-        ]
+        ],
+        "practice": "phys210/quiz.html?homework=12#q-28-61"
       },
       {
         "problem": "28.62",
@@ -1718,7 +1889,8 @@ window.TESSELATE_SOLUTIONS={
             334,
             335
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=12#q-28-62"
       },
       {
         "problem": "28.64",
@@ -1731,20 +1903,22 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             336
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=12#q-28-64"
       },
       {
         "problem": "28.65",
         "title": "28.65 · Two suspended wires",
         "steps": [
-          "The separation is 2ℓ sin θ. Balance horizontal magnetic force per length against (mass per length)g tan θ to obtain I ≈ 73.4 A."
+          "The separation is 2ℓ sin θ. Balance horizontal magnetic force per length against (mass per length)g tan θ to obtain I ≈ 23.2 A."
         ],
         "manual": {
           "problem": "28.61",
           "pages": [
             337
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=12#q-28-65"
       },
       {
         "problem": "28.72",
@@ -1757,14 +1931,22 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             340
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=12#q-28-72"
       }
     ],
-    "source": "https://online.camosun.ca/d2l/lms/dropbox/dropbox.d2l?ou=348967"
+    "source": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2OTM/PHYS%20210%20Homework%2012.pdf?ou=348967",
+    "practice": "phys210/quiz.html?homework=12",
+    "files": [
+      {
+        "label": "Homework 12 · full worked steps, diagrams and answer checks",
+        "url": "phys210/quiz.html?homework=12"
+      }
+    ]
   },
   "f26-12": {
     "title": "PHYS 210 · Homework 13",
-    "status": "8 assigned questions · worked references and diagrams",
+    "status": "8 assigned questions · full worked practice, diagrams and references",
     "sections": [
       {
         "problem": "29.25",
@@ -1777,7 +1959,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             360
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=13#q-29-25"
       },
       {
         "problem": "29.26",
@@ -1790,7 +1973,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             360
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=13#q-29-26"
       },
       {
         "problem": "29.29",
@@ -1803,7 +1987,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             361
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=13#q-29-29"
       },
       {
         "problem": "29.42",
@@ -1817,7 +2002,8 @@ window.TESSELATE_SOLUTIONS={
             364,
             365
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=13#q-29-42"
       },
       {
         "problem": "30.9",
@@ -1830,7 +2016,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             390
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=13#q-30-9"
       },
       {
         "problem": "30.11",
@@ -1843,7 +2030,8 @@ window.TESSELATE_SOLUTIONS={
           "pages": [
             390
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=13#q-30-11"
       },
       {
         "problem": "30.23",
@@ -1857,7 +2045,8 @@ window.TESSELATE_SOLUTIONS={
             393,
             394
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=13#q-30-23"
       },
       {
         "problem": "30.25",
@@ -1871,10 +2060,18 @@ window.TESSELATE_SOLUTIONS={
             394,
             395
           ]
-        }
+        },
+        "practice": "phys210/quiz.html?homework=13#q-30-25"
       }
     ],
-    "source": "https://online.camosun.ca/d2l/lms/dropbox/dropbox.d2l?ou=348967"
+    "source": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2OTQ/PHYS%20210%20Homework%2013%20new.pdf?ou=348967",
+    "practice": "phys210/quiz.html?homework=13",
+    "files": [
+      {
+        "label": "Homework 13 · full worked steps, diagrams and answer checks",
+        "url": "phys210/quiz.html?homework=13"
+      }
+    ]
   },
   "f26-52": {
     "title": "ECET 250E · Lab 4 · Resistive DC Circuits",

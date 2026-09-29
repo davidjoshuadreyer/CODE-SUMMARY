@@ -10,7 +10,7 @@ assert(Math.abs((2-Math.sqrt(1))**(-1/3)-1)<1e-12);
 assert(Math.abs(Math.tan(Math.PI/4)-1)<1e-12);
 console.log('PASS: reference file links, differential-equation residuals and initial conditions.');
 const S=ctx.window.TESSELATE_SOLUTIONS;
-const expectedCounts=[4,5,6,6,8,8,10,9,6,10,8];
+const expectedCounts=[6,5,6,6,8,8,10,9,6,10,8];
 for(let i=0;i<expectedCounts.length;i++){
  const entry=S[`f26-${i+2}`];assert.equal(entry.sections.length,expectedCounts[i]);
  assert.equal(new Set(entry.sections.map(s=>s.problem)).size,entry.sections.length);
@@ -26,4 +26,4 @@ const rows=S['f26-52'].sections[0].table.rows;
 for(const [j,a,b] of [[0,0,1],[1,1,2],[2,2,3],[3,3,4],[4,0,2],[5,3,2],[6,4,2]])near(Number(rows[j][1].replace('−','-').split(' ')[0]),nodes[a]-nodes[b]);
 near(0.710*8.5e28*1.602176634e-19*Math.PI*(.00205**2)/4/4.85,6.58e3,.001);
 near(-.17543859649122806*.0076+(-.2564102564102564)*(-.0052),0);
-console.log('PASS: 80-question coverage, edition mappings, circuit polarity and numerical checks.');
+console.log('PASS: 82-question coverage, edition mappings, circuit polarity and numerical checks.');
