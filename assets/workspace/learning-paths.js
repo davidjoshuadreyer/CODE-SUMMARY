@@ -71,6 +71,11 @@ window.TESSELATE_PATHS = {
     ],
     "practice": [
       {
+        "title": "Midterm 1 · Quick phone walkthrough",
+        "url": "phys210/quick-midterm.html",
+        "summary": "Tap the next solution step. Multiple choice, instant explanations, no handwriting or calculator."
+      },
+      {
         "title": "Midterm 1 · Printable practice test",
         "url": "phys210/quiz.html#midterm-1-practice",
         "summary": "75-minute mock test PDF with diagrams and working space, plus a separate worked answer key."

@@ -271,6 +271,17 @@ window.TESSELATE_CATALOG = {
       "builtin": true
     },
     {
+      "id": "page-cGh5czIxMC9xdWljay1taWR0ZXJtLmh0bWw",
+      "courseId": "phys210",
+      "title": "Start here · Study guide",
+      "kind": "Study notes",
+      "url": "phys210/quick-midterm.html",
+      "body": "",
+      "description": "",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
       "id": "page-cGh5czIxMC9xdWl6Lmh0bWw",
       "courseId": "phys210",
       "title": "Practice quiz",
