@@ -71,6 +71,11 @@ window.TESSELATE_PATHS = {
     ],
     "practice": [
       {
+        "title": "Midterm 1 · Printable practice test",
+        "url": "phys210/quiz.html#midterm-1-practice",
+        "summary": "75-minute mock test PDF with diagrams and working space, plus a separate worked answer key."
+      },
+      {
         "title": "Homework 1–13 · 89 worked problems",
         "url": "phys210/quiz.html",
         "summary": "Given, Find, drawings, notes, hints, and step-by-step solutions."
