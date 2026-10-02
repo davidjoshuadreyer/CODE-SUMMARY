@@ -1937,6 +1937,28 @@ window.TESSELATE_CATALOG = {
       "builtin": true
     },
     {
+      "id": "page-phys210-midterm1-test",
+      "courseId": "phys210",
+      "title": "Midterm 1 · Printable practice test (PDF)",
+      "kind": "Practice test",
+      "url": "phys210/midterm-1-practice-test.pdf",
+      "body": "",
+      "description": "75-minute mock test with diagrams, working space and optional bonus questions, based on the October 2 topic hints.",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
+      "id": "page-phys210-midterm1-key",
+      "courseId": "phys210",
+      "title": "Midterm 1 · Practice test answer key (PDF)",
+      "kind": "Study notes",
+      "url": "phys210/midterm-1-practice-answer-key.pdf",
+      "body": "",
+      "description": "Separate worked solutions and marking guide. Open after attempting the mock test.",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
       "id": "page-phys210-worked-pdf",
       "courseId": "phys210",
       "title": "Tutorial 2 · Illustrated worked solutions (21-page PDF)",
