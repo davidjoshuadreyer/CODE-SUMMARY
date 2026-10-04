@@ -57,7 +57,8 @@ window.SETUP_QUESTIONS = [
     "source": "Assignment 1 · Question 4",
     "url": "pdfs/assignment-1.pdf#page=1",
     "notes": "pdfs/section-2-5-solutions-by-substitutions.pdf#page=4",
-    "homework": true
+    "homework": true,
+    "recommended": "Zill 10e · §2.5 #5"
   },
   {
     "id": "a5",
@@ -87,7 +88,8 @@ window.SETUP_QUESTIONS = [
     "source": "Assignment 1 · Question 6",
     "url": "pdfs/assignment-1.pdf#page=1",
     "notes": "pdfs/section-2-5-solutions-by-substitutions.pdf#page=18",
-    "homework": true
+    "homework": true,
+    "recommended": "Zill 10e · §2.5 #23"
   },
   {
     "id": "a7",
@@ -282,7 +284,8 @@ window.SETUP_QUESTIONS = [
     "source": "Notes §2.5 · Example 3",
     "url": "pdfs/section-2-5-solutions-by-substitutions.pdf#page=7",
     "notes": "pdfs/section-2-5-solutions-by-substitutions.pdf#page=7",
-    "homework": false
+    "homework": false,
+    "recommended": "Zill 10e · §2.5 #11"
   },
   {
     "id": "b1",
@@ -388,5 +391,175 @@ window.SETUP_QUESTIONS = [
     "url": "pdfs/section-3-1-linear-models.pdf#page=17",
     "notes": "pdfs/section-3-1-linear-models.pdf#page=17",
     "homework": false
+  },
+  {
+    "id": "r225",
+    "equation": "xy'=4y",
+    "options": [
+      "Separate: \\;\\frac{dy}{y}=4\\frac{dx}{x}",
+      "Separate: \\;y\\,dy=4x\\,dx",
+      "Bernoulli: \\;n=4,\\quad u=y^{-3}"
+    ],
+    "why": "Divide by x, then separate the y factor. The 4 is a coefficient, not the power of y. This equation is also linear; keep y=0 separately after division by y.",
+    "topic": "Separable",
+    "source": "Zill 10e · §2.2 #5 · recommended homework",
+    "url": "https://sites.google.com/site/cazelais/home/math252/homework",
+    "notes": "pdfs/section-2-2-separable-equations.pdf#page=2",
+    "homework": false,
+    "textbook": true,
+    "recommended": "Zill 10e · §2.2 #5"
+  },
+  {
+    "id": "r227",
+    "equation": "y'=e^{3x+2y}",
+    "options": [
+      "Separate: \\;e^{-2y}\\,dy=e^{3x}\\,dx",
+      "Separate: \\;e^{2y}\\,dy=e^{3x}\\,dx",
+      "Linear: \\;P(x)=2,\\quad f(x)=e^{3x}"
+    ],
+    "why": "Use e^(3x+2y)=e^(3x)e^(2y). Divide by e^(2y), giving e^(−2y) on the left. A variable inside an exponential does not make the equation linear.",
+    "topic": "Separable",
+    "source": "Zill 10e · §2.2 #7 · recommended homework",
+    "url": "https://sites.google.com/site/cazelais/home/math252/homework",
+    "notes": "pdfs/section-2-2-separable-equations.pdf#page=2",
+    "homework": false,
+    "textbook": true,
+    "recommended": "Zill 10e · §2.2 #7"
+  },
+  {
+    "id": "r2315",
+    "equation": "y\\,dx-4(x+y^6)\\,dy=0",
+    "options": [
+      "\\text{Linear in }x(y):\\quad\\frac{dx}{dy}-\\frac4y x=4y^5",
+      "\\text{Linear in }y(x):\\quad P(x)=y^6",
+      "Separate: \\;\\frac{dx}{x}=\\frac{4\\,dy}{y+y^6}"
+    ],
+    "why": "Try swapping which variable is dependent. Divide y dx/dy=4x+4y⁶ by y. The result is linear in x as a function of y; the integrating factor is y^(−4). This is also Example 4 in the linear-equation notes.",
+    "topic": "Linear",
+    "source": "Zill 10e · §2.3 #15 · recommended homework",
+    "url": "https://sites.google.com/site/cazelais/home/math252/homework",
+    "notes": "pdfs/section-2-3-linear-equations.pdf#page=13",
+    "homework": false,
+    "textbook": true,
+    "recommended": "Zill 10e · §2.3 #15"
+  },
+  {
+    "id": "r243",
+    "equation": "(5x+4y)\\,dx+(4x-8y^3)\\,dy=0",
+    "options": [
+      "Exact check: \\;M_y=4=N_x",
+      "Exact check: \\;M_x=5=N_y",
+      "Homogeneous: \\;y=vx\\text{ since all terms have degree 1}"
+    ],
+    "why": "Cross-partials match: ∂(5x+4y)/∂y=4 and ∂(4x−8y³)/∂x=4. The y³ term prevents the claimed equal-degree argument.",
+    "topic": "Exact",
+    "source": "Zill 10e · §2.4 #3 · recommended homework",
+    "url": "https://sites.google.com/site/cazelais/home/math252/homework",
+    "notes": "pdfs/section-2-4-exact-equations.pdf#page=3",
+    "homework": false,
+    "textbook": true,
+    "recommended": "Zill 10e · §2.4 #3"
+  },
+  {
+    "id": "r247",
+    "equation": "(x^2-y^2)\\,dx+(x^2-2xy)\\,dy=0",
+    "options": [
+      "\\text{Not exact: }M_y=-2y,\\quad N_x=2x-2y",
+      "\\text{Exact because it is written as }M\\,dx+N\\,dy=0",
+      "\\text{Exact: }M_y=N_x=-2y"
+    ],
+    "why": "Do the derivatives before choosing exactness. The derivative of x² in N is 2x, so the cross-partials do not agree. The textbook asks whether it is exact; it is not. A homogeneous substitution is an alternative if asked to solve it.",
+    "topic": "Exact",
+    "source": "Zill 10e · §2.4 #7 · recommended homework",
+    "url": "https://sites.google.com/site/cazelais/home/math252/homework",
+    "notes": "pdfs/section-2-4-exact-equations.pdf#page=3",
+    "homework": false,
+    "textbook": true,
+    "recommended": "Zill 10e · §2.4 #7"
+  },
+  {
+    "id": "r251",
+    "equation": "(x-y)\\,dx+x\\,dy=0",
+    "options": [
+      "Homogeneous: \\;y=vx,\\quad v+xv\\prime=v-1",
+      "Homogeneous: \\;y=vx,\\quad y\\prime=xv\\prime",
+      "Separate: \\;\\frac{dy}{y}=\\frac{dx}{x-1}"
+    ],
+    "why": "First write y′=y/x−1. The ratio y/x is the clue. The product rule gives y′=v+xv′. This one can also be solved as a linear equation.",
+    "topic": "Homogeneous",
+    "source": "Zill 10e · §2.5 #1 · recommended homework",
+    "url": "https://sites.google.com/site/cazelais/home/math252/homework",
+    "notes": "pdfs/section-2-5-solutions-by-substitutions.pdf#page=4",
+    "homework": false,
+    "textbook": true,
+    "recommended": "Zill 10e · §2.5 #1"
+  },
+  {
+    "id": "r257",
+    "equation": "y'=\\frac{y-x}{y+x}",
+    "options": [
+      "Homogeneous: \\;y=vx,\\quad v+xv\\prime=\\frac{v-1}{v+1}",
+      "Linear: \\;P(x)=\\frac1{y+x}",
+      "Separate: \\;(y+x)\\,dy=(y-x)\\,dx\\text{ is separated}"
+    ],
+    "why": "Divide numerator and denominator by x. The right side becomes (v−1)/(v+1). Merely moving the denominator across does not separate variables if both sides still mix x and y.",
+    "topic": "Homogeneous",
+    "source": "Zill 10e · §2.5 #7 · recommended homework",
+    "url": "https://sites.google.com/site/cazelais/home/math252/homework",
+    "notes": "pdfs/section-2-5-solutions-by-substitutions.pdf#page=4",
+    "homework": false,
+    "textbook": true,
+    "recommended": "Zill 10e · §2.5 #7"
+  },
+  {
+    "id": "r2517",
+    "equation": "y'=y(xy^3-1)",
+    "options": [
+      "Bernoulli: \\;y\\prime+y=xy^4,\\quad u=y^{-3}",
+      "Bernoulli: \\;n=3,\\quad u=y^{-2}",
+      "Linear: \\;y\\prime+y=xy^4\\text{ is linear}"
+    ],
+    "why": "Expand the outer y first: y(xy³−1)=xy⁴−y. The power is n=4, so use u=y^(1−4)=y^(−3). The transformed equation is u′−3u=−3x.",
+    "topic": "Bernoulli",
+    "source": "Zill 10e · §2.5 #17 · recommended homework",
+    "url": "https://sites.google.com/site/cazelais/home/math252/homework",
+    "notes": "pdfs/section-2-5-solutions-by-substitutions.pdf#page=11",
+    "homework": false,
+    "textbook": true,
+    "recommended": "Zill 10e · §2.5 #17"
+  },
+  {
+    "id": "r2525",
+    "equation": "y'=\\tan^2(x+y)",
+    "options": [
+      "Combination substitution: \\;u=x+y,\\quad u\\prime=1+\\tan^2u",
+      "Combination substitution: \\;u=x+y,\\quad u\\prime=\\tan^2u",
+      "Bernoulli: \\;n=2,\\quad u=y^{-1}"
+    ],
+    "why": "The repeated expression is x+y. Its derivative is 1+y′. Thus u′=1+tan²u=sec²u, which is separable. The square on tan does not mean a y² Bernoulli equation.",
+    "topic": "Combination substitution",
+    "source": "Zill 10e · §2.5 #25 · recommended homework",
+    "url": "https://sites.google.com/site/cazelais/home/math252/homework",
+    "notes": "pdfs/section-2-5-solutions-by-substitutions.pdf#page=18",
+    "homework": false,
+    "textbook": true,
+    "recommended": "Zill 10e · §2.5 #25"
+  },
+  {
+    "id": "r2529",
+    "equation": "y'=\\cos(x+y),\\quad y(0)=\\frac\\pi4",
+    "options": [
+      "Combination substitution: \\;u=x+y,\\quad u\\prime=1+\\cos u,\\quad u(0)=\\frac\\pi4",
+      "Combination substitution: \\;u=x+y,\\quad u\\prime=\\cos u",
+      "Linear: \\;\\cos(x+y)=\\cos x+\\cos y"
+    ],
+    "why": "Use u=x+y and include the derivative of x. The initial value becomes u(0)=π/4. Cosine of a sum is not the sum of the cosines.",
+    "topic": "Combination substitution",
+    "source": "Zill 10e · §2.5 #29 · recommended homework",
+    "url": "https://sites.google.com/site/cazelais/home/math252/homework",
+    "notes": "pdfs/section-2-5-solutions-by-substitutions.pdf#page=18",
+    "homework": false,
+    "textbook": true,
+    "recommended": "Zill 10e · §2.5 #29"
   }
 ];
