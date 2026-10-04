@@ -203,6 +203,11 @@ window.TESSELATE_PATHS = {
     ],
     "practice": [
       {
+        "title": "Identify the setup · Quick multiple-choice quiz",
+        "url": "math252/identify-setup.html",
+        "summary": "26 examples from lecture notes and Assignment 1. Recognize the method, choose the setup, and learn the clues."
+      },
+      {
         "title": "Practice by topic",
         "url": "math252/lessons.html",
         "summary": "Each lesson includes a practice problem and worked solution."

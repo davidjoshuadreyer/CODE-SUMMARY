@@ -637,6 +637,17 @@ window.TESSELATE_CATALOG = {
       "builtin": true
     },
     {
+      "id": "page-bWF0aDI1Mi9pZGVudGlmeS1zZXR1cC5odG1s",
+      "courseId": "math252",
+      "title": "Identify the setup · Multiple-choice quiz",
+      "kind": "Quiz",
+      "url": "math252/identify-setup.html",
+      "body": "",
+      "description": "",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
       "id": "page-bWF0aDI1Mi9sZXNzb25zLmh0bWw",
       "courseId": "math252",
       "title": "Start here · Simplified lessons",
