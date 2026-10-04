@@ -330,7 +330,8 @@ window.SETUP_QUESTIONS = [
     "source": "Notes §2.5 · Example 7",
     "url": "pdfs/section-2-5-solutions-by-substitutions.pdf#page=18",
     "notes": "pdfs/section-2-5-solutions-by-substitutions.pdf#page=18",
-    "homework": false
+    "homework": false,
+    "leah": 8
   },
   {
     "id": "c2",
@@ -526,7 +527,8 @@ window.SETUP_QUESTIONS = [
     "notes": "pdfs/section-2-5-solutions-by-substitutions.pdf#page=11",
     "homework": false,
     "textbook": true,
-    "recommended": "Zill 10e · §2.5 #17"
+    "recommended": "Zill 10e · §2.5 #17",
+    "leah": 6
   },
   {
     "id": "r2525",
@@ -561,5 +563,158 @@ window.SETUP_QUESTIONS = [
     "homework": false,
     "textbook": true,
     "recommended": "Zill 10e · §2.5 #29"
+  },
+  {
+    "id": "lh1",
+    "equation": "\\frac{dP}{dt}=P-P^2,\\quad P(0)=2",
+    "options": [
+      "Separate: \\;\\frac{dP}{P(1-P)}=dt",
+      "\\text{Exponential growth: }P\\prime=kP\\text{ with constant }k",
+      "Separate: \\;\\frac{dP}{P}-\\frac{dP}{P^2}=dt"
+    ],
+    "why": "Factor P−P²=P(1−P). The right side depends only on P, so it is separable. A reciprocal of a difference cannot be split into a difference of reciprocals. Bernoulli is another valid approach.",
+    "topic": "Separable",
+    "source": "Leah Howard’s site · Practice #1",
+    "url": "https://www.leahhoward.com/m252/252practice.pdf#page=1",
+    "notes": "pdfs/section-2-2-separable-equations.pdf#page=2",
+    "homework": false,
+    "leah": 1,
+    "leahOnly": true
+  },
+  {
+    "id": "lh2",
+    "equation": "x^3y'+4x^2y=e^{-x},\\quad y(-1)=0",
+    "options": [
+      "Linear: \\;y\\prime+\\frac4x y=\\frac{e^{-x}}{x^3},\\quad\\mu=x^4",
+      "Linear: \\;P(x)=4x^2,\\quad\\mu=e^{4x^3/3}",
+      "Separate: \\;\\frac{dy}{y}=\\frac{e^{-x}}{x^3}\\,dx"
+    ],
+    "why": "Divide every term by x³ before finding P(x). An integrating factor is x⁴ on an interval excluding zero. The initial value is at x=−1, so work on the negative-x side.",
+    "topic": "Linear",
+    "source": "Leah Howard’s site · Practice #2",
+    "url": "https://www.leahhoward.com/m252/252practice.pdf#page=1",
+    "notes": "pdfs/section-2-3-linear-equations.pdf#page=1",
+    "homework": false,
+    "leah": 2,
+    "leahOnly": true
+  },
+  {
+    "id": "lh3",
+    "equation": "xy'+2y=3x,\\quad y(1)=0",
+    "options": [
+      "Linear: \\;y\\prime+\\frac2x y=3,\\quad\\mu=x^2",
+      "Linear: \\;y\\prime+2y=3,\\quad\\mu=e^{2x}",
+      "Separate: \\;\\frac{dy}{y}=3\\,dx"
+    ],
+    "why": "Divide the entire equation by x. This gives P(x)=2/x and f(x)=3, so the integrating factor is x². The initial condition supplies the constant after integration.",
+    "topic": "Linear",
+    "source": "Leah Howard’s site · Practice #3",
+    "url": "https://www.leahhoward.com/m252/252practice.pdf#page=1",
+    "notes": "pdfs/section-2-3-linear-equations.pdf#page=1",
+    "homework": false,
+    "leah": 3,
+    "leahOnly": true
+  },
+  {
+    "id": "lh4",
+    "equation": "y'=\\frac{y^2}{xy+x^2}",
+    "options": [
+      "Homogeneous: \\;y=vx,\\quad v+xv\\prime=\\frac{v^2}{v+1}",
+      "Separate: \\;\\frac{dy}{y^2}=\\frac{dx}{xy+x^2}\\text{ is separated}",
+      "Bernoulli: \\;n=2\\text{ because }y^2\\text{ is in the numerator}"
+    ],
+    "why": "Divide numerator and denominator by x² to reveal (y/x)²/(y/x+1). The right side depends only on y/x. The mixed denominator prevents direct separation.",
+    "topic": "Homogeneous",
+    "source": "Leah Howard’s site · Practice #4",
+    "url": "https://www.leahhoward.com/m252/252practice.pdf#page=1",
+    "notes": "pdfs/section-2-5-solutions-by-substitutions.pdf#page=4",
+    "homework": false,
+    "leah": 4,
+    "leahOnly": true
+  },
+  {
+    "id": "lh5",
+    "equation": "y'=\\frac{x+3y}{3x+y}",
+    "options": [
+      "Homogeneous: \\;y=vx,\\quad v+xv\\prime=\\frac{1+3v}{3+v}",
+      "Homogeneous: \\;y=vx,\\quad y\\prime=v",
+      "Linear: \\;P(x)=3x+y"
+    ],
+    "why": "The numerator and denominator are both degree one. Divide by x to reveal the ratio y/x, and remember the product rule when differentiating y=vx.",
+    "topic": "Homogeneous",
+    "source": "Leah Howard’s site · Practice #5",
+    "url": "https://www.leahhoward.com/m252/252practice.pdf#page=1",
+    "notes": "pdfs/section-2-5-solutions-by-substitutions.pdf#page=4",
+    "homework": false,
+    "leah": 5,
+    "leahOnly": true
+  },
+  {
+    "id": "lh7",
+    "equation": "(y^2\\cos x-3x^2y-2x)\\,dx+(ky\\sin x-x^3+4y)\\,dy=0",
+    "options": [
+      "Exact check: \\;2y\\cos x-3x^2=ky\\cos x-3x^2",
+      "Exact check: \\;M_x=N_y",
+      "\\text{Set }k=0\\text{ because the equation equals zero}"
+    ],
+    "why": "The question asks which k makes it exact. Compute M_y and N_x and equate them as expressions, not just at one point. Matching the y cos(x) coefficients gives k=2.",
+    "topic": "Exact",
+    "source": "Leah Howard’s site · Practice #7",
+    "url": "https://www.leahhoward.com/m252/252practice.pdf#page=1",
+    "notes": "pdfs/section-2-4-exact-equations.pdf#page=3",
+    "homework": false,
+    "leah": 7,
+    "leahOnly": true
+  },
+  {
+    "id": "lh9",
+    "equation": "x^2y'=xy+y^4",
+    "options": [
+      "Bernoulli: \\;y\\prime-\\frac1x y=\\frac1{x^2}y^4,\\quad u=y^{-3}",
+      "Homogeneous: \\;y=vx\\text{ because both variables appear}",
+      "Bernoulli: \\;n=4,\\quad u=y^4"
+    ],
+    "why": "Divide by x² and move y/x to the left. Then the Bernoulli power is n=4, so u=y^(1−n)=y^(−3). The terms do not have the degrees required for the proposed homogeneous shortcut.",
+    "topic": "Bernoulli",
+    "source": "Leah Howard’s site · Practice #9",
+    "url": "https://www.leahhoward.com/m252/252practice.pdf#page=1",
+    "notes": "pdfs/section-2-5-solutions-by-substitutions.pdf#page=11",
+    "homework": false,
+    "leah": 9,
+    "leahOnly": true
+  },
+  {
+    "id": "lh10",
+    "equation": "(1+xye^x)\\,dx+(xe^x+x\\cos y)\\,dy=0",
+    "options": [
+      "\\text{Multiply by }1/x:\\quad(1/x+ye^x)\\,dx+(e^x+\\cos y)\\,dy=0",
+      "\\text{Already exact: }M_y=N_x=xe^x",
+      "\\text{Multiply by }x\\text{ to make it exact}"
+    ],
+    "why": "The original cross-partials differ: M_y=xe^x, while N_x=e^x+xe^x+cos(y). Their difference divided by N is −1/x. Thus an integrating factor is 1/x on an interval excluding zero. Afterwards both cross-partials equal e^x.",
+    "topic": "Exact",
+    "source": "Leah Howard’s site · Practice #10",
+    "url": "https://www.leahhoward.com/m252/252practice.pdf#page=1",
+    "notes": "pdfs/section-2-4-exact-equations.pdf#page=12",
+    "homework": false,
+    "leah": 10,
+    "leahOnly": true
+  },
+  {
+    "id": "lh11",
+    "equation": "\\text{200 L with 100 g salt. In: 5 g/L at 4 L/min. Out: 4 L/min.}",
+    "options": [
+      "\\text{Mixing: }m\\prime=20-\\frac{m}{50},\\quad m(0)=100\\;\\text{g}",
+      "m\\prime=5-4m,\\quad m(0)=200",
+      "m\\prime=20-\\frac{4m}{200+4t},\\quad m(0)=100"
+    ],
+    "why": "Incoming salt is 5×4=20 g/min. Outgoing salt is (m/200)×4=m/50 g/min. Equal flows keep the volume fixed; the initial mass is 100 grams.",
+    "topic": "Mixing model",
+    "source": "Leah Howard’s site · Practice #11",
+    "url": "https://www.leahhoward.com/m252/252practice.pdf#page=1",
+    "notes": "pdfs/section-3-1-linear-models.pdf#page=12",
+    "homework": false,
+    "leah": 11,
+    "leahOnly": true
   }
 ];

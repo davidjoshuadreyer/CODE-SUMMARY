@@ -205,7 +205,7 @@ window.TESSELATE_PATHS = {
       {
         "title": "Identify the setup · Quick multiple-choice quiz",
         "url": "math252/identify-setup.html",
-        "summary": "36 examples from lecture notes, Assignment 1, and recommended textbook homework. Recognize the method, choose the setup, and learn the clues."
+        "summary": "45 examples from lecture notes, Assignment 1, recommended textbook homework, and Leah Howard’s site. Recognize the method, choose the setup, and learn the clues."
       },
       {
         "title": "Practice by topic",
