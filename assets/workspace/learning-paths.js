@@ -474,6 +474,16 @@ window.TESSELATE_PATHS = {
         "title": "Practice within each lesson",
         "url": "ecet250e/review.html",
         "summary": "Short questions with expandable worked answers."
+      },
+      {
+        "title": "Lab 5 · Interactive bench guide",
+        "url": "ecet250e/lab5.html",
+        "summary": "Step-by-step wiring, measurement inputs, and automatic account saves."
+      },
+      {
+        "title": "Lab 5 · Calculations and report",
+        "url": "ecet250e/lab5-calculations.html",
+        "summary": "Clear Thevenin calculations and a downloadable report template."
       }
     ]
   }

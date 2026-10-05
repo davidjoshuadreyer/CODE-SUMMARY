@@ -383,6 +383,7 @@
   .btn-weak:hover { background: rgba(245,158,11,0.12); }
 </style>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../assets/account-progress.js"></script>
 </head>
 <body>
 
@@ -1735,11 +1736,14 @@ function recordAnswer(questionId, correct) {
 
 async function saveProgress() {
   if (!supa || !authUser) return;
-  await supa.from('tesselate_progress').upsert({
-    user_id: authUser.id,
-    progress_json: localProgress,
-    updated_at: new Date().toISOString()
-  }, { onConflict: 'user_id' });
+  const owner = authUser.id;
+  // Quiz saves must preserve account data owned by other pages, including Lab 5.
+  const answers = Object.fromEntries(Object.entries(localProgress).filter(([key,value]) =>
+    !key.startsWith('__') && value && typeof value.c === 'number' && typeof value.w === 'number'));
+  try {
+    await TesselateProgress.mutate(supa, owner, remote => ({...remote, ...answers}),
+      () => authUser?.id === owner);
+  } catch (error) { console.warn('Progress save pending:', error.message); }
 }
 
 function getQuizStat(quizIndex) {

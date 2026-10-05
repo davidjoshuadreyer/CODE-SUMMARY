@@ -1992,6 +1992,28 @@ window.TESSELATE_CATALOG = {
         "ref-d2l-phys210-5448798"
       ],
       "builtin": true
+    },
+    {
+      "id": "page-ZWNldDI1MGUvbGFiNS5odG1s",
+      "courseId": "ecet250e",
+      "title": "Lab 5 · Interactive bench guide",
+      "kind": "Study notes",
+      "url": "ecet250e/lab5.html",
+      "body": "",
+      "description": "Step-by-step wiring, measurement inputs, and automatic account saves.",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
+      "id": "page-ZWNldDI1MGUvbGFiNS1jYWxjdWxhdGlvbnMuaHRtbA",
+      "courseId": "ecet250e",
+      "title": "Lab 5 · Calculations and report",
+      "kind": "Lab report",
+      "url": "ecet250e/lab5-calculations.html",
+      "body": "",
+      "description": "Clear Thevenin calculations and a downloadable report template.",
+      "referenceIds": [],
+      "builtin": true
     }
   ],
   "references": [
