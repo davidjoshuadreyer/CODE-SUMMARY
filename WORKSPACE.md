@@ -164,3 +164,9 @@ Checks: `node dev/solutions-test.cjs`, `node dev/reference-cloud-test.cjs`, `nod
 ## ECET 250E Lab 5
 
 `ecet250e/lab5.html` provides a step-by-step bench guide, wiring diagrams, readings, backups and CSV export. `lab5-calculations.html` explains the calculations and links the report template. Signed-in progress uses the existing private `tesselate_progress` row under `__ecet250_lab5`. Account-scoped local drafts retain offline edits. Guest readings require explicit import. The shared `assets/account-progress.js` helper uses compare-and-swap updates to preserve unrelated quiz data. Run `node dev/lab5-account-test.cjs` to verify conflict handling, account isolation and offline recovery.
+
+## Assignment navigation and October 7 walkthroughs
+
+Every course workspace has an **Assignments & solutions** tab, with shareable routes such as `index.html#course/phys210/assignments`. Six active courses also have `assignments.html` directories linked from their lesson hubs. The lists combine scheduled assignment/lab sources with available walkthroughs, PDFs, instructor keys, and signed-in references; missing solutions are explicitly labelled. They contain no student submissions, grades, or inferred completion status.
+
+`dev/assignment-walkthroughs.cjs` contains the checked ECET Problem Set 5 and Physics Homework 5 explanations. Rebuild their HTML with `node dev/build-assignment-walkthroughs.cjs`. After changing solution entries or rebuilding course hubs, run `node dev/build-assignment-index.cjs` and `node dev/build-workspace-catalog.cjs`. The assignment-index builder restores hub links and writes `assets/workspace/assignments-data.js`. Printable keys are linked beside each walkthrough. ECET circuit reductions were independently checked by nodal equations, and the 6.60 expressions satisfy KCL, the inductor voltage relation, and the initial condition. Phone layout, equation rendering, tab switching, reloadable routes, and local links were checked.

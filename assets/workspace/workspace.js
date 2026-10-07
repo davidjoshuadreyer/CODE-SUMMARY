@@ -132,12 +132,18 @@ function practiceOverview(id){
  const items=path?.practice||pages(id).filter(p=>['Quiz','Practice exam'].includes(p.kind));
  return items.length?`<div class="resource-grid">${items.map(p=>`<article class="resource-card"><span class="badge">Practice</span><h3>${esc(p.title)}</h3><p>${esc(p.summary||p.description||'')}</p><a class="button primary" href="${esc(safeURL(p.url))}">Start practising →</a></article>`).join('')}</div>`:empty('No practice set yet.','Your lessons and references are available in the other tabs.','');
 }
+function assignmentOverview(id){
+ const items=window.TESSELATE_ASSIGNMENTS?.[id]||[];
+ const featured=items.find(e=>['f26-41','f26-4','f26-36'].includes(e.id));
+ if(!items.length)return empty('No assignment list yet.','Your course references and study pages are available in the other tabs.','');
+ return `<p class="hint">Handouts and solutions in one place. Dates are from the saved course schedule; check D2L for changes. No submission status is inferred.</p>${featured?`<div class="actions"><a class="button primary" href="${esc(featured.solution)}">Open ${esc(featured.title)} walkthrough</a></div>`:''}<div class="assignment-list">${items.map(e=>`<article id="assignment-${esc(e.id)}"><p class="assignment-date">Scheduled due ${esc(e.date)} · ${esc(e.time)}</p><h3>${esc(e.title)}</h3><p class="assignment-status">${esc(e.status)}</p><div class="actions">${e.solution?`<a class="button primary" href="${esc(safeURL(e.solution))}">${esc(e.label)}</a>`:''}<a class="button" href="${esc(safeURL(e.source))}">Assignment source</a>${e.pdf?`<a class="button" href="${esc(safeURL(e.pdf))}">Printable key</a>`:''}</div></article>`).join('')}</div>`;
+}
 function courseView(id){
  const c=course(id);if(!c)return empty('Course not found','Choose a course from your workspace.','<a class="button" href="#courses">My courses</a>');
  const subtitle=window.TESSELATE_PATHS?.[id]?'Learn a topic, practise it, and use the references when you need more detail.':c.description;
  return `<a class="back" href="#${c.semester===state.currentSemester?'courses':'archive'}">← Back to courses</a>`+heading(c.semester+' / '+c.code,c.name,subtitle||'Build your study collection, one resource at a time.','')+
- `<div class="tabs" role="group" aria-label="Course content">${button('tab-learn','Lessons',id,tab==='learn'?'active':'')}${button('tab-practice','Practice',id,tab==='practice'?'active':'')}${button('tab-references',`References (${refs(id).length})`,id,tab==='references'?'active':'')}${button('tab-pages','My pages & tools',id,tab==='pages'?'active':'')}</div>`+
- (tab==='learn'?learningOverview(id):tab==='practice'?practiceOverview(id):tab==='references'?library(id):`<div class="actions">${button('edit-course','Edit course',c.id)}${button('upload','↑ Upload references',c.id)}${button('add-page','+ Add study page',c.id,'primary')}</div>`+(pages(id).length?`<div class="resource-grid">${pages(id).map(resourceCard).join('')}</div>`:empty('Your study collection starts here.','Write a note or link an existing study page, quiz, or practice exam.',button('add-page','+ Add study page',id,'primary'))));
+ `<div class="tabs" role="group" aria-label="Course content">${button('tab-learn','Lessons',id,tab==='learn'?'active':'')}${button('tab-assignments','Assignments &amp; solutions',id,tab==='assignments'?'active':'')}${button('tab-practice','Practice',id,tab==='practice'?'active':'')}${button('tab-references',`References (${refs(id).length})`,id,tab==='references'?'active':'')}${button('tab-pages','My pages & tools',id,tab==='pages'?'active':'')}</div>`+
+ (tab==='learn'?learningOverview(id):tab==='assignments'?assignmentOverview(id):tab==='practice'?practiceOverview(id):tab==='references'?library(id):`<div class="actions">${button('edit-course','Edit course',c.id)}${button('upload','↑ Upload references',c.id)}${button('add-page','+ Add study page',c.id,'primary')}</div>`+(pages(id).length?`<div class="resource-grid">${pages(id).map(resourceCard).join('')}</div>`:empty('Your study collection starts here.','Write a note or link an existing study page, quiz, or practice exam.',button('add-page','+ Add study page',id,'primary'))));
 }
 function courseOptions(selected='',unassigned=false){return (unassigned?'<option value="">Unassigned</option>':'')+state.courses.map(c=>`<option value="${esc(c.id)}" ${selected===c.id?'selected':''}>${esc(c.code+' · '+c.name+' ('+c.semester+')')}</option>`).join('');}
 function library(id=''){
@@ -151,7 +157,8 @@ function referenceResults(id=''){
 }
 function formatSize(size){return size>=1048576?(size/1048576).toFixed(1)+' MB':Math.max(1,Math.round(size/1024))+' KB';}
 function render(){
- const [view,id]=(location.hash.slice(1)||'overview').split('/');
+ const [view,id,requestedTab]=(location.hash.slice(1)||'overview').split('/');
+ if(view==='course'&&['learn','assignments','practice','references','pages'].includes(requestedTab))tab=requestedTab;
  const nav=view==='course'?(course(id)?.semester===state.currentSemester?'courses':'archive'):view==='note'?'courses':view;
  document.querySelectorAll('[data-nav]').forEach(a=>{a.classList.toggle('active',a.dataset.nav===nav);if(a.dataset.nav===nav)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
  $('#breadcrumb').textContent=({overview:'Overview',courses:'My courses',archive:'Past semesters',references:'Reference library',course:course(id)?.code,note:'Study notes'})[view]||'Overview';
@@ -307,7 +314,7 @@ document.addEventListener('click',async event=>{
   else if(action==='delete-page')confirmDelete('page',id);
   else if(action==='delete-reference')confirmDelete('reference',id);
   else if(action==='download')await downloadReference(id);
-  else if(['tab-learn','tab-practice','tab-pages','tab-references'].includes(action)){tab=action.slice(4);search='';courseFilter='';statusFilter='';render();}
+  else if(['tab-learn','tab-assignments','tab-practice','tab-pages','tab-references'].includes(action)){tab=action.slice(4);history.replaceState(null,'','#course/'+id+'/'+tab);search='';courseFilter='';statusFilter='';render();}
   else if(action==='theme'){const dark=document.body.classList.toggle('dark');try{localStorage.setItem('chem-theme',dark?'dark':'light');}catch{}$('#theme-label').textContent=dark?'Light appearance':'Dark appearance';}
   else if(action==='backup'){el.disabled=true;try{await backup();}finally{el.disabled=false;}}
   else if(action==='restore')$('#restore-file').click();

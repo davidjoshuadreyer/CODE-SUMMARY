@@ -84,6 +84,17 @@ window.TESSELATE_CATALOG = {
   ],
   "resources": [
     {
+      "id": "page-cGh5czIxMC9hc3NpZ25tZW50cy5odG1s",
+      "courseId": "phys210",
+      "title": "Assignments & solutions",
+      "kind": "Study notes",
+      "url": "phys210/assignments.html",
+      "body": "",
+      "description": "",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
       "id": "page-cGh5czIxMC9jaGFyZ2UtZGlzdHJpYnV0aW9ucy5odG1s",
       "courseId": "phys210",
       "title": "Continuous charge: one piece at a time",
@@ -113,6 +124,17 @@ window.TESSELATE_CATALOG = {
       "url": "phys210/flux-gauss.html",
       "body": "",
       "description": "Distinguish field strength from field passing through a surface.",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
+      "id": "page-cGh5czIxMC9ob21ld29yay01Lmh0bWw",
+      "courseId": "phys210",
+      "title": "Homework 5 · Electric potential walkthrough",
+      "kind": "Study notes",
+      "url": "phys210/homework-5.html",
+      "body": "",
+      "description": "",
       "referenceIds": [],
       "builtin": true
     },
@@ -304,6 +326,17 @@ window.TESSELATE_CATALOG = {
       "builtin": true
     },
     {
+      "id": "page-ZWNldDI1MGUvYXNzaWdubWVudHMuaHRtbA",
+      "courseId": "ecet250e",
+      "title": "Assignments & solutions",
+      "kind": "Study notes",
+      "url": "ecet250e/assignments.html",
+      "body": "",
+      "description": "",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
       "id": "page-ZWNldDI1MGUvY3VycmVudC12b2x0YWdlLXBvd2VyLmh0bWw",
       "courseId": "ecet250e",
       "title": "Current, voltage, and power",
@@ -355,6 +388,17 @@ window.TESSELATE_CATALOG = {
       "url": "ecet250e/nodal-analysis.html",
       "body": "",
       "description": "Use current balance to find an unknown voltage.",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
+      "id": "page-ZWNldDI1MGUvcHJvYmxlbS1zZXQtNS5odG1s",
+      "courseId": "ecet250e",
+      "title": "Problem Set 5 · Capacitors and inductors walkthrough",
+      "kind": "Study notes",
+      "url": "ecet250e/problem-set-5.html",
+      "body": "",
+      "description": "",
       "referenceIds": [],
       "builtin": true
     },
@@ -656,6 +700,17 @@ window.TESSELATE_CATALOG = {
       "referenceIds": [
         "ref-math252-15ZlkmC3tOAWsP2XFu_RakzFqe3rtG_YU"
       ],
+      "builtin": true
+    },
+    {
+      "id": "page-bWF0aDI1Mi9hc3NpZ25tZW50cy5odG1s",
+      "courseId": "math252",
+      "title": "Assignments & solutions",
+      "kind": "Study notes",
+      "url": "math252/assignments.html",
+      "body": "",
+      "description": "",
+      "referenceIds": [],
       "builtin": true
     },
     {
@@ -1065,6 +1120,24 @@ window.TESSELATE_CATALOG = {
       "builtin": true
     },
     {
+      "id": "page-ZW5ncjI5MC9hc3NpZ25tZW50cy5odG1s",
+      "courseId": "engr290",
+      "title": "Assignments & solutions",
+      "kind": "Study notes",
+      "url": "engr290/assignments.html",
+      "body": "",
+      "description": "",
+      "referenceIds": [
+        "ref-RU5HUiAyOTAvV2VlayAxIEF0b21pYyBTdHJ1Y3R1cmVfMjAyNigxKS5wcHR4",
+        "ref-RU5HUiAyOTAvV2VlayAyYSBCb25kaW5nXzIwMjYucHB0eA",
+        "ref-RU5HUiAyOTAvV2VlayAyYiBEaXNsb2NhdGlvbnNfMjAyNi5wcHR4",
+        "ref-RU5HUiAyOTAvRU5HUiAyOTBfQXNzaWduXzFfMjAyNi5kb2N4",
+        "ref-RU5HUiAyOTAvRU5HUjI5MENvdXJzZU91dGxpbmVfMjAyNi5kb2N4",
+        "ref-RU5HUiAyOTAvRU5HUi0yOTAtWDAxIGNvdXJzZSBzeWxsYWJ1c18yMDI2LmRvY3g"
+      ],
+      "builtin": true
+    },
+    {
       "id": "page-ZW5ncjI5MC9leGFtLmh0bWw",
       "courseId": "engr290",
       "title": "Practice exams",
@@ -1260,6 +1333,26 @@ window.TESSELATE_CATALOG = {
       "builtin": true
     },
     {
+      "id": "page-bWF0aDI1MGIvYXNzaWdubWVudHMuaHRtbA",
+      "courseId": "math250b",
+      "title": "Assignments & solutions",
+      "kind": "Study notes",
+      "url": "math250b/assignments.html",
+      "body": "",
+      "description": "",
+      "referenceIds": [
+        "ref-TWF0aCAyNTBCLzI1MEItQTEtMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEItQTItMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEItQTMtMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEItQTQtMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEItZm9ybXVsYXNoZWV0LnBkZg",
+        "ref-TWF0aCAyNTBCLzI1MEJYMDEtVDFTb2wtMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEJYMDEtVDJTb2wtMjAyNUYucGRm",
+        "ref-TWF0aCAyNTBCLzI1MEJYMDEtVDNTb2wtMjAyNUYucGRm"
+      ],
+      "builtin": true
+    },
+    {
       "id": "page-bWF0aDI1MGIvZXhhbS5odG1s",
       "courseId": "math250b",
       "title": "Practice exams",
@@ -1336,6 +1429,51 @@ window.TESSELATE_CATALOG = {
         "ref-TWF0aCAyNTBCLzI1MEJYMDEtVDFTb2wtMjAyNUYucGRm",
         "ref-TWF0aCAyNTBCLzI1MEJYMDEtVDJTb2wtMjAyNUYucGRm",
         "ref-TWF0aCAyNTBCLzI1MEJYMDEtVDNTb2wtMjAyNUYucGRm"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-Y29tcDEzOWUvYXNzaWdubWVudHMuaHRtbA",
+      "courseId": "comp139e",
+      "title": "Assignments & solutions",
+      "kind": "Study notes",
+      "url": "comp139e/assignments.html",
+      "body": "",
+      "description": "",
+      "referenceIds": [
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wMV9iYXNpY3MuY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wMl9pbnB1dF9hbmRfZGVjaXNpb25zLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wM19mdW5jdGlvbnMuY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wNF9hcnJheXNfYW5kX3N0cmluZ3MuY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wNV9wb2ludGVycy5jcHA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wNl9tb2R1bGVzX2FuZF90ZXN0aW5nLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wN19jbGFzc2VzLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wOF9pbmhlcml0YW5jZS5jcHA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8wOV90ZW1wbGF0ZXMuY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xMF9saW5rZWRfbGlzdHMuY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xMV9zdGFja3NfYW5kX3F1ZXVlcy5jcHA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xMl9maWxlcy5jcHA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xM19leGNlcHRpb25zLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xNF92ZWN0b3JzLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xNV9jb250cm9sLmNwcA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xNl9oYXJtb25pY19tb3Rpb24uY3Bw",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xN19pbnRlZ3JhdGlvbi5jcHA",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL3R1dG9yaWFscy8xOF9yZWZlcmVuY2VfZGVtby5jcHA",
+        "ref-Y29tcDEzOWUvbGVjdHVyZSBzbGlkZXMvMC0xX0ludHJvZHVjdGlvbl90b19DKysucGRm",
+        "ref-Y29tcDEzOWUvbGVjdHVyZSBzbGlkZXMvMS0xX0Z1bmN0aW9ucy5wZGY",
+        "ref-Y29tcDEzOWUvbGVjdHVyZSBzbGlkZXMvMS0yX1BvaW50ZXJzX2FuZF9EeW5hbWljX01lbW9yeV9NYW5hZ2VtZW50LnBkZg",
+        "ref-Y29tcDEzOWUvbGVjdHVyZSBzbGlkZXMvMS0zX09iamVjdHNfYW5kX0NsYXNzZXMucGRm",
+        "ref-Y29tcDEzOWUvbGVjdHVyZSBzbGlkZXMvMS00X0ZpbGVzX2FuZF9FeGNlcHRpb25fSGFuZGxpbmcucGRm",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDEvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDIvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDMvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDQvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDUvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDYvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDcvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDgvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL2xhYnMvbGFiMDkvUkVBRE1FLm1k",
+        "ref-Y29tcDEzOWUvd29ya3NwYWNlL1JFQURNRS5tZA"
       ],
       "builtin": true
     },

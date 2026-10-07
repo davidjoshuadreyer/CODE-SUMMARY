@@ -968,8 +968,8 @@ window.TESSELATE_SOLUTIONS = {
     "practice": "phys210/quiz.html?homework=4"
   },
   "f26-4": {
-    "title": "PHYS 210 · Homework 5",
-    "status": "6 assigned questions · full worked practice, diagrams and references",
+    "title": "PHYS 210 · Homework 5 · Electric potential and energy",
+    "status": "Full step-by-step walkthrough · 6 questions",
     "sections": [
       {
         "problem": "23.1",
@@ -1062,10 +1062,15 @@ window.TESSELATE_SOLUTIONS = {
     "practice": "phys210/quiz.html?homework=5",
     "files": [
       {
-        "label": "Homework 5 · full worked steps, diagrams and answer checks",
-        "url": "phys210/quiz.html?homework=5"
+        "label": "Open step-by-step walkthrough",
+        "url": "phys210/homework-5.html"
+      },
+      {
+        "label": "Download printable solution key",
+        "url": "phys210/homework-5-solution-key.pdf"
       }
-    ]
+    ],
+    "walkthrough": "phys210/homework-5.html"
   },
   "f26-5": {
     "title": "PHYS 210 · Homework 6",
@@ -2170,6 +2175,131 @@ window.TESSELATE_SOLUTIONS = {
           "Insert your measured voltages and current, and photos of your actual circuit connections.",
           "Explain whether your measurements support Ohm’s law, KVL and the predicted voltage-divider ranges. Refer to your recorded numbers.",
           "Describe what you learned and any problems you encountered, including how you corrected them. These observations cannot be filled in reliably before doing the lab."
+        ]
+      }
+    ]
+  },
+  "f26-41": {
+    "title": "ECET 250E · Problem Set 5 · Capacitors and inductors",
+    "status": "Full step-by-step walkthrough · 10 questions",
+    "source": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTcwODE4NDY/ECET%20250E-Linear%20Circuit%201-Problemset%205-Chapter%206%20-%202023.pdf?ou=347548",
+    "walkthrough": "ecet250e/problem-set-5.html",
+    "files": [
+      {
+        "label": "Open step-by-step walkthrough",
+        "url": "ecet250e/problem-set-5.html"
+      },
+      {
+        "label": "Download printable solution key",
+        "url": "ecet250e/problem-set-5-solution-key.pdf"
+      }
+    ],
+    "sections": [
+      {
+        "title": "6.16 · Find the unknown capacitor",
+        "steps": [
+          "Separate the parallel branches before solving the unknown series pair.",
+          "Remove the known parallel branch: Parallel capacitances add. The C–80 µF branch must supply the difference.",
+          "Write the series relation: Use reciprocal addition, or the product-over-sum form for two capacitors. Keep all capacitances in µF.",
+          "Solve for C: Multiply by the denominator, collect the C terms, then divide.",
+          "C = 20 µF."
+        ]
+      },
+      {
+        "title": "6.17 · Three capacitor networks",
+        "steps": [
+          "Reduce the innermost simple pairs, then redraw the remaining connections.",
+          "(a) Start at the right-hand branch: The 12 F and lower 4 F meet at an isolated right-hand node, so they are in series.",
+          "(a) Combine across the middle nodes: That 3 F equivalent is parallel with the central 3 F and 6 F. The result is in series with the input 4 F.",
+          "(b) Work from right to left: The right-hand 4 F and 2 F are parallel: 6 F. This is in series with the top 6 F, giving 3 F. The left 5 F is parallel with that whole branch.",
+          "(c) Reduce the rectangle: The top 3 F and 6 F are series: 2 F. Add the lower 4 F in parallel to get 6 F. The remaining 2 F, 6 F and right-hand 3 F are in series.",
+          "(a) 3 F; (b) 8 F; (c) 1 F."
+        ]
+      },
+      {
+        "title": "6.18 · Identical-capacitor network",
+        "steps": [
+          "Name the upper-left and upper-right nodes. The outer branches on each side reduce separately, leaving three equivalents in series.",
+          "Reduce the left side: The outer vertical 4 µF and bottom-left 4 µF form a series path from the left terminal to the upper-left node. Their 2 µF equivalent is parallel with the inner vertical 4 µF.",
+          "Reduce the right side: The right side has the same connections, so its equivalent is also 6 µF.",
+          "Reduce the top connection: The topmost and middle horizontal capacitors connect the same upper-left and upper-right nodes. They are parallel.",
+          "Combine the remaining chain: The reduced path between the bottom terminals is 6 µF, then 8 µF, then 6 µF in series.",
+          "Ceq = 24/11 µF ≈ 2.18 µF."
+        ]
+      },
+      {
+        "title": "6.26 · Charge and energy in parallel",
+        "steps": [
+          "Parallel branches all have the same 150 V. Use q = CV for each branch and W = ½CV² for energy.",
+          "Add capacitances: For parallel capacitors, add their values.",
+          "Calculate each charge: Multiply each capacitance by the common voltage. Using µF × V gives µC.",
+          "Calculate total stored energy: Use the total capacitance in farads, and square the voltage.",
+          "Ceq = 35 µF; charges = 750, 1500, 3000 µC; total energy ≈ 0.394 J."
+        ]
+      },
+      {
+        "title": "6.32 · Capacitor voltages from a current source",
+        "steps": [
+          "Current entering a capacitor’s positive terminal increases its voltage. Integrate current to get added charge; divide that charge by the appropriate capacitance.",
+          "Identify the shared current and voltage: The 12 µF carries all source current. The 20 µF and 40 µF are parallel, so both have v₂ and behave as 60 µF for finding v₂. The indicated current enters the positive side of v₁.",
+          "Integrate the source current from 0 to t: Convert 50 mA to 0.050 A. The integral is charge in coulombs.",
+          "Add the initial voltages: Apply v(t) = v(0) + Δq/C separately to the 12 µF capacitor and the 60 µF parallel equivalent.",
+          "Write the shared parallel voltage: This is the voltage of both the 20 µF and the 40 µF capacitor.",
+          "Evaluate at half a second: Use e⁻¹ = 0.367879. The voltages are v₁ = 1366.918 V and v₂ = 283.384 V.",
+          "Find energy in each physical capacitor: Use its own capacitance. The 60 µF equivalent is useful for voltage but the question asks for energy in each capacitor.",
+          "v₁(t) = 50 + 2083.333(1 − e⁻²ᵗ) V; v₂(t) = 20 + 416.667(1 − e⁻²ᵗ) V. At 0.5 s: W12 = 11.21 J, W20 = 0.8031 J, W40 = 1.606 J."
+        ]
+      },
+      {
+        "title": "6.40 · Voltage from a current graph",
+        "steps": [
+          "Inductor voltage depends on slope, not current magnitude. Use the passive convention: current enters the positive-voltage terminal.",
+          "Use the slope of each straight segment: The relation is v = L di/dt. Convert L to 0.005 H and each 2 ms interval to 0.002 s.",
+          "At 1 ms: rising ramp: The slope is (10 − 0)/0.002 = 5000 A/s.",
+          "At 3 ms: flat segment: The current is nonzero but unchanging, so di/dt is zero.",
+          "At 5 ms: falling ramp: The slope is (0 − 10)/0.002 = −5000 A/s.",
+          "+25 V, 0 V, −25 V at 1, 3, 5 ms respectively."
+        ]
+      },
+      {
+        "title": "6.43 · Energy stored in an inductor",
+        "steps": [
+          "Inductor energy depends on the final current squared, regardless of how quickly it got there.",
+          "Convert the units: 80 mH = 0.080 H; 60 mA = 0.060 A.",
+          "Square the current and multiply: Use W = ½LI².",
+          "W = 0.144 mJ = 144 µJ."
+        ]
+      },
+      {
+        "title": "6.51 · Reduce an inductor network",
+        "steps": [
+          "For uncoupled inductors, the series/parallel rules match resistors: series values add; parallel reciprocals add.",
+          "Reduce the right-hand parallel group: The 60, 20, and 30 mH inductors share both endpoints.",
+          "Add the series 25 mH: The lower path now has 25 mH + 10 mH.",
+          "Combine the two a–b branches: The top 10 mH is parallel with the entire 35 mH lower path.",
+          "Leq ≈ 7.78 mH."
+        ]
+      },
+      {
+        "title": "6.53 · Reduce a network with diagonal branches",
+        "steps": [
+          "Diagonal drawing lines do not require a special transform here. The right-hand outside pairs each have an isolated intermediate node.",
+          "Reduce U to M: The upper 8 mH and right-side 12 mH are series: 20 mH. This path is parallel with the 5 mH diagonal.",
+          "Reduce D to M: The lower 8 mH and right-side 4 mH are series: 12 mH. This is parallel with the 6 mH diagonal.",
+          "Reduce U to D: The route through M has 4 + 4 = 8 mH. It is parallel with the left internal 8 mH.",
+          "Add the terminal inductors: The 6 mH at terminal a and 10 mH at terminal b are in series with the reduced internal network.",
+          "Leq = 20 mH."
+        ]
+      },
+      {
+        "title": "6.60 · Current sharing between parallel inductors",
+        "steps": [
+          "The two inductors share voltage. Use KCL on the derivatives to find that voltage, then integrate the 5 H branch current using its initial value.",
+          "Differentiate Kirchhoff’s current law: Take both branch currents downward. is = i₃ + io, and di₃/dt = vo/3, dio/dt = vo/5.",
+          "Find the common voltage: The equivalent is (1/3 + 1/5)⁻¹ = 15/8 H. Differentiate 4e⁻²ᵗ to get −8e⁻²ᵗ A/s.",
+          "Integrate the 5 H branch slope: Divide the common voltage by 5 H, then integrate from 0 to t and add io(0) = 2 A.",
+          "Check the other branch: KCL gives i₃ = 4e⁻²ᵗ − io = 2.5e⁻²ᵗ − 0.5 A. At long times the branches carry opposite 0.5 A currents even as the source current tends to zero.",
+          "io(t) = 0.5 + 1.5e⁻²ᵗ A; vo(t) = −15e⁻²ᵗ V."
         ]
       }
     ]
