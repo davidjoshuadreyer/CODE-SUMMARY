@@ -302,6 +302,11 @@ window.TESSELATE_PATHS = {
     ],
     "practice": [
       {
+        "title": "Assignment 1 · Step-by-step walkthrough",
+        "url": "engr290/assignment-1.html",
+        "summary": "All six materials problems, with equations, substitutions, checks, and a printable solution key."
+      },
+      {
         "title": "Practice quiz",
         "url": "engr290/quiz.html",
         "summary": "Practice the covered materials topics."

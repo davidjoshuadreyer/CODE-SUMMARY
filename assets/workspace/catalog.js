@@ -315,6 +315,28 @@ window.TESSELATE_CATALOG = {
       "builtin": true
     },
     {
+      "id": "page-ZWNldDI1MGUvbGFiNS1jYWxjdWxhdGlvbnMuaHRtbA",
+      "courseId": "ecet250e",
+      "title": "Lab 5 · Calculations and report",
+      "kind": "Lab report",
+      "url": "ecet250e/lab5-calculations.html",
+      "body": "",
+      "description": "Clear Thevenin calculations and a downloadable report template.",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
+      "id": "page-ZWNldDI1MGUvbGFiNS5odG1s",
+      "courseId": "ecet250e",
+      "title": "Lab 5 · Interactive bench guide",
+      "kind": "Study notes",
+      "url": "ecet250e/lab5.html",
+      "body": "",
+      "description": "Step-by-step wiring, measurement inputs, and automatic account saves.",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
       "id": "page-ZWNldDI1MGUvbWF0ZXJpYWxzLmh0bWw",
       "courseId": "ecet250e",
       "title": "D2L course materials · Fall 2026",
@@ -1021,6 +1043,24 @@ window.TESSELATE_CATALOG = {
       "referenceIds": [
         "ref-RU5HUiAyOTAvRU5HUiAyOTBfQXNzaWduXzFfMjAyNi5kb2N4",
         "ref-RU5HUiAyOTAvRU5HUjI5MENvdXJzZU91dGxpbmVfMjAyNi5kb2N4"
+      ],
+      "builtin": true
+    },
+    {
+      "id": "page-ZW5ncjI5MC9hc3NpZ25tZW50LTEuaHRtbA",
+      "courseId": "engr290",
+      "title": "Assignment 1 · Step-by-step walkthrough",
+      "kind": "Study notes",
+      "url": "engr290/assignment-1.html",
+      "body": "",
+      "description": "",
+      "referenceIds": [
+        "ref-RU5HUiAyOTAvV2VlayAxIEF0b21pYyBTdHJ1Y3R1cmVfMjAyNigxKS5wcHR4",
+        "ref-RU5HUiAyOTAvV2VlayAyYSBCb25kaW5nXzIwMjYucHB0eA",
+        "ref-RU5HUiAyOTAvV2VlayAyYiBEaXNsb2NhdGlvbnNfMjAyNi5wcHR4",
+        "ref-RU5HUiAyOTAvRU5HUiAyOTBfQXNzaWduXzFfMjAyNi5kb2N4",
+        "ref-RU5HUiAyOTAvRU5HUjI5MENvdXJzZU91dGxpbmVfMjAyNi5kb2N4",
+        "ref-RU5HUiAyOTAvRU5HUi0yOTAtWDAxIGNvdXJzZSBzeWxsYWJ1c18yMDI2LmRvY3g"
       ],
       "builtin": true
     },
@@ -1991,28 +2031,6 @@ window.TESSELATE_CATALOG = {
       "referenceIds": [
         "ref-d2l-phys210-5448798"
       ],
-      "builtin": true
-    },
-    {
-      "id": "page-ZWNldDI1MGUvbGFiNS5odG1s",
-      "courseId": "ecet250e",
-      "title": "Lab 5 · Interactive bench guide",
-      "kind": "Study notes",
-      "url": "ecet250e/lab5.html",
-      "body": "",
-      "description": "Step-by-step wiring, measurement inputs, and automatic account saves.",
-      "referenceIds": [],
-      "builtin": true
-    },
-    {
-      "id": "page-ZWNldDI1MGUvbGFiNS1jYWxjdWxhdGlvbnMuaHRtbA",
-      "courseId": "ecet250e",
-      "title": "Lab 5 · Calculations and report",
-      "kind": "Lab report",
-      "url": "ecet250e/lab5-calculations.html",
-      "body": "",
-      "description": "Clear Thevenin calculations and a downloadable report template.",
-      "referenceIds": [],
       "builtin": true
     }
   ],

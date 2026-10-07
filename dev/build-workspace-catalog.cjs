@@ -18,7 +18,7 @@ const courses = [
 const fallLessons=require('./fall-lessons.cjs');
 const physicsLessons=require('./physics-course.cjs').map(u=>({...u,slug:'learn-'+u.slug,summary:'Weeks '+u.weeks+' · '+u.chapter}));
 const d2lMaterials=require('./d2l-materials.cjs');
-const titles = {'review':'Review sheet','quiz':'Practice quiz','exam':'Practice exams','cheatsheet':'Final exam cheat sheet','ref':'Quick reference','intro':'Getting started','fundamentals':'Fundamentals','functions':'Functions','arrays-pointers':'Arrays & pointers','char-pointers':'Characters & pointers','file-io':'File I/O','flow-control':'Flow control','Sets1-32_FormulaSheet':'Formula sheet · Sets 1–32','Sets22-30_FormulaSheet':'Formula sheet · Sets 22–30','Sets22-30_FormulaSheet_keywords':'Formula sheet with keywords · Sets 22–30','SampleTest3_SolutionKey':'Sample test 3 · Solution key'};
+const titles = {'assignment-1':'Assignment 1 · Step-by-step walkthrough','review':'Review sheet','quiz':'Practice quiz','exam':'Practice exams','cheatsheet':'Final exam cheat sheet','ref':'Quick reference','intro':'Getting started','fundamentals':'Fundamentals','functions':'Functions','arrays-pointers':'Arrays & pointers','char-pointers':'Characters & pointers','file-io':'File I/O','flow-control':'Flow control','Sets1-32_FormulaSheet':'Formula sheet · Sets 1–32','Sets22-30_FormulaSheet':'Formula sheet · Sets 22–30','Sets22-30_FormulaSheet_keywords':'Formula sheet with keywords · Sets 22–30','SampleTest3_SolutionKey':'Sample test 3 · Solution key'};
 const url = p => p.split('/').map(encodeURIComponent).join('/');
 const id = p => Buffer.from(p).toString('base64url');
 const resources = [];

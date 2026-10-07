@@ -267,7 +267,7 @@ window.TESSELATE_SOLUTIONS = {
   },
   "f26-36": {
     "title": "ENGR 290 · Assignment 1",
-    "status": "Worked solutions · 6 questions; vacancy-data ambiguity flagged",
+    "status": "Worked walkthrough · all 6 questions",
     "source": "ENGR%20290/ENGR%20290_Assign_1_2026.docx",
     "sections": [
       {
@@ -304,7 +304,7 @@ window.TESSELATE_SOLUTIONS = {
         "steps": [
           "Use f(T)=A exp(−Q/kT). Take the ratio to eliminate the temperature-independent prefactor A: f₂/f₁=exp[(Q/k)(1/T₁−1/T₂)].",
           "T₁=673.15 K; T₂=933.15 K. With Q=0.76 eV, k=8.62×10⁻⁵ eV/K, f₁=2.29×10⁻⁵, the result is f₂=8.81×10⁻⁴, or 0.0881% of sites.",
-          "Source inconsistency: assuming A=1 would predict f₁≈2.05×10⁻⁶, not the stated value, and f₂≈7.88×10⁻⁵. The ratio result uses all supplied data; ask the instructor which interpretation is intended."
+          "The Week 2a Bonding slides (slide 36) include a pre-exponential constant. Setting A=1 would predict f₁≈2.05×10⁻⁶, which does not match the supplied starting fraction. The given data imply A≈11.17; the ratio method uses the lecture model and all supplied data."
         ]
       },
       {
@@ -315,6 +315,16 @@ window.TESSELATE_SOLUTIONS = {
           "At x=1.00 mm and D=2.98×10⁻¹¹ m²/s, t=x²/(4Dη²)=36881 s=10.245 h.",
           "Assumptions: constant temperature and D, uniform initial concentration, constant surface concentration, and a depth small compared with specimen thickness."
         ]
+      }
+    ],
+    "files": [
+      {
+        "label": "Read the step-by-step walkthrough",
+        "url": "engr290/assignment-1.html"
+      },
+      {
+        "label": "Download the solution key and guide (PDF)",
+        "url": "engr290/assignment-1-solution-key.pdf"
       }
     ]
   },
