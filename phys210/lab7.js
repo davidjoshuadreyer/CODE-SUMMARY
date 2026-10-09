@@ -1,7 +1,7 @@
 (() => {
  'use strict';
  const M=Lab7Math,$=id=>document.getElementById(id),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
- const defaults={student:'',partners:'',date:'',section:'',meter:'',temperature:'',uncertaintyNotes:'',diameter:'',dDiameter:'',lengthB:'10.0',dLengthB:'0.1',bCount:'6',aMin:'',aMax:'',bMin:'',bMax:'',slopeNotes:'',accepted:'',acceptedSource:'',observations:'',discussion:'',conclusion:''};
+ const defaults={resistanceMode:'manual',rPercent:'',rDigits:'',rResolution:'',rOffset:'0',rRange:'',student:'',partners:'',date:'',section:'',meter:'',temperature:'',uncertaintyNotes:'',diameter:'',dDiameter:'',lengthB:'10.0',dLengthB:'0.1',bCount:'6',aMin:'',aMax:'',bMin:'',bMax:'',slopeNotes:'',accepted:'',acceptedSource:'',observations:'',discussion:'',conclusion:''};
  for(let i=0;i<19;i++)for(const k of ['L','dL','R','dR'])defaults['a'+i+k]=k==='L'?((i+1)/10).toFixed(3):'';
  for(let i=0;i<20;i++)for(const k of ['g','d','dd','R','dR'])defaults['b'+i+k]='';
  let data={...defaults},step=0,renderedB=0;
@@ -29,8 +29,8 @@
  function resultText(a){return [`Part A: ρA = ${M.fmt(a.rhoA)} ± ${M.fmt(a.drhoA)} Ω·m.`,`Part B: ρB = ${M.fmt(a.rhoB)} ± ${M.fmt(a.drhoB)} Ω·m.`,a.consistent===null?'Consistency comparison awaits both resistivity uncertainties.':`|ρA − ρB| = ${M.fmt(a.difference)} Ω·m; ΔρA + ΔρB = ${M.fmt(a.combined)} Ω·m. The manual’s strict inequality is ${a.consistent?'satisfied: consistent':'not satisfied: not consistent'} within these uncertainties.`,a.accepted?`Accepted resistivity: ${M.fmt(a.accepted)} Ω·m. Absolute percent differences: Part A ${M.fmt(a.percentA,4)}%; Part B ${M.fmt(a.percentB,4)}%.`:'Accepted-value comparison awaits a reference value.'];}
  function rawTables(a){
   const display=v=>v&&String(v).length>12&&M.number(v)!==null?M.fmt(M.number(v),8):v||'—';
-  const aRows=Array.from({length:19},(_,i)=>[i+1,...['L','dL','R','dR'].map(k=>display(data['a'+i+k]))]);
-  const bRows=Array.from({length:Number(data.bCount)},(_,i)=>[i+1,...['g','d','dd','R','dR'].map(k=>display(data['b'+i+k]))]);
+  const aRows=Array.from({length:19},(_,i)=>[i+1,...['L','dL','R','dR'].map(k=>display(k==='dR'&&data.resistanceMode==='auto'?String(M.resistanceDelta(data,'a',i)??''):data['a'+i+k]))]);
+  const bRows=Array.from({length:Number(data.bCount)},(_,i)=>[i+1,...['g','d','dd','R','dR'].map(k=>display(k==='dR'&&data.resistanceMode==='auto'?String(M.resistanceDelta(data,'b',i)??''):data['b'+i+k]))]);
   return [{title:'Part A raw measurements',headers:['Point','L (m)','ΔL (m)','R (Ω)','ΔR (Ω)'],rows:aRows},{title:'Part B raw measurements',headers:['Wire','AWG','d (mm)','Δd (mm)','R (Ω)','ΔR (Ω)'],rows:bRows},{title:'Part B calculated areas',headers:['Wire','A (m²)','ΔA (m²)','1/A (m⁻²)','Δ(1/A) (m⁻²)'],rows:a.B.map(p=>[p.i+1,...[p.area,p.dArea,p.x,p.dx].map(v=>M.fmt(v))])}];
  }
  function reportModel(){
@@ -38,7 +38,7 @@
   const sections=[
    ['Objectives','Test R ∝ L at fixed diameter and R ∝ 1/A at fixed length. Obtain two independent values of Nichrome resistivity and compare them with uncertainty and an accepted value.'],
    ['Theory','R = ρL/A; A = πd²/4. For Part A, ρA = mA A. For Part B, ρB = mB/L. Ordinary least squares fits use a free intercept. Resistivity is a material property that depends on temperature.'],
-   ['Apparatus and uncertainty',`Prepared #28 AWG wire; equal-length samples of differing gauge; probe and resistance meter. Meter/range: ${data.meter||'[Not entered]'}. Temperature: ${data.temperature?data.temperature+' °C':'not recorded'}.\nPart A diameter = ${data.diameter||'—'} ± ${data.dDiameter||'—'} mm. Part B common length = ${data.lengthB||'—'} ± ${data.dLengthB||'—'} m.\n${data.uncertaintyNotes||'[Add uncertainty sources and convention.]'}`],
+   ['Apparatus and uncertainty',`Prepared #28 AWG wire; equal-length samples of differing gauge; probe and resistance meter. Meter/range: ${data.meter||'[Not entered]'}. Temperature: ${data.temperature?data.temperature+' °C':'not recorded'}.\nPart A diameter = ${data.diameter||'—'} ± ${data.dDiameter||'—'} mm. Part B common length = ${data.lengthB||'—'} ± ${data.dLengthB||'—'} m.\n${data.resistanceMode==='auto'?`Automatic resistance uncertainty: ΔR = R × ${data.rPercent||'—'}% + ${data.rDigits||'—'} digits × ${data.rResolution||'—'} Ω/digit + ${data.rOffset||'0'} Ω.\n`:''}${data.uncertaintyNotes||'[Add uncertainty sources and convention.]'}`],
    ['Procedure','Manual procedure: measure R at 0.10–1.90 m in 0.10 m steps along the #28 wire, then measure each supplied equal-length wire between its exposed ends. Use COM and VΩ in resistance mode on unpowered samples. The jumper is assumed to have negligible resistance.'],
    ['Actual procedure and observations',data.observations||'[Add actual observations and deviations from the procedure.]'],
    ['Calculations',`Part A: d = ${M.fmt(a.diameter===null?null:a.diameter/1000)} m; A = πd²/4 = ${M.fmt(a.areaA)} m²; ΔA = ${M.fmt(a.dAreaA)} m².\nBest-fit R = mL + b: mA = ${M.fmt(a.af?.m)} Ω/m; bA = ${M.fmt(a.af?.b)} Ω; R² = ${M.fmt(a.af?.r2)}.\nPart B best-fit R = m(1/A) + b: mB = ${M.fmt(a.bf?.m)} Ω·m²; bB = ${M.fmt(a.bf?.b)} Ω; R² = ${M.fmt(a.bf?.r2)}.\nΔmA = (${data.aMax||'—'} − ${data.aMin||'—'})/2 = ${M.fmt(a.au?.dm)} Ω/m.\nΔmB = (${data.bMax||'—'} − ${data.bMin||'—'})/2 = ${M.fmt(a.bu?.dm)} Ω·m².\nρA = ${M.fmt(a.af?.m)} × ${M.fmt(a.areaA)} = ${M.fmt(a.rhoA)} Ω·m.\nρB = ${M.fmt(a.bf?.m)} / ${M.fmt(a.length)} = ${M.fmt(a.rhoB)} Ω·m.\nUncertainty propagation: ΔA/A = 2Δd/d; Δ(1/A)/(1/A) = ΔA/A; ΔρA/ρA = ΔmA/mA + ΔA/A; ΔρB/ρB = ΔmB/mB + ΔL/L.\nSlope-limit method: ${data.slopeNotes||'[Not entered]'}.`],
@@ -51,6 +51,16 @@
  }
  function tableHTML(t){return `<h3>${esc(t.title)}</h3><div class="table-wrap"><table class="report-table"><thead><tr>${t.headers.map(h=>`<th>${esc(h)}</th>`).join('')}</tr></thead><tbody>${t.rows.map(r=>`<tr>${r.map(v=>`<td>${esc(v)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;}
  function render(){
+  const auto=data.resistanceMode==='auto';
+  document.querySelectorAll('[data-key]').forEach(el=>{
+   if(/^[ab]\d+dR$/.test(el.dataset.key)){
+    el.readOnly=auto;
+    const key=el.dataset.key,prefix=key[0],i=Number(key.slice(1,-2));
+    const delta=M.resistanceDelta(data,prefix,i);
+    el.value=auto?(delta===null?'':Number(delta.toPrecision(12))):data[key];
+   }
+  });
+  for(const id of ['commonDRA','commonDRB','fillDRA','fillDRB'])$(id).disabled=auto;
   const a=M.analyze(data);
   $('analysis').innerHTML=['A','B'].map(k=>{const f=k==='A'?a.af:a.bf,rows=k==='A'?a.A:a.B,u=k==='A'?'Ω/m':'Ω·m²';return `<h3>Part ${k} · ${rows.length} valid points</h3>${chart(rows,f,'Part '+k+' · Resistance versus '+(k==='A'?'length':'inverse area'),k==='A'?'Length L (m)':'Inverse area 1/A (m⁻²)')}<p>Best-fit slope = <b>${M.fmt(f?.m)} ${u}</b>; intercept = ${M.fmt(f?.b)} Ω; R² = ${M.fmt(f?.r2)}. Brown line: best fit. Green points: measurements.</p>`;}).join('');
   const feedback=['A','B'].map(k=>{const bounds=k==='A'?a.aBounds:a.bBounds,f=k==='A'?a.af:a.bf,u=k==='A'?a.au:a.bu,rows=k==='A'?a.A:a.B;let s=`Part ${k}: `;s+=bounds?`rectangle slope range ${M.fmt(bounds.min)} to ${M.fmt(bounds.max)} ${k==='A'?'Ω/m':'Ω·m²'}.`:'no bounded common-line range available; enter at least 3 valid points and all uncertainties, then review the graph.';if(bounds&&f&&(f.m<bounds.min||f.m>bounds.max))s+=' The least-squares slope is outside that range; investigate before choosing limits.';if(u&&(M.intercept(rows,u.min)===null||M.intercept(rows,u.max)===null))s+=' One or both chosen limits cannot intersect all entered uncertainty rectangles. Explain your instructor-approved method.';return s;});
@@ -72,6 +82,17 @@
  function set(values){data={...data,...values};apply(data,step);save();}
  function fill(prefix,suffix,input,count){const v=$(input).value;if(M.nonnegative(v)===null){$('saveStatus').textContent='Enter a non-negative uncertainty before filling blank cells.';return;}const updates={};for(let i=0;i<count;i++)if(data[prefix+i+suffix]==='')updates[prefix+i+suffix]=v;set(updates);}
  $('fillDL').onclick=()=>fill('a','dL','commonDL',19);$('fillDRA').onclick=()=>fill('a','dR','commonDRA',19);$('fillDRB').onclick=()=>fill('b','dR','commonDRB',Number(data.bCount));
+ const meterPresets={
+  '45-medium-300':{meter:'Fluke 45 · medium rate · 300 Ω range',rRange:'300',rPercent:'0.05',rDigits:'2',rResolution:'0.01',rOffset:'0.02'},
+  '45-medium-3000':{meter:'Fluke 45 · medium rate · 3 kΩ range',rRange:'3000',rPercent:'0.05',rDigits:'2',rResolution:'0.1',rOffset:'0'},
+  '45-fast-300':{meter:'Fluke 45 · fast rate · 300 Ω range',rRange:'300',rPercent:'0.05',rDigits:'2',rResolution:'0.1',rOffset:'0.02'},
+  '45-fast-3000':{meter:'Fluke 45 · fast rate · 3 kΩ range',rRange:'3000',rPercent:'0.05',rDigits:'2',rResolution:'1',rOffset:'0'},
+  '45-slow-100':{meter:'Fluke 45 · slow rate · 100 Ω range',rRange:'100',rPercent:'0.05',rDigits:'8',rResolution:'0.001',rOffset:'0.02'},
+  '45-slow-1000':{meter:'Fluke 45 · slow rate · 1000 Ω range',rRange:'1000',rPercent:'0.05',rDigits:'8',rResolution:'0.01',rOffset:'0.02'},
+  '177-600':{meter:'Fluke 177 · 600 Ω range',rRange:'600',rPercent:'0.9',rDigits:'2',rResolution:'0.1',rOffset:'0'},
+  '177-6000':{meter:'Fluke 177 · 6 kΩ range',rRange:'6000',rPercent:'0.9',rDigits:'1',rResolution:'1',rOffset:'0'}
+ };
+ $('meterPreset').onchange=e=>{const preset=meterPresets[e.target.value];if(preset)set({...preset,resistanceMode:'auto'});e.target.value='';};
  $('nominalA').onclick=()=>set({diameter:(0.127*92**((36-28)/39)).toPrecision(6)});
  $('nominalB').onclick=()=>{const v={};for(let i=0;i<Number(data.bCount);i++){const g=M.number(data['b'+i+'g']);if(g!==null&&Number.isInteger(g)&&g>=20&&g<=30&&data['b'+i+'d']==='')v['b'+i+'d']=(0.127*92**((36-g)/39)).toPrecision(6);}set(v);};
  $('addB').onclick=()=>{if(Number(data.bCount)<20)set({bCount:String(Number(data.bCount)+1)});};
