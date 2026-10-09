@@ -152,7 +152,9 @@ window.TESSELATE_SOLUTIONS = {
   },
   "f26-21": {
     "title": "PHYS 210 · Nichrome resistivity",
-    "status": "Prepared calculations · your measurements required",
+    "walkthrough": "phys210/lab7.html",
+    "source": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448840/View",
+    "status": "Interactive lab report · enter measurements and export Excel / Word",
     "sections": [
       {
         "title": "Fit rather than one-point division",

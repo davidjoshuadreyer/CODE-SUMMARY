@@ -171,10 +171,10 @@ window.TESSELATE_ASSIGNMENTS = {
       "title": "Resistivity of Nichrome · report",
       "date": "2026-11-20",
       "time": "Friday class",
-      "source": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448870/View",
-      "solution": "solutions.html?event=f26-21",
-      "label": "Worked reference · sign in",
-      "status": "Prepared calculations · your measurements required",
+      "source": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448840/View",
+      "solution": "phys210/lab7.html",
+      "label": "Open lab report builder",
+      "status": "Interactive lab report · enter measurements and export Excel / Word",
       "pdf": ""
     },
     {

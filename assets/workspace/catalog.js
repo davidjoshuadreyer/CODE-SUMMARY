@@ -139,6 +139,17 @@ window.TESSELATE_CATALOG = {
       "builtin": true
     },
     {
+      "id": "page-cGh5czIxMC9sYWI3Lmh0bWw",
+      "courseId": "phys210",
+      "title": "Experiment 7 · Lab report builder",
+      "kind": "Lab report",
+      "url": "phys210/lab7.html",
+      "body": "",
+      "description": "Step-by-step Nichrome measurements, graphs, account saves, and Excel and Word exports.",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
       "id": "page-cGh5czIxMC9sZWFybi1jYXBhY2l0b3JzLmh0bWw",
       "courseId": "phys210",
       "title": "Capacitance, combinations, and dielectrics",
