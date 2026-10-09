@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-labelledby="title desc">
+<title id="title">The two graph methods for resistivity</title><desc id="desc">Part A graph resistance vertically versus length horizontally and multiply the slope by area. Part B graph resistance vertically versus inverse area horizontally and divide the slope by length. The sketches are theoretical guides, not measured results.</desc>
+<style>text{font:18px Arial,sans-serif;fill:#23333d}.small{font-size:15px}.label{font-weight:700}</style><rect width="600" height="360" fill="#fff"/>
+<path d="M300 30V317" stroke="#d9dfe3"/><text x="150" y="38" text-anchor="middle" class="label">PART A · constant d</text><text x="450" y="38" text-anchor="middle" class="label">PART B · constant L</text>
+<path d="M67 75V222H265M365 75V222H563" fill="none" stroke="#284859" stroke-width="2"/><path d="M78 209L251 88M376 209L549 88" stroke="#956332" stroke-width="3"/>
+<text x="37" y="91">R</text><text x="337" y="91">R</text><text x="170" y="249" text-anchor="middle">L (m)</text><text x="465" y="249" text-anchor="middle">1/A (m⁻²)</text><text x="141" y="125" class="small">slope mA</text><text x="437" y="125" class="small">slope mB</text>
+<text x="150" y="289" text-anchor="middle" class="label">ρA = mA × A</text><text x="450" y="289" text-anchor="middle" class="label">ρB = mB ÷ L</text>
+<text x="300" y="338" text-anchor="middle" class="small">Method sketches only · your measured graphs appear below</text>
+</svg>

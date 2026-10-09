@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-labelledby="title desc">
+<title id="title">Part A resistance measurement</title><desc id="desc">Black COM lead stays at the wire start. Red V-ohm probe touches each length mark along the same wire. Select resistance mode with no external power.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto-start-reverse"><path d="M0 0L6 3L0 6" fill="none" stroke="#284859"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;font-size:18px;fill:#23333d}.small{font-size:15px}.label{font-weight:700}.wire{stroke:#956332;stroke-width:6;fill:none;stroke-linecap:round}</style>
+<rect width="600" height="360" fill="#fff"/>
+<rect x="34" y="24" width="194" height="175" rx="14" fill="#f1f4f5" stroke="#819099" stroke-width="2"/>
+<text x="131" y="53" text-anchor="middle" class="label">MULTIMETER</text><rect x="56" y="65" width="150" height="48" rx="4" fill="#e4ece9"/>
+<text x="131" y="97" text-anchor="middle" style="font-size:26px">R (Ω)</text><text x="131" y="138" text-anchor="middle" class="small">Select Ω mode</text>
+<circle cx="85" cy="172" r="10" fill="#23333d"/><circle cx="175" cy="172" r="10" fill="#b44738"/><text x="85" y="158" text-anchor="middle" class="small">COM</text><text x="175" y="158" text-anchor="middle" class="small">VΩ</text>
+<path d="M85 182V275" fill="none" stroke="#23333d" stroke-width="4"/>
+<path d="M175 182V213Q175 226 196 226H351Q368 226 368 246" fill="none" stroke="#b44738" stroke-width="4"/>
+<path d="M368 235V263" stroke="#b44738" stroke-width="9"/><path d="M368 258V274" stroke="#23333d" stroke-width="3"/>
+<path d="M85 275H558" class="wire"/><circle cx="85" cy="275" r="8" fill="#23333d"/>
+<path d="M179 265V285M274 265V285M368 265V285M463 265V285M558 265V285" stroke="#819099"/>
+<text x="85" y="303" text-anchor="middle">0</text><text x="368" y="303" text-anchor="middle">L</text><text x="549" y="303" text-anchor="end" class="small">same wire</text>
+<path d="M88 326H365" stroke="#284859" stroke-width="1.5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="224" y="350" text-anchor="middle" class="small">Measured length: start → probe</text>
+<text x="260" y="58" class="label">1  Black lead stays fixed</text><text x="280" y="84">at the wire’s start plug.</text>
+<text x="260" y="126" class="label">2  Move the red probe</text><text x="280" y="152">to each length mark.</text>
+<text x="260" y="192" class="small">Unpowered sample · no supply attached</text>
+</svg>

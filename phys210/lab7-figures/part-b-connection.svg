@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-labelledby="title desc">
+<title id="title">Part B equal-length wire measurement</title><desc id="desc">Connect COM and V-ohm leads to opposite exposed ends of one full wire sample. Record its gauge, diameter and resistance, then replace it with the next equal-length sample. Do not connect samples together.</desc>
+<style>text{font:18px Arial,sans-serif;fill:#23333d}.small{font-size:15px}.label{font-weight:700}</style><rect width="600" height="360" fill="#fff"/>
+<rect x="26" y="27" width="174" height="163" rx="12" fill="#f1f4f5" stroke="#819099" stroke-width="2"/><text x="113" y="55" text-anchor="middle" class="label">MULTIMETER</text><rect x="48" y="67" width="130" height="45" rx="4" fill="#e4ece9"/><text x="113" y="98" text-anchor="middle" style="font-size:25px">R (Ω)</text><text x="113" y="137" text-anchor="middle" class="small">Select Ω mode</text><circle cx="68" cy="170" r="9" fill="#23333d"/><circle cx="155" cy="170" r="9" fill="#b44738"/><text x="68" y="157" text-anchor="middle" class="small">COM</text><text x="155" y="157" text-anchor="middle" class="small">VΩ</text>
+<path d="M68 180V259H235" fill="none" stroke="#23333d" stroke-width="4"/><path d="M155 180V213H557V259H506" fill="none" stroke="#b44738" stroke-width="4"/>
+<path d="M235 259H269C281 220 298 220 307 259C316 298 332 298 341 259C350 220 366 220 375 259C384 298 400 298 409 259C418 220 434 220 443 259H506" stroke="#956332" stroke-width="5" fill="none"/>
+<circle cx="235" cy="259" r="6" fill="#23333d"/><circle cx="506" cy="259" r="6" fill="#b44738"/>
+<text x="238" y="54" class="label">One full sample at a time</text><text x="238" y="84">Clip to its two exposed ends.</text><text x="238" y="128">Record AWG → diameter → R.</text><text x="238" y="158">Then swap to the next wire.</text>
+<text x="371" y="315" text-anchor="middle" class="label">Same L = (10.0 ± 0.1) m</text><text x="300" y="344" text-anchor="middle" class="small">Different diameters · do not join the samples together</text>
+</svg>

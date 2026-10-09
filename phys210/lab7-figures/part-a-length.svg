@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-labelledby="title desc">
+<title id="title">Counting length around the folded wire</title><desc id="desc">Start at zero and follow the top side toward one metre. Continue around the jumper and back along the return side at 1.1 to 1.9 metres. Do not restart from zero. Drawing is a schematic, not a physical layout specification.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0L6 3L0 6" fill="none" stroke="#284859"/></marker></defs>
+<style>text{font:18px Arial,sans-serif;fill:#23333d}.small{font-size:15px}.label{font-weight:700}</style><rect width="600" height="360" fill="#fff"/>
+<text x="32" y="34" class="label">Follow the wire, not the board’s width</text>
+<path d="M70 124H510" fill="none" stroke="#956332" stroke-width="6"/><path d="M510 124Q549 124 549 173V187Q549 224 510 224" fill="none" stroke="#647984" stroke-width="4" stroke-dasharray="7 5"/><path d="M510 224H70" fill="none" stroke="#956332" stroke-width="6"/>
+<circle cx="70" cy="124" r="9" fill="#23333d"/><text x="70" y="96" text-anchor="middle">0</text>
+<path d="M158 112V136M246 112V136M334 112V136M422 112V136M510 112V136M158 212V236M246 212V236M334 212V236M422 212V236" stroke="#819099" stroke-width="2"/>
+<text x="158" y="96" text-anchor="middle">0.2</text><text x="246" y="96" text-anchor="middle">0.4</text><text x="334" y="96" text-anchor="middle">0.6</text><text x="422" y="96" text-anchor="middle">0.8</text><text x="510" y="96" text-anchor="middle">1.0 m</text>
+<text x="158" y="259" text-anchor="middle">1.8</text><text x="246" y="259" text-anchor="middle">1.6</text><text x="334" y="259" text-anchor="middle">1.4</text><text x="422" y="259" text-anchor="middle">1.2 m</text>
+<path d="M120 155H467M467 192H120" stroke="#284859" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="295" y="179" text-anchor="middle" class="small">Continue around the jumper →</text>
+<circle cx="114" cy="224" r="7" fill="#b44738"/><path d="M114 235V285" stroke="#b44738" stroke-width="2"/><text x="32" y="309">Last reading: 1.90 m</text>
+<text x="32" y="340" class="small">Read every 0.10 m. Alternate marks shown here for clarity.</text>
+</svg>
