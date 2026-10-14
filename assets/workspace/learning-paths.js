@@ -456,8 +456,13 @@ window.TESSELATE_PATHS = {
     ]
   },
   "ecet250e": {
-    "coverage": "Three introductory lessons are ready. The D2L library indexes the released notes, labs, and solutions; full course lessons and instructor-checked quizzes are still to be added.",
+    "coverage": "161 worked problems cover the currently posted Weeks 1–6 (Chapters 1–4, 6–7). All 49 original files, expandable solutions, and an optional Lab report theme. Checked October 14, 2026.",
     "lessons": [
+      {
+        "title": "Worked problem library",
+        "url": "ecet250e/report-study.html",
+        "summary": "161 worked problems from the posted lecture slides, Problem Sets 1–6, and Quiz 1."
+      },
       {
         "title": "Current, voltage, and power",
         "url": "ecet250e/current-voltage-power.html",
@@ -476,9 +481,14 @@ window.TESSELATE_PATHS = {
     ],
     "practice": [
       {
-        "title": "Practice within each lesson",
-        "url": "ecet250e/review.html",
-        "summary": "Short questions with expandable worked answers."
+        "title": "Worked problem library · Start here",
+        "url": "ecet250e/report-study.html",
+        "summary": "Search by topic, reveal each step, and mark problems reviewed."
+      },
+      {
+        "title": "All posted course materials",
+        "url": "ecet250e/report-study.html#library",
+        "summary": "Original lecture decks, problem sets, keys, labs, and simulation references."
       },
       {
         "title": "Lab 5 · Interactive bench guide",
