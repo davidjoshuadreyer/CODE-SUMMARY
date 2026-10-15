@@ -29,7 +29,7 @@
  const source=document.currentScript?.src;
  if(!source)return;
  const script=document.createElement('script');
- script.src=new URL('design/aurora-motion.js',source).href;
+ script.src=new URL('design/aurora-motion.js?v=fluid-2',source).href;
  script.defer=true;
  document.head.append(script);
 })();
