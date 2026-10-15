@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400" role="img" aria-labelledby="title desc">
+<title id="title">Exterior field of two charged spherical shells</title><desc id="desc">Concentric spherical surfaces have radii 1.0 cm and 3.0 cm, with uniform densities +40 pC/m² and +60 pC/m² respectively. Find E at r = 4.0 cm.</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="context-stroke"/></marker></defs><rect width="800" height="400" fill="#fffefa"/>
+<text x="25" y="30" font-family="Arial, sans-serif" font-size="20" fill="#253840" text-anchor="start">T4-Q6  ·  Exterior field of two charged spherical shells</text>
+<path d="M25 45L775 45" fill="none" stroke="#d6dedd" stroke-width="1"/>
+<text x="25" y="383" font-family="Arial, sans-serif" font-size="14" fill="#69777d" text-anchor="start">SCHEMATIC · not to scale unless axes are numbered</text>
+<circle cx="230" cy="210" r="28" fill="none" stroke="#137b80" stroke-width="2"/>
+<circle cx="230" cy="210" r="84" fill="none" stroke="#137b80" stroke-width="2"/>
+<circle cx="230" cy="210" r="112" fill="none" stroke="#be4949" stroke-width="2" stroke-dasharray="6 5"/>
+<path d="M342 210L420 210" fill="none" stroke="#be4949" stroke-width="3"/>
+<polygon points="420,210 410.0,205.5 410.0,214.5" fill="#be4949"/>
+<text x="425" y="215" font-family="Arial, sans-serif" font-size="18" fill="#253840" text-anchor="start">E</text>
+<text x="215" y="195" font-family="Arial, sans-serif" font-size="18" fill="#253840" text-anchor="start">+</text>
+<text x="260" y="150" font-family="Arial, sans-serif" font-size="18" fill="#253840" text-anchor="start">+</text>
+<text x="480" y="100" font-family="Arial, sans-serif" font-size="17" fill="#253840" text-anchor="start">Spherical shells; cross-section</text>
+<text x="480" y="130" font-family="Arial, sans-serif" font-size="17" fill="#253840" text-anchor="start">R₁ = 1 cm; σ₁ = +40 pC/m²</text>
+<text x="480" y="160" font-family="Arial, sans-serif" font-size="17" fill="#253840" text-anchor="start">R₂ = 3 cm; σ₂ = +60 pC/m²</text>
+<text x="480" y="190" font-family="Arial, sans-serif" font-size="17" fill="#253840" text-anchor="start">Dashed Gaussian sphere: 4 cm</text>
+<text x="480" y="220" font-family="Arial, sans-serif" font-size="17" fill="#253840" text-anchor="start">Both shells are fully enclosed.</text>
+</svg>
