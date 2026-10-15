@@ -1,5 +1,5 @@
-/* Original, static landscape inspired by the user's pastel/grain reference.
-   Decoration stays outside problem content; no animation or external assets. */
+/* Original landscape inspired by the user's pastel/grain reference.
+   Decoration stays outside problem content; all assets are local. */
 html:not([data-study-style=report]) body{background-image:radial-gradient(ellipse at 90% 0%,#e8ddfa55,transparent 42%),radial-gradient(ellipse at 5% 45%,#ffe2ea35,transparent 40%);background-attachment:fixed}
 html:not([data-study-style=report]) body .sidebar{background:linear-gradient(165deg,var(--sidebar) 45%,#f2e3ed);border-right-color:var(--line)}
 html:not([data-study-style=report]) body.dark .sidebar{background:linear-gradient(165deg,var(--sidebar) 45%,#352537)}
@@ -26,3 +26,14 @@ html:not([data-study-style=report]) body.dark footer:after{opacity:.4}
 html:not([data-study-style=report]) body>footer{padding-left:max(24px,calc((100% - 950px)/2));padding-right:max(24px,calc((100% - 950px)/2))}
 @media(max-width:760px){html:not([data-study-style=report]) body footer:after{background-size:auto 220px}html:not([data-study-style=report]) body footer{min-height:220px;padding-bottom:145px;flex-wrap:wrap}html:not([data-study-style=report]) body .report-cover .intro-note{max-width:100%}html:not([data-study-style=report]) body .report-cover:after{background-size:auto 150px}html:not([data-study-style=report]) body .report-cover{padding-bottom:80px}}
 @media print{html:not([data-study-style=report]) body{background:#fff!important}html:not([data-study-style=report]) body .report-cover{padding-bottom:20px}html:not([data-study-style=report]) body :is(.report-cover,footer):after{display:none}html:not([data-study-style=report]) body :is(.studio-feature,.learning-intro,.learning-callout,.course-top){background:#fff!important}}
+/* Grain is a fixed, seamless texture: movement comes from the spring, not flashing noise. */
+:root{--aurora-x:0px;--aurora-y:0px;--aurora-hue:0deg;--aurora-light-x:50%}
+html:not([data-study-style=report]) body .studio-feature-art{position:relative;isolation:isolate;background:none}
+html:not([data-study-style=report]) body .studio-feature-art:before{content:'';position:absolute;inset:-20px;z-index:-1;pointer-events:none;background-image:url('grain.svg'),radial-gradient(ellipse at var(--aurora-light-x) 50%,#ffcad955,transparent 65%),url('aurora-landscape.svg');background-size:180px 180px,100% 100%,cover;background-position:center;background-repeat:repeat,no-repeat,no-repeat;transform:translate(var(--aurora-x),var(--aurora-y)) scale(1.04);filter:hue-rotate(var(--aurora-hue)) saturate(1.12)}
+html:not([data-study-style=report]) body .studio-feature-art img{transform:translate(calc(var(--aurora-x)*-.35),calc(var(--aurora-y)*-.35))}
+html:not([data-study-style=report]) body :is(.report-cover,footer):after{top:auto;height:190px;inset-inline:-20px;background-image:url('grain.svg'),url('aurora-landscape.svg');background-size:180px 180px,100% 100%;background-repeat:repeat,no-repeat;background-position:center bottom;transform:translate(var(--aurora-x),var(--aurora-y)) scale(1.08);filter:hue-rotate(var(--aurora-hue)) saturate(1.12);mask-image:linear-gradient(transparent,#000 35%)}
+html:not([data-study-style=report]) body footer{overflow:hidden}
+html:not([data-study-style=report]) body footer:after{height:260px}
+@media(max-width:760px){html:not([data-study-style=report]) body .report-cover:after{height:150px}html:not([data-study-style=report]) body footer:after{height:220px}}
+@media(prefers-reduced-motion:reduce){html:not([data-study-style=report]) body :is(.report-cover,footer):after,html:not([data-study-style=report]) body .studio-feature-art:before,html:not([data-study-style=report]) body .studio-feature-art img{transform:none;filter:none}}
+@media print{html:not([data-study-style=report]) body .studio-feature-art:before{display:none}}

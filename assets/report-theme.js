@@ -23,3 +23,13 @@
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mount,{once:true});else mount();
   addEventListener('storage',e=>{if(e.key===key)apply(e.newValue);});
 })();
+
+// Shared visual enhancement; source URL stays correct on nested course pages.
+(() => {
+ const source=document.currentScript?.src;
+ if(!source)return;
+ const script=document.createElement('script');
+ script.src=new URL('design/aurora-motion.js',source).href;
+ script.defer=true;
+ document.head.append(script);
+})();
