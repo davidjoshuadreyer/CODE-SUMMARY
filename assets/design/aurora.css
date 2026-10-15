@@ -48,3 +48,10 @@ body.dark .aurora-fluid{opacity:.6}
 html[data-study-style=report] .aurora-fluid{display:none}
 @media(max-width:760px){.aurora-fluid{height:210px}.report-cover .aurora-fluid{height:170px}html:not([data-study-style=report]) body .report-cover.has-fluid{padding-bottom:130px}}
 @media print{.aurora-fluid{display:none}}
+
+/* Keep the reading-page introduction clear; landscapes belong at the page edge. */
+html:not([data-study-style=report]) body .report-cover,
+html:not([data-study-style=report]) body .report-cover.has-fluid{padding-bottom:24px}
+html:not([data-study-style=report]) body .report-cover:after,
+.report-cover .aurora-fluid{display:none}
+html:not([data-study-style=report]) body .report-cover .intro-note{max-width:720px}

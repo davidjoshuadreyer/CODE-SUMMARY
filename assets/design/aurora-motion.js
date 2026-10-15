@@ -39,7 +39,7 @@ function initAuroraFluid(){
  }
  function wake(){if(!frame&&allowed()){last=0;frame=requestAnimationFrame(tick);}}
  const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{const s=surfaces.get(e.target);if(s)s.visible=e.isIntersecting;});wake();},{rootMargin:'40px'});
- function mount(){document.querySelectorAll('.studio-feature-art,.report-cover,body>footer,.shell>footer').forEach(host=>{if(surfaces.has(host))return;const canvas=document.createElement('canvas');canvas.className='aurora-fluid';canvas.setAttribute('aria-hidden','true');const ctx=canvas.getContext('2d');if(!ctx)return;host.append(canvas);host.classList.add('has-fluid');surfaces.set(host,{canvas,ctx,visible:false});observer.observe(host);});wake();}
+ function mount(){document.querySelectorAll('.studio-feature-art,body>footer,.shell>footer').forEach(host=>{if(surfaces.has(host))return;const canvas=document.createElement('canvas');canvas.className='aurora-fluid';canvas.setAttribute('aria-hidden','true');const ctx=canvas.getContext('2d');if(!ctx)return;host.append(canvas);host.classList.add('has-fluid');surfaces.set(host,{canvas,ctx,visible:false});observer.observe(host);});wake();}
  addEventListener('pointermove',e=>{pointer.x=e.clientX;pointer.y=e.clientY;},{passive:true});
  addEventListener('pointerdown',e=>{pointer.x=e.clientX;pointer.y=e.clientY;if(!reduce.matches){ripples.push({x:e.clientX,y:e.clientY,t:phase});if(ripples.length>5)ripples.shift();}wake();},{passive:true});
  document.addEventListener('pointerleave',()=>{pointer.x=pointer.y=-10000;});
