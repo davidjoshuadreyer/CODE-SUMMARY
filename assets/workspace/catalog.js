@@ -337,6 +337,31 @@ window.TESSELATE_CATALOG = {
       "builtin": true
     },
     {
+      "id": "page-cGh5czIxMC90dXRvcmlhbHMuaHRtbA",
+      "courseId": "phys210",
+      "title": "Tutorials 1–11 · Complete worked solutions",
+      "kind": "Study notes",
+      "url": "phys210/tutorials.html",
+      "body": "",
+      "description": "105 tutorial questions plus 12 vector-review examples and exercises, with original diagrams, worked steps, and checks.",
+      "referenceIds": [
+        "ref-physics-tutorial-3871e3c402d5048b",
+        "ref-physics-tutorial-7f3006ccbbda12e0",
+        "ref-physics-tutorial-c43273c179cdea7c",
+        "ref-physics-tutorial-1da5a48f80b82563",
+        "ref-physics-tutorial-9825a0c43a07880c",
+        "ref-physics-tutorial-63fcab465c6859d1",
+        "ref-physics-tutorial-c993ed60f5abdd73",
+        "ref-physics-tutorial-69cbfbd73b6cb8e3",
+        "ref-physics-tutorial-4f69b6d0b92fec78",
+        "ref-physics-tutorial-990baba096ce8f9e",
+        "ref-physics-tutorial-dc683be3bb055fd6",
+        "ref-physics-tutorial-973bb50401d38f44",
+        "ref-physics-tutorial-1da5297c88213dca"
+      ],
+      "builtin": true
+    },
+    {
       "id": "page-ZWNldDI1MGUvYXNzaWdubWVudHMuaHRtbA",
       "courseId": "ecet250e",
       "title": "Assignments & solutions",
@@ -2256,6 +2281,149 @@ window.TESSELATE_CATALOG = {
     }
   ],
   "references": [
+    {
+      "id": "ref-physics-tutorial-3871e3c402d5048b",
+      "courseId": "phys210",
+      "name": "1 Kinematics & Coulomb",
+      "url": "phys210/tutorial-sources/tutorial-01.pdf",
+      "size": 58558,
+      "stage": "unreviewed",
+      "notes": "Original tutorial handout · Collected October 14, 2026. https://online.camosun.ca/d2l/le/content/348967/viewContent/5448797/View",
+      "builtin": true,
+      "createdAt": "2026-10-14T00:00:00.000Z"
+    },
+    {
+      "id": "ref-physics-tutorial-7f3006ccbbda12e0",
+      "courseId": "phys210",
+      "name": "10 B force Calc B",
+      "url": "phys210/tutorial-sources/tutorial-10.pdf",
+      "size": 54458,
+      "stage": "unreviewed",
+      "notes": "Original tutorial handout · Collected October 14, 2026. https://online.camosun.ca/d2l/le/content/348967/viewContent/5448846/View",
+      "builtin": true,
+      "createdAt": "2026-10-14T00:00:00.000Z"
+    },
+    {
+      "id": "ref-physics-tutorial-c43273c179cdea7c",
+      "courseId": "phys210",
+      "name": "11 B field & Induction",
+      "url": "phys210/tutorial-sources/tutorial-11.pdf",
+      "size": 56525,
+      "stage": "unreviewed",
+      "notes": "Original tutorial handout · Collected October 14, 2026. https://online.camosun.ca/d2l/le/content/348967/viewContent/5448847/View",
+      "builtin": true,
+      "createdAt": "2026-10-14T00:00:00.000Z"
+    },
+    {
+      "id": "ref-physics-tutorial-1da5a48f80b82563",
+      "courseId": "phys210",
+      "name": "2 E field Dist",
+      "url": "phys210/tutorial-sources/tutorial-02.pdf",
+      "size": 97756,
+      "stage": "unreviewed",
+      "notes": "Original tutorial handout · Collected October 14, 2026. https://online.camosun.ca/d2l/le/content/348967/viewContent/5448798/View",
+      "builtin": true,
+      "createdAt": "2026-10-14T00:00:00.000Z"
+    },
+    {
+      "id": "ref-physics-tutorial-9825a0c43a07880c",
+      "courseId": "phys210",
+      "name": "3 E Flux",
+      "url": "phys210/tutorial-sources/tutorial-03.pdf",
+      "size": 96818,
+      "stage": "unreviewed",
+      "notes": "Original tutorial handout · Collected October 14, 2026. https://online.camosun.ca/d2l/le/content/348967/viewContent/5448799/View",
+      "builtin": true,
+      "createdAt": "2026-10-14T00:00:00.000Z"
+    },
+    {
+      "id": "ref-physics-tutorial-63fcab465c6859d1",
+      "courseId": "phys210",
+      "name": "4 Gauss Law",
+      "url": "phys210/tutorial-sources/tutorial-04.pdf",
+      "size": 44722,
+      "stage": "unreviewed",
+      "notes": "Original tutorial handout · Collected October 14, 2026. https://online.camosun.ca/d2l/le/content/348967/viewContent/5448800/View",
+      "builtin": true,
+      "createdAt": "2026-10-14T00:00:00.000Z"
+    },
+    {
+      "id": "ref-physics-tutorial-c993ed60f5abdd73",
+      "courseId": "phys210",
+      "name": "5 E Potential",
+      "url": "phys210/tutorial-sources/tutorial-05.pdf",
+      "size": 222988,
+      "stage": "unreviewed",
+      "notes": "Original tutorial handout · Collected October 14, 2026. https://online.camosun.ca/d2l/le/content/348967/viewContent/5448801/View",
+      "builtin": true,
+      "createdAt": "2026-10-14T00:00:00.000Z"
+    },
+    {
+      "id": "ref-physics-tutorial-69cbfbd73b6cb8e3",
+      "courseId": "phys210",
+      "name": "6 Capacitance",
+      "url": "phys210/tutorial-sources/tutorial-06.pdf",
+      "size": 52545,
+      "stage": "unreviewed",
+      "notes": "Original tutorial handout · Collected October 14, 2026. https://online.camosun.ca/d2l/le/content/348967/viewContent/5448802/View",
+      "builtin": true,
+      "createdAt": "2026-10-14T00:00:00.000Z"
+    },
+    {
+      "id": "ref-physics-tutorial-4f69b6d0b92fec78",
+      "courseId": "phys210",
+      "name": "7 Cap Combo",
+      "url": "phys210/tutorial-sources/tutorial-07.pdf",
+      "size": 56468,
+      "stage": "unreviewed",
+      "notes": "Original tutorial handout · Collected October 14, 2026. https://online.camosun.ca/d2l/le/content/348967/viewContent/5448803/View",
+      "builtin": true,
+      "createdAt": "2026-10-14T00:00:00.000Z"
+    },
+    {
+      "id": "ref-physics-tutorial-990baba096ce8f9e",
+      "courseId": "phys210",
+      "name": "8 DC Circuits B Force on Charges",
+      "url": "phys210/tutorial-sources/tutorial-08.pdf",
+      "size": 51685,
+      "stage": "unreviewed",
+      "notes": "Original tutorial handout · Collected October 14, 2026. https://online.camosun.ca/d2l/le/content/348967/viewContent/5448804/View",
+      "builtin": true,
+      "createdAt": "2026-10-14T00:00:00.000Z"
+    },
+    {
+      "id": "ref-physics-tutorial-dc683be3bb055fd6",
+      "courseId": "phys210",
+      "name": "9 Mag Force on Charges",
+      "url": "phys210/tutorial-sources/tutorial-09.pdf",
+      "size": 101378,
+      "stage": "unreviewed",
+      "notes": "Original tutorial handout · Collected October 14, 2026. https://online.camosun.ca/d2l/le/content/348967/viewContent/5448845/View",
+      "builtin": true,
+      "createdAt": "2026-10-14T00:00:00.000Z"
+    },
+    {
+      "id": "ref-physics-tutorial-973bb50401d38f44",
+      "courseId": "phys210",
+      "name": "P154 Tutorial on Dot Product Cross Product",
+      "url": "phys210/tutorial-sources/vector-review.pdf",
+      "size": 351519,
+      "stage": "unreviewed",
+      "notes": "Original tutorial handout · Collected October 14, 2026. https://online.camosun.ca/d2l/le/content/348967/viewContent/5448852/View",
+      "builtin": true,
+      "createdAt": "2026-10-14T00:00:00.000Z"
+    },
+    {
+      "id": "ref-physics-tutorial-1da5297c88213dca",
+      "courseId": "phys210",
+      "name": "tutorial-2-short",
+      "url": "phys210/tutorial-sources/tutorial-2-short.jpg",
+      "size": 153418,
+      "stage": "unreviewed",
+      "notes": "Original tutorial handout · Collected October 14, 2026. https://online.camosun.ca/d2l/le/content/348967/viewContent/5448843/View",
+      "builtin": true,
+      "createdAt": "2026-10-14T00:00:00.000Z"
+    },
     {
       "id": "ref-ecet-import-9dfb869a806d0f48",
       "courseId": "ecet250e",

@@ -37,6 +37,10 @@ for (const [dir,courseId] of [['phys210','phys210'],['ecet250e','ecet250e'],['ma
 const lab5Pages={"phys210/lab7.html": {"title": "Experiment 7 · Lab report builder", "kind": "Lab report", "description": "Step-by-step Nichrome measurements, graphs, account saves, and Excel and Word exports."},"ecet250e/lab5.html": {"title": "Lab 5 · Interactive bench guide", "kind": "Study notes", "description": "Step-by-step wiring, measurement inputs, and automatic account saves."}, "ecet250e/lab5-calculations.html": {"title": "Lab 5 · Calculations and report", "kind": "Lab report", "description": "Clear Thevenin calculations and a downloadable report template."}};
 for (const resource of resources) if(lab5Pages[resource.url]) Object.assign(resource,lab5Pages[resource.url]);
 const references=[];
+const physicsTutorialFiles=require('../phys210/tutorial-manifest.json');
+for(const m of physicsTutorialFiles)references.push({id:'ref-physics-tutorial-'+m.sha256.slice(0,16),courseId:'phys210',name:m.title,url:'phys210/'+m.url,size:m.bytes,stage:'unreviewed',notes:'Original tutorial handout · Collected October 14, 2026. '+m.topicUrl,builtin:true,createdAt:'2026-10-14T00:00:00.000Z'});
+const physicsTutorialPage=resources.find(r=>r.url==='phys210/tutorials.html');
+if(physicsTutorialPage)Object.assign(physicsTutorialPage,{title:'Tutorials 1–11 · Complete worked solutions',description:'105 tutorial questions plus 12 vector-review examples and exercises, with original diagrams, worked steps, and checks.',referenceIds:physicsTutorialFiles.map(m=>'ref-physics-tutorial-'+m.sha256.slice(0,16))});
 const ecetFiles=require('../ecet250e/source-manifest.json');
 for(const m of ecetFiles)references.push({id:'ref-ecet-import-'+m.id,courseId:'ecet250e',name:m.title,url:'ecet250e/'+m.url,size:m.bytes,stage:'unreviewed',notes:(m.original?'Original D2L file':'PDF reading copy')+' · '+m.group+' · Collected October 14, 2026.',builtin:true,createdAt:'2026-10-14T00:00:00.000Z'});
 const ecetStudy=resources.find(r=>r.url==='ecet250e/report-study.html');

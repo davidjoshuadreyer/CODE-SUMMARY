@@ -1,0 +1,145 @@
+[
+  {
+    "tutorial": 1,
+    "title": "1 Kinematics & Coulomb",
+    "filename": "1 Kinematics & Coulomb.pdf",
+    "url": "tutorial-sources/tutorial-01.pdf",
+    "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448797/View",
+    "sha256": "3871e3c402d5048bb88115b69d7baa06b47f563f523638b65fed8b107863f927",
+    "bytes": 58558,
+    "format": "PDF",
+    "supplement": false
+  },
+  {
+    "tutorial": 10,
+    "title": "10 B force Calc B",
+    "filename": "10 B force Calc B.pdf",
+    "url": "tutorial-sources/tutorial-10.pdf",
+    "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448846/View",
+    "sha256": "7f3006ccbbda12e026e82b2a70cc29e490a8afcfc9a2f861f49829cca8f0b1bd",
+    "bytes": 54458,
+    "format": "PDF",
+    "supplement": false
+  },
+  {
+    "tutorial": 11,
+    "title": "11 B field & Induction",
+    "filename": "11 B field & Induction.pdf",
+    "url": "tutorial-sources/tutorial-11.pdf",
+    "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448847/View",
+    "sha256": "c43273c179cdea7cdb57206161924188943dc800352db5b23db1ad5f4e68b755",
+    "bytes": 56525,
+    "format": "PDF",
+    "supplement": false
+  },
+  {
+    "tutorial": 2,
+    "title": "2 E field Dist",
+    "filename": "2 E field Dist.pdf",
+    "url": "tutorial-sources/tutorial-02.pdf",
+    "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448798/View",
+    "sha256": "1da5a48f80b8256337e0928aaa8a496f5afd9a4dec35e7a4af7a087649a3debb",
+    "bytes": 97756,
+    "format": "PDF",
+    "supplement": false
+  },
+  {
+    "tutorial": 3,
+    "title": "3 E Flux",
+    "filename": "3 E Flux.pdf",
+    "url": "tutorial-sources/tutorial-03.pdf",
+    "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448799/View",
+    "sha256": "9825a0c43a07880cb326350ae0fc3ebca7885775ba7225da61e744be037ea3e2",
+    "bytes": 96818,
+    "format": "PDF",
+    "supplement": false
+  },
+  {
+    "tutorial": 4,
+    "title": "4 Gauss Law",
+    "filename": "4 Gauss Law.pdf",
+    "url": "tutorial-sources/tutorial-04.pdf",
+    "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448800/View",
+    "sha256": "63fcab465c6859d1b6a251d450c2669dcd8ebb68d60ee41523b4f5dd6b2b96e6",
+    "bytes": 44722,
+    "format": "PDF",
+    "supplement": false
+  },
+  {
+    "tutorial": 5,
+    "title": "5 E Potential",
+    "filename": "5 E Potential.pdf",
+    "url": "tutorial-sources/tutorial-05.pdf",
+    "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448801/View",
+    "sha256": "c993ed60f5abdd7391704261dada41e4d9a46f577a1ff707e0b03b32d5658501",
+    "bytes": 222988,
+    "format": "PDF",
+    "supplement": false
+  },
+  {
+    "tutorial": 6,
+    "title": "6 Capacitance",
+    "filename": "6 Capacitance.pdf",
+    "url": "tutorial-sources/tutorial-06.pdf",
+    "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448802/View",
+    "sha256": "69cbfbd73b6cb8e359b11a899fe52d8c7d389ef42687d8c7120e2b6e47b3df71",
+    "bytes": 52545,
+    "format": "PDF",
+    "supplement": false
+  },
+  {
+    "tutorial": 7,
+    "title": "7 Cap Combo",
+    "filename": "7 Cap Combo.pdf",
+    "url": "tutorial-sources/tutorial-07.pdf",
+    "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448803/View",
+    "sha256": "4f69b6d0b92fec784a250769de8c538f8e157201317e50f6e98bc3f5571e311f",
+    "bytes": 56468,
+    "format": "PDF",
+    "supplement": false
+  },
+  {
+    "tutorial": 8,
+    "title": "8 DC Circuits B Force on Charges",
+    "filename": "8 DC Circuits B Force on Charges.pdf",
+    "url": "tutorial-sources/tutorial-08.pdf",
+    "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448804/View",
+    "sha256": "990baba096ce8f9e9d7e259580f4de66319ae2073213a29adc66a922c76447e9",
+    "bytes": 51685,
+    "format": "PDF",
+    "supplement": false
+  },
+  {
+    "tutorial": 9,
+    "title": "9 Mag Force on Charges",
+    "filename": "9 Mag Force on Charges.pdf",
+    "url": "tutorial-sources/tutorial-09.pdf",
+    "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448845/View",
+    "sha256": "dc683be3bb055fd641d73a88ab35ec2785c1bfcc774caa914643e064452c68d6",
+    "bytes": 101378,
+    "format": "PDF",
+    "supplement": false
+  },
+  {
+    "tutorial": 0,
+    "title": "P154 Tutorial on Dot Product Cross Product",
+    "filename": "P154 Tutorial on Dot Product Cross Product.pdf",
+    "url": "tutorial-sources/vector-review.pdf",
+    "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448852/View",
+    "sha256": "973bb50401d38f4476a89c215018240c3e670a24040727dde1db484fed3db522",
+    "bytes": 351519,
+    "format": "PDF",
+    "supplement": true
+  },
+  {
+    "tutorial": 0,
+    "title": "tutorial-2-short",
+    "filename": "tutorial-2-short.jpg",
+    "url": "tutorial-sources/tutorial-2-short.jpg",
+    "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448843/View",
+    "sha256": "1da5297c88213dca96d885a3c85e551deaeffafce191a513e9db0ac255e8a9af",
+    "bytes": 153418,
+    "format": "JPG",
+    "supplement": true
+  }
+]

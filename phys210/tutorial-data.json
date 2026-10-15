@@ -1,0 +1,5067 @@
+[
+  {
+    "id": "t1-q1",
+    "tutorial": 1,
+    "number": "1",
+    "title": "Position at maximum positive velocity",
+    "pages": [
+      1
+    ],
+    "question": "For x = 6t² − t³ metres, find the position when velocity in the positive x direction is greatest.",
+    "steps": [
+      {
+        "title": "Differentiate position",
+        "body": "Positive-direction speed means the maximum positive velocity.",
+        "math": "v=12t-3t^2,\\qquad a=12-6t"
+      },
+      {
+        "title": "Locate the maximum",
+        "body": "Set acceleration to zero. Velocity is a downward-opening parabola.",
+        "math": "a=0\\Rightarrow t=2\\,\\mathrm{s}"
+      },
+      {
+        "title": "Evaluate position",
+        "body": "Substitute the time into the original position function.",
+        "math": "x(2)=6(2)^2-(2)^3=16\\,\\mathrm m"
+      }
+    ],
+    "answer": "x=16\\,\\mathrm m\\quad\\text{(D)}",
+    "check": "v(2)=12 m/s and d²v/dt² = −6 < 0. Speed magnitude later grows without bound in the negative direction; that is not the requested positive-direction maximum.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-01.pdf",
+      "title": "1 Kinematics & Coulomb.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448797/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-01-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t1-q2",
+    "tutorial": 1,
+    "number": "2",
+    "title": "Acceleration of an exponential trajectory",
+    "pages": [
+      1
+    ],
+    "question": "For x = 15e^(−2t) m, find acceleration at t = 1 s.",
+    "steps": [
+      {
+        "title": "Differentiate once",
+        "body": "Velocity is negative as position decreases.",
+        "math": "v=-30e^{-2t}\\,\\mathrm{m/s}"
+      },
+      {
+        "title": "Differentiate again",
+        "body": "Acceleration is positive.",
+        "math": "a=60e^{-2t}\\,\\mathrm{m/s^2}"
+      },
+      {
+        "title": "Evaluate",
+        "body": "Use t = 1 s.",
+        "math": "a(1)=60e^{-2}=8.12\\,\\mathrm{m/s^2}"
+      }
+    ],
+    "answer": "a=8.1\\,\\mathrm{m/s^2}\\quad\\text{(C)}",
+    "check": "The printed choices incorrectly show m/s; acceleration must have units m/s².",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-01.pdf",
+      "title": "1 Kinematics & Coulomb.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448797/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-01-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t1-q3",
+    "tutorial": 1,
+    "number": "3",
+    "title": "Displacement for half the acceleration",
+    "pages": [
+      1
+    ],
+    "question": "Cart A (mass m) starts at rest with acceleration a and travels x in time t. Cart B (mass 4m) starts at rest with acceleration a/2. Find its distance in the same time.",
+    "steps": [
+      {
+        "title": "Write the first displacement",
+        "body": "With zero initial speed, displacement depends on acceleration and time.",
+        "math": "x=\\tfrac12at^2"
+      },
+      {
+        "title": "Use the second acceleration",
+        "body": "The given acceleration already accounts for any force or mass effects.",
+        "math": "x_B=\\tfrac12(a/2)t^2=x/2"
+      }
+    ],
+    "answer": "x_B=\\frac{x}{2}\\quad\\text{(B)}",
+    "check": "Doubling or quadrupling mass does not enter kinematics once acceleration is specified.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-01.pdf",
+      "title": "1 Kinematics & Coulomb.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448797/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-01-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t1-q4",
+    "tutorial": 1,
+    "number": "4",
+    "title": "Magnitude of a vector combination",
+    "pages": [
+      1
+    ],
+    "question": "A = 12i − 16j and B = −24i + 10j. Find |C| for C = 2A − B.",
+    "steps": [
+      {
+        "title": "Combine components",
+        "body": "Subtract the entire vector B.",
+        "math": "\\mathbf C=(24,-32)-(-24,10)=(48,-42)"
+      },
+      {
+        "title": "Compute magnitude",
+        "body": "Use orthogonal components.",
+        "math": "|\\mathbf C|=\\sqrt{48^2+(-42)^2}=63.78"
+      }
+    ],
+    "answer": "|\\mathbf C|\\approx64\\quad\\text{(C)}",
+    "check": "Both components contribute positively to the squared magnitude.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-01.pdf",
+      "title": "1 Kinematics & Coulomb.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448797/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-01-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t1-q5",
+    "tutorial": 1,
+    "number": "5",
+    "title": "Vector needed for a vertical resultant",
+    "pages": [
+      1
+    ],
+    "question": "B + C points along +y and has magnitude |C|, where C = 3i + 4j. Find |B|.",
+    "steps": [
+      {
+        "title": "Find the required resultant",
+        "body": "C has magnitude 5, so the resultant is 5j.",
+        "math": "|\\mathbf C|=5,\\qquad\\mathbf R=(0,5)"
+      },
+      {
+        "title": "Subtract C",
+        "body": "Solve B = R − C.",
+        "math": "\\mathbf B=(-3,1),\\qquad |\\mathbf B|=\\sqrt{10}=3.162"
+      }
+    ],
+    "answer": "|\\mathbf B|\\approx3.2\\quad\\text{(A)}",
+    "check": "(−3,1)+(3,4)=(0,5), as required.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-01.pdf",
+      "title": "1 Kinematics & Coulomb.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448797/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-01-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t1-q6",
+    "tutorial": 1,
+    "number": "6",
+    "title": "Speed under constant planar acceleration",
+    "pages": [
+      2
+    ],
+    "question": "A particle starts at the origin with velocity 9.0j m/s and acceleration (2.0i − 4.0j) m/s². Find its speed when x = 15 m.",
+    "steps": [
+      {
+        "title": "Use horizontal position to find time",
+        "body": "The initial horizontal velocity is zero.",
+        "math": "15=\\tfrac12(2)t^2\\Rightarrow t=\\sqrt{15}=3.873\\,\\mathrm s"
+      },
+      {
+        "title": "Find both velocity components",
+        "body": "Acceleration changes each component independently.",
+        "math": "v_x=2t=7.746,\\qquad v_y=9-4t=-6.492\\quad\\mathrm{m/s}"
+      },
+      {
+        "title": "Take the magnitude",
+        "body": "Speed is not the algebraic sum of components.",
+        "math": "v=\\sqrt{v_x^2+v_y^2}=10.11\\,\\mathrm{m/s}"
+      }
+    ],
+    "answer": "v\\approx10\\,\\mathrm{m/s}\\quad\\text{(A)}",
+    "check": "The particle is moving downward at this time because vy < 0.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-01.pdf",
+      "title": "1 Kinematics & Coulomb.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448797/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-01-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t1-q7",
+    "tutorial": 1,
+    "number": "7",
+    "title": "Building height from projectile range",
+    "pages": [
+      2
+    ],
+    "question": "A rock leaves a building at 12.2 m/s, 53° above horizontal, and lands 25 m from its base. Find the height; use g = 9.80 m/s².",
+    "steps": [
+      {
+        "title": "Find flight time",
+        "body": "Horizontal motion is uniform.",
+        "math": "t=\\frac{25}{12.2\\cos53^\\circ}=3.405\\,\\mathrm s"
+      },
+      {
+        "title": "Use vertical displacement",
+        "body": "Choose launch point as y = 0, so the ground is at −h.",
+        "math": "-h=(12.2\\sin53^\\circ)t-\\tfrac12gt^2"
+      },
+      {
+        "title": "Calculate height",
+        "body": "Rearrange before substituting.",
+        "math": "h=\\tfrac12gt^2-(12.2\\sin53^\\circ)t=23.63\\,\\mathrm m"
+      }
+    ],
+    "answer": "h=23.6\\,\\mathrm m\\quad\\text{(D)}",
+    "check": "The flight time exceeds the return-to-launch-level time, consistent with landing below the roof.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-01.pdf",
+      "title": "1 Kinematics & Coulomb.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448797/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-01-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t1-q8",
+    "tutorial": 1,
+    "number": "8",
+    "title": "Two positive charges from total charge and force",
+    "pages": [
+      2
+    ],
+    "question": "Two positive spheres have total charge 40 μC, are separated by 0.50 m, and repel with force 2.0 N. Find the smaller charge.",
+    "steps": [
+      {
+        "title": "Use Coulomb’s law",
+        "body": "Let the smaller charge be q.",
+        "math": "q(40\\times10^{-6}-q)=\\frac{Fr^2}{k}=5.563\\times10^{-11}\\,\\mathrm{C^2}"
+      },
+      {
+        "title": "Solve the quadratic",
+        "body": "Select the smaller positive root.",
+        "math": "q=\\frac{40\\times10^{-6}-\\sqrt{(40\\times10^{-6})^2-4Fr^2/k}}{2}"
+      }
+    ],
+    "answer": "q=1.44\\,\\mu\\mathrm C\\approx1.4\\,\\mu\\mathrm C\\quad\\text{(A)}",
+    "check": "The other charge is 38.56 μC; their sum is 40 μC and their Coulomb force is 2.0 N.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-01.pdf",
+      "title": "1 Kinematics & Coulomb.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448797/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-01-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t1-q9",
+    "tutorial": 1,
+    "number": "9",
+    "title": "Force from two charges in a right triangle",
+    "pages": [
+      2
+    ],
+    "question": "Place Q₂ = +80 nC at (0,0), Q₁ = +60 nC at (0,3.0 mm), and q = +24 nC at (4.0 mm,0). Find the net force magnitude on q.",
+    "steps": [
+      {
+        "title": "Find distances and directions",
+        "body": "Both forces repel q. Q₁ produces a rightward and downward force.",
+        "math": "r_1=5.0\\,\\mathrm{mm},\\quad\\hat{\\mathbf r}_1=(0.8,-0.6),\\quad r_2=4.0\\,\\mathrm{mm}"
+      },
+      {
+        "title": "Calculate the two forces",
+        "body": "Use Coulomb’s law for each separation.",
+        "math": "F_1=0.5177\\,\\mathrm N,\\quad F_2=1.0785\\,\\mathrm N"
+      },
+      {
+        "title": "Add components",
+        "body": "Take the magnitude only after adding vectors.",
+        "math": "\\mathbf F=(1.0785+0.8(0.5177),-0.6(0.5177))=(1.4927,-0.3106)\\,\\mathrm N"
+      }
+    ],
+    "answer": "|\\mathbf F|=1.525\\,\\mathrm N\\approx1.5\\,\\mathrm N\\quad\\text{(D)}",
+    "check": "The resultant points about 11.8° below +x, consistent with repulsion from both positive charges.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-01.pdf",
+      "title": "1 Kinematics & Coulomb.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448797/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-01-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t1-q10",
+    "tutorial": 1,
+    "number": "10",
+    "title": "Field at the midpoint offset from two unequal charges",
+    "pages": [
+      3
+    ],
+    "question": "Q = −6.0 nC is at (0,+0.60 m), q = +3.0 nC at (0,−0.60 m), and P at (0.80 m,0). Find the electric-field magnitude at P.",
+    "steps": [
+      {
+        "title": "Find equal source distances",
+        "body": "Each charge is 1.00 m from P.",
+        "math": "r=\\sqrt{0.60^2+0.80^2}=1.00\\,\\mathrm m"
+      },
+      {
+        "title": "Resolve each field",
+        "body": "The negative charge pulls the field toward upper left; the positive charge gives upper right.",
+        "math": "\\mathbf E_Q=k(6\\times10^{-9})(-0.8,0.6),\\quad\\mathbf E_q=k(3\\times10^{-9})(0.8,0.6)"
+      },
+      {
+        "title": "Add and take magnitude",
+        "body": "The vertical components add while horizontal components oppose.",
+        "math": "\\mathbf E=(-21.57,48.53)\\,\\mathrm{N/C},\\quad E=53.11\\,\\mathrm{N/C}"
+      }
+    ],
+    "answer": "E\\approx53\\,\\mathrm{N/C}\\quad\\text{(D)}",
+    "check": "The result points up and left, toward the larger-magnitude negative charge.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-01.pdf",
+      "title": "1 Kinematics & Coulomb.pdf",
+      "pages": [
+        3
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448797/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-01-p3.webp",
+        "page": 3,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t2-q15",
+    "tutorial": 2,
+    "number": "15",
+    "title": "Zero field outside two opposite charges",
+    "pages": [
+      1
+    ],
+    "question": "A −2.50 μC charge is at x = 0 and a +6.00 μC charge at x = 1.00 m. Find the finite point where E = 0.",
+    "steps": [
+      {
+        "title": "Choose the possible region",
+        "body": "Between opposite charges the fields point the same way. Cancellation must be left of the smaller charge."
+      },
+      {
+        "title": "Equate magnitudes",
+        "body": "Let d > 0 be distance to the left of the negative charge.",
+        "math": "\\frac{2.50}{d^2}=\\frac{6.00}{(d+1.00)^2}"
+      },
+      {
+        "title": "Solve the distance",
+        "body": "Take the positive square roots.",
+        "math": "d=\\frac{1.00}{\\sqrt{6.00/2.50}-1}=1.821\\,\\mathrm m"
+      }
+    ],
+    "answer": "x=-1.82\\,\\mathrm m",
+    "check": "At this point the smaller negative charge is closer; the two fields have equal magnitude and opposite directions.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-02.pdf",
+      "title": "2 E field Dist.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448798/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-02-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t2-q16",
+    "tutorial": 2,
+    "number": "16",
+    "title": "Electric field between thundercloud charge concentrations",
+    "pages": [
+      1
+    ],
+    "question": "An aircraft is at height 2000 m; +40.0 C is at 3000 m and −40.0 C at 1000 m. Treat the concentrations as point charges and find E at the aircraft.",
+    "steps": [
+      {
+        "title": "Identify directions",
+        "body": "The upper positive charge pushes downward; the lower negative charge attracts downward."
+      },
+      {
+        "title": "Add equal magnitudes",
+        "body": "Each source is 1000 m away.",
+        "math": "E=2\\frac{k(40.0)}{(1000)^2}=7.190\\times10^5\\,\\mathrm{N/C}"
+      }
+    ],
+    "answer": "\\mathbf E=-7.19\\times10^5\\hat{\\mathbf y}\\,\\mathrm{N/C}\\quad\\text{(downward)}",
+    "check": "The two equal contributions add rather than cancel.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-02.pdf",
+      "title": "2 E field Dist.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448798/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-02-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t2-q25",
+    "tutorial": 2,
+    "number": "25",
+    "title": "Axial field of a finite negative rod",
+    "pages": [
+      1
+    ],
+    "question": "A uniformly charged rod has length 0.140 m and total charge −22.0 μC. Find the field magnitude and direction on its axis 0.360 m from its center.",
+    "steps": [
+      {
+        "title": "Set the coordinate system",
+        "body": "Center the rod at the origin and evaluate at x = +0.360 m; λ = Q/L."
+      },
+      {
+        "title": "Integrate axial contributions",
+        "body": "Every source-to-point displacement is along +x.",
+        "math": "E_x=k\\lambda\\int_{-L/2}^{L/2}\\frac{ds}{(x-s)^2}=\\frac{kQ}{x^2-(L/2)^2}"
+      },
+      {
+        "title": "Substitute",
+        "body": "The negative sign indicates a field toward the rod.",
+        "math": "E_x=\\frac{k(-22.0\\times10^{-6})}{0.360^2-0.070^2}=-1.586\\times10^6\\,\\mathrm{N/C}"
+      }
+    ],
+    "answer": "E=1.59\\times10^6\\,\\mathrm{N/C}\\quad\\text{toward the rod}",
+    "check": "The result is slightly larger than k|Q|/x², and reduces to that point-charge result far away.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-02.pdf",
+      "title": "2 E field Dist.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448798/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-02-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t2-q26",
+    "tutorial": 2,
+    "number": "26",
+    "title": "Field of a semi-infinite uniform line",
+    "pages": [
+      1
+    ],
+    "question": "A line with uniform linear density λ₀ extends along +x from x₀ > 0 to infinity. Find E at the origin.",
+    "steps": [
+      {
+        "title": "Write the vector element",
+        "body": "For positive density, each element produces a field toward −x.",
+        "math": "d\\mathbf E=-\\hat{\\mathbf x}\\frac{k\\lambda_0\\,dx}{x^2}"
+      },
+      {
+        "title": "Integrate",
+        "body": "The far endpoint contributes zero.",
+        "math": "\\mathbf E=-k\\lambda_0\\hat{\\mathbf x}\\int_{x_0}^{\\infty}x^{-2}dx=-\\frac{k\\lambda_0}{x_0}\\hat{\\mathbf x}"
+      }
+    ],
+    "answer": "\\mathbf E=-\\frac{\\lambda_0}{4\\pi\\epsilon_0x_0}\\hat{\\mathbf x},\\quad E=\\frac{k|\\lambda_0|}{x_0}",
+    "check": "Units are N/C; reverse the direction if λ₀ is negative.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-02.pdf",
+      "title": "2 E field Dist.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448798/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-02-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t2-q27",
+    "tutorial": 2,
+    "number": "27",
+    "title": "Four axial fields of a charged ring",
+    "pages": [
+      1
+    ],
+    "question": "A uniformly charged ring has radius 0.100 m and charge +75.0 μC. Find the axial field at positive axial distances (a) 0.0100 m, (b) 0.0500 m, (c) 0.300 m, (d) 1.00 m.",
+    "steps": [
+      {
+        "title": "Use symmetry",
+        "body": "Transverse components cancel; axial components add.",
+        "math": "E_x=\\frac{kQx}{(x^2+a^2)^{3/2}}"
+      },
+      {
+        "title": "Evaluate near the center",
+        "body": "Keep all distances in metres.",
+        "math": "E_a=6.6408\\times10^6,\\quad E_b=2.4116\\times10^7\\quad\\mathrm{N/C}"
+      },
+      {
+        "title": "Evaluate farther away",
+        "body": "All four fields point away from the positively charged ring along +x.",
+        "math": "E_c=6.3948\\times10^6,\\quad E_d=6.6408\\times10^5\\quad\\mathrm{N/C}"
+      }
+    ],
+    "answer": "\\begin{aligned}(a)&\\ 6.64\\times10^6\\\\(b)&\\ 2.41\\times10^7\\\\(c)&\\ 6.39\\times10^6\\\\(d)&\\ 6.64\\times10^5\\end{aligned}\\ \\mathrm{N/C}\\quad(+x)",
+    "check": "The field initially increases, reaches a maximum at x=a/√2, and then decreases; a monotonic decrease from the center would be incorrect.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-02.pdf",
+      "title": "2 E field Dist.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448798/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-02-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t2-q28",
+    "tutorial": 2,
+    "number": "28",
+    "title": "Field of a semi-infinite nonuniform line",
+    "pages": [
+      1
+    ],
+    "question": "A line extends from x₀ > 0 to infinity with linear charge density λ(x) = λ₀x₀/x. Find the electric field at the origin.",
+    "steps": [
+      {
+        "title": "Use the local density",
+        "body": "Charge in dx decreases with x.",
+        "math": "dq=\\frac{\\lambda_0x_0}{x}dx"
+      },
+      {
+        "title": "Integrate the vector field",
+        "body": "Positive charges produce a field toward −x.",
+        "math": "\\mathbf E=-k\\lambda_0x_0\\hat{\\mathbf x}\\int_{x_0}^{\\infty}x^{-3}dx"
+      },
+      {
+        "title": "Apply limits",
+        "body": "The upper-limit term vanishes.",
+        "math": "\\mathbf E=-k\\lambda_0x_0\\frac{1}{2x_0^2}\\hat{\\mathbf x}"
+      }
+    ],
+    "answer": "\\mathbf E=-\\frac{k\\lambda_0}{2x_0}\\hat{\\mathbf x}",
+    "check": "This is half the uniform-line result for the same starting density; negative λ₀ reverses direction.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-02.pdf",
+      "title": "2 E field Dist.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448798/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-02-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t2-q29",
+    "tutorial": 2,
+    "number": "29",
+    "title": "Location and value of the ring-field maximum",
+    "pages": [
+      1
+    ],
+    "question": "Show where the magnitude of the axial field of a uniformly charged ring of radius a and charge Q is greatest, and derive its maximum value.",
+    "steps": [
+      {
+        "title": "Differentiate the positive-side magnitude",
+        "body": "Assume a > 0 and nonzero Q.",
+        "math": "E(x)=\\frac{k|Q|x}{(x^2+a^2)^{3/2}},\\quad \\frac{dE}{dx}=\\frac{k|Q|(a^2-2x^2)}{(x^2+a^2)^{5/2}}"
+      },
+      {
+        "title": "Find the critical point",
+        "body": "The derivative changes from positive to negative.",
+        "math": "x=\\frac{a}{\\sqrt2}"
+      },
+      {
+        "title": "Substitute back",
+        "body": "There is an equal magnitude maximum on the negative side.",
+        "math": "E_{\\max}=\\frac{2k|Q|}{3\\sqrt3a^2}=\\frac{|Q|}{6\\sqrt3\\pi\\epsilon_0a^2}"
+      }
+    ],
+    "answer": "|x|=\\frac{a}{\\sqrt2},\\qquad E_{\\max}=\\frac{|Q|}{6\\sqrt3\\pi\\epsilon_0a^2}",
+    "check": "E vanishes at the center and tends to zero at infinity, confirming the interior extremum is the maximum.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-02.pdf",
+      "title": "2 E field Dist.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448798/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-02-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t2-q30",
+    "tutorial": 2,
+    "number": "30",
+    "title": "Four axial fields of a uniformly charged disk",
+    "pages": [
+      2
+    ],
+    "question": "A disk has radius 0.350 m and surface density +7.90×10⁻³ C/m². Find the field at positive axial distances (a) 0.0500 m, (b) 0.100 m, (c) 0.500 m, (d) 2.00 m.",
+    "steps": [
+      {
+        "title": "Sum concentric rings",
+        "body": "A ring of radius r has charge σ2πr dr.",
+        "math": "E_x=2\\pi k\\sigma x\\int_0^R\\frac{r\\,dr}{(x^2+r^2)^{3/2}}=\\frac{\\sigma}{2\\epsilon_0}\\left(1-\\frac{x}{\\sqrt{x^2+R^2}}\\right)"
+      },
+      {
+        "title": "Evaluate the nearer points",
+        "body": "Use the finite-disk expression, not the infinite-sheet approximation.",
+        "math": "E_a=3.8303\\times10^8,\\quad E_b=3.2356\\times10^8\\quad\\mathrm{N/C}"
+      },
+      {
+        "title": "Evaluate the farther points",
+        "body": "Each field points away from the disk on the selected positive side.",
+        "math": "E_c=8.0644\\times10^7,\\quad E_d=6.6782\\times10^6\\quad\\mathrm{N/C}"
+      }
+    ],
+    "answer": "\\begin{aligned}(a)&\\ 3.83\\times10^8\\\\(b)&\\ 3.24\\times10^8\\\\(c)&\\ 8.06\\times10^7\\\\(d)&\\ 6.68\\times10^6\\end{aligned}\\ \\mathrm{N/C}\\quad(+x)",
+    "check": "All values are below σ/(2ε₀)=4.46×10⁸ N/C and decrease with distance.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-02.pdf",
+      "title": "2 E field Dist.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448798/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-02-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t2-q32",
+    "tutorial": 2,
+    "number": "32",
+    "title": "Far-field limit of a charged disk",
+    "pages": [
+      2
+    ],
+    "question": "Show that a uniformly charged disk of radius R and charge Q = σπR² acts like a point charge on its axis when x ≫ R.",
+    "steps": [
+      {
+        "title": "Rewrite the geometric factor",
+        "body": "Take x > 0.",
+        "math": "\\frac{x}{\\sqrt{x^2+R^2}}=\\left(1+\\frac{R^2}{x^2}\\right)^{-1/2}"
+      },
+      {
+        "title": "Apply the binomial approximation",
+        "body": "The small parameter is R²/x².",
+        "math": "\\left(1+\\frac{R^2}{x^2}\\right)^{-1/2}\\simeq1-\\frac{R^2}{2x^2}"
+      },
+      {
+        "title": "Insert into the disk field",
+        "body": "Replace σπR² by Q.",
+        "math": "E\\simeq\\frac{\\sigma R^2}{4\\epsilon_0x^2}=\\frac{Q}{4\\pi\\epsilon_0x^2}=\\frac{kQ}{x^2}"
+      }
+    ],
+    "answer": "\\mathbf E\\simeq\\frac{kQ}{x^2}\\hat{\\mathbf x}\\quad(x\\gg R,\\ x>0)",
+    "check": "The leading relative correction is −3R²/(4x²), so the approximation improves as distance increases.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-02.pdf",
+      "title": "2 E field Dist.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448798/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-02-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t2-q33",
+    "tutorial": 2,
+    "number": "33",
+    "title": "Field at the center of a negative semicircular rod",
+    "pages": [
+      2
+    ],
+    "question": "A 0.140 m insulating rod is bent into the left half of a circle. It carries uniform charge −7.50 μC. Find the field at its center O.",
+    "steps": [
+      {
+        "title": "Convert arc length to radius",
+        "body": "The given length is the semicircular arc length, not its diameter.",
+        "math": "R=L/\\pi=0.04456\\,\\mathrm m,\\quad |\\lambda|=|Q|/(\\pi R)"
+      },
+      {
+        "title": "Use symmetry and integrate",
+        "body": "Vertical components cancel. Negative charge attracts toward the left semicircle.",
+        "math": "E=\\int_{-\\pi/2}^{\\pi/2}\\frac{k|\\lambda|}{R}\\cos\\theta\\,d\\theta=\\frac{2k|Q|}{\\pi R^2}"
+      },
+      {
+        "title": "Calculate",
+        "body": "Take +x to the right.",
+        "math": "E=\\frac{2\\pi k|Q|}{L^2}=2.1609\\times10^7\\,\\mathrm{N/C}"
+      }
+    ],
+    "answer": "\\mathbf E=-2.16\\times10^7\\hat{\\mathbf x}\\,\\mathrm{N/C}\\quad\\text{(left)}",
+    "check": "The result points toward the negatively charged material and has zero vertical component.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-02.pdf",
+      "title": "2 E field Dist.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448798/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-02-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t3-q23-40",
+    "tutorial": 3,
+    "number": "23.40",
+    "title": "Charge ratio from field-line counts",
+    "pages": [
+      1
+    ],
+    "question": "The diagram shows field lines leaving upper charge q₂, with some ending on lower charge q₁. Determine (a) q₁/q₂ and (b) both signs.",
+    "steps": [
+      {
+        "title": "Read arrow directions",
+        "body": "Lines leave q₂ and terminate on q₁, so q₂ is positive and q₁ is negative."
+      },
+      {
+        "title": "Count lines",
+        "body": "Six lines terminate on q₁. Eighteen lines leave q₂: six terminate on q₁ and twelve extend outward.",
+        "math": "\\frac{|q_1|}{|q_2|}=\\frac{6}{18}=\\frac13"
+      },
+      {
+        "title": "Restore the sign",
+        "body": "The charges have opposite signs.",
+        "math": "\\frac{q_1}{q_2}=-\\frac13"
+      }
+    ],
+    "answer": "(a)\\ \\frac{q_1}{q_2}=-\\frac13;\\qquad(b)\\ q_1<0,\\ q_2>0",
+    "check": "The net positive charge explains why some lines extend to infinity.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-03.pdf",
+      "title": "3 E Flux.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448799/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-03-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t3-q23-42",
+    "tutorial": 3,
+    "number": "23.42",
+    "title": "Electron and proton speeds in a uniform field",
+    "pages": [
+      1
+    ],
+    "question": "An electron and proton start at rest in a uniform 520 N/C electric field. Find each speed after 48.0 ns.",
+    "steps": [
+      {
+        "title": "Apply electric force and Newton’s law",
+        "body": "The particles have equal charge magnitudes but very different masses.",
+        "math": "|a|=\\frac{eE}{m},\\quad v=\\frac{eEt}{m}"
+      },
+      {
+        "title": "Calculate the electron speed",
+        "body": "Use me = 9.109×10⁻³¹ kg and t = 48.0×10⁻⁹ s.",
+        "math": "v_e=4.3900\\times10^6\\,\\mathrm{m/s}"
+      },
+      {
+        "title": "Calculate the proton speed",
+        "body": "Use mp = 1.673×10⁻²⁷ kg. The proton accelerates along E; the electron opposite E.",
+        "math": "v_p=2.3909\\times10^3\\,\\mathrm{m/s}"
+      }
+    ],
+    "answer": "v_e=4.39\\times10^6\\,\\mathrm{m/s},\\qquad v_p=2.39\\times10^3\\,\\mathrm{m/s}",
+    "check": "The speed ratio is mp/me ≈1836. Both speeds are sufficiently below c for the intended nonrelativistic model.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-03.pdf",
+      "title": "3 E Flux.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448799/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-03-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t3-q23-44",
+    "tutorial": 3,
+    "number": "23.44",
+    "title": "A proton brought to rest by an electric field",
+    "pages": [
+      1
+    ],
+    "question": "A proton initially moves along +x in E = −6.00×10⁵ i N/C and stops after 7.00 cm. Find (a) acceleration, (b) initial speed, and (c) stopping time.",
+    "steps": [
+      {
+        "title": "Calculate acceleration",
+        "body": "A positive proton accelerates in the field direction.",
+        "math": "a_x=\\frac{eE_x}{m_p}=-5.7473\\times10^{13}\\,\\mathrm{m/s^2}"
+      },
+      {
+        "title": "Use the stopping distance",
+        "body": "Final speed is zero and displacement is +0.0700 m.",
+        "math": "0=v_0^2+2a_x(0.0700)\\Rightarrow v_0=2.8366\\times10^6\\,\\mathrm{m/s}"
+      },
+      {
+        "title": "Find stopping time",
+        "body": "Use final velocity = initial velocity + at.",
+        "math": "t=-\\frac{v_0}{a_x}=4.9355\\times10^{-8}\\,\\mathrm s"
+      }
+    ],
+    "answer": "\\begin{aligned}(a)&\\ -5.75\\times10^{13}\\hat{\\mathbf x}\\,\\mathrm{m/s^2}\\\\(b)&\\ 2.84\\times10^6\\,\\mathrm{m/s}\\\\(c)&\\ 49.4\\,\\mathrm{ns}\\end{aligned}",
+    "check": "Average speed during stopping is v₀/2; multiplying by the stopping time recovers 0.0700 m.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-03.pdf",
+      "title": "3 E Flux.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448799/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-03-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t3-q24-4",
+    "tutorial": 3,
+    "number": "24.4",
+    "title": "Flux through a triangular closed box",
+    "pages": [
+      1
+    ],
+    "question": "A triangular prism lies in a horizontal field E = 7.80×10⁴ N/C. Its vertical face is 10 cm high by 30 cm long; the sloped face makes 60° with the vertical in the end cross-section. Find outward flux through (a) vertical face, (b) slanted face, (c) the entire box.",
+    "steps": [
+      {
+        "title": "Calculate entering flux",
+        "body": "The vertical face normal points opposite the field.",
+        "math": "\\Phi_v=-E(0.10)(0.30)=-2.340\\times10^3\\,\\mathrm{N\\,m^2/C}"
+      },
+      {
+        "title": "Calculate exiting flux",
+        "body": "The slanted face has the same projected area perpendicular to E. Alternatively its slant length is 0.10/cos60° = 0.20 m and its normal is 60° from E.",
+        "math": "\\Phi_s=E(0.20)(0.30)\\cos60^\\circ=+2.340\\times10^3\\,\\mathrm{N\\,m^2/C}"
+      },
+      {
+        "title": "Sum all faces",
+        "body": "The remaining faces have normals perpendicular to E, giving zero flux.",
+        "math": "\\Phi_{\\rm closed}=\\Phi_v+\\Phi_s=0"
+      }
+    ],
+    "answer": "(a)\\ -2.34\\times10^3;\\quad(b)\\ +2.34\\times10^3;\\quad(c)\\ 0\\qquad\\mathrm{N\\,m^2/C}",
+    "check": "A uniform field has zero net flux through a closed surface containing no net charge.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-03.pdf",
+      "title": "3 E Flux.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448799/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-03-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t3-q24-5",
+    "tutorial": 3,
+    "number": "24.5",
+    "title": "Flux through coordinate-plane surfaces",
+    "pages": [
+      2
+    ],
+    "question": "A uniform field E = ai + bj intersects area A. Find flux if the surface lies in (a) yz, (b) xz, (c) xy. Specify the normal convention.",
+    "steps": [
+      {
+        "title": "Choose surface normals",
+        "body": "An open surface has two possible orientations. Choose +x, +y, and +z for the three cases."
+      },
+      {
+        "title": "Use the dot product",
+        "body": "Only the component normal to each surface contributes.",
+        "math": "\\Phi=\\mathbf E\\cdot\\hat{\\mathbf n}A"
+      },
+      {
+        "title": "Evaluate each orientation",
+        "body": "The field has no z component.",
+        "math": "\\Phi_{yz}=aA,\\quad\\Phi_{xz}=bA,\\quad\\Phi_{xy}=0"
+      }
+    ],
+    "answer": "(a)\\ aA;\\qquad(b)\\ bA;\\qquad(c)\\ 0\\quad\\text{for positive-axis normals}",
+    "check": "Reversing the chosen normal reverses the sign of flux; the source does not specify normal orientations.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-03.pdf",
+      "title": "3 E Flux.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448799/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-03-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t3-q24-9",
+    "tutorial": 3,
+    "number": "24.9",
+    "title": "Net electric flux through a submarine",
+    "pages": [
+      2
+    ],
+    "question": "Charges +5.00 μC, −9.00 μC, +27.0 μC, and −84.0 μC lie inside a submarine. Find (a) net outward flux and (b) whether more field lines leave or enter.",
+    "steps": [
+      {
+        "title": "Sum enclosed charge",
+        "body": "Keep the algebraic signs.",
+        "math": "Q_{\\rm enc}=(5.00-9.00+27.0-84.0)\\,\\mu\\mathrm C=-61.0\\,\\mu\\mathrm C"
+      },
+      {
+        "title": "Apply Gauss’s law",
+        "body": "The detailed hull shape does not matter.",
+        "math": "\\Phi=\\frac{Q_{\\rm enc}}{\\epsilon_0}=-6.8894\\times10^6\\,\\mathrm{N\\,m^2/C}"
+      },
+      {
+        "title": "Interpret the sign",
+        "body": "Negative outward flux means more lines enter than leave."
+      }
+    ],
+    "answer": "(a)\\ -6.89\\times10^6\\,\\mathrm{N\\,m^2/C};\\qquad(b)\\ N_{\\rm leaving}<N_{\\rm entering}",
+    "check": "Only net enclosed charge controls total flux; the distribution of individual charges does not change this answer.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-03.pdf",
+      "title": "3 E Flux.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448799/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-03-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t3-q24-54",
+    "tutorial": 3,
+    "number": "24.54",
+    "title": "Flux of a nonuniform field through a rectangle",
+    "pages": [
+      2
+    ],
+    "question": "E = ay i + bz j + cx k, with constant a,b,c. Find flux through the xy rectangle 0 ≤ x ≤ w and 0 ≤ y ≤ h.",
+    "steps": [
+      {
+        "title": "Choose the normal",
+        "body": "Use +z as the surface normal; reversing it changes the sign.",
+        "math": "d\\mathbf A=\\hat{\\mathbf z}\\,dx\\,dy"
+      },
+      {
+        "title": "Retain the normal component",
+        "body": "The x and y components do not cross the xy plane.",
+        "math": "\\Phi=\\int_0^h\\int_0^w cx\\,dx\\,dy"
+      },
+      {
+        "title": "Integrate",
+        "body": "The normal component varies linearly with x.",
+        "math": "\\Phi=c\\left(\\frac{w^2}{2}\\right)h"
+      }
+    ],
+    "answer": "\\Phi=\\frac12chw^2\\quad(+z\\text{ normal})",
+    "check": "The average normal field is cw/2; multiplying by area wh gives the same flux.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-03.pdf",
+      "title": "3 E Flux.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448799/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-03-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t3-q24-66",
+    "tutorial": 3,
+    "number": "24.66",
+    "title": "Net flux and enclosed charge in a nonuniform field",
+    "pages": [
+      2
+    ],
+    "question": "A rectangular closed surface has height a = 0.400 m, depth b = 0.400 m and x-length c = 0.600 m. Its left face is at x = a and right face at x = a+c. E = (3.0+2.0x²)i N/C, with x in metres. Find net outward flux and enclosed charge.",
+    "steps": [
+      {
+        "title": "Identify the contributing faces",
+        "body": "Only faces normal to x carry flux; each has area ab = 0.160 m².",
+        "math": "x_L=0.400\\,\\mathrm m,\\quad x_R=1.000\\,\\mathrm m"
+      },
+      {
+        "title": "Subtract incoming from outgoing flux",
+        "body": "Use the field value at each face, not the field at the center.",
+        "math": "\\Phi=ab[E(x_R)-E(x_L)]=0.160[5.00-3.32]=0.2688\\,\\mathrm{N\\,m^2/C}"
+      },
+      {
+        "title": "Apply Gauss’s law",
+        "body": "The net flux is positive.",
+        "math": "Q_{\\rm enc}=\\epsilon_0\\Phi=2.3800\\times10^{-12}\\,\\mathrm C"
+      }
+    ],
+    "answer": "\\Phi=0.269\\,\\mathrm{N\\,m^2/C},\\qquad Q_{\\rm enc}=2.38\\,\\mathrm{pC}",
+    "check": "The constant 3.0 N/C term cancels. Integrating divergence 4x over the volume gives the same flux.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-03.pdf",
+      "title": "3 E Flux.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448799/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-03-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t4-q1",
+    "tutorial": 4,
+    "number": "1",
+    "title": "Field from perpendicular infinite sheets",
+    "pages": [
+      1
+    ],
+    "question": "Two infinite sheets are perpendicular, carrying +60 pC/m² and −80 pC/m². Find the field magnitude away from either sheet.",
+    "steps": [
+      {
+        "title": "Find each sheet’s field",
+        "body": "A single nonconducting infinite sheet produces |σ|/(2ε₀) on either side.",
+        "math": "E_1=\\frac{60\\times10^{-12}}{2\\epsilon_0},\\quad E_2=\\frac{80\\times10^{-12}}{2\\epsilon_0}"
+      },
+      {
+        "title": "Add perpendicular components",
+        "body": "The directions are orthogonal in every region.",
+        "math": "E=\\sqrt{E_1^2+E_2^2}=\\frac{100\\times10^{-12}}{2\\epsilon_0}=5.647\\,\\mathrm{N/C}"
+      }
+    ],
+    "answer": "E=5.6\\,\\mathrm{N/C}\\quad\\text{(B)}",
+    "check": "Signs change component directions across sheets, but the magnitude remains the same.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-04.pdf",
+      "title": "4 Gauss Law.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448800/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-04-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t4-q2",
+    "tutorial": 4,
+    "number": "2",
+    "title": "Field inside a uniformly charged cylinder",
+    "pages": [
+      1
+    ],
+    "question": "A long nonconducting cylinder has radius 12 cm and uniform density +5.0 nC/m³. Find E at radius 5.0 cm.",
+    "steps": [
+      {
+        "title": "Choose an interior Gaussian cylinder",
+        "body": "Since r < R, only charge inside radius r is enclosed.",
+        "math": "Q_{\\rm enc}=\\rho\\pi r^2\\ell"
+      },
+      {
+        "title": "Apply Gauss’s law",
+        "body": "Flux passes through the curved side only.",
+        "math": "E(2\\pi r\\ell)=\\frac{\\rho\\pi r^2\\ell}{\\epsilon_0}\\Rightarrow E=\\frac{\\rho r}{2\\epsilon_0}"
+      },
+      {
+        "title": "Evaluate",
+        "body": "Use r = 0.050 m.",
+        "math": "E=14.12\\,\\mathrm{N/C}"
+      }
+    ],
+    "answer": "E\\approx14\\,\\mathrm{N/C}\\quad\\text{(C), radially outward}",
+    "check": "Inside a uniformly charged cylinder the field grows linearly from zero at the axis.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-04.pdf",
+      "title": "4 Gauss Law.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448800/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-04-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t4-q3",
+    "tutorial": 4,
+    "number": "3",
+    "title": "Field outside a uniformly charged cylinder",
+    "pages": [
+      1
+    ],
+    "question": "Each 2.0 m length of a long cylinder of radius 4.0 mm contains +4.0 nC uniformly. Find E at radius 5.0 mm.",
+    "steps": [
+      {
+        "title": "Convert charge to charge per length",
+        "body": "The observation point is outside the cylinder.",
+        "math": "\\lambda=\\frac{4.0\\,\\mathrm{nC}}{2.0\\,\\mathrm m}=2.0\\times10^{-9}\\,\\mathrm{C/m}"
+      },
+      {
+        "title": "Apply exterior cylindrical Gauss law",
+        "body": "All charge within the Gaussian length is enclosed.",
+        "math": "E=\\frac{\\lambda}{2\\pi\\epsilon_0r}=7.190\\times10^3\\,\\mathrm{N/C}"
+      }
+    ],
+    "answer": "E=7.2\\,\\mathrm{kN/C}\\quad\\text{(D), outward}",
+    "check": "The result decreases as 1/r outside the cylinder and does not depend on its radius.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-04.pdf",
+      "title": "4 Gauss Law.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448800/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-04-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t4-q4",
+    "tutorial": 4,
+    "number": "4",
+    "title": "Field inside a cylinder with quadratic density",
+    "pages": [
+      1
+    ],
+    "question": "A long cylinder of radius 6.0 mm has volume density ρ(r) = αr² with α = 6.2 mC/m⁵. Find E at radius 2.0 mm.",
+    "steps": [
+      {
+        "title": "Integrate enclosed charge",
+        "body": "Use a dummy radius s; density is not constant across the Gaussian volume.",
+        "math": "Q_{\\rm enc}=\\int_0^r\\alpha s^2(2\\pi s\\ell)ds=\\frac{\\pi\\alpha\\ell r^4}{2}"
+      },
+      {
+        "title": "Apply Gauss’s law",
+        "body": "The observation point is inside the cylinder.",
+        "math": "E(2\\pi r\\ell)=\\frac{Q_{\\rm enc}}{\\epsilon_0}\\Rightarrow E=\\frac{\\alpha r^3}{4\\epsilon_0}"
+      },
+      {
+        "title": "Convert units and evaluate",
+        "body": "α = 6.2×10⁻³ C/m⁵ and r = 2.0×10⁻³ m.",
+        "math": "E=1.4005\\,\\mathrm{N/C}"
+      }
+    ],
+    "answer": "E=1.4\\,\\mathrm{N/C}\\quad\\text{(A), outward}",
+    "check": "The r³ dependence follows from enclosed charge proportional to r⁴ and flux area proportional to r.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-04.pdf",
+      "title": "4 Gauss Law.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448800/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-04-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t4-q5",
+    "tutorial": 4,
+    "number": "5",
+    "title": "Field within a charged cylindrical annulus",
+    "pages": [
+      1
+    ],
+    "question": "Uniform density +80 nC/m³ occupies a long cylindrical annulus between radii 1.0 mm and 3.0 mm. Find E at radius 2.0 mm.",
+    "steps": [
+      {
+        "title": "Enclose only occupied volume",
+        "body": "The central hollow region contributes no charge.",
+        "math": "Q_{\\rm enc}=\\rho\\pi(r^2-r_i^2)\\ell"
+      },
+      {
+        "title": "Apply Gauss’s law",
+        "body": "The point lies within the charged annulus.",
+        "math": "E=\\frac{\\rho(r^2-r_i^2)}{2\\epsilon_0r}"
+      },
+      {
+        "title": "Evaluate",
+        "body": "Use ri = 0.001 m and r = 0.002 m.",
+        "math": "E=6.776\\,\\mathrm{N/C}"
+      }
+    ],
+    "answer": "E=6.8\\,\\mathrm{N/C}\\quad\\text{(D), outward}",
+    "check": "The expression tends to zero as r approaches the inner radius.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-04.pdf",
+      "title": "4 Gauss Law.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448800/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-04-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t4-q6",
+    "tutorial": 4,
+    "number": "6",
+    "title": "Exterior field of two charged spherical shells",
+    "pages": [
+      2
+    ],
+    "question": "Concentric spherical surfaces have radii 1.0 cm and 3.0 cm, with uniform densities +40 pC/m² and +60 pC/m² respectively. Find E at r = 4.0 cm.",
+    "steps": [
+      {
+        "title": "Convert surface densities to charges",
+        "body": "Both complete shells are enclosed.",
+        "math": "Q_{\\rm enc}=4\\pi(\\sigma_1R_1^2+\\sigma_2R_2^2)"
+      },
+      {
+        "title": "Apply spherical Gauss law",
+        "body": "The exterior field equals that of the total charge at the center.",
+        "math": "E=\\frac{Q_{\\rm enc}}{4\\pi\\epsilon_0r^2}=\\frac{\\sigma_1R_1^2+\\sigma_2R_2^2}{\\epsilon_0r^2}"
+      },
+      {
+        "title": "Evaluate",
+        "body": "Use metres and C/m².",
+        "math": "E=4.094\\,\\mathrm{N/C}"
+      }
+    ],
+    "answer": "E=4.1\\,\\mathrm{N/C}\\quad\\text{(B), outward}",
+    "check": "Both positive shells contribute outward fields; surface area must be included before summing charges.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-04.pdf",
+      "title": "4 Gauss Law.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448800/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-04-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t4-q7",
+    "tutorial": 4,
+    "number": "7",
+    "title": "Exterior field of a charged conductor with a central charge",
+    "pages": [
+      2
+    ],
+    "question": "A +4.0 pC point charge lies at the center of a conducting spherical shell (inner radius 2.0 cm, outer radius 4.0 cm) whose net charge is +4.0 pC. Find E at r = 6.0 cm.",
+    "steps": [
+      {
+        "title": "Track induced charges",
+        "body": "The inner surface has −4.0 pC so the metal’s field vanishes. The outer surface then has +8.0 pC."
+      },
+      {
+        "title": "Find total enclosed charge",
+        "body": "The external Gaussian sphere contains point charge plus shell net charge.",
+        "math": "Q_{\\rm enc}=4.0+4.0=8.0\\,\\mathrm{pC}"
+      },
+      {
+        "title": "Calculate the exterior field",
+        "body": "Use spherical symmetry.",
+        "math": "E=\\frac{k(8.0\\times10^{-12})}{0.060^2}=19.97\\,\\mathrm{N/C}"
+      }
+    ],
+    "answer": "E=20\\,\\mathrm{N/C}\\quad\\text{(D), outward}",
+    "check": "Surface charges −4 pC and +8 pC sum to the specified +4 pC conductor charge.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-04.pdf",
+      "title": "4 Gauss Law.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448800/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-04-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t4-q8",
+    "tutorial": 4,
+    "number": "8",
+    "title": "Exterior field of a wire and conducting cylindrical shell",
+    "pages": [
+      2
+    ],
+    "question": "A long central wire has λw = −8.0 pC/m. A coaxial metallic shell (inner radius 1.0 cm, outer radius 2.0 cm) has net λshell = −4.0 pC/m. Find E at radius 3.0 cm.",
+    "steps": [
+      {
+        "title": "Add all enclosed charge per length",
+        "body": "The observation point is outside both wire and shell.",
+        "math": "\\lambda_{\\rm enc}=-8.0-4.0=-12.0\\,\\mathrm{pC/m}"
+      },
+      {
+        "title": "Apply cylindrical Gauss law",
+        "body": "Use the magnitude for the requested field strength.",
+        "math": "E=\\frac{|\\lambda_{\\rm enc}|}{2\\pi\\epsilon_0r}=7.190\\,\\mathrm{N/C}"
+      },
+      {
+        "title": "Determine direction",
+        "body": "The enclosed charge is negative, so the field points toward the axis."
+      }
+    ],
+    "answer": "E=7.2\\,\\mathrm{N/C}\\quad\\text{(B), radially inward}",
+    "check": "The induced inner-surface charge is +8 pC/m and outer-surface charge is −12 pC/m, preserving net shell charge −4 pC/m.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-04.pdf",
+      "title": "4 Gauss Law.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448800/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-04-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t4-q9",
+    "tutorial": 4,
+    "number": "9",
+    "title": "Induced charge density on a conductor’s inner surface",
+    "pages": [
+      2
+    ],
+    "question": "A +6.0 nC point charge lies at the center of a conducting spherical shell with inner radius 1.0 cm, outer radius 2.0 cm and net shell charge −4.0 nC. Find the inner-surface charge density.",
+    "steps": [
+      {
+        "title": "Use zero field in the metal",
+        "body": "A Gaussian surface within the conductor encloses zero net charge.",
+        "math": "Q_{\\rm inner}=-6.0\\,\\mathrm{nC}"
+      },
+      {
+        "title": "Divide by the inner surface area",
+        "body": "The central charge gives spherical symmetry, so density is uniform.",
+        "math": "\\sigma_{\\rm inner}=\\frac{-6.0\\times10^{-9}}{4\\pi(0.010)^2}=-4.7746\\times10^{-6}\\,\\mathrm{C/m^2}"
+      }
+    ],
+    "answer": "\\sigma_{\\rm inner}=-4.8\\,\\mu\\mathrm{C/m^2}\\quad\\text{(B)}",
+    "check": "The outer surface carries +2.0 nC, so −6.0 + 2.0 = −4.0 nC equals the specified shell net charge.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-04.pdf",
+      "title": "4 Gauss Law.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448800/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-04-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t5-q3",
+    "tutorial": 5,
+    "number": "3",
+    "title": "Accelerating a proton and an electron",
+    "pages": [
+      1
+    ],
+    "question": "Find the speed of (a) a proton accelerated from rest through 120 V and (b) an electron accelerated through the same potential-difference magnitude (also taking its initial speed as zero).",
+    "steps": [
+      {
+        "title": "Convert electrical energy to kinetic energy",
+        "body": "Acceleration increases kinetic energy by the charge magnitude times the potential-difference magnitude. The proton moves toward lower potential; the electron moves toward higher potential.",
+        "math": "\\tfrac12 mv^2=e|\\Delta V|,\\qquad v=\\sqrt{\\frac{2e(120)}m}"
+      },
+      {
+        "title": "Insert each particle mass",
+        "body": "Use e = 1.602 × 10⁻¹⁹ C, proton mass 1.673 × 10⁻²⁷ kg and electron mass 9.109 × 10⁻³¹ kg.",
+        "math": "v_p=1.5162\\times10^5\\ \\mathrm{m/s},\\qquad v_e=6.4971\\times10^6\\ \\mathrm{m/s}"
+      }
+    ],
+    "answer": "\\text{(a) }1.52\\times10^5\\ \\mathrm{m/s};\\qquad\\text{(b) }6.50\\times10^6\\ \\mathrm{m/s}",
+    "check": "Both particles gain 120 eV. The lighter electron is faster by √(mp/me) ≈ 42.8; both speeds are nonrelativistic.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-05.pdf",
+      "title": "5 E Potential.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448801/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-05-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t5-q37",
+    "tutorial": 5,
+    "number": "37",
+    "title": "Potential and field from a linear function",
+    "pages": [
+      1
+    ],
+    "question": "V(x) = 10.0 − 7.00x volts for 0 ≤ x ≤ 6.00 m. Find (a) V and (b) the magnitude and direction of E at x = 0, 3.00 and 6.00 m.",
+    "steps": [
+      {
+        "title": "Evaluate the potential",
+        "body": "Substitute each coordinate in the given linear function.",
+        "math": "V(0)=10.0\\ \\mathrm V,\\quad V(3)=-11.0\\ \\mathrm V,\\quad V(6)=-32.0\\ \\mathrm V"
+      },
+      {
+        "title": "Differentiate",
+        "body": "Electric field is the negative spatial derivative. The constant slope gives the same field throughout the stated region.",
+        "math": "\\mathbf E=-\\frac{dV}{dx}\\hat{\\mathbf x}=+7.00\\hat{\\mathbf x}\\ \\mathrm{V/m}"
+      }
+    ],
+    "answer": "V=(10.0,-11.0,-32.0)\\ \\mathrm V;\\qquad\\mathbf E=7.00\\hat{\\mathbf x}\\ \\mathrm{V/m}\\ \\text{at all three points}",
+    "check": "Potential decreases toward +x, so the field points +x. Endpoint values use the field within the stated region.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-05.pdf",
+      "title": "5 E Potential.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448801/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-05-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t5-q16",
+    "tutorial": 5,
+    "number": "16",
+    "title": "Symmetric charges: zero field, nonzero potential",
+    "pages": [
+      1
+    ],
+    "question": "Two +2.00 μC charges lie at x = −0.800 m and +0.800 m. A positive test charge q = 1.28 × 10⁻¹⁸ C is at the origin. Find (a) its net force, (b) E at the origin and (c) V at the origin relative to infinity.",
+    "steps": [
+      {
+        "title": "Add the fields as vectors",
+        "body": "Equal positive charges at equal distances produce equal, opposite x-directed fields at the origin.",
+        "math": "\\mathbf E=\\frac{kQ}{r^2}\\hat{\\mathbf x}-\\frac{kQ}{r^2}\\hat{\\mathbf x}=0"
+      },
+      {
+        "title": "Find the test-charge force",
+        "body": "The force is the test charge times the net external field.",
+        "math": "\\mathbf F=q\\mathbf E=0"
+      },
+      {
+        "title": "Add potentials as scalars",
+        "body": "Both source charges give positive potential; their potentials do not cancel.",
+        "math": "V=\\frac{2kQ}{r}=\\frac{2(8.988\\times10^9)(2.00\\times10^{-6})}{0.800}=4.49\\times10^4\\ \\mathrm V"
+      }
+    ],
+    "answer": "\\text{(a) }\\mathbf F=0;\\quad\\text{(b) }\\mathbf E=0;\\quad\\text{(c) }V=44.9\\ \\mathrm{kV}",
+    "check": "A zero potential gradient at the symmetry point does not require the potential itself to be zero.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-05.pdf",
+      "title": "5 E Potential.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448801/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-05-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t5-q17",
+    "tutorial": 5,
+    "number": "17",
+    "title": "Recovering a point charge from E and V",
+    "pages": [
+      1
+    ],
+    "question": "At a point near a single charge, |E| = 500 V/m and V = −3.00 kV relative to infinity. Find (a) the distance from the charge and (b) its magnitude.",
+    "steps": [
+      {
+        "title": "Eliminate charge",
+        "body": "Divide the point-charge potential magnitude by field magnitude.",
+        "math": "|V|=\\frac{k|Q|}{r},\\quad E=\\frac{k|Q|}{r^2}\\quad\\Rightarrow\\quad r=\\frac{|V|}{E}=\\frac{3000}{500}=6.00\\ \\mathrm m"
+      },
+      {
+        "title": "Recover charge",
+        "body": "Use the potential equation. Negative potential means the source charge is negative.",
+        "math": "|Q|=\\frac{|V|r}{k}=\\frac{3000(6.00)}{8.988\\times10^9}=2.00\\times10^{-6}\\ \\mathrm C"
+      }
+    ],
+    "answer": "\\text{(a) }r=6.00\\ \\mathrm m;\\qquad\\text{(b) }|Q|=2.00\\ \\mu\\mathrm C\\quad(Q<0)",
+    "check": "Substitution into k|Q|/r² returns 500 V/m.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-05.pdf",
+      "title": "5 E Potential.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448801/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-05-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t5-q18",
+    "tutorial": 5,
+    "number": "18",
+    "title": "Where field and potential vanish",
+    "pages": [
+      1
+    ],
+    "question": "A charge +q is at x = 0 and a charge −2q is at x = 2.00 m. Find every finite x for which (a) E = 0 and (b) V = 0.",
+    "steps": [
+      {
+        "title": "Locate possible field cancellation",
+        "body": "Between the charges both fields point right. To the right of −2q its field is stronger. Cancellation is possible only at x < 0, outside the smaller charge.",
+        "math": "\\frac{kq}{x^2}=\\frac{2kq}{(2-x)^2}\\quad(x<0)"
+      },
+      {
+        "title": "Solve the field equation in its valid region",
+        "body": "For x < 0, distances are −x and 2−x. Take the positive square root and solve.",
+        "math": "2-x=\\sqrt2(-x)\\quad\\Rightarrow\\quad x=-2(1+\\sqrt2)=-4.83\\ \\mathrm m"
+      },
+      {
+        "title": "Solve the scalar potential equation",
+        "body": "Potentials cancel when the distance to −2q is twice the distance to +q. The absolute-value equation has one root between the charges and one to their left.",
+        "math": "\\frac{kq}{|x|}-\\frac{2kq}{|x-2|}=0\\quad\\Rightarrow\\quad |x-2|=2|x|\\quad\\Rightarrow\\quad x=-2.00\\ \\mathrm m,\\ \\frac23\\ \\mathrm m"
+      }
+    ],
+    "answer": "\\text{(a) }x=-4.83\\ \\mathrm m;\\qquad\\text{(b) }x=-2.00\\ \\mathrm m,\\ +0.667\\ \\mathrm m",
+    "check": "Neither charge location is allowed. Checking field directions removes the spurious positive root of the squared field equation.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-05.pdf",
+      "title": "5 E Potential.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448801/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-05-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t5-q34",
+    "tutorial": 5,
+    "number": "34",
+    "title": "Energy of a four-charge rectangle",
+    "pages": [
+      2
+    ],
+    "question": "At the corners of a rectangle of height a = 0.200 m and width b = 0.400 m are +q (upper left), −2q (upper right), +2q (lower left) and +3q (lower right), with q = 6.00 μC. Find the quasistatic assembly energy from infinity.",
+    "steps": [
+      {
+        "title": "Count all six distinct charge pairs",
+        "body": "There are two vertical pairs, two horizontal pairs and two diagonal pairs; count each once. Each diagonal has length D = √(a²+b²).",
+        "math": "U=kq^2\\left[\\frac{2-6}{a}+\\frac{-2+6}{b}+\\frac{3-4}{\\sqrt{a^2+b^2}}\\right]"
+      },
+      {
+        "title": "Evaluate the sum",
+        "body": "Vertical terms are attractive overall; horizontal terms are repulsive overall; diagonal terms are attractive overall.",
+        "math": "U=(8.988\\times10^9)(6.00\\times10^{-6})^2\\left[-\\frac4{0.200}+\\frac4{0.400}-\\frac1{0.447214}\\right]=-3.959\\ \\mathrm J"
+      },
+      {
+        "title": "Interpret the sign",
+        "body": "The external agent does negative quasistatic work; 3.96 J is released during assembly."
+      }
+    ],
+    "answer": "W_{\\mathrm{ext}}=\\Delta U=-3.96\\ \\mathrm J",
+    "check": "The formula contains exactly 4·3/2 = 6 pair interactions. A negative result represents released energy, not a negative energy requirement magnitude.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-05.pdf",
+      "title": "5 E Potential.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448801/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-05-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t5-q39",
+    "tutorial": 5,
+    "number": "39",
+    "title": "Electric field from a three-dimensional potential",
+    "pages": [
+      2
+    ],
+    "question": "V = 5x − 3x²y + 2yz² in SI units. Find Ex, Ey, Ez and |E| at P = (1, 0, −2) m.",
+    "steps": [
+      {
+        "title": "Take the negative gradient",
+        "body": "Differentiate with respect to one coordinate at a time, holding the other two fixed.",
+        "math": "E_x=-5+6xy,\\qquad E_y=3x^2-2z^2,\\qquad E_z=-4yz"
+      },
+      {
+        "title": "Evaluate at P",
+        "body": "At x = 1, y = 0, z = −2, the x and y components are both −5 V/m and the z component vanishes.",
+        "math": "\\mathbf E(P)=(-5\\hat{\\mathbf x}-5\\hat{\\mathbf y})\\ \\mathrm{V/m}"
+      },
+      {
+        "title": "Find the magnitude",
+        "body": "Use the Euclidean norm of the field vector.",
+        "math": "|\\mathbf E(P)|=\\sqrt{(-5)^2+(-5)^2+0^2}=\\sqrt{50}\\ \\mathrm{V/m}"
+      }
+    ],
+    "answer": "E_x=-5+6xy,\\ E_y=3x^2-2z^2,\\ E_z=-4yz;\\quad |\\mathbf E(P)|=7.07\\ \\mathrm{V/m}",
+    "check": "The z component is zero at P because y = 0, even though z is nonzero.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-05.pdf",
+      "title": "5 E Potential.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448801/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-05-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t5-q42",
+    "tutorial": 5,
+    "number": "42",
+    "title": "Potential difference along a charged ring axis",
+    "pages": [
+      2
+    ],
+    "question": "A ring of radius R carries uniform total charge Q. Find the potential difference between its center and a point on its axis a distance 2R away. State the subtraction order.",
+    "steps": [
+      {
+        "title": "Sum scalar contributions around the ring",
+        "body": "Every charge element is the same distance √(R²+z²) from an axial point.",
+        "math": "V(z)=\\int\\frac{k\\,dq}{\\sqrt{R^2+z^2}}=\\frac{kQ}{\\sqrt{R^2+z^2}}"
+      },
+      {
+        "title": "Evaluate both points",
+        "body": "At the center the source distance is R; at z = 2R it is √5 R.",
+        "math": "V(0)=\\frac{kQ}{R},\\qquad V(2R)=\\frac{kQ}{\\sqrt5R}"
+      },
+      {
+        "title": "Specify the sign convention",
+        "body": "Define the difference as final axial point minus center. The reverse subtraction changes its sign.",
+        "math": "V(2R)-V(0)=\\frac{kQ}{R}\\left(\\frac1{\\sqrt5}-1\\right)"
+      }
+    ],
+    "answer": "V(2R)-V(0)=-\\left(1-\\frac1{\\sqrt5}\\right)\\frac{kQ}{R}\\approx-0.5528\\frac{kQ}{R}",
+    "check": "For Q > 0, potential decreases away from the ring center along its axis, so this difference is negative.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-05.pdf",
+      "title": "5 E Potential.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448801/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-05-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t5-q63",
+    "tutorial": 5,
+    "number": "63",
+    "title": "Potential difference near an infinite line charge",
+    "pages": [
+      2
+    ],
+    "question": "The radial field of an infinite uniform line charge is E = λ/(2πε₀r). Derive V(r₂) − V(r₁).",
+    "steps": [
+      {
+        "title": "Integrate the field",
+        "body": "Choose a radial path; the potential difference is minus the field line integral.",
+        "math": "V(r_2)-V(r_1)=-\\int_{r_1}^{r_2}\\frac{\\lambda}{2\\pi\\epsilon_0 r}\\,dr"
+      },
+      {
+        "title": "Evaluate the logarithm",
+        "body": "The ratio of radii is dimensionless.",
+        "math": "V(r_2)-V(r_1)=-\\frac{\\lambda}{2\\pi\\epsilon_0}\\ln\\!\\left(\\frac{r_2}{r_1}\\right)"
+      },
+      {
+        "title": "Choose a finite reference",
+        "body": "An infinite line charge cannot use a finite zero at infinity because the logarithm diverges. The finite-radius potential difference remains well-defined."
+      }
+    ],
+    "answer": "\\Delta V_{1\\to2}=\\frac{\\lambda}{2\\pi\\epsilon_0}\\ln\\!\\left(\\frac{r_1}{r_2}\\right)",
+    "check": "For positive λ and r₂ > r₁, the potential difference is negative, consistent with the outward electric field.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-05.pdf",
+      "title": "5 E Potential.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448801/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-05-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t6-q7",
+    "tutorial": 6,
+    "number": "7",
+    "title": "Parallel plates: field, charge and capacitance",
+    "pages": [
+      1
+    ],
+    "question": "Air-filled parallel plates have area 7.60 cm² and separation 1.80 mm, with 20.0 V applied. Find (a) field, (b) surface charge density, (c) capacitance and (d) charge on each plate. Neglect edge effects.",
+    "steps": [
+      {
+        "title": "Convert dimensions and find the field",
+        "body": "Area is 7.60 × 10⁻⁴ m² and separation is 1.80 × 10⁻³ m.",
+        "math": "E=\\frac{V}{d}=\\frac{20.0}{1.80\\times10^{-3}}=1.11\\times10^4\\ \\mathrm{V/m}"
+      },
+      {
+        "title": "Find surface charge density",
+        "body": "The air-filled field relation gives the magnitude on either plate.",
+        "math": "|\\sigma|=\\epsilon_0 E=9.84\\times10^{-8}\\ \\mathrm{C/m^2}"
+      },
+      {
+        "title": "Find capacitance and plate charges",
+        "body": "Use parallel-plate capacitance and Q = CV.",
+        "math": "C=\\frac{\\epsilon_0 A}{d}=3.74\\ \\mathrm{pF},\\qquad Q=CV=74.8\\ \\mathrm{pC}"
+      }
+    ],
+    "answer": "\\text{(a) }E=1.11\\times10^4\\ \\mathrm{V/m};\\quad\\text{(b) }\\sigma=\\pm9.84\\times10^{-8}\\ \\mathrm{C/m^2};\\quad\\text{(c) }C=3.74\\ \\mathrm{pF};\\quad\\text{(d) }Q=\\pm74.8\\ \\mathrm{pC}",
+    "check": "σA agrees with CV. The field points from the positive plate toward the negative plate.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-06.pdf",
+      "title": "6 Capacitance.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448802/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-06-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t6-q23",
+    "tutorial": 6,
+    "number": "23",
+    "title": "Charge sharing after switching",
+    "pages": [
+      1
+    ],
+    "question": "C₁ = 6.00 μF is charged from a 20.0 V battery by closing S₁ while S₂ is open. S₁ is opened, then S₂ connects initially uncharged C₂ = 3.00 μF in parallel. Find the initial charge on C₁ and final charge on each capacitor.",
+    "steps": [
+      {
+        "title": "Charge the first capacitor",
+        "body": "Initially only C₁ is connected across the battery.",
+        "math": "Q_{1i}=C_1V_0=(6.00)(20.0)=120\\ \\mu\\mathrm C"
+      },
+      {
+        "title": "Conserve charge after disconnecting the battery",
+        "body": "Both capacitors share a final voltage. Total positive-plate charge remains 120 μC.",
+        "math": "V_f=\\frac{Q_{1i}}{C_1+C_2}=\\frac{120}{9.00}=13.33\\ \\mathrm V"
+      },
+      {
+        "title": "Allocate the final charge",
+        "body": "Each final charge is its capacitance times the common voltage.",
+        "math": "Q_{1f}=C_1V_f=80.0\\ \\mu\\mathrm C,\\qquad Q_{2f}=C_2V_f=40.0\\ \\mu\\mathrm C"
+      }
+    ],
+    "answer": "Q_{1i}=120\\ \\mu\\mathrm C;\\quad Q_{1f}=80.0\\ \\mu\\mathrm C;\\quad Q_{2f}=40.0\\ \\mu\\mathrm C",
+    "check": "Final positive-plate charges sum to 120 μC; each negative plate has the opposite charge. Electrostatic energy is not conserved during charge redistribution.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-06.pdf",
+      "title": "6 Capacitance.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448802/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-06-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t6-q31",
+    "tutorial": 6,
+    "number": "31",
+    "title": "Stored energy at two battery voltages",
+    "pages": [
+      1
+    ],
+    "question": "A 3.00 μF capacitor is connected to (a) a 12.0 V battery and (b) a 6.00 V battery. Find stored energy in each case.",
+    "steps": [
+      {
+        "title": "Use the voltage form of capacitor energy",
+        "body": "For a capacitor held at voltage V, U = CV²/2.",
+        "math": "U_{12}=\\tfrac12(3.00\\times10^{-6})(12.0)^2=216\\ \\mu\\mathrm J"
+      },
+      {
+        "title": "Evaluate the lower voltage",
+        "body": "Halving the voltage reduces energy to one quarter.",
+        "math": "U_6=\\tfrac12(3.00\\times10^{-6})(6.00)^2=54.0\\ \\mu\\mathrm J"
+      }
+    ],
+    "answer": "\\text{(a) }216\\ \\mu\\mathrm J;\\qquad\\text{(b) }54.0\\ \\mu\\mathrm J",
+    "check": "U₆/U₁₂ = (6/12)² = 1/4.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-06.pdf",
+      "title": "6 Capacitance.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448802/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-06-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t6-q34",
+    "tutorial": 6,
+    "number": "34",
+    "title": "Doubling separation at fixed charge",
+    "pages": [
+      1
+    ],
+    "question": "A charged parallel-plate capacitor is disconnected from its battery. By what fraction does its stored energy change when the plate separation doubles?",
+    "steps": [
+      {
+        "title": "Identify the conserved quantity",
+        "body": "Disconnection means plate charge remains fixed; the voltage is free to change.",
+        "math": "Q_f=Q_i,\\qquad C_f=\\frac{\\epsilon_0 A}{2d}=\\frac{C_i}{2}"
+      },
+      {
+        "title": "Use the fixed-charge energy expression",
+        "body": "At constant Q, energy is inversely proportional to capacitance.",
+        "math": "U_f=\\frac{Q^2}{2C_f}=2U_i,\\qquad\\frac{U_f-U_i}{U_i}=1"
+      }
+    ],
+    "answer": "U_f=2U_i;\\qquad\\frac{\\Delta U}{U_i}=+1\\quad\\text{(100\\% increase)}",
+    "check": "Mechanical work is needed to pull the attracting plates apart; that work supplies the increased field energy.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-06.pdf",
+      "title": "6 Capacitance.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448802/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-06-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t6-q47",
+    "tutorial": 6,
+    "number": "47",
+    "title": "Isolated capacitor immersed in water",
+    "pages": [
+      1
+    ],
+    "question": "An air capacitor has separation 1.50 cm and plate area 25.0 cm². It is charged to 250 V, disconnected, then fully immersed in insulating distilled water. Find (a) charge before/after, (b) final capacitance and voltage, and (c) energy change. The handout does not specify the dielectric constant κ; give κ-dependent results and an explicitly conditional numerical example for κ = 80.0.",
+    "steps": [
+      {
+        "title": "Calculate initial capacitance and charge",
+        "body": "Treat air as vacuum and neglect fringing. Disconnection conserves free plate charge.",
+        "math": "C_0=\\frac{\\epsilon_0(25.0\\times10^{-4})}{1.50\\times10^{-2}}=1.476\\ \\mathrm{pF},\\qquad Q_0=C_0(250)=0.369\\ \\mathrm{nC}"
+      },
+      {
+        "title": "Insert dielectric at fixed charge",
+        "body": "A fully filling dielectric multiplies capacitance by κ; fixed charge means the voltage divides by κ.",
+        "math": "Q_f=Q_0,\\qquad C_f=\\kappa C_0,\\qquad V_f=\\frac{250}{\\kappa}\\ \\mathrm V"
+      },
+      {
+        "title": "Compute energy change",
+        "body": "Use Q²/(2C) because the battery is disconnected.",
+        "math": "U_0=46.1\\ \\mathrm{nJ},\\quad U_f=\\frac{46.1}{\\kappa}\\ \\mathrm{nJ},\\quad\\Delta U=46.1(\\kappa^{-1}-1)\\ \\mathrm{nJ}"
+      },
+      {
+        "title": "Illustrate with κ = 80.0",
+        "body": "These numerical values assume κ = 80.0; the symbolic result applies for the dielectric constant supplied by your course table.",
+        "math": "C_f=118\\ \\mathrm{pF},\\quad V_f=3.13\\ \\mathrm V,\\quad\\Delta U=-45.5\\ \\mathrm{nJ}"
+      }
+    ],
+    "answer": "|Q_i|=|Q_f|=0.369\\ \\mathrm{nC};\\ C_f=1.476\\kappa\\ \\mathrm{pF};\\ V_f=250/\\kappa\\ \\mathrm V;\\ \\Delta U=46.1(\\kappa^{-1}-1)\\ \\mathrm{nJ}",
+    "check": "The plates have opposite signs. For any κ > 1, fixed-charge energy decreases. Numerical water results require a specified κ; the source omits it.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-06.pdf",
+      "title": "6 Capacitance.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448802/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-06-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t6-q67",
+    "tutorial": 6,
+    "number": "67",
+    "title": "Find an unknown capacitance by charge sharing",
+    "pages": [
+      2
+    ],
+    "question": "An isolated unknown capacitor is charged to 100 V, then connected in parallel to an uncharged 10.0 μF capacitor. Their final voltage is 30.0 V. Find the unknown capacitance.",
+    "steps": [
+      {
+        "title": "Conserve charge",
+        "body": "Initial charge on the unknown capacitor equals total final charge.",
+        "math": "C(100)=(C+10.0\\ \\mu\\mathrm F)(30.0)"
+      },
+      {
+        "title": "Solve for capacitance",
+        "body": "Move the C terms to the same side.",
+        "math": "C=\\frac{(10.0\\ \\mu\\mathrm F)(30.0)}{100-30.0}=4.2857\\ \\mu\\mathrm F"
+      }
+    ],
+    "answer": "C=4.29\\ \\mu\\mathrm F",
+    "check": "Initial charge is 428.6 μC; final charges 128.6 μC and 300 μC sum to the same value.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-06.pdf",
+      "title": "6 Capacitance.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448802/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-06-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t6-q69",
+    "tutorial": 6,
+    "number": "69",
+    "title": "Dielectric insertion with the battery connected",
+    "pages": [
+      2
+    ],
+    "question": "A parallel-plate capacitor, separation d, remains connected to a battery at ΔV₀ while a dielectric of thickness d and constant κ fills its gap. (a) Show U/U₀ = κ and explain the energy increase. (b) Find the change in charge.",
+    "steps": [
+      {
+        "title": "Identify the fixed voltage",
+        "body": "The battery holds voltage constant while the dielectric increases capacitance.",
+        "math": "C=\\kappa C_0,\\qquad V=\\Delta V_0"
+      },
+      {
+        "title": "Find the energy ratio",
+        "body": "Use CV²/2 for this fixed-voltage process.",
+        "math": "\\frac{U}{U_0}=\\frac{\\tfrac12\\kappa C_0(\\Delta V_0)^2}{\\tfrac12 C_0(\\Delta V_0)^2}=\\kappa"
+      },
+      {
+        "title": "Find charge and explain the energy source",
+        "body": "The battery supplies additional charge and energy. During quasistatic insertion, half of the supplied energy increases stored field energy and the remainder can appear as mechanical work.",
+        "math": "Q=CV=\\kappa Q_0,\\quad\\Delta Q=(\\kappa-1)Q_0,\\quad W_{\\mathrm{battery}}=V\\Delta Q=2(U-U_0)"
+      }
+    ],
+    "answer": "\\text{(a) }U/U_0=\\kappa;\\qquad\\text{(b) }Q=\\kappa Q_0",
+    "check": "This is fixed voltage, not fixed charge. The battery is the energy source; inserting a dielectric does not create energy.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-06.pdf",
+      "title": "6 Capacitance.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448802/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-06-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t6-q71",
+    "tutorial": 6,
+    "number": "71",
+    "title": "Reconnect charged capacitors with reversed polarity",
+    "pages": [
+      2
+    ],
+    "question": "C₁ = 6.00 μF and C₂ = 2.00 μF are charged in parallel across 250 V, disconnected, then connected positive-to-negative and negative-to-positive. Find the resulting charge on each capacitor.",
+    "steps": [
+      {
+        "title": "Compute initial charges",
+        "body": "Take the node containing the initially positive plate of C₁ as the positive reference node.",
+        "math": "Q_{1i}=1500\\ \\mu\\mathrm C,\\qquad Q_{2i}=500\\ \\mu\\mathrm C"
+      },
+      {
+        "title": "Conserve signed node charge",
+        "body": "Because the connections reverse C₂, the charge on that node is the difference, not the sum.",
+        "math": "Q_{\\mathrm{node}}=1500-500=1000\\ \\mu\\mathrm C,\\qquad V_f=\\frac{1000}{6.00+2.00}=125\\ \\mathrm V"
+      },
+      {
+        "title": "Recover each capacitor charge",
+        "body": "C₁ retains its original polarity. C₂ reverses polarity because its initially negative plate is on the final positive node.",
+        "math": "|Q_{1f}|=(6.00)(125)=750\\ \\mu\\mathrm C,\\qquad |Q_{2f}|=(2.00)(125)=250\\ \\mu\\mathrm C"
+      }
+    ],
+    "answer": "|Q_{1f}|=750\\ \\mu\\mathrm C;\\quad |Q_{2f}|=250\\ \\mu\\mathrm C\\quad\\text{(polarity of }C_2\\text{ reversed)}",
+    "check": "Final charge on the reference node is 750 + 250 = 1000 μC, equal to the initial signed sum.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-06.pdf",
+      "title": "6 Capacitance.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448802/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-06-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t7-q1",
+    "tutorial": 7,
+    "number": "1",
+    "title": "Energy in a capacitor network",
+    "pages": [
+      1
+    ],
+    "question": "In the diagram C₁ = 50 μF and C₂ = 30 μF form one parallel group; C₃ = 36 μF and C₄ = 12 μF form a second parallel group. The two groups are in series across V₀ = 30 V. Find the energy in C₃ and select the answer.",
+    "steps": [
+      {
+        "title": "Reduce each parallel group",
+        "body": "The common top conductor joins the two groups; the battery separates the bottom nodes, so the groups are in series.",
+        "math": "C_L=C_1+C_2=80\\ \\mu\\mathrm F,\\quad C_R=C_3+C_4=48\\ \\mu\\mathrm F"
+      },
+      {
+        "title": "Find the right-group voltage",
+        "body": "Series groups have equal charge. The smaller group receives the larger voltage.",
+        "math": "C_{\\mathrm{eq}}=\\frac{80(48)}{80+48}=30\\ \\mu\\mathrm F,\\quad Q=C_{\\mathrm{eq}}V_0=900\\ \\mu\\mathrm C,\\quad V_3=\\frac{900}{48}=18.75\\ \\mathrm V"
+      },
+      {
+        "title": "Calculate C₃ energy",
+        "body": "C₃ shares the full right-group voltage.",
+        "math": "U_3=\\tfrac12C_3V_3^2=\\tfrac12(36\\times10^{-6})(18.75)^2=6.328\\ \\mathrm{mJ}"
+      }
+    ],
+    "answer": "U_3=6.3\\ \\mathrm{mJ}\\quad\\text{(A)}",
+    "check": "The other group has 11.25 V, and the two group voltages sum to 30 V. Agrees with the printed key.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-07.pdf",
+      "title": "7 Cap Combo.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448803/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-07-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t7-q2",
+    "tutorial": 7,
+    "number": "2",
+    "title": "Voltage division in a series capacitor branch",
+    "pages": [
+      1
+    ],
+    "question": "C₁ = 5.0 μF is directly across a 24 V source. A parallel branch contains C₂ = 15 μF and C₃ = 30 μF in series. Find the voltage across C₂.",
+    "steps": [
+      {
+        "title": "Identify the branch voltage",
+        "body": "Both branches connect to the battery nodes, so the C₂–C₃ series pair has 24 V across it. C₁ does not change the ideal battery voltage.",
+        "math": "C_{23}=\\frac{15(30)}{15+30}=10\\ \\mu\\mathrm F"
+      },
+      {
+        "title": "Find series charge and C₂ voltage",
+        "body": "Series capacitors carry equal charge magnitude.",
+        "math": "Q_{23}=C_{23}V_0=240\\ \\mu\\mathrm C,\\qquad V_2=\\frac{240}{15}=16\\ \\mathrm V"
+      }
+    ],
+    "answer": "V_2=16\\ \\mathrm V\\quad\\text{(C)}",
+    "check": "V₃ = 8 V; V₂ + V₃ = 24 V. Agrees with the printed key.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-07.pdf",
+      "title": "7 Cap Combo.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448803/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-07-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t7-q3",
+    "tutorial": 7,
+    "number": "3",
+    "title": "Energy after same-polarity charge sharing",
+    "pages": [
+      1
+    ],
+    "question": "A 6.0 μF capacitor at 50 V and a 4.0 μF capacitor at 34 V are connected positive-to-positive and negative-to-negative. Find the final energy stored in the 6.0 μF capacitor.",
+    "steps": [
+      {
+        "title": "Conserve positive-node charge",
+        "body": "The charges add because the polarities match.",
+        "math": "Q_{\\mathrm{tot}}=(6.0)(50)+(4.0)(34)=436\\ \\mu\\mathrm C"
+      },
+      {
+        "title": "Find equilibrium voltage",
+        "body": "Both capacitors share the same final voltage.",
+        "math": "V_f=\\frac{436}{6.0+4.0}=43.6\\ \\mathrm V"
+      },
+      {
+        "title": "Compute the requested capacitor energy",
+        "body": "Use only the 6.0 μF capacitance for its stored energy.",
+        "math": "U_6=\\tfrac12(6.0\\times10^{-6})(43.6)^2=5.70288\\ \\mathrm{mJ}"
+      }
+    ],
+    "answer": "U_6=5.7\\ \\mathrm{mJ}\\quad\\text{(B)}",
+    "check": "Final voltage lies between 34 V and 50 V; the printed key is B.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-07.pdf",
+      "title": "7 Cap Combo.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448803/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-07-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t7-q4",
+    "tutorial": 7,
+    "number": "4",
+    "title": "Unknown capacitor from two initial voltages",
+    "pages": [
+      2
+    ],
+    "question": "A 25 μF capacitor charged to 50 V is connected with matching polarity to an unknown capacitor C charged to 20 V. The final common voltage is 36 V. Find C.",
+    "steps": [
+      {
+        "title": "Write charge conservation",
+        "body": "Charge on the combined positive node is conserved.",
+        "math": "(25)(50)+C(20)=(25+C)(36)\\qquad[C\\text{ in }\\mu\\mathrm F]"
+      },
+      {
+        "title": "Solve for C",
+        "body": "The higher-voltage capacitor loses the charge gained by the lower-voltage capacitor.",
+        "math": "C=\\frac{25(50-36)}{36-20}=21.875\\ \\mu\\mathrm F"
+      }
+    ],
+    "answer": "C\\approx22\\ \\mu\\mathrm F\\quad\\text{(C)}",
+    "check": "Both sides give 1687.5 μC at the unrounded C. Agrees with the printed key.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-07.pdf",
+      "title": "7 Cap Combo.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448803/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-07-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t7-q5",
+    "tutorial": 7,
+    "number": "5",
+    "title": "Unknown initially uncharged capacitor",
+    "pages": [
+      2
+    ],
+    "question": "A 30 μF capacitor initially at 80 V is connected across an uncharged capacitor C. Their final voltage is 20 V. Find C.",
+    "steps": [
+      {
+        "title": "Conserve charge",
+        "body": "The initially uncharged capacitor contributes no initial node charge.",
+        "math": "(30)(80)=(30+C)(20)\\qquad[C\\text{ in }\\mu\\mathrm F]"
+      },
+      {
+        "title": "Solve the total capacitance",
+        "body": "The fourfold decrease in voltage requires a fourfold increase in total capacitance.",
+        "math": "30+C=120\\quad\\Rightarrow\\quad C=90\\ \\mu\\mathrm F"
+      }
+    ],
+    "answer": "C=90\\ \\mu\\mathrm F\\quad\\text{(D)}",
+    "check": "Final charges are 600 μC and 1800 μC, totaling the original 2400 μC. Agrees with the key.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-07.pdf",
+      "title": "7 Cap Combo.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448803/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-07-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t7-q6",
+    "tutorial": 7,
+    "number": "6",
+    "title": "Pulling plates apart while connected to a battery",
+    "pages": [
+      2
+    ],
+    "question": "A parallel-plate capacitor initially has C₀, Q₀ and plate separation d at battery voltage V₀. Separation increases to 2d while the battery remains connected. Find the new capacitance and plate-charge magnitude.",
+    "steps": [
+      {
+        "title": "Use the new separation",
+        "body": "Capacitance is inversely proportional to plate spacing.",
+        "math": "C_f=\\frac{\\epsilon_0A}{2d}=\\frac{C_0}{2}"
+      },
+      {
+        "title": "Keep the voltage fixed",
+        "body": "Charge adjusts through the battery as capacitance changes.",
+        "math": "Q_f=C_fV_0=\\frac{C_0V_0}{2}=\\frac{Q_0}{2}"
+      }
+    ],
+    "answer": "C_f=\\tfrac12C_0,\\qquad Q_f=\\tfrac12Q_0\\quad\\text{(A)}",
+    "check": "Charge is not conserved on the capacitor because the battery stays connected. Agrees with the printed key.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-07.pdf",
+      "title": "7 Cap Combo.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448803/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-07-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t7-q7",
+    "tutorial": 7,
+    "number": "7",
+    "title": "Dielectric insertion after battery disconnection",
+    "pages": [
+      2
+    ],
+    "question": "A parallel-plate capacitor initially has C₀, Q₀ and V₀. It is disconnected from its battery and filled with a dielectric of constant 3. Find the final plate-charge magnitude and voltage.",
+    "steps": [
+      {
+        "title": "Keep the isolated charge fixed",
+        "body": "The disconnected plates cannot exchange free charge with a battery.",
+        "math": "Q_f=Q_0,\\qquad C_f=3C_0"
+      },
+      {
+        "title": "Find the reduced voltage",
+        "body": "Voltage follows Q/C.",
+        "math": "V_f=\\frac{Q_0}{3C_0}=\\frac{V_0}{3}"
+      }
+    ],
+    "answer": "Q_f=Q_0,\\qquad V_f=\\tfrac13V_0\\quad\\text{(B)}",
+    "check": "U_f = U₀/3 at fixed charge. Agrees with the printed key.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-07.pdf",
+      "title": "7 Cap Combo.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448803/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-07-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t7-q8",
+    "tutorial": 7,
+    "number": "8",
+    "title": "Charge passing through a light bulb",
+    "pages": [
+      2
+    ],
+    "question": "A bulb operates at 30 W and 120 V for 1.0 min. How much charge enters and leaves it?",
+    "steps": [
+      {
+        "title": "Find current from power",
+        "body": "Use the stated operating voltage and power.",
+        "math": "I=\\frac PV=\\frac{30}{120}=0.25\\ \\mathrm A"
+      },
+      {
+        "title": "Convert minutes to seconds",
+        "body": "One minute is 60 s; charge is current times elapsed time.",
+        "math": "Q=It=(0.25)(60)=15\\ \\mathrm C"
+      }
+    ],
+    "answer": "Q=15\\ \\mathrm C\\quad\\text{(B)}",
+    "check": "Equal charge enters and leaves in steady state; the bulb does not consume charge. Agrees with the key.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-07.pdf",
+      "title": "7 Cap Combo.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448803/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-07-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t7-q9",
+    "tutorial": 7,
+    "number": "9",
+    "title": "Resistivity from wire dimensions",
+    "pages": [
+      3
+    ],
+    "question": "A 2.0 m wire of diameter 1.0 mm has resistance 0.45 Ω. Find the material resistivity.",
+    "steps": [
+      {
+        "title": "Calculate cross-sectional area",
+        "body": "Radius is half the diameter, 0.50 × 10⁻³ m.",
+        "math": "A=\\pi\\left(\\frac{1.0\\times10^{-3}}2\\right)^2=7.854\\times10^{-7}\\ \\mathrm{m^2}"
+      },
+      {
+        "title": "Rearrange the wire resistance formula",
+        "body": "R = ρL/A gives resistivity.",
+        "math": "\\rho=\\frac{RA}{L}=\\frac{(0.45)(7.854\\times10^{-7})}{2.0}=1.767\\times10^{-7}\\ \\Omega\\,\\mathrm m"
+      }
+    ],
+    "answer": "\\rho=1.8\\times10^{-7}\\ \\Omega\\,\\mathrm m\\quad\\text{(C)}",
+    "check": "Using diameter as radius would incorrectly multiply the answer by four. Agrees with the key.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-07.pdf",
+      "title": "7 Cap Combo.pdf",
+      "pages": [
+        3
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448803/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-07-p3.webp",
+        "page": 3,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t7-q10",
+    "tutorial": 7,
+    "number": "10",
+    "title": "Resistance of a stretched wire",
+    "pages": [
+      3
+    ],
+    "question": "A conductor of length ℓ, radius r, resistivity ρ and resistance R is stretched to four times its original length. Find its new resistance, assuming unchanged resistivity and conserved material volume.",
+    "steps": [
+      {
+        "title": "Conserve wire volume",
+        "body": "Quadrupling length reduces the cross-sectional area to one quarter.",
+        "math": "A\\ell=A_f(4\\ell)\\quad\\Rightarrow\\quad A_f=A/4"
+      },
+      {
+        "title": "Recalculate resistance",
+        "body": "Both the increased length and decreased area increase resistance.",
+        "math": "R_f=\\frac{\\rho(4\\ell)}{A/4}=16\\frac{\\rho\\ell}{A}=16R"
+      }
+    ],
+    "answer": "R_f=16R\\quad\\text{(E)}",
+    "check": "The constant-volume, constant-resistivity assumptions are required for the textbook stretching model. Agrees with the printed key.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-07.pdf",
+      "title": "7 Cap Combo.pdf",
+      "pages": [
+        3
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448803/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-07-p3.webp",
+        "page": 3,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t8-q1",
+    "tutorial": 8,
+    "number": "1",
+    "title": "Voltage from an electron count",
+    "pages": [
+      1
+    ],
+    "question": "5.0 × 10²¹ electrons pass through a 20 Ω resistor in 10 min. Find the potential-difference magnitude across it.",
+    "steps": [
+      {
+        "title": "Convert electron count to charge magnitude",
+        "body": "Multiply by the elementary charge; convert time to 600 s.",
+        "math": "|Q|=Ne=(5.0\\times10^{21})(1.602\\times10^{-19})=801\\ \\mathrm C"
+      },
+      {
+        "title": "Calculate current and voltage",
+        "body": "Use average current, then Ohm’s law.",
+        "math": "I=\\frac{|Q|}{t}=\\frac{801}{600}=1.335\\ \\mathrm A,\\qquad |\\Delta V|=IR=26.7\\ \\mathrm V"
+      }
+    ],
+    "answer": "|\\Delta V|\\approx27\\ \\mathrm V\\quad\\text{(C)}",
+    "check": "The electron motion is opposite conventional current, but that does not change the requested voltage magnitude. Matches key C.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-08.pdf",
+      "title": "8 DC Circuits B Force on Charges.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448804/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-08-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t8-q2",
+    "tutorial": 8,
+    "number": "2",
+    "title": "Resistance ratio after cooling",
+    "pages": [
+      1
+    ],
+    "question": "Iron and carbon each have resistance 10 Ω at 20 °C. Their temperature coefficients are +5.0 × 10⁻³ /°C and −0.50 × 10⁻³ /°C respectively. Use the linear model to find Rcarbon/Riron at −80 °C.",
+    "steps": [
+      {
+        "title": "Calculate the temperature change",
+        "body": "Use the difference from the reference temperature.",
+        "math": "\\Delta T=-80-20=-100\\ ^\\circ\\mathrm C"
+      },
+      {
+        "title": "Calculate each new resistance",
+        "body": "Apply R = R₀(1 + αΔT) separately.",
+        "math": "R_{\\mathrm{Fe}}=10[1+(5.0\\times10^{-3})(-100)]=5.0\\ \\Omega"
+      },
+      {
+        "title": "Form the requested ratio",
+        "body": "Carbon’s negative coefficient makes its resistance increase as it cools.",
+        "math": "R_{\\mathrm C}=10[1+(-0.50\\times10^{-3})(-100)]=10.5\\ \\Omega,\\qquad\\frac{R_{\\mathrm C}}{R_{\\mathrm{Fe}}}=2.1"
+      }
+    ],
+    "answer": "R_{\\mathrm C}/R_{\\mathrm{Fe}}=+2.1\\quad\\text{(C)}",
+    "check": "Both modeled resistances remain positive; the result agrees with the key.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-08.pdf",
+      "title": "8 DC Circuits B Force on Charges.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448804/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-08-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t8-q3",
+    "tutorial": 8,
+    "number": "3",
+    "title": "Comparing two rated light bulbs",
+    "pages": [
+      1
+    ],
+    "question": "Bulb A is rated 60 W and bulb B 100 W, both at 110 V. Compare their operating resistance and current at the rated voltage.",
+    "steps": [
+      {
+        "title": "Compare resistance",
+        "body": "At equal voltage, resistance is inversely proportional to power.",
+        "math": "R_A=\\frac{110^2}{60}=202\\ \\Omega,\\qquad R_B=\\frac{110^2}{100}=121\\ \\Omega"
+      },
+      {
+        "title": "Compare current",
+        "body": "At equal voltage, current is proportional to power.",
+        "math": "I_A=\\frac{60}{110}=0.545\\ \\mathrm A,\\qquad I_B=\\frac{100}{110}=0.909\\ \\mathrm A"
+      }
+    ],
+    "answer": "R_A>R_B,\\qquad I_A<I_B\\quad\\text{(B)}",
+    "check": "These are operating resistances at rated voltage; incandescent resistance varies with temperature. Matches key B.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-08.pdf",
+      "title": "8 DC Circuits B Force on Charges.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448804/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-08-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t8-q4",
+    "tutorial": 8,
+    "number": "4",
+    "title": "Power in the diagonal resistor",
+    "pages": [
+      1
+    ],
+    "question": "A 12 V source feeds a top resistor R. From its right-hand node to the source return, a diagonal resistor 2R is in parallel with two other R resistors in series. With R = 3.0 Ω, find power in the diagonal 2R resistor.",
+    "steps": [
+      {
+        "title": "Reduce the two return paths",
+        "body": "The side-and-bottom path has resistance 2R, equal to the diagonal path. Their parallel equivalent is R.",
+        "math": "R_{\\mathrm{return}}=(2R)\\parallel(2R)=R,\\qquad R_{\\mathrm{tot}}=2R=6.0\\ \\Omega"
+      },
+      {
+        "title": "Find the return-path voltage",
+        "body": "The source voltage divides equally between top R and the return equivalent R.",
+        "math": "I_{\\mathrm{source}}=\\frac{12}{6}=2.0\\ \\mathrm A,\\qquad V_{2R}=I_{\\mathrm{source}}R=6.0\\ \\mathrm V"
+      },
+      {
+        "title": "Calculate diagonal power",
+        "body": "The actual diagonal resistance is 2R = 6.0 Ω.",
+        "math": "P_{2R}=\\frac{V_{2R}^2}{2R}=\\frac{6.0^2}{6.0}=6.0\\ \\mathrm W"
+      }
+    ],
+    "answer": "P_{2R}=6.0\\ \\mathrm W\\quad\\text{(C)}",
+    "check": "Each return branch carries 1 A; the two branch currents sum to 2 A. Matches key C.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-08.pdf",
+      "title": "8 DC Circuits B Force on Charges.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448804/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-08-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t8-q5",
+    "tutorial": 8,
+    "number": "5",
+    "title": "Direction of current in a resistor branch",
+    "pages": [
+      2
+    ],
+    "question": "In the diagram the middle branch has a 20 Ω resistor below a 50 V source (+ at top), with 1.8 A upward. The left branch has a 30 V source (+ at top) and a bottom 10 Ω resistor. Find the current magnitude and direction through the 10 Ω resistor.",
+    "steps": [
+      {
+        "title": "Set the bottom/right node to zero",
+        "body": "Move upward through the middle branch: a 36 V drop across the resistor is followed by a 50 V rise across the source.",
+        "math": "V_T-V_B=50-(1.8)(20)=14\\ \\mathrm V"
+      },
+      {
+        "title": "Find the lower-left node potential",
+        "body": "The left source puts the top node 30 V above its lower terminal.",
+        "math": "V_L=V_T-30=14-30=-16\\ \\mathrm V\\qquad(V_B=0)"
+      },
+      {
+        "title": "Use Ohm’s law with a direction",
+        "body": "The right end of the 10 Ω resistor is at 0 V and its left end is at −16 V; conventional current flows right to left.",
+        "math": "I_{10}=\\frac{V_B-V_L}{10}=\\frac{0-(-16)}{10}=1.6\\ \\mathrm A"
+      }
+    ],
+    "answer": "I_{10}=1.6\\ \\mathrm A\\ \\text{right to left}\\quad\\text{(A)}",
+    "check": "The middle current sets the node voltage without needing the unspecified right-hand R. The loop voltage changes sum to zero; matches key A.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-08.pdf",
+      "title": "8 DC Circuits B Force on Charges.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448804/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-08-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t8-q6",
+    "tutorial": 8,
+    "number": "6",
+    "title": "Potential change along a circuit segment",
+    "pages": [
+      2
+    ],
+    "question": "Travel from A to B through a 20 V source (− then +), a 20 Ω resistor carrying 1.5 A from A toward B, and a 12 V source (+ then −). Find VB − VA.",
+    "steps": [
+      {
+        "title": "Assign each signed voltage change",
+        "body": "Crossing − to + gives a rise; going with current through a resistor gives a drop; crossing + to − gives a drop.",
+        "math": "\\Delta V_1=+20\\ \\mathrm V,\\quad\\Delta V_R=-IR=-30\\ \\mathrm V,\\quad\\Delta V_2=-12\\ \\mathrm V"
+      },
+      {
+        "title": "Add the changes from A to B",
+        "body": "The sum is the requested final-minus-initial potential.",
+        "math": "V_B-V_A=20-30-12=-22\\ \\mathrm V"
+      }
+    ],
+    "answer": "V_B-V_A=-22\\ \\mathrm V\\quad\\text{(B)}",
+    "check": "The B endpoint lies 22 V below A; reversing the traversal reverses every term. Matches key B.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-08.pdf",
+      "title": "8 DC Circuits B Force on Charges.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448804/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-08-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t8-q7",
+    "tutorial": 8,
+    "number": "7",
+    "title": "Brightness in a series-parallel bulb circuit",
+    "pages": [
+      2
+    ],
+    "question": "Three identical 100 W bulbs are connected to a 110 V source: bulb A is in series with parallel bulbs B and C. Which is brightest?",
+    "steps": [
+      {
+        "title": "Compare branch currents",
+        "body": "Symmetry gives equal currents in B and C. Their sum passes through A.",
+        "math": "I_A=I_B+I_C=2I_B=2I_C"
+      },
+      {
+        "title": "Relate power to brightness",
+        "body": "Using equal bulb resistance, dissipated power is I²R. Bulb A dissipates four times the power of either parallel bulb.",
+        "math": "P_A=I_A^2R=4I_B^2R=4P_B=4P_C"
+      }
+    ],
+    "answer": "\\text{A is brightest; B and C are equally dimmer. (A)}",
+    "check": "The power ratio 4:1:1 uses the equal-resistance bulb model. The brightness ranking is the expected answer in the printed key.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-08.pdf",
+      "title": "8 DC Circuits B Force on Charges.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448804/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-08-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t8-q8",
+    "tutorial": 8,
+    "number": "8",
+    "title": "Magnetic acceleration of an electron",
+    "pages": [
+      3
+    ],
+    "question": "An electron has velocity 6.0 × 10⁶ m/s in +x. The field is B = (3.0, 1.5, 2.0) T. Find the magnetic-acceleration magnitude.",
+    "steps": [
+      {
+        "title": "Keep only perpendicular field components",
+        "body": "The x component is parallel to velocity and exerts no magnetic force.",
+        "math": "B_\\perp=\\sqrt{B_y^2+B_z^2}=\\sqrt{1.5^2+2.0^2}=2.5\\ \\mathrm T"
+      },
+      {
+        "title": "Find force and acceleration magnitudes",
+        "body": "Use the elementary-charge magnitude and electron mass.",
+        "math": "a=\\frac{evB_\\perp}{m_e}=\\frac{(1.602\\times10^{-19})(6.0\\times10^6)(2.5)}{9.109\\times10^{-31}}=2.64\\times10^{18}\\ \\mathrm{m/s^2}"
+      },
+      {
+        "title": "Check the force direction",
+        "body": "v × B has components −vBz in y and +vBy in z. Multiplication by the electron’s negative charge reverses both.",
+        "math": "\\mathbf a=\\frac{ev}{m_e}(B_z\\hat{\\mathbf y}-B_y\\hat{\\mathbf z})"
+      }
+    ],
+    "answer": "a=2.6\\times10^{18}\\ \\mathrm{m/s^2}\\quad\\text{(C)}",
+    "check": "Magnetic acceleration is perpendicular to velocity and changes direction rather than speed. Matches key C.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-08.pdf",
+      "title": "8 DC Circuits B Force on Charges.pdf",
+      "pages": [
+        3
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448804/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-08-p3.webp",
+        "page": 3,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t8-q9",
+    "tutorial": 8,
+    "number": "9",
+    "title": "Infer field direction from an electron force",
+    "pages": [
+      3
+    ],
+    "question": "An electron moves in +x and experiences magnetic force in +z. Given Bx = 0, determine the magnetic-field direction.",
+    "steps": [
+      {
+        "title": "Account for negative charge",
+        "body": "F = q(v × B). For an electron, v × B must point opposite the force, toward −z.",
+        "math": "\\mathbf v\\times\\mathbf B\\ \\parallel\\ -\\hat{\\mathbf z}"
+      },
+      {
+        "title": "Apply the right-hand rule",
+        "body": "Since x × y = z, x × (−y) = −z. A z component of B would create an unwanted y force, so Bz = 0.",
+        "math": "\\hat{\\mathbf x}\\times(-\\hat{\\mathbf y})=-\\hat{\\mathbf z}"
+      }
+    ],
+    "answer": "\\mathbf B\\ \\text{points in the negative y direction. (A)}",
+    "check": "Multiplying the −z cross product by negative electron charge produces the specified +z force. Matches key A.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-08.pdf",
+      "title": "8 DC Circuits B Force on Charges.pdf",
+      "pages": [
+        3
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448804/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-08-p3.webp",
+        "page": 3,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t8-q10",
+    "tutorial": 8,
+    "number": "10",
+    "title": "Solve a magnetic cross product for By",
+    "pages": [
+      3
+    ],
+    "question": "A +2.0 C charge moves with v = (2.0i + 4.0j + 6.0k) m/s and experiences F = (4.0i − 20j + 12k) N. Bx = 0. Find By.",
+    "steps": [
+      {
+        "title": "Expand the cross product",
+        "body": "Set B = (0, By, Bz) in F = q(v × B).",
+        "math": "\\mathbf F=2\\big[(4B_z-6B_y)\\hat{\\mathbf x}-2B_z\\hat{\\mathbf y}+2B_y\\hat{\\mathbf z}\\big]"
+      },
+      {
+        "title": "Use the z component",
+        "body": "The z force directly isolates By.",
+        "math": "F_z=4B_y=12\\quad\\Rightarrow\\quad B_y=+3.0\\ \\mathrm T"
+      },
+      {
+        "title": "Verify the remaining components",
+        "body": "The y force gives Bz = 5.0 T, which also reproduces Fx.",
+        "math": "B_z=5.0\\ \\mathrm T,\\qquad F_x=2[4(5)-6(3)]=4.0\\ \\mathrm N"
+      }
+    ],
+    "answer": "B_y=+3.0\\ \\mathrm T\\quad\\text{(B)}",
+    "check": "F·v = 4(2) − 20(4) + 12(6) = 0, as required for a purely magnetic force. Matches key B.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-08.pdf",
+      "title": "8 DC Circuits B Force on Charges.pdf",
+      "pages": [
+        3
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448804/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-08-p3.webp",
+        "page": 3,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t9-q1",
+    "tutorial": 9,
+    "number": "1",
+    "title": "Acceleration of a negatively charged particle",
+    "pages": [
+      1
+    ],
+    "question": "A 2.0 mg particle with charge −6.0 μC moves at 3.0 km/s in +x through B=(2i+3j+4k) mT. Find its acceleration.",
+    "steps": [
+      {
+        "title": "Convert to SI",
+        "body": "A milligram is 10⁻⁶ kg; retain the negative charge.",
+        "math": "m=2.0\\times10^{-6}\\,\\mathrm{kg},\\quad q=-6.0\\times10^{-6}\\,\\mathrm C"
+      },
+      {
+        "title": "Evaluate the cross product",
+        "body": "The x component of the field is parallel to the velocity and contributes no force.",
+        "math": "\\mathbf v\\times\\mathbf B=3000\\mathbf i\\times(0.002\\mathbf i+0.003\\mathbf j+0.004\\mathbf k)=-12\\mathbf j+9\\mathbf k"
+      },
+      {
+        "title": "Apply Newton’s law",
+        "body": "Multiplication by the negative charge reverses the cross-product direction.",
+        "math": "\\mathbf a=\\frac q m(\\mathbf v\\times\\mathbf B)=36\\mathbf j-27\\mathbf k\\;\\mathrm{m/s^2}"
+      }
+    ],
+    "answer": "\\mathbf a=(36\\mathbf j-27\\mathbf k)\\,\\mathrm{m/s^2}\\quad\\text{(a)}",
+    "check": "Acceleration is perpendicular to velocity and field. Matches key (a).",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-09.pdf",
+      "title": "9 Mag Force on Charges.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448845/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-09-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t9-q2",
+    "tutorial": 9,
+    "number": "2",
+    "title": "Net force on an L-shaped wire",
+    "pages": [
+      1
+    ],
+    "question": "A 25 A current flows from x=−2 m to 0, then y=0 to 3 m, in B=40 mT in +z. Find the force magnitude.",
+    "steps": [
+      {
+        "title": "Use endpoint displacement",
+        "body": "For a uniform field, the integral of dℓ equals end minus start.",
+        "math": "\\Delta\\mathbf r=2\\mathbf i+3\\mathbf j\\;\\mathrm m"
+      },
+      {
+        "title": "Add perpendicular force components",
+        "body": "Use i×k=−j and j×k=i.",
+        "math": "\\mathbf F=I\\Delta\\mathbf r\\times\\mathbf B=25(2\\mathbf i+3\\mathbf j)\\times0.040\\mathbf k=3\\mathbf i-2\\mathbf j\\;\\mathrm N"
+      },
+      {
+        "title": "Take the magnitude",
+        "body": "Combine components by Pythagoras.",
+        "math": "|\\mathbf F|=\\sqrt{3^2+(-2)^2}=3.61\\,\\mathrm N"
+      }
+    ],
+    "answer": "F\\approx3.6\\,\\mathrm N\\quad\\text{(d)}",
+    "check": "The two segments separately produce −2j N and +3i N. Matches key (d).",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-09.pdf",
+      "title": "9 Mag Force on Charges.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448845/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-09-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t9-q3",
+    "tutorial": 9,
+    "number": "3",
+    "title": "Force on an inverted U-shaped wire",
+    "pages": [
+      1
+    ],
+    "question": "A wire rises a distance L, runs 2L in +x, then descends L. Current follows this path; uniform B points +y. Find the net magnetic force.",
+    "steps": [
+      {
+        "title": "Separate the three segments",
+        "body": "The two vertical legs are parallel or antiparallel to B, so each has zero magnetic force.",
+        "math": "\\mathbf F_{\\mathrm{legs}}=0"
+      },
+      {
+        "title": "Find the horizontal force",
+        "body": "The top segment carries current in +x, so i×j=k.",
+        "math": "\\mathbf F=I(2L\\mathbf i)\\times(B\\mathbf j)=2IBL\\mathbf k"
+      }
+    ],
+    "answer": "\\mathbf F=2IBL\\,\\mathbf k\\quad\\text{(b)}",
+    "check": "The endpoint displacement is 2L i, which gives the same net force. Matches key (b).",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-09.pdf",
+      "title": "9 Mag Force on Charges.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448845/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-09-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t9-q4",
+    "tutorial": 9,
+    "number": "4",
+    "title": "Torque on an 80-turn loop",
+    "pages": [
+      2
+    ],
+    "question": "An 80-turn rectangular loop has a=0.40 m, b=0.30 m and I=8.0 A. B=40 mT in +x. Its plane makes θ=30° with +x as shown. Find the torque magnitude about y.",
+    "steps": [
+      {
+        "title": "Identify the angle to the normal",
+        "body": "The torque formula uses the normal-to-field angle, 90°−θ, rather than the angle to the plane.",
+        "math": "A=ab=0.12\\,\\mathrm{m^2},\\quad\\alpha=60^\\circ"
+      },
+      {
+        "title": "Evaluate the dipole torque",
+        "body": "Multiply by the number of turns.",
+        "math": "\\tau=NIAB\\sin\\alpha=80(8.0)(0.12)(0.040)\\cos30^\\circ=2.66\\,\\mathrm{N\\,m}"
+      }
+    ],
+    "answer": "\\tau\\approx2.7\\,\\mathrm{N\\,m}\\quad\\text{(d)}",
+    "check": "The value is below the maximum NIAB=3.072 N·m. Matches key (d).",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-09.pdf",
+      "title": "9 Mag Force on Charges.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448845/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-09-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t9-q5",
+    "tutorial": 9,
+    "number": "5",
+    "title": "Current required for loop torque",
+    "pages": [
+      2
+    ],
+    "question": "A single-turn square loop is 50 cm on a side. A 70 mT field makes 40° with the loop plane. What current gives a torque of 1.0 N·m about the specified central axis?",
+    "steps": [
+      {
+        "title": "Find area and normal angle",
+        "body": "Convert 50 cm to 0.50 m; the normal is 50° from the field.",
+        "math": "A=(0.50)^2=0.25\\,\\mathrm{m^2}"
+      },
+      {
+        "title": "Solve for current",
+        "body": "Use sin50°=cos40°.",
+        "math": "I=\\frac{\\tau}{AB\\cos40^\\circ}=\\frac{1.0}{(0.25)(0.070)\\cos40^\\circ}=74.6\\,\\mathrm A"
+      }
+    ],
+    "answer": "I\\approx75\\,\\mathrm A\\quad\\text{(d)}",
+    "check": "Substitution gives 1.0 N·m. Matches key (d).",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-09.pdf",
+      "title": "9 Mag Force on Charges.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448845/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-09-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t9-q6",
+    "tutorial": 9,
+    "number": "6",
+    "title": "Helix pitch and entry angle",
+    "pages": [
+      2
+    ],
+    "question": "A proton enters a 0.50 T field along +x with speed 60 km/s. Its helix pitch is 5.0 mm. Find the angle between its velocity and B.",
+    "steps": [
+      {
+        "title": "Find the cyclotron period",
+        "body": "Use mp=1.67×10⁻²⁷ kg and e=1.60×10⁻¹⁹ C.",
+        "math": "T=\\frac{2\\pi m_p}{eB}=1.31\\times10^{-7}\\,\\mathrm s"
+      },
+      {
+        "title": "Use pitch to find parallel speed",
+        "body": "Pitch is the distance advanced along the field in one revolution.",
+        "math": "v_\\parallel=\\frac pT=\\frac{0.0050}{1.31\\times10^{-7}}=3.81\\times10^4\\,\\mathrm{m/s}"
+      },
+      {
+        "title": "Find the entry angle",
+        "body": "The parallel component is v cosα.",
+        "math": "\\alpha=\\cos^{-1}(v_\\parallel/v)=\\cos^{-1}(0.635)=50.6^\\circ"
+      }
+    ],
+    "answer": "\\alpha\\approx51^\\circ\\quad\\text{(b)}",
+    "check": "The parallel speed is smaller than the total speed, as required. Matches key (b).",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-09.pdf",
+      "title": "9 Mag Force on Charges.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448845/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-09-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t9-q7",
+    "tutorial": 9,
+    "number": "7",
+    "title": "Classify a charged particle’s trajectory",
+    "pages": [
+      3
+    ],
+    "question": "A particle has m=3.0 μg and q=5.0 μC. In B=60j mT its initial velocity is (30j−40k) m/s. Determine the subsequent trajectory.",
+    "steps": [
+      {
+        "title": "Resolve the velocity",
+        "body": "Both a parallel and a perpendicular component are present, so the path is helical. Convert μg to 10⁻⁹ kg.",
+        "math": "v_\\parallel=30\\,\\mathrm{m/s},\\quad v_\\perp=40\\,\\mathrm{m/s},\\quad m=3.0\\times10^{-9}\\,\\mathrm{kg}"
+      },
+      {
+        "title": "Find radius and period",
+        "body": "Only the perpendicular speed enters the radius.",
+        "math": "r=\\frac{mv_\\perp}{|q|B}=0.40\\,\\mathrm m,\\qquad T=\\frac{2\\pi m}{|q|B}=0.0628\\,\\mathrm s"
+      },
+      {
+        "title": "Find the pitch",
+        "body": "The particle advances along +y during each turn.",
+        "math": "p=v_\\parallel T=1.88\\,\\mathrm m"
+      }
+    ],
+    "answer": "\\text{Helix of radius }40\\,\\mathrm{cm}\\quad\\text{(d)}",
+    "check": "Pitch is 1.88 m, not 6.3 cm; the path is not a circle. Matches key (d).",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-09.pdf",
+      "title": "9 Mag Force on Charges.pdf",
+      "pages": [
+        3
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448845/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-09-p3.webp",
+        "page": 3,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t9-q8",
+    "tutorial": 9,
+    "number": "8",
+    "title": "Distance travelled in circular motion",
+    "pages": [
+      3
+    ],
+    "question": "A proton follows a circular path of radius 2.0 mm in B=0.25 T. Find its total distance in 1.0 s, using m=1.67×10⁻²⁷ kg and q=1.6×10⁻¹⁹ C.",
+    "steps": [
+      {
+        "title": "Balance radial force",
+        "body": "Magnetic force supplies centripetal acceleration.",
+        "math": "qvB=\\frac{mv^2}{r}\\quad\\Rightarrow\\quad v=\\frac{qBr}{m}=4.79\\times10^4\\,\\mathrm{m/s}"
+      },
+      {
+        "title": "Use constant speed",
+        "body": "Magnetism changes direction without changing speed; distance is speed times time.",
+        "math": "s=vt=(4.79\\times10^4)(1.0)=4.79\\times10^4\\,\\mathrm m"
+      }
+    ],
+    "answer": "s\\approx48\\,\\mathrm{km}\\quad\\text{(d)}",
+    "check": "Distance counts every revolution; it is not the final displacement. Matches key (d).",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-09.pdf",
+      "title": "9 Mag Force on Charges.pdf",
+      "pages": [
+        3
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448845/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-09-p3.webp",
+        "page": 3,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t9-q9",
+    "tutorial": 9,
+    "number": "9",
+    "title": "Electron cyclotron period",
+    "pages": [
+      3
+    ],
+    "question": "An electron moves in a circle of radius 15 cm in a 3.0 G uniform field. Find the period.",
+    "steps": [
+      {
+        "title": "Convert gauss to tesla",
+        "body": "Use 1 G=10⁻⁴ T.",
+        "math": "B=3.0\\times10^{-4}\\,\\mathrm T"
+      },
+      {
+        "title": "Eliminate the radius",
+        "body": "Combining T=2πr/v with r=mv/(|q|B) makes the period independent of radius.",
+        "math": "T=\\frac{2\\pi m_e}{eB}=\\frac{2\\pi(9.11\\times10^{-31})}{(1.60\\times10^{-19})(3.0\\times10^{-4})}=1.19\\times10^{-7}\\,\\mathrm s"
+      }
+    ],
+    "answer": "T\\approx0.12\\,\\mu\\mathrm s\\quad\\text{(a)}",
+    "check": "The radius affects speed but cancels from the nonrelativistic period. Matches key (a).",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-09.pdf",
+      "title": "9 Mag Force on Charges.pdf",
+      "pages": [
+        3
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448845/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-09-p3.webp",
+        "page": 3,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t9-q10",
+    "tutorial": 9,
+    "number": "10",
+    "title": "Proton orbit after acceleration",
+    "pages": [
+      3
+    ],
+    "question": "A proton accelerates from rest through 2.5 kV, then enters B=0.60 T perpendicularly. Find its circular-path radius.",
+    "steps": [
+      {
+        "title": "Convert electric energy to kinetic energy",
+        "body": "The gain in kinetic energy is eΔV.",
+        "math": "\\frac12m_pv^2=e\\Delta V\\quad\\Rightarrow\\quad v=\\sqrt{\\frac{2e\\Delta V}{m_p}}=6.92\\times10^5\\,\\mathrm{m/s}"
+      },
+      {
+        "title": "Find the magnetic radius",
+        "body": "Substitute the speed into the radial-force result.",
+        "math": "r=\\frac{m_pv}{eB}=\\frac1B\\sqrt{\\frac{2m_p\\Delta V}{e}}=0.0120\\,\\mathrm m"
+      }
+    ],
+    "answer": "r\\approx12\\,\\mathrm{mm}\\quad\\text{(b)}",
+    "check": "The speed is much less than c, consistent with nonrelativistic energy. Matches key (b).",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-09.pdf",
+      "title": "9 Mag Force on Charges.pdf",
+      "pages": [
+        3
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448845/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-09-p3.webp",
+        "page": 3,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t9-q11",
+    "tutorial": 9,
+    "number": "11",
+    "title": "Field for a proton velocity selector",
+    "pages": [
+      3
+    ],
+    "question": "A velocity selector must transmit 2.0 keV protons with E=80 kV/m. Find B.",
+    "steps": [
+      {
+        "title": "Find proton speed",
+        "body": "Convert 2.0 keV to kinetic energy using e.",
+        "math": "v=\\sqrt{\\frac{2K}{m_p}}=\\sqrt{\\frac{2(2000)(1.60\\times10^{-19})}{1.67\\times10^{-27}}}=6.19\\times10^5\\,\\mathrm{m/s}"
+      },
+      {
+        "title": "Balance transverse forces",
+        "body": "Arrange crossed electric and magnetic forces in opposite directions.",
+        "math": "eE=evB\\quad\\Rightarrow\\quad B=\\frac Ev=\\frac{8.0\\times10^4}{6.19\\times10^5}=0.129\\,\\mathrm T"
+      }
+    ],
+    "answer": "B\\approx0.13\\,\\mathrm T\\quad\\text{(d)}",
+    "check": "At this speed E=vB, so the transmitted protons are undeflected. Matches key (d).",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-09.pdf",
+      "title": "9 Mag Force on Charges.pdf",
+      "pages": [
+        3
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448845/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-09-p3.webp",
+        "page": 3,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t10-q1",
+    "tutorial": 10,
+    "number": "1",
+    "title": "Perpendicular fields of two long wires",
+    "pages": [
+      1
+    ],
+    "question": "A 30 A long wire lies along x. A 40 A long wire perpendicular to xy passes through (0,4,0) m. Find the magnetic-field magnitude at (0,2,0) m.",
+    "steps": [
+      {
+        "title": "Calculate both field magnitudes",
+        "body": "The observation point is 2 m from each wire.",
+        "math": "B_1=\\frac{\\mu_0(30)}{2\\pi(2)}=3.0\\,\\mu\\mathrm T,\\quad B_2=\\frac{\\mu_0(40)}{2\\pi(2)}=4.0\\,\\mu\\mathrm T"
+      },
+      {
+        "title": "Add vectors",
+        "body": "One field points along z and the other along x. Their signs depend on current direction, but their magnitude sum is orthogonal.",
+        "math": "B=\\sqrt{B_1^2+B_2^2}=5.0\\,\\mu\\mathrm T"
+      }
+    ],
+    "answer": "B=5.0\\,\\mu\\mathrm T\\quad\\text{(b)}",
+    "check": "The current directions are not specified, but they cannot change this magnitude. Matches key (b).",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-10.pdf",
+      "title": "10 B force Calc B.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448846/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-10-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t10-q2",
+    "tutorial": 10,
+    "number": "2",
+    "title": "Superposition from three parallel wires",
+    "pages": [
+      1
+    ],
+    "question": "For I=20 A, three x-parallel wires carry 4I in +x at y=2 m, 3I in −x at y=−1 m, and I in +x at y=−3 m. Find B at the origin.",
+    "steps": [
+      {
+        "title": "Determine signs with the right-hand rule",
+        "body": "At the origin the upper and middle wires produce −z fields; the lower wire produces +z.",
+        "math": "B_{z,1}=-\\frac{\\mu_0(80)}{2\\pi(2)}=-8.0\\,\\mu\\mathrm T"
+      },
+      {
+        "title": "Add signed fields",
+        "body": "All three field vectors are along the z axis.",
+        "math": "B_z=-8.0-\\frac{2\\times10^{-7}(60)}{1}\\times10^6+\\frac{2\\times10^{-7}(20)}{3}\\times10^6=-18.67\\,\\mu\\mathrm T"
+      }
+    ],
+    "answer": "|\\mathbf B|\\approx19\\,\\mu\\mathrm T\\quad\\text{(c)},\\qquad\\mathbf B\\parallel-\\mathbf k",
+    "check": "The two larger contributions reinforce each other. Matches key (c).",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-10.pdf",
+      "title": "10 B force Calc B.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448846/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-10-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t10-q3",
+    "tutorial": 10,
+    "number": "3",
+    "title": "Field from concentric circular arcs",
+    "pages": [
+      1
+    ],
+    "question": "The shown wire has a clockwise quarter-circle of radius a=2.0 cm and a clockwise three-quarter-circle of radius b=4.0 cm, joined by radial segments. I=2.0 A. Find B at their common center P.",
+    "steps": [
+      {
+        "title": "Discard radial contributions",
+        "body": "For radial connectors, dℓ is parallel to the displacement toward P, so the Biot–Savart cross product vanishes.",
+        "math": "B_{\\mathrm{radial}}=0"
+      },
+      {
+        "title": "Add arc fields",
+        "body": "Each arc contributes μ₀Iφ/(4πR). Both currents circulate clockwise and produce into-page fields.",
+        "math": "B=\\frac{\\mu_0 I}{4\\pi}\\left(\\frac{\\pi/2}{a}+\\frac{3\\pi/2}{b}\\right)=\\frac{\\mu_0I}{8}\\left(\\frac1a+\\frac3b\\right)=39.27\\,\\mu\\mathrm T"
+      }
+    ],
+    "answer": "B\\approx39\\,\\mu\\mathrm T\\text{ into the page}\\quad\\text{(b)}",
+    "check": "Both arc contributions add; the connecting straight pieces contribute zero. Matches key (b).",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-10.pdf",
+      "title": "10 B force Calc B.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448846/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-10-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t10-q4",
+    "tutorial": 10,
+    "number": "4",
+    "title": "Infer currents from the force between wires",
+    "pages": [
+      2
+    ],
+    "question": "Two long parallel wires are 6.0 mm apart. One current is twice the other. The force on 3.0 m of wire is 8.0 μN. Find the greater current.",
+    "steps": [
+      {
+        "title": "Write the force using the smaller current",
+        "body": "Let the smaller current be i and the larger be 2i.",
+        "math": "F=\\frac{\\mu_0(i)(2i)L}{2\\pi d}=\\frac{\\mu_0 i^2L}{\\pi d}"
+      },
+      {
+        "title": "Solve and double",
+        "body": "Use SI lengths and force.",
+        "math": "i=\\sqrt{\\frac{F\\pi d}{\\mu_0L}}=0.20\\,\\mathrm A,\\qquad I_{\\mathrm{greater}}=2i=0.40\\,\\mathrm A"
+      }
+    ],
+    "answer": "I_{\\mathrm{greater}}=0.40\\,\\mathrm A\\quad\\text{(b)}",
+    "check": "The product 0.20×0.40 A² reproduces 8.0 μN. Matches key (b).",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-10.pdf",
+      "title": "10 B force Calc B.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448846/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-10-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t10-q5",
+    "tutorial": 10,
+    "number": "5",
+    "title": "Force on one of three equidistant wires",
+    "pages": [
+      2
+    ],
+    "question": "Three long wires at the vertices of an equilateral triangle of side R=6.0 mm each carry 5.0 A out of the page. Find the force on a 2.0 m length of any one wire.",
+    "steps": [
+      {
+        "title": "Calculate one attractive force",
+        "body": "Currents in the same direction attract.",
+        "math": "F_0=\\frac{\\mu_0I^2L}{2\\pi R}=\\frac{(2\\times10^{-7})(25)(2.0)}{0.0060}=1.667\\,\\mathrm{mN}"
+      },
+      {
+        "title": "Resolve the equal forces",
+        "body": "The forces toward the other two vertices are 60° apart.",
+        "math": "F_{\\mathrm{net}}=2F_0\\cos30^\\circ=\\sqrt3F_0=2.887\\,\\mathrm{mN}"
+      }
+    ],
+    "answer": "F_{\\mathrm{net}}\\approx2.9\\,\\mathrm{mN}\\quad\\text{(d)}",
+    "check": "The force points from the chosen vertex toward the triangle’s center. Matches key (d).",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-10.pdf",
+      "title": "10 B force Calc B.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448846/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-10-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t10-q6",
+    "tutorial": 10,
+    "number": "6",
+    "title": "Field inside a coaxial conducting shell",
+    "pages": [
+      2
+    ],
+    "question": "A hollow conductor with inner radius 2.0 mm and outer radius 4.0 mm carries 24 A uniformly across its material. A coaxial wire carries 24 A oppositely. Find B at radius 3.0 mm.",
+    "steps": [
+      {
+        "title": "Find the enclosed shell current",
+        "body": "Only the annular material between 2 mm and 3 mm lies inside the Amperian circle.",
+        "math": "I_{\\mathrm{shell,enc}}=24\\frac{3^2-2^2}{4^2-2^2}=10\\,\\mathrm A"
+      },
+      {
+        "title": "Subtract opposite currents",
+        "body": "Take the central wire’s direction as positive.",
+        "math": "I_{\\mathrm{enc}}=24-10=14\\,\\mathrm A"
+      },
+      {
+        "title": "Apply Ampère’s law",
+        "body": "Cylindrical symmetry makes B constant on the circle.",
+        "math": "B=\\frac{\\mu_0I_{\\mathrm{enc}}}{2\\pi r}=\\frac{(2\\times10^{-7})(14)}{0.0030}=0.933\\,\\mathrm{mT}"
+      }
+    ],
+    "answer": "B\\approx0.93\\,\\mathrm{mT}\\quad\\text{(b)}",
+    "check": "Outside the shell the net enclosed current is zero; at this internal radius it is nonzero. Matches key (b).",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-10.pdf",
+      "title": "10 B force Calc B.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448846/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-10-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t10-q7",
+    "tutorial": 10,
+    "number": "7",
+    "title": "Combine wire and solenoid fields",
+    "pages": [
+      2
+    ],
+    "question": "A 3.0 A wire lies along the axis of a long solenoid of radius 3.0 cm, n=900 turns/m and current 30 mA. Find B at radius 2.0 cm, neglecting end effects.",
+    "steps": [
+      {
+        "title": "Calculate the axial field",
+        "body": "The observation point lies inside the solenoid.",
+        "math": "B_s=\\mu_0nI_s=(4\\pi\\times10^{-7})(900)(0.030)=33.93\\,\\mu\\mathrm T"
+      },
+      {
+        "title": "Calculate the azimuthal field",
+        "body": "The axial wire’s field circles the axis and is perpendicular to the solenoid field.",
+        "math": "B_w=\\frac{\\mu_0I_w}{2\\pi r}=\\frac{(2\\times10^{-7})(3.0)}{0.020}=30.0\\,\\mu\\mathrm T"
+      },
+      {
+        "title": "Take the vector magnitude",
+        "body": "Use Pythagoras for the orthogonal fields.",
+        "math": "B=\\sqrt{33.93^2+30.0^2}=45.29\\,\\mu\\mathrm T"
+      }
+    ],
+    "answer": "B\\approx45\\,\\mu\\mathrm T\\quad\\text{(d)}",
+    "check": "Adding magnitudes directly would incorrectly give 64 μT. Matches key (d).",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-10.pdf",
+      "title": "10 B force Calc B.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448846/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-10-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t10-q8",
+    "tutorial": 10,
+    "number": "8",
+    "title": "Magnetic flux through an internal disk",
+    "pages": [
+      3
+    ],
+    "question": "A solenoid of radius 4.0 cm and length 4.0 m has 8000 turns and I=5.0 A. Find flux through a coaxial circular disk of radius 2.0 cm at its center.",
+    "steps": [
+      {
+        "title": "Calculate the internal field",
+        "body": "For the long solenoid use n=N/ℓ.",
+        "math": "B=\\mu_0\\frac N\\ell I=(4\\pi\\times10^{-7})\\frac{8000}{4.0}(5.0)=0.01257\\,\\mathrm T"
+      },
+      {
+        "title": "Use the disk area",
+        "body": "The surface normal is parallel to B; use the disk radius, not the solenoid radius.",
+        "math": "\\Phi=BA=(0.01257)\\pi(0.020)^2=1.579\\times10^{-5}\\,\\mathrm{Wb}"
+      }
+    ],
+    "answer": "\\Phi\\approx16\\,\\mu\\mathrm{Wb}\\quad\\text{(b)}",
+    "check": "This is flux through one surface, not flux linkage of 8000 turns. Matches key (b).",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-10.pdf",
+      "title": "10 B force Calc B.pdf",
+      "pages": [
+        3
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448846/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-10-p3.webp",
+        "page": 3,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t10-q9",
+    "tutorial": 10,
+    "number": "9",
+    "title": "Ampèrian integral inside a hollow conductor",
+    "pages": [
+      3
+    ],
+    "question": "A hollow conductor with inner radius a=3.0 mm and outer radius b=6.0 mm carries 40 A uniformly. Find the magnitude of ∮B·dℓ around a concentric circle of radius 5.0 mm.",
+    "steps": [
+      {
+        "title": "Find the fraction of current enclosed",
+        "body": "Use annular area, excluding the empty central hole.",
+        "math": "I_{\\mathrm{enc}}=40\\frac{5^2-3^2}{6^2-3^2}=23.70\\,\\mathrm A"
+      },
+      {
+        "title": "Apply the circulation law",
+        "body": "The question requests the line integral itself.",
+        "math": "\\left|\\oint\\mathbf B\\cdot d\\boldsymbol\\ell\\right|=\\mu_0I_{\\mathrm{enc}}=(4\\pi\\times10^{-7})(23.70)=2.979\\times10^{-5}\\,\\mathrm{T\\,m}"
+      }
+    ],
+    "answer": "\\left|\\oint\\mathbf B\\cdot d\\boldsymbol\\ell\\right|\\approx30\\,\\mu\\mathrm{T\\,m}\\quad\\text{(b)}",
+    "check": "Units are T·m, not T. Matches key (b).",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-10.pdf",
+      "title": "10 B force Calc B.pdf",
+      "pages": [
+        3
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448846/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-10-p3.webp",
+        "page": 3,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t10-q10",
+    "tutorial": 10,
+    "number": "10",
+    "title": "Doubling solenoid turns and length",
+    "pages": [
+      3
+    ],
+    "question": "A solenoid’s number of turns and length are both doubled while current is unchanged. Find the ratio of new to original internal magnetic field.",
+    "steps": [
+      {
+        "title": "Use turn density",
+        "body": "For an ideal long solenoid B depends on N/ℓ.",
+        "math": "B=\\mu_0\\frac N\\ell I"
+      },
+      {
+        "title": "Cancel the common scaling",
+        "body": "Doubling numerator and denominator leaves turn density unchanged.",
+        "math": "\\frac{B_{\\mathrm{new}}}{B_{\\mathrm{old}}}=\\frac{(2N)/(2\\ell)}{N/\\ell}=1"
+      }
+    ],
+    "answer": "B_{\\mathrm{new}}/B_{\\mathrm{old}}=1\\quad\\text{(c)}",
+    "check": "Assumes the same current and negligible end effects, as in the ideal-solenoid model. Matches key (c).",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-10.pdf",
+      "title": "10 B force Calc B.pdf",
+      "pages": [
+        3
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448846/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-10-p3.webp",
+        "page": 3,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t11-q1",
+    "tutorial": 11,
+    "number": "1",
+    "title": "Field direction above two equal currents",
+    "pages": [
+      1
+    ],
+    "question": "Two symmetrically placed wires M and N carry equal currents into the page. Point P is above their midpoint. Which compass arrow A–H shows the resulting field? E points right.",
+    "steps": [
+      {
+        "title": "Apply the right-hand rule",
+        "body": "An into-page current makes clockwise field lines. At P, M produces a down-right field and N an up-right field."
+      },
+      {
+        "title": "Use symmetry",
+        "body": "Equal distances and currents give equal magnitudes. Vertical components cancel; rightward components add.",
+        "math": "B_y=0,\\qquad B_x>0"
+      }
+    ],
+    "answer": "\\text{Direction E (right), choice (d)}",
+    "check": "Direction E is the diagram label; the corresponding multiple-choice letter is d. Matches key (d).",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-11.pdf",
+      "title": "11 B field & Induction.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448847/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-11-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t11-q2",
+    "tutorial": 11,
+    "number": "2",
+    "title": "Induced current in a sinusoidal field",
+    "pages": [
+      1
+    ],
+    "question": "A 40-turn coil has radius 4.0 cm and total resistance 0.20 Ω. A perpendicular field varies as B=50 sin(10πt) mT. Find the magnitude of induced current at t=0.10 s.",
+    "steps": [
+      {
+        "title": "Differentiate the field",
+        "body": "Convert millitesla to tesla before differentiating.",
+        "math": "\\frac{dB}{dt}=0.050(10\\pi)\\cos(10\\pi t),\\qquad \\left.\\frac{dB}{dt}\\right|_{0.10}=-0.5\\pi\\,\\mathrm{T/s}"
+      },
+      {
+        "title": "Apply Faraday’s law and Ohm’s law",
+        "body": "Use total coil resistance; do not multiply it by N.",
+        "math": "I=\\frac{NA|dB/dt|}{R}=\\frac{40\\pi(0.040)^2(0.5\\pi)}{0.20}=1.579\\,\\mathrm A"
+      }
+    ],
+    "answer": "I\\approx1.6\\,\\mathrm A\\quad\\text{(b)}",
+    "check": "At t=0.10 s the field is zero but its slope is maximal, so current is not zero. Matches key (b).",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-11.pdf",
+      "title": "11 B field & Induction.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448847/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-11-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t11-q3",
+    "tutorial": 11,
+    "number": "3",
+    "title": "Induction in a loop near a long wire",
+    "pages": [
+      1
+    ],
+    "question": "A rectangular loop of resistance 2.0 mΩ lies below a long wire carrying rightward current increasing at 100 A/s. Loop length L=1.5 m; distances from wire to near and far edges are d=1.0 cm and D=6.0 cm. Find induced current.",
+    "steps": [
+      {
+        "title": "Integrate the nonuniform field",
+        "body": "The far edge is distance D from the wire; the loop width is D−d.",
+        "math": "\\Phi=\\int_d^D\\frac{\\mu_0I}{2\\pi r}L\\,dr=\\frac{\\mu_0IL}{2\\pi}\\ln\\frac Dd"
+      },
+      {
+        "title": "Differentiate flux and divide by resistance",
+        "body": "Geometry is fixed while the source current changes.",
+        "math": "I_{\\mathrm{ind}}=\\frac{\\mu_0L}{2\\pi R}\\ln\\frac Dd\\left|\\frac{dI}{dt}\\right|=\\frac{(2\\times10^{-7})(1.5)}{0.0020}\\ln6(100)=0.02688\\,\\mathrm A"
+      },
+      {
+        "title": "Determine circulation",
+        "body": "The source field below the wire points into the page and increases. Induction produces an out-of-page field, hence counterclockwise current."
+      }
+    ],
+    "answer": "I_{\\mathrm{ind}}\\approx27\\,\\mathrm{mA}\\text{ counterclockwise}\\quad\\text{(c)}",
+    "check": "Using D+d as the far-edge distance would misread the diagram. Matches key (c).",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-11.pdf",
+      "title": "11 B field & Induction.pdf",
+      "pages": [
+        1
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448847/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-11-p1.webp",
+        "page": 1,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t11-q4",
+    "tutorial": 11,
+    "number": "4",
+    "title": "Induced emf from a changing rectangular area",
+    "pages": [
+      2
+    ],
+    "question": "A 60 cm by 40 cm rectangular loop lies in a uniform perpendicular 0.50 T field. Starting at t=0, its length grows at 20 mm/s and width shrinks at 20 mm/s. Find emf magnitude at t=4.0 s.",
+    "steps": [
+      {
+        "title": "Write both time-dependent dimensions",
+        "body": "Use 0.020 m/s for each rate.",
+        "math": "\\ell(t)=0.60+0.020t,\\qquad w(t)=0.40-0.020t"
+      },
+      {
+        "title": "Differentiate area with the product rule",
+        "body": "At 4 s the dimensions are 0.68 m and 0.32 m.",
+        "math": "\\frac{dA}{dt}=w\\frac{d\\ell}{dt}+\\ell\\frac{dw}{dt}=0.020(w-\\ell)=0.020(0.32-0.68)=-0.0072\\,\\mathrm{m^2/s}"
+      },
+      {
+        "title": "Use Faraday’s law",
+        "body": "Take the magnitude of the decreasing flux rate.",
+        "math": "|\\mathcal E|=B|dA/dt|=(0.50)(0.0072)=0.0036\\,\\mathrm V"
+      }
+    ],
+    "answer": "|\\mathcal E|=3.6\\,\\mathrm{mV}\\quad\\text{(c)}",
+    "check": "Equal opposite side rates do not cancel because the two dimensions are unequal. Matches key (c).",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-11.pdf",
+      "title": "11 B field & Induction.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448847/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-11-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t11-q5",
+    "tutorial": 11,
+    "number": "5",
+    "title": "Coil inside a time-varying solenoid",
+    "pages": [
+      2
+    ],
+    "question": "A long solenoid has n=1500 turns/m, area 0.40 m² and current I=(4.0+3.0t²) A. A 300-turn coaxial coil of area 0.15 m² lies inside it. Find induced emf magnitude at t=2.0 s.",
+    "steps": [
+      {
+        "title": "Differentiate the source current",
+        "body": "The constant 4.0 A contributes no induction.",
+        "math": "\\frac{dI}{dt}=6.0t=12.0\\,\\mathrm{A/s}\\quad(t=2.0\\,\\mathrm s)"
+      },
+      {
+        "title": "Find coil flux linkage",
+        "body": "The coil samples only its own area, which is smaller than the solenoid area.",
+        "math": "N\\Phi=N A_c\\mu_0nI"
+      },
+      {
+        "title": "Evaluate the emf",
+        "body": "Differentiate the flux linkage.",
+        "math": "|\\mathcal E|=NA_c\\mu_0n|dI/dt|=300(0.15)(4\\pi\\times10^{-7})(1500)(12)=1.018\\,\\mathrm V"
+      }
+    ],
+    "answer": "|\\mathcal E|\\approx1.0\\,\\mathrm V\\quad\\text{(b)}",
+    "check": "Using the solenoid’s larger area would overestimate the flux captured by the coil. Matches key (b).",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-11.pdf",
+      "title": "11 B field & Induction.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448847/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-11-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t11-q6",
+    "tutorial": 11,
+    "number": "6",
+    "title": "Steady motional induction and power",
+    "pages": [
+      2
+    ],
+    "question": "A 10 cm conducting rod slides at 2.0 m/s on frictionless conducting rails in a uniform perpendicular magnetic field. A constant applied force 0.60 N maintains the speed. The loop load is 12 Ω. Find the current magnitude.",
+    "steps": [
+      {
+        "title": "Use steady energy balance",
+        "body": "At constant speed there is no change in kinetic energy; mechanical input becomes resistor heating, assuming negligible rod/rail resistance.",
+        "math": "Fv=I^2R"
+      },
+      {
+        "title": "Solve for current",
+        "body": "The unknown field cancels, so its value is unnecessary.",
+        "math": "I=\\sqrt{\\frac{Fv}{R}}=\\sqrt{\\frac{(0.60)(2.0)}{12}}=0.3162\\,\\mathrm A"
+      }
+    ],
+    "answer": "I\\approx0.32\\,\\mathrm A\\quad\\text{(a)}",
+    "check": "Input power is 1.2 W and I²R=1.2 W. Field direction is unspecified, so only magnitude is determined. Matches key (a).",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-11.pdf",
+      "title": "11 B field & Induction.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448847/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-11-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t11-q7",
+    "tutorial": 11,
+    "number": "7",
+    "title": "Polarity of a moving bar near a wire",
+    "pages": [
+      2
+    ],
+    "question": "A horizontal bar of length L=50 cm lies a=4.0 mm above a long wire carrying 50 A to the left. The bar moves upward at v=12 m/s. End A is left and B is right. Find VA−VB.",
+    "steps": [
+      {
+        "title": "Find the local magnetic field",
+        "body": "Above a leftward current the field points into the page. All points on this parallel bar have the same distance a.",
+        "math": "B=\\frac{\\mu_0I}{2\\pi a}=\\frac{(2\\times10^{-7})(50)}{0.0040}=2.5\\times10^{-3}\\,\\mathrm T"
+      },
+      {
+        "title": "Determine charge separation",
+        "body": "With v upward and B into the page, v×B points left. Positive charge accumulates at A, so VA exceeds VB."
+      },
+      {
+        "title": "Evaluate the motional voltage",
+        "body": "The rod is perpendicular to both velocity and field.",
+        "math": "V_A-V_B=BvL=(2.5\\times10^{-3})(12)(0.50)=0.015\\,\\mathrm V"
+      }
+    ],
+    "answer": "V_A-V_B=+15\\,\\mathrm{mV}\\quad\\text{(a)}",
+    "check": "The positive sign follows directly from the force on positive charges toward A. Matches key (a).",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-11.pdf",
+      "title": "11 B field & Induction.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448847/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-11-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t11-q8",
+    "tutorial": 11,
+    "number": "8",
+    "title": "Voltage at the midpoint of a rotating rod",
+    "pages": [
+      3
+    ],
+    "question": "A rod of total length L=0.40 m pivots at its left end P with angular speed +2.0 rad/s (counterclockwise). B=0.20 T into the page. A is its midpoint, L/2 from P. Find VA−VP.",
+    "steps": [
+      {
+        "title": "Determine magnetic-force direction",
+        "body": "At the shown instant the rod points right and moves upward. The magnetic force on positive charges is inward toward P, making P higher in potential."
+      },
+      {
+        "title": "Integrate over the requested part of the rod",
+        "body": "Local speed is ωr. Stop at A=L/2, not at the free end.",
+        "math": "V_A-V_P=\\int_0^{L/2}(\\mathbf v\\times\\mathbf B)\\cdot d\\boldsymbol\\ell=-\\int_0^{L/2}\\omega Br\\,dr=-\\frac{B\\omega L^2}{8}"
+      },
+      {
+        "title": "Insert values",
+        "body": "The requested voltage is one quarter of the end-to-end rod voltage.",
+        "math": "V_A-V_P=-\\frac{(0.20)(2.0)(0.40)^2}{8}=-0.0080\\,\\mathrm V"
+      }
+    ],
+    "answer": "V_A-V_P=-8.0\\,\\mathrm{mV}\\quad\\text{(c)}",
+    "check": "The free-end voltage would be −32 mV; midpoint labeling is essential. Matches key (c).",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-11.pdf",
+      "title": "11 B field & Induction.pdf",
+      "pages": [
+        3
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448847/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-11-p3.webp",
+        "page": 3,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t11-q9",
+    "tutorial": 11,
+    "number": "9",
+    "title": "Ways to induce a coil current",
+    "pages": [
+      3
+    ],
+    "question": "Can a coil current be induced by (a) moving a magnet through it, (b) moving the coil toward a magnet, or (c) holding it near another coil whose current is increasing?",
+    "steps": [
+      {
+        "title": "Apply the flux-change criterion",
+        "body": "An induced emf exists when flux linkage changes; a closed conducting coil can then carry current.",
+        "math": "\\mathcal E=-\\frac{d(N\\Phi_B)}{dt}"
+      },
+      {
+        "title": "Check all three mechanisms",
+        "body": "Moving either the magnet or the coil changes their relative geometry and flux. Changing current in the nearby coil changes its field and therefore the first coil’s flux."
+      }
+    ],
+    "answer": "\\text{All of the above, choice (d)}",
+    "check": "Motion is sufficient in (a) and (b), but changing field alone suffices in (c). Matches key (d).",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-11.pdf",
+      "title": "11 B field & Induction.pdf",
+      "pages": [
+        3
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448847/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-11-p3.webp",
+        "page": 3,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "t11-q10",
+    "tutorial": 11,
+    "number": "10",
+    "title": "Lenz’s law for a falling magnet",
+    "pages": [
+      3
+    ],
+    "question": "A bar magnet falls through a horizontal conducting loop, north pole downward. Viewed from above the loop, in what sequence does the induced current circulate?",
+    "steps": [
+      {
+        "title": "Analyze approach",
+        "body": "The approaching north pole increases downward magnetic flux. To oppose that increase, the loop produces an upward field: counterclockwise current viewed from above."
+      },
+      {
+        "title": "Analyze departure",
+        "body": "After the magnet passes, downward flux decreases. The loop reinforces downward flux to oppose its decrease: clockwise current viewed from above."
+      }
+    ],
+    "answer": "\\text{Counterclockwise first, then clockwise; choice (d)}",
+    "check": "The induced magnetic force opposes the magnet’s motion in both stages. The viewing direction is explicitly from above. Matches key (d).",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/tutorial-11.pdf",
+      "title": "11 B field & Induction.pdf",
+      "pages": [
+        3
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448847/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/tutorial-11-p3.webp",
+        "page": 3,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "vectors-dot-ex1",
+    "tutorial": 0,
+    "number": "Dot example 1",
+    "title": "Work from two directions",
+    "pages": [
+      2
+    ],
+    "question": "A 5.0 N force at 10° acts during a 2.5 m displacement at 55°. Calculate the work.",
+    "steps": [
+      {
+        "title": "Angle between the vectors",
+        "body": "Both directions use the same positive-x reference.",
+        "math": "\\theta=55^\\circ-10^\\circ=45^\\circ"
+      },
+      {
+        "title": "Dot product",
+        "body": "Only the force component along displacement does work.",
+        "math": "W=Fd\\cos\\theta=(5.0)(2.5)\\cos45^\\circ=8.8388\\ \\mathrm J"
+      }
+    ],
+    "answer": "W=8.8\\ \\mathrm J",
+    "check": "The acute angle gives positive work, less than Fd = 12.5 J.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/vector-review.pdf",
+      "title": "P154 Tutorial on Dot Product Cross Product.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448852/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/vector-review-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "vectors-dot-ex2",
+    "tutorial": 0,
+    "number": "Dot example 2",
+    "title": "Work using components",
+    "pages": [
+      2
+    ],
+    "question": "Repeat dot-product Example 1 using Cartesian components.",
+    "steps": [
+      {
+        "title": "Resolve the vectors",
+        "body": "Retain unrounded trigonometric values until the final result.",
+        "math": "\\vec F=(5\\cos10^\\circ,5\\sin10^\\circ)\\ \\mathrm N;\\quad\\vec d=(2.5\\cos55^\\circ,2.5\\sin55^\\circ)\\ \\mathrm m"
+      },
+      {
+        "title": "Multiply matching components",
+        "body": "Cross-axis unit-vector dot products vanish.",
+        "math": "W=F_xd_x+F_yd_y=8.8388\\ \\mathrm J"
+      }
+    ],
+    "answer": "W=8.8\\ \\mathrm J",
+    "check": "Agrees with the magnitude-and-angle method.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/vector-review.pdf",
+      "title": "P154 Tutorial on Dot Product Cross Product.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448852/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/vector-review-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "vectors-dot-1",
+    "tutorial": 0,
+    "number": "Dot practice 1",
+    "title": "Convert centimetres before calculating work",
+    "pages": [
+      2
+    ],
+    "question": "Calculate work for F = 15 N at 10° and displacement 115 cm at 0°.",
+    "steps": [
+      {
+        "title": "Convert and compare directions",
+        "body": "The displacement is 1.15 m; the vectors are 10° apart.",
+        "math": "W=(15)(1.15)\\cos10^\\circ=16.9879\\ \\mathrm J"
+      }
+    ],
+    "answer": "W\\approx17\\ \\mathrm J",
+    "check": "Using centimetres without conversion would overstate work by a factor of 100.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/vector-review.pdf",
+      "title": "P154 Tutorial on Dot Product Cross Product.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448852/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/vector-review-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "vectors-dot-2",
+    "tutorial": 0,
+    "number": "Dot practice 2",
+    "title": "Negative work in component form",
+    "pages": [
+      2
+    ],
+    "question": "Calculate work for F = (2.0i + 8.0j) N and displacement (−6.2i − 4.5j) cm.",
+    "steps": [
+      {
+        "title": "Convert displacement",
+        "body": "Use metres in both components.",
+        "math": "\\vec d=(-0.062\\hat i-0.045\\hat j)\\ \\mathrm m"
+      },
+      {
+        "title": "Dot product",
+        "body": "Add the x and y contributions.",
+        "math": "W=(2)(-0.062)+(8)(-0.045)=-0.484\\ \\mathrm J"
+      }
+    ],
+    "answer": "W\\approx-0.48\\ \\mathrm J",
+    "check": "Both component contributions are negative.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/vector-review.pdf",
+      "title": "P154 Tutorial on Dot Product Cross Product.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448852/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/vector-review-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "vectors-dot-3",
+    "tutorial": 0,
+    "number": "Dot practice 3",
+    "title": "Work with compass directions",
+    "pages": [
+      2
+    ],
+    "question": "Calculate work for a 2500 N force 30° east of north and a 60.0 m displacement 60° north of west.",
+    "steps": [
+      {
+        "title": "Use one angular reference",
+        "body": "With east as 0° and north as 90°, the directions are 60° and 120°.",
+        "math": "\\theta=120^\\circ-60^\\circ=60^\\circ"
+      },
+      {
+        "title": "Calculate work",
+        "body": "The dot product uses the angle between the vectors.",
+        "math": "W=(2500)(60.0)\\cos60^\\circ=75000\\ \\mathrm J"
+      }
+    ],
+    "answer": "W=75\\ \\mathrm{kJ}",
+    "check": "An angle of 60° gives half the maximum possible work Fd.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/vector-review.pdf",
+      "title": "P154 Tutorial on Dot Product Cross Product.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448852/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/vector-review-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "vectors-dot-4",
+    "tutorial": 0,
+    "number": "Dot practice 4",
+    "title": "Work from opposing components",
+    "pages": [
+      2
+    ],
+    "question": "Calculate work for F = (−150i − 450j) N and displacement (3.6i + 1.2j) m.",
+    "steps": [
+      {
+        "title": "Dot product",
+        "body": "Multiply the matching components and add.",
+        "math": "W=(-150)(3.6)+(-450)(1.2)=-1080\\ \\mathrm J"
+      }
+    ],
+    "answer": "W=-1.08\\ \\mathrm{kJ}\\approx-1.1\\ \\mathrm{kJ}",
+    "check": "Each axis contributes −540 J.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/vector-review.pdf",
+      "title": "P154 Tutorial on Dot Product Cross Product.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448852/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/vector-review-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "vectors-dot-5",
+    "tutorial": 0,
+    "number": "Dot practice 5",
+    "title": "Find the angle between vectors",
+    "pages": [
+      2
+    ],
+    "question": "Find the angle between force and displacement in dot-product practice problems 2 and 4.",
+    "steps": [
+      {
+        "title": "Rearrange the dot product",
+        "body": "Calculate magnitudes from the components; consistent units cancel in the ratio.",
+        "math": "\\theta=\\cos^{-1}\\!\\left(\\frac{\\vec F\\cdot\\vec d}{|\\vec F||\\vec d|}\\right)"
+      },
+      {
+        "title": "Problem 2",
+        "body": "Using centimetres consistently in numerator and denominator is valid for this dimensionless ratio.",
+        "math": "\\theta_2=\\cos^{-1}\\!\\left(\\frac{-48.4}{\\sqrt{68}\\sqrt{58.69}}\\right)=140.009^\\circ"
+      },
+      {
+        "title": "Problem 4",
+        "body": "Apply the same formula to its vectors.",
+        "math": "\\theta_4=\\cos^{-1}\\!\\left(\\frac{-1080}{\\sqrt{225000}\\sqrt{14.4}}\\right)=126.870^\\circ"
+      }
+    ],
+    "answer": "\\theta_2\\approx140^\\circ,\\qquad\\theta_4\\approx127^\\circ",
+    "check": "Source correction: the printed 94° for problem 2 does not reproduce the given dot product. The correct angle is about 140°. Both angles are obtuse, consistent with negative work.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/vector-review.pdf",
+      "title": "P154 Tutorial on Dot Product Cross Product.pdf",
+      "pages": [
+        2
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448852/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/vector-review-p2.webp",
+        "page": 2,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "vectors-cross-ex",
+    "tutorial": 0,
+    "number": "Cross example",
+    "title": "Torque and the right-hand rule",
+    "pages": [
+      4
+    ],
+    "question": "A 5.0 N force at 180° acts on a 2.5 m lever arm at 45°, both in the xy plane. Find the torque vector.",
+    "steps": [
+      {
+        "title": "Use the order R × F",
+        "body": "The directed rotation from the lever toward the force is +135°.",
+        "math": "\\tau_z=RF\\sin(180^\\circ-45^\\circ)"
+      },
+      {
+        "title": "Magnitude and direction",
+        "body": "Counterclockwise rotation in the xy plane gives positive z.",
+        "math": "\\tau_z=(2.5)(5.0)\\sin135^\\circ=8.8388\\ \\mathrm{N\\,m}"
+      }
+    ],
+    "answer": "\\vec\\tau\\approx8.8\\hat k\\ \\mathrm{N\\,m}",
+    "check": "Torque is perpendicular to the lever–force plane; reversing the cross-product order would reverse its sign.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/vector-review.pdf",
+      "title": "P154 Tutorial on Dot Product Cross Product.pdf",
+      "pages": [
+        4
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448852/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/vector-review-p4.webp",
+        "page": 4,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "vectors-cross-1",
+    "tutorial": 0,
+    "number": "Cross practice 1",
+    "title": "Torque on a disk rim",
+    "pages": [
+      4
+    ],
+    "question": "A 10 N force points downward at the right edge of a 28.0 cm diameter disk. Find torque about its centre.",
+    "steps": [
+      {
+        "title": "Use the radius",
+        "body": "The lever arm points along +x and has length 0.140 m.",
+        "math": "\\vec R=0.140\\hat i\\ \\mathrm m,\\qquad\\vec F=-10\\hat j\\ \\mathrm N"
+      },
+      {
+        "title": "Cross product",
+        "body": "The force turns the disk clockwise.",
+        "math": "\\vec\\tau=\\vec R\\times\\vec F=-1.40\\hat k\\ \\mathrm{N\\,m}"
+      }
+    ],
+    "answer": "\\vec\\tau=-1.4\\hat k\\ \\mathrm{N\\,m}",
+    "check": "Negative z points into the page, agreeing with clockwise rotation.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/vector-review.pdf",
+      "title": "P154 Tutorial on Dot Product Cross Product.pdf",
+      "pages": [
+        4
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448852/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/vector-review-p4.webp",
+        "page": 4,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "vectors-cross-2",
+    "tutorial": 0,
+    "number": "Cross practice 2",
+    "title": "Torque from an upward force component",
+    "pages": [
+      4
+    ],
+    "question": "A 23.5 N force points east and 45° above horizontal. It acts on a 1.80 m lever pointing east. Find the torque.",
+    "steps": [
+      {
+        "title": "Choose east, north, up axes",
+        "body": "The force component parallel to the lever produces no torque.",
+        "math": "\\vec R=1.80\\hat i;\\quad\\vec F=23.5\\cos45^\\circ\\hat i+23.5\\sin45^\\circ\\hat k"
+      },
+      {
+        "title": "Cross product",
+        "body": "East crossed with up points south, or −j.",
+        "math": "\\vec\\tau=-(1.80)(23.5)\\sin45^\\circ\\hat j=-29.91\\hat j\\ \\mathrm{N\\,m}"
+      }
+    ],
+    "answer": "|\\vec\\tau|=29.9\\ \\mathrm{N\\,m},\\quad\\text{south}",
+    "check": "The cross product is perpendicular to both east and up.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/vector-review.pdf",
+      "title": "P154 Tutorial on Dot Product Cross Product.pdf",
+      "pages": [
+        4
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448852/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/vector-review-p4.webp",
+        "page": 4,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "vectors-cross-3",
+    "tutorial": 0,
+    "number": "Cross practice 3",
+    "title": "Cartesian torque",
+    "pages": [
+      4
+    ],
+    "question": "Find the torque for F = (2.0i + 8.0j) N acting on lever R = (−6.2i − 4.5j) cm.",
+    "steps": [
+      {
+        "title": "Convert lever components",
+        "body": "The vector starts at the pivot and ends at the point of application.",
+        "math": "\\vec R=(-0.062\\hat i-0.045\\hat j)\\ \\mathrm m"
+      },
+      {
+        "title": "Calculate the z component",
+        "body": "Use RxFy − RyFx, keeping the order R × F.",
+        "math": "\\tau_z=(-0.062)(8)-(-0.045)(2)=-0.406\\ \\mathrm{N\\,m}"
+      }
+    ],
+    "answer": "\\vec\\tau=-0.406\\hat k\\ \\mathrm{N\\,m}",
+    "check": "The negative z result indicates clockwise torque in the xy plane.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/vector-review.pdf",
+      "title": "P154 Tutorial on Dot Product Cross Product.pdf",
+      "pages": [
+        4
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448852/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/vector-review-p4.webp",
+        "page": 4,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  },
+  {
+    "id": "vectors-cross-4",
+    "tutorial": 0,
+    "number": "Cross practice 4",
+    "title": "Polar torque",
+    "pages": [
+      4
+    ],
+    "question": "A force 8.25 N at 76° acts on a lever 7.66 cm at 216°, both in the xy plane. Find the torque.",
+    "steps": [
+      {
+        "title": "Directed angle",
+        "body": "The force direction minus the lever direction is −140°.",
+        "math": "\\theta_F-\\theta_R=76^\\circ-216^\\circ=-140^\\circ"
+      },
+      {
+        "title": "Signed torque",
+        "body": "Convert the lever length to metres.",
+        "math": "\\tau_z=(0.0766)(8.25)\\sin(-140^\\circ)=-0.40621\\ \\mathrm{N\\,m}"
+      }
+    ],
+    "answer": "\\vec\\tau\\approx-0.406\\hat k\\ \\mathrm{N\\,m}",
+    "check": "Matches the component version in practice problem 3 within the rounding of the polar inputs.",
+    "status": "worked",
+    "source": {
+      "url": "tutorial-sources/vector-review.pdf",
+      "title": "P154 Tutorial on Dot Product Cross Product.pdf",
+      "pages": [
+        4
+      ],
+      "topicUrl": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448852/View"
+    },
+    "figures": [
+      {
+        "url": "tutorial-figures/vector-review-p4.webp",
+        "page": 4,
+        "width": 1102,
+        "height": 1426
+      }
+    ]
+  }
+]
