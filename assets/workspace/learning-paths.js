@@ -463,6 +463,7 @@ window.TESSELATE_PATHS = {
   "ecet250e": {
     "coverage": "161 worked problems cover the currently posted Weeks 1–6 (Chapters 1–4, 6–7). All 49 original files, expandable solutions, and an optional Lab report theme. Checked October 14, 2026.",
     "lessons": [
+      {"title":"Midterm coverage & formula sheet","url":"ecet250e/formula-sheet.html","summary":"Confirmed Chapters 1–4 and 6, formulas, method reminders, and a printable study reference."},
       {
         "title": "Worked problem library",
         "url": "ecet250e/report-study.html",

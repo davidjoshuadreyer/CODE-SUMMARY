@@ -384,6 +384,17 @@ window.TESSELATE_CATALOG = {
       "builtin": true
     },
     {
+      "id": "page-ZWNldDI1MGUvZm9ybXVsYS1zaGVldC5odG1s",
+      "courseId": "ecet250e",
+      "title": "Midterm coverage & formula sheet",
+      "kind": "Study notes",
+      "url": "ecet250e/formula-sheet.html",
+      "body": "",
+      "description": "Chapters 1–4 and 6: formulas, method reminders, confirmed exam coverage, and a printable study reference.",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
       "id": "page-ZWNldDI1MGUvbGFiNS1jYWxjdWxhdGlvbnMuaHRtbA",
       "courseId": "ecet250e",
       "title": "Lab 5 · Calculations and report",
