@@ -1,0 +1,9 @@
+/* Dedicated scientific diagrams stay on a neutral canvas in both themes. */
+.study-diagram{margin:1.5rem 0;border:1px solid var(--line,#d4d0c5);border-radius:8px;overflow:hidden;break-inside:avoid}
+.study-diagram>a{display:block;background:#fffefb}
+.study-diagram img{display:block;width:100%;max-width:900px;height:auto;margin:auto}
+.study-diagram figcaption{padding:.9rem 1rem;font-size:.9rem;line-height:1.6;border-top:1px solid var(--line,#d4d0c5)}
+.study-diagram figcaption a{display:inline-block;margin-left:.35rem}
+.study-diagram a:focus-visible{outline:3px solid #a1582f;outline-offset:-3px}
+@media(max-width:600px){.study-diagram{margin:1rem -.35rem}.study-diagram figcaption{padding:.7rem;font-size:.85rem}}
+@media print{.study-diagram img{max-height:90mm;object-fit:contain}.study-diagram figcaption a{display:none}}

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400" role="img" aria-labelledby="title desc">
+<title id="title">Far-field limit of a charged disk</title><desc id="desc">Show that a uniformly charged disk of radius R and charge Q = σπR² acts like a point charge on its axis when x ≫ R.</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="context-stroke"/></marker></defs><rect width="800" height="400" fill="#fffefa"/>
+<text x="25" y="30" font-family="Arial, sans-serif" font-size="20" fill="#253840" text-anchor="start">T2-Q32  ·  Far-field limit of a charged disk</text>
+<path d="M25 45L775 45" fill="none" stroke="#d6dedd" stroke-width="1"/>
+<text x="25" y="383" font-family="Arial, sans-serif" font-size="14" fill="#69777d" text-anchor="start">SCHEMATIC · not to scale unless axes are numbered</text>
+<ellipse cx="170" cy="205" rx="50" ry="110" fill="#e9f2f1" stroke="#137b80" stroke-width="4"/>
+<path d="M90 205L440 205" fill="none" stroke="#69777d" stroke-width="1"/>
+<polygon points="440,205 430.0,200.5 430.0,209.5" fill="#69777d"/>
+<circle cx="360" cy="205" r="5" fill="#253840" stroke="#253840" stroke-width="2"/>
+<path d="M360 205L440 205" fill="none" stroke="#be4949" stroke-width="3"/>
+<polygon points="440,205 430.0,200.5 430.0,209.5" fill="#be4949"/>
+<text x="400" y="185" font-family="Arial, sans-serif" font-size="18" fill="#253840" text-anchor="start">E</text>
+<path d="M170 205L170 95" fill="none" stroke="#137b80" stroke-width="2"/>
+<text x="183" y="145" font-family="Arial, sans-serif" font-size="18" fill="#253840" text-anchor="start">R</text>
+<text x="265" y="235" font-family="Arial, sans-serif" font-size="18" fill="#253840" text-anchor="start">x</text>
+<text x="140" y="340" font-family="Arial, sans-serif" font-size="18" fill="#253840" text-anchor="start">+ + + +</text>
+<path d="M170 95L360 205" fill="none" stroke="#69777d" stroke-width="1" stroke-dasharray="6 5"/>
+<path d="M170 315L360 205" fill="none" stroke="#69777d" stroke-width="1" stroke-dasharray="6 5"/>
+<text x="480" y="100" font-family="Arial, sans-serif" font-size="17" fill="#253840" text-anchor="start">Far from disk: x ≫ R</text>
+<text x="480" y="130" font-family="Arial, sans-serif" font-size="17" fill="#253840" text-anchor="start">Q = σπR²</text>
+<text x="480" y="160" font-family="Arial, sans-serif" font-size="17" fill="#253840" text-anchor="start">Disk subtends a small angle.</text>
+<text x="480" y="190" font-family="Arial, sans-serif" font-size="17" fill="#253840" text-anchor="start">E ≈ kQ/x²</text>
+<text x="480" y="220" font-family="Arial, sans-serif" font-size="17" fill="#253840" text-anchor="start">Point-charge limit</text>
+</svg>

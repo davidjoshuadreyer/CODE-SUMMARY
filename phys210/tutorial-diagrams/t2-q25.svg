@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400" role="img" aria-labelledby="title desc">
+<title id="title">Axial field of a finite negative rod</title><desc id="desc">A uniformly charged rod has length 0.140 m and total charge −22.0 μC. Find the field magnitude and direction on its axis 0.360 m from its center.</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="context-stroke"/></marker></defs><rect width="800" height="400" fill="#fffefa"/>
+<text x="25" y="30" font-family="Arial, sans-serif" font-size="20" fill="#253840" text-anchor="start">T2-Q25  ·  Axial field of a finite negative rod</text>
+<path d="M25 45L775 45" fill="none" stroke="#d6dedd" stroke-width="1"/>
+<text x="25" y="383" font-family="Arial, sans-serif" font-size="14" fill="#69777d" text-anchor="start">SCHEMATIC · not to scale unless axes are numbered</text>
+<path d="M50 200L440 200" fill="none" stroke="#69777d" stroke-width="1"/>
+<polygon points="440,200 430.0,195.5 430.0,204.5" fill="#69777d"/>
+<path d="M110 200L220 200" fill="none" stroke="#137b80" stroke-width="18"/>
+<text x="110" y="170" font-family="Arial, sans-serif" font-size="18" fill="#253840" text-anchor="start">− − − − −</text>
+<circle cx="400" cy="200" r="5" fill="#253840" stroke="#253840" stroke-width="2"/>
+<path d="M400 160L320 160" fill="none" stroke="#137b80" stroke-width="3"/>
+<polygon points="320,160 330.0,164.5 330.0,155.5" fill="#137b80"/>
+<text x="350" y="140" font-family="Arial, sans-serif" font-size="18" fill="#253840" text-anchor="start">E</text>
+<text x="150" y="240" font-family="Arial, sans-serif" font-size="18" fill="#253840" text-anchor="start">0</text>
+<text x="65" y="275" font-family="Arial, sans-serif" font-size="18" fill="#253840" text-anchor="start">Rod length L = 0.140 m</text>
+<text x="210" y="310" font-family="Arial, sans-serif" font-size="18" fill="#253840" text-anchor="start">x = 0.360 m from center</text>
+<text x="480" y="100" font-family="Arial, sans-serif" font-size="17" fill="#253840" text-anchor="start">Q = −22.0 μC</text>
+<text x="480" y="130" font-family="Arial, sans-serif" font-size="17" fill="#253840" text-anchor="start">Observation point is on the axis.</text>
+<text x="480" y="160" font-family="Arial, sans-serif" font-size="17" fill="#253840" text-anchor="start">E points toward the rod.</text>
+<text x="480" y="190" font-family="Arial, sans-serif" font-size="17" fill="#253840" text-anchor="start">Eₓ = kQ / [x² − (L/2)²]</text>
+</svg>

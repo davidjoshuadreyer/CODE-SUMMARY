@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400" role="img" aria-labelledby="title desc">
+<title id="title">Field at the midpoint offset from two unequal charges</title><desc id="desc">Q = −6.0 nC is at (0,+0.60 m), q = +3.0 nC at (0,−0.60 m), and P at (0.80 m,0). Find the electric-field magnitude at P.</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="context-stroke"/></marker></defs><rect width="800" height="400" fill="#fffefa"/>
+<text x="25" y="30" font-family="Arial, sans-serif" font-size="20" fill="#253840" text-anchor="start">T1-Q10  ·  Field at the midpoint offset from two unequal charges</text>
+<path d="M25 45L775 45" fill="none" stroke="#d6dedd" stroke-width="1"/>
+<text x="25" y="383" font-family="Arial, sans-serif" font-size="14" fill="#69777d" text-anchor="start">SCHEMATIC · not to scale unless axes are numbered</text>
+<circle cx="100" cy="100" r="17" fill="#fffefa" stroke="#137b80" stroke-width="2"/>
+<text x="100" y="106" font-family="Arial, sans-serif" font-size="22" fill="#137b80" text-anchor="middle">−</text>
+<text x="100" y="144" font-family="Arial, sans-serif" font-size="17" fill="#253840" text-anchor="middle">−6 nC</text>
+<circle cx="100" cy="300" r="17" fill="#fffefa" stroke="#be4949" stroke-width="2"/>
+<text x="100" y="306" font-family="Arial, sans-serif" font-size="22" fill="#be4949" text-anchor="middle">+</text>
+<text x="100" y="344" font-family="Arial, sans-serif" font-size="17" fill="#253840" text-anchor="middle">+3 nC</text>
+<circle cx="350" cy="200" r="5" fill="#253840" stroke="#253840" stroke-width="2"/>
+<text x="360" y="220" font-family="Arial, sans-serif" font-size="18" fill="#253840" text-anchor="start">P</text>
+<path d="M100 100L350 200" fill="none" stroke="#69777d" stroke-width="1" stroke-dasharray="6 5"/>
+<path d="M100 300L350 200" fill="none" stroke="#69777d" stroke-width="1" stroke-dasharray="6 5"/>
+<path d="M350 200L270 168" fill="none" stroke="#137b80" stroke-width="3"/>
+<polygon points="270,168 277.6135088652591,175.89205187252472 280.95602495244606,167.53576165455738" fill="#137b80"/>
+<path d="M350 200L390 184" fill="none" stroke="#be4949" stroke-width="3"/>
+<polygon points="390,184 379.04397504755394,183.53576165455738 382.3864911347409,191.89205187252472" fill="#be4949"/>
+<text x="220" y="142" font-family="Arial, sans-serif" font-size="18" fill="#253840" text-anchor="start">E₋</text>
+<text x="395" y="175" font-family="Arial, sans-serif" font-size="18" fill="#253840" text-anchor="start">E₊</text>
+<text x="145" y="225" font-family="Arial, sans-serif" font-size="18" fill="#253840" text-anchor="start">0.80 m</text>
+<text x="40" y="195" font-family="Arial, sans-serif" font-size="18" fill="#253840" text-anchor="start">±0.60 m</text>
+<text x="480" y="100" font-family="Arial, sans-serif" font-size="17" fill="#253840" text-anchor="start">Each source is 1.00 m from P.</text>
+<text x="480" y="130" font-family="Arial, sans-serif" font-size="17" fill="#253840" text-anchor="start">Negative: field toward source.</text>
+<text x="480" y="160" font-family="Arial, sans-serif" font-size="17" fill="#253840" text-anchor="start">Positive: field away.</text>
+<text x="480" y="190" font-family="Arial, sans-serif" font-size="17" fill="#253840" text-anchor="start">E = (−21.57i + 48.53j) N/C</text>
+</svg>

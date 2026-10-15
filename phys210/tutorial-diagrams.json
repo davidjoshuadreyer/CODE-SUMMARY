@@ -1,0 +1,938 @@
+[
+  {
+    "id": "t1-q1",
+    "alt": "Position at maximum positive velocity — annotated setup and reasoning diagram",
+    "caption": "Schematic for position at maximum positive velocity. Read with the worked steps; geometry is not necessarily to scale.",
+    "url": "tutorial-diagrams/t1-q1.svg",
+    "width": 800.0,
+    "height": 400.0
+  },
+  {
+    "id": "t1-q2",
+    "alt": "Acceleration of an exponential trajectory — annotated setup and reasoning diagram",
+    "caption": "Schematic for acceleration of an exponential trajectory. Read with the worked steps; geometry is not necessarily to scale.",
+    "url": "tutorial-diagrams/t1-q2.svg",
+    "width": 800.0,
+    "height": 400.0
+  },
+  {
+    "id": "t1-q3",
+    "alt": "Displacement for half the acceleration — annotated setup and reasoning diagram",
+    "caption": "Schematic for displacement for half the acceleration. Read with the worked steps; geometry is not necessarily to scale.",
+    "url": "tutorial-diagrams/t1-q3.svg",
+    "width": 800.0,
+    "height": 400.0
+  },
+  {
+    "id": "t1-q4",
+    "alt": "Magnitude of a vector combination — annotated setup and reasoning diagram",
+    "caption": "Schematic for magnitude of a vector combination. Read with the worked steps; geometry is not necessarily to scale.",
+    "url": "tutorial-diagrams/t1-q4.svg",
+    "width": 800.0,
+    "height": 400.0
+  },
+  {
+    "id": "t1-q5",
+    "alt": "Vector needed for a vertical resultant — annotated setup and reasoning diagram",
+    "caption": "Schematic for vector needed for a vertical resultant. Read with the worked steps; geometry is not necessarily to scale.",
+    "url": "tutorial-diagrams/t1-q5.svg",
+    "width": 800.0,
+    "height": 400.0
+  },
+  {
+    "id": "t1-q6",
+    "alt": "Speed under constant planar acceleration — annotated setup and reasoning diagram",
+    "caption": "Schematic for speed under constant planar acceleration. Read with the worked steps; geometry is not necessarily to scale.",
+    "url": "tutorial-diagrams/t1-q6.svg",
+    "width": 800.0,
+    "height": 400.0
+  },
+  {
+    "id": "t1-q7",
+    "alt": "Building height from projectile range — annotated setup and reasoning diagram",
+    "caption": "Schematic for building height from projectile range. Read with the worked steps; geometry is not necessarily to scale.",
+    "url": "tutorial-diagrams/t1-q7.svg",
+    "width": 800.0,
+    "height": 400.0
+  },
+  {
+    "id": "t1-q8",
+    "alt": "Two positive charges from total charge and force — annotated setup and reasoning diagram",
+    "caption": "Schematic for two positive charges from total charge and force. Read with the worked steps; geometry is not necessarily to scale.",
+    "url": "tutorial-diagrams/t1-q8.svg",
+    "width": 800.0,
+    "height": 400.0
+  },
+  {
+    "id": "t1-q9",
+    "alt": "Force from two charges in a right triangle — annotated setup and reasoning diagram",
+    "caption": "Schematic for force from two charges in a right triangle. Read with the worked steps; geometry is not necessarily to scale.",
+    "url": "tutorial-diagrams/t1-q9.svg",
+    "width": 800.0,
+    "height": 400.0
+  },
+  {
+    "id": "t1-q10",
+    "alt": "Field at the midpoint offset from two unequal charges — annotated setup and reasoning diagram",
+    "caption": "Schematic for field at the midpoint offset from two unequal charges. Read with the worked steps; geometry is not necessarily to scale.",
+    "url": "tutorial-diagrams/t1-q10.svg",
+    "width": 800.0,
+    "height": 400.0
+  },
+  {
+    "id": "t2-q15",
+    "alt": "Zero field outside two opposite charges — annotated setup and reasoning diagram",
+    "caption": "Schematic for zero field outside two opposite charges. Read with the worked steps; geometry is not necessarily to scale.",
+    "url": "tutorial-diagrams/t2-q15.svg",
+    "width": 800.0,
+    "height": 400.0
+  },
+  {
+    "id": "t2-q16",
+    "alt": "Electric field between thundercloud charge concentrations — annotated setup and reasoning diagram",
+    "caption": "Schematic for electric field between thundercloud charge concentrations. Read with the worked steps; geometry is not necessarily to scale.",
+    "url": "tutorial-diagrams/t2-q16.svg",
+    "width": 800.0,
+    "height": 400.0
+  },
+  {
+    "id": "t2-q25",
+    "alt": "Axial field of a finite negative rod — annotated setup and reasoning diagram",
+    "caption": "Schematic for axial field of a finite negative rod. Read with the worked steps; geometry is not necessarily to scale.",
+    "url": "tutorial-diagrams/t2-q25.svg",
+    "width": 800.0,
+    "height": 400.0
+  },
+  {
+    "id": "t2-q26",
+    "alt": "Field of a semi-infinite uniform line — annotated setup and reasoning diagram",
+    "caption": "Schematic for field of a semi-infinite uniform line. Read with the worked steps; geometry is not necessarily to scale.",
+    "url": "tutorial-diagrams/t2-q26.svg",
+    "width": 800.0,
+    "height": 400.0
+  },
+  {
+    "id": "t2-q27",
+    "alt": "Four axial fields of a charged ring — annotated setup and reasoning diagram",
+    "caption": "Schematic for four axial fields of a charged ring. Read with the worked steps; geometry is not necessarily to scale.",
+    "url": "tutorial-diagrams/t2-q27.svg",
+    "width": 800.0,
+    "height": 400.0
+  },
+  {
+    "id": "t2-q28",
+    "alt": "Field of a semi-infinite nonuniform line — annotated setup and reasoning diagram",
+    "caption": "Schematic for field of a semi-infinite nonuniform line. Read with the worked steps; geometry is not necessarily to scale.",
+    "url": "tutorial-diagrams/t2-q28.svg",
+    "width": 800.0,
+    "height": 400.0
+  },
+  {
+    "id": "t2-q29",
+    "alt": "Location and value of the ring-field maximum — annotated setup and reasoning diagram",
+    "caption": "Schematic for location and value of the ring-field maximum. Read with the worked steps; geometry is not necessarily to scale.",
+    "url": "tutorial-diagrams/t2-q29.svg",
+    "width": 800.0,
+    "height": 400.0
+  },
+  {
+    "id": "t2-q30",
+    "alt": "Four axial fields of a uniformly charged disk — annotated setup and reasoning diagram",
+    "caption": "Schematic for four axial fields of a uniformly charged disk. Read with the worked steps; geometry is not necessarily to scale.",
+    "url": "tutorial-diagrams/t2-q30.svg",
+    "width": 800.0,
+    "height": 400.0
+  },
+  {
+    "id": "t2-q32",
+    "alt": "Far-field limit of a charged disk — annotated setup and reasoning diagram",
+    "caption": "Schematic for far-field limit of a charged disk. Read with the worked steps; geometry is not necessarily to scale.",
+    "url": "tutorial-diagrams/t2-q32.svg",
+    "width": 800.0,
+    "height": 400.0
+  },
+  {
+    "id": "t2-q33",
+    "alt": "Field at the center of a negative semicircular rod — annotated setup and reasoning diagram",
+    "caption": "Schematic for field at the center of a negative semicircular rod. Read with the worked steps; geometry is not necessarily to scale.",
+    "url": "tutorial-diagrams/t2-q33.svg",
+    "width": 800.0,
+    "height": 400.0
+  },
+  {
+    "id": "t3-q23-40",
+    "alt": "Charge ratio from field-line counts — annotated setup and reasoning diagram",
+    "caption": "Schematic for charge ratio from field-line counts. Read with the worked steps; geometry is not necessarily to scale.",
+    "url": "tutorial-diagrams/t3-q23-40.svg",
+    "width": 800.0,
+    "height": 400.0
+  },
+  {
+    "id": "t3-q23-42",
+    "alt": "Electron and proton speeds in a uniform field — annotated setup and reasoning diagram",
+    "caption": "Schematic for electron and proton speeds in a uniform field. Read with the worked steps; geometry is not necessarily to scale.",
+    "url": "tutorial-diagrams/t3-q23-42.svg",
+    "width": 800.0,
+    "height": 400.0
+  },
+  {
+    "id": "t3-q23-44",
+    "alt": "A proton brought to rest by an electric field — annotated setup and reasoning diagram",
+    "caption": "Schematic for a proton brought to rest by an electric field. Read with the worked steps; geometry is not necessarily to scale.",
+    "url": "tutorial-diagrams/t3-q23-44.svg",
+    "width": 800.0,
+    "height": 400.0
+  },
+  {
+    "id": "t3-q24-4",
+    "alt": "Flux through a triangular closed box — annotated setup and reasoning diagram",
+    "caption": "Schematic for flux through a triangular closed box. Read with the worked steps; geometry is not necessarily to scale.",
+    "url": "tutorial-diagrams/t3-q24-4.svg",
+    "width": 800.0,
+    "height": 400.0
+  },
+  {
+    "id": "t3-q24-5",
+    "alt": "Flux through coordinate-plane surfaces — annotated setup and reasoning diagram",
+    "caption": "Schematic for flux through coordinate-plane surfaces. Read with the worked steps; geometry is not necessarily to scale.",
+    "url": "tutorial-diagrams/t3-q24-5.svg",
+    "width": 800.0,
+    "height": 400.0
+  },
+  {
+    "id": "t3-q24-9",
+    "alt": "Net electric flux through a submarine — annotated setup and reasoning diagram",
+    "caption": "Schematic for net electric flux through a submarine. Read with the worked steps; geometry is not necessarily to scale.",
+    "url": "tutorial-diagrams/t3-q24-9.svg",
+    "width": 800.0,
+    "height": 400.0
+  },
+  {
+    "id": "t3-q24-54",
+    "alt": "Flux of a nonuniform field through a rectangle — annotated setup and reasoning diagram",
+    "caption": "Schematic for flux of a nonuniform field through a rectangle. Read with the worked steps; geometry is not necessarily to scale.",
+    "url": "tutorial-diagrams/t3-q24-54.svg",
+    "width": 800.0,
+    "height": 400.0
+  },
+  {
+    "id": "t3-q24-66",
+    "alt": "Net flux and enclosed charge in a nonuniform field — annotated setup and reasoning diagram",
+    "caption": "Schematic for net flux and enclosed charge in a nonuniform field. Read with the worked steps; geometry is not necessarily to scale.",
+    "url": "tutorial-diagrams/t3-q24-66.svg",
+    "width": 800.0,
+    "height": 400.0
+  },
+  {
+    "id": "t4-q1",
+    "alt": "Field from perpendicular infinite sheets — annotated setup and reasoning diagram",
+    "caption": "Schematic for field from perpendicular infinite sheets. Read with the worked steps; geometry is not necessarily to scale.",
+    "url": "tutorial-diagrams/t4-q1.svg",
+    "width": 800.0,
+    "height": 400.0
+  },
+  {
+    "id": "t4-q2",
+    "alt": "Field inside a uniformly charged cylinder — annotated setup and reasoning diagram",
+    "caption": "Schematic for field inside a uniformly charged cylinder. Read with the worked steps; geometry is not necessarily to scale.",
+    "url": "tutorial-diagrams/t4-q2.svg",
+    "width": 800.0,
+    "height": 400.0
+  },
+  {
+    "id": "t4-q3",
+    "alt": "Field outside a uniformly charged cylinder — annotated setup and reasoning diagram",
+    "caption": "Schematic for field outside a uniformly charged cylinder. Read with the worked steps; geometry is not necessarily to scale.",
+    "url": "tutorial-diagrams/t4-q3.svg",
+    "width": 800.0,
+    "height": 400.0
+  },
+  {
+    "id": "t4-q4",
+    "alt": "Field inside a cylinder with quadratic density — annotated setup and reasoning diagram",
+    "caption": "Schematic for field inside a cylinder with quadratic density. Read with the worked steps; geometry is not necessarily to scale.",
+    "url": "tutorial-diagrams/t4-q4.svg",
+    "width": 800.0,
+    "height": 400.0
+  },
+  {
+    "id": "t4-q5",
+    "alt": "Field within a charged cylindrical annulus — annotated setup and reasoning diagram",
+    "caption": "Schematic for field within a charged cylindrical annulus. Read with the worked steps; geometry is not necessarily to scale.",
+    "url": "tutorial-diagrams/t4-q5.svg",
+    "width": 800.0,
+    "height": 400.0
+  },
+  {
+    "id": "t4-q6",
+    "alt": "Exterior field of two charged spherical shells — annotated setup and reasoning diagram",
+    "caption": "Schematic for exterior field of two charged spherical shells. Read with the worked steps; geometry is not necessarily to scale.",
+    "url": "tutorial-diagrams/t4-q6.svg",
+    "width": 800.0,
+    "height": 400.0
+  },
+  {
+    "id": "t4-q7",
+    "alt": "Exterior field of a charged conductor with a central charge — annotated setup and reasoning diagram",
+    "caption": "Schematic for exterior field of a charged conductor with a central charge. Read with the worked steps; geometry is not necessarily to scale.",
+    "url": "tutorial-diagrams/t4-q7.svg",
+    "width": 800.0,
+    "height": 400.0
+  },
+  {
+    "id": "t4-q8",
+    "alt": "Exterior field of a wire and conducting cylindrical shell — annotated setup and reasoning diagram",
+    "caption": "Schematic for exterior field of a wire and conducting cylindrical shell. Read with the worked steps; geometry is not necessarily to scale.",
+    "url": "tutorial-diagrams/t4-q8.svg",
+    "width": 800.0,
+    "height": 400.0
+  },
+  {
+    "id": "t4-q9",
+    "alt": "Induced charge density on a conductor’s inner surface — annotated setup and reasoning diagram",
+    "caption": "Schematic for induced charge density on a conductor’s inner surface. Read with the worked steps; geometry is not necessarily to scale.",
+    "url": "tutorial-diagrams/t4-q9.svg",
+    "width": 800.0,
+    "height": 400.0
+  },
+  {
+    "id": "t5-q3",
+    "alt": "Proton accelerates toward lower potential; electron toward higher potential. Both gain equal kinetic energy but electron moves faster.",
+    "caption": "Both particles start at rest and gain 120 eV. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t5-q3.svg",
+    "width": 720.0,
+    "height": 400.0
+  },
+  {
+    "id": "t5-q37",
+    "alt": "Straight descending V versus x graph through 10, −11, and −32 volts. Uniform electric field arrow points to increasing x.",
+    "caption": "Slope of potential determines the direction of electric field. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t5-q37.svg",
+    "width": 720.0,
+    "height": 400.0
+  },
+  {
+    "id": "t5-q16",
+    "alt": "Equal positive charges flank the origin at equal distances. Equal opposite field arrows cancel at the test charge.",
+    "caption": "Fields cancel as vectors; potentials add as scalars. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t5-q16.svg",
+    "width": 720.0,
+    "height": 400.0
+  },
+  {
+    "id": "t5-q17",
+    "alt": "Observation point P is six metres from a negative point charge. Electric field points toward the charge.",
+    "caption": "A negative source produces inward field and negative potential. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t5-q17.svg",
+    "width": 720.0,
+    "height": 400.0
+  },
+  {
+    "id": "t5-q18",
+    "alt": "Number line identifies E zero at −4.83 metres and V zero at −2.00 and +0.667 metres, with charges at zero and two metres.",
+    "caption": "Field cancellation and zero potential occur at different locations. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t5-q18.svg",
+    "width": 720.0,
+    "height": 400.0
+  },
+  {
+    "id": "t5-q34",
+    "alt": "Rectangle with correct signed corner charges and all four edges plus both diagonals indicating the six energy pairs.",
+    "caption": "Assembly energy includes six distinct pairs. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t5-q34.svg",
+    "width": 720.0,
+    "height": 400.0
+  },
+  {
+    "id": "t5-q39",
+    "alt": "Local component triangle at P: electric field points toward negative x and negative y with equal components, and zero z component.",
+    "caption": "Field components at P = (1, 0, −2) m; local x–y plane. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t5-q39.svg",
+    "width": 720.0,
+    "height": 400.0
+  },
+  {
+    "id": "t5-q42",
+    "alt": "Ring shown obliquely, radius R and axial observation point two radii away. Right triangle gives source distance square root five R.",
+    "caption": "Every ring element is the same distance from an axial point. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t5-q42.svg",
+    "width": 720.0,
+    "height": 400.0
+  },
+  {
+    "id": "t5-q63",
+    "alt": "Line charge viewed end-on with radial observation points r1 and r2. Outward field along integration path gives decreasing potential.",
+    "caption": "Cross-section of an infinite line charge; shown for λ > 0. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t5-q63.svg",
+    "width": 720.0,
+    "height": 400.0
+  },
+  {
+    "id": "t6-q7",
+    "alt": "Parallel plates separated 1.80 millimetres with uniform field arrows from positive left plate to negative right plate.",
+    "caption": "Air-filled parallel plates; neglect edge effects. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t6-q7.svg",
+    "width": 720.0,
+    "height": 400.0
+  },
+  {
+    "id": "t6-q23",
+    "alt": "Initially charged six microfarad capacitor shares charge with uncharged three microfarad capacitor; final capacitors are connected in parallel, battery absent.",
+    "caption": "Battery disconnected before charge sharing. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t6-q23.svg",
+    "width": 720.0,
+    "height": 400.0
+  },
+  {
+    "id": "t6-q31",
+    "alt": "Same three microfarad capacitor at twelve and six volts, with energy bars in four-to-one ratio.",
+    "caption": "Stored energy scales with voltage squared at fixed capacitance. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t6-q31.svg",
+    "width": 720.0,
+    "height": 400.0
+  },
+  {
+    "id": "t6-q34",
+    "alt": "Isolated capacitor before and after doubling plate separation; charge fixed, capacitance halved, stored energy doubled.",
+    "caption": "Plate spacing doubles after disconnection. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t6-q34.svg",
+    "width": 720.0,
+    "height": 400.0
+  },
+  {
+    "id": "t6-q47",
+    "alt": "Isolated capacitor with air replaced by water dielectric. Charge stays fixed while capacitance increases by kappa and voltage and energy decrease.",
+    "caption": "Water fills the gap after disconnection. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t6-q47.svg",
+    "width": 720.0,
+    "height": 400.0
+  },
+  {
+    "id": "t6-q67",
+    "alt": "Unknown charged capacitor and uncharged ten microfarad capacitor become a parallel pair at thirty volts.",
+    "caption": "Charge conservation determines the unknown capacitance. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t6-q67.svg",
+    "width": 720.0,
+    "height": 400.0
+  },
+  {
+    "id": "t6-q69",
+    "alt": "Before and after dielectric insertion at fixed battery voltage: capacitance, charge and stored energy each increase by kappa.",
+    "caption": "Dielectric enters while battery remains connected. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t6-q69.svg",
+    "width": 720.0,
+    "height": 400.0
+  },
+  {
+    "id": "t6-q71",
+    "alt": "Opposed charged capacitors connect in parallel. Initially negative plate of two microfarad capacitor joins final positive top node and reverses polarity.",
+    "caption": "Opposite initial polarities are connected together. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t6-q71.svg",
+    "width": 720.0,
+    "height": 400.0
+  },
+  {
+    "id": "t7-q1",
+    "alt": "Equivalent two-capacitor series circuit: eighty and forty-eight microfarad groups across thirty volts. C3 shares right-group voltage.",
+    "caption": "Equivalent circuit: each parallel group is combined first. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t7-q1.svg",
+    "width": 720.0,
+    "height": 400.0
+  },
+  {
+    "id": "t7-q2",
+    "alt": "Five microfarad capacitor lies in parallel with series fifteen and thirty microfarad capacitors. Series branch voltage divides sixteen and eight volts.",
+    "caption": "Redrawn connections: C₁ is parallel to the C₂–C₃ branch. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t7-q2.svg",
+    "width": 720.0,
+    "height": 400.0
+  },
+  {
+    "id": "t7-q3",
+    "alt": "Matching polarity: add initial positive-plate charges. Initial voltages and capacitances are shown separately; final connected pair has one common voltage.",
+    "caption": "Matching polarity: add initial positive-plate charges. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t7-q3.svg",
+    "width": 720.0,
+    "height": 400.0
+  },
+  {
+    "id": "t7-q4",
+    "alt": "Matching polarity: charge transfers toward lower voltage. Initial voltages and capacitances are shown separately; final connected pair has one common voltage.",
+    "caption": "Matching polarity: charge transfers toward lower voltage. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t7-q4.svg",
+    "width": 720.0,
+    "height": 400.0
+  },
+  {
+    "id": "t7-q5",
+    "alt": "An initially uncharged capacitor receives part of the charge. Initial voltages and capacitances are shown separately; final connected pair has one common voltage.",
+    "caption": "An initially uncharged capacitor receives part of the charge. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t7-q5.svg",
+    "width": 720.0,
+    "height": 400.0
+  },
+  {
+    "id": "t7-q6",
+    "alt": "At fixed battery voltage, doubling plate spacing halves both capacitance and charge.",
+    "caption": "Plate spacing doubles with battery connected. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t7-q6.svg",
+    "width": 720.0,
+    "height": 400.0
+  },
+  {
+    "id": "t7-q7",
+    "alt": "Isolated capacitor filled with dielectric of relative permittivity three, with charge fixed and voltage reduced to one third.",
+    "caption": "Dielectric κ = 3 inserted after disconnection. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t7-q7.svg",
+    "width": 720.0,
+    "height": 400.0
+  },
+  {
+    "id": "t7-q8",
+    "alt": "Bulb with equal conventional current arrows entering and leaving. Fifteen coulombs cross each side in one minute.",
+    "caption": "Steady current: the same charge enters and leaves the bulb. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t7-q8.svg",
+    "width": 720.0,
+    "height": 400.0
+  },
+  {
+    "id": "t7-q9",
+    "alt": "Cylindrical wire with length two metres and diameter one millimetre; circular end shows radius is half the diameter.",
+    "caption": "Wire resistance depends on length and cross-sectional area. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t7-q9.svg",
+    "width": 720.0,
+    "height": 400.0
+  },
+  {
+    "id": "t7-q10",
+    "alt": "Short thick wire stretched to four times length and one quarter area. Equal drawn rectangle areas emphasize conserved material volume.",
+    "caption": "Stretching conserves volume; resistivity stays unchanged. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t7-q10.svg",
+    "width": 720.0,
+    "height": 400.0
+  },
+  {
+    "id": "t8-q1",
+    "alt": "Resistor with conventional current to the right and electron motion to the left. Voltage polarity follows conventional current drop.",
+    "caption": "Conventional current is opposite electron motion. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t8-q1.svg",
+    "width": 720.0,
+    "height": 400.0
+  },
+  {
+    "id": "t8-q2",
+    "alt": "Cooling comparison: iron resistance drops from ten to five ohms while carbon rises from ten to ten point five ohms.",
+    "caption": "Linear temperature model: cooling from 20 °C to −80 °C. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t8-q2.svg",
+    "width": 720.0,
+    "height": 400.0
+  },
+  {
+    "id": "t8-q3",
+    "alt": "Two rated bulbs displayed side by side at equal voltage; lower power A has higher resistance and lower current.",
+    "caption": "Compare operating values at the same rated voltage. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t8-q3.svg",
+    "width": 720.0,
+    "height": 400.0
+  },
+  {
+    "id": "t8-q4",
+    "alt": "Equivalent circuit with three ohm resistor in series with two equal six ohm return paths; left return represents original diagonal resistor.",
+    "caption": "Equivalent return paths: diagonal 2R parallel to side + bottom. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t8-q4.svg",
+    "width": 720.0,
+    "height": 400.0
+  },
+  {
+    "id": "t8-q5",
+    "alt": "Three-branch circuit has thirty and fifty volt sources positive at top. Given middle upward current sets top voltage fourteen volts and left bottom node negative sixteen volts.",
+    "caption": "Redrawn original nodes and polarities; bottom node is 0 V. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t8-q5.svg",
+    "width": 720.0,
+    "height": 400.0
+  },
+  {
+    "id": "t8-q6",
+    "alt": "Circuit segment from A through twenty volt rise, twenty ohm resistor voltage drop, and twelve volt drop to B. Current points A to B.",
+    "caption": "Walk from A to B and add the signed potential changes. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t8-q6.svg",
+    "width": 720.0,
+    "height": 400.0
+  },
+  {
+    "id": "t8-q7",
+    "alt": "Bulb A is in series with parallel bulbs B and C; A carries twice the current through either equal parallel branch.",
+    "caption": "Equal-resistance model: A carries the sum of B and C currents. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t8-q7.svg",
+    "width": 720.0,
+    "height": 400.0
+  },
+  {
+    "id": "t8-q8",
+    "alt": "Projection onto yz plane shows perpendicular magnetic field with positive y and z components; electron acceleration has positive y and negative z components. Velocity points out of plane.",
+    "caption": "View the y–z plane; velocity is along +x, out of this plane. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t8-q8.svg",
+    "width": 720.0,
+    "height": 400.0
+  },
+  {
+    "id": "t8-q9",
+    "alt": "Velocity points right along positive x and magnetic field down along negative y. Dot symbol indicates electron force out of page along positive z.",
+    "caption": "Right-hand rule gives v × B; negative charge reverses it. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t8-q9.svg",
+    "width": 720.0,
+    "height": 400.0
+  },
+  {
+    "id": "t8-q10",
+    "alt": "Three-row component dependency diagram isolates By from z force, Bz from y force, then checks x force with both values.",
+    "caption": "Component map for B = (0, Bᵧ, Bz); charge q = +2 C. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t8-q10.svg",
+    "width": 720.0,
+    "height": 400.0
+  },
+  {
+    "id": "t9-q1",
+    "alt": "Velocity is along +x. The negative charge makes acceleration point +y and −z. Schematic; not to scale.",
+    "caption": "Velocity is along +x. The negative charge makes acceleration point +y and −z. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t9-q1.svg",
+    "width": 760.0,
+    "height": 400.0
+  },
+  {
+    "id": "t9-q2",
+    "alt": "Current follows the L-shaped path. Segment forces are downward and rightward. Schematic; not to scale.",
+    "caption": "Current follows the L-shaped path. Segment forces are downward and rightward. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t9-q2.svg",
+    "width": 760.0,
+    "height": 400.0
+  },
+  {
+    "id": "t9-q3",
+    "alt": "The vertical legs align with the field; only the top segment produces an out-of-page force. Schematic; not to scale.",
+    "caption": "The vertical legs align with the field; only the top segment produces an out-of-page force. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t9-q3.svg",
+    "width": 760.0,
+    "height": 400.0
+  },
+  {
+    "id": "t9-q4",
+    "alt": "Edge-on loop view distinguishes the 30° plane angle from the complementary normal angle. Schematic; not to scale.",
+    "caption": "Edge-on loop view distinguishes the 30° plane angle from the complementary normal angle. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t9-q4.svg",
+    "width": 760.0,
+    "height": 400.0
+  },
+  {
+    "id": "t9-q5",
+    "alt": "Edge-on loop view distinguishes the 40° plane angle from the complementary normal angle. Schematic; not to scale.",
+    "caption": "Edge-on loop view distinguishes the 40° plane angle from the complementary normal angle. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t9-q5.svg",
+    "width": 760.0,
+    "height": 400.0
+  },
+  {
+    "id": "t9-q6",
+    "alt": "A projected helix separates forward motion along the field from circular motion across it; handedness is not depicted. Schematic; not to scale.",
+    "caption": "A projected helix separates forward motion along the field from circular motion across it; handedness is not depicted. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t9-q6.svg",
+    "width": 760.0,
+    "height": 400.0
+  },
+  {
+    "id": "t9-q7",
+    "alt": "A projected helix separates forward motion along the field from circular motion across it; handedness is not depicted. Schematic; not to scale.",
+    "caption": "A projected helix separates forward motion along the field from circular motion across it; handedness is not depicted. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t9-q7.svg",
+    "width": 760.0,
+    "height": 400.0
+  },
+  {
+    "id": "t9-q8",
+    "alt": "Illustrative out-of-page field: magnetic force stays radial while velocity stays tangent to the orbit. Schematic; not to scale.",
+    "caption": "Illustrative out-of-page field: magnetic force stays radial while velocity stays tangent to the orbit. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t9-q8.svg",
+    "width": 760.0,
+    "height": 400.0
+  },
+  {
+    "id": "t9-q9",
+    "alt": "Illustrative out-of-page field: magnetic force stays radial while velocity stays tangent to the orbit. Schematic; not to scale.",
+    "caption": "Illustrative out-of-page field: magnetic force stays radial while velocity stays tangent to the orbit. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t9-q9.svg",
+    "width": 760.0,
+    "height": 400.0
+  },
+  {
+    "id": "t9-q10",
+    "alt": "A proton gains kinetic energy before entering the perpendicular magnetic field. The shown bend illustrates an into-page field. Schematic; not to scale.",
+    "caption": "A proton gains kinetic energy before entering the perpendicular magnetic field. The shown bend illustrates an into-page field. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t9-q10.svg",
+    "width": 760.0,
+    "height": 400.0
+  },
+  {
+    "id": "t9-q11",
+    "alt": "Crossed fields balance electric and magnetic forces on the selected proton speed. Schematic; not to scale.",
+    "caption": "Crossed fields balance electric and magnetic forces on the selected proton speed. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t9-q11.svg",
+    "width": 760.0,
+    "height": 400.0
+  },
+  {
+    "id": "t10-q1",
+    "alt": "The observation point is two metres from each perpendicular wire. Their field contributions are orthogonal. Schematic; not to scale.",
+    "caption": "The observation point is two metres from each perpendicular wire. Their field contributions are orthogonal. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t10-q1.svg",
+    "width": 760.0,
+    "height": 400.0
+  },
+  {
+    "id": "t10-q2",
+    "alt": "Current directions in three parallel wires determine the signed into-page field at the origin. Schematic; not to scale.",
+    "caption": "Current directions in three parallel wires determine the signed into-page field at the origin. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t10-q2.svg",
+    "width": 760.0,
+    "height": 400.0
+  },
+  {
+    "id": "t10-q3",
+    "alt": "Quarter-circle and three-quarter-circle arc contributions point into the page; radial connectors contribute zero at P. Schematic; not to scale.",
+    "caption": "Quarter-circle and three-quarter-circle arc contributions point into the page; radial connectors contribute zero at P. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t10-q3.svg",
+    "width": 760.0,
+    "height": 400.0
+  },
+  {
+    "id": "t10-q4",
+    "alt": "Two parallel wires are separated by 6 mm. Magnitudes determine the larger current without selecting attraction or repulsion. Schematic; not to scale.",
+    "caption": "Two parallel wires are separated by 6 mm. Magnitudes determine the larger current without selecting attraction or repulsion. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t10-q4.svg",
+    "width": 760.0,
+    "height": 400.0
+  },
+  {
+    "id": "t10-q5",
+    "alt": "For the top wire, equal attractive forces combine toward the midpoint of the opposite side. Schematic; not to scale.",
+    "caption": "For the top wire, equal attractive forces combine toward the midpoint of the opposite side. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t10-q5.svg",
+    "width": 760.0,
+    "height": 400.0
+  },
+  {
+    "id": "t10-q6",
+    "alt": "The dashed Amperian circle encloses only part of the conducting annulus plus the central wire. Schematic; not to scale.",
+    "caption": "The dashed Amperian circle encloses only part of the conducting annulus plus the central wire. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t10-q6.svg",
+    "width": 760.0,
+    "height": 400.0
+  },
+  {
+    "id": "t10-q7",
+    "alt": "At the interior point, the wire field is tangential and the solenoid field is axial, so they add orthogonally. Schematic; not to scale.",
+    "caption": "At the interior point, the wire field is tangential and the solenoid field is axial, so they add orthogonally. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t10-q7.svg",
+    "width": 760.0,
+    "height": 400.0
+  },
+  {
+    "id": "t10-q8",
+    "alt": "The shaded inner area is the surface used for flux, not the full solenoid cross-section. Schematic; not to scale.",
+    "caption": "The shaded inner area is the surface used for flux, not the full solenoid cross-section. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t10-q8.svg",
+    "width": 760.0,
+    "height": 400.0
+  },
+  {
+    "id": "t10-q9",
+    "alt": "The dashed Amperian circle encloses only part of the conducting annulus; the central hole is empty. Schematic; not to scale.",
+    "caption": "The dashed Amperian circle encloses only part of the conducting annulus; the central hole is empty. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t10-q9.svg",
+    "width": 760.0,
+    "height": 400.0
+  },
+  {
+    "id": "t10-q10",
+    "alt": "Doubling both turns and length preserves turn density and the ideal internal field. Schematic; not to scale.",
+    "caption": "Doubling both turns and length preserves turn density and the ideal internal field. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t10-q10.svg",
+    "width": 760.0,
+    "height": 400.0
+  },
+  {
+    "id": "t11-q1",
+    "alt": "At P above the midpoint, the two field vectors have opposite vertical components and equal rightward components. Schematic; not to scale.",
+    "caption": "At P above the midpoint, the two field vectors have opposite vertical components and equal rightward components. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t11-q1.svg",
+    "width": 760.0,
+    "height": 400.0
+  },
+  {
+    "id": "t11-q2",
+    "alt": "Sinusoidal field crosses zero at 0.10 s with a steep negative slope, so the induced current magnitude is maximal. Schematic; not to scale.",
+    "caption": "Sinusoidal field crosses zero at 0.10 s with a steep negative slope, so the induced current magnitude is maximal. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t11-q2.svg",
+    "width": 760.0,
+    "height": 400.0
+  },
+  {
+    "id": "t11-q3",
+    "alt": "The loop below an increasing rightward current induces counterclockwise current to oppose the growing into-page flux. Schematic; not to scale.",
+    "caption": "The loop below an increasing rightward current induces counterclockwise current to oppose the growing into-page flux. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t11-q3.svg",
+    "width": 760.0,
+    "height": 400.0
+  },
+  {
+    "id": "t11-q4",
+    "alt": "The rectangle becomes longer and narrower; the unequal dimensions make the total area decrease. Schematic; not to scale.",
+    "caption": "The rectangle becomes longer and narrower; the unequal dimensions make the total area decrease. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t11-q4.svg",
+    "width": 760.0,
+    "height": 400.0
+  },
+  {
+    "id": "t11-q5",
+    "alt": "The shaded inner area is the surface used for flux, not the full solenoid cross-section. Schematic; not to scale.",
+    "caption": "The shaded inner area is the surface used for flux, not the full solenoid cross-section. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t11-q5.svg",
+    "width": 760.0,
+    "height": 400.0
+  },
+  {
+    "id": "t11-q6",
+    "alt": "Applied force balances magnetic drag on the moving rod. Mechanical power becomes resistor heating; field polarity is unspecified. Schematic; not to scale.",
+    "caption": "Applied force balances magnetic drag on the moving rod. Mechanical power becomes resistor heating; field polarity is unspecified. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t11-q6.svg",
+    "width": 760.0,
+    "height": 400.0
+  },
+  {
+    "id": "t11-q7",
+    "alt": "Positive charges are driven toward the left end A as the bar moves upward through the into-page field. Schematic; not to scale.",
+    "caption": "Positive charges are driven toward the left end A as the bar moves upward through the into-page field. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t11-q7.svg",
+    "width": 760.0,
+    "height": 400.0
+  },
+  {
+    "id": "t11-q8",
+    "alt": "Velocity grows with distance from the pivot. Positive charge is pushed inward; the requested integral stops at the rod midpoint. Schematic; not to scale.",
+    "caption": "Velocity grows with distance from the pivot. Positive charge is pushed inward; the requested integral stops at the rod midpoint. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t11-q8.svg",
+    "width": 760.0,
+    "height": 400.0
+  },
+  {
+    "id": "t11-q9",
+    "alt": "Moving a magnet, moving a coil, or changing a nearby current can each change magnetic flux linkage. Schematic; not to scale.",
+    "caption": "Moving a magnet, moving a coil, or changing a nearby current can each change magnetic flux linkage. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t11-q9.svg",
+    "width": 760.0,
+    "height": 400.0
+  },
+  {
+    "id": "t11-q10",
+    "alt": "Viewed from above, induced current is counterclockwise during approach and clockwise during departure of the falling magnet. Schematic; not to scale.",
+    "caption": "Viewed from above, induced current is counterclockwise during approach and clockwise during departure of the falling magnet. Schematic; not to scale.",
+    "url": "tutorial-diagrams/t11-q10.svg",
+    "width": 760.0,
+    "height": 400.0
+  },
+  {
+    "id": "vectors-dot-ex1",
+    "alt": "Force and displacement share an origin; their relative angle is 45°. Schematic, not to scale.",
+    "caption": "Force and displacement share an origin; their relative angle is 45°. Schematic, not to scale.",
+    "url": "tutorial-diagrams/vectors-dot-ex1.svg",
+    "width": 760.0,
+    "height": 380.0
+  },
+  {
+    "id": "vectors-dot-ex2",
+    "alt": "Dashed projections identify the x components; the dot product adds the matching component products. Schematic.",
+    "caption": "Dashed projections identify the x components; the dot product adds the matching component products. Schematic.",
+    "url": "tutorial-diagrams/vectors-dot-ex2.svg",
+    "width": 760.0,
+    "height": 380.0
+  },
+  {
+    "id": "vectors-dot-1",
+    "alt": "The 15 N force is 10° above the 1.15 m displacement. Arrow lengths are schematic.",
+    "caption": "The 15 N force is 10° above the 1.15 m displacement. Arrow lengths are schematic.",
+    "url": "tutorial-diagrams/vectors-dot-1.svg",
+    "width": 760.0,
+    "height": 380.0
+  },
+  {
+    "id": "vectors-dot-2",
+    "alt": "Force lies in quadrant I and displacement in quadrant III; the angle is about 140°, giving negative work. Schematic.",
+    "caption": "Force lies in quadrant I and displacement in quadrant III; the angle is about 140°, giving negative work. Schematic.",
+    "url": "tutorial-diagrams/vectors-dot-2.svg",
+    "width": 760.0,
+    "height": 380.0
+  },
+  {
+    "id": "vectors-dot-3",
+    "alt": "East is right and north is up. The two vectors are 60° apart, although their compass bearings use different reference directions. Schematic.",
+    "caption": "East is right and north is up. The two vectors are 60° apart, although their compass bearings use different reference directions. Schematic.",
+    "url": "tutorial-diagrams/vectors-dot-3.svg",
+    "width": 760.0,
+    "height": 380.0
+  },
+  {
+    "id": "vectors-dot-4",
+    "alt": "Force points southwest and displacement northeast; their obtuse angle gives negative work. Schematic.",
+    "caption": "Force points southwest and displacement northeast; their obtuse angle gives negative work. Schematic.",
+    "url": "tutorial-diagrams/vectors-dot-4.svg",
+    "width": 760.0,
+    "height": 380.0
+  },
+  {
+    "id": "vectors-dot-5",
+    "alt": "The vectors give about 140° for practice 2 and 127° for practice 4. The handout’s 94° answer for practice 2 is incorrect. Schematic.",
+    "caption": "The vectors give about 140° for practice 2 and 127° for practice 4. The handout’s 94° answer for practice 2 is incorrect. Schematic.",
+    "url": "tutorial-diagrams/vectors-dot-5.svg",
+    "width": 760.0,
+    "height": 380.0
+  },
+  {
+    "id": "vectors-cross-ex",
+    "alt": "A lever at 45° crossed with a force at 180° gives positive z torque. Vectors are translated to a common origin to compare directions; schematic.",
+    "caption": "A lever at 45° crossed with a force at 180° gives positive z torque. Vectors are translated to a common origin to compare directions; schematic.",
+    "url": "tutorial-diagrams/vectors-cross-ex.svg",
+    "width": 760.0,
+    "height": 380.0
+  },
+  {
+    "id": "vectors-cross-1",
+    "alt": "The force acts downward at the right rim. The 0.140 m radius gives clockwise torque into the page. Schematic.",
+    "caption": "The force acts downward at the right rim. The 0.140 m radius gives clockwise torque into the page. Schematic.",
+    "url": "tutorial-diagrams/vectors-cross-1.svg",
+    "width": 760.0,
+    "height": 380.0
+  },
+  {
+    "id": "vectors-cross-2",
+    "alt": "In the east–up plane, the eastward lever crosses the upward force component to give torque toward south. Schematic.",
+    "caption": "In the east–up plane, the eastward lever crosses the upward force component to give torque toward south. Schematic.",
+    "url": "tutorial-diagrams/vectors-cross-2.svg",
+    "width": 760.0,
+    "height": 380.0
+  },
+  {
+    "id": "vectors-cross-3",
+    "alt": "The lever points into quadrant III and the force into quadrant I. The rotation from R toward F is clockwise, giving negative z torque. Schematic.",
+    "caption": "The lever points into quadrant III and the force into quadrant I. The rotation from R toward F is clockwise, giving negative z torque. Schematic.",
+    "url": "tutorial-diagrams/vectors-cross-3.svg",
+    "width": 760.0,
+    "height": 380.0
+  },
+  {
+    "id": "vectors-cross-4",
+    "alt": "The force at 76° and lever at 216° give directed angle −140° and clockwise torque. Schematic, not to scale.",
+    "caption": "The force at 76° and lever at 216° give directed angle −140° and clockwise torque. Schematic, not to scale.",
+    "url": "tutorial-diagrams/vectors-cross-4.svg",
+    "width": 760.0,
+    "height": 380.0
+  }
+]

@@ -6,6 +6,15 @@
  const nonnegative=v=>{const n=number(v);return n!==null&&n>=0?n:null;};
  const area=d=>Math.PI*(d/1000)**2/4;
  const fmt=(n,d=5)=>n===null||n===undefined||!Number.isFinite(n)?'—':n!==0&&(Math.abs(n)>=1e5||Math.abs(n)<.001)?Number(n.toPrecision(d)).toExponential().replace('e+','e'):Number(n.toPrecision(d)).toString();
+ // Meter accuracy: percentage of the reading plus a number of least-significant digits.
+ function resistanceUncertainty(reading,percent,digits,resolution,offset=0){
+  const r=positive(reading),p=nonnegative(percent),n=nonnegative(digits),q=positive(resolution),o=nonnegative(offset);
+  return r===null||p===null||n===null||!Number.isInteger(n)||q===null||o===null?null:r*p/100+n*q+o;
+ }
+ function resistanceDelta(d,prefix,i){
+  if(d.resistanceMode==='auto'&&positive(d.rRange)!==null&&positive(d[prefix+i+'R'])>positive(d.rRange))return null;
+  return d.resistanceMode==='auto'?resistanceUncertainty(d[prefix+i+'R'],d.rPercent,d.rDigits,d.rResolution,d.rOffset??0):nonnegative(d[prefix+i+'dR']);
+ }
  function fit(rows){
   if(rows.length<3)return null;
   const x=rows.reduce((s,p)=>s+p.x,0)/rows.length,y=rows.reduce((s,p)=>s+p.y,0)/rows.length;
@@ -37,13 +46,13 @@
   const areaA=diameter===null?null:area(diameter),dAreaA=areaA===null||dd===null?null:2*areaA*dd/diameter;
   let startedA=0,startedB=0;
   for(let i=0;i<19;i++){
-   const x=positive(d['a'+i+'L']),dx=nonnegative(d['a'+i+'dL']),y=positive(d['a'+i+'R']),dy=nonnegative(d['a'+i+'dR']);
+   const x=positive(d['a'+i+'L']),dx=nonnegative(d['a'+i+'dL']),y=positive(d['a'+i+'R']),dy=resistanceDelta(d,'a',i);
    if(String(d['a'+i+'R']||'').trim())startedA++;
    if(x!==null&&y!==null)A.push({i,x,dx,y,dy});
   }
   const count=Math.max(1,Math.min(20,Number(d.bCount)||6));
   for(let i=0;i<count;i++){
-   const dia=positive(d['b'+i+'d']),delta=nonnegative(d['b'+i+'dd']),y=positive(d['b'+i+'R']),dy=nonnegative(d['b'+i+'dR']);
+   const dia=positive(d['b'+i+'d']),delta=nonnegative(d['b'+i+'dd']),y=positive(d['b'+i+'R']),dy=resistanceDelta(d,'b',i);
    if(['d','dd','R','dR','g'].some(k=>String(d['b'+i+k]||'').trim()))startedB++;
    if(dia!==null&&y!==null){const a=area(dia),da=delta===null?null:2*a*delta/dia;B.push({i,d:dia,dd:delta,area:a,dArea:da,x:1/a,dx:da===null?null:da/a**2,y,dy});}
   }
@@ -77,6 +86,6 @@
   for(const [key,label] of [['observations','observations'],['discussion','discussion'],['conclusion','conclusion']])if(!d[key]?.trim())issues.push('Write your '+label+'.');
   return {A,B,af,bf,au,bu,aBounds,bBounds,diameter,dd,areaA,dAreaA,length,dl,rhoA,rhoB,drhoA,drhoB,accepted,difference,combined,consistent,issues,complete:issues.length===0,percentA:rhoA!==null&&accepted?100*Math.abs(rhoA-accepted)/accepted:null,percentB:rhoB!==null&&accepted?100*Math.abs(rhoB-accepted)/accepted:null};
  }
- const api={number,positive,nonnegative,area,fmt,fit,bounds,intercept,analyze};
+ const api={resistanceUncertainty,resistanceDelta,number,positive,nonnegative,area,fmt,fit,bounds,intercept,analyze};
  if(typeof module!=='undefined')module.exports=api;root.Lab7Math=api;
 })(typeof window==='undefined'?globalThis:window);

@@ -1,0 +1,33 @@
+/* Opt-in: the original site's styles are untouched when Original is selected. */
+.report-style-control{display:flex;align-items:center;gap:.6rem;font:12px/1.4 system-ui,sans-serif;color:inherit;flex-wrap:wrap}
+.report-style-control select{display:inline-block;margin:0;padding:.45rem .65rem;border:1px solid var(--line,#aaa);border-radius:4px;background:var(--paper,var(--surface,#fff));color:inherit;font:inherit;max-width:100%}
+.sidebar>.report-style-control{margin-top:16px;padding:12px 8px;border-top:1px solid var(--line,#ddd)}
+html[data-study-style=report]{--report-font:Georgia,'Times New Roman',serif;--report-rule:#b5b2aa}
+html[data-study-style=report] body{--bg:#f5f3ed;--paper:#fffefb;--surface:#fffefb;--ink:#242420;--text:#242420;--muted:#625f57;--line:#d2cec3;--accent:#315860;--soft:#efede5;--shadow:none;background:var(--bg);color:var(--ink);font-family:var(--report-font);line-height:1.7}
+html[data-study-style=report] body.dark{--bg:#1c1d1c;--paper:#242623;--surface:#242623;--ink:#eeeae0;--text:#eeeae0;--muted:#bbb7ab;--line:#55584e;--accent:#b9d5cf;--soft:#30342d;--report-rule:#66695f}
+html[data-study-style=report] :is(h1,h2,h3,h4,.brand){font-family:var(--report-font);letter-spacing:normal}
+html[data-study-style=report] h1{font-size:clamp(1.8rem,3.4vw,2.65rem);font-weight:700;line-height:1.25}
+html[data-study-style=report] h2{font-size:1.3rem;border-bottom:1px solid var(--report-rule);padding-bottom:.4rem;margin-top:1.7rem;margin-bottom:1rem}
+html[data-study-style=report] h3{font-size:1.1rem;line-height:1.45}
+html[data-study-style=report] :is(p,li){line-height:1.75}
+html[data-study-style=report] body>main{max-width:960px;background:var(--paper);padding:48px 64px;min-height:60vh}
+html[data-study-style=report] .shell>main{background:var(--paper);margin:28px auto;max-width:1120px}
+html[data-study-style=report] :is(section,.lesson-card,.resource-card,.course-card,.panel,.notice,.worked,.learning-callout){border-radius:0;box-shadow:none}
+html[data-study-style=report] :is(section,.lesson-card,.resource-card,.course-card){background:transparent}
+html[data-study-style=report] :is(section,.notice,.worked){border-color:var(--line)}
+html[data-study-style=report] section{padding:20px 0;border-left:0;border-right:0}
+html[data-study-style=report] .lead{font-size:1.1rem;line-height:1.75}
+html[data-study-style=report] .eyebrow{font-family:system-ui,sans-serif;font-weight:500;font-size:.72rem;letter-spacing:.1em;color:var(--muted)}
+html[data-study-style=report] :is(table){border-collapse:collapse;width:100%}
+html[data-study-style=report] :is(td,th){border:1px solid var(--line);padding:8px 12px}
+html[data-study-style=report] th{background:var(--soft)}
+html[data-study-style=report] figure{margin:28px auto;text-align:center}
+html[data-study-style=report] figcaption{font: .85rem/1.6 var(--report-font);color:var(--muted);margin-top:10px}
+html[data-study-style=report] .katex-display{margin:24px 0;padding:4px 0;overflow-x:auto;overflow-y:hidden}
+html[data-study-style=report] :is(button,.button,input,select,textarea,.tabs,.topbar,.sidebar nav,.report-style-control){font-family:system-ui,sans-serif}
+html[data-study-style=report] :is(button,.button){border-radius:4px}
+html[data-study-style=report] details{border-color:var(--line);border-radius:0;background:transparent}
+html[data-study-style=report] summary{color:var(--ink)}
+html[data-study-style=report] .grid{gap:20px}
+@media(max-width:760px){html[data-study-style=report] body>main{padding:28px 20px}html[data-study-style=report] .shell>main{margin:0} .sidebar>.report-style-control{display:flex;margin-top:14px;padding:10px 0}html[data-study-style=report] h2{font-size:1.2rem}}
+@media print{.report-style-control{display:none!important}html[data-study-style=report] body{background:#fff;color:#111;--paper:#fff;--ink:#111;--text:#111;--muted:#444;--line:#bbb}html[data-study-style=report] body>main{max-width:none;padding:0}html[data-study-style=report] h2{break-after:avoid}html[data-study-style=report] :is(figure,.katex-display){break-inside:avoid}}

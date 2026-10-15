@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400" role="img" aria-labelledby="title desc">
+<title id="title">Charge ratio from field-line counts</title><desc id="desc">The diagram shows field lines leaving upper charge q₂, with some ending on lower charge q₁. Determine (a) q₁/q₂ and (b) both signs.</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="context-stroke"/></marker></defs><rect width="800" height="400" fill="#fffefa"/>
+<text x="25" y="30" font-family="Arial, sans-serif" font-size="20" fill="#253840" text-anchor="start">T3-Q23-40  ·  Charge ratio from field-line counts</text>
+<path d="M25 45L775 45" fill="none" stroke="#d6dedd" stroke-width="1"/>
+<text x="25" y="383" font-family="Arial, sans-serif" font-size="14" fill="#69777d" text-anchor="start">SCHEMATIC · not to scale unless axes are numbered</text>
+<circle cx="190" cy="115" r="17" fill="#fffefa" stroke="#be4949" stroke-width="2"/>
+<text x="190" y="121" font-family="Arial, sans-serif" font-size="22" fill="#be4949" text-anchor="middle">+</text>
+<text x="190" y="159" font-family="Arial, sans-serif" font-size="17" fill="#253840" text-anchor="middle"></text>
+<text x="75" y="115" font-family="Arial, sans-serif" font-size="18" fill="#253840" text-anchor="start">q₂ &gt; 0</text>
+<circle cx="190" cy="275" r="17" fill="#fffefa" stroke="#137b80" stroke-width="2"/>
+<text x="190" y="281" font-family="Arial, sans-serif" font-size="22" fill="#137b80" text-anchor="middle">−</text>
+<text x="190" y="319" font-family="Arial, sans-serif" font-size="17" fill="#253840" text-anchor="middle">q₁ &lt; 0</text>
+<path d="M190 140L190 245" fill="none" stroke="#137b80" stroke-width="4"/>
+<polygon points="190,245 194.5,235.0 185.5,235.0" fill="#137b80"/>
+<text x="220" y="200" font-family="Arial, sans-serif" font-size="18" fill="#253840" text-anchor="start">6 lines terminate</text>
+<path d="M215 100L340 80" fill="none" stroke="#be4949" stroke-width="4"/>
+<polygon points="340,80 329.4146364258529,77.13642216744155 330.83655093581297,86.0233878546919" fill="#be4949"/>
+<text x="250" y="125" font-family="Arial, sans-serif" font-size="18" fill="#253840" text-anchor="start">12 escape to ∞</text>
+<text x="480" y="100" font-family="Arial, sans-serif" font-size="17" fill="#253840" text-anchor="start">Line-count balance:</text>
+<text x="480" y="130" font-family="Arial, sans-serif" font-size="17" fill="#253840" text-anchor="start">18 leave q₂ in total.</text>
+<text x="480" y="160" font-family="Arial, sans-serif" font-size="17" fill="#253840" text-anchor="start">6 end on q₁; 12 go outward.</text>
+<text x="480" y="190" font-family="Arial, sans-serif" font-size="17" fill="#253840" text-anchor="start">q₁/q₂ = −6/18 = −1/3</text>
+<text x="480" y="220" font-family="Arial, sans-serif" font-size="17" fill="#253840" text-anchor="start">Arrows represent line bundles.</text>
+</svg>

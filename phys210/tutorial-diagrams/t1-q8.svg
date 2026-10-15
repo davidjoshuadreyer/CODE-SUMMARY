@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400" role="img" aria-labelledby="title desc">
+<title id="title">Two positive charges from total charge and force</title><desc id="desc">Two positive spheres have total charge 40 μC, are separated by 0.50 m, and repel with force 2.0 N. Find the smaller charge.</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="context-stroke"/></marker></defs><rect width="800" height="400" fill="#fffefa"/>
+<text x="25" y="30" font-family="Arial, sans-serif" font-size="20" fill="#253840" text-anchor="start">T1-Q8  ·  Two positive charges from total charge and force</text>
+<path d="M25 45L775 45" fill="none" stroke="#d6dedd" stroke-width="1"/>
+<text x="25" y="383" font-family="Arial, sans-serif" font-size="14" fill="#69777d" text-anchor="start">SCHEMATIC · not to scale unless axes are numbered</text>
+<circle cx="145" cy="190" r="17" fill="#fffefa" stroke="#be4949" stroke-width="2"/>
+<text x="145" y="196" font-family="Arial, sans-serif" font-size="22" fill="#be4949" text-anchor="middle">+</text>
+<text x="145" y="234" font-family="Arial, sans-serif" font-size="17" fill="#253840" text-anchor="middle">q</text>
+<circle cx="365" cy="190" r="17" fill="#fffefa" stroke="#be4949" stroke-width="2"/>
+<text x="365" y="196" font-family="Arial, sans-serif" font-size="22" fill="#be4949" text-anchor="middle">+</text>
+<text x="365" y="234" font-family="Arial, sans-serif" font-size="17" fill="#253840" text-anchor="middle">40 μC − q</text>
+<path d="M120 190L55 190" fill="none" stroke="#be4949" stroke-width="3"/>
+<polygon points="55,190 65.0,194.5 65.0,185.5" fill="#be4949"/>
+<path d="M390 190L455 190" fill="none" stroke="#be4949" stroke-width="3"/>
+<polygon points="455,190 445.0,185.5 445.0,194.5" fill="#be4949"/>
+<text x="55" y="155" font-family="Arial, sans-serif" font-size="18" fill="#253840" text-anchor="start">2.0 N</text>
+<text x="390" y="155" font-family="Arial, sans-serif" font-size="18" fill="#253840" text-anchor="start">2.0 N</text>
+<path d="M145 265L365 265" fill="none" stroke="#253840" stroke-width="2"/>
+<text x="255" y="292" font-family="Arial, sans-serif" font-size="18" fill="#253840" text-anchor="middle">0.50 m</text>
+<text x="480" y="100" font-family="Arial, sans-serif" font-size="17" fill="#253840" text-anchor="start">Both charges are positive.</text>
+<text x="480" y="130" font-family="Arial, sans-serif" font-size="17" fill="#253840" text-anchor="start">Forces repel; magnitudes equal.</text>
+<text x="480" y="160" font-family="Arial, sans-serif" font-size="17" fill="#253840" text-anchor="start">q₁ + q₂ = 40 μC</text>
+<text x="480" y="190" font-family="Arial, sans-serif" font-size="17" fill="#253840" text-anchor="start">q₁q₂ = Fr²/k</text>
+</svg>
