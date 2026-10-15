@@ -1,0 +1,49 @@
+/* Editorial reading surface shared by all generated course pages. */
+html body{font-family:var(--font-body);background:var(--bg);color:var(--ink)}
+body>header{background:var(--bg);padding-top:27px;padding-bottom:27px;gap:25px}
+body>header .brand{font-family:var(--font-heading);letter-spacing:-1.2px;font-size:25px;color:var(--ink)}
+body>header nav{font-size:13px;gap:18px}
+body>header nav a{text-decoration:none;color:var(--muted)}
+body>header nav a:hover{color:var(--accent);text-decoration:underline}
+body>main{padding-top:48px;padding-bottom:64px}
+body h1{font-family:var(--font-editorial);font-size:clamp(36px,4.6vw,60px);font-weight:400;letter-spacing:-1.8px;line-height:1.08;max-width:1000px;margin:22px 0 25px;text-wrap:balance}
+body h2{font-family:var(--font-editorial);font-weight:400;font-size:29px;letter-spacing:-.6px;line-height:1.25}
+body h3{font-family:var(--font-heading);font-weight:600;letter-spacing:-.4px;line-height:1.45}
+body .eyebrow{color:var(--rust);font-size:10px;letter-spacing:1.7px;font-weight:600}
+body .lead{font-size:18px;line-height:1.75;color:var(--muted);max-width:750px}
+body main>section{border:0;border-top:1px solid var(--line);border-radius:0;background:transparent;padding:30px 0;margin:34px 0}
+body .lesson-card{border:1px solid var(--line);border-radius:9px;background:var(--paper);padding:27px;transition:border-color .15s,transform .15s}
+body .lesson-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+body .lesson-card h2{font-size:27px}
+body .lesson-card p{font-size:14px;line-height:1.8}
+body .learning-callout,body.dark .learning-callout{background:var(--hero);border:1px solid var(--line);border-radius:9px;padding:30px;margin:30px 0}
+body .learning-callout h2{font-size:32px}
+body .learning-callout p{font-size:15px;color:var(--muted)}
+body .learning-path{list-style:none;padding:0;counter-reset:lesson}
+body .learning-path li{padding:27px 0 27px 52px;position:relative;counter-increment:lesson;border-bottom:1px solid var(--line)}
+body .learning-path li::before{content:counter(lesson,decimal-leading-zero);position:absolute;left:0;top:27px;font:22px var(--font-editorial);color:var(--rust)}
+body .learning-path h2{font-family:var(--font-heading);font-size:20px;font-weight:500;letter-spacing:-.5px;margin:9px 0}
+body .learning-path h2 a{color:var(--ink);text-decoration:none}
+body .learning-path h2 a:hover{text-decoration:underline}
+body .learning-path p{font-size:14px;color:var(--muted);margin-bottom:0}
+body .notice,body .worked{border-left-width:2px;border-radius:0 8px 8px 0;background:var(--soft);padding:24px}
+body .practice-question{border-radius:10px;background:var(--paper);padding:28px}
+body .solution-panel,body.dark .solution-panel{background:var(--soft);border-radius:8px}
+body button,body .button,body select{font-family:var(--font-body);font-size:14px;border-radius:6px;line-height:1.5}
+body .primary,body.dark .primary{background:var(--accent);color:var(--on-accent)}
+body button:hover:not(:disabled),body .button:hover{border-color:var(--accent)}
+body .option{border-radius:6px;padding:15px;background:var(--paper)}
+body .option:has(input:checked){background:var(--soft)}
+body details{padding:19px 0}
+body summary{font-weight:500;font-size:15px}
+body .lesson-toc{font-size:13px;gap:12px 24px;padding:20px 0 26px}
+body .material h3{font-family:var(--font-heading);font-size:18px;font-weight:500}
+body main>p{max-width:82ch}
+body main img,body main svg{max-width:100%}
+body .sources{font-size:13px;line-height:1.8}
+body footer{font-size:12px;padding-top:25px;padding-bottom:35px}
+@media(max-width:760px){body>header{padding:22px 20px;align-items:flex-start;flex-direction:column;gap:14px}body>header nav{gap:8px 18px}body>header nav a{display:inline-flex;align-items:center;min-height:40px}body>main{padding:30px 20px 45px}body h1{font-size:38px;letter-spacing:-1.2px;overflow-wrap:anywhere}body h2{font-size:27px}body .lead{font-size:17px}body main>section{padding:25px 0;margin:26px 0}body .learning-callout,body .practice-question{padding:22px}body .learning-path li{padding-left:36px}body .learning-path li::before{font-size:18px}body .learning-path h2{font-size:19px}body .lesson-card{padding:23px}body .notice,body .worked{padding:19px}body input:not([type=checkbox]):not([type=radio]),body select,body textarea{font-size:16px}body button,body .button{min-height:44px}body .actions{gap:10px}body .actions .button{max-width:100%;overflow-wrap:anywhere}}
+@media(prefers-reduced-motion:reduce){body .lesson-card{transition:none}}
+@media print{body{background:white;color:black;font-family:Georgia,serif}body>main{padding:0;max-width:none}body h1{font-size:30px}body h2{font-size:22px}body main>section{padding:15px 0;margin:15px 0}body .learning-callout,body .worked,body .notice{background:transparent;color:black}body .lesson-card{transform:none}}
+body main>section>p{max-width:78ch}
+body .problem-layout>*{min-width:0}body .problem-facts dd{overflow-wrap:anywhere}body .practice-toolbar select{max-width:100%}body .practice-question textarea{min-width:0}

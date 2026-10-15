@@ -1,0 +1,49 @@
+@import url('./tokens.css');
+/* A conservative reading skin for older, self-contained tools. Keep their
+   grids, science diagrams, semantic answer colors, and interaction rules. */
+@media screen {
+  html body{background:var(--bg);color:var(--ink);font-family:var(--font-body)}
+  html body h1{font-family:var(--font-editorial);font-weight:400;color:var(--ink);letter-spacing:-1.3px;line-height:1.15;font-size:clamp(30px,4vw,48px)}
+  html body h2{font-family:var(--font-editorial);font-weight:400;color:var(--ink);line-height:1.3}
+  html body h3{font-family:var(--font-heading);color:var(--ink);line-height:1.45}
+  html body .eyebrow{font-size:10px;color:var(--rust);letter-spacing:1.5px}
+  html body>nav,html body>header,html body .topbar{background:var(--bg);color:var(--ink);border-color:var(--line)}
+  html body nav a{color:var(--accent)}
+  html body .nav-brand{font-family:var(--font-heading);color:var(--ink)}
+  html body .subtitle,html body .intro,html body .note{color:var(--muted)}
+  html body .card,html body .panel,html body .topic,html body .formula-box{background:var(--paper);border-color:var(--line);border-radius:9px}
+  html body button,html body .button{font-family:var(--font-body);border-radius:6px}
+  html body input:not([type=checkbox]):not([type=radio]),html body textarea,html body select{background:var(--paper);color:var(--ink);border-color:var(--line)}
+  html body :focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+  html body .section-header{border-color:var(--line);color:var(--ink)}
+  html body .section-header h2{color:var(--ink)}
+  html body .section-num{background:var(--accent);color:var(--on-accent)}
+  html body .primary{background:var(--accent);color:var(--on-accent)}
+}
+@media screen and (max-width:640px){html body input:not([type=checkbox]):not([type=radio]),html body textarea,html body select{font-size:16px}html body button,html body .button{min-height:44px}}
+@media screen and (max-width:760px){html body table{display:block;max-width:100%;overflow-x:auto}html body .page,html body main{min-width:0}html body pre{max-width:100%;overflow-x:auto}}
+@media screen{
+ html body h1,html body .section-header h2,html body .nav-brand{background-image:none;-webkit-text-fill-color:currentColor}
+ html body p,html body ul,html body ol{color:var(--muted)}
+ html body .card-title{color:var(--accent)}
+ html body pre,html body code{background:var(--soft);color:var(--ink);border-color:var(--line)}
+ html body pre .comment,html body pre .out{color:var(--muted)}
+ html body pre .kw,html body pre .fn,html body pre .str{color:var(--accent)}
+ html body pre .num,html body pre .op{color:var(--rust)}
+ html body th{background:var(--soft);color:var(--accent)}
+ html body td,html body tr:nth-child(even) td{background:var(--paper);color:var(--ink);border-color:var(--line)}
+ html body .tip,html body .note{background:var(--soft);color:var(--ink);border-color:var(--line)}
+ html body .tip strong,html body .note strong{color:var(--accent)}
+ html body .grid-2>*,html body .grid>*{min-width:0}
+ html body .back-top{background:var(--paper);color:var(--accent);border-color:var(--line)}
+}
+@media screen{
+ html body .output{max-width:100%;overflow-x:auto;background:var(--soft);color:var(--ink);border-color:var(--line)}
+ html body .step-body,html body .step-body strong,html body .mat-eq{color:var(--ink)}
+ html body .mat-step-label,html body .mat-step-note{color:var(--accent)}
+ html body .bmat{display:table}
+ html body .bmat tr td,html body .bmat tr:nth-child(even) td{background:transparent;color:var(--ink)}
+ html body .bmat tr td.bad{color:var(--bad)}
+ html body .bmat-outer{max-width:100%;overflow-x:auto}
+ html body .bmat-outer::before,html body .bmat-outer::after{border-color:var(--muted)}
+}

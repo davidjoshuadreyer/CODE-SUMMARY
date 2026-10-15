@@ -180,3 +180,13 @@ The existing owner-restricted progress row stores this lab under `__phys210_lab7
 Run `node dev/lab7-account-test.cjs` and `node dev/lab7-test.cjs` (the latter needs `exceljs@4.4.0` and `jszip@3.10.1` on `NODE_PATH`). Synthetic test data are written only to a temporary directory. Browser checks should use localhost guest storage, never a real account's measurements. `assets/vendor/lab-export` contains the browser builds of ExcelJS 4.4.0, docx 9.5.1 and JSZip 3.10.1 with their licenses; libraries load only on export. Site development uses the existing repository and hosting, not a separate Sites project.
 
 Experiment 7 report styling: `phys210/lab7-figures/` contains labelled setup, length-path, and analysis SVGs. Procedure figures are included in the live report preview, print/PDF, and Word export. The page uses serif report typography, ruled tables, and numbered report sections.
+
+## Studio + Fieldnotes design (October 15, 2026)
+
+The workspace, planner, and reference viewer use the Studio layout; course hubs and lesson pages use Fieldnotes typography. Shared colors, fonts, and light/dark tokens live in `assets/design/tokens.css`. `workspace.css` imports `studio.css`, and `engr290/course.css` imports `fieldnotes.css`; existing course generators inherit the new design through those entry points. The wave and lattice SVGs are original decorative artwork, not measurements or progress indicators.
+
+The home feature links to an actual course in the selected semester and the daily plan. Course/page/reference counts remain derived from the existing workspace state. No sample completion percentages, new storage keys, data migrations, or account changes are introduced. Existing course URLs and functional JavaScript are retained.
+
+Older standalone study pages and tools use `assets/design/legacy.css`, which preserves their specialized layouts and print styles. After rebuilding any standalone legacy pages, run `node dev/apply-design.cjs` to restore that stylesheet link. The script is idempotent. World/game experiences and source files such as PDFs remain separate from the study-interface design.
+
+Validation: JavaScript syntax, existing cloud adapter contract tests, planner engine, memory scheduling and recall tests; browser checks of workspace navigation, course tabs, dialogs, reference filtering, lesson disclosures, dark appearance, and representative 390px mobile layouts. Planner tests use the repository's pinned browser FSRS bundle through a temporary Node module alias when the npm dependency is absent locally. Signed-in cloud UI is not exercised by the visual checks.

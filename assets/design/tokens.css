@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+/* Tesselate Studio + Fieldnotes. Both application and lesson vocabularies
+   share these tokens so existing controls retain their behavior and states. */
+:root {
+  color-scheme: light;
+  --bg: #f6f7f1;
+  --surface: #fffef9;
+  --paper: #fffef9;
+  --text: #25392e;
+  --ink: #25392e;
+  --muted: #63705f;
+  --line: #dce1d4;
+  --accent: #315d40;
+  --soft: #e8eedc;
+  --green: #356e4b;
+  --good: #226440;
+  --bad: #ae3541;
+  --rust: #a34e2d;
+  --sidebar: #eff2e9;
+  --hero: #e7edd9;
+  --on-accent: #fffef9;
+  --shadow: 0 6px 24px #263c2704;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-heading: 'Manrope', system-ui, sans-serif;
+  --font-editorial: Georgia, 'Times New Roman', serif;
+}
+body.dark {
+  color-scheme: dark;
+  --bg: #18221c;
+  --surface: #202d24;
+  --paper: #202d24;
+  --text: #edf0e5;
+  --ink: #edf0e5;
+  --muted: #b4beab;
+  --line: #3c4b3d;
+  --accent: #bdd89b;
+  --soft: #30412d;
+  --green: #a0cf9e;
+  --good: #a0cf9e;
+  --bad: #ffabb0;
+  --rust: #e8aa81;
+  --sidebar: #1c271f;
+  --hero: #2b3b27;
+  --on-accent: #1b2a1d;
+  --shadow: none;
+}
