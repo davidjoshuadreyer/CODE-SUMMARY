@@ -1,0 +1,28 @@
+/* Original, static landscape inspired by the user's pastel/grain reference.
+   Decoration stays outside problem content; no animation or external assets. */
+html:not([data-study-style=report]) body{background-image:radial-gradient(ellipse at 90% 0%,#e8ddfa55,transparent 42%),radial-gradient(ellipse at 5% 45%,#ffe2ea35,transparent 40%);background-attachment:fixed}
+html:not([data-study-style=report]) body .sidebar{background:linear-gradient(165deg,var(--sidebar) 45%,#f2e3ed);border-right-color:var(--line)}
+html:not([data-study-style=report]) body.dark .sidebar{background:linear-gradient(165deg,var(--sidebar) 45%,#352537)}
+html:not([data-study-style=report]) body .sidebar nav a.active{background:linear-gradient(110deg,var(--soft),#f6e3ed);box-shadow:inset 3px 0 var(--accent)}
+html:not([data-study-style=report]) body.dark .sidebar nav a.active{background:var(--soft)}
+html:not([data-study-style=report]) body :is(.studio-feature,.learning-intro,.learning-callout){background-color:var(--hero);background-image:radial-gradient(ellipse at 95% 0%,#ffcbdc66,transparent 65%)}
+html:not([data-study-style=report]) body .studio-feature-art{background:url('aurora-landscape.svg') center bottom/cover no-repeat;align-self:stretch}
+html:not([data-study-style=report]) body .studio-feature-art img{opacity:.35;mix-blend-mode:multiply}
+html:not([data-study-style=report]) body .studio-feature-art span{background:var(--paper);padding:7px 12px;border-radius:30px;margin-bottom:24px;color:var(--ink);letter-spacing:1.2px}
+html:not([data-study-style=report]) body .course-top{background:linear-gradient(125deg,#ece3f7,#f8e2e9 65%,#f8e7dd)}
+html:not([data-study-style=report]) body .course-card:nth-child(3n+2) .course-top{background:linear-gradient(125deg,#e4e4fa,#f0e2f2 65%,#f6e2e5)}
+html:not([data-study-style=report]) body .course-card:nth-child(3n+3) .course-top{background:linear-gradient(125deg,#f8e2e9,#f6e6dc 65%,#e9e8d7)}
+html:not([data-study-style=report]) body.dark .course-top{background:linear-gradient(125deg,#3d3150,#493146)}
+html:not([data-study-style=report]) body .course-artwork{filter:hue-rotate(135deg) saturate(.6);opacity:.5}
+html:not([data-study-style=report]) body .report-cover{position:relative;isolation:isolate;overflow:hidden;border-bottom:1px solid var(--line);padding-bottom:95px}
+html:not([data-study-style=report]) body .report-cover:after{content:'';position:absolute;z-index:-1;inset:0;background:url('aurora-landscape.svg') center bottom/100% 190px no-repeat;pointer-events:none;opacity:.85}
+html:not([data-study-style=report]) body.dark .report-cover:after{opacity:.35}
+html:not([data-study-style=report]) body .report-cover .intro-note{max-width:75%;position:relative}
+html:not([data-study-style=report]) body :is(.chapter,.formula-card){box-shadow:0 8px 35px #63467f06}
+html:not([data-study-style=report]) body :is(.solution[open],.result){border-color:var(--accent)}
+html:not([data-study-style=report]) body footer{position:relative;isolation:isolate;max-width:none;min-height:250px;padding-bottom:175px;border-top:1px solid var(--line);background:transparent}
+html:not([data-study-style=report]) body footer:after{content:'';position:absolute;z-index:-1;inset:0;pointer-events:none;background:url('aurora-landscape.svg') center bottom/100% 260px no-repeat}
+html:not([data-study-style=report]) body.dark footer:after{opacity:.4}
+html:not([data-study-style=report]) body>footer{padding-left:max(24px,calc((100% - 950px)/2));padding-right:max(24px,calc((100% - 950px)/2))}
+@media(max-width:760px){html:not([data-study-style=report]) body footer:after{background-size:auto 220px}html:not([data-study-style=report]) body footer{min-height:220px;padding-bottom:145px;flex-wrap:wrap}html:not([data-study-style=report]) body .report-cover .intro-note{max-width:100%}html:not([data-study-style=report]) body .report-cover:after{background-size:auto 150px}html:not([data-study-style=report]) body .report-cover{padding-bottom:80px}}
+@media print{html:not([data-study-style=report]) body{background:#fff!important}html:not([data-study-style=report]) body .report-cover{padding-bottom:20px}html:not([data-study-style=report]) body :is(.report-cover,footer):after{display:none}html:not([data-study-style=report]) body :is(.studio-feature,.learning-intro,.learning-callout,.course-top){background:#fff!important}}

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 520" preserveAspectRatio="none" fill="none">
+<defs>
+ <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#f8f7fc"/><stop offset=".55" stop-color="#f8d9e8"/><stop offset="1" stop-color="#f7b5bc"/></linearGradient>
+ <linearGradient id="far" x1="100" y1="220" x2="1300" y2="500" gradientUnits="userSpaceOnUse"><stop stop-color="#d3c7ef"/><stop offset=".4" stop-color="#aaa0e9"/><stop offset="1" stop-color="#666ab2"/></linearGradient>
+ <linearGradient id="middle" x1="400" y1="290" x2="1100" y2="520" gradientUnits="userSpaceOnUse"><stop stop-color="#dbc9dc"/><stop offset=".38" stop-color="#d0d4b4"/><stop offset="1" stop-color="#6d618d"/></linearGradient>
+ <linearGradient id="near" x1="50" y1="300" x2="1250" y2="530" gradientUnits="userSpaceOnUse"><stop stop-color="#ef80c4"/><stop offset=".5" stop-color="#f4a4bd"/><stop offset="1" stop-color="#bf6fa6"/></linearGradient>
+ <linearGradient id="front" x1="250" y1="390" x2="1200" y2="600" gradientUnits="userSpaceOnUse"><stop stop-color="#ec786d"/><stop offset=".5" stop-color="#ff9b84"/><stop offset="1" stop-color="#c25378"/></linearGradient>
+ <filter id="soft"><feGaussianBlur stdDeviation="7"/></filter>
+ <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".72" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+ <linearGradient id="fade" x2="0" y2="1"><stop stop-color="white" stop-opacity="0"/><stop offset=".32" stop-color="white" stop-opacity=".6"/><stop offset="1" stop-color="white"/></linearGradient>
+ <mask id="edge"><path fill="url(#fade)" d="M0 0h1440v520H0z"/></mask>
+</defs>
+<g mask="url(#edge)"><path fill="url(#sky)" d="M0 0h1440v520H0z"/>
+<g filter="url(#soft)">
+<path fill="url(#far)" d="M-30 300C130 260 245 295 365 218S540 214 662 264 832 317 1000 270s330-20 480 6v290H-30Z"/>
+<path fill="url(#middle)" d="M-30 345C180 290 280 342 425 318s280 78 425 31 390-4 630-39v256H-30Z"/>
+<path fill="url(#near)" d="M-30 290C150 310 244 361 390 382s261 117 452 83 422-148 638-90v191H-30Z"/>
+<path fill="url(#front)" d="M-30 415C131 363 274 385 434 453s265 81 416 53 371-83 630-3v90H-30Z"/>
+</g><path d="M0 0h1440v520H0z" filter="url(#grain)" opacity=".16" style="mix-blend-mode:multiply"/>
+</g></svg>
