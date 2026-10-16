@@ -3096,6 +3096,17 @@ window.TESSELATE_CATALOG = {
       "createdAt": "2026-10-14T00:00:00.000Z"
     },
     {
+      "id": "ref-ecet-original-questions-print",
+      "courseId": "ecet250e",
+      "name": "Original question screenshots - printable practice PDF",
+      "url": "ecet250e/ecet-original-questions-print.pdf",
+      "size": 22798498,
+      "stage": "unreviewed",
+      "notes": "161 questions on 135 source screenshot pages, with writing space. Original printed annotations retained.",
+      "builtin": true,
+      "createdAt": "2026-10-16T00:00:00.000Z"
+    },
+    {
       "id": "ref-d2l-phys210-5448870",
       "courseId": "phys210",
       "name": "PHYS 210 X01A TimeLine 2026F",
