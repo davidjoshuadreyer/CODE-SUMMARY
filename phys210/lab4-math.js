@@ -23,15 +23,15 @@ function withUncertainties(raw){
  }
  return d;
 }
-function analyze(raw){const d=withUncertainties(raw);const issues=[],e=8.85e-12,n=pos(d.sheets),T=pos(d.thickness),uT=unc(d.dThickness),validN=n!==null&&Number.isInteger(n),t=validN&&T?T*.001/n:null,ut=t!==null&&uT!==null?uT*.001/n:null;
+function analyze(raw){const d=withUncertainties(raw),capScale=d.capacitanceUnit==='pF'?1e-12:1e-9;const issues=[],e=8.85e-12,n=pos(d.sheets),T=pos(d.thickness),uT=unc(d.dThickness),validN=n!==null&&Number.isInteger(n),t=validN&&T?T*.001/n:null,ut=t!==null&&uT!==null?uT*.001/n:null;
 const l=pos(d.length),w=pos(d.width),ul=unc(d.dLength),uw=unc(d.dWidth),area=l&&w?l*w*1e-4:null,ua=area!==null&&ul!==null&&uw!==null?area*(ul/l+uw/w):null,cn=pos(d.fixedSheets),gap=t&&cn&&Number.isInteger(cn)?t*cn:null,ug=gap!==null&&ut!==null?ut*cn:null;
 const B=[],C=[],rawB=[],rawC=[];
 for(let i=0;i<6;i++){
  const count=pos(d[`b${i}n`]),cap=pos(d[`b${i}c`]),uc=unc(d[`b${i}u`]),g=t&&count&&Number.isInteger(count)?t*count:null,dg=g!==null&&ut!==null?ut*count:null;
  rawB.push([i+1,d[`b${i}n`],d[`b${i}c`],d[`b${i}u`]]);
- if(g&&cap)B.push({i,x:1/g,dx:dg===null?null:dg/g**2,y:cap*1e-9,dy:uc===null?null:uc*1e-9,g,dg});
+ if(g&&cap)B.push({i,x:1/g,dx:dg===null?null:dg/g**2,y:cap*capScale,dy:uc===null?null:uc*capScale,g,dg});
  const a=pos(d[`c${i}l`]),b=pos(d[`c${i}w`]),da=unc(d[`c${i}ul`]),db=unc(d[`c${i}uw`]),c=pos(d[`c${i}c`]),u=unc(d[`c${i}u`]),ar=a&&b?a*b*1e-4:null,ur=ar!==null&&da!==null&&db!==null?ar*(da/a+db/b):null;
- rawC.push([i+1,...['l','ul','w','uw','c','u'].map(k=>d[`c${i}${k}`])]);if(ar&&c)C.push({i,x:ar,dx:ur,y:c*1e-9,dy:u===null?null:u*1e-9});
+ rawC.push([i+1,...['l','ul','w','uw','c','u'].map(k=>d[`c${i}${k}`])]);if(ar&&c)C.push({i,x:ar,dx:ur,y:c*capScale,dy:u===null?null:u*capScale});
 }
 const bf=fit(B),cf=fit(C),k1=bf?.m>0&&area?bf.m/(e*area):null,k2=cf?.m>0&&gap?cf.m*gap/e:null,u1=k1!==null&&bf.dm!==null&&ua!==null?k1*(bf.dm/bf.m+ua/area):null,u2=k2!==null&&cf.dm!==null&&ug!==null?k2*(cf.dm/cf.m+ug/gap):null;
 const mean=k1!==null&&k2!==null?(k1+k2)/2:null,um=u1!==null&&u2!==null?(u1+u2)/2:null,difference=mean!==null?Math.abs(k1-k2):null,sum=um!==null?u1+u2:null,consistent=sum!==null?difference<=sum:null;

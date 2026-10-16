@@ -25,7 +25,7 @@
   try{
    const saved=await TesselateProgress.mutate(client,who,all=>{
     const old=all[NS]||{};
-    all[NS]={version:1,readings:{...(old.readings||{}),...(patch.readings||{})},step:patch.step??old.step??0};return all;
+    all[NS]={version:1,readings:{...Lab4UI.clean(old.readings||{}),...(patch.readings||{})},step:patch.step??old.step??0};return all;
    },()=>owner===who&&epoch===token);
    if(owner!==who||epoch!==token)return;
    // Clear only values that were actually saved; retain edits made in flight.
@@ -45,6 +45,7 @@
   retry.hidden=!user;adopt.hidden=!user||!hasData(guestReadings());
   const local=get(BASE+(owner||'guest'))||{};
   draft=local.draft||{};pending=local.pending||{};step=local.step||0;
+  if(pending.readings){const normalized=Lab4UI.clean({...draft,...pending.readings});for(const key of Object.keys(pending.readings))pending.readings[key]=normalized[key];if(normalized.capacitanceUnit)pending.readings.capacitanceUnit=normalized.capacitanceUnit;}
   if(!owner){apply(local.draft||get(GUEST)||{});ready=true;lock(false);message('Saved on this device · sign in through the course workspace to sync.');return;}
   apply(draft);message('Checking account for saved readings… You can enter measurements now.');
   try{
@@ -52,7 +53,7 @@
    if(token!==epoch)return;
    const saved=row?.progress_json?.[NS]||{};
    step=pending.step??saved.step??step;
-   const merged={...saved.readings,...(pending.readings||{})};
+   const merged={...Lab4UI.clean(saved.readings||{}),...(pending.readings||{})};
    const earlier=row?.progress_json?.__phys210_lab7?.readings||{};
    for(const key of ['student','section'])if(!merged[key]?.trim()&&earlier[key]?.trim())merged[key]=earlier[key];
    apply(merged);
