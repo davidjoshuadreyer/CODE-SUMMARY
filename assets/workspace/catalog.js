@@ -95,6 +95,17 @@ window.TESSELATE_CATALOG = {
       "builtin": true
     },
     {
+      "id": "page-cGh5czIxMC9jYXBhY2l0YW5jZS1wcmVwLmh0bWw",
+      "courseId": "phys210",
+      "title": "Experiment 4 · Textbook Capacitor prep",
+      "kind": "Study notes",
+      "url": "phys210/capacitance-prep.html",
+      "body": "",
+      "description": "Printable procedure, blank measurement tables, uncertainty equations and report checklist.",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
       "id": "page-cGh5czIxMC9jaGFyZ2UtZGlzdHJpYnV0aW9ucy5odG1s",
       "courseId": "phys210",
       "title": "Continuous charge: one piece at a time",
