@@ -3,7 +3,8 @@
 (() => {
  'use strict';
  const NS='__phys210_lab4',BASE='phys210-lab4-account-v1:',GUEST='phys210-lab4-bench-v1';
- let client,owner=null,epoch=0,timer,ready=false;
+ let client,subscription,owner=null,epoch=0,timer,ready=false;
+ function bounded(promise){let timeout;return Promise.race([promise,new Promise((_,reject)=>{timeout=setTimeout(()=>reject(new Error("Account connection timed out.")),8000);})]).finally(()=>clearTimeout(timeout));}
  const inFlight=new Set();
  let pending={},draft={},step=0;
  const label=document.getElementById('accountStatus'),status=document.getElementById('saveStatus');
@@ -47,7 +48,7 @@
   if(!owner){apply(local.draft||get(GUEST)||{});ready=true;lock(false);message('Saved on this device · sign in through the course workspace to sync.');return;}
   apply(draft);message('Loading your account progress…');
   try{
-   const row=await TesselateProgress.read(client,owner);
+   const row=await bounded(TesselateProgress.read(client,owner));
    if(token!==epoch)return;
    const saved=row?.progress_json?.[NS]||{};
    step=pending.step??saved.step??step;
@@ -72,7 +73,7 @@
    draft=clean;step=currentStep;persist();schedule();
   }
  };
- retry.onclick=async()=>{if(!ready)return;const {data,error}=await client.auth.getSession();if(error){message(error.message);return;}await activate(data.session?.user||null,true);};
+ retry.onclick=async()=>{if(!ready)return;try{if(!client){await init();return;}const {data,error}=await bounded(client.auth.getSession());if(error)throw error;await activate(data.session?.user||null,true);}catch(e){message(e.message+' Your entries are kept on this device. Try Retry sync again.');}};
  adopt.onclick=()=>{
   if(!ready||!owner)return;
   if(!confirm('Copy this device’s earlier local Experiment 4 readings into the signed-in account? Matching fields will replace that account’s readings.'))return;
@@ -86,12 +87,14 @@
   lock(true);
   try{
    if(!window.supabase||!window.TesselateProgress)throw new Error('Sign-in could not load. Reload when connected.');
-   client=window.supabase.createClient('https://xsscvdooviztaxzuwbmr.supabase.co','sb_publishable_BTkvBDZodnIPQoJ4nFEhMQ_Wd5me5QY');
-   const {data,error}=await client.auth.getSession();if(error)throw error;
+   client=client||window.supabase.createClient('https://xsscvdooviztaxzuwbmr.supabase.co','sb_publishable_BTkvBDZodnIPQoJ4nFEhMQ_Wd5me5QY');
+   const {data,error}=await bounded(client.auth.getSession());if(error)throw error;
    await activate(data.session?.user||null);
-   // Defer work outside the Supabase auth callback lock.
-   client.auth.onAuthStateChange((_event,session)=>setTimeout(()=>activate(session?.user||null),0));
-  }catch(e){owner=null;ready=true;apply(get(BASE+'guest')?.draft||get(GUEST)||{});lock(false);label.textContent='Account connection unavailable';message(e.message+' Entries are saved on this device.');}
+  }catch(e){await activate(null,true);label.textContent='Account connection unavailable';retry.hidden=false;message(e.message+' You can enter measurements now; they are saved on this device.');}
+  finally{
+   // Defer work outside the Supabase auth callback lock, including late recovery.
+   if(client&&!subscription){subscription=true;client.auth.onAuthStateChange((_event,session)=>setTimeout(()=>activate(session?.user||null),0));}
+  }
  }
  init();
 })();
