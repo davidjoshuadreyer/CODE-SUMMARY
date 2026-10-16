@@ -544,6 +544,17 @@ window.TESSELATE_CATALOG = {
       "builtin": true
     },
     {
+      "id": "page-ZWNldDI1MGUvdmlydHVhbC1sYWIuaHRtbA",
+      "courseId": "ecet250e",
+      "title": "3D Virtual Lab · Labs 1–5",
+      "kind": "Study notes",
+      "url": "ecet250e/virtual-lab.html",
+      "body": "",
+      "description": "Build breadboard circuits with your lab equipment. Practice voltage, resistance and series current measurements across 17 guided exercises.",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
       "id": "page-bWF0aDI1Mi8wMS1yZWFkaW5nLWVxdWF0aW9ucy5odG1s",
       "courseId": "math252",
       "title": "Reading a differential equation",
