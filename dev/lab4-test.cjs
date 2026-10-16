@@ -1,7 +1,7 @@
 const assert=require('node:assert/strict'),M=require('../phys210/lab4-math.js');
 assert.equal(M.analyze({}).complete,false);assert.equal(M.analyze({}).k1,null);assert.equal(M.num(''),null);assert.equal(M.unc(''),null);assert.equal(M.rounded(1.206494,.110207),'1.2 ± 0.1');
 assert.equal(M.rounded(123,18),'120 ± 20');
-const d={sheets:'100',thickness:'10',dThickness:'0.010',length:'20',width:'20',dLength:'.1',dWidth:'.1',fixedSheets:'100',reference:'3',dReference:'.2'};
+const d={reviewStatus:'reviewed',sheets:'100',thickness:'10',dThickness:'0.010',length:'20',width:'20',dLength:'.1',dWidth:'.1',fixedSheets:'100',reference:'3',dReference:'.2'};
 for(const k of ['student','date','partners','meter','textbook','uncertaintyNotes','observations','discussion','acceptedSource'])d[k]='TEST ONLY';
 const e=8.85e-12;for(let i=0;i<6;i++){const n=(i+1)*20,l=20-2*i;Object.assign(d,{['b'+i+'n']:String(n),['b'+i+'c']:String(3*e*.04/(n*.0001)*1e9),['b'+i+'u']:'.01',['c'+i+'l']:String(l),['c'+i+'w']:String(l),['c'+i+'ul']:'.1',['c'+i+'uw']:'.1',['c'+i+'c']:String(3*e*l*l*1e-4/.01*1e9),['c'+i+'u']:'.01'});}
 const a=M.analyze(d);assert.equal(a.complete,true);assert.ok(Math.abs(a.k1-3)<1e-12);assert.ok(Math.abs(a.k2-3)<1e-12);assert.equal(a.consistent,true);assert.ok(a.u1>0&&a.u2>0);assert.equal(a.referenceConsistent,true);

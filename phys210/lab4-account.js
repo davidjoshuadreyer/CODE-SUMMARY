@@ -51,7 +51,13 @@
    if(token!==epoch)return;
    const saved=row?.progress_json?.[NS]||{};
    step=pending.step??saved.step??step;
-   apply({...saved.readings,...(pending.readings||{})});persist();
+   const merged={...saved.readings,...(pending.readings||{})};
+   const earlier=row?.progress_json?.__phys210_lab7?.readings||{};
+   for(const key of ['student','section'])if(!merged[key]?.trim()&&earlier[key]?.trim())merged[key]=earlier[key];
+   apply(merged);
+   // Save newly prepared writing without replacing existing measurements or edits.
+   for(const [key,value] of Object.entries(draft))if(value!==''&&value!==(saved.readings||{})[key])pending.readings={...(pending.readings||{}),[key]:value};
+   persist();
    ready=true;lock(false);
    if(Object.keys(pending).length)await flush();else message('Account progress loaded · changes save automatically.');
   }catch(e){if(token===epoch){ready=true;lock(false);message('Could not load account progress · '+e.message+' Local edits will be kept until Retry sync succeeds.');}}
