@@ -22,3 +22,9 @@ assert.equal(M.withUncertainties({...auto,meterIncrement:''}).c0u,undefined);
 assert.equal(M.withUncertainties({...auto,c0c:''}).c0u,undefined);
 assert.equal(auto.b0u,undefined); // Calculated values never replace stored observations.
 console.log('PASS automatic ruler and capacitance uncertainty, recalculation, overrides and incomplete ranges');
+const spec={meterAccuracy:'manufacturer',meterPercent:'1',meterDigits:'3',meterIncrement:'0.001',b0c:'0.5'};
+assert.ok(Math.abs(Number(M.withUncertainties(spec).b0u)-0.008)<1e-12);
+assert.equal(M.withUncertainties({...spec,meterIncrement:''}).b0u,undefined);
+assert.ok(Math.abs(Number(M.withUncertainties({...spec,b0low:'.48',b0high:'.51'}).b0u)-.02)<1e-12);
+assert.equal(M.withUncertainties({...spec,b0u:'.04'}).b0u,'.04');
+console.log('PASS manufacturer percent-plus-digits accuracy and missing resolution guard');

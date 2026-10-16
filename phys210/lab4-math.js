@@ -14,10 +14,12 @@ function withUncertainties(raw){
  for(const part of ['b','c'])for(let i=0;i<6;i++){
   const key=part+i,reading=pos(d[key+'c']),lo=pos(d[key+'low']),hi=pos(d[key+'high']),increment=pos(d.meterIncrement);
   if(!blank(key+'u')||reading===null)continue;
+  const percent=unc(d.meterPercent),digits=unc(d.meterDigits);
+  const base=d.meterAccuracy==='manufacturer'?(increment!==null&&percent!==null&&digits!==null?reading*percent/100+digits*increment:null):increment;
   const hasRange=!blank(key+'low')||!blank(key+'high');
   if(hasRange){
-   if(lo!==null&&hi!==null&&hi>=lo&&reading>=lo&&reading<=hi)d[key+'u']=String(Math.max(reading-lo,hi-reading,increment||0));
-  }else if(increment!==null)d[key+'u']=String(increment);
+   if(lo!==null&&hi!==null&&hi>=lo&&reading>=lo&&reading<=hi&&(d.meterAccuracy!=='manufacturer'||base!==null))d[key+'u']=String(Math.max(reading-lo,hi-reading,base||0));
+  }else if(base!==null)d[key+'u']=String(base);
  }
  return d;
 }
