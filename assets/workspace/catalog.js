@@ -150,6 +150,17 @@ window.TESSELATE_CATALOG = {
       "builtin": true
     },
     {
+      "id": "page-cGh5czIxMC9sYWI0Lmh0bWw",
+      "courseId": "phys210",
+      "title": "Experiment 4 · Capacitance lab and report",
+      "kind": "Lab report",
+      "url": "phys210/lab4.html",
+      "body": "",
+      "description": "Account-saved measurements, automatic dielectric calculations, report preview, Word/PDF and instructor Excel graph exports.",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
       "id": "page-cGh5czIxMC9sYWI3Lmh0bWw",
       "courseId": "phys210",
       "title": "Experiment 7 · Lab report builder",
