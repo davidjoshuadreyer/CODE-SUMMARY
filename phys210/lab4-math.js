@@ -6,7 +6,22 @@ function fit(rows){if(rows.length<3)return null;const n=rows.length,x=rows.reduc
 let dm=null,min=null,max=null,lo=null,hi=null,top=null,bottom=null;
 if(m>0&&rows.every(p=>p.dx!==null&&p.dy!==null)){lo=Math.min(...rows.map(p=>p.x-p.dx));hi=Math.max(...rows.map(p=>p.x+p.dx));top=Math.max(...rows.map(p=>p.y+p.dy-m*(p.x-p.dx)-b));bottom=Math.max(...rows.map(p=>m*(p.x+p.dx)+b-p.y+p.dy));if(hi>lo){dm=(top+bottom)/(hi-lo);min=m-dm;max=m+dm;}}
 return {m,b,r2,n,dm,min,max,lo,hi,top,bottom};}
-function analyze(d){const issues=[],e=8.85e-12,n=pos(d.sheets),T=pos(d.thickness),uT=unc(d.dThickness),validN=n!==null&&Number.isInteger(n),t=validN&&T?T*.001/n:null,ut=t!==null&&uT!==null?uT*.001/n:null;
+function withUncertainties(raw){
+ const d={...raw},blank=k=>d[k]==null||String(d[k]).trim()==='';
+ if(blank('dThickness'))d.dThickness='0.010';
+ const ruler=unc(d.rulerUncertainty??'0.1');
+ for(const key of ['dLength','dWidth',...Array.from({length:6},(_,i)=>['c'+i+'ul','c'+i+'uw']).flat()])if(blank(key)&&ruler!==null)d[key]=String(ruler);
+ for(const part of ['b','c'])for(let i=0;i<6;i++){
+  const key=part+i,reading=pos(d[key+'c']),lo=pos(d[key+'low']),hi=pos(d[key+'high']),increment=pos(d.meterIncrement);
+  if(!blank(key+'u')||reading===null)continue;
+  const hasRange=!blank(key+'low')||!blank(key+'high');
+  if(hasRange){
+   if(lo!==null&&hi!==null&&hi>=lo&&reading>=lo&&reading<=hi)d[key+'u']=String(Math.max(reading-lo,hi-reading,increment||0));
+  }else if(increment!==null)d[key+'u']=String(increment);
+ }
+ return d;
+}
+function analyze(raw){const d=withUncertainties(raw);const issues=[],e=8.85e-12,n=pos(d.sheets),T=pos(d.thickness),uT=unc(d.dThickness),validN=n!==null&&Number.isInteger(n),t=validN&&T?T*.001/n:null,ut=t!==null&&uT!==null?uT*.001/n:null;
 const l=pos(d.length),w=pos(d.width),ul=unc(d.dLength),uw=unc(d.dWidth),area=l&&w?l*w*1e-4:null,ua=area!==null&&ul!==null&&uw!==null?area*(ul/l+uw/w):null,cn=pos(d.fixedSheets),gap=t&&cn&&Number.isInteger(cn)?t*cn:null,ug=gap!==null&&ut!==null?ut*cn:null;
 const B=[],C=[],rawB=[],rawC=[];
 for(let i=0;i<6;i++){
@@ -27,5 +42,5 @@ if(!bf||!cf||bf.m<=0||cf.m<=0)issues.push('Both graphs need distinct horizontal 
 if(!ref||uref===null||!d.acceptedSource?.trim())issues.push('Enter the paper reference value, uncertainty and source (use 0 only if treated as exact).');
 for(const key of ['student','date','partners','meter','textbook','uncertaintyNotes','observations','discussion'])if(!d[key]?.trim())issues.push('Complete '+({partners:'partner name (or “none”)',observations:'actual procedure and observations',discussion:'discussion',uncertaintyNotes:'measurement uncertainty notes'}[key]||key)+'.');
 return {t,ut,area,ua,gap,ug,B,C,rawB,rawC,bf,cf,k1,k2,u1,u2,mean,um,difference,sum,consistent,ref,uref,referenceConsistent,issues,complete:!issues.length};}
-const api={num,pos,unc,fmt,rounded,fit,analyze};if(typeof module!=='undefined')module.exports=api;root.Lab4Math=api;
+const api={withUncertainties,num,pos,unc,fmt,rounded,fit,analyze};if(typeof module!=='undefined')module.exports=api;root.Lab4Math=api;
 })(typeof window==='undefined'?globalThis:window);
