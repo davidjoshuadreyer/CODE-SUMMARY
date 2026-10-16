@@ -40,13 +40,13 @@
  }
  async function activate(user,force=false){
   const next=user?.id||null;if(!force&&ready&&next===owner)return;
-  epoch++;const token=epoch;clearTimeout(timer);ready=false;owner=next;lock(true);
+  epoch++;const token=epoch;clearTimeout(timer);ready=true;owner=next;lock(false);
   label.textContent=user?'Signed in as '+(user.email||'your account'):'Not signed in';
   retry.hidden=!user;adopt.hidden=!user||!hasData(guestReadings());
   const local=get(BASE+(owner||'guest'))||{};
   draft=local.draft||{};pending=local.pending||{};step=local.step||0;
   if(!owner){apply(local.draft||get(GUEST)||{});ready=true;lock(false);message('Saved on this device · sign in through the course workspace to sync.');return;}
-  apply(draft);message('Loading your account progress…');
+  apply(draft);message('Checking account for saved readings… You can enter measurements now.');
   try{
    const row=await bounded(TesselateProgress.read(client,owner));
    if(token!==epoch)return;
@@ -84,7 +84,7 @@
  document.addEventListener('visibilitychange',()=>{if(document.hidden)flush();});
  window.addEventListener('beforeunload',e=>{if(owner&&Object.keys(pending).length){e.preventDefault();e.returnValue='';}});
  async function init(){
-  lock(true);
+  await activate(null,true);
   try{
    if(!window.supabase||!window.TesselateProgress)throw new Error('Sign-in could not load. Reload when connected.');
    client=client||window.supabase.createClient('https://xsscvdooviztaxzuwbmr.supabase.co','sb_publishable_BTkvBDZodnIPQoJ4nFEhMQ_Wd5me5QY');

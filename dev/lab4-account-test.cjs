@@ -51,7 +51,7 @@ async function bench(storage=new Map()){
  assert.equal(rows.get('a').progress_json.quiz.c,2);
  console.log('PASS offline draft persistence, reload and retry; quiz progress retained');
  // A hanging auth request must unlock the form and preserve a device draft.
- hangSession=true;b=await bench();assert.equal(b.fields[0].disabled,true);await b.expire();
+ hangSession=true;b=await bench();assert.equal(b.fields[0].disabled,false);await b.expire();
  assert.equal(b.fields[0].disabled,false);assert.equal(b.els.get('load').disabled,false);
  assert.match(b.els.get('saveStatus').textContent,/enter measurements now/);
  b.context.Lab4Account.capture({o12v:'8.5'},0);
@@ -60,7 +60,7 @@ async function bench(storage=new Map()){
  await b.expire();hangSession=false;await b.els.get('retryAccount').onclick();
  assert.equal(b.shown.data.o12v,'4.2');assert.equal(b.els.get('adoptLocal').hidden,false);
  // A hanging account read must preserve the owner's cached draft and pending edits.
- hangRead=true;b=await bench(saved);assert.equal(b.fields[0].disabled,true);await b.expire();
+ hangRead=true;b=await bench(saved);assert.equal(b.fields[0].disabled,false);await b.expire();
  assert.equal(b.fields[0].disabled,false);assert.equal(b.shown.data.o12v,'4.2');
  b.context.Lab4Account.capture({o12v:'4.3'},4);
  hangRead=false;await b.els.get('retryAccount').onclick();
