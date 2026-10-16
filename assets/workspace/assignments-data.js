@@ -128,8 +128,8 @@ window.TESSELATE_ASSIGNMENTS = {
       "date": "2026-11-06",
       "time": "Friday class",
       "source": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448870/View",
-      "solution": "solutions.html?event=f26-19",
-      "label": "Worked reference · sign in",
+      "solution": "phys210/lab4.html",
+      "label": "Open lab report builder",
       "status": "Prepared calculations · your measurements required",
       "pdf": ""
     },
