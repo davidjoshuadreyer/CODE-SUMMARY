@@ -2267,6 +2267,17 @@ window.TESSELATE_CATALOG = {
       "builtin": true
     },
     {
+      "id": "page-phys210-resistivity-report",
+      "courseId": "phys210",
+      "title": "Experiment 7 · Completed resistivity report (PDF)",
+      "kind": "Lab report",
+      "url": "phys210/resistivity-report.pdf",
+      "body": "",
+      "description": "Updated October 16, 2026. Part B excludes the #30 reading, with the exclusion disclosed and calculations updated.",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
       "id": "page-phys210-midterm1-test",
       "courseId": "phys210",
       "title": "Midterm 1 · Printable practice test (PDF)",
