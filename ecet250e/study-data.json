@@ -8461,5 +8461,570 @@
         "page": 6
       }
     ]
+  },
+  {
+    "id": "ch8-lecture-8-1",
+    "chapter": 8,
+    "kind": "lecture",
+    "title": "Example 8.1 · Switching values",
+    "question": "The switch has been closed a long time and opens at t = 0. Find i(0+), v(0+), their initial derivatives, and the final values.",
+    "pages": [
+      5
+    ],
+    "source": {
+      "url": "source-materials/ecet-250e-week-7-chapter-8-second-order-circuits-2026-593d2756.pptx",
+      "title": "ECET 250E-WEEK 7-CHAPTER 8-SECOND ORDER CIRCUITS-2026",
+      "pages": [
+        5
+      ]
+    },
+    "figures": [
+      {
+        "url": "study-figures/593d275653e92406-p5.webp",
+        "width": 1600,
+        "height": 900,
+        "page": 5
+      }
+    ],
+    "steps": [
+      {
+        "title": "Before switching: DC equivalents",
+        "body": "Short the inductor and open the capacitor. The 4 Ω and 2 Ω resistors carry the same current.",
+        "math": "i(0^-)=\\frac{12}{4+2}=2\\ \\mathrm A,\\quad v(0^-)=2(2)=4\\ \\mathrm V"
+      },
+      {
+        "title": "Carry the stored values across the switch",
+        "body": "Inductor current and capacitor voltage remain continuous.",
+        "math": "i(0^+)=2\\ \\mathrm A,\\quad v(0^+)=4\\ \\mathrm V"
+      },
+      {
+        "title": "Use the circuit after switching",
+        "body": "The 2 Ω branch is disconnected. Apply KVL and the capacitor equation.",
+        "math": "i'(0^+)=\\frac{12-4(2)-4}{0.25}=0,\\quad v'(0^+)=\\frac2{0.1}=20\\ \\mathrm{V/s}"
+      },
+      {
+        "title": "Let the circuit reach DC again",
+        "body": "The capacitor becomes open, so no current flows through the series resistor.",
+        "math": "i(\\infty)=0,\\quad v(\\infty)=12\\ \\mathrm V"
+      }
+    ],
+    "answer": "i_0=2\\ \\mathrm A,\\ v_0=4\\ \\mathrm V,\\ i'_0=0,\\ v'_0=20\\ \\mathrm{V/s}",
+    "check": "The final capacitor voltage equals the supply; the final series current is zero.",
+    "status": "worked"
+  },
+  {
+    "id": "ch8-lecture-8-3",
+    "chapter": 8,
+    "kind": "lecture",
+    "title": "Example 8.3 · Characteristic roots",
+    "question": "For a series RLC circuit, R = 40 Ω, L = 4 H, C = 1/4 F. Calculate the characteristic roots and classify the response.",
+    "pages": [
+      16
+    ],
+    "source": {
+      "url": "source-materials/ecet-250e-week-7-chapter-8-second-order-circuits-2026-593d2756.pptx",
+      "title": "ECET 250E-WEEK 7-CHAPTER 8-SECOND ORDER CIRCUITS-2026",
+      "pages": [
+        16
+      ]
+    },
+    "figures": [
+      {
+        "url": "study-figures/593d275653e92406-p16.webp",
+        "width": 1600,
+        "height": 900,
+        "page": 16
+      }
+    ],
+    "steps": [
+      {
+        "title": "Find the two parameters",
+        "body": "Use the series RLC damping factor.",
+        "math": "\\alpha=\\frac{R}{2L}=5\\ \\mathrm{s^{-1}},\\quad\\omega_0=\\frac1{\\sqrt{LC}}=1\\ \\mathrm{rad/s}"
+      },
+      {
+        "title": "Compare, then calculate the roots",
+        "body": "Alpha is greater than omega-zero: two different real roots.",
+        "math": "s_{1,2}=-5\\pm\\sqrt{25-1}=-5\\pm\\sqrt{24}"
+      }
+    ],
+    "answer": "s_1=-0.10102,\\quad s_2=-9.89898\\ \\mathrm{s^{-1}}\\quad(\\text{overdamped})",
+    "check": "The roots sum to −10 and multiply to 1, matching s² + 10s + 1 = 0.",
+    "status": "worked"
+  },
+  {
+    "id": "ch8-lecture-8-4",
+    "chapter": 8,
+    "kind": "lecture",
+    "title": "Example 8.4 · Source-free series response",
+    "question": "The circuit is at steady state before the switch opens. Find the indicated inductor current i(t) for t > 0.",
+    "pages": [
+      17
+    ],
+    "source": {
+      "url": "source-materials/ecet-250e-week-7-chapter-8-second-order-circuits-2026-593d2756.pptx",
+      "title": "ECET 250E-WEEK 7-CHAPTER 8-SECOND ORDER CIRCUITS-2026",
+      "pages": [
+        17
+      ]
+    },
+    "figures": [
+      {
+        "url": "study-figures/593d275653e92406-p17.webp",
+        "width": 1600,
+        "height": 900,
+        "page": 17
+      }
+    ],
+    "steps": [
+      {
+        "title": "Find the initial stored values",
+        "body": "Before switching, the capacitor branch is open and the inductor is short.",
+        "math": "i_0=\\frac{10}{4+6}=1\\ \\mathrm A,\\quad v_{C0}=6\\ \\mathrm V"
+      },
+      {
+        "title": "Reduce the loop after switching",
+        "body": "The source is removed. The 6 Ω and 3 Ω resistors are now in the discharge loop.",
+        "math": "R=9\\ \\Omega,\\quad\\alpha=\\frac9{2(0.5)}=9,\\quad\\omega_0=\\frac1{\\sqrt{0.5(0.02)}}=10,\\quad\\omega_d=\\sqrt{19}"
+      },
+      {
+        "title": "Find the starting slope",
+        "body": "The capacitor voltage drives the chosen current. KVL gives L i′ + 9i − vC = 0.",
+        "math": "i'_0=\\frac{6-9(1)}{0.5}=-6\\ \\mathrm{A/s}"
+      },
+      {
+        "title": "Fit the underdamped form",
+        "body": "The initial value fixes A; the initial slope fixes B.",
+        "math": "i=e^{-9t}(A\\cos\\sqrt{19}t+B\\sin\\sqrt{19}t),\\quad A=1,\\quad-9A+\\sqrt{19}B=-6"
+      }
+    ],
+    "answer": "i(t)=e^{-9t}\\left[\\cos(\\sqrt{19}t)+\\frac3{\\sqrt{19}}\\sin(\\sqrt{19}t)\\right]\\ \\mathrm A",
+    "check": "At t = 0, i = 1 A and i′ = −6 A/s. With the source removed the response decays to zero.",
+    "status": "worked"
+  },
+  {
+    "id": "ch8-lecture-8-5",
+    "chapter": 8,
+    "kind": "lecture",
+    "title": "Example 8.5 · Three damping cases",
+    "question": "Find v(t) in the parallel RLC circuit with v(0) = 5 V, iL(0) = 0, L = 1 H and C = 10 mF. Consider R = 1.923 Ω, 5 Ω and 6.25 Ω.",
+    "pages": [
+      27
+    ],
+    "source": {
+      "url": "source-materials/ecet-250e-week-7-chapter-8-second-order-circuits-2026-593d2756.pptx",
+      "title": "ECET 250E-WEEK 7-CHAPTER 8-SECOND ORDER CIRCUITS-2026",
+      "pages": [
+        27
+      ]
+    },
+    "figures": [
+      {
+        "url": "study-figures/593d275653e92406-p27.webp",
+        "width": 1600,
+        "height": 900,
+        "page": 27
+      }
+    ],
+    "steps": [
+      {
+        "title": "Use one setup for all three cases",
+        "body": "All branch currents point down. Apply KCL at the top node.",
+        "math": "\\omega_0=10,\\quad\\alpha=\\frac{50}{R},\\quad v'_0=-\\frac{v_0/R+i_{L0}}C=-\\frac{500}{R}"
+      },
+      {
+        "title": "R = 1.923 Ω: overdamped",
+        "body": "Using the intended rounded alpha = 26, the roots are approximately −2 and −50. Solve for two constants.",
+        "math": "A+B=5,\\quad-2A-50B=-260\\ \\Rightarrow\\ A=-\\frac5{24},\\ B=\\frac{125}{24}"
+      },
+      {
+        "title": "R = 5 Ω: critically damped",
+        "body": "Alpha equals omega-zero. Use (A + Bt) exp(−10t).",
+        "math": "A=5,\\quad B-10A=-100\\ \\Rightarrow\\ B=-50"
+      },
+      {
+        "title": "R = 6.25 Ω: underdamped",
+        "body": "Alpha = 8 and damped frequency = 6.",
+        "math": "A=5,\\quad-8A+6B=-80\\ \\Rightarrow\\ B=-\\frac{20}3"
+      }
+    ],
+    "answer": "\\begin{aligned}R=1.923:&\\ v\\approx-0.2083e^{-2t}+5.2083e^{-50t}\\\\R=5:&\\ v=(5-50t)e^{-10t}\\\\R=6.25:&\\ v=e^{-8t}(5\\cos6t-6.6667\\sin6t)\\end{aligned}\\quad\\mathrm V",
+    "check": "Each result begins at 5 V and decays to zero. The first case uses rounded roots because 1.923 Ω is rounded.",
+    "status": "worked"
+  },
+  {
+    "id": "ch8-lecture-8-8",
+    "chapter": 8,
+    "kind": "lecture",
+    "title": "Example 8.8 · Parallel RLC step",
+    "question": "Find i(t) and iR(t) for t > 0. The switch closes at zero and the voltage source 30u(−t) V drops from 30 V to 0 V.",
+    "pages": [
+      38
+    ],
+    "source": {
+      "url": "source-materials/ecet-250e-week-7-chapter-8-second-order-circuits-2026-593d2756.pptx",
+      "title": "ECET 250E-WEEK 7-CHAPTER 8-SECOND ORDER CIRCUITS-2026",
+      "pages": [
+        38
+      ]
+    },
+    "figures": [
+      {
+        "url": "study-figures/593d275653e92406-p38.webp",
+        "width": 1600,
+        "height": 900,
+        "page": 38
+      }
+    ],
+    "steps": [
+      {
+        "title": "Find the pre-switch state",
+        "body": "The left inductor carries the isolated 4 A source current. On the right, the capacitor voltage is set by two 20 Ω resistors.",
+        "math": "i_0=4\\ \\mathrm A,\\quad v_0=30\\frac{20}{20+20}=15\\ \\mathrm V"
+      },
+      {
+        "title": "Find the circuit after zero",
+        "body": "The voltage source becomes a short. The two 20 Ω resistors are parallel, and the inductor eventually carries all 4 A.",
+        "math": "R=10,\\ L=20,\\ C=0.008,\\ i_\\infty=4,\\ i'_0=\\frac{15}{20}=0.75"
+      },
+      {
+        "title": "Calculate the roots and constants",
+        "body": "The response is overdamped. Use i = 4 + A exp(s1 t) + B exp(s2 t).",
+        "math": "\\alpha=6.25,\\ \\omega_0=2.5,\\ s_{1,2}=-6.25\\pm\\sqrt{32.8125};\\quad A+B=0,\\ (s_1-s_2)A=0.75"
+      },
+      {
+        "title": "Recover the resistor current",
+        "body": "The indicated resistor is 20 Ω, even though the equivalent resistance is 10 Ω.",
+        "math": "v=L\\frac{di}{dt},\\quad i_R=\\frac v{20}=\\frac{20}{20}\\frac{di}{dt}"
+      }
+    ],
+    "answer": "\\begin{aligned}i(t)&=4+0.065465(e^{-0.52178t}-e^{-11.97822t})\\ \\mathrm A\\\\i_R(t)&=0.065465(-0.52178e^{-0.52178t}+11.97822e^{-11.97822t})\\ \\mathrm A\\end{aligned}",
+    "check": "At zero iR = 0.75 A and v = 15 V. At infinity i = 4 A and iR = 0.",
+    "status": "worked"
+  },
+  {
+    "id": "ch8-ps7-1",
+    "chapter": 8,
+    "kind": "problemset",
+    "title": "Problem Set 7 · Q1 · Problem 8.13",
+    "question": "Find R for a critically damped response in Fig. 8.68.",
+    "pages": [
+      1
+    ],
+    "source": {
+      "url": "source-materials/ecet-250e-linear-circuit-1-problemset-7-chapter-8-2023-52d6c989.pdf",
+      "title": "ECET 250E-Linear Circuit 1-Problemset 7-Chapter 8-2023",
+      "pages": [
+        1
+      ]
+    },
+    "figures": [
+      {
+        "url": "study-figures/52d6c989c8c5374e-p1.webp",
+        "width": 1224,
+        "height": 1584,
+        "page": 1
+      }
+    ],
+    "steps": [
+      {
+        "title": "Reduce the resistor pair",
+        "body": "R is in parallel with 60 Ω. This equivalent is in series with L and C.",
+        "math": "R_{eq}=\\frac{60R}{60+R},\\quad\\omega_0=\\frac1{\\sqrt{4(0.01)}}=5"
+      },
+      {
+        "title": "Set the critical-damping condition",
+        "body": "For a series circuit, alpha = Req/(2L).",
+        "math": "\\frac{R_{eq}}{2(4)}=5\\ \\Rightarrow\\ R_{eq}=40\\ \\Omega"
+      },
+      {
+        "title": "Solve for the actual resistor",
+        "body": "Use the equivalent resistance, not 40 Ω as the answer for R.",
+        "math": "\\frac{60R}{60+R}=40\\ \\Rightarrow\\ 60R=2400+40R"
+      }
+    ],
+    "answer": "R=120\\ \\Omega",
+    "check": "120 Ω in parallel with 60 Ω is 40 Ω; alpha and omega-zero both equal 5.",
+    "status": "worked",
+    "instructorSolution": {
+      "url": "source-materials/ecet-250e-linear-circuit-1-problemset-7-chapter-8-solution-46df03ad.pdf",
+      "title": "ECET 250E-Linear Circuit 1-Problemset 7-Chapter 8-Solution",
+      "pages": [
+        1
+      ]
+    }
+  },
+  {
+    "id": "ch8-ps7-2",
+    "chapter": 8,
+    "kind": "problemset",
+    "title": "Problem Set 7 · Q2 · Problem 8.17",
+    "question": "The switch moves from A to B at t = 0. Find capacitor voltage v(t) for t ≥ 0.",
+    "pages": [
+      1
+    ],
+    "source": {
+      "url": "source-materials/ecet-250e-linear-circuit-1-problemset-7-chapter-8-2023-52d6c989.pdf",
+      "title": "ECET 250E-Linear Circuit 1-Problemset 7-Chapter 8-2023",
+      "pages": [
+        1
+      ]
+    },
+    "figures": [
+      {
+        "url": "study-figures/52d6c989c8c5374e-p1.webp",
+        "width": 1224,
+        "height": 1584,
+        "page": 1
+      }
+    ],
+    "steps": [
+      {
+        "title": "Find the initial values at A",
+        "body": "At DC, the capacitor is open and no current flows through the inductor.",
+        "math": "v_0=5(4)=20\\ \\mathrm V,\\quad i_0=0,\\quad v'_0=\\frac{i_0}{C}=0"
+      },
+      {
+        "title": "Use the source-free circuit at B",
+        "body": "Only the 10 Ω resistor, 0.25 H inductor and 0.04 F capacitor remain.",
+        "math": "\\alpha=\\frac{10}{2(0.25)}=20,\\quad\\omega_0=\\frac1{\\sqrt{0.25(0.04)}}=10"
+      },
+      {
+        "title": "Find the two exponential terms",
+        "body": "Alpha exceeds omega-zero, so use an overdamped response.",
+        "math": "s_{1,2}=-20\\pm\\sqrt{300}=-2.67949,\\,-37.32051"
+      },
+      {
+        "title": "Fit the capacitor voltage directly",
+        "body": "Use v(0) and v′(0); this avoids integrating the current.",
+        "math": "A+B=20,\\quad s_1A+s_2B=0\\ \\Rightarrow\\ A=21.5470,\\ B=-1.5470"
+      }
+    ],
+    "answer": "v(t)=21.5470e^{-2.67949t}-1.5470e^{-37.32051t}\\ \\mathrm V,\\quad t\\ge0",
+    "check": "v(0) = 20 V, v′(0) = 0, and v tends to zero after the source is disconnected.",
+    "status": "worked",
+    "instructorSolution": {
+      "url": "source-materials/ecet-250e-linear-circuit-1-problemset-7-chapter-8-solution-46df03ad.pdf",
+      "title": "ECET 250E-Linear Circuit 1-Problemset 7-Chapter 8-Solution",
+      "pages": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "ch8-ps7-3",
+    "chapter": 8,
+    "kind": "problemset",
+    "title": "Problem Set 7 · Q3 · Problem 8.23",
+    "question": "Choose C so the parallel network is underdamped with alpha = 1 s⁻¹.",
+    "pages": [
+      2
+    ],
+    "source": {
+      "url": "source-materials/ecet-250e-linear-circuit-1-problemset-7-chapter-8-2023-52d6c989.pdf",
+      "title": "ECET 250E-Linear Circuit 1-Problemset 7-Chapter 8-2023",
+      "pages": [
+        2
+      ]
+    },
+    "figures": [
+      {
+        "url": "study-figures/52d6c989c8c5374e-p2.webp",
+        "width": 1224,
+        "height": 1584,
+        "page": 2
+      }
+    ],
+    "steps": [
+      {
+        "title": "Combine the capacitors",
+        "body": "The unknown C and the 10 mF capacitor share the same two nodes.",
+        "math": "C_T=C+0.01\\ \\mathrm F"
+      },
+      {
+        "title": "Use the required damping factor",
+        "body": "For parallel RLC, alpha = 1/(2 R CT).",
+        "math": "1=\\frac1{2(10)C_T}\\ \\Rightarrow\\ C_T=0.05\\ \\mathrm F"
+      },
+      {
+        "title": "Subtract the existing capacitor and verify damping",
+        "body": "Use L = 20 mH = 0.020 H.",
+        "math": "C=0.05-0.01=0.04\\ \\mathrm F,\\quad\\omega_0=\\frac1{\\sqrt{0.020(0.05)}}=31.62>1"
+      }
+    ],
+    "answer": "C=40\\ \\mathrm{mF}\\quad(\\text{underdamped})",
+    "check": "The key prints omega-zero as 141.42; the pictured values give 31.62 rad/s. This arithmetic error does not change C or the damping classification.",
+    "status": "worked",
+    "instructorSolution": {
+      "url": "source-materials/ecet-250e-linear-circuit-1-problemset-7-chapter-8-solution-46df03ad.pdf",
+      "title": "ECET 250E-Linear Circuit 1-Problemset 7-Chapter 8-Solution",
+      "pages": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "ch8-ps7-4",
+    "chapter": 8,
+    "kind": "problemset",
+    "title": "Problem Set 7 · Q4 · Problem 8.47",
+    "question": "Find output voltage vo(t) after the switch closes in Fig. 8.94.",
+    "pages": [
+      3
+    ],
+    "source": {
+      "url": "source-materials/ecet-250e-linear-circuit-1-problemset-7-chapter-8-2023-52d6c989.pdf",
+      "title": "ECET 250E-Linear Circuit 1-Problemset 7-Chapter 8-2023",
+      "pages": [
+        3
+      ]
+    },
+    "figures": [
+      {
+        "url": "study-figures/52d6c989c8c5374e-p3.webp",
+        "width": 1224,
+        "height": 1584,
+        "page": 3
+      }
+    ],
+    "steps": [
+      {
+        "title": "Use the pre-switch DC circuit",
+        "body": "The capacitor is open and the inductor shorts its branch. Current divides between 5 Ω and 10 Ω.",
+        "math": "i_{L0}=3\\frac5{5+10}=1\\ \\mathrm A,\\quad v_0=0"
+      },
+      {
+        "title": "Find the post-switch parameters",
+        "body": "The switch bypasses 10 Ω. R = 5 Ω, C = 0.01 F, L = 1 H.",
+        "math": "\\alpha=\\frac1{2(5)(0.01)}=10=\\omega_0=\\frac1{\\sqrt{1(0.01)}}"
+      },
+      {
+        "title": "Solve for inductor current",
+        "body": "At infinity the inductor carries 3 A. Its starting slope is v0/L = 0.",
+        "math": "i_L=3+(A+Bt)e^{-10t},\\quad A=-2,\\quad B-10A=0\\ \\Rightarrow\\ B=-20"
+      },
+      {
+        "title": "Differentiate to get the requested voltage",
+        "body": "Use the passive voltage polarity across the inductor.",
+        "math": "v_o=L\\frac{di_L}{dt}=\\frac{d}{dt}\\left[3+(-2-20t)e^{-10t}\\right]"
+      }
+    ],
+    "answer": "v_o(t)=200t e^{-10t}\\ \\mathrm V,\\quad t\\ge0",
+    "check": "vo begins and ends at zero. KCL gives vo′(0) = (3−1)/0.01 = 200 V/s. In the key this is numbered 5, but it is assignment Q4.",
+    "status": "worked",
+    "instructorSolution": {
+      "url": "source-materials/ecet-250e-linear-circuit-1-problemset-7-chapter-8-solution-46df03ad.pdf",
+      "title": "ECET 250E-Linear Circuit 1-Problemset 7-Chapter 8-Solution",
+      "pages": [
+        4
+      ]
+    }
+  },
+  {
+    "id": "ch8-ps7-5",
+    "chapter": 8,
+    "kind": "problemset",
+    "title": "Problem Set 7 · Q5 · Problem 8.49",
+    "question": "Find the indicated inductor current i(t) for t > 0 after the switch opens.",
+    "pages": [
+      4
+    ],
+    "source": {
+      "url": "source-materials/ecet-250e-linear-circuit-1-problemset-7-chapter-8-2023-52d6c989.pdf",
+      "title": "ECET 250E-Linear Circuit 1-Problemset 7-Chapter 8-2023",
+      "pages": [
+        4
+      ]
+    },
+    "figures": [
+      {
+        "url": "study-figures/52d6c989c8c5374e-p4.webp",
+        "width": 1224,
+        "height": 1584,
+        "page": 4
+      }
+    ],
+    "steps": [
+      {
+        "title": "Find initial and final currents",
+        "body": "Before switching, both sources feed the shorted inductor. After switching, only the 3 A source remains.",
+        "math": "i_0=3+\\frac{12}{4}=6\\ \\mathrm A,\\quad v_0=0,\\quad i_\\infty=3\\ \\mathrm A"
+      },
+      {
+        "title": "Classify the parallel RLC response",
+        "body": "Use R = 5 Ω, C = 1/20 F and L = 5 H.",
+        "math": "\\alpha=\\frac1{2(5)(0.05)}=2,\\quad\\omega_0=\\frac1{\\sqrt{5(0.05)}}=2"
+      },
+      {
+        "title": "Use the critically damped form",
+        "body": "The initial derivative is v0/L = 0.",
+        "math": "i=3+(A+Bt)e^{-2t},\\quad A=6-3=3,\\quad B-2A=0\\ \\Rightarrow\\ B=6"
+      }
+    ],
+    "answer": "i(t)=3+(3+6t)e^{-2t}\\ \\mathrm A,\\quad t>0",
+    "check": "i(0) = 6 A, i′(0) = 0, and i(∞) = 3 A. This is numbered 6 in the key but Q5 on the assignment.",
+    "status": "worked",
+    "instructorSolution": {
+      "url": "source-materials/ecet-250e-linear-circuit-1-problemset-7-chapter-8-solution-46df03ad.pdf",
+      "title": "ECET 250E-Linear Circuit 1-Problemset 7-Chapter 8-Solution",
+      "pages": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "id": "ch8-extra-8-33",
+    "chapter": 8,
+    "kind": "extra",
+    "title": "Extra practice from the key · Problem 8.33",
+    "question": "Find v(t) for the series RLC step circuit in Fig. 8.81. This problem appears only in the released solution key, not in the five-question assignment.",
+    "pages": [
+      3
+    ],
+    "source": {
+      "url": "source-materials/ecet-250e-linear-circuit-1-problemset-7-chapter-8-solution-46df03ad.pdf",
+      "title": "ECET 250E-Linear Circuit 1-Problemset 7-Chapter 8-Solution",
+      "pages": [
+        3
+      ]
+    },
+    "figures": [
+      {
+        "url": "study-figures/46df03ad7979441d-p3.webp",
+        "width": 1224,
+        "height": 1584,
+        "page": 3
+      }
+    ],
+    "steps": [
+      {
+        "title": "Transform the sources and find initial values",
+        "body": "Use the key’s pre-switch equivalent: a 30 V supply with 10 Ω and 5 Ω resistors. The marked pre-switch inductor current is opposite capacitor charging current.",
+        "math": "v_0=30\\frac5{10+5}=10\\ \\mathrm V,\\quad i_{C0}=-2\\ \\mathrm A,\\quad v'_0=-\\frac24=-0.5\\ \\mathrm{V/s}"
+      },
+      {
+        "title": "Find the final value and poles",
+        "body": "After switching: Vs = 20 V, R = 5 Ω, L = 1 H and C = 4 F.",
+        "math": "v_\\infty=20,\\quad\\alpha=2.5,\\quad\\omega_0=0.5,\\quad s_{1,2}=-2.5\\pm\\sqrt6"
+      },
+      {
+        "title": "Fit both constants",
+        "body": "Use s1 = −4.94949 and s2 = −0.05051.",
+        "math": "v=20+Ae^{s_1t}+Be^{s_2t},\\quad A+B=-10,\\quad s_1A+s_2B=-0.5"
+      }
+    ],
+    "answer": "v(t)\\approx20+0.205166e^{-4.94949t}-10.205166e^{-0.05051t}\\ \\mathrm V",
+    "check": "v(0) = 10 V, v′(0) = −0.5 V/s, and the final voltage is 20 V.",
+    "status": "worked",
+    "instructorSolution": {
+      "url": "source-materials/ecet-250e-linear-circuit-1-problemset-7-chapter-8-solution-46df03ad.pdf",
+      "title": "ECET 250E-Linear Circuit 1-Problemset 7-Chapter 8-Solution",
+      "pages": [
+        3
+      ]
+    }
   }
 ]

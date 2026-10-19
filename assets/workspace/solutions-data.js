@@ -2305,5 +2305,30 @@ window.TESSELATE_SOLUTIONS = {
         ]
       }
     ]
+  },
+  "f26-43": {
+    "title": "ECET 250E · Problem Set 7 · Chapter 8",
+    "status": "Worked solutions · 5 of 5 assigned questions",
+    "source": "https://online.camosun.ca/d2l/lms/dropbox/user/folder_submit_files.d2l?db=465532&ou=347548",
+    "walkthrough": "ecet250e/report-study.html#ch8-ps7-1",
+    "sections": [
+      {
+        "title": "Second-order RLC circuits",
+        "steps": [
+          "All five assigned questions have original diagrams, worked steps, and checks in the problem library.",
+          "The released key includes an extra Problem 8.33; it is labelled separately as extra practice. Match the key by textbook problem number."
+        ]
+      }
+    ],
+    "files": [
+      {
+        "label": "Released solution key",
+        "url": "ecet250e/source-materials/ecet-250e-linear-circuit-1-problemset-7-chapter-8-solution-46df03ad.pdf"
+      },
+      {
+        "label": "Original question PDF",
+        "url": "ecet250e/source-materials/ecet-250e-linear-circuit-1-problemset-7-chapter-8-2023-52d6c989.pdf"
+      }
+    ]
   }
 };

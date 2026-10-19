@@ -461,13 +461,12 @@ window.TESSELATE_PATHS = {
     ]
   },
   "ecet250e": {
-    "coverage": "161 worked problems cover the currently posted Weeks 1–6 (Chapters 1–4, 6–7). All 49 original files, expandable solutions, and an optional Lab report theme. Checked October 14, 2026.",
+    "coverage": "172 worked problems cover the currently posted Weeks 1–7 (Chapters 1–4, 6–8). All 54 original files, expandable solutions, and an optional Lab report theme. Checked October 19, 2026.",
     "lessons": [
-      {"title":"Midterm coverage & formula sheet","url":"ecet250e/formula-sheet.html","summary":"Confirmed Chapters 1–4 and 6, formulas, method reminders, and a printable study reference."},
       {
         "title": "Worked problem library",
         "url": "ecet250e/report-study.html",
-        "summary": "161 worked problems from the posted lecture slides, Problem Sets 1–6, and Quiz 1."
+        "summary": "172 worked problems from the posted lecture slides, Problem Sets 1–7, and Quiz 1."
       },
       {
         "title": "Current, voltage, and power",
@@ -487,6 +486,16 @@ window.TESSELATE_PATHS = {
     ],
     "practice": [
       {
+        "title": "Cumulative formula sheet · Through Chapter 8",
+        "url": "ecet250e/formula-sheet-latest.html",
+        "summary": "One-page technique reference including RC, RL, and second-order RLC responses."
+      },
+      {
+        "title": "Midterm formula sheet · Chapters 1–4 & 6",
+        "url": "ecet250e/formula-sheet.html",
+        "summary": "The separate original midterm reference."
+      },
+      {
         "title": "Worked problem library · Start here",
         "url": "ecet250e/report-study.html",
         "summary": "Search by topic, reveal each step, and mark problems reviewed."
@@ -495,6 +504,11 @@ window.TESSELATE_PATHS = {
         "title": "All posted course materials",
         "url": "ecet250e/report-study.html#library",
         "summary": "Original lecture decks, problem sets, keys, labs, and simulation references."
+      },
+      {
+        "title": "3D Virtual Lab · Labs 1–5",
+        "url": "ecet250e/virtual-lab.html",
+        "summary": "Build circuits and practice voltage, resistance and series current measurements at your virtual bench."
       },
       {
         "title": "Lab 5 · Interactive bench guide",

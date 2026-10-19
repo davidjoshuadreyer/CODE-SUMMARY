@@ -1,8 +1,8 @@
 # ECET study edition
 
-Snapshot: October 14, 2026. Posted Weeks 1–6 only. The sequence is Chapters 1, 2, 3, 4, 6, 7; Chapter 5 and later weeks were not posted.
+Snapshot: October 19, 2026. Posted Weeks 1–7 only. The sequence is Chapters 1, 2, 3, 4, 6, 7, 8; Chapter 5 and later weeks were not posted.
 
-The bank contains 161 entries: 85 lecture examples, demonstrations, and practice exercises; 65 questions from Problem Sets 1–6; and 11 Quiz 1 questions. Source ambiguities and corrections are recorded in the affected entry. Example 6.9 is conditional because the source does not clearly establish its initial current. Laboratory measurements are not fabricated; use the original handouts and existing Lab 5 tools.
+The bank contains 172 entries: 90 lecture examples, demonstrations, and practice exercises; 70 assigned questions from Problem Sets 1–7; 11 Quiz 1 questions; and one extra example (8.33) present only in the Problem Set 7 key. Source ambiguities and corrections are recorded in the affected entry. Example 6.9 is conditional because the source does not clearly establish its initial current. Laboratory measurements are not fabricated; use the original handouts and existing Lab 5 tools.
 
 ## Updating content
 
@@ -17,3 +17,9 @@ The bank contains 161 entries: 85 lecture examples, demonstrations, and practice
 `assets/report-theme.css` is opt-in under `html[data-study-style="report"]`. The original appearance remains the default. `assets/report-theme.js` stores only the presentation choice in `tesselate-study-style`; the existing `chem-theme` light/dark preference is independent. Extend the report rules here, not in the original course stylesheets. The installer adds the selector to academic pages and leaves games alone.
 
 Reviewed-problem checkmarks use `tesselate-ecet-reviewed-v1` on the current browser. They are separate from existing account-backed lab measurements and workspace data. No D2L grades, submissions, or account credentials are included.
+
+## Week 7 import
+
+Five new originals (54 total): Chapter 8 PPTX, response-summary PDF, Problem Set 7 PDF/DOCX, and the released key. Chapter 8 example figures preserve the original embedded screenshot images and their slide positions. PPTX source page numbers refer to slides. The question-only assignment has five problems; the key has six, so map by textbook problem number. Problem 8.23 has an arithmetic error in the key: omega-zero is 31.62 rad/s, not 141.42.
+
+`formula-sheet.html` remains the one-page midterm sheet (Chapters 1–4, 6); `formula-sheet-latest.html` is the cumulative one-page sheet through Chapter 8. Build with the corresponding `build-ecet-formula-sheet.cjs` and `build-ecet-latest-formula.cjs`. The midterm question filter explicitly includes chapters 0, 1, 2, 3, 4, 6 so later chapters cannot leak into it.

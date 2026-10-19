@@ -31,7 +31,7 @@
   persist();
  }
  function filter(target=current?.id){const words=search.value.toLowerCase().trim().split(/\s+/).filter(Boolean);
-  matching=problems.filter(p=>{const ch=p.closest('.chapter').dataset.chapter,done=reviewed.has(p.id);return words.every(w=>p.dataset.search.includes(w))&&(kind.value==='all'||p.dataset.kind===kind.value)&&(progress.value==='all'||(progress.value==='reviewed')===done)&&(chapter.value==='all'||chapter.value===ch||(chapter.value==='midterm'&&ch!=='7'));});
+  matching=problems.filter(p=>{const ch=p.closest('.chapter').dataset.chapter,done=reviewed.has(p.id);return words.every(w=>p.dataset.search.includes(w))&&(kind.value==='all'||p.dataset.kind===kind.value)&&(progress.value==='all'||(progress.value==='reviewed')===done)&&(chapter.value==='all'||chapter.value===ch||(chapter.value==='midterm'&&['0','1','2','3','4','6'].includes(ch)));});
   render(target);
  }
  function navigate(id){render(id);$('quiz-controls').scrollIntoView({block:'start'});current?.querySelector('summary').focus({preventScroll:true});}

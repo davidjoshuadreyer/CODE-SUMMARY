@@ -421,11 +421,11 @@ window.TESSELATE_ASSIGNMENTS = {
       "title": "Problem Set 7 · Chapter 8",
       "date": "2026-10-26",
       "time": "9:30 a.m.",
-      "source": "https://online.camosun.ca/d2l/lms/dropbox/dropbox.d2l?ou=347548",
-      "solution": "",
+      "source": "https://online.camosun.ca/d2l/lms/dropbox/user/folder_submit_files.d2l?db=465532&ou=347548",
+      "solution": "ecet250e/report-study.html#ch8-ps7-1",
       "label": "Worked solution",
-      "status": "Solution not yet prepared",
-      "pdf": ""
+      "status": "Worked solutions · 5 of 5 assigned questions",
+      "pdf": "ecet250e/source-materials/ecet-250e-linear-circuit-1-problemset-7-chapter-8-solution-46df03ad.pdf"
     },
     {
       "id": "f26-53",

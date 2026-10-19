@@ -22,7 +22,7 @@ c.setTitle('ECET 250E - Original question screenshots')
 c.setAuthor('Tesselate')
 for n,(url,entry) in enumerate(pages.items(),1):
     qs=entry['questions'];q=qs[0]; f=entry['figure']
-    section='Quiz 1' if q['kind']=='quiz' else f"Chapter {q['chapter']} / "+('Lecture questions' if q['kind']=='lecture' else 'Problem set')
+    section='Quiz 1' if q['kind']=='quiz' else f"Chapter {q['chapter']} / "+('Lecture questions' if q['kind']=='lecture' else 'Extra practice from key (answers included)' if q['kind']=='extra' else 'Problem set')
     c.bookmarkPage(f'p{n}')
     c.addOutlineEntry(f'{section} - source page {f["page"]}',f'p{n}',level=0)
     c.setFont('Helvetica',9);c.setFillColorRGB(.25,.25,.25)

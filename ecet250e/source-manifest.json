@@ -658,5 +658,70 @@
     "sha256": "cf02cce874507f857032c9bc42009cf2c0084aa8c90d29aa64abc7dd642c65f7",
     "group": "Lecture slides",
     "original": false
+  },
+  {
+    "id": "593d275653e92406",
+    "title": "ECET 250E-WEEK 7-CHAPTER 8-SECOND ORDER CIRCUITS-2026",
+    "filename": "ECET 250E-WEEK 7-CHAPTER 8-SECOND ORDER CIRCUITS-2026.pptx",
+    "url": "source-materials/ecet-250e-week-7-chapter-8-second-order-circuits-2026-593d2756.pptx",
+    "format": "PPTX",
+    "bytes": 1520017,
+    "sha256": "593d275653e924061749693465c29818acb64d14da55045a09594394dbef9f41",
+    "group": "Week 7 · Second-order circuits",
+    "original": true,
+    "collected": "2026-10-19",
+    "topicUrl": "https://online.camosun.ca/d2l/le/content/347548/viewContent/5366833/View"
+  },
+  {
+    "id": "18aede4299e88763",
+    "title": "ECET 250E-WEEK 7-CHAPTER 8-SECOND ORDER CIRCUITS-(Summery of different responses)",
+    "filename": "ECET 250E-WEEK 7-CHAPTER 8-SECOND ORDER CIRCUITS-(Summery of different responses).pdf",
+    "url": "source-materials/ecet-250e-week-7-chapter-8-second-order-circuits-summery-of-different-responses-18aede42.pdf",
+    "format": "PDF",
+    "bytes": 823293,
+    "sha256": "18aede4299e88763a5e99e3d017a67bca2f4c2a68a833cc0a243973f6256541c",
+    "group": "Week 7 · Second-order circuits",
+    "original": true,
+    "collected": "2026-10-19",
+    "topicUrl": "https://online.camosun.ca/d2l/le/content/347548/viewContent/5366852/View"
+  },
+  {
+    "id": "52d6c989c8c5374e",
+    "title": "ECET 250E-Linear Circuit 1-Problemset 7-Chapter 8-2023",
+    "filename": "ECET 250E-Linear Circuit 1-Problemset 7-Chapter 8-2023.pdf",
+    "url": "source-materials/ecet-250e-linear-circuit-1-problemset-7-chapter-8-2023-52d6c989.pdf",
+    "format": "PDF",
+    "bytes": 409489,
+    "sha256": "52d6c989c8c5374e1ee4b5ef96701f4bc61d154efc4b7bb96ff18773f12cdb60",
+    "group": "Problem Set 7 · Chapter 8",
+    "original": true,
+    "collected": "2026-10-19",
+    "topicUrl": "https://online.camosun.ca/d2l/lms/dropbox/user/folder_submit_files.d2l?db=465532&ou=347548"
+  },
+  {
+    "id": "7df127fa315e3a98",
+    "title": "ECET 250E-Linear Circuit 1-Problemset 7-Chapter 8-2023",
+    "filename": "ECET 250E-Linear Circuit 1-Problemset 7-Chapter 8-2023.docx",
+    "url": "source-materials/ecet-250e-linear-circuit-1-problemset-7-chapter-8-2023-7df127fa.docx",
+    "format": "DOCX",
+    "bytes": 137196,
+    "sha256": "7df127fa315e3a98164f61fd7925c74ad03bc75a7635baf9e019ab8debcd7e0a",
+    "group": "Problem Set 7 · Chapter 8",
+    "original": true,
+    "collected": "2026-10-19",
+    "topicUrl": "https://online.camosun.ca/d2l/lms/dropbox/user/folder_submit_files.d2l?db=465532&ou=347548"
+  },
+  {
+    "id": "46df03ad7979441d",
+    "title": "ECET 250E-Linear Circuit 1-Problemset 7-Chapter 8-Solution",
+    "filename": "ECET 250E-Linear Circuit 1-Problemset 7-Chapter 8-Solution.pdf",
+    "url": "source-materials/ecet-250e-linear-circuit-1-problemset-7-chapter-8-solution-46df03ad.pdf",
+    "format": "PDF",
+    "bytes": 373260,
+    "sha256": "46df03ad7979441da38ab20425808eea3f786b6f4cbdb6f61fed57f7dc087d18",
+    "group": "Problem Set 7 · Chapter 8",
+    "original": true,
+    "collected": "2026-10-19",
+    "topicUrl": "https://online.camosun.ca/d2l/le/content/347548/viewContent/5366874/View"
   }
 ]

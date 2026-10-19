@@ -406,13 +406,24 @@ window.TESSELATE_CATALOG = {
       "builtin": true
     },
     {
+      "id": "page-ZWNldDI1MGUvZm9ybXVsYS1zaGVldC1sYXRlc3QuaHRtbA",
+      "courseId": "ecet250e",
+      "title": "Cumulative formula sheet · Through Chapter 8",
+      "kind": "Study notes",
+      "url": "ecet250e/formula-sheet-latest.html",
+      "body": "",
+      "description": "One-page technique reference through Week 7: DC methods, capacitors, inductors, RC/RL transients, and second-order RLC responses.",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
       "id": "page-ZWNldDI1MGUvZm9ybXVsYS1zaGVldC5odG1s",
       "courseId": "ecet250e",
-      "title": "Midterm coverage & formula sheet",
+      "title": "Midterm formula sheet · Chapters 1–4 & 6",
       "kind": "Study notes",
       "url": "ecet250e/formula-sheet.html",
       "body": "",
-      "description": "Chapters 1–4 and 6: formulas, method reminders, confirmed exam coverage, and a printable study reference.",
+      "description": "Chapters 1–4 and 6: formulas and method reminders in the original one-page midterm reference.",
       "referenceIds": [],
       "builtin": true
     },
@@ -478,7 +489,7 @@ window.TESSELATE_CATALOG = {
       "kind": "Study notes",
       "url": "ecet250e/report-study.html",
       "body": "",
-      "description": "161 worked problems with diagrams, expandable steps, and an optional Lab report theme.",
+      "description": "172 worked problems with diagrams, expandable steps, and an optional Lab report theme.",
       "referenceIds": [
         "ref-ecet-import-9dfb869a806d0f48",
         "ref-ecet-import-40192e5a598e0992",
@@ -539,7 +550,12 @@ window.TESSELATE_CATALOG = {
         "ref-ecet-import-dede57b3f5c154b1",
         "ref-ecet-import-9f385d3f65d872f8",
         "ref-ecet-import-f848f7cf2f72259e",
-        "ref-ecet-import-cf02cce874507f85"
+        "ref-ecet-import-cf02cce874507f85",
+        "ref-ecet-import-593d275653e92406",
+        "ref-ecet-import-18aede4299e88763",
+        "ref-ecet-import-52d6c989c8c5374e",
+        "ref-ecet-import-7df127fa315e3a98",
+        "ref-ecet-import-46df03ad7979441d"
       ],
       "builtin": true
     },
@@ -3140,13 +3156,68 @@ window.TESSELATE_CATALOG = {
       "createdAt": "2026-10-14T00:00:00.000Z"
     },
     {
+      "id": "ref-ecet-import-593d275653e92406",
+      "courseId": "ecet250e",
+      "name": "ECET 250E-WEEK 7-CHAPTER 8-SECOND ORDER CIRCUITS-2026",
+      "url": "ecet250e/source-materials/ecet-250e-week-7-chapter-8-second-order-circuits-2026-593d2756.pptx",
+      "size": 1520017,
+      "stage": "unreviewed",
+      "notes": "Original D2L file · Week 7 · Second-order circuits · Collected October 19, 2026.",
+      "builtin": true,
+      "createdAt": "2026-10-19T00:00:00.000Z"
+    },
+    {
+      "id": "ref-ecet-import-18aede4299e88763",
+      "courseId": "ecet250e",
+      "name": "ECET 250E-WEEK 7-CHAPTER 8-SECOND ORDER CIRCUITS-(Summery of different responses)",
+      "url": "ecet250e/source-materials/ecet-250e-week-7-chapter-8-second-order-circuits-summery-of-different-responses-18aede42.pdf",
+      "size": 823293,
+      "stage": "unreviewed",
+      "notes": "Original D2L file · Week 7 · Second-order circuits · Collected October 19, 2026.",
+      "builtin": true,
+      "createdAt": "2026-10-19T00:00:00.000Z"
+    },
+    {
+      "id": "ref-ecet-import-52d6c989c8c5374e",
+      "courseId": "ecet250e",
+      "name": "ECET 250E-Linear Circuit 1-Problemset 7-Chapter 8-2023",
+      "url": "ecet250e/source-materials/ecet-250e-linear-circuit-1-problemset-7-chapter-8-2023-52d6c989.pdf",
+      "size": 409489,
+      "stage": "unreviewed",
+      "notes": "Original D2L file · Problem Set 7 · Chapter 8 · Collected October 19, 2026.",
+      "builtin": true,
+      "createdAt": "2026-10-19T00:00:00.000Z"
+    },
+    {
+      "id": "ref-ecet-import-7df127fa315e3a98",
+      "courseId": "ecet250e",
+      "name": "ECET 250E-Linear Circuit 1-Problemset 7-Chapter 8-2023",
+      "url": "ecet250e/source-materials/ecet-250e-linear-circuit-1-problemset-7-chapter-8-2023-7df127fa.docx",
+      "size": 137196,
+      "stage": "unreviewed",
+      "notes": "Original D2L file · Problem Set 7 · Chapter 8 · Collected October 19, 2026.",
+      "builtin": true,
+      "createdAt": "2026-10-19T00:00:00.000Z"
+    },
+    {
+      "id": "ref-ecet-import-46df03ad7979441d",
+      "courseId": "ecet250e",
+      "name": "ECET 250E-Linear Circuit 1-Problemset 7-Chapter 8-Solution",
+      "url": "ecet250e/source-materials/ecet-250e-linear-circuit-1-problemset-7-chapter-8-solution-46df03ad.pdf",
+      "size": 373260,
+      "stage": "unreviewed",
+      "notes": "Original D2L file · Problem Set 7 · Chapter 8 · Collected October 19, 2026.",
+      "builtin": true,
+      "createdAt": "2026-10-19T00:00:00.000Z"
+    },
+    {
       "id": "ref-ecet-original-questions-print",
       "courseId": "ecet250e",
       "name": "Original question screenshots - printable practice PDF",
       "url": "ecet250e/ecet-original-questions-print.pdf",
-      "size": 22798498,
+      "size": 24433398,
       "stage": "unreviewed",
-      "notes": "161 questions on 135 source screenshot pages, with writing space. Original printed annotations retained.",
+      "notes": "172 questions on 145 source screenshot pages, with writing space. Original printed annotations retained.",
       "builtin": true,
       "createdAt": "2026-10-16T00:00:00.000Z"
     },
@@ -5241,6 +5312,28 @@ window.TESSELATE_CATALOG = {
       "createdAt": "2026-01-01T00:00:00.000Z"
     },
     {
+      "id": "ref-Y2hlbS9wZGZzL0NIRU0xNTAtUGV0cnVjY2kucGRm",
+      "courseId": "chem",
+      "name": "CHEM150-Petrucci.pdf",
+      "url": "chem/pdfs/CHEM150-Petrucci.pdf",
+      "size": 57864738,
+      "stage": "unreviewed",
+      "notes": "Existing reference. Check whether this was used in a study page, then link it here.",
+      "builtin": true,
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "ref-Y2hlbS9wZGZzL0NIRU0xNTBfX19NaWR0ZXJtX0lfX19QcmFjdGljZV9BLnBkZi5wZGY",
+      "courseId": "chem",
+      "name": "CHEM150___Midterm_I___Practice_A.pdf.pdf",
+      "url": "chem/pdfs/CHEM150___Midterm_I___Practice_A.pdf.pdf",
+      "size": 511328,
+      "stage": "unreviewed",
+      "notes": "Existing reference. Check whether this was used in a study page, then link it here.",
+      "builtin": true,
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
       "id": "ref-Y2hlbS9wZGZzL0NoZW0gMTUwIEFuc3dlciBrZXkgTWlkdGVybSAoMjAxNV8xMF8xNyAwNV81MV80OCBVVEMpLnBkZg",
       "courseId": "chem",
       "name": "Chem 150 Answer key Midterm (2015_10_17 05_51_48 UTC).pdf",
@@ -5268,28 +5361,6 @@ window.TESSELATE_CATALOG = {
       "name": "Chem TT 1B.pdf.pdf",
       "url": "chem/pdfs/Chem%20TT%201B.pdf.pdf",
       "size": 1589281,
-      "stage": "unreviewed",
-      "notes": "Existing reference. Check whether this was used in a study page, then link it here.",
-      "builtin": true,
-      "createdAt": "2026-01-01T00:00:00.000Z"
-    },
-    {
-      "id": "ref-Y2hlbS9wZGZzL0NIRU0xNTAtUGV0cnVjY2kucGRm",
-      "courseId": "chem",
-      "name": "CHEM150-Petrucci.pdf",
-      "url": "chem/pdfs/CHEM150-Petrucci.pdf",
-      "size": 57864738,
-      "stage": "unreviewed",
-      "notes": "Existing reference. Check whether this was used in a study page, then link it here.",
-      "builtin": true,
-      "createdAt": "2026-01-01T00:00:00.000Z"
-    },
-    {
-      "id": "ref-Y2hlbS9wZGZzL0NIRU0xNTBfX19NaWR0ZXJtX0lfX19QcmFjdGljZV9BLnBkZi5wZGY",
-      "courseId": "chem",
-      "name": "CHEM150___Midterm_I___Practice_A.pdf.pdf",
-      "url": "chem/pdfs/CHEM150___Midterm_I___Practice_A.pdf.pdf",
-      "size": 511328,
       "stage": "unreviewed",
       "notes": "Existing reference. Check whether this was used in a study page, then link it here.",
       "builtin": true,
@@ -5373,22 +5444,22 @@ window.TESSELATE_CATALOG = {
       "createdAt": "2026-01-01T00:00:00.000Z"
     },
     {
-      "id": "ref-Y2hlbS9wZGZzL1dlZWsgNSBhZGRpdGlvbmFsIFZTRVBSIHNsaWRlcyAtIFRhZ2dlZC0xLnBkZg",
+      "id": "ref-Y2hlbS9wZGZzL1dlZWsgNSBMZWN0dXJlIFBvbGFyaXR5IC0gVGFnZ2VkLnBkZg",
       "courseId": "chem",
-      "name": "Week 5 additional VSEPR slides - Tagged-1.pdf",
-      "url": "chem/pdfs/Week%205%20additional%20VSEPR%20slides%20-%20Tagged-1.pdf",
-      "size": 770911,
+      "name": "Week 5 Lecture Polarity - Tagged.pdf",
+      "url": "chem/pdfs/Week%205%20Lecture%20Polarity%20-%20Tagged.pdf",
+      "size": 1188663,
       "stage": "unreviewed",
       "notes": "Existing reference. Check whether this was used in a study page, then link it here.",
       "builtin": true,
       "createdAt": "2026-01-01T00:00:00.000Z"
     },
     {
-      "id": "ref-Y2hlbS9wZGZzL1dlZWsgNSBMZWN0dXJlIFBvbGFyaXR5IC0gVGFnZ2VkLnBkZg",
+      "id": "ref-Y2hlbS9wZGZzL1dlZWsgNSBhZGRpdGlvbmFsIFZTRVBSIHNsaWRlcyAtIFRhZ2dlZC0xLnBkZg",
       "courseId": "chem",
-      "name": "Week 5 Lecture Polarity - Tagged.pdf",
-      "url": "chem/pdfs/Week%205%20Lecture%20Polarity%20-%20Tagged.pdf",
-      "size": 1188663,
+      "name": "Week 5 additional VSEPR slides - Tagged-1.pdf",
+      "url": "chem/pdfs/Week%205%20additional%20VSEPR%20slides%20-%20Tagged-1.pdf",
+      "size": 770911,
       "stage": "unreviewed",
       "notes": "Existing reference. Check whether this was used in a study page, then link it here.",
       "builtin": true,
@@ -5494,11 +5565,11 @@ window.TESSELATE_CATALOG = {
       "createdAt": "2026-01-01T00:00:00.000Z"
     },
     {
-      "id": "ref-U3RhdGlzdGljcy9zMjU0LXRlc3QzLTIwMjVKYW4gLSBzb2wucGRm",
+      "id": "ref-U3RhdGlzdGljcy9TVEFUU19UQUJMRSAtIFN0YXQyNTQucGRm",
       "courseId": "stats",
-      "name": "s254-test3-2025Jan - sol.pdf",
-      "url": "Statistics/s254-test3-2025Jan%20-%20sol.pdf",
-      "size": 560738,
+      "name": "STATS_TABLE - Stat254.pdf",
+      "url": "Statistics/STATS_TABLE%20-%20Stat254.pdf",
+      "size": 198421,
       "stage": "unreviewed",
       "notes": "Existing reference. Check whether this was used in a study page, then link it here.",
       "builtin": true,
@@ -5604,11 +5675,11 @@ window.TESSELATE_CATALOG = {
       "createdAt": "2026-01-01T00:00:00.000Z"
     },
     {
-      "id": "ref-U3RhdGlzdGljcy9TVEFUU19UQUJMRSAtIFN0YXQyNTQucGRm",
+      "id": "ref-U3RhdGlzdGljcy9zMjU0LXRlc3QzLTIwMjVKYW4gLSBzb2wucGRm",
       "courseId": "stats",
-      "name": "STATS_TABLE - Stat254.pdf",
-      "url": "Statistics/STATS_TABLE%20-%20Stat254.pdf",
-      "size": 198421,
+      "name": "s254-test3-2025Jan - sol.pdf",
+      "url": "Statistics/s254-test3-2025Jan%20-%20sol.pdf",
+      "size": 560738,
       "stage": "unreviewed",
       "notes": "Existing reference. Check whether this was used in a study page, then link it here.",
       "builtin": true,
