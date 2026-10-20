@@ -486,6 +486,11 @@ window.TESSELATE_PATHS = {
     ],
     "practice": [
       {
+        "title": "Multiple-choice midterm practice",
+        "url": "ecet250e/quiz.html",
+        "summary": "4 original Quiz 1 questions plus 30 similar questions. Check answers, learn why, and retry misses."
+      },
+      {
         "title": "Cumulative formula sheet · Through Chapter 8",
         "url": "ecet250e/formula-sheet-latest.html",
         "summary": "One-page technique reference including RC, RL, and second-order RLC responses."

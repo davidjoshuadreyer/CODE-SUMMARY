@@ -48,6 +48,8 @@ const ecetFormula=resources.find(r=>r.url==='ecet250e/formula-sheet.html');
 if(ecetFormula)Object.assign(ecetFormula,{title:'Midterm formula sheet · Chapters 1–4 & 6',description:'Chapters 1–4 and 6: formulas and method reminders in the original one-page midterm reference.'});
 const ecetLatest=resources.find(r=>r.url==='ecet250e/formula-sheet-latest.html');
 if(ecetLatest)Object.assign(ecetLatest,{title:'Cumulative formula sheet · Through Chapter 8',description:'One-page technique reference through Week 7: DC methods, capacitors, inductors, RC/RL transients, and second-order RLC responses.'});
+const ecetQuiz=resources.find(r=>r.url==='ecet250e/quiz.html');
+if(ecetQuiz)Object.assign(ecetQuiz,{title:'Multiple-choice midterm practice',description:'4 original Quiz 1 MCQs plus 30 similar questions for Chapters 1–4 and 6, with explanations and retry-missed rounds.'});
 const ecetStudy=resources.find(r=>r.url==='ecet250e/report-study.html');
 if(ecetStudy)Object.assign(ecetStudy,{title:'Worked problem library · Lectures, problem sets & Quiz 1',description:require('../ecet250e/study-data.json').length+' worked problems with diagrams, expandable steps, and an optional Lab report theme.',referenceIds:ecetFiles.map(m=>'ref-ecet-import-'+m.id)});
 for(const [courseId,materials] of Object.entries(d2lMaterials)) for(const m of materials) references.push({id:'ref-d2l-'+courseId+'-'+m.id,courseId,name:m.title,url:m.url,size:0,stage:'unreviewed',notes:m.access+' · '+m.group+' · Indexed '+(m.checked||'2026-09-23')+'. Original remains at its source; this is not an offline copy.',builtin:true,createdAt:'2026-09-23T00:00:00.000Z'});

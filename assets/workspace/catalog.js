@@ -483,6 +483,17 @@ window.TESSELATE_CATALOG = {
       "builtin": true
     },
     {
+      "id": "page-ZWNldDI1MGUvcXVpei5odG1s",
+      "courseId": "ecet250e",
+      "title": "Multiple-choice midterm practice",
+      "kind": "Quiz",
+      "url": "ecet250e/quiz.html",
+      "body": "",
+      "description": "4 original Quiz 1 MCQs plus 30 similar questions for Chapters 1–4 and 6, with explanations and retry-missed rounds.",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
       "id": "page-ZWNldDI1MGUvcmVwb3J0LXN0dWR5Lmh0bWw",
       "courseId": "ecet250e",
       "title": "Worked problem library · Lectures, problem sets & Quiz 1",

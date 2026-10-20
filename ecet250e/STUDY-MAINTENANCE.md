@@ -23,3 +23,7 @@ Reviewed-problem checkmarks use `tesselate-ecet-reviewed-v1` on the current brow
 Five new originals (54 total): Chapter 8 PPTX, response-summary PDF, Problem Set 7 PDF/DOCX, and the released key. Chapter 8 example figures preserve the original embedded screenshot images and their slide positions. PPTX source page numbers refer to slides. The question-only assignment has five problems; the key has six, so map by textbook problem number. Problem 8.23 has an arithmetic error in the key: omega-zero is 31.62 rad/s, not 141.42.
 
 `formula-sheet.html` remains the one-page midterm sheet (Chapters 1–4, 6); `formula-sheet-latest.html` is the cumulative one-page sheet through Chapter 8. Build with the corresponding `build-ecet-formula-sheet.cjs` and `build-ecet-latest-formula.cjs`. The midterm question filter explicitly includes chapters 0, 1, 2, 3, 4, 6 so later chapters cannot leak into it.
+
+## Multiple-choice practice
+
+`quiz.html` uses `mcq-data.js`, built by `node dev/build-ecet-mcq.cjs`: four original Quiz 1 MCQs (Q1, Q7, Q8, Q9) with exact wording/choices, and 30 authored practice questions (six each for Chapters 1, 2, 3, 4, 6). The extra questions are not instructor predictions. Original excerpts use SVG viewports into the untouched source page images, excluding the printed answers. Answers lock after checking; results and retry-missed use the first checked choice. Rounds are session-only.
