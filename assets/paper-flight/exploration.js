@@ -21,7 +21,8 @@
       range:Math.hypot(distance,target.y-p.y)};
   }
   function create() {
-    return {landmarks:landmarks.map(l=>({...l})),selectedWaypoint:0,discoveries:[],bonus:0,tags:0,
+    return {landmarks:landmarks.map(l=>({...l})),selectedWaypoint:0,discoveries:[],bonus:0,tags:0,ringsCollected:0,
+      rings:[{east:110,north:0,y:70},{east:265,north:75,y:78},{east:385,north:-90,y:62},{east:525,north:170,y:100},{east:670,north:-210,y:90}].map((r,i)=>({...r,id:"breeze-"+i,radius:16,collected:false,collectedAt:0})),
       targets:[
         {id:'kite-1',east:165,north:0,y:72},
         {id:'kite-2',east:305,north:130,y:83},
@@ -55,6 +56,18 @@
         run.lastEvent={type:'discovery',text:mark.name+' discovered · +25 breeze',time:run.time};
       }
     }
+    const current=position(plane),previous=run._previous||current;
+    for(const ring of run.rings){
+      if(ring.collected)continue;
+      const dx=current.east-previous.east,dz=current.north-previous.north,dy=current.y-previous.y,length=dx*dx+dz*dz+dy*dy;
+      const along=length?Math.max(0,Math.min(1,((ring.east-previous.east)*dx+(ring.north-previous.north)*dz+(ring.y-previous.y)*dy)/length)):0;
+      if(Math.hypot(previous.east+dx*along-ring.east,previous.north+dz*along-ring.north,previous.y+dy*along-ring.y)<ring.radius){
+        ring.collected=true;ring.collectedAt=run.time;run.ringsCollected++;run.bonus+=5;
+        plane.energy=Math.min(1,finite(plane.energy,1)+.22);
+        run.lastEvent={type:'ring',text:'Breeze ribbon · +22% energy · +5 breeze',time:run.time};
+      }
+    }
+    run._previous=current;
     if(input.fire&&run.fireCooldown<=0) {
       run.fireCooldown=.42;
       const pitch=finite(plane.pitch)/RAD;
@@ -75,7 +88,7 @@
     }
     plane.explorationBonus=run.bonus;
     plane.discoveries=run.discoveries.length;
-    plane.kitesTagged=run.tags;
+    plane.kitesTagged=run.tags;plane.ribbons=run.ringsCollected;
     return run;
   }
   const api={create,step,navigation,cycleWaypoint,landmarks,relative};

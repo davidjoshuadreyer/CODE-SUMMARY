@@ -52,3 +52,11 @@ assert.deepEqual(a,b,'world deterministic across launches');
 a.landmarks[0].name='changed';
 assert.equal(b.landmarks[0].name,'Sunfield','run state independent');
 console.log('Paper Flight exploration: bearings, discoveries, aiming, cooldowns, rewards and cleanup passed.');
+
+// Ribbon collision sweeps the travelled segment, so fast flights cannot skip a pickup.
+run=E.create();p=plane({east:80,energy:.3});E.step(run,p,{},1/60);p.east=140;E.step(run,p,{},1/60);
+assert.equal(run.ringsCollected,1);assert.equal(p.ribbons,1);assert.equal(run.bonus,5);assert.equal(p.energy,.52);
+p.east=80;E.step(run,p,{},1/60);assert.equal(run.bonus,5,'collected ribbons cannot be farmed');
+run=E.create();p=plane({east:80,y:110,energy:.9});E.step(run,p,{},1/60);p.east=140;E.step(run,p,{},1/60);assert.equal(run.ringsCollected,0,'must fly through the ribbon altitude');
+p=plane({east:110,energy:.95});run=E.create();E.step(run,p,{},1/60);assert.equal(p.energy,1,'recharge capped at full');
+console.log('Breeze ribbons: swept collisions, altitude, single rewards and energy cap passed.');
