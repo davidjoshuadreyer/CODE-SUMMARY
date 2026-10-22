@@ -75,7 +75,9 @@
       maxSpeed: speed, thermalTime: 0, stallTime: 0, _spec: s, _accumulator: 0};
   }
   function integrate(s, input, bank, boost) {
-    s.roll += (bank * 35 * RAD - s.roll) * (1 - Math.exp(-H * 3.5));
+    // Aileron-style input commands roll rate, not a target bank angle.
+    // Neutral input holds attitude; opposite input rolls the wings back level.
+    s.roll = clamp(s.roll + bank * 40 * RAD * H, -55 * RAD, 55 * RAD);
     const p = s._spec;
     const air=updraftAt(s.east,s.north,s.y,s.time);
     const thermal=air.thermal;
