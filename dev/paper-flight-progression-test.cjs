@@ -48,3 +48,30 @@ const beginner=P.load(storage(null)).data;
 P.finish(beginner,{x:0});
 assert.equal(P.purchase(beginner,0),true,'First flight affords an upgrade');
 console.log('Progression: migration, invalid storage, sanitized saves, rewards, contracts, history and purchases passed.');
+
+// Earn the exploration reward through the actual game module, then round-trip the
+// completed flight through storage. A new throw must not inherit its reward.
+const E=require('../assets/paper-flight/exploration.js');
+const explorer=P.load(storage(null)).data, expedition=E.create();
+const craft={x:0,east:0,north:0,y:70,heading:90,pitch:0,landed:false};
+E.step(expedition,craft,{fire:true},1/60);
+craft.x=craft.east=220;
+E.step(expedition,craft,{},1/60);
+assert.equal(craft.explorationBonus,35);
+craft.landed=true;
+const expeditionResult=P.finish(explorer,craft);
+assert.equal(expeditionResult.reward,expeditionResult.baseReward+35);
+assert.deepEqual(expeditionResult.bonuses,[{label:'Exploration & kites',reward:35}]);
+const explorationSave=storage(null);
+assert.equal(P.save(explorationSave,explorer),true);
+const restoredExplorer=P.load(explorationSave).data;
+assert.equal(restoredExplorer.balance,expeditionResult.reward);
+assert.equal(restoredExplorer.history[0].explorationBonus,35);
+assert.equal(restoredExplorer.history[0].discoveries,1);
+assert.equal(restoredExplorer.history[0].kitesTagged,1);
+assert.equal(restoredExplorer.history[0].reward,expeditionResult.reward);
+const nextThrow=P.finish(restoredExplorer,{x:220});
+assert.equal(nextThrow.reward,nextThrow.baseReward,'exploration bonus does not leak into the next flight');
+assert.equal(restoredExplorer.history[0].explorationBonus,0);
+assert.equal(restoredExplorer.balance,expeditionResult.reward+nextThrow.baseReward);
+console.log('Exploration rewards: actual discovery/tag earnings persist and do not leak across throws.');

@@ -1,0 +1,34 @@
+'use strict';
+const assert=require('node:assert/strict');
+const P=require('../assets/paper-flight/physics.js');
+function advance(s,input,seconds,hz=60){for(let i=0;i<seconds*hz&&!s.landed;i++)P.step(s,input,1/hz);return s;}
+const east=advance(P.create(),{},3), north=P.create();north.heading=0;advance(north,{},3);
+assert(east.east>80&&Math.abs(east.north)<1e-6);
+assert(north.north>80&&Math.abs(north.east)<1e-6);
+const turning=advance(P.create(),{bank:1},4);
+assert(turning.north<-10&&turning.heading>90,'bank changes world trajectory');
+assert(P.terrainHeight(350,190)>P.terrainHeight(0,0)+25);
+const windward=P.updraftAt(270,190,P.terrainHeight(270,190)+10);
+const leeward=P.updraftAt(430,190,P.terrainHeight(430,190)+10);
+assert(windward.ridgeLift>0&&leeward.ridgeLift<0,'terrain slope separates windward lift and lee sink');
+assert(P.updraftAt(270,190,180).ridgeLift<windward.ridgeLift,'slope lift decays with height');
+assert(P.updraftAt(220,0,40).thermal>P.updraftAt(220,180,40).thermal,'thermal is a spatial column');
+const rain=P.weatherAt(460,-160,3),storm=P.weatherAt(780,-260,3);
+assert(rain.rain>.8&&storm.storm>.95&&P.weatherAt(0,0).rain<.02);
+assert(Math.abs(P.weatherAt(460.01,-160,3).rain-rain.rain)<.001,'weather fields remain smooth');
+const boosted=advance(P.create(),{boost:true},3),coasting=advance(P.create(),{},3);
+assert(boosted.vx>coasting.vx+8&&boosted.energy<.53&&boosted.thrust>0,'thrust trades stored energy for speed');
+const exhausted=P.create();exhausted.y=500;advance(exhausted,{boost:true},8);
+assert.equal(exhausted.energy,0);assert.equal(exhausted.thrust,0);
+advance(exhausted,{},2);assert(exhausted.energy>.06,'release recharges');
+const low=P.create();low.y=.008;low.vy=2;P.step(low,{},1/120);
+const high=P.create();high.y=20;high.vy=2;P.step(high,{},1/120);
+assert(low.groundEffect<high.groundEffect&&low.drag<high.drag,'near-ground effect reduces induced drag');
+const collision=P.create();collision.east=350;collision.north=190;collision.y=P.terrainHeight(350,190)+.001;collision.vy=-12;
+P.step(collision,{},1/60);assert(collision.landed&&collision.crashed&&collision.agl===0&&collision.impactSpeed>0);
+const uphill=P.create();uphill.east=280;uphill.north=190;uphill.y=P.terrainHeight(uphill.east,uphill.north)+.001;uphill.vy=1;
+P.step(uphill,{},1/120);
+assert(uphill.vy>0&&uphill.landed&&uphill.crashed&&uphill.impactNormal<-2.5,'uphill collision uses terrain-normal approach even while climbing');
+const frozen={...collision};P.step(collision,{boost:true},1);assert.deepEqual(collision,frozen,'landed physics stays frozen');
+for(const hz of [30,144]){const a=advance(P.create(),{bank:.4,boost:true},3,hz);const b=advance(P.create(),{bank:.4,boost:true},3);for(const key of ['east','north','y','energy'])assert(Math.abs(a[key]-b[key])<1e-7);}
+console.log('World checks passed: coordinates, ridge lift, thermals, weather, boost, ground effect and collision.');

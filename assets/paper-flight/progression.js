@@ -25,8 +25,10 @@
       maxHeight:clamp(value.maxHeight, 0, 10000),
       maxSpeed:clamp(value.maxSpeed, 0, 1000),
       thermalTime:clamp(value.thermalTime, 0, 3600),
-      stalls:integer(value.stalls, 10000),
+      stalls:integer(value.stalls, 10000), crashed:value.crashed===true,
       config:config(value.config),
+      explorationBonus:integer(value.explorationBonus, 1000),
+      discoveries:integer(value.discoveries, 5), kitesTagged:integer(value.kitesTagged, 5),
       reward:integer(value.reward)
     };
   }
@@ -84,7 +86,7 @@
     data.stats.thermalTime = Math.max(data.stats.thermalTime, entry.thermalTime);
     data.stats.maxHeight = Math.max(data.stats.maxHeight, entry.maxHeight);
     if (entry.stalls === 0) data.stats.efficientDistance = Math.max(data.stats.efficientDistance, entry.distance);
-    const bonuses = [];
+    const bonuses = entry.explorationBonus ? [{label:'Exploration & kites', reward:entry.explorationBonus}] : [];
     for (const goal of goals) {
       if (!data.completed.includes(goal.id) && goal.metric(data) >= goal.target) {
         data.completed.push(goal.id);

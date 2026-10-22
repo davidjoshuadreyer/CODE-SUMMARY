@@ -8,7 +8,7 @@ function fly(config = {}, control = () => 0, hz = 60) {
     for (const key of ['x', 'y', 'vx', 'vy', 'pitch', 'airspeed', 'lift', 'drag']) assert(Number.isFinite(s[key]), `${key} remains finite`);
   }
   assert(s.landed, 'finite flight must end in a landing');
-  assert.equal(s.y, 0);
+  assert.equal(s.y, s.groundHeight);
   return s;
 }
 const baseline = fly();
