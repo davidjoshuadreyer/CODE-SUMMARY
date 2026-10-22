@@ -3,19 +3,20 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f7eff7">
 <title>Paper flight · Tesselate</title>
-<link rel="stylesheet" href="assets/paper-flight/flight.css?v=2">
-<script defer src="assets/paper-flight/physics.js?v=2"></script>
-<script defer src="assets/paper-flight/progression.js?v=2"></script>
-<script defer src="assets/paper-flight/renderer.js?v=2"></script>
-<script defer src="assets/paper-flight/flight.js?v=2"></script>
+<link rel="stylesheet" href="assets/paper-flight/flight.css?v=3">
+<script defer src="assets/paper-flight/physics.js?v=3"></script>
+<script defer src="assets/paper-flight/progression.js?v=3"></script>
+<script defer src="assets/paper-flight/renderer.js?v=3"></script>
+<script defer src="assets/paper-flight/flight.js?v=3"></script>
 </head>
 <body>
 <header class="page-header"><a href="index.html">← Back to workspace</a><span>TESSELATE / TAKE A BREAK</span><button id="motion" aria-pressed="false">Quiet motion</button></header>
 <main>
 <div class="intro"><div><p class="eyebrow">A SMALL EXPERIMENT IN FLIGHT</p><h1>Paper flight<span>.</span></h1><p>Fold. Fly. Find a little more horizon.</p></div><div class="record"><span>YOUR FURTHEST FLIGHT</span><strong id="best">0 <small>m</small></strong></div></div>
 <section class="sky" aria-label="Paper airplane game">
-<canvas id="flight" aria-label="A folded paper airplane flying over grainy pastel waves"></canvas>
+<canvas id="flight" tabindex="0" aria-label="A folded paper airplane flying over grainy pastel waves"></canvas>
 <div class="hud"><div><span class="live-dot"></span><span id="landscape">The lavender coast</span></div><div><strong id="distance">0</strong> <span>m</span><button id="pause" aria-label="Pause flight" hidden>Ⅱ</button></div></div>
+<div class="view-switch" role="group" aria-label="Camera view"><button id="view-side" aria-pressed="true">Side view</button><button id="view-pov" aria-pressed="false">POV view</button></div>
 <div class="flight-status" id="flight-status">Ready for a little fieldwork</div>
 <div class="invitation" id="invitation"><span class="eyebrow">FOLLOW YOUR CURIOSITY</span><h2>A paper plane.<br>An open horizon.</h2><p>Hold to launch. Follow the ribbons of rising air.</p></div>
 <div class="flight-controls"><div class="lift-display" id="charge-display"><span id="meter-label">Launch energy</span><div class="meter"><i id="meter"></i></div></div><button id="launch">Hold to launch ↗</button><div class="steering" id="steering" hidden><button id="dive" aria-label="Hold to dive">↘ Dive <kbd>↓</kbd></button><button id="pull" aria-label="Hold to pull up">↗ Pull up <kbd>↑</kbd></button></div><p id="hint">Hold Space or the button, then release. A quick tap works too.</p></div>

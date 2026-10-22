@@ -7,7 +7,7 @@
   class FlightRenderer {
     constructor(canvas) {
       this.canvas = canvas; this.ctx = canvas.getContext('2d');
-      this.time = 0; this.cameraY = 0; this.trail = []; this.lastPhase = ''; this.trailClock = 0;
+      this.time = 0; this.cameraY = 0; this.trail = []; this.lastPhase = ''; this.trailClock = 0; this.povPitch = 0;
       const noise = document.createElement('canvas'); noise.width = noise.height = 256;
       const nc = noise.getContext('2d'), pixels = nc.createImageData(256, 256);
       for (let i=0;i<pixels.data.length;i+=4) {
@@ -39,8 +39,9 @@
       const phase=options.phase||'ready', quiet=!!options.quiet, paused=!!options.paused;
       const step=paused?0:clamp(dt,0,.08), moving=phase==='flying';
       const x=Number(state.x)||0,y=Math.max(0,Number(state.y)||0), scale=w<600?2:2.5;
-      if(phase!==this.lastPhase && (phase==='ready'||phase==='charging')){this.trail.length=0;this.trailClock=0;this.cameraY=0;}
-      this.lastPhase=phase;if(!quiet)this.time+=step;
+      if(phase!==this.lastPhase && (phase==='ready'||phase==='charging')){this.trail.length=0;this.trailClock=0;this.cameraY=0;this.povPitch=Number(state.pitch)||0;}
+      this.lastPhase=phase;if(this.lastView!==options.view){this.trail.length=0;this.trailClock=0;this.lastView=options.view;}if(!quiet)this.time+=step;
+      if(options.view==='pov'){this.drawPOV(state,options,step);return;}
       const targetCamera=Math.max(0,y-(h*.54/scale));
       if(!paused)this.cameraY=quiet?targetCamera:this.cameraY+(targetCamera-this.cameraY)*(1-Math.exp(-step*3.5));
       const t=quiet?0:this.time, px=w*(w<600?.31:.27), ground=h*.79+this.cameraY*scale;
@@ -80,6 +81,52 @@
         const charge=clamp(options.charge||0,0,1);c.save();c.translate(px,py);c.rotate(-.24);c.setLineDash([2,6]);c.strokeStyle='#80698a65';c.lineWidth=1;c.beginPath();c.moveTo(40,0);c.quadraticCurveTo(85,-15,120+charge*75,-3-charge*22);c.stroke();c.restore();
       }
       this.plane(px,clamp(py,25,h-45),-(Number(state.pitch)||0),options.config||{},w<600?.82:1,phase,state,t,quiet);
+    }
+    drawPOV(state, options, dt) {
+      const {ctx:c,w,h}=this,quiet=!!options.quiet;
+      const flying=options.phase==='flying',x=Number(state.x)||0,altitude=Math.max(4,Number(state.y)||0);
+      const target=clamp(Number(state.pitch)||0,-.65,.65);
+      if(!options.paused)this.povPitch=quiet?0:this.povPitch+(target-this.povPitch)*(1-Math.exp(-dt*5));
+      // Camera looks forward along the flight path. Pitch shifts the horizon;
+      // distance bands expand toward the viewer using perspective division.
+      const horizon=h*(.37+this.povPitch*.36),focal=Math.min(w*.85,h*1.1),cx=w*.5;
+      const travel=quiet?0:x,t=quiet?0:this.time;
+      const project=(lateral,z,elevation=0)=>({x:cx+lateral*focal/z,y:horizon+(altitude-elevation)*focal/z});
+      c.fillStyle=this.sky;c.fillRect(0,0,w,h);c.fillStyle=this.glow;c.fillRect(0,0,w,h);
+      c.beginPath();c.arc(w*.74,horizon-h*.13,Math.min(w,h)*.045,0,Math.PI*2);c.fillStyle='#fff8e6b0';c.fill();
+      // Distant paper ridges are still the same softly layered coast.
+      for(let layer=0;layer<4;layer++){
+        c.fillStyle=this.wavePaint[layer];c.beginPath();
+        for(let j=0;j<=90;j++){const nx=j/90,y=horizon+layer*12+Math.sin(nx*5+layer*1.7+t*.04+travel*.0004)*h*.025;j?c.lineTo(nx*w,y):c.moveTo(0,y);}
+        c.lineTo(w,h);c.lineTo(0,h);c.closePath();c.fill();
+      }
+      const band=42,near=8,far=1700;
+      for(let world=Math.ceil((travel+far)/band)*band;world>travel+near;world-=band){
+        const zFar=world-travel,zNear=Math.max(near,zFar-band),index=Math.floor(world/band);
+        c.beginPath();
+        for(let j=0;j<=40;j++){const lateral=(j/40-.5)*4000,elev=Math.sin(lateral*.005+world*.009)*5;const p=project(lateral,zFar,elev);j?c.lineTo(p.x,p.y):c.moveTo(p.x,p.y);}
+        for(let j=40;j>=0;j--){const lateral=(j/40-.5)*4000,elev=Math.sin(lateral*.005+(world-band)*.009)*5;const p=project(lateral,zNear,elev);c.lineTo(p.x,p.y);}
+        c.closePath();c.fillStyle=palettes[((index%4)+4)%4][0];c.globalAlpha=.22;c.fill();c.globalAlpha=1;
+        c.beginPath();for(let j=0;j<=40;j++){const lateral=(j/40-.5)*4000;const p=project(lateral,zFar,Math.sin(lateral*.005+world*.009)*5);j?c.lineTo(p.x,p.y):c.moveTo(p.x,p.y);}c.strokeStyle='#fff7ef35';c.lineWidth=.8;c.stroke();
+      }
+      // World-anchored surface flecks grow as they pass beneath the nose.
+      for(let i=0;i<210;i++){const z=15+((random(i+80)*1000-travel%1000+1000)%1000),lateral=(random(i+460)-.5)*1600,p=project(lateral,z);if(p.y<horizon||p.y>h||p.x<0||p.x>w)continue;const size=clamp(110/z,.5,2.8);c.fillStyle=i%3?'#fff4ef65':'#5b3d661e';c.fillRect(p.x,p.y,size,size);}
+      // Updrafts line up with the same physical thermal zones as side view.
+      if(flying||options.phase==='landed'){
+        const next=220+Math.max(0,Math.ceil((x-220)/400))*400,ahead=next-x;
+        if(ahead>3&&ahead<900){const depth=Math.max(35,ahead),left=project(-65,depth),right=project(65,depth),top=project(0,depth,135);const topY=clamp(top.y,115,h*.55),bottomY=Math.min(h*.82,left.y),span=Math.min(w*.8,right.x-left.x);
+          const glow=c.createLinearGradient(cx-span/2,0,cx+span/2,0);glow.addColorStop(0,'#fffadf00');glow.addColorStop(.5,'#fffadf40');glow.addColorStop(1,'#fffadf00');c.fillStyle=glow;c.fillRect(cx-span/2,topY,span,Math.max(0,bottomY-topY));
+          c.strokeStyle='#fffbe5a0';c.lineWidth=1.2;for(let i=0;i<9;i++){const progress=(i/9+t*.16)%1,yy=bottomY-progress*(bottomY-topY),xx=cx+Math.sin(i*2+progress*4)*span*.3;c.globalAlpha=Math.sin(progress*Math.PI)*.75;c.beginPath();c.moveTo(xx-5,yy+4);c.quadraticCurveTo(xx,yy-5,xx+5,yy+4);c.stroke();}c.globalAlpha=1;
+          c.font='9px ui-monospace, monospace';c.textAlign='center';c.fillStyle='#70597a';c.fillText('RISING AIR · '+Math.round(ahead)+' m',cx,Math.max(123,topY-10));
+        }
+        if(state.thermal>.4){c.fillStyle='#fff8de18';c.fillRect(0,0,w,h);}
+      }
+      c.save();c.globalAlpha=.54;c.fillStyle=this.grain;c.fillRect(0,0,w,h);c.restore();
+      // The paper nose and inner folds frame a pilot's-eye view, not a chase camera.
+      const nose=h*.67,base=h*1.08,span=w*(.27+clamp(Number(options.config?.wing??50),0,100)*.0012);
+      const shape=(points,color)=>{c.beginPath();points.forEach((p,i)=>i?c.lineTo(...p):c.moveTo(...p));c.closePath();c.fillStyle=color;c.fill();c.strokeStyle='#9e84ad40';c.lineWidth=1;c.stroke();};
+      shape([[cx,nose],[cx-span,base],[cx-12,h*.91]],'#fff9ed');shape([[cx,nose],[cx+span,base],[cx+12,h*.91]],'#eee3ed');shape([[cx,nose],[cx-12,h*.91],[cx,base],[cx+12,h*.91]],'#cbb8d8');
+      c.save();c.beginPath();c.moveTo(cx,nose);c.lineTo(cx-span,base);c.lineTo(cx+span,base);c.closePath();c.clip();c.globalAlpha=.3;c.fillStyle=this.grain;c.fillRect(0,nose,w,h-nose);c.restore();
     }
     thermal(sx,ground,scale,t,quiet) {
       const c=this.ctx,top=Math.max(54,ground-110*scale),bottom=Math.min(this.h-45,ground),span=65*scale;
