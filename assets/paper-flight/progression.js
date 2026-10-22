@@ -9,13 +9,24 @@
     balance: clamp(value?.balance, 0, 100, 50),
     trim: clamp(value?.trim, -6, 10, 2)
   });
+  const places = [
+    {id:'sunfield',name:'Sunfield',note:'Golden fields with rising warm air.'},
+    {id:'foldridge',name:'Fold Ridge',note:'Folded hills lift air along their windward slopes.'},
+    {id:'rainharbor',name:'Rain Harbor',note:'A quiet harbor beneath the rain.'},
+    {id:'cloudgarden',name:'Cloud Garden',note:'Soft clouds and high, wandering thermals.'},
+    {id:'stormarch',name:'Storm Arch',note:'A stone arch on the edge of the weather.'}
+  ];
+  const discoveryIds = value => Array.isArray(value) ? [...new Set(value.filter(id => places.some(place => place.id === id)))] : [];
   const goals = [
     {id:'coast', title:'Find your wings', description:'Fly 300 m in one throw.', reward:25, target:300, metric:d=>d.best},
     {id:'passage', title:'Across the passage', description:'Fly 600 m in one throw.', reward:45, target:600, metric:d=>d.best},
     {id:'horizon', title:'A new horizon', description:'Fly 1,000 m in one throw.', reward:70, target:1000, metric:d=>d.best},
     {id:'thermal', title:'Read the air', description:'Spend 3 seconds in thermals in one flight.', reward:35, target:3, metric:d=>d.stats.thermalTime},
     {id:'efficient', title:'A clean glide', description:'Fly 450 m without stalling.', reward:40, target:450, metric:d=>d.stats.efficientDistance},
-    {id:'altitude', title:'Room to glide', description:'Reach 120 m above the waves.', reward:35, target:120, metric:d=>d.stats.maxHeight}
+    {id:'altitude', title:'Room to glide', description:'Reach 120 m above the waves.', reward:35, target:120, metric:d=>d.stats.maxHeight},
+    {id:'chart', title:'A traveller’s sketchbook', description:'Discover 3 different places across any number of flights.', reward:45, target:3, metric:d=>d.discoveryIds.length},
+    {id:'atlas', title:'The whole paper coast', description:'Discover all 5 places at your own pace.', reward:80, target:5, metric:d=>d.discoveryIds.length},
+    {id:'ribbons', title:'Thread the breeze', description:'Collect 3 breeze ribbons in one flight.', reward:45, target:3, metric:d=>d.stats.ribbons}
   ];
 
   function flightRecord(value = {}) {
@@ -29,6 +40,7 @@
       config:config(value.config),
       explorationBonus:integer(value.explorationBonus, 1000),
       discoveries:integer(value.discoveries, 5), kitesTagged:integer(value.kitesTagged, 5), ribbons:integer(value.ribbons,5),
+      discoveryIds:discoveryIds(value.discoveryIds),
       reward:integer(value.reward)
     };
   }
@@ -37,11 +49,12 @@
     const v = value && typeof value === 'object' ? value : {};
     return {
       balance:integer(v.balance), best:integer(v.best),
+      discoveryIds:discoveryIds(v.discoveryIds),
       levels:[0, 1, 2].map(i => integer(v.levels?.[i], 8)),
       config:config(v.config), flights:integer(v.flights),
       history:Array.isArray(v.history) ? v.history.filter(item => item && typeof item === 'object').slice(0, 8).map(flightRecord) : [],
       completed:Array.isArray(v.completed) ? [...new Set(v.completed.filter(id => goals.some(goal => goal.id === id)))] : [],
-      stats:{thermalTime:clamp(v.stats?.thermalTime, 0, 3600), efficientDistance:integer(v.stats?.efficientDistance), maxHeight:clamp(v.stats?.maxHeight, 0, 10000)}
+      stats:{thermalTime:clamp(v.stats?.thermalTime, 0, 3600), efficientDistance:integer(v.stats?.efficientDistance), maxHeight:clamp(v.stats?.maxHeight, 0, 10000), ribbons:integer(v.stats?.ribbons, 5)}
     };
   }
 
@@ -75,6 +88,11 @@
     return goals.map(({metric, ...goal}) => ({...goal, done:data.completed.includes(goal.id), progress:data.completed.includes(goal.id) ? goal.target : Math.min(goal.target, metric(data))}));
   }
 
+  function journal(data) {
+    const found = discoveryIds(data?.discoveryIds);
+    return places.map(place => ({...place, discovered:found.includes(place.id)}));
+  }
+
   function finish(data, flight) {
     const entry = flightRecord(flight);
     const previousBest = data.best;
@@ -83,6 +101,8 @@
     const baseReward = 24 + Math.floor(entry.distance / 12);
     data.best = Math.max(previousBest, entry.distance);
     data.flights++;
+    data.discoveryIds = discoveryIds([...(data.discoveryIds || []), ...entry.discoveryIds]);
+    data.stats.ribbons = Math.max(data.stats.ribbons || 0, entry.ribbons);
     data.stats.thermalTime = Math.max(data.stats.thermalTime, entry.thermalTime);
     data.stats.maxHeight = Math.max(data.stats.maxHeight, entry.maxHeight);
     if (entry.stalls === 0) data.stats.efficientDistance = Math.max(data.stats.efficientDistance, entry.distance);
@@ -101,5 +121,5 @@
     return {reward, baseReward, bonuses, record, previousBest};
   }
 
-  globalThis.FlightProgression = {load, save, upgradeCost, finish, purchase, contracts};
+  globalThis.FlightProgression = {load, save, upgradeCost, finish, purchase, contracts, journal};
 })();

@@ -32,7 +32,7 @@ assert.equal(P.finish(data, {...flight,x:1000,stalls:2}).bonuses.length, 1);
 assert.equal(data.stats.efficientDistance, 630);
 for (let i=0; i<10; i++) P.finish(data,{...flight,x:10});
 assert.equal(data.history.length, 8);
-assert.equal(P.contracts(data).every(c=>c.done && c.progress===c.target), true);
+assert.equal(P.contracts(data).filter(c=>!['chart','atlas','ribbons'].includes(c.id)).every(c=>c.done && c.progress===c.target), true);
 const persisted = storage(null);
 assert.equal(P.save(persisted, data), true);
 assert.deepEqual(P.load(persisted).data, data);
@@ -76,3 +76,29 @@ assert.equal(nextThrow.reward,nextThrow.baseReward,'exploration bonus does not l
 assert.equal(restoredExplorer.history[0].explorationBonus,0);
 assert.equal(restoredExplorer.balance,expeditionResult.reward+nextThrow.baseReward);
 console.log('Exploration rewards: actual discovery/tag earnings persist and do not leak across throws.');
+
+// The album preserves actual identities across flights; the old count alone
+// cannot prove which places a returning player visited.
+assert.deepEqual(old.data.discoveryIds, []);
+assert.equal(P.journal(old.data).filter(p=>p.discovered).length, 0);
+const journalSave=storage(null), traveller=P.load(journalSave).data;
+let reward=P.finish(traveller,{x:10,discoveries:5,discoveryIds:['sunfield','sunfield','invented',null],ribbons:1});
+assert.deepEqual(traveller.discoveryIds,['sunfield']);
+assert.equal(reward.bonuses.length,0);
+reward=P.finish(traveller,{x:10,discoveryIds:['foldridge','rainharbor'],ribbons:2});
+assert.deepEqual(reward.bonuses,[{label:'A traveller’s sketchbook',reward:45}]);
+assert.equal(P.contracts(traveller).find(c=>c.id==='ribbons').progress,2,'Ribbons require mastery in one flight, not cumulative farming');
+assert.equal(P.save(journalSave,traveller),true);
+const returned=P.load(journalSave).data;
+reward=P.finish(returned,{x:10,discoveryIds:['sunfield','cloudgarden','stormarch'],ribbons:3});
+assert.deepEqual(reward.bonuses,[{label:'The whole paper coast',reward:80},{label:'Thread the breeze',reward:45}]);
+assert.equal(P.journal(returned).every(p=>p.discovered),true);
+assert.equal(P.finish(returned,{x:10,discoveryIds:returned.discoveryIds,ribbons:5}).bonuses.length,0,'Exploration contracts pay once');
+const dirty=P.load(storage(JSON.stringify({...returned,discoveryIds:['sunfield','sunfield','invalid'],stats:{ribbons:999}}))).data;
+assert.deepEqual(dirty.discoveryIds,['sunfield']);
+assert.equal(dirty.stats.ribbons,5);
+const copy=P.journal(returned);copy[0].id='corrupted';
+assert.equal(P.journal(returned)[0].id,'sunfield','Journal returns independent records');
+assert.equal(P.save(journalSave,returned),true);
+assert.deepEqual(P.load(journalSave).data,returned);
+console.log('Discovery album: legacy migration, identity validation, multi-flight collection and one-time mastery goals passed.');
