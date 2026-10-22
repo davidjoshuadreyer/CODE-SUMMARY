@@ -241,14 +241,16 @@
     weather(state,quiet,t) {
       const c=this.ctx,w=this.w,h=this.h,rain=clamp(Number(state.weather?.rain)||0,0,1),storm=clamp(Number(state.weather?.storm)||0,0,1);
       if(rain<=.01&&storm<=.01)return;
-      c.save();c.fillStyle=`rgba(78,69,112,${rain*.07+storm*.2})`;c.fillRect(0,0,w,h);
+      c.save();c.fillStyle=`rgba(78,69,112,${rain*.12+storm*.2})`;c.fillRect(0,0,w,h);
       const cloud=c.createLinearGradient(0,0,0,h*.53);cloud.addColorStop(0,`rgba(82,72,111,${.15+storm*.28})`);cloud.addColorStop(1,'rgba(82,72,111,0)');c.fillStyle=cloud;c.fillRect(0,0,w,h*.53);
       // Three depth layers: fine distant drizzle and broader, quicker foreground drops.
       for(let layer=0;layer<3;layer++){
-        c.lineWidth=.45+layer*.4;c.strokeStyle='#eee7f7';
-        for(let i=0;i<Math.floor(rain*(42-layer*9));i++){
+        c.lineWidth=.8+layer*.55;c.strokeStyle='#fff7ff';
+        for(let i=0;i<Math.floor(rain*(82-layer*14));i++){
           const seed=i+layer*137,speed=(95+random(seed+94)*70)*(1+layer*.8),sy=(random(seed+50)*h+(quiet?0:t*speed))%(h+40)-20,sx=(random(seed+900)*w+(quiet?0:t*speed*.23))%(w+40)-20;
-          c.globalAlpha=.12+layer*.12+random(seed+330)*.12;c.beginPath();c.moveTo(sx,sy);c.lineTo(sx-2-layer*2-storm*3,sy+5+layer*5+storm*3);c.stroke();
+          c.globalAlpha=.38+layer*.17+random(seed+330)*.12;c.beginPath();c.moveTo(sx,sy);c.lineTo(sx-3-layer*3-storm*4,sy+11+layer*8+storm*5);
+          // A muted ink edge keeps pale drops visible against the grain and bright paper.
+          c.strokeStyle='#726886';c.lineWidth=1.5+layer*.6;c.stroke();c.strokeStyle='#fff7ff';c.lineWidth=.8+layer*.55;c.stroke();
         }
       }
       if(!quiet&&storm>.1){

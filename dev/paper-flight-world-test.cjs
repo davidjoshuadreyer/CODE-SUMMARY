@@ -32,3 +32,13 @@ assert(uphill.vy>0&&uphill.landed&&uphill.crashed&&uphill.impactNormal<-2.5,'uph
 const frozen={...collision};P.step(collision,{boost:true},1);assert.deepEqual(collision,frozen,'landed physics stays frozen');
 for(const hz of [30,144]){const a=advance(P.create(),{bank:.4,boost:true},3,hz);const b=advance(P.create(),{bank:.4,boost:true},3);for(const key of ['east','north','y','energy'])assert(Math.abs(a[key]-b[key])<1e-7);}
 console.log('World checks passed: coordinates, ridge lift, thermals, weather, boost, ground effect and collision.');
+
+const yawRight=advance(P.create(),{yaw:1},2),yawLeft=advance(P.create(),{yaw:-1},2);
+assert.equal(yawRight.roll,0);assert.equal(yawLeft.roll,0);
+assert(yawRight.heading>90&&yawLeft.heading<90,'rudder steers heading independently of roll');
+assert(yawRight.north<0&&yawLeft.north>0,'rudder changes actual world trajectory');
+const released=yawRight.heading;advance(yawRight,{},1);assert.equal(yawRight.heading,released,'released rudder preserves heading with wings level');
+const mixed=advance(P.create(),{bank:.2,yaw:-.3},2),bankOnly=advance(P.create(),{bank:.2},2);
+assert.equal(mixed.roll,bankOnly.roll,'yaw must not change roll input');assert(mixed.heading<bankOnly.heading);
+for(const hz of [30,144]){const a=advance(P.create(),{yaw:.7},2,hz),b=advance(P.create(),{yaw:.7},2);assert(Math.abs(a.east-b.east)<1e-7);assert(Math.abs(a.heading-b.heading)<1e-7);}
+console.log('Rudder checks passed: separate roll/yaw, physical trajectory, release and frame-rate independence.');

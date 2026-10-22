@@ -74,7 +74,7 @@
       stalled: false, thermal: 0, time: 0, landed: false, maxHeight: 70,
       maxSpeed: speed, thermalTime: 0, stallTime: 0, _spec: s, _accumulator: 0};
   }
-  function integrate(s, input, bank, boost) {
+  function integrate(s, input, bank, boost, yaw) {
     // Aileron-style input commands roll rate, not a target bank angle.
     // Neutral input holds attitude; opposite input rolls the wings back level.
     s.roll = clamp(s.roll + bank * 40 * RAD * H, -55 * RAD, 55 * RAD);
@@ -98,7 +98,8 @@
     s.energy=clamp(s.energy+(boosting ? -.16 : boost ? 0 : .035)*H,0,1);
     const q = .5 * RHO * v * v * p.area;
     const lift = q * cl, drag = q * cd, verticalLift = lift * Math.cos(s.roll);
-    s.heading = (s.heading + G * Math.tan(s.roll) / Math.max(8,v) * H / RAD + 360) % 360;
+    // Separate arcade rudder steering changes heading without commanding roll.
+    s.heading = (s.heading + G * Math.tan(s.roll) / Math.max(8,v) * H / RAD + yaw * 24 * H + 360) % 360;
     s.vx += (thrust*Math.cos(s.pitch)-drag * ax / v - verticalLift * ay / v) / p.mass * H;
     s.vy += ((thrust*Math.sin(s.pitch)+verticalLift * ax / v - drag * ay / v) / p.mass - G) * H;
     // Prevent numerical backward looping in a forgiving side-scrolling game.
@@ -126,7 +127,7 @@
     state._accumulator += clamp(number(dt, 0), 0, .25);
     const pitch = clamp(number(input.pitch, 0), -1, 1), bank = clamp(number(input.bank, 0), -1, 1);
     while (state._accumulator + 1e-10 >= H && !state.landed) {
-      integrate(state, pitch, bank, Boolean(input.boost)); state._accumulator -= H;
+      integrate(state, pitch, bank, Boolean(input.boost), clamp(number(input.yaw, 0), -1, 1)); state._accumulator -= H;
     }
     return state;
   }
