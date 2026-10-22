@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f7eff7">
+<title>Paper flight · Tesselate</title>
+<link rel="stylesheet" href="assets/paper-flight/flight.css">
+<script defer src="assets/paper-flight/flight.js"></script>
+</head>
+<body>
+<header class="page-header"><a href="index.html">← Back to workspace</a><span>TESSELATE / TAKE A BREAK</span><button id="motion" aria-pressed="false">Quiet motion</button></header>
+<main>
+<div class="intro"><div><p class="eyebrow">A LITTLE ROOM TO WANDER</p><h1>Paper flight<span>.</span></h1><p>One small fold. A little further into the quiet.</p></div><div class="record"><span>YOUR FURTHEST FLIGHT</span><strong id="best">0 <small>m</small></strong></div></div>
+<section class="sky" aria-label="Paper airplane game">
+<canvas id="flight" aria-label="A paper airplane drifting over pastel waves"></canvas>
+<div class="hud"><span id="landscape">The lavender coast</span><span><strong id="distance">0</strong> m <span class="hud-divider">/</span> <span id="altitude">Ready to wander</span></span></div>
+<div class="invitation" id="invitation"><span class="eyebrow">NO HURRY. NO WRONG TURNS.</span><h2>See where the breeze takes you.</h2><p>Hold to gather a little momentum. Release to fly.</p></div>
+<div class="flight-controls"><div class="lift-display"><span id="meter-label">Launch momentum</span><div class="meter"><i id="meter"></i></div></div><button id="launch">Hold to throw <span>↗</span></button><button id="pause" hidden>Pause</button><p id="hint">Hold the button or Space to throw. During flight, hold for a gentle lift.</p></div>
+<div class="result" id="result" hidden aria-live="polite"><p class="eyebrow" id="result-label">A SOFT LANDING</p><h2 id="result-distance"></h2><p id="reward"></p><button id="again">Another little adventure ↗</button></div>
+</section>
+<div class="workshop-heading"><div><p class="eyebrow">THE FOLDING TABLE</p><h2>Small changes. Longer daydreams.</h2><p>Every flight earns breeze. Spend a little to go a little further.</p></div><div class="wallet"><strong id="balance">0</strong><span>breeze to spend</span></div></div>
+<section class="upgrades" aria-label="Airplane upgrades" id="upgrades"></section>
+<p class="save-note" id="save-note">Your folds and furthest flight are saved on this device. Stay a while, or come back another day.</p>
+<p class="sr-only" id="announcement" role="status"></p>
+<noscript><p>Enable JavaScript to take your paper airplane for a flight.</p></noscript>
+</main>
+</body></html>
