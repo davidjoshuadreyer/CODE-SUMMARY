@@ -117,7 +117,7 @@
         if(ahead>3&&ahead<900){const depth=Math.max(35,ahead),left=project(-65,depth),right=project(65,depth),top=project(0,depth,135);const topY=clamp(top.y,115,h*.55),bottomY=Math.min(h*.82,left.y),span=Math.min(w*.8,right.x-left.x);
           const glow=c.createLinearGradient(cx-span/2,0,cx+span/2,0);glow.addColorStop(0,'#fffadf00');glow.addColorStop(.5,'#fffadf40');glow.addColorStop(1,'#fffadf00');c.fillStyle=glow;c.fillRect(cx-span/2,topY,span,Math.max(0,bottomY-topY));
           c.strokeStyle='#fffbe5a0';c.lineWidth=1.2;for(let i=0;i<9;i++){const progress=(i/9+t*.16)%1,yy=bottomY-progress*(bottomY-topY),xx=cx+Math.sin(i*2+progress*4)*span*.3;c.globalAlpha=Math.sin(progress*Math.PI)*.75;c.beginPath();c.moveTo(xx-5,yy+4);c.quadraticCurveTo(xx,yy-5,xx+5,yy+4);c.stroke();}c.globalAlpha=1;
-          c.font='9px ui-monospace, monospace';c.textAlign='center';c.fillStyle='#70597a';c.fillText('RISING AIR · '+Math.round(ahead)+' m',cx,Math.max(123,topY-10));
+
         }
         if(state.thermal>.4){c.fillStyle='#fff8de18';c.fillRect(0,0,w,h);}
       }
@@ -127,6 +127,7 @@
       const shape=(points,color)=>{c.beginPath();points.forEach((p,i)=>i?c.lineTo(...p):c.moveTo(...p));c.closePath();c.fillStyle=color;c.fill();c.strokeStyle='#9e84ad40';c.lineWidth=1;c.stroke();};
       shape([[cx,nose],[cx-span,base],[cx-12,h*.91]],'#fff9ed');shape([[cx,nose],[cx+span,base],[cx+12,h*.91]],'#eee3ed');shape([[cx,nose],[cx-12,h*.91],[cx,base],[cx+12,h*.91]],'#cbb8d8');
       c.save();c.beginPath();c.moveTo(cx,nose);c.lineTo(cx-span,base);c.lineTo(cx+span,base);c.closePath();c.clip();c.globalAlpha=.3;c.fillStyle=this.grain;c.fillRect(0,nose,w,h-nose);c.restore();
+      FlightHUD.draw(c,w,h,state,options,this.povPitch);
     }
     thermal(sx,ground,scale,t,quiet) {
       const c=this.ctx,top=Math.max(54,ground-110*scale),bottom=Math.min(this.h-45,ground),span=65*scale;

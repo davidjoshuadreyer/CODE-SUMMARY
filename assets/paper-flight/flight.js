@@ -10,7 +10,7 @@
   const FLIGHT_PACE = 1.18; // Slightly brisker play; fixed-step aerodynamic tuning stays intact.
   let view = 'side';
   try { view = storage?.getItem('tesselate-paper-flight-camera') === 'pov' ? 'pov' : 'side'; } catch {}
-  function selectView(next){view=next;for(const name of ['side','pov'])$('view-'+name).setAttribute('aria-pressed',String(view===name));$('flight').setAttribute('aria-label',view==='pov'?'Pilot’s-eye view over grainy pastel waves':'Side view of a paper airplane flying over grainy pastel waves');try{storage?.setItem('tesselate-paper-flight-camera',view);}catch{}}
+  function selectView(next){view=next;$('pov-guide').hidden=view!=='pov';for(const name of ['side','pov'])$('view-'+name).setAttribute('aria-pressed',String(view===name));$('flight').setAttribute('aria-label',view==='pov'?'Pilot’s-eye view over grainy pastel waves':'Side view of a paper airplane flying over grainy pastel waves');try{storage?.setItem('tesselate-paper-flight-camera',view);}catch{}}
   for(const name of ['side','pov'])$('view-'+name).addEventListener('click',()=>{selectView(name);$('flight').focus({preventScroll:true});});
   selectView(view);
   const preference = matchMedia('(prefers-reduced-motion: reduce)');
