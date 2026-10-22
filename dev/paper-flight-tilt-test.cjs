@@ -1,0 +1,11 @@
+const assert=require('node:assert/strict');
+const {FlightTilt,axes,command}=require('../assets/paper-flight/tilt.js');
+const P=require('../assets/paper-flight/physics.js');
+assert.equal(axes(null,0),null);assert.equal(command(2),0);assert.equal(command(25),1);assert.equal(command(-25),-1);
+assert.ok(Math.abs(axes(20,10,90).pitch-10)<1e-8);assert.ok(Math.abs(axes(20,10,90).bank+20)<1e-8);
+const events=new Map(),host={DeviceOrientationEvent:{requestPermission:async()=> 'granted'},isSecureContext:true,screen:{orientation:{angle:0,addEventListener(){},removeEventListener(){}}},addEventListener:(n,f)=>events.set(n,f),removeEventListener:n=>events.delete(n)};
+(async()=>{let message='';const t=new FlightTilt(host,m=>message=m);await t.enable();assert.equal(t.enabled,true);events.get('deviceorientation')({beta:40,gamma:0});assert.deepEqual(t.read(.1),{pitch:0,bank:0});events.get('deviceorientation')({beta:65,gamma:25});let control=t.read(.5);assert.ok(control.pitch>.95&&control.bank>.95);t.recenter();events.get('deviceorientation')({beta:65,gamma:25});assert.deepEqual(t.read(.1),{pitch:0,bank:0});t.sampleTime=0;assert.deepEqual(t.read(.1),{pitch:0,bank:0});t.disable();assert.equal(events.has('deviceorientation'),false);
+const denied=new FlightTilt({...host,DeviceOrientationEvent:{requestPermission:async()=> 'denied'}},m=>message=m);await denied.enable();assert.equal(denied.enabled,false);assert.match(message,/not allowed/);
+const unavailable=new FlightTilt({...host,DeviceOrientationEvent:undefined},m=>message=m);await unavailable.enable();assert.match(message,/unavailable/);
+const fly=bank=>{const s=P.create({},1);for(let i=0;i<360;i++)P.step(s,{bank},1/120);return s;};const neutral=fly(0),right=fly(1),left=fly(-1);assert.equal(neutral.heading,90);assert.ok(right.heading>90&&left.heading<90);assert.ok(right.roll>0&&left.roll<0);assert.ok(right.y<neutral.y);assert.ok(Math.abs(right.y-left.y)<1e-9);for(let i=0;i<240;i++)P.step(right,{bank:0},1/120);assert.ok(Math.abs(right.roll)<.001);
+console.log('Tilt and bank: calibration, dead zone, landscape mapping, smoothing, denied/unavailable sensors, stale samples, turn symmetry and lift tradeoff passed.');})();

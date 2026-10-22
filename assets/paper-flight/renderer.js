@@ -7,7 +7,7 @@
   class FlightRenderer {
     constructor(canvas) {
       this.canvas = canvas; this.ctx = canvas.getContext('2d');
-      this.time = 0; this.cameraY = 0; this.trail = []; this.lastPhase = ''; this.trailClock = 0; this.povPitch = 0;
+      this.time = 0; this.cameraY = 0; this.trail = []; this.lastPhase = ''; this.trailClock = 0; this.povPitch = 0; this.povRoll = 0;
       const noise = document.createElement('canvas'); noise.width = noise.height = 256;
       const nc = noise.getContext('2d'), pixels = nc.createImageData(256, 256);
       for (let i=0;i<pixels.data.length;i+=4) {
@@ -89,8 +89,10 @@
       if(!options.paused)this.povPitch=quiet?0:this.povPitch+(target-this.povPitch)*(1-Math.exp(-dt*5));
       // Camera looks forward along the flight path. Pitch shifts the horizon;
       // distance bands expand toward the viewer using perspective division.
+      this.povRoll=quiet?0:(Number(state.roll)||0);
       const horizon=h*(.37+this.povPitch*.36),focal=Math.min(w*.85,h*1.1),cx=w*.5;
       const travel=quiet?0:x,t=quiet?0:this.time;
+      c.save();c.translate(w/2,h*.37);c.rotate(-this.povRoll);const cover=1+Math.abs(Math.sin(this.povRoll))*.95;c.scale(cover,cover);c.translate(-w/2,-h*.37);
       const project=(lateral,z,elevation=0)=>({x:cx+lateral*focal/z,y:horizon+(altitude-elevation)*focal/z});
       c.fillStyle=this.sky;c.fillRect(0,0,w,h);c.fillStyle=this.glow;c.fillRect(0,0,w,h);
       c.beginPath();c.arc(w*.74,horizon-h*.13,Math.min(w,h)*.045,0,Math.PI*2);c.fillStyle='#fff8e6b0';c.fill();
@@ -122,12 +124,13 @@
         if(state.thermal>.4){c.fillStyle='#fff8de18';c.fillRect(0,0,w,h);}
       }
       c.save();c.globalAlpha=.54;c.fillStyle=this.grain;c.fillRect(0,0,w,h);c.restore();
+      c.restore();
       // The paper nose and inner folds frame a pilot's-eye view, not a chase camera.
       const nose=h*.67,base=h*1.08,span=w*(.27+clamp(Number(options.config?.wing??50),0,100)*.0012);
       const shape=(points,color)=>{c.beginPath();points.forEach((p,i)=>i?c.lineTo(...p):c.moveTo(...p));c.closePath();c.fillStyle=color;c.fill();c.strokeStyle='#9e84ad40';c.lineWidth=1;c.stroke();};
       shape([[cx,nose],[cx-span,base],[cx-12,h*.91]],'#fff9ed');shape([[cx,nose],[cx+span,base],[cx+12,h*.91]],'#eee3ed');shape([[cx,nose],[cx-12,h*.91],[cx,base],[cx+12,h*.91]],'#cbb8d8');
       c.save();c.beginPath();c.moveTo(cx,nose);c.lineTo(cx-span,base);c.lineTo(cx+span,base);c.closePath();c.clip();c.globalAlpha=.3;c.fillStyle=this.grain;c.fillRect(0,nose,w,h-nose);c.restore();
-      FlightHUD.draw(c,w,h,state,options,this.povPitch);
+      FlightHUD.draw(c,w,h,state,options,this.povPitch,this.povRoll);
     }
     thermal(sx,ground,scale,t,quiet) {
       const c=this.ctx,top=Math.max(54,ground-110*scale),bottom=Math.min(this.h-45,ground),span=65*scale;

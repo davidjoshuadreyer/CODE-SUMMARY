@@ -36,11 +36,12 @@
     const s = specs(config), speed = s.launchSpeed * (.77 + .23 * clamp(number(charge, .7), 0, 1));
     const gamma = 3 * RAD;
     return {x: 0, y: 70, vx: speed * Math.cos(gamma), vy: speed * Math.sin(gamma),
-      pitch: gamma + s.trimAlpha, airspeed: speed, lift: 0, drag: 0, alpha: s.trimAlpha,
+      roll: 0, heading: 90, pitch: gamma + s.trimAlpha, airspeed: speed, lift: 0, drag: 0, alpha: s.trimAlpha,
       stalled: false, thermal: 0, time: 0, landed: false, maxHeight: 70,
       maxSpeed: speed, thermalTime: 0, stallTime: 0, _spec: s, _accumulator: 0};
   }
-  function integrate(s, input) {
+  function integrate(s, input, bank) {
+    s.roll += (bank * 35 * RAD - s.roll) * (1 - Math.exp(-H * 3.5));
     const p = s._spec;
     // Thermals are finite, spatial updrafts: crossing one trades position for altitude.
     // Fade at altitude and with time so holding a control cannot produce perpetual flight.
@@ -54,9 +55,10 @@
     const cl = clamp(.13 + 3.6 * alpha, -.9, 1.25) * Math.exp(-excess * 6);
     const cd = p.profileDrag + cl * cl / (Math.PI * p.aspectRatio * .72) + excess * excess * 2.8;
     const q = .5 * RHO * v * v * p.area;
-    const lift = q * cl, drag = q * cd;
-    s.vx += (-drag * ax / v - lift * ay / v) / p.mass * H;
-    s.vy += ((lift * ax / v - drag * ay / v) / p.mass - G) * H;
+    const lift = q * cl, drag = q * cd, verticalLift = lift * Math.cos(s.roll);
+    s.heading = (s.heading + G * Math.tan(s.roll) / Math.max(8,v) * H / RAD + 360) % 360;
+    s.vx += (-drag * ax / v - verticalLift * ay / v) / p.mass * H;
+    s.vy += ((verticalLift * ax / v - drag * ay / v) / p.mass - G) * H;
     // Prevent numerical backward looping in a forgiving side-scrolling game.
     s.vx = clamp(s.vx, 2, 75); s.vy = clamp(s.vy, -65, 45);
     s.x += s.vx * H; s.y += s.vy * H; s.time += H;
@@ -70,9 +72,9 @@
     if (!state || state.landed) return state;
     // Same fixed substeps at 30/60/144 Hz; discard tab-suspension time.
     state._accumulator += clamp(number(dt, 0), 0, .25);
-    const pitch = clamp(number(input.pitch, 0), -1, 1);
+    const pitch = clamp(number(input.pitch, 0), -1, 1), bank = clamp(number(input.bank, 0), -1, 1);
     while (state._accumulator + 1e-10 >= H && !state.landed) {
-      integrate(state, pitch); state._accumulator -= H;
+      integrate(state, pitch, bank); state._accumulator -= H;
     }
     return state;
   }
