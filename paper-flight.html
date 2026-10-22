@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f7eff7">
 <title>Paper flight · Tesselate</title>
-<link rel="stylesheet" href="assets/paper-flight/flight.css?v=8">
-<script defer src="assets/paper-flight/physics.js?v=8"></script>
-<script defer src="assets/paper-flight/progression.js?v=8"></script>
-<script defer src="assets/paper-flight/exploration.js?v=8"></script>
-<script defer src="assets/paper-flight/hud.js?v=8"></script>
-<script defer src="assets/paper-flight/scenery.js?v=8"></script>
-<script defer src="assets/paper-flight/renderer.js?v=8"></script>
-<script defer src="assets/paper-flight/tilt.js?v=8"></script>
-<script defer src="assets/paper-flight/flight.js?v=8"></script>
+<link rel="stylesheet" href="assets/paper-flight/flight.css?v=9">
+<script defer src="assets/paper-flight/physics.js?v=9"></script>
+<script defer src="assets/paper-flight/progression.js?v=9"></script>
+<script defer src="assets/paper-flight/exploration.js?v=9"></script>
+<script defer src="assets/paper-flight/hud.js?v=9"></script>
+<script defer src="assets/paper-flight/scenery.js?v=9"></script>
+<script defer src="assets/paper-flight/renderer.js?v=9"></script>
+<script defer src="assets/paper-flight/tilt.js?v=9"></script>
+<script defer src="assets/paper-flight/flight.js?v=9"></script>
 </head>
 <body>
 <header class="page-header"><a href="index.html">← Back to workspace</a><span>TESSELATE / TAKE A BREAK</span><button id="motion" aria-pressed="false">Quiet motion</button></header>
@@ -24,14 +24,14 @@
 <div class="discovery-toast" id="discovery-toast" hidden><span>✧ FIELD NOTE</span><strong id="discovery-text"></strong></div>
 <div class="flight-status" id="flight-status">Ready for a little fieldwork</div>
 <div class="invitation" id="invitation"><span class="eyebrow">FOLLOW YOUR CURIOSITY</span><h2>A paper plane.<br>An open horizon.</h2><p>Find paper harbors, wind gardens and ribbons of rising air.</p></div>
-<div class="flight-controls"><div class="lift-display" id="charge-display"><span id="meter-label">Launch energy</span><div class="meter"><i id="meter"></i></div></div><button id="launch">Hold to launch ↗</button><div class="steering" id="steering" hidden><button id="bank-left" aria-label="Hold to bank left">↶ <kbd>←</kbd></button><button id="dive" aria-label="Hold to dive">↘ Dive <kbd>↓</kbd></button><button id="pull" aria-label="Hold to pull up">↗ Pull up <kbd>↑</kbd></button><button id="bank-right" aria-label="Hold to bank right">↷ <kbd>→</kbd></button></div><p id="hint">Hold Space or the button, then release. A quick tap works too.</p></div>
+<div class="flight-controls"><div class="lift-display" id="charge-display"><span id="meter-label">Launch energy</span><div class="meter"><i id="meter"></i></div></div><button id="launch">Hold to launch ↗</button><div class="steering" id="steering" hidden><button id="bank-left" aria-label="Hold to bank left">↶ <kbd>←</kbd></button><button id="pull" aria-label="Hold to pull up">↗ Pull up <kbd>↓</kbd></button><button id="dive" aria-label="Hold to dive">↘ Dive <kbd>↑</kbd></button><button id="bank-right" aria-label="Hold to bank right">↷ <kbd>→</kbd></button></div><p id="hint">Hold Space or the button, then release. A quick tap works too.</p></div>
 <div class="result" id="result" hidden aria-live="polite"><p class="eyebrow" id="result-label">FLIGHT NOTES</p><h2 id="result-distance"></h2><p id="reward"></p><div id="result-stats"></div><p id="flight-advice"></p><button id="again">Launch again ↗</button><button id="tune">Adjust your design ↓</button></div>
 </section>
 <section class="expedition" aria-label="Flight expedition">
 <div class="expedition-actions"><button id="boost" aria-label="Hold for thrust">✦ Thrust <kbd>Shift</kbd><span id="energy">100%</span></button><button id="fire" aria-label="Fire a paper pulse">◎ Paper pulse <kbd>F</kbd></button><div class="expedition-score"><strong id="explore-score">0 / 5</strong><span>places discovered this flight</span></div></div>
 <div class="route-panel"><div class="route-map"><svg id="chart" viewBox="0 0 360 220" role="img" aria-label="Flight chart, north up"><defs><pattern id="chart-grid" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0V30" fill="none" stroke="#b8a5bf" stroke-opacity=".22"/></pattern></defs><rect width="360" height="220" fill="url(#chart-grid)"/><text x="14" y="20" fill="#937d9c" font-size="9">N ↑</text><g id="chart-landmarks"></g><path id="chart-trail" fill="none" stroke="#ac879d" stroke-width="1.3" stroke-dasharray="3 3"/><path id="chart-plane" d="M0 -7L5 6L0 3L-5 6Z" fill="#654d7a" stroke="#fff9ef" stroke-width="1"/></svg></div><div class="route-details"><p class="eyebrow">CHOOSE YOUR NEXT HORIZON</p><div id="destinations" class="destinations" role="group" aria-label="Destinations"></div><strong id="navigation">Follow the coast</strong><p id="route-note">Bank toward a destination and fly close to discover it. Each discovery earns breeze.</p><p class="flight-tip">Fly through golden breeze ribbons for energy and rewards. Hold Shift for a short burst of thrust; glide to recharge. Aim at wandering kites and press F to unravel them into confetti. Shooting is optional.</p><p id="exploration-event" role="status"></p></div></div>
 </section>
-<div class="tilt-controls"><button id="tilt-toggle" aria-pressed="false">Enable tilt controls</button><button id="tilt-center" hidden>Recenter</button><span id="tilt-status" role="status">← / → or A / D to roll · release to hold bank · opposite input to level. Phone tilt is optional.</span></div>
+<div class="tilt-controls"><button id="tilt-toggle" aria-pressed="false">Enable tilt controls</button><button id="tilt-center" hidden>Recenter</button><span id="tilt-status" role="status">← / → or A / D to roll · release to hold bank · opposite input to level. ↑ / W dives · ↓ / S climbs. Phone pitch tilt is inverted.</span></div>
 <p class="pov-guide" id="pov-guide" hidden><span>POV FLIGHT DECK</span> Moving tapes show speed and altitude. The ladder shows pitch; the small circle shows where you’re travelling. V/S is climb or descent. The compass diamond points to your destination. ALT shows clearance above terrain. The energy gauge shows available thrust. Release roll input to keep your bank angle; steer the opposite way to level the wings. Watch the climb rate near slopes.</p>
 <div class="instruments" aria-label="Live flight telemetry"><div><span>AIRSPEED</span><strong id="speed">0 <small>m/s</small></strong></div><div><span>GROUND CLEARANCE</span><strong id="altitude">70 <small>m</small></strong></div><div><span>LIFT / DRAG</span><strong id="efficiency">—</strong></div><div><span>ANGLE OF ATTACK</span><strong id="alpha">0 <small>°</small></strong></div><div class="air-reading"><span>AIR MASS</span><strong id="air">Still air</strong></div></div>
 <div class="workshop-heading" id="workshop"><div><p class="eyebrow">THE FOLDING TABLE</p><h2>A little engineering. A lot of sky.</h2><p>Change one thing. Take a flight. See what happens.</p></div><div class="wallet"><strong id="balance">0</strong><span>breeze to spend</span></div></div>
