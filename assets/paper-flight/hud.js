@@ -59,15 +59,16 @@
     const rawPathY=axis+(cameraPitch-r.flightPath)*scale,pathY=clamp(rawPathY,clipTop+10,clipBottom-12);
     ctx.strokeStyle=ink;ctx.beginPath();ctx.arc(cx,pathY,5,0,Math.PI*2);ctx.stroke();line(cx-13,pathY,cx-5,pathY);line(cx+5,pathY,cx+13,pathY);line(cx,pathY-5,cx,pathY-10);ctx.lineWidth=1;
     // Compact lower instrument rail stays above the flight controls and paper nose.
-    const railY=h*.73,railW=Math.min(w-30,480),column=railW/3;
-    card(cx-railW/2,railY-17,railW,43);
+    const railY=h*.79,edge=small?42:70;
     const climb=(r.verticalSpeed>=0?'+':'')+r.verticalSpeed.toFixed(1);
-    [['V/S',climb+' m/s'],['THRUST',Math.round(r.energy*100)+'%'],['BANK',(r.roll>=0?'+':'')+(r.roll*180/Math.PI).toFixed(0)+'°']].forEach(([label,value],i)=>{const xx=cx-railW/2+column*(i+.5);text(label,xx,railY-5,7,'center',muted);text(value,xx,railY+12,small?11:13);if(i)line(cx-railW/2+column*i,railY-8,cx-railW/2+column*i,railY+16,'#b8a2c13d');});
+    text('V/S',edge,railY-10,7,'center',muted);text(climb+' m/s',edge,railY+5,small?10:12);
+    text('BANK',w-edge,railY-10,7,'center',muted);text((r.roll>=0?'+':'')+(r.roll*180/Math.PI).toFixed(0)+'°',w-edge,railY+5,small?10:12);
+    text('THRUST',w-edge,railY+35,7,'center',muted);text(Math.round(r.energy*100)+'%',w-edge,railY+50,small?10:12);
     const mode=options.paused?'FLIGHT PAUSED':r.altitude<16&&r.verticalSpeed<0?'TERRAIN · PULL UP / THRUST':r.stalled?'STALL · LOWER THE NOSE':state.boosting?'THRUST · ADDING ENERGY':r.storm>.25?'STORM · EXPECT GUSTS':r.ridge>.3?'RIDGE LIFT +'+r.ridge.toFixed(1)+' m/s':r.updraft>.4?'UPDRAFT +'+r.updraft.toFixed(1)+' m/s':r.rain>.15?'RAIN · EXTRA DRAG':'GLIDE · RECHARGING';
-    text(mode,cx,h*.65+13,small?8:10,'center',r.stalled||r.altitude<16?rose:ink);
-    if(options.navigation){const n=options.navigation,d=n.relativeBearing;const arrow=Math.abs(d)<8?'◇':d<0?'←':'→';text(arrow+' '+n.name.toUpperCase()+' · '+Math.round(n.distance)+' m',cx,h*.81,small?8:10,'center',ink);}
+    text(mode,cx,h*.49+13,small?8:10,'center',r.stalled||r.altitude<16?rose:ink);
+    if(options.navigation){const n=options.navigation,d=n.relativeBearing;const arrow=Math.abs(d)<8?'◇':d<0?'←':'→';text(arrow+' '+n.name.toUpperCase()+' · '+Math.round(n.distance)+' m',cx,h*.68,small?8:10,'center',ink);}
     // Thrust is a stored energy budget, separate from airspeed and aerodynamic lift.
-    const energyW=railW/3-28,energyX=cx-energyW/2;ctx.fillStyle='#b7a0c344';ctx.fillRect(energyX,railY+18,energyW,2);ctx.fillStyle=state.boosting?'#ad7188':'#8a739c';ctx.fillRect(energyX,railY+18,energyW*r.energy,2);
+    const energyW=40,energyX=w-edge-20;ctx.fillStyle='#b7a0c344';ctx.fillRect(energyX,railY+58,energyW,2);ctx.fillStyle=state.boosting?'#ad7188':'#8a739c';ctx.fillRect(energyX,railY+58,energyW*r.energy,2);
     ctx.restore();
   }
   root.FlightHUD={readings,draw};

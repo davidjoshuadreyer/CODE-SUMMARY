@@ -141,13 +141,24 @@
       c.restore();
       // The paper nose and inner folds frame a pilot's-eye view, not a chase camera.
       c.save(); if(state.crashed)c.globalAlpha=quiet?.35:Math.max(0,1-this.crashTime*2);
-      const flex=quiet?0:this.wingFlex*3+((state.stalled?Math.sin(t*22):Math.sin(t*2))*(state.stalled?1.5:.25)),nose=h*.67+flex,base=h*1.08,span=w*(.27+clamp(Number(options.config?.wing??50),0,100)*.0012);
+      const airflow=clamp((Number(state.airspeed)||0)/35,0,1.6),
+        flutter=quiet?0:Math.sin(t*11)*airflow*.8+Math.sin(t*17.3)*airflow*.35,
+        flex=quiet?0:this.wingFlex*4+flutter+(state.stalled?Math.sin(t*22)*2:Math.sin(t*2.1)*1.3),
+        nose=h*.73+flex-this.boostGlow*5,base=h*1.08,span=w*(.23+clamp(Number(options.config?.wing??50),0,100)*.001);
+      // The folds yield to airflow; a small lag against bank gives the body weight.
+      if(!quiet){c.translate(cx+Math.sin(t*1.4)*airflow*1.5,h*.91+Math.sin(t*2.1)*1.2);c.rotate(-this.visualRoll*.075);c.translate(-cx,-h*.91);}
       if(state.crashed&&!quiet){const crush=clamp(this.crashTime/.18,0,1);c.translate(cx,h*.74);c.scale(1-crush*.4,1-crush*.65);c.translate(-cx,-h*.74);}
       const shape=(points,color)=>{c.beginPath();points.forEach((p,i)=>i?c.lineTo(...p):c.moveTo(...p));c.closePath();c.fillStyle=color;c.fill();c.strokeStyle='#9e84ad40';c.lineWidth=1;c.stroke();};
-      shape([[cx,nose],[cx-span,base],[cx-12,h*.91]],'#fff9ed');shape([[cx,nose],[cx+span,base],[cx+12,h*.91]],'#eee3ed');shape([[cx,nose],[cx-12,h*.91],[cx,base],[cx+12,h*.91]],'#cbb8d8');
+      shape([[cx,nose],[cx-span,base-flex*2],[cx-12,h*.91]],'#fff9ed');shape([[cx,nose],[cx+span,base+flex*2],[cx+12,h*.91]],'#eee3ed');
+      shape([[cx-span*.88,base-flex*2],[cx-span*.72,base-18-flex*2],[cx,nose+9]],'#f2e5d8');
+      shape([[cx+span*.88,base+flex*2],[cx+span*.72,base-18+flex*2],[cx,nose+9]],'#d9c8df');shape([[cx,nose],[cx-12,h*.91],[cx,base],[cx+12,h*.91]],'#cbb8d8');
       c.save();c.beginPath();c.moveTo(cx,nose);c.lineTo(cx-span,base);c.lineTo(cx+span,base);c.closePath();c.clip();c.globalAlpha=.3;c.fillStyle=this.grain;c.fillRect(0,nose,w,h-nose);c.restore();
       // Narrow folded seams and warm paper edges retain a handmade silhouette.
       c.strokeStyle='#b7a0be75';c.lineWidth=1;c.beginPath();c.moveTo(cx,nose+16);c.lineTo(cx-span*.72,base);c.moveTo(cx,nose+16);c.lineTo(cx+span*.72,base);c.stroke();
+      // A little stitched paper patch and a wind-tugged thread make this your airframe.
+      c.save();c.translate(cx+span*.19,h*.94);c.rotate(-.18);c.fillStyle='#d8b3a0';c.fillRect(-11,-7,22,14);c.strokeStyle='#fff4e3';c.setLineDash([2,3]);c.strokeRect(-8,-4,16,8);c.setLineDash([]);c.restore();
+      c.strokeStyle='#a78091';c.lineWidth=1.4;c.beginPath();c.moveTo(cx+4,h*.9);
+      for(let i=1;i<=12;i++){const sway=quiet?0:Math.sin(t*7-i*.5)*i*.45*airflow;c.lineTo(cx+4+i*.65+sway,h*.9+i*3);}c.stroke();
       c.fillStyle='#bb9879';c.fillRect(cx-3,h*.91,6,16);c.restore();
       if(state.crashed)this.crumble(cx,h*.74,quiet,2.3);
       if(this.boostGlow>.01&&!quiet){c.save();c.globalAlpha=this.boostGlow;c.strokeStyle='#fff8dc88';c.lineWidth=1.5;for(let i=0;i<12;i++){const a=i/12*Math.PI*2, r=.35+((t*1.6+i/12)%1)*.3;c.beginPath();c.moveTo(cx+Math.cos(a)*w*r,h*.45+Math.sin(a)*h*r);c.lineTo(cx+Math.cos(a)*w*(r+.055),h*.45+Math.sin(a)*h*(r+.055));c.stroke();}c.restore();}
