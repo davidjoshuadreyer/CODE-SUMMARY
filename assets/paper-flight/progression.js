@@ -39,7 +39,7 @@
       stalls:integer(value.stalls, 10000), crashed:value.crashed===true,
       config:config(value.config),
       explorationBonus:integer(value.explorationBonus, 1000),
-      discoveries:integer(value.discoveries, 5), kitesTagged:integer(value.kitesTagged, 5), ribbons:integer(value.ribbons,5),
+      discoveries:integer(value.discoveries, 5), kitesTagged:integer(value.kitesTagged, 5), ribbons:integer(value.ribbons,12),
       discoveryIds:discoveryIds(value.discoveryIds),
       reward:integer(value.reward)
     };
@@ -54,7 +54,7 @@
       config:config(v.config), flights:integer(v.flights),
       history:Array.isArray(v.history) ? v.history.filter(item => item && typeof item === 'object').slice(0, 8).map(flightRecord) : [],
       completed:Array.isArray(v.completed) ? [...new Set(v.completed.filter(id => goals.some(goal => goal.id === id)))] : [],
-      stats:{thermalTime:clamp(v.stats?.thermalTime, 0, 3600), efficientDistance:integer(v.stats?.efficientDistance), maxHeight:clamp(v.stats?.maxHeight, 0, 10000), ribbons:integer(v.stats?.ribbons, 5)}
+      stats:{thermalTime:clamp(v.stats?.thermalTime, 0, 3600), efficientDistance:integer(v.stats?.efficientDistance), maxHeight:clamp(v.stats?.maxHeight, 0, 10000), ribbons:integer(v.stats?.ribbons, 12)}
     };
   }
 

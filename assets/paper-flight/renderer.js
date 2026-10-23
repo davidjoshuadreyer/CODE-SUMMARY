@@ -229,6 +229,8 @@
       }
     }
     ribbonRing(x,y,radius,t,quiet,ring,runTime,aspect=1,opacity=1) {
+      if(ring.missed)return;
+      if(Number.isFinite(ring.trailIndex)&&!ring.active&&!ring.collected)opacity*=.28;
       const age=ring.collected?Math.max(0,runTime-(ring.collectedAt||0)):0;
       if(ring.collected&&(quiet||age>.7))return;
       const c=this.ctx,progress=ring.collected?clamp(age/.7,0,1):0,turn=quiet?0:Math.sin(t*.6+(Number(ring.east)||0)*.01)*.09;
@@ -236,6 +238,7 @@
       // Broad translucent paper ribbon and a warm inner edge make the opening legible.
       c.strokeStyle='#bd925d66';c.lineWidth=clamp(radius*.14,1.8,6);c.beginPath();c.ellipse(0,0,radius*aspect,radius,0,0,Math.PI*2);c.stroke();
       c.strokeStyle='#fff1bddd';c.lineWidth=clamp(radius*.065,1,3);c.beginPath();c.ellipse(0,0,radius*aspect,radius,0,0,Math.PI*2);c.stroke();
+      if(ring.active&&!ring.collected){c.fillStyle='#fff9e8';c.font=Math.max(10,Math.min(24,radius*.45))+'px Georgia';c.textAlign='center';c.fillText(String(ring.trailIndex+1),0,-radius-9);}
       c.fillStyle='#e9c58f';for(const side of [-1,1]){c.beginPath();c.moveTo(side*radius*aspect,radius*.08);c.lineTo(side*(radius*aspect+radius*.13),radius*.4);c.lineTo(side*(radius*aspect-radius*.07),radius*.28);c.closePath();c.fill();}c.restore();
     }
     weather(state,quiet,t) {

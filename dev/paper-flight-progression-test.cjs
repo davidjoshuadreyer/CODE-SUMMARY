@@ -96,7 +96,7 @@ assert.equal(P.journal(returned).every(p=>p.discovered),true);
 assert.equal(P.finish(returned,{x:10,discoveryIds:returned.discoveryIds,ribbons:5}).bonuses.length,0,'Exploration contracts pay once');
 const dirty=P.load(storage(JSON.stringify({...returned,discoveryIds:['sunfield','sunfield','invalid'],stats:{ribbons:999}}))).data;
 assert.deepEqual(dirty.discoveryIds,['sunfield']);
-assert.equal(dirty.stats.ribbons,5);
+assert.equal(dirty.stats.ribbons,12);
 const copy=P.journal(returned);copy[0].id='corrupted';
 assert.equal(P.journal(returned)[0].id,'sunfield','Journal returns independent records');
 assert.equal(P.save(journalSave,returned),true);

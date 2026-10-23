@@ -1,5 +1,5 @@
 /* Hand-placed paper landmarks and optional kite tagging. Coordinates are world metres;
- * heading is compass degrees (east = 90). This layer never changes the flight forces. */
+ * heading is compass degrees (east = 90). Ribbon trails grant small bounded speed/energy pickups. */
 (function (root) {
   'use strict';
   const RAD = Math.PI / 180;
@@ -37,6 +37,45 @@
     return {...relative(plane,target),id:target.id,name:target.name,kind:target.kind,
       discovered:run.discoveries.includes(target.id)};
   }
+  function startTrail(run,plane) {
+    const origin=position(plane),destination=run.landmarks[run.selectedWaypoint];
+    let east=origin.east,north=origin.north,heading=finite(plane.heading,90),passed=false;
+    run.trailMode=true;run.trailIndex=0;run.streak=0;run.bestStreak=0;run.trailComplete=false;
+    run.trailRewarded=false;run._previous=origin;
+    run.rings=Array.from({length:12},(_,i)=>{
+      if(i>0){
+        if(Math.hypot(destination.east-east,destination.north-north)<95)passed=true;
+        const desired=passed?heading+Math.sin(i*.7)*5:Math.atan2(destination.east-east,destination.north-north)/RAD;
+        heading+=Math.max(-12,Math.min(12,wrap(desired-heading)));
+      }
+      const spacing=i===0?85:80;
+      east+=Math.sin(heading*RAD)*spacing;north+=Math.cos(heading*RAD)*spacing;
+      const terrain=root.FlightPhysics?.terrainHeight?.(east,north)??0;
+      const altitude=i<4?[0,4,2,-5][i]:-5-Math.min(15,(i-3)*2)+Math.sin(i*.5)*4;
+      const y=Math.max(terrain+40,origin.y+altitude);
+      return {east,north,y,id:'trail-'+i,radius:22,collected:false,collectedAt:0,
+        missed:false,active:i===0,trailIndex:i,incomingHeading:heading,nearest:Infinity};
+    });
+    return run;
+  }
+  function trailNavigation(run,plane) {
+    if(!run.trailMode||run.trailComplete)return null;
+    const ring=run.rings[run.trailIndex];
+    if(!ring)return null;
+    return {...relative(plane,ring),id:ring.id,name:'Ribbon '+(run.trailIndex+1)+' / '+run.rings.length,
+      kind:'ribbon',index:run.trailIndex,total:run.rings.length,streak:run.streak,discovered:false};
+  }
+  function advanceTrail(run) {
+    run.rings[run.trailIndex].active=false;
+    run.trailIndex++;
+    if(run.trailIndex>=run.rings.length){
+      run.trailComplete=true;
+      if(run.ringsCollected>=9&&!run.trailRewarded){
+        run.bonus+=40;run.trailRewarded=true;
+        run.lastEvent={type:'complete',text:'Ribbon run complete · '+run.ringsCollected+'/12 · +40 breeze',time:run.time};
+      }else run.lastEvent={type:'complete',text:'Ribbon run complete · '+run.ringsCollected+'/12 ribbons',time:run.time};
+    }else run.rings[run.trailIndex].active=true;
+  }
   function cycleWaypoint(run,direction=1) {
     const n=run.landmarks.length;
     run.selectedWaypoint=(run.selectedWaypoint+(direction<0?-1:1)+n)%n;
@@ -58,13 +97,31 @@
     }
     const current=position(plane),previous=run._previous||current;
     for(const ring of run.rings){
-      if(ring.collected)continue;
+      if(ring.collected||ring.missed||(run.trailMode&&!ring.active))continue;
       const dx=current.east-previous.east,dz=current.north-previous.north,dy=current.y-previous.y,length=dx*dx+dz*dz+dy*dy;
       const along=length?Math.max(0,Math.min(1,((ring.east-previous.east)*dx+(ring.north-previous.north)*dz+(ring.y-previous.y)*dy)/length)):0;
       if(Math.hypot(previous.east+dx*along-ring.east,previous.north+dz*along-ring.north,previous.y+dy*along-ring.y)<ring.radius){
-        ring.collected=true;ring.collectedAt=run.time;run.ringsCollected++;run.bonus+=5;
-        plane.energy=Math.min(1,finite(plane.energy,1)+.22);
-        run.lastEvent={type:'ring',text:'Breeze ribbon · +22% energy · +5 breeze',time:run.time};
+        ring.collected=true;ring.collectedAt=run.time;run.ringsCollected++;
+        if(run.trailMode){
+          run.streak++;run.bestStreak=Math.max(run.bestStreak,run.streak);
+          const reward=5+Math.min(run.streak-1,4)*3;
+          run.bonus+=reward;plane.energy=Math.min(1,finite(plane.energy,1)+.32);
+          if(Number.isFinite(plane.vx))plane.vx=Math.min(75,plane.vx+2);
+          run.lastEvent={type:'ring',text:run.streak+' ribbon streak · +32% energy · +'+reward+' breeze',time:run.time};
+          advanceTrail(run);
+        }else{
+          run.bonus+=5;plane.energy=Math.min(1,finite(plane.energy,1)+.22);
+          run.lastEvent={type:'ring',text:'Breeze ribbon · +22% energy · +5 breeze',time:run.time};
+        }
+      }else if(run.trailMode){
+        const range=Math.hypot(current.east-ring.east,current.north-ring.north,current.y-ring.y);
+        ring.nearest=Math.min(ring.nearest,range);
+        const past=(current.east-ring.east)*Math.sin(ring.incomingHeading*RAD)+(current.north-ring.north)*Math.cos(ring.incomingHeading*RAD);
+        if(past>45||(ring.nearest<110&&range>200)){
+          ring.missed=true;run.streak=0;
+          run.lastEvent={type:'miss',text:'Ribbon missed · next ribbon ahead',time:run.time};
+          advanceTrail(run);
+        }
       }
     }
     run._previous=current;
@@ -91,7 +148,7 @@
     plane.kitesTagged=run.tags;plane.ribbons=run.ringsCollected;
     return run;
   }
-  const api={create,step,navigation,cycleWaypoint,landmarks,relative};
+  const api={create,step,navigation,cycleWaypoint,landmarks,relative,startTrail,trailNavigation};
   root.FlightExploration=api;
   if(typeof module!=='undefined'&&module.exports)module.exports=api;
 })(typeof globalThis!=='undefined'?globalThis:this);
