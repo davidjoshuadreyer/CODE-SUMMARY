@@ -1753,7 +1753,7 @@ window.TESSELATE_CATALOG = {
       "kind": "Practice worksheet",
       "url": "comp139e/fill-in-the-blanks.html",
       "body": "",
-      "description": "The original two-page Rectangle exercise with 21 editable blanks and browser-saved answers.",
+      "description": "Rectangle exercise with 21 blanks, live answer feedback, explanatory hints, and browser-saved answers.",
       "referenceIds": [],
       "builtin": true
     },

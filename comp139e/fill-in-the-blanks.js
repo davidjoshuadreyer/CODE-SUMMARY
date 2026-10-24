@@ -3,66 +3,70 @@
   const key = 'tesselate-comp139e-rectangle-blanks-v1';
   const fields = [...document.querySelectorAll('.paper input')];
   const status = document.getElementById('status');
-  function progress(message) {
-    status.textContent = `${fields.filter(field => field.value.trim()).length} / ${fields.length} filled · ${message}`;
-  }
+  let storageMessage = 'Saved in this browser';
   try {
     const saved = JSON.parse(localStorage.getItem(key) || '{}');
     fields.forEach(field => { if (typeof saved?.[field.id] === 'string') field.value = saved[field.id]; });
-    progress('Saved in this browser');
-  } catch { progress('Browser saving unavailable'); }
+  } catch { storageMessage = 'Browser saving unavailable'; }
+  function progress() {
+    const correct = fields.filter(field => field.dataset.result === 'correct').length;
+    status.textContent = `${correct} / ${fields.length} correct · ${storageMessage}`;
+  }
   function save() {
     try {
       localStorage.setItem(key, JSON.stringify(Object.fromEntries(fields.map(field => [field.id, field.value]))));
-      progress('Saved in this browser');
-    } catch { progress('Could not save; keep this page open'); }
+      storageMessage = 'Saved in this browser';
+    } catch { storageMessage = 'Could not save; keep this page open'; }
+    progress();
   }
-  const feedback = document.getElementById('feedback');
-  const results = document.getElementById('results');
-  function resetFeedback() {
-    feedback.hidden = true;
-    fields.forEach(field => {
-      delete field.dataset.result;
-      field.removeAttribute('aria-invalid');
-      field.removeAttribute('aria-describedby');
+  const refreshers = fields.map((field, index) => {
+    const line = field.closest('.line');
+    const wrapper = document.createElement('span');
+    wrapper.className = 'blank';
+    field.before(wrapper);
+    wrapper.append(field);
+    const state = document.createElement('span');
+    state.className = 'answer-state';
+    state.id = `state-${index + 1}`;
+    state.setAttribute('role', 'status');
+    state.setAttribute('aria-live', 'polite');
+    const hint = document.createElement('button');
+    hint.type = 'button';
+    hint.className = 'hint-button';
+    hint.textContent = 'Hint';
+    hint.setAttribute('aria-label', `Hint for blank ${index + 1}`);
+    hint.setAttribute('aria-expanded', 'false');
+    const explanation = document.createElement('div');
+    explanation.className = 'hint-explanation';
+    explanation.id = `hint-${index + 1}`;
+    explanation.hidden = true;
+    explanation.textContent = `Blank ${index + 1}: ${RectangleWorksheet.answers[index].explanation}`;
+    hint.setAttribute('aria-controls', explanation.id);
+    field.setAttribute('aria-describedby', state.id);
+    line.append(explanation);
+    wrapper.append(state, hint);
+    hint.addEventListener('click', () => {
+      explanation.hidden = !explanation.hidden;
+      hint.setAttribute('aria-expanded', String(!explanation.hidden));
+      field.setAttribute('aria-describedby', state.id + (explanation.hidden ? '' : ` ${explanation.id}`));
     });
-  }
-  fields.forEach(field => field.addEventListener('input', () => { resetFeedback(); save(); }));
-  document.getElementById('check').addEventListener('click', () => {
-    results.replaceChildren();
-    let correct = 0, empty = 0;
-    fields.forEach((field, index) => {
+    function refresh() {
       const result = RectangleWorksheet.check(index, field.value);
-      correct += result.state === 'correct';
-      empty += result.state === 'empty';
       field.dataset.result = result.state;
       field.setAttribute('aria-invalid', String(result.state === 'retry'));
-      const row = document.createElement('li');
-      row.id = `feedback-${index + 1}`;
-      field.setAttribute('aria-describedby', row.id);
-      const link = document.createElement('a');
-      link.href = `#${field.id}`;
-      link.textContent = `Blank ${index + 1}: ${result.state === 'correct' ? 'Correct' : result.state === 'empty' ? 'Not answered' : 'Try again'}`;
-      link.addEventListener('click', () => field.focus());
-      row.append(link, document.createTextNode(` — ${result.explanation} `));
-      if (result.state !== 'correct') {
-        const details = document.createElement('details');
-        const summary = document.createElement('summary');
-        summary.textContent = 'Show an answer';
-        const answer = document.createElement('code');
-        answer.textContent = result.answer;
-        details.append(summary, answer);
-        row.append(details);
-      }
-      results.append(row);
-    });
-    document.getElementById('score').textContent = `${correct} / ${fields.length} correct · ${fields.length - correct - empty} to revisit · ${empty} unanswered`;
-    feedback.hidden = false;
+      state.dataset.result = result.state;
+      state.textContent = result.state === 'correct' ? '✓' : result.state === 'retry' ? '×' : '';
+      state.setAttribute('aria-label', result.state === 'correct' ? 'Correct' : result.state === 'retry' ? 'Try again' : 'Not answered');
+    }
+    field.addEventListener('input', () => { refresh(); save(); });
+    refresh();
+    return refresh;
   });
+  progress();
   document.getElementById('clear').addEventListener('click', () => {
     if (fields.some(field => field.value) && !confirm('Clear all worksheet answers?')) return;
     fields.forEach(field => { field.value = ''; });
-    resetFeedback();
+    refreshers.forEach(refresh => refresh());
     save();
     fields[0].focus();
   });
