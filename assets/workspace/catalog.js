@@ -1657,6 +1657,17 @@ window.TESSELATE_CATALOG = {
       "builtin": true
     },
     {
+      "id": "page-Y29tcDEzOWUvY29kZS10ZW1wbGF0ZXMuaHRtbA",
+      "courseId": "comp139e",
+      "title": "C++ code templates · Copy & paste",
+      "kind": "Study notes",
+      "url": "comp139e/code-templates.html",
+      "body": "",
+      "description": "25 reusable patterns with clean copy buttons, separate explanations and runnable examples.",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
       "id": "page-Y29tcDEzOWUvY3BwLWNoZWF0LXNoZWV0Lmh0bWw",
       "courseId": "comp139e",
       "title": "C++ midterm cheat sheet / rules",

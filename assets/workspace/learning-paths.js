@@ -444,6 +444,11 @@ window.TESSELATE_PATHS = {
     ],
     "practice": [
       {
+        "title": "C++ code templates · Copy & paste",
+        "url": "comp139e/code-templates.html",
+        "summary": "25 simple templates with separate explanations, usage examples and adaptation notes."
+      },
+      {
         "title": "Fill-in-the-blank worksheets",
         "url": "comp139e/midterm-practice.html",
         "summary": "All examples grouped by topic: references, arrays, classes, files, exceptions, stacks and queues. Live feedback, hints and solutions."

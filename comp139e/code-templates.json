@@ -1,0 +1,672 @@
+[
+  {
+    "id": "value-function",
+    "group": "functions",
+    "title": "Return a calculated value",
+    "when": "The question asks you to calculate and return a result.",
+    "code": "double getArea(double length, double width) {\n    return length * width;\n}\n",
+    "use": "double area = getArea(3, 4);\n",
+    "parts": [
+      [
+        "double",
+        "Type of the returned answer."
+      ],
+      [
+        "length, width",
+        "Local copies of the caller’s inputs."
+      ],
+      [
+        "return",
+        "Send the result back to the caller."
+      ]
+    ],
+    "change": "Rename the function and parameters; replace the formula and result type.",
+    "watch": "A non-void function must return a value on every normal path.",
+    "reference": "lecture slides/1-1_Functions.pdf",
+    "test": "assert(area == 12);"
+  },
+  {
+    "id": "references",
+    "group": "functions",
+    "title": "Change arguments using references",
+    "when": "The function must change the caller’s variables.",
+    "code": "void swapValues(int& a, int& b) {\n    int temp = a;\n    a = b;\n    b = temp;\n}\n",
+    "use": "int x = 3, y = 8;\nswapValues(x, y);\n",
+    "parts": [
+      [
+        "int&",
+        "An alias for the original variable; updates reach the caller."
+      ],
+      [
+        "temp",
+        "Preserve the first value before overwriting it."
+      ],
+      [
+        "void",
+        "This function acts on arguments instead of returning a result."
+      ]
+    ],
+    "change": "Change int to double or another type; keep & when you want to modify the caller.",
+    "watch": "Without &, you only swap local copies.",
+    "reference": "lecture slides/1-1_Functions.pdf",
+    "test": "assert(x==8 && y==3);"
+  },
+  {
+    "id": "defaults",
+    "group": "functions",
+    "title": "Default arguments and overloads",
+    "when": "A call may omit an input, or use a different parameter type.",
+    "code": "int scale(int value, int factor = 2) {\n    return value * factor;\n}\ndouble scale(double value) {\n    return value * 1.5;\n}\n",
+    "use": "int a = scale(3);\nint b = scale(3, 4);\ndouble c = scale(2.0);\n",
+    "parts": [
+      [
+        "factor = 2",
+        "Used when the second argument is omitted."
+      ],
+      [
+        "double overload",
+        "Selected for a double argument."
+      ]
+    ],
+    "change": "Change the default or calculations. If you add a prototype, put the default only there.",
+    "watch": "Return type alone cannot distinguish overloads. Defaults belong on trailing parameters.",
+    "reference": "lecture slides/1-1_Functions.pdf",
+    "test": "assert(a==6 && b==12 && c==3.0);"
+  },
+  {
+    "id": "prototype",
+    "group": "functions",
+    "title": "Declare first, define later",
+    "when": "You need a prototype above main and the function body below main.",
+    "code": "double average(int a, int b);\n\ndouble average(int a, int b) {\n    return (static_cast<double>(a) + b) / 2;\n}\n",
+    "use": "double result = average(3, 4);\n",
+    "parts": [
+      [
+        "Prototype ending in ;",
+        "Announces the name, result type and parameter types."
+      ],
+      [
+        "Definition with braces",
+        "Supplies the executable body."
+      ],
+      [
+        "static_cast<double>",
+        "Makes the arithmetic floating-point before addition and division."
+      ]
+    ],
+    "change": "Leave the prototype above main; move the definition below main if requested. Change the formula.",
+    "watch": "Keep the declaration and definition types identical. Casting after integer division cannot restore the lost fraction.",
+    "reference": "lecture slides/1-1_Functions.pdf",
+    "test": "assert(result==3.5);"
+  },
+  {
+    "id": "array-function",
+    "group": "functions",
+    "title": "Loop through an array",
+    "when": "You need a total, search, count or other loop over values.",
+    "code": "double sum(const double values[], int size) {\n    double total = 0;\n    for (int i = 0; i < size; ++i) {\n        total += values[i];\n    }\n    return total;\n}\n",
+    "use": "double values[] = {2, 4, 6};\ndouble total = sum(values, 3);\n",
+    "parts": [
+      [
+        "const double values[]",
+        "Read the caller’s elements without modifying them."
+      ],
+      [
+        "size",
+        "Number of elements; the function cannot infer it from this parameter."
+      ],
+      [
+        "i < size",
+        "Valid indexes are 0 through size - 1."
+      ]
+    ],
+    "change": "Replace the loop body with the operation required; remove const only if the function must change elements.",
+    "watch": "Pass the real length. Do not use sizeof(values) here to find the array length.",
+    "reference": "lecture slides/1-2_Pointers_and_Dynamic_Memory_Management.pdf",
+    "test": "assert(total==12);"
+  },
+  {
+    "id": "static-local",
+    "group": "functions",
+    "title": "Remember a value between calls",
+    "when": "You need a ticket number or a running count.",
+    "code": "int nextTicket() {\n    static int issued = 0;\n    ++issued;\n    return issued;\n}\n",
+    "use": "int first = nextTicket();\nint second = nextTicket();\n",
+    "parts": [
+      [
+        "static local",
+        "Initialized once; its value survives later calls."
+      ],
+      [
+        "++issued",
+        "Increment the stored value before returning it."
+      ]
+    ],
+    "change": "Change the initial value or update rule.",
+    "watch": "This is shared state for the function, not a fresh variable on each call.",
+    "reference": "lecture slides/1-1_Functions.pdf",
+    "test": "assert(first==1 && second==2);"
+  },
+  {
+    "id": "basic-class",
+    "group": "classes",
+    "title": "Basic class: Rectangle",
+    "when": "You need private data, constructors, getters, setters and a calculation.",
+    "code": "class Rectangle {\nprivate:\n    double length;\n    double width;\npublic:\n    Rectangle() : length(1), width(1) {}\n    Rectangle(double l, double w) : length(l), width(w) {}\n    double getLength() const { return length; }\n    double getWidth() const { return width; }\n    void setLength(double length) { this->length = length; }\n    void setWidth(double width) { this->width = width; }\n    double getArea() const { return length * width; }\n};\n",
+    "use": "Rectangle r(3, 4);\nr.setLength(5);\ndouble area = r.getArea();\n",
+    "parts": [
+      [
+        "private",
+        "Data belongs to each object and is accessed through public methods."
+      ],
+      [
+        "Constructors",
+        "Set starting values; their name matches the class and they have no return type."
+      ],
+      [
+        "public",
+        "Functions callers are allowed to use."
+      ],
+      [
+        "const after ()",
+        "Promises the method will not change ordinary object fields."
+      ],
+      [
+        "this->length",
+        "The object’s field, distinguished from the same-named parameter."
+      ]
+    ],
+    "change": "Rename Rectangle everywhere, replace fields and constructor inputs, then replace the calculation. Add validation in setters if requested.",
+    "watch": "End the class with };. Rectangle r(); declares a function; Rectangle r; constructs an object.",
+    "reference": "lecture slides/1-3_Objects_and_Classes.pdf",
+    "test": "assert(area==20 && r.getWidth()==4);"
+  },
+  {
+    "id": "outside-methods",
+    "group": "classes",
+    "title": "Methods outside a class",
+    "when": "The question gives a class declaration and asks for definitions.",
+    "code": "class Circle {\nprivate:\n    double radius;\npublic:\n    Circle(double r = 1);\n    double getArea() const;\n};\n\nCircle::Circle(double r) : radius(r) {}\n\ndouble Circle::getArea() const {\n    return 3.141592653589793 * radius * radius;\n}\n",
+    "use": "Circle c(2);\ndouble area = c.getArea();\n",
+    "parts": [
+      [
+        "Inside the class",
+        "Method declarations end with semicolons."
+      ],
+      [
+        "Circle::",
+        "Says the definition belongs to Circle."
+      ],
+      [
+        "Constructor definition",
+        "Still has no return type."
+      ]
+    ],
+    "change": "Put the class declaration in Circle.hpp with an include guard. Put definitions in Circle.cpp after #include \"Circle.hpp\"; compile Circle.cpp with main.cpp.",
+    "watch": "Repeat const on the definition. Do not repeat a default argument on the definition.",
+    "reference": "lecture slides/1-3_Objects_and_Classes.pdf",
+    "test": "assert(area>12.56 && area<12.57);"
+  },
+  {
+    "id": "struct",
+    "group": "classes",
+    "title": "Simple struct",
+    "when": "You just need to group related values.",
+    "code": "struct Measurement {\n    double value;\n    double time;\n};\n",
+    "use": "Measurement m{12.5, 2.0};\nm.value = 15;\n",
+    "parts": [
+      [
+        "struct",
+        "Members are public by default."
+      ],
+      [
+        "Fields",
+        "Each instance keeps its own value and time."
+      ]
+    ],
+    "change": "Rename the struct and fields; add other types as needed.",
+    "watch": "Brace values follow the declared field order. Use a class with private fields when you need controlled access.",
+    "reference": "lecture slides/1-3_Objects_and_Classes.pdf",
+    "test": "assert(m.value==15 && m.time==2);"
+  },
+  {
+    "id": "static-member",
+    "group": "classes",
+    "title": "Static class member",
+    "when": "You need one value shared by all instances.",
+    "code": "class CircleS {\nprivate:\n    double radius;\n    static int numberOfObjects;\npublic:\n    CircleS(double r = 1) : radius(r) { ++numberOfObjects; }\n    double getArea() const { return 3.141592653589793 * radius * radius; }\n    static int getNumberOfObjects() { return numberOfObjects; }\n};\n\nint CircleS::numberOfObjects = 0;\n",
+    "use": "CircleS a(2), b(3);\nint count = CircleS::getNumberOfObjects();\n",
+    "parts": [
+      [
+        "static field",
+        "One shared counter rather than a counter per object."
+      ],
+      [
+        "Outside definition",
+        "Provides storage and initial value once in a .cpp file."
+      ],
+      [
+        "Static method",
+        "Called with ClassName::; it has no this pointer."
+      ]
+    ],
+    "change": "Use the shared field for another class-wide quantity.",
+    "watch": "This example counts calls to this constructor, not currently live objects; implicit copies are not counted. Do not put the outside definition in multiple .cpp files.",
+    "reference": "lecture slides/1-3_Objects_and_Classes.pdf",
+    "test": "assert(count==2);"
+  },
+  {
+    "id": "inheritance",
+    "group": "classes",
+    "title": "Base and derived class",
+    "when": "You need a shared interface with different behavior for each shape.",
+    "code": "#include <iostream>\n\nclass Shape {\npublic:\n    virtual void draw() const = 0;\n    virtual ~Shape() = default;\n};\n\nclass RectangleShape : public Shape {\nprivate:\n    double length, width;\npublic:\n    RectangleShape(double l, double w) : length(l), width(w) {}\n    void draw() const override {\n        std::cout << length << \" x \" << width << '\\n';\n    }\n};\n",
+    "use": "RectangleShape r(3, 4);\nShape* shape = &r;\nshape->draw();\n",
+    "parts": [
+      [
+        "= 0",
+        "A pure virtual function: Shape is abstract."
+      ],
+      [
+        "public Shape",
+        "The derived class uses Shape’s public interface."
+      ],
+      [
+        "override",
+        "Checks that this method matches a virtual base method."
+      ],
+      [
+        "Virtual destructor",
+        "An addition to the shortened lab pattern so deletion through Shape* is safe."
+      ]
+    ],
+    "change": "Rename the derived class and implement the required methods. Use Shape* when the concrete type can vary.",
+    "watch": "You cannot instantiate Shape. This is a shortened lab adaptation: position fields and printMe are omitted.",
+    "reference": "workspace/reference/course/labs/files/ShapeExample/Shape.hpp",
+    "test": "assert(shape==&r);"
+  },
+  {
+    "id": "template-function",
+    "group": "templates",
+    "title": "Function template: maxValue",
+    "when": "The same function should work with int, double or another comparable type.",
+    "code": "template<typename T>\nT maxValue(T value1, T value2) {\n    if (value1 > value2) return value1;\n    return value2;\n}\n",
+    "use": "int a = maxValue(3, 8);\ndouble b = maxValue<double>(3, 8.5);\n",
+    "parts": [
+      [
+        "template<typename T>",
+        "T is a type chosen when the function is used."
+      ],
+      [
+        "T parameters and return",
+        "Both inputs and the result use that type."
+      ]
+    ],
+    "change": "Replace the comparison and body for the generic operation you need. typename and class are interchangeable here.",
+    "watch": "The chosen type must support >. Mixed types may need an explicit <double>. Keep template definitions visible in a header.",
+    "reference": "workspace/reference/examples/Object-Oriented_Programming/GenericMaxValue.cpp",
+    "test": "assert(a==8 && b==8.5);"
+  },
+  {
+    "id": "template-class",
+    "group": "templates",
+    "title": "Class template: BuildingG",
+    "when": "Your class must store values of a caller-chosen type.",
+    "code": "#include <string>\n\ntemplate<typename T>\nclass BuildingG {\npublic:\n    T x;\n    T y;\n    std::string name;\n    BuildingG() : x(0), y(0), name(\"noname\") {}\n    BuildingG(T x, T y, std::string name) : x(x), y(y), name(name) {}\n    std::string getName();\n};\n\ntemplate<typename T>\nstd::string BuildingG<T>::getName() {\n    return name;\n}\n",
+    "use": "BuildingG<double> b(2.5, 3.5, \"Lab\");\nstd::string name = b.getName();\n",
+    "parts": [
+      [
+        "T x, T y",
+        "Only these fields vary with the chosen type."
+      ],
+      [
+        "BuildingG<double>",
+        "Choose the type when creating an object."
+      ],
+      [
+        "Outside template method",
+        "Repeat template<typename T> and qualify with BuildingG<T>::."
+      ]
+    ],
+    "change": "Change the fields and operations to fit the question; keep all template definitions in the header.",
+    "watch": "This course pattern expects T to accept 0 in the default constructor. Renaming the class also means renaming constructors and qualified definitions.",
+    "reference": "workspace/reference/examples/Object-Oriented_Programming/TestGenericClass.cpp",
+    "test": "assert(name==\"Lab\" && b.x==2.5);"
+  },
+  {
+    "id": "template-inheritance",
+    "group": "templates",
+    "title": "Derived class template",
+    "when": "You need a generic class derived from another generic class.",
+    "code": "#include <string>\n\ntemplate<typename T>\nclass BuildingBase {\npublic:\n    T x, y;\n    BuildingBase(T x, T y) : x(x), y(y) {}\n};\n\ntemplate<typename T>\nclass HouseG : public BuildingBase<T> {\npublic:\n    std::string owner;\n    HouseG(T x, T y, std::string owner)\n        : BuildingBase<T>(x, y), owner(owner) {}\n    T getX() const { return this->x; }\n};\n",
+    "use": "HouseG<double> h(3, 6, \"Ada\");\ndouble x = h.getX();\n",
+    "parts": [
+      [
+        "BuildingBase<T>",
+        "Pass the same chosen type to the base class."
+      ],
+      [
+        "Initializer list",
+        "Construct the base before initializing this class’s fields."
+      ],
+      [
+        "this->x",
+        "Access a member inherited from a dependent template base."
+      ]
+    ],
+    "change": "Rename the base/derived classes and replace owner with the extra data you need.",
+    "watch": "A shortened BuildingG/HouseG adaptation; do not combine it with another definition of HouseG.",
+    "reference": "workspace/reference/examples/Object-Oriented_Programming/TestGenericClass.cpp",
+    "test": "assert(x==3 && h.owner==\"Ada\");"
+  },
+  {
+    "id": "pointer-parameter",
+    "group": "memory",
+    "title": "Pointer parameter and object access",
+    "when": "A function receives an address and changes the pointed-to value.",
+    "code": "void setValue(int* p, int value) {\n    if (p != nullptr) *p = value;\n}\n\nvoid redirect(int*& p, int* target) {\n    p = target;\n}\n",
+    "use": "int a = 1, b = 2;\nint* p = &a;\nsetValue(p, 7);\nredirect(p, &b);\n",
+    "parts": [
+      [
+        "&a",
+        "Address of a variable."
+      ],
+      [
+        "*p",
+        "The value at the address."
+      ],
+      [
+        "int*&",
+        "Reference to the pointer itself, so redirect changes the caller’s pointer."
+      ]
+    ],
+    "change": "Replace int with the required type. For an object pointer use p->method(); for an object use object.method().",
+    "watch": "Do not dereference a null or dangling pointer. This code borrows addresses and does not delete them.",
+    "reference": "lecture slides/1-2_Pointers_and_Dynamic_Memory_Management.pdf",
+    "test": "assert(a==7 && p==&b);"
+  },
+  {
+    "id": "dynamic-array",
+    "group": "memory",
+    "title": "Allocate and return an array",
+    "when": "The function creates an array whose lifetime must continue after it returns.",
+    "code": "double* makeArray(int size) {\n    double* values = new double[size]{};\n    return values;\n}\n",
+    "use": "int size = 3;\ndouble* values = makeArray(size);\nvalues[0] = 2.5;\ndelete[] values;\nvalues = nullptr;\n",
+    "parts": [
+      [
+        "double* return type",
+        "Return the address of the first element."
+      ],
+      [
+        "new double[size]{}",
+        "Allocate size zero-initialized elements."
+      ],
+      [
+        "delete[]",
+        "The caller releases the returned allocation."
+      ]
+    ],
+    "change": "Change double to the element type and fill the array before returning it.",
+    "watch": "size must be nonnegative. Never return a pointer to a local stack array. Pair new[] with delete[].",
+    "reference": "lecture slides/1-2_Pointers_and_Dynamic_Memory_Management.pdf",
+    "test": "assert(values==nullptr);"
+  },
+  {
+    "id": "object-array",
+    "group": "memory",
+    "title": "Objects, pointers and arrays",
+    "when": "You need to create several objects and call their methods.",
+    "code": "class Reading {\nprivate:\n    double value;\npublic:\n    Reading(double v = 0) : value(v) {}\n    double getValue() const { return value; }\n    void setValue(double v) { value = v; }\n};\n",
+    "use": "Reading one(5);\nReading* p = &one;\ndouble value = p->getValue();\nReading* readings = new Reading[3];\nreadings[0].setValue(7);\ndelete[] readings;\n",
+    "parts": [
+      [
+        "one",
+        "An ordinary object; use a dot."
+      ],
+      [
+        "p",
+        "A pointer to an object; use an arrow."
+      ],
+      [
+        "new Reading[3]",
+        "Calls the default constructor for each element."
+      ]
+    ],
+    "change": "Replace Reading with your class. Use &readings[i] when a function expects a pointer to an element.",
+    "watch": "Deleting the array destroys its objects. Do not delete p here: it points at a local object.",
+    "reference": "lecture slides/1-3_Objects_and_Classes.pdf",
+    "test": "assert(value==5);"
+  },
+  {
+    "id": "strings",
+    "group": "memory",
+    "title": "String methods and read-only reference",
+    "when": "You need to find, split or examine text without copying the input unnecessarily.",
+    "code": "#include <string>\n\nstd::string firstPart(const std::string& text) {\n    std::string::size_type pos = text.find(' ');\n    if (pos == std::string::npos) return text;\n    return text.substr(0, pos);\n}\n",
+    "use": "std::string first = firstPart(\"Ada Lovelace\");\n",
+    "parts": [
+      [
+        "const std::string&",
+        "Read the caller’s string through a reference."
+      ],
+      [
+        "find",
+        "Returns a position, or npos when no match exists."
+      ],
+      [
+        "substr(0, pos)",
+        "Copies pos characters starting at index zero."
+      ]
+    ],
+    "change": "Change the separator and substring positions. Use text.length() for its length.",
+    "watch": "Check npos before using the result as a valid index. Use a std::string, not a string literal, to call string methods.",
+    "reference": "lecture slides/1-3_Objects_and_Classes.pdf",
+    "test": "assert(first==\"Ada\");"
+  },
+  {
+    "id": "read-file",
+    "group": "files",
+    "title": "Read numbers from a file",
+    "when": "You need to process every successfully read value.",
+    "code": "#include <fstream>\n#include <stdexcept>\n#include <string>\n\ndouble totalFile(const std::string& filename) {\n    std::ifstream input(filename);\n    if (!input) throw std::runtime_error(\"Cannot open file\");\n    double value, total = 0;\n    while (input >> value) {\n        total += value;\n    }\n    if (input.bad() || !input.eof()) {\n        throw std::runtime_error(\"Invalid data or read error\");\n    }\n    return total;\n}\n",
+    "use": "{\n    std::ofstream output(\"scores.txt\");\n    output << \"10 20 30\\n\";\n}\ndouble total = totalFile(\"scores.txt\");\n",
+    "parts": [
+      [
+        "ifstream",
+        "Input file stream; check opening before reading."
+      ],
+      [
+        "while (input >> value)",
+        "Run the body only after a successful read."
+      ],
+      [
+        "State check",
+        "Distinguish the expected end of the file from other failure."
+      ]
+    ],
+    "change": "Change the input type and replace total += value with your processing. For whole lines use std::getline(input, line) and a std::string line.",
+    "watch": "Do not loop on !input.eof(). Local streams close when they leave scope. The usage example creates a sample file.",
+    "reference": "lecture slides/1-4_Files_and_Exception_Handling.pdf",
+    "test": "assert(total==60);"
+  },
+  {
+    "id": "write-file",
+    "group": "files",
+    "title": "Write or append a file",
+    "when": "You need to save results without erasing earlier entries.",
+    "code": "#include <fstream>\n#include <stdexcept>\n#include <string>\n\nvoid appendValue(const std::string& filename, double value) {\n    std::ofstream output(filename, std::ios::app);\n    if (!output) throw std::runtime_error(\"Cannot open file\");\n    output << value << '\\n';\n    output.close();\n    if (!output) throw std::runtime_error(\"Cannot write file\");\n}\n",
+    "use": "appendValue(\"results.txt\", 12.5);\n",
+    "parts": [
+      [
+        "ofstream",
+        "Output file stream."
+      ],
+      [
+        "ios::app",
+        "Append to existing contents."
+      ],
+      [
+        "close and check",
+        "Finish writing and check for failure."
+      ]
+    ],
+    "change": "Remove std::ios::app to replace the file contents. Change the output expression to write fields separated by spaces.",
+    "watch": "Ordinary ofstream opening overwrites existing contents; choose the mode deliberately.",
+    "reference": "lecture slides/1-4_Files_and_Exception_Handling.pdf",
+    "test": "std::ifstream in(\"results.txt\");double v;in>>v;assert(v==12.5);"
+  },
+  {
+    "id": "exceptions",
+    "group": "files",
+    "title": "Throw and catch an exception",
+    "when": "An invalid operation must be reported to the caller.",
+    "code": "#include <iostream>\n#include <stdexcept>\n\ndouble quotient(double numerator, double denominator) {\n    if (denominator == 0) {\n        throw std::runtime_error(\"Cannot divide by zero\");\n    }\n    return numerator / denominator;\n}\n",
+    "use": "try {\n    double result = quotient(8, 2);\n    (void)result;\n} catch (const std::exception& error) {\n    std::cerr << error.what() << '\\n';\n}\n",
+    "parts": [
+      [
+        "throw",
+        "Stop the current operation and transfer control to a matching handler."
+      ],
+      [
+        "try",
+        "Wrap calls that may throw."
+      ],
+      [
+        "catch by const reference",
+        "Read the exception without slicing it."
+      ],
+      [
+        "what()",
+        "Retrieve the error message."
+      ]
+    ],
+    "change": "Change the invalid condition and message; replace quotient with your own operation.",
+    "watch": "Statements after a throw in the try block are skipped. An ordinary file-stream failure usually sets flags rather than throwing.",
+    "reference": "lecture slides/1-4_Files_and_Exception_Handling.pdf",
+    "test": "assert(quotient(8,2)==4);bool caught=false;try{quotient(1,0);}catch(const std::runtime_error&){caught=true;}assert(caught);"
+  },
+  {
+    "id": "linked-list",
+    "group": "structures",
+    "title": "Singly linked list: IntSLList",
+    "when": "You need to insert at either end and remove the head.",
+    "code": "#include <iostream>\nusing namespace std;\nclass IntSLLNode {\npublic:\n    IntSLLNode(int el, IntSLLNode *ptr = nullptr) { info = el; next = ptr; }\n    int info;\n    IntSLLNode *next;\n};\nclass IntSLList {\n    IntSLLNode *head, *tail;\npublic:\n    IntSLList() { head = tail = nullptr; }\n    int isEmpty() { return head == nullptr; }\n    void addToHead(int el) {\n        head = new IntSLLNode(el, head);\n        if (tail == nullptr) tail = head;\n    }\n    void addToTail(int el) {\n        if (tail != nullptr) {\n            tail->next = new IntSLLNode(el);\n            tail = tail->next;\n        } else head = tail = new IntSLLNode(el);\n    }\n    int deleteFromHead() { \n        int el = head->info;\n        IntSLLNode *tmp = head;\n        if (head == tail) head = tail = nullptr;\n        else head = head->next;\n        delete tmp;\n        return el;\n    }\n    ~IntSLList() { while (!isEmpty()) deleteFromHead(); }\n    \n    IntSLList(const IntSLList&) = delete;\n    IntSLList& operator=(const IntSLList&) = delete;\n};\n",
+    "use": "IntSLList lst;\nlst.addToHead(20);\nlst.addToTail(30);\nint first = lst.deleteFromHead();\n",
+    "parts": [
+      [
+        "IntSLLNode",
+        "info stores the integer; next links to the following node."
+      ],
+      [
+        "head / tail",
+        "First and last node; both null when empty."
+      ],
+      [
+        "addToHead / addToTail",
+        "Update links, then update the relevant end pointer."
+      ],
+      [
+        "deleteFromHead",
+        "Save the value and node, update links, delete the old node, return the value."
+      ]
+    ],
+    "change": "Use the same pointer steps for other node data. Add traversal with for (IntSLLNode* p = head; p != nullptr; p = p->next) inside the class.",
+    "watch": "deleteFromHead requires a nonempty list. Destructor frees nodes; copying is disabled to avoid shared raw ownership.",
+    "reference": "workspace/reference/examples/Linked_Lists/IntSLList.cpp",
+    "test": "assert(first==20);assert(lst.deleteFromHead()==30);assert(lst.isEmpty());"
+  },
+  {
+    "id": "linked-stack",
+    "group": "structures",
+    "title": "Lab 6 linked Stack<T>",
+    "when": "You need LIFO: last in, first out.",
+    "code": "#include <iostream>\n#include <exception>\n#include <string>\nusing namespace std;\n\nclass StackException : public exception {\n    string message;\npublic:\n    explicit StackException(const string& msg) noexcept : message(msg) {}\n    const char* what() const noexcept override { return message.c_str(); }\n};\n\ntemplate <class T> class Stack {\nprivate:\n    typedef struct stackNode {\n        struct stackNode *next;\n        T theItem;\n    } StackNode;\n    StackNode *topOfStack;\n    int count;\npublic:\n    Stack() : topOfStack(NULL), count(0) {}\n    void push(T item) {\n        StackNode *newNode = new StackNode;\n        newNode->theItem = item;\n        newNode->next = topOfStack;\n        topOfStack = newNode;\n        ++count;\n    }\n    T pop(void) {\n        if (isEmpty()) throw StackException(\"Pop from empty stack\");\n        T item = topOfStack->theItem;\n        StackNode *old = topOfStack;\n        topOfStack = old->next;\n        delete old;\n        --count;\n        return item;\n    }\n    T top(void) {\n        if (isEmpty()) throw StackException(\"Top of empty stack\");\n        return topOfStack->theItem;\n    }\n    int size(void) { return count; }\n    bool isEmpty(void) { return count == 0; }\n    \n    ~Stack() { while (!isEmpty()) pop(); }\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n};\n",
+    "use": "Stack<int> s;\ns.push(10);\ns.push(20);\nint peek = s.top();\nint removed = s.pop();\n",
+    "parts": [
+      [
+        "StackNode / theItem / next",
+        "A node holds one item and the link below it."
+      ],
+      [
+        "topOfStack / count",
+        "The top node and the current item count."
+      ],
+      [
+        "push",
+        "Create a node, link to old top, move top, increment count."
+      ],
+      [
+        "pop",
+        "Save the item, advance top, delete the old node, decrement count, return item."
+      ],
+      [
+        "top / isEmpty / size",
+        "Inspect without removing; empty access throws StackException."
+      ]
+    ],
+    "change": "Choose Stack<double>, Stack<std::string> or Stack<Shape*>. For Shape*, delete each owned shape after popping it; deleting nodes alone does not delete the pointed-to shapes.",
+    "watch": "This uses the lab API: pop returns T. Keep template code in the header. Cleanup and disabled copying are practice additions.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "test": "assert(peek==20 && removed==20 && s.size()==1);"
+  },
+  {
+    "id": "linked-queue",
+    "group": "structures",
+    "title": "Linked queue: ListQueue<T>",
+    "when": "You need FIFO using the supplied std::list-based example.",
+    "code": "#include <iostream>\n#include <list>\nusing namespace std;\n\ntemplate<class T>\nclass ListQueue {\npublic:\n\tListQueue() {\n\t}\n\tvoid clear() {\n\t\tlst.clear();\n\t}\n\tbool isEmpty() const {\n\t\treturn lst.empty();\n\t}\n\tT& front() {\n\t\treturn lst.front();\n\t}\n\tT dequeue() {\n\t\tT el = lst.front();\n\t\tlst.pop_front();\n\t\treturn el;\n\t}\n\tvoid enqueue(const T& el) {\n\t\tlst.push_back(el);\n\t}\nprivate:\n\tlist<T> lst;\n};\n",
+    "use": "ListQueue<int> q;\nq.enqueue(10);\nq.enqueue(20);\nint first = q.dequeue();\n",
+    "parts": [
+      [
+        "list<T> lst",
+        "The standard list manages the linked nodes."
+      ],
+      [
+        "enqueue",
+        "push_back adds at the rear."
+      ],
+      [
+        "dequeue",
+        "Read front, pop_front, then return the saved value."
+      ],
+      [
+        "front / isEmpty / clear",
+        "Inspect the oldest item, test emptiness, or remove all items."
+      ]
+    ],
+    "change": "Choose the stored type with ListQueue<double> or another suitable type.",
+    "watch": "Check isEmpty before front or dequeue. The supplied example uses std::list; use the linked-list template above to study manual node links.",
+    "reference": "workspace/reference/examples/Stacks_and_Queues/GenListQueue.h",
+    "test": "assert(first==10 && q.front()==20);"
+  },
+  {
+    "id": "circular-queue",
+    "group": "structures",
+    "title": "Circular queue: ArrayQueue<T, size>",
+    "when": "You need FIFO in a fixed-size array.",
+    "code": "#include <iostream>\nusing namespace std;\n\ntemplate<class T, int size = 100>\nclass ArrayQueue {\npublic:\n\tArrayQueue() {\n\t\tfirst = last = -1;\n\t}\n\tvoid enqueue(T);\n\tT dequeue();\n\tbool isFull() {\n\t\treturn (first == 0 && last == size-1) || (first == last + 1);\n\t}\n\tbool isEmpty() {\n\t\treturn first == -1;\n\t}\n\nprivate:\n\tint first, last;\n\tT storage[size];\n};\n\ntemplate<class T, int size>\nvoid ArrayQueue<T,size>::enqueue(T el) {\n\tif (!isFull())\n\t\tif (last == size-1 || last == -1) {\n\t\t\tstorage[0] = el;\n\t\t\tlast = 0;\n\t\t\tif (first == -1)\n\t\t\t\tfirst = 0;\n\t\t}\n\t\telse storage[++last] = el;\n\telse cout << \"Full queue.\\n\";\n}\n\ntemplate<class T, int size>\nT ArrayQueue<T,size>::dequeue() {\n\tT tmp;\n\ttmp = storage[first];\n\tif (first == last)\n\t\tlast = first = -1;\n\telse if (first == size-1)\n\t\tfirst = 0;\n\telse first++;\n\treturn tmp;\n}\n",
+    "use": "ArrayQueue<int, 4> q;\nq.enqueue(10);\nq.enqueue(20);\nint first = q.dequeue();\n",
+    "parts": [
+      [
+        "storage[size]",
+        "Fixed array of queue elements."
+      ],
+      [
+        "first / last",
+        "Oldest and newest occupied indexes; -1 marks empty."
+      ],
+      [
+        "enqueue",
+        "Check full, wrap last if needed, store the value."
+      ],
+      [
+        "dequeue",
+        "Save the front value; reset if it was the last item, otherwise advance/wrap first."
+      ]
+    ],
+    "change": "Change <int, 4> to the item type and capacity you need. Keep the supplied first/last convention.",
+    "watch": "Call dequeue only when nonempty. A full enqueue prints “Full queue.” and does not insert; it does not throw.",
+    "reference": "workspace/reference/examples/Stacks_and_Queues/GenArrayQueue.h",
+    "test": "assert(first==10 && q.dequeue()==20 && q.isEmpty());"
+  }
+]
