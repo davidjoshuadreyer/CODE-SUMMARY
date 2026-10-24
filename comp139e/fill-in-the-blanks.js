@@ -73,5 +73,21 @@
     save();
     fields[0].focus();
   });
+  const notesKey = 'tesselate-comp139e-rectangle-notes-v1';
+  const noteFields = [...document.querySelectorAll('.notepad textarea')];
+  const notesStatus = document.getElementById('notes-status');
+  try {
+    const notes = JSON.parse(localStorage.getItem(notesKey) || '{}');
+    noteFields.forEach(field => {
+      if (typeof notes?.[field.id] === 'string') field.value = notes[field.id];
+    });
+    notesStatus.textContent = 'Notes saved in this browser';
+  } catch { notesStatus.textContent = 'Notes could not be loaded. Keep this page open while working.'; }
+  noteFields.forEach(field => field.addEventListener('input', () => {
+    try {
+      localStorage.setItem(notesKey, JSON.stringify(Object.fromEntries(noteFields.map(note => [note.id, note.value]))));
+      notesStatus.textContent = 'Notes saved in this browser';
+    } catch { notesStatus.textContent = 'Could not save notes. Keep this page open and copy your notes before leaving.'; }
+  }));
   document.getElementById('print').addEventListener('click', () => window.print());
 })();
