@@ -401,5 +401,220 @@
         "alternatives": []
       }
     ]
+  },
+  {
+    "slug": "linked-stack",
+    "title": "8 \u00b7 Build a linked stack",
+    "topic": "LIFO: build push, top, pop, and cleanup with linked nodes. The most recently pushed value leaves first.",
+    "source": "#include <iostream>\n#include <stdexcept>\nusing namespace std;\n\nclass Stack {\n    struct Node {\n        int value;\n        Node *next;\n    };\n    Node *head;\npublic:\n    Stack() : head(@1) {}\n    bool empty() const { return @2; }\n\n    void push(int value) {\n        Node *node = new Node{value, @3};\n        head = @4;\n    }\n    int top() const {\n        if (empty()) throw runtime_error(\"empty stack\");\n        return @5; // Read without removing.\n    }\n    void pop() {\n        if (empty()) throw runtime_error(\"empty stack\");\n        Node *old = @6;\n        head = @7; // Advance BEFORE deleting the old node.\n        delete @8;\n    }\n    @9() {\n        while (!empty()) @10;\n    }\n    // This owner must not share nodes through an accidental shallow copy.\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n};\n\nint main() {\n    Stack s;\n    s.push(10);\n    s.push(20);\n    s.push(30);\n    while (!s.empty()) {\n        cout << s.@11() << ' ';\n        s.pop();\n    }\n    cout << '\\n'; // Expected order: 30 20 10\n}\n",
+    "output": "30 20 10 \n",
+    "answers": [
+      {
+        "answer": "nullptr",
+        "explanation": "An empty linked stack has no first node.",
+        "alternatives": []
+      },
+      {
+        "answer": "head == nullptr",
+        "explanation": "There are no values when the head pointer has no node.",
+        "alternatives": [
+          "!head"
+        ]
+      },
+      {
+        "answer": "head",
+        "explanation": "The new top must link to the previous top, preserving the rest of the stack.",
+        "alternatives": []
+      },
+      {
+        "answer": "node",
+        "explanation": "Make the newly allocated node the top of the stack.",
+        "alternatives": []
+      },
+      {
+        "answer": "head->value",
+        "explanation": "The newest value is stored in the head node.",
+        "alternatives": [
+          "(*head).value"
+        ]
+      },
+      {
+        "answer": "head",
+        "explanation": "Keep the original head address so you can delete that allocation.",
+        "alternatives": []
+      },
+      {
+        "answer": "head->next",
+        "explanation": "Move the head to the second node before freeing the first.",
+        "alternatives": [
+          "old->next"
+        ]
+      },
+      {
+        "answer": "old",
+        "explanation": "Delete the removed single node, not the new head and not an array.",
+        "alternatives": []
+      },
+      {
+        "answer": "~Stack",
+        "explanation": "A destructor has a tilde followed by the class name and no return type.",
+        "alternatives": []
+      },
+      {
+        "answer": "pop()",
+        "explanation": "Repeated removal releases every remaining node.",
+        "alternatives": []
+      },
+      {
+        "answer": "top",
+        "explanation": "top reads the value; pop removes it without returning it.",
+        "alternatives": []
+      }
+    ],
+    "validation": "Stack s;\nassert(s.empty());\nexpectError([&]{s.top();}); expectError([&]{s.pop();});\ns.push(1); s.push(2); assert(s.top()==2); assert(s.top()==2);\ns.pop(); assert(s.top()==1); s.pop(); assert(s.empty());\ns.push(9); assert(s.top()==9); s.pop(); assert(s.empty());\n{ Stack leftover; for(int i=0;i<100;++i) leftover.push(i); }\n"
+  },
+  {
+    "slug": "linked-queue",
+    "title": "9 \u00b7 Build a linked queue",
+    "topic": "FIFO: insert at the rear and remove from the front. Handle the first node and the last removal correctly.",
+    "source": "#include <iostream>\n#include <stdexcept>\nusing namespace std;\n\nclass Queue {\n    struct Node { int value; Node *next; };\n    Node *frontNode;\n    Node *rearNode;\npublic:\n    Queue() : frontNode(nullptr), rearNode(nullptr) {}\n    bool empty() const { return @1; }\n\n    void enqueue(int value) {\n        Node *node = new Node{value, @2};\n        if (empty()) {\n            frontNode = @3; // First node is both front and rear.\n        } else {\n            rearNode->next = @4;\n        }\n        rearNode = @5;\n    }\n    int front() const {\n        if (empty()) throw runtime_error(\"empty queue\");\n        return @6;\n    }\n    void dequeue() {\n        if (empty()) throw runtime_error(\"empty queue\");\n        Node *old = @7;\n        frontNode = @8;\n        if (frontNode == nullptr) {\n            rearNode = @9; // No dangling rear after removing last node.\n        }\n        delete @10;\n    }\n    ~Queue() {\n        while (!empty()) @11;\n    }\n    Queue(const Queue&) = delete;\n    Queue& operator=(const Queue&) = delete;\n};\n\nint main() {\n    Queue q;\n    q.enqueue(10);\n    q.enqueue(20);\n    q.enqueue(30);\n    while (!q.empty()) {\n        cout << q.@12() << ' ';\n        q.dequeue();\n    }\n    cout << '\\n'; // Expected order: 10 20 30\n    q.enqueue(40); // Reuse the queue after it becomes empty.\n    cout << q.front() << '\\n';\n}\n",
+    "output": "10 20 30 \n40\n",
+    "answers": [
+      {
+        "answer": "frontNode == nullptr",
+        "explanation": "An empty queue has no front node.",
+        "alternatives": [
+          "!frontNode"
+        ]
+      },
+      {
+        "answer": "nullptr",
+        "explanation": "The new rear is the last node, so it must not point to a following node.",
+        "alternatives": []
+      },
+      {
+        "answer": "node",
+        "explanation": "When inserting into an empty queue, the new node also becomes the front.",
+        "alternatives": []
+      },
+      {
+        "answer": "node",
+        "explanation": "Link the old rear to the newly allocated node before moving rearNode.",
+        "alternatives": []
+      },
+      {
+        "answer": "node",
+        "explanation": "The new node is now the last node in the queue.",
+        "alternatives": []
+      },
+      {
+        "answer": "frontNode->value",
+        "explanation": "FIFO reads the oldest value, at the front.",
+        "alternatives": [
+          "(*frontNode).value"
+        ]
+      },
+      {
+        "answer": "frontNode",
+        "explanation": "Save the node being removed so its allocation can be freed.",
+        "alternatives": []
+      },
+      {
+        "answer": "frontNode->next",
+        "explanation": "The second node becomes the new front.",
+        "alternatives": [
+          "old->next"
+        ]
+      },
+      {
+        "answer": "nullptr",
+        "explanation": "Once the last node is removed, both end pointers must represent an empty queue.",
+        "alternatives": []
+      },
+      {
+        "answer": "old",
+        "explanation": "Release the one removed node with scalar delete.",
+        "alternatives": []
+      },
+      {
+        "answer": "dequeue()",
+        "explanation": "Remove remaining nodes one by one during destruction.",
+        "alternatives": []
+      },
+      {
+        "answer": "front",
+        "explanation": "Read the oldest queued value without removing it.",
+        "alternatives": []
+      }
+    ],
+    "validation": "Queue q;\nassert(q.empty()); expectError([&]{q.front();}); expectError([&]{q.dequeue();});\nq.enqueue(10); assert(q.front()==10); q.dequeue(); assert(q.empty());\nq.enqueue(20); q.enqueue(30); assert(q.front()==20); q.dequeue(); assert(q.front()==30);\nq.enqueue(40); q.dequeue(); assert(q.front()==40); q.dequeue(); assert(q.empty());\nfor(int i=0;i<20;++i){q.enqueue(i);assert(q.front()==i);q.dequeue();}\n{ Queue leftover; for(int i=0;i<100;++i) leftover.enqueue(i); }\n"
+  },
+  {
+    "slug": "circular-queue",
+    "title": "10 \u00b7 Build a circular queue",
+    "topic": "Use a fixed array with a front index, next insertion index, and count. Reuse freed slots with wraparound.",
+    "source": "#include <iostream>\n#include <stdexcept>\nusing namespace std;\n\nclass CircularQueue {\n    static const int CAPACITY = 4;\n    int data[CAPACITY]{};\n    int frontIndex = 0; // Next value to remove.\n    int rearIndex = 0;  // Next free slot to insert into.\n    int count = 0;      // Distinguishes empty from full.\npublic:\n    bool empty() const { return @1; }\n    bool full() const { return @2; }\n    void enqueue(int value) {\n        if (full()) throw runtime_error(\"full queue\");\n        data[@3] = value;\n        rearIndex = @4;\n        @5; // One more stored value.\n    }\n    int front() const {\n        if (empty()) throw runtime_error(\"empty queue\");\n        return data[@6];\n    }\n    void dequeue() {\n        if (empty()) throw runtime_error(\"empty queue\");\n        frontIndex = @7;\n        @8; // One fewer stored value.\n    }\n}; // data is a member array, so no manual delete is needed.\n\nint main() {\n    CircularQueue q;\n    q.enqueue(10); q.enqueue(20);\n    q.enqueue(30); q.enqueue(40); // Full.\n    q.@9(); // Remove 10.\n    q.dequeue(); // Remove 20.\n    q.enqueue(50); q.enqueue(60); // Wrap into freed slots.\n    while (!q.@10()) {\n        cout << q.front() << ' ';\n        q.dequeue();\n    }\n    cout << '\\n'; // Expected order: 30 40 50 60\n}\n",
+    "output": "30 40 50 60 \n",
+    "answers": [
+      {
+        "answer": "count == 0",
+        "explanation": "Zero stored elements means empty; equal front/rear indexes alone are ambiguous.",
+        "alternatives": [
+          "!count"
+        ]
+      },
+      {
+        "answer": "count == CAPACITY",
+        "explanation": "With a separate count, all four slots can be used.",
+        "alternatives": []
+      },
+      {
+        "answer": "rearIndex",
+        "explanation": "rearIndex is defined as the next insertion slot, not the last occupied slot.",
+        "alternatives": []
+      },
+      {
+        "answer": "(rearIndex + 1) % CAPACITY",
+        "explanation": "Modulo wraps the next insertion index from the end back to zero.",
+        "alternatives": []
+      },
+      {
+        "answer": "++count",
+        "explanation": "Insertion increases the number of stored values.",
+        "alternatives": [
+          "count++",
+          "count += 1"
+        ]
+      },
+      {
+        "answer": "frontIndex",
+        "explanation": "frontIndex points to the oldest stored value.",
+        "alternatives": []
+      },
+      {
+        "answer": "(frontIndex + 1) % CAPACITY",
+        "explanation": "Advance the removal index, wrapping at the end of the array.",
+        "alternatives": []
+      },
+      {
+        "answer": "--count",
+        "explanation": "Removal decreases the number of stored values.",
+        "alternatives": [
+          "count--",
+          "count -= 1"
+        ]
+      },
+      {
+        "answer": "dequeue",
+        "explanation": "Remove the front item to free a slot.",
+        "alternatives": []
+      },
+      {
+        "answer": "empty",
+        "explanation": "Stop when no queued values remain.",
+        "alternatives": []
+      }
+    ],
+    "validation": "CircularQueue q;\nassert(q.empty());assert(!q.full());\nexpectError([&]{q.front();});expectError([&]{q.dequeue();});\nfor(int i=0;i<4;++i)q.enqueue(i);assert(q.full());\nexpectError([&]{q.enqueue(99);});assert(q.front()==0);\nfor(int i=0;i<100;++i){assert(q.front()==i);q.dequeue();q.enqueue(i+4);assert(q.full());}\nfor(int i=100;i<104;++i){assert(q.front()==i);q.dequeue();}\nassert(q.empty());q.enqueue(7);assert(q.front()==7);q.dequeue();assert(q.empty());\n"
   }
 ]

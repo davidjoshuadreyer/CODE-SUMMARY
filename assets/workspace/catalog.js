@@ -2095,11 +2095,11 @@ window.TESSELATE_CATALOG = {
     {
       "id": "page-Y29tcDEzOWUvbWlkdGVybS1wcmFjdGljZS5odG1s",
       "courseId": "comp139e",
-      "title": "Midterm fill-in-the-blank practice · 7 exercises",
+      "title": "Midterm fill-in-the-blank practice · 10 exercises",
       "kind": "Practice worksheet",
       "url": "comp139e/midterm-practice.html",
       "body": "",
-      "description": "61 blanks covering functions, references, pointers, arrays, classes, strings, files and exceptions.",
+      "description": "94 blanks covering functions, references, pointers, arrays, classes, strings, files, exceptions, stacks and queues.",
       "referenceIds": [],
       "builtin": true
     },
@@ -2111,6 +2111,17 @@ window.TESSELATE_CATALOG = {
       "url": "comp139e/practice-box-review.html",
       "body": "",
       "description": "A longer Rectangle-style exercise combining classes, pointers, references, and memory ownership.",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
+      "id": "page-Y29tcDEzOWUvcHJhY3RpY2UtY2lyY3VsYXItcXVldWUuaHRtbA",
+      "courseId": "comp139e",
+      "title": "10 · Build a circular queue · Fill in the blanks",
+      "kind": "Practice worksheet",
+      "url": "comp139e/practice-circular-queue.html",
+      "body": "",
+      "description": "Use a fixed array with a front index, next insertion index, and count. Reuse freed slots with wraparound.",
       "referenceIds": [],
       "builtin": true
     },
@@ -2144,6 +2155,28 @@ window.TESSELATE_CATALOG = {
       "url": "comp139e/practice-file-streams.html",
       "body": "",
       "description": "Write readings, then calculate their total using successful extractions only.",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
+      "id": "page-Y29tcDEzOWUvcHJhY3RpY2UtbGlua2VkLXF1ZXVlLmh0bWw",
+      "courseId": "comp139e",
+      "title": "9 · Build a linked queue · Fill in the blanks",
+      "kind": "Practice worksheet",
+      "url": "comp139e/practice-linked-queue.html",
+      "body": "",
+      "description": "FIFO: insert at the rear and remove from the front. Handle the first node and the last removal correctly.",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
+      "id": "page-Y29tcDEzOWUvcHJhY3RpY2UtbGlua2VkLXN0YWNrLmh0bWw",
+      "courseId": "comp139e",
+      "title": "8 · Build a linked stack · Fill in the blanks",
+      "kind": "Practice worksheet",
+      "url": "comp139e/practice-linked-stack.html",
+      "body": "",
+      "description": "LIFO: build push, top, pop, and cleanup with linked nodes. The most recently pushed value leaves first.",
       "referenceIds": [],
       "builtin": true
     },
