@@ -7,7 +7,7 @@ const esc = text => text.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceA
 const template = fs.readFileSync(path.join(folder, 'fill-in-the-blanks.html'), 'utf8');
 fs.writeFileSync(path.join(folder,'practice-bank.js'), 'window.COMP_PRACTICE = '+JSON.stringify(bank)+';\n');
 for (const [index, item] of bank.entries()) {
-  let html = template.replace('cpp-cheat-sheet.html#rectangle', `cpp-cheat-sheet.html#${item.slug}`).replace('<body>', `<body data-exercise="${item.slug}">`)
+  let html = template.replace('<body>', `<body data-exercise="${item.slug}">`)
     .replace('<title>Fill in the blanks · COMP 139E</title>', `<title>${esc(item.title)} · COMP 139E</title>`)
     .replace('<h1>Fill in the blanks</h1>', `<h1>${esc(item.title)}</h1><p>${esc(item.topic)}</p>`)
     .replace('<script defer src="worksheet-checker.js?v=1"></script>', '<script defer src="practice-bank.js?v=1"></script><script defer src="practice-checker.js?v=1"></script>');
