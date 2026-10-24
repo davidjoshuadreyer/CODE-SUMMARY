@@ -51,6 +51,9 @@
       field.setAttribute('aria-describedby', state.id + (explanation.hidden ? '' : ` ${explanation.id}`));
     });
     function refresh() {
+      // Reserve room for the expected answer, entered text, and caret.
+      const characters = Math.max(18, RectangleWorksheet.answers[index].answer.length + 2, field.value.length + 2);
+      field.style.setProperty('--answer-width', `${characters}ch`);
       const result = RectangleWorksheet.check(index, field.value);
       field.dataset.result = result.state;
       field.setAttribute('aria-invalid', String(result.state === 'retry'));
