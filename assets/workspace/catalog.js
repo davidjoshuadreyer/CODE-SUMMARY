@@ -1663,7 +1663,7 @@ window.TESSELATE_CATALOG = {
       "kind": "Study notes",
       "url": "comp139e/cpp-cheat-sheet.html",
       "body": "",
-      "description": "Printable class template, type rules, blank-solving method, memory, files and exceptions.",
+      "description": "Quick blank-position reference: if you see this, write this.",
       "referenceIds": [],
       "builtin": true
     },

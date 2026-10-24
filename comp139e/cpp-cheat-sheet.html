@@ -1,103 +1,28 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>C++ midterm cheat sheet · COMP 139E</title><style>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>C++ blank-position guide · COMP 139E</title><style>
 *{box-sizing:border-box}body{margin:0;background:#eeeae4;color:#17251e;font:15px/1.5 Arial,sans-serif}nav{max-width:1050px;margin:24px auto;padding:0 24px;display:flex;gap:20px;flex-wrap:wrap;align-items:center}a{color:#235847}button{font:inherit;padding:8px 16px;background:white;border:1px solid #8a9e90;border-radius:5px;cursor:pointer}.page{max-width:1050px;background:white;margin:20px auto;padding:38px 44px;box-shadow:0 3px 18px #0001}h1{font-size:30px;margin:0 0 6px}h2{font-size:19px;margin:22px 0 8px}h3{font-size:16px;margin:16px 0 6px}p{margin:6px 0 12px}.sub{color:#526358}.rule{padding:12px 16px;background:#eaf2ec;border-left:4px solid #386650}.columns{display:grid;grid-template-columns:1fr 1fr;gap:28px}.columns>*{min-width:0}pre{background:#f4f6f3;padding:12px;font:13px/1.55 monospace;overflow-x:auto;margin:8px 0}code{font-family:monospace}table{border-collapse:collapse;width:100%;font-size:14px}th,td{text-align:left;vertical-align:top;padding:7px;border-bottom:1px solid #d9e1d9}th{background:#f2f5f1}ol,ul{padding-left:22px;margin:8px 0}li{margin:5px 0}.footer{margin-top:22px;font-size:12px;color:#56655b}@media(max-width:750px){.columns{display:block}.page{margin:12px;padding:24px 18px}h1{font-size:25px}}@page{size:letter;margin:0.45in}@media print{body{background:white;font-size:10px;line-height:1.35}nav{display:none}.page{width:auto;max-width:none;margin:0;padding:0;box-shadow:none;break-after:page}.page:last-child{break-after:auto}.columns{display:grid;gap:18px}h1{font-size:22px}h2{font-size:14px;margin:12px 0 5px}h3{font-size:12px;margin:9px 0 4px}p{margin:4px 0 7px}pre{font-size:9px;line-height:1.45;padding:8px;white-space:pre-wrap;overflow:visible}table{font-size:10px}th,td{padding:4px}.rule{padding:8px}li{margin:3px 0}.footer{font-size:9px;margin-top:12px}section,pre,table{break-inside:avoid}}
-</style></head><body><nav><a href="../index.html#course/comp139e">← COMP 139E</a><a href="midterm-practice.html">Practice exercises</a><a href="fill-in-the-blanks.html">Rectangle worksheet</a><button onclick="window.print()">Print / Save as PDF</button></nav>
-<article class="page"><h1>C++ midterm: the rules</h1><p class="sub">COMP 139E · Class structure, types, and a repeatable way to solve blanks</p>
-<section class="rule"><strong>Read the declaration → inspect the call → identify the type → fill the blank → trace one example.</strong><br>Ask: “What type is needed here, and what type do I have?”</section>
-<div class="columns"><div><section><h2>1. Default class structure</h2><pre>class Rectangle {
-private:
-    double length, width; // object data
-public:
-    Rectangle();         // constructor
-    void setLength(double x);
-    double getArea() const;
-}; // semicolon required
-
-Rectangle::Rectangle() {
-    length = 1;
-    width = 1;
-}
-void Rectangle::setLength(double x) {
-    length = x;
-}
-double Rectangle::getArea() const {
-    return length * width;
-}</pre><p><strong>Outside-class definition:</strong></p><pre>returnType Class::function(parameters) {
-    // body
-}</pre><p><strong>Constructor:</strong> class name, no return type—not even <code>void</code>. <code>Class::</code> says which class owns the function.</p><p><strong>Declaration</strong> gives the signature and ends in <code>;</code>. <strong>Definition</strong> supplies the body. Return type, parameter types, and trailing <code>const</code> must agree.</p><p>A trailing <code>const</code> promises not to modify ordinary object data; it allows calls on const objects.</p></section>
-<section><h2>2. What is defined where?</h2><table><tr><th>Location</th><th>Meaning</th></tr><tr><td>Inside class, outside methods</td><td>Members: data stored in each object</td></tr><tr><td>Function parentheses</td><td>Parameters: receive the arguments</td></tr><tr><td>Function body</td><td>Local variables: belong to that call</td></tr><tr><td><code>main()</code></td><td>Create objects, call functions, use results</td></tr><tr><td><code>new T[n]</code></td><td>Allocation survives until matching deletion</td></tr></table><p>Inside a method, <code>length</code> means this object's member. If a parameter has the same name, use <code>this-&gt;length</code> for the member.</p><p><code>class</code> defaults to private access; <code>struct</code> defaults to public. Both can contain data and methods.</p></section></div>
-<div><section><h2>3. Value, reference, or pointer?</h2><table><tr><th>Parameter</th><th>Meaning / call</th></tr><tr><td><code>void f(int x)</code></td><td>Copy of value; <code>f(n)</code></td></tr><tr><td><code>void f(int &amp;x)</code></td><td>Alias to caller's variable; <code>f(n)</code></td></tr><tr><td><code>void f(int *p)</code></td><td>Copy of address; <code>f(&amp;n)</code></td></tr><tr><td><code>void f(const int &amp;x)</code></td><td>Read through a reference; <code>f(n)</code></td></tr></table><pre>int n = 5;
-int *p = &amp;n; // &amp;n: address of n
-*p = 7;      // *p: value at that address
-             // n is now 7</pre><p><code>T &amp;x</code> in a declaration means reference. <code>&amp;x</code> in an expression means address-of. <code>T *p</code> declares a pointer; <code>*p</code> dereferences one.</p><p>Changing <code>*p</code> changes the pointed-to value. Reassigning a by-value pointer parameter <code>p</code> does not redirect the caller's pointer. <code>T *&amp;p</code> can.</p></section>
-<section><h2>4. Dot or arrow?</h2><pre>Rectangle r;
-Rectangle *p = &amp;r;
-Rectangle *items = new Rectangle[3];
-
-r.getArea();         // object → dot
-p-&gt;getArea();        // pointer → arrow
-(*p).getArea();       // equivalent
-items[i].getArea();  // element is object
-(items+i)-&gt;getArea();// address is pointer
-
-delete[] items;</pre><p><strong>Look immediately left of the operator.</strong> <code>items</code> is a pointer; <code>items[i]</code> is an object.</p></section>
-<section><h2>5. Fast blank-solving guide</h2><table><tr><th>Blank position</th><th>Check</th></tr><tr><td>Before function name</td><td>Return type + <code>Class::</code>?</td></tr><tr><td>Parameter list</td><td>Value, alias, or address?</td></tr><tr><td>Function call</td><td>Match the declared parameter type</td></tr><tr><td>Before variable name</td><td>What type does the right side produce?</td></tr><tr><td>Member access</td><td>Object <code>.</code> or pointer <code>-&gt;</code>?</td></tr><tr><td>After <code>delete</code></td><td>Single object or array?</td></tr></table></section></div></div><p class="footer">Study reference · Follow your instructor's rules about permitted exam materials.</p></article>
-<article class="page"><h1>C++ midterm: patterns &amp; checks</h1><p class="sub">Arrays, memory, functions, strings, files, and exceptions</p><div class="columns"><div>
-<section><h2>6. Dynamic array pattern</h2><pre>// Input is read-only. Caller owns result.
-double *doubled(const double *values,
-                int size) {
-    double *result = new double[size];
-    for (int i = 0; i &lt; size; ++i) {
-        result[i] = values[i] * 2;
-    }
-    return result;
-}
-
-// In main():
-double values[] = {2, 3};
-double *out = doubled(values, 2);
-cout &lt;&lt; out[0];
-delete[] out;
-out = nullptr;</pre><ul><li><code>new double[size]</code> produces a <code>double*</code>, not one double. Its elements are uninitialized until assigned; <code>new double[size]{}</code> zero-initializes them.</li><li><code>a[i]</code> is equivalent to <code>*(a + i)</code>.</li><li><code>&amp;a[i]</code> is equivalent to <code>a + i</code>.</li><li>Valid indexes: <code>0</code> through <code>size - 1</code>. Use <code>i &lt; size</code>.</li><li>Pass the length separately: a pointer does not carry the array size.</li><li>A runtime array length must have an integer type; do not use <code>double num</code>.</li></ul></section>
-<section><h2>7. Memory ownership</h2><table><tr><th>Allocation</th><th>Release</th></tr><tr><td><code>new T</code></td><td><code>delete p;</code></td></tr><tr><td><code>new T[n]</code></td><td><code>delete[] p;</code></td></tr><tr><td><code>T a[3];</code> local array</td><td>No manual delete</td></tr></table><p>Never return a pointer/reference to a local variable or local array. Its lifetime ends when the function returns.</p><p>Delete each owned allocation once. Do not use it afterward. Setting one pointer to <code>nullptr</code> neither frees memory nor clears other pointers to that allocation.</p></section>
-<section><h2>8. Numeric and function rules</h2><pre>(3 + 8) / 2                       // 5
-static_cast&lt;double&gt;(3 + 8) / 2  // 5.5</pre><p>Convert <strong>before</strong> integer division. Converting the truncated result afterward cannot recover the fraction.</p><ul><li><code>void</code>: no returned value. A non-void function must return its result on every relevant path.</li><li>Default arguments fill omitted trailing arguments; normally specify them once, in the declaration.</li><li>Overloads differ in parameter lists; return type alone is not enough.</li><li><code>static</code> local variables retain their values between calls.</li></ul></section></div>
-<div><section><h2>9. Strings and static members</h2><pre>string name = "Ada Lovelace";
-auto space = name.find(' ');
-if (space != string::npos) {
-    cout &lt;&lt; name.substr(0, space);
-}</pre><p><code>find</code> returns a position or <code>string::npos</code>. <code>substr(start, count)</code> uses a character count, not an ending index. <code>length()</code> gives the number of characters.</p><pre>// Inside class Student:
-static int created;
-static int count() { return created; }
-
-// Outside class, define storage once:
-int Student::created = 0;
-
-// Call via class:
-Student::count();</pre><p>A static member is shared by the class. A static method has no <code>this</code> object; it cannot directly access an ordinary member without an object.</p></section>
-<section><h2>10. File streams</h2><pre>#include &lt;fstream&gt;
-
-ofstream output("data.txt");
-if (!output) return 1;
-output &lt;&lt; 2.5 &lt;&lt; ' ' &lt;&lt; 4.0;
-output.close();
-
-ifstream input("data.txt");
-if (!input) return 1;
-double value, total = 0;
-while (input &gt;&gt; value) {
-    total += value;
-}
-if (input.bad() || !input.eof()) {
-    // read error / non-numeric input
-}</pre><p><code>ofstream</code> writes with <code>&lt;&lt;</code>; <code>ifstream</code> reads with <code>&gt;&gt;</code>. Test the read itself—not <code>while (!input.eof())</code>. Use <code>getline(input, line)</code> for a complete line.</p></section>
-<section><h2>11. Exceptions</h2><pre>#include &lt;stdexcept&gt;
-
-try {
-    if (count &lt;= 0)
-        throw invalid_argument("bad count");
-    cout &lt;&lt; total / count;
-} catch (const invalid_argument &amp;error) {
-    cout &lt;&lt; error.what();
-}
-// Continue here after the handler.</pre><p><code>throw</code> skips the remaining normal path and searches for a matching <code>catch</code>. Catch standard exceptions by const reference; <code>what()</code> gives their message.</p></section>
-<section class="rule"><h2>Final 30-second check</h2><ol><li>Declarations and definitions match.</li><li>Constructor has no return type.</li><li>Each call supplies the correct types.</li><li>Dot/arrow matches object/pointer.</li><li>Indexes stay inside the array.</li><li>Every owned allocation has matching cleanup.</li><li>Trace one small input to check the result.</li></ol></section></div></div><p class="footer">Snippets use unqualified standard-library names for brevity, assuming the appropriate includes and <code>using namespace std;</code>. Some are partial patterns, not standalone programs.</p></article></body></html>
+th:first-child{width:24%}th:nth-child(2){width:46%}td{padding:12px 10px}td code{overflow-wrap:anywhere} @media print{td{padding:6px}tr{break-inside:avoid}table{break-inside:auto}} @media(max-width:600px){table{font-size:12px}td{padding:8px 5px}.page{padding:16px 10px}}</style></head><body><nav><a href="../index.html#course/comp139e">← COMP 139E</a><a href="midterm-practice.html">Practice exercises</a><a href="fill-in-the-blanks.html">Rectangle worksheet</a><button onclick="window.print()">Print / Save as PDF</button></nav>
+<article class="page"><h1>Where is the blank?</h1><p class="sub">Match the position. Check the declaration when choosing a type or name.</p>
+<table><thead><tr><th>Blank location</th><th>If you see this…</th><th>Write this</th></tr></thead><tbody>
+<tr><td>Before a constructor</td><td><code>___ Rectangle() { }</code><br>Defined outside the class</td><td><code>Rectangle::</code><br>No return type</td></tr>
+<tr><td>Before a member function</td><td><code>___ getArea() const { … }</code><br>Declared as <code>double getArea() const;</code> in Rectangle</td><td><code>double Rectangle::</code></td></tr>
+<tr><td>Before a function returning an array</td><td><code>___ getDimensions();</code><br>Returns a newly allocated array of doubles</td><td><code>double *</code><br>Outside-class definition: <code>double *Rectangle::</code></td></tr>
+<tr><td>In a parameter list</td><td><code>void change(int ___ x)</code><br>Must change the caller's integer</td><td><code>&amp;</code></td></tr>
+<tr><td>In a parameter list</td><td><code>void set(___ dimensions)</code><br>Receives an array of doubles</td><td><code>double *</code></td></tr>
+<tr><td>After a method's parentheses</td><td><code>double Rectangle::getArea() ___</code><br>The class declaration ends with <code>const</code></td><td><code>const</code></td></tr>
+<tr><td>Inside a function call</td><td><code>change(___)</code> expects <code>Rectangle *</code><br>You have object <code>r</code></td><td><code>&amp;r</code></td></tr>
+<tr><td>Inside a function call</td><td><code>change(___)</code> expects <code>Rectangle *</code><br>You want element <code>r[i]</code> of an array</td><td><code>&amp;r[i]</code> or <code>r + i</code></td></tr>
+<tr><td>Inside a function call</td><td><code>setDimensions(___)</code> expects <code>double *</code><br>You have array <code>double d[2];</code></td><td><code>d</code></td></tr>
+<tr><td>Before a variable name</td><td><code>___ areas = new double[size];</code></td><td><code>double *</code></td></tr>
+<tr><td>After <code>=</code>: allocate an array</td><td><code>double *areas = ___;</code><br>Need one double per rectangle</td><td><code>new double[size]</code></td></tr>
+<tr><td>Before a member call</td><td><code>___ getArea()</code><br><code>r</code> is an object</td><td><code>r.</code></td></tr>
+<tr><td>Before a member call</td><td><code>___ getArea()</code><br><code>p</code> is a pointer to an object</td><td><code>p-&gt;</code></td></tr>
+<tr><td>Before a member call</td><td><code>___ getArea()</code><br><code>rectangles</code> is an array of objects</td><td><code>rectangles[i].</code></td></tr>
+<tr><td>After <code>=</code>: read an element</td><td><code>width = ___;</code><br>Width is the second value in <code>dimensions</code></td><td><code>dimensions[1]</code><br>First → <code>[0]</code>; second → <code>[1]</code></td></tr>
+<tr><td>Before <code>=</code>: write through a pointer</td><td><code>___ = 7;</code><br>Change the integer pointed to by <code>p</code></td><td><code>*p</code></td></tr>
+<tr><td>After <code>return</code></td><td><code>return ___;</code><br>Function built an output array named <code>areas</code></td><td><code>areas</code></td></tr>
+<tr><td>After <code>delete</code></td><td><code>delete ___;</code><br><code>areas</code> came from <code>new double[size]</code></td><td><code>[] areas</code><br>Single object from <code>new Rectangle</code>? Write its pointer name only.</td></tr>
+<tr><td>Before division</td><td><code>return ___ / 2;</code><br><code>a</code> and <code>b</code> are integers; need a decimal average</td><td><code>static_cast&lt;double&gt;(a + b)</code></td></tr>
+<tr><td>File-stream type or operator</td><td>Write a file → <code>___ out("x.txt");</code><br>Read a file → <code>___ in("x.txt");</code></td><td>Write: <code>ofstream</code>, use <code>&lt;&lt;</code><br>Read: <code>ifstream</code>, use <code>&gt;&gt;</code></td></tr>
+<tr><td>Inside a file-reading loop</td><td><code>while (___)</code><br>Read numbers into <code>value</code> from <code>in</code></td><td><code>in &gt;&gt; value</code></td></tr>
+<tr><td>Exception keyword</td><td><code>___ { riskyCall(); }</code><br><code>___ invalid_argument("bad");</code><br><code>___ (const exception &amp;e) { … }</code></td><td><code>try</code><br><code>throw</code><br><code>catch</code></td></tr>
+</tbody></table></article></body></html>
