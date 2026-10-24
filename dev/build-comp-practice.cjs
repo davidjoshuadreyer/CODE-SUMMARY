@@ -15,10 +15,10 @@ template=replaceNavigation(template,'fill-in-the-blanks.html');
 fs.writeFileSync(path.join(folder,'fill-in-the-blanks.html'),template);
 fs.writeFileSync(path.join(folder,'practice-bank.js'), 'window.COMP_PRACTICE = '+JSON.stringify(bank)+';\n');
 for (const [index, item] of bank.entries()) {
-  let html = template.replace('<body>', `<body data-exercise="${item.slug}">`)
+  let html = template.replace('<body>', `<body data-exercise="${item.slug}" data-answer-version="${item.answerVersion||1}">`)
     .replace('<title>Fill in the blanks · COMP 139E</title>', `<title>${esc(item.title)} · COMP 139E</title>`)
-    .replace('<h1>Fill in the blanks</h1>', `<h1>${esc(item.title)}</h1><p>${esc(item.topic)}</p>`)
-    .replace('<script defer src="worksheet-checker.js?v=1"></script>', '<script defer src="practice-bank.js?v=2"></script><script defer src="practice-checker.js?v=1"></script>');
+    .replace('<h1>Fill in the blanks</h1>', `<h1>${esc(item.title)}</h1><p>${esc(item.topic)}</p>${item.reference?`<details><summary>Course example &amp; practice adaptations</summary><p>${esc(item.sourceNote)}</p><a href="${esc(item.reference)}">Open course source →</a></details>`:''}`)
+    .replace('<script defer src="worksheet-checker.js?v=1"></script>', '<script defer src="practice-bank.js?v=3"></script><script defer src="practice-checker.js?v=1"></script>');
   const lines = item.source.split('\n').map(line=>'<div class="line">'+(esc(line).replace(/@(\d+)/g,(_,n)=>`<input id="blank-${n}" aria-label="Blank ${n}" autocomplete="off" autocapitalize="off" spellcheck="false">`) || '&nbsp;')+'</div>').join('');
   html = html.replace(/<section class="paper"[\s\S]*?<\/section><\/main>/, `<section class="paper" aria-label="Practice code">${lines}</section></main>`);
   html = replaceNavigation(html,`practice-${item.slug}.html`);
@@ -29,7 +29,7 @@ const groups = [
   {id:'foundations',title:'Functions, pointers & arrays',slugs:['references','dynamic-array']},
   {id:'classes',title:'Classes & objects',slugs:['sensor-class','strings-static','box-review']},
   {id:'files-exceptions',title:'Files & exceptions',slugs:['file-streams','exceptions']},
-  {id:'stacks-queues',title:'Stacks & queues',slugs:['linked-stack','linked-queue','circular-queue']}
+  {id:'stacks-queues',title:'Linked lists, stacks & queues',slugs:['linked-list','linked-stack','linked-queue','circular-queue']}
 ];
 const sections=groups.map(group=>`<section id="${group.id}" class="topic-section"><h2>${esc(group.title)}</h2><div class="practice-grid">${(group.items||group.slugs.map(slug=>bank.find(item=>item.slug===slug))).map(item=>`<a class="practice-card" href="${item.url||`practice-${item.slug}.html`}"><h3>${esc(item.title)}</h3><p>${esc(item.topic)}</p><span>${item.count||item.answers.length} blanks · Open worksheet →</span></a>`).join('')}</div></section>`).join('');
 const css = template.match(/<style>([\s\S]*?)<\/style>/)[1];

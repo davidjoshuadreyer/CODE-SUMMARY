@@ -29,7 +29,7 @@ try {
    assert.equal(execFileSync(executable,{cwd:dir,encoding:'utf8'}),exercise.output);
   }
   if (exercise.validation) {
-   const harness = source.replace('int main()', 'int exampleMain()').replace(/\}\s*$/, 'return 0;\n}') + '\n#include <cassert>\n#include <functional>\nvoid expectError(const std::function<void()>& f) { bool caught=false; try { f(); } catch(const std::runtime_error&) { caught=true; } assert(caught); }\nint main() {\n' + exercise.validation + '\n}\n';
+   const harness = source.replace('int main()', 'int exampleMain()').replace(/\}\s*$/, 'return 0;\n}') + '\n#include <cassert>\n#include <functional>\nvoid expectError(const std::function<void()>& f) { bool caught=false; try { f(); } catch(const std::exception&) { caught=true; } assert(caught); }\nint main() {\n' + exercise.validation + '\n}\n';
    fs.writeFileSync(cpp,harness);
    execFileSync('clang++',['-std=c++17','-fsanitize=address,undefined','-g',cpp,'-o',executable]);
    execFileSync(executable,{cwd:dir,encoding:'utf8'});

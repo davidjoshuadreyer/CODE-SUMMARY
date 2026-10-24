@@ -1,14 +1,14 @@
 [
   {
     "slug": "references",
-    "title": "1 \u00b7 Functions & references",
-    "topic": "Change the caller\u2019s values, use a default argument, and calculate an average.",
+    "title": "1 · Functions & references",
+    "topic": "Change the caller’s values, use a default argument, and calculate an average.",
     "source": "#include <iostream>\nusing namespace std;\n\n// Change the caller's two integers, rather than local copies.\nvoid exchange(int @1 a, int @2 b) {\n    int temp = a;\n    a = @3;\n    b = @4;\n}\n\n// Add amount to the caller's balance. Default increase: 5.\nvoid increase(double @5 balance, double amount = @6) {\n    balance += amount;\n}\n\n// Return a fractional average even when both inputs are integers.\ndouble average(int a, int b) {\n    return @7 / 2;\n}\n\nint main() {\n    int left = 3, right = 8;\n    exchange(@8, right);\n    double balance = 10;\n    increase(balance);\n    cout << left << ' ' << right << ' ' << balance << ' '\n         << average(3, 8) << '\\n';\n}",
     "output": "8 3 15 5.5\n",
     "answers": [
       {
         "answer": "&",
-        "explanation": "A reference parameter is another name for the caller\u2019s variable.",
+        "explanation": "A reference parameter is another name for the caller’s variable.",
         "alternatives": []
       },
       {
@@ -57,7 +57,7 @@
   },
   {
     "slug": "dynamic-array",
-    "title": "2 \u00b7 Pointers & dynamic arrays",
+    "title": "2 · Pointers & dynamic arrays",
     "topic": "Build a new result array without changing the original measurements.",
     "source": "#include <iostream>\nusing namespace std;\n\n// Return a new array containing twice each input value.\n// Caller owns the returned allocation.\n@1 doubled(const double *values, int size) {\n    double *result = @2;\n    for (int i = 0; i < @3; ++i) {\n        result[i] = @4 * 2;\n    }\n    return @5;\n}\n\n// Replace the number stored at the supplied address.\nvoid replace(double *destination, double value) {\n    @6 = value;\n}\n\nint main() {\n    double readings[] = {1.5, 2.0, 4.0};\n    double *copy = doubled(readings, 3);\n    replace(@7, 9.0); // Replace only copy[1].\n    cout << copy[0] << ' ' << copy[1] << ' ' << copy[2]\n         << ' ' << readings[1] << '\\n';\n    delete @8;\n    copy = @9;\n}",
     "output": "3 9 8 2\n",
@@ -118,7 +118,7 @@
   },
   {
     "slug": "sensor-class",
-    "title": "3 \u00b7 Sensor class",
+    "title": "3 · Sensor class",
     "topic": "Practise constructors, member scope, const methods, object pointers, and arrays of objects.",
     "source": "#include <iostream>\nusing namespace std;\n\nclass Sensor {\n    double reading;\npublic:\n    Sensor();\n    Sensor(double value);\n    void set(double value);\n    double get() const;\n};\n\n@1 Sensor() { reading = 0; }\n@2 Sensor(double value) { reading = value; }\nvoid @3 set(double value) { reading = value; }\ndouble Sensor::get() @4 { return reading; }\n\n// Update the object through its pointer.\nvoid calibrate(Sensor *sensor, double offset) {\n    sensor@5 set(sensor@6 get() + offset);\n}\n\n// Return one reading per sensor; caller must free the array.\ndouble *readAll(const Sensor *sensors, int size) {\n    double *values = @7;\n    for (int i = 0; i < size; ++i) {\n        values[i] = sensors[i]@8 get();\n    }\n    return values;\n}\n\nint main() {\n    Sensor sensors[] = {Sensor(10), Sensor(20)};\n    calibrate(@9, 2);\n    double *values = readAll(sensors, 2);\n    cout << values[0] << ' ' << values[1] << '\\n';\n    delete @10;\n}",
     "output": "10 22\n",
@@ -179,7 +179,7 @@
   },
   {
     "slug": "strings-static",
-    "title": "4 \u00b7 Strings & static members",
+    "title": "4 · Strings & static members",
     "topic": "Extract a first name and count constructed objects.",
     "source": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Student {\n    string name;\n    static int created;\npublic:\n    Student(const string &text) {\n        name = text;\n        @1; // Count this construction.\n    }\n    string firstName() const {\n        auto space = name.@2(' ');\n        if (space == string::@3) return name;\n        return name.@4(0, space);\n    }\n    static int count() { return @5; }\n};\n\n// Define storage for the static member once.\nint @6 = 0;\n\nint main() {\n    Student first(\"Ada Lovelace\"), second(\"Grace Hopper\");\n    cout << first.@7() << ' ' << second.firstName() << '\\n';\n    cout << @8 << '\\n';\n}",
     "output": "Ada Grace\n2\n",
@@ -235,7 +235,7 @@
   },
   {
     "slug": "box-review",
-    "title": "5 \u00b7 Mixed review: boxes",
+    "title": "5 · Mixed review: boxes",
     "topic": "A longer Rectangle-style exercise combining classes, pointers, references, and memory ownership.",
     "source": "#include <iostream>\nusing namespace std;\n\nclass Box {\n    double width = 1, height = 1, depth = 1;\npublic:\n    Box();\n    Box(double w, double h, double d);\n    double volume() const;\n    void setDimensions(const double *dimensions);\n    double *getDimensions() const;\n};\n\n@1 Box() {}\nBox::Box(double w, double h, double d) {\n    double dimensions[] = {w, h, d};\n    setDimensions(@2);\n}\n@3 Box::volume() const {\n    return @4;\n}\nvoid Box::setDimensions(const double *dimensions) {\n    width = dimensions[0];\n    height = dimensions[1];\n    depth = @5;\n}\n@6 Box::getDimensions() const {\n    double *dimensions = new double[3]{width, height, depth};\n    return dimensions;\n}\n\n// Change an existing box through a reference.\nvoid reshape(Box @7 box, const double *dimensions) {\n    box.@8(dimensions);\n}\n\n// Caller owns the returned array of volumes.\ndouble *volumes(const Box *boxes, int size) {\n    double *results = @9;\n    for (int i = 0; i < size; ++i) {\n        results[i] = @10;\n    }\n    return results;\n}\n\nint main() {\n    Box *boxes = new Box[2];\n    double dimensions[] = {2, 3, 4};\n    reshape(boxes[1], dimensions);\n    double *values = volumes(boxes, 2);\n    double *copiedDimensions = boxes[1].getDimensions();\n    cout << values[0] << ' ' << values[1] << ' '\n         << copiedDimensions[2] << '\\n';\n    delete @11;\n    delete @12;\n    delete @13;\n}",
     "output": "1 24 4\n",
@@ -259,7 +259,7 @@
       },
       {
         "answer": "width * height * depth",
-        "explanation": "A rectangular box\u2019s volume multiplies its three dimensions.",
+        "explanation": "A rectangular box’s volume multiplies its three dimensions.",
         "alternatives": [
           "height * width * depth",
           "depth * height * width",
@@ -282,7 +282,7 @@
       },
       {
         "answer": "&",
-        "explanation": "The function must alter the caller\u2019s Box rather than a copy.",
+        "explanation": "The function must alter the caller’s Box rather than a copy.",
         "alternatives": []
       },
       {
@@ -321,7 +321,7 @@
   },
   {
     "slug": "file-streams",
-    "title": "6 \u00b7 File streams",
+    "title": "6 · File streams",
     "topic": "Write readings, then calculate their total using successful extractions only.",
     "source": "#include <iostream>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    @1 output(\"readings.txt\");\n    if (!output) return 1;\n    output @2 2.5 << ' ' << 4.0 << ' ' << 1.5;\n    output.@3(); // Finish writing before opening for reading.\n\n    @4 input(\"readings.txt\");\n    if (!input) return 1;\n    double value = 0, total = 0;\n    int count = 0;\n    while (@5) {\n        total @6 value;\n        ++count;\n    }\n    // A failed extraction is expected at EOF, but not elsewhere.\n    if (input.bad() || !input.@7()) return 2;\n    cout << total << ' ' << count << '\\n';\n}",
     "output": "8 3\n",
@@ -365,7 +365,7 @@
   },
   {
     "slug": "exceptions",
-    "title": "7 \u00b7 Exceptions",
+    "title": "7 · Exceptions",
     "topic": "Throw on invalid input, catch the error, and continue after the handler.",
     "source": "#include <iostream>\n#include <stdexcept>\nusing namespace std;\n\ndouble average(double total, int count) {\n    if (count <= 0) {\n        @1 invalid_argument(\"count must be positive\");\n    }\n    return total @2 count;\n}\n\nint main() {\n    @3 {\n        cout << average(9, 2) << '\\n';\n        double result = average(9, 0);\n        cout << result << '\\n'; // Skipped after the exception.\n    } @4 (const invalid_argument @5 error) {\n        cout << error.@6() << '\\n';\n    }\n    cout << \"continues\" << '\\n';\n}",
     "output": "4.5\ncount must be positive\ncontinues\n",
@@ -404,217 +404,269 @@
   },
   {
     "slug": "linked-stack",
-    "title": "8 \u00b7 Build a linked stack",
-    "topic": "LIFO: build push, top, pop, and cleanup with linked nodes. The most recently pushed value leaves first.",
-    "source": "#include <iostream>\n#include <stdexcept>\nusing namespace std;\n\nclass Stack {\n    struct Node {\n        int value;\n        Node *next;\n    };\n    Node *head;\npublic:\n    Stack() : head(@1) {}\n    bool empty() const { return @2; }\n\n    void push(int value) {\n        Node *node = new Node{value, @3};\n        head = @4;\n    }\n    int top() const {\n        if (empty()) throw runtime_error(\"empty stack\");\n        return @5; // Read without removing.\n    }\n    void pop() {\n        if (empty()) throw runtime_error(\"empty stack\");\n        Node *old = @6;\n        head = @7; // Advance BEFORE deleting the old node.\n        delete @8;\n    }\n    @9() {\n        while (!empty()) @10;\n    }\n    // This owner must not share nodes through an accidental shallow copy.\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n};\n\nint main() {\n    Stack s;\n    s.push(10);\n    s.push(20);\n    s.push(30);\n    while (!s.empty()) {\n        cout << s.@11() << ' ';\n        s.pop();\n    }\n    cout << '\\n'; // Expected order: 30 20 10\n}\n",
-    "output": "30 20 10 \n",
+    "title": "8 · Build a linked stack",
+    "topic": "Lab 6 Stack<T>: push, pop, top, size and isEmpty.",
+    "source": "#include <iostream>\n#include <exception>\n#include <string>\nusing namespace std;\n\n// StackException.hpp, included here to make this example standalone.\nclass StackException : public exception {\n    string message;\npublic:\n    explicit StackException(const string& msg) noexcept : message(msg) {}\n    const char* what() const noexcept override { return message.c_str(); }\n};\n\ntemplate <class T> class Stack {\nprivate:\n    typedef struct stackNode {\n        struct stackNode *next;\n        T theItem;\n    } StackNode;\n    StackNode *topOfStack;\n    int count;\npublic:\n    Stack() : topOfStack(@1), count(0) {}\n    void push(T item) {\n        StackNode *newNode = new StackNode;\n        newNode->theItem = @2;\n        newNode->next = @3;\n        topOfStack = @4;\n        @5;\n    }\n    T pop(void) {\n        if (@6) throw StackException(\"Pop from empty stack\");\n        T item = @7;\n        StackNode *old = topOfStack;\n        topOfStack = @8;\n        delete @9;\n        @10;\n        return @11;\n    }\n    T top(void) {\n        if (isEmpty()) throw StackException(\"Top of empty stack\");\n        return @12;\n    }\n    int size(void) { return count; }\n    bool isEmpty(void) { return @13; }\n    // Practice addition: clean up nodes and prevent shallow copies.\n    ~Stack() { while (!isEmpty()) pop(); }\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n};\n\nint main() {\n    Stack<int> s;\n    s.push(10); s.push(20); s.push(30);\n    while (!s.isEmpty()) cout << s.pop() << ' ';\n    cout << '\\n';\n}\n",
     "answers": [
       {
-        "answer": "nullptr",
-        "explanation": "An empty linked stack has no first node.",
+        "answer": "NULL",
+        "explanation": "An empty stack has no top node. The lab spells this NULL.",
         "alternatives": []
       },
       {
-        "answer": "head == nullptr",
-        "explanation": "There are no values when the head pointer has no node.",
-        "alternatives": [
-          "!head"
-        ]
-      },
-      {
-        "answer": "head",
-        "explanation": "The new top must link to the previous top, preserving the rest of the stack.",
+        "answer": "item",
+        "explanation": "Copy the parameter into the new node’s theItem member.",
         "alternatives": []
       },
       {
-        "answer": "node",
-        "explanation": "Make the newly allocated node the top of the stack.",
+        "answer": "topOfStack",
+        "explanation": "Link the new node to the previous top.",
         "alternatives": []
       },
       {
-        "answer": "head->value",
-        "explanation": "The newest value is stored in the head node.",
-        "alternatives": [
-          "(*head).value"
-        ]
-      },
-      {
-        "answer": "head",
-        "explanation": "Keep the original head address so you can delete that allocation.",
-        "alternatives": []
-      },
-      {
-        "answer": "head->next",
-        "explanation": "Move the head to the second node before freeing the first.",
-        "alternatives": [
-          "old->next"
-        ]
-      },
-      {
-        "answer": "old",
-        "explanation": "Delete the removed single node, not the new head and not an array.",
-        "alternatives": []
-      },
-      {
-        "answer": "~Stack",
-        "explanation": "A destructor has a tilde followed by the class name and no return type.",
-        "alternatives": []
-      },
-      {
-        "answer": "pop()",
-        "explanation": "Repeated removal releases every remaining node.",
-        "alternatives": []
-      },
-      {
-        "answer": "top",
-        "explanation": "top reads the value; pop removes it without returning it.",
-        "alternatives": []
-      }
-    ],
-    "validation": "Stack s;\nassert(s.empty());\nexpectError([&]{s.top();}); expectError([&]{s.pop();});\ns.push(1); s.push(2); assert(s.top()==2); assert(s.top()==2);\ns.pop(); assert(s.top()==1); s.pop(); assert(s.empty());\ns.push(9); assert(s.top()==9); s.pop(); assert(s.empty());\n{ Stack leftover; for(int i=0;i<100;++i) leftover.push(i); }\n"
-  },
-  {
-    "slug": "linked-queue",
-    "title": "9 \u00b7 Build a linked queue",
-    "topic": "FIFO: insert at the rear and remove from the front. Handle the first node and the last removal correctly.",
-    "source": "#include <iostream>\n#include <stdexcept>\nusing namespace std;\n\nclass Queue {\n    struct Node { int value; Node *next; };\n    Node *frontNode;\n    Node *rearNode;\npublic:\n    Queue() : frontNode(nullptr), rearNode(nullptr) {}\n    bool empty() const { return @1; }\n\n    void enqueue(int value) {\n        Node *node = new Node{value, @2};\n        if (empty()) {\n            frontNode = @3; // First node is both front and rear.\n        } else {\n            rearNode->next = @4;\n        }\n        rearNode = @5;\n    }\n    int front() const {\n        if (empty()) throw runtime_error(\"empty queue\");\n        return @6;\n    }\n    void dequeue() {\n        if (empty()) throw runtime_error(\"empty queue\");\n        Node *old = @7;\n        frontNode = @8;\n        if (frontNode == nullptr) {\n            rearNode = @9; // No dangling rear after removing last node.\n        }\n        delete @10;\n    }\n    ~Queue() {\n        while (!empty()) @11;\n    }\n    Queue(const Queue&) = delete;\n    Queue& operator=(const Queue&) = delete;\n};\n\nint main() {\n    Queue q;\n    q.enqueue(10);\n    q.enqueue(20);\n    q.enqueue(30);\n    while (!q.empty()) {\n        cout << q.@12() << ' ';\n        q.dequeue();\n    }\n    cout << '\\n'; // Expected order: 10 20 30\n    q.enqueue(40); // Reuse the queue after it becomes empty.\n    cout << q.front() << '\\n';\n}\n",
-    "output": "10 20 30 \n40\n",
-    "answers": [
-      {
-        "answer": "frontNode == nullptr",
-        "explanation": "An empty queue has no front node.",
-        "alternatives": [
-          "!frontNode"
-        ]
-      },
-      {
-        "answer": "nullptr",
-        "explanation": "The new rear is the last node, so it must not point to a following node.",
-        "alternatives": []
-      },
-      {
-        "answer": "node",
-        "explanation": "When inserting into an empty queue, the new node also becomes the front.",
-        "alternatives": []
-      },
-      {
-        "answer": "node",
-        "explanation": "Link the old rear to the newly allocated node before moving rearNode.",
-        "alternatives": []
-      },
-      {
-        "answer": "node",
-        "explanation": "The new node is now the last node in the queue.",
-        "alternatives": []
-      },
-      {
-        "answer": "frontNode->value",
-        "explanation": "FIFO reads the oldest value, at the front.",
-        "alternatives": [
-          "(*frontNode).value"
-        ]
-      },
-      {
-        "answer": "frontNode",
-        "explanation": "Save the node being removed so its allocation can be freed.",
-        "alternatives": []
-      },
-      {
-        "answer": "frontNode->next",
-        "explanation": "The second node becomes the new front.",
-        "alternatives": [
-          "old->next"
-        ]
-      },
-      {
-        "answer": "nullptr",
-        "explanation": "Once the last node is removed, both end pointers must represent an empty queue.",
-        "alternatives": []
-      },
-      {
-        "answer": "old",
-        "explanation": "Release the one removed node with scalar delete.",
-        "alternatives": []
-      },
-      {
-        "answer": "dequeue()",
-        "explanation": "Remove remaining nodes one by one during destruction.",
-        "alternatives": []
-      },
-      {
-        "answer": "front",
-        "explanation": "Read the oldest queued value without removing it.",
-        "alternatives": []
-      }
-    ],
-    "validation": "Queue q;\nassert(q.empty()); expectError([&]{q.front();}); expectError([&]{q.dequeue();});\nq.enqueue(10); assert(q.front()==10); q.dequeue(); assert(q.empty());\nq.enqueue(20); q.enqueue(30); assert(q.front()==20); q.dequeue(); assert(q.front()==30);\nq.enqueue(40); q.dequeue(); assert(q.front()==40); q.dequeue(); assert(q.empty());\nfor(int i=0;i<20;++i){q.enqueue(i);assert(q.front()==i);q.dequeue();}\n{ Queue leftover; for(int i=0;i<100;++i) leftover.enqueue(i); }\n"
-  },
-  {
-    "slug": "circular-queue",
-    "title": "10 \u00b7 Build a circular queue",
-    "topic": "Use a fixed array with a front index, next insertion index, and count. Reuse freed slots with wraparound.",
-    "source": "#include <iostream>\n#include <stdexcept>\nusing namespace std;\n\nclass CircularQueue {\n    static const int CAPACITY = 4;\n    int data[CAPACITY]{};\n    int frontIndex = 0; // Next value to remove.\n    int rearIndex = 0;  // Next free slot to insert into.\n    int count = 0;      // Distinguishes empty from full.\npublic:\n    bool empty() const { return @1; }\n    bool full() const { return @2; }\n    void enqueue(int value) {\n        if (full()) throw runtime_error(\"full queue\");\n        data[@3] = value;\n        rearIndex = @4;\n        @5; // One more stored value.\n    }\n    int front() const {\n        if (empty()) throw runtime_error(\"empty queue\");\n        return data[@6];\n    }\n    void dequeue() {\n        if (empty()) throw runtime_error(\"empty queue\");\n        frontIndex = @7;\n        @8; // One fewer stored value.\n    }\n}; // data is a member array, so no manual delete is needed.\n\nint main() {\n    CircularQueue q;\n    q.enqueue(10); q.enqueue(20);\n    q.enqueue(30); q.enqueue(40); // Full.\n    q.@9(); // Remove 10.\n    q.dequeue(); // Remove 20.\n    q.enqueue(50); q.enqueue(60); // Wrap into freed slots.\n    while (!q.@10()) {\n        cout << q.front() << ' ';\n        q.dequeue();\n    }\n    cout << '\\n'; // Expected order: 30 40 50 60\n}\n",
-    "output": "30 40 50 60 \n",
-    "answers": [
-      {
-        "answer": "count == 0",
-        "explanation": "Zero stored elements means empty; equal front/rear indexes alone are ambiguous.",
-        "alternatives": [
-          "!count"
-        ]
-      },
-      {
-        "answer": "count == CAPACITY",
-        "explanation": "With a separate count, all four slots can be used.",
-        "alternatives": []
-      },
-      {
-        "answer": "rearIndex",
-        "explanation": "rearIndex is defined as the next insertion slot, not the last occupied slot.",
-        "alternatives": []
-      },
-      {
-        "answer": "(rearIndex + 1) % CAPACITY",
-        "explanation": "Modulo wraps the next insertion index from the end back to zero.",
+        "answer": "newNode",
+        "explanation": "The new node becomes the top.",
         "alternatives": []
       },
       {
         "answer": "++count",
-        "explanation": "Insertion increases the number of stored values.",
-        "alternatives": [
-          "count++",
-          "count += 1"
-        ]
-      },
-      {
-        "answer": "frontIndex",
-        "explanation": "frontIndex points to the oldest stored value.",
+        "explanation": "push adds one item to the stack.",
         "alternatives": []
       },
       {
-        "answer": "(frontIndex + 1) % CAPACITY",
-        "explanation": "Advance the removal index, wrapping at the end of the array.",
+        "answer": "isEmpty()",
+        "explanation": "Check whether the stack is empty before reading a node.",
+        "alternatives": []
+      },
+      {
+        "answer": "topOfStack->theItem",
+        "explanation": "Save the item before deleting its node.",
+        "alternatives": []
+      },
+      {
+        "answer": "old->next",
+        "explanation": "Move to the next node before freeing the old top.",
+        "alternatives": []
+      },
+      {
+        "answer": "old",
+        "explanation": "Free the removed node.",
         "alternatives": []
       },
       {
         "answer": "--count",
-        "explanation": "Removal decreases the number of stored values.",
-        "alternatives": [
-          "count--",
-          "count -= 1"
-        ]
-      },
-      {
-        "answer": "dequeue",
-        "explanation": "Remove the front item to free a slot.",
+        "explanation": "pop removes one item.",
         "alternatives": []
       },
       {
-        "answer": "empty",
-        "explanation": "Stop when no queued values remain.",
+        "answer": "item",
+        "explanation": "The lab’s pop returns the removed item.",
+        "alternatives": []
+      },
+      {
+        "answer": "topOfStack->theItem",
+        "explanation": "top reads the item without removing it.",
+        "alternatives": []
+      },
+      {
+        "answer": "count == 0",
+        "explanation": "The lab tracks emptiness using count.",
         "alternatives": []
       }
     ],
-    "validation": "CircularQueue q;\nassert(q.empty());assert(!q.full());\nexpectError([&]{q.front();});expectError([&]{q.dequeue();});\nfor(int i=0;i<4;++i)q.enqueue(i);assert(q.full());\nexpectError([&]{q.enqueue(99);});assert(q.front()==0);\nfor(int i=0;i<100;++i){assert(q.front()==i);q.dequeue();q.enqueue(i+4);assert(q.full());}\nfor(int i=100;i<104;++i){assert(q.front()==i);q.dequeue();}\nassert(q.empty());q.enqueue(7);assert(q.front()==7);q.dequeue();assert(q.empty());\n"
+    "output": "30 20 10 \n",
+    "validation": "Stack<int> s; assert(s.isEmpty()); assert(s.size()==0); expectError([&]{s.pop();}); expectError([&]{s.top();}); s.push(1);s.push(2);assert(s.top()==2);assert(s.size()==2);assert(s.pop()==2);assert(s.pop()==1);assert(s.isEmpty());s.push(9);assert(s.pop()==9);{Stack<int> rest;rest.push(1);}",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "sourceNote": "Uses the Lab 6 StackGiven.hpp names and signatures. The lab leaves push, pop and top for you to implement; these practice solutions fill them in. Cleanup and copy protection are added for safe standalone practice.",
+    "answerVersion": 2
+  },
+  {
+    "slug": "linked-queue",
+    "title": "9 · Build a linked queue",
+    "topic": "Course ListQueue<T>: enqueue at the back, dequeue from the front.",
+    "source": "#include <iostream>\n#include <list>\nusing namespace std;\n\ntemplate<class T>\nclass ListQueue {\npublic:\n\tListQueue() {\n\t}\n\tvoid clear() {\n\t\t@1;\n\t}\n\tbool isEmpty() const {\n\t\treturn @2;\n\t}\n\tT& front() {\n\t\treturn @3;\n\t}\n\tT dequeue() {\n\t\tT el = @4;\n\t\t@5;\n\t\treturn @6;\n\t}\n\tvoid enqueue(const T& el) {\n\t\t@7;\n\t}\nprivate:\n\t@8 lst;\n};\n\nint main() {\n    ListQueue<int> q;\n    q.enqueue(10); q.enqueue(20); q.enqueue(30);\n    while (!q.isEmpty()) cout << q.dequeue() << ' ';\n    cout << '\\n';\n}\n",
+    "answers": [
+      {
+        "answer": "lst.clear()",
+        "explanation": "clear removes all items from the list.",
+        "alternatives": []
+      },
+      {
+        "answer": "lst.empty()",
+        "explanation": "The queue is empty when its underlying list is empty.",
+        "alternatives": []
+      },
+      {
+        "answer": "lst.front()",
+        "explanation": "Read the first item without removing it.",
+        "alternatives": []
+      },
+      {
+        "answer": "lst.front()",
+        "explanation": "Save the oldest item before removing it.",
+        "alternatives": []
+      },
+      {
+        "answer": "lst.pop_front()",
+        "explanation": "Remove from the front for FIFO order.",
+        "alternatives": []
+      },
+      {
+        "answer": "el",
+        "explanation": "dequeue returns the item it removed.",
+        "alternatives": []
+      },
+      {
+        "answer": "lst.push_back(el)",
+        "explanation": "Append new items to the back of the list.",
+        "alternatives": []
+      },
+      {
+        "answer": "list<T>",
+        "explanation": "This example uses the standard doubly linked list as storage.",
+        "alternatives": []
+      }
+    ],
+    "output": "10 20 30 \n",
+    "validation": "ListQueue<int> q;assert(q.isEmpty());q.enqueue(1);q.enqueue(2);assert(q.front()==1);assert(q.dequeue()==1);assert(q.dequeue()==2);assert(q.isEmpty());q.enqueue(3);q.clear();assert(q.isEmpty());",
+    "reference": "workspace/reference/examples/Stacks_and_Queues/GenListQueue.h",
+    "sourceNote": "Uses the supplied GenListQueue.h implementation and names. It builds on std::list; front and dequeue require a nonempty queue.",
+    "answerVersion": 2
+  },
+  {
+    "slug": "circular-queue",
+    "title": "10 · Build a circular queue",
+    "topic": "Course ArrayQueue<T, size>: first, last and storage; -1 marks empty.",
+    "source": "#include <iostream>\nusing namespace std;\n\ntemplate<class T, int size = 100>\nclass ArrayQueue {\npublic:\n\tArrayQueue() {\n\t\tfirst = last = @1;\n\t}\n\tvoid enqueue(T);\n\tT dequeue();\n\tbool isFull() {\n\t\treturn @2;\n\t}\n\tbool isEmpty() {\n\t\treturn @3;\n\t}\n\n\nprivate:\n\tint first, last;\n\tT storage[size];\n};\n\ntemplate<class T, int size>\nvoid ArrayQueue<T,size>::enqueue(T el) {\n\tif (@4)\n\t\tif (@5) {\n\t\t\tstorage[0] = @6;\n\t\t\tlast = 0;\n\t\t\tif (first == -1)\n\t\t\t\tfirst = 0;\n\t\t}\n\t\telse storage[@7] = el;\n\telse cout << \"Full queue.\\n\";\n}\n\ntemplate<class T, int size>\nT ArrayQueue<T,size>::dequeue() {\n\tT tmp;\n\ttmp = @8;\n\tif (first == last)\n\t\tlast = first = @9;\n\telse if (@10)\n\t\tfirst = 0;\n\telse @11;\n\treturn @12;\n}\n\n\nint main() {\n    ArrayQueue<int, 4> q;\n    q.enqueue(10); q.enqueue(20); q.enqueue(30); q.enqueue(40);\n    q.dequeue(); q.dequeue();\n    q.enqueue(50); q.enqueue(60);\n    while (!q.isEmpty()) cout << q.dequeue() << ' ';\n    cout << '\\n';\n}\n",
+    "answers": [
+      {
+        "answer": "-1",
+        "explanation": "The course example uses -1 to mark an empty queue.",
+        "alternatives": []
+      },
+      {
+        "answer": "(first == 0 && last == size-1) || (first == last + 1)",
+        "explanation": "Full means last has reached the slot immediately before first, including wraparound.",
+        "alternatives": []
+      },
+      {
+        "answer": "first == -1",
+        "explanation": "An empty queue has first equal to -1.",
+        "alternatives": []
+      },
+      {
+        "answer": "!isFull()",
+        "explanation": "Only enqueue when a slot is available.",
+        "alternatives": []
+      },
+      {
+        "answer": "last == size-1 || last == -1",
+        "explanation": "Start at zero when empty or when last reaches the end.",
+        "alternatives": []
+      },
+      {
+        "answer": "el",
+        "explanation": "Store the new element in the first slot.",
+        "alternatives": []
+      },
+      {
+        "answer": "++last",
+        "explanation": "Advance last before writing the next item.",
+        "alternatives": []
+      },
+      {
+        "answer": "storage[first]",
+        "explanation": "Save the oldest item for the return value.",
+        "alternatives": []
+      },
+      {
+        "answer": "-1",
+        "explanation": "Removing the only item resets both indexes.",
+        "alternatives": []
+      },
+      {
+        "answer": "first == size-1",
+        "explanation": "The next removal wraps to zero when first is at the last slot.",
+        "alternatives": []
+      },
+      {
+        "answer": "first++",
+        "explanation": "Otherwise advance first by one slot.",
+        "alternatives": []
+      },
+      {
+        "answer": "tmp",
+        "explanation": "dequeue returns the saved item.",
+        "alternatives": []
+      }
+    ],
+    "output": "30 40 50 60 \n",
+    "validation": "ArrayQueue<int,4> q;assert(q.isEmpty());for(int i=0;i<4;++i)q.enqueue(i);assert(q.isFull());for(int i=0;i<100;++i){assert(q.dequeue()==i);q.enqueue(i+4);assert(q.isFull());}for(int i=100;i<104;++i)assert(q.dequeue()==i);assert(q.isEmpty());q.enqueue(7);assert(q.dequeue()==7);assert(q.isEmpty());",
+    "reference": "workspace/reference/examples/Stacks_and_Queues/GenArrayQueue.h",
+    "sourceNote": "Uses the supplied GenArrayQueue.h algorithm, including first/last = -1 and a dequeue that returns the item. Call dequeue only when nonempty. The unused stream-output friend declaration is omitted.",
+    "answerVersion": 2
+  },
+  {
+    "slug": "linked-list",
+    "title": "11 · Build a singly linked list",
+    "topic": "Course IntSLList: head, tail, info, addToHead, addToTail and deleteFromHead.",
+    "source": "#include <iostream>\nusing namespace std;\nclass IntSLLNode {\npublic:\n    IntSLLNode(int el, IntSLLNode *ptr = nullptr) { info = el; next = ptr; }\n    int info;\n    IntSLLNode *next;\n};\nclass IntSLList {\n    IntSLLNode *head, *tail;\npublic:\n    IntSLList() { head = tail = @1; }\n    int isEmpty() { return @2; }\n    void addToHead(int el) {\n        head = new IntSLLNode(el, @3);\n        if (tail == nullptr) tail = @4;\n    }\n    void addToTail(int el) {\n        if (tail != nullptr) {\n            tail->next = @5;\n            tail = @6;\n        } else head = tail = new IntSLLNode(el);\n    }\n    int deleteFromHead() { // Requires a nonempty list.\n        int el = @7;\n        IntSLLNode *tmp = head;\n        if (@8) head = tail = nullptr;\n        else head = @9;\n        delete @10;\n        return el;\n    }\n    ~IntSLList() { while (!isEmpty()) deleteFromHead(); }\n    // Practice addition: prevent shallow copies of owned nodes.\n    IntSLList(const IntSLList&) = delete;\n    IntSLList& operator=(const IntSLList&) = delete;\n};\nint main() {\n    IntSLList lst;\n    lst.addToHead(20); lst.addToHead(10); lst.addToTail(30);\n    while (!lst.isEmpty()) cout << lst.deleteFromHead() << ' ';\n    cout << '\\n';\n}\n",
+    "answers": [
+      {
+        "answer": "nullptr",
+        "explanation": "An empty list has neither a head nor a tail.",
+        "alternatives": []
+      },
+      {
+        "answer": "head == nullptr",
+        "explanation": "No head means the list is empty.",
+        "alternatives": []
+      },
+      {
+        "answer": "head",
+        "explanation": "The new head points to the old head.",
+        "alternatives": []
+      },
+      {
+        "answer": "head",
+        "explanation": "The first node is both the head and the tail.",
+        "alternatives": []
+      },
+      {
+        "answer": "new IntSLLNode(el)",
+        "explanation": "Link a new node after the old tail.",
+        "alternatives": []
+      },
+      {
+        "answer": "tail->next",
+        "explanation": "Advance tail to the node just created.",
+        "alternatives": []
+      },
+      {
+        "answer": "head->info",
+        "explanation": "Save the first node’s stored integer.",
+        "alternatives": []
+      },
+      {
+        "answer": "head == tail",
+        "explanation": "Equal head and tail means there is only one node.",
+        "alternatives": []
+      },
+      {
+        "answer": "head->next",
+        "explanation": "The second node becomes the head.",
+        "alternatives": []
+      },
+      {
+        "answer": "tmp",
+        "explanation": "Free the removed node after updating the links.",
+        "alternatives": []
+      }
+    ],
+    "output": "10 20 30 \n",
+    "validation": "IntSLList lst;assert(lst.isEmpty());lst.addToHead(2);lst.addToHead(1);lst.addToTail(3);assert(lst.deleteFromHead()==1);assert(lst.deleteFromHead()==2);assert(lst.deleteFromHead()==3);assert(lst.isEmpty());lst.addToTail(4);assert(lst.deleteFromHead()==4);{IntSLList rest;rest.addToTail(1);rest.addToTail(2);}",
+    "reference": "workspace/reference/examples/Linked_Lists/IntSLList.cpp",
+    "sourceNote": "Uses the supplied IntSLList.h/.cpp names and insertion/removal algorithms. Declarations and definitions are combined here; cleanup is shortened and copy protection added.",
+    "answerVersion": 2
   }
 ]

@@ -2095,11 +2095,11 @@ window.TESSELATE_CATALOG = {
     {
       "id": "page-Y29tcDEzOWUvbWlkdGVybS1wcmFjdGljZS5odG1s",
       "courseId": "comp139e",
-      "title": "Midterm fill-in-the-blank practice · 10 exercises",
+      "title": "Midterm fill-in-the-blank practice · 11 exercises",
       "kind": "Practice worksheet",
       "url": "comp139e/midterm-practice.html",
       "body": "",
-      "description": "94 blanks covering functions, references, pointers, arrays, classes, strings, files, exceptions, stacks and queues.",
+      "description": "104 blanks covering functions, references, pointers, arrays, classes, strings, files, exceptions, stacks and queues.",
       "referenceIds": [],
       "builtin": true
     },
@@ -2121,7 +2121,7 @@ window.TESSELATE_CATALOG = {
       "kind": "Practice worksheet",
       "url": "comp139e/practice-circular-queue.html",
       "body": "",
-      "description": "Use a fixed array with a front index, next insertion index, and count. Reuse freed slots with wraparound.",
+      "description": "Course ArrayQueue<T, size>: first, last and storage; -1 marks empty.",
       "referenceIds": [],
       "builtin": true
     },
@@ -2159,13 +2159,24 @@ window.TESSELATE_CATALOG = {
       "builtin": true
     },
     {
+      "id": "page-Y29tcDEzOWUvcHJhY3RpY2UtbGlua2VkLWxpc3QuaHRtbA",
+      "courseId": "comp139e",
+      "title": "11 · Build a singly linked list · Fill in the blanks",
+      "kind": "Practice worksheet",
+      "url": "comp139e/practice-linked-list.html",
+      "body": "",
+      "description": "Course IntSLList: head, tail, info, addToHead, addToTail and deleteFromHead.",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
       "id": "page-Y29tcDEzOWUvcHJhY3RpY2UtbGlua2VkLXF1ZXVlLmh0bWw",
       "courseId": "comp139e",
       "title": "9 · Build a linked queue · Fill in the blanks",
       "kind": "Practice worksheet",
       "url": "comp139e/practice-linked-queue.html",
       "body": "",
-      "description": "FIFO: insert at the rear and remove from the front. Handle the first node and the last removal correctly.",
+      "description": "Course ListQueue<T>: enqueue at the back, dequeue from the front.",
       "referenceIds": [],
       "builtin": true
     },
@@ -2176,7 +2187,7 @@ window.TESSELATE_CATALOG = {
       "kind": "Practice worksheet",
       "url": "comp139e/practice-linked-stack.html",
       "body": "",
-      "description": "LIFO: build push, top, pop, and cleanup with linked nodes. The most recently pushed value leaves first.",
+      "description": "Lab 6 Stack<T>: push, pop, top, size and isEmpty.",
       "referenceIds": [],
       "builtin": true
     },

@@ -1,7 +1,7 @@
 (() => {
   'use strict';
   const exercise = document.body.dataset.exercise || 'rectangle';
-  const key = `tesselate-comp139e-${exercise}-blanks-v1`;
+  const key = `tesselate-comp139e-${exercise}-blanks-v${document.body.dataset.answerVersion || 1}`;
   const fields = [...document.querySelectorAll('.paper input')];
   const status = document.getElementById('status');
   let storageMessage = 'Saved in this browser';
