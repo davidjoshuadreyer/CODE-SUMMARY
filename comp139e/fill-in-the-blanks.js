@@ -45,11 +45,37 @@
     hint.setAttribute('aria-controls', explanation.id);
     field.setAttribute('aria-describedby', state.id);
     line.append(explanation);
-    wrapper.append(state, hint);
+    const solutionButton = document.createElement('button');
+    solutionButton.type = 'button';
+    solutionButton.className = 'hint-button';
+    solutionButton.textContent = 'Solution';
+    solutionButton.setAttribute('aria-label', `Solution for blank ${index + 1}`);
+    solutionButton.setAttribute('aria-expanded', 'false');
+    const solution = document.createElement('div');
+    solution.className = 'hint-explanation';
+    solution.id = `solution-${index + 1}`;
+    solution.hidden = true;
+    const answer = document.createElement('code');
+    answer.textContent = RectangleWorksheet.answers[index].answer;
+    solution.append(document.createTextNode(`Blank ${index + 1} solution: `), answer);
+    const reasoning = document.createElement('div');
+    reasoning.textContent = RectangleWorksheet.answers[index].explanation;
+    solution.append(reasoning);
+    solutionButton.setAttribute('aria-controls', solution.id);
+    line.append(solution);
+    wrapper.append(state, hint, solutionButton);
+    function describe() {
+      field.setAttribute('aria-describedby', [state.id, !explanation.hidden && explanation.id, !solution.hidden && solution.id].filter(Boolean).join(' '));
+    }
+    solutionButton.addEventListener('click', () => {
+      solution.hidden = !solution.hidden;
+      solutionButton.setAttribute('aria-expanded', String(!solution.hidden));
+      describe();
+    });
     hint.addEventListener('click', () => {
       explanation.hidden = !explanation.hidden;
       hint.setAttribute('aria-expanded', String(!explanation.hidden));
-      field.setAttribute('aria-describedby', state.id + (explanation.hidden ? '' : ` ${explanation.id}`));
+      describe();
     });
     function refresh() {
       // Reserve room for the expected answer, entered text, and caret.
