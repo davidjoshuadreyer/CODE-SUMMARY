@@ -73,21 +73,71 @@
     save();
     fields[0].focus();
   });
-  const notesKey = 'tesselate-comp139e-rectangle-notes-v1';
-  const noteFields = [...document.querySelectorAll('.notepad textarea')];
+  const notesKey = 'tesselate-comp139e-rectangle-canvas-v1';
+  const geometryKey = notesKey + '-position';
+  const notepad = document.querySelector('.notepad');
+  const note = document.getElementById('notes-canvas');
+  const handle = document.querySelector('.note-handle');
   const notesStatus = document.getElementById('notes-status');
   try {
-    const notes = JSON.parse(localStorage.getItem(notesKey) || '{}');
-    noteFields.forEach(field => {
-      if (typeof notes?.[field.id] === 'string') field.value = notes[field.id];
-    });
-    notesStatus.textContent = 'Notes saved in this browser';
-  } catch { notesStatus.textContent = 'Notes could not be loaded. Keep this page open while working.'; }
-  noteFields.forEach(field => field.addEventListener('input', () => {
-    try {
-      localStorage.setItem(notesKey, JSON.stringify(Object.fromEntries(noteFields.map(note => [note.id, note.value]))));
-      notesStatus.textContent = 'Notes saved in this browser';
-    } catch { notesStatus.textContent = 'Could not save notes. Keep this page open and copy your notes before leaving.'; }
-  }));
+    const saved = localStorage.getItem(notesKey);
+    if (saved !== null) note.value = saved;
+    else {
+      const old = JSON.parse(localStorage.getItem('tesselate-comp139e-rectangle-notes-v1') || '{}');
+      note.value = ['notes-knowns', 'notes-unknowns', 'notes-functions'].map(key => typeof old?.[key] === 'string' ? old[key] : '').filter(Boolean).join('\n\n');
+    }
+    notesStatus.textContent = 'Saved in this browser';
+  } catch { notesStatus.textContent = 'Unable to load saved notes'; }
+  note.addEventListener('input', () => {
+    try { localStorage.setItem(notesKey, note.value); notesStatus.textContent = 'Saved in this browser'; }
+    catch { notesStatus.textContent = 'Unable to save — copy notes before leaving'; }
+  });
+  function place(x, y) {
+    const rect = notepad.getBoundingClientRect();
+    notepad.style.left = Math.max(8, Math.min(x, window.innerWidth - rect.width - 8)) + 'px';
+    notepad.style.top = Math.max(8, Math.min(y, window.innerHeight - rect.height - 8)) + 'px';
+    notepad.style.right = 'auto';
+  }
+  function savePosition() {
+    const r = notepad.getBoundingClientRect();
+    try { localStorage.setItem(geometryKey, JSON.stringify({x:r.x,y:r.y,width:r.width,height:r.height})); } catch {}
+  }
+  try {
+    const saved = JSON.parse(localStorage.getItem(geometryKey));
+    if (saved && ['x','y','width','height'].every(key => Number.isFinite(saved[key]))) {
+      notepad.style.width = Math.max(220, saved.width) + 'px';
+      notepad.style.height = Math.max(180, saved.height) + 'px';
+      place(saved.x, saved.y);
+    }
+  } catch {}
+  let drag = null;
+  handle.addEventListener('pointerdown', event => {
+    if (event.button !== 0) return;
+    const rect = notepad.getBoundingClientRect();
+    drag = {x:event.clientX - rect.x, y:event.clientY - rect.y};
+    handle.setPointerCapture(event.pointerId);
+    event.preventDefault();
+  });
+  handle.addEventListener('pointermove', event => {
+    if (drag) place(event.clientX - drag.x, event.clientY - drag.y);
+  });
+  function finishDrag() { if (drag) { drag = null; savePosition(); } }
+  handle.addEventListener('pointerup', finishDrag);
+  handle.addEventListener('pointercancel', finishDrag);
+  handle.addEventListener('lostpointercapture', finishDrag);
+  handle.addEventListener('keydown', event => {
+    const moves = {ArrowLeft:[-20,0],ArrowRight:[20,0],ArrowUp:[0,-20],ArrowDown:[0,20]};
+    if (!moves[event.key]) return;
+    event.preventDefault();
+    const rect = notepad.getBoundingClientRect(), [dx,dy] = moves[event.key];
+    place(rect.x + dx, rect.y + dy); savePosition();
+  });
+  new ResizeObserver(() => {
+    const r = notepad.getBoundingClientRect();
+    place(r.x, r.y); savePosition();
+  }).observe(notepad);
+  window.addEventListener('resize', () => {
+    const r = notepad.getBoundingClientRect(); place(r.x, r.y); savePosition();
+  });
   document.getElementById('print').addEventListener('click', () => window.print());
 })();
