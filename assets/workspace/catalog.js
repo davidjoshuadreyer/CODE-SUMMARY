@@ -1657,6 +1657,17 @@ window.TESSELATE_CATALOG = {
       "builtin": true
     },
     {
+      "id": "page-Y29tcDEzOWUvY3BwLWNoZWF0LXNoZWV0Lmh0bWw",
+      "courseId": "comp139e",
+      "title": "C++ midterm cheat sheet / rules",
+      "kind": "Study notes",
+      "url": "comp139e/cpp-cheat-sheet.html",
+      "body": "",
+      "description": "Printable class template, type rules, blank-solving method, memory, files and exceptions.",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
       "id": "page-Y29tcDEzOWUvZGVzay5odG1s",
       "courseId": "comp139e",
       "title": "Online Code Desk - C++ compiler",
