@@ -1747,6 +1747,17 @@ window.TESSELATE_CATALOG = {
       "builtin": true
     },
     {
+      "id": "page-Y29tcDEzOWUvZmlsbC1pbi10aGUtYmxhbmtzLmh0bWw",
+      "courseId": "comp139e",
+      "title": "Fill in the blanks · Rectangle worksheet",
+      "kind": "Practice worksheet",
+      "url": "comp139e/fill-in-the-blanks.html",
+      "body": "",
+      "description": "The original two-page Rectangle exercise with 21 editable blanks and browser-saved answers.",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
       "id": "page-Y29tcDEzOWUvbGFicy5odG1s",
       "courseId": "comp139e",
       "title": "Lab guides · C++ and MATLAB",
