@@ -444,6 +444,16 @@ window.TESSELATE_PATHS = {
     ],
     "practice": [
       {
+        "title": "Fill-in-the-blank worksheets",
+        "url": "comp139e/midterm-practice.html",
+        "summary": "All examples grouped by topic: references, arrays, classes, files, exceptions, stacks and queues. Live feedback, hints and solutions."
+      },
+      {
+        "title": "Stacks & queues · Build them yourself",
+        "url": "comp139e/midterm-practice.html#stacks-queues",
+        "summary": "Linked stack, linked queue and circular queue worksheets."
+      },
+      {
         "title": "Practice quiz",
         "url": "comp139e/quiz.html",
         "summary": "Topic questions with explanations."
