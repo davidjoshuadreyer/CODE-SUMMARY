@@ -1,6 +1,7 @@
 (() => {
   'use strict';
-  const key = 'tesselate-comp139e-rectangle-blanks-v1';
+  const exercise = document.body.dataset.exercise || 'rectangle';
+  const key = `tesselate-comp139e-${exercise}-blanks-v1`;
   const fields = [...document.querySelectorAll('.paper input')];
   const status = document.getElementById('status');
   let storageMessage = 'Saved in this browser';
@@ -73,7 +74,7 @@
     save();
     fields[0].focus();
   });
-  const notesKey = 'tesselate-comp139e-rectangle-canvas-v1';
+  const notesKey = `tesselate-comp139e-${exercise}-canvas-v1`;
   const geometryKey = notesKey + '-position';
   const notepad = document.querySelector('.notepad');
   const note = document.getElementById('notes-canvas');
@@ -82,7 +83,7 @@
   try {
     const saved = localStorage.getItem(notesKey);
     if (saved !== null) note.value = saved;
-    else {
+    else if (exercise === 'rectangle') {
       const old = JSON.parse(localStorage.getItem('tesselate-comp139e-rectangle-notes-v1') || '{}');
       note.value = ['notes-knowns', 'notes-unknowns', 'notes-functions'].map(key => typeof old?.[key] === 'string' ? old[key] : '').filter(Boolean).join('\n\n');
     }

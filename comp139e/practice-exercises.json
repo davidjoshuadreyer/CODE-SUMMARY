@@ -1,0 +1,405 @@
+[
+  {
+    "slug": "references",
+    "title": "1 \u00b7 Functions & references",
+    "topic": "Change the caller\u2019s values, use a default argument, and calculate an average.",
+    "source": "#include <iostream>\nusing namespace std;\n\n// Change the caller's two integers, rather than local copies.\nvoid exchange(int @1 a, int @2 b) {\n    int temp = a;\n    a = @3;\n    b = @4;\n}\n\n// Add amount to the caller's balance. Default increase: 5.\nvoid increase(double @5 balance, double amount = @6) {\n    balance += amount;\n}\n\n// Return a fractional average even when both inputs are integers.\ndouble average(int a, int b) {\n    return @7 / 2;\n}\n\nint main() {\n    int left = 3, right = 8;\n    exchange(@8, right);\n    double balance = 10;\n    increase(balance);\n    cout << left << ' ' << right << ' ' << balance << ' '\n         << average(3, 8) << '\\n';\n}",
+    "output": "8 3 15 5.5\n",
+    "answers": [
+      {
+        "answer": "&",
+        "explanation": "A reference parameter is another name for the caller\u2019s variable.",
+        "alternatives": []
+      },
+      {
+        "answer": "&",
+        "explanation": "Both variables must be passed by reference for both changes to reach the caller.",
+        "alternatives": []
+      },
+      {
+        "answer": "b",
+        "explanation": "Copy the second value into the first variable.",
+        "alternatives": []
+      },
+      {
+        "answer": "temp",
+        "explanation": "The original first value was saved before a was overwritten.",
+        "alternatives": []
+      },
+      {
+        "answer": "&",
+        "explanation": "Use a reference so adding to balance changes the original.",
+        "alternatives": []
+      },
+      {
+        "answer": "5",
+        "explanation": "A default argument is used when the caller omits that argument.",
+        "alternatives": [
+          "5.0"
+        ]
+      },
+      {
+        "answer": "static_cast<double>(a + b)",
+        "explanation": "Convert the sum before division; converting the already-truncated integer result is too late.",
+        "alternatives": [
+          "(a + b) * 1.0",
+          "(a + b) / 1.0",
+          "double(a + b)",
+          "(double)(a + b)"
+        ]
+      },
+      {
+        "answer": "left",
+        "explanation": "Pass the variable itself to a reference parameter, not its address.",
+        "alternatives": []
+      }
+    ]
+  },
+  {
+    "slug": "dynamic-array",
+    "title": "2 \u00b7 Pointers & dynamic arrays",
+    "topic": "Build a new result array without changing the original measurements.",
+    "source": "#include <iostream>\nusing namespace std;\n\n// Return a new array containing twice each input value.\n// Caller owns the returned allocation.\n@1 doubled(const double *values, int size) {\n    double *result = @2;\n    for (int i = 0; i < @3; ++i) {\n        result[i] = @4 * 2;\n    }\n    return @5;\n}\n\n// Replace the number stored at the supplied address.\nvoid replace(double *destination, double value) {\n    @6 = value;\n}\n\nint main() {\n    double readings[] = {1.5, 2.0, 4.0};\n    double *copy = doubled(readings, 3);\n    replace(@7, 9.0); // Replace only copy[1].\n    cout << copy[0] << ' ' << copy[1] << ' ' << copy[2]\n         << ' ' << readings[1] << '\\n';\n    delete @8;\n    copy = @9;\n}",
+    "output": "3 9 8 2\n",
+    "answers": [
+      {
+        "answer": "double *",
+        "explanation": "Returning a dynamic array means returning the address of its first double.",
+        "alternatives": []
+      },
+      {
+        "answer": "new double[size]",
+        "explanation": "Allocate one double for each input element.",
+        "alternatives": []
+      },
+      {
+        "answer": "size",
+        "explanation": "Visit every valid index from zero up to, but excluding, the array length.",
+        "alternatives": []
+      },
+      {
+        "answer": "values[i]",
+        "explanation": "Read the input element corresponding to this output index.",
+        "alternatives": [
+          "*(values + i)"
+        ]
+      },
+      {
+        "answer": "result",
+        "explanation": "Return the pointer, not a single array element.",
+        "alternatives": []
+      },
+      {
+        "answer": "*destination",
+        "explanation": "Dereference the pointer to change the number at its address.",
+        "alternatives": [
+          "destination[0]"
+        ]
+      },
+      {
+        "answer": "&copy[1]",
+        "explanation": "The function needs the address of the second element.",
+        "alternatives": [
+          "copy + 1",
+          "1 + copy"
+        ]
+      },
+      {
+        "answer": "[] copy",
+        "explanation": "Array allocations require array deletion.",
+        "alternatives": []
+      },
+      {
+        "answer": "nullptr",
+        "explanation": "Clear this pointer after releasing its allocation; this is separate from freeing memory.",
+        "alternatives": []
+      }
+    ]
+  },
+  {
+    "slug": "sensor-class",
+    "title": "3 \u00b7 Sensor class",
+    "topic": "Practise constructors, member scope, const methods, object pointers, and arrays of objects.",
+    "source": "#include <iostream>\nusing namespace std;\n\nclass Sensor {\n    double reading;\npublic:\n    Sensor();\n    Sensor(double value);\n    void set(double value);\n    double get() const;\n};\n\n@1 Sensor() { reading = 0; }\n@2 Sensor(double value) { reading = value; }\nvoid @3 set(double value) { reading = value; }\ndouble Sensor::get() @4 { return reading; }\n\n// Update the object through its pointer.\nvoid calibrate(Sensor *sensor, double offset) {\n    sensor@5 set(sensor@6 get() + offset);\n}\n\n// Return one reading per sensor; caller must free the array.\ndouble *readAll(const Sensor *sensors, int size) {\n    double *values = @7;\n    for (int i = 0; i < size; ++i) {\n        values[i] = sensors[i]@8 get();\n    }\n    return values;\n}\n\nint main() {\n    Sensor sensors[] = {Sensor(10), Sensor(20)};\n    calibrate(@9, 2);\n    double *values = readAll(sensors, 2);\n    cout << values[0] << ' ' << values[1] << '\\n';\n    delete @10;\n}",
+    "output": "10 22\n",
+    "answers": [
+      {
+        "answer": "Sensor::",
+        "explanation": "An out-of-class constructor definition needs the class scope but no return type.",
+        "alternatives": []
+      },
+      {
+        "answer": "Sensor::",
+        "explanation": "The overloaded constructor also belongs to Sensor.",
+        "alternatives": []
+      },
+      {
+        "answer": "Sensor::",
+        "explanation": "Qualify a member defined outside the class.",
+        "alternatives": []
+      },
+      {
+        "answer": "const",
+        "explanation": "The declaration promises that get will not modify the object; the definition must match.",
+        "alternatives": []
+      },
+      {
+        "answer": "->",
+        "explanation": "sensor is a pointer to an object; access its member with the arrow operator.",
+        "alternatives": []
+      },
+      {
+        "answer": "->",
+        "explanation": "The getter is also being called through the pointer.",
+        "alternatives": []
+      },
+      {
+        "answer": "new double[size]",
+        "explanation": "Allocate an output array with a slot for each sensor.",
+        "alternatives": []
+      },
+      {
+        "answer": ".",
+        "explanation": "sensors[i] is an object, not a pointer.",
+        "alternatives": []
+      },
+      {
+        "answer": "&sensors[1]",
+        "explanation": "Pass the address of the second sensor to calibrate.",
+        "alternatives": [
+          "sensors + 1"
+        ]
+      },
+      {
+        "answer": "[] values",
+        "explanation": "Release the returned dynamic array after using it.",
+        "alternatives": []
+      }
+    ]
+  },
+  {
+    "slug": "strings-static",
+    "title": "4 \u00b7 Strings & static members",
+    "topic": "Extract a first name and count constructed objects.",
+    "source": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Student {\n    string name;\n    static int created;\npublic:\n    Student(const string &text) {\n        name = text;\n        @1; // Count this construction.\n    }\n    string firstName() const {\n        auto space = name.@2(' ');\n        if (space == string::@3) return name;\n        return name.@4(0, space);\n    }\n    static int count() { return @5; }\n};\n\n// Define storage for the static member once.\nint @6 = 0;\n\nint main() {\n    Student first(\"Ada Lovelace\"), second(\"Grace Hopper\");\n    cout << first.@7() << ' ' << second.firstName() << '\\n';\n    cout << @8 << '\\n';\n}",
+    "output": "Ada Grace\n2\n",
+    "answers": [
+      {
+        "answer": "++created",
+        "explanation": "The shared counter increases once each time this constructor runs.",
+        "alternatives": [
+          "created++",
+          "created += 1",
+          "created = created + 1"
+        ]
+      },
+      {
+        "answer": "find",
+        "explanation": "Search for the first occurrence of the separator character.",
+        "alternatives": []
+      },
+      {
+        "answer": "npos",
+        "explanation": "string uses a special value to mean that no match was found.",
+        "alternatives": []
+      },
+      {
+        "answer": "substr",
+        "explanation": "Extract characters starting at index zero, ending before the space.",
+        "alternatives": []
+      },
+      {
+        "answer": "created",
+        "explanation": "A static method can read the shared static member.",
+        "alternatives": []
+      },
+      {
+        "answer": "Student::created",
+        "explanation": "The static data member needs its class-qualified name outside the class.",
+        "alternatives": []
+      },
+      {
+        "answer": "firstName",
+        "explanation": "Call the member that extracts the first part of the stored name.",
+        "alternatives": []
+      },
+      {
+        "answer": "Student::count()",
+        "explanation": "Call a static member through the class name.",
+        "alternatives": [
+          "first.count()",
+          "second.count()"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "box-review",
+    "title": "5 \u00b7 Mixed review: boxes",
+    "topic": "A longer Rectangle-style exercise combining classes, pointers, references, and memory ownership.",
+    "source": "#include <iostream>\nusing namespace std;\n\nclass Box {\n    double width = 1, height = 1, depth = 1;\npublic:\n    Box();\n    Box(double w, double h, double d);\n    double volume() const;\n    void setDimensions(const double *dimensions);\n    double *getDimensions() const;\n};\n\n@1 Box() {}\nBox::Box(double w, double h, double d) {\n    double dimensions[] = {w, h, d};\n    setDimensions(@2);\n}\n@3 Box::volume() const {\n    return @4;\n}\nvoid Box::setDimensions(const double *dimensions) {\n    width = dimensions[0];\n    height = dimensions[1];\n    depth = @5;\n}\n@6 Box::getDimensions() const {\n    double *dimensions = new double[3]{width, height, depth};\n    return dimensions;\n}\n\n// Change an existing box through a reference.\nvoid reshape(Box @7 box, const double *dimensions) {\n    box.@8(dimensions);\n}\n\n// Caller owns the returned array of volumes.\ndouble *volumes(const Box *boxes, int size) {\n    double *results = @9;\n    for (int i = 0; i < size; ++i) {\n        results[i] = @10;\n    }\n    return results;\n}\n\nint main() {\n    Box *boxes = new Box[2];\n    double dimensions[] = {2, 3, 4};\n    reshape(boxes[1], dimensions);\n    double *values = volumes(boxes, 2);\n    double *copiedDimensions = boxes[1].getDimensions();\n    cout << values[0] << ' ' << values[1] << ' '\n         << copiedDimensions[2] << '\\n';\n    delete @11;\n    delete @12;\n    delete @13;\n}",
+    "output": "1 24 4\n",
+    "answers": [
+      {
+        "answer": "Box::",
+        "explanation": "Qualify the default constructor with its class name.",
+        "alternatives": []
+      },
+      {
+        "answer": "dimensions",
+        "explanation": "Pass the local array to the setter; it converts to a pointer to the first value.",
+        "alternatives": [
+          "&dimensions[0]"
+        ]
+      },
+      {
+        "answer": "double",
+        "explanation": "The volume can be fractional, and the declaration specifies double.",
+        "alternatives": []
+      },
+      {
+        "answer": "width * height * depth",
+        "explanation": "A rectangular box\u2019s volume multiplies its three dimensions.",
+        "alternatives": [
+          "height * width * depth",
+          "depth * height * width",
+          "width * depth * height",
+          "height * depth * width",
+          "depth * width * height"
+        ]
+      },
+      {
+        "answer": "dimensions[2]",
+        "explanation": "The third dimension is stored at index two.",
+        "alternatives": [
+          "*(dimensions + 2)"
+        ]
+      },
+      {
+        "answer": "double *",
+        "explanation": "The getter returns a newly allocated array, represented by a pointer.",
+        "alternatives": []
+      },
+      {
+        "answer": "&",
+        "explanation": "The function must alter the caller\u2019s Box rather than a copy.",
+        "alternatives": []
+      },
+      {
+        "answer": "setDimensions",
+        "explanation": "Use the public setter to change private dimensions.",
+        "alternatives": []
+      },
+      {
+        "answer": "new double[size]",
+        "explanation": "Allocate one result for each Box.",
+        "alternatives": []
+      },
+      {
+        "answer": "boxes[i].volume()",
+        "explanation": "Index to an object, then call its volume method.",
+        "alternatives": [
+          "(boxes + i)->volume()"
+        ]
+      },
+      {
+        "answer": "[] copiedDimensions",
+        "explanation": "Release the array returned by getDimensions.",
+        "alternatives": []
+      },
+      {
+        "answer": "[] values",
+        "explanation": "Release the array returned by volumes.",
+        "alternatives": []
+      },
+      {
+        "answer": "[] boxes",
+        "explanation": "Release the array of Box objects.",
+        "alternatives": []
+      }
+    ]
+  },
+  {
+    "slug": "file-streams",
+    "title": "6 \u00b7 File streams",
+    "topic": "Write readings, then calculate their total using successful extractions only.",
+    "source": "#include <iostream>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    @1 output(\"readings.txt\");\n    if (!output) return 1;\n    output @2 2.5 << ' ' << 4.0 << ' ' << 1.5;\n    output.@3(); // Finish writing before opening for reading.\n\n    @4 input(\"readings.txt\");\n    if (!input) return 1;\n    double value = 0, total = 0;\n    int count = 0;\n    while (@5) {\n        total @6 value;\n        ++count;\n    }\n    // A failed extraction is expected at EOF, but not elsewhere.\n    if (input.bad() || !input.@7()) return 2;\n    cout << total << ' ' << count << '\\n';\n}",
+    "output": "8 3\n",
+    "answers": [
+      {
+        "answer": "ofstream",
+        "explanation": "An output file stream writes to a file.",
+        "alternatives": []
+      },
+      {
+        "answer": "<<",
+        "explanation": "Insertion sends a value to an output stream.",
+        "alternatives": []
+      },
+      {
+        "answer": "close",
+        "explanation": "Close the writer so its buffered data reaches the file before reading.",
+        "alternatives": []
+      },
+      {
+        "answer": "ifstream",
+        "explanation": "An input file stream reads from a file.",
+        "alternatives": []
+      },
+      {
+        "answer": "input >> value",
+        "explanation": "Test extraction itself so the loop only processes successfully read values.",
+        "alternatives": []
+      },
+      {
+        "answer": "+=",
+        "explanation": "Add each reading to the running total.",
+        "alternatives": []
+      },
+      {
+        "answer": "eof",
+        "explanation": "Check whether the read ended at end-of-file.",
+        "alternatives": []
+      }
+    ]
+  },
+  {
+    "slug": "exceptions",
+    "title": "7 \u00b7 Exceptions",
+    "topic": "Throw on invalid input, catch the error, and continue after the handler.",
+    "source": "#include <iostream>\n#include <stdexcept>\nusing namespace std;\n\ndouble average(double total, int count) {\n    if (count <= 0) {\n        @1 invalid_argument(\"count must be positive\");\n    }\n    return total @2 count;\n}\n\nint main() {\n    @3 {\n        cout << average(9, 2) << '\\n';\n        double result = average(9, 0);\n        cout << result << '\\n'; // Skipped after the exception.\n    } @4 (const invalid_argument @5 error) {\n        cout << error.@6() << '\\n';\n    }\n    cout << \"continues\" << '\\n';\n}",
+    "output": "4.5\ncount must be positive\ncontinues\n",
+    "answers": [
+      {
+        "answer": "throw",
+        "explanation": "Raise an exception to leave the normal execution path.",
+        "alternatives": []
+      },
+      {
+        "answer": "/",
+        "explanation": "Compute the quotient; total is already a floating-point value.",
+        "alternatives": []
+      },
+      {
+        "answer": "try",
+        "explanation": "Enclose operations that may throw in a protected block.",
+        "alternatives": []
+      },
+      {
+        "answer": "catch",
+        "explanation": "Introduce the handler for the specified exception type.",
+        "alternatives": []
+      },
+      {
+        "answer": "&",
+        "explanation": "Catch by const reference to avoid copying the exception.",
+        "alternatives": []
+      },
+      {
+        "answer": "what",
+        "explanation": "Standard exceptions expose their explanatory message through this member.",
+        "alternatives": []
+      }
+    ]
+  }
+]

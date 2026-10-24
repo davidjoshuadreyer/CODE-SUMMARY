@@ -2082,6 +2082,94 @@ window.TESSELATE_CATALOG = {
       "builtin": true
     },
     {
+      "id": "page-Y29tcDEzOWUvbWlkdGVybS1wcmFjdGljZS5odG1s",
+      "courseId": "comp139e",
+      "title": "Midterm fill-in-the-blank practice · 7 exercises",
+      "kind": "Practice worksheet",
+      "url": "comp139e/midterm-practice.html",
+      "body": "",
+      "description": "61 blanks covering functions, references, pointers, arrays, classes, strings, files and exceptions.",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
+      "id": "page-Y29tcDEzOWUvcHJhY3RpY2UtYm94LXJldmlldy5odG1s",
+      "courseId": "comp139e",
+      "title": "5 · Mixed review: boxes · Fill in the blanks",
+      "kind": "Practice worksheet",
+      "url": "comp139e/practice-box-review.html",
+      "body": "",
+      "description": "A longer Rectangle-style exercise combining classes, pointers, references, and memory ownership.",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
+      "id": "page-Y29tcDEzOWUvcHJhY3RpY2UtZHluYW1pYy1hcnJheS5odG1s",
+      "courseId": "comp139e",
+      "title": "2 · Pointers & dynamic arrays · Fill in the blanks",
+      "kind": "Practice worksheet",
+      "url": "comp139e/practice-dynamic-array.html",
+      "body": "",
+      "description": "Build a new result array without changing the original measurements.",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
+      "id": "page-Y29tcDEzOWUvcHJhY3RpY2UtZXhjZXB0aW9ucy5odG1s",
+      "courseId": "comp139e",
+      "title": "7 · Exceptions · Fill in the blanks",
+      "kind": "Practice worksheet",
+      "url": "comp139e/practice-exceptions.html",
+      "body": "",
+      "description": "Throw on invalid input, catch the error, and continue after the handler.",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
+      "id": "page-Y29tcDEzOWUvcHJhY3RpY2UtZmlsZS1zdHJlYW1zLmh0bWw",
+      "courseId": "comp139e",
+      "title": "6 · File streams · Fill in the blanks",
+      "kind": "Practice worksheet",
+      "url": "comp139e/practice-file-streams.html",
+      "body": "",
+      "description": "Write readings, then calculate their total using successful extractions only.",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
+      "id": "page-Y29tcDEzOWUvcHJhY3RpY2UtcmVmZXJlbmNlcy5odG1s",
+      "courseId": "comp139e",
+      "title": "1 · Functions & references · Fill in the blanks",
+      "kind": "Practice worksheet",
+      "url": "comp139e/practice-references.html",
+      "body": "",
+      "description": "Change the caller’s values, use a default argument, and calculate an average.",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
+      "id": "page-Y29tcDEzOWUvcHJhY3RpY2Utc2Vuc29yLWNsYXNzLmh0bWw",
+      "courseId": "comp139e",
+      "title": "3 · Sensor class · Fill in the blanks",
+      "kind": "Practice worksheet",
+      "url": "comp139e/practice-sensor-class.html",
+      "body": "",
+      "description": "Practise constructors, member scope, const methods, object pointers, and arrays of objects.",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
+      "id": "page-Y29tcDEzOWUvcHJhY3RpY2Utc3RyaW5ncy1zdGF0aWMuaHRtbA",
+      "courseId": "comp139e",
+      "title": "4 · Strings & static members · Fill in the blanks",
+      "kind": "Practice worksheet",
+      "url": "comp139e/practice-strings-static.html",
+      "body": "",
+      "description": "Extract a first name and count constructed objects.",
+      "referenceIds": [],
+      "builtin": true
+    },
+    {
       "id": "page-Y29tcDEzOWUvcXVpei5odG1s",
       "courseId": "comp139e",
       "title": "Practice quiz",
