@@ -134,10 +134,13 @@ backlog of old daily tasks. FSRS-6 schedules each studied topic independently
 from flashcards, using Again/Hard/Good/Easy recall ratings and a 90% retention
 target. Labelled colours show recall priorities per course and topic. Checking
 a block records study without inventing a recall grade or submitting coursework.
-The morning recall set offers up to ten multiple-choice questions, chosen from
-due and new questions in studied or introduced topics. It saves each answer,
+The morning recall set offers up to ten multiple-choice questions. Its default
+midterm-prep mode uses 36 original questions refreshed October 24, 2026 from
+the available course lessons and worksheets, including unstudied topics. Due
+reviews take priority and courses are balanced. Studied-only and all-topic modes
+remain available; each mode keeps its own daily set without replacing old sets. It saves each answer,
 resumes unfinished sets, and adjusts card intervals based on correctness and
-uncertainty. The bank has 188 questions covering all 109 current topic entries;
+uncertainty. The bank has 224 questions covering all current topic entries;
 users can select a course, topic, or include unstudied material. Quick-check
 accuracy and session history are recorded separately from whole-topic mastery.
 See `dev/STUDY-FSRS.md` for record types, legacy handling, and verification.
@@ -190,3 +193,8 @@ The home feature links to an actual course in the selected semester and the dail
 Older standalone study pages and tools use `assets/design/legacy.css`, which preserves their specialized layouts and print styles. After rebuilding any standalone legacy pages, run `node dev/apply-design.cjs` to restore that stylesheet link. The script is idempotent. World/game experiences and source files such as PDFs remain separate from the study-interface design.
 
 Validation: JavaScript syntax, existing cloud adapter contract tests, planner engine, memory scheduling and recall tests; browser checks of workspace navigation, course tabs, dialogs, reference filtering, lesson disclosures, dark appearance, and representative 390px mobile layouts. Planner tests use the repository's pinned browser FSRS bundle through a temporary Node module alias when the npm dependency is absent locally. Signed-in cloud UI is not exercised by the visual checks.
+
+Midterm-prep questions live in `dev/midterm-recall-content.cjs`; regenerate with
+`node dev/build-study-mcq.cjs`. This content refresh does not verify D2L dates or
+claim confirmed exam coverage. The existing September schedule snapshot remains
+labelled separately. Circuits lesson aliases include the new worked-library entry.

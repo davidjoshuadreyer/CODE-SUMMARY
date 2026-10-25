@@ -13,7 +13,7 @@ function pool(cards,topics,records,{course='',topic='',scope='studied'}={}){
  const studied=matching.filter(c=>records['card-review/'+c.id]?.value.fsrs||topicIds(c).some(id=>introduced.has(id)||M.status(E.confidence(records,id)).studied));
  // A new account can start immediately with the first two lessons in each course.
  const foundations=matching.filter(c=>topicIds(c).some(id=>/^[a-z]+\d+[a-z]?-[01]$/.test(id)));
- return {cards:scope==='all'?matching:studied.length?studied:foundations,foundation:scope!=='all'&&!studied.length};
+ return {cards:scope==='prep'?matching.filter(c=>c.prep):scope==='all'?matching:studied.length?studied:foundations,foundation:scope==='studied'&&!studied.length};
 }
 function select(cards,topics,records,date,options={}){
  const source=pool(cards,topics,records,options),map=new Map(topics.map(t=>[t.id,t])),limit=options.limit||10;

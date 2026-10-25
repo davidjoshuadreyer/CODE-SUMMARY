@@ -2,7 +2,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('nod
 const R=require('../assets/workspace/study-recall'),M=require('../assets/workspace/study-memory'),E=require('../assets/workspace/study-engine');
 const ctx={window:{}};for(const f of ['learning-paths','study-mcq'])vm.runInNewContext(fs.readFileSync('assets/workspace/'+f+'.js','utf8'),ctx);
 const cards=JSON.parse(JSON.stringify(ctx.window.TESSELATE_STUDY_MCQ)),topics=E.topics(ctx.window.TESSELATE_PATHS),date='2026-09-28',now=date+'T20:00:00Z';
-assert.equal(cards.length,188);assert.equal(new Set(cards.map(c=>c.id)).size,cards.length);
+assert.equal(cards.length,224);assert.equal(new Set(cards.map(c=>c.id)).size,cards.length);
 for(const t of topics)assert(cards.filter(c=>R.topicIds(c).includes(t.id)).length>=2,t.id);
 for(const c of cards){assert.equal(c.options.length,4);assert.equal(new Set(c.options).size,4);assert(c.back&&c.source);assert(R.topicIds(c).every(id=>topics.some(t=>t.id===id)));assert.deepEqual(R.choices(c,date).map(o=>o.index).sort(),[0,1,2,3]);}
 assert(new Set(cards.map(c=>R.choices(c,date).findIndex(o=>o.index===c.correct))).size===4,'Correct choices must appear in varied positions');
@@ -29,3 +29,18 @@ const single=R.select(cards,topics,{},date,{topic:'calc-12.4',scope:'all'});asse
 const allReviewed=Object.fromEntries(cards.map(c=>['card-review/'+c.id,{value:M.review({},4,now)}]));
 assert.equal(R.select(cards,topics,allReviewed,date,{scope:'all'}).ids.length,0);
 console.log('PASS: every topic covered, varied choices, balanced stable sets, wrong/correct/guess scoring, due-first selection, no early repeats, idempotent answers, topic/course filters.');
+
+const prep=R.select(cards,topics,{},'2026-10-24',{scope:'prep'});
+assert.equal(prep.ids.length,10);assert(!prep.foundation);
+assert(prep.ids.every(id=>cards.find(c=>c.id===id).prep));
+assert.equal(new Set(prep.ids.map(id=>topics.find(t=>t.id===cards.find(c=>c.id===id).topic).course)).size,6);
+assert.deepEqual(R.select(cards,topics,{},'2026-10-24',{scope:'prep'}),prep);
+const pc=cards.find(c=>c.id===prep.ids[0]);
+const pr={['card-review/'+pc.id]:{value:R.answer({},pc,-1,false,'prep-test','2026-10-24T20:00:00Z')}};
+assert(!R.select(cards,topics,pr,'2026-10-24',{scope:'prep'}).ids.includes(pc.id));
+assert.equal(R.select(cards,topics,pr,'2026-10-25',{scope:'prep'}).ids[0],pc.id);
+for(const course of ['phys210','math252','math250b','comp139e','engr290','ecet250e']) {
+ const p=R.select(cards,topics,{},'2026-10-24',{scope:'prep',course});
+ assert.equal(p.ids.length,6);assert(p.ids.every(id=>cards.find(c=>c.id===id).prep));
+}
+console.log('PASS: fresh prep coverage across all six courses, stable sets, due-first reviews, no early repeats.');

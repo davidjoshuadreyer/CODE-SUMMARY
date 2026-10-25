@@ -257,15 +257,15 @@ diffusion-temperature|Increasing temperature usually changes atomic diffusivity 
 `);
 // Later circuits chapter mapping follows Alexander/Sadiku's publisher contents;
 // it is supplemental conceptual review, not a claim to reproduce instructor notes.
-group('ecet-ch1 ecet250e-0',`
+group('ecet-ch1 ecet250e-0 ecet250e-1',`
 current-definition|Electric current is the rate of flow of…|Charge|Voltage|Resistance|Energy per charge|Current is charge transferred per unit time.
 passive-sign|Under the passive sign convention, positive absorbed power means current enters…|The positive voltage terminal|The negative voltage terminal|Both terminals at once|No terminal|With current entering the positive reference terminal, p = vi is absorbed power.
 `);
-group('ecet-ch2 ecet250e-1',`
+group('ecet-ch2 ecet250e-0 ecet250e-2',`
 parallel-voltage|Resistors in parallel share the same…|Voltage|Current necessarily|Resistance necessarily|Power necessarily|Each branch connects to the same pair of nodes.
 kvl|Kirchhoff’s voltage law says the algebraic sum of voltages around a circuit loop is…|Zero|Always positive|Equal to the largest resistor|Equal to total current|Voltage rises and drops balance in the lumped-circuit model.
 `);
-group('ecet-ch3 ecet250e-2',`
+group('ecet-ch3 ecet250e-0 ecet250e-3',`
 nodal-reference|In nodal analysis, node voltages are measured relative to…|A chosen reference node|Always the largest resistor|The nearest current source only|An arbitrary separate zero for every node|Choosing a common reference makes voltage differences consistent.
 mesh-law|Mesh-current equations mainly use…|Kirchhoff’s voltage law|Only conservation of mass|Only capacitor charge|The magnetic force law|Mesh analysis writes loop voltage balances for planar circuits.
 `);

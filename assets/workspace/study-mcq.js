@@ -2,6 +2,7 @@
 window.TESSELATE_STUDY_MCQ = [
   {
     "id": "mcq-charge-sign",
+    "prep": false,
     "topic": "phys210-0",
     "topics": [
       "phys210-0"
@@ -20,6 +21,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-charge-distance",
+    "prep": false,
     "topic": "phys210-0",
     "topics": [
       "phys210-0"
@@ -38,6 +40,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-field-sign",
+    "prep": false,
     "topic": "phys210-1",
     "topics": [
       "phys210-1"
@@ -56,6 +59,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-dipole",
+    "prep": false,
     "topic": "phys210-1",
     "topics": [
       "phys210-1"
@@ -74,6 +78,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-continuous-field",
+    "prep": false,
     "topic": "phys210-2",
     "topics": [
       "phys210-2"
@@ -92,6 +97,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-field-symmetry",
+    "prep": false,
     "topic": "phys210-2",
     "topics": [
       "phys210-2"
@@ -110,6 +116,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-gauss-charge",
+    "prep": false,
     "topic": "phys210-3",
     "topics": [
       "phys210-3"
@@ -128,6 +135,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-conductor-static",
+    "prep": false,
     "topic": "phys210-3",
     "topics": [
       "phys210-3"
@@ -146,6 +154,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-potential-scalar",
+    "prep": false,
     "topic": "phys210-4",
     "topics": [
       "phys210-4"
@@ -164,6 +173,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-equipotential",
+    "prep": false,
     "topic": "phys210-4",
     "topics": [
       "phys210-4"
@@ -182,6 +192,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-capacitor-parallel",
+    "prep": false,
     "topic": "phys210-5",
     "topics": [
       "phys210-5"
@@ -200,6 +211,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-dielectric",
+    "prep": false,
     "topic": "phys210-5",
     "topics": [
       "phys210-5"
@@ -218,6 +230,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-kcl-physics",
+    "prep": false,
     "topic": "phys210-6",
     "topics": [
       "phys210-6"
@@ -236,6 +249,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-resistance-current",
+    "prep": false,
     "topic": "phys210-6",
     "topics": [
       "phys210-6"
@@ -254,6 +268,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-rc-continuity",
+    "prep": false,
     "topic": "phys210-7",
     "topics": [
       "phys210-7"
@@ -272,6 +287,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-rc-final",
+    "prep": false,
     "topic": "phys210-7",
     "topics": [
       "phys210-7"
@@ -290,6 +306,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-magnetic-work",
+    "prep": false,
     "topic": "phys210-8",
     "topics": [
       "phys210-8"
@@ -308,6 +325,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-magnetic-parallel",
+    "prep": false,
     "topic": "phys210-8",
     "topics": [
       "phys210-8"
@@ -326,6 +344,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-ampere-symmetry",
+    "prep": false,
     "topic": "phys210-9",
     "topics": [
       "phys210-9"
@@ -344,6 +363,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-wire-field",
+    "prep": false,
     "topic": "phys210-9",
     "topics": [
       "phys210-9"
@@ -362,6 +382,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-lenz",
+    "prep": false,
     "topic": "phys210-10",
     "topics": [
       "phys210-10"
@@ -380,6 +401,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-faraday",
+    "prep": false,
     "topic": "phys210-10",
     "topics": [
       "phys210-10"
@@ -398,6 +420,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-inductor-continuity",
+    "prep": false,
     "topic": "phys210-11",
     "topics": [
       "phys210-11"
@@ -416,6 +439,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-displacement",
+    "prep": false,
     "topic": "phys210-11",
     "topics": [
       "phys210-11"
@@ -434,6 +458,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-uncertainty",
+    "prep": false,
     "topic": "phys210-12",
     "topics": [
       "phys210-12"
@@ -452,6 +477,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-graph-units",
+    "prep": false,
     "topic": "phys210-12",
     "topics": [
       "phys210-12"
@@ -470,6 +496,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-ode-order",
+    "prep": false,
     "topic": "math252-0",
     "topics": [
       "math252-0"
@@ -488,6 +515,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-initial-condition",
+    "prep": false,
     "topic": "math252-0",
     "topics": [
       "math252-0"
@@ -506,6 +534,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-separate",
+    "prep": false,
     "topic": "math252-1",
     "topics": [
       "math252-1"
@@ -524,6 +553,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-lost-solutions",
+    "prep": false,
     "topic": "math252-1",
     "topics": [
       "math252-1"
@@ -542,6 +572,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-integrating-factor",
+    "prep": false,
     "topic": "math252-2",
     "topics": [
       "math252-2"
@@ -560,6 +591,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-linear-form",
+    "prep": false,
     "topic": "math252-2",
     "topics": [
       "math252-2"
@@ -578,6 +610,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-exact-condition",
+    "prep": false,
     "topic": "math252-3",
     "topics": [
       "math252-3"
@@ -596,6 +629,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-exact-potential",
+    "prep": false,
     "topic": "math252-3",
     "topics": [
       "math252-3"
@@ -614,6 +648,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-homogeneous-sub",
+    "prep": false,
     "topic": "math252-4",
     "topics": [
       "math252-4"
@@ -632,6 +667,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-bernoulli-sub",
+    "prep": false,
     "topic": "math252-4",
     "topics": [
       "math252-4"
@@ -650,6 +686,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-cooling",
+    "prep": false,
     "topic": "math252-5",
     "topics": [
       "math252-5"
@@ -668,6 +705,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-mixing",
+    "prep": false,
     "topic": "math252-5",
     "topics": [
       "math252-5"
@@ -686,6 +724,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-superposition",
+    "prep": false,
     "topic": "math252-6",
     "topics": [
       "math252-6"
@@ -704,6 +743,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-reduction-order",
+    "prep": false,
     "topic": "math252-6",
     "topics": [
       "math252-6"
@@ -722,6 +762,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-complex-roots",
+    "prep": false,
     "topic": "math252-7",
     "topics": [
       "math252-7"
@@ -740,6 +781,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-repeated-root",
+    "prep": false,
     "topic": "math252-7",
     "topics": [
       "math252-7"
@@ -758,6 +800,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-trial-overlap",
+    "prep": false,
     "topic": "math252-8",
     "topics": [
       "math252-8"
@@ -776,6 +819,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-undetermined-use",
+    "prep": false,
     "topic": "math252-8",
     "topics": [
       "math252-8"
@@ -794,6 +838,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-variation",
+    "prep": false,
     "topic": "math252-9",
     "topics": [
       "math252-9"
@@ -812,6 +857,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-wronskian",
+    "prep": false,
     "topic": "math252-9",
     "topics": [
       "math252-9"
@@ -830,6 +876,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-euler-trial",
+    "prep": false,
     "topic": "math252-10",
     "topics": [
       "math252-10"
@@ -848,6 +895,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-euler-domain",
+    "prep": false,
     "topic": "math252-10",
     "topics": [
       "math252-10"
@@ -866,6 +914,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-damping",
+    "prep": false,
     "topic": "math252-11",
     "topics": [
       "math252-11"
@@ -884,6 +933,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-critical-damping",
+    "prep": false,
     "topic": "math252-11",
     "topics": [
       "math252-11"
@@ -902,6 +952,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-series-radius",
+    "prep": false,
     "topic": "math252-12",
     "topics": [
       "math252-12"
@@ -920,6 +971,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-series-align",
+    "prep": false,
     "topic": "math252-12",
     "topics": [
       "math252-12"
@@ -938,6 +990,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-recurrence",
+    "prep": false,
     "topic": "math252-13",
     "topics": [
       "math252-13"
@@ -956,6 +1009,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-ordinary-point",
+    "prep": false,
     "topic": "math252-13",
     "topics": [
       "math252-13"
@@ -974,6 +1028,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-laplace-purpose",
+    "prep": false,
     "topic": "math252-14",
     "topics": [
       "math252-14"
@@ -992,6 +1047,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-laplace-linearity",
+    "prep": false,
     "topic": "math252-14",
     "topics": [
       "math252-14"
@@ -1010,6 +1066,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-inverse-laplace",
+    "prep": false,
     "topic": "math252-15",
     "topics": [
       "math252-15"
@@ -1028,6 +1085,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-laplace-initial",
+    "prep": false,
     "topic": "math252-15",
     "topics": [
       "math252-15"
@@ -1046,6 +1104,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-step-delay",
+    "prep": false,
     "topic": "math252-16",
     "topics": [
       "math252-16"
@@ -1064,6 +1123,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-delay-shift",
+    "prep": false,
     "topic": "math252-16",
     "topics": [
       "math252-16"
@@ -1082,6 +1142,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-convolution",
+    "prep": false,
     "topic": "math252-17",
     "topics": [
       "math252-17"
@@ -1100,6 +1161,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-convolution-memory",
+    "prep": false,
     "topic": "math252-17",
     "topics": [
       "math252-17"
@@ -1118,6 +1180,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-impulse-area",
+    "prep": false,
     "topic": "math252-18",
     "topics": [
       "math252-18"
@@ -1136,6 +1199,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-impulse-motion",
+    "prep": false,
     "topic": "math252-18",
     "topics": [
       "math252-18"
@@ -1154,6 +1218,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-eigen-mode",
+    "prep": false,
     "topic": "math252-19",
     "topics": [
       "math252-19"
@@ -1172,6 +1237,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-system-stability",
+    "prep": false,
     "topic": "math252-19",
     "topics": [
       "math252-19"
@@ -1190,6 +1256,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-forced-system",
+    "prep": false,
     "topic": "math252-20",
     "topics": [
       "math252-20"
@@ -1208,6 +1275,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-fundamental-matrix",
+    "prep": false,
     "topic": "math252-20",
     "topics": [
       "math252-20"
@@ -1226,6 +1294,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-cylinder",
+    "prep": false,
     "topic": "calc-11.7",
     "topics": [
       "calc-11.7",
@@ -1245,6 +1314,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-quadric-traces",
+    "prep": false,
     "topic": "calc-11.7",
     "topics": [
       "calc-11.7",
@@ -1264,6 +1334,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-partial-intro",
+    "prep": false,
     "topic": "calc-12.1",
     "topics": [
       "calc-12.1",
@@ -1283,6 +1354,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-partial-notation",
+    "prep": false,
     "topic": "calc-12.1",
     "topics": [
       "calc-12.1",
@@ -1302,6 +1374,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-multivariable-domain",
+    "prep": false,
     "topic": "calc-12.2",
     "topics": [
       "calc-12.2",
@@ -1321,6 +1394,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-level-curve",
+    "prep": false,
     "topic": "calc-12.2",
     "topics": [
       "calc-12.2",
@@ -1340,6 +1414,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-limit-paths",
+    "prep": false,
     "topic": "calc-12.3",
     "topics": [
       "calc-12.3",
@@ -1359,6 +1434,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-limit-proof",
+    "prep": false,
     "topic": "calc-12.3",
     "topics": [
       "calc-12.3",
@@ -1378,6 +1454,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-partial-constant",
+    "prep": false,
     "topic": "calc-12.4",
     "topics": [
       "calc-12.4",
@@ -1397,6 +1474,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-mixed-partials",
+    "prep": false,
     "topic": "calc-12.4",
     "topics": [
       "calc-12.4",
@@ -1416,6 +1494,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-optimization-model",
+    "prep": false,
     "topic": "calc-12.5",
     "topics": [
       "calc-12.5",
@@ -1435,6 +1514,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-optimization-global",
+    "prep": false,
     "topic": "calc-12.5",
     "topics": [
       "calc-12.5",
@@ -1454,6 +1534,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-linear-approx",
+    "prep": false,
     "topic": "calc-12.6",
     "topics": [
       "calc-12.6",
@@ -1473,6 +1554,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-differential",
+    "prep": false,
     "topic": "calc-12.6",
     "topics": [
       "calc-12.6",
@@ -1492,6 +1574,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-chain-paths",
+    "prep": false,
     "topic": "calc-12.7",
     "topics": [
       "calc-12.7",
@@ -1511,6 +1594,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-chain-independent",
+    "prep": false,
     "topic": "calc-12.7",
     "topics": [
       "calc-12.7",
@@ -1530,6 +1614,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-gradient-steepest",
+    "prep": false,
     "topic": "calc-12.8",
     "topics": [
       "calc-12.8",
@@ -1549,6 +1634,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-directional-unit",
+    "prep": false,
     "topic": "calc-12.8",
     "topics": [
       "calc-12.8",
@@ -1568,6 +1654,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-lagrange",
+    "prep": false,
     "topic": "calc-12.9",
     "topics": [
       "calc-12.9",
@@ -1587,6 +1674,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-constraint-check",
+    "prep": false,
     "topic": "calc-12.9",
     "topics": [
       "calc-12.9",
@@ -1606,6 +1694,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-saddle",
+    "prep": false,
     "topic": "calc-12.10",
     "topics": [
       "calc-12.10",
@@ -1625,6 +1714,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-second-test-zero",
+    "prep": false,
     "topic": "calc-12.10",
     "topics": [
       "calc-12.10",
@@ -1644,6 +1734,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-double-integral",
+    "prep": false,
     "topic": "calc-13.1",
     "topics": [
       "calc-13.1",
@@ -1663,6 +1754,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-iterated-inner",
+    "prep": false,
     "topic": "calc-13.1",
     "topics": [
       "calc-13.1",
@@ -1682,6 +1774,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-region-bounds",
+    "prep": false,
     "topic": "calc-13.2",
     "topics": [
       "calc-13.2",
@@ -1701,6 +1794,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-region-split",
+    "prep": false,
     "topic": "calc-13.2",
     "topics": [
       "calc-13.2",
@@ -1720,6 +1814,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-area-integrand",
+    "prep": false,
     "topic": "calc-13.3",
     "topics": [
       "calc-13.3",
@@ -1739,6 +1834,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-volume-between",
+    "prep": false,
     "topic": "calc-13.3",
     "topics": [
       "calc-13.3",
@@ -1758,6 +1854,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-polar-area",
+    "prep": false,
     "topic": "calc-13.4",
     "topics": [
       "calc-13.4",
@@ -1777,6 +1874,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-polar-use",
+    "prep": false,
     "topic": "calc-13.4",
     "topics": [
       "calc-13.4",
@@ -1796,6 +1894,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-lamina-mass",
+    "prep": false,
     "topic": "calc-13.5",
     "topics": [
       "calc-13.5",
@@ -1815,6 +1914,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-centroid-weight",
+    "prep": false,
     "topic": "calc-13.5",
     "topics": [
       "calc-13.5",
@@ -1834,6 +1934,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-triple-volume",
+    "prep": false,
     "topic": "calc-13.6",
     "topics": [
       "calc-13.6",
@@ -1853,6 +1954,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-triple-bounds",
+    "prep": false,
     "topic": "calc-13.6",
     "topics": [
       "calc-13.6",
@@ -1872,6 +1974,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-cylindrical",
+    "prep": false,
     "topic": "calc-11.8",
     "topics": [
       "calc-11.8",
@@ -1891,6 +1994,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-spherical-radius",
+    "prep": false,
     "topic": "calc-11.8",
     "topics": [
       "calc-11.8",
@@ -1910,6 +2014,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-cylindrical-volume",
+    "prep": false,
     "topic": "calc-13.7",
     "topics": [
       "calc-13.7",
@@ -1929,6 +2034,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-spherical-volume",
+    "prep": false,
     "topic": "calc-13.7",
     "topics": [
       "calc-13.7",
@@ -1948,6 +2054,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-surface-area",
+    "prep": false,
     "topic": "calc-13.8",
     "topics": [
       "calc-13.8",
@@ -1967,6 +2074,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-surface-projection",
+    "prep": false,
     "topic": "calc-13.8",
     "topics": [
       "calc-13.8",
@@ -1986,6 +2094,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-jacobian",
+    "prep": false,
     "topic": "calc-13.9",
     "topics": [
       "calc-13.9",
@@ -2005,6 +2114,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-transform-bounds",
+    "prep": false,
     "topic": "calc-13.9",
     "topics": [
       "calc-13.9",
@@ -2024,6 +2134,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-vector-field",
+    "prep": false,
     "topic": "calc-14.1",
     "topics": [
       "calc-14.1",
@@ -2043,6 +2154,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-divergence",
+    "prep": false,
     "topic": "calc-14.1",
     "topics": [
       "calc-14.1",
@@ -2062,6 +2174,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-work-integral",
+    "prep": false,
     "topic": "calc-14.2",
     "topics": [
       "calc-14.2",
@@ -2081,6 +2194,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-conservative",
+    "prep": false,
     "topic": "calc-14.2",
     "topics": [
       "calc-14.2",
@@ -2100,6 +2214,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-stokes",
+    "prep": false,
     "topic": "math250b-7",
     "topics": [
       "math250b-7"
@@ -2118,6 +2233,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-divergence-theorem",
+    "prep": false,
     "topic": "math250b-7",
     "topics": [
       "math250b-7"
@@ -2136,6 +2252,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-unit-cell",
+    "prep": false,
     "topic": "engr290-0",
     "topics": [
       "engr290-0"
@@ -2154,6 +2271,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-fcc-packing",
+    "prep": false,
     "topic": "engr290-0",
     "topics": [
       "engr290-0"
@@ -2172,6 +2290,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-miller-parallel",
+    "prep": false,
     "topic": "engr290-1",
     "topics": [
       "engr290-1"
@@ -2190,6 +2309,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-direction-plane",
+    "prep": false,
     "topic": "engr290-1",
     "topics": [
       "engr290-1"
@@ -2208,6 +2328,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-ionic-bond",
+    "prep": false,
     "topic": "engr290-2",
     "topics": [
       "engr290-2"
@@ -2226,6 +2347,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-vacancy-temperature",
+    "prep": false,
     "topic": "engr290-2",
     "topics": [
       "engr290-2"
@@ -2244,6 +2366,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-strengthen",
+    "prep": false,
     "topic": "engr290-3",
     "topics": [
       "engr290-3"
@@ -2262,6 +2385,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-grain-size",
+    "prep": false,
     "topic": "engr290-3",
     "topics": [
       "engr290-3"
@@ -2280,6 +2404,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-diffusion-gradient",
+    "prep": false,
     "topic": "engr290-4",
     "topics": [
       "engr290-4"
@@ -2298,6 +2423,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-diffusion-temperature",
+    "prep": false,
     "topic": "engr290-4",
     "topics": [
       "engr290-4"
@@ -2316,10 +2442,12 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-current-definition",
+    "prep": false,
     "topic": "ecet-ch1",
     "topics": [
       "ecet-ch1",
-      "ecet250e-0"
+      "ecet250e-0",
+      "ecet250e-1"
     ],
     "front": "Electric current is the rate of flow of…",
     "options": [
@@ -2335,10 +2463,12 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-passive-sign",
+    "prep": false,
     "topic": "ecet-ch1",
     "topics": [
       "ecet-ch1",
-      "ecet250e-0"
+      "ecet250e-0",
+      "ecet250e-1"
     ],
     "front": "Under the passive sign convention, positive absorbed power means current enters…",
     "options": [
@@ -2354,10 +2484,12 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-parallel-voltage",
+    "prep": false,
     "topic": "ecet-ch2",
     "topics": [
       "ecet-ch2",
-      "ecet250e-1"
+      "ecet250e-0",
+      "ecet250e-2"
     ],
     "front": "Resistors in parallel share the same…",
     "options": [
@@ -2373,10 +2505,12 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-kvl",
+    "prep": false,
     "topic": "ecet-ch2",
     "topics": [
       "ecet-ch2",
-      "ecet250e-1"
+      "ecet250e-0",
+      "ecet250e-2"
     ],
     "front": "Kirchhoff’s voltage law says the algebraic sum of voltages around a circuit loop is…",
     "options": [
@@ -2392,10 +2526,12 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-nodal-reference",
+    "prep": false,
     "topic": "ecet-ch3",
     "topics": [
       "ecet-ch3",
-      "ecet250e-2"
+      "ecet250e-0",
+      "ecet250e-3"
     ],
     "front": "In nodal analysis, node voltages are measured relative to…",
     "options": [
@@ -2411,10 +2547,12 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-mesh-law",
+    "prep": false,
     "topic": "ecet-ch3",
     "topics": [
       "ecet-ch3",
-      "ecet250e-2"
+      "ecet250e-0",
+      "ecet250e-3"
     ],
     "front": "Mesh-current equations mainly use…",
     "options": [
@@ -2430,6 +2568,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-superposition-circuits",
+    "prep": false,
     "topic": "ecet-ch4",
     "topics": [
       "ecet-ch4"
@@ -2448,6 +2587,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-thevenin",
+    "prep": false,
     "topic": "ecet-ch4",
     "topics": [
       "ecet-ch4"
@@ -2466,6 +2606,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-opamp-current",
+    "prep": false,
     "topic": "ecet-ch5",
     "topics": [
       "ecet-ch5"
@@ -2484,6 +2625,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-opamp-feedback",
+    "prep": false,
     "topic": "ecet-ch5",
     "topics": [
       "ecet-ch5"
@@ -2502,6 +2644,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-capacitor-storage",
+    "prep": false,
     "topic": "ecet-ch6",
     "topics": [
       "ecet-ch6"
@@ -2520,6 +2663,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-inductor-storage",
+    "prep": false,
     "topic": "ecet-ch6",
     "topics": [
       "ecet-ch6"
@@ -2538,6 +2682,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-first-order-response",
+    "prep": false,
     "topic": "ecet-ch7",
     "topics": [
       "ecet-ch7"
@@ -2556,6 +2701,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-time-constant",
+    "prep": false,
     "topic": "ecet-ch7",
     "topics": [
       "ecet-ch7"
@@ -2574,6 +2720,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-second-order-storage",
+    "prep": false,
     "topic": "ecet-ch8",
     "topics": [
       "ecet-ch8"
@@ -2592,6 +2739,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-underdamped",
+    "prep": false,
     "topic": "ecet-ch8",
     "topics": [
       "ecet-ch8"
@@ -2610,6 +2758,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-phasor",
+    "prep": false,
     "topic": "ecet-ch9",
     "topics": [
       "ecet-ch9"
@@ -2628,6 +2777,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-inductor-phase",
+    "prep": false,
     "topic": "ecet-ch9",
     "topics": [
       "ecet-ch9"
@@ -2646,6 +2796,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-ac-impedance",
+    "prep": false,
     "topic": "ecet-ch10",
     "topics": [
       "ecet-ch10"
@@ -2664,6 +2815,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-ac-laws",
+    "prep": false,
     "topic": "ecet-ch10",
     "topics": [
       "ecet-ch10"
@@ -2682,6 +2834,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-rms-purpose",
+    "prep": false,
     "topic": "ecet-ch11",
     "topics": [
       "ecet-ch11"
@@ -2700,6 +2853,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-power-factor",
+    "prep": false,
     "topic": "ecet-ch11",
     "topics": [
       "ecet-ch11"
@@ -2718,6 +2872,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-three-phase",
+    "prep": false,
     "topic": "ecet-ch12",
     "topics": [
       "ecet-ch12"
@@ -2736,6 +2891,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-neutral-balanced",
+    "prep": false,
     "topic": "ecet-ch12",
     "topics": [
       "ecet-ch12"
@@ -2754,6 +2910,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-mutual-induction",
+    "prep": false,
     "topic": "ecet-ch13",
     "topics": [
       "ecet-ch13"
@@ -2772,6 +2929,7 @@ window.TESSELATE_STUDY_MCQ = [
   },
   {
     "id": "mcq-transformer-dc",
+    "prep": false,
     "topic": "ecet-ch13",
     "topics": [
       "ecet-ch13"
@@ -2787,6 +2945,698 @@ window.TESSELATE_STUDY_MCQ = [
     "back": "Transformer action requires changing flux; steady DC is not its normal operating mode.",
     "source": "https://online.camosun.ca/d2l/home/347548",
     "supplemental": true
+  },
+  {
+    "id": "mcq-prep-direction",
+    "prep": true,
+    "topic": "calc-12.8",
+    "topics": [
+      "calc-12.8",
+      "math250b-1"
+    ],
+    "front": "At a point, gradient f = (3, 4). What is the greatest directional derivative?",
+    "options": [
+      "5",
+      "7",
+      "25",
+      "1"
+    ],
+    "correct": 0,
+    "back": "The maximum directional derivative is the length of the gradient: sqrt(9 + 16) = 5.",
+    "source": "math250b/02-gradients.html",
+    "supplemental": false
+  },
+  {
+    "id": "mcq-prep-hessian",
+    "prep": true,
+    "topic": "calc-12.10",
+    "topics": [
+      "calc-12.10",
+      "math250b-2"
+    ],
+    "front": "At a stationary point, D = fxx fyy − fxy² is positive and fxx is negative. What follows?",
+    "options": [
+      "A local maximum",
+      "A local minimum",
+      "A saddle point",
+      "The test is inconclusive"
+    ],
+    "correct": 0,
+    "back": "Positive D means both principal curvatures have the same sign. Negative fxx makes this a local maximum.",
+    "source": "math250b/03-optimization.html",
+    "supplemental": false
+  },
+  {
+    "id": "mcq-prep-lagrange",
+    "prep": true,
+    "topic": "calc-12.9",
+    "topics": [
+      "calc-12.9",
+      "math250b-2"
+    ],
+    "front": "When finding absolute extrema on a closed bounded region, which candidates must you check?",
+    "options": [
+      "Interior critical points and boundary candidates",
+      "Only interior critical points",
+      "Only the origin",
+      "Only points with a positive multiplier"
+    ],
+    "correct": 0,
+    "back": "Absolute extrema can occur inside or on the boundary. Compare values at all feasible candidates, including corners.",
+    "source": "math250b/03-optimization.html",
+    "supplemental": false
+  },
+  {
+    "id": "mcq-prep-reverse",
+    "prep": true,
+    "topic": "calc-13.2",
+    "topics": [
+      "calc-13.2",
+      "math250b-3"
+    ],
+    "front": "The region is 0 ≤ x ≤ 1 and x ≤ y ≤ 1. What bounds describe it with x integrated first?",
+    "options": [
+      "0 ≤ y ≤ 1; 0 ≤ x ≤ y",
+      "0 ≤ y ≤ 1; y ≤ x ≤ 1",
+      "0 ≤ x ≤ 1; 0 ≤ y ≤ x",
+      "0 ≤ y ≤ 1; 0 ≤ x ≤ 1"
+    ],
+    "correct": 0,
+    "back": "The region lies above y = x in the unit square. A horizontal slice runs from x = 0 to x = y.",
+    "source": "math250b/04-double-integrals.html",
+    "supplemental": false
+  },
+  {
+    "id": "mcq-prep-polar",
+    "prep": true,
+    "topic": "calc-13.4",
+    "topics": [
+      "calc-13.4",
+      "math250b-3"
+    ],
+    "front": "For a disk of radius 2 centred at the origin, which polar bounds cover it once?",
+    "options": [
+      "0 ≤ r ≤ 2; 0 ≤ θ ≤ 2π",
+      "0 ≤ r ≤ 4; 0 ≤ θ ≤ π",
+      "−2 ≤ r ≤ 2; 0 ≤ θ ≤ 2π",
+      "0 ≤ r ≤ 2; 0 ≤ θ ≤ π"
+    ],
+    "correct": 0,
+    "back": "A nonnegative radius from 0 to 2 and one full angular turn cover the disk. Include r in the area element.",
+    "source": "math250b/04-double-integrals.html",
+    "supplemental": false
+  },
+  {
+    "id": "mcq-prep-triple",
+    "prep": true,
+    "topic": "calc-13.6",
+    "topics": [
+      "calc-13.6",
+      "math250b-4"
+    ],
+    "front": "What does a triple integral of 1 over a solid measure?",
+    "options": [
+      "Its volume",
+      "Its surface area",
+      "Its mass for every density",
+      "Its boundary length"
+    ],
+    "correct": 0,
+    "back": "Each volume element contributes once. Mass requires integrating density instead.",
+    "source": "math250b/05-triple-integrals.html",
+    "supplemental": false
+  },
+  {
+    "id": "mcq-prep-repeated",
+    "prep": true,
+    "topic": "math252-7",
+    "topics": [
+      "math252-7"
+    ],
+    "front": "A characteristic equation has repeated root r = 2. Which is the general homogeneous solution?",
+    "options": [
+      " (C1 + C2 x)e^(2x)",
+      "C1 e^(2x) + C2 e^(2x)",
+      "C1 cos(2x) + C2 sin(2x)",
+      "C1 e^x + C2 e^(2x)"
+    ],
+    "correct": 0,
+    "back": "A repeated root needs a second independent solution x e^(2x); two multiples of e^(2x) are not independent.",
+    "source": "math252/08-characteristic-roots.html",
+    "supplemental": false
+  },
+  {
+    "id": "mcq-prep-complex",
+    "prep": true,
+    "topic": "math252-7",
+    "topics": [
+      "math252-7"
+    ],
+    "front": "Roots −1 ± 3i give which real homogeneous solution?",
+    "options": [
+      "e^(−x)(C1 cos 3x + C2 sin 3x)",
+      "e^(3x)(C1 cos x + C2 sin x)",
+      "C1 e^(−x) + C2 e^(3x)",
+      "C1 cos 3x + C2 sin 3x"
+    ],
+    "correct": 0,
+    "back": "The real part gives the exponential envelope; the imaginary part gives the oscillation frequency.",
+    "source": "math252/08-characteristic-roots.html",
+    "supplemental": false
+  },
+  {
+    "id": "mcq-prep-resonance",
+    "prep": true,
+    "topic": "math252-8",
+    "topics": [
+      "math252-8"
+    ],
+    "front": "For y'' − 3y' + 2y = e^x, what particular trial avoids duplicating the homogeneous solution?",
+    "options": [
+      "A x e^x",
+      "A e^x",
+      "A x²",
+      "A cos x"
+    ],
+    "correct": 0,
+    "back": "The characteristic roots are 1 and 2, so e^x is already a homogeneous solution. Multiply the trial by x.",
+    "source": "math252/09-undetermined-coefficients.html",
+    "supplemental": false
+  },
+  {
+    "id": "mcq-prep-poly",
+    "prep": true,
+    "topic": "math252-8",
+    "topics": [
+      "math252-8"
+    ],
+    "front": "For y'' + y = x², which trial has enough terms for undetermined coefficients?",
+    "options": [
+      "Ax² + Bx + C",
+      "Ax² only",
+      "Ae^x",
+      "A sin x"
+    ],
+    "correct": 0,
+    "back": "Use a full degree-two polynomial because differentiation produces lower-degree terms.",
+    "source": "math252/09-undetermined-coefficients.html",
+    "supplemental": false
+  },
+  {
+    "id": "mcq-prep-vop",
+    "prep": true,
+    "topic": "math252-9",
+    "topics": [
+      "math252-9"
+    ],
+    "front": "Before using standard variation-of-parameters formulas for y'' + p y' + q y = g, what must you do?",
+    "options": [
+      "Divide by the coefficient of y''",
+      "Set both initial conditions to zero",
+      "Discard the forcing term",
+      "Make the Wronskian zero"
+    ],
+    "correct": 0,
+    "back": "The usual formulas assume leading coefficient 1; divide the entire equation, including the forcing term.",
+    "source": "math252/10-variation-of-parameters.html",
+    "supplemental": false
+  },
+  {
+    "id": "mcq-prep-euler",
+    "prep": true,
+    "topic": "math252-10",
+    "topics": [
+      "math252-10"
+    ],
+    "front": "For x²y'' + axy' + by = 0 on x > 0, what trial leads to the indicial equation?",
+    "options": [
+      "y = x^m",
+      "y = e^(mx)",
+      "y = sin(mx)",
+      "y = m + x"
+    ],
+    "correct": 0,
+    "back": "Each derivative lowers the power while its x factor restores it, giving m(m−1) + am + b = 0.",
+    "source": "math252/11-cauchy-euler.html",
+    "supplemental": false
+  },
+  {
+    "id": "mcq-prep-array-delete",
+    "prep": true,
+    "topic": "comp139e-4",
+    "topics": [
+      "comp139e-4",
+      "comp139e-20"
+    ],
+    "front": "Memory was allocated with new double[n]. How should it be released?",
+    "options": [
+      "delete[] pointer;",
+      "delete pointer;",
+      "free(pointer);",
+      "pointer = nullptr; only"
+    ],
+    "correct": 0,
+    "back": "Array new pairs with delete[]. Nulling a pointer alone does not release its allocation.",
+    "source": "comp139e/lesson-05.html",
+    "supplemental": false
+  },
+  {
+    "id": "mcq-prep-link-insert",
+    "prep": true,
+    "topic": "comp139e-9",
+    "topics": [
+      "comp139e-9"
+    ],
+    "front": "To insert node n at the head of a singly linked list, which order preserves the old list?",
+    "options": [
+      "n->next = head; head = n;",
+      "head = n; n->next = head;",
+      "delete head; head = n;",
+      "n->next = nullptr; head = n;"
+    ],
+    "correct": 0,
+    "back": "Save the old head in n->next before moving head. Reversing the assignments makes n point to itself.",
+    "source": "comp139e/lesson-10.html",
+    "supplemental": false
+  },
+  {
+    "id": "mcq-prep-link-delete",
+    "prep": true,
+    "topic": "comp139e-9",
+    "topics": [
+      "comp139e-9"
+    ],
+    "front": "When deleting the first node, what must happen before delete oldHead?",
+    "options": [
+      "Save or move to its next pointer",
+      "Read oldHead->next after deletion",
+      "Delete every following node",
+      "Set the new head to oldHead"
+    ],
+    "correct": 0,
+    "back": "Once deleted, oldHead must not be dereferenced. Move head to the saved successor first.",
+    "source": "comp139e/lesson-10.html",
+    "supplemental": false
+  },
+  {
+    "id": "mcq-prep-queue-last",
+    "prep": true,
+    "topic": "comp139e-10",
+    "topics": [
+      "comp139e-10"
+    ],
+    "front": "A linked queue removes its only node. What should its head and tail become?",
+    "options": [
+      "Both nullptr",
+      "Only head becomes nullptr",
+      "Only tail becomes nullptr",
+      "Both point to the deleted node"
+    ],
+    "correct": 0,
+    "back": "An empty queue must not retain a dangling tail. Reset both ends when the last node is removed.",
+    "source": "comp139e/lesson-11.html",
+    "supplemental": false
+  },
+  {
+    "id": "mcq-prep-ring",
+    "prep": true,
+    "topic": "comp139e-10",
+    "topics": [
+      "comp139e-10"
+    ],
+    "front": "A circular array queue has capacity N. How do you advance an index with wraparound?",
+    "options": [
+      "(index + 1) % N",
+      "index + N",
+      "index % (N + 1)",
+      "index − 1 always"
+    ],
+    "correct": 0,
+    "back": "Modulo N returns to zero after index N−1. Full and empty detection also need a count or a spare-slot convention.",
+    "source": "comp139e/lesson-11.html",
+    "supplemental": false
+  },
+  {
+    "id": "mcq-prep-stream",
+    "prep": true,
+    "topic": "comp139e-11",
+    "topics": [
+      "comp139e-11",
+      "comp139e-22"
+    ],
+    "front": "Which loop processes a numeric input only when extraction succeeds?",
+    "options": [
+      "while (in >> value)",
+      "while (!in.eof())",
+      "while (in.good()) followed by unchecked extraction",
+      "while (value != 0)"
+    ],
+    "correct": 0,
+    "back": "The extraction itself tests success, avoiding processing a stale value after the final failed read.",
+    "source": "comp139e/lesson-12.html",
+    "supplemental": false
+  },
+  {
+    "id": "mcq-prep-potential-sign",
+    "prep": true,
+    "topic": "phys210-4",
+    "topics": [
+      "phys210-4"
+    ],
+    "front": "A positive charge moves to a lower electric potential. Its electric potential energy…",
+    "options": [
+      "Decreases",
+      "Increases",
+      "Cannot change",
+      "Must become zero"
+    ],
+    "correct": 0,
+    "back": "The change is q times the change in potential. For positive q, a decrease in potential lowers potential energy.",
+    "source": "phys210/learn-potential.html",
+    "supplemental": false
+  },
+  {
+    "id": "mcq-prep-equipotential",
+    "prep": true,
+    "topic": "phys210-4",
+    "topics": [
+      "phys210-4"
+    ],
+    "front": "How much work does the electrostatic force do moving a charge along one equipotential?",
+    "options": [
+      "Zero",
+      "q times the path length",
+      "Always positive",
+      "Always negative"
+    ],
+    "correct": 0,
+    "back": "The endpoints have the same potential, so the electrostatic work −q ΔV is zero.",
+    "source": "phys210/learn-potential.html",
+    "supplemental": false
+  },
+  {
+    "id": "mcq-prep-cap-battery",
+    "prep": true,
+    "topic": "phys210-5",
+    "topics": [
+      "phys210-5"
+    ],
+    "front": "A dielectric fully fills a capacitor while it stays connected to an ideal battery. What stays fixed?",
+    "options": [
+      "Voltage",
+      "Charge",
+      "Capacitance",
+      "Stored energy"
+    ],
+    "correct": 0,
+    "back": "The battery fixes voltage. Capacitance increases, so charge and stored energy increase.",
+    "source": "phys210/learn-capacitors.html",
+    "supplemental": false
+  },
+  {
+    "id": "mcq-prep-cap-isolated",
+    "prep": true,
+    "topic": "phys210-5",
+    "topics": [
+      "phys210-5"
+    ],
+    "front": "An isolated charged capacitor is disconnected before a dielectric is inserted. What stays fixed?",
+    "options": [
+      "Free charge on its plates",
+      "Voltage",
+      "Stored energy",
+      "Capacitance"
+    ],
+    "correct": 0,
+    "back": "With no conducting path, free plate charge stays fixed. Increased capacitance lowers voltage and stored energy.",
+    "source": "phys210/learn-capacitors.html",
+    "supplemental": false
+  },
+  {
+    "id": "mcq-prep-cap-series",
+    "prep": true,
+    "topic": "phys210-5",
+    "topics": [
+      "phys210-5"
+    ],
+    "front": "Two identical capacitors C are connected in series. Their equivalent capacitance is…",
+    "options": [
+      "C/2",
+      "2C",
+      "C",
+      "C²"
+    ],
+    "correct": 0,
+    "back": "Reciprocals add in series: 1/Ceq = 1/C + 1/C.",
+    "source": "phys210/learn-capacitors.html",
+    "supplemental": false
+  },
+  {
+    "id": "mcq-prep-cap-energy",
+    "prep": true,
+    "topic": "phys210-5",
+    "topics": [
+      "phys210-5"
+    ],
+    "front": "At fixed capacitance, doubling voltage changes stored energy by what factor?",
+    "options": [
+      "4",
+      "2",
+      "1/2",
+      "1"
+    ],
+    "correct": 0,
+    "back": "Stored energy is one half C V², so doubling V multiplies it by four.",
+    "source": "phys210/learn-capacitors.html",
+    "supplemental": false
+  },
+  {
+    "id": "mcq-prep-rc-initial",
+    "prep": true,
+    "topic": "ecet-ch7",
+    "topics": [
+      "ecet-ch7"
+    ],
+    "front": "With finite current, which quantity cannot jump instantaneously at a switching event?",
+    "options": [
+      "Capacitor voltage",
+      "Resistor voltage",
+      "Resistor current",
+      "Switch voltage"
+    ],
+    "correct": 0,
+    "back": "An instantaneous capacitor-voltage jump would require an impulse of current because i = C dv/dt.",
+    "source": "https://online.camosun.ca/d2l/home/347548",
+    "supplemental": true
+  },
+  {
+    "id": "mcq-prep-rl-initial",
+    "prep": true,
+    "topic": "ecet-ch7",
+    "topics": [
+      "ecet-ch7"
+    ],
+    "front": "With finite voltage, which quantity cannot jump instantaneously?",
+    "options": [
+      "Inductor current",
+      "Capacitor current",
+      "Resistor voltage",
+      "Switch current"
+    ],
+    "correct": 0,
+    "back": "Since v = L di/dt, an instantaneous inductor-current jump requires an impulse of voltage.",
+    "source": "https://online.camosun.ca/d2l/home/347548",
+    "supplemental": true
+  },
+  {
+    "id": "mcq-prep-rc-final",
+    "prep": true,
+    "topic": "ecet-ch7",
+    "topics": [
+      "ecet-ch7"
+    ],
+    "front": "In DC steady state, an ideal capacitor and inductor act respectively as…",
+    "options": [
+      "An open circuit and a short circuit",
+      "A short circuit and an open circuit",
+      "Two open circuits",
+      "Two short circuits"
+    ],
+    "correct": 0,
+    "back": "At steady DC, dv/dt and di/dt vanish. Capacitor current is zero and inductor voltage is zero.",
+    "source": "https://online.camosun.ca/d2l/home/347548",
+    "supplemental": true
+  },
+  {
+    "id": "mcq-prep-time-constant",
+    "prep": true,
+    "topic": "ecet-ch7",
+    "topics": [
+      "ecet-ch7"
+    ],
+    "front": "For an RC response, how is the time constant found?",
+    "options": [
+      "Resistance seen by the capacitor times C",
+      "C divided by resistance",
+      "The initial voltage times C",
+      "Only the resistance of the nearest component"
+    ],
+    "correct": 0,
+    "back": "Use the equivalent resistance seen at the capacitor with independent sources deactivated; dependent sources require proper analysis.",
+    "source": "https://online.camosun.ca/d2l/home/347548",
+    "supplemental": true
+  },
+  {
+    "id": "mcq-prep-critical",
+    "prep": true,
+    "topic": "ecet-ch8",
+    "topics": [
+      "ecet-ch8"
+    ],
+    "front": "For s² + 2αs + ω0² = 0, critical damping occurs when…",
+    "options": [
+      "α = ω0",
+      "α = 0 with ω0 > 0",
+      "α < ω0",
+      "α > ω0"
+    ],
+    "correct": 0,
+    "back": "Equal damping and natural frequency produce a repeated real root, between oscillatory and overdamped cases.",
+    "source": "https://online.camosun.ca/d2l/home/347548",
+    "supplemental": true
+  },
+  {
+    "id": "mcq-prep-cap-phase",
+    "prep": true,
+    "topic": "ecet-ch9",
+    "topics": [
+      "ecet-ch9"
+    ],
+    "front": "In sinusoidal steady state, an ideal capacitor’s current…",
+    "options": [
+      "Leads its voltage by 90°",
+      "Lags its voltage by 90°",
+      "Is always in phase",
+      "Has twice the frequency"
+    ],
+    "correct": 0,
+    "back": "From i = C dv/dt, differentiating a sinusoid gives a quarter-cycle phase lead.",
+    "source": "https://online.camosun.ca/d2l/home/347548",
+    "supplemental": true
+  },
+  {
+    "id": "mcq-prep-fcc",
+    "prep": true,
+    "topic": "engr290-0",
+    "topics": [
+      "engr290-0"
+    ],
+    "front": "How many atoms belong to a conventional FCC unit cell?",
+    "options": [
+      "4",
+      "6",
+      "8",
+      "2"
+    ],
+    "correct": 0,
+    "back": "Eight corners contribute 1 atom in total; six faces contribute 3. The total is 4.",
+    "source": "engr290/01-crystals.html",
+    "supplemental": false
+  },
+  {
+    "id": "mcq-prep-miller",
+    "prep": true,
+    "topic": "engr290-1",
+    "topics": [
+      "engr290-1"
+    ],
+    "front": "A crystal plane is parallel to the z axis. Its third Miller index is…",
+    "options": [
+      "0",
+      "1",
+      "Infinity",
+      "Always −1"
+    ],
+    "correct": 0,
+    "back": "A parallel axis has an infinite intercept; taking its reciprocal gives zero.",
+    "source": "engr290/02-miller-indices.html",
+    "supplemental": false
+  },
+  {
+    "id": "mcq-prep-grains",
+    "prep": true,
+    "topic": "engr290-3",
+    "topics": [
+      "engr290-3"
+    ],
+    "front": "Why can smaller grains strengthen a metal in the usual Hall–Petch regime?",
+    "options": [
+      "More grain boundaries impede dislocations",
+      "They remove all dislocations",
+      "They eliminate all atomic bonds",
+      "They make every crystal amorphous"
+    ],
+    "correct": 0,
+    "back": "Grain boundaries obstruct dislocation motion, raising the stress needed for plastic deformation.",
+    "source": "engr290/04-dislocations.html",
+    "supplemental": false
+  },
+  {
+    "id": "mcq-prep-cold-work",
+    "prep": true,
+    "topic": "engr290-3",
+    "topics": [
+      "engr290-3"
+    ],
+    "front": "Cold working commonly increases strength while reducing…",
+    "options": [
+      "Ductility",
+      "Dislocation density",
+      "The number of grain boundaries to zero",
+      "Atomic number"
+    ],
+    "correct": 0,
+    "back": "Plastic deformation increases dislocation density. Their interactions hinder motion, raising strength and often lowering ductility.",
+    "source": "engr290/04-dislocations.html",
+    "supplemental": false
+  },
+  {
+    "id": "mcq-prep-diffusion",
+    "prep": true,
+    "topic": "engr290-4",
+    "topics": [
+      "engr290-4"
+    ],
+    "front": "If concentration is higher on the left, net diffusion tends to go…",
+    "options": [
+      "Toward the right",
+      "Toward the left",
+      "Only upward",
+      "Nowhere unless concentration is uniform"
+    ],
+    "correct": 0,
+    "back": "Fick’s first law gives flux down the concentration gradient, from higher to lower concentration.",
+    "source": "engr290/05-diffusion.html",
+    "supplemental": false
+  },
+  {
+    "id": "mcq-prep-temperature",
+    "prep": true,
+    "topic": "engr290-4",
+    "topics": [
+      "engr290-4"
+    ],
+    "front": "Why does diffusion usually become much faster at higher temperature?",
+    "options": [
+      "More atoms overcome the activation-energy barrier",
+      "All vacancies disappear",
+      "Atomic mass becomes zero",
+      "The concentration gradient must reverse"
+    ],
+    "correct": 0,
+    "back": "Diffusion coefficients have Arrhenius temperature dependence; more thermally activated jumps occur at higher temperature.",
+    "source": "engr290/05-diffusion.html",
+    "supplemental": false
   },
   {
     "id": "mcq-comp-c1",

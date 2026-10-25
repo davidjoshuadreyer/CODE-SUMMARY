@@ -1,8 +1,8 @@
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
-const groups=require('./recall-content.cjs'),E=require('../assets/workspace/study-engine');
+const groups=[...require('./recall-content.cjs'),...require('./midterm-recall-content.cjs')],E=require('../assets/workspace/study-engine');
 const ctx={window:{}};vm.runInNewContext(fs.readFileSync('assets/workspace/learning-paths.js','utf8'),ctx);
 const topics=E.topics(ctx.window.TESSELATE_PATHS),byId=new Map(topics.map(t=>[t.id,t]));
-const cards=groups.flatMap(g=>g.rows.map(([id,front,right,...rest])=>({id:'mcq-'+id,topic:g.topics[0],topics:g.topics,front,options:[right,...rest.slice(0,3)],correct:0,back:rest[3],source:byId.get(g.topics[0]).url,supplemental:g.topics[0].startsWith('ecet-ch')&&Number(g.topics[0].slice(7))>3})));
+const cards=groups.flatMap(g=>g.rows.map(([id,front,right,...rest])=>({id:'mcq-'+id,prep:Boolean(g.prep),topic:g.topics[0],topics:g.topics,front,options:[right,...rest.slice(0,3)],correct:0,back:rest[3],source:byId.get(g.topics[0]).url,supplemental:g.topics[0].startsWith('ecet-ch')&&Number(g.topics[0].slice(7))>3})));
 const aliases={0:18,1:18,2:19,4:20,6:21,11:22,12:22};
 for(const q of require('./comp139e-content.cjs').questions){const topic='comp139e-'+q.topic;cards.push({id:'mcq-comp-'+q.id,topic,topics:[topic,...(aliases[q.topic]!==undefined?['comp139e-'+aliases[q.topic]]:[])],front:q.prompt.replaceAll('`',''),options:q.options.map(x=>x.replaceAll('`','')),correct:q.correct,back:q.explanation.replaceAll('`',''),source:byId.get(topic).url});}
 assert.equal(new Set(cards.map(c=>c.id)).size,cards.length);
