@@ -595,11 +595,11 @@ window.TESSELATE_CATALOG = {
     {
       "id": "page-ZWNldDI1MGUvdmlydHVhbC1sYWIuaHRtbA",
       "courseId": "ecet250e",
-      "title": "3D Virtual Lab · Labs 1–5",
+      "title": "3D Virtual Lab · Labs 1–6",
       "kind": "Study notes",
       "url": "ecet250e/virtual-lab.html",
       "body": "",
-      "description": "Build breadboard circuits with your lab equipment. Practice voltage, resistance and series current measurements across 17 guided exercises.",
+      "description": "Practice DC measurements and Lab 6 RC/RL square-wave response at your virtual bench.",
       "referenceIds": [],
       "builtin": true
     },
@@ -2538,6 +2538,17 @@ window.TESSELATE_CATALOG = {
       "referenceIds": [
         "ref-d2l-phys210-5448798"
       ],
+      "builtin": true
+    },
+    {
+      "id": "page-ZWNldDI1MGUvbGFiNi5odG1s",
+      "courseId": "ecet250e",
+      "title": "Lab 6 · RC–RL transient bench",
+      "kind": "Study notes",
+      "url": "ecet250e/lab6.html",
+      "body": "",
+      "description": "Eight guided RC/RL setups, square-wave scope measurements, resistance prechecks and CSV records. D2L checked October 26, 2026.",
+      "referenceIds": [],
       "builtin": true
     }
   ],
