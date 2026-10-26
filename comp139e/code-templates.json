@@ -4,7 +4,7 @@
     "group": "functions",
     "title": "Return a calculated value",
     "when": "The question asks you to calculate and return a result.",
-    "code": "double getArea(double length, double width) {\n    return length * width;\n}\n",
+    "code": "#include <iostream>\nusing namespace std;\n\ndouble getArea(double length, double width) {\n    return length * width;\n}\n",
     "use": "double area = getArea(3, 4);\n",
     "parts": [
       [
@@ -30,7 +30,7 @@
     "group": "functions",
     "title": "Change arguments using references",
     "when": "The function must change the caller’s variables.",
-    "code": "void swapValues(int& a, int& b) {\n    int temp = a;\n    a = b;\n    b = temp;\n}\n",
+    "code": "#include <iostream>\nusing namespace std;\n\nvoid swapValues(int& a, int& b) {\n    int temp = a;\n    a = b;\n    b = temp;\n}\n",
     "use": "int x = 3, y = 8;\nswapValues(x, y);\n",
     "parts": [
       [
@@ -56,7 +56,7 @@
     "group": "functions",
     "title": "Default arguments and overloads",
     "when": "A call may omit an input, or use a different parameter type.",
-    "code": "int scale(int value, int factor = 2) {\n    return value * factor;\n}\ndouble scale(double value) {\n    return value * 1.5;\n}\n",
+    "code": "#include <iostream>\nusing namespace std;\n\nint scale(int value, int factor = 2) {\n    return value * factor;\n}\ndouble scale(double value) {\n    return value * 1.5;\n}\n",
     "use": "int a = scale(3);\nint b = scale(3, 4);\ndouble c = scale(2.0);\n",
     "parts": [
       [
@@ -78,7 +78,7 @@
     "group": "functions",
     "title": "Declare first, define later",
     "when": "You need a prototype above main and the function body below main.",
-    "code": "double average(int a, int b);\n\ndouble average(int a, int b) {\n    return (static_cast<double>(a) + b) / 2;\n}\n",
+    "code": "#include <iostream>\nusing namespace std;\n\ndouble average(int a, int b);\n\ndouble average(int a, int b) {\n    return (static_cast<double>(a) + b) / 2;\n}\n",
     "use": "double result = average(3, 4);\n",
     "parts": [
       [
@@ -104,7 +104,7 @@
     "group": "functions",
     "title": "Loop through an array",
     "when": "You need a total, search, count or other loop over values.",
-    "code": "double sum(const double values[], int size) {\n    double total = 0;\n    for (int i = 0; i < size; ++i) {\n        total += values[i];\n    }\n    return total;\n}\n",
+    "code": "#include <iostream>\nusing namespace std;\n\ndouble sum(const double values[], int size) {\n    double total = 0;\n    for (int i = 0; i < size; ++i) {\n        total += values[i];\n    }\n    return total;\n}\n",
     "use": "double values[] = {2, 4, 6};\ndouble total = sum(values, 3);\n",
     "parts": [
       [
@@ -130,7 +130,7 @@
     "group": "functions",
     "title": "Remember a value between calls",
     "when": "You need a ticket number or a running count.",
-    "code": "int nextTicket() {\n    static int issued = 0;\n    ++issued;\n    return issued;\n}\n",
+    "code": "#include <iostream>\nusing namespace std;\n\nint nextTicket() {\n    static int issued = 0;\n    ++issued;\n    return issued;\n}\n",
     "use": "int first = nextTicket();\nint second = nextTicket();\n",
     "parts": [
       [
@@ -152,7 +152,7 @@
     "group": "classes",
     "title": "Basic class: Rectangle",
     "when": "You need private data, constructors, getters, setters and a calculation.",
-    "code": "class Rectangle {\nprivate:\n    double length;\n    double width;\npublic:\n    Rectangle() : length(1), width(1) {}\n    Rectangle(double l, double w) : length(l), width(w) {}\n    double getLength() const { return length; }\n    double getWidth() const { return width; }\n    void setLength(double length) { this->length = length; }\n    void setWidth(double width) { this->width = width; }\n    double getArea() const { return length * width; }\n};\n",
+    "code": "#include <iostream>\nusing namespace std;\n\nclass Rectangle {\nprivate:\n    double length;\n    double width;\npublic:\n    Rectangle() : length(1), width(1) {}\n    Rectangle(double l, double w) : length(l), width(w) {}\n    double getLength() const { return length; }\n    double getWidth() const { return width; }\n    void setLength(double length) { this->length = length; }\n    void setWidth(double width) { this->width = width; }\n    double getArea() const { return length * width; }\n};\n",
     "use": "Rectangle r(3, 4);\nr.setLength(5);\ndouble area = r.getArea();\n",
     "parts": [
       [
@@ -186,7 +186,7 @@
     "group": "classes",
     "title": "Methods outside a class",
     "when": "The question gives a class declaration and asks for definitions.",
-    "code": "class Circle {\nprivate:\n    double radius;\npublic:\n    Circle(double r = 1);\n    double getArea() const;\n};\n\nCircle::Circle(double r) : radius(r) {}\n\ndouble Circle::getArea() const {\n    return 3.141592653589793 * radius * radius;\n}\n",
+    "code": "#include <iostream>\nusing namespace std;\n\nclass Circle {\nprivate:\n    double radius;\npublic:\n    Circle(double r = 1);\n    double getArea() const;\n};\n\nCircle::Circle(double r) : radius(r) {}\n\ndouble Circle::getArea() const {\n    return 3.141592653589793 * radius * radius;\n}\n",
     "use": "Circle c(2);\ndouble area = c.getArea();\n",
     "parts": [
       [
@@ -212,7 +212,7 @@
     "group": "classes",
     "title": "Simple struct",
     "when": "You just need to group related values.",
-    "code": "struct Measurement {\n    double value;\n    double time;\n};\n",
+    "code": "#include <iostream>\nusing namespace std;\n\nstruct Measurement {\n    double value;\n    double time;\n};\n",
     "use": "Measurement m{12.5, 2.0};\nm.value = 15;\n",
     "parts": [
       [
@@ -234,7 +234,7 @@
     "group": "classes",
     "title": "Static class member",
     "when": "You need one value shared by all instances.",
-    "code": "class CircleS {\nprivate:\n    double radius;\n    static int numberOfObjects;\npublic:\n    CircleS(double r = 1) : radius(r) { ++numberOfObjects; }\n    double getArea() const { return 3.141592653589793 * radius * radius; }\n    static int getNumberOfObjects() { return numberOfObjects; }\n};\n\nint CircleS::numberOfObjects = 0;\n",
+    "code": "#include <iostream>\nusing namespace std;\n\nclass CircleS {\nprivate:\n    double radius;\n    static int numberOfObjects;\npublic:\n    CircleS(double r = 1) : radius(r) { ++numberOfObjects; }\n    double getArea() const { return 3.141592653589793 * radius * radius; }\n    static int getNumberOfObjects() { return numberOfObjects; }\n};\n\nint CircleS::numberOfObjects = 0;\n",
     "use": "CircleS a(2), b(3);\nint count = CircleS::getNumberOfObjects();\n",
     "parts": [
       [
@@ -260,7 +260,7 @@
     "group": "classes",
     "title": "Base and derived class",
     "when": "You need a shared interface with different behavior for each shape.",
-    "code": "#include <iostream>\n\nclass Shape {\npublic:\n    virtual void draw() const = 0;\n    virtual ~Shape() = default;\n};\n\nclass RectangleShape : public Shape {\nprivate:\n    double length, width;\npublic:\n    RectangleShape(double l, double w) : length(l), width(w) {}\n    void draw() const override {\n        std::cout << length << \" x \" << width << '\\n';\n    }\n};\n",
+    "code": "#include <iostream>\nusing namespace std;\n\nclass Shape {\npublic:\n    virtual void draw() const = 0;\n    virtual ~Shape() = default;\n};\n\nclass RectangleShape : public Shape {\nprivate:\n    double length, width;\npublic:\n    RectangleShape(double l, double w) : length(l), width(w) {}\n    void draw() const override {\n        cout << length << \" x \" << width << '\\n';\n    }\n};\n",
     "use": "RectangleShape r(3, 4);\nShape* shape = &r;\nshape->draw();\n",
     "parts": [
       [
@@ -290,7 +290,7 @@
     "group": "templates",
     "title": "Function template: maxValue",
     "when": "The same function should work with int, double or another comparable type.",
-    "code": "template<typename T>\nT maxValue(T value1, T value2) {\n    if (value1 > value2) return value1;\n    return value2;\n}\n",
+    "code": "#include <iostream>\nusing namespace std;\n\ntemplate<typename T>\nT maxValue(T value1, T value2) {\n    if (value1 > value2) return value1;\n    return value2;\n}\n",
     "use": "int a = maxValue(3, 8);\ndouble b = maxValue<double>(3, 8.5);\n",
     "parts": [
       [
@@ -312,8 +312,8 @@
     "group": "templates",
     "title": "Class template: BuildingG",
     "when": "Your class must store values of a caller-chosen type.",
-    "code": "#include <string>\n\ntemplate<typename T>\nclass BuildingG {\npublic:\n    T x;\n    T y;\n    std::string name;\n    BuildingG() : x(0), y(0), name(\"noname\") {}\n    BuildingG(T x, T y, std::string name) : x(x), y(y), name(name) {}\n    std::string getName();\n};\n\ntemplate<typename T>\nstd::string BuildingG<T>::getName() {\n    return name;\n}\n",
-    "use": "BuildingG<double> b(2.5, 3.5, \"Lab\");\nstd::string name = b.getName();\n",
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\n\ntemplate<typename T>\nclass BuildingG {\npublic:\n    T x;\n    T y;\n    string name;\n    BuildingG() : x(0), y(0), name(\"noname\") {}\n    BuildingG(T x, T y, string name) : x(x), y(y), name(name) {}\n    string getName();\n};\n\ntemplate<typename T>\nstring BuildingG<T>::getName() {\n    return name;\n}\n",
+    "use": "BuildingG<double> b(2.5, 3.5, \"Lab\");\nstring name = b.getName();\n",
     "parts": [
       [
         "T x, T y",
@@ -338,7 +338,7 @@
     "group": "templates",
     "title": "Derived class template",
     "when": "You need a generic class derived from another generic class.",
-    "code": "#include <string>\n\ntemplate<typename T>\nclass BuildingBase {\npublic:\n    T x, y;\n    BuildingBase(T x, T y) : x(x), y(y) {}\n};\n\ntemplate<typename T>\nclass HouseG : public BuildingBase<T> {\npublic:\n    std::string owner;\n    HouseG(T x, T y, std::string owner)\n        : BuildingBase<T>(x, y), owner(owner) {}\n    T getX() const { return this->x; }\n};\n",
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\n\ntemplate<typename T>\nclass BuildingBase {\npublic:\n    T x, y;\n    BuildingBase(T x, T y) : x(x), y(y) {}\n};\n\ntemplate<typename T>\nclass HouseG : public BuildingBase<T> {\npublic:\n    string owner;\n    HouseG(T x, T y, string owner)\n        : BuildingBase<T>(x, y), owner(owner) {}\n    T getX() const { return this->x; }\n};\n",
     "use": "HouseG<double> h(3, 6, \"Ada\");\ndouble x = h.getX();\n",
     "parts": [
       [
@@ -364,7 +364,7 @@
     "group": "memory",
     "title": "Pointer parameter and object access",
     "when": "A function receives an address and changes the pointed-to value.",
-    "code": "void setValue(int* p, int value) {\n    if (p != nullptr) *p = value;\n}\n\nvoid redirect(int*& p, int* target) {\n    p = target;\n}\n",
+    "code": "#include <iostream>\nusing namespace std;\n\nvoid setValue(int* p, int value) {\n    if (p != nullptr) *p = value;\n}\n\nvoid redirect(int*& p, int* target) {\n    p = target;\n}\n",
     "use": "int a = 1, b = 2;\nint* p = &a;\nsetValue(p, 7);\nredirect(p, &b);\n",
     "parts": [
       [
@@ -390,7 +390,7 @@
     "group": "memory",
     "title": "Allocate and return an array",
     "when": "The function creates an array whose lifetime must continue after it returns.",
-    "code": "double* makeArray(int size) {\n    double* values = new double[size]{};\n    return values;\n}\n",
+    "code": "#include <iostream>\nusing namespace std;\n\ndouble* makeArray(int size) {\n    double* values = new double[size]{};\n    return values;\n}\n",
     "use": "int size = 3;\ndouble* values = makeArray(size);\nvalues[0] = 2.5;\ndelete[] values;\nvalues = nullptr;\n",
     "parts": [
       [
@@ -416,7 +416,7 @@
     "group": "memory",
     "title": "Objects, pointers and arrays",
     "when": "You need to create several objects and call their methods.",
-    "code": "class Reading {\nprivate:\n    double value;\npublic:\n    Reading(double v = 0) : value(v) {}\n    double getValue() const { return value; }\n    void setValue(double v) { value = v; }\n};\n",
+    "code": "#include <iostream>\nusing namespace std;\n\nclass Reading {\nprivate:\n    double value;\npublic:\n    Reading(double v = 0) : value(v) {}\n    double getValue() const { return value; }\n    void setValue(double v) { value = v; }\n};\n",
     "use": "Reading one(5);\nReading* p = &one;\ndouble value = p->getValue();\nReading* readings = new Reading[3];\nreadings[0].setValue(7);\ndelete[] readings;\n",
     "parts": [
       [
@@ -442,11 +442,11 @@
     "group": "memory",
     "title": "String methods and read-only reference",
     "when": "You need to find, split or examine text without copying the input unnecessarily.",
-    "code": "#include <string>\n\nstd::string firstPart(const std::string& text) {\n    std::string::size_type pos = text.find(' ');\n    if (pos == std::string::npos) return text;\n    return text.substr(0, pos);\n}\n",
-    "use": "std::string first = firstPart(\"Ada Lovelace\");\n",
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nstring firstPart(const string& text) {\n    string::size_type pos = text.find(' ');\n    if (pos == string::npos) return text;\n    return text.substr(0, pos);\n}\n",
+    "use": "string first = firstPart(\"Ada Lovelace\");\n",
     "parts": [
       [
-        "const std::string&",
+        "const string&",
         "Read the caller’s string through a reference."
       ],
       [
@@ -459,7 +459,7 @@
       ]
     ],
     "change": "Change the separator and substring positions. Use text.length() for its length.",
-    "watch": "Check npos before using the result as a valid index. Use a std::string, not a string literal, to call string methods.",
+    "watch": "Check npos before using the result as a valid index. Use a string, not a string literal, to call string methods.",
     "reference": "lecture slides/1-3_Objects_and_Classes.pdf",
     "test": "assert(first==\"Ada\");"
   },
@@ -468,8 +468,8 @@
     "group": "files",
     "title": "Read numbers from a file",
     "when": "You need to process every successfully read value.",
-    "code": "#include <fstream>\n#include <stdexcept>\n#include <string>\n\ndouble totalFile(const std::string& filename) {\n    std::ifstream input(filename);\n    if (!input) throw std::runtime_error(\"Cannot open file\");\n    double value, total = 0;\n    while (input >> value) {\n        total += value;\n    }\n    if (input.bad() || !input.eof()) {\n        throw std::runtime_error(\"Invalid data or read error\");\n    }\n    return total;\n}\n",
-    "use": "{\n    std::ofstream output(\"scores.txt\");\n    output << \"10 20 30\\n\";\n}\ndouble total = totalFile(\"scores.txt\");\n",
+    "code": "#include <iostream>\n#include <fstream>\n#include <stdexcept>\n#include <string>\nusing namespace std;\n\ndouble totalFile(const string& filename) {\n    ifstream input(filename);\n    if (!input) throw runtime_error(\"Cannot open file\");\n    double value, total = 0;\n    while (input >> value) {\n        total += value;\n    }\n    if (input.bad() || !input.eof()) {\n        throw runtime_error(\"Invalid data or read error\");\n    }\n    return total;\n}\n",
+    "use": "{\n    ofstream output(\"scores.txt\");\n    output << \"10 20 30\\n\";\n}\ndouble total = totalFile(\"scores.txt\");\n",
     "parts": [
       [
         "ifstream",
@@ -484,7 +484,7 @@
         "Distinguish the expected end of the file from other failure."
       ]
     ],
-    "change": "Change the input type and replace total += value with your processing. For whole lines use std::getline(input, line) and a std::string line.",
+    "change": "Change the input type and replace total += value with your processing. For whole lines use getline(input, line) and a string line.",
     "watch": "Do not loop on !input.eof(). Local streams close when they leave scope. The usage example creates a sample file.",
     "reference": "lecture slides/1-4_Files_and_Exception_Handling.pdf",
     "test": "assert(total==60);"
@@ -494,7 +494,7 @@
     "group": "files",
     "title": "Write or append a file",
     "when": "You need to save results without erasing earlier entries.",
-    "code": "#include <fstream>\n#include <stdexcept>\n#include <string>\n\nvoid appendValue(const std::string& filename, double value) {\n    std::ofstream output(filename, std::ios::app);\n    if (!output) throw std::runtime_error(\"Cannot open file\");\n    output << value << '\\n';\n    output.close();\n    if (!output) throw std::runtime_error(\"Cannot write file\");\n}\n",
+    "code": "#include <iostream>\n#include <fstream>\n#include <stdexcept>\n#include <string>\nusing namespace std;\n\nvoid appendValue(const string& filename, double value) {\n    ofstream output(filename, ios::app);\n    if (!output) throw runtime_error(\"Cannot open file\");\n    output << value << '\\n';\n    output.close();\n    if (!output) throw runtime_error(\"Cannot write file\");\n}\n",
     "use": "appendValue(\"results.txt\", 12.5);\n",
     "parts": [
       [
@@ -510,18 +510,18 @@
         "Finish writing and check for failure."
       ]
     ],
-    "change": "Remove std::ios::app to replace the file contents. Change the output expression to write fields separated by spaces.",
+    "change": "Remove ios::app to replace the file contents. Change the output expression to write fields separated by spaces.",
     "watch": "Ordinary ofstream opening overwrites existing contents; choose the mode deliberately.",
     "reference": "lecture slides/1-4_Files_and_Exception_Handling.pdf",
-    "test": "std::ifstream in(\"results.txt\");double v;in>>v;assert(v==12.5);"
+    "test": "ifstream in(\"results.txt\");double v;in>>v;assert(v==12.5);"
   },
   {
     "id": "exceptions",
     "group": "files",
     "title": "Throw and catch an exception",
     "when": "An invalid operation must be reported to the caller.",
-    "code": "#include <iostream>\n#include <stdexcept>\n\ndouble quotient(double numerator, double denominator) {\n    if (denominator == 0) {\n        throw std::runtime_error(\"Cannot divide by zero\");\n    }\n    return numerator / denominator;\n}\n",
-    "use": "try {\n    double result = quotient(8, 2);\n    (void)result;\n} catch (const std::exception& error) {\n    std::cerr << error.what() << '\\n';\n}\n",
+    "code": "#include <iostream>\n#include <stdexcept>\nusing namespace std;\n\ndouble quotient(double numerator, double denominator) {\n    if (denominator == 0) {\n        throw runtime_error(\"Cannot divide by zero\");\n    }\n    return numerator / denominator;\n}\n",
+    "use": "try {\n    double result = quotient(8, 2);\n    (void)result;\n} catch (const exception& error) {\n    cerr << error.what() << '\\n';\n}\n",
     "parts": [
       [
         "throw",
@@ -543,14 +543,14 @@
     "change": "Change the invalid condition and message; replace quotient with your own operation.",
     "watch": "Statements after a throw in the try block are skipped. An ordinary file-stream failure usually sets flags rather than throwing.",
     "reference": "lecture slides/1-4_Files_and_Exception_Handling.pdf",
-    "test": "assert(quotient(8,2)==4);bool caught=false;try{quotient(1,0);}catch(const std::runtime_error&){caught=true;}assert(caught);"
+    "test": "assert(quotient(8,2)==4);bool caught=false;try{quotient(1,0);}catch(const runtime_error&){caught=true;}assert(caught);"
   },
   {
     "id": "linked-list",
     "group": "structures",
     "title": "Singly linked list: IntSLList",
     "when": "You need to insert at either end and remove the head.",
-    "code": "#include <iostream>\nusing namespace std;\nclass IntSLLNode {\npublic:\n    IntSLLNode(int el, IntSLLNode *ptr = nullptr) { info = el; next = ptr; }\n    int info;\n    IntSLLNode *next;\n};\nclass IntSLList {\n    IntSLLNode *head, *tail;\npublic:\n    IntSLList() { head = tail = nullptr; }\n    int isEmpty() { return head == nullptr; }\n    void addToHead(int el) {\n        head = new IntSLLNode(el, head);\n        if (tail == nullptr) tail = head;\n    }\n    void addToTail(int el) {\n        if (tail != nullptr) {\n            tail->next = new IntSLLNode(el);\n            tail = tail->next;\n        } else head = tail = new IntSLLNode(el);\n    }\n    int deleteFromHead() { \n        int el = head->info;\n        IntSLLNode *tmp = head;\n        if (head == tail) head = tail = nullptr;\n        else head = head->next;\n        delete tmp;\n        return el;\n    }\n    ~IntSLList() { while (!isEmpty()) deleteFromHead(); }\n    \n    IntSLList(const IntSLList&) = delete;\n    IntSLList& operator=(const IntSLList&) = delete;\n};\n",
+    "code": "#include <iostream>\nusing namespace std;\n\nclass IntSLLNode {\npublic:\n    IntSLLNode(int el, IntSLLNode *ptr = nullptr) { info = el; next = ptr; }\n    int info;\n    IntSLLNode *next;\n};\nclass IntSLList {\n    IntSLLNode *head, *tail;\npublic:\n    IntSLList() { head = tail = nullptr; }\n    int isEmpty() { return head == nullptr; }\n    void addToHead(int el) {\n        head = new IntSLLNode(el, head);\n        if (tail == nullptr) tail = head;\n    }\n    void addToTail(int el) {\n        if (tail != nullptr) {\n            tail->next = new IntSLLNode(el);\n            tail = tail->next;\n        } else head = tail = new IntSLLNode(el);\n    }\n    int deleteFromHead() { \n        int el = head->info;\n        IntSLLNode *tmp = head;\n        if (head == tail) head = tail = nullptr;\n        else head = head->next;\n        delete tmp;\n        return el;\n    }\n    ~IntSLList() { while (!isEmpty()) deleteFromHead(); }\n    \n    IntSLList(const IntSLList&) = delete;\n    IntSLList& operator=(const IntSLList&) = delete;\n};\n",
     "use": "IntSLList lst;\nlst.addToHead(20);\nlst.addToTail(30);\nint first = lst.deleteFromHead();\n",
     "parts": [
       [
@@ -604,7 +604,7 @@
         "Inspect without removing; empty access throws StackException."
       ]
     ],
-    "change": "Choose Stack<double>, Stack<std::string> or Stack<Shape*>. For Shape*, delete each owned shape after popping it; deleting nodes alone does not delete the pointed-to shapes.",
+    "change": "Choose Stack<double>, Stack<string> or Stack<Shape*>. For Shape*, delete each owned shape after popping it; deleting nodes alone does not delete the pointed-to shapes.",
     "watch": "This uses the lab API: pop returns T. Keep template code in the header. Cleanup and disabled copying are practice additions.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "test": "assert(peek==20 && removed==20 && s.size()==1);"
@@ -613,7 +613,7 @@
     "id": "linked-queue",
     "group": "structures",
     "title": "Linked queue: ListQueue<T>",
-    "when": "You need FIFO using the supplied std::list-based example.",
+    "when": "You need FIFO using the supplied list-based example.",
     "code": "#include <iostream>\n#include <list>\nusing namespace std;\n\ntemplate<class T>\nclass ListQueue {\npublic:\n\tListQueue() {\n\t}\n\tvoid clear() {\n\t\tlst.clear();\n\t}\n\tbool isEmpty() const {\n\t\treturn lst.empty();\n\t}\n\tT& front() {\n\t\treturn lst.front();\n\t}\n\tT dequeue() {\n\t\tT el = lst.front();\n\t\tlst.pop_front();\n\t\treturn el;\n\t}\n\tvoid enqueue(const T& el) {\n\t\tlst.push_back(el);\n\t}\nprivate:\n\tlist<T> lst;\n};\n",
     "use": "ListQueue<int> q;\nq.enqueue(10);\nq.enqueue(20);\nint first = q.dequeue();\n",
     "parts": [
@@ -635,7 +635,7 @@
       ]
     ],
     "change": "Choose the stored type with ListQueue<double> or another suitable type.",
-    "watch": "Check isEmpty before front or dequeue. The supplied example uses std::list; use the linked-list template above to study manual node links.",
+    "watch": "Check isEmpty before front or dequeue. The supplied example uses list; use the linked-list template above to study manual node links.",
     "reference": "workspace/reference/examples/Stacks_and_Queues/GenListQueue.h",
     "test": "assert(first==10 && q.front()==20);"
   },

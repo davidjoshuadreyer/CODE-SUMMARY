@@ -1,12 +1,15 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Midterm class & structure patterns · COMP 139E</title><link rel="stylesheet" href="code-templates.css?v=3"><script defer src="code-templates.js?v=3"></script></head><body><a class="skip" href="#content">Skip to templates</a><header class="page-header"><nav aria-label="Breadcrumb"><a href="../index.html#course/comp139e">← COMP 139E</a><span>/</span><a href="midterm-practice.html">Fill-in-the-blank practice</a><span>/</span><a href="cpp-cheat-sheet.html">Quick rules</a></nav><p class="eyebrow">YOUR C++ TOOLBOX</p><h1>Classes, links, stacks & queues.</h1><p class="intro">24 practice question patterns for the topics your instructor identified. Copy a blank starter with fill-in comments, then open the worked solution when you need it. These are study examples, not predictions of the exam questions.</p><p class="focus-link"><a href="code-templates.html">← All C++ code templates</a></p><div class="instructions"><div><strong>1 · Pick a pattern</strong><p>Search by what you need to do, or choose a topic.</p></div><div><strong>2 · Copy only the code</strong><p>Blank templates include short TODO comments. Longer explanations stay outside the code. “Copy runnable solution” includes the completed answer and one main().</p></div><div><strong>3 · Make it yours</strong><p>Open “What to change” for the names, types and logic to replace.</p></div></div></header><div class="library-layout"><aside><div class="index"><label for="template-search">Find a template</label><input id="template-search" type="search" placeholder="Try: constructor, pop, file…"><p id="search-count" role="status">24 templates</p><nav aria-label="Template topics"><a href="#placement">Where does code go?</a><details open><summary>Inheritance</summary><a href="#inherit-basic" data-index="inherit-basic">01 · Base class + derived class</a><a href="#inherit-abstract" data-index="inherit-abstract">02 · Abstract Shape + area</a><a href="#inherit-protected" data-index="inherit-protected">03 · Protected data + override</a><a href="#inherit-base-call" data-index="inherit-base-call">04 · Extend a base method</a><a href="#inherit-outside" data-index="inherit-outside">05 · Define derived methods outside the class</a><a href="#inherit-template" data-index="inherit-template">06 · Generic base + generic derived class</a></details><details open><summary>Linked lists</summary><a href="#list-core" data-index="list-core">07 · Build a singly linked list</a><a href="#list-count" data-index="list-count">08 · Traverse and count nodes</a><a href="#list-find" data-index="list-find">09 · Search for a value</a><a href="#list-tail" data-index="list-tail">10 · Delete the tail</a><a href="#list-remove-value" data-index="list-remove-value">11 · Delete the first matching node</a><a href="#list-reverse" data-index="list-reverse">12 · Reverse links in place</a></details><details open><summary>Stacks</summary><a href="#stack-core" data-index="stack-core">13 · Build Lab 6 Stack&lt;T&gt;</a><a href="#stack-clear" data-index="stack-clear">14 · Clear and reuse a stack</a><a href="#stack-reverse-text" data-index="stack-reverse-text">15 · Use a stack to reverse text</a><a href="#stack-brackets" data-index="stack-brackets">16 · Check balanced parentheses</a><a href="#stack-transfer" data-index="stack-transfer">17 · Pass stacks by reference</a><a href="#stack-shapes" data-index="stack-shapes">18 · Combine inheritance + Stack&lt;Shape*&gt;</a></details><details open><summary>Queues</summary><a href="#queue-manual" data-index="queue-manual">19 · Build a queue using linked nodes</a><a href="#queue-list" data-index="queue-list">20 · Course ListQueue&lt;T&gt;</a><a href="#queue-circular" data-index="queue-circular">21 · Course circular ArrayQueue&lt;T, size&gt;</a><a href="#queue-records" data-index="queue-records">22 · Queue objects in arrival order</a><a href="#queue-rotate" data-index="queue-rotate">23 · Move the front item to the back</a><a href="#queue-reverse" data-index="queue-reverse">24 · Reverse a queue using a stack</a></details></nav></div></aside><main id="content"><section class="placement" id="placement"><h2>Where does code go?</h2><dl><dt>Top of the file</dt><dd>#include lines for the libraries you use.</dd><dt>Above main() / in a header</dt><dd>Structs, classes, function declarations and template definitions. Wrap a header in #ifndef NAME_HPP, #define NAME_HPP and #endif.</dd><dt>Inside main()</dt><dd>Create objects and call functions. This is where the “Usage” code goes.</dd><dt>Outside the class</dt><dd>Separate method definitions use ClassName::. Template methods also repeat template&lt;typename T&gt; and use ClassName&lt;T&gt;::.</dd></dl><p>Each card is independent. Combine only the pieces you need; keep one main() and one definition of each class or function.</p></section><p id="no-results" hidden>No matching templates. Try “array”, “class”, “stack” or “file”.</p><section class="topic" id="inheritance"><div class="section-title"><p class="eyebrow">Inheritance</p><h2>Inheritance</h2></div><article id="inherit-basic" class="template" data-search="01 · base class + derived class inheritance inheritance create person with a name, then student with an id. initialize the base from the derived constructor and provide getters. replace person/student and their data with the types in the question. a derived class cannot directly read private base fields; use the base getter. base class stores common fields. derived initializer list calls person(name) before initializing id."><header><h3>01 · Base class + derived class</h3><p>Create Person with a name, then Student with an ID. Initialize the base from the derived constructor and provide getters.</p><div class="card-actions"><a href="#inherit-basic" aria-label="Link to 01 · Base class + derived class"># Link</a><button type="button" data-program="inherit-basic">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="inherit-basic-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="inherit-basic-starter">// EDIT: rename classes, fields and parameter types to match your question.
-// TODO bodies below are unfinished; complete them before compiling.
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Midterm class & structure patterns · COMP 139E</title><link rel="stylesheet" href="code-templates.css?v=3"><script defer src="code-templates.js?v=3"></script></head><body><a class="skip" href="#content">Skip to templates</a><header class="page-header"><nav aria-label="Breadcrumb"><a href="../index.html#course/comp139e">← COMP 139E</a><span>/</span><a href="midterm-practice.html">Fill-in-the-blank practice</a><span>/</span><a href="cpp-cheat-sheet.html">Quick rules</a></nav><p class="eyebrow">YOUR C++ TOOLBOX</p><h1>Classes, links, stacks & queues.</h1><p class="intro">24 practice question patterns for the topics your instructor identified. Copy a blank starter with fill-in comments, then open the worked solution when you need it. These are study examples, not predictions of the exam questions.</p><p class="focus-link"><a href="code-templates.html">← All C++ code templates</a></p><div class="instructions"><div><strong>1 · Pick a pattern</strong><p>Search by what you need to do, or choose a topic.</p></div><div><strong>2 · Copy only the code</strong><p>Blank templates include short TODO comments. Longer explanations stay outside the code. “Copy runnable solution” includes the completed answer and one main().</p></div><div><strong>3 · Make it yours</strong><p>Open “What to change” for the names, types and logic to replace.</p></div></div></header><div class="library-layout"><aside><div class="index"><label for="template-search">Find a template</label><input id="template-search" type="search" placeholder="Try: constructor, pop, file…"><p id="search-count" role="status">24 templates</p><nav aria-label="Template topics"><a href="#placement">Where does code go?</a><details open><summary>Inheritance</summary><a href="#inherit-basic" data-index="inherit-basic">01 · Base class + derived class</a><a href="#inherit-abstract" data-index="inherit-abstract">02 · Abstract Shape + area</a><a href="#inherit-protected" data-index="inherit-protected">03 · Protected data + override</a><a href="#inherit-base-call" data-index="inherit-base-call">04 · Extend a base method</a><a href="#inherit-outside" data-index="inherit-outside">05 · Define derived methods outside the class</a><a href="#inherit-template" data-index="inherit-template">06 · Generic base + generic derived class</a></details><details open><summary>Linked lists</summary><a href="#list-core" data-index="list-core">07 · Build a singly linked list</a><a href="#list-count" data-index="list-count">08 · Traverse and count nodes</a><a href="#list-find" data-index="list-find">09 · Search for a value</a><a href="#list-tail" data-index="list-tail">10 · Delete the tail</a><a href="#list-remove-value" data-index="list-remove-value">11 · Delete the first matching node</a><a href="#list-reverse" data-index="list-reverse">12 · Reverse links in place</a></details><details open><summary>Stacks</summary><a href="#stack-core" data-index="stack-core">13 · Build Lab 6 Stack&lt;T&gt;</a><a href="#stack-clear" data-index="stack-clear">14 · Clear and reuse a stack</a><a href="#stack-reverse-text" data-index="stack-reverse-text">15 · Use a stack to reverse text</a><a href="#stack-brackets" data-index="stack-brackets">16 · Check balanced parentheses</a><a href="#stack-transfer" data-index="stack-transfer">17 · Pass stacks by reference</a><a href="#stack-shapes" data-index="stack-shapes">18 · Combine inheritance + Stack&lt;Shape*&gt;</a></details><details open><summary>Queues</summary><a href="#queue-manual" data-index="queue-manual">19 · Build a queue using linked nodes</a><a href="#queue-list" data-index="queue-list">20 · Course ListQueue&lt;T&gt;</a><a href="#queue-circular" data-index="queue-circular">21 · Course circular ArrayQueue&lt;T, size&gt;</a><a href="#queue-records" data-index="queue-records">22 · Queue objects in arrival order</a><a href="#queue-rotate" data-index="queue-rotate">23 · Move the front item to the back</a><a href="#queue-reverse" data-index="queue-reverse">24 · Reverse a queue using a stack</a></details></nav></div></aside><main id="content"><section class="placement" id="placement"><h2>Where does code go?</h2><dl><dt>Top of the file</dt><dd>#include lines for the libraries you use.</dd><dt>Above main() / in a header</dt><dd>Structs, classes, function declarations and template definitions. Wrap a header in #ifndef NAME_HPP, #define NAME_HPP and #endif.</dd><dt>Inside main()</dt><dd>Create objects and call functions. This is where the “Usage” code goes.</dd><dt>Outside the class</dt><dd>Separate method definitions use ClassName::. Template methods also repeat template&lt;typename T&gt; and use ClassName&lt;T&gt;::.</dd></dl><p>Each card is independent. Combine only the pieces you need; keep one main() and one definition of each class or function.</p></section><p id="no-results" hidden>No matching templates. Try “array”, “class”, “stack” or “file”.</p><section class="topic" id="inheritance"><div class="section-title"><p class="eyebrow">Inheritance</p><h2>Inheritance</h2></div><article id="inherit-basic" class="template" data-search="01 · base class + derived class inheritance inheritance create person with a name, then student with an id. initialize the base from the derived constructor and provide getters. replace person/student and their data with the types in the question. a derived class cannot directly read private base fields; use the base getter. base class stores common fields. derived initializer list calls person(name) before initializing id."><header><h3>01 · Base class + derived class</h3><p>Create Person with a name, then Student with an ID. Initialize the base from the derived constructor and provide getters.</p><div class="card-actions"><a href="#inherit-basic" aria-label="Link to 01 · Base class + derived class"># Link</a><button type="button" data-program="inherit-basic">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="inherit-basic-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="inherit-basic-starter">#include &lt;iostream&gt;
 #include &lt;string&gt;
+using namespace std;
+
+// EDIT: rename classes, fields and parameter types to match your question.
+// TODO bodies below are unfinished; complete them before compiling.
 class Person {
 private:
-    std::string name;
+    string name;
 public:
-    Person(std::string name) : name(name) {}
-    std::string getName() const {
+    Person(string name) : name(name) {}
+    string getName() const {
         // TODO: return the stored name.
     }
 };
@@ -14,7 +17,7 @@ class Student : public Person {
 private:
     int id;
 public:
-    Student(std::string name, int id) : Person(name), id(id) {}
+    Student(string name, int id) : Person(name), id(id) {}
     int getId() const {
         // TODO: return the stored id.
     }
@@ -24,25 +27,31 @@ public:
     // TODO: test normal, empty and one-item cases where applicable.
     return 0;
 }
-</code></pre></details><details class="solution"><summary>Show worked solution</summary><div class="code-heading"><div><strong>Solution</strong><small>One completed solution to this practice question.</small></div><button type="button" data-copy="inherit-basic-code" aria-label="Copy Solution">Copy solution</button></div><pre tabindex="0"><code id="inherit-basic-code">#include &lt;string&gt;
+</code></pre></details><details class="solution"><summary>Show worked solution</summary><div class="code-heading"><div><strong>Solution</strong><small>One completed solution to this practice question.</small></div><button type="button" data-copy="inherit-basic-code" aria-label="Copy Solution">Copy solution</button></div><pre tabindex="0"><code id="inherit-basic-code">#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
 class Person {
 private:
-    std::string name;
+    string name;
 public:
-    Person(std::string name) : name(name) {}
-    std::string getName() const { return name; }
+    Person(string name) : name(name) {}
+    string getName() const { return name; }
 };
 class Student : public Person {
 private:
     int id;
 public:
-    Student(std::string name, int id) : Person(name), id(id) {}
+    Student(string name, int id) : Person(name), id(id) {}
     int getId() const { return id; }
 };
 </code></pre></details>
 <details class="explanation"><summary>What it does · What to change</summary><div class="explanation-body"><dl><dt>Base class</dt><dd>Stores common fields.</dd><dt>Derived initializer list</dt><dd>Calls Person(name) before initializing id.</dd></dl><h4>What to change</h4><p>Replace Person/Student and their data with the types in the question.</p><h4>Remember</h4><p>A derived class cannot directly read private base fields; use the base getter.</p><a href="workspace/reference/course/labs/files/ShapeExample/Rectangle.hpp">Course source ↗</a><p class="source-note">A simplified study adaptation of the linked slides or supplied course example; not a verbatim answer key.</p></div></details>
 <details class="usage"><summary>Example test case / usage</summary><div class="code-heading"><div><strong>Usage</strong><small>Paste inside main(), after copying the template.</small></div><button type="button" data-copy="inherit-basic-use" aria-label="Copy Usage">Copy usage</button></div><pre tabindex="0"><code id="inherit-basic-use">Student s(&quot;Ada&quot;, 42);
-</code></pre><p class="expected"><strong>Expected result:</strong> Name Ada; ID 42.</p></details></article><article id="inherit-abstract" class="template" data-search="02 · abstract shape + area inheritance inheritance create an abstract shape with getarea(), then implement rectangle and circle. call both through shape pointers. replace getarea with draw, cost, volume or the requested operation. the local objects are borrowed; do not delete &amp;r or &amp;c. a virtual destructor permits deletion through a base pointer when objects are allocated with new. = 0 makes getarea pure virtual and shape abstract. override the signature must match the base, including const. shape* dispatches to the actual object’s method."><header><h3>02 · Abstract Shape + area</h3><p>Create an abstract Shape with getArea(), then implement Rectangle and Circle. Call both through Shape pointers.</p><div class="card-actions"><a href="#inherit-abstract" aria-label="Link to 02 · Abstract Shape + area"># Link</a><button type="button" data-program="inherit-abstract">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="inherit-abstract-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="inherit-abstract-starter">// EDIT: rename classes, fields and parameter types to match your question.
+</code></pre><p class="expected"><strong>Expected result:</strong> Name Ada; ID 42.</p></details></article><article id="inherit-abstract" class="template" data-search="02 · abstract shape + area inheritance inheritance create an abstract shape with getarea(), then implement rectangle and circle. call both through shape pointers. replace getarea with draw, cost, volume or the requested operation. the local objects are borrowed; do not delete &amp;r or &amp;c. a virtual destructor permits deletion through a base pointer when objects are allocated with new. = 0 makes getarea pure virtual and shape abstract. override the signature must match the base, including const. shape* dispatches to the actual object’s method."><header><h3>02 · Abstract Shape + area</h3><p>Create an abstract Shape with getArea(), then implement Rectangle and Circle. Call both through Shape pointers.</p><div class="card-actions"><a href="#inherit-abstract" aria-label="Link to 02 · Abstract Shape + area"># Link</a><button type="button" data-program="inherit-abstract">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="inherit-abstract-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="inherit-abstract-starter">#include &lt;iostream&gt;
+using namespace std;
+
+// EDIT: rename classes, fields and parameter types to match your question.
 // TODO bodies below are unfinished; complete them before compiling.
 class Shape {
 public:
@@ -70,7 +79,10 @@ public:
     // TODO: test normal, empty and one-item cases where applicable.
     return 0;
 }
-</code></pre></details><details class="solution"><summary>Show worked solution</summary><div class="code-heading"><div><strong>Solution</strong><small>One completed solution to this practice question.</small></div><button type="button" data-copy="inherit-abstract-code" aria-label="Copy Solution">Copy solution</button></div><pre tabindex="0"><code id="inherit-abstract-code">class Shape {
+</code></pre></details><details class="solution"><summary>Show worked solution</summary><div class="code-heading"><div><strong>Solution</strong><small>One completed solution to this practice question.</small></div><button type="button" data-copy="inherit-abstract-code" aria-label="Copy Solution">Copy solution</button></div><pre tabindex="0"><code id="inherit-abstract-code">#include &lt;iostream&gt;
+using namespace std;
+
+class Shape {
 public:
     virtual double getArea() const = 0;
     virtual ~Shape() = default;
@@ -94,7 +106,10 @@ Circle c(2);
 Shape* shapes[] = {&amp;r, &amp;c};
 double total = 0;
 for (int i = 0; i &lt; 2; ++i) total += shapes[i]-&gt;getArea();
-</code></pre><p class="expected"><strong>Expected result:</strong> Total area is approximately 24.5664.</p></details></article><article id="inherit-protected" class="template" data-search="03 · protected data + override inheritance inheritance create account with a protected balance and virtual monthlychange(). derive savingsaccount that adds interest. replace the balance/rate fields and update rule. do not redeclare balance in the derived class; that would create a different field. protected derived methods can access balance; outside callers cannot. virtual calls through account* select the derived override."><header><h3>03 · Protected data + override</h3><p>Create Account with a protected balance and virtual monthlyChange(). Derive SavingsAccount that adds interest.</p><div class="card-actions"><a href="#inherit-protected" aria-label="Link to 03 · Protected data + override"># Link</a><button type="button" data-program="inherit-protected">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="inherit-protected-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="inherit-protected-starter">// EDIT: rename classes, fields and parameter types to match your question.
+</code></pre><p class="expected"><strong>Expected result:</strong> Total area is approximately 24.5664.</p></details></article><article id="inherit-protected" class="template" data-search="03 · protected data + override inheritance inheritance create account with a protected balance and virtual monthlychange(). derive savingsaccount that adds interest. replace the balance/rate fields and update rule. do not redeclare balance in the derived class; that would create a different field. protected derived methods can access balance; outside callers cannot. virtual calls through account* select the derived override."><header><h3>03 · Protected data + override</h3><p>Create Account with a protected balance and virtual monthlyChange(). Derive SavingsAccount that adds interest.</p><div class="card-actions"><a href="#inherit-protected" aria-label="Link to 03 · Protected data + override"># Link</a><button type="button" data-program="inherit-protected">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="inherit-protected-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="inherit-protected-starter">#include &lt;iostream&gt;
+using namespace std;
+
+// EDIT: rename classes, fields and parameter types to match your question.
 // TODO bodies below are unfinished; complete them before compiling.
 class Account {
 protected:
@@ -122,7 +137,10 @@ public:
     // TODO: test normal, empty and one-item cases where applicable.
     return 0;
 }
-</code></pre></details><details class="solution"><summary>Show worked solution</summary><div class="code-heading"><div><strong>Solution</strong><small>One completed solution to this practice question.</small></div><button type="button" data-copy="inherit-protected-code" aria-label="Copy Solution">Copy solution</button></div><pre tabindex="0"><code id="inherit-protected-code">class Account {
+</code></pre></details><details class="solution"><summary>Show worked solution</summary><div class="code-heading"><div><strong>Solution</strong><small>One completed solution to this practice question.</small></div><button type="button" data-copy="inherit-protected-code" aria-label="Copy Solution">Copy solution</button></div><pre tabindex="0"><code id="inherit-protected-code">#include &lt;iostream&gt;
+using namespace std;
+
+class Account {
 protected:
     double balance;
 public:
@@ -142,7 +160,10 @@ public:
 <details class="usage"><summary>Example test case / usage</summary><div class="code-heading"><div><strong>Usage</strong><small>Paste inside main(), after copying the template.</small></div><button type="button" data-copy="inherit-protected-use" aria-label="Copy Usage">Copy usage</button></div><pre tabindex="0"><code id="inherit-protected-use">SavingsAccount savings(100, 0.05);
 Account* account = &amp;savings;
 account-&gt;monthlyChange();
-</code></pre><p class="expected"><strong>Expected result:</strong> Balance changes from 100 to 105.</p></details></article><article id="inherit-base-call" class="template" data-search="04 · extend a base method inheritance inheritance create device::reset() to clear a reading. override reset in sensor to also clear its error count, while reusing the base reset. use this pattern when the question says extend existing behavior. calling reset() unqualified inside itself would recurse. device::reset() explicitly reuse the base implementation. derived reset adds the sensor-specific work."><header><h3>04 · Extend a base method</h3><p>Create Device::reset() to clear a reading. Override reset in Sensor to also clear its error count, while reusing the base reset.</p><div class="card-actions"><a href="#inherit-base-call" aria-label="Link to 04 · Extend a base method"># Link</a><button type="button" data-program="inherit-base-call">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="inherit-base-call-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="inherit-base-call-starter">// EDIT: rename classes, fields and parameter types to match your question.
+</code></pre><p class="expected"><strong>Expected result:</strong> Balance changes from 100 to 105.</p></details></article><article id="inherit-base-call" class="template" data-search="04 · extend a base method inheritance inheritance create device::reset() to clear a reading. override reset in sensor to also clear its error count, while reusing the base reset. use this pattern when the question says extend existing behavior. calling reset() unqualified inside itself would recurse. device::reset() explicitly reuse the base implementation. derived reset adds the sensor-specific work."><header><h3>04 · Extend a base method</h3><p>Create Device::reset() to clear a reading. Override reset in Sensor to also clear its error count, while reusing the base reset.</p><div class="card-actions"><a href="#inherit-base-call" aria-label="Link to 04 · Extend a base method"># Link</a><button type="button" data-program="inherit-base-call">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="inherit-base-call-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="inherit-base-call-starter">#include &lt;iostream&gt;
+using namespace std;
+
+// EDIT: rename classes, fields and parameter types to match your question.
 // TODO bodies below are unfinished; complete them before compiling.
 class Device {
 protected:
@@ -173,7 +194,10 @@ public:
     // TODO: test normal, empty and one-item cases where applicable.
     return 0;
 }
-</code></pre></details><details class="solution"><summary>Show worked solution</summary><div class="code-heading"><div><strong>Solution</strong><small>One completed solution to this practice question.</small></div><button type="button" data-copy="inherit-base-call-code" aria-label="Copy Solution">Copy solution</button></div><pre tabindex="0"><code id="inherit-base-call-code">class Device {
+</code></pre></details><details class="solution"><summary>Show worked solution</summary><div class="code-heading"><div><strong>Solution</strong><small>One completed solution to this practice question.</small></div><button type="button" data-copy="inherit-base-call-code" aria-label="Copy Solution">Copy solution</button></div><pre tabindex="0"><code id="inherit-base-call-code">#include &lt;iostream&gt;
+using namespace std;
+
+class Device {
 protected:
     double reading;
 public:
@@ -196,7 +220,10 @@ public:
 <details class="explanation"><summary>What it does · What to change</summary><div class="explanation-body"><dl><dt>Device::reset()</dt><dd>Explicitly reuse the base implementation.</dd><dt>Derived reset</dt><dd>Adds the sensor-specific work.</dd></dl><h4>What to change</h4><p>Use this pattern when the question says extend existing behavior.</p><h4>Remember</h4><p>Calling reset() unqualified inside itself would recurse.</p><a href="workspace/reference/course/labs/files/ShapeExample/Rectangle.hpp">Course source ↗</a><p class="source-note">A simplified study adaptation of the linked slides or supplied course example; not a verbatim answer key.</p></div></details>
 <details class="usage"><summary>Example test case / usage</summary><div class="code-heading"><div><strong>Usage</strong><small>Paste inside main(), after copying the template.</small></div><button type="button" data-copy="inherit-base-call-use" aria-label="Copy Usage">Copy usage</button></div><pre tabindex="0"><code id="inherit-base-call-use">Sensor sensor(12, 3);
 sensor.reset();
-</code></pre><p class="expected"><strong>Expected result:</strong> Reading and error count both become 0.</p></details></article><article id="inherit-outside" class="template" data-search="05 · define derived methods outside the class inheritance inheritance declare shape and rectangle, then define rectangle’s constructor and getarea outside its class. move declarations to a guarded header and definitions to a .cpp including that header. repeat const, but not override, on the outside definition. inside the class declarations end in semicolons. rectangle:: qualifies definitions outside the class."><header><h3>05 · Define derived methods outside the class</h3><p>Declare Shape and Rectangle, then define Rectangle’s constructor and getArea outside its class.</p><div class="card-actions"><a href="#inherit-outside" aria-label="Link to 05 · Define derived methods outside the class"># Link</a><button type="button" data-program="inherit-outside">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="inherit-outside-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="inherit-outside-starter">// EDIT: rename classes, fields and parameter types to match your question.
+</code></pre><p class="expected"><strong>Expected result:</strong> Reading and error count both become 0.</p></details></article><article id="inherit-outside" class="template" data-search="05 · define derived methods outside the class inheritance inheritance declare shape and rectangle, then define rectangle’s constructor and getarea outside its class. move declarations to a guarded header and definitions to a .cpp including that header. repeat const, but not override, on the outside definition. inside the class declarations end in semicolons. rectangle:: qualifies definitions outside the class."><header><h3>05 · Define derived methods outside the class</h3><p>Declare Shape and Rectangle, then define Rectangle’s constructor and getArea outside its class.</p><div class="card-actions"><a href="#inherit-outside" aria-label="Link to 05 · Define derived methods outside the class"># Link</a><button type="button" data-program="inherit-outside">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="inherit-outside-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="inherit-outside-starter">#include &lt;iostream&gt;
+using namespace std;
+
+// EDIT: rename classes, fields and parameter types to match your question.
 // TODO bodies below are unfinished; complete them before compiling.
 class Shape {
 public:
@@ -218,7 +245,10 @@ double Rectangle::getArea() const {
     // TODO: test normal, empty and one-item cases where applicable.
     return 0;
 }
-</code></pre></details><details class="solution"><summary>Show worked solution</summary><div class="code-heading"><div><strong>Solution</strong><small>One completed solution to this practice question.</small></div><button type="button" data-copy="inherit-outside-code" aria-label="Copy Solution">Copy solution</button></div><pre tabindex="0"><code id="inherit-outside-code">class Shape {
+</code></pre></details><details class="solution"><summary>Show worked solution</summary><div class="code-heading"><div><strong>Solution</strong><small>One completed solution to this practice question.</small></div><button type="button" data-copy="inherit-outside-code" aria-label="Copy Solution">Copy solution</button></div><pre tabindex="0"><code id="inherit-outside-code">#include &lt;iostream&gt;
+using namespace std;
+
+class Shape {
 public:
     virtual double getArea() const = 0;
     virtual ~Shape() = default;
@@ -236,9 +266,12 @@ double Rectangle::getArea() const {
 </code></pre></details>
 <details class="explanation"><summary>What it does · What to change</summary><div class="explanation-body"><dl><dt>Inside the class</dt><dd>Declarations end in semicolons.</dd><dt>Rectangle::</dt><dd>Qualifies definitions outside the class.</dd></dl><h4>What to change</h4><p>Move declarations to a guarded header and definitions to a .cpp including that header.</p><h4>Remember</h4><p>Repeat const, but not override, on the outside definition.</p><a href="workspace/reference/course/labs/files/ShapeExample/Rectangle.hpp">Course source ↗</a><p class="source-note">A simplified study adaptation of the linked slides or supplied course example; not a verbatim answer key.</p></div></details>
 <details class="usage"><summary>Example test case / usage</summary><div class="code-heading"><div><strong>Usage</strong><small>Paste inside main(), after copying the template.</small></div><button type="button" data-copy="inherit-outside-use" aria-label="Copy Usage">Copy usage</button></div><pre tabindex="0"><code id="inherit-outside-use">Rectangle rectangle(5, 6);
-</code></pre><p class="expected"><strong>Expected result:</strong> Area is 30.</p></details></article><article id="inherit-template" class="template" data-search="06 · generic base + generic derived class inheritance inheritance create a generic buildingg&lt;t&gt; storing coordinates. derive houseg&lt;t&gt; with an owner, and access an inherited coordinate. replace coordinate and owner fields with the requested generic data. use this-&gt; for inherited dependent members; keep template definitions in the header. buildingg&lt;t&gt; pass the same chosen type to the base class. initializer list construct the base before initializing this class’s fields. this-&gt;x access a member inherited from a dependent template base."><header><h3>06 · Generic base + generic derived class</h3><p>Create a generic BuildingG&lt;T&gt; storing coordinates. Derive HouseG&lt;T&gt; with an owner, and access an inherited coordinate.</p><div class="card-actions"><a href="#inherit-template" aria-label="Link to 06 · Generic base + generic derived class"># Link</a><button type="button" data-program="inherit-template">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="inherit-template-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="inherit-template-starter">// EDIT: rename classes, fields and parameter types to match your question.
-// TODO bodies below are unfinished; complete them before compiling.
+</code></pre><p class="expected"><strong>Expected result:</strong> Area is 30.</p></details></article><article id="inherit-template" class="template" data-search="06 · generic base + generic derived class inheritance inheritance create a generic buildingg&lt;t&gt; storing coordinates. derive houseg&lt;t&gt; with an owner, and access an inherited coordinate. replace coordinate and owner fields with the requested generic data. use this-&gt; for inherited dependent members; keep template definitions in the header. buildingg&lt;t&gt; pass the same chosen type to the base class. initializer list construct the base before initializing this class’s fields. this-&gt;x access a member inherited from a dependent template base."><header><h3>06 · Generic base + generic derived class</h3><p>Create a generic BuildingG&lt;T&gt; storing coordinates. Derive HouseG&lt;T&gt; with an owner, and access an inherited coordinate.</p><div class="card-actions"><a href="#inherit-template" aria-label="Link to 06 · Generic base + generic derived class"># Link</a><button type="button" data-program="inherit-template">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="inherit-template-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="inherit-template-starter">#include &lt;iostream&gt;
 #include &lt;string&gt;
+using namespace std;
+
+// EDIT: rename classes, fields and parameter types to match your question.
+// TODO bodies below are unfinished; complete them before compiling.
 
 template&lt;typename T&gt;
 class BuildingG {
@@ -250,8 +283,8 @@ public:
 template&lt;typename T&gt;
 class HouseG : public BuildingG&lt;T&gt; {
 public:
-    std::string owner;
-    HouseG(T x, T y, std::string owner)
+    string owner;
+    HouseG(T x, T y, string owner)
         : BuildingG&lt;T&gt;(x, y), owner(owner) {}
     T getX() const {
         // TODO: return the inherited x value using this-&gt;x.
@@ -262,7 +295,9 @@ public:
     // TODO: test normal, empty and one-item cases where applicable.
     return 0;
 }
-</code></pre></details><details class="solution"><summary>Show worked solution</summary><div class="code-heading"><div><strong>Solution</strong><small>One completed solution to this practice question.</small></div><button type="button" data-copy="inherit-template-code" aria-label="Copy Solution">Copy solution</button></div><pre tabindex="0"><code id="inherit-template-code">#include &lt;string&gt;
+</code></pre></details><details class="solution"><summary>Show worked solution</summary><div class="code-heading"><div><strong>Solution</strong><small>One completed solution to this practice question.</small></div><button type="button" data-copy="inherit-template-code" aria-label="Copy Solution">Copy solution</button></div><pre tabindex="0"><code id="inherit-template-code">#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
 
 template&lt;typename T&gt;
 class BuildingG {
@@ -274,8 +309,8 @@ public:
 template&lt;typename T&gt;
 class HouseG : public BuildingG&lt;T&gt; {
 public:
-    std::string owner;
-    HouseG(T x, T y, std::string owner)
+    string owner;
+    HouseG(T x, T y, string owner)
         : BuildingG&lt;T&gt;(x, y), owner(owner) {}
     T getX() const { return this-&gt;x; }
 };
@@ -283,10 +318,11 @@ public:
 <details class="explanation"><summary>What it does · What to change</summary><div class="explanation-body"><dl><dt>BuildingG&lt;T&gt;</dt><dd>Pass the same chosen type to the base class.</dd><dt>Initializer list</dt><dd>Construct the base before initializing this class’s fields.</dd><dt>this-&gt;x</dt><dd>Access a member inherited from a dependent template base.</dd></dl><h4>What to change</h4><p>Replace coordinate and owner fields with the requested generic data.</p><h4>Remember</h4><p>Use this-&gt; for inherited dependent members; keep template definitions in the header.</p><a href="workspace/reference/examples/Object-Oriented_Programming/TestGenericClass.cpp">Course source ↗</a><p class="source-note">A simplified study adaptation of the linked slides or supplied course example; not a verbatim answer key.</p></div></details>
 <details class="usage"><summary>Example test case / usage</summary><div class="code-heading"><div><strong>Usage</strong><small>Paste inside main(), after copying the template.</small></div><button type="button" data-copy="inherit-template-use" aria-label="Copy Usage">Copy usage</button></div><pre tabindex="0"><code id="inherit-template-use">HouseG&lt;double&gt; h(3, 6, &quot;Ada&quot;);
 double x = h.getX();
-</code></pre><p class="expected"><strong>Expected result:</strong> Inherited x is 3; owner is Ada.</p></details></article></section><section class="topic" id="lists"><div class="section-title"><p class="eyebrow">Linked lists</p><h2>Linked lists</h2></div><article id="list-core" class="template" data-search="07 · build a singly linked list lists linked lists implement intsllist with addtohead, addtotail and deletefromhead; handle an empty list and the final removal. preserve head/tail/next updates; change info’s type when required. deletefromhead requires a nonempty list. both end pointers must become null after the last removal. intsllnode info stores the integer; next links to the following node. head / tail first and last node; both null when empty. addtohead / addtotail update links, then update the relevant end pointer. deletefromhead save the value and node, update links, delete the old node, return the value."><header><h3>07 · Build a singly linked list</h3><p>Implement IntSLList with addToHead, addToTail and deleteFromHead; handle an empty list and the final removal.</p><div class="card-actions"><a href="#list-core" aria-label="Link to 07 · Build a singly linked list"># Link</a><button type="button" data-program="list-core">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="list-core-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="list-core-starter">// EDIT: rename classes, fields and parameter types to match your question.
-// TODO bodies below are unfinished; complete them before compiling.
-#include &lt;iostream&gt;
+</code></pre><p class="expected"><strong>Expected result:</strong> Inherited x is 3; owner is Ada.</p></details></article></section><section class="topic" id="lists"><div class="section-title"><p class="eyebrow">Linked lists</p><h2>Linked lists</h2></div><article id="list-core" class="template" data-search="07 · build a singly linked list lists linked lists implement intsllist with addtohead, addtotail and deletefromhead; handle an empty list and the final removal. preserve head/tail/next updates; change info’s type when required. deletefromhead requires a nonempty list. both end pointers must become null after the last removal. intsllnode info stores the integer; next links to the following node. head / tail first and last node; both null when empty. addtohead / addtotail update links, then update the relevant end pointer. deletefromhead save the value and node, update links, delete the old node, return the value."><header><h3>07 · Build a singly linked list</h3><p>Implement IntSLList with addToHead, addToTail and deleteFromHead; handle an empty list and the final removal.</p><div class="card-actions"><a href="#list-core" aria-label="Link to 07 · Build a singly linked list"># Link</a><button type="button" data-program="list-core">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="list-core-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="list-core-starter">#include &lt;iostream&gt;
 using namespace std;
+
+// EDIT: rename classes, fields and parameter types to match your question.
+// TODO bodies below are unfinished; complete them before compiling.
 class IntSLLNode {
 public:
     IntSLLNode(int el, IntSLLNode *ptr = nullptr) {
@@ -327,6 +363,7 @@ public:
 }
 </code></pre></details><details class="solution"><summary>Show worked solution</summary><div class="code-heading"><div><strong>Solution</strong><small>One completed solution to this practice question.</small></div><button type="button" data-copy="list-core-code" aria-label="Copy Solution">Copy solution</button></div><pre tabindex="0"><code id="list-core-code">#include &lt;iostream&gt;
 using namespace std;
+
 class IntSLLNode {
 public:
     IntSLLNode(int el, IntSLLNode *ptr = nullptr) { info = el; next = ptr; }
@@ -368,10 +405,11 @@ lst.addToHead(20);
 lst.addToHead(10);
 lst.addToTail(30);
 int first = lst.deleteFromHead();
-</code></pre><p class="expected"><strong>Expected result:</strong> First removal is 10; remaining order is 20, 30.</p></details></article><article id="list-count" class="template" data-search="08 · traverse and count nodes lists linked lists add a const countnodes() method that traverses without changing head. replace ++count with a sum or another read-only operation. do not advance head when you only mean to traverse. p a temporary traversal pointer. p = p-&gt;next moves to the following node without moving head."><header><h3>08 · Traverse and count nodes</h3><p>Add a const countNodes() method that traverses without changing head.</p><div class="card-actions"><a href="#list-count" aria-label="Link to 08 · Traverse and count nodes"># Link</a><button type="button" data-program="list-count">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="list-count-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="list-count-starter">// EDIT: rename classes, fields and parameter types to match your question.
-// TODO bodies below are unfinished; complete them before compiling.
-#include &lt;iostream&gt;
+</code></pre><p class="expected"><strong>Expected result:</strong> First removal is 10; remaining order is 20, 30.</p></details></article><article id="list-count" class="template" data-search="08 · traverse and count nodes lists linked lists add a const countnodes() method that traverses without changing head. replace ++count with a sum or another read-only operation. do not advance head when you only mean to traverse. p a temporary traversal pointer. p = p-&gt;next moves to the following node without moving head."><header><h3>08 · Traverse and count nodes</h3><p>Add a const countNodes() method that traverses without changing head.</p><div class="card-actions"><a href="#list-count" aria-label="Link to 08 · Traverse and count nodes"># Link</a><button type="button" data-program="list-count">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="list-count-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="list-count-starter">#include &lt;iostream&gt;
 using namespace std;
+
+// EDIT: rename classes, fields and parameter types to match your question.
+// TODO bodies below are unfinished; complete them before compiling.
 class IntSLLNode {
 public:
     IntSLLNode(int el, IntSLLNode *ptr = nullptr) {
@@ -415,6 +453,7 @@ public:
 }
 </code></pre></details><details class="solution"><summary>Show worked solution</summary><div class="code-heading"><div><strong>Solution</strong><small>One completed solution to this practice question.</small></div><button type="button" data-copy="list-count-code" aria-label="Copy Solution">Copy solution</button></div><pre tabindex="0"><code id="list-count-code">#include &lt;iostream&gt;
 using namespace std;
+
 class IntSLLNode {
 public:
     IntSLLNode(int el, IntSLLNode *ptr = nullptr) { info = el; next = ptr; }
@@ -460,10 +499,11 @@ public:
 lst.addToTail(10);
 lst.addToTail(20);
 int count = lst.countNodes();
-</code></pre><p class="expected"><strong>Expected result:</strong> count is 2; counting does not remove any nodes.</p></details></article><article id="list-find" class="template" data-search="09 · search for a value lists linked lists add isinlist(int el). return true for a match and false for a missing value or an empty list. change the equality test to match the requested condition. returning false inside the first loop iteration stops the search too soon. compare info check the current node before moving on. return false after loop only report failure after all nodes have been checked."><header><h3>09 · Search for a value</h3><p>Add isInList(int el). Return true for a match and false for a missing value or an empty list.</p><div class="card-actions"><a href="#list-find" aria-label="Link to 09 · Search for a value"># Link</a><button type="button" data-program="list-find">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="list-find-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="list-find-starter">// EDIT: rename classes, fields and parameter types to match your question.
-// TODO bodies below are unfinished; complete them before compiling.
-#include &lt;iostream&gt;
+</code></pre><p class="expected"><strong>Expected result:</strong> count is 2; counting does not remove any nodes.</p></details></article><article id="list-find" class="template" data-search="09 · search for a value lists linked lists add isinlist(int el). return true for a match and false for a missing value or an empty list. change the equality test to match the requested condition. returning false inside the first loop iteration stops the search too soon. compare info check the current node before moving on. return false after loop only report failure after all nodes have been checked."><header><h3>09 · Search for a value</h3><p>Add isInList(int el). Return true for a match and false for a missing value or an empty list.</p><div class="card-actions"><a href="#list-find" aria-label="Link to 09 · Search for a value"># Link</a><button type="button" data-program="list-find">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="list-find-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="list-find-starter">#include &lt;iostream&gt;
 using namespace std;
+
+// EDIT: rename classes, fields and parameter types to match your question.
+// TODO bodies below are unfinished; complete them before compiling.
 class IntSLLNode {
 public:
     IntSLLNode(int el, IntSLLNode *ptr = nullptr) {
@@ -507,6 +547,7 @@ public:
 }
 </code></pre></details><details class="solution"><summary>Show worked solution</summary><div class="code-heading"><div><strong>Solution</strong><small>One completed solution to this practice question.</small></div><button type="button" data-copy="list-find-code" aria-label="Copy Solution">Copy solution</button></div><pre tabindex="0"><code id="list-find-code">#include &lt;iostream&gt;
 using namespace std;
+
 class IntSLLNode {
 public:
     IntSLLNode(int el, IntSLLNode *ptr = nullptr) { info = el; next = ptr; }
@@ -553,10 +594,11 @@ public:
 lst.addToTail(4);
 lst.addToTail(9);
 bool found = lst.isInList(9);
-</code></pre><p class="expected"><strong>Expected result:</strong> found is true because 9 is present.</p></details></article><article id="list-tail" class="template" data-search="10 · delete the tail lists linked lists add deletefromtail() to a singly linked list. find the predecessor and handle the one-node case. use the same predecessor search when removing a node by position. requires a nonempty list. never read tail after deleting it. predecessor singly linked nodes have no prev pointer; walk from head. one node clear both head and tail."><header><h3>10 · Delete the tail</h3><p>Add deleteFromTail() to a singly linked list. Find the predecessor and handle the one-node case.</p><div class="card-actions"><a href="#list-tail" aria-label="Link to 10 · Delete the tail"># Link</a><button type="button" data-program="list-tail">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="list-tail-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="list-tail-starter">// EDIT: rename classes, fields and parameter types to match your question.
-// TODO bodies below are unfinished; complete them before compiling.
-#include &lt;iostream&gt;
+</code></pre><p class="expected"><strong>Expected result:</strong> found is true because 9 is present.</p></details></article><article id="list-tail" class="template" data-search="10 · delete the tail lists linked lists add deletefromtail() to a singly linked list. find the predecessor and handle the one-node case. use the same predecessor search when removing a node by position. requires a nonempty list. never read tail after deleting it. predecessor singly linked nodes have no prev pointer; walk from head. one node clear both head and tail."><header><h3>10 · Delete the tail</h3><p>Add deleteFromTail() to a singly linked list. Find the predecessor and handle the one-node case.</p><div class="card-actions"><a href="#list-tail" aria-label="Link to 10 · Delete the tail"># Link</a><button type="button" data-program="list-tail">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="list-tail-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="list-tail-starter">#include &lt;iostream&gt;
 using namespace std;
+
+// EDIT: rename classes, fields and parameter types to match your question.
+// TODO bodies below are unfinished; complete them before compiling.
 class IntSLLNode {
 public:
     IntSLLNode(int el, IntSLLNode *ptr = nullptr) {
@@ -600,6 +642,7 @@ public:
 }
 </code></pre></details><details class="solution"><summary>Show worked solution</summary><div class="code-heading"><div><strong>Solution</strong><small>One completed solution to this practice question.</small></div><button type="button" data-copy="list-tail-code" aria-label="Copy Solution">Copy solution</button></div><pre tabindex="0"><code id="list-tail-code">#include &lt;iostream&gt;
 using namespace std;
+
 class IntSLLNode {
 public:
     IntSLLNode(int el, IntSLLNode *ptr = nullptr) { info = el; next = ptr; }
@@ -654,10 +697,11 @@ public:
 lst.addToTail(1);
 lst.addToTail(2);
 int last = lst.deleteFromTail();
-</code></pre><p class="expected"><strong>Expected result:</strong> last is 2; the remaining node stores 1.</p></details></article><article id="list-remove-value" class="template" data-search="11 · delete the first matching node lists linked lists implement deletenode(el). support deleting the head, middle, tail or only node, and leave the list unchanged if absent. change the comparison to remove according to another condition. this removes the first match, not all duplicates. it is a simplified adaptation of deletenode in the supplied list. pred and tmp track the predecessor and candidate node. head case there is no predecessor; update head directly. tail case the predecessor becomes the new tail."><header><h3>11 · Delete the first matching node</h3><p>Implement deleteNode(el). Support deleting the head, middle, tail or only node, and leave the list unchanged if absent.</p><div class="card-actions"><a href="#list-remove-value" aria-label="Link to 11 · Delete the first matching node"># Link</a><button type="button" data-program="list-remove-value">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="list-remove-value-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="list-remove-value-starter">// EDIT: rename classes, fields and parameter types to match your question.
-// TODO bodies below are unfinished; complete them before compiling.
-#include &lt;iostream&gt;
+</code></pre><p class="expected"><strong>Expected result:</strong> last is 2; the remaining node stores 1.</p></details></article><article id="list-remove-value" class="template" data-search="11 · delete the first matching node lists linked lists implement deletenode(el). support deleting the head, middle, tail or only node, and leave the list unchanged if absent. change the comparison to remove according to another condition. this removes the first match, not all duplicates. it is a simplified adaptation of deletenode in the supplied list. pred and tmp track the predecessor and candidate node. head case there is no predecessor; update head directly. tail case the predecessor becomes the new tail."><header><h3>11 · Delete the first matching node</h3><p>Implement deleteNode(el). Support deleting the head, middle, tail or only node, and leave the list unchanged if absent.</p><div class="card-actions"><a href="#list-remove-value" aria-label="Link to 11 · Delete the first matching node"># Link</a><button type="button" data-program="list-remove-value">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="list-remove-value-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="list-remove-value-starter">#include &lt;iostream&gt;
 using namespace std;
+
+// EDIT: rename classes, fields and parameter types to match your question.
+// TODO bodies below are unfinished; complete them before compiling.
 class IntSLLNode {
 public:
     IntSLLNode(int el, IntSLLNode *ptr = nullptr) {
@@ -701,6 +745,7 @@ public:
 }
 </code></pre></details><details class="solution"><summary>Show worked solution</summary><div class="code-heading"><div><strong>Solution</strong><small>One completed solution to this practice question.</small></div><button type="button" data-copy="list-remove-value-code" aria-label="Copy Solution">Copy solution</button></div><pre tabindex="0"><code id="list-remove-value-code">#include &lt;iostream&gt;
 using namespace std;
+
 class IntSLLNode {
 public:
     IntSLLNode(int el, IntSLLNode *ptr = nullptr) { info = el; next = ptr; }
@@ -753,10 +798,11 @@ public:
 <details class="usage"><summary>Example test case / usage</summary><div class="code-heading"><div><strong>Usage</strong><small>Paste inside main(), after copying the template.</small></div><button type="button" data-copy="list-remove-value-use" aria-label="Copy Usage">Copy usage</button></div><pre tabindex="0"><code id="list-remove-value-use">IntSLList lst;
 lst.addToTail(1); lst.addToTail(2); lst.addToTail(3);
 lst.deleteNode(2);
-</code></pre><p class="expected"><strong>Expected result:</strong> The remaining list is 1 → 3.</p></details></article><article id="list-reverse" class="template" data-search="12 · reverse links in place lists linked lists reverse the singly linked list without creating new nodes. update both head and tail. use the three-pointer pattern for any singly linked node type. an extension exercise built from the course node layout, not a copied slide solution. save next preserve the original next link before overwriting it. reverse one link point current back to previous. ends old head becomes tail; final previous becomes head."><header><h3>12 · Reverse links in place</h3><p>Reverse the singly linked list without creating new nodes. Update both head and tail.</p><div class="card-actions"><a href="#list-reverse" aria-label="Link to 12 · Reverse links in place"># Link</a><button type="button" data-program="list-reverse">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="list-reverse-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="list-reverse-starter">// EDIT: rename classes, fields and parameter types to match your question.
-// TODO bodies below are unfinished; complete them before compiling.
-#include &lt;iostream&gt;
+</code></pre><p class="expected"><strong>Expected result:</strong> The remaining list is 1 → 3.</p></details></article><article id="list-reverse" class="template" data-search="12 · reverse links in place lists linked lists reverse the singly linked list without creating new nodes. update both head and tail. use the three-pointer pattern for any singly linked node type. an extension exercise built from the course node layout, not a copied slide solution. save next preserve the original next link before overwriting it. reverse one link point current back to previous. ends old head becomes tail; final previous becomes head."><header><h3>12 · Reverse links in place</h3><p>Reverse the singly linked list without creating new nodes. Update both head and tail.</p><div class="card-actions"><a href="#list-reverse" aria-label="Link to 12 · Reverse links in place"># Link</a><button type="button" data-program="list-reverse">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="list-reverse-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="list-reverse-starter">#include &lt;iostream&gt;
 using namespace std;
+
+// EDIT: rename classes, fields and parameter types to match your question.
+// TODO bodies below are unfinished; complete them before compiling.
 class IntSLLNode {
 public:
     IntSLLNode(int el, IntSLLNode *ptr = nullptr) {
@@ -800,6 +846,7 @@ public:
 }
 </code></pre></details><details class="solution"><summary>Show worked solution</summary><div class="code-heading"><div><strong>Solution</strong><small>One completed solution to this practice question.</small></div><button type="button" data-copy="list-reverse-code" aria-label="Copy Solution">Copy solution</button></div><pre tabindex="0"><code id="list-reverse-code">#include &lt;iostream&gt;
 using namespace std;
+
 class IntSLLNode {
 public:
     IntSLLNode(int el, IntSLLNode *ptr = nullptr) { info = el; next = ptr; }
@@ -851,13 +898,13 @@ public:
 <details class="usage"><summary>Example test case / usage</summary><div class="code-heading"><div><strong>Usage</strong><small>Paste inside main(), after copying the template.</small></div><button type="button" data-copy="list-reverse-use" aria-label="Copy Usage">Copy usage</button></div><pre tabindex="0"><code id="list-reverse-use">IntSLList lst;
 lst.addToTail(1); lst.addToTail(2); lst.addToTail(3);
 lst.reverse();
-</code></pre><p class="expected"><strong>Expected result:</strong> The list becomes 3 → 2 → 1.</p></details></article></section><section class="topic" id="stacks"><div class="section-title"><p class="eyebrow">Stacks</p><h2>Stacks</h2></div><article id="stack-core" class="template" data-search="13 · build lab 6 stack&lt;t&gt; stacks stacks implement push, pop, top, size and isempty using stacknode, topofstack, theitem and count. choose the stored type; keep the lab 6 function names and return types. pop returns the item. empty pop/top throw stackexception. cleanup/copy protection are study additions. stacknode / theitem / next a node holds one item and the link below it. topofstack / count the top node and the current item count. push create a node, link to old top, move top, increment count. pop save the item, advance top, delete the old node, decrement count, return item. top / isempty / size inspect without removing; empty access throws stackexception."><header><h3>13 · Build Lab 6 Stack&lt;T&gt;</h3><p>Implement push, pop, top, size and isEmpty using StackNode, topOfStack, theItem and count.</p><div class="card-actions"><a href="#stack-core" aria-label="Link to 13 · Build Lab 6 Stack&lt;T&gt;"># Link</a><button type="button" data-program="stack-core">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="stack-core-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="stack-core-starter">// EDIT: rename classes, fields and parameter types to match your question.
-// TODO bodies below are unfinished; complete them before compiling.
-#include &lt;iostream&gt;
+</code></pre><p class="expected"><strong>Expected result:</strong> The list becomes 3 → 2 → 1.</p></details></article></section><section class="topic" id="stacks"><div class="section-title"><p class="eyebrow">Stacks</p><h2>Stacks</h2></div><article id="stack-core" class="template" data-search="13 · build lab 6 stack&lt;t&gt; stacks stacks implement push, pop, top, size and isempty using stacknode, topofstack, theitem and count. choose the stored type; keep the lab 6 function names and return types. pop returns the item. empty pop/top throw stackexception. cleanup/copy protection are study additions. stacknode / theitem / next a node holds one item and the link below it. topofstack / count the top node and the current item count. push create a node, link to old top, move top, increment count. pop save the item, advance top, delete the old node, decrement count, return item. top / isempty / size inspect without removing; empty access throws stackexception."><header><h3>13 · Build Lab 6 Stack&lt;T&gt;</h3><p>Implement push, pop, top, size and isEmpty using StackNode, topOfStack, theItem and count.</p><div class="card-actions"><a href="#stack-core" aria-label="Link to 13 · Build Lab 6 Stack&lt;T&gt;"># Link</a><button type="button" data-program="stack-core">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="stack-core-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="stack-core-starter">#include &lt;iostream&gt;
 #include &lt;exception&gt;
 #include &lt;string&gt;
 using namespace std;
 
+// EDIT: rename classes, fields and parameter types to match your question.
+// TODO bodies below are unfinished; complete them before compiling.
 class StackException : public exception {
     string message;
 public:
@@ -958,13 +1005,13 @@ public:
 <details class="usage"><summary>Example test case / usage</summary><div class="code-heading"><div><strong>Usage</strong><small>Paste inside main(), after copying the template.</small></div><button type="button" data-copy="stack-core-use" aria-label="Copy Usage">Copy usage</button></div><pre tabindex="0"><code id="stack-core-use">Stack&lt;int&gt; s;
 s.push(10); s.push(20);
 int removed = s.pop();
-</code></pre><p class="expected"><strong>Expected result:</strong> removed is 20; top is now 10; size is 1.</p></details></article><article id="stack-clear" class="template" data-search="14 · clear and reuse a stack stacks stacks add clear() to release all nodes and leave the stack reusable. use clear in a reset operation when the question requires it. clearing nodes containing raw pointers does not delete the pointed-to objects. repeated pop reuses count updates and node deletion. empty stack the loop does nothing."><header><h3>14 · Clear and reuse a stack</h3><p>Add clear() to release all nodes and leave the stack reusable.</p><div class="card-actions"><a href="#stack-clear" aria-label="Link to 14 · Clear and reuse a stack"># Link</a><button type="button" data-program="stack-clear">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="stack-clear-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="stack-clear-starter">// EDIT: rename classes, fields and parameter types to match your question.
-// TODO bodies below are unfinished; complete them before compiling.
-#include &lt;iostream&gt;
+</code></pre><p class="expected"><strong>Expected result:</strong> removed is 20; top is now 10; size is 1.</p></details></article><article id="stack-clear" class="template" data-search="14 · clear and reuse a stack stacks stacks add clear() to release all nodes and leave the stack reusable. use clear in a reset operation when the question requires it. clearing nodes containing raw pointers does not delete the pointed-to objects. repeated pop reuses count updates and node deletion. empty stack the loop does nothing."><header><h3>14 · Clear and reuse a stack</h3><p>Add clear() to release all nodes and leave the stack reusable.</p><div class="card-actions"><a href="#stack-clear" aria-label="Link to 14 · Clear and reuse a stack"># Link</a><button type="button" data-program="stack-clear">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="stack-clear-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="stack-clear-starter">#include &lt;iostream&gt;
 #include &lt;exception&gt;
 #include &lt;string&gt;
 using namespace std;
 
+// EDIT: rename classes, fields and parameter types to match your question.
+// TODO bodies below are unfinished; complete them before compiling.
 class StackException : public exception {
     string message;
 public:
@@ -1072,13 +1119,13 @@ public:
 s.push(1); s.push(2);
 s.clear();
 s.push(3);
-</code></pre><p class="expected"><strong>Expected result:</strong> The cleared stack is reused with one item, 3.</p></details></article><article id="stack-reverse-text" class="template" data-search="15 · use a stack to reverse text stacks stacks push the characters of a string, then pop them to build the reversed string. replace characters with another sequence type for reversal. the stack is consumed by this algorithm. push input order the last character ends up on top. pop order returns the reverse order."><header><h3>15 · Use a stack to reverse text</h3><p>Push the characters of a string, then pop them to build the reversed string.</p><div class="card-actions"><a href="#stack-reverse-text" aria-label="Link to 15 · Use a stack to reverse text"># Link</a><button type="button" data-program="stack-reverse-text">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="stack-reverse-text-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="stack-reverse-text-starter">// EDIT: rename classes, fields and parameter types to match your question.
-// TODO bodies below are unfinished; complete them before compiling.
-#include &lt;iostream&gt;
+</code></pre><p class="expected"><strong>Expected result:</strong> The cleared stack is reused with one item, 3.</p></details></article><article id="stack-reverse-text" class="template" data-search="15 · use a stack to reverse text stacks stacks push the characters of a string, then pop them to build the reversed string. replace characters with another sequence type for reversal. the stack is consumed by this algorithm. push input order the last character ends up on top. pop order returns the reverse order."><header><h3>15 · Use a stack to reverse text</h3><p>Push the characters of a string, then pop them to build the reversed string.</p><div class="card-actions"><a href="#stack-reverse-text" aria-label="Link to 15 · Use a stack to reverse text"># Link</a><button type="button" data-program="stack-reverse-text">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="stack-reverse-text-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="stack-reverse-text-starter">#include &lt;iostream&gt;
 #include &lt;exception&gt;
 #include &lt;string&gt;
 using namespace std;
 
+// EDIT: rename classes, fields and parameter types to match your question.
+// TODO bodies below are unfinished; complete them before compiling.
 class StackException : public exception {
     string message;
 public:
@@ -1176,18 +1223,18 @@ public:
 };
 </code></pre></details>
 <details class="explanation"><summary>What it does · What to change</summary><div class="explanation-body"><dl><dt>Push input order</dt><dd>The last character ends up on top.</dd><dt>Pop order</dt><dd>Returns the reverse order.</dd></dl><h4>What to change</h4><p>Replace characters with another sequence type for reversal.</p><h4>Remember</h4><p>The stack is consumed by this algorithm.</p><a href="workspace/reference/course/labs/files/ShapeExample/StackGiven.hpp">Course source ↗</a><p class="source-note">A simplified study adaptation of the linked slides or supplied course example; not a verbatim answer key.</p></div></details>
-<details class="usage"><summary>Example test case / usage</summary><div class="code-heading"><div><strong>Usage</strong><small>Paste inside main(), after copying the template.</small></div><button type="button" data-copy="stack-reverse-text-use" aria-label="Copy Usage">Copy usage</button></div><pre tabindex="0"><code id="stack-reverse-text-use">std::string text = &quot;code&quot;;
+<details class="usage"><summary>Example test case / usage</summary><div class="code-heading"><div><strong>Usage</strong><small>Paste inside main(), after copying the template.</small></div><button type="button" data-copy="stack-reverse-text-use" aria-label="Copy Usage">Copy usage</button></div><pre tabindex="0"><code id="stack-reverse-text-use">string text = &quot;code&quot;;
 Stack&lt;char&gt; s;
 for (int i = 0; i &lt; static_cast&lt;int&gt;(text.length()); ++i) s.push(text[i]);
-std::string reversed;
+string reversed;
 while (!s.isEmpty()) reversed += s.pop();
-</code></pre><p class="expected"><strong>Expected result:</strong> reversed is &quot;edoc&quot;.</p></details></article><article id="stack-brackets" class="template" data-search="16 · check balanced parentheses stacks stacks use stack&lt;char&gt; to validate ( and ). ignore other characters. to support [] and {}, store each opener and compare its type with the closer. this example handles parentheses only. it is a practice application of the lab stack. opening parenthesis push a pending opener. closing parenthesis needs an opener; otherwise reject immediately. final empty check no unmatched opener may remain."><header><h3>16 · Check balanced parentheses</h3><p>Use Stack&lt;char&gt; to validate ( and ). Ignore other characters.</p><div class="card-actions"><a href="#stack-brackets" aria-label="Link to 16 · Check balanced parentheses"># Link</a><button type="button" data-program="stack-brackets">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="stack-brackets-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="stack-brackets-starter">// EDIT: rename classes, fields and parameter types to match your question.
-// TODO bodies below are unfinished; complete them before compiling.
-#include &lt;iostream&gt;
+</code></pre><p class="expected"><strong>Expected result:</strong> reversed is &quot;edoc&quot;.</p></details></article><article id="stack-brackets" class="template" data-search="16 · check balanced parentheses stacks stacks use stack&lt;char&gt; to validate ( and ). ignore other characters. to support [] and {}, store each opener and compare its type with the closer. this example handles parentheses only. it is a practice application of the lab stack. opening parenthesis push a pending opener. closing parenthesis needs an opener; otherwise reject immediately. final empty check no unmatched opener may remain."><header><h3>16 · Check balanced parentheses</h3><p>Use Stack&lt;char&gt; to validate ( and ). Ignore other characters.</p><div class="card-actions"><a href="#stack-brackets" aria-label="Link to 16 · Check balanced parentheses"># Link</a><button type="button" data-program="stack-brackets">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="stack-brackets-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="stack-brackets-starter">#include &lt;iostream&gt;
 #include &lt;exception&gt;
 #include &lt;string&gt;
 using namespace std;
 
+// EDIT: rename classes, fields and parameter types to match your question.
+// TODO bodies below are unfinished; complete them before compiling.
 class StackException : public exception {
     string message;
 public:
@@ -1230,7 +1277,7 @@ public:
     Stack&amp; operator=(const Stack&amp;) = delete;
 };
 
-bool balanced(const std::string&amp; text) {
+bool balanced(const string&amp; text) {
         // TODO: push openers; match closers; reject missing openers; verify no openers remain.
     }
 </code></pre><details class="usage"><summary>Blank main() scaffold</summary><div class="code-heading"><div><strong>Test scaffold</strong><small>Paste after the completed class/function definitions. Keep only one main().</small></div><button type="button" data-copy="stack-brackets-main" aria-label="Copy Test scaffold">Copy test scaffold</button></div><pre tabindex="0"><code id="stack-brackets-main">int main() {
@@ -1288,7 +1335,7 @@ public:
     Stack&amp; operator=(const Stack&amp;) = delete;
 };
 
-bool balanced(const std::string&amp; text) {
+bool balanced(const string&amp; text) {
     Stack&lt;char&gt; s;
     for (int i = 0; i &lt; static_cast&lt;int&gt;(text.length()); ++i) {
         if (text[i] == '(') s.push('(');
@@ -1302,13 +1349,13 @@ bool balanced(const std::string&amp; text) {
 </code></pre></details>
 <details class="explanation"><summary>What it does · What to change</summary><div class="explanation-body"><dl><dt>Opening parenthesis</dt><dd>Push a pending opener.</dd><dt>Closing parenthesis</dt><dd>Needs an opener; otherwise reject immediately.</dd><dt>Final empty check</dt><dd>No unmatched opener may remain.</dd></dl><h4>What to change</h4><p>To support [] and {}, store each opener and compare its type with the closer.</p><h4>Remember</h4><p>This example handles parentheses only. It is a practice application of the lab stack.</p><a href="workspace/reference/course/labs/files/ShapeExample/StackGiven.hpp">Course source ↗</a><p class="source-note">A simplified study adaptation of the linked slides or supplied course example; not a verbatim answer key.</p></div></details>
 <details class="usage"><summary>Example test case / usage</summary><div class="code-heading"><div><strong>Usage</strong><small>Paste inside main(), after copying the template.</small></div><button type="button" data-copy="stack-brackets-use" aria-label="Copy Usage">Copy usage</button></div><pre tabindex="0"><code id="stack-brackets-use">bool valid = balanced(&quot;(a+(b*c))&quot;);
-</code></pre><p class="expected"><strong>Expected result:</strong> valid is true; &quot;)(&quot; and &quot;(()&quot; would be false.</p></details></article><article id="stack-transfer" class="template" data-search="17 · pass stacks by reference stacks stacks write transfer(source, destination) to move all items using pop and push. explain the resulting order. use a temporary second stack if you need to restore an order. the destination need not be empty; transferred items are placed above any existing items. references operate on the original stacks without copying owned nodes. one pop then push reverses the transferred sequence."><header><h3>17 · Pass stacks by reference</h3><p>Write transfer(source, destination) to move all items using pop and push. Explain the resulting order.</p><div class="card-actions"><a href="#stack-transfer" aria-label="Link to 17 · Pass stacks by reference"># Link</a><button type="button" data-program="stack-transfer">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="stack-transfer-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="stack-transfer-starter">// EDIT: rename classes, fields and parameter types to match your question.
-// TODO bodies below are unfinished; complete them before compiling.
-#include &lt;iostream&gt;
+</code></pre><p class="expected"><strong>Expected result:</strong> valid is true; &quot;)(&quot; and &quot;(()&quot; would be false.</p></details></article><article id="stack-transfer" class="template" data-search="17 · pass stacks by reference stacks stacks write transfer(source, destination) to move all items using pop and push. explain the resulting order. use a temporary second stack if you need to restore an order. the destination need not be empty; transferred items are placed above any existing items. references operate on the original stacks without copying owned nodes. one pop then push reverses the transferred sequence."><header><h3>17 · Pass stacks by reference</h3><p>Write transfer(source, destination) to move all items using pop and push. Explain the resulting order.</p><div class="card-actions"><a href="#stack-transfer" aria-label="Link to 17 · Pass stacks by reference"># Link</a><button type="button" data-program="stack-transfer">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="stack-transfer-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="stack-transfer-starter">#include &lt;iostream&gt;
 #include &lt;exception&gt;
 #include &lt;string&gt;
 using namespace std;
 
+// EDIT: rename classes, fields and parameter types to match your question.
+// TODO bodies below are unfinished; complete them before compiling.
 class StackException : public exception {
     string message;
 public:
@@ -1417,13 +1464,13 @@ void transfer(Stack&lt;int&gt;&amp; source, Stack&lt;int&gt;&amp; destination) {
 <details class="usage"><summary>Example test case / usage</summary><div class="code-heading"><div><strong>Usage</strong><small>Paste inside main(), after copying the template.</small></div><button type="button" data-copy="stack-transfer-use" aria-label="Copy Usage">Copy usage</button></div><pre tabindex="0"><code id="stack-transfer-use">Stack&lt;int&gt; source, destination;
 source.push(1); source.push(2); source.push(3);
 transfer(source, destination);
-</code></pre><p class="expected"><strong>Expected result:</strong> source is empty; destination pops 1, then 2, then 3.</p></details></article><article id="stack-shapes" class="template" data-search="18 · combine inheritance + stack&lt;shape*&gt; stacks stacks store derived shapes in a stack of base pointers. pop each shape, call its virtual method, and delete it. use the lab draw() operation instead of getarea() if requested. assumes processing does not throw; a robust throwing application needs an explicit cleanup/ownership strategy. stack&lt;shape*&gt; stores pointers because shape is abstract. virtual call uses the rectangle implementation through shape*. two allocations pop deletes the node; delete shape releases the owned object."><header><h3>18 · Combine inheritance + Stack&lt;Shape*&gt;</h3><p>Store derived shapes in a stack of base pointers. Pop each shape, call its virtual method, and delete it.</p><div class="card-actions"><a href="#stack-shapes" aria-label="Link to 18 · Combine inheritance + Stack&lt;Shape*&gt;"># Link</a><button type="button" data-program="stack-shapes">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="stack-shapes-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="stack-shapes-starter">// EDIT: rename classes, fields and parameter types to match your question.
-// TODO bodies below are unfinished; complete them before compiling.
-#include &lt;iostream&gt;
+</code></pre><p class="expected"><strong>Expected result:</strong> source is empty; destination pops 1, then 2, then 3.</p></details></article><article id="stack-shapes" class="template" data-search="18 · combine inheritance + stack&lt;shape*&gt; stacks stacks store derived shapes in a stack of base pointers. pop each shape, call its virtual method, and delete it. use the lab draw() operation instead of getarea() if requested. assumes processing does not throw; a robust throwing application needs an explicit cleanup/ownership strategy. stack&lt;shape*&gt; stores pointers because shape is abstract. virtual call uses the rectangle implementation through shape*. two allocations pop deletes the node; delete shape releases the owned object."><header><h3>18 · Combine inheritance + Stack&lt;Shape*&gt;</h3><p>Store derived shapes in a stack of base pointers. Pop each shape, call its virtual method, and delete it.</p><div class="card-actions"><a href="#stack-shapes" aria-label="Link to 18 · Combine inheritance + Stack&lt;Shape*&gt;"># Link</a><button type="button" data-program="stack-shapes">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="stack-shapes-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="stack-shapes-starter">#include &lt;iostream&gt;
 #include &lt;exception&gt;
 #include &lt;string&gt;
 using namespace std;
 
+// EDIT: rename classes, fields and parameter types to match your question.
+// TODO bodies below are unfinished; complete them before compiling.
 class StackException : public exception {
     string message;
 public:
@@ -1556,9 +1603,12 @@ while (!shapes.isEmpty()) {
     total += shape-&gt;getArea();
     delete shape;
 }
-</code></pre><p class="expected"><strong>Expected result:</strong> Total area is 26; nodes and shapes are released.</p></details></article></section><section class="topic" id="queues"><div class="section-title"><p class="eyebrow">Queues</p><h2>Queues</h2></div><article id="queue-manual" class="template" data-search="19 · build a queue using linked nodes queues queues implement a generic queue without std::list. insert at the tail and remove from the head. change the stored type with linkedqueue&lt;t&gt;. keep both empty-state pointer updates. this is a clearly labeled manual-node adaptation, not the instructor’s exact listqueue implementation. head / tail oldest and newest nodes. enqueue link at tail; the first insertion also sets head. dequeue remove head; the last removal clears tail. course connection manual-node adaptation combining intsllist links with enqueue/dequeue naming; the supplied listqueue instead uses std::list."><header><h3>19 · Build a queue using linked nodes</h3><p>Implement a generic queue without std::list. Insert at the tail and remove from the head.</p><div class="card-actions"><a href="#queue-manual" aria-label="Link to 19 · Build a queue using linked nodes"># Link</a><button type="button" data-program="queue-manual">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="queue-manual-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="queue-manual-starter">// EDIT: rename classes, fields and parameter types to match your question.
-// TODO bodies below are unfinished; complete them before compiling.
+</code></pre><p class="expected"><strong>Expected result:</strong> Total area is 26; nodes and shapes are released.</p></details></article></section><section class="topic" id="queues"><div class="section-title"><p class="eyebrow">Queues</p><h2>Queues</h2></div><article id="queue-manual" class="template" data-search="19 · build a queue using linked nodes queues queues implement a generic queue without list. insert at the tail and remove from the head. change the stored type with linkedqueue&lt;t&gt;. keep both empty-state pointer updates. this is a clearly labeled manual-node adaptation, not the instructor’s exact listqueue implementation. head / tail oldest and newest nodes. enqueue link at tail; the first insertion also sets head. dequeue remove head; the last removal clears tail. course connection manual-node adaptation combining intsllist links with enqueue/dequeue naming; the supplied listqueue instead uses list."><header><h3>19 · Build a queue using linked nodes</h3><p>Implement a generic queue without list. Insert at the tail and remove from the head.</p><div class="card-actions"><a href="#queue-manual" aria-label="Link to 19 · Build a queue using linked nodes"># Link</a><button type="button" data-program="queue-manual">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="queue-manual-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="queue-manual-starter">#include &lt;iostream&gt;
 #include &lt;stdexcept&gt;
+using namespace std;
+
+// EDIT: rename classes, fields and parameter types to match your question.
+// TODO bodies below are unfinished; complete them before compiling.
 template&lt;class T&gt;
 class LinkedQueue {
     struct Node {
@@ -1592,11 +1642,14 @@ public:
     LinkedQueue&amp; operator=(const LinkedQueue&amp;) = delete;
 };
 </code></pre><details class="usage"><summary>Blank main() scaffold</summary><div class="code-heading"><div><strong>Test scaffold</strong><small>Paste after the completed class/function definitions. Keep only one main().</small></div><button type="button" data-copy="queue-manual-main" aria-label="Copy Test scaffold">Copy test scaffold</button></div><pre tabindex="0"><code id="queue-manual-main">int main() {
-    // TODO: Implement a generic queue without std::list. Insert at the tail and remove from the head.
+    // TODO: Implement a generic queue without list. Insert at the tail and remove from the head.
     // TODO: test normal, empty and one-item cases where applicable.
     return 0;
 }
-</code></pre></details><details class="solution"><summary>Show worked solution</summary><div class="code-heading"><div><strong>Solution</strong><small>One completed solution to this practice question.</small></div><button type="button" data-copy="queue-manual-code" aria-label="Copy Solution">Copy solution</button></div><pre tabindex="0"><code id="queue-manual-code">#include &lt;stdexcept&gt;
+</code></pre></details><details class="solution"><summary>Show worked solution</summary><div class="code-heading"><div><strong>Solution</strong><small>One completed solution to this practice question.</small></div><button type="button" data-copy="queue-manual-code" aria-label="Copy Solution">Copy solution</button></div><pre tabindex="0"><code id="queue-manual-code">#include &lt;iostream&gt;
+#include &lt;stdexcept&gt;
+using namespace std;
+
 template&lt;class T&gt;
 class LinkedQueue {
     struct Node {
@@ -1618,11 +1671,11 @@ public:
         ++count;
     }
     T front() const {
-        if (isEmpty()) throw std::runtime_error(&quot;Empty queue&quot;);
+        if (isEmpty()) throw runtime_error(&quot;Empty queue&quot;);
         return head-&gt;info;
     }
     T dequeue() {
-        if (isEmpty()) throw std::runtime_error(&quot;Empty queue&quot;);
+        if (isEmpty()) throw runtime_error(&quot;Empty queue&quot;);
         T el = head-&gt;info;
         Node* tmp = head;
         head = head-&gt;next;
@@ -1636,16 +1689,16 @@ public:
     LinkedQueue&amp; operator=(const LinkedQueue&amp;) = delete;
 };
 </code></pre></details>
-<details class="explanation"><summary>What it does · What to change</summary><div class="explanation-body"><dl><dt>head / tail</dt><dd>Oldest and newest nodes.</dd><dt>enqueue</dt><dd>Link at tail; the first insertion also sets head.</dd><dt>dequeue</dt><dd>Remove head; the last removal clears tail.</dd><dt>Course connection</dt><dd>Manual-node adaptation combining IntSLList links with enqueue/dequeue naming; the supplied ListQueue instead uses std::list.</dd></dl><h4>What to change</h4><p>Change the stored type with LinkedQueue&lt;T&gt;. Keep both empty-state pointer updates.</p><h4>Remember</h4><p>This is a clearly labeled manual-node adaptation, not the instructor’s exact ListQueue implementation.</p><a href="workspace/reference/examples/Linked_Lists/IntSLList.cpp">Course source ↗</a><p class="source-note">A simplified study adaptation of the linked slides or supplied course example; not a verbatim answer key.</p></div></details>
+<details class="explanation"><summary>What it does · What to change</summary><div class="explanation-body"><dl><dt>head / tail</dt><dd>Oldest and newest nodes.</dd><dt>enqueue</dt><dd>Link at tail; the first insertion also sets head.</dd><dt>dequeue</dt><dd>Remove head; the last removal clears tail.</dd><dt>Course connection</dt><dd>Manual-node adaptation combining IntSLList links with enqueue/dequeue naming; the supplied ListQueue instead uses list.</dd></dl><h4>What to change</h4><p>Change the stored type with LinkedQueue&lt;T&gt;. Keep both empty-state pointer updates.</p><h4>Remember</h4><p>This is a clearly labeled manual-node adaptation, not the instructor’s exact ListQueue implementation.</p><a href="workspace/reference/examples/Linked_Lists/IntSLList.cpp">Course source ↗</a><p class="source-note">A simplified study adaptation of the linked slides or supplied course example; not a verbatim answer key.</p></div></details>
 <details class="usage"><summary>Example test case / usage</summary><div class="code-heading"><div><strong>Usage</strong><small>Paste inside main(), after copying the template.</small></div><button type="button" data-copy="queue-manual-use" aria-label="Copy Usage">Copy usage</button></div><pre tabindex="0"><code id="queue-manual-use">LinkedQueue&lt;int&gt; q;
 q.enqueue(10); q.enqueue(20);
 int first = q.dequeue();
-</code></pre><p class="expected"><strong>Expected result:</strong> first is 10; the remaining value is 20.</p></details></article><article id="queue-list" class="template" data-search="20 · course listqueue&lt;t&gt; queues queues implement the supplied queue wrapper using std::list, enqueue, dequeue, front and isempty. use this version only when standard-library list is allowed. front and dequeue require a nonempty queue. list&lt;t&gt; lst the standard list manages the linked nodes. enqueue push_back adds at the rear. dequeue read front, pop_front, then return the saved value. front / isempty / clear inspect the oldest item, test emptiness, or remove all items."><header><h3>20 · Course ListQueue&lt;T&gt;</h3><p>Implement the supplied queue wrapper using std::list, enqueue, dequeue, front and isEmpty.</p><div class="card-actions"><a href="#queue-list" aria-label="Link to 20 · Course ListQueue&lt;T&gt;"># Link</a><button type="button" data-program="queue-list">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="queue-list-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="queue-list-starter">// EDIT: rename classes, fields and parameter types to match your question.
-// TODO bodies below are unfinished; complete them before compiling.
-#include &lt;iostream&gt;
+</code></pre><p class="expected"><strong>Expected result:</strong> first is 10; the remaining value is 20.</p></details></article><article id="queue-list" class="template" data-search="20 · course listqueue&lt;t&gt; queues queues implement the supplied queue wrapper using list, enqueue, dequeue, front and isempty. use this version only when standard-library list is allowed. front and dequeue require a nonempty queue. list&lt;t&gt; lst the standard list manages the linked nodes. enqueue push_back adds at the rear. dequeue read front, pop_front, then return the saved value. front / isempty / clear inspect the oldest item, test emptiness, or remove all items."><header><h3>20 · Course ListQueue&lt;T&gt;</h3><p>Implement the supplied queue wrapper using list, enqueue, dequeue, front and isEmpty.</p><div class="card-actions"><a href="#queue-list" aria-label="Link to 20 · Course ListQueue&lt;T&gt;"># Link</a><button type="button" data-program="queue-list">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="queue-list-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="queue-list-starter">#include &lt;iostream&gt;
 #include &lt;list&gt;
 using namespace std;
 
+// EDIT: rename classes, fields and parameter types to match your question.
+// TODO bodies below are unfinished; complete them before compiling.
 template&lt;class T&gt;
 class ListQueue {
 public:
@@ -1670,7 +1723,7 @@ private:
 	list&lt;T&gt; lst;
 };
 </code></pre><details class="usage"><summary>Blank main() scaffold</summary><div class="code-heading"><div><strong>Test scaffold</strong><small>Paste after the completed class/function definitions. Keep only one main().</small></div><button type="button" data-copy="queue-list-main" aria-label="Copy Test scaffold">Copy test scaffold</button></div><pre tabindex="0"><code id="queue-list-main">int main() {
-    // TODO: Implement the supplied queue wrapper using std::list, enqueue, dequeue, front and isEmpty.
+    // TODO: Implement the supplied queue wrapper using list, enqueue, dequeue, front and isEmpty.
     // TODO: test normal, empty and one-item cases where applicable.
     return 0;
 }
@@ -1709,11 +1762,11 @@ private:
 q.enqueue(10);
 q.enqueue(20);
 int first = q.dequeue();
-</code></pre><p class="expected"><strong>Expected result:</strong> first is 10; front is then 20.</p></details></article><article id="queue-circular" class="template" data-search="21 · course circular arrayqueue&lt;t, size&gt; queues queues implement wraparound enqueue/dequeue using first, last and storage; -1 means empty. change capacity and element type. keep last as the last occupied slot. a different queue design may define rear as the next free slot; do not mix conventions. storage[size] fixed array of queue elements. first / last oldest and newest occupied indexes; -1 marks empty. enqueue check full, wrap last if needed, store the value. dequeue save the front value; reset if it was the last item, otherwise advance/wrap first."><header><h3>21 · Course circular ArrayQueue&lt;T, size&gt;</h3><p>Implement wraparound enqueue/dequeue using first, last and storage; -1 means empty.</p><div class="card-actions"><a href="#queue-circular" aria-label="Link to 21 · Course circular ArrayQueue&lt;T, size&gt;"># Link</a><button type="button" data-program="queue-circular">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="queue-circular-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="queue-circular-starter">// EDIT: rename classes, fields and parameter types to match your question.
-// TODO bodies below are unfinished; complete them before compiling.
-#include &lt;iostream&gt;
+</code></pre><p class="expected"><strong>Expected result:</strong> first is 10; front is then 20.</p></details></article><article id="queue-circular" class="template" data-search="21 · course circular arrayqueue&lt;t, size&gt; queues queues implement wraparound enqueue/dequeue using first, last and storage; -1 means empty. change capacity and element type. keep last as the last occupied slot. a different queue design may define rear as the next free slot; do not mix conventions. storage[size] fixed array of queue elements. first / last oldest and newest occupied indexes; -1 marks empty. enqueue check full, wrap last if needed, store the value. dequeue save the front value; reset if it was the last item, otherwise advance/wrap first."><header><h3>21 · Course circular ArrayQueue&lt;T, size&gt;</h3><p>Implement wraparound enqueue/dequeue using first, last and storage; -1 means empty.</p><div class="card-actions"><a href="#queue-circular" aria-label="Link to 21 · Course circular ArrayQueue&lt;T, size&gt;"># Link</a><button type="button" data-program="queue-circular">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="queue-circular-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="queue-circular-starter">#include &lt;iostream&gt;
 using namespace std;
 
+// EDIT: rename classes, fields and parameter types to match your question.
+// TODO bodies below are unfinished; complete them before compiling.
 template&lt;class T, int size = 100&gt;
 class ArrayQueue {
 public:
@@ -1801,9 +1854,12 @@ T ArrayQueue&lt;T,size&gt;::dequeue() {
 q.enqueue(1); q.enqueue(2); q.enqueue(3);
 q.dequeue();
 q.enqueue(4);
-</code></pre><p class="expected"><strong>Expected result:</strong> The queue is full again and dequeues 2, 3, 4.</p></details></article><article id="queue-records" class="template" data-search="22 · queue objects in arrival order queues queues create a job struct with an id and duration. enqueue jobs and process them fifo. use student, request or printjob with the fields in the question. use -&gt; only for pointers; next here is an object and uses a dot. job groups the fields of one queued item. linkedqueue&lt;job&gt; stores whole records by value."><header><h3>22 · Queue objects in arrival order</h3><p>Create a Job struct with an ID and duration. Enqueue jobs and process them FIFO.</p><div class="card-actions"><a href="#queue-records" aria-label="Link to 22 · Queue objects in arrival order"># Link</a><button type="button" data-program="queue-records">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="queue-records-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="queue-records-starter">// EDIT: rename classes, fields and parameter types to match your question.
-// TODO bodies below are unfinished; complete them before compiling.
+</code></pre><p class="expected"><strong>Expected result:</strong> The queue is full again and dequeues 2, 3, 4.</p></details></article><article id="queue-records" class="template" data-search="22 · queue objects in arrival order queues queues create a job struct with an id and duration. enqueue jobs and process them fifo. use student, request or printjob with the fields in the question. use -&gt; only for pointers; next here is an object and uses a dot. job groups the fields of one queued item. linkedqueue&lt;job&gt; stores whole records by value."><header><h3>22 · Queue objects in arrival order</h3><p>Create a Job struct with an ID and duration. Enqueue jobs and process them FIFO.</p><div class="card-actions"><a href="#queue-records" aria-label="Link to 22 · Queue objects in arrival order"># Link</a><button type="button" data-program="queue-records">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="queue-records-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="queue-records-starter">#include &lt;iostream&gt;
 #include &lt;stdexcept&gt;
+using namespace std;
+
+// EDIT: rename classes, fields and parameter types to match your question.
+// TODO bodies below are unfinished; complete them before compiling.
 template&lt;class T&gt;
 class LinkedQueue {
     struct Node {
@@ -1843,7 +1899,10 @@ struct Job { int id; double duration; };
     // TODO: test normal, empty and one-item cases where applicable.
     return 0;
 }
-</code></pre></details><details class="solution"><summary>Show worked solution</summary><div class="code-heading"><div><strong>Solution</strong><small>One completed solution to this practice question.</small></div><button type="button" data-copy="queue-records-code" aria-label="Copy Solution">Copy solution</button></div><pre tabindex="0"><code id="queue-records-code">#include &lt;stdexcept&gt;
+</code></pre></details><details class="solution"><summary>Show worked solution</summary><div class="code-heading"><div><strong>Solution</strong><small>One completed solution to this practice question.</small></div><button type="button" data-copy="queue-records-code" aria-label="Copy Solution">Copy solution</button></div><pre tabindex="0"><code id="queue-records-code">#include &lt;iostream&gt;
+#include &lt;stdexcept&gt;
+using namespace std;
+
 template&lt;class T&gt;
 class LinkedQueue {
     struct Node {
@@ -1865,11 +1924,11 @@ public:
         ++count;
     }
     T front() const {
-        if (isEmpty()) throw std::runtime_error(&quot;Empty queue&quot;);
+        if (isEmpty()) throw runtime_error(&quot;Empty queue&quot;);
         return head-&gt;info;
     }
     T dequeue() {
-        if (isEmpty()) throw std::runtime_error(&quot;Empty queue&quot;);
+        if (isEmpty()) throw runtime_error(&quot;Empty queue&quot;);
         T el = head-&gt;info;
         Node* tmp = head;
         head = head-&gt;next;
@@ -1890,9 +1949,12 @@ struct Job { int id; double duration; };
 jobs.enqueue(Job{101, 2.5});
 jobs.enqueue(Job{102, 1.0});
 Job next = jobs.dequeue();
-</code></pre><p class="expected"><strong>Expected result:</strong> next has ID 101 and duration 2.5; job 102 is still queued.</p></details></article><article id="queue-rotate" class="template" data-search="23 · move the front item to the back queues queues write a generic rotate function for a queue. keep the queue unchanged when empty. repeat rotation the required number of times for a round-robin exercise. guard the empty case before calling dequeue. reference parameter modify the caller’s queue. dequeue then enqueue move the first item behind the others."><header><h3>23 · Move the front item to the back</h3><p>Write a generic rotate function for a queue. Keep the queue unchanged when empty.</p><div class="card-actions"><a href="#queue-rotate" aria-label="Link to 23 · Move the front item to the back"># Link</a><button type="button" data-program="queue-rotate">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="queue-rotate-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="queue-rotate-starter">// EDIT: rename classes, fields and parameter types to match your question.
-// TODO bodies below are unfinished; complete them before compiling.
+</code></pre><p class="expected"><strong>Expected result:</strong> next has ID 101 and duration 2.5; job 102 is still queued.</p></details></article><article id="queue-rotate" class="template" data-search="23 · move the front item to the back queues queues write a generic rotate function for a queue. keep the queue unchanged when empty. repeat rotation the required number of times for a round-robin exercise. guard the empty case before calling dequeue. reference parameter modify the caller’s queue. dequeue then enqueue move the first item behind the others."><header><h3>23 · Move the front item to the back</h3><p>Write a generic rotate function for a queue. Keep the queue unchanged when empty.</p><div class="card-actions"><a href="#queue-rotate" aria-label="Link to 23 · Move the front item to the back"># Link</a><button type="button" data-program="queue-rotate">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="queue-rotate-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="queue-rotate-starter">#include &lt;iostream&gt;
 #include &lt;stdexcept&gt;
+using namespace std;
+
+// EDIT: rename classes, fields and parameter types to match your question.
+// TODO bodies below are unfinished; complete them before compiling.
 template&lt;class T&gt;
 class LinkedQueue {
     struct Node {
@@ -1935,7 +1997,10 @@ void rotate(LinkedQueue&lt;T&gt;&amp; q) {
     // TODO: test normal, empty and one-item cases where applicable.
     return 0;
 }
-</code></pre></details><details class="solution"><summary>Show worked solution</summary><div class="code-heading"><div><strong>Solution</strong><small>One completed solution to this practice question.</small></div><button type="button" data-copy="queue-rotate-code" aria-label="Copy Solution">Copy solution</button></div><pre tabindex="0"><code id="queue-rotate-code">#include &lt;stdexcept&gt;
+</code></pre></details><details class="solution"><summary>Show worked solution</summary><div class="code-heading"><div><strong>Solution</strong><small>One completed solution to this practice question.</small></div><button type="button" data-copy="queue-rotate-code" aria-label="Copy Solution">Copy solution</button></div><pre tabindex="0"><code id="queue-rotate-code">#include &lt;iostream&gt;
+#include &lt;stdexcept&gt;
+using namespace std;
+
 template&lt;class T&gt;
 class LinkedQueue {
     struct Node {
@@ -1957,11 +2022,11 @@ public:
         ++count;
     }
     T front() const {
-        if (isEmpty()) throw std::runtime_error(&quot;Empty queue&quot;);
+        if (isEmpty()) throw runtime_error(&quot;Empty queue&quot;);
         return head-&gt;info;
     }
     T dequeue() {
-        if (isEmpty()) throw std::runtime_error(&quot;Empty queue&quot;);
+        if (isEmpty()) throw runtime_error(&quot;Empty queue&quot;);
         T el = head-&gt;info;
         Node* tmp = head;
         head = head-&gt;next;
@@ -1984,9 +2049,14 @@ void rotate(LinkedQueue&lt;T&gt;&amp; q) {
 <details class="usage"><summary>Example test case / usage</summary><div class="code-heading"><div><strong>Usage</strong><small>Paste inside main(), after copying the template.</small></div><button type="button" data-copy="queue-rotate-use" aria-label="Copy Usage">Copy usage</button></div><pre tabindex="0"><code id="queue-rotate-use">LinkedQueue&lt;int&gt; q;
 q.enqueue(1); q.enqueue(2); q.enqueue(3);
 rotate(q);
-</code></pre><p class="expected"><strong>Expected result:</strong> The queue order becomes 2, 3, 1.</p></details></article><article id="queue-reverse" class="template" data-search="24 · reverse a queue using a stack queues queues write reversequeue(q) using only queue operations and a temporary linked stack. use a template function if asked to support types other than int. the function modifies the original queue; pass it by reference rather than copying raw-node ownership. first loop drain fifo items into a lifo stack. second loop pop reversed values back into the queue."><header><h3>24 · Reverse a queue using a stack</h3><p>Write reverseQueue(q) using only queue operations and a temporary linked stack.</p><div class="card-actions"><a href="#queue-reverse" aria-label="Link to 24 · Reverse a queue using a stack"># Link</a><button type="button" data-program="queue-reverse">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="queue-reverse-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="queue-reverse-starter">// EDIT: rename classes, fields and parameter types to match your question.
-// TODO bodies below are unfinished; complete them before compiling.
+</code></pre><p class="expected"><strong>Expected result:</strong> The queue order becomes 2, 3, 1.</p></details></article><article id="queue-reverse" class="template" data-search="24 · reverse a queue using a stack queues queues write reversequeue(q) using only queue operations and a temporary linked stack. use a template function if asked to support types other than int. the function modifies the original queue; pass it by reference rather than copying raw-node ownership. first loop drain fifo items into a lifo stack. second loop pop reversed values back into the queue."><header><h3>24 · Reverse a queue using a stack</h3><p>Write reverseQueue(q) using only queue operations and a temporary linked stack.</p><div class="card-actions"><a href="#queue-reverse" aria-label="Link to 24 · Reverse a queue using a stack"># Link</a><button type="button" data-program="queue-reverse">Copy runnable solution</button></div></header><div class="code-heading"><div><strong>Blank template</strong><small>Fill the TODO comments before compiling. Paste above main().</small></div><button type="button" data-copy="queue-reverse-starter" aria-label="Copy Blank template">Copy blank template</button></div><pre tabindex="0"><code id="queue-reverse-starter">#include &lt;iostream&gt;
 #include &lt;stdexcept&gt;
+#include &lt;exception&gt;
+#include &lt;string&gt;
+using namespace std;
+
+// EDIT: rename classes, fields and parameter types to match your question.
+// TODO bodies below are unfinished; complete them before compiling.
 template&lt;class T&gt;
 class LinkedQueue {
     struct Node {
@@ -2019,11 +2089,6 @@ public:
     LinkedQueue(const LinkedQueue&amp;) = delete;
     LinkedQueue&amp; operator=(const LinkedQueue&amp;) = delete;
 };
-#include &lt;iostream&gt;
-#include &lt;exception&gt;
-#include &lt;string&gt;
-using namespace std;
-
 class StackException : public exception {
     string message;
 public:
@@ -2074,7 +2139,12 @@ void reverseQueue(LinkedQueue&lt;int&gt;&amp; q) {
     // TODO: test normal, empty and one-item cases where applicable.
     return 0;
 }
-</code></pre></details><details class="solution"><summary>Show worked solution</summary><div class="code-heading"><div><strong>Solution</strong><small>One completed solution to this practice question.</small></div><button type="button" data-copy="queue-reverse-code" aria-label="Copy Solution">Copy solution</button></div><pre tabindex="0"><code id="queue-reverse-code">#include &lt;stdexcept&gt;
+</code></pre></details><details class="solution"><summary>Show worked solution</summary><div class="code-heading"><div><strong>Solution</strong><small>One completed solution to this practice question.</small></div><button type="button" data-copy="queue-reverse-code" aria-label="Copy Solution">Copy solution</button></div><pre tabindex="0"><code id="queue-reverse-code">#include &lt;iostream&gt;
+#include &lt;stdexcept&gt;
+#include &lt;exception&gt;
+#include &lt;string&gt;
+using namespace std;
+
 template&lt;class T&gt;
 class LinkedQueue {
     struct Node {
@@ -2096,11 +2166,11 @@ public:
         ++count;
     }
     T front() const {
-        if (isEmpty()) throw std::runtime_error(&quot;Empty queue&quot;);
+        if (isEmpty()) throw runtime_error(&quot;Empty queue&quot;);
         return head-&gt;info;
     }
     T dequeue() {
-        if (isEmpty()) throw std::runtime_error(&quot;Empty queue&quot;);
+        if (isEmpty()) throw runtime_error(&quot;Empty queue&quot;);
         T el = head-&gt;info;
         Node* tmp = head;
         head = head-&gt;next;
@@ -2113,11 +2183,6 @@ public:
     LinkedQueue(const LinkedQueue&amp;) = delete;
     LinkedQueue&amp; operator=(const LinkedQueue&amp;) = delete;
 };
-#include &lt;iostream&gt;
-#include &lt;exception&gt;
-#include &lt;string&gt;
-using namespace std;
-
 class StackException : public exception {
     string message;
 public:
