@@ -501,6 +501,11 @@ window.TESSELATE_PATHS = {
     ],
     "practice": [
       {
+        "title": "Lab 6 · RC–RL transient bench",
+        "url": "ecet250e/lab6.html",
+        "summary": "Practise the latest D2L lab: square waves, grounded scope measurements and time constants."
+      },
+      {
         "title": "Multiple-choice midterm practice",
         "url": "ecet250e/quiz.html",
         "summary": "4 original Quiz 1 questions plus 30 similar questions. Check answers, learn why, and retry misses."
