@@ -1,8 +1,8 @@
 # ECET study edition
 
-Snapshot: October 19, 2026. Posted Weeks 1–7 only. The sequence is Chapters 1, 2, 3, 4, 6, 7, 8; Chapter 5 and later weeks were not posted.
+Lecture snapshot: October 26, 2026. Posted Weeks 1–8; Chapters 1, 2, 3, 4, 6, 7, 8, 9. Chapter 5 is not in the posted sequence. Assignments remain through Problem Set 7.
 
-The bank contains 172 entries: 90 lecture examples, demonstrations, and practice exercises; 70 assigned questions from Problem Sets 1–7; 11 Quiz 1 questions; and one extra example (8.33) present only in the Problem Set 7 key. Source ambiguities and corrections are recorded in the affected entry. Example 6.9 is conditional because the source does not clearly establish its initial current. Laboratory measurements are not fabricated; use the original handouts and existing Lab 5 tools.
+The bank contains 183 entries: 101 lecture examples, demonstrations, and practice exercises; 70 assigned questions from Problem Sets 1–7; 11 Quiz 1 questions; and one extra example (8.33) present only in the Problem Set 7 key. Source ambiguities and corrections are recorded in the affected entry. Example 6.9 is conditional because the source does not clearly establish its initial current. Laboratory measurements are not fabricated; use the original handouts and existing Lab 5 tools.
 
 ## Updating content
 
@@ -27,3 +27,7 @@ Five new originals (54 total): Chapter 8 PPTX, response-summary PDF, Problem Set
 ## Multiple-choice practice
 
 `quiz.html` uses `mcq-data.js`, built by `node dev/build-ecet-mcq.cjs`: four original Quiz 1 MCQs (Q1, Q7, Q8, Q9) with exact wording/choices, and 30 authored practice questions (six each for Chapters 1, 2, 3, 4, 6). The extra questions are not instructor predictions. Original excerpts use SVG viewports into the untouched source page images, excluding the printed answers. Answers lock after checking; results and retry-missed use the first checked choice. Rounds are session-only.
+
+## Week 8 import
+
+Chapter 9 adds 11 lecture entries and the unchanged 68-slide PPTX (55 originals total). Includes the sine-to-cosine exercise and posted Examples 9.1–9.5, 9.7–9.11; Example 9.6 is not present. Source figures are untouched embedded excerpts, some including answers. Slide 31 is an unnumbered conversion exercise. The printed negative derivative term in Example 9.7 is retained; its answer is explicitly a sinusoidal particular solution, not a stable transient claim. Phasors use peak amplitudes and a cosine reference. The cumulative formula sheet still covers through Chapter 8.

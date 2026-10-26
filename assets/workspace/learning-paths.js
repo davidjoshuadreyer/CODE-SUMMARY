@@ -481,12 +481,12 @@ window.TESSELATE_PATHS = {
     ]
   },
   "ecet250e": {
-    "coverage": "172 worked problems cover the currently posted Weeks 1–7 (Chapters 1–4, 6–8). All 54 original files, expandable solutions, and an optional Lab report theme. Checked October 19, 2026.",
+    "coverage": "183 worked problems cover the currently posted Weeks 1–8 (Chapters 1–4, 6–9). All 55 original files, expandable solutions, and an optional Lab report theme. Checked October 26, 2026.",
     "lessons": [
       {
         "title": "Worked problem library",
         "url": "ecet250e/report-study.html",
-        "summary": "172 worked problems from the posted lecture slides, Problem Sets 1–7, and Quiz 1."
+        "summary": "183 worked problems from the posted lecture slides, Problem Sets 1–7, and Quiz 1."
       },
       {
         "title": "Current, voltage, and power",

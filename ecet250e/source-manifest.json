@@ -723,5 +723,18 @@
     "original": true,
     "collected": "2026-10-19",
     "topicUrl": "https://online.camosun.ca/d2l/le/content/347548/viewContent/5366874/View"
+  },
+  {
+    "id": "305928b5744a75a2",
+    "title": "ECET 250E · Week 8 · Chapter 9 · Sinusoids and phasors",
+    "filename": "ECET 250E-WEEK 8-CHAPTER 9-SINUSOIDAL AND PHASORS_2026.pptx",
+    "url": "source-materials/ecet-week8-chapter9-sinusoids-phasors-305928b5.pptx",
+    "format": "PPTX",
+    "bytes": 2934168,
+    "sha256": "305928b5744a75a2c52b4eee8cefcef2d6b6748230f8179de66a8ac5319c56dd",
+    "group": "Week 8 · Sinusoids and phasors",
+    "original": true,
+    "collected": "2026-10-26",
+    "topicUrl": "https://online.camosun.ca/d2l/le/content/347548/viewContent/5366837/View"
   }
 ]

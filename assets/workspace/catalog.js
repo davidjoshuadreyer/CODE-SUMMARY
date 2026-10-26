@@ -500,7 +500,7 @@ window.TESSELATE_CATALOG = {
       "kind": "Study notes",
       "url": "ecet250e/report-study.html",
       "body": "",
-      "description": "172 worked problems with diagrams, expandable steps, and an optional Lab report theme.",
+      "description": "183 worked problems with diagrams, expandable steps, and an optional Lab report theme.",
       "referenceIds": [
         "ref-ecet-import-9dfb869a806d0f48",
         "ref-ecet-import-40192e5a598e0992",
@@ -566,7 +566,8 @@ window.TESSELATE_CATALOG = {
         "ref-ecet-import-18aede4299e88763",
         "ref-ecet-import-52d6c989c8c5374e",
         "ref-ecet-import-7df127fa315e3a98",
-        "ref-ecet-import-46df03ad7979441d"
+        "ref-ecet-import-46df03ad7979441d",
+        "ref-ecet-import-305928b5744a75a2"
       ],
       "builtin": true
     },
@@ -6644,6 +6645,17 @@ window.TESSELATE_CATALOG = {
       "notes": "Imported from the existing COMP 139E course setup.",
       "builtin": true,
       "createdAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "ref-ecet-import-305928b5744a75a2",
+      "courseId": "ecet250e",
+      "name": "ECET 250E · Week 8 · Chapter 9 · Sinusoids and phasors",
+      "url": "ecet250e/source-materials/ecet-week8-chapter9-sinusoids-phasors-305928b5.pptx",
+      "size": 2934168,
+      "stage": "unreviewed",
+      "notes": "Original D2L file · Week 8 · Sinusoids and phasors · Collected October 26, 2026.",
+      "builtin": true,
+      "createdAt": "2026-10-26T00:00:00.000Z"
     }
   ]
 };
