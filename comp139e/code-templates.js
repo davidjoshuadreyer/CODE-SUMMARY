@@ -24,6 +24,15 @@
  let timer;
  async function copy(text){try{await navigator.clipboard.writeText(text);const s=document.getElementById('copy-status');s.textContent='Code copied — colours and explanations left out.';clearTimeout(timer);timer=setTimeout(()=>s.textContent='',3000);}catch{const d=document.getElementById('copy-fallback'),f=d.querySelector('textarea');f.value=text;d.showModal();f.focus();f.select();}}
  document.addEventListener('click',e=>{const b=e.target.closest('[data-copy]');if(b)copy(document.getElementById(b.dataset.copy).textContent);});
+ document.addEventListener('click',e=>{
+  const button=e.target.closest('[data-code-target]');if(!button)return;
+  const target=document.getElementById(button.dataset.codeTarget);if(!target)return;
+  const workspace=button.closest('.code-workspace');
+  workspace.querySelectorAll('.selected-line').forEach(line=>line.classList.remove('selected-line'));
+  workspace.querySelectorAll('[aria-current]').forEach(b=>b.removeAttribute('aria-current'));
+  button.setAttribute('aria-current','true');target.classList.add('selected-line');
+  target.scrollIntoView({block:'nearest',inline:'nearest'});target.focus({preventScroll:true});
+ });
  let beforePrint=[];
  window.addEventListener('beforeprint',()=>{beforePrint=[...document.querySelectorAll('details')].map(d=>[d,d.open]);document.querySelectorAll('.entry').forEach(d=>{if(!d.closest('.template').hidden)d.open=true;});});
  window.addEventListener('afterprint',()=>beforePrint.forEach(([d,open])=>d.open=open));
