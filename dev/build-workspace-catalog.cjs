@@ -35,6 +35,8 @@ for (const [dir,courseId] of [['phys210','phys210'],['ecet250e','ecet250e'],['ma
  }
 }
 const compCode=resources.find(r=>r.url==='comp139e/code-templates.html');if(compCode)Object.assign(compCode,{title:'C++ code templates · Copy & paste',description:'25 reusable patterns with clean copy buttons, separate explanations and runnable examples.',referenceIds:[]});
+const engrReps=resources.find(r=>r.url==='engr290/assignment-practice.html');
+if(engrReps)Object.assign(engrReps,{title:'Assignments 1 & 2 · Multiple-choice reps',kind:'Practice quiz',description:'42 questions covering all 20 assigned problems, with hints, worked solutions and missed-question retries.',referenceIds:['ref-d2l-engr290-5465527','ref-d2l-engr290-5494675']});
 const compRules=resources.find(r=>r.url==='comp139e/cpp-cheat-sheet.html');if(compRules)Object.assign(compRules,{title:'C++ midterm cheat sheet / rules',description:'Quick blank-position reference: if you see this, write this.',referenceIds:[]});
 const compPractice=require('../comp139e/practice-exercises.json');
 for(const exercise of compPractice){const entry=resources.find(r=>r.url===`comp139e/practice-${exercise.slug}.html`);if(entry)Object.assign(entry,{title:exercise.title+' · Fill in the blanks',kind:'Practice worksheet',description:exercise.topic,referenceIds:[]});}

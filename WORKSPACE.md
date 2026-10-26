@@ -198,3 +198,7 @@ Midterm-prep questions live in `dev/midterm-recall-content.cjs`; regenerate with
 `node dev/build-study-mcq.cjs`. This content refresh does not verify D2L dates or
 claim confirmed exam coverage. The existing September schedule snapshot remains
 labelled separately. Circuits lesson aliases include the new worked-library entry.
+
+## ENGR 290 assignment reps
+
+`engr290/assignment-practice.html` provides 42 multiple-choice questions covering all six Assignment 1 and fourteen Assignment 2 problems, verified against D2L on October 26, 2026. Edit `dev/build-engr290-reps.cjs` and run it to rebuild the bank. Graph readings are approximate and stated explicitly; Assignment 2 Q5(c)'s apparent key error is explained. Progress uses `engr290-assignment-reps-v1` in browser localStorage, separate from account backups. Hints count as assisted, revealed answers do not count as correct, and missed/assisted questions can be retried.

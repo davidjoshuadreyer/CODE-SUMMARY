@@ -307,6 +307,11 @@ window.TESSELATE_PATHS = {
     ],
     "practice": [
       {
+        "title": "Assignments 1 & 2 · Multiple-choice reps",
+        "url": "engr290/assignment-practice.html",
+        "summary": "42 questions covering all 20 assigned problems. Hints, worked solutions, shuffled choices, and missed-question retries."
+      },
+      {
         "title": "Assignment 1 · Step-by-step walkthrough",
         "url": "engr290/assignment-1.html",
         "summary": "All six materials problems, with equations, substitutions, checks, and a printable solution key."

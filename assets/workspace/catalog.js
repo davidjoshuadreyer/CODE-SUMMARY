@@ -1299,6 +1299,20 @@ window.TESSELATE_CATALOG = {
       "builtin": true
     },
     {
+      "id": "page-ZW5ncjI5MC9hc3NpZ25tZW50LXByYWN0aWNlLmh0bWw",
+      "courseId": "engr290",
+      "title": "Assignments 1 & 2 · Multiple-choice reps",
+      "kind": "Practice quiz",
+      "url": "engr290/assignment-practice.html",
+      "body": "",
+      "description": "42 questions covering all 20 assigned problems, with hints, worked solutions and missed-question retries.",
+      "referenceIds": [
+        "ref-d2l-engr290-5465527",
+        "ref-d2l-engr290-5494675"
+      ],
+      "builtin": true
+    },
+    {
       "id": "page-ZW5ncjI5MC9hc3NpZ25tZW50cy5odG1s",
       "courseId": "engr290",
       "title": "Assignments & solutions",
@@ -4307,6 +4321,17 @@ window.TESSELATE_CATALOG = {
       "size": 0,
       "stage": "unreviewed",
       "notes": "Camosun login · Assignments · Indexed 2026-09-28. Original remains at its source; this is not an offline copy.",
+      "builtin": true,
+      "createdAt": "2026-09-23T00:00:00.000Z"
+    },
+    {
+      "id": "ref-d2l-engr290-5494675",
+      "courseId": "engr290",
+      "name": "ENGR 290_Assign_2_2026",
+      "url": "https://online.camosun.ca/d2l/le/content/347881/viewContent/5494675/View",
+      "size": 0,
+      "stage": "unreviewed",
+      "notes": "Camosun login · Assignments · Indexed 2026-10-26. Original remains at its source; this is not an offline copy.",
       "builtin": true,
       "createdAt": "2026-09-23T00:00:00.000Z"
     },

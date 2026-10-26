@@ -72,7 +72,8 @@ add('engr290',347881,'Course information',`5421418|ENGR290CourseOutline_2026
 add('engr290',347881,'Lecture slides',`5421421|Week 1 Atomic Structure_2026
 5475178|Week 2a Bonding_2026 (Revised)
 5421576|Week 2b Dislocations_2026`);
-add('engr290',347881,'Assignments',`5465527|ENGR 290_Assign_1_2026`);
+add('engr290',347881,'Assignments',`5465527|ENGR 290_Assign_1_2026
+5494675|ENGR 290_Assign_2_2026`);
 add('comp139e',347338,'Course information',`5457464|COMP 139E X01A Syllabus`);
 add('comp139e',347338,'Labs',`5404942|Example of a well-documented program.
 5404902|139E - Lab 1
@@ -124,3 +125,5 @@ for(const [key,source] of Object.entries(require('./physics-homework-sources.jso
 }
 for(const course of ['phys210','engr290'])for(const item of data[course])item.checked='2026-09-28';
 module.exports=data;
+
+for(const item of data.engr290)if(item.id==='5494675')item.checked='2026-10-26';
