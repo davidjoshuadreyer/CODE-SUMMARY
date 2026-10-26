@@ -33,6 +33,17 @@
   button.setAttribute('aria-current','true');target.classList.add('selected-line');
   target.scrollIntoView({block:'nearest',inline:'nearest'});target.focus({preventScroll:true});
  });
+ const decisionFilter=document.getElementById('decision-filter');
+ decisionFilter.addEventListener('change',()=>{
+  let count=0;document.querySelectorAll('[data-decision]').forEach(row=>{row.hidden=decisionFilter.value!=='all'&&row.dataset.decision!==decisionFilter.value;if(!row.hidden)count++;});
+  document.getElementById('decision-count').textContent=`${count} routes`;
+ });
+ document.addEventListener('click',e=>{
+  const button=e.target.closest('[data-download]');if(!button)return;
+  const code=document.getElementById(button.dataset.download).textContent;
+  const url=URL.createObjectURL(new Blob([code],{type:'text/plain;charset=utf-8'}));
+  const link=document.createElement('a');link.href=url;link.download=button.dataset.download.replace(/-program$/,'')+'.cpp';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+ });
  let beforePrint=[];
  window.addEventListener('beforeprint',()=>{beforePrint=[...document.querySelectorAll('details')].map(d=>[d,d.open]);document.querySelectorAll('.entry').forEach(d=>{if(!d.closest('.template').hidden)d.open=true;});});
  window.addEventListener('afterprint',()=>beforePrint.forEach(([d,open])=>d.open=open));

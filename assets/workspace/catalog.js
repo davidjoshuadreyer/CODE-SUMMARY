@@ -1678,7 +1678,7 @@ window.TESSELATE_CATALOG = {
       "kind": "Study notes",
       "url": "comp139e/code-templates.html",
       "body": "",
-      "description": "49 colour-coded complete examples with main(), 24 blank starters and quick rules in one searchable sheet.",
+      "description": "75 complete examples, Labs 1–7 study solutions, 19 lab-style drills, a decision matrix, code outlines and 24 blank starters in one sheet.",
       "referenceIds": [],
       "builtin": true
     },

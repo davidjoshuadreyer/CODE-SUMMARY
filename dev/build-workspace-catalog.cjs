@@ -35,7 +35,7 @@ for (const [dir,courseId] of [['phys210','phys210'],['ecet250e','ecet250e'],['ma
  }
 }
 for(let i=resources.length-1;i>=0;i--)if(['comp139e/midterm-patterns.html','comp139e/cpp-cheat-sheet.html'].includes(resources[i].url))resources.splice(i,1);
-const compCode=resources.find(r=>r.url==='comp139e/code-templates.html');if(compCode)Object.assign(compCode,{title:'COMP midterm cheat sheet · Code, templates & rules',description:'49 colour-coded complete examples with main(), 24 blank starters and quick rules in one searchable sheet.',referenceIds:[]});
+const compCode=resources.find(r=>r.url==='comp139e/code-templates.html');if(compCode)Object.assign(compCode,{title:'COMP midterm cheat sheet · Code, templates & rules',description:'75 complete examples, Labs 1–7 study solutions, 19 lab-style drills, a decision matrix, code outlines and 24 blank starters in one sheet.',referenceIds:[]});
 const engrReps=resources.find(r=>r.url==='engr290/assignment-practice.html');
 if(engrReps)Object.assign(engrReps,{title:'Assignments 1 & 2 · Multiple-choice reps',kind:'Practice quiz',description:'42 questions covering all 20 assigned problems, with hints, worked solutions and missed-question retries.',referenceIds:['ref-d2l-engr290-5465527','ref-d2l-engr290-5494675']});
 const compPractice=require('../comp139e/practice-exercises.json');

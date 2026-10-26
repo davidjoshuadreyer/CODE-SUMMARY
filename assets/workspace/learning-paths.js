@@ -451,7 +451,7 @@ window.TESSELATE_PATHS = {
       {
         "title": "Midterm cheat sheet · Everything in one place",
         "url": "comp139e/code-templates.html",
-        "summary": "49 colour-coded complete examples with main(), 24 blank starters, class maps, search and quick rules. Download for offline use."
+        "summary": "75 colour-coded examples with main(), Labs 1–7 worked solutions, 19 lab-style drills, a decision matrix, code outlines and 24 blank starters. Download for offline use."
       },
       {
         "title": "Fill-in-the-blank worksheets",

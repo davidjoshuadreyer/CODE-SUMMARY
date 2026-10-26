@@ -1,0 +1,721 @@
+[
+  {
+    "id": "lab01-survey",
+    "title": "Lab 1 \u00b7 Surveying and dynamic arrays",
+    "group": "lab-solutions",
+    "lab": 1,
+    "code": "#include <iostream>\n#include <cmath>\n#include <stdexcept>\nusing namespace std;\n\nconst double PI = 3.14159265358979323846;\nvoid getUserInput(double& radius, double& pegDist, double& spacing) {\n    cout << \"Radius, peg distance, maximum spacing: \";\n    if (!(cin >> radius >> pegDist >> spacing)) throw invalid_argument(\"Use numbers\");\n}\nint getNumberOfLights(double radius, double pegDist, double spacing) {\n    if (radius <= 0 || pegDist <= 0 || pegDist > 2*radius || spacing <= 0)\n        throw invalid_argument(\"Require R>0, 0<chord<=2R, spacing>0\");\n    double arcAngle = 2 * asin(pegDist / (2 * radius));\n    return static_cast<int>(ceil(radius * arcAngle / spacing)) + 1;\n}\nvoid calculateLightPositions(double radius, double pegDist, int numLights,\n                             double angles[], double distances[]) {\n    double halfArcAngle = asin(pegDist / (2 * radius));\n    angles[0] = distances[0] = 0;\n    for (int i=1; i<numLights; ++i) {\n        double halfCentralAngle = halfArcAngle * i / (numLights-1);\n        angles[i] = halfArcAngle - halfCentralAngle;\n        distances[i] = 2 * radius * sin(halfCentralAngle);\n    }\n}\nvoid outputResults(const double angles[], const double distances[], int numLights) {\n    cout << numLights << \" streetlights\\n\";\n    for (int i=0; i<numLights; ++i) {\n        cout << i+1 << \": distance=\" << distances[i];\n        if (i>0) cout << \", angle=\" << angles[i]*180/PI << \" degrees\";\n        cout << '\\n';\n    }\n}\n",
+    "use": "double radius, pegDist, spacing;\ntry {\n    getUserInput(radius, pegDist, spacing);\n    int numLights = getNumberOfLights(radius, pegDist, spacing);\n    double* angles = new double[numLights];\n    double* distances = new double[numLights];\n    calculateLightPositions(radius, pegDist, numLights, angles, distances);\n    outputResults(angles, distances, numLights);\n    delete[] angles;\n    delete[] distances;\n} catch (const exception& e) { cout << e.what() << '\\n'; }",
+    "test": "assert(getNumberOfLights(100,100,20)==7);\ndouble a[7],d[7];calculateLightPositions(100,100,7,a,d);\nassert(abs(d[6]-100)<1e-9 && abs(a[6])<1e-9 && d[0]==0);\nbool caught=false;try{getNumberOfLights(1,3,1);}catch(const invalid_argument&){caught=true;}assert(caught);",
+    "when": "Find a count at runtime, allocate two arrays, fill them in a function, then release them.",
+    "change": "Change the geometry formula and outputs; keep ceil for a maximum allowed gap and include both endpoints.",
+    "watch": "Uses the minor arc and assumes a practical number of lights; do not use integer division for angles.",
+    "reference": "workspace/reference/course/labs/139E - Lab 1.html",
+    "parts": [
+      [
+        "Recognize this pattern",
+        "Find a count at runtime, allocate two arrays, fill them in a function, then release them."
+      ],
+      [
+        "Adapt it",
+        "Change the geometry formula and outputs; keep ceil for a maximum allowed gap and include both endpoints."
+      ],
+      [
+        "Check before copying",
+        "Uses the minor arc and assumes a practical number of lights; do not use integer division for angles."
+      ]
+    ],
+    "stdin": "100 100 20\n",
+    "expected": "For 100 100 20: 7 lights; first distance 0, final distance 100."
+  },
+  {
+    "id": "lab02-grades",
+    "title": "Lab 2 \u00b7 Validated input and weighted grades",
+    "group": "lab-solutions",
+    "lab": 2,
+    "code": "#include <iostream>\n#include <string>\n#include <cmath>\n#include <limits>\nusing namespace std;\n\nconst double MIN_MARK=0, MAX_MARK=100, MIN_WEIGHT=1, MAX_WEIGHT=50;\nconst double REQUIRED_WEIGHT=100, WEIGHT_TOLERANCE=0.1;\nbool getValidNumber(string prompt, double* value, const double min, const double max) {\n    while (true) {\n        cout << prompt;\n        if (!(cin >> *value)) {\n            cin.clear();\n            cin.ignore(numeric_limits<streamsize>::max(), '\\n');\n            return false;\n        }\n        if (*value >= min && *value <= max) return true;\n        cout << \"Number is out of range. Try again.\\n\";\n    }\n}\nstring gradeFromMark(const double mark) {\n    // Check these example boundaries against your course outline.\n    if (mark>=90) return \"A+\";\n    else if (mark>=85) return \"A\";\n    else if (mark>=80) return \"A-\";\n    else if (mark>=77) return \"B+\";\n    else if (mark>=73) return \"B\";\n    else if (mark>=70) return \"B-\";\n    else if (mark>=65) return \"C+\";\n    else if (mark>=60) return \"C\";\n    else if (mark>=50) return \"D\";\n    else return \"F\";\n}\n",
+    "use": "double mark, weight, total=0, totalWeight=0;\nwhile (getValidNumber(\"Mark: \", &mark, MIN_MARK, MAX_MARK)) {\n    if (!getValidNumber(\"Weight: \", &weight, MIN_WEIGHT, MAX_WEIGHT)) break;\n    total += mark * weight / 100.0;\n    totalWeight += weight;\n}\ncout << \"Input data terminated.\\n\";\nif (abs(totalWeight-REQUIRED_WEIGHT) <= WEIGHT_TOLERANCE + 1e-9)\n    cout << \"Mark is \" << total << \" and grade is \" << gradeFromMark(total) << '\\n';\nelse cout << \"Weights must total 100%.\\n\";",
+    "test": "assert(abs(total-89.1)<1e-9 && totalWeight==100);assert(gradeFromMark(89.1)==\"A\");",
+    "when": "Validate through a pointer, retry out-of-range input, stop on a non-number, accumulate without arrays.",
+    "change": "Replace named limits and grade thresholds; keep validation independent of marks or weights.",
+    "watch": "Grade boundaries are examples: the supplied lab gives 89.1 \u2192 A but does not contain the full course-outline table.",
+    "reference": "workspace/reference/course/labs/139E - Lab 2.html",
+    "parts": [
+      [
+        "Recognize this pattern",
+        "Validate through a pointer, retry out-of-range input, stop on a non-number, accumulate without arrays."
+      ],
+      [
+        "Adapt it",
+        "Replace named limits and grade thresholds; keep validation independent of marks or weights."
+      ],
+      [
+        "Check before copying",
+        "Grade boundaries are examples: the supplied lab gives 89.1 \u2192 A but does not contain the full course-outline table."
+      ]
+    ],
+    "stdin": "85 30 92 50 88 20 q\n",
+    "expected": "85\u00d730%, 92\u00d750%, 88\u00d720% gives 89.1 and A."
+  },
+  {
+    "id": "lab03-coordinates",
+    "title": "Lab 3 \u00b7 Struct results, persistent arrays, defaults",
+    "group": "lab-solutions",
+    "lab": 3,
+    "code": "#include <iostream>\n#include <cmath>\n#include <algorithm>\n#include <stdexcept>\nusing namespace std;\n\nconst double PI=3.14159265358979323846;\nstruct SphericalCoords { double radius, azimuth, inclination; };\ninline double getRadius(double x, double y, double z=0) {\n    return sqrt(x*x + y*y + z*z);\n}\ndouble* sphericalToRectangular(double r, double azimuth, double inclination=PI/2) {\n    if (r<0) throw invalid_argument(\"Negative radius\");\n    return new double[3]{r*sin(inclination)*cos(azimuth),\n                         r*sin(inclination)*sin(azimuth), r*cos(inclination)};\n}\nSphericalCoords rectangularToSpherical(double x, double y, double z=0) {\n    double r=getRadius(x,y,z);\n    if (r==0) return {0,0,0}; // Direction undefined: choose zero angles.\n    return {r, atan2(y,x), acos(max(-1.0,min(1.0,z/r)))};\n}\n",
+    "use": "SphericalCoords s=rectangularToSpherical(3,4);\ndouble* xyz=sphericalToRectangular(s.radius,s.azimuth,s.inclination);\ncout << s.radius << \" -> \" << xyz[0] << \", \" << xyz[1] << \", \" << xyz[2] << '\\n';\ndelete[] xyz;",
+    "test": "assert(getRadius(3,4)==5);double* a=sphericalToRectangular(2,0);double* b=sphericalToRectangular(3,0);assert(a!=b && abs(a[0]-2)<1e-9 && abs(b[0]-3)<1e-9);delete[] a;delete[] b;assert(rectangularToSpherical(0,0).radius==0);",
+    "when": "Return a fixed group as a struct; return a new array when the caller needs persistent indexed storage.",
+    "change": "Change the fields or formulas; put default arguments in the header declaration when splitting files.",
+    "watch": "Caller must delete[] each returned array. This is a one-file study version; the original lab requires spherical.hpp and spherical.cpp.",
+    "reference": "workspace/reference/course/labs/139E - Lab 3.html",
+    "parts": [
+      [
+        "Recognize this pattern",
+        "Return a fixed group as a struct; return a new array when the caller needs persistent indexed storage."
+      ],
+      [
+        "Adapt it",
+        "Change the fields or formulas; put default arguments in the header declaration when splitting files."
+      ],
+      [
+        "Check before copying",
+        "Caller must delete[] each returned array. This is a one-file study version; the original lab requires spherical.hpp and spherical.cpp."
+      ]
+    ],
+    "expected": "Radius 5; round trip returns approximately 3, 4, 0."
+  },
+  {
+    "id": "lab04-parser",
+    "title": "Lab 4 \u00b7 Command-line files, peek, append",
+    "group": "lab-solutions",
+    "lab": 4,
+    "code": "#include <iostream>\n#include <fstream>\n#include <sstream>\n#include <string>\n#include <cctype>\n#include <stdexcept>\nusing namespace std;\n\nvoid processText(istream& input, ostream& output) {\n    while (input >> ws && input.peek()!=char_traits<char>::eof()) {\n        int first=input.peek();\n        if (isdigit(static_cast<unsigned char>(first)) || first=='+' || first=='-') {\n            int number;\n            if (!(input >> number)) throw runtime_error(\"Invalid integer\");\n            output << \"Found an integer: \" << number << '\\n';\n        } else {\n            string word; input >> word;\n            output << \"Found a \" << word.length() << \" character word: \" << word << '\\n';\n        }\n    }\n    if (input.bad() || !output) throw runtime_error(\"I/O error\");\n}\n",
+    "use": "if (argc!=3) { cout << \"Usage: program input.txt output.txt\\n\"; return 1; }\ntry {\n    ifstream input(argv[1]);\n    ofstream output(argv[2],ios::app);\n    if (!input || !output) throw runtime_error(\"Could not open files\");\n    processText(input,output);\n} catch (const exception& e) { cout << e.what() << '\\n'; return 1; }",
+    "test": "istringstream input(\"hello -12 +7 world\");ostringstream output;processText(input,output);assert(output.str()==\"Found a 5 character word: hello\\nFound an integer: -12\\nFound an integer: 7\\nFound a 5 character word: world\\n\");",
+    "when": "Read filenames from argc/argv, classify one peeked character, extract the entire word or integer, append output.",
+    "change": "Change the output labels or processing function; keep ios::app if existing output must survive.",
+    "watch": "Assumes the handout\u2019s valid words and integers. In a terminal run: ./program input.txt output.txt.",
+    "reference": "workspace/reference/course/labs/139E - Lab 4.html",
+    "parts": [
+      [
+        "Recognize this pattern",
+        "Read filenames from argc/argv, classify one peeked character, extract the entire word or integer, append output."
+      ],
+      [
+        "Adapt it",
+        "Change the output labels or processing function; keep ios::app if existing output must survive."
+      ],
+      [
+        "Check before copying",
+        "Assumes the handout\u2019s valid words and integers. In a terminal run: ./program input.txt output.txt."
+      ]
+    ],
+    "mainSignature": "int main(int argc, char* argv[])",
+    "runArgs": [
+      "input.txt",
+      "output.txt"
+    ],
+    "fixtures": {
+      "input.txt": "hello -12 +7 world\n"
+    },
+    "expected": "Appends four classified lines for hello -12 +7 world."
+  },
+  {
+    "id": "lab05-controller",
+    "title": "Lab 5 \u00b7 Controller inheritance and PID state",
+    "group": "lab-solutions",
+    "lab": 5,
+    "code": "#include <iostream>\n#include <cmath>\n#include <stdexcept>\n#include <vector>\nusing namespace std;\n\nclass Controller {\npublic:\n    static constexpr double deltaT=1.0;\n    virtual double controlStep(double plantOutput, double setpoint)=0;\n    virtual ~Controller()=default;\n};\nclass ProportionalController : public Controller {\n    double kc;\npublic:\n    ProportionalController(double propGain) : kc(propGain) {}\n    double controlStep(double plantOutput, double setpoint) override {\n        double error=setpoint-plantOutput;\n        return setpoint+kc*error;\n    }\n};\nclass PID_Controller : public Controller {\n    double kc,ti,td,q,previousOutput;\npublic:\n    PID_Controller(double propGain,double integralTime,double derivativeTime)\n        : kc(propGain),ti(integralTime),td(derivativeTime),q(0),previousOutput(0) {\n        if (ti<=0 || td<0) throw invalid_argument(\"Require ti>0 and td>=0\");\n    }\n    double controlStep(double plantOutput, double setpoint) override {\n        double error=setpoint-plantOutput;\n        q=0.9*q+0.1*error;\n        double result=setpoint+kc*(error+deltaT/ti*q-td/deltaT*(plantOutput-previousOutput));\n        previousOutput=plantOutput;\n        return result;\n    }\n};\nclass Plant {\n    int order;\n    vector<double> b,a,state;\npublic:\n    Plant(const double num[],const double den[],int order)\n        : order(order),b(num,num+order+1),a(den,den+order+1),state(order+1,0) {}\n    double plantResponse(double input) {\n        double y=b[0]*input+state[0];\n        for (int k=0;k<order;++k) state[k]=state[k+1]+input*b[k+1]-y*a[k+1];\n        return y;\n    }\n};\n",
+    "use": "const double num[]={0.023018459508916,0.046036919017832,0.023018459508916};\nconst double den[]={1,-1.618519638615533,0.710593476651197};\nPlant plant(num,den,2);\nPID_Controller pidController(0.5,25,2.5);\nController* controller=&pidController;\ndouble y=plant.plantResponse(0);\ncout << \"Y = [\\n\";\nfor (int step=0;step<50;++step) {\n    double input=controller->controlStep(y,1);\n    y=plant.plantResponse(input);\n    cout << input << \" \" << y << '\\n';\n}\ncout << \"];\\n\";",
+    "test": "ProportionalController p(0.3);assert(abs(p.controlStep(0,1)-1.3)<1e-9);PID_Controller pid(0.5,25,2.5);assert(abs(pid.controlStep(0,1)-1.502)<1e-9);assert(abs(pid.controlStep(0,1)-1.5038)<1e-9);",
+    "when": "Derive from an abstract Controller, override controlStep, keep q and previousOutput between calls.",
+    "change": "Change the controller algorithm; keep the same interface so the driver still uses Controller*.",
+    "watch": "Uses the handout\u2019s leaky integral q=0.9q+0.1error, not a cumulative sum. Assumes finite inputs and normalized plant coefficients.",
+    "reference": "workspace/reference/course/labs/139E - Lab 5.html",
+    "parts": [
+      [
+        "Recognize this pattern",
+        "Derive from an abstract Controller, override controlStep, keep q and previousOutput between calls."
+      ],
+      [
+        "Adapt it",
+        "Change the controller algorithm; keep the same interface so the driver still uses Controller*."
+      ],
+      [
+        "Check before copying",
+        "Uses the handout\u2019s leaky integral q=0.9q+0.1error, not a cumulative sum. Assumes finite inputs and normalized plant coefficients."
+      ]
+    ],
+    "expected": "50 plant input/output rows, ready to paste into MATLAB as Y."
+  },
+  {
+    "id": "lab06-shape-stack",
+    "title": "Lab 6 \u00b7 Square + linked Stack<Shape*> + exceptions",
+    "group": "lab-solutions",
+    "lab": 6,
+    "code": "#include <iostream>\n#include <exception>\n#include <string>\nusing namespace std;\n\nclass Shape {\n    int x,y;\nprotected:\n    virtual void printMe(ostream& out) const=0;\npublic:\n    Shape(int xLoc,int yLoc) : x(xLoc),y(yLoc) {}\n    virtual ~Shape()=default;\n    void moveTo(int x,int y) { this->x=x; this->y=y; }\n    int getX() const { return x; }\n    int getY() const { return y; }\n    virtual void draw() const=0;\n    friend ostream& operator<<(ostream& out,const Shape& shape) {\n        shape.printMe(out); return out;\n    }\n};\nclass Rectangle : public Shape {\n    double length,width;\nprotected:\n    void printMe(ostream& out) const override { out << \"Rectangle \" << length << \" x \" << width; }\npublic:\n    Rectangle(double l,double w,int x,int y) : Shape(x,y),length(l),width(w) {}\n    double getLength() const { return length; }\n    double getWidth() const { return width; }\n    void draw() const override { cout << *this << \" at \" << getX() << \",\" << getY() << '\\n'; }\n};\nclass Circle : public Shape {\n    double radius;\nprotected:\n    void printMe(ostream& out) const override { out << \"Circle radius \" << radius; }\npublic:\n    Circle(double r,int x,int y) : Shape(x,y),radius(r) {}\n    double getRadius() const { return radius; }\n    void draw() const override { cout << *this << \" at \" << getX() << \",\" << getY() << '\\n'; }\n};\nclass Square : public Rectangle {\nprotected:\n    void printMe(ostream& out) const override { out << \"Square side \" << getLength(); }\npublic:\n    Square(double side,int x,int y) : Rectangle(side,side,x,y) {}\n};\n\nclass StackException : public exception {\n    string message;\npublic:\n    explicit StackException(const string& msg) noexcept : message(msg) {}\n    const char* what() const noexcept override { return message.c_str(); }\n};\n\ntemplate <class T> class Stack {\nprivate:\n    typedef struct stackNode {\n        struct stackNode *next;\n        T theItem;\n    } StackNode;\n    StackNode *topOfStack;\n    int count;\npublic:\n    Stack() : topOfStack(NULL), count(0) {}\n    void push(T item) {\n        StackNode *newNode = new StackNode;\n        newNode->theItem = item;\n        newNode->next = topOfStack;\n        topOfStack = newNode;\n        ++count;\n    }\n    T pop(void) {\n        if (isEmpty()) throw StackException(\"Pop from empty stack\");\n        T item = topOfStack->theItem;\n        StackNode *old = topOfStack;\n        topOfStack = old->next;\n        delete old;\n        --count;\n        return item;\n    }\n    T top(void) {\n        if (isEmpty()) throw StackException(\"Top of empty stack\");\n        return topOfStack->theItem;\n    }\n    int size(void) { return count; }\n    bool isEmpty(void) { return count == 0; }\n    \n    ~Stack() { while (!isEmpty()) pop(); }\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n};\n",
+    "use": "Circle circle(2,0,0); Rectangle rectangle(3,4,1,1); Square square(5,2,2);\nStack<Shape*> shapes;\ntry {\n    shapes.push(&circle); shapes.push(&rectangle); shapes.push(&square);\n    cout << \"Size \" << shapes.size() << \", top \" << *shapes.top() << '\\n';\n    while (!shapes.isEmpty()) shapes.pop()->draw();\n    shapes.pop(); // Deliberate underflow to test the catch.\n} catch (const StackException& e) { cout << e.what() << '\\n'; }",
+    "test": "assert(square.getLength()==5 && square.getWidth()==5);assert(shapes.isEmpty());Stack<int> s;s.push(3);assert(s.top()==3 && s.size()==1 && s.pop()==3);bool caught=false;try{s.top();}catch(const StackException&){caught=true;}assert(caught);",
+    "when": "Combine multi-level inheritance, a template linked stack, base pointers, virtual draw(), and a caught underflow.",
+    "change": "Add derived Shapes or change T; use the supplied StackNode, topOfStack, theItem and count wording.",
+    "watch": "Pointers here borrow local objects: do not delete them. Stack deletes its nodes. Square inherits Rectangle::draw, which dispatches Square::printMe.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "parts": [
+      [
+        "Recognize this pattern",
+        "Combine multi-level inheritance, a template linked stack, base pointers, virtual draw(), and a caught underflow."
+      ],
+      [
+        "Adapt it",
+        "Add derived Shapes or change T; use the supplied StackNode, topOfStack, theItem and count wording."
+      ],
+      [
+        "Check before copying",
+        "Pointers here borrow local objects: do not delete them. Stack deletes its nodes. Square inherits Rectangle::draw, which dispatches Square::printMe."
+      ]
+    ],
+    "expected": "Square draws first, then Rectangle, then Circle; empty pop is caught."
+  },
+  {
+    "id": "lab07-shape-vector",
+    "title": "Lab 7 \u00b7 vector<Shape*>, iterators and bounds checking",
+    "group": "lab-solutions",
+    "lab": 7,
+    "code": "#include <iostream>\n#include <vector>\n#include <stdexcept>\nusing namespace std;\n\nclass Shape {\n    int x,y;\nprotected:\n    virtual void printMe(ostream& out) const=0;\npublic:\n    Shape(int xLoc,int yLoc) : x(xLoc),y(yLoc) {}\n    virtual ~Shape()=default;\n    void moveTo(int x,int y) { this->x=x; this->y=y; }\n    int getX() const { return x; }\n    int getY() const { return y; }\n    virtual void draw() const=0;\n    friend ostream& operator<<(ostream& out,const Shape& shape) {\n        shape.printMe(out); return out;\n    }\n};\nclass Rectangle : public Shape {\n    double length,width;\nprotected:\n    void printMe(ostream& out) const override { out << \"Rectangle \" << length << \" x \" << width; }\npublic:\n    Rectangle(double l,double w,int x,int y) : Shape(x,y),length(l),width(w) {}\n    double getLength() const { return length; }\n    double getWidth() const { return width; }\n    void draw() const override { cout << *this << \" at \" << getX() << \",\" << getY() << '\\n'; }\n};\nclass Circle : public Shape {\n    double radius;\nprotected:\n    void printMe(ostream& out) const override { out << \"Circle radius \" << radius; }\npublic:\n    Circle(double r,int x,int y) : Shape(x,y),radius(r) {}\n    double getRadius() const { return radius; }\n    void draw() const override { cout << *this << \" at \" << getX() << \",\" << getY() << '\\n'; }\n};\nclass Square : public Rectangle {\nprotected:\n    void printMe(ostream& out) const override { out << \"Square side \" << getLength(); }\npublic:\n    Square(double side,int x,int y) : Rectangle(side,side,x,y) {}\n};\n",
+    "use": "Circle circle(2,0,0); Rectangle rectangle(3,4,1,1); Square square(5,2,2);\nvector<Shape*> shapes;\ntry {\n    shapes.push_back(&circle); shapes.push_back(&rectangle);\n    shapes[0]->moveTo(2,3);\n    shapes.front()->draw(); shapes.back()->draw();\n    cout << shapes.size() << \" \" << shapes.capacity() << \" \" << shapes.max_size() << '\\n';\n    shapes.insert(shapes.begin()+1,&square);\n    for (vector<Shape*>::iterator it=shapes.begin();it!=shapes.end();++it) (*it)->draw();\n    shapes.pop_back();\n    shapes.at(0)->draw();\n    shapes.at(shapes.size()); // Deliberate checked out-of-range access.\n} catch (const out_of_range& e) { cout << e.what() << '\\n'; }",
+    "test": "assert(shapes.size()==2 && shapes.front()==&circle && shapes.back()==&square);assert(circle.getX()==2 && circle.getY()==3);",
+    "when": "Use all required vector operations and iterate through base pointers to invoke virtual draw().",
+    "change": "Use this when STL is allowed and the question asks for a vector, not a linked-node implementation.",
+    "watch": "at() checks bounds; [] does not. Pointers borrow local objects; pop_back does not delete a pointed-to object.",
+    "reference": "workspace/reference/course/labs/139E - Lab 7.html",
+    "parts": [
+      [
+        "Recognize this pattern",
+        "Use all required vector operations and iterate through base pointers to invoke virtual draw()."
+      ],
+      [
+        "Adapt it",
+        "Use this when STL is allowed and the question asks for a vector, not a linked-node implementation."
+      ],
+      [
+        "Check before copying",
+        "at() checks bounds; [] does not. Pointers borrow local objects; pop_back does not delete a pointed-to object."
+      ]
+    ],
+    "expected": "Polymorphic draw calls, vector sizes, then a caught out_of_range."
+  },
+  {
+    "id": "variant-square",
+    "title": "Shape variation \u00b7 Add a derived Square",
+    "group": "lab-variants",
+    "lab": 6,
+    "code": "#include <iostream>\nusing namespace std;\n\nclass Shape {\n    int x,y;\nprotected:\n    virtual void printMe(ostream& out) const=0;\npublic:\n    Shape(int xLoc,int yLoc) : x(xLoc),y(yLoc) {}\n    virtual ~Shape()=default;\n    void moveTo(int x,int y) { this->x=x; this->y=y; }\n    int getX() const { return x; }\n    int getY() const { return y; }\n    virtual void draw() const=0;\n    friend ostream& operator<<(ostream& out,const Shape& shape) {\n        shape.printMe(out); return out;\n    }\n};\nclass Rectangle : public Shape {\n    double length,width;\nprotected:\n    void printMe(ostream& out) const override { out << \"Rectangle \" << length << \" x \" << width; }\npublic:\n    Rectangle(double l,double w,int x,int y) : Shape(x,y),length(l),width(w) {}\n    double getLength() const { return length; }\n    double getWidth() const { return width; }\n    void draw() const override { cout << *this << \" at \" << getX() << \",\" << getY() << '\\n'; }\n};\nclass Circle : public Shape {\n    double radius;\nprotected:\n    void printMe(ostream& out) const override { out << \"Circle radius \" << radius; }\npublic:\n    Circle(double r,int x,int y) : Shape(x,y),radius(r) {}\n    double getRadius() const { return radius; }\n    void draw() const override { cout << *this << \" at \" << getX() << \",\" << getY() << '\\n'; }\n};\nclass Square : public Rectangle {\nprotected:\n    void printMe(ostream& out) const override { out << \"Square side \" << getLength(); }\npublic:\n    Square(double side,int x,int y) : Rectangle(side,side,x,y) {}\n};\n",
+    "use": "Square s(4,1,2); Shape* p=&s; p->moveTo(6,7); p->draw(); cout << *p << endl;",
+    "test": "assert(s.getLength()==4 && s.getWidth()==4 && s.getX()==6);",
+    "when": "A new type is a special case of an existing derived class.",
+    "change": "Pass side twice to Rectangle; only override behavior that differs.",
+    "watch": "Do not duplicate x, y, length or width in Square.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "parts": [
+      [
+        "Recognize this pattern",
+        "A new type is a special case of an existing derived class."
+      ],
+      [
+        "Adapt it",
+        "Pass side twice to Rectangle; only override behavior that differs."
+      ],
+      [
+        "Check before copying",
+        "Do not duplicate x, y, length or width in Square."
+      ]
+    ]
+  },
+  {
+    "id": "variant-triangle",
+    "title": "Shape variation \u00b7 Add Triangle with new data",
+    "group": "lab-variants",
+    "lab": 6,
+    "code": "#include <iostream>\nusing namespace std;\n\nclass Shape {\n    int x,y;\nprotected:\n    virtual void printMe(ostream& out) const=0;\npublic:\n    Shape(int xLoc,int yLoc) : x(xLoc),y(yLoc) {}\n    virtual ~Shape()=default;\n    void moveTo(int x,int y) { this->x=x; this->y=y; }\n    int getX() const { return x; }\n    int getY() const { return y; }\n    virtual void draw() const=0;\n    friend ostream& operator<<(ostream& out,const Shape& shape) {\n        shape.printMe(out); return out;\n    }\n};\nclass Rectangle : public Shape {\n    double length,width;\nprotected:\n    void printMe(ostream& out) const override { out << \"Rectangle \" << length << \" x \" << width; }\npublic:\n    Rectangle(double l,double w,int x,int y) : Shape(x,y),length(l),width(w) {}\n    double getLength() const { return length; }\n    double getWidth() const { return width; }\n    void draw() const override { cout << *this << \" at \" << getX() << \",\" << getY() << '\\n'; }\n};\nclass Circle : public Shape {\n    double radius;\nprotected:\n    void printMe(ostream& out) const override { out << \"Circle radius \" << radius; }\npublic:\n    Circle(double r,int x,int y) : Shape(x,y),radius(r) {}\n    double getRadius() const { return radius; }\n    void draw() const override { cout << *this << \" at \" << getX() << \",\" << getY() << '\\n'; }\n};\nclass Square : public Rectangle {\nprotected:\n    void printMe(ostream& out) const override { out << \"Square side \" << getLength(); }\npublic:\n    Square(double side,int x,int y) : Rectangle(side,side,x,y) {}\n};\nclass Triangle : public Shape {\n    double base,height;\nprotected:\n    void printMe(ostream& out) const override { out << \"Triangle area \" << getArea(); }\npublic:\n    Triangle(double b,double h,int x,int y) : Shape(x,y),base(b),height(h) {}\n    double getArea() const { return base*height/2.0; }\n    void draw() const override { cout << *this << '\\n'; }\n};\n",
+    "use": "Triangle t(6,4,0,0); Shape& shape=t; shape.draw();",
+    "test": "assert(t.getArea()==12);",
+    "when": "Extend an abstract base with a new concrete shape and an extra calculation.",
+    "change": "Replace Triangle fields, constructor and calculation; implement every pure virtual method.",
+    "watch": "Shape does not declare getArea: call t.getArea(), or add a virtual area interface if the question requires it.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "parts": [
+      [
+        "Recognize this pattern",
+        "Extend an abstract base with a new concrete shape and an extra calculation."
+      ],
+      [
+        "Adapt it",
+        "Replace Triangle fields, constructor and calculation; implement every pure virtual method."
+      ],
+      [
+        "Check before copying",
+        "Shape does not declare getArea: call t.getArea(), or add a virtual area interface if the question requires it."
+      ]
+    ]
+  },
+  {
+    "id": "variant-shape-print",
+    "title": "Shape variation \u00b7 Polymorphic stream output",
+    "group": "lab-variants",
+    "lab": 6,
+    "code": "#include <iostream>\nusing namespace std;\n\nclass Shape {\n    int x,y;\nprotected:\n    virtual void printMe(ostream& out) const=0;\npublic:\n    Shape(int xLoc,int yLoc) : x(xLoc),y(yLoc) {}\n    virtual ~Shape()=default;\n    void moveTo(int x,int y) { this->x=x; this->y=y; }\n    int getX() const { return x; }\n    int getY() const { return y; }\n    virtual void draw() const=0;\n    friend ostream& operator<<(ostream& out,const Shape& shape) {\n        shape.printMe(out); return out;\n    }\n};\nclass Rectangle : public Shape {\n    double length,width;\nprotected:\n    void printMe(ostream& out) const override { out << \"Rectangle \" << length << \" x \" << width; }\npublic:\n    Rectangle(double l,double w,int x,int y) : Shape(x,y),length(l),width(w) {}\n    double getLength() const { return length; }\n    double getWidth() const { return width; }\n    void draw() const override { cout << *this << \" at \" << getX() << \",\" << getY() << '\\n'; }\n};\nclass Circle : public Shape {\n    double radius;\nprotected:\n    void printMe(ostream& out) const override { out << \"Circle radius \" << radius; }\npublic:\n    Circle(double r,int x,int y) : Shape(x,y),radius(r) {}\n    double getRadius() const { return radius; }\n    void draw() const override { cout << *this << \" at \" << getX() << \",\" << getY() << '\\n'; }\n};\nclass Square : public Rectangle {\nprotected:\n    void printMe(ostream& out) const override { out << \"Square side \" << getLength(); }\npublic:\n    Square(double side,int x,int y) : Rectangle(side,side,x,y) {}\n};\n",
+    "use": "Circle c(2,0,0); Square s(3,1,1); Shape* a=&c; Shape* b=&s; cout << *a << \" / \" << *b << endl;",
+    "test": "assert(c.getRadius()==2 && s.getWidth()==3);",
+    "when": "Print derived-specific details using cout << a base reference.",
+    "change": "Keep one friend operator<< in Shape and override printMe in each subtype.",
+    "watch": "Use cout << *pointer for object output; cout << pointer prints an address.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "parts": [
+      [
+        "Recognize this pattern",
+        "Print derived-specific details using cout << a base reference."
+      ],
+      [
+        "Adapt it",
+        "Keep one friend operator<< in Shape and override printMe in each subtype."
+      ],
+      [
+        "Check before copying",
+        "Use cout << *pointer for object output; cout << pointer prints an address."
+      ]
+    ]
+  },
+  {
+    "id": "variant-shape-queue",
+    "title": "Shape variation \u00b7 Process polymorphic objects FIFO",
+    "group": "lab-variants",
+    "lab": 6,
+    "code": "#include <iostream>\n#include <stdexcept>\nusing namespace std;\n\nclass Shape {\n    int x,y;\nprotected:\n    virtual void printMe(ostream& out) const=0;\npublic:\n    Shape(int xLoc,int yLoc) : x(xLoc),y(yLoc) {}\n    virtual ~Shape()=default;\n    void moveTo(int x,int y) { this->x=x; this->y=y; }\n    int getX() const { return x; }\n    int getY() const { return y; }\n    virtual void draw() const=0;\n    friend ostream& operator<<(ostream& out,const Shape& shape) {\n        shape.printMe(out); return out;\n    }\n};\nclass Rectangle : public Shape {\n    double length,width;\nprotected:\n    void printMe(ostream& out) const override { out << \"Rectangle \" << length << \" x \" << width; }\npublic:\n    Rectangle(double l,double w,int x,int y) : Shape(x,y),length(l),width(w) {}\n    double getLength() const { return length; }\n    double getWidth() const { return width; }\n    void draw() const override { cout << *this << \" at \" << getX() << \",\" << getY() << '\\n'; }\n};\nclass Circle : public Shape {\n    double radius;\nprotected:\n    void printMe(ostream& out) const override { out << \"Circle radius \" << radius; }\npublic:\n    Circle(double r,int x,int y) : Shape(x,y),radius(r) {}\n    double getRadius() const { return radius; }\n    void draw() const override { cout << *this << \" at \" << getX() << \",\" << getY() << '\\n'; }\n};\nclass Square : public Rectangle {\nprotected:\n    void printMe(ostream& out) const override { out << \"Square side \" << getLength(); }\npublic:\n    Square(double side,int x,int y) : Rectangle(side,side,x,y) {}\n};\n\ntemplate<class T>\nclass LinkedQueue {\n    struct Node {\n        T info;\n        Node* next;\n        Node(const T& el) : info(el), next(nullptr) {}\n    };\n    Node *head, *tail;\n    int count;\npublic:\n    LinkedQueue() : head(nullptr), tail(nullptr), count(0) {}\n    bool isEmpty() const { return head == nullptr; }\n    int size() const { return count; }\n    void enqueue(const T& el) {\n        Node* node = new Node(el);\n        if (tail == nullptr) head = node;\n        else tail->next = node;\n        tail = node;\n        ++count;\n    }\n    T front() const {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        return head->info;\n    }\n    T dequeue() {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        T el = head->info;\n        Node* tmp = head;\n        head = head->next;\n        if (head == nullptr) tail = nullptr;\n        delete tmp;\n        --count;\n        return el;\n    }\n    ~LinkedQueue() { while (!isEmpty()) dequeue(); }\n    LinkedQueue(const LinkedQueue&) = delete;\n    LinkedQueue& operator=(const LinkedQueue&) = delete;\n};\n",
+    "use": "Circle c(2,0,0); Square s(3,1,1); LinkedQueue<Shape*> q; q.enqueue(&c); q.enqueue(&s); while(!q.isEmpty()) q.dequeue()->draw();",
+    "test": "assert(q.isEmpty());",
+    "when": "Change the lab\u2019s LIFO Shape processing into FIFO using a linked queue.",
+    "change": "Replace stack push/pop with enqueue/dequeue and preserve base-pointer dispatch.",
+    "watch": "This is a lab-style extension, not an assigned Lab 6 requirement. Local objects outlive the queue.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "parts": [
+      [
+        "Recognize this pattern",
+        "Change the lab\u2019s LIFO Shape processing into FIFO using a linked queue."
+      ],
+      [
+        "Adapt it",
+        "Replace stack push/pop with enqueue/dequeue and preserve base-pointer dispatch."
+      ],
+      [
+        "Check before copying",
+        "This is a lab-style extension, not an assigned Lab 6 requirement. Local objects outlive the queue."
+      ]
+    ]
+  },
+  {
+    "id": "variant-shape-heap",
+    "title": "Shape variation \u00b7 Own and delete dynamically allocated shapes",
+    "group": "lab-variants",
+    "lab": 6,
+    "code": "#include <iostream>\n#include <exception>\n#include <string>\nusing namespace std;\n\nclass Shape {\n    int x,y;\nprotected:\n    virtual void printMe(ostream& out) const=0;\npublic:\n    Shape(int xLoc,int yLoc) : x(xLoc),y(yLoc) {}\n    virtual ~Shape()=default;\n    void moveTo(int x,int y) { this->x=x; this->y=y; }\n    int getX() const { return x; }\n    int getY() const { return y; }\n    virtual void draw() const=0;\n    friend ostream& operator<<(ostream& out,const Shape& shape) {\n        shape.printMe(out); return out;\n    }\n};\nclass Rectangle : public Shape {\n    double length,width;\nprotected:\n    void printMe(ostream& out) const override { out << \"Rectangle \" << length << \" x \" << width; }\npublic:\n    Rectangle(double l,double w,int x,int y) : Shape(x,y),length(l),width(w) {}\n    double getLength() const { return length; }\n    double getWidth() const { return width; }\n    void draw() const override { cout << *this << \" at \" << getX() << \",\" << getY() << '\\n'; }\n};\nclass Circle : public Shape {\n    double radius;\nprotected:\n    void printMe(ostream& out) const override { out << \"Circle radius \" << radius; }\npublic:\n    Circle(double r,int x,int y) : Shape(x,y),radius(r) {}\n    double getRadius() const { return radius; }\n    void draw() const override { cout << *this << \" at \" << getX() << \",\" << getY() << '\\n'; }\n};\nclass Square : public Rectangle {\nprotected:\n    void printMe(ostream& out) const override { out << \"Square side \" << getLength(); }\npublic:\n    Square(double side,int x,int y) : Rectangle(side,side,x,y) {}\n};\n\nclass StackException : public exception {\n    string message;\npublic:\n    explicit StackException(const string& msg) noexcept : message(msg) {}\n    const char* what() const noexcept override { return message.c_str(); }\n};\n\ntemplate <class T> class Stack {\nprivate:\n    typedef struct stackNode {\n        struct stackNode *next;\n        T theItem;\n    } StackNode;\n    StackNode *topOfStack;\n    int count;\npublic:\n    Stack() : topOfStack(NULL), count(0) {}\n    void push(T item) {\n        StackNode *newNode = new StackNode;\n        newNode->theItem = item;\n        newNode->next = topOfStack;\n        topOfStack = newNode;\n        ++count;\n    }\n    T pop(void) {\n        if (isEmpty()) throw StackException(\"Pop from empty stack\");\n        T item = topOfStack->theItem;\n        StackNode *old = topOfStack;\n        topOfStack = old->next;\n        delete old;\n        --count;\n        return item;\n    }\n    T top(void) {\n        if (isEmpty()) throw StackException(\"Top of empty stack\");\n        return topOfStack->theItem;\n    }\n    int size(void) { return count; }\n    bool isEmpty(void) { return count == 0; }\n    \n    ~Stack() { while (!isEmpty()) pop(); }\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n};\n",
+    "use": "Stack<Shape*> shapes; shapes.push(new Circle(2,0,0)); shapes.push(new Square(3,0,0)); while(!shapes.isEmpty()) { Shape* p=shapes.pop(); p->draw(); delete p; }",
+    "test": "assert(shapes.isEmpty());",
+    "when": "A question explicitly creates derived objects with new and requires cleanup through base pointers.",
+    "change": "Delete every popped object once; retain Shape\u2019s virtual destructor.",
+    "watch": "Stack owns nodes only. This simple driver assumes allocations and draw succeed; production exception-safe ownership needs more care.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "parts": [
+      [
+        "Recognize this pattern",
+        "A question explicitly creates derived objects with new and requires cleanup through base pointers."
+      ],
+      [
+        "Adapt it",
+        "Delete every popped object once; retain Shape\u2019s virtual destructor."
+      ],
+      [
+        "Check before copying",
+        "Stack owns nodes only. This simple driver assumes allocations and draw succeed; production exception-safe ownership needs more care."
+      ]
+    ]
+  },
+  {
+    "id": "variant-controller-switch",
+    "title": "Controller variation \u00b7 Switch implementations through a base pointer",
+    "group": "lab-variants",
+    "lab": 5,
+    "code": "#include <iostream>\n#include <cmath>\n#include <stdexcept>\n#include <vector>\nusing namespace std;\n\nclass Controller {\npublic:\n    static constexpr double deltaT=1.0;\n    virtual double controlStep(double plantOutput, double setpoint)=0;\n    virtual ~Controller()=default;\n};\nclass ProportionalController : public Controller {\n    double kc;\npublic:\n    ProportionalController(double propGain) : kc(propGain) {}\n    double controlStep(double plantOutput, double setpoint) override {\n        double error=setpoint-plantOutput;\n        return setpoint+kc*error;\n    }\n};\nclass PID_Controller : public Controller {\n    double kc,ti,td,q,previousOutput;\npublic:\n    PID_Controller(double propGain,double integralTime,double derivativeTime)\n        : kc(propGain),ti(integralTime),td(derivativeTime),q(0),previousOutput(0) {\n        if (ti<=0 || td<0) throw invalid_argument(\"Require ti>0 and td>=0\");\n    }\n    double controlStep(double plantOutput, double setpoint) override {\n        double error=setpoint-plantOutput;\n        q=0.9*q+0.1*error;\n        double result=setpoint+kc*(error+deltaT/ti*q-td/deltaT*(plantOutput-previousOutput));\n        previousOutput=plantOutput;\n        return result;\n    }\n};\nclass Plant {\n    int order;\n    vector<double> b,a,state;\npublic:\n    Plant(const double num[],const double den[],int order)\n        : order(order),b(num,num+order+1),a(den,den+order+1),state(order+1,0) {}\n    double plantResponse(double input) {\n        double y=b[0]*input+state[0];\n        for (int k=0;k<order;++k) state[k]=state[k+1]+input*b[k+1]-y*a[k+1];\n        return y;\n    }\n};\n",
+    "use": "ProportionalController proportional(0.3); PID_Controller pid(0.5,25,2.5); Controller* c=&proportional; cout << c->controlStep(0,1) << endl; c=&pid; cout << c->controlStep(0,1) << endl;",
+    "test": "assert(abs(proportional.controlStep(0,1)-1.3)<1e-9);",
+    "when": "Use the same calling code with two different derived implementations.",
+    "change": "Change which concrete object c points to; keep the controlStep signature unchanged.",
+    "watch": "These are addresses of local objects: do not delete c.",
+    "reference": "workspace/reference/course/labs/139E - Lab 5.html",
+    "parts": [
+      [
+        "Recognize this pattern",
+        "Use the same calling code with two different derived implementations."
+      ],
+      [
+        "Adapt it",
+        "Change which concrete object c points to; keep the controlStep signature unchanged."
+      ],
+      [
+        "Check before copying",
+        "These are addresses of local objects: do not delete c."
+      ]
+    ]
+  },
+  {
+    "id": "variant-controller-limit",
+    "title": "Controller variation \u00b7 Override and reuse the base calculation",
+    "group": "lab-variants",
+    "lab": 5,
+    "code": "#include <iostream>\n#include <cmath>\n#include <stdexcept>\n#include <vector>\nusing namespace std;\n\nclass Controller {\npublic:\n    static constexpr double deltaT=1.0;\n    virtual double controlStep(double plantOutput, double setpoint)=0;\n    virtual ~Controller()=default;\n};\nclass ProportionalController : public Controller {\n    double kc;\npublic:\n    ProportionalController(double propGain) : kc(propGain) {}\n    double controlStep(double plantOutput, double setpoint) override {\n        double error=setpoint-plantOutput;\n        return setpoint+kc*error;\n    }\n};\nclass PID_Controller : public Controller {\n    double kc,ti,td,q,previousOutput;\npublic:\n    PID_Controller(double propGain,double integralTime,double derivativeTime)\n        : kc(propGain),ti(integralTime),td(derivativeTime),q(0),previousOutput(0) {\n        if (ti<=0 || td<0) throw invalid_argument(\"Require ti>0 and td>=0\");\n    }\n    double controlStep(double plantOutput, double setpoint) override {\n        double error=setpoint-plantOutput;\n        q=0.9*q+0.1*error;\n        double result=setpoint+kc*(error+deltaT/ti*q-td/deltaT*(plantOutput-previousOutput));\n        previousOutput=plantOutput;\n        return result;\n    }\n};\nclass Plant {\n    int order;\n    vector<double> b,a,state;\npublic:\n    Plant(const double num[],const double den[],int order)\n        : order(order),b(num,num+order+1),a(den,den+order+1),state(order+1,0) {}\n    double plantResponse(double input) {\n        double y=b[0]*input+state[0];\n        for (int k=0;k<order;++k) state[k]=state[k+1]+input*b[k+1]-y*a[k+1];\n        return y;\n    }\n};\nclass LimitedController : public ProportionalController {\n    double low,high;\npublic:\n    LimitedController(double gain,double low,double high)\n        : ProportionalController(gain),low(low),high(high) {\n        if (low>high) throw invalid_argument(\"Reversed limits\");\n    }\n    double controlStep(double plantOutput,double setpoint) override {\n        double result=ProportionalController::controlStep(plantOutput,setpoint);\n        if (result<low) return low;\n        if (result>high) return high;\n        return result;\n    }\n};\n",
+    "use": "LimitedController limited(2,0,1); Controller* c=&limited; cout << c->controlStep(0,1) << endl;",
+    "test": "assert(limited.controlStep(0,1)==1 && limited.controlStep(2,0)==0);",
+    "when": "A derived class keeps the parent calculation but adds output limits.",
+    "change": "Use Base::method(...) to reuse the original implementation, then modify its result.",
+    "watch": "Calling controlStep without Base:: inside this override would recurse.",
+    "reference": "workspace/reference/course/labs/139E - Lab 5.html",
+    "parts": [
+      [
+        "Recognize this pattern",
+        "A derived class keeps the parent calculation but adds output limits."
+      ],
+      [
+        "Adapt it",
+        "Use Base::method(...) to reuse the original implementation, then modify its result."
+      ],
+      [
+        "Check before copying",
+        "Calling controlStep without Base:: inside this override would recurse."
+      ]
+    ]
+  },
+  {
+    "id": "variant-moving-average",
+    "title": "Class variation \u00b7 Remember the previous result",
+    "group": "lab-variants",
+    "lab": 5,
+    "code": "#include <iostream>\n#include <stdexcept>\nusing namespace std;\n\nclass Filter {\npublic:\n    virtual double update(double input)=0;\n    virtual ~Filter()=default;\n};\nclass LeakyFilter : public Filter {\n    double alpha,previous;\npublic:\n    LeakyFilter(double alpha) : alpha(alpha),previous(0) {\n        if(alpha<0 || alpha>1) throw invalid_argument(\"alpha must be in [0,1]\");\n    }\n    double update(double input) override {\n        previous=alpha*previous+(1-alpha)*input;\n        return previous;\n    }\n    void reset() { previous=0; }\n};\n",
+    "use": "LeakyFilter f(0.5); Filter& filter=f; cout << filter.update(10) << \" \" << filter.update(10) << endl;",
+    "test": "f.reset();assert(f.update(10)==5 && f.update(10)==7.5);",
+    "when": "A calculation must remember state between method calls, like PID q.",
+    "change": "Put persistent state in the object; keep temporary inputs and results local.",
+    "watch": "A local previous=0 inside update would reset the state on every call.",
+    "reference": "workspace/reference/course/labs/139E - Lab 5.html",
+    "parts": [
+      [
+        "Recognize this pattern",
+        "A calculation must remember state between method calls, like PID q."
+      ],
+      [
+        "Adapt it",
+        "Put persistent state in the object; keep temporary inputs and results local."
+      ],
+      [
+        "Check before copying",
+        "A local previous=0 inside update would reset the state on every call."
+      ]
+    ]
+  },
+  {
+    "id": "variant-list-sum",
+    "title": "List variation \u00b7 Sum and average without changing head",
+    "group": "lab-variants",
+    "lab": 6,
+    "code": "#include <iostream>\nusing namespace std;\n\nclass IntSLLNode {\npublic:\n    IntSLLNode(int el, IntSLLNode *ptr = nullptr) { info = el; next = ptr; }\n    int info;\n    IntSLLNode *next;\n};\nclass IntSLList {\n    IntSLLNode *head, *tail;\npublic:\n    int sum() const {\n        int total=0;\n        for(IntSLLNode* p=head;p!=nullptr;p=p->next) total+=p->info;\n        return total;\n    }\n    double average() const {\n        int total=0,n=0;\n        for(IntSLLNode* p=head;p!=nullptr;p=p->next) {total+=p->info;++n;}\n        return n==0 ? 0.0 : static_cast<double>(total)/n;\n    }\n    IntSLList() { head = tail = nullptr; }\n    int isEmpty() { return head == nullptr; }\n    void addToHead(int el) {\n        head = new IntSLLNode(el, head);\n        if (tail == nullptr) tail = head;\n    }\n    void addToTail(int el) {\n        if (tail != nullptr) {\n            tail->next = new IntSLLNode(el);\n            tail = tail->next;\n        } else head = tail = new IntSLLNode(el);\n    }\n    int deleteFromHead() { \n        int el = head->info;\n        IntSLLNode *tmp = head;\n        if (head == tail) head = tail = nullptr;\n        else head = head->next;\n        delete tmp;\n        return el;\n    }\n    ~IntSLList() { while (!isEmpty()) deleteFromHead(); }\n    \n    IntSLList(const IntSLList&) = delete;\n    IntSLList& operator=(const IntSLList&) = delete;\n};\n",
+    "use": "IntSLList list; list.addToTail(3); list.addToTail(4); cout << list.sum() << \" \" << list.average() << endl;",
+    "test": "assert(list.sum()==7 && list.average()==3.5);assert(list.deleteFromHead()==3);IntSLList empty;assert(empty.average()==0);",
+    "when": "Traverse every node to calculate an aggregate while preserving the list.",
+    "change": "Replace the accumulator operation; use a traversal pointer instead of moving head.",
+    "watch": "This example defines empty average as 0; change that policy if the question specifies an exception.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "parts": [
+      [
+        "Recognize this pattern",
+        "Traverse every node to calculate an aggregate while preserving the list."
+      ],
+      [
+        "Adapt it",
+        "Replace the accumulator operation; use a traversal pointer instead of moving head."
+      ],
+      [
+        "Check before copying",
+        "This example defines empty average as 0; change that policy if the question specifies an exception."
+      ]
+    ]
+  },
+  {
+    "id": "variant-list-insert-after",
+    "title": "List variation \u00b7 Insert after a matching value",
+    "group": "lab-variants",
+    "lab": 6,
+    "code": "#include <iostream>\nusing namespace std;\n\nclass IntSLLNode {\npublic:\n    IntSLLNode(int el, IntSLLNode *ptr = nullptr) { info = el; next = ptr; }\n    int info;\n    IntSLLNode *next;\n};\nclass IntSLList {\n    IntSLLNode *head, *tail;\npublic:\n    bool insertAfter(int target,int el) {\n        IntSLLNode* p=head;\n        while(p!=nullptr && p->info!=target) p=p->next;\n        if(p==nullptr) return false;\n        p->next=new IntSLLNode(el,p->next);\n        if(tail==p) tail=p->next;\n        return true;\n    }\n    IntSLList() { head = tail = nullptr; }\n    int isEmpty() { return head == nullptr; }\n    void addToHead(int el) {\n        head = new IntSLLNode(el, head);\n        if (tail == nullptr) tail = head;\n    }\n    void addToTail(int el) {\n        if (tail != nullptr) {\n            tail->next = new IntSLLNode(el);\n            tail = tail->next;\n        } else head = tail = new IntSLLNode(el);\n    }\n    int deleteFromHead() { \n        int el = head->info;\n        IntSLLNode *tmp = head;\n        if (head == tail) head = tail = nullptr;\n        else head = head->next;\n        delete tmp;\n        return el;\n    }\n    ~IntSLList() { while (!isEmpty()) deleteFromHead(); }\n    \n    IntSLList(const IntSLList&) = delete;\n    IntSLList& operator=(const IntSLList&) = delete;\n};\n",
+    "use": "IntSLList list; list.addToTail(10); list.addToTail(30); list.insertAfter(10,20);",
+    "test": "assert(list.insertAfter(30,40));assert(!list.insertAfter(99,1));for(int v:{10,20,30,40}) assert(list.deleteFromHead()==v);list.addToTail(50);assert(list.deleteFromHead()==50);",
+    "when": "Insert into the middle or after the tail without losing the rest of the chain.",
+    "change": "Save the old successor in the new node, then reconnect p->next; update tail if needed.",
+    "watch": "Returns false if target is absent. Inserts after the first matching node.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "parts": [
+      [
+        "Recognize this pattern",
+        "Insert into the middle or after the tail without losing the rest of the chain."
+      ],
+      [
+        "Adapt it",
+        "Save the old successor in the new node, then reconnect p->next; update tail if needed."
+      ],
+      [
+        "Check before copying",
+        "Returns false if target is absent. Inserts after the first matching node."
+      ]
+    ]
+  },
+  {
+    "id": "variant-list-sorted",
+    "title": "List variation \u00b7 Keep values in sorted order",
+    "group": "lab-variants",
+    "lab": 6,
+    "code": "#include <iostream>\nusing namespace std;\n\nclass IntSLLNode {\npublic:\n    IntSLLNode(int el, IntSLLNode *ptr = nullptr) { info = el; next = ptr; }\n    int info;\n    IntSLLNode *next;\n};\nclass IntSLList {\n    IntSLLNode *head, *tail;\npublic:\n    void insertSorted(int el) {\n        if(head==nullptr || el<=head->info) {addToHead(el);return;}\n        IntSLLNode* p=head;\n        while(p->next!=nullptr && p->next->info<el) p=p->next;\n        p->next=new IntSLLNode(el,p->next);\n        if(p==tail) tail=p->next;\n    }\n    IntSLList() { head = tail = nullptr; }\n    int isEmpty() { return head == nullptr; }\n    void addToHead(int el) {\n        head = new IntSLLNode(el, head);\n        if (tail == nullptr) tail = head;\n    }\n    void addToTail(int el) {\n        if (tail != nullptr) {\n            tail->next = new IntSLLNode(el);\n            tail = tail->next;\n        } else head = tail = new IntSLLNode(el);\n    }\n    int deleteFromHead() { \n        int el = head->info;\n        IntSLLNode *tmp = head;\n        if (head == tail) head = tail = nullptr;\n        else head = head->next;\n        delete tmp;\n        return el;\n    }\n    ~IntSLList() { while (!isEmpty()) deleteFromHead(); }\n    \n    IntSLList(const IntSLList&) = delete;\n    IntSLList& operator=(const IntSLList&) = delete;\n};\n",
+    "use": "IntSLList list; for(int v:{7,2,5,2}) list.insertSorted(v);",
+    "test": "for(int v:{2,2,5,7})assert(list.deleteFromHead()==v);assert(list.isEmpty());",
+    "when": "Insert each new item at the correct sorted position.",
+    "change": "Change the comparison for descending order; handle head insertion separately.",
+    "watch": "The existing list must already be sorted. Do not use unsorted addToTail calls first.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "parts": [
+      [
+        "Recognize this pattern",
+        "Insert each new item at the correct sorted position."
+      ],
+      [
+        "Adapt it",
+        "Change the comparison for descending order; handle head insertion separately."
+      ],
+      [
+        "Check before copying",
+        "The existing list must already be sorted. Do not use unsorted addToTail calls first."
+      ]
+    ]
+  },
+  {
+    "id": "variant-list-remove-all",
+    "title": "List variation \u00b7 Delete every matching value",
+    "group": "lab-variants",
+    "lab": 6,
+    "code": "#include <iostream>\nusing namespace std;\n\nclass IntSLLNode {\npublic:\n    IntSLLNode(int el, IntSLLNode *ptr = nullptr) { info = el; next = ptr; }\n    int info;\n    IntSLLNode *next;\n};\nclass IntSLList {\n    IntSLLNode *head, *tail;\npublic:\n    int removeAll(int target) {\n        int removed=0;\n        while(head!=nullptr && head->info==target) {deleteFromHead();++removed;}\n        IntSLLNode* p=head;\n        while(p!=nullptr && p->next!=nullptr) {\n            if(p->next->info==target) {\n                IntSLLNode* old=p->next;\n                p->next=old->next;\n                if(old==tail) tail=p;\n                delete old; ++removed;\n            } else p=p->next;\n        }\n        return removed;\n    }\n    IntSLList() { head = tail = nullptr; }\n    int isEmpty() { return head == nullptr; }\n    void addToHead(int el) {\n        head = new IntSLLNode(el, head);\n        if (tail == nullptr) tail = head;\n    }\n    void addToTail(int el) {\n        if (tail != nullptr) {\n            tail->next = new IntSLLNode(el);\n            tail = tail->next;\n        } else head = tail = new IntSLLNode(el);\n    }\n    int deleteFromHead() { \n        int el = head->info;\n        IntSLLNode *tmp = head;\n        if (head == tail) head = tail = nullptr;\n        else head = head->next;\n        delete tmp;\n        return el;\n    }\n    ~IntSLList() { while (!isEmpty()) deleteFromHead(); }\n    \n    IntSLList(const IntSLList&) = delete;\n    IntSLList& operator=(const IntSLList&) = delete;\n};\n",
+    "use": "IntSLList list; for(int v:{2,2,3,2,4,2}) list.addToTail(v); cout << list.removeAll(2) << endl;",
+    "test": "assert(list.deleteFromHead()==3 && list.deleteFromHead()==4 && list.isEmpty());list.addToTail(2);assert(list.removeAll(2)==1 && list.isEmpty());list.addToTail(8);assert(list.deleteFromHead()==8);",
+    "when": "Remove matches at the head, middle, tail, including adjacent matches.",
+    "change": "Separate head removals from predecessor-based removal; only advance p when no deletion occurs.",
+    "watch": "Always reconnect before delete; keep tail correct after removing the last node.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "parts": [
+      [
+        "Recognize this pattern",
+        "Remove matches at the head, middle, tail, including adjacent matches."
+      ],
+      [
+        "Adapt it",
+        "Separate head removals from predecessor-based removal; only advance p when no deletion occurs."
+      ],
+      [
+        "Check before copying",
+        "Always reconnect before delete; keep tail correct after removing the last node."
+      ]
+    ]
+  },
+  {
+    "id": "variant-stack-copy-order",
+    "title": "Stack variation \u00b7 Copy items while preserving both orders",
+    "group": "lab-variants",
+    "lab": 6,
+    "code": "#include <iostream>\n#include <exception>\n#include <string>\nusing namespace std;\n\nclass StackException : public exception {\n    string message;\npublic:\n    explicit StackException(const string& msg) noexcept : message(msg) {}\n    const char* what() const noexcept override { return message.c_str(); }\n};\n\ntemplate <class T> class Stack {\nprivate:\n    typedef struct stackNode {\n        struct stackNode *next;\n        T theItem;\n    } StackNode;\n    StackNode *topOfStack;\n    int count;\npublic:\n    Stack() : topOfStack(NULL), count(0) {}\n    void push(T item) {\n        StackNode *newNode = new StackNode;\n        newNode->theItem = item;\n        newNode->next = topOfStack;\n        topOfStack = newNode;\n        ++count;\n    }\n    T pop(void) {\n        if (isEmpty()) throw StackException(\"Pop from empty stack\");\n        T item = topOfStack->theItem;\n        StackNode *old = topOfStack;\n        topOfStack = old->next;\n        delete old;\n        --count;\n        return item;\n    }\n    T top(void) {\n        if (isEmpty()) throw StackException(\"Top of empty stack\");\n        return topOfStack->theItem;\n    }\n    int size(void) { return count; }\n    bool isEmpty(void) { return count == 0; }\n    \n    ~Stack() { while (!isEmpty()) pop(); }\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n};\n\nvoid copyStack(Stack<int>& source,Stack<int>& destination) {\n    if(!destination.isEmpty()) throw StackException(\"Destination must start empty\");\n    Stack<int> temporary;\n    while(!source.isEmpty()) temporary.push(source.pop());\n    while(!temporary.isEmpty()) {\n        int value=temporary.pop();\n        source.push(value); destination.push(value);\n    }\n}\n",
+    "use": "Stack<int> source,destination; source.push(1);source.push(2);source.push(3);copyStack(source,destination);",
+    "test": "for(int v:{3,2,1}){assert(source.pop()==v);assert(destination.pop()==v);}assert(source.isEmpty()&&destination.isEmpty());",
+    "when": "Duplicate a stack using only its public operations, leaving the source unchanged.",
+    "change": "Use a temporary stack to undo the first reversal. This copies values without invoking a copy constructor.",
+    "watch": "Destination must be empty. With pointer items, copying pointers would not clone their objects.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "parts": [
+      [
+        "Recognize this pattern",
+        "Duplicate a stack using only its public operations, leaving the source unchanged."
+      ],
+      [
+        "Adapt it",
+        "Use a temporary stack to undo the first reversal. This copies values without invoking a copy constructor."
+      ],
+      [
+        "Check before copying",
+        "Destination must be empty. With pointer items, copying pointers would not clone their objects."
+      ]
+    ]
+  },
+  {
+    "id": "variant-stack-postfix",
+    "title": "Stack variation \u00b7 Evaluate a postfix expression",
+    "group": "lab-variants",
+    "lab": 6,
+    "code": "#include <iostream>\n#include <exception>\n#include <string>\n#include <sstream>\n#include <stdexcept>\nusing namespace std;\n\nclass StackException : public exception {\n    string message;\npublic:\n    explicit StackException(const string& msg) noexcept : message(msg) {}\n    const char* what() const noexcept override { return message.c_str(); }\n};\n\ntemplate <class T> class Stack {\nprivate:\n    typedef struct stackNode {\n        struct stackNode *next;\n        T theItem;\n    } StackNode;\n    StackNode *topOfStack;\n    int count;\npublic:\n    Stack() : topOfStack(NULL), count(0) {}\n    void push(T item) {\n        StackNode *newNode = new StackNode;\n        newNode->theItem = item;\n        newNode->next = topOfStack;\n        topOfStack = newNode;\n        ++count;\n    }\n    T pop(void) {\n        if (isEmpty()) throw StackException(\"Pop from empty stack\");\n        T item = topOfStack->theItem;\n        StackNode *old = topOfStack;\n        topOfStack = old->next;\n        delete old;\n        --count;\n        return item;\n    }\n    T top(void) {\n        if (isEmpty()) throw StackException(\"Top of empty stack\");\n        return topOfStack->theItem;\n    }\n    int size(void) { return count; }\n    bool isEmpty(void) { return count == 0; }\n    \n    ~Stack() { while (!isEmpty()) pop(); }\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n};\n\nint evaluatePostfix(const string& expression) {\n    istringstream input(expression);\n    Stack<int> values;\n    string token;\n    while(input>>token) {\n        if(token==\"+\" || token==\"-\" || token==\"*\") {\n            if(values.size()<2) throw invalid_argument(\"Missing operand\");\n            int right=values.pop(),left=values.pop();\n            if(token==\"+\") values.push(left+right);\n            else if(token==\"-\") values.push(left-right);\n            else values.push(left*right);\n        } else {\n            size_t used=0;\n            int value=stoi(token,&used);\n            if(used!=token.size()) throw invalid_argument(\"Invalid number\");\n            values.push(value);\n        }\n    }\n    if(values.size()!=1) throw invalid_argument(\"Invalid expression\");\n    return values.pop();\n}\n",
+    "use": "cout << evaluatePostfix(\"3 4 + 2 *\") << endl;",
+    "test": "assert(evaluatePostfix(\"3 4 + 2 *\")==14);assert(evaluatePostfix(\"8 3 -\")==5);bool caught=false;try{evaluatePostfix(\"1 +\");}catch(const invalid_argument&){caught=true;}assert(caught);",
+    "when": "A question processes operators after their operands using LIFO storage.",
+    "change": "Add operators inside the operator branch; preserve left/right operand order.",
+    "watch": "Supports space-separated integers and +, -, *. Assumes arithmetic results fit int; it does not parse infix expressions.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "parts": [
+      [
+        "Recognize this pattern",
+        "A question processes operators after their operands using LIFO storage."
+      ],
+      [
+        "Adapt it",
+        "Add operators inside the operator branch; preserve left/right operand order."
+      ],
+      [
+        "Check before copying",
+        "Supports space-separated integers and +, -, *. Assumes arithmetic results fit int; it does not parse infix expressions."
+      ]
+    ]
+  },
+  {
+    "id": "variant-stack-min",
+    "title": "Stack variation \u00b7 Find the minimum and restore the stack",
+    "group": "lab-variants",
+    "lab": 6,
+    "code": "#include <iostream>\n#include <exception>\n#include <string>\nusing namespace std;\n\nclass StackException : public exception {\n    string message;\npublic:\n    explicit StackException(const string& msg) noexcept : message(msg) {}\n    const char* what() const noexcept override { return message.c_str(); }\n};\n\ntemplate <class T> class Stack {\nprivate:\n    typedef struct stackNode {\n        struct stackNode *next;\n        T theItem;\n    } StackNode;\n    StackNode *topOfStack;\n    int count;\npublic:\n    Stack() : topOfStack(NULL), count(0) {}\n    void push(T item) {\n        StackNode *newNode = new StackNode;\n        newNode->theItem = item;\n        newNode->next = topOfStack;\n        topOfStack = newNode;\n        ++count;\n    }\n    T pop(void) {\n        if (isEmpty()) throw StackException(\"Pop from empty stack\");\n        T item = topOfStack->theItem;\n        StackNode *old = topOfStack;\n        topOfStack = old->next;\n        delete old;\n        --count;\n        return item;\n    }\n    T top(void) {\n        if (isEmpty()) throw StackException(\"Top of empty stack\");\n        return topOfStack->theItem;\n    }\n    int size(void) { return count; }\n    bool isEmpty(void) { return count == 0; }\n    \n    ~Stack() { while (!isEmpty()) pop(); }\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n};\n\nint minimum(Stack<int>& source) {\n    if(source.isEmpty()) throw StackException(\"No minimum of empty stack\");\n    int result=source.top();\n    Stack<int> temporary;\n    while(!source.isEmpty()) {\n        int value=source.pop();\n        if(value<result) result=value;\n        temporary.push(value);\n    }\n    while(!temporary.isEmpty()) source.push(temporary.pop());\n    return result;\n}\n",
+    "use": "Stack<int> s;for(int v:{4,1,7})s.push(v);cout << minimum(s) << endl;",
+    "test": "assert(minimum(s)==1 && s.size()==3);for(int v:{7,1,4})assert(s.pop()==v);",
+    "when": "Inspect all stack values without permanently changing their order.",
+    "change": "Replace the comparison with a total/count/search condition, while still restoring from temporary.",
+    "watch": "Checking only top() cannot find the minimum of the entire stack.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "parts": [
+      [
+        "Recognize this pattern",
+        "Inspect all stack values without permanently changing their order."
+      ],
+      [
+        "Adapt it",
+        "Replace the comparison with a total/count/search condition, while still restoring from temporary."
+      ],
+      [
+        "Check before copying",
+        "Checking only top() cannot find the minimum of the entire stack."
+      ]
+    ]
+  },
+  {
+    "id": "variant-queue-filter",
+    "title": "Queue variation \u00b7 Remove matching items and keep FIFO order",
+    "group": "lab-variants",
+    "lab": 6,
+    "code": "#include <iostream>\n#include <stdexcept>\nusing namespace std;\n\ntemplate<class T>\nclass LinkedQueue {\n    struct Node {\n        T info;\n        Node* next;\n        Node(const T& el) : info(el), next(nullptr) {}\n    };\n    Node *head, *tail;\n    int count;\npublic:\n    LinkedQueue() : head(nullptr), tail(nullptr), count(0) {}\n    bool isEmpty() const { return head == nullptr; }\n    int size() const { return count; }\n    void enqueue(const T& el) {\n        Node* node = new Node(el);\n        if (tail == nullptr) head = node;\n        else tail->next = node;\n        tail = node;\n        ++count;\n    }\n    T front() const {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        return head->info;\n    }\n    T dequeue() {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        T el = head->info;\n        Node* tmp = head;\n        head = head->next;\n        if (head == nullptr) tail = nullptr;\n        delete tmp;\n        --count;\n        return el;\n    }\n    ~LinkedQueue() { while (!isEmpty()) dequeue(); }\n    LinkedQueue(const LinkedQueue&) = delete;\n    LinkedQueue& operator=(const LinkedQueue&) = delete;\n};\n\nint removeValue(LinkedQueue<int>& q,int target) {\n    int originalSize=q.size(),removed=0;\n    for(int i=0;i<originalSize;++i) {\n        int value=q.dequeue();\n        if(value==target) ++removed;\n        else q.enqueue(value);\n    }\n    return removed;\n}\n",
+    "use": "LinkedQueue<int> q;for(int v:{2,1,2,3})q.enqueue(v);cout << removeValue(q,2) << endl;",
+    "test": "assert(q.size()==2 && q.dequeue()==1 && q.dequeue()==3);assert(removeValue(q,2)==0);",
+    "when": "Filter a queue using only enqueue and dequeue while preserving survivor order.",
+    "change": "Store the initial size so re-enqueued values are not processed forever.",
+    "watch": "A while(!isEmpty()) loop would never finish when retained values keep re-entering the queue.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "parts": [
+      [
+        "Recognize this pattern",
+        "Filter a queue using only enqueue and dequeue while preserving survivor order."
+      ],
+      [
+        "Adapt it",
+        "Store the initial size so re-enqueued values are not processed forever."
+      ],
+      [
+        "Check before copying",
+        "A while(!isEmpty()) loop would never finish when retained values keep re-entering the queue."
+      ]
+    ]
+  },
+  {
+    "id": "variant-queue-merge",
+    "title": "Queue variation \u00b7 Merge two already sorted queues",
+    "group": "lab-variants",
+    "lab": 6,
+    "code": "#include <iostream>\n#include <stdexcept>\nusing namespace std;\n\ntemplate<class T>\nclass LinkedQueue {\n    struct Node {\n        T info;\n        Node* next;\n        Node(const T& el) : info(el), next(nullptr) {}\n    };\n    Node *head, *tail;\n    int count;\npublic:\n    LinkedQueue() : head(nullptr), tail(nullptr), count(0) {}\n    bool isEmpty() const { return head == nullptr; }\n    int size() const { return count; }\n    void enqueue(const T& el) {\n        Node* node = new Node(el);\n        if (tail == nullptr) head = node;\n        else tail->next = node;\n        tail = node;\n        ++count;\n    }\n    T front() const {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        return head->info;\n    }\n    T dequeue() {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        T el = head->info;\n        Node* tmp = head;\n        head = head->next;\n        if (head == nullptr) tail = nullptr;\n        delete tmp;\n        --count;\n        return el;\n    }\n    ~LinkedQueue() { while (!isEmpty()) dequeue(); }\n    LinkedQueue(const LinkedQueue&) = delete;\n    LinkedQueue& operator=(const LinkedQueue&) = delete;\n};\n\nvoid mergeQueues(LinkedQueue<int>& a,LinkedQueue<int>& b,LinkedQueue<int>& result) {\n    if(!result.isEmpty()) throw runtime_error(\"Result must start empty\");\n    while(!a.isEmpty() && !b.isEmpty()) {\n        if(a.front()<=b.front()) result.enqueue(a.dequeue());\n        else result.enqueue(b.dequeue());\n    }\n    while(!a.isEmpty()) result.enqueue(a.dequeue());\n    while(!b.isEmpty()) result.enqueue(b.dequeue());\n}\n",
+    "use": "LinkedQueue<int> a,b,result;for(int v:{1,4,7})a.enqueue(v);for(int v:{2,4,8})b.enqueue(v);mergeQueues(a,b,result);",
+    "test": "for(int v:{1,2,4,4,7,8})assert(result.dequeue()==v);assert(a.isEmpty()&&b.isEmpty());",
+    "when": "Repeatedly take the smaller front item from two sorted FIFO inputs.",
+    "change": "Use comparisons of front values, then dequeue from only the chosen input.",
+    "watch": "Inputs must be sorted and distinct from result. This consumes both input queues.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "parts": [
+      [
+        "Recognize this pattern",
+        "Repeatedly take the smaller front item from two sorted FIFO inputs."
+      ],
+      [
+        "Adapt it",
+        "Use comparisons of front values, then dequeue from only the chosen input."
+      ],
+      [
+        "Check before copying",
+        "Inputs must be sorted and distinct from result. This consumes both input queues."
+      ]
+    ]
+  },
+  {
+    "id": "variant-queue-two-stacks",
+    "title": "Queue variation \u00b7 Implement FIFO using two stacks",
+    "group": "lab-variants",
+    "lab": 6,
+    "code": "#include <iostream>\n#include <exception>\n#include <string>\nusing namespace std;\n\nclass StackException : public exception {\n    string message;\npublic:\n    explicit StackException(const string& msg) noexcept : message(msg) {}\n    const char* what() const noexcept override { return message.c_str(); }\n};\n\ntemplate <class T> class Stack {\nprivate:\n    typedef struct stackNode {\n        struct stackNode *next;\n        T theItem;\n    } StackNode;\n    StackNode *topOfStack;\n    int count;\npublic:\n    Stack() : topOfStack(NULL), count(0) {}\n    void push(T item) {\n        StackNode *newNode = new StackNode;\n        newNode->theItem = item;\n        newNode->next = topOfStack;\n        topOfStack = newNode;\n        ++count;\n    }\n    T pop(void) {\n        if (isEmpty()) throw StackException(\"Pop from empty stack\");\n        T item = topOfStack->theItem;\n        StackNode *old = topOfStack;\n        topOfStack = old->next;\n        delete old;\n        --count;\n        return item;\n    }\n    T top(void) {\n        if (isEmpty()) throw StackException(\"Top of empty stack\");\n        return topOfStack->theItem;\n    }\n    int size(void) { return count; }\n    bool isEmpty(void) { return count == 0; }\n    \n    ~Stack() { while (!isEmpty()) pop(); }\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n};\n\ntemplate<class T> class TwoStackQueue {\n    Stack<T> incoming,outgoing;\n    void prepareFront() {\n        if(outgoing.isEmpty())\n            while(!incoming.isEmpty()) outgoing.push(incoming.pop());\n    }\npublic:\n    bool isEmpty() { return incoming.isEmpty() && outgoing.isEmpty(); }\n    void enqueue(T value) { incoming.push(value); }\n    T front() { prepareFront();return outgoing.top(); }\n    T dequeue() { prepareFront();return outgoing.pop(); }\n};\n",
+    "use": "TwoStackQueue<int> q;q.enqueue(1);q.enqueue(2);cout << q.dequeue() << endl;q.enqueue(3);",
+    "test": "assert(q.front()==2 && q.dequeue()==2 && q.dequeue()==3 && q.isEmpty());bool caught=false;try{q.dequeue();}catch(const StackException&){caught=true;}assert(caught);",
+    "when": "Implement queue behavior when you are given stacks as the allowed building blocks.",
+    "change": "Push new arrivals into incoming; transfer only when outgoing is empty.",
+    "watch": "Transferring on every dequeue would reorder items. Empty operations propagate StackException.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "parts": [
+      [
+        "Recognize this pattern",
+        "Implement queue behavior when you are given stacks as the allowed building blocks."
+      ],
+      [
+        "Adapt it",
+        "Push new arrivals into incoming; transfer only when outgoing is empty."
+      ],
+      [
+        "Check before copying",
+        "Transferring on every dequeue would reorder items. Empty operations propagate StackException."
+      ]
+    ]
+  },
+  {
+    "id": "variant-record-array",
+    "title": "Data-return variation \u00b7 Struct summary and a dynamic result array",
+    "group": "lab-variants",
+    "lab": 3,
+    "code": "#include <iostream>\n#include <stdexcept>\nusing namespace std;\n\nstruct Summary { int count; double total,average; };\nSummary summarize(const double values[],int size) {\n    if(size<0) throw invalid_argument(\"Negative size\");\n    Summary result{size,0,0};\n    for(int i=0;i<size;++i) result.total+=values[i];\n    if(size>0) result.average=result.total/size;\n    return result;\n}\ndouble* scaledCopy(const double values[],int size,double scale=1) {\n    if(size<0) throw invalid_argument(\"Negative size\");\n    double* result=new double[size];\n    for(int i=0;i<size;++i) result[i]=values[i]*scale;\n    return result;\n}\n",
+    "use": "double values[]={2,4,6};Summary s=summarize(values,3);double* copy=scaledCopy(values,3,2);cout<<s.average<<\" \"<<copy[2]<<endl;delete[] copy;",
+    "test": "assert(s.count==3 && s.total==12 && s.average==4);assert(summarize(values,0).average==0);",
+    "when": "Return named aggregate results and independently allocated transformed data.",
+    "change": "Use a struct for a few named results; a dynamic array for a runtime-sized sequence.",
+    "watch": "Caller owns the returned array; summarize does not modify the input.",
+    "reference": "workspace/reference/course/labs/139E - Lab 3.html",
+    "parts": [
+      [
+        "Recognize this pattern",
+        "Return named aggregate results and independently allocated transformed data."
+      ],
+      [
+        "Adapt it",
+        "Use a struct for a few named results; a dynamic array for a runtime-sized sequence."
+      ],
+      [
+        "Check before copying",
+        "Caller owns the returned array; summarize does not modify the input."
+      ]
+    ]
+  }
+]

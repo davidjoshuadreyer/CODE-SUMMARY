@@ -2,13 +2,15 @@
 const fs=require('node:fs'),path=require('node:path'),os=require('node:os'),crypto=require('node:crypto');
 const {execFileSync}=require('node:child_process');
 const folder=path.join(__dirname,'../comp139e');
-const items=[...require('../comp139e/midterm-patterns.json'),...require('../comp139e/code-templates.json')];
-const program=x=>(x.code.trimEnd()+'\n\nint main() {\n'+x.use.trimEnd().split('\n').map(l=>'    '+l).join('\n')+'\n    return 0;\n}\n').replace(/[ \t]+$/gm,'');
+const {items,program}=require('./comp-library-data.cjs');
 const dir=fs.mkdtempSync(path.join(os.tmpdir(),'comp-symbols-'));
+const cache=JSON.parse(fs.readFileSync(path.join(folder,'code-symbols.json'),'utf8'));
 const output={};
 try {
  for(const x of items){
   const source=program(x), wrapped=source.replace('using namespace std;','namespace comp_outline { using namespace std;')+'\n}';
+  const sha256=crypto.createHash('sha256').update(source).digest('hex');
+  if(cache[x.id]?.sha256===sha256){output[x.id]=cache[x.id];continue;}
   const cpp=path.join(dir,'example.cpp');fs.writeFileSync(cpp,wrapped);
   const ast=JSON.parse(execFileSync('clang++',['-std=c++17','-Xclang','-ast-dump=json','-Xclang','-ast-dump-filter=comp_outline','-fsyntax-only',cpp],{maxBuffer:32*1024*1024,encoding:'utf8'}));
   const line=n=>wrapped.slice(0,n.loc?.offset??0).split('\n').length;
@@ -41,7 +43,7 @@ try {
    return kids.flatMap(k=>walk(k,access,scope));
   }
   const symbols=walk(ast);
-  output[x.id]={sha256:crypto.createHash('sha256').update(source).digest('hex'),symbols};
+  output[x.id]={sha256,symbols};
   console.log('Outline '+x.id);
  }
  fs.writeFileSync(path.join(folder,'code-symbols.json'),JSON.stringify(output,null,2)+'\n');
