@@ -2551,6 +2551,17 @@ window.TESSELATE_CATALOG = {
       "description": "Eight guided RC/RL setups, square-wave scope measurements, resistance prechecks and CSV records. D2L checked October 26, 2026.",
       "referenceIds": [],
       "builtin": true
+    },
+    {
+      "id": "page-Y29tcDEzOWUvbWlkdGVybS1wYXR0ZXJucy5odG1s",
+      "courseId": "comp139e",
+      "title": "Midterm class & structure templates · 24 question cases",
+      "kind": "Study notes",
+      "url": "comp139e/midterm-patterns.html",
+      "body": "",
+      "description": "Blank templates with TODO comments and separate worked examples for inheritance, lists, stacks and queues.",
+      "referenceIds": [],
+      "builtin": true
     }
   ],
   "references": [

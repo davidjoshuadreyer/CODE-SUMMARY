@@ -1,0 +1,670 @@
+[
+  {
+    "id": "inherit-basic",
+    "group": "inheritance",
+    "title": "01 · Base class + derived class",
+    "when": "Create Person with a name, then Student with an ID. Initialize the base from the derived constructor and provide getters.",
+    "code": "#include <string>\nclass Person {\nprivate:\n    std::string name;\npublic:\n    Person(std::string name) : name(name) {}\n    std::string getName() const { return name; }\n};\nclass Student : public Person {\nprivate:\n    int id;\npublic:\n    Student(std::string name, int id) : Person(name), id(id) {}\n    int getId() const { return id; }\n};\n",
+    "use": "Student s(\"Ada\", 42);\n",
+    "test": "assert(s.getName()==\"Ada\" && s.getId()==42);",
+    "parts": [
+      [
+        "Base class",
+        "Stores common fields."
+      ],
+      [
+        "Derived initializer list",
+        "Calls Person(name) before initializing id."
+      ]
+    ],
+    "change": "Replace Person/Student and their data with the types in the question.",
+    "watch": "A derived class cannot directly read private base fields; use the base getter.",
+    "reference": "workspace/reference/course/labs/files/ShapeExample/Rectangle.hpp",
+    "starter": "// EDIT: rename classes, fields and parameter types to match your question.\n// TODO bodies below are unfinished; complete them before compiling.\n#include <string>\nclass Person {\nprivate:\n    std::string name;\npublic:\n    Person(std::string name) : name(name) {}\n    std::string getName() const {\n        // TODO: return the stored name.\n    }\n};\nclass Student : public Person {\nprivate:\n    int id;\npublic:\n    Student(std::string name, int id) : Person(name), id(id) {}\n    int getId() const {\n        // TODO: return the stored id.\n    }\n};\n",
+    "useStarter": "// TODO: create the required objects or containers.\n// TODO: add sample data and call your operations.\n// TODO: check normal, empty and one-item cases where applicable.\n",
+    "expected": "Name Ada; ID 42."
+  },
+  {
+    "id": "inherit-abstract",
+    "group": "inheritance",
+    "title": "02 · Abstract Shape + area",
+    "when": "Create an abstract Shape with getArea(), then implement Rectangle and Circle. Call both through Shape pointers.",
+    "code": "class Shape {\npublic:\n    virtual double getArea() const = 0;\n    virtual ~Shape() = default;\n};\nclass Rectangle : public Shape {\n    double length, width;\npublic:\n    Rectangle(double l, double w) : length(l), width(w) {}\n    double getArea() const override { return length * width; }\n};\nclass Circle : public Shape {\n    double radius;\npublic:\n    Circle(double r) : radius(r) {}\n    double getArea() const override { return 3.141592653589793 * radius * radius; }\n};\n",
+    "use": "Rectangle r(3, 4);\nCircle c(2);\nShape* shapes[] = {&r, &c};\ndouble total = 0;\nfor (int i = 0; i < 2; ++i) total += shapes[i]->getArea();\n",
+    "test": "assert(total>24.56 && total<24.57);",
+    "parts": [
+      [
+        "= 0",
+        "Makes getArea pure virtual and Shape abstract."
+      ],
+      [
+        "override",
+        "The signature must match the base, including const."
+      ],
+      [
+        "Shape*",
+        "Dispatches to the actual object’s method."
+      ]
+    ],
+    "change": "Replace getArea with draw, cost, volume or the requested operation.",
+    "watch": "The local objects are borrowed; do not delete &r or &c. A virtual destructor permits deletion through a base pointer when objects are allocated with new.",
+    "reference": "workspace/reference/course/labs/files/ShapeExample/Rectangle.hpp",
+    "starter": "// EDIT: rename classes, fields and parameter types to match your question.\n// TODO bodies below are unfinished; complete them before compiling.\nclass Shape {\npublic:\n    virtual double getArea() const = 0;\n    virtual ~Shape() = default;\n};\nclass Rectangle : public Shape {\n    double length, width;\npublic:\n    Rectangle(double l, double w) : length(l), width(w) {}\n    double getArea() const override {\n        // TODO: return the area formula using this derived class’s fields.\n    }\n};\nclass Circle : public Shape {\n    double radius;\npublic:\n    Circle(double r) : radius(r) {}\n    double getArea() const override {\n        // TODO: return the area formula using this derived class’s fields.\n    }\n};\n",
+    "useStarter": "// TODO: create the required objects or containers.\n// TODO: add sample data and call your operations.\n// TODO: check normal, empty and one-item cases where applicable.\n",
+    "expected": "Total area is approximately 24.5664."
+  },
+  {
+    "id": "inherit-protected",
+    "group": "inheritance",
+    "title": "03 · Protected data + override",
+    "when": "Create Account with a protected balance and virtual monthlyChange(). Derive SavingsAccount that adds interest.",
+    "code": "class Account {\nprotected:\n    double balance;\npublic:\n    Account(double b) : balance(b) {}\n    virtual void monthlyChange() { balance -= 5; }\n    double getBalance() const { return balance; }\n    virtual ~Account() = default;\n};\nclass SavingsAccount : public Account {\n    double rate;\npublic:\n    SavingsAccount(double b, double r) : Account(b), rate(r) {}\n    void monthlyChange() override { balance += balance * rate; }\n};\n",
+    "use": "SavingsAccount savings(100, 0.05);\nAccount* account = &savings;\naccount->monthlyChange();\n",
+    "test": "assert(account->getBalance()==105);",
+    "parts": [
+      [
+        "protected",
+        "Derived methods can access balance; outside callers cannot."
+      ],
+      [
+        "virtual",
+        "Calls through Account* select the derived override."
+      ]
+    ],
+    "change": "Replace the balance/rate fields and update rule.",
+    "watch": "Do not redeclare balance in the derived class; that would create a different field.",
+    "reference": "workspace/reference/course/labs/files/ShapeExample/Rectangle.hpp",
+    "starter": "// EDIT: rename classes, fields and parameter types to match your question.\n// TODO bodies below are unfinished; complete them before compiling.\nclass Account {\nprotected:\n    double balance;\npublic:\n    Account(double b) : balance(b) {}\n    virtual void monthlyChange() {\n        // TODO: apply this class’s balance update rule.\n    }\n    double getBalance() const {\n        // TODO: return the balance.\n    }\n    virtual ~Account() = default;\n};\nclass SavingsAccount : public Account {\n    double rate;\npublic:\n    SavingsAccount(double b, double r) : Account(b), rate(r) {}\n    void monthlyChange() override {\n        // TODO: apply this class’s balance update rule.\n    }\n};\n",
+    "useStarter": "// TODO: create the required objects or containers.\n// TODO: add sample data and call your operations.\n// TODO: check normal, empty and one-item cases where applicable.\n",
+    "expected": "Balance changes from 100 to 105."
+  },
+  {
+    "id": "inherit-base-call",
+    "group": "inheritance",
+    "title": "04 · Extend a base method",
+    "when": "Create Device::reset() to clear a reading. Override reset in Sensor to also clear its error count, while reusing the base reset.",
+    "code": "class Device {\nprotected:\n    double reading;\npublic:\n    Device(double r) : reading(r) {}\n    virtual void reset() { reading = 0; }\n    double getReading() const { return reading; }\n    virtual ~Device() = default;\n};\nclass Sensor : public Device {\n    int errors;\npublic:\n    Sensor(double r, int e) : Device(r), errors(e) {}\n    void reset() override {\n        Device::reset();\n        errors = 0;\n    }\n    int getErrors() const { return errors; }\n};\n",
+    "use": "Sensor sensor(12, 3);\nsensor.reset();\n",
+    "test": "assert(sensor.getReading()==0 && sensor.getErrors()==0);",
+    "parts": [
+      [
+        "Device::reset()",
+        "Explicitly reuse the base implementation."
+      ],
+      [
+        "Derived reset",
+        "Adds the sensor-specific work."
+      ]
+    ],
+    "change": "Use this pattern when the question says extend existing behavior.",
+    "watch": "Calling reset() unqualified inside itself would recurse.",
+    "reference": "workspace/reference/course/labs/files/ShapeExample/Rectangle.hpp",
+    "starter": "// EDIT: rename classes, fields and parameter types to match your question.\n// TODO bodies below are unfinished; complete them before compiling.\nclass Device {\nprotected:\n    double reading;\npublic:\n    Device(double r) : reading(r) {}\n    virtual void reset() {\n        // TODO: reset this class’s fields; call the base reset when extending it.\n    }\n    double getReading() const {\n        // TODO: return the current reading.\n    }\n    virtual ~Device() = default;\n};\nclass Sensor : public Device {\n    int errors;\npublic:\n    Sensor(double r, int e) : Device(r), errors(e) {}\n    void reset() override {\n        // TODO: reset this class’s fields; call the base reset when extending it.\n    }\n    int getErrors() const {\n        // TODO: return the error count.\n    }\n};\n",
+    "useStarter": "// TODO: create the required objects or containers.\n// TODO: add sample data and call your operations.\n// TODO: check normal, empty and one-item cases where applicable.\n",
+    "expected": "Reading and error count both become 0."
+  },
+  {
+    "id": "inherit-outside",
+    "group": "inheritance",
+    "title": "05 · Define derived methods outside the class",
+    "when": "Declare Shape and Rectangle, then define Rectangle’s constructor and getArea outside its class.",
+    "code": "class Shape {\npublic:\n    virtual double getArea() const = 0;\n    virtual ~Shape() = default;\n};\nclass Rectangle : public Shape {\n    double length, width;\npublic:\n    Rectangle(double l, double w);\n    double getArea() const override;\n};\nRectangle::Rectangle(double l, double w) : length(l), width(w) {}\ndouble Rectangle::getArea() const {\n    return length * width;\n}\n",
+    "use": "Rectangle rectangle(5, 6);\n",
+    "test": "assert(rectangle.getArea()==30);",
+    "parts": [
+      [
+        "Inside the class",
+        "Declarations end in semicolons."
+      ],
+      [
+        "Rectangle::",
+        "Qualifies definitions outside the class."
+      ]
+    ],
+    "change": "Move declarations to a guarded header and definitions to a .cpp including that header.",
+    "watch": "Repeat const, but not override, on the outside definition.",
+    "reference": "workspace/reference/course/labs/files/ShapeExample/Rectangle.hpp",
+    "starter": "// EDIT: rename classes, fields and parameter types to match your question.\n// TODO bodies below are unfinished; complete them before compiling.\nclass Shape {\npublic:\n    virtual double getArea() const = 0;\n    virtual ~Shape() = default;\n};\nclass Rectangle : public Shape {\n    double length, width;\npublic:\n    Rectangle(double l, double w);\n    double getArea() const override;\n};\nRectangle::Rectangle(double l, double w) : length(l), width(w) {}\ndouble Rectangle::getArea() const {\n        // TODO: return the area formula using this derived class’s fields.\n    }\n",
+    "useStarter": "// TODO: create the required objects or containers.\n// TODO: add sample data and call your operations.\n// TODO: check normal, empty and one-item cases where applicable.\n",
+    "expected": "Area is 30."
+  },
+  {
+    "id": "inherit-template",
+    "group": "inheritance",
+    "title": "06 · Generic base + generic derived class",
+    "when": "Create a generic BuildingG<T> storing coordinates. Derive HouseG<T> with an owner, and access an inherited coordinate.",
+    "code": "#include <string>\n\ntemplate<typename T>\nclass BuildingG {\npublic:\n    T x, y;\n    BuildingG(T x, T y) : x(x), y(y) {}\n};\n\ntemplate<typename T>\nclass HouseG : public BuildingG<T> {\npublic:\n    std::string owner;\n    HouseG(T x, T y, std::string owner)\n        : BuildingG<T>(x, y), owner(owner) {}\n    T getX() const { return this->x; }\n};\n",
+    "use": "HouseG<double> h(3, 6, \"Ada\");\ndouble x = h.getX();\n",
+    "test": "assert(x==3 && h.owner==\"Ada\");",
+    "parts": [
+      [
+        "BuildingG<T>",
+        "Pass the same chosen type to the base class."
+      ],
+      [
+        "Initializer list",
+        "Construct the base before initializing this class’s fields."
+      ],
+      [
+        "this->x",
+        "Access a member inherited from a dependent template base."
+      ]
+    ],
+    "change": "Replace coordinate and owner fields with the requested generic data.",
+    "watch": "Use this-> for inherited dependent members; keep template definitions in the header.",
+    "reference": "workspace/reference/examples/Object-Oriented_Programming/TestGenericClass.cpp",
+    "starter": "// EDIT: rename classes, fields and parameter types to match your question.\n// TODO bodies below are unfinished; complete them before compiling.\n#include <string>\n\ntemplate<typename T>\nclass BuildingG {\npublic:\n    T x, y;\n    BuildingG(T x, T y) : x(x), y(y) {}\n};\n\ntemplate<typename T>\nclass HouseG : public BuildingG<T> {\npublic:\n    std::string owner;\n    HouseG(T x, T y, std::string owner)\n        : BuildingG<T>(x, y), owner(owner) {}\n    T getX() const {\n        // TODO: return the inherited x value using this->x.\n    }\n};\n",
+    "useStarter": "// TODO: create the required objects or containers.\n// TODO: add sample data and call your operations.\n// TODO: check normal, empty and one-item cases where applicable.\n",
+    "expected": "Inherited x is 3; owner is Ada."
+  },
+  {
+    "id": "list-core",
+    "group": "lists",
+    "title": "07 · Build a singly linked list",
+    "when": "Implement IntSLList with addToHead, addToTail and deleteFromHead; handle an empty list and the final removal.",
+    "code": "#include <iostream>\nusing namespace std;\nclass IntSLLNode {\npublic:\n    IntSLLNode(int el, IntSLLNode *ptr = nullptr) { info = el; next = ptr; }\n    int info;\n    IntSLLNode *next;\n};\nclass IntSLList {\n    IntSLLNode *head, *tail;\npublic:\n    IntSLList() { head = tail = nullptr; }\n    int isEmpty() { return head == nullptr; }\n    void addToHead(int el) {\n        head = new IntSLLNode(el, head);\n        if (tail == nullptr) tail = head;\n    }\n    void addToTail(int el) {\n        if (tail != nullptr) {\n            tail->next = new IntSLLNode(el);\n            tail = tail->next;\n        } else head = tail = new IntSLLNode(el);\n    }\n    int deleteFromHead() { \n        int el = head->info;\n        IntSLLNode *tmp = head;\n        if (head == tail) head = tail = nullptr;\n        else head = head->next;\n        delete tmp;\n        return el;\n    }\n    ~IntSLList() { while (!isEmpty()) deleteFromHead(); }\n    \n    IntSLList(const IntSLList&) = delete;\n    IntSLList& operator=(const IntSLList&) = delete;\n};\n",
+    "use": "IntSLList lst;\nlst.addToHead(20);\nlst.addToHead(10);\nlst.addToTail(30);\nint first = lst.deleteFromHead();\n",
+    "test": "assert(first==10);assert(lst.deleteFromHead()==20);assert(lst.deleteFromHead()==30);assert(lst.isEmpty());lst.addToTail(7);assert(lst.deleteFromHead()==7);",
+    "parts": [
+      [
+        "IntSLLNode",
+        "info stores the integer; next links to the following node."
+      ],
+      [
+        "head / tail",
+        "First and last node; both null when empty."
+      ],
+      [
+        "addToHead / addToTail",
+        "Update links, then update the relevant end pointer."
+      ],
+      [
+        "deleteFromHead",
+        "Save the value and node, update links, delete the old node, return the value."
+      ]
+    ],
+    "change": "Preserve head/tail/next updates; change info’s type when required.",
+    "watch": "deleteFromHead requires a nonempty list. Both end pointers must become null after the last removal.",
+    "reference": "workspace/reference/examples/Linked_Lists/IntSLList.cpp",
+    "starter": "// EDIT: rename classes, fields and parameter types to match your question.\n// TODO bodies below are unfinished; complete them before compiling.\n#include <iostream>\nusing namespace std;\nclass IntSLLNode {\npublic:\n    IntSLLNode(int el, IntSLLNode *ptr = nullptr) {\n        // TODO: store el in info and ptr in next.\n    }\n    int info;\n    IntSLLNode *next;\n};\nclass IntSLList {\n    IntSLLNode *head, *tail;\npublic:\n    IntSLList() {\n        // TODO: initialize head and tail to nullptr.\n    }\n    int isEmpty() {\n        // TODO: return whether there are no items.\n    }\n    void addToHead(int el) {\n        // TODO: create a node linked to head; update head and, if empty before insertion, tail.\n    }\n    void addToTail(int el) {\n        // TODO: link a new node after tail; handle an empty list; update tail.\n    }\n    int deleteFromHead() {\n        // TODO: save info; update head/tail; delete the old head; return the saved info.\n    }\n    ~IntSLList() {\n        // TODO: release all remaining owned nodes.\n    }\n    \n    IntSLList(const IntSLList&) = delete;\n    IntSLList& operator=(const IntSLList&) = delete;\n};\n",
+    "useStarter": "// TODO: create the required objects or containers.\n// TODO: add sample data and call your operations.\n// TODO: check normal, empty and one-item cases where applicable.\n",
+    "expected": "First removal is 10; remaining order is 20, 30."
+  },
+  {
+    "id": "list-count",
+    "group": "lists",
+    "title": "08 · Traverse and count nodes",
+    "when": "Add a const countNodes() method that traverses without changing head.",
+    "code": "#include <iostream>\nusing namespace std;\nclass IntSLLNode {\npublic:\n    IntSLLNode(int el, IntSLLNode *ptr = nullptr) { info = el; next = ptr; }\n    int info;\n    IntSLLNode *next;\n};\nclass IntSLList {\n    IntSLLNode *head, *tail;\npublic:\n    IntSLList() { head = tail = nullptr; }\n    int isEmpty() { return head == nullptr; }\n    void addToHead(int el) {\n        head = new IntSLLNode(el, head);\n        if (tail == nullptr) tail = head;\n    }\n    void addToTail(int el) {\n        if (tail != nullptr) {\n            tail->next = new IntSLLNode(el);\n            tail = tail->next;\n        } else head = tail = new IntSLLNode(el);\n    }\n    int deleteFromHead() { \n        int el = head->info;\n        IntSLLNode *tmp = head;\n        if (head == tail) head = tail = nullptr;\n        else head = head->next;\n        delete tmp;\n        return el;\n    }\n    ~IntSLList() { while (!isEmpty()) deleteFromHead(); }\n    \n    IntSLList(const IntSLList&) = delete;\n    IntSLList& operator=(const IntSLList&) = delete;\n    int countNodes() const {\n        int count = 0;\n        for (IntSLLNode* p = head; p != nullptr; p = p->next) ++count;\n        return count;\n    }\n};\n",
+    "use": "IntSLList lst;\nlst.addToTail(10);\nlst.addToTail(20);\nint count = lst.countNodes();\n",
+    "test": "assert(count==2);assert(lst.deleteFromHead()==10);assert(lst.countNodes()==1);lst.deleteFromHead();assert(lst.countNodes()==0);",
+    "parts": [
+      [
+        "p",
+        "A temporary traversal pointer."
+      ],
+      [
+        "p = p->next",
+        "Moves to the following node without moving head."
+      ]
+    ],
+    "change": "Replace ++count with a sum or another read-only operation.",
+    "watch": "Do not advance head when you only mean to traverse.",
+    "reference": "workspace/reference/examples/Linked_Lists/IntSLList.cpp",
+    "starter": "// EDIT: rename classes, fields and parameter types to match your question.\n// TODO bodies below are unfinished; complete them before compiling.\n#include <iostream>\nusing namespace std;\nclass IntSLLNode {\npublic:\n    IntSLLNode(int el, IntSLLNode *ptr = nullptr) {\n        // TODO: store el in info and ptr in next.\n    }\n    int info;\n    IntSLLNode *next;\n};\nclass IntSLList {\n    IntSLLNode *head, *tail;\npublic:\n    IntSLList() {\n        // TODO: initialize head and tail to nullptr.\n    }\n    int isEmpty() {\n        // TODO: return whether there are no items.\n    }\n    void addToHead(int el) {\n        // TODO: create a node linked to head; update head and, if empty before insertion, tail.\n    }\n    void addToTail(int el) {\n        // TODO: link a new node after tail; handle an empty list; update tail.\n    }\n    int deleteFromHead() {\n        // TODO: save info; update head/tail; delete the old head; return the saved info.\n    }\n    ~IntSLList() {\n        // TODO: release all remaining owned nodes.\n    }\n    \n    IntSLList(const IntSLList&) = delete;\n    IntSLList& operator=(const IntSLList&) = delete;\n    int countNodes() const {\n        // TODO: walk from head with a temporary pointer; count nodes; return the count.\n    }\n};\n",
+    "useStarter": "// TODO: create the required objects or containers.\n// TODO: add sample data and call your operations.\n// TODO: check normal, empty and one-item cases where applicable.\n",
+    "expected": "count is 2; counting does not remove any nodes."
+  },
+  {
+    "id": "list-find",
+    "group": "lists",
+    "title": "09 · Search for a value",
+    "when": "Add isInList(int el). Return true for a match and false for a missing value or an empty list.",
+    "code": "#include <iostream>\nusing namespace std;\nclass IntSLLNode {\npublic:\n    IntSLLNode(int el, IntSLLNode *ptr = nullptr) { info = el; next = ptr; }\n    int info;\n    IntSLLNode *next;\n};\nclass IntSLList {\n    IntSLLNode *head, *tail;\npublic:\n    IntSLList() { head = tail = nullptr; }\n    int isEmpty() { return head == nullptr; }\n    void addToHead(int el) {\n        head = new IntSLLNode(el, head);\n        if (tail == nullptr) tail = head;\n    }\n    void addToTail(int el) {\n        if (tail != nullptr) {\n            tail->next = new IntSLLNode(el);\n            tail = tail->next;\n        } else head = tail = new IntSLLNode(el);\n    }\n    int deleteFromHead() { \n        int el = head->info;\n        IntSLLNode *tmp = head;\n        if (head == tail) head = tail = nullptr;\n        else head = head->next;\n        delete tmp;\n        return el;\n    }\n    ~IntSLList() { while (!isEmpty()) deleteFromHead(); }\n    \n    IntSLList(const IntSLList&) = delete;\n    IntSLList& operator=(const IntSLList&) = delete;\n    bool isInList(int el) const {\n        for (IntSLLNode* tmp = head; tmp != nullptr; tmp = tmp->next) {\n            if (tmp->info == el) return true;\n        }\n        return false;\n    }\n};\n",
+    "use": "IntSLList lst;\nlst.addToTail(4);\nlst.addToTail(9);\nbool found = lst.isInList(9);\n",
+    "test": "assert(found && !lst.isInList(7));lst.deleteFromHead();lst.deleteFromHead();assert(!lst.isInList(9));",
+    "parts": [
+      [
+        "Compare info",
+        "Check the current node before moving on."
+      ],
+      [
+        "Return false after loop",
+        "Only report failure after all nodes have been checked."
+      ]
+    ],
+    "change": "Change the equality test to match the requested condition.",
+    "watch": "Returning false inside the first loop iteration stops the search too soon.",
+    "reference": "workspace/reference/examples/Linked_Lists/IntSLList.cpp",
+    "starter": "// EDIT: rename classes, fields and parameter types to match your question.\n// TODO bodies below are unfinished; complete them before compiling.\n#include <iostream>\nusing namespace std;\nclass IntSLLNode {\npublic:\n    IntSLLNode(int el, IntSLLNode *ptr = nullptr) {\n        // TODO: store el in info and ptr in next.\n    }\n    int info;\n    IntSLLNode *next;\n};\nclass IntSLList {\n    IntSLLNode *head, *tail;\npublic:\n    IntSLList() {\n        // TODO: initialize head and tail to nullptr.\n    }\n    int isEmpty() {\n        // TODO: return whether there are no items.\n    }\n    void addToHead(int el) {\n        // TODO: create a node linked to head; update head and, if empty before insertion, tail.\n    }\n    void addToTail(int el) {\n        // TODO: link a new node after tail; handle an empty list; update tail.\n    }\n    int deleteFromHead() {\n        // TODO: save info; update head/tail; delete the old head; return the saved info.\n    }\n    ~IntSLList() {\n        // TODO: release all remaining owned nodes.\n    }\n    \n    IntSLList(const IntSLList&) = delete;\n    IntSLList& operator=(const IntSLList&) = delete;\n    bool isInList(int el) const {\n        // TODO: search each node for el; return true for a match or false after the loop.\n    }\n};\n",
+    "useStarter": "// TODO: create the required objects or containers.\n// TODO: add sample data and call your operations.\n// TODO: check normal, empty and one-item cases where applicable.\n",
+    "expected": "found is true because 9 is present."
+  },
+  {
+    "id": "list-tail",
+    "group": "lists",
+    "title": "10 · Delete the tail",
+    "when": "Add deleteFromTail() to a singly linked list. Find the predecessor and handle the one-node case.",
+    "code": "#include <iostream>\nusing namespace std;\nclass IntSLLNode {\npublic:\n    IntSLLNode(int el, IntSLLNode *ptr = nullptr) { info = el; next = ptr; }\n    int info;\n    IntSLLNode *next;\n};\nclass IntSLList {\n    IntSLLNode *head, *tail;\npublic:\n    IntSLList() { head = tail = nullptr; }\n    int isEmpty() { return head == nullptr; }\n    void addToHead(int el) {\n        head = new IntSLLNode(el, head);\n        if (tail == nullptr) tail = head;\n    }\n    void addToTail(int el) {\n        if (tail != nullptr) {\n            tail->next = new IntSLLNode(el);\n            tail = tail->next;\n        } else head = tail = new IntSLLNode(el);\n    }\n    int deleteFromHead() { \n        int el = head->info;\n        IntSLLNode *tmp = head;\n        if (head == tail) head = tail = nullptr;\n        else head = head->next;\n        delete tmp;\n        return el;\n    }\n    ~IntSLList() { while (!isEmpty()) deleteFromHead(); }\n    \n    IntSLList(const IntSLList&) = delete;\n    IntSLList& operator=(const IntSLList&) = delete;\n    int deleteFromTail() {\n        int el = tail->info;\n        if (head == tail) {\n            delete head;\n            head = tail = nullptr;\n        } else {\n            IntSLLNode* tmp = head;\n            while (tmp->next != tail) tmp = tmp->next;\n            delete tail;\n            tail = tmp;\n            tail->next = nullptr;\n        }\n        return el;\n    }\n};\n",
+    "use": "IntSLList lst;\nlst.addToTail(1);\nlst.addToTail(2);\nint last = lst.deleteFromTail();\n",
+    "test": "assert(last==2);assert(lst.deleteFromTail()==1);assert(lst.isEmpty());lst.addToTail(3);assert(lst.deleteFromTail()==3);",
+    "parts": [
+      [
+        "Predecessor",
+        "Singly linked nodes have no prev pointer; walk from head."
+      ],
+      [
+        "One node",
+        "Clear both head and tail."
+      ]
+    ],
+    "change": "Use the same predecessor search when removing a node by position.",
+    "watch": "Requires a nonempty list. Never read tail after deleting it.",
+    "reference": "workspace/reference/examples/Linked_Lists/IntSLList.cpp",
+    "starter": "// EDIT: rename classes, fields and parameter types to match your question.\n// TODO bodies below are unfinished; complete them before compiling.\n#include <iostream>\nusing namespace std;\nclass IntSLLNode {\npublic:\n    IntSLLNode(int el, IntSLLNode *ptr = nullptr) {\n        // TODO: store el in info and ptr in next.\n    }\n    int info;\n    IntSLLNode *next;\n};\nclass IntSLList {\n    IntSLLNode *head, *tail;\npublic:\n    IntSLList() {\n        // TODO: initialize head and tail to nullptr.\n    }\n    int isEmpty() {\n        // TODO: return whether there are no items.\n    }\n    void addToHead(int el) {\n        // TODO: create a node linked to head; update head and, if empty before insertion, tail.\n    }\n    void addToTail(int el) {\n        // TODO: link a new node after tail; handle an empty list; update tail.\n    }\n    int deleteFromHead() {\n        // TODO: save info; update head/tail; delete the old head; return the saved info.\n    }\n    ~IntSLList() {\n        // TODO: release all remaining owned nodes.\n    }\n    \n    IntSLList(const IntSLList&) = delete;\n    IntSLList& operator=(const IntSLList&) = delete;\n    int deleteFromTail() {\n        // TODO: handle one node or find the predecessor; update tail; delete old tail; return info.\n    }\n};\n",
+    "useStarter": "// TODO: create the required objects or containers.\n// TODO: add sample data and call your operations.\n// TODO: check normal, empty and one-item cases where applicable.\n",
+    "expected": "last is 2; the remaining node stores 1."
+  },
+  {
+    "id": "list-remove-value",
+    "group": "lists",
+    "title": "11 · Delete the first matching node",
+    "when": "Implement deleteNode(el). Support deleting the head, middle, tail or only node, and leave the list unchanged if absent.",
+    "code": "#include <iostream>\nusing namespace std;\nclass IntSLLNode {\npublic:\n    IntSLLNode(int el, IntSLLNode *ptr = nullptr) { info = el; next = ptr; }\n    int info;\n    IntSLLNode *next;\n};\nclass IntSLList {\n    IntSLLNode *head, *tail;\npublic:\n    IntSLList() { head = tail = nullptr; }\n    int isEmpty() { return head == nullptr; }\n    void addToHead(int el) {\n        head = new IntSLLNode(el, head);\n        if (tail == nullptr) tail = head;\n    }\n    void addToTail(int el) {\n        if (tail != nullptr) {\n            tail->next = new IntSLLNode(el);\n            tail = tail->next;\n        } else head = tail = new IntSLLNode(el);\n    }\n    int deleteFromHead() { \n        int el = head->info;\n        IntSLLNode *tmp = head;\n        if (head == tail) head = tail = nullptr;\n        else head = head->next;\n        delete tmp;\n        return el;\n    }\n    ~IntSLList() { while (!isEmpty()) deleteFromHead(); }\n    \n    IntSLList(const IntSLList&) = delete;\n    IntSLList& operator=(const IntSLList&) = delete;\n    void deleteNode(int el) {\n        IntSLLNode* pred = nullptr;\n        IntSLLNode* tmp = head;\n        while (tmp != nullptr && tmp->info != el) {\n            pred = tmp;\n            tmp = tmp->next;\n        }\n        if (tmp == nullptr) return;\n        if (pred == nullptr) head = tmp->next;\n        else pred->next = tmp->next;\n        if (tmp == tail) tail = pred;\n        delete tmp;\n    }\n};\n",
+    "use": "IntSLList lst;\nlst.addToTail(1); lst.addToTail(2); lst.addToTail(3);\nlst.deleteNode(2);\n",
+    "test": "lst.deleteNode(99);assert(lst.deleteFromHead()==1);assert(lst.deleteFromHead()==3);lst.deleteNode(7);lst.addToTail(8);lst.deleteNode(8);assert(lst.isEmpty());lst.addToTail(1);lst.addToTail(2);lst.deleteNode(2);lst.addToTail(3);assert(lst.deleteFromHead()==1);assert(lst.deleteFromHead()==3);",
+    "parts": [
+      [
+        "pred and tmp",
+        "Track the predecessor and candidate node."
+      ],
+      [
+        "Head case",
+        "There is no predecessor; update head directly."
+      ],
+      [
+        "Tail case",
+        "The predecessor becomes the new tail."
+      ]
+    ],
+    "change": "Change the comparison to remove according to another condition.",
+    "watch": "This removes the first match, not all duplicates. It is a simplified adaptation of deleteNode in the supplied list.",
+    "reference": "workspace/reference/examples/Linked_Lists/IntSLList.cpp",
+    "starter": "// EDIT: rename classes, fields and parameter types to match your question.\n// TODO bodies below are unfinished; complete them before compiling.\n#include <iostream>\nusing namespace std;\nclass IntSLLNode {\npublic:\n    IntSLLNode(int el, IntSLLNode *ptr = nullptr) {\n        // TODO: store el in info and ptr in next.\n    }\n    int info;\n    IntSLLNode *next;\n};\nclass IntSLList {\n    IntSLLNode *head, *tail;\npublic:\n    IntSLList() {\n        // TODO: initialize head and tail to nullptr.\n    }\n    int isEmpty() {\n        // TODO: return whether there are no items.\n    }\n    void addToHead(int el) {\n        // TODO: create a node linked to head; update head and, if empty before insertion, tail.\n    }\n    void addToTail(int el) {\n        // TODO: link a new node after tail; handle an empty list; update tail.\n    }\n    int deleteFromHead() {\n        // TODO: save info; update head/tail; delete the old head; return the saved info.\n    }\n    ~IntSLList() {\n        // TODO: release all remaining owned nodes.\n    }\n    \n    IntSLList(const IntSLList&) = delete;\n    IntSLList& operator=(const IntSLList&) = delete;\n    void deleteNode(int el) {\n        // TODO: find el and its predecessor; unlink the match; repair head/tail; delete the node.\n    }\n};\n",
+    "useStarter": "// TODO: create the required objects or containers.\n// TODO: add sample data and call your operations.\n// TODO: check normal, empty and one-item cases where applicable.\n",
+    "expected": "The remaining list is 1 → 3."
+  },
+  {
+    "id": "list-reverse",
+    "group": "lists",
+    "title": "12 · Reverse links in place",
+    "when": "Reverse the singly linked list without creating new nodes. Update both head and tail.",
+    "code": "#include <iostream>\nusing namespace std;\nclass IntSLLNode {\npublic:\n    IntSLLNode(int el, IntSLLNode *ptr = nullptr) { info = el; next = ptr; }\n    int info;\n    IntSLLNode *next;\n};\nclass IntSLList {\n    IntSLLNode *head, *tail;\npublic:\n    IntSLList() { head = tail = nullptr; }\n    int isEmpty() { return head == nullptr; }\n    void addToHead(int el) {\n        head = new IntSLLNode(el, head);\n        if (tail == nullptr) tail = head;\n    }\n    void addToTail(int el) {\n        if (tail != nullptr) {\n            tail->next = new IntSLLNode(el);\n            tail = tail->next;\n        } else head = tail = new IntSLLNode(el);\n    }\n    int deleteFromHead() { \n        int el = head->info;\n        IntSLLNode *tmp = head;\n        if (head == tail) head = tail = nullptr;\n        else head = head->next;\n        delete tmp;\n        return el;\n    }\n    ~IntSLList() { while (!isEmpty()) deleteFromHead(); }\n    \n    IntSLList(const IntSLList&) = delete;\n    IntSLList& operator=(const IntSLList&) = delete;\n    void reverse() {\n        IntSLLNode* previous = nullptr;\n        IntSLLNode* current = head;\n        tail = head;\n        while (current != nullptr) {\n            IntSLLNode* next = current->next;\n            current->next = previous;\n            previous = current;\n            current = next;\n        }\n        head = previous;\n    }\n};\n",
+    "use": "IntSLList lst;\nlst.addToTail(1); lst.addToTail(2); lst.addToTail(3);\nlst.reverse();\n",
+    "test": "assert(lst.deleteFromHead()==3);assert(lst.deleteFromHead()==2);assert(lst.deleteFromHead()==1);lst.reverse();assert(lst.isEmpty());lst.addToTail(4);lst.reverse();lst.addToTail(5);assert(lst.deleteFromHead()==4);assert(lst.deleteFromHead()==5);",
+    "parts": [
+      [
+        "Save next",
+        "Preserve the original next link before overwriting it."
+      ],
+      [
+        "Reverse one link",
+        "Point current back to previous."
+      ],
+      [
+        "Ends",
+        "Old head becomes tail; final previous becomes head."
+      ]
+    ],
+    "change": "Use the three-pointer pattern for any singly linked node type.",
+    "watch": "An extension exercise built from the course node layout, not a copied slide solution.",
+    "reference": "workspace/reference/examples/Linked_Lists/IntSLList.cpp",
+    "starter": "// EDIT: rename classes, fields and parameter types to match your question.\n// TODO bodies below are unfinished; complete them before compiling.\n#include <iostream>\nusing namespace std;\nclass IntSLLNode {\npublic:\n    IntSLLNode(int el, IntSLLNode *ptr = nullptr) {\n        // TODO: store el in info and ptr in next.\n    }\n    int info;\n    IntSLLNode *next;\n};\nclass IntSLList {\n    IntSLLNode *head, *tail;\npublic:\n    IntSLList() {\n        // TODO: initialize head and tail to nullptr.\n    }\n    int isEmpty() {\n        // TODO: return whether there are no items.\n    }\n    void addToHead(int el) {\n        // TODO: create a node linked to head; update head and, if empty before insertion, tail.\n    }\n    void addToTail(int el) {\n        // TODO: link a new node after tail; handle an empty list; update tail.\n    }\n    int deleteFromHead() {\n        // TODO: save info; update head/tail; delete the old head; return the saved info.\n    }\n    ~IntSLList() {\n        // TODO: release all remaining owned nodes.\n    }\n    \n    IntSLList(const IntSLList&) = delete;\n    IntSLList& operator=(const IntSLList&) = delete;\n    void reverse() {\n        // TODO: save each next link before reversing it; update both head and tail.\n    }\n};\n",
+    "useStarter": "// TODO: create the required objects or containers.\n// TODO: add sample data and call your operations.\n// TODO: check normal, empty and one-item cases where applicable.\n",
+    "expected": "The list becomes 3 → 2 → 1."
+  },
+  {
+    "id": "stack-core",
+    "group": "stacks",
+    "title": "13 · Build Lab 6 Stack<T>",
+    "when": "Implement push, pop, top, size and isEmpty using StackNode, topOfStack, theItem and count.",
+    "code": "#include <iostream>\n#include <exception>\n#include <string>\nusing namespace std;\n\nclass StackException : public exception {\n    string message;\npublic:\n    explicit StackException(const string& msg) noexcept : message(msg) {}\n    const char* what() const noexcept override { return message.c_str(); }\n};\n\ntemplate <class T> class Stack {\nprivate:\n    typedef struct stackNode {\n        struct stackNode *next;\n        T theItem;\n    } StackNode;\n    StackNode *topOfStack;\n    int count;\npublic:\n    Stack() : topOfStack(NULL), count(0) {}\n    void push(T item) {\n        StackNode *newNode = new StackNode;\n        newNode->theItem = item;\n        newNode->next = topOfStack;\n        topOfStack = newNode;\n        ++count;\n    }\n    T pop(void) {\n        if (isEmpty()) throw StackException(\"Pop from empty stack\");\n        T item = topOfStack->theItem;\n        StackNode *old = topOfStack;\n        topOfStack = old->next;\n        delete old;\n        --count;\n        return item;\n    }\n    T top(void) {\n        if (isEmpty()) throw StackException(\"Top of empty stack\");\n        return topOfStack->theItem;\n    }\n    int size(void) { return count; }\n    bool isEmpty(void) { return count == 0; }\n    \n    ~Stack() { while (!isEmpty()) pop(); }\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n};\n",
+    "use": "Stack<int> s;\ns.push(10); s.push(20);\nint removed = s.pop();\n",
+    "test": "assert(removed==20 && s.top()==10 && s.size()==1);s.pop();bool caught=false;try{s.pop();}catch(const StackException&){caught=true;}assert(caught);",
+    "parts": [
+      [
+        "StackNode / theItem / next",
+        "A node holds one item and the link below it."
+      ],
+      [
+        "topOfStack / count",
+        "The top node and the current item count."
+      ],
+      [
+        "push",
+        "Create a node, link to old top, move top, increment count."
+      ],
+      [
+        "pop",
+        "Save the item, advance top, delete the old node, decrement count, return item."
+      ],
+      [
+        "top / isEmpty / size",
+        "Inspect without removing; empty access throws StackException."
+      ]
+    ],
+    "change": "Choose the stored type; keep the Lab 6 function names and return types.",
+    "watch": "pop returns the item. Empty pop/top throw StackException. Cleanup/copy protection are study additions.",
+    "reference": "workspace/reference/course/labs/files/ShapeExample/StackGiven.hpp",
+    "starter": "// EDIT: rename classes, fields and parameter types to match your question.\n// TODO bodies below are unfinished; complete them before compiling.\n#include <iostream>\n#include <exception>\n#include <string>\nusing namespace std;\n\nclass StackException : public exception {\n    string message;\npublic:\n    explicit StackException(const string& msg) noexcept : message(msg) {}\n    const char* what() const noexcept override {\n        // TODO: return message.c_str().\n    }\n};\n\ntemplate <class T> class Stack {\nprivate:\n    typedef struct stackNode {\n        struct stackNode *next;\n        T theItem;\n    } StackNode;\n    StackNode *topOfStack;\n    int count;\npublic:\n    Stack() : topOfStack(NULL), count(0) {}\n    void push(T item) {\n        // TODO: allocate a node; store item; link to old top; update topOfStack and count.\n    }\n    T pop(void) {\n        // TODO: check empty; save item; advance top; delete old node; decrement count; return item.\n    }\n    T top(void) {\n        // TODO: check empty, then return theItem without removing the node.\n    }\n    int size(void) {\n        // TODO: return the number of stored items.\n    }\n    bool isEmpty(void) {\n        // TODO: return whether there are no items.\n    }\n    \n    ~Stack() {\n        // TODO: release all remaining owned nodes.\n    }\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n};\n",
+    "useStarter": "// TODO: create the required objects or containers.\n// TODO: add sample data and call your operations.\n// TODO: check normal, empty and one-item cases where applicable.\n",
+    "expected": "removed is 20; top is now 10; size is 1."
+  },
+  {
+    "id": "stack-clear",
+    "group": "stacks",
+    "title": "14 · Clear and reuse a stack",
+    "when": "Add clear() to release all nodes and leave the stack reusable.",
+    "code": "#include <iostream>\n#include <exception>\n#include <string>\nusing namespace std;\n\nclass StackException : public exception {\n    string message;\npublic:\n    explicit StackException(const string& msg) noexcept : message(msg) {}\n    const char* what() const noexcept override { return message.c_str(); }\n};\n\ntemplate <class T> class Stack {\nprivate:\n    typedef struct stackNode {\n        struct stackNode *next;\n        T theItem;\n    } StackNode;\n    StackNode *topOfStack;\n    int count;\npublic:\n    Stack() : topOfStack(NULL), count(0) {}\n    void push(T item) {\n        StackNode *newNode = new StackNode;\n        newNode->theItem = item;\n        newNode->next = topOfStack;\n        topOfStack = newNode;\n        ++count;\n    }\n    T pop(void) {\n        if (isEmpty()) throw StackException(\"Pop from empty stack\");\n        T item = topOfStack->theItem;\n        StackNode *old = topOfStack;\n        topOfStack = old->next;\n        delete old;\n        --count;\n        return item;\n    }\n    T top(void) {\n        if (isEmpty()) throw StackException(\"Top of empty stack\");\n        return topOfStack->theItem;\n    }\n    int size(void) { return count; }\n    bool isEmpty(void) { return count == 0; }\n    \n    ~Stack() { while (!isEmpty()) pop(); }\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n    void clear() {\n        while (!isEmpty()) pop();\n    }\n};\n",
+    "use": "Stack<int> s;\ns.push(1); s.push(2);\ns.clear();\ns.push(3);\n",
+    "test": "assert(s.size()==1 && s.pop()==3 && s.isEmpty());s.clear();",
+    "parts": [
+      [
+        "Repeated pop",
+        "Reuses count updates and node deletion."
+      ],
+      [
+        "Empty stack",
+        "The loop does nothing."
+      ]
+    ],
+    "change": "Use clear in a reset operation when the question requires it.",
+    "watch": "Clearing nodes containing raw pointers does not delete the pointed-to objects.",
+    "reference": "workspace/reference/course/labs/files/ShapeExample/StackGiven.hpp",
+    "starter": "// EDIT: rename classes, fields and parameter types to match your question.\n// TODO bodies below are unfinished; complete them before compiling.\n#include <iostream>\n#include <exception>\n#include <string>\nusing namespace std;\n\nclass StackException : public exception {\n    string message;\npublic:\n    explicit StackException(const string& msg) noexcept : message(msg) {}\n    const char* what() const noexcept override {\n        // TODO: return message.c_str().\n    }\n};\n\ntemplate <class T> class Stack {\nprivate:\n    typedef struct stackNode {\n        struct stackNode *next;\n        T theItem;\n    } StackNode;\n    StackNode *topOfStack;\n    int count;\npublic:\n    Stack() : topOfStack(NULL), count(0) {}\n    void push(T item) {\n        // TODO: allocate a node; store item; link to old top; update topOfStack and count.\n    }\n    T pop(void) {\n        // TODO: check empty; save item; advance top; delete old node; decrement count; return item.\n    }\n    T top(void) {\n        // TODO: check empty, then return theItem without removing the node.\n    }\n    int size(void) {\n        // TODO: return the number of stored items.\n    }\n    bool isEmpty(void) {\n        // TODO: return whether there are no items.\n    }\n    \n    ~Stack() {\n        // TODO: release all remaining owned nodes.\n    }\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n    void clear() {\n        // TODO: remove every item, leaving valid empty state.\n    }\n};\n",
+    "useStarter": "// TODO: create the required objects or containers.\n// TODO: add sample data and call your operations.\n// TODO: check normal, empty and one-item cases where applicable.\n",
+    "expected": "The cleared stack is reused with one item, 3."
+  },
+  {
+    "id": "stack-reverse-text",
+    "group": "stacks",
+    "title": "15 · Use a stack to reverse text",
+    "when": "Push the characters of a string, then pop them to build the reversed string.",
+    "code": "#include <iostream>\n#include <exception>\n#include <string>\nusing namespace std;\n\nclass StackException : public exception {\n    string message;\npublic:\n    explicit StackException(const string& msg) noexcept : message(msg) {}\n    const char* what() const noexcept override { return message.c_str(); }\n};\n\ntemplate <class T> class Stack {\nprivate:\n    typedef struct stackNode {\n        struct stackNode *next;\n        T theItem;\n    } StackNode;\n    StackNode *topOfStack;\n    int count;\npublic:\n    Stack() : topOfStack(NULL), count(0) {}\n    void push(T item) {\n        StackNode *newNode = new StackNode;\n        newNode->theItem = item;\n        newNode->next = topOfStack;\n        topOfStack = newNode;\n        ++count;\n    }\n    T pop(void) {\n        if (isEmpty()) throw StackException(\"Pop from empty stack\");\n        T item = topOfStack->theItem;\n        StackNode *old = topOfStack;\n        topOfStack = old->next;\n        delete old;\n        --count;\n        return item;\n    }\n    T top(void) {\n        if (isEmpty()) throw StackException(\"Top of empty stack\");\n        return topOfStack->theItem;\n    }\n    int size(void) { return count; }\n    bool isEmpty(void) { return count == 0; }\n    \n    ~Stack() { while (!isEmpty()) pop(); }\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n};\n",
+    "use": "std::string text = \"code\";\nStack<char> s;\nfor (int i = 0; i < static_cast<int>(text.length()); ++i) s.push(text[i]);\nstd::string reversed;\nwhile (!s.isEmpty()) reversed += s.pop();\n",
+    "test": "assert(reversed==\"edoc\" && s.isEmpty());",
+    "parts": [
+      [
+        "Push input order",
+        "The last character ends up on top."
+      ],
+      [
+        "Pop order",
+        "Returns the reverse order."
+      ]
+    ],
+    "change": "Replace characters with another sequence type for reversal.",
+    "watch": "The stack is consumed by this algorithm.",
+    "reference": "workspace/reference/course/labs/files/ShapeExample/StackGiven.hpp",
+    "starter": "// EDIT: rename classes, fields and parameter types to match your question.\n// TODO bodies below are unfinished; complete them before compiling.\n#include <iostream>\n#include <exception>\n#include <string>\nusing namespace std;\n\nclass StackException : public exception {\n    string message;\npublic:\n    explicit StackException(const string& msg) noexcept : message(msg) {}\n    const char* what() const noexcept override {\n        // TODO: return message.c_str().\n    }\n};\n\ntemplate <class T> class Stack {\nprivate:\n    typedef struct stackNode {\n        struct stackNode *next;\n        T theItem;\n    } StackNode;\n    StackNode *topOfStack;\n    int count;\npublic:\n    Stack() : topOfStack(NULL), count(0) {}\n    void push(T item) {\n        // TODO: allocate a node; store item; link to old top; update topOfStack and count.\n    }\n    T pop(void) {\n        // TODO: check empty; save item; advance top; delete old node; decrement count; return item.\n    }\n    T top(void) {\n        // TODO: check empty, then return theItem without removing the node.\n    }\n    int size(void) {\n        // TODO: return the number of stored items.\n    }\n    bool isEmpty(void) {\n        // TODO: return whether there are no items.\n    }\n    \n    ~Stack() {\n        // TODO: release all remaining owned nodes.\n    }\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n};\n",
+    "useStarter": "// TODO: create the required objects or containers.\n// TODO: add sample data and call your operations.\n// TODO: check normal, empty and one-item cases where applicable.\n",
+    "expected": "reversed is \"edoc\"."
+  },
+  {
+    "id": "stack-brackets",
+    "group": "stacks",
+    "title": "16 · Check balanced parentheses",
+    "when": "Use Stack<char> to validate ( and ). Ignore other characters.",
+    "code": "#include <iostream>\n#include <exception>\n#include <string>\nusing namespace std;\n\nclass StackException : public exception {\n    string message;\npublic:\n    explicit StackException(const string& msg) noexcept : message(msg) {}\n    const char* what() const noexcept override { return message.c_str(); }\n};\n\ntemplate <class T> class Stack {\nprivate:\n    typedef struct stackNode {\n        struct stackNode *next;\n        T theItem;\n    } StackNode;\n    StackNode *topOfStack;\n    int count;\npublic:\n    Stack() : topOfStack(NULL), count(0) {}\n    void push(T item) {\n        StackNode *newNode = new StackNode;\n        newNode->theItem = item;\n        newNode->next = topOfStack;\n        topOfStack = newNode;\n        ++count;\n    }\n    T pop(void) {\n        if (isEmpty()) throw StackException(\"Pop from empty stack\");\n        T item = topOfStack->theItem;\n        StackNode *old = topOfStack;\n        topOfStack = old->next;\n        delete old;\n        --count;\n        return item;\n    }\n    T top(void) {\n        if (isEmpty()) throw StackException(\"Top of empty stack\");\n        return topOfStack->theItem;\n    }\n    int size(void) { return count; }\n    bool isEmpty(void) { return count == 0; }\n    \n    ~Stack() { while (!isEmpty()) pop(); }\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n};\n\nbool balanced(const std::string& text) {\n    Stack<char> s;\n    for (int i = 0; i < static_cast<int>(text.length()); ++i) {\n        if (text[i] == '(') s.push('(');\n        else if (text[i] == ')') {\n            if (s.isEmpty()) return false;\n            s.pop();\n        }\n    }\n    return s.isEmpty();\n}\n",
+    "use": "bool valid = balanced(\"(a+(b*c))\");\n",
+    "test": "assert(valid);assert(!balanced(\")(\"));assert(!balanced(\"(()\"));assert(balanced(\"\"));",
+    "parts": [
+      [
+        "Opening parenthesis",
+        "Push a pending opener."
+      ],
+      [
+        "Closing parenthesis",
+        "Needs an opener; otherwise reject immediately."
+      ],
+      [
+        "Final empty check",
+        "No unmatched opener may remain."
+      ]
+    ],
+    "change": "To support [] and {}, store each opener and compare its type with the closer.",
+    "watch": "This example handles parentheses only. It is a practice application of the lab stack.",
+    "reference": "workspace/reference/course/labs/files/ShapeExample/StackGiven.hpp",
+    "starter": "// EDIT: rename classes, fields and parameter types to match your question.\n// TODO bodies below are unfinished; complete them before compiling.\n#include <iostream>\n#include <exception>\n#include <string>\nusing namespace std;\n\nclass StackException : public exception {\n    string message;\npublic:\n    explicit StackException(const string& msg) noexcept : message(msg) {}\n    const char* what() const noexcept override {\n        // TODO: return message.c_str().\n    }\n};\n\ntemplate <class T> class Stack {\nprivate:\n    typedef struct stackNode {\n        struct stackNode *next;\n        T theItem;\n    } StackNode;\n    StackNode *topOfStack;\n    int count;\npublic:\n    Stack() : topOfStack(NULL), count(0) {}\n    void push(T item) {\n        // TODO: allocate a node; store item; link to old top; update topOfStack and count.\n    }\n    T pop(void) {\n        // TODO: check empty; save item; advance top; delete old node; decrement count; return item.\n    }\n    T top(void) {\n        // TODO: check empty, then return theItem without removing the node.\n    }\n    int size(void) {\n        // TODO: return the number of stored items.\n    }\n    bool isEmpty(void) {\n        // TODO: return whether there are no items.\n    }\n    \n    ~Stack() {\n        // TODO: release all remaining owned nodes.\n    }\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n};\n\nbool balanced(const std::string& text) {\n        // TODO: push openers; match closers; reject missing openers; verify no openers remain.\n    }\n",
+    "useStarter": "// TODO: create the required objects or containers.\n// TODO: add sample data and call your operations.\n// TODO: check normal, empty and one-item cases where applicable.\n",
+    "expected": "valid is true; \")(\" and \"(()\" would be false."
+  },
+  {
+    "id": "stack-transfer",
+    "group": "stacks",
+    "title": "17 · Pass stacks by reference",
+    "when": "Write transfer(source, destination) to move all items using pop and push. Explain the resulting order.",
+    "code": "#include <iostream>\n#include <exception>\n#include <string>\nusing namespace std;\n\nclass StackException : public exception {\n    string message;\npublic:\n    explicit StackException(const string& msg) noexcept : message(msg) {}\n    const char* what() const noexcept override { return message.c_str(); }\n};\n\ntemplate <class T> class Stack {\nprivate:\n    typedef struct stackNode {\n        struct stackNode *next;\n        T theItem;\n    } StackNode;\n    StackNode *topOfStack;\n    int count;\npublic:\n    Stack() : topOfStack(NULL), count(0) {}\n    void push(T item) {\n        StackNode *newNode = new StackNode;\n        newNode->theItem = item;\n        newNode->next = topOfStack;\n        topOfStack = newNode;\n        ++count;\n    }\n    T pop(void) {\n        if (isEmpty()) throw StackException(\"Pop from empty stack\");\n        T item = topOfStack->theItem;\n        StackNode *old = topOfStack;\n        topOfStack = old->next;\n        delete old;\n        --count;\n        return item;\n    }\n    T top(void) {\n        if (isEmpty()) throw StackException(\"Top of empty stack\");\n        return topOfStack->theItem;\n    }\n    int size(void) { return count; }\n    bool isEmpty(void) { return count == 0; }\n    \n    ~Stack() { while (!isEmpty()) pop(); }\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n};\n\nvoid transfer(Stack<int>& source, Stack<int>& destination) {\n    while (!source.isEmpty()) destination.push(source.pop());\n}\n",
+    "use": "Stack<int> source, destination;\nsource.push(1); source.push(2); source.push(3);\ntransfer(source, destination);\n",
+    "test": "assert(source.isEmpty());assert(destination.pop()==1);assert(destination.pop()==2);assert(destination.pop()==3);",
+    "parts": [
+      [
+        "References",
+        "Operate on the original stacks without copying owned nodes."
+      ],
+      [
+        "One pop then push",
+        "Reverses the transferred sequence."
+      ]
+    ],
+    "change": "Use a temporary second stack if you need to restore an order.",
+    "watch": "The destination need not be empty; transferred items are placed above any existing items.",
+    "reference": "workspace/reference/course/labs/files/ShapeExample/StackGiven.hpp",
+    "starter": "// EDIT: rename classes, fields and parameter types to match your question.\n// TODO bodies below are unfinished; complete them before compiling.\n#include <iostream>\n#include <exception>\n#include <string>\nusing namespace std;\n\nclass StackException : public exception {\n    string message;\npublic:\n    explicit StackException(const string& msg) noexcept : message(msg) {}\n    const char* what() const noexcept override {\n        // TODO: return message.c_str().\n    }\n};\n\ntemplate <class T> class Stack {\nprivate:\n    typedef struct stackNode {\n        struct stackNode *next;\n        T theItem;\n    } StackNode;\n    StackNode *topOfStack;\n    int count;\npublic:\n    Stack() : topOfStack(NULL), count(0) {}\n    void push(T item) {\n        // TODO: allocate a node; store item; link to old top; update topOfStack and count.\n    }\n    T pop(void) {\n        // TODO: check empty; save item; advance top; delete old node; decrement count; return item.\n    }\n    T top(void) {\n        // TODO: check empty, then return theItem without removing the node.\n    }\n    int size(void) {\n        // TODO: return the number of stored items.\n    }\n    bool isEmpty(void) {\n        // TODO: return whether there are no items.\n    }\n    \n    ~Stack() {\n        // TODO: release all remaining owned nodes.\n    }\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n};\n\nvoid transfer(Stack<int>& source, Stack<int>& destination) {\n        // TODO: pop from source and push to destination until source is empty.\n    }\n",
+    "useStarter": "// TODO: create the required objects or containers.\n// TODO: add sample data and call your operations.\n// TODO: check normal, empty and one-item cases where applicable.\n",
+    "expected": "source is empty; destination pops 1, then 2, then 3."
+  },
+  {
+    "id": "stack-shapes",
+    "group": "stacks",
+    "title": "18 · Combine inheritance + Stack<Shape*>",
+    "when": "Store derived shapes in a stack of base pointers. Pop each shape, call its virtual method, and delete it.",
+    "code": "#include <iostream>\n#include <exception>\n#include <string>\nusing namespace std;\n\nclass StackException : public exception {\n    string message;\npublic:\n    explicit StackException(const string& msg) noexcept : message(msg) {}\n    const char* what() const noexcept override { return message.c_str(); }\n};\n\ntemplate <class T> class Stack {\nprivate:\n    typedef struct stackNode {\n        struct stackNode *next;\n        T theItem;\n    } StackNode;\n    StackNode *topOfStack;\n    int count;\npublic:\n    Stack() : topOfStack(NULL), count(0) {}\n    void push(T item) {\n        StackNode *newNode = new StackNode;\n        newNode->theItem = item;\n        newNode->next = topOfStack;\n        topOfStack = newNode;\n        ++count;\n    }\n    T pop(void) {\n        if (isEmpty()) throw StackException(\"Pop from empty stack\");\n        T item = topOfStack->theItem;\n        StackNode *old = topOfStack;\n        topOfStack = old->next;\n        delete old;\n        --count;\n        return item;\n    }\n    T top(void) {\n        if (isEmpty()) throw StackException(\"Top of empty stack\");\n        return topOfStack->theItem;\n    }\n    int size(void) { return count; }\n    bool isEmpty(void) { return count == 0; }\n    \n    ~Stack() { while (!isEmpty()) pop(); }\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n};\n\nclass Shape {\npublic:\n    virtual double getArea() const = 0;\n    virtual ~Shape() = default;\n};\nclass Rectangle : public Shape {\n    double length, width;\npublic:\n    Rectangle(double l, double w) : length(l), width(w) {}\n    double getArea() const override { return length * width; }\n};\n",
+    "use": "Stack<Shape*> shapes;\nshapes.push(new Rectangle(2, 3));\nshapes.push(new Rectangle(4, 5));\ndouble total = 0;\nwhile (!shapes.isEmpty()) {\n    Shape* shape = shapes.pop();\n    total += shape->getArea();\n    delete shape;\n}\n",
+    "test": "assert(total==26);",
+    "parts": [
+      [
+        "Stack<Shape*>",
+        "Stores pointers because Shape is abstract."
+      ],
+      [
+        "Virtual call",
+        "Uses the Rectangle implementation through Shape*."
+      ],
+      [
+        "Two allocations",
+        "pop deletes the node; delete shape releases the owned object."
+      ]
+    ],
+    "change": "Use the lab draw() operation instead of getArea() if requested.",
+    "watch": "Assumes processing does not throw; a robust throwing application needs an explicit cleanup/ownership strategy.",
+    "reference": "workspace/reference/course/labs/files/ShapeExample/StackGiven.hpp",
+    "starter": "// EDIT: rename classes, fields and parameter types to match your question.\n// TODO bodies below are unfinished; complete them before compiling.\n#include <iostream>\n#include <exception>\n#include <string>\nusing namespace std;\n\nclass StackException : public exception {\n    string message;\npublic:\n    explicit StackException(const string& msg) noexcept : message(msg) {}\n    const char* what() const noexcept override {\n        // TODO: return message.c_str().\n    }\n};\n\ntemplate <class T> class Stack {\nprivate:\n    typedef struct stackNode {\n        struct stackNode *next;\n        T theItem;\n    } StackNode;\n    StackNode *topOfStack;\n    int count;\npublic:\n    Stack() : topOfStack(NULL), count(0) {}\n    void push(T item) {\n        // TODO: allocate a node; store item; link to old top; update topOfStack and count.\n    }\n    T pop(void) {\n        // TODO: check empty; save item; advance top; delete old node; decrement count; return item.\n    }\n    T top(void) {\n        // TODO: check empty, then return theItem without removing the node.\n    }\n    int size(void) {\n        // TODO: return the number of stored items.\n    }\n    bool isEmpty(void) {\n        // TODO: return whether there are no items.\n    }\n    \n    ~Stack() {\n        // TODO: release all remaining owned nodes.\n    }\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n};\n\nclass Shape {\npublic:\n    virtual double getArea() const = 0;\n    virtual ~Shape() = default;\n};\nclass Rectangle : public Shape {\n    double length, width;\npublic:\n    Rectangle(double l, double w) : length(l), width(w) {}\n    double getArea() const override {\n        // TODO: return the area formula using this derived class’s fields.\n    }\n};\n",
+    "useStarter": "// TODO: create the required objects or containers.\n// TODO: add sample data and call your operations.\n// TODO: check normal, empty and one-item cases where applicable.\n",
+    "expected": "Total area is 26; nodes and shapes are released."
+  },
+  {
+    "id": "queue-manual",
+    "group": "queues",
+    "title": "19 · Build a queue using linked nodes",
+    "when": "Implement a generic queue without std::list. Insert at the tail and remove from the head.",
+    "code": "#include <stdexcept>\ntemplate<class T>\nclass LinkedQueue {\n    struct Node {\n        T info;\n        Node* next;\n        Node(const T& el) : info(el), next(nullptr) {}\n    };\n    Node *head, *tail;\n    int count;\npublic:\n    LinkedQueue() : head(nullptr), tail(nullptr), count(0) {}\n    bool isEmpty() const { return head == nullptr; }\n    int size() const { return count; }\n    void enqueue(const T& el) {\n        Node* node = new Node(el);\n        if (tail == nullptr) head = node;\n        else tail->next = node;\n        tail = node;\n        ++count;\n    }\n    T front() const {\n        if (isEmpty()) throw std::runtime_error(\"Empty queue\");\n        return head->info;\n    }\n    T dequeue() {\n        if (isEmpty()) throw std::runtime_error(\"Empty queue\");\n        T el = head->info;\n        Node* tmp = head;\n        head = head->next;\n        if (head == nullptr) tail = nullptr;\n        delete tmp;\n        --count;\n        return el;\n    }\n    ~LinkedQueue() { while (!isEmpty()) dequeue(); }\n    LinkedQueue(const LinkedQueue&) = delete;\n    LinkedQueue& operator=(const LinkedQueue&) = delete;\n};\n",
+    "use": "LinkedQueue<int> q;\nq.enqueue(10); q.enqueue(20);\nint first = q.dequeue();\n",
+    "test": "assert(first==10);assert(q.dequeue()==20);assert(q.isEmpty());q.enqueue(30);assert(q.dequeue()==30);bool caught=false;try{q.dequeue();}catch(const std::runtime_error&){caught=true;}assert(caught);",
+    "parts": [
+      [
+        "head / tail",
+        "Oldest and newest nodes."
+      ],
+      [
+        "enqueue",
+        "Link at tail; the first insertion also sets head."
+      ],
+      [
+        "dequeue",
+        "Remove head; the last removal clears tail."
+      ],
+      [
+        "Course connection",
+        "Manual-node adaptation combining IntSLList links with enqueue/dequeue naming; the supplied ListQueue instead uses std::list."
+      ]
+    ],
+    "change": "Change the stored type with LinkedQueue<T>. Keep both empty-state pointer updates.",
+    "watch": "This is a clearly labeled manual-node adaptation, not the instructor’s exact ListQueue implementation.",
+    "reference": "workspace/reference/examples/Linked_Lists/IntSLList.cpp",
+    "starter": "// EDIT: rename classes, fields and parameter types to match your question.\n// TODO bodies below are unfinished; complete them before compiling.\n#include <stdexcept>\ntemplate<class T>\nclass LinkedQueue {\n    struct Node {\n        T info;\n        Node* next;\n        Node(const T& el) : info(el), next(nullptr) {}\n    };\n    Node *head, *tail;\n    int count;\npublic:\n    LinkedQueue() : head(nullptr), tail(nullptr), count(0) {}\n    bool isEmpty() const {\n        // TODO: return whether there are no items.\n    }\n    int size() const {\n        // TODO: return the number of stored items.\n    }\n    void enqueue(const T& el) {\n        // TODO: allocate a node; link after tail; set head if empty; update tail and count.\n    }\n    T front() const {\n        // TODO: return the oldest item without removing it; respect the empty-queue precondition.\n    }\n    T dequeue() {\n        // TODO: check empty; save head info; advance head; clear tail if now empty; delete node; update count; return info.\n    }\n    ~LinkedQueue() {\n        // TODO: release all remaining owned nodes.\n    }\n    LinkedQueue(const LinkedQueue&) = delete;\n    LinkedQueue& operator=(const LinkedQueue&) = delete;\n};\n",
+    "useStarter": "// TODO: create the required objects or containers.\n// TODO: add sample data and call your operations.\n// TODO: check normal, empty and one-item cases where applicable.\n",
+    "expected": "first is 10; the remaining value is 20."
+  },
+  {
+    "id": "queue-list",
+    "group": "queues",
+    "title": "20 · Course ListQueue<T>",
+    "when": "Implement the supplied queue wrapper using std::list, enqueue, dequeue, front and isEmpty.",
+    "code": "#include <iostream>\n#include <list>\nusing namespace std;\n\ntemplate<class T>\nclass ListQueue {\npublic:\n\tListQueue() {\n\t}\n\tvoid clear() {\n\t\tlst.clear();\n\t}\n\tbool isEmpty() const {\n\t\treturn lst.empty();\n\t}\n\tT& front() {\n\t\treturn lst.front();\n\t}\n\tT dequeue() {\n\t\tT el = lst.front();\n\t\tlst.pop_front();\n\t\treturn el;\n\t}\n\tvoid enqueue(const T& el) {\n\t\tlst.push_back(el);\n\t}\nprivate:\n\tlist<T> lst;\n};\n",
+    "use": "ListQueue<int> q;\nq.enqueue(10);\nq.enqueue(20);\nint first = q.dequeue();\n",
+    "test": "assert(first==10 && q.front()==20);",
+    "parts": [
+      [
+        "list<T> lst",
+        "The standard list manages the linked nodes."
+      ],
+      [
+        "enqueue",
+        "push_back adds at the rear."
+      ],
+      [
+        "dequeue",
+        "Read front, pop_front, then return the saved value."
+      ],
+      [
+        "front / isEmpty / clear",
+        "Inspect the oldest item, test emptiness, or remove all items."
+      ]
+    ],
+    "change": "Use this version only when standard-library list is allowed.",
+    "watch": "front and dequeue require a nonempty queue.",
+    "reference": "workspace/reference/examples/Stacks_and_Queues/GenListQueue.h",
+    "starter": "// EDIT: rename classes, fields and parameter types to match your question.\n// TODO bodies below are unfinished; complete them before compiling.\n#include <iostream>\n#include <list>\nusing namespace std;\n\ntemplate<class T>\nclass ListQueue {\npublic:\n\tListQueue() {\n\t}\n\tvoid clear() {\n        // TODO: remove every item, leaving valid empty state.\n    }\n\tbool isEmpty() const {\n        // TODO: return whether there are no items.\n    }\n\tT& front() {\n        // TODO: return the oldest item without removing it; respect the empty-queue precondition.\n    }\n\tT dequeue() {\n        // TODO: save lst.front(); call lst.pop_front(); return the saved item.\n    }\n\tvoid enqueue(const T& el) {\n        // TODO: append el using lst.push_back.\n    }\nprivate:\n\tlist<T> lst;\n};\n",
+    "useStarter": "// TODO: create the required objects or containers.\n// TODO: add sample data and call your operations.\n// TODO: check normal, empty and one-item cases where applicable.\n",
+    "expected": "first is 10; front is then 20."
+  },
+  {
+    "id": "queue-circular",
+    "group": "queues",
+    "title": "21 · Course circular ArrayQueue<T, size>",
+    "when": "Implement wraparound enqueue/dequeue using first, last and storage; -1 means empty.",
+    "code": "#include <iostream>\nusing namespace std;\n\ntemplate<class T, int size = 100>\nclass ArrayQueue {\npublic:\n\tArrayQueue() {\n\t\tfirst = last = -1;\n\t}\n\tvoid enqueue(T);\n\tT dequeue();\n\tbool isFull() {\n\t\treturn (first == 0 && last == size-1) || (first == last + 1);\n\t}\n\tbool isEmpty() {\n\t\treturn first == -1;\n\t}\n\nprivate:\n\tint first, last;\n\tT storage[size];\n};\n\ntemplate<class T, int size>\nvoid ArrayQueue<T,size>::enqueue(T el) {\n\tif (!isFull())\n\t\tif (last == size-1 || last == -1) {\n\t\t\tstorage[0] = el;\n\t\t\tlast = 0;\n\t\t\tif (first == -1)\n\t\t\t\tfirst = 0;\n\t\t}\n\t\telse storage[++last] = el;\n\telse cout << \"Full queue.\\n\";\n}\n\ntemplate<class T, int size>\nT ArrayQueue<T,size>::dequeue() {\n\tT tmp;\n\ttmp = storage[first];\n\tif (first == last)\n\t\tlast = first = -1;\n\telse if (first == size-1)\n\t\tfirst = 0;\n\telse first++;\n\treturn tmp;\n}\n",
+    "use": "ArrayQueue<int, 3> q;\nq.enqueue(1); q.enqueue(2); q.enqueue(3);\nq.dequeue();\nq.enqueue(4);\n",
+    "test": "assert(q.isFull());assert(q.dequeue()==2);assert(q.dequeue()==3);assert(q.dequeue()==4);assert(q.isEmpty());",
+    "parts": [
+      [
+        "storage[size]",
+        "Fixed array of queue elements."
+      ],
+      [
+        "first / last",
+        "Oldest and newest occupied indexes; -1 marks empty."
+      ],
+      [
+        "enqueue",
+        "Check full, wrap last if needed, store the value."
+      ],
+      [
+        "dequeue",
+        "Save the front value; reset if it was the last item, otherwise advance/wrap first."
+      ]
+    ],
+    "change": "Change capacity and element type. Keep last as the last occupied slot.",
+    "watch": "A different queue design may define rear as the next free slot; do not mix conventions.",
+    "reference": "workspace/reference/examples/Stacks_and_Queues/GenArrayQueue.h",
+    "starter": "// EDIT: rename classes, fields and parameter types to match your question.\n// TODO bodies below are unfinished; complete them before compiling.\n#include <iostream>\nusing namespace std;\n\ntemplate<class T, int size = 100>\nclass ArrayQueue {\npublic:\n\tArrayQueue() {\n        // TODO: initialize first and last to -1.\n    }\n\tvoid enqueue(T);\n\tT dequeue();\n\tbool isFull() {\n        // TODO: check whether the next insertion would exceed the array capacity.\n    }\n\tbool isEmpty() {\n        // TODO: return whether there are no items.\n    }\n\nprivate:\n\tint first, last;\n\tT storage[size];\n};\n\ntemplate<class T, int size>\nvoid ArrayQueue<T,size>::enqueue(T el) {\n        // TODO: check capacity if needed; insert at the rear; update the queue state.\n    }\n\ntemplate<class T, int size>\nT ArrayQueue<T,size>::dequeue() {\n        // TODO: save the front item; remove it; handle the final item and wraparound if needed; return it.\n    }\n",
+    "useStarter": "// TODO: create the required objects or containers.\n// TODO: add sample data and call your operations.\n// TODO: check normal, empty and one-item cases where applicable.\n",
+    "expected": "The queue is full again and dequeues 2, 3, 4."
+  },
+  {
+    "id": "queue-records",
+    "group": "queues",
+    "title": "22 · Queue objects in arrival order",
+    "when": "Create a Job struct with an ID and duration. Enqueue jobs and process them FIFO.",
+    "code": "#include <stdexcept>\ntemplate<class T>\nclass LinkedQueue {\n    struct Node {\n        T info;\n        Node* next;\n        Node(const T& el) : info(el), next(nullptr) {}\n    };\n    Node *head, *tail;\n    int count;\npublic:\n    LinkedQueue() : head(nullptr), tail(nullptr), count(0) {}\n    bool isEmpty() const { return head == nullptr; }\n    int size() const { return count; }\n    void enqueue(const T& el) {\n        Node* node = new Node(el);\n        if (tail == nullptr) head = node;\n        else tail->next = node;\n        tail = node;\n        ++count;\n    }\n    T front() const {\n        if (isEmpty()) throw std::runtime_error(\"Empty queue\");\n        return head->info;\n    }\n    T dequeue() {\n        if (isEmpty()) throw std::runtime_error(\"Empty queue\");\n        T el = head->info;\n        Node* tmp = head;\n        head = head->next;\n        if (head == nullptr) tail = nullptr;\n        delete tmp;\n        --count;\n        return el;\n    }\n    ~LinkedQueue() { while (!isEmpty()) dequeue(); }\n    LinkedQueue(const LinkedQueue&) = delete;\n    LinkedQueue& operator=(const LinkedQueue&) = delete;\n};\n\nstruct Job { int id; double duration; };\n",
+    "use": "LinkedQueue<Job> jobs;\njobs.enqueue(Job{101, 2.5});\njobs.enqueue(Job{102, 1.0});\nJob next = jobs.dequeue();\n",
+    "test": "assert(next.id==101 && next.duration==2.5);assert(jobs.front().id==102);",
+    "parts": [
+      [
+        "Job",
+        "Groups the fields of one queued item."
+      ],
+      [
+        "LinkedQueue<Job>",
+        "Stores whole records by value."
+      ]
+    ],
+    "change": "Use Student, Request or PrintJob with the fields in the question.",
+    "watch": "Use -> only for pointers; next here is an object and uses a dot.",
+    "reference": "workspace/reference/examples/Linked_Lists/IntSLList.cpp",
+    "starter": "// EDIT: rename classes, fields and parameter types to match your question.\n// TODO bodies below are unfinished; complete them before compiling.\n#include <stdexcept>\ntemplate<class T>\nclass LinkedQueue {\n    struct Node {\n        T info;\n        Node* next;\n        Node(const T& el) : info(el), next(nullptr) {}\n    };\n    Node *head, *tail;\n    int count;\npublic:\n    LinkedQueue() : head(nullptr), tail(nullptr), count(0) {}\n    bool isEmpty() const {\n        // TODO: return whether there are no items.\n    }\n    int size() const {\n        // TODO: return the number of stored items.\n    }\n    void enqueue(const T& el) {\n        // TODO: allocate a node; link after tail; set head if empty; update tail and count.\n    }\n    T front() const {\n        // TODO: return the oldest item without removing it; respect the empty-queue precondition.\n    }\n    T dequeue() {\n        // TODO: check empty; save head info; advance head; clear tail if now empty; delete node; update count; return info.\n    }\n    ~LinkedQueue() {\n        // TODO: release all remaining owned nodes.\n    }\n    LinkedQueue(const LinkedQueue&) = delete;\n    LinkedQueue& operator=(const LinkedQueue&) = delete;\n};\n\nstruct Job { int id; double duration; };\n",
+    "useStarter": "// TODO: create the required objects or containers.\n// TODO: add sample data and call your operations.\n// TODO: check normal, empty and one-item cases where applicable.\n",
+    "expected": "next has ID 101 and duration 2.5; job 102 is still queued."
+  },
+  {
+    "id": "queue-rotate",
+    "group": "queues",
+    "title": "23 · Move the front item to the back",
+    "when": "Write a generic rotate function for a queue. Keep the queue unchanged when empty.",
+    "code": "#include <stdexcept>\ntemplate<class T>\nclass LinkedQueue {\n    struct Node {\n        T info;\n        Node* next;\n        Node(const T& el) : info(el), next(nullptr) {}\n    };\n    Node *head, *tail;\n    int count;\npublic:\n    LinkedQueue() : head(nullptr), tail(nullptr), count(0) {}\n    bool isEmpty() const { return head == nullptr; }\n    int size() const { return count; }\n    void enqueue(const T& el) {\n        Node* node = new Node(el);\n        if (tail == nullptr) head = node;\n        else tail->next = node;\n        tail = node;\n        ++count;\n    }\n    T front() const {\n        if (isEmpty()) throw std::runtime_error(\"Empty queue\");\n        return head->info;\n    }\n    T dequeue() {\n        if (isEmpty()) throw std::runtime_error(\"Empty queue\");\n        T el = head->info;\n        Node* tmp = head;\n        head = head->next;\n        if (head == nullptr) tail = nullptr;\n        delete tmp;\n        --count;\n        return el;\n    }\n    ~LinkedQueue() { while (!isEmpty()) dequeue(); }\n    LinkedQueue(const LinkedQueue&) = delete;\n    LinkedQueue& operator=(const LinkedQueue&) = delete;\n};\n\ntemplate<class T>\nvoid rotate(LinkedQueue<T>& q) {\n    if (!q.isEmpty()) q.enqueue(q.dequeue());\n}\n",
+    "use": "LinkedQueue<int> q;\nq.enqueue(1); q.enqueue(2); q.enqueue(3);\nrotate(q);\n",
+    "test": "assert(q.dequeue()==2);assert(q.dequeue()==3);assert(q.dequeue()==1);rotate(q);assert(q.isEmpty());q.enqueue(4);rotate(q);assert(q.dequeue()==4);",
+    "parts": [
+      [
+        "Reference parameter",
+        "Modify the caller’s queue."
+      ],
+      [
+        "dequeue then enqueue",
+        "Move the first item behind the others."
+      ]
+    ],
+    "change": "Repeat rotation the required number of times for a round-robin exercise.",
+    "watch": "Guard the empty case before calling dequeue.",
+    "reference": "workspace/reference/examples/Linked_Lists/IntSLList.cpp",
+    "starter": "// EDIT: rename classes, fields and parameter types to match your question.\n// TODO bodies below are unfinished; complete them before compiling.\n#include <stdexcept>\ntemplate<class T>\nclass LinkedQueue {\n    struct Node {\n        T info;\n        Node* next;\n        Node(const T& el) : info(el), next(nullptr) {}\n    };\n    Node *head, *tail;\n    int count;\npublic:\n    LinkedQueue() : head(nullptr), tail(nullptr), count(0) {}\n    bool isEmpty() const {\n        // TODO: return whether there are no items.\n    }\n    int size() const {\n        // TODO: return the number of stored items.\n    }\n    void enqueue(const T& el) {\n        // TODO: allocate a node; link after tail; set head if empty; update tail and count.\n    }\n    T front() const {\n        // TODO: return the oldest item without removing it; respect the empty-queue precondition.\n    }\n    T dequeue() {\n        // TODO: check empty; save head info; advance head; clear tail if now empty; delete node; update count; return info.\n    }\n    ~LinkedQueue() {\n        // TODO: release all remaining owned nodes.\n    }\n    LinkedQueue(const LinkedQueue&) = delete;\n    LinkedQueue& operator=(const LinkedQueue&) = delete;\n};\n\ntemplate<class T>\nvoid rotate(LinkedQueue<T>& q) {\n        // TODO: if nonempty, dequeue one item and enqueue it at the back.\n    }\n",
+    "useStarter": "// TODO: create the required objects or containers.\n// TODO: add sample data and call your operations.\n// TODO: check normal, empty and one-item cases where applicable.\n",
+    "expected": "The queue order becomes 2, 3, 1."
+  },
+  {
+    "id": "queue-reverse",
+    "group": "queues",
+    "title": "24 · Reverse a queue using a stack",
+    "when": "Write reverseQueue(q) using only queue operations and a temporary linked stack.",
+    "code": "#include <stdexcept>\ntemplate<class T>\nclass LinkedQueue {\n    struct Node {\n        T info;\n        Node* next;\n        Node(const T& el) : info(el), next(nullptr) {}\n    };\n    Node *head, *tail;\n    int count;\npublic:\n    LinkedQueue() : head(nullptr), tail(nullptr), count(0) {}\n    bool isEmpty() const { return head == nullptr; }\n    int size() const { return count; }\n    void enqueue(const T& el) {\n        Node* node = new Node(el);\n        if (tail == nullptr) head = node;\n        else tail->next = node;\n        tail = node;\n        ++count;\n    }\n    T front() const {\n        if (isEmpty()) throw std::runtime_error(\"Empty queue\");\n        return head->info;\n    }\n    T dequeue() {\n        if (isEmpty()) throw std::runtime_error(\"Empty queue\");\n        T el = head->info;\n        Node* tmp = head;\n        head = head->next;\n        if (head == nullptr) tail = nullptr;\n        delete tmp;\n        --count;\n        return el;\n    }\n    ~LinkedQueue() { while (!isEmpty()) dequeue(); }\n    LinkedQueue(const LinkedQueue&) = delete;\n    LinkedQueue& operator=(const LinkedQueue&) = delete;\n};\n#include <iostream>\n#include <exception>\n#include <string>\nusing namespace std;\n\nclass StackException : public exception {\n    string message;\npublic:\n    explicit StackException(const string& msg) noexcept : message(msg) {}\n    const char* what() const noexcept override { return message.c_str(); }\n};\n\ntemplate <class T> class Stack {\nprivate:\n    typedef struct stackNode {\n        struct stackNode *next;\n        T theItem;\n    } StackNode;\n    StackNode *topOfStack;\n    int count;\npublic:\n    Stack() : topOfStack(NULL), count(0) {}\n    void push(T item) {\n        StackNode *newNode = new StackNode;\n        newNode->theItem = item;\n        newNode->next = topOfStack;\n        topOfStack = newNode;\n        ++count;\n    }\n    T pop(void) {\n        if (isEmpty()) throw StackException(\"Pop from empty stack\");\n        T item = topOfStack->theItem;\n        StackNode *old = topOfStack;\n        topOfStack = old->next;\n        delete old;\n        --count;\n        return item;\n    }\n    T top(void) {\n        if (isEmpty()) throw StackException(\"Top of empty stack\");\n        return topOfStack->theItem;\n    }\n    int size(void) { return count; }\n    bool isEmpty(void) { return count == 0; }\n    \n    ~Stack() { while (!isEmpty()) pop(); }\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n};\n\nvoid reverseQueue(LinkedQueue<int>& q) {\n    Stack<int> s;\n    while (!q.isEmpty()) s.push(q.dequeue());\n    while (!s.isEmpty()) q.enqueue(s.pop());\n}\n",
+    "use": "LinkedQueue<int> q;\nq.enqueue(1); q.enqueue(2); q.enqueue(3);\nreverseQueue(q);\n",
+    "test": "assert(q.dequeue()==3);assert(q.dequeue()==2);assert(q.dequeue()==1);reverseQueue(q);assert(q.isEmpty());",
+    "parts": [
+      [
+        "First loop",
+        "Drain FIFO items into a LIFO stack."
+      ],
+      [
+        "Second loop",
+        "Pop reversed values back into the queue."
+      ]
+    ],
+    "change": "Use a template function if asked to support types other than int.",
+    "watch": "The function modifies the original queue; pass it by reference rather than copying raw-node ownership.",
+    "reference": "workspace/reference/course/labs/files/ShapeExample/StackGiven.hpp",
+    "starter": "// EDIT: rename classes, fields and parameter types to match your question.\n// TODO bodies below are unfinished; complete them before compiling.\n#include <stdexcept>\ntemplate<class T>\nclass LinkedQueue {\n    struct Node {\n        T info;\n        Node* next;\n        Node(const T& el) : info(el), next(nullptr) {}\n    };\n    Node *head, *tail;\n    int count;\npublic:\n    LinkedQueue() : head(nullptr), tail(nullptr), count(0) {}\n    bool isEmpty() const {\n        // TODO: return whether there are no items.\n    }\n    int size() const {\n        // TODO: return the number of stored items.\n    }\n    void enqueue(const T& el) {\n        // TODO: allocate a node; link after tail; set head if empty; update tail and count.\n    }\n    T front() const {\n        // TODO: return the oldest item without removing it; respect the empty-queue precondition.\n    }\n    T dequeue() {\n        // TODO: check empty; save head info; advance head; clear tail if now empty; delete node; update count; return info.\n    }\n    ~LinkedQueue() {\n        // TODO: release all remaining owned nodes.\n    }\n    LinkedQueue(const LinkedQueue&) = delete;\n    LinkedQueue& operator=(const LinkedQueue&) = delete;\n};\n#include <iostream>\n#include <exception>\n#include <string>\nusing namespace std;\n\nclass StackException : public exception {\n    string message;\npublic:\n    explicit StackException(const string& msg) noexcept : message(msg) {}\n    const char* what() const noexcept override {\n        // TODO: return message.c_str().\n    }\n};\n\ntemplate <class T> class Stack {\nprivate:\n    typedef struct stackNode {\n        struct stackNode *next;\n        T theItem;\n    } StackNode;\n    StackNode *topOfStack;\n    int count;\npublic:\n    Stack() : topOfStack(NULL), count(0) {}\n    void push(T item) {\n        // TODO: allocate a node; store item; link to old top; update topOfStack and count.\n    }\n    T pop(void) {\n        // TODO: check empty; save item; advance top; delete old node; decrement count; return item.\n    }\n    T top(void) {\n        // TODO: check empty, then return theItem without removing the node.\n    }\n    int size(void) {\n        // TODO: return the number of stored items.\n    }\n    bool isEmpty(void) {\n        // TODO: return whether there are no items.\n    }\n    \n    ~Stack() {\n        // TODO: release all remaining owned nodes.\n    }\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n};\n\nvoid reverseQueue(LinkedQueue<int>& q) {\n        // TODO: dequeue into a temporary stack, then pop back into the queue.\n    }\n",
+    "useStarter": "// TODO: create the required objects or containers.\n// TODO: add sample data and call your operations.\n// TODO: check normal, empty and one-item cases where applicable.\n",
+    "expected": "The queue order becomes 3, 2, 1."
+  }
+]

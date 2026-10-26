@@ -16,7 +16,7 @@
   window.addEventListener('hashchange',revealHash);
   let timer;
   async function copy(text) {
-    try {await navigator.clipboard.writeText(text);const status=document.getElementById('copy-status');status.textContent='Code copied — explanations left out.';clearTimeout(timer);timer=setTimeout(()=>{status.textContent='';},3000);}
+    try {await navigator.clipboard.writeText(text);const status=document.getElementById('copy-status');status.textContent='Code copied.';clearTimeout(timer);timer=setTimeout(()=>{status.textContent='';},3000);}
     catch {const dialog=document.getElementById('copy-fallback');const field=dialog.querySelector('textarea');field.value=text;dialog.showModal();field.focus();field.select();}
   }
   document.addEventListener('click',event=>{

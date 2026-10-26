@@ -1,6 +1,6 @@
 const fs=require('node:fs'),os=require('node:os'),path=require('node:path'),assert=require('node:assert/strict');
 const {execFileSync}=require('node:child_process');
-const items=require('../comp139e/code-templates.json');
+const items=require(process.argv.includes('--midterm')?'../comp139e/midterm-patterns.json':'../comp139e/code-templates.json');
 const root=path.join(__dirname,'..','comp139e');
 const dir=fs.mkdtempSync(path.join(os.tmpdir(),'comp-library-'));
 try {
