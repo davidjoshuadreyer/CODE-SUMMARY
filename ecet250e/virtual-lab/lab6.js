@@ -1,9 +1,12 @@
+import {mountSteps} from './bench-steps.mjs';
+import {mountWireGuide,endpoint} from './wire-guide.mjs';
 import {createBench} from './bench.js';
 import {response,cursorTau,arrangement,paintScope} from './transient.mjs';
 const $=id=>document.getElementById(id),recordKey='ecet-lab6-records-v1';
 let kind='RC',on=false,precheck='',rows=[];
 try{const saved=JSON.parse(localStorage.getItem(recordKey));if(Array.isArray(saved))rows=saved}catch{}
-const bench=createBench($('scene'),hit=>{if(hit?.kind==='terminal')$('tip').textContent=`${hit.id}: inspect the connection card for this guided setup.`;else if(hit)$('tip').textContent='Use the Lab 6 controls to change the circuit, generator or resistance precheck.'},h=>{$('hover').textContent=h?.id||'Drag to look around · Scroll to zoom'});
+const bench=createBench($('scene'),hit=>{if(hit?.kind==='terminal')$('tip').textContent=endpoint(hit.id);else if(hit)$('tip').textContent='Use the Lab 6 controls to change the circuit, generator or resistance precheck.'},h=>{$('hover').textContent=(h?endpoint(h.id):'')||'Drag to look around · Scroll to zoom'});
+const wireGuide=mountWireGuide(bench);
 const num=id=>Number($(id).value),us=t=>(t*1e6).toFixed(3)+' µs';
 function model(){return response({kind,r:num('r'),c:num('storage')*1e-9,l:num('storage')*.001,coil:$('model').value==='real'?num('coil'):0,rg:$('model').value==='real'?50:0,f:num('frequency')})}
 function cursors(){return {min:num('y1'),max:num('y2'),x1:num('x1')*.001,x2:num('x2')*.001}}
@@ -14,6 +17,7 @@ function redraw(){
  const observe=$('observe').value,c=cursors(),setup=arrangement(kind,observe,m.r,m.coil,precheck);
  const storage=setup.edges.find(e=>e.type==='capacitor'||e.type==='inductor');if(storage)storage.label=num('storage')+(kind==='RC'?' nF':' mH');
  bench.update({pot:50,jack:'VΩ',voltage:0},setup,{display:precheck?setup.value.toFixed(2):'—',unit:precheck?'Ω':'SCOPE',supplyCurrent:0,transient:{model:m,observe,on,cursors:c}});
+ wireGuide.update({jack:'VΩ'},setup);
  paintScope($('scope').getContext('2d'),1000,410,m,observe,on,c);
  $('output').textContent=on?'● Generator output ON · switch off':'Enable generator output';$('output').disabled=!!precheck;$('checkCoil').hidden=kind!=='RL';$('coilLabel').hidden=kind!=='RL';$('storageName').textContent=kind==='RC'?'C (nF)':'L (mH)';
  $('connectionTitle').textContent=precheck?'Ω precheck · circuit disconnected':`${kind} · CH2 across ${observe==='storage'?(kind==='RC'?'capacitor':'inductor + winding'):'resistor'}`;
@@ -39,3 +43,5 @@ $('snap').onclick=()=>{const m=model();$('y1').value=m.vmin.toFixed(6);$('y2').v
 $('record').onclick=()=>{const m=model(),c=cursors(),tau=cursorTau(c.max,c.min,c.x2-c.x1);if(!on||precheck||!validTarget()||!Number.isFinite(tau))return;rows.push({time:new Date().toISOString(),kind,model:$('model').value,frequencyHz:m.f,rOhm:m.r,cFarad:kind==='RC'?m.c:'',lHenry:kind==='RL'?m.l:'',rgenOhm:m.rg,rcoilOhm:kind==='RL'?m.coil:'',vmaxV:c.max,vminV:c.min,halfPeriodS:c.x2-c.x1,predictedTauS:m.tau,idealTauS:m.idealTau,cursorTauS:tau,differencePct:100*Math.abs(tau-m.tau)/m.tau});save();redraw()};
 $('export').onclick=()=>{const keys=['time','kind','model','frequencyHz','rOhm','cFarad','lHenry','rgenOhm','rcoilOhm','vmaxV','vminV','halfPeriodS','predictedTauS','idealTauS','cursorTauS','differencePct'];const csv=['Simulated Lab 6 periodic steady-state results',keys.join(','),...rows.map(r=>keys.map(k=>'"'+String(r[k]??'').replaceAll('"','""')+'"').join(','))].join('\r\n');const url=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));const a=document.createElement('a');a.href=url;a.download='ecet-lab6-simulated.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};$('clearRecords').onclick=()=>{rows=[];save();redraw()};
 document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>bench.view(b.dataset.view));checklist();resetCursors();redraw();
+
+mountSteps((config,step)=>{kind=config.kind;on=false;precheck=config.precheck;$('observe').value=config.observe;$('frequency').value=config.frequency;$('r').value=kind==='RC'?10000:470;$('storage').value=100;$('coil').value=70;$('model').value=config.model;$('preset').value=`${kind}-${config.observe}-${config.frequency}`;resetCursors();checklist();redraw();$('tip').textContent=config.note;},'transient');
