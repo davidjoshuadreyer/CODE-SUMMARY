@@ -449,14 +449,9 @@ window.TESSELATE_PATHS = {
     ],
     "practice": [
       {
-        "title": "Midterm: inheritance, linked lists, stacks & queues",
-        "url": "comp139e/midterm-patterns.html",
-        "summary": "24 practice question cases with blank TODO templates, separate worked solutions and example calls."
-      },
-      {
-        "title": "C++ code templates · Copy & paste",
+        "title": "Midterm cheat sheet · Everything in one place",
         "url": "comp139e/code-templates.html",
-        "summary": "25 simple templates with separate explanations, usage examples and adaptation notes."
+        "summary": "49 colour-coded complete examples with main(), 24 blank starters, class maps, search and quick rules. Download for offline use."
       },
       {
         "title": "Fill-in-the-blank worksheets",

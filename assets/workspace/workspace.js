@@ -12,7 +12,7 @@ const cloud=window.TesselateCloud;
 const dialog = $('#editor');
 const copy = value => structuredClone(value);
 const course = id => state.courses.find(c=>c.id===id);
-const pages = id => state.resources.filter(r=>!id || r.courseId===id);
+const pages = id => state.resources.filter(r=>(!id || r.courseId===id)&&!(r.builtin&&['comp139e/midterm-patterns.html','comp139e/cpp-cheat-sheet.html'].includes(r.url)));
 const refs = id => state.references.filter(r=>!id || r.courseId===id);
 const outputs = id => state.resources.filter(r=>r.referenceIds.includes(id));
 const status = r => outputs(r.id).length ? 'converted' : r.stage;
@@ -151,7 +151,7 @@ function courseView(id){
  const c=course(id);if(!c)return empty('Course not found','Choose a course from your workspace.','<a class="button" href="#courses">My courses</a>');
  const subtitle=window.TESSELATE_PATHS?.[id]?'Learn a topic, practise it, and use the references when you need more detail.':c.description;
  return `<a class="back" href="#${c.semester===state.currentSemester?'courses':'archive'}">← Back to courses</a><div class="editorial-heading">`+heading(c.semester+' / '+c.code,c.name,subtitle||'Build your study collection, one resource at a time.','')+'</div>'+
- (id==='comp139e'?`<div class="panel guide"><p class="eyebrow">C++ PRACTICE</p><h2>Fill in the blanks</h2><p>Choose a topic, fill in the code, and get instant feedback with hints and solutions.</p><div class="actions"><a class="button primary" href="comp139e/midterm-practice.html">Browse all worksheets →</a><a class="button" href="comp139e/midterm-practice.html#stacks-queues">Stacks &amp; queues</a><a class="button" href="comp139e/midterm-patterns.html">Midterm: blank class &amp; structure templates</a><a class="button" href="comp139e/code-templates.html">Copy &amp; paste code templates</a><a class="button" href="comp139e/cpp-cheat-sheet.html">Cheat sheet</a></div></div>`:'')+
+ (id==='comp139e'?`<div class="panel guide"><p class="eyebrow">C++ PRACTICE</p><h2>Fill in the blanks</h2><p>Choose a topic, fill in the code, and get instant feedback with hints and solutions.</p><div class="actions"><a class="button primary" href="comp139e/midterm-practice.html">Browse all worksheets →</a><a class="button" href="comp139e/midterm-practice.html#stacks-queues">Stacks &amp; queues</a><a class="button" href="comp139e/code-templates.html">Midterm cheat sheet · code, templates &amp; rules</a></div></div>`:'')+
  (id==='phys210'?`<div class="panel guide"><h2>Capacitance Lab</h2><p>Enter your textbook capacitor measurements, save to your account, and build your report.</p><a class="button primary" href="phys210/lab4.html">Open Capacitance Lab →</a></div>`:'')+
  (id==='ecet250e'?`<div class="panel guide"><h2>3D ECET Lab</h2><p>Build circuits and practise Labs 1–6 at your virtual bench.</p><a class="button primary" href="ecet250e/virtual-lab.html">Open 3D Virtual Lab →</a></div>`:'')+
  `<div class="tabs" role="group" aria-label="Course content">${button('tab-learn','Lessons',id,tab==='learn'?'active':'')}${button('tab-assignments','Assignments &amp; solutions',id,tab==='assignments'?'active':'')}${button('tab-practice','Practice',id,tab==='practice'?'active':'')}${button('tab-references',`References (${refs(id).length})`,id,tab==='references'?'active':'')}${button('tab-pages','My pages & tools',id,tab==='pages'?'active':'')}</div>`+

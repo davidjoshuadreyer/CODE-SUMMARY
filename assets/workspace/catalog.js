@@ -1674,22 +1674,11 @@ window.TESSELATE_CATALOG = {
     {
       "id": "page-Y29tcDEzOWUvY29kZS10ZW1wbGF0ZXMuaHRtbA",
       "courseId": "comp139e",
-      "title": "C++ code templates · Copy & paste",
+      "title": "COMP midterm cheat sheet · Code, templates & rules",
       "kind": "Study notes",
       "url": "comp139e/code-templates.html",
       "body": "",
-      "description": "25 reusable patterns with clean copy buttons, separate explanations and runnable examples.",
-      "referenceIds": [],
-      "builtin": true
-    },
-    {
-      "id": "page-Y29tcDEzOWUvY3BwLWNoZWF0LXNoZWV0Lmh0bWw",
-      "courseId": "comp139e",
-      "title": "C++ midterm cheat sheet / rules",
-      "kind": "Study notes",
-      "url": "comp139e/cpp-cheat-sheet.html",
-      "body": "",
-      "description": "Quick blank-position reference: if you see this, write this.",
+      "description": "49 colour-coded complete examples with main(), 24 blank starters and quick rules in one searchable sheet.",
       "referenceIds": [],
       "builtin": true
     },
@@ -2549,17 +2538,6 @@ window.TESSELATE_CATALOG = {
       "url": "ecet250e/lab6.html",
       "body": "",
       "description": "Eight guided RC/RL setups, square-wave scope measurements, resistance prechecks and CSV records. D2L checked October 26, 2026.",
-      "referenceIds": [],
-      "builtin": true
-    },
-    {
-      "id": "page-Y29tcDEzOWUvbWlkdGVybS1wYXR0ZXJucy5odG1s",
-      "courseId": "comp139e",
-      "title": "Midterm class & structure templates · 24 question cases",
-      "kind": "Study notes",
-      "url": "comp139e/midterm-patterns.html",
-      "body": "",
-      "description": "Blank templates with TODO comments and separate worked examples for inheritance, lists, stacks and queues.",
       "referenceIds": [],
       "builtin": true
     }
