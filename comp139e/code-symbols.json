@@ -1,4 +1,4205 @@
 {
+  "game-warrior": {
+    "sha256": "3174c992af5db55323dfa120eb32cb285d3a0b70a1eae8cc409ab18b35f94722",
+    "offsetEncoding": "utf8",
+    "symbols": [
+      {
+        "name": "Player",
+        "kind": "class",
+        "line": 6,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "name",
+            "kind": "member",
+            "line": 8,
+            "type": "string",
+            "access": "protected",
+            "children": []
+          },
+          {
+            "name": "level",
+            "kind": "member",
+            "line": 9,
+            "type": "int",
+            "access": "protected",
+            "children": []
+          },
+          {
+            "name": "Player",
+            "kind": "constructor",
+            "line": 11,
+            "type": "void (string, int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "n",
+                "kind": "parameter",
+                "line": 11,
+                "type": "string",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "l",
+                "kind": "parameter",
+                "line": 11,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "attack",
+            "kind": "method",
+            "line": 12,
+            "type": "int () const",
+            "access": "public",
+            "children": [],
+            "status": "pure virtual"
+          },
+          {
+            "name": "~Player",
+            "kind": "destructor",
+            "line": 13,
+            "type": "void () noexcept",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "Warrior",
+        "kind": "class",
+        "line": 15,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "strength",
+            "kind": "member",
+            "line": 16,
+            "type": "int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Warrior",
+            "kind": "constructor",
+            "line": 18,
+            "type": "void (string, int, int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "n",
+                "kind": "parameter",
+                "line": 18,
+                "type": "string",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "l",
+                "kind": "parameter",
+                "line": 18,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "s",
+                "kind": "parameter",
+                "line": 18,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "attack",
+            "kind": "method",
+            "line": 19,
+            "type": "int () const",
+            "access": "public",
+            "children": [],
+            "status": "definition",
+            "override": true
+          }
+        ],
+        "bases": [
+          {
+            "name": "Player",
+            "access": "public"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 22,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "hero",
+            "kind": "local",
+            "line": 23,
+            "type": "Warrior",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "player",
+            "kind": "local",
+            "line": 24,
+            "type": "Player &",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "game-mage": {
+    "sha256": "f50be703ba1d09a79d6bc5aaaa1fbdf4965bb3b51dbc5a2879aa2c31fbd46c80",
+    "offsetEncoding": "utf8",
+    "symbols": [
+      {
+        "name": "Player",
+        "kind": "class",
+        "line": 6,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "name",
+            "kind": "member",
+            "line": 7,
+            "type": "string",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Player",
+            "kind": "constructor",
+            "line": 9,
+            "type": "void (string)",
+            "access": "public",
+            "children": [
+              {
+                "name": "n",
+                "kind": "parameter",
+                "line": 9,
+                "type": "string",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "getName",
+            "kind": "method",
+            "line": 10,
+            "type": "string () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "Mage",
+        "kind": "class",
+        "line": 12,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "mana",
+            "kind": "member",
+            "line": 13,
+            "type": "int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Mage",
+            "kind": "constructor",
+            "line": 15,
+            "type": "void (string, int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "n",
+                "kind": "parameter",
+                "line": 15,
+                "type": "string",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "m",
+                "kind": "parameter",
+                "line": 15,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "cast",
+            "kind": "method",
+            "line": 16,
+            "type": "bool (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "cost",
+                "kind": "parameter",
+                "line": 16,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "getMana",
+            "kind": "method",
+            "line": 21,
+            "type": "int () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          }
+        ],
+        "bases": [
+          {
+            "name": "Player",
+            "access": "public"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 24,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "mage",
+            "kind": "local",
+            "line": 25,
+            "type": "Mage",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "game-healer": {
+    "sha256": "3ba1cf57e3982f66c79f356bd3e2c3b64388eaa0b86cf6e268d595350fe26041",
+    "offsetEncoding": "utf8",
+    "symbols": [
+      {
+        "name": "Player",
+        "kind": "class",
+        "line": 6,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "health",
+            "kind": "member",
+            "line": 8,
+            "type": "int",
+            "access": "protected",
+            "children": []
+          },
+          {
+            "name": "maxHealth",
+            "kind": "member",
+            "line": 8,
+            "type": "int",
+            "access": "protected",
+            "children": []
+          },
+          {
+            "name": "Player",
+            "kind": "constructor",
+            "line": 10,
+            "type": "void (int, int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "h",
+                "kind": "parameter",
+                "line": 10,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "maximum",
+                "kind": "parameter",
+                "line": 10,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "getHealth",
+            "kind": "method",
+            "line": 11,
+            "type": "int () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "Healer",
+        "kind": "class",
+        "line": 13,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "Healer",
+            "kind": "constructor",
+            "line": 15,
+            "type": "void (int, int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "h",
+                "kind": "parameter",
+                "line": 15,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "maximum",
+                "kind": "parameter",
+                "line": 15,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "heal",
+            "kind": "method",
+            "line": 16,
+            "type": "void (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "amount",
+                "kind": "parameter",
+                "line": 16,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ],
+        "bases": [
+          {
+            "name": "Player",
+            "access": "public"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 23,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "player",
+            "kind": "local",
+            "line": 24,
+            "type": "Healer",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "game-tank": {
+    "sha256": "cd841105831da9bcd2898d6a575276b86d846b302fb87bad7755936f5ca3f184",
+    "offsetEncoding": "utf8",
+    "symbols": [
+      {
+        "name": "Player",
+        "kind": "class",
+        "line": 6,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "health",
+            "kind": "member",
+            "line": 7,
+            "type": "int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Player",
+            "kind": "constructor",
+            "line": 9,
+            "type": "void (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "h",
+                "kind": "parameter",
+                "line": 9,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "takeDamage",
+            "kind": "method",
+            "line": 10,
+            "type": "void (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "amount",
+                "kind": "parameter",
+                "line": 10,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "getHealth",
+            "kind": "method",
+            "line": 15,
+            "type": "int () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "~Player",
+            "kind": "destructor",
+            "line": 16,
+            "type": "void () noexcept",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "Tank",
+        "kind": "class",
+        "line": 18,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "armour",
+            "kind": "member",
+            "line": 19,
+            "type": "int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Tank",
+            "kind": "constructor",
+            "line": 21,
+            "type": "void (int, int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "h",
+                "kind": "parameter",
+                "line": 21,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "a",
+                "kind": "parameter",
+                "line": 21,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "takeDamage",
+            "kind": "method",
+            "line": 22,
+            "type": "void (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "amount",
+                "kind": "parameter",
+                "line": 22,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition",
+            "override": true
+          }
+        ],
+        "bases": [
+          {
+            "name": "Player",
+            "access": "public"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 27,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "tank",
+            "kind": "local",
+            "line": 28,
+            "type": "Tank",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "player",
+            "kind": "local",
+            "line": 29,
+            "type": "Player &",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "game-weapons": {
+    "sha256": "ebaffb128d109750d1e2071f26f9ac17c8385ac4dc0c93b74213f4b3f2bf71a4",
+    "offsetEncoding": "utf8",
+    "symbols": [
+      {
+        "name": "Weapon",
+        "kind": "class",
+        "line": 6,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "damage",
+            "kind": "method",
+            "line": 8,
+            "type": "int () const",
+            "access": "public",
+            "children": [],
+            "status": "pure virtual"
+          },
+          {
+            "name": "~Weapon",
+            "kind": "destructor",
+            "line": 9,
+            "type": "void () noexcept",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "Sword",
+        "kind": "class",
+        "line": 11,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "strength",
+            "kind": "member",
+            "line": 12,
+            "type": "int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Sword",
+            "kind": "constructor",
+            "line": 14,
+            "type": "void (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "s",
+                "kind": "parameter",
+                "line": 14,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "damage",
+            "kind": "method",
+            "line": 15,
+            "type": "int () const",
+            "access": "public",
+            "children": [],
+            "status": "definition",
+            "override": true
+          }
+        ],
+        "bases": [
+          {
+            "name": "Weapon",
+            "access": "public"
+          }
+        ]
+      },
+      {
+        "name": "Bow",
+        "kind": "class",
+        "line": 17,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "accuracy",
+            "kind": "member",
+            "line": 18,
+            "type": "int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Bow",
+            "kind": "constructor",
+            "line": 20,
+            "type": "void (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "a",
+                "kind": "parameter",
+                "line": 20,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "damage",
+            "kind": "method",
+            "line": 21,
+            "type": "int () const",
+            "access": "public",
+            "children": [],
+            "status": "definition",
+            "override": true
+          }
+        ],
+        "bases": [
+          {
+            "name": "Weapon",
+            "access": "public"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 24,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "sword",
+            "kind": "local",
+            "line": 25,
+            "type": "Sword",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "bow",
+            "kind": "local",
+            "line": 26,
+            "type": "Bow",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "weapons",
+            "kind": "local",
+            "line": 27,
+            "type": "Weapon *[2]",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "weapon",
+            "kind": "local",
+            "line": 28,
+            "type": "Weapon *",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "game-enemies": {
+    "sha256": "7f628496e3ebd7dc1269f323cfaba90c949e5cdcd7aa91101d7190323cd67bae",
+    "offsetEncoding": "utf8",
+    "symbols": [
+      {
+        "name": "Enemy",
+        "kind": "class",
+        "line": 6,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "level",
+            "kind": "member",
+            "line": 8,
+            "type": "int",
+            "access": "protected",
+            "children": []
+          },
+          {
+            "name": "Enemy",
+            "kind": "constructor",
+            "line": 10,
+            "type": "void (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "l",
+                "kind": "parameter",
+                "line": 10,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "reward",
+            "kind": "method",
+            "line": 11,
+            "type": "int () const",
+            "access": "public",
+            "children": [],
+            "status": "pure virtual"
+          },
+          {
+            "name": "~Enemy",
+            "kind": "destructor",
+            "line": 12,
+            "type": "void () noexcept",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "Goblin",
+        "kind": "class",
+        "line": 14,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "Goblin",
+            "kind": "constructor",
+            "line": 16,
+            "type": "void (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "l",
+                "kind": "parameter",
+                "line": 16,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "reward",
+            "kind": "method",
+            "line": 17,
+            "type": "int () const",
+            "access": "public",
+            "children": [],
+            "status": "definition",
+            "override": true
+          }
+        ],
+        "bases": [
+          {
+            "name": "Enemy",
+            "access": "public"
+          }
+        ]
+      },
+      {
+        "name": "Dragon",
+        "kind": "class",
+        "line": 19,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "Dragon",
+            "kind": "constructor",
+            "line": 21,
+            "type": "void (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "l",
+                "kind": "parameter",
+                "line": 21,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "reward",
+            "kind": "method",
+            "line": 22,
+            "type": "int () const",
+            "access": "public",
+            "children": [],
+            "status": "definition",
+            "override": true
+          }
+        ],
+        "bases": [
+          {
+            "name": "Enemy",
+            "access": "public"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 25,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "goblin",
+            "kind": "local",
+            "line": 26,
+            "type": "Goblin",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "dragon",
+            "kind": "local",
+            "line": 27,
+            "type": "Dragon",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "enemies",
+            "kind": "local",
+            "line": 28,
+            "type": "Enemy *[2]",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "gold",
+            "kind": "local",
+            "line": 29,
+            "type": "int",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "enemy",
+            "kind": "local",
+            "line": 30,
+            "type": "Enemy *",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "game-boss": {
+    "sha256": "88a31e89956e2d5c71f46585be3b86faf4b3b59f37d65d6f54b74cf767607ae9",
+    "offsetEncoding": "utf8",
+    "symbols": [
+      {
+        "name": "Character",
+        "kind": "class",
+        "line": 6,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "health",
+            "kind": "member",
+            "line": 8,
+            "type": "int",
+            "access": "protected",
+            "children": []
+          },
+          {
+            "name": "Character",
+            "kind": "constructor",
+            "line": 10,
+            "type": "void (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "h",
+                "kind": "parameter",
+                "line": 10,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "getHealth",
+            "kind": "method",
+            "line": 11,
+            "type": "int () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "Enemy",
+        "kind": "class",
+        "line": 13,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "damage",
+            "kind": "member",
+            "line": 15,
+            "type": "int",
+            "access": "protected",
+            "children": []
+          },
+          {
+            "name": "Enemy",
+            "kind": "constructor",
+            "line": 17,
+            "type": "void (int, int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "h",
+                "kind": "parameter",
+                "line": 17,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "d",
+                "kind": "parameter",
+                "line": 17,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ],
+        "bases": [
+          {
+            "name": "Character",
+            "access": "public"
+          }
+        ]
+      },
+      {
+        "name": "Boss",
+        "kind": "class",
+        "line": 19,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "bonusDamage",
+            "kind": "member",
+            "line": 20,
+            "type": "int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Boss",
+            "kind": "constructor",
+            "line": 22,
+            "type": "void (int, int, int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "h",
+                "kind": "parameter",
+                "line": 22,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "d",
+                "kind": "parameter",
+                "line": 22,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "bonus",
+                "kind": "parameter",
+                "line": 22,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "attack",
+            "kind": "method",
+            "line": 23,
+            "type": "int () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          }
+        ],
+        "bases": [
+          {
+            "name": "Enemy",
+            "access": "public"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 26,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "boss",
+            "kind": "local",
+            "line": 27,
+            "type": "Boss",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "game-items": {
+    "sha256": "e89762591cdab0fa852eaf0a4efeab18ea4a34639c4e4ff12508a1bab3cb7872",
+    "offsetEncoding": "utf8",
+    "symbols": [
+      {
+        "name": "Item",
+        "kind": "class",
+        "line": 6,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "use",
+            "kind": "method",
+            "line": 8,
+            "type": "void () const",
+            "access": "public",
+            "children": [],
+            "status": "pure virtual"
+          },
+          {
+            "name": "~Item",
+            "kind": "destructor",
+            "line": 9,
+            "type": "void () noexcept",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "Potion",
+        "kind": "class",
+        "line": 11,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "amount",
+            "kind": "member",
+            "line": 12,
+            "type": "int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Potion",
+            "kind": "constructor",
+            "line": 14,
+            "type": "void (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "a",
+                "kind": "parameter",
+                "line": 14,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "use",
+            "kind": "method",
+            "line": 15,
+            "type": "void () const",
+            "access": "public",
+            "children": [],
+            "status": "definition",
+            "override": true
+          }
+        ],
+        "bases": [
+          {
+            "name": "Item",
+            "access": "public"
+          }
+        ]
+      },
+      {
+        "name": "Coin",
+        "kind": "class",
+        "line": 17,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "amount",
+            "kind": "member",
+            "line": 18,
+            "type": "int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Coin",
+            "kind": "constructor",
+            "line": 20,
+            "type": "void (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "a",
+                "kind": "parameter",
+                "line": 20,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "use",
+            "kind": "method",
+            "line": 21,
+            "type": "void () const",
+            "access": "public",
+            "children": [],
+            "status": "definition",
+            "override": true
+          }
+        ],
+        "bases": [
+          {
+            "name": "Item",
+            "access": "public"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 24,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "potion",
+            "kind": "local",
+            "line": 25,
+            "type": "Potion",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "coin",
+            "kind": "local",
+            "line": 26,
+            "type": "Coin",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "items",
+            "kind": "local",
+            "line": 27,
+            "type": "Item *[2]",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "item",
+            "kind": "local",
+            "line": 28,
+            "type": "Item *",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "game-movement": {
+    "sha256": "5feabd82e3f84a1ac82628422bcf1da75fd17e4ba2d8010266be1fe7b876520b",
+    "offsetEncoding": "utf8",
+    "symbols": [
+      {
+        "name": "Entity",
+        "kind": "class",
+        "line": 6,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "x",
+            "kind": "member",
+            "line": 8,
+            "type": "int",
+            "access": "protected",
+            "children": []
+          },
+          {
+            "name": "y",
+            "kind": "member",
+            "line": 8,
+            "type": "int",
+            "access": "protected",
+            "children": []
+          },
+          {
+            "name": "Entity",
+            "kind": "constructor",
+            "line": 10,
+            "type": "void (int, int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "startX",
+                "kind": "parameter",
+                "line": 10,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "startY",
+                "kind": "parameter",
+                "line": 10,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "printPosition",
+            "kind": "method",
+            "line": 11,
+            "type": "void () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "Player",
+        "kind": "class",
+        "line": 13,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "Player",
+            "kind": "constructor",
+            "line": 15,
+            "type": "void (int, int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "startX",
+                "kind": "parameter",
+                "line": 15,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "startY",
+                "kind": "parameter",
+                "line": 15,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "move",
+            "kind": "method",
+            "line": 16,
+            "type": "void (int, int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "dx",
+                "kind": "parameter",
+                "line": 16,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "dy",
+                "kind": "parameter",
+                "line": 16,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "declaration"
+          }
+        ],
+        "bases": [
+          {
+            "name": "Entity",
+            "access": "public"
+          }
+        ]
+      },
+      {
+        "name": "move",
+        "kind": "function",
+        "line": 18,
+        "type": "void (int, int)",
+        "access": "",
+        "children": [
+          {
+            "name": "dx",
+            "kind": "parameter",
+            "line": 18,
+            "type": "int",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "dy",
+            "kind": "parameter",
+            "line": 18,
+            "type": "int",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition",
+        "outside": true
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 23,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "player",
+            "kind": "local",
+            "line": 24,
+            "type": "Player",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "game-profile": {
+    "sha256": "e83899b008f89ae0d7eaca76ca2670c0cdce59e350de782d70f1cef487b5bc99",
+    "offsetEncoding": "utf8",
+    "symbols": [
+      {
+        "name": "Player",
+        "kind": "class",
+        "line": 6,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "name",
+            "kind": "member",
+            "line": 7,
+            "type": "string",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Player",
+            "kind": "constructor",
+            "line": 9,
+            "type": "void (string)",
+            "access": "public",
+            "children": [
+              {
+                "name": "n",
+                "kind": "parameter",
+                "line": 9,
+                "type": "string",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "print",
+            "kind": "method",
+            "line": 10,
+            "type": "void () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "~Player",
+            "kind": "destructor",
+            "line": 11,
+            "type": "void () noexcept",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "Knight",
+        "kind": "class",
+        "line": 13,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "rank",
+            "kind": "member",
+            "line": 14,
+            "type": "string",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Knight",
+            "kind": "constructor",
+            "line": 16,
+            "type": "void (string, string)",
+            "access": "public",
+            "children": [
+              {
+                "name": "n",
+                "kind": "parameter",
+                "line": 16,
+                "type": "string",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "r",
+                "kind": "parameter",
+                "line": 16,
+                "type": "string",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "print",
+            "kind": "method",
+            "line": 17,
+            "type": "void () const",
+            "access": "public",
+            "children": [],
+            "status": "definition",
+            "override": true
+          }
+        ],
+        "bases": [
+          {
+            "name": "Player",
+            "access": "public"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 23,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "knight",
+            "kind": "local",
+            "line": 24,
+            "type": "Knight",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "player",
+            "kind": "local",
+            "line": 25,
+            "type": "Player &",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "game-undo": {
+    "sha256": "444a787b57f22cfce14654e2ab13c869a490747f099981e2a77b201c35a5b599",
+    "offsetEncoding": "utf8",
+    "symbols": [
+      {
+        "name": "StackException",
+        "kind": "class",
+        "line": 8,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "message",
+            "kind": "member",
+            "line": 9,
+            "type": "string",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "StackException",
+            "kind": "constructor",
+            "line": 11,
+            "type": "void (string)",
+            "access": "public",
+            "children": [
+              {
+                "name": "msg",
+                "kind": "parameter",
+                "line": 11,
+                "type": "string",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "what",
+            "kind": "method",
+            "line": 12,
+            "type": "const char *() const noexcept",
+            "access": "public",
+            "children": [],
+            "status": "definition",
+            "override": true
+          }
+        ],
+        "bases": [
+          {
+            "name": "exception",
+            "access": "public"
+          }
+        ]
+      },
+      {
+        "name": "Stack",
+        "kind": "class",
+        "line": 14,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "stackNode",
+            "kind": "struct",
+            "line": 15,
+            "type": "",
+            "access": "private",
+            "children": [
+              {
+                "name": "theItem",
+                "kind": "member",
+                "line": 15,
+                "type": "T",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "next",
+                "kind": "member",
+                "line": 15,
+                "type": "stackNode *",
+                "access": "public",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "StackNode",
+            "kind": "type alias",
+            "line": 16,
+            "type": "stackNode",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "topOfStack",
+            "kind": "member",
+            "line": 17,
+            "type": "StackNode *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "count",
+            "kind": "member",
+            "line": 18,
+            "type": "int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Stack<T>",
+            "kind": "constructor",
+            "line": 20,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "Stack<T>",
+            "kind": "constructor",
+            "line": 21,
+            "type": "void (const Stack<T> &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "operator=",
+            "kind": "method",
+            "line": 22,
+            "type": "Stack<T> &(const Stack<T> &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "~Stack<T>",
+            "kind": "destructor",
+            "line": 23,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 24,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "size",
+            "kind": "method",
+            "line": 25,
+            "type": "int () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "push",
+            "kind": "method",
+            "line": 26,
+            "type": "void (T)",
+            "access": "public",
+            "children": [
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 26,
+                "type": "T",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "node",
+                "kind": "local",
+                "line": 28,
+                "type": "StackNode *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "top",
+            "kind": "method",
+            "line": 32,
+            "type": "T () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "pop",
+            "kind": "method",
+            "line": 36,
+            "type": "T ()",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 38,
+                "type": "StackNode *",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "value",
+                "kind": "local",
+                "line": 39,
+                "type": "T",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "Position",
+        "kind": "struct",
+        "line": 47,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "x",
+            "kind": "member",
+            "line": 47,
+            "type": "int",
+            "access": "public",
+            "children": []
+          },
+          {
+            "name": "y",
+            "kind": "member",
+            "line": 47,
+            "type": "int",
+            "access": "public",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "undo",
+        "kind": "function",
+        "line": 48,
+        "type": "bool (Stack<Position> &, Position &)",
+        "access": "",
+        "children": [
+          {
+            "name": "history",
+            "kind": "parameter",
+            "line": 48,
+            "type": "Stack<Position> &",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "player",
+            "kind": "parameter",
+            "line": 48,
+            "type": "Position &",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 54,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "player",
+            "kind": "local",
+            "line": 55,
+            "type": "Position",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "history",
+            "kind": "local",
+            "line": 56,
+            "type": "Stack<Position>",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "game-checkpoints": {
+    "sha256": "ff873ab1e2ed7de50ae55891b3760fc76e5139303e9da489528981081ff29007",
+    "offsetEncoding": "utf8",
+    "symbols": [
+      {
+        "name": "StackException",
+        "kind": "class",
+        "line": 8,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "message",
+            "kind": "member",
+            "line": 9,
+            "type": "string",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "StackException",
+            "kind": "constructor",
+            "line": 11,
+            "type": "void (string)",
+            "access": "public",
+            "children": [
+              {
+                "name": "msg",
+                "kind": "parameter",
+                "line": 11,
+                "type": "string",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "what",
+            "kind": "method",
+            "line": 12,
+            "type": "const char *() const noexcept",
+            "access": "public",
+            "children": [],
+            "status": "definition",
+            "override": true
+          }
+        ],
+        "bases": [
+          {
+            "name": "exception",
+            "access": "public"
+          }
+        ]
+      },
+      {
+        "name": "Stack",
+        "kind": "class",
+        "line": 14,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "stackNode",
+            "kind": "struct",
+            "line": 15,
+            "type": "",
+            "access": "private",
+            "children": [
+              {
+                "name": "theItem",
+                "kind": "member",
+                "line": 15,
+                "type": "T",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "next",
+                "kind": "member",
+                "line": 15,
+                "type": "stackNode *",
+                "access": "public",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "StackNode",
+            "kind": "type alias",
+            "line": 16,
+            "type": "stackNode",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "topOfStack",
+            "kind": "member",
+            "line": 17,
+            "type": "StackNode *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "count",
+            "kind": "member",
+            "line": 18,
+            "type": "int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Stack<T>",
+            "kind": "constructor",
+            "line": 20,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "Stack<T>",
+            "kind": "constructor",
+            "line": 21,
+            "type": "void (const Stack<T> &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "operator=",
+            "kind": "method",
+            "line": 22,
+            "type": "Stack<T> &(const Stack<T> &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "~Stack<T>",
+            "kind": "destructor",
+            "line": 23,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 24,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "size",
+            "kind": "method",
+            "line": 25,
+            "type": "int () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "push",
+            "kind": "method",
+            "line": 26,
+            "type": "void (T)",
+            "access": "public",
+            "children": [
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 26,
+                "type": "T",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "node",
+                "kind": "local",
+                "line": 28,
+                "type": "StackNode *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "top",
+            "kind": "method",
+            "line": 32,
+            "type": "T () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "pop",
+            "kind": "method",
+            "line": 36,
+            "type": "T ()",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 38,
+                "type": "StackNode *",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "value",
+                "kind": "local",
+                "line": 39,
+                "type": "T",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "respawn",
+        "kind": "function",
+        "line": 47,
+        "type": "string (Stack<string> &)",
+        "access": "",
+        "children": [
+          {
+            "name": "checkpoints",
+            "kind": "parameter",
+            "line": 47,
+            "type": "Stack<string> &",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 52,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "checkpoints",
+            "kind": "local",
+            "line": 53,
+            "type": "Stack<string>",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "game-loot": {
+    "sha256": "91e5e19cd4defc253cea62930a45cd8dd57663ec5a9d9abd719a3aa51648093b",
+    "offsetEncoding": "utf8",
+    "symbols": [
+      {
+        "name": "StackException",
+        "kind": "class",
+        "line": 8,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "message",
+            "kind": "member",
+            "line": 9,
+            "type": "string",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "StackException",
+            "kind": "constructor",
+            "line": 11,
+            "type": "void (string)",
+            "access": "public",
+            "children": [
+              {
+                "name": "msg",
+                "kind": "parameter",
+                "line": 11,
+                "type": "string",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "what",
+            "kind": "method",
+            "line": 12,
+            "type": "const char *() const noexcept",
+            "access": "public",
+            "children": [],
+            "status": "definition",
+            "override": true
+          }
+        ],
+        "bases": [
+          {
+            "name": "exception",
+            "access": "public"
+          }
+        ]
+      },
+      {
+        "name": "Stack",
+        "kind": "class",
+        "line": 14,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "stackNode",
+            "kind": "struct",
+            "line": 15,
+            "type": "",
+            "access": "private",
+            "children": [
+              {
+                "name": "theItem",
+                "kind": "member",
+                "line": 15,
+                "type": "T",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "next",
+                "kind": "member",
+                "line": 15,
+                "type": "stackNode *",
+                "access": "public",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "StackNode",
+            "kind": "type alias",
+            "line": 16,
+            "type": "stackNode",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "topOfStack",
+            "kind": "member",
+            "line": 17,
+            "type": "StackNode *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "count",
+            "kind": "member",
+            "line": 18,
+            "type": "int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Stack<T>",
+            "kind": "constructor",
+            "line": 20,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "Stack<T>",
+            "kind": "constructor",
+            "line": 21,
+            "type": "void (const Stack<T> &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "operator=",
+            "kind": "method",
+            "line": 22,
+            "type": "Stack<T> &(const Stack<T> &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "~Stack<T>",
+            "kind": "destructor",
+            "line": 23,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 24,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "size",
+            "kind": "method",
+            "line": 25,
+            "type": "int () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "push",
+            "kind": "method",
+            "line": 26,
+            "type": "void (T)",
+            "access": "public",
+            "children": [
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 26,
+                "type": "T",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "node",
+                "kind": "local",
+                "line": 28,
+                "type": "StackNode *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "top",
+            "kind": "method",
+            "line": 32,
+            "type": "T () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "pop",
+            "kind": "method",
+            "line": 36,
+            "type": "T ()",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 38,
+                "type": "StackNode *",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "value",
+                "kind": "local",
+                "line": 39,
+                "type": "T",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "totalLoot",
+        "kind": "function",
+        "line": 47,
+        "type": "int (Stack<int> &)",
+        "access": "",
+        "children": [
+          {
+            "name": "loot",
+            "kind": "parameter",
+            "line": 47,
+            "type": "Stack<int> &",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "total",
+            "kind": "local",
+            "line": 48,
+            "type": "int",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "temporary",
+            "kind": "local",
+            "line": 49,
+            "type": "Stack<int>",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "value",
+            "kind": "local",
+            "line": 51,
+            "type": "int",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 60,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "loot",
+            "kind": "local",
+            "line": 61,
+            "type": "Stack<int>",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "game-combo": {
+    "sha256": "153061e539cf6cecc01943b10104dfaea36a49714c6987d3efd90e2eee334714",
+    "offsetEncoding": "utf8",
+    "symbols": [
+      {
+        "name": "StackException",
+        "kind": "class",
+        "line": 8,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "message",
+            "kind": "member",
+            "line": 9,
+            "type": "string",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "StackException",
+            "kind": "constructor",
+            "line": 11,
+            "type": "void (string)",
+            "access": "public",
+            "children": [
+              {
+                "name": "msg",
+                "kind": "parameter",
+                "line": 11,
+                "type": "string",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "what",
+            "kind": "method",
+            "line": 12,
+            "type": "const char *() const noexcept",
+            "access": "public",
+            "children": [],
+            "status": "definition",
+            "override": true
+          }
+        ],
+        "bases": [
+          {
+            "name": "exception",
+            "access": "public"
+          }
+        ]
+      },
+      {
+        "name": "Stack",
+        "kind": "class",
+        "line": 14,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "stackNode",
+            "kind": "struct",
+            "line": 15,
+            "type": "",
+            "access": "private",
+            "children": [
+              {
+                "name": "theItem",
+                "kind": "member",
+                "line": 15,
+                "type": "T",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "next",
+                "kind": "member",
+                "line": 15,
+                "type": "stackNode *",
+                "access": "public",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "StackNode",
+            "kind": "type alias",
+            "line": 16,
+            "type": "stackNode",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "topOfStack",
+            "kind": "member",
+            "line": 17,
+            "type": "StackNode *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "count",
+            "kind": "member",
+            "line": 18,
+            "type": "int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Stack<T>",
+            "kind": "constructor",
+            "line": 20,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "Stack<T>",
+            "kind": "constructor",
+            "line": 21,
+            "type": "void (const Stack<T> &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "operator=",
+            "kind": "method",
+            "line": 22,
+            "type": "Stack<T> &(const Stack<T> &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "~Stack<T>",
+            "kind": "destructor",
+            "line": 23,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 24,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "size",
+            "kind": "method",
+            "line": 25,
+            "type": "int () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "push",
+            "kind": "method",
+            "line": 26,
+            "type": "void (T)",
+            "access": "public",
+            "children": [
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 26,
+                "type": "T",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "node",
+                "kind": "local",
+                "line": 28,
+                "type": "StackNode *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "top",
+            "kind": "method",
+            "line": 32,
+            "type": "T () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "pop",
+            "kind": "method",
+            "line": 36,
+            "type": "T ()",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 38,
+                "type": "StackNode *",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "value",
+                "kind": "local",
+                "line": 39,
+                "type": "T",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "Action",
+        "kind": "struct",
+        "line": 47,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "name",
+            "kind": "member",
+            "line": 47,
+            "type": "string",
+            "access": "public",
+            "children": []
+          },
+          {
+            "name": "damage",
+            "kind": "member",
+            "line": 47,
+            "type": "int",
+            "access": "public",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "resolve",
+        "kind": "function",
+        "line": 48,
+        "type": "int (Stack<Action> &)",
+        "access": "",
+        "children": [
+          {
+            "name": "actions",
+            "kind": "parameter",
+            "line": 48,
+            "type": "Stack<Action> &",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "total",
+            "kind": "local",
+            "line": 49,
+            "type": "int",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "action",
+            "kind": "local",
+            "line": 51,
+            "type": "Action",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 58,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "actions",
+            "kind": "local",
+            "line": 59,
+            "type": "Stack<Action>",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "damage",
+            "kind": "local",
+            "line": 61,
+            "type": "int",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "game-turns": {
+    "sha256": "eb896de74dd4a712254e46a50cfc34f3cb6aec89617c8d011c46449406c184cb",
+    "offsetEncoding": "utf8",
+    "symbols": [
+      {
+        "name": "Queue",
+        "kind": "class",
+        "line": 8,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "Node",
+            "kind": "struct",
+            "line": 9,
+            "type": "",
+            "access": "private",
+            "children": [
+              {
+                "name": "theItem",
+                "kind": "member",
+                "line": 9,
+                "type": "T",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "next",
+                "kind": "member",
+                "line": 9,
+                "type": "Node *",
+                "access": "public",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "head",
+            "kind": "member",
+            "line": 10,
+            "type": "Node *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "tail",
+            "kind": "member",
+            "line": 11,
+            "type": "Node *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "count",
+            "kind": "member",
+            "line": 12,
+            "type": "int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Queue<T>",
+            "kind": "constructor",
+            "line": 14,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "Queue<T>",
+            "kind": "constructor",
+            "line": 15,
+            "type": "void (const Queue<T> &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "operator=",
+            "kind": "method",
+            "line": 16,
+            "type": "Queue<T> &(const Queue<T> &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "~Queue<T>",
+            "kind": "destructor",
+            "line": 17,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 18,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "size",
+            "kind": "method",
+            "line": 19,
+            "type": "int () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "enqueue",
+            "kind": "method",
+            "line": 20,
+            "type": "void (T)",
+            "access": "public",
+            "children": [
+              {
+                "name": "value",
+                "kind": "parameter",
+                "line": 20,
+                "type": "T",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "node",
+                "kind": "local",
+                "line": 21,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "front",
+            "kind": "method",
+            "line": 27,
+            "type": "T () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "dequeue",
+            "kind": "method",
+            "line": 31,
+            "type": "T ()",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 33,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "value",
+                "kind": "local",
+                "line": 34,
+                "type": "T",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "nextTurn",
+        "kind": "function",
+        "line": 43,
+        "type": "string (Queue<string> &)",
+        "access": "",
+        "children": [
+          {
+            "name": "turns",
+            "kind": "parameter",
+            "line": 43,
+            "type": "Queue<string> &",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "player",
+            "kind": "local",
+            "line": 45,
+            "type": "string",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 50,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "turns",
+            "kind": "local",
+            "line": 51,
+            "type": "Queue<string>",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "game-spawn": {
+    "sha256": "3d11696cbe7eb70b056cbedace25ca7067403f3ad12f72c2fb76e43d3b995fe7",
+    "offsetEncoding": "utf8",
+    "symbols": [
+      {
+        "name": "Queue",
+        "kind": "class",
+        "line": 8,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "Node",
+            "kind": "struct",
+            "line": 9,
+            "type": "",
+            "access": "private",
+            "children": [
+              {
+                "name": "theItem",
+                "kind": "member",
+                "line": 9,
+                "type": "T",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "next",
+                "kind": "member",
+                "line": 9,
+                "type": "Node *",
+                "access": "public",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "head",
+            "kind": "member",
+            "line": 10,
+            "type": "Node *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "tail",
+            "kind": "member",
+            "line": 11,
+            "type": "Node *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "count",
+            "kind": "member",
+            "line": 12,
+            "type": "int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Queue<T>",
+            "kind": "constructor",
+            "line": 14,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "Queue<T>",
+            "kind": "constructor",
+            "line": 15,
+            "type": "void (const Queue<T> &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "operator=",
+            "kind": "method",
+            "line": 16,
+            "type": "Queue<T> &(const Queue<T> &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "~Queue<T>",
+            "kind": "destructor",
+            "line": 17,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 18,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "size",
+            "kind": "method",
+            "line": 19,
+            "type": "int () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "enqueue",
+            "kind": "method",
+            "line": 20,
+            "type": "void (T)",
+            "access": "public",
+            "children": [
+              {
+                "name": "value",
+                "kind": "parameter",
+                "line": 20,
+                "type": "T",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "node",
+                "kind": "local",
+                "line": 21,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "front",
+            "kind": "method",
+            "line": 27,
+            "type": "T () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "dequeue",
+            "kind": "method",
+            "line": 31,
+            "type": "T ()",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 33,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "value",
+                "kind": "local",
+                "line": 34,
+                "type": "T",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "Spawn",
+        "kind": "struct",
+        "line": 43,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "type",
+            "kind": "member",
+            "line": 43,
+            "type": "string",
+            "access": "public",
+            "children": []
+          },
+          {
+            "name": "health",
+            "kind": "member",
+            "line": 43,
+            "type": "int",
+            "access": "public",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "spawnNext",
+        "kind": "function",
+        "line": 44,
+        "type": "bool (Queue<Spawn> &)",
+        "access": "",
+        "children": [
+          {
+            "name": "pending",
+            "kind": "parameter",
+            "line": 44,
+            "type": "Queue<Spawn> &",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "enemy",
+            "kind": "local",
+            "line": 46,
+            "type": "Spawn",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 51,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "pending",
+            "kind": "local",
+            "line": 52,
+            "type": "Queue<Spawn>",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "game-matchmaking": {
+    "sha256": "ef0355e91dce44994811db7bd56b0d8650d38ed7076783dcb7c30fd6adf093d6",
+    "offsetEncoding": "utf8",
+    "symbols": [
+      {
+        "name": "Queue",
+        "kind": "class",
+        "line": 8,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "Node",
+            "kind": "struct",
+            "line": 9,
+            "type": "",
+            "access": "private",
+            "children": [
+              {
+                "name": "theItem",
+                "kind": "member",
+                "line": 9,
+                "type": "T",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "next",
+                "kind": "member",
+                "line": 9,
+                "type": "Node *",
+                "access": "public",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "head",
+            "kind": "member",
+            "line": 10,
+            "type": "Node *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "tail",
+            "kind": "member",
+            "line": 11,
+            "type": "Node *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "count",
+            "kind": "member",
+            "line": 12,
+            "type": "int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Queue<T>",
+            "kind": "constructor",
+            "line": 14,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "Queue<T>",
+            "kind": "constructor",
+            "line": 15,
+            "type": "void (const Queue<T> &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "operator=",
+            "kind": "method",
+            "line": 16,
+            "type": "Queue<T> &(const Queue<T> &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "~Queue<T>",
+            "kind": "destructor",
+            "line": 17,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 18,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "size",
+            "kind": "method",
+            "line": 19,
+            "type": "int () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "enqueue",
+            "kind": "method",
+            "line": 20,
+            "type": "void (T)",
+            "access": "public",
+            "children": [
+              {
+                "name": "value",
+                "kind": "parameter",
+                "line": 20,
+                "type": "T",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "node",
+                "kind": "local",
+                "line": 21,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "front",
+            "kind": "method",
+            "line": 27,
+            "type": "T () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "dequeue",
+            "kind": "method",
+            "line": 31,
+            "type": "T ()",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 33,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "value",
+                "kind": "local",
+                "line": 34,
+                "type": "T",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "makeMatch",
+        "kind": "function",
+        "line": 43,
+        "type": "bool (Queue<string> &)",
+        "access": "",
+        "children": [
+          {
+            "name": "waiting",
+            "kind": "parameter",
+            "line": 43,
+            "type": "Queue<string> &",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "first",
+            "kind": "local",
+            "line": 45,
+            "type": "string",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "second",
+            "kind": "local",
+            "line": 46,
+            "type": "string",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 51,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "waiting",
+            "kind": "local",
+            "line": 52,
+            "type": "Queue<string>",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "game-inventory-find": {
+    "sha256": "b4718d0f369d07bda9ea6feb1d0ac7a74bed6d536b32fbc0803774624b3a76c6",
+    "offsetEncoding": "utf8",
+    "symbols": [
+      {
+        "name": "ItemNode",
+        "kind": "struct",
+        "line": 7,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "name",
+            "kind": "member",
+            "line": 8,
+            "type": "string",
+            "access": "public",
+            "children": []
+          },
+          {
+            "name": "quantity",
+            "kind": "member",
+            "line": 9,
+            "type": "int",
+            "access": "public",
+            "children": []
+          },
+          {
+            "name": "next",
+            "kind": "member",
+            "line": 10,
+            "type": "ItemNode *",
+            "access": "public",
+            "children": []
+          },
+          {
+            "name": "ItemNode",
+            "kind": "constructor",
+            "line": 11,
+            "type": "void (string, int, ItemNode *)",
+            "access": "public",
+            "children": [
+              {
+                "name": "n",
+                "kind": "parameter",
+                "line": 11,
+                "type": "string",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "q",
+                "kind": "parameter",
+                "line": 11,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "link",
+                "kind": "parameter",
+                "line": 11,
+                "type": "ItemNode *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "Inventory",
+        "kind": "class",
+        "line": 14,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "head",
+            "kind": "member",
+            "line": 15,
+            "type": "ItemNode *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Inventory",
+            "kind": "constructor",
+            "line": 17,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "Inventory",
+            "kind": "constructor",
+            "line": 18,
+            "type": "void (const Inventory &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "operator=",
+            "kind": "method",
+            "line": 19,
+            "type": "Inventory &(const Inventory &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "~Inventory",
+            "kind": "destructor",
+            "line": 20,
+            "type": "void () noexcept",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 22,
+                "type": "ItemNode *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "add",
+            "kind": "method",
+            "line": 27,
+            "type": "void (string, int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "name",
+                "kind": "parameter",
+                "line": 27,
+                "type": "string",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "quantity",
+                "kind": "parameter",
+                "line": 27,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "quantityOf",
+            "kind": "method",
+            "line": 30,
+            "type": "int (string) const",
+            "access": "public",
+            "children": [
+              {
+                "name": "name",
+                "kind": "parameter",
+                "line": 30,
+                "type": "string",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "p",
+                "kind": "local",
+                "line": 31,
+                "type": "ItemNode *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 37,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "bag",
+            "kind": "local",
+            "line": 38,
+            "type": "Inventory",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "game-inventory-use": {
+    "sha256": "3f6a5d64887e93f57b9bf6d8ff64c78c468355151d9b06ff3524aad0018a4f9b",
+    "offsetEncoding": "utf8",
+    "symbols": [
+      {
+        "name": "ItemNode",
+        "kind": "struct",
+        "line": 7,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "name",
+            "kind": "member",
+            "line": 8,
+            "type": "string",
+            "access": "public",
+            "children": []
+          },
+          {
+            "name": "quantity",
+            "kind": "member",
+            "line": 9,
+            "type": "int",
+            "access": "public",
+            "children": []
+          },
+          {
+            "name": "next",
+            "kind": "member",
+            "line": 10,
+            "type": "ItemNode *",
+            "access": "public",
+            "children": []
+          },
+          {
+            "name": "ItemNode",
+            "kind": "constructor",
+            "line": 11,
+            "type": "void (string, int, ItemNode *)",
+            "access": "public",
+            "children": [
+              {
+                "name": "n",
+                "kind": "parameter",
+                "line": 11,
+                "type": "string",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "q",
+                "kind": "parameter",
+                "line": 11,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "link",
+                "kind": "parameter",
+                "line": 11,
+                "type": "ItemNode *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "Inventory",
+        "kind": "class",
+        "line": 14,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "head",
+            "kind": "member",
+            "line": 15,
+            "type": "ItemNode *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Inventory",
+            "kind": "constructor",
+            "line": 17,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "Inventory",
+            "kind": "constructor",
+            "line": 18,
+            "type": "void (const Inventory &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "operator=",
+            "kind": "method",
+            "line": 19,
+            "type": "Inventory &(const Inventory &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "~Inventory",
+            "kind": "destructor",
+            "line": 20,
+            "type": "void () noexcept",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 22,
+                "type": "ItemNode *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "add",
+            "kind": "method",
+            "line": 27,
+            "type": "void (string, int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "name",
+                "kind": "parameter",
+                "line": 27,
+                "type": "string",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "quantity",
+                "kind": "parameter",
+                "line": 27,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "useOne",
+            "kind": "method",
+            "line": 30,
+            "type": "bool (string)",
+            "access": "public",
+            "children": [
+              {
+                "name": "name",
+                "kind": "parameter",
+                "line": 30,
+                "type": "string",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "p",
+                "kind": "local",
+                "line": 31,
+                "type": "ItemNode *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 41,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "bag",
+            "kind": "local",
+            "line": 42,
+            "type": "Inventory",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "game-inventory-remove": {
+    "sha256": "cf35b0fb0ffb97ad4aa20e2f6715b351fb0f8963eacafb51135af28503e39c9e",
+    "offsetEncoding": "utf8",
+    "symbols": [
+      {
+        "name": "ItemNode",
+        "kind": "struct",
+        "line": 7,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "name",
+            "kind": "member",
+            "line": 8,
+            "type": "string",
+            "access": "public",
+            "children": []
+          },
+          {
+            "name": "quantity",
+            "kind": "member",
+            "line": 9,
+            "type": "int",
+            "access": "public",
+            "children": []
+          },
+          {
+            "name": "next",
+            "kind": "member",
+            "line": 10,
+            "type": "ItemNode *",
+            "access": "public",
+            "children": []
+          },
+          {
+            "name": "ItemNode",
+            "kind": "constructor",
+            "line": 11,
+            "type": "void (string, int, ItemNode *)",
+            "access": "public",
+            "children": [
+              {
+                "name": "n",
+                "kind": "parameter",
+                "line": 11,
+                "type": "string",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "q",
+                "kind": "parameter",
+                "line": 11,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "link",
+                "kind": "parameter",
+                "line": 11,
+                "type": "ItemNode *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "Inventory",
+        "kind": "class",
+        "line": 14,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "head",
+            "kind": "member",
+            "line": 15,
+            "type": "ItemNode *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Inventory",
+            "kind": "constructor",
+            "line": 17,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "Inventory",
+            "kind": "constructor",
+            "line": 18,
+            "type": "void (const Inventory &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "operator=",
+            "kind": "method",
+            "line": 19,
+            "type": "Inventory &(const Inventory &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "~Inventory",
+            "kind": "destructor",
+            "line": 20,
+            "type": "void () noexcept",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 22,
+                "type": "ItemNode *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "add",
+            "kind": "method",
+            "line": 27,
+            "type": "void (string, int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "name",
+                "kind": "parameter",
+                "line": 27,
+                "type": "string",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "quantity",
+                "kind": "parameter",
+                "line": 27,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "remove",
+            "kind": "method",
+            "line": 30,
+            "type": "bool (string)",
+            "access": "public",
+            "children": [
+              {
+                "name": "name",
+                "kind": "parameter",
+                "line": 30,
+                "type": "string",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "previous",
+                "kind": "local",
+                "line": 31,
+                "type": "ItemNode *",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "current",
+                "kind": "local",
+                "line": 32,
+                "type": "ItemNode *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "print",
+            "kind": "method",
+            "line": 43,
+            "type": "void () const",
+            "access": "public",
+            "children": [
+              {
+                "name": "p",
+                "kind": "local",
+                "line": 44,
+                "type": "ItemNode *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 49,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "bag",
+            "kind": "local",
+            "line": 50,
+            "type": "Inventory",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
   "short-student": {
     "sha256": "d6fdefa8acb9f7e805cfe635e8c48711147018e502f86b8d83a45f9a5388c03e",
     "offsetEncoding": "utf8",

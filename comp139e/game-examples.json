@@ -1,0 +1,782 @@
+[
+  {
+    "id": "game-warrior",
+    "group": "game-examples",
+    "title": "Player \u00b7 warrior damage",
+    "shortTitle": "Player \u00b7 warrior damage",
+    "when": "Derive Warrior from Player; calculate attack damage.",
+    "question": [
+      "Derive Warrior from Player; calculate attack damage.",
+      "Player stores protected name and level and declares pure virtual int attack() const. Warrior adds strength; attack() returns strength + 2 * level. Give Player a virtual destructor."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nclass Player {\nprotected:\n    string name;\n    int level;\npublic:\n    Player(string n, int l) : name(n), level(l) {}\n    virtual int attack() const = 0;\n    virtual ~Player() = default;\n};\nclass Warrior : public Player {\n    int strength;\npublic:\n    Warrior(string n, int l, int s) : Player(n, l), strength(s) {}\n    int attack() const override { return strength + 2 * level; }\n};",
+    "use": "Warrior hero(\"Ari\", 3, 10);\nPlayer& player = hero; // Calls the Warrior override.\ncout << player.attack() << '\\n';",
+    "expected": "16",
+    "expectedOutput": "16\n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Structure",
+        "Base class holds shared data; derived classes add behavior."
+      ],
+      [
+        "main()",
+        "Creates sample game data and calls the required operation."
+      ]
+    ],
+    "change": "Rename the game objects, change the sample values, and adapt the requested operation.",
+    "watch": "Initialize inherited fields through Player(n, l).",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Game-themed application of course structures.",
+    "facets": {
+      "structure": "inheritance",
+      "storage": "none",
+      "type": "int",
+      "role": "example"
+    },
+    "typeLabel": "non-template",
+    "checks": "Warrior w(\"A\",0,4); Player& p=w; assert(p.attack()==4);"
+  },
+  {
+    "id": "game-mage",
+    "group": "game-examples",
+    "title": "Player \u00b7 mage mana",
+    "shortTitle": "Player \u00b7 mage mana",
+    "when": "Derive Mage; spend mana only when a spell can be cast.",
+    "question": [
+      "Derive Mage; spend mana only when a spell can be cast.",
+      "Player stores a name. Mage starts with mana and exposes cast(cost) and getMana(). cast returns false for a negative cost or insufficient mana; otherwise subtract the cost and return true."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nclass Player {\n    string name;\npublic:\n    Player(string n) : name(n) {}\n    string getName() const { return name; }\n};\nclass Mage : public Player {\n    int mana;\npublic:\n    Mage(string n, int m) : Player(n), mana(m) {}\n    bool cast(int cost) {\n        if (cost < 0 || cost > mana) return false;\n        mana -= cost; // Change state only after checking the cost.\n        return true;\n    }\n    int getMana() const { return mana; }\n};",
+    "use": "Mage mage(\"Mira\", 20);\ncout << mage.cast(8) << ' ' << mage.getMana() << '\\n';\ncout << mage.cast(15) << ' ' << mage.getMana() << '\\n';",
+    "expected": "1 12\n0 12",
+    "expectedOutput": "1 12\n0 12\n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Structure",
+        "Base class holds shared data; derived classes add behavior."
+      ],
+      [
+        "main()",
+        "Creates sample game data and calls the required operation."
+      ]
+    ],
+    "change": "Rename the game objects, change the sample values, and adapt the requested operation.",
+    "watch": "The constructor assumes nonnegative starting mana.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Game-themed application of course structures.",
+    "facets": {
+      "structure": "inheritance",
+      "storage": "none",
+      "type": "int",
+      "role": "example"
+    },
+    "typeLabel": "non-template",
+    "checks": "Mage m(\"M\",5); assert(!m.cast(-1) && m.getMana()==5); assert(m.cast(5) && m.getMana()==0); assert(!m.cast(1));"
+  },
+  {
+    "id": "game-healer",
+    "group": "game-examples",
+    "title": "Player \u00b7 healing limit",
+    "shortTitle": "Player \u00b7 healing limit",
+    "when": "Derive Healer; restore health without exceeding maximum health.",
+    "question": [
+      "Derive Healer; restore health without exceeding maximum health.",
+      "Player stores protected health and maxHealth. Healer::heal(amount) ignores negative amounts, adds the amount, and caps health at maxHealth."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nclass Player {\nprotected:\n    int health, maxHealth;\npublic:\n    Player(int h, int maximum) : health(h), maxHealth(maximum) {}\n    int getHealth() const { return health; }\n};\nclass Healer : public Player {\npublic:\n    Healer(int h, int maximum) : Player(h, maximum) {}\n    void heal(int amount) {\n        if (amount < 0) return;\n        health += amount;\n        if (health > maxHealth) health = maxHealth;\n    }\n};",
+    "use": "Healer player(70, 100);\nplayer.heal(50);\ncout << player.getHealth() << '\\n';",
+    "expected": "100",
+    "expectedOutput": "100\n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Structure",
+        "Base class holds shared data; derived classes add behavior."
+      ],
+      [
+        "main()",
+        "Creates sample game data and calls the required operation."
+      ]
+    ],
+    "change": "Rename the game objects, change the sample values, and adapt the requested operation.",
+    "watch": "Starting health should be between zero and maxHealth.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Game-themed application of course structures.",
+    "facets": {
+      "structure": "inheritance",
+      "storage": "none",
+      "type": "int",
+      "role": "example"
+    },
+    "typeLabel": "non-template",
+    "checks": "Healer h(50,100); h.heal(-2); assert(h.getHealth()==50); h.heal(10); assert(h.getHealth()==60); h.heal(100); assert(h.getHealth()==100);"
+  },
+  {
+    "id": "game-tank",
+    "group": "game-examples",
+    "title": "Player \u00b7 armour reduces damage",
+    "shortTitle": "Player \u00b7 armour reduces damage",
+    "when": "Override takeDamage() for an armoured player.",
+    "question": [
+      "Override takeDamage() for an armoured player.",
+      "Player has virtual takeDamage(amount), which subtracts nonnegative damage and keeps health at least zero. Tank reduces incoming damage by armour, then calls the base method."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nclass Player {\n    int health;\npublic:\n    Player(int h) : health(h) {}\n    virtual void takeDamage(int amount) {\n        if (amount < 0) amount = 0;\n        health -= amount;\n        if (health < 0) health = 0;\n    }\n    int getHealth() const { return health; }\n    virtual ~Player() = default;\n};\nclass Tank : public Player {\n    int armour;\npublic:\n    Tank(int h, int a) : Player(h), armour(a) {}\n    void takeDamage(int amount) override {\n        Player::takeDamage(amount - armour); // Reuse the health checks.\n    }\n};",
+    "use": "Tank tank(100, 5);\nPlayer& player = tank;\nplayer.takeDamage(12);\ncout << player.getHealth() << '\\n';",
+    "expected": "93",
+    "expectedOutput": "93\n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Structure",
+        "Base class holds shared data; derived classes add behavior."
+      ],
+      [
+        "main()",
+        "Creates sample game data and calls the required operation."
+      ]
+    ],
+    "change": "Rename the game objects, change the sample values, and adapt the requested operation.",
+    "watch": "Use Player::takeDamage to call the base version, not the override again. Assume armour is nonnegative.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Game-themed application of course structures.",
+    "facets": {
+      "structure": "inheritance",
+      "storage": "none",
+      "type": "int",
+      "role": "example"
+    },
+    "typeLabel": "non-template",
+    "checks": "Tank t(10,5); t.takeDamage(2); assert(t.getHealth()==10); t.takeDamage(50); assert(t.getHealth()==0);"
+  },
+  {
+    "id": "game-weapons",
+    "group": "game-examples",
+    "title": "Weapons \u00b7 sword and bow",
+    "shortTitle": "Weapons \u00b7 sword and bow",
+    "when": "Give Sword and Bow different damage formulas.",
+    "question": [
+      "Give Sword and Bow different damage formulas.",
+      "Weapon declares pure virtual int damage() const and a virtual destructor. Sword returns strength * 2; Bow returns accuracy + 5. Call both through Weapon pointers."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nclass Weapon {\npublic:\n    virtual int damage() const = 0;\n    virtual ~Weapon() = default;\n};\nclass Sword : public Weapon {\n    int strength;\npublic:\n    Sword(int s) : strength(s) {}\n    int damage() const override { return strength * 2; }\n};\nclass Bow : public Weapon {\n    int accuracy;\npublic:\n    Bow(int a) : accuracy(a) {}\n    int damage() const override { return accuracy + 5; }\n};",
+    "use": "Sword sword(6);\nBow bow(4);\nWeapon* weapons[] = {&sword, &bow};\nfor (Weapon* weapon : weapons) cout << weapon->damage() << ' ';\ncout << '\\n';",
+    "expected": "12 9",
+    "expectedOutput": "12 9 \n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Structure",
+        "Base class holds shared data; derived classes add behavior."
+      ],
+      [
+        "main()",
+        "Creates sample game data and calls the required operation."
+      ]
+    ],
+    "change": "Rename the game objects, change the sample values, and adapt the requested operation.",
+    "watch": "The pointers refer to local objects; do not delete them.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Game-themed application of course structures.",
+    "facets": {
+      "structure": "inheritance",
+      "storage": "none",
+      "type": "int",
+      "role": "example"
+    },
+    "typeLabel": "non-template",
+    "checks": ""
+  },
+  {
+    "id": "game-enemies",
+    "group": "game-examples",
+    "title": "Enemies \u00b7 different rewards",
+    "shortTitle": "Enemies \u00b7 different rewards",
+    "when": "Use an abstract Enemy for Goblin and Dragon rewards.",
+    "question": [
+      "Use an abstract Enemy for Goblin and Dragon rewards.",
+      "Enemy stores protected level and has pure virtual int reward() const. Goblin returns level * 10; Dragon returns level * 100. Provide a virtual destructor."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nclass Enemy {\nprotected:\n    int level;\npublic:\n    Enemy(int l) : level(l) {}\n    virtual int reward() const = 0;\n    virtual ~Enemy() = default;\n};\nclass Goblin : public Enemy {\npublic:\n    Goblin(int l) : Enemy(l) {}\n    int reward() const override { return level * 10; }\n};\nclass Dragon : public Enemy {\npublic:\n    Dragon(int l) : Enemy(l) {}\n    int reward() const override { return level * 100; }\n};",
+    "use": "Goblin goblin(2);\nDragon dragon(3);\nEnemy* enemies[] = {&goblin, &dragon};\nint gold = 0;\nfor (Enemy* enemy : enemies) gold += enemy->reward();\ncout << gold << '\\n';",
+    "expected": "320",
+    "expectedOutput": "320\n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Structure",
+        "Base class holds shared data; derived classes add behavior."
+      ],
+      [
+        "main()",
+        "Creates sample game data and calls the required operation."
+      ]
+    ],
+    "change": "Rename the game objects, change the sample values, and adapt the requested operation.",
+    "watch": "Keep Enemy pointers to preserve each derived reward calculation.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Game-themed application of course structures.",
+    "facets": {
+      "structure": "inheritance",
+      "storage": "none",
+      "type": "int",
+      "role": "example"
+    },
+    "typeLabel": "non-template",
+    "checks": ""
+  },
+  {
+    "id": "game-boss",
+    "group": "game-examples",
+    "title": "Boss \u00b7 three-level inheritance",
+    "shortTitle": "Boss \u00b7 three-level inheritance",
+    "when": "Build Character \u2192 Enemy \u2192 Boss.",
+    "question": [
+      "Build Character \u2192 Enemy \u2192 Boss.",
+      "Character stores protected health. Enemy adds protected damage. Boss adds bonusDamage and provides attack() returning damage + bonusDamage. Expose getHealth() in Character."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nclass Character {\nprotected:\n    int health;\npublic:\n    Character(int h) : health(h) {}\n    int getHealth() const { return health; }\n};\nclass Enemy : public Character {\nprotected:\n    int damage;\npublic:\n    Enemy(int h, int d) : Character(h), damage(d) {}\n};\nclass Boss : public Enemy {\n    int bonusDamage;\npublic:\n    Boss(int h, int d, int bonus) : Enemy(h, d), bonusDamage(bonus) {}\n    int attack() const { return damage + bonusDamage; }\n};",
+    "use": "Boss boss(200, 20, 10);\ncout << boss.getHealth() << ' ' << boss.attack() << '\\n';",
+    "expected": "200 30",
+    "expectedOutput": "200 30\n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Structure",
+        "Base class holds shared data; derived classes add behavior."
+      ],
+      [
+        "main()",
+        "Creates sample game data and calls the required operation."
+      ]
+    ],
+    "change": "Rename the game objects, change the sample values, and adapt the requested operation.",
+    "watch": "Each constructor initializes only its immediate base.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Game-themed application of course structures.",
+    "facets": {
+      "structure": "inheritance",
+      "storage": "none",
+      "type": "int",
+      "role": "example"
+    },
+    "typeLabel": "non-template",
+    "checks": ""
+  },
+  {
+    "id": "game-items",
+    "group": "game-examples",
+    "title": "Items \u00b7 potion and coin",
+    "shortTitle": "Items \u00b7 potion and coin",
+    "when": "Use Potion and Coin through an Item interface.",
+    "question": [
+      "Use Potion and Coin through an Item interface.",
+      "Item declares virtual void use() const = 0 and a virtual destructor. Potion stores a healing amount; Coin stores a gold amount. use() prints the effect without changing any player."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nclass Item {\npublic:\n    virtual void use() const = 0;\n    virtual ~Item() = default;\n};\nclass Potion : public Item {\n    int amount;\npublic:\n    Potion(int a) : amount(a) {}\n    void use() const override { cout << \"Heal \" << amount << '\\n'; }\n};\nclass Coin : public Item {\n    int amount;\npublic:\n    Coin(int a) : amount(a) {}\n    void use() const override { cout << \"Gold \" << amount << '\\n'; }\n};",
+    "use": "Potion potion(25);\nCoin coin(10);\nItem* items[] = {&potion, &coin};\nfor (Item* item : items) item->use();",
+    "expected": "Heal 25\nGold 10",
+    "expectedOutput": "Heal 25\nGold 10\n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Structure",
+        "Base class holds shared data; derived classes add behavior."
+      ],
+      [
+        "main()",
+        "Creates sample game data and calls the required operation."
+      ]
+    ],
+    "change": "Rename the game objects, change the sample values, and adapt the requested operation.",
+    "watch": "A void method performs an action; it does not return a number.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Game-themed application of course structures.",
+    "facets": {
+      "structure": "inheritance",
+      "storage": "none",
+      "type": "int",
+      "role": "example"
+    },
+    "typeLabel": "non-template",
+    "checks": ""
+  },
+  {
+    "id": "game-movement",
+    "group": "game-examples",
+    "title": "Player \u00b7 define movement outside class",
+    "shortTitle": "Player \u00b7 define movement outside class",
+    "when": "Derive Player from Entity; define move() below the class.",
+    "question": [
+      "Derive Player from Entity; define move() below the class.",
+      "Entity stores protected x and y and provides printPosition(). Player declares move(dx, dy); define Player::move outside the class to add the offsets."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nclass Entity {\nprotected:\n    int x, y;\npublic:\n    Entity(int startX, int startY) : x(startX), y(startY) {}\n    void printPosition() const { cout << x << ' ' << y << '\\n'; }\n};\nclass Player : public Entity {\npublic:\n    Player(int startX, int startY) : Entity(startX, startY) {}\n    void move(int dx, int dy); // Declare inside the class.\n};\nvoid Player::move(int dx, int dy) { // Define using ClassName::.\n    x += dx;\n    y += dy;\n}",
+    "use": "Player player(2, 3);\nplayer.move(4, -1);\nplayer.printPosition();",
+    "expected": "6 2",
+    "expectedOutput": "6 2\n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Structure",
+        "Base class holds shared data; derived classes add behavior."
+      ],
+      [
+        "main()",
+        "Creates sample game data and calls the required operation."
+      ]
+    ],
+    "change": "Rename the game objects, change the sample values, and adapt the requested operation.",
+    "watch": "The definition must have the same parameter types as the declaration.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Game-themed application of course structures.",
+    "facets": {
+      "structure": "inheritance",
+      "storage": "none",
+      "type": "int",
+      "role": "example"
+    },
+    "typeLabel": "non-template",
+    "checks": ""
+  },
+  {
+    "id": "game-profile",
+    "group": "game-examples",
+    "title": "Player \u00b7 extend profile printing",
+    "shortTitle": "Player \u00b7 extend profile printing",
+    "when": "Print the base player name and the derived character class.",
+    "question": [
+      "Print the base player name and the derived character class.",
+      "Player stores a private name and has virtual print(). Knight adds a rank and overrides print(), calling Player::print() before printing the rank."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nclass Player {\n    string name;\npublic:\n    Player(string n) : name(n) {}\n    virtual void print() const { cout << name; }\n    virtual ~Player() = default;\n};\nclass Knight : public Player {\n    string rank;\npublic:\n    Knight(string n, string r) : Player(n), rank(r) {}\n    void print() const override {\n        Player::print(); // Reuse base printing for private data.\n        cout << \" - \" << rank << '\\n';\n    }\n};",
+    "use": "Knight knight(\"Ari\", \"Captain\");\nPlayer& player = knight;\nplayer.print();",
+    "expected": "Ari - Captain",
+    "expectedOutput": "Ari - Captain\n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Structure",
+        "Base class holds shared data; derived classes add behavior."
+      ],
+      [
+        "main()",
+        "Creates sample game data and calls the required operation."
+      ]
+    ],
+    "change": "Rename the game objects, change the sample values, and adapt the requested operation.",
+    "watch": "Qualify the base call to avoid recursively calling Knight::print().",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Game-themed application of course structures.",
+    "facets": {
+      "structure": "inheritance",
+      "storage": "none",
+      "type": "int",
+      "role": "example"
+    },
+    "typeLabel": "non-template",
+    "checks": ""
+  },
+  {
+    "id": "game-undo",
+    "group": "game-examples",
+    "title": "Stack \u00b7 undo a move",
+    "shortTitle": "Stack \u00b7 undo a move",
+    "when": "Undo the latest player position using a stack.",
+    "question": [
+      "Undo the latest player position using a stack.",
+      "Store each old Position before moving. undo(history, position) restores the latest saved position and returns true; return false if history is empty."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\nclass StackException : public exception {\n    string message;\npublic:\n    StackException(string msg) : message(msg) {}\n    const char* what() const noexcept override { return message.c_str(); }\n};\ntemplate <class T> class Stack {\n    struct stackNode { T theItem; stackNode* next; };\n    typedef stackNode StackNode;\n    StackNode* topOfStack;\n    int count;\npublic:\n    Stack() : topOfStack(nullptr), count(0) {}\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n    ~Stack() { while (!isEmpty()) pop(); }\n    bool isEmpty() const { return count == 0; }\n    int size() const { return count; }\n    void push(T item) {\n        // Link the new node to the OLD top before replacing topOfStack.\n        StackNode* node = new StackNode{item, topOfStack};\n        topOfStack = node;\n        ++count;\n    }\n    T top() const {\n        if (isEmpty()) throw StackException(\"Empty stack\");\n        return topOfStack->theItem; // Read without removing.\n    }\n    T pop() {\n        if (isEmpty()) throw StackException(\"Empty stack\");\n        StackNode* old = topOfStack;\n        T value = old->theItem; // Save before deleting the node.\n        topOfStack = old->next;\n        delete old;\n        --count;\n        return value;\n    }\n};\n\nstruct Position { int x; int y; };\nbool undo(Stack<Position>& history, Position& player) {\n    if (history.isEmpty()) return false;\n    player = history.pop(); // Latest saved position comes out first.\n    return true;\n}",
+    "use": "Position player{0, 0};\nStack<Position> history;\nhistory.push(player); player = {3, 2};\nhistory.push(player); player = {5, 4};\nundo(history, player);\ncout << player.x << ' ' << player.y << '\\n';",
+    "expected": "3 2",
+    "expectedOutput": "3 2\n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Structure",
+        "Last added is first removed."
+      ],
+      [
+        "main()",
+        "Creates sample game data and calls the required operation."
+      ]
+    ],
+    "change": "Rename the game objects, change the sample values, and adapt the requested operation.",
+    "watch": "Pass the player position by reference so undo changes the caller.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Game-themed application of course structures.",
+    "facets": {
+      "structure": "stack",
+      "storage": "linked",
+      "type": "template",
+      "role": "example"
+    },
+    "typeLabel": "template",
+    "checks": "Stack<Position> s; Position p{1,2}; assert(!undo(s,p)); assert(p.x==1 && p.y==2); s.push({3,4}); assert(undo(s,p) && p.x==3 && p.y==4 && s.isEmpty());"
+  },
+  {
+    "id": "game-checkpoints",
+    "group": "game-examples",
+    "title": "Stack \u00b7 return to a checkpoint",
+    "shortTitle": "Stack \u00b7 return to a checkpoint",
+    "when": "Save checkpoint names and return to the most recent one.",
+    "question": [
+      "Save checkpoint names and return to the most recent one.",
+      "Write respawn(checkpoints): pop the newest checkpoint, or return \"Start\" when empty."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\nclass StackException : public exception {\n    string message;\npublic:\n    StackException(string msg) : message(msg) {}\n    const char* what() const noexcept override { return message.c_str(); }\n};\ntemplate <class T> class Stack {\n    struct stackNode { T theItem; stackNode* next; };\n    typedef stackNode StackNode;\n    StackNode* topOfStack;\n    int count;\npublic:\n    Stack() : topOfStack(nullptr), count(0) {}\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n    ~Stack() { while (!isEmpty()) pop(); }\n    bool isEmpty() const { return count == 0; }\n    int size() const { return count; }\n    void push(T item) {\n        // Link the new node to the OLD top before replacing topOfStack.\n        StackNode* node = new StackNode{item, topOfStack};\n        topOfStack = node;\n        ++count;\n    }\n    T top() const {\n        if (isEmpty()) throw StackException(\"Empty stack\");\n        return topOfStack->theItem; // Read without removing.\n    }\n    T pop() {\n        if (isEmpty()) throw StackException(\"Empty stack\");\n        StackNode* old = topOfStack;\n        T value = old->theItem; // Save before deleting the node.\n        topOfStack = old->next;\n        delete old;\n        --count;\n        return value;\n    }\n};\n\nstring respawn(Stack<string>& checkpoints) {\n    if (checkpoints.isEmpty()) return \"Start\";\n    return checkpoints.pop(); // Removes the checkpoint used by this respawn.\n}",
+    "use": "Stack<string> checkpoints;\ncheckpoints.push(\"Village\"); checkpoints.push(\"Castle\");\ncout << respawn(checkpoints) << '\\n';\ncout << respawn(checkpoints) << '\\n';\ncout << respawn(checkpoints) << '\\n';",
+    "expected": "Castle\nVillage\nStart",
+    "expectedOutput": "Castle\nVillage\nStart\n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Structure",
+        "Last added is first removed."
+      ],
+      [
+        "main()",
+        "Creates sample game data and calls the required operation."
+      ]
+    ],
+    "change": "Rename the game objects, change the sample values, and adapt the requested operation.",
+    "watch": "Use pop() here because this question consumes the checkpoint.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Game-themed application of course structures.",
+    "facets": {
+      "structure": "stack",
+      "storage": "linked",
+      "type": "template",
+      "role": "example"
+    },
+    "typeLabel": "template",
+    "checks": "Stack<string> s; assert(respawn(s)==\"Start\"); s.push(\"Cave\"); assert(respawn(s)==\"Cave\" && s.isEmpty());"
+  },
+  {
+    "id": "game-loot",
+    "group": "game-examples",
+    "title": "Stack \u00b7 total loot value",
+    "shortTitle": "Stack \u00b7 total loot value",
+    "when": "Total stacked loot values without changing their order.",
+    "question": [
+      "Total stacked loot values without changing their order.",
+      "Use one temporary stack and only public operations. Return zero for empty loot."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\nclass StackException : public exception {\n    string message;\npublic:\n    StackException(string msg) : message(msg) {}\n    const char* what() const noexcept override { return message.c_str(); }\n};\ntemplate <class T> class Stack {\n    struct stackNode { T theItem; stackNode* next; };\n    typedef stackNode StackNode;\n    StackNode* topOfStack;\n    int count;\npublic:\n    Stack() : topOfStack(nullptr), count(0) {}\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n    ~Stack() { while (!isEmpty()) pop(); }\n    bool isEmpty() const { return count == 0; }\n    int size() const { return count; }\n    void push(T item) {\n        // Link the new node to the OLD top before replacing topOfStack.\n        StackNode* node = new StackNode{item, topOfStack};\n        topOfStack = node;\n        ++count;\n    }\n    T top() const {\n        if (isEmpty()) throw StackException(\"Empty stack\");\n        return topOfStack->theItem; // Read without removing.\n    }\n    T pop() {\n        if (isEmpty()) throw StackException(\"Empty stack\");\n        StackNode* old = topOfStack;\n        T value = old->theItem; // Save before deleting the node.\n        topOfStack = old->next;\n        delete old;\n        --count;\n        return value;\n    }\n};\n\nint totalLoot(Stack<int>& loot) {\n    int total = 0;\n    Stack<int> temporary;\n    while (!loot.isEmpty()) {\n        int value = loot.pop();\n        total += value;\n        temporary.push(value);\n    }\n    // Second reversal restores the original loot stack.\n    while (!temporary.isEmpty()) loot.push(temporary.pop());\n    return total;\n}",
+    "use": "Stack<int> loot;\nloot.push(10); loot.push(25); loot.push(5);\ncout << totalLoot(loot) << ' ' << loot.top() << '\\n';",
+    "expected": "40 5",
+    "expectedOutput": "40 5\n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Structure",
+        "Last added is first removed."
+      ],
+      [
+        "main()",
+        "Creates sample game data and calls the required operation."
+      ]
+    ],
+    "change": "Rename the game objects, change the sample values, and adapt the requested operation.",
+    "watch": "Do not return until every item has been restored.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Game-themed application of course structures.",
+    "facets": {
+      "structure": "stack",
+      "storage": "linked",
+      "type": "template",
+      "role": "example"
+    },
+    "typeLabel": "template",
+    "checks": "Stack<int> s; assert(totalLoot(s)==0); s.push(2); s.push(3); assert(totalLoot(s)==5); assert(s.pop()==3 && s.pop()==2);"
+  },
+  {
+    "id": "game-combo",
+    "group": "game-examples",
+    "title": "Stack \u00b7 resolve latest action first",
+    "shortTitle": "Stack \u00b7 resolve latest action first",
+    "when": "Store action records and resolve the newest first.",
+    "question": [
+      "Store action records and resolve the newest first.",
+      "Action contains a name and damage. resolve(actions) pops all actions and returns total damage."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\nclass StackException : public exception {\n    string message;\npublic:\n    StackException(string msg) : message(msg) {}\n    const char* what() const noexcept override { return message.c_str(); }\n};\ntemplate <class T> class Stack {\n    struct stackNode { T theItem; stackNode* next; };\n    typedef stackNode StackNode;\n    StackNode* topOfStack;\n    int count;\npublic:\n    Stack() : topOfStack(nullptr), count(0) {}\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n    ~Stack() { while (!isEmpty()) pop(); }\n    bool isEmpty() const { return count == 0; }\n    int size() const { return count; }\n    void push(T item) {\n        // Link the new node to the OLD top before replacing topOfStack.\n        StackNode* node = new StackNode{item, topOfStack};\n        topOfStack = node;\n        ++count;\n    }\n    T top() const {\n        if (isEmpty()) throw StackException(\"Empty stack\");\n        return topOfStack->theItem; // Read without removing.\n    }\n    T pop() {\n        if (isEmpty()) throw StackException(\"Empty stack\");\n        StackNode* old = topOfStack;\n        T value = old->theItem; // Save before deleting the node.\n        topOfStack = old->next;\n        delete old;\n        --count;\n        return value;\n    }\n};\n\nstruct Action { string name; int damage; };\nint resolve(Stack<Action>& actions) {\n    int total = 0;\n    while (!actions.isEmpty()) {\n        Action action = actions.pop(); // Copy the record before its node is deleted.\n        cout << action.name << '\\n';\n        total += action.damage;\n    }\n    return total;\n}",
+    "use": "Stack<Action> actions;\nactions.push({\"Slash\", 5}); actions.push({\"Fire\", 8});\nint damage = resolve(actions);\ncout << damage << '\\n';",
+    "expected": "Fire\nSlash\n13",
+    "expectedOutput": "Fire\nSlash\n13\n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Structure",
+        "Last added is first removed."
+      ],
+      [
+        "main()",
+        "Creates sample game data and calls the required operation."
+      ]
+    ],
+    "change": "Rename the game objects, change the sample values, and adapt the requested operation.",
+    "watch": "This function consumes the stack; the newest action runs first.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Game-themed application of course structures.",
+    "facets": {
+      "structure": "stack",
+      "storage": "linked",
+      "type": "template",
+      "role": "example"
+    },
+    "typeLabel": "template",
+    "checks": "Stack<Action> s; assert(resolve(s)==0); s.push({\"Hit\",4}); ostringstream output; streambuf* old=cout.rdbuf(output.rdbuf()); int total=resolve(s); cout.rdbuf(old); assert(total==4 && s.isEmpty() && output.str()==\"Hit\\n\");"
+  },
+  {
+    "id": "game-turns",
+    "group": "game-examples",
+    "title": "Queue \u00b7 take turns",
+    "shortTitle": "Queue \u00b7 take turns",
+    "when": "Move the current player to the back after their turn.",
+    "question": [
+      "Move the current player to the back after their turn.",
+      "nextTurn(turns) returns the front name and enqueues it again. Return \"None\" if empty."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\ntemplate <class T> class Queue {\n    struct Node { T theItem; Node* next; };\n    Node* head;\n    Node* tail;\n    int count;\npublic:\n    Queue() : head(nullptr), tail(nullptr), count(0) {}\n    Queue(const Queue&) = delete;\n    Queue& operator=(const Queue&) = delete;\n    ~Queue() { while (!isEmpty()) dequeue(); }\n    bool isEmpty() const { return head == nullptr; }\n    int size() const { return count; }\n    void enqueue(T value) {\n        Node* node = new Node{value, nullptr};\n        if (isEmpty()) head = node; // First node becomes BOTH ends.\n        else tail->next = node;\n        tail = node;\n        ++count;\n    }\n    T front() const {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        return head->theItem;\n    }\n    T dequeue() {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        Node* old = head;\n        T value = old->theItem;\n        head = head->next;\n        if (head == nullptr) tail = nullptr; // Last node was removed.\n        delete old;\n        --count;\n        return value;\n    }\n};\n\nstring nextTurn(Queue<string>& turns) {\n    if (turns.isEmpty()) return \"None\";\n    string player = turns.dequeue();\n    turns.enqueue(player); // Player waits at the back for the next round.\n    return player;\n}",
+    "use": "Queue<string> turns;\nturns.enqueue(\"Ari\"); turns.enqueue(\"Mira\");\ncout << nextTurn(turns) << '\\n';\ncout << nextTurn(turns) << '\\n';\ncout << nextTurn(turns) << '\\n';",
+    "expected": "Ari\nMira\nAri",
+    "expectedOutput": "Ari\nMira\nAri\n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Structure",
+        "First added is first removed."
+      ],
+      [
+        "main()",
+        "Creates sample game data and calls the required operation."
+      ]
+    ],
+    "change": "Rename the game objects, change the sample values, and adapt the requested operation.",
+    "watch": "One turn rotates one player; it does not empty the queue.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Game-themed application of course structures.",
+    "facets": {
+      "structure": "queue",
+      "storage": "linked",
+      "type": "template",
+      "role": "example"
+    },
+    "typeLabel": "template",
+    "checks": "Queue<string> q; assert(nextTurn(q)==\"None\"); q.enqueue(\"A\"); assert(nextTurn(q)==\"A\" && q.size()==1); q.enqueue(\"B\"); assert(nextTurn(q)==\"A\" && nextTurn(q)==\"B\");"
+  },
+  {
+    "id": "game-spawn",
+    "group": "game-examples",
+    "title": "Queue \u00b7 spawn enemies in order",
+    "shortTitle": "Queue \u00b7 spawn enemies in order",
+    "when": "Spawn enemies in the order they were scheduled.",
+    "question": [
+      "Spawn enemies in the order they were scheduled.",
+      "Spawn contains type and health. spawnNext(queue) removes and prints one record; return false if empty, true otherwise."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\ntemplate <class T> class Queue {\n    struct Node { T theItem; Node* next; };\n    Node* head;\n    Node* tail;\n    int count;\npublic:\n    Queue() : head(nullptr), tail(nullptr), count(0) {}\n    Queue(const Queue&) = delete;\n    Queue& operator=(const Queue&) = delete;\n    ~Queue() { while (!isEmpty()) dequeue(); }\n    bool isEmpty() const { return head == nullptr; }\n    int size() const { return count; }\n    void enqueue(T value) {\n        Node* node = new Node{value, nullptr};\n        if (isEmpty()) head = node; // First node becomes BOTH ends.\n        else tail->next = node;\n        tail = node;\n        ++count;\n    }\n    T front() const {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        return head->theItem;\n    }\n    T dequeue() {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        Node* old = head;\n        T value = old->theItem;\n        head = head->next;\n        if (head == nullptr) tail = nullptr; // Last node was removed.\n        delete old;\n        --count;\n        return value;\n    }\n};\n\nstruct Spawn { string type; int health; };\nbool spawnNext(Queue<Spawn>& pending) {\n    if (pending.isEmpty()) return false;\n    Spawn enemy = pending.dequeue(); // Oldest scheduled enemy is first.\n    cout << enemy.type << ' ' << enemy.health << '\\n';\n    return true;\n}",
+    "use": "Queue<Spawn> pending;\npending.enqueue({\"Goblin\", 20}); pending.enqueue({\"Dragon\", 100});\nwhile (spawnNext(pending)) {}",
+    "expected": "Goblin 20\nDragon 100",
+    "expectedOutput": "Goblin 20\nDragon 100\n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Structure",
+        "First added is first removed."
+      ],
+      [
+        "main()",
+        "Creates sample game data and calls the required operation."
+      ]
+    ],
+    "change": "Rename the game objects, change the sample values, and adapt the requested operation.",
+    "watch": "Check empty before dequeue().",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Game-themed application of course structures.",
+    "facets": {
+      "structure": "queue",
+      "storage": "linked",
+      "type": "template",
+      "role": "example"
+    },
+    "typeLabel": "template",
+    "checks": "Queue<Spawn> q; assert(!spawnNext(q)); q.enqueue({\"Slime\",5}); ostringstream output; streambuf* old=cout.rdbuf(output.rdbuf()); bool ok=spawnNext(q); cout.rdbuf(old); assert(ok && q.isEmpty() && output.str()==\"Slime 5\\n\");"
+  },
+  {
+    "id": "game-matchmaking",
+    "group": "game-examples",
+    "title": "Queue \u00b7 pair waiting players",
+    "shortTitle": "Queue \u00b7 pair waiting players",
+    "when": "Take the first two waiting players to create a match.",
+    "question": [
+      "Take the first two waiting players to create a match.",
+      "makeMatch(queue) prints their names and returns true. If fewer than two wait, return false without removing anyone."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\ntemplate <class T> class Queue {\n    struct Node { T theItem; Node* next; };\n    Node* head;\n    Node* tail;\n    int count;\npublic:\n    Queue() : head(nullptr), tail(nullptr), count(0) {}\n    Queue(const Queue&) = delete;\n    Queue& operator=(const Queue&) = delete;\n    ~Queue() { while (!isEmpty()) dequeue(); }\n    bool isEmpty() const { return head == nullptr; }\n    int size() const { return count; }\n    void enqueue(T value) {\n        Node* node = new Node{value, nullptr};\n        if (isEmpty()) head = node; // First node becomes BOTH ends.\n        else tail->next = node;\n        tail = node;\n        ++count;\n    }\n    T front() const {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        return head->theItem;\n    }\n    T dequeue() {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        Node* old = head;\n        T value = old->theItem;\n        head = head->next;\n        if (head == nullptr) tail = nullptr; // Last node was removed.\n        delete old;\n        --count;\n        return value;\n    }\n};\n\nbool makeMatch(Queue<string>& waiting) {\n    if (waiting.size() < 2) return false; // Check BEFORE removing either player.\n    string first = waiting.dequeue();\n    string second = waiting.dequeue();\n    cout << first << \" vs \" << second << '\\n';\n    return true;\n}",
+    "use": "Queue<string> waiting;\nwaiting.enqueue(\"Ari\"); waiting.enqueue(\"Mira\"); waiting.enqueue(\"Kai\");\nmakeMatch(waiting);\ncout << waiting.front() << '\\n';",
+    "expected": "Ari vs Mira\nKai",
+    "expectedOutput": "Ari vs Mira\nKai\n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Structure",
+        "First added is first removed."
+      ],
+      [
+        "main()",
+        "Creates sample game data and calls the required operation."
+      ]
+    ],
+    "change": "Rename the game objects, change the sample values, and adapt the requested operation.",
+    "watch": "Checking size first prevents losing a lone waiting player.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Game-themed application of course structures.",
+    "facets": {
+      "structure": "queue",
+      "storage": "linked",
+      "type": "template",
+      "role": "example"
+    },
+    "typeLabel": "template",
+    "checks": "Queue<string> q; assert(!makeMatch(q)); q.enqueue(\"A\"); assert(!makeMatch(q) && q.size()==1); q.enqueue(\"B\"); ostringstream output; streambuf* old=cout.rdbuf(output.rdbuf()); bool ok=makeMatch(q); cout.rdbuf(old); assert(ok && q.isEmpty() && output.str()==\"A vs B\\n\");"
+  },
+  {
+    "id": "game-inventory-find",
+    "group": "game-examples",
+    "title": "List \u00b7 find inventory quantity",
+    "shortTitle": "List \u00b7 find inventory quantity",
+    "when": "Find how many of an item the inventory contains.",
+    "question": [
+      "Find how many of an item the inventory contains.",
+      "Assume item names are unique. Add quantityOf(name) const; return zero when the item is missing."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\n// Each node stores an item name and quantity.\nstruct ItemNode {\n    string name;\n    int quantity;\n    ItemNode* next;\n    ItemNode(string n, int q, ItemNode* link = nullptr)\n        : name(n), quantity(q), next(link) {}\n};\nclass Inventory {\n    ItemNode* head;\npublic:\n    Inventory() : head(nullptr) {}\n    Inventory(const Inventory&) = delete;\n    Inventory& operator=(const Inventory&) = delete;\n    ~Inventory() {\n        while (head != nullptr) {\n            ItemNode* old = head;\n            head = head->next; // Save the rest of the chain before deletion.\n            delete old;\n        }\n    }\n    void add(string name, int quantity) {\n        head = new ItemNode(name, quantity, head); // Insert at the front.\n    }\n    int quantityOf(string name) const {\n        for (ItemNode* p = head; p != nullptr; p = p->next)\n            if (p->name == name) return p->quantity;\n        return 0;\n    }\n};",
+    "use": "Inventory bag;\nbag.add(\"Potion\", 3); bag.add(\"Key\", 1);\ncout << bag.quantityOf(\"Potion\") << ' ' << bag.quantityOf(\"Arrow\") << '\\n';",
+    "expected": "3 0",
+    "expectedOutput": "3 0\n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Structure",
+        "Nodes store data and link to the next node."
+      ],
+      [
+        "main()",
+        "Creates sample game data and calls the required operation."
+      ]
+    ],
+    "change": "Rename the game objects, change the sample values, and adapt the requested operation.",
+    "watch": "Traverse with p, leaving head unchanged.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Game-themed application of course structures.",
+    "facets": {
+      "structure": "list",
+      "storage": "linked",
+      "type": "int",
+      "role": "example"
+    },
+    "typeLabel": "non-template",
+    "checks": "Inventory b; assert(b.quantityOf(\"Key\")==0); b.add(\"Key\",2); b.add(\"Potion\",3); assert(b.quantityOf(\"Key\")==2 && b.quantityOf(\"Potion\")==3);"
+  },
+  {
+    "id": "game-inventory-use",
+    "group": "game-examples",
+    "title": "List \u00b7 use one inventory item",
+    "shortTitle": "List \u00b7 use one inventory item",
+    "when": "Use one item if its quantity is positive.",
+    "question": [
+      "Use one item if its quantity is positive.",
+      "Assume unique item names. useOne(name) reduces its quantity by one and returns true. Return false if missing or already zero; leave zero-quantity nodes in the list."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\n// Each node stores an item name and quantity.\nstruct ItemNode {\n    string name;\n    int quantity;\n    ItemNode* next;\n    ItemNode(string n, int q, ItemNode* link = nullptr)\n        : name(n), quantity(q), next(link) {}\n};\nclass Inventory {\n    ItemNode* head;\npublic:\n    Inventory() : head(nullptr) {}\n    Inventory(const Inventory&) = delete;\n    Inventory& operator=(const Inventory&) = delete;\n    ~Inventory() {\n        while (head != nullptr) {\n            ItemNode* old = head;\n            head = head->next; // Save the rest of the chain before deletion.\n            delete old;\n        }\n    }\n    void add(string name, int quantity) {\n        head = new ItemNode(name, quantity, head); // Insert at the front.\n    }\n    bool useOne(string name) {\n        for (ItemNode* p = head; p != nullptr; p = p->next) {\n            if (p->name == name && p->quantity > 0) {\n                --p->quantity; // Change the data; keep the links unchanged.\n                return true;\n            }\n        }\n        return false;\n    }\n};",
+    "use": "Inventory bag;\nbag.add(\"Potion\", 1);\ncout << bag.useOne(\"Potion\") << ' ' << bag.useOne(\"Potion\") << '\\n';",
+    "expected": "1 0",
+    "expectedOutput": "1 0\n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Structure",
+        "Nodes store data and link to the next node."
+      ],
+      [
+        "main()",
+        "Creates sample game data and calls the required operation."
+      ]
+    ],
+    "change": "Rename the game objects, change the sample values, and adapt the requested operation.",
+    "watch": "A quantity of zero is a valid stored item; do not decrement below zero.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Game-themed application of course structures.",
+    "facets": {
+      "structure": "list",
+      "storage": "linked",
+      "type": "int",
+      "role": "example"
+    },
+    "typeLabel": "non-template",
+    "checks": "Inventory b; assert(!b.useOne(\"Key\")); b.add(\"Key\",0); assert(!b.useOne(\"Key\")); b.add(\"Potion\",2); assert(b.useOne(\"Potion\")); assert(b.useOne(\"Potion\")); assert(!b.useOne(\"Potion\"));"
+  },
+  {
+    "id": "game-inventory-remove",
+    "group": "game-examples",
+    "title": "List \u00b7 remove an inventory item",
+    "shortTitle": "List \u00b7 remove an inventory item",
+    "when": "Remove the first inventory node with a matching name.",
+    "question": [
+      "Remove the first inventory node with a matching name.",
+      "remove(name) must handle the head, middle, last node and missing items. Return true if removed, false otherwise."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\n// Each node stores an item name and quantity.\nstruct ItemNode {\n    string name;\n    int quantity;\n    ItemNode* next;\n    ItemNode(string n, int q, ItemNode* link = nullptr)\n        : name(n), quantity(q), next(link) {}\n};\nclass Inventory {\n    ItemNode* head;\npublic:\n    Inventory() : head(nullptr) {}\n    Inventory(const Inventory&) = delete;\n    Inventory& operator=(const Inventory&) = delete;\n    ~Inventory() {\n        while (head != nullptr) {\n            ItemNode* old = head;\n            head = head->next; // Save the rest of the chain before deletion.\n            delete old;\n        }\n    }\n    void add(string name, int quantity) {\n        head = new ItemNode(name, quantity, head); // Insert at the front.\n    }\n    bool remove(string name) {\n        ItemNode* previous = nullptr;\n        ItemNode* current = head;\n        while (current != nullptr && current->name != name) {\n            previous = current;\n            current = current->next;\n        }\n        if (current == nullptr) return false;\n        if (previous == nullptr) head = current->next; // Removing the first node.\n        else previous->next = current->next; // Skip the removed node.\n        delete current;\n        return true;\n    }\n    void print() const {\n        for (ItemNode* p = head; p != nullptr; p = p->next) cout << p->name << ' ';\n        cout << '\\n';\n    }\n};",
+    "use": "Inventory bag;\nbag.add(\"Key\", 1); bag.add(\"Potion\", 3); bag.add(\"Sword\", 1);\nbag.remove(\"Potion\");\nbag.print();",
+    "expected": "Sword Key",
+    "expectedOutput": "Sword Key \n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Structure",
+        "Nodes store data and link to the next node."
+      ],
+      [
+        "main()",
+        "Creates sample game data and calls the required operation."
+      ]
+    ],
+    "change": "Rename the game objects, change the sample values, and adapt the requested operation.",
+    "watch": "Relink the chain before deleting; never read current after delete.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Game-themed application of course structures.",
+    "facets": {
+      "structure": "list",
+      "storage": "linked",
+      "type": "int",
+      "role": "example"
+    },
+    "typeLabel": "non-template",
+    "checks": "Inventory b; assert(!b.remove(\"X\")); b.add(\"A\",1); b.add(\"B\",1); b.add(\"C\",1); assert(b.remove(\"B\")); assert(b.remove(\"C\")); assert(b.remove(\"A\")); assert(!b.remove(\"A\")); b.add(\"D\",1); assert(b.remove(\"D\"));"
+  }
+]
