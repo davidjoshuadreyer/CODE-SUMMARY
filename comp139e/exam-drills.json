@@ -1,0 +1,1294 @@
+[
+  {
+    "id": "exam-pay",
+    "group": "exam-drills",
+    "title": "01 \u00b7 Employee pay",
+    "shortTitle": "01 \u00b7 Employee pay",
+    "when": "Create an abstract Employee with a shared name and two derived classes.",
+    "question": [
+      "Create an abstract Employee with a shared name and two derived classes.",
+      "Store string name as protected, initialize it in the base constructor, provide getName(), pure virtual double pay() const and a virtual destructor.",
+      "HourlyWorker stores hours, rate and returns hours * rate. FixedWorker stores salary and returns salary.",
+      "In main(), create HourlyWorker with values 6, 20 and FixedWorker with values 150; call pay() through an array of Employee pointers."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\n// ABSTRACT BASE: keep the shared name here; derived classes supply the calculation.\nclass Employee {\nprotected:\n    string name;\npublic:\n    Employee(string label) : name(label) {}\n    string getName() const { return name; }\n    virtual double pay() const = 0;\n    virtual ~Employee() = default; // Safe cleanup through a base pointer.\n};\n// DERIVED: HourlyWorker supplies its own pay calculation.\nclass HourlyWorker : public Employee {\nprivate:\n    double hours, rate;\npublic:\n    HourlyWorker(string label, double hoursValue, double rateValue) : Employee(label), hours(hoursValue), rate(rateValue) {}\n    double pay() const override { return hours * rate; }\n};\n// DERIVED: FixedWorker supplies its own pay calculation.\nclass FixedWorker : public Employee {\nprivate:\n    double salary;\npublic:\n    FixedWorker(string label, double salaryValue) : Employee(label), salary(salaryValue) {}\n    double pay() const override { return salary; }\n};\n",
+    "use": "HourlyWorker first(\"A\", 6, 20);\nFixedWorker second(\"B\", 150);\n// Base pointers preserve polymorphism; these stack objects need no delete.\nEmployee* objects[] = {&first, &second};\nfor (Employee* object : objects)\n    cout << object->getName() << \": \" << object->pay() << '\\n';",
+    "expected": "A: 120\nB: 150",
+    "expectedOutput": "A: 120\nB: 150\n",
+    "parts": [
+      [
+        "Base",
+        "Owns the common name and declares the required virtual calculation."
+      ],
+      [
+        "Derived classes",
+        "Each constructor initializes the base first, then its own numeric fields."
+      ],
+      [
+        "main",
+        "Calls the same function through base pointers; the actual object selects the override."
+      ]
+    ],
+    "change": "Use this when the required operations match the question. Rename the classes and fields, then change the sample data and required formula. Keep the ownership and empty-case checks.",
+    "watch": "Match const and the return type exactly. Do not try to instantiate the abstract base.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related course lab",
+    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "manualComments": true,
+    "facets": {
+      "structure": "inheritance",
+      "storage": "none",
+      "type": "int",
+      "role": "example"
+    },
+    "checks": "",
+    "typeLabel": "non-template"
+  },
+  {
+    "id": "exam-perimeter",
+    "group": "exam-drills",
+    "title": "02 \u00b7 Shape perimeter",
+    "shortTitle": "02 \u00b7 Shape perimeter",
+    "when": "Create an abstract Shape with a shared name and two derived classes.",
+    "question": [
+      "Create an abstract Shape with a shared name and two derived classes.",
+      "Store string name as protected, initialize it in the base constructor, provide getName(), pure virtual double perimeter() const and a virtual destructor.",
+      "Rectangle stores width, height and returns 2 * (width + height). Triangle stores a, b, c and returns a + b + c.",
+      "In main(), create Rectangle with values 3, 4 and Triangle with values 3, 4, 5; call perimeter() through an array of Shape pointers."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\n// ABSTRACT BASE: keep the shared name here; derived classes supply the calculation.\nclass Shape {\nprotected:\n    string name;\npublic:\n    Shape(string label) : name(label) {}\n    string getName() const { return name; }\n    virtual double perimeter() const = 0;\n    virtual ~Shape() = default; // Safe cleanup through a base pointer.\n};\n// DERIVED: Rectangle supplies its own perimeter calculation.\nclass Rectangle : public Shape {\nprivate:\n    double width, height;\npublic:\n    Rectangle(string label, double widthValue, double heightValue) : Shape(label), width(widthValue), height(heightValue) {}\n    double perimeter() const override { return 2 * (width + height); }\n};\n// DERIVED: Triangle supplies its own perimeter calculation.\nclass Triangle : public Shape {\nprivate:\n    double a, b, c;\npublic:\n    Triangle(string label, double aValue, double bValue, double cValue) : Shape(label), a(aValue), b(bValue), c(cValue) {}\n    double perimeter() const override { return a + b + c; }\n};\n",
+    "use": "Rectangle first(\"A\", 3, 4);\nTriangle second(\"B\", 3, 4, 5);\n// Base pointers preserve polymorphism; these stack objects need no delete.\nShape* objects[] = {&first, &second};\nfor (Shape* object : objects)\n    cout << object->getName() << \": \" << object->perimeter() << '\\n';",
+    "expected": "A: 14\nB: 12",
+    "expectedOutput": "A: 14\nB: 12\n",
+    "parts": [
+      [
+        "Base",
+        "Owns the common name and declares the required virtual calculation."
+      ],
+      [
+        "Derived classes",
+        "Each constructor initializes the base first, then its own numeric fields."
+      ],
+      [
+        "main",
+        "Calls the same function through base pointers; the actual object selects the override."
+      ]
+    ],
+    "change": "Use this when the required operations match the question. Rename the classes and fields, then change the sample data and required formula. Keep the ownership and empty-case checks.",
+    "watch": "Match const and the return type exactly. Do not try to instantiate the abstract base.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related course lab",
+    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "manualComments": true,
+    "facets": {
+      "structure": "inheritance",
+      "storage": "none",
+      "type": "int",
+      "role": "example"
+    },
+    "checks": "",
+    "typeLabel": "non-template"
+  },
+  {
+    "id": "exam-delivery",
+    "group": "exam-drills",
+    "title": "03 \u00b7 Delivery fee",
+    "shortTitle": "03 \u00b7 Delivery fee",
+    "when": "Create an abstract Delivery with a shared name and two derived classes.",
+    "question": [
+      "Create an abstract Delivery with a shared name and two derived classes.",
+      "Store string name as protected, initialize it in the base constructor, provide getName(), pure virtual double fee() const and a virtual destructor.",
+      "LocalDelivery stores distance and returns 5 + 2 * distance. ParcelDelivery stores weight and returns 4 * weight.",
+      "In main(), create LocalDelivery with values 3 and ParcelDelivery with values 2; call fee() through an array of Delivery pointers."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\n// ABSTRACT BASE: keep the shared name here; derived classes supply the calculation.\nclass Delivery {\nprotected:\n    string name;\npublic:\n    Delivery(string label) : name(label) {}\n    string getName() const { return name; }\n    virtual double fee() const = 0;\n    virtual ~Delivery() = default; // Safe cleanup through a base pointer.\n};\n// DERIVED: LocalDelivery supplies its own fee calculation.\nclass LocalDelivery : public Delivery {\nprivate:\n    double distance;\npublic:\n    LocalDelivery(string label, double distanceValue) : Delivery(label), distance(distanceValue) {}\n    double fee() const override { return 5 + 2 * distance; }\n};\n// DERIVED: ParcelDelivery supplies its own fee calculation.\nclass ParcelDelivery : public Delivery {\nprivate:\n    double weight;\npublic:\n    ParcelDelivery(string label, double weightValue) : Delivery(label), weight(weightValue) {}\n    double fee() const override { return 4 * weight; }\n};\n",
+    "use": "LocalDelivery first(\"A\", 3);\nParcelDelivery second(\"B\", 2);\n// Base pointers preserve polymorphism; these stack objects need no delete.\nDelivery* objects[] = {&first, &second};\nfor (Delivery* object : objects)\n    cout << object->getName() << \": \" << object->fee() << '\\n';",
+    "expected": "A: 11\nB: 8",
+    "expectedOutput": "A: 11\nB: 8\n",
+    "parts": [
+      [
+        "Base",
+        "Owns the common name and declares the required virtual calculation."
+      ],
+      [
+        "Derived classes",
+        "Each constructor initializes the base first, then its own numeric fields."
+      ],
+      [
+        "main",
+        "Calls the same function through base pointers; the actual object selects the override."
+      ]
+    ],
+    "change": "Use this when the required operations match the question. Rename the classes and fields, then change the sample data and required formula. Keep the ownership and empty-case checks.",
+    "watch": "Match const and the return type exactly. Do not try to instantiate the abstract base.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related course lab",
+    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "manualComments": true,
+    "facets": {
+      "structure": "inheritance",
+      "storage": "none",
+      "type": "int",
+      "role": "example"
+    },
+    "checks": "",
+    "typeLabel": "non-template"
+  },
+  {
+    "id": "exam-tickets",
+    "group": "exam-drills",
+    "title": "04 \u00b7 Ticket cost",
+    "shortTitle": "04 \u00b7 Ticket cost",
+    "when": "Create an abstract Ticket with a shared name and two derived classes.",
+    "question": [
+      "Create an abstract Ticket with a shared name and two derived classes.",
+      "Store string name as protected, initialize it in the base constructor, provide getName(), pure virtual double cost() const and a virtual destructor.",
+      "AdultTicket stores price and returns price. ChildTicket stores price and returns price / 2.",
+      "In main(), create AdultTicket with values 20 and ChildTicket with values 20; call cost() through an array of Ticket pointers."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\n// ABSTRACT BASE: keep the shared name here; derived classes supply the calculation.\nclass Ticket {\nprotected:\n    string name;\npublic:\n    Ticket(string label) : name(label) {}\n    string getName() const { return name; }\n    virtual double cost() const = 0;\n    virtual ~Ticket() = default; // Safe cleanup through a base pointer.\n};\n// DERIVED: AdultTicket supplies its own cost calculation.\nclass AdultTicket : public Ticket {\nprivate:\n    double price;\npublic:\n    AdultTicket(string label, double priceValue) : Ticket(label), price(priceValue) {}\n    double cost() const override { return price; }\n};\n// DERIVED: ChildTicket supplies its own cost calculation.\nclass ChildTicket : public Ticket {\nprivate:\n    double price;\npublic:\n    ChildTicket(string label, double priceValue) : Ticket(label), price(priceValue) {}\n    double cost() const override { return price / 2; }\n};\n",
+    "use": "AdultTicket first(\"A\", 20);\nChildTicket second(\"B\", 20);\n// Base pointers preserve polymorphism; these stack objects need no delete.\nTicket* objects[] = {&first, &second};\nfor (Ticket* object : objects)\n    cout << object->getName() << \": \" << object->cost() << '\\n';",
+    "expected": "A: 20\nB: 10",
+    "expectedOutput": "A: 20\nB: 10\n",
+    "parts": [
+      [
+        "Base",
+        "Owns the common name and declares the required virtual calculation."
+      ],
+      [
+        "Derived classes",
+        "Each constructor initializes the base first, then its own numeric fields."
+      ],
+      [
+        "main",
+        "Calls the same function through base pointers; the actual object selects the override."
+      ]
+    ],
+    "change": "Use this when the required operations match the question. Rename the classes and fields, then change the sample data and required formula. Keep the ownership and empty-case checks.",
+    "watch": "Match const and the return type exactly. Do not try to instantiate the abstract base.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related course lab",
+    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "manualComments": true,
+    "facets": {
+      "structure": "inheritance",
+      "storage": "none",
+      "type": "int",
+      "role": "example"
+    },
+    "checks": "",
+    "typeLabel": "non-template"
+  },
+  {
+    "id": "exam-rental",
+    "group": "exam-drills",
+    "title": "05 \u00b7 Rental cost",
+    "shortTitle": "05 \u00b7 Rental cost",
+    "when": "Create an abstract Rental with a shared name and two derived classes.",
+    "question": [
+      "Create an abstract Rental with a shared name and two derived classes.",
+      "Store string name as protected, initialize it in the base constructor, provide getName(), pure virtual double cost() const and a virtual destructor.",
+      "BikeRental stores hours and returns hours * 5. CarRental stores days and returns days * 40.",
+      "In main(), create BikeRental with values 3 and CarRental with values 2; call cost() through an array of Rental pointers."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\n// ABSTRACT BASE: keep the shared name here; derived classes supply the calculation.\nclass Rental {\nprotected:\n    string name;\npublic:\n    Rental(string label) : name(label) {}\n    string getName() const { return name; }\n    virtual double cost() const = 0;\n    virtual ~Rental() = default; // Safe cleanup through a base pointer.\n};\n// DERIVED: BikeRental supplies its own cost calculation.\nclass BikeRental : public Rental {\nprivate:\n    double hours;\npublic:\n    BikeRental(string label, double hoursValue) : Rental(label), hours(hoursValue) {}\n    double cost() const override { return hours * 5; }\n};\n// DERIVED: CarRental supplies its own cost calculation.\nclass CarRental : public Rental {\nprivate:\n    double days;\npublic:\n    CarRental(string label, double daysValue) : Rental(label), days(daysValue) {}\n    double cost() const override { return days * 40; }\n};\n",
+    "use": "BikeRental first(\"A\", 3);\nCarRental second(\"B\", 2);\n// Base pointers preserve polymorphism; these stack objects need no delete.\nRental* objects[] = {&first, &second};\nfor (Rental* object : objects)\n    cout << object->getName() << \": \" << object->cost() << '\\n';",
+    "expected": "A: 15\nB: 80",
+    "expectedOutput": "A: 15\nB: 80\n",
+    "parts": [
+      [
+        "Base",
+        "Owns the common name and declares the required virtual calculation."
+      ],
+      [
+        "Derived classes",
+        "Each constructor initializes the base first, then its own numeric fields."
+      ],
+      [
+        "main",
+        "Calls the same function through base pointers; the actual object selects the override."
+      ]
+    ],
+    "change": "Use this when the required operations match the question. Rename the classes and fields, then change the sample data and required formula. Keep the ownership and empty-case checks.",
+    "watch": "Match const and the return type exactly. Do not try to instantiate the abstract base.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related course lab",
+    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "manualComments": true,
+    "facets": {
+      "structure": "inheritance",
+      "storage": "none",
+      "type": "int",
+      "role": "example"
+    },
+    "checks": "",
+    "typeLabel": "non-template"
+  },
+  {
+    "id": "exam-sensor",
+    "group": "exam-drills",
+    "title": "06 \u00b7 Sensor conversion",
+    "shortTitle": "06 \u00b7 Sensor conversion",
+    "when": "Create an abstract Sensor with a shared name and two derived classes.",
+    "question": [
+      "Create an abstract Sensor with a shared name and two derived classes.",
+      "Store string name as protected, initialize it in the base constructor, provide getName(), pure virtual double read() const and a virtual destructor.",
+      "OffsetSensor stores raw, offset and returns raw + offset. ScaleSensor stores raw, factor and returns raw * factor.",
+      "In main(), create OffsetSensor with values 10, 2 and ScaleSensor with values 10, 3; call read() through an array of Sensor pointers."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\n// ABSTRACT BASE: keep the shared name here; derived classes supply the calculation.\nclass Sensor {\nprotected:\n    string name;\npublic:\n    Sensor(string label) : name(label) {}\n    string getName() const { return name; }\n    virtual double read() const = 0;\n    virtual ~Sensor() = default; // Safe cleanup through a base pointer.\n};\n// DERIVED: OffsetSensor supplies its own read calculation.\nclass OffsetSensor : public Sensor {\nprivate:\n    double raw, offset;\npublic:\n    OffsetSensor(string label, double rawValue, double offsetValue) : Sensor(label), raw(rawValue), offset(offsetValue) {}\n    double read() const override { return raw + offset; }\n};\n// DERIVED: ScaleSensor supplies its own read calculation.\nclass ScaleSensor : public Sensor {\nprivate:\n    double raw, factor;\npublic:\n    ScaleSensor(string label, double rawValue, double factorValue) : Sensor(label), raw(rawValue), factor(factorValue) {}\n    double read() const override { return raw * factor; }\n};\n",
+    "use": "OffsetSensor first(\"A\", 10, 2);\nScaleSensor second(\"B\", 10, 3);\n// Base pointers preserve polymorphism; these stack objects need no delete.\nSensor* objects[] = {&first, &second};\nfor (Sensor* object : objects)\n    cout << object->getName() << \": \" << object->read() << '\\n';",
+    "expected": "A: 12\nB: 30",
+    "expectedOutput": "A: 12\nB: 30\n",
+    "parts": [
+      [
+        "Base",
+        "Owns the common name and declares the required virtual calculation."
+      ],
+      [
+        "Derived classes",
+        "Each constructor initializes the base first, then its own numeric fields."
+      ],
+      [
+        "main",
+        "Calls the same function through base pointers; the actual object selects the override."
+      ]
+    ],
+    "change": "Use this when the required operations match the question. Rename the classes and fields, then change the sample data and required formula. Keep the ownership and empty-case checks.",
+    "watch": "Match const and the return type exactly. Do not try to instantiate the abstract base.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related course lab",
+    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "manualComments": true,
+    "facets": {
+      "structure": "inheritance",
+      "storage": "none",
+      "type": "int",
+      "role": "example"
+    },
+    "checks": "",
+    "typeLabel": "non-template"
+  },
+  {
+    "id": "exam-volume",
+    "group": "exam-drills",
+    "title": "07 \u00b7 Solid volume",
+    "shortTitle": "07 \u00b7 Solid volume",
+    "when": "Create an abstract Solid with a shared name and two derived classes.",
+    "question": [
+      "Create an abstract Solid with a shared name and two derived classes.",
+      "Store string name as protected, initialize it in the base constructor, provide getName(), pure virtual double volume() const and a virtual destructor.",
+      "Box stores length, width, height and returns length * width * height. Cube stores side and returns side * side * side.",
+      "In main(), create Box with values 2, 3, 4 and Cube with values 3; call volume() through an array of Solid pointers."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\n// ABSTRACT BASE: keep the shared name here; derived classes supply the calculation.\nclass Solid {\nprotected:\n    string name;\npublic:\n    Solid(string label) : name(label) {}\n    string getName() const { return name; }\n    virtual double volume() const = 0;\n    virtual ~Solid() = default; // Safe cleanup through a base pointer.\n};\n// DERIVED: Box supplies its own volume calculation.\nclass Box : public Solid {\nprivate:\n    double length, width, height;\npublic:\n    Box(string label, double lengthValue, double widthValue, double heightValue) : Solid(label), length(lengthValue), width(widthValue), height(heightValue) {}\n    double volume() const override { return length * width * height; }\n};\n// DERIVED: Cube supplies its own volume calculation.\nclass Cube : public Solid {\nprivate:\n    double side;\npublic:\n    Cube(string label, double sideValue) : Solid(label), side(sideValue) {}\n    double volume() const override { return side * side * side; }\n};\n",
+    "use": "Box first(\"A\", 2, 3, 4);\nCube second(\"B\", 3);\n// Base pointers preserve polymorphism; these stack objects need no delete.\nSolid* objects[] = {&first, &second};\nfor (Solid* object : objects)\n    cout << object->getName() << \": \" << object->volume() << '\\n';",
+    "expected": "A: 24\nB: 27",
+    "expectedOutput": "A: 24\nB: 27\n",
+    "parts": [
+      [
+        "Base",
+        "Owns the common name and declares the required virtual calculation."
+      ],
+      [
+        "Derived classes",
+        "Each constructor initializes the base first, then its own numeric fields."
+      ],
+      [
+        "main",
+        "Calls the same function through base pointers; the actual object selects the override."
+      ]
+    ],
+    "change": "Use this when the required operations match the question. Rename the classes and fields, then change the sample data and required formula. Keep the ownership and empty-case checks.",
+    "watch": "Match const and the return type exactly. Do not try to instantiate the abstract base.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related course lab",
+    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "manualComments": true,
+    "facets": {
+      "structure": "inheritance",
+      "storage": "none",
+      "type": "int",
+      "role": "example"
+    },
+    "checks": "",
+    "typeLabel": "non-template"
+  },
+  {
+    "id": "exam-assessment",
+    "group": "exam-drills",
+    "title": "08 \u00b7 Assessment mark",
+    "shortTitle": "08 \u00b7 Assessment mark",
+    "when": "Create an abstract Assessment with a shared name and two derived classes.",
+    "question": [
+      "Create an abstract Assessment with a shared name and two derived classes.",
+      "Store string name as protected, initialize it in the base constructor, provide getName(), pure virtual double mark() const and a virtual destructor.",
+      "Quiz stores correct, total and returns 100 * correct / total. Project stores score and returns score.",
+      "In main(), create Quiz with values 8, 10 and Project with values 75; call mark() through an array of Assessment pointers."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\n// ABSTRACT BASE: keep the shared name here; derived classes supply the calculation.\nclass Assessment {\nprotected:\n    string name;\npublic:\n    Assessment(string label) : name(label) {}\n    string getName() const { return name; }\n    virtual double mark() const = 0;\n    virtual ~Assessment() = default; // Safe cleanup through a base pointer.\n};\n// DERIVED: Quiz supplies its own mark calculation.\nclass Quiz : public Assessment {\nprivate:\n    double correct, total;\npublic:\n    Quiz(string label, double correctValue, double totalValue) : Assessment(label), correct(correctValue), total(totalValue) {}\n    double mark() const override { return 100 * correct / total; }\n};\n// DERIVED: Project supplies its own mark calculation.\nclass Project : public Assessment {\nprivate:\n    double score;\npublic:\n    Project(string label, double scoreValue) : Assessment(label), score(scoreValue) {}\n    double mark() const override { return score; }\n};\n",
+    "use": "Quiz first(\"A\", 8, 10);\nProject second(\"B\", 75);\n// Base pointers preserve polymorphism; these stack objects need no delete.\nAssessment* objects[] = {&first, &second};\nfor (Assessment* object : objects)\n    cout << object->getName() << \": \" << object->mark() << '\\n';",
+    "expected": "A: 80\nB: 75",
+    "expectedOutput": "A: 80\nB: 75\n",
+    "parts": [
+      [
+        "Base",
+        "Owns the common name and declares the required virtual calculation."
+      ],
+      [
+        "Derived classes",
+        "Each constructor initializes the base first, then its own numeric fields."
+      ],
+      [
+        "main",
+        "Calls the same function through base pointers; the actual object selects the override."
+      ]
+    ],
+    "change": "Use this when the required operations match the question. Rename the classes and fields, then change the sample data and required formula. Keep the ownership and empty-case checks.",
+    "watch": "Match const and the return type exactly. Do not try to instantiate the abstract base.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related course lab",
+    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "manualComments": true,
+    "facets": {
+      "structure": "inheritance",
+      "storage": "none",
+      "type": "int",
+      "role": "example"
+    },
+    "checks": "",
+    "typeLabel": "non-template"
+  },
+  {
+    "id": "exam-square-chain",
+    "group": "exam-drills",
+    "title": "09 \u00b7 Square inheritance",
+    "shortTitle": "09 \u00b7 Square inheritance",
+    "when": "Create Square by inheriting Rectangle, which inherits abstract Shape.",
+    "question": [
+      "Create Square by inheriting Rectangle, which inherits abstract Shape.",
+      "Shape declares virtual double getArea() const = 0 and a virtual destructor. Rectangle stores protected width and height.",
+      "Rectangle implements getArea(). Square accepts one side and passes it twice to Rectangle; reuse the inherited getArea().",
+      "In main(), print areas of Rectangle(3,4) and Square(5) through Shape pointers."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\nclass Shape {\npublic:\n    virtual double getArea() const = 0;\n    virtual ~Shape() = default;\n};\nclass Rectangle : public Shape {\nprotected:\n    double width, height;\npublic:\n    Rectangle(double w, double h) : width(w), height(h) {}\n    double getArea() const override { return width * height; }\n};\nclass Square : public Rectangle {\npublic:\n    // No duplicate fields or area function: initialize the inherited rectangle.\n    Square(double side) : Rectangle(side, side) {}\n};\n",
+    "use": "Rectangle rectangle(3, 4);\nSquare square(5);\nShape* shapes[] = {&rectangle, &square};\nfor (Shape* shape : shapes) cout << shape->getArea() << '\\n';",
+    "expected": "12\n25",
+    "expectedOutput": "12\n25\n",
+    "parts": [
+      [
+        "Square",
+        "Only adapts construction: both dimensions receive side."
+      ],
+      [
+        "Inheritance",
+        "Square reuses Rectangle::getArea and is also a Shape."
+      ]
+    ],
+    "change": "Use this when the required operations match the question. Rename the classes and fields, then change the sample data and required formula. Keep the ownership and empty-case checks.",
+    "watch": "Do not add another width or height inside Square.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related course lab",
+    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "manualComments": true,
+    "facets": {
+      "structure": "inheritance",
+      "storage": "none",
+      "type": "int",
+      "role": "example"
+    },
+    "checks": "",
+    "typeLabel": "non-template"
+  },
+  {
+    "id": "exam-account",
+    "group": "exam-drills",
+    "title": "10 \u00b7 Savings account",
+    "shortTitle": "10 \u00b7 Savings account",
+    "when": "Extend a concrete Account with SavingsAccount.",
+    "question": [
+      "Extend a concrete Account with SavingsAccount.",
+      "Account stores protected balance, provides deposit(amount), getBalance(), and virtual display() const.",
+      "SavingsAccount stores an interest rate as a decimal, adds applyInterest(), and overrides display(). Include a virtual base destructor.",
+      "Start at 100 with rate 0.1, deposit 50, apply interest, and display through Account*."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\nclass Account {\nprotected:\n    double balance;\npublic:\n    Account(double initial) : balance(initial) {}\n    virtual ~Account() = default;\n    void deposit(double amount) { balance += amount; }\n    double getBalance() const { return balance; }\n    virtual void display() const { cout << \"Balance: \" << balance << '\\n'; }\n};\nclass SavingsAccount : public Account {\n    double rate;\npublic:\n    SavingsAccount(double initial, double r) : Account(initial), rate(r) {}\n    void applyInterest() { balance += balance * rate; } // Update inherited state.\n    void display() const override {\n        cout << \"Savings \";\n        Account::display(); // Reuse the base implementation explicitly.\n    }\n};\n",
+    "use": "SavingsAccount savings(100, 0.1);\nsavings.deposit(50); // Inherited function.\nsavings.applyInterest();\nAccount* account = &savings;\naccount->display();",
+    "expected": "Savings Balance: 165",
+    "expectedOutput": "Savings Balance: 165\n",
+    "parts": [
+      [
+        "Base state",
+        "balance is protected so SavingsAccount can update it."
+      ],
+      [
+        "Base call",
+        "Account::display avoids recursively calling the override."
+      ]
+    ],
+    "change": "Use this when the required operations match the question. Rename the classes and fields, then change the sample data and required formula. Keep the ownership and empty-case checks.",
+    "watch": "Rate 0.1 means 10%; call applyInterest on the derived object.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related course lab",
+    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "manualComments": true,
+    "facets": {
+      "structure": "inheritance",
+      "storage": "none",
+      "type": "int",
+      "role": "example"
+    },
+    "checks": "",
+    "typeLabel": "non-template"
+  },
+  {
+    "id": "exam-message",
+    "group": "exam-drills",
+    "title": "11 \u00b7 Message printing",
+    "shortTitle": "11 \u00b7 Message printing",
+    "when": "Implement an abstract Message and two printable message types.",
+    "question": [
+      "Implement an abstract Message and two printable message types.",
+      "Message stores protected text and declares virtual void print() const = 0 plus a virtual destructor.",
+      "PlainMessage prints text. WarningMessage prints WARNING: followed by text.",
+      "Allocate one of each with new, print through Message pointers, then delete both."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\nclass Message {\nprotected:\n    string text;\npublic:\n    Message(string t) : text(t) {}\n    virtual void print() const = 0;\n    virtual ~Message() = default;\n};\nclass PlainMessage : public Message {\npublic:\n    PlainMessage(string t) : Message(t) {}\n    void print() const override { cout << text << '\\n'; }\n};\nclass WarningMessage : public Message {\npublic:\n    WarningMessage(string t) : Message(t) {}\n    void print() const override { cout << \"WARNING: \" << text << '\\n'; }\n};\n",
+    "use": "Message* messages[] = {new PlainMessage(\"Ready\"), new WarningMessage(\"Low battery\")};\nfor (Message* message : messages) {\n    message->print(); // Virtual dispatch uses the actual message type.\n    delete message; // Matches new; base destructor is virtual.\n}",
+    "expected": "Ready\nWARNING: Low battery",
+    "expectedOutput": "Ready\nWARNING: Low battery\n",
+    "parts": [
+      [
+        "Abstract method",
+        "Both derived classes must implement the exact print signature."
+      ],
+      [
+        "Ownership",
+        "main owns these allocations and deletes each once."
+      ]
+    ],
+    "change": "Use this when the required operations match the question. Rename the classes and fields, then change the sample data and required formula. Keep the ownership and empty-case checks.",
+    "watch": "Do not delete stack-allocated objects; these objects were created with new.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related course lab",
+    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "manualComments": true,
+    "facets": {
+      "structure": "inheritance",
+      "storage": "none",
+      "type": "int",
+      "role": "example"
+    },
+    "checks": "",
+    "typeLabel": "non-template"
+  },
+  {
+    "id": "exam-controller",
+    "group": "exam-drills",
+    "title": "12 \u00b7 Proportional controller",
+    "shortTitle": "12 \u00b7 Proportional controller",
+    "when": "Implement a small version of the controller lab using an abstract Controller.",
+    "question": [
+      "Implement a small version of the controller lab using an abstract Controller.",
+      "Controller stores protected setpoint and declares virtual double controlStep(double measured) = 0 and a virtual destructor.",
+      "ProportionalController stores gain and returns gain * (setpoint - measured).",
+      "With setpoint 10 and gain 2, call through Controller* for measured values 7 and 12."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\nclass Controller {\nprotected:\n    double setpoint;\npublic:\n    Controller(double target) : setpoint(target) {}\n    virtual double controlStep(double measured) = 0;\n    virtual ~Controller() = default;\n};\nclass ProportionalController : public Controller {\n    double gain;\npublic:\n    ProportionalController(double target, double k) : Controller(target), gain(k) {}\n    double controlStep(double measured) override {\n        double error = setpoint - measured; // Desired minus actual value.\n        return gain * error;\n    }\n};\n",
+    "use": "ProportionalController p(10, 2);\nController* controller = &p;\ncout << controller->controlStep(7) << '\\n';\ncout << controller->controlStep(12) << '\\n';",
+    "expected": "6\n-4",
+    "expectedOutput": "6\n-4\n",
+    "parts": [
+      [
+        "Error",
+        "Subtract the measurement from the target; the sign matters."
+      ],
+      [
+        "Override",
+        "The base pointer calls ProportionalController::controlStep."
+      ]
+    ],
+    "change": "Use this when the required operations match the question. Rename the classes and fields, then change the sample data and required formula. Keep the ownership and empty-case checks.",
+    "watch": "This simple version has no accumulated error or previous-sample state.",
+    "reference": "workspace/reference/course/labs/139E - Lab 5.html",
+    "referenceLabel": "Related course lab",
+    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "manualComments": true,
+    "facets": {
+      "structure": "inheritance",
+      "storage": "none",
+      "type": "int",
+      "role": "example"
+    },
+    "checks": "",
+    "typeLabel": "non-template"
+  },
+  {
+    "id": "exam-limited-controller",
+    "group": "exam-drills",
+    "title": "13 \u00b7 Limited controller",
+    "shortTitle": "13 \u00b7 Limited controller",
+    "when": "Derive LimitedController from a working ProportionalController.",
+    "question": [
+      "Derive LimitedController from a working ProportionalController.",
+      "ProportionalController provides virtual controlStep(measured) returning gain * (target - measured).",
+      "LimitedController stores a positive output limit, calls the base function, then clamps its result between -limit and +limit.",
+      "Test target 10, gain 2, limit 5 with measurements 0, 9 and 20."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\nclass ProportionalController {\n    double target, gain;\npublic:\n    ProportionalController(double t, double k) : target(t), gain(k) {}\n    virtual ~ProportionalController() = default;\n    virtual double controlStep(double measured) { return gain * (target - measured); }\n};\nclass LimitedController : public ProportionalController {\n    double limit;\npublic:\n    LimitedController(double t, double k, double maximum)\n        : ProportionalController(t, k), limit(maximum) {}\n    double controlStep(double measured) override {\n        // Calculate once using the parent, then restrict the output range.\n        double result = ProportionalController::controlStep(measured);\n        if (result > limit) return limit;\n        if (result < -limit) return -limit;\n        return result;\n    }\n};\n",
+    "use": "LimitedController limited(10, 2, 5);\nProportionalController* p = &limited;\ncout << p->controlStep(0) << '\\n';\ncout << p->controlStep(9) << '\\n';\ncout << p->controlStep(20) << '\\n';",
+    "expected": "5\n2\n-5",
+    "expectedOutput": "5\n2\n-5\n",
+    "parts": [
+      [
+        "Base call",
+        "Qualified call reuses the parent calculation."
+      ],
+      [
+        "Clamp",
+        "Check upper and lower limits before returning unchanged output."
+      ]
+    ],
+    "change": "Use this when the required operations match the question. Rename the classes and fields, then change the sample data and required formula. Keep the ownership and empty-case checks.",
+    "watch": "Calling controlStep(measured) without the base qualifier inside the override would recurse.",
+    "reference": "workspace/reference/course/labs/139E - Lab 5.html",
+    "referenceLabel": "Related course lab",
+    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "manualComments": true,
+    "facets": {
+      "structure": "inheritance",
+      "storage": "none",
+      "type": "int",
+      "role": "example"
+    },
+    "checks": "",
+    "typeLabel": "non-template"
+  },
+  {
+    "id": "exam-student",
+    "group": "exam-drills",
+    "title": "14 \u00b7 Student description",
+    "shortTitle": "14 \u00b7 Student description",
+    "when": "Derive Student from Person and reuse the base print function.",
+    "question": [
+      "Derive Student from Person and reuse the base print function.",
+      "Person stores a private name, initializes it, and has virtual void print() const plus a virtual destructor.",
+      "Student adds a private integer studentId; its print calls Person::print then prints the ID on the same line.",
+      "Print Student(\"Alex\", 42) through Person*."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\nclass Person {\n    string name; // Private: Student cannot access this field directly.\npublic:\n    Person(string n) : name(n) {}\n    virtual ~Person() = default;\n    virtual void print() const { cout << name; }\n};\nclass Student : public Person {\n    int studentId;\npublic:\n    Student(string name, int id) : Person(name), studentId(id) {}\n    void print() const override {\n        Person::print(); // The base function can access its own private name.\n        cout << \" ID \" << studentId << '\\n';\n    }\n};\n",
+    "use": "Student student(\"Alex\", 42);\nPerson* person = &student;\nperson->print();",
+    "expected": "Alex ID 42",
+    "expectedOutput": "Alex ID 42\n",
+    "parts": [
+      [
+        "Private base field",
+        "Use a base method rather than directly accessing name."
+      ],
+      [
+        "Initializer list",
+        "Person(name) constructs the base portion."
+      ]
+    ],
+    "change": "Use this when the required operations match the question. Rename the classes and fields, then change the sample data and required formula. Keep the ownership and empty-case checks.",
+    "watch": "Do not redeclare name in Student; that creates a separate field.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related course lab",
+    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "manualComments": true,
+    "facets": {
+      "structure": "inheritance",
+      "storage": "none",
+      "type": "int",
+      "role": "example"
+    },
+    "checks": "",
+    "typeLabel": "non-template"
+  },
+  {
+    "id": "exam-inventory",
+    "group": "exam-drills",
+    "title": "15 \u00b7 Discounted product",
+    "shortTitle": "15 \u00b7 Discounted product",
+    "when": "Extend Product with DiscountProduct and compute a mixed inventory total.",
+    "question": [
+      "Extend Product with DiscountProduct and compute a mixed inventory total.",
+      "Product stores protected price, provides virtual double cost() const returning price and a virtual destructor.",
+      "DiscountProduct stores discount as a decimal and overrides cost to return price * (1 - discount).",
+      "Use Product(50) and DiscountProduct(100, 0.2). Write a free totalCost(Product* items[], int size) and print their total."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\nclass Product {\nprotected:\n    double price;\npublic:\n    Product(double p) : price(p) {}\n    virtual ~Product() = default;\n    virtual double cost() const { return price; }\n};\nclass DiscountProduct : public Product {\n    double discount;\npublic:\n    DiscountProduct(double p, double d) : Product(p), discount(d) {}\n    double cost() const override { return price * (1 - discount); }\n};\n// Free function: use pointers to keep each object's virtual behavior.\ndouble totalCost(Product* items[], int size) {\n    double total = 0;\n    for (int i = 0; i < size; ++i) total += items[i]->cost();\n    return total;\n}\n",
+    "use": "Product regular(50);\nDiscountProduct sale(100, 0.2);\nProduct* products[] = {&regular, &sale};\ncout << totalCost(products, 2) << '\\n';",
+    "expected": "130",
+    "expectedOutput": "130\n",
+    "parts": [
+      [
+        "Virtual cost",
+        "Product supplies a usable default; DiscountProduct overrides it."
+      ],
+      [
+        "totalCost",
+        "Accepts an explicit array length and accumulates virtual results."
+      ]
+    ],
+    "change": "Use this when the required operations match the question. Rename the classes and fields, then change the sample data and required formula. Keep the ownership and empty-case checks.",
+    "watch": "Use Product* rather than copying derived objects into a Product array.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related course lab",
+    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "manualComments": true,
+    "facets": {
+      "structure": "inheritance",
+      "storage": "none",
+      "type": "int",
+      "role": "example"
+    },
+    "checks": "",
+    "typeLabel": "non-template"
+  },
+  {
+    "id": "exam-stack-basic",
+    "group": "exam-drills",
+    "title": "16 \u00b7 Build a stack",
+    "shortTitle": "16 \u00b7 Build a stack",
+    "when": "Implement a template linked Stack<T> using the lab member names.",
+    "question": [
+      "Implement a template linked Stack<T> using the lab member names.",
+      "Provide push, pop returning the item, top, size, isEmpty and a destructor. Throw StackException on empty pop/top.",
+      "Push 3 and 8, print top and size, pop both, then catch an empty pop."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\nclass StackException : public exception {\n    string message;\npublic:\n    StackException(string msg) : message(msg) {}\n    const char* what() const noexcept override { return message.c_str(); }\n};\ntemplate <class T> class Stack {\n    struct stackNode { T theItem; stackNode* next; };\n    typedef stackNode StackNode;\n    StackNode* topOfStack;\n    int count;\npublic:\n    Stack() : topOfStack(nullptr), count(0) {}\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n    ~Stack() { while (!isEmpty()) pop(); }\n    bool isEmpty() const { return count == 0; }\n    int size() const { return count; }\n    void push(T item) {\n        // Link the new node to the OLD top before replacing topOfStack.\n        StackNode* node = new StackNode{item, topOfStack};\n        topOfStack = node;\n        ++count;\n    }\n    T top() const {\n        if (isEmpty()) throw StackException(\"Empty stack\");\n        return topOfStack->theItem; // Read without removing.\n    }\n    T pop() {\n        if (isEmpty()) throw StackException(\"Empty stack\");\n        StackNode* old = topOfStack;\n        T value = old->theItem; // Save before deleting the node.\n        topOfStack = old->next;\n        delete old;\n        --count;\n        return value;\n    }\n};\n",
+    "use": "Stack<int> s;\ns.push(3); s.push(8);\ncout << s.top() << ' ' << s.size() << '\\n';\ncout << s.pop() << ' ' << s.pop() << '\\n';\ntry { s.pop(); } catch (const exception& e) { cout << e.what() << '\\n'; }",
+    "expected": "8 2\n8 3\nEmpty stack",
+    "expectedOutput": "8 2\n8 3\nEmpty stack\n",
+    "parts": [
+      [
+        "Container",
+        "Owns its linked nodes; constructor starts empty and destructor releases nodes."
+      ],
+      [
+        "Operation",
+        "The comments identify the traversal, updates and stopping conditions."
+      ],
+      [
+        "main",
+        "Builds sample data and prints the result and any preserved contents."
+      ]
+    ],
+    "change": "Use this when the required operations match the question. Rename the classes and fields, then change the sample data and required formula. Keep the ownership and empty-case checks.",
+    "watch": "top() must not change count; pop() decrements it.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related course lab",
+    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "manualComments": true,
+    "facets": {
+      "structure": "stack",
+      "storage": "linked",
+      "type": "template",
+      "role": "example"
+    },
+    "checks": "Stack<int> s; assert(s.isEmpty()); bool caught=false; try{s.top();}catch(const StackException&){caught=true;} assert(caught); s.push(1); assert(s.pop()==1 && s.size()==0);"
+  },
+  {
+    "id": "exam-stack-above",
+    "group": "exam-drills",
+    "title": "17 \u00b7 Count above limit",
+    "shortTitle": "17 \u00b7 Count above limit",
+    "when": "Write countAbove(Stack<int>& s, int limit) using only public stack operations.",
+    "question": [
+      "Write countAbove(Stack<int>& s, int limit) using only public stack operations.",
+      "Count values strictly greater than limit and leave the stack in its original order. Use one temporary stack.",
+      "Test values 4,9,2,7 with limit 5, then print the original stack by popping it."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\nclass StackException : public exception {\n    string message;\npublic:\n    StackException(string msg) : message(msg) {}\n    const char* what() const noexcept override { return message.c_str(); }\n};\ntemplate <class T> class Stack {\n    struct stackNode { T theItem; stackNode* next; };\n    typedef stackNode StackNode;\n    StackNode* topOfStack;\n    int count;\npublic:\n    Stack() : topOfStack(nullptr), count(0) {}\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n    ~Stack() { while (!isEmpty()) pop(); }\n    bool isEmpty() const { return count == 0; }\n    int size() const { return count; }\n    void push(T item) {\n        // Link the new node to the OLD top before replacing topOfStack.\n        StackNode* node = new StackNode{item, topOfStack};\n        topOfStack = node;\n        ++count;\n    }\n    T top() const {\n        if (isEmpty()) throw StackException(\"Empty stack\");\n        return topOfStack->theItem; // Read without removing.\n    }\n    T pop() {\n        if (isEmpty()) throw StackException(\"Empty stack\");\n        StackNode* old = topOfStack;\n        T value = old->theItem; // Save before deleting the node.\n        topOfStack = old->next;\n        delete old;\n        --count;\n        return value;\n    }\n};\nint countAbove(Stack<int>& s, int limit) {\n    Stack<int> temporary;\n    int count = 0;\n    while (!s.isEmpty()) {\n        int value = s.pop();\n        if (value > limit) ++count; // Compare the ITEM, not the stack object.\n        temporary.push(value);\n    }\n    // Second reversal restores the original order.\n    while (!temporary.isEmpty()) s.push(temporary.pop());\n    return count;\n}\n",
+    "use": "Stack<int> s;\nfor (int x : {4, 9, 2, 7}) s.push(x);\ncout << countAbove(s, 5) << '\\n';\nwhile (!s.isEmpty()) cout << s.pop() << ' ';\ncout << '\\n';",
+    "expected": "2\n7 2 9 4",
+    "expectedOutput": "2\n7 2 9 4 \n",
+    "parts": [
+      [
+        "Container",
+        "Owns its linked nodes; constructor starts empty and destructor releases nodes."
+      ],
+      [
+        "Operation",
+        "The comments identify the traversal, updates and stopping conditions."
+      ],
+      [
+        "main",
+        "Builds sample data and prints the result and any preserved contents."
+      ]
+    ],
+    "change": "Use this when the required operations match the question. Rename the classes and fields, then change the sample data and required formula. Keep the ownership and empty-case checks.",
+    "watch": "Use >, not >=. Restoring is necessary because pop changes the input.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related course lab",
+    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "manualComments": true,
+    "facets": {
+      "structure": "stack",
+      "storage": "linked",
+      "type": "template",
+      "role": "example"
+    },
+    "checks": "Stack<int> s; assert(countAbove(s,5)==0); s.push(5);s.push(6); assert(countAbove(s,5)==1);assert(s.pop()==6 && s.pop()==5);"
+  },
+  {
+    "id": "exam-stack-sum",
+    "group": "exam-drills",
+    "title": "18 \u00b7 Sum without changing",
+    "shortTitle": "18 \u00b7 Sum without changing",
+    "when": "Write sumStack(Stack<int>& s) with public operations only.",
+    "question": [
+      "Write sumStack(Stack<int>& s) with public operations only.",
+      "Return the sum while preserving the stack order; use a temporary stack.",
+      "Test 3,-2,8. Print the sum and unchanged top."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\nclass StackException : public exception {\n    string message;\npublic:\n    StackException(string msg) : message(msg) {}\n    const char* what() const noexcept override { return message.c_str(); }\n};\ntemplate <class T> class Stack {\n    struct stackNode { T theItem; stackNode* next; };\n    typedef stackNode StackNode;\n    StackNode* topOfStack;\n    int count;\npublic:\n    Stack() : topOfStack(nullptr), count(0) {}\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n    ~Stack() { while (!isEmpty()) pop(); }\n    bool isEmpty() const { return count == 0; }\n    int size() const { return count; }\n    void push(T item) {\n        // Link the new node to the OLD top before replacing topOfStack.\n        StackNode* node = new StackNode{item, topOfStack};\n        topOfStack = node;\n        ++count;\n    }\n    T top() const {\n        if (isEmpty()) throw StackException(\"Empty stack\");\n        return topOfStack->theItem; // Read without removing.\n    }\n    T pop() {\n        if (isEmpty()) throw StackException(\"Empty stack\");\n        StackNode* old = topOfStack;\n        T value = old->theItem; // Save before deleting the node.\n        topOfStack = old->next;\n        delete old;\n        --count;\n        return value;\n    }\n};\nint sumStack(Stack<int>& s) {\n    Stack<int> temporary;\n    int sum = 0;\n    while (!s.isEmpty()) {\n        int value = s.pop();\n        sum += value;\n        temporary.push(value);\n    }\n    while (!temporary.isEmpty()) s.push(temporary.pop()); // Restore order.\n    return sum;\n}\n",
+    "use": "Stack<int> s;\ns.push(3); s.push(-2); s.push(8);\ncout << sumStack(s) << '\\n';\ncout << s.top() << '\\n';",
+    "expected": "9\n8",
+    "expectedOutput": "9\n8\n",
+    "parts": [
+      [
+        "Container",
+        "Owns its linked nodes; constructor starts empty and destructor releases nodes."
+      ],
+      [
+        "Operation",
+        "The comments identify the traversal, updates and stopping conditions."
+      ],
+      [
+        "main",
+        "Builds sample data and prints the result and any preserved contents."
+      ]
+    ],
+    "change": "Use this when the required operations match the question. Rename the classes and fields, then change the sample data and required formula. Keep the ownership and empty-case checks.",
+    "watch": "An empty stack has sum 0. Do not return before restoring the input.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related course lab",
+    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "manualComments": true,
+    "facets": {
+      "structure": "stack",
+      "storage": "linked",
+      "type": "template",
+      "role": "example"
+    },
+    "checks": "Stack<int> s; assert(sumStack(s)==0);s.push(-5); assert(sumStack(s)==-5 && s.pop()==-5);"
+  },
+  {
+    "id": "exam-stack-remove-negative",
+    "group": "exam-drills",
+    "title": "19 \u00b7 Remove negatives",
+    "shortTitle": "19 \u00b7 Remove negatives",
+    "when": "Remove all negative values from a stack using public operations.",
+    "question": [
+      "Remove all negative values from a stack using public operations.",
+      "Preserve the relative order of retained values. Zero is retained.",
+      "Push 4,-2,0,-7,9; remove negatives and print by popping."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\nclass StackException : public exception {\n    string message;\npublic:\n    StackException(string msg) : message(msg) {}\n    const char* what() const noexcept override { return message.c_str(); }\n};\ntemplate <class T> class Stack {\n    struct stackNode { T theItem; stackNode* next; };\n    typedef stackNode StackNode;\n    StackNode* topOfStack;\n    int count;\npublic:\n    Stack() : topOfStack(nullptr), count(0) {}\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n    ~Stack() { while (!isEmpty()) pop(); }\n    bool isEmpty() const { return count == 0; }\n    int size() const { return count; }\n    void push(T item) {\n        // Link the new node to the OLD top before replacing topOfStack.\n        StackNode* node = new StackNode{item, topOfStack};\n        topOfStack = node;\n        ++count;\n    }\n    T top() const {\n        if (isEmpty()) throw StackException(\"Empty stack\");\n        return topOfStack->theItem; // Read without removing.\n    }\n    T pop() {\n        if (isEmpty()) throw StackException(\"Empty stack\");\n        StackNode* old = topOfStack;\n        T value = old->theItem; // Save before deleting the node.\n        topOfStack = old->next;\n        delete old;\n        --count;\n        return value;\n    }\n};\nvoid removeNegatives(Stack<int>& s) {\n    Stack<int> kept;\n    while (!s.isEmpty()) {\n        int value = s.pop();\n        if (value >= 0) kept.push(value); // Discard only negatives.\n    }\n    while (!kept.isEmpty()) s.push(kept.pop()); // Restore retained order.\n}\n",
+    "use": "Stack<int> s;\nfor (int x : {4, -2, 0, -7, 9}) s.push(x);\nremoveNegatives(s);\nwhile (!s.isEmpty()) cout << s.pop() << ' ';\ncout << '\\n';",
+    "expected": "9 0 4",
+    "expectedOutput": "9 0 4 \n",
+    "parts": [
+      [
+        "Container",
+        "Owns its linked nodes; constructor starts empty and destructor releases nodes."
+      ],
+      [
+        "Operation",
+        "The comments identify the traversal, updates and stopping conditions."
+      ],
+      [
+        "main",
+        "Builds sample data and prints the result and any preserved contents."
+      ]
+    ],
+    "change": "Use this when the required operations match the question. Rename the classes and fields, then change the sample data and required formula. Keep the ownership and empty-case checks.",
+    "watch": "One transfer reverses order; the second transfer restores it.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related course lab",
+    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "manualComments": true,
+    "facets": {
+      "structure": "stack",
+      "storage": "linked",
+      "type": "template",
+      "role": "example"
+    },
+    "checks": "Stack<int> s;removeNegatives(s);s.push(-1);s.push(-2);removeNegatives(s);assert(s.isEmpty());s.push(0);removeNegatives(s);assert(s.pop()==0);"
+  },
+  {
+    "id": "exam-stack-palindrome",
+    "group": "exam-drills",
+    "title": "20 \u00b7 Palindrome with stack",
+    "shortTitle": "20 \u00b7 Palindrome with stack",
+    "when": "Use Stack<char> to test whether a string is a palindrome.",
+    "question": [
+      "Use Stack<char> to test whether a string is a palindrome.",
+      "Push all characters, then compare popped characters with the original string. Match exactly, including case and spaces.",
+      "Test level and code."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\nclass StackException : public exception {\n    string message;\npublic:\n    StackException(string msg) : message(msg) {}\n    const char* what() const noexcept override { return message.c_str(); }\n};\ntemplate <class T> class Stack {\n    struct stackNode { T theItem; stackNode* next; };\n    typedef stackNode StackNode;\n    StackNode* topOfStack;\n    int count;\npublic:\n    Stack() : topOfStack(nullptr), count(0) {}\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n    ~Stack() { while (!isEmpty()) pop(); }\n    bool isEmpty() const { return count == 0; }\n    int size() const { return count; }\n    void push(T item) {\n        // Link the new node to the OLD top before replacing topOfStack.\n        StackNode* node = new StackNode{item, topOfStack};\n        topOfStack = node;\n        ++count;\n    }\n    T top() const {\n        if (isEmpty()) throw StackException(\"Empty stack\");\n        return topOfStack->theItem; // Read without removing.\n    }\n    T pop() {\n        if (isEmpty()) throw StackException(\"Empty stack\");\n        StackNode* old = topOfStack;\n        T value = old->theItem; // Save before deleting the node.\n        topOfStack = old->next;\n        delete old;\n        --count;\n        return value;\n    }\n};\nbool isPalindrome(const string& text) {\n    Stack<char> reversed;\n    for (char ch : text) reversed.push(ch);\n    for (char ch : text) {\n        if (ch != reversed.pop()) return false; // Compare against reversed order.\n    }\n    return true; // Empty and one-character strings also match.\n}\n",
+    "use": "cout << boolalpha << isPalindrome(\"level\") << '\\n';\ncout << isPalindrome(\"code\") << '\\n';",
+    "expected": "true\nfalse",
+    "expectedOutput": "true\nfalse\n",
+    "parts": [
+      [
+        "Container",
+        "Owns its linked nodes; constructor starts empty and destructor releases nodes."
+      ],
+      [
+        "Operation",
+        "The comments identify the traversal, updates and stopping conditions."
+      ],
+      [
+        "main",
+        "Builds sample data and prints the result and any preserved contents."
+      ]
+    ],
+    "change": "Use this when the required operations match the question. Rename the classes and fields, then change the sample data and required formula. Keep the ownership and empty-case checks.",
+    "watch": "The local stack destructor cleans remaining nodes even when returning early.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related course lab",
+    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "manualComments": true,
+    "facets": {
+      "structure": "stack",
+      "storage": "linked",
+      "type": "template",
+      "role": "example"
+    },
+    "checks": "assert(isPalindrome(\"\"));assert(isPalindrome(\"a\"));assert(!isPalindrome(\"Aa\"));"
+  },
+  {
+    "id": "exam-queue-basic",
+    "group": "exam-drills",
+    "title": "21 \u00b7 Build a queue",
+    "shortTitle": "21 \u00b7 Build a queue",
+    "when": "Implement a template linked Queue<T> with head and tail.",
+    "question": [
+      "Implement a template linked Queue<T> with head and tail.",
+      "Provide enqueue, dequeue returning the item, front, size, isEmpty and destructor; throw runtime_error when empty.",
+      "Enqueue 4 and 8, print front and size, dequeue both, then enqueue 12 to prove reuse works."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\ntemplate <class T> class Queue {\n    struct Node { T theItem; Node* next; };\n    Node* head;\n    Node* tail;\n    int count;\npublic:\n    Queue() : head(nullptr), tail(nullptr), count(0) {}\n    Queue(const Queue&) = delete;\n    Queue& operator=(const Queue&) = delete;\n    ~Queue() { while (!isEmpty()) dequeue(); }\n    bool isEmpty() const { return head == nullptr; }\n    int size() const { return count; }\n    void enqueue(T value) {\n        Node* node = new Node{value, nullptr};\n        if (isEmpty()) head = node; // First node becomes BOTH ends.\n        else tail->next = node;\n        tail = node;\n        ++count;\n    }\n    T front() const {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        return head->theItem;\n    }\n    T dequeue() {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        Node* old = head;\n        T value = old->theItem;\n        head = head->next;\n        if (head == nullptr) tail = nullptr; // Last node was removed.\n        delete old;\n        --count;\n        return value;\n    }\n};\n",
+    "use": "Queue<int> q;\nq.enqueue(4); q.enqueue(8);\ncout << q.front() << ' ' << q.size() << '\\n';\ncout << q.dequeue() << ' ' << q.dequeue() << '\\n';\nq.enqueue(12);\ncout << q.dequeue() << '\\n';",
+    "expected": "4 2\n4 8\n12",
+    "expectedOutput": "4 2\n4 8\n12\n",
+    "parts": [
+      [
+        "Container",
+        "Owns its linked nodes; constructor starts empty and destructor releases nodes."
+      ],
+      [
+        "Operation",
+        "The comments identify the traversal, updates and stopping conditions."
+      ],
+      [
+        "main",
+        "Builds sample data and prints the result and any preserved contents."
+      ]
+    ],
+    "change": "Use this when the required operations match the question. Rename the classes and fields, then change the sample data and required formula. Keep the ownership and empty-case checks.",
+    "watch": "Removing the last node must reset tail.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related course lab",
+    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "manualComments": true,
+    "facets": {
+      "structure": "queue",
+      "storage": "linked",
+      "type": "template",
+      "role": "example"
+    },
+    "checks": "Queue<int> q;bool caught=false;try{q.dequeue();}catch(const runtime_error&){caught=true;}assert(caught);q.enqueue(3);assert(q.front()==3 && q.size()==1);assert(q.dequeue()==3 && q.isEmpty());"
+  },
+  {
+    "id": "exam-queue-count",
+    "group": "exam-drills",
+    "title": "22 \u00b7 Count queue matches",
+    "shortTitle": "22 \u00b7 Count queue matches",
+    "when": "Count occurrences of a target in a queue without changing its order.",
+    "question": [
+      "Count occurrences of a target in a queue without changing its order.",
+      "Use public operations only. Save the initial size and rotate exactly that many items.",
+      "For 2,7,2,9 count target 2, then print the queue."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\ntemplate <class T> class Queue {\n    struct Node { T theItem; Node* next; };\n    Node* head;\n    Node* tail;\n    int count;\npublic:\n    Queue() : head(nullptr), tail(nullptr), count(0) {}\n    Queue(const Queue&) = delete;\n    Queue& operator=(const Queue&) = delete;\n    ~Queue() { while (!isEmpty()) dequeue(); }\n    bool isEmpty() const { return head == nullptr; }\n    int size() const { return count; }\n    void enqueue(T value) {\n        Node* node = new Node{value, nullptr};\n        if (isEmpty()) head = node; // First node becomes BOTH ends.\n        else tail->next = node;\n        tail = node;\n        ++count;\n    }\n    T front() const {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        return head->theItem;\n    }\n    T dequeue() {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        Node* old = head;\n        T value = old->theItem;\n        head = head->next;\n        if (head == nullptr) tail = nullptr; // Last node was removed.\n        delete old;\n        --count;\n        return value;\n    }\n};\nint countMatches(Queue<int>& q, int target) {\n    int count = 0;\n    int originalSize = q.size(); // Fixed bound: dequeue + enqueue keeps size unchanged.\n    for (int i = 0; i < originalSize; ++i) {\n        int value = q.dequeue();\n        if (value == target) ++count;\n        q.enqueue(value); // One full rotation restores the order.\n    }\n    return count;\n}\n",
+    "use": "Queue<int> q;\nfor (int x : {2, 7, 2, 9}) q.enqueue(x);\ncout << countMatches(q, 2) << '\\n';\nwhile (!q.isEmpty()) cout << q.dequeue() << ' ';\ncout << '\\n';",
+    "expected": "2\n2 7 2 9",
+    "expectedOutput": "2\n2 7 2 9 \n",
+    "parts": [
+      [
+        "Container",
+        "Owns its linked nodes; constructor starts empty and destructor releases nodes."
+      ],
+      [
+        "Operation",
+        "The comments identify the traversal, updates and stopping conditions."
+      ],
+      [
+        "main",
+        "Builds sample data and prints the result and any preserved contents."
+      ]
+    ],
+    "change": "Use this when the required operations match the question. Rename the classes and fields, then change the sample data and required formula. Keep the ownership and empty-case checks.",
+    "watch": "while(!q.isEmpty()) would never end if every removed item is re-enqueued.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related course lab",
+    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "manualComments": true,
+    "facets": {
+      "structure": "queue",
+      "storage": "linked",
+      "type": "template",
+      "role": "example"
+    },
+    "checks": "Queue<int> q;assert(countMatches(q,2)==0);q.enqueue(2);assert(countMatches(q,2)==1 && q.dequeue()==2);"
+  },
+  {
+    "id": "exam-queue-sum",
+    "group": "exam-drills",
+    "title": "23 \u00b7 Queue sum / average",
+    "shortTitle": "23 \u00b7 Queue sum / average",
+    "when": "Compute a queue sum without changing its order.",
+    "question": [
+      "Compute a queue sum without changing its order.",
+      "Write sumQueue using a fixed number of dequeue/enqueue operations. In main compute a floating-point average, or print Empty for an empty queue.",
+      "Test 2,3,6; print sum and average."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\ntemplate <class T> class Queue {\n    struct Node { T theItem; Node* next; };\n    Node* head;\n    Node* tail;\n    int count;\npublic:\n    Queue() : head(nullptr), tail(nullptr), count(0) {}\n    Queue(const Queue&) = delete;\n    Queue& operator=(const Queue&) = delete;\n    ~Queue() { while (!isEmpty()) dequeue(); }\n    bool isEmpty() const { return head == nullptr; }\n    int size() const { return count; }\n    void enqueue(T value) {\n        Node* node = new Node{value, nullptr};\n        if (isEmpty()) head = node; // First node becomes BOTH ends.\n        else tail->next = node;\n        tail = node;\n        ++count;\n    }\n    T front() const {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        return head->theItem;\n    }\n    T dequeue() {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        Node* old = head;\n        T value = old->theItem;\n        head = head->next;\n        if (head == nullptr) tail = nullptr; // Last node was removed.\n        delete old;\n        --count;\n        return value;\n    }\n};\nint sumQueue(Queue<int>& q) {\n    int total = 0;\n    int n = q.size();\n    for (int i = 0; i < n; ++i) {\n        int value = q.dequeue();\n        total += value;\n        q.enqueue(value); // Preserve every item and complete the rotation.\n    }\n    return total;\n}\n",
+    "use": "Queue<int> q;\nq.enqueue(2); q.enqueue(3); q.enqueue(6);\nif (q.isEmpty()) cout << \"Empty\\n\";\nelse {\n    int total = sumQueue(q);\n    cout << total << '\\n';\n    cout << static_cast<double>(total) / q.size() << '\\n';\n}",
+    "expected": "11\n3.66667",
+    "expectedOutput": "11\n3.66667\n",
+    "parts": [
+      [
+        "Container",
+        "Owns its linked nodes; constructor starts empty and destructor releases nodes."
+      ],
+      [
+        "Operation",
+        "The comments identify the traversal, updates and stopping conditions."
+      ],
+      [
+        "main",
+        "Builds sample data and prints the result and any preserved contents."
+      ]
+    ],
+    "change": "Use this when the required operations match the question. Rename the classes and fields, then change the sample data and required formula. Keep the ownership and empty-case checks.",
+    "watch": "Cast before dividing; never divide by an empty queue size.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related course lab",
+    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "manualComments": true,
+    "facets": {
+      "structure": "queue",
+      "storage": "linked",
+      "type": "template",
+      "role": "example"
+    },
+    "checks": "Queue<int> q;assert(sumQueue(q)==0);q.enqueue(-2);q.enqueue(3);assert(sumQueue(q)==1 && q.dequeue()==-2 && q.dequeue()==3);"
+  },
+  {
+    "id": "exam-queue-threshold",
+    "group": "exam-drills",
+    "title": "24 \u00b7 Keep passing scores",
+    "shortTitle": "24 \u00b7 Keep passing scores",
+    "when": "Remove scores below a pass mark from a queue.",
+    "question": [
+      "Remove scores below a pass mark from a queue.",
+      "Use public operations, preserve retained order, and examine only the original items. Scores equal to the mark pass.",
+      "Test 45,70,50,20,90 with pass mark 50, then print retained scores."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\ntemplate <class T> class Queue {\n    struct Node { T theItem; Node* next; };\n    Node* head;\n    Node* tail;\n    int count;\npublic:\n    Queue() : head(nullptr), tail(nullptr), count(0) {}\n    Queue(const Queue&) = delete;\n    Queue& operator=(const Queue&) = delete;\n    ~Queue() { while (!isEmpty()) dequeue(); }\n    bool isEmpty() const { return head == nullptr; }\n    int size() const { return count; }\n    void enqueue(T value) {\n        Node* node = new Node{value, nullptr};\n        if (isEmpty()) head = node; // First node becomes BOTH ends.\n        else tail->next = node;\n        tail = node;\n        ++count;\n    }\n    T front() const {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        return head->theItem;\n    }\n    T dequeue() {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        Node* old = head;\n        T value = old->theItem;\n        head = head->next;\n        if (head == nullptr) tail = nullptr; // Last node was removed.\n        delete old;\n        --count;\n        return value;\n    }\n};\nvoid keepPassing(Queue<int>& q, int passMark) {\n    int originalSize = q.size(); // Do not use a shrinking q.size() as the bound.\n    for (int i = 0; i < originalSize; ++i) {\n        int score = q.dequeue();\n        if (score >= passMark) q.enqueue(score); // Failed scores are dropped.\n    }\n}\n",
+    "use": "Queue<int> q;\nfor (int x : {45, 70, 50, 20, 90}) q.enqueue(x);\nkeepPassing(q, 50);\nwhile (!q.isEmpty()) cout << q.dequeue() << ' ';\ncout << '\\n';",
+    "expected": "70 50 90",
+    "expectedOutput": "70 50 90 \n",
+    "parts": [
+      [
+        "Container",
+        "Owns its linked nodes; constructor starts empty and destructor releases nodes."
+      ],
+      [
+        "Operation",
+        "The comments identify the traversal, updates and stopping conditions."
+      ],
+      [
+        "main",
+        "Builds sample data and prints the result and any preserved contents."
+      ]
+    ],
+    "change": "Use this when the required operations match the question. Rename the classes and fields, then change the sample data and required formula. Keep the ownership and empty-case checks.",
+    "watch": "The loop must use originalSize because filtering can reduce the queue size.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related course lab",
+    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "manualComments": true,
+    "facets": {
+      "structure": "queue",
+      "storage": "linked",
+      "type": "template",
+      "role": "example"
+    },
+    "checks": "Queue<int> q;keepPassing(q,50);q.enqueue(20);keepPassing(q,50);assert(q.isEmpty());q.enqueue(50);keepPassing(q,50);assert(q.dequeue()==50);"
+  },
+  {
+    "id": "exam-queue-append",
+    "group": "exam-drills",
+    "title": "25 \u00b7 Append two queues",
+    "shortTitle": "25 \u00b7 Append two queues",
+    "when": "Move all items from source onto the end of destination.",
+    "question": [
+      "Move all items from source onto the end of destination.",
+      "Write appendQueue(Queue<int>& destination, Queue<int>& source). Preserve each queue's FIFO order; source ends empty.",
+      "Start destination with 1,2 and source with 3,4. Print destination after appending. Handle both references naming the same queue by doing nothing."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\ntemplate <class T> class Queue {\n    struct Node { T theItem; Node* next; };\n    Node* head;\n    Node* tail;\n    int count;\npublic:\n    Queue() : head(nullptr), tail(nullptr), count(0) {}\n    Queue(const Queue&) = delete;\n    Queue& operator=(const Queue&) = delete;\n    ~Queue() { while (!isEmpty()) dequeue(); }\n    bool isEmpty() const { return head == nullptr; }\n    int size() const { return count; }\n    void enqueue(T value) {\n        Node* node = new Node{value, nullptr};\n        if (isEmpty()) head = node; // First node becomes BOTH ends.\n        else tail->next = node;\n        tail = node;\n        ++count;\n    }\n    T front() const {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        return head->theItem;\n    }\n    T dequeue() {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        Node* old = head;\n        T value = old->theItem;\n        head = head->next;\n        if (head == nullptr) tail = nullptr; // Last node was removed.\n        delete old;\n        --count;\n        return value;\n    }\n};\nvoid appendQueue(Queue<int>& destination, Queue<int>& source) {\n    if (&destination == &source) return; // Otherwise dequeue/enqueue would loop forever.\n    while (!source.isEmpty()) destination.enqueue(source.dequeue());\n}\n",
+    "use": "Queue<int> destination, source;\ndestination.enqueue(1); destination.enqueue(2);\nsource.enqueue(3); source.enqueue(4);\nappendQueue(destination, source);\nwhile (!destination.isEmpty()) cout << destination.dequeue() << ' ';\ncout << '\\n' << boolalpha << source.isEmpty() << '\\n';",
+    "expected": "1 2 3 4\ntrue",
+    "expectedOutput": "1 2 3 4 \ntrue\n",
+    "parts": [
+      [
+        "Container",
+        "Owns its linked nodes; constructor starts empty and destructor releases nodes."
+      ],
+      [
+        "Operation",
+        "The comments identify the traversal, updates and stopping conditions."
+      ],
+      [
+        "main",
+        "Builds sample data and prints the result and any preserved contents."
+      ]
+    ],
+    "change": "Use this when the required operations match the question. Rename the classes and fields, then change the sample data and required formula. Keep the ownership and empty-case checks.",
+    "watch": "This operation moves the values; it does not preserve the source.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related course lab",
+    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "manualComments": true,
+    "facets": {
+      "structure": "queue",
+      "storage": "linked",
+      "type": "template",
+      "role": "example"
+    },
+    "checks": "Queue<int> a,b;appendQueue(a,b);a.enqueue(1);appendQueue(a,a);assert(a.size()==1);appendQueue(b,a);assert(a.isEmpty() && b.dequeue()==1);"
+  },
+  {
+    "id": "exam-list-count-even",
+    "group": "exam-drills",
+    "title": "26 \u00b7 Count even nodes",
+    "shortTitle": "26 \u00b7 Count even nodes",
+    "when": "Add countEven() const to a singly linked list.",
+    "question": [
+      "Add countEven() const to a singly linked list.",
+      "Walk nodes directly without changing head, tail or any link. Count values divisible by 2, including zero and negative evens.",
+      "Store 3,4,0,-2,7; print the count and unchanged list."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\nstruct IntSLLNode {\n    int info;\n    IntSLLNode* next;\n    IntSLLNode(int value, IntSLLNode* link = nullptr) : info(value), next(link) {}\n};\nclass IntSLList {\n    IntSLLNode* head;\n    IntSLLNode* tail;\npublic:\n    IntSLList() : head(nullptr), tail(nullptr) {}\n    IntSLList(const IntSLList&) = delete;\n    IntSLList& operator=(const IntSLList&) = delete;\n    ~IntSLList() {\n        while (head != nullptr) {\n            IntSLLNode* old = head;\n            head = head->next; // Keep the remaining chain before deleting.\n            delete old;\n        }\n    }\n    void addToTail(int value) {\n        IntSLLNode* node = new IntSLLNode(value);\n        if (head == nullptr) head = node;\n        else tail->next = node;\n        tail = node;\n    }\n    void print() const {\n        for (IntSLLNode* p = head; p != nullptr; p = p->next) cout << p->info << ' ';\n        cout << '\\n';\n    }\n    int countEven() const {\n        int count = 0;\n        for (IntSLLNode* p = head; p != nullptr; p = p->next)\n            if (p->info % 2 == 0) ++count;\n        return count;\n    }\n};\n",
+    "use": "IntSLList list;\nfor (int x : {3, 4, 0, -2, 7}) list.addToTail(x);\ncout << list.countEven() << '\\n';\nlist.print();",
+    "expected": "3\n3 4 0 -2 7",
+    "expectedOutput": "3\n3 4 0 -2 7 \n",
+    "parts": [
+      [
+        "Container",
+        "Owns its linked nodes; constructor starts empty and destructor releases nodes."
+      ],
+      [
+        "Operation",
+        "The comments identify the traversal, updates and stopping conditions."
+      ],
+      [
+        "main",
+        "Builds sample data and prints the result and any preserved contents."
+      ]
+    ],
+    "change": "Use this when the required operations match the question. Rename the classes and fields, then change the sample data and required formula. Keep the ownership and empty-case checks.",
+    "watch": "Use a local traversal pointer, not head itself.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related course lab",
+    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "manualComments": true,
+    "facets": {
+      "structure": "list",
+      "storage": "linked",
+      "type": "int",
+      "role": "example"
+    },
+    "checks": "IntSLList l;assert(l.countEven()==0);l.addToTail(-4);l.addToTail(1);assert(l.countEven()==1);"
+  },
+  {
+    "id": "exam-list-replace",
+    "group": "exam-drills",
+    "title": "27 \u00b7 Replace values",
+    "shortTitle": "27 \u00b7 Replace values",
+    "when": "Add replaceAll(oldValue,newValue) to a singly linked list.",
+    "question": [
+      "Add replaceAll(oldValue,newValue) to a singly linked list.",
+      "Change matching info fields and return the number of replacements. Preserve all links.",
+      "For 2,5,2,8 replace 2 with 9; print replacement count and final list."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\nstruct IntSLLNode {\n    int info;\n    IntSLLNode* next;\n    IntSLLNode(int value, IntSLLNode* link = nullptr) : info(value), next(link) {}\n};\nclass IntSLList {\n    IntSLLNode* head;\n    IntSLLNode* tail;\npublic:\n    IntSLList() : head(nullptr), tail(nullptr) {}\n    IntSLList(const IntSLList&) = delete;\n    IntSLList& operator=(const IntSLList&) = delete;\n    ~IntSLList() {\n        while (head != nullptr) {\n            IntSLLNode* old = head;\n            head = head->next; // Keep the remaining chain before deleting.\n            delete old;\n        }\n    }\n    void addToTail(int value) {\n        IntSLLNode* node = new IntSLLNode(value);\n        if (head == nullptr) head = node;\n        else tail->next = node;\n        tail = node;\n    }\n    void print() const {\n        for (IntSLLNode* p = head; p != nullptr; p = p->next) cout << p->info << ' ';\n        cout << '\\n';\n    }\n    int replaceAll(int oldValue, int newValue) {\n        int count = 0;\n        for (IntSLLNode* p = head; p != nullptr; p = p->next) {\n            if (p->info == oldValue) {\n                p->info = newValue; // Links stay exactly as they were.\n                ++count;\n            }\n        }\n        return count;\n    }\n};\n",
+    "use": "IntSLList list;\nfor (int x : {2, 5, 2, 8}) list.addToTail(x);\ncout << list.replaceAll(2, 9) << '\\n';\nlist.print();",
+    "expected": "2\n9 5 9 8",
+    "expectedOutput": "2\n9 5 9 8 \n",
+    "parts": [
+      [
+        "Container",
+        "Owns its linked nodes; constructor starts empty and destructor releases nodes."
+      ],
+      [
+        "Operation",
+        "The comments identify the traversal, updates and stopping conditions."
+      ],
+      [
+        "main",
+        "Builds sample data and prints the result and any preserved contents."
+      ]
+    ],
+    "change": "Use this when the required operations match the question. Rename the classes and fields, then change the sample data and required formula. Keep the ownership and empty-case checks.",
+    "watch": "Update data, not pointers. Count matches even when oldValue equals newValue.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related course lab",
+    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "manualComments": true,
+    "facets": {
+      "structure": "list",
+      "storage": "linked",
+      "type": "int",
+      "role": "example"
+    },
+    "checks": "IntSLList l;assert(l.replaceAll(1,2)==0);l.addToTail(1);assert(l.replaceAll(1,1)==1);assert(l.replaceAll(1,2)==1);"
+  },
+  {
+    "id": "exam-list-insert-before",
+    "group": "exam-drills",
+    "title": "28 \u00b7 Insert before match",
+    "shortTitle": "28 \u00b7 Insert before match",
+    "when": "Add insertBefore(target,value), inserting before the first matching node.",
+    "question": [
+      "Add insertBefore(target,value), inserting before the first matching node.",
+      "Return true if inserted, false if target is absent. Handle a match at head.",
+      "Build 3,7,9, insert 5 before 7 and 1 before 3; print the result."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\nstruct IntSLLNode {\n    int info;\n    IntSLLNode* next;\n    IntSLLNode(int value, IntSLLNode* link = nullptr) : info(value), next(link) {}\n};\nclass IntSLList {\n    IntSLLNode* head;\n    IntSLLNode* tail;\npublic:\n    IntSLList() : head(nullptr), tail(nullptr) {}\n    IntSLList(const IntSLList&) = delete;\n    IntSLList& operator=(const IntSLList&) = delete;\n    ~IntSLList() {\n        while (head != nullptr) {\n            IntSLLNode* old = head;\n            head = head->next; // Keep the remaining chain before deleting.\n            delete old;\n        }\n    }\n    void addToTail(int value) {\n        IntSLLNode* node = new IntSLLNode(value);\n        if (head == nullptr) head = node;\n        else tail->next = node;\n        tail = node;\n    }\n    void print() const {\n        for (IntSLLNode* p = head; p != nullptr; p = p->next) cout << p->info << ' ';\n        cout << '\\n';\n    }\n    bool insertBefore(int target, int value) {\n        IntSLLNode* previous = nullptr;\n        IntSLLNode* current = head;\n        while (current != nullptr && current->info != target) {\n            previous = current;\n            current = current->next;\n        }\n        if (current == nullptr) return false;\n        IntSLLNode* node = new IntSLLNode(value, current);\n        if (previous == nullptr) head = node; // Inserting before the old head.\n        else previous->next = node;\n        return true;\n    }\n};\n",
+    "use": "IntSLList list;\nfor (int x : {3, 7, 9}) list.addToTail(x);\nlist.insertBefore(7, 5);\nlist.insertBefore(3, 1);\nlist.print();",
+    "expected": "1 3 5 7 9",
+    "expectedOutput": "1 3 5 7 9 \n",
+    "parts": [
+      [
+        "Container",
+        "Owns its linked nodes; constructor starts empty and destructor releases nodes."
+      ],
+      [
+        "Operation",
+        "The comments identify the traversal, updates and stopping conditions."
+      ],
+      [
+        "main",
+        "Builds sample data and prints the result and any preserved contents."
+      ]
+    ],
+    "change": "Use this when the required operations match the question. Rename the classes and fields, then change the sample data and required formula. Keep the ownership and empty-case checks.",
+    "watch": "New node points to current; predecessor then points to new node. Tail stays unchanged.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related course lab",
+    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "manualComments": true,
+    "facets": {
+      "structure": "list",
+      "storage": "linked",
+      "type": "int",
+      "role": "example"
+    },
+    "checks": "IntSLList l;assert(!l.insertBefore(1,0));l.addToTail(1);assert(l.insertBefore(1,0));assert(!l.insertBefore(8,7));"
+  },
+  {
+    "id": "exam-list-remove-front",
+    "group": "exam-drills",
+    "title": "29 \u00b7 Remove first node",
+    "shortTitle": "29 \u00b7 Remove first node",
+    "when": "Add deleteFromHead() returning the removed value.",
+    "question": [
+      "Add deleteFromHead() returning the removed value.",
+      "Throw runtime_error on an empty list. Reset tail when the last node is removed.",
+      "Build 4,8; remove both, append 12 to the emptied list, and print it."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\nstruct IntSLLNode {\n    int info;\n    IntSLLNode* next;\n    IntSLLNode(int value, IntSLLNode* link = nullptr) : info(value), next(link) {}\n};\nclass IntSLList {\n    IntSLLNode* head;\n    IntSLLNode* tail;\npublic:\n    IntSLList() : head(nullptr), tail(nullptr) {}\n    IntSLList(const IntSLList&) = delete;\n    IntSLList& operator=(const IntSLList&) = delete;\n    ~IntSLList() {\n        while (head != nullptr) {\n            IntSLLNode* old = head;\n            head = head->next; // Keep the remaining chain before deleting.\n            delete old;\n        }\n    }\n    void addToTail(int value) {\n        IntSLLNode* node = new IntSLLNode(value);\n        if (head == nullptr) head = node;\n        else tail->next = node;\n        tail = node;\n    }\n    void print() const {\n        for (IntSLLNode* p = head; p != nullptr; p = p->next) cout << p->info << ' ';\n        cout << '\\n';\n    }\n    int deleteFromHead() {\n        if (head == nullptr) throw runtime_error(\"Empty list\");\n        IntSLLNode* old = head;\n        int value = old->info;\n        head = old->next;\n        if (head == nullptr) tail = nullptr; // The sole node was removed.\n        delete old;\n        return value;\n    }\n};\n",
+    "use": "IntSLList list;\nlist.addToTail(4); list.addToTail(8);\ncout << list.deleteFromHead() << ' ' << list.deleteFromHead() << '\\n';\nlist.addToTail(12);\nlist.print();",
+    "expected": "4 8\n12",
+    "expectedOutput": "4 8\n12 \n",
+    "parts": [
+      [
+        "Container",
+        "Owns its linked nodes; constructor starts empty and destructor releases nodes."
+      ],
+      [
+        "Operation",
+        "The comments identify the traversal, updates and stopping conditions."
+      ],
+      [
+        "main",
+        "Builds sample data and prints the result and any preserved contents."
+      ]
+    ],
+    "change": "Use this when the required operations match the question. Rename the classes and fields, then change the sample data and required formula. Keep the ownership and empty-case checks.",
+    "watch": "Save the value and next pointer before delete.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related course lab",
+    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "manualComments": true,
+    "facets": {
+      "structure": "list",
+      "storage": "linked",
+      "type": "int",
+      "role": "example"
+    },
+    "checks": "IntSLList l;bool caught=false;try{l.deleteFromHead();}catch(const runtime_error&){caught=true;}assert(caught);l.addToTail(1);assert(l.deleteFromHead()==1);l.addToTail(2);assert(l.deleteFromHead()==2);"
+  },
+  {
+    "id": "exam-list-remove-after",
+    "group": "exam-drills",
+    "title": "30 \u00b7 Remove after match",
+    "shortTitle": "30 \u00b7 Remove after match",
+    "when": "Add removeAfter(target), deleting the node after the first matching value.",
+    "question": [
+      "Add removeAfter(target), deleting the node after the first matching value.",
+      "Return false if target is missing or has no successor. Update tail if the deleted node was last.",
+      "Build 2,4,6,8; removeAfter(4), removeAfter(4) again, then append 10 and print."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\nstruct IntSLLNode {\n    int info;\n    IntSLLNode* next;\n    IntSLLNode(int value, IntSLLNode* link = nullptr) : info(value), next(link) {}\n};\nclass IntSLList {\n    IntSLLNode* head;\n    IntSLLNode* tail;\npublic:\n    IntSLList() : head(nullptr), tail(nullptr) {}\n    IntSLList(const IntSLList&) = delete;\n    IntSLList& operator=(const IntSLList&) = delete;\n    ~IntSLList() {\n        while (head != nullptr) {\n            IntSLLNode* old = head;\n            head = head->next; // Keep the remaining chain before deleting.\n            delete old;\n        }\n    }\n    void addToTail(int value) {\n        IntSLLNode* node = new IntSLLNode(value);\n        if (head == nullptr) head = node;\n        else tail->next = node;\n        tail = node;\n    }\n    void print() const {\n        for (IntSLLNode* p = head; p != nullptr; p = p->next) cout << p->info << ' ';\n        cout << '\\n';\n    }\n    bool removeAfter(int target) {\n        IntSLLNode* current = head;\n        while (current != nullptr && current->info != target) current = current->next;\n        if (current == nullptr || current->next == nullptr) return false;\n        IntSLLNode* old = current->next;\n        current->next = old->next; // Bypass the node to be removed.\n        if (old == tail) tail = current;\n        delete old;\n        return true;\n    }\n};\n",
+    "use": "IntSLList list;\nfor (int x : {2, 4, 6, 8}) list.addToTail(x);\nlist.removeAfter(4); // Removes 6.\nlist.removeAfter(4); // Removes 8, so 4 becomes tail.\nlist.addToTail(10);\nlist.print();",
+    "expected": "2 4 10",
+    "expectedOutput": "2 4 10 \n",
+    "parts": [
+      [
+        "Container",
+        "Owns its linked nodes; constructor starts empty and destructor releases nodes."
+      ],
+      [
+        "Operation",
+        "The comments identify the traversal, updates and stopping conditions."
+      ],
+      [
+        "main",
+        "Builds sample data and prints the result and any preserved contents."
+      ]
+    ],
+    "change": "Use this when the required operations match the question. Rename the classes and fields, then change the sample data and required formula. Keep the ownership and empty-case checks.",
+    "watch": "Reconnect current->next before deleting the successor.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related course lab",
+    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "manualComments": true,
+    "facets": {
+      "structure": "list",
+      "storage": "linked",
+      "type": "int",
+      "role": "example"
+    },
+    "checks": "IntSLList l;assert(!l.removeAfter(1));l.addToTail(1);assert(!l.removeAfter(1));l.addToTail(2);assert(l.removeAfter(1));l.addToTail(3);assert(l.removeAfter(1));"
+  }
+]
