@@ -1,0 +1,1300 @@
+[
+  {
+    "id": "short-student",
+    "group": "short-drills",
+    "title": "Student \u00b7 add a field",
+    "shortTitle": "Student \u00b7 add a field",
+    "when": "Derive Student from Person; add a student number.",
+    "question": [
+      "Derive Student from Person; add a student number.",
+      "Person stores a private name and exposes getName(). Initialize both fields in the Student constructor. Add print() to show the name and number."
+    ],
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Person {\n    string name; // Private: derived classes must use getName().\npublic:\n    Person(string n) : name(n) {}\n    string getName() const { return name; }\n};\nclass Student : public Person {\n    int number;\npublic:\n    Student(string n, int num) : Person(n), number(num) {}\n    void print() const { cout << getName() << ' ' << number << '\\n'; }\n};",
+    "use": "Student s(\"Alex\", 42);\ns.print();",
+    "expected": "Alex 42",
+    "expectedOutput": "Alex 42\n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Start",
+        "Use the matching generic template above."
+      ],
+      [
+        "Change",
+        "Add the fields or operation named in the question."
+      ],
+      [
+        "Test",
+        "Use main() to check the result and an empty or boundary case."
+      ]
+    ],
+    "change": "Keep the structure. Change the names, data, and calculation to match your question.",
+    "watch": "Initialize the base with Person(n); name is private.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "facets": {
+      "structure": "inheritance",
+      "storage": "none",
+      "type": "int",
+      "role": "example"
+    },
+    "typeLabel": "non-template",
+    "checks": ""
+  },
+  {
+    "id": "short-account",
+    "group": "short-drills",
+    "title": "Account \u00b7 use protected data",
+    "shortTitle": "Account \u00b7 use protected data",
+    "when": "Derive SavingsAccount; add interest to the balance.",
+    "question": [
+      "Derive SavingsAccount; add interest to the balance.",
+      "Account stores protected double balance and provides getBalance(). SavingsAccount::addInterest(rate) adds balance * rate, where 0.1 means 10%."
+    ],
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Account {\nprotected:\n    double balance;\npublic:\n    Account(double b) : balance(b) {}\n    double getBalance() const { return balance; }\n};\nclass SavingsAccount : public Account {\npublic:\n    SavingsAccount(double b) : Account(b) {}\n    void addInterest(double rate) { balance += balance * rate; }\n};",
+    "use": "SavingsAccount a(100);\na.addInterest(0.1);\ncout << a.getBalance() << '\\n';",
+    "expected": "110",
+    "expectedOutput": "110\n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Start",
+        "Use the matching generic template above."
+      ],
+      [
+        "Change",
+        "Add the fields or operation named in the question."
+      ],
+      [
+        "Test",
+        "Use main() to check the result and an empty or boundary case."
+      ]
+    ],
+    "change": "Keep the structure. Change the names, data, and calculation to match your question.",
+    "watch": "Protected data is accessible inside the derived class.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "facets": {
+      "structure": "inheritance",
+      "storage": "none",
+      "type": "int",
+      "role": "example"
+    },
+    "typeLabel": "non-template",
+    "checks": ""
+  },
+  {
+    "id": "short-counter",
+    "group": "short-drills",
+    "title": "Counter \u00b7 reuse a base method",
+    "shortTitle": "Counter \u00b7 reuse a base method",
+    "when": "Derive DoubleCounter; increment twice using the base method.",
+    "question": [
+      "Derive DoubleCounter; increment twice using the base method.",
+      "Counter starts at zero and provides increment() and getValue(). Add incrementTwice() in the derived class without accessing the private value."
+    ],
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Counter {\n    int value;\npublic:\n    Counter() : value(0) {}\n    void increment() { ++value; }\n    int getValue() const { return value; }\n};\nclass DoubleCounter : public Counter {\npublic:\n    void incrementTwice() {\n        increment(); // Reuse the inherited public operation.\n        increment();\n    }\n};",
+    "use": "DoubleCounter c;\nc.incrementTwice();\ncout << c.getValue() << '\\n';",
+    "expected": "2",
+    "expectedOutput": "2\n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Start",
+        "Use the matching generic template above."
+      ],
+      [
+        "Change",
+        "Add the fields or operation named in the question."
+      ],
+      [
+        "Test",
+        "Use main() to check the result and an empty or boundary case."
+      ]
+    ],
+    "change": "Keep the structure. Change the names, data, and calculation to match your question.",
+    "watch": "A derived class can call inherited public methods.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "facets": {
+      "structure": "inheritance",
+      "storage": "none",
+      "type": "int",
+      "role": "example"
+    },
+    "typeLabel": "non-template",
+    "checks": ""
+  },
+  {
+    "id": "short-square",
+    "group": "short-drills",
+    "title": "Square \u00b7 pass values to the base",
+    "shortTitle": "Square \u00b7 pass values to the base",
+    "when": "Derive Square from Rectangle using one side length.",
+    "question": [
+      "Derive Square from Rectangle using one side length.",
+      "Rectangle stores private length and width and provides area(). Square(side) must initialize both dimensions; reuse area() unchanged."
+    ],
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Rectangle {\n    double length, width;\npublic:\n    Rectangle(double l, double w) : length(l), width(w) {}\n    double area() const { return length * width; }\n};\nclass Square : public Rectangle {\npublic:\n    Square(double side) : Rectangle(side, side) {} // Same value for both dimensions.\n};",
+    "use": "Square s(5);\ncout << s.area() << '\\n';",
+    "expected": "25",
+    "expectedOutput": "25\n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Start",
+        "Use the matching generic template above."
+      ],
+      [
+        "Change",
+        "Add the fields or operation named in the question."
+      ],
+      [
+        "Test",
+        "Use main() to check the result and an empty or boundary case."
+      ]
+    ],
+    "change": "Keep the structure. Change the names, data, and calculation to match your question.",
+    "watch": "No override is needed when the inherited method already does the job.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "facets": {
+      "structure": "inheritance",
+      "storage": "none",
+      "type": "int",
+      "role": "example"
+    },
+    "typeLabel": "non-template",
+    "checks": ""
+  },
+  {
+    "id": "short-employee",
+    "group": "short-drills",
+    "title": "Employee \u00b7 override pay",
+    "shortTitle": "Employee \u00b7 override pay",
+    "when": "Override Employee::pay() in HourlyEmployee.",
+    "question": [
+      "Override Employee::pay() in HourlyEmployee.",
+      "Employee::pay() returns 0 and is virtual. HourlyEmployee stores hours and rate and returns their product. Call pay() through an Employee reference."
+    ],
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Employee {\npublic:\n    virtual double pay() const { return 0; }\n    virtual ~Employee() = default;\n};\nclass HourlyEmployee : public Employee {\n    double hours, rate;\npublic:\n    HourlyEmployee(double h, double r) : hours(h), rate(r) {}\n    double pay() const override { return hours * rate; }\n};",
+    "use": "HourlyEmployee worker(3, 20);\nEmployee& person = worker; // Reference keeps virtual dispatch.\ncout << person.pay() << '\\n';",
+    "expected": "60",
+    "expectedOutput": "60\n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Start",
+        "Use the matching generic template above."
+      ],
+      [
+        "Change",
+        "Add the fields or operation named in the question."
+      ],
+      [
+        "Test",
+        "Use main() to check the result and an empty or boundary case."
+      ]
+    ],
+    "change": "Keep the structure. Change the names, data, and calculation to match your question.",
+    "watch": "virtual enables derived behavior through a base reference.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "facets": {
+      "structure": "inheritance",
+      "storage": "none",
+      "type": "int",
+      "role": "example"
+    },
+    "typeLabel": "non-template",
+    "checks": ""
+  },
+  {
+    "id": "short-ticket",
+    "group": "short-drills",
+    "title": "Ticket \u00b7 extend a base calculation",
+    "shortTitle": "Ticket \u00b7 extend a base calculation",
+    "when": "Override Ticket::cost() to apply a discount.",
+    "question": [
+      "Override Ticket::cost() to apply a discount.",
+      "Ticket stores a private price. DiscountTicket receives a price and discount amount. Its cost() returns Ticket::cost() minus that discount."
+    ],
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Ticket {\n    double price;\npublic:\n    Ticket(double p) : price(p) {}\n    virtual double cost() const { return price; }\n    virtual ~Ticket() = default;\n};\nclass DiscountTicket : public Ticket {\n    double discount;\npublic:\n    DiscountTicket(double p, double d) : Ticket(p), discount(d) {}\n    double cost() const override {\n        return Ticket::cost() - discount; // Qualified call avoids calling ourselves.\n    }\n};",
+    "use": "DiscountTicket t(20, 5);\ncout << t.cost() << '\\n';",
+    "expected": "15",
+    "expectedOutput": "15\n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Start",
+        "Use the matching generic template above."
+      ],
+      [
+        "Change",
+        "Add the fields or operation named in the question."
+      ],
+      [
+        "Test",
+        "Use main() to check the result and an empty or boundary case."
+      ]
+    ],
+    "change": "Keep the structure. Change the names, data, and calculation to match your question.",
+    "watch": "Use Ticket::cost(), not cost(), inside this override.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "facets": {
+      "structure": "inheritance",
+      "storage": "none",
+      "type": "int",
+      "role": "example"
+    },
+    "typeLabel": "non-template",
+    "checks": ""
+  },
+  {
+    "id": "short-sensor",
+    "group": "short-drills",
+    "title": "Sensor \u00b7 implement an abstract method",
+    "shortTitle": "Sensor \u00b7 implement an abstract method",
+    "when": "Implement a sensor that adds an offset.",
+    "question": [
+      "Implement a sensor that adds an offset.",
+      "Sensor declares pure virtual double read() const and a virtual destructor. OffsetSensor stores raw and offset; read() returns their sum."
+    ],
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Sensor {\npublic:\n    virtual double read() const = 0;\n    virtual ~Sensor() = default;\n};\nclass OffsetSensor : public Sensor {\n    double raw, offset;\npublic:\n    OffsetSensor(double r, double o) : raw(r), offset(o) {}\n    double read() const override { return raw + offset; }\n};",
+    "use": "OffsetSensor sensor(10, 2);\nSensor* p = &sensor;\ncout << p->read() << '\\n';",
+    "expected": "12",
+    "expectedOutput": "12\n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Start",
+        "Use the matching generic template above."
+      ],
+      [
+        "Change",
+        "Add the fields or operation named in the question."
+      ],
+      [
+        "Test",
+        "Use main() to check the result and an empty or boundary case."
+      ]
+    ],
+    "change": "Keep the structure. Change the names, data, and calculation to match your question.",
+    "watch": "The override must match the base return type and const.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "facets": {
+      "structure": "inheritance",
+      "storage": "none",
+      "type": "int",
+      "role": "example"
+    },
+    "typeLabel": "non-template",
+    "checks": ""
+  },
+  {
+    "id": "short-box",
+    "group": "short-drills",
+    "title": "Box \u00b7 define methods outside the class",
+    "shortTitle": "Box \u00b7 define methods outside the class",
+    "when": "Derive Box from Solid; define its methods below the class.",
+    "question": [
+      "Derive Box from Solid; define its methods below the class.",
+      "Solid has pure virtual double volume() const and a virtual destructor. Box stores length, width and height. Declare its constructor and volume() in the class; define both using Box::."
+    ],
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Solid {\npublic:\n    virtual double volume() const = 0;\n    virtual ~Solid() = default;\n};\nclass Box : public Solid {\n    double length, width, height;\npublic:\n    Box(double l, double w, double h); // Declarations end with semicolons.\n    double volume() const override;\n};\n// Definitions belong to Box even though written outside its braces.\nBox::Box(double l, double w, double h) : length(l), width(w), height(h) {}\ndouble Box::volume() const { return length * width * height; }",
+    "use": "Box b(2, 3, 4);\ncout << b.volume() << '\\n';",
+    "expected": "24",
+    "expectedOutput": "24\n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Start",
+        "Use the matching generic template above."
+      ],
+      [
+        "Change",
+        "Add the fields or operation named in the question."
+      ],
+      [
+        "Test",
+        "Use main() to check the result and an empty or boundary case."
+      ]
+    ],
+    "change": "Keep the structure. Change the names, data, and calculation to match your question.",
+    "watch": "Use Box:: on definitions; write override only inside the class.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "facets": {
+      "structure": "inheritance",
+      "storage": "none",
+      "type": "int",
+      "role": "example"
+    },
+    "typeLabel": "non-template",
+    "checks": ""
+  },
+  {
+    "id": "short-shapes",
+    "group": "short-drills",
+    "title": "Shapes \u00b7 two area formulas",
+    "shortTitle": "Shapes \u00b7 two area formulas",
+    "when": "Implement Square and Circle with a shared abstract base.",
+    "question": [
+      "Implement Square and Circle with a shared abstract base.",
+      "Shape stores protected double value, initializes it in its constructor, declares pure virtual double area() const, and has a virtual destructor.",
+      "Square returns value * value; Circle returns 3.0 * value * value. Use pi = 3 for this question.",
+      "Call both through Shape pointers in main()."
+    ],
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Shape {\nprotected:\n    double value;\npublic:\n    Shape(double v) : value(v) {}\n    virtual double area() const = 0;\n    virtual ~Shape() = default;\n};\nclass Square : public Shape {\npublic:\n    Square(double v) : Shape(v) {}\n    double area() const override { return value * value; }\n};\nclass Circle : public Shape {\npublic:\n    Circle(double v) : Shape(v) {}\n    double area() const override { return 3.0 * value * value; }\n};",
+    "use": "Square a(2);\nCircle b(2);\nShape* first = &a;\nShape* second = &b; // Points to existing objects; no delete needed.\ncout << first->area() << ' ' << second->area() << '\\n';",
+    "expected": "4 12",
+    "expectedOutput": "4 12\n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Start",
+        "Use the matching generic template above."
+      ],
+      [
+        "Change",
+        "Add the fields or operation named in the question."
+      ],
+      [
+        "Test",
+        "Use main() to check the result and an empty or boundary case."
+      ]
+    ],
+    "change": "Keep the structure. Change the names, data, and calculation to match your question.",
+    "watch": "Keep the same signature in the base and both overrides.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "facets": {
+      "structure": "inheritance",
+      "storage": "none",
+      "type": "int",
+      "role": "example"
+    },
+    "typeLabel": "non-template",
+    "checks": ""
+  },
+  {
+    "id": "short-delivery",
+    "group": "short-drills",
+    "title": "Delivery \u00b7 two fee rules",
+    "shortTitle": "Delivery \u00b7 two fee rules",
+    "when": "Implement Pickup and Courier with a shared abstract base.",
+    "question": [
+      "Implement Pickup and Courier with a shared abstract base.",
+      "Delivery stores protected double value, initializes it in its constructor, declares pure virtual double fee() const, and has a virtual destructor.",
+      "Pickup returns 0; Courier returns 5 + value.",
+      "Call both through Delivery pointers in main()."
+    ],
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Delivery {\nprotected:\n    double value;\npublic:\n    Delivery(double v) : value(v) {}\n    virtual double fee() const = 0;\n    virtual ~Delivery() = default;\n};\nclass Pickup : public Delivery {\npublic:\n    Pickup(double v) : Delivery(v) {}\n    double fee() const override { return 0; }\n};\nclass Courier : public Delivery {\npublic:\n    Courier(double v) : Delivery(v) {}\n    double fee() const override { return 5 + value; }\n};",
+    "use": "Pickup a(3);\nCourier b(3);\nDelivery* first = &a;\nDelivery* second = &b; // Points to existing objects; no delete needed.\ncout << first->fee() << ' ' << second->fee() << '\\n';",
+    "expected": "0 8",
+    "expectedOutput": "0 8\n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Start",
+        "Use the matching generic template above."
+      ],
+      [
+        "Change",
+        "Add the fields or operation named in the question."
+      ],
+      [
+        "Test",
+        "Use main() to check the result and an empty or boundary case."
+      ]
+    ],
+    "change": "Keep the structure. Change the names, data, and calculation to match your question.",
+    "watch": "Keep the same signature in the base and both overrides.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "facets": {
+      "structure": "inheritance",
+      "storage": "none",
+      "type": "int",
+      "role": "example"
+    },
+    "typeLabel": "non-template",
+    "checks": ""
+  },
+  {
+    "id": "short-marks",
+    "group": "short-drills",
+    "title": "Marks \u00b7 two scoring rules",
+    "shortTitle": "Marks \u00b7 two scoring rules",
+    "when": "Implement Quiz and BonusQuiz with a shared abstract base.",
+    "question": [
+      "Implement Quiz and BonusQuiz with a shared abstract base.",
+      "Assessment stores protected double value, initializes it in its constructor, declares pure virtual double score() const, and has a virtual destructor.",
+      "Quiz returns value; BonusQuiz returns value + 2.",
+      "Call both through Assessment pointers in main()."
+    ],
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Assessment {\nprotected:\n    double value;\npublic:\n    Assessment(double v) : value(v) {}\n    virtual double score() const = 0;\n    virtual ~Assessment() = default;\n};\nclass Quiz : public Assessment {\npublic:\n    Quiz(double v) : Assessment(v) {}\n    double score() const override { return value; }\n};\nclass BonusQuiz : public Assessment {\npublic:\n    BonusQuiz(double v) : Assessment(v) {}\n    double score() const override { return value + 2; }\n};",
+    "use": "Quiz a(6);\nBonusQuiz b(6);\nAssessment* first = &a;\nAssessment* second = &b; // Points to existing objects; no delete needed.\ncout << first->score() << ' ' << second->score() << '\\n';",
+    "expected": "6 8",
+    "expectedOutput": "6 8\n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Start",
+        "Use the matching generic template above."
+      ],
+      [
+        "Change",
+        "Add the fields or operation named in the question."
+      ],
+      [
+        "Test",
+        "Use main() to check the result and an empty or boundary case."
+      ]
+    ],
+    "change": "Keep the structure. Change the names, data, and calculation to match your question.",
+    "watch": "Keep the same signature in the base and both overrides.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "facets": {
+      "structure": "inheritance",
+      "storage": "none",
+      "type": "int",
+      "role": "example"
+    },
+    "typeLabel": "non-template",
+    "checks": ""
+  },
+  {
+    "id": "short-converter",
+    "group": "short-drills",
+    "title": "Converter \u00b7 two conversions",
+    "shortTitle": "Converter \u00b7 two conversions",
+    "when": "Implement DoubleValue and HalfValue with a shared abstract base.",
+    "question": [
+      "Implement DoubleValue and HalfValue with a shared abstract base.",
+      "Converter stores protected double value, initializes it in its constructor, declares pure virtual double convert() const, and has a virtual destructor.",
+      "DoubleValue returns value * 2; HalfValue returns value / 2.",
+      "Call both through Converter pointers in main()."
+    ],
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Converter {\nprotected:\n    double value;\npublic:\n    Converter(double v) : value(v) {}\n    virtual double convert() const = 0;\n    virtual ~Converter() = default;\n};\nclass DoubleValue : public Converter {\npublic:\n    DoubleValue(double v) : Converter(v) {}\n    double convert() const override { return value * 2; }\n};\nclass HalfValue : public Converter {\npublic:\n    HalfValue(double v) : Converter(v) {}\n    double convert() const override { return value / 2; }\n};",
+    "use": "DoubleValue a(8);\nHalfValue b(8);\nConverter* first = &a;\nConverter* second = &b; // Points to existing objects; no delete needed.\ncout << first->convert() << ' ' << second->convert() << '\\n';",
+    "expected": "16 4",
+    "expectedOutput": "16 4\n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Start",
+        "Use the matching generic template above."
+      ],
+      [
+        "Change",
+        "Add the fields or operation named in the question."
+      ],
+      [
+        "Test",
+        "Use main() to check the result and an empty or boundary case."
+      ]
+    ],
+    "change": "Keep the structure. Change the names, data, and calculation to match your question.",
+    "watch": "Keep the same signature in the base and both overrides.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "facets": {
+      "structure": "inheritance",
+      "storage": "none",
+      "type": "int",
+      "role": "example"
+    },
+    "typeLabel": "non-template",
+    "checks": ""
+  },
+  {
+    "id": "short-job",
+    "group": "short-drills",
+    "title": "Job \u00b7 print inherited data",
+    "shortTitle": "Job \u00b7 print inherited data",
+    "when": "Derive PrintJob and print its ID and filename.",
+    "question": [
+      "Derive PrintJob and print its ID and filename.",
+      "Job stores protected int id, initializes it in its constructor, declares pure virtual void execute() const, and has a virtual destructor. PrintJob adds a string filename."
+    ],
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Job {\nprotected:\n    int id;\npublic:\n    Job(int number) : id(number) {}\n    virtual void execute() const = 0;\n    virtual ~Job() = default;\n};\nclass PrintJob : public Job {\n    string filename;\npublic:\n    PrintJob(int number, string file) : Job(number), filename(file) {}\n    void execute() const override { cout << id << ' ' << filename << '\\n'; }\n};",
+    "use": "PrintJob job(7, \"notes.txt\");\nJob& base = job;\nbase.execute();",
+    "expected": "7 notes.txt",
+    "expectedOutput": "7 notes.txt\n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Start",
+        "Use the matching generic template above."
+      ],
+      [
+        "Change",
+        "Add the fields or operation named in the question."
+      ],
+      [
+        "Test",
+        "Use main() to check the result and an empty or boundary case."
+      ]
+    ],
+    "change": "Keep the structure. Change the names, data, and calculation to match your question.",
+    "watch": "Use void when the method prints but returns no value.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "facets": {
+      "structure": "inheritance",
+      "storage": "none",
+      "type": "int",
+      "role": "example"
+    },
+    "typeLabel": "non-template",
+    "checks": ""
+  },
+  {
+    "id": "short-display",
+    "group": "short-drills",
+    "title": "Display \u00b7 extend base printing",
+    "shortTitle": "Display \u00b7 extend base printing",
+    "when": "Print a device name followed by its battery level.",
+    "question": [
+      "Print a device name followed by its battery level.",
+      "Device stores a private name and has virtual print(). Phone adds battery and overrides print(), calling Device::print() first."
+    ],
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Device {\n    string name;\npublic:\n    Device(string n) : name(n) {}\n    virtual void print() const { cout << name; }\n    virtual ~Device() = default;\n};\nclass Phone : public Device {\n    int battery;\npublic:\n    Phone(string n, int b) : Device(n), battery(b) {}\n    void print() const override {\n        Device::print(); // Print the base portion first.\n        cout << ' ' << battery << \"%\\n\";\n    }\n};",
+    "use": "Phone phone(\"Phone\", 80);\nphone.print();",
+    "expected": "Phone 80%",
+    "expectedOutput": "Phone 80%\n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Start",
+        "Use the matching generic template above."
+      ],
+      [
+        "Change",
+        "Add the fields or operation named in the question."
+      ],
+      [
+        "Test",
+        "Use main() to check the result and an empty or boundary case."
+      ]
+    ],
+    "change": "Keep the structure. Change the names, data, and calculation to match your question.",
+    "watch": "Qualify the base call to avoid recursive Phone::print().",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "facets": {
+      "structure": "inheritance",
+      "storage": "none",
+      "type": "int",
+      "role": "example"
+    },
+    "typeLabel": "non-template",
+    "checks": ""
+  },
+  {
+    "id": "short-chain",
+    "group": "short-drills",
+    "title": "Inheritance \u00b7 three levels",
+    "shortTitle": "Inheritance \u00b7 three levels",
+    "when": "Build Person \u2192 Student \u2192 GraduateStudent.",
+    "question": [
+      "Build Person \u2192 Student \u2192 GraduateStudent.",
+      "Person stores a private name and exposes getName(). Student adds a private number and getNumber(). GraduateStudent adds a topic and prints all three. Pass constructor arguments along the chain."
+    ],
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Person {\n    string name;\npublic:\n    Person(string n) : name(n) {}\n    string getName() const { return name; }\n};\nclass Student : public Person {\n    int number;\npublic:\n    Student(string n, int num) : Person(n), number(num) {}\n    int getNumber() const { return number; }\n};\nclass GraduateStudent : public Student {\n    string topic;\npublic:\n    GraduateStudent(string n, int num, string t) : Student(n, num), topic(t) {}\n    void print() const { cout << getName() << ' ' << getNumber() << ' ' << topic << '\\n'; }\n};",
+    "use": "GraduateStudent s(\"Sam\", 10, \"Robotics\");\ns.print();",
+    "expected": "Sam 10 Robotics",
+    "expectedOutput": "Sam 10 Robotics\n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Start",
+        "Use the matching generic template above."
+      ],
+      [
+        "Change",
+        "Add the fields or operation named in the question."
+      ],
+      [
+        "Test",
+        "Use main() to check the result and an empty or boundary case."
+      ]
+    ],
+    "change": "Keep the structure. Change the names, data, and calculation to match your question.",
+    "watch": "Each constructor initializes its immediate base, not a grandparent.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "facets": {
+      "structure": "inheritance",
+      "storage": "none",
+      "type": "int",
+      "role": "example"
+    },
+    "typeLabel": "non-template",
+    "checks": ""
+  },
+  {
+    "id": "short-stack-find",
+    "group": "short-drills",
+    "title": "Stack \u00b7 find a value",
+    "shortTitle": "Stack \u00b7 find a value",
+    "when": "Write contains(s, target); leave the stack unchanged.",
+    "question": [
+      "Write contains(s, target); leave the stack unchanged.",
+      "Use only public stack operations and one temporary stack. Return false for an empty stack."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\nclass StackException : public exception {\n    string message;\npublic:\n    StackException(string msg) : message(msg) {}\n    const char* what() const noexcept override { return message.c_str(); }\n};\ntemplate <class T> class Stack {\n    struct stackNode { T theItem; stackNode* next; };\n    typedef stackNode StackNode;\n    StackNode* topOfStack;\n    int count;\npublic:\n    Stack() : topOfStack(nullptr), count(0) {}\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n    ~Stack() { while (!isEmpty()) pop(); }\n    bool isEmpty() const { return count == 0; }\n    int size() const { return count; }\n    void push(T item) {\n        // Link the new node to the OLD top before replacing topOfStack.\n        StackNode* node = new StackNode{item, topOfStack};\n        topOfStack = node;\n        ++count;\n    }\n    T top() const {\n        if (isEmpty()) throw StackException(\"Empty stack\");\n        return topOfStack->theItem; // Read without removing.\n    }\n    T pop() {\n        if (isEmpty()) throw StackException(\"Empty stack\");\n        StackNode* old = topOfStack;\n        T value = old->theItem; // Save before deleting the node.\n        topOfStack = old->next;\n        delete old;\n        --count;\n        return value;\n    }\n};\n\n// FREE FUNCTION: inspect values, then restore the original order.\nbool contains(Stack<int>& s, int target) {\n    bool found = false;\n    Stack<int> temporary;\n    while (!s.isEmpty()) {\n        int value = s.pop();\n        if (value == target) found = true;\n        temporary.push(value);\n    }\n    while (!temporary.isEmpty()) s.push(temporary.pop());\n    return found;\n}",
+    "use": "Stack<int> s;\ns.push(4); s.push(9);\ncout << contains(s, 4) << ' ' << contains(s, 8) << '\\n';\ncout << s.pop() << ' ' << s.pop() << '\\n';",
+    "expected": "1 0\n9 4",
+    "expectedOutput": "1 0\n9 4\n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Start",
+        "Use the matching generic template above."
+      ],
+      [
+        "Change",
+        "Add the fields or operation named in the question."
+      ],
+      [
+        "Test",
+        "Use main() to check the result and an empty or boundary case."
+      ]
+    ],
+    "change": "Keep the structure. Change the names, data, and calculation to match your question.",
+    "watch": "Do not return early before restoring the stack.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "facets": {
+      "structure": "stack",
+      "storage": "linked",
+      "type": "template",
+      "role": "example"
+    },
+    "typeLabel": "template",
+    "checks": "Stack<int> s; assert(!contains(s, 1)); s.push(1); assert(contains(s, 1)); assert(s.pop()==1);"
+  },
+  {
+    "id": "short-stack-max",
+    "group": "short-drills",
+    "title": "Stack \u00b7 largest value",
+    "shortTitle": "Stack \u00b7 largest value",
+    "when": "Return the largest stack value without changing the stack.",
+    "question": [
+      "Return the largest stack value without changing the stack.",
+      "Throw StackException if empty. Use one temporary stack and public operations."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\nclass StackException : public exception {\n    string message;\npublic:\n    StackException(string msg) : message(msg) {}\n    const char* what() const noexcept override { return message.c_str(); }\n};\ntemplate <class T> class Stack {\n    struct stackNode { T theItem; stackNode* next; };\n    typedef stackNode StackNode;\n    StackNode* topOfStack;\n    int count;\npublic:\n    Stack() : topOfStack(nullptr), count(0) {}\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n    ~Stack() { while (!isEmpty()) pop(); }\n    bool isEmpty() const { return count == 0; }\n    int size() const { return count; }\n    void push(T item) {\n        // Link the new node to the OLD top before replacing topOfStack.\n        StackNode* node = new StackNode{item, topOfStack};\n        topOfStack = node;\n        ++count;\n    }\n    T top() const {\n        if (isEmpty()) throw StackException(\"Empty stack\");\n        return topOfStack->theItem; // Read without removing.\n    }\n    T pop() {\n        if (isEmpty()) throw StackException(\"Empty stack\");\n        StackNode* old = topOfStack;\n        T value = old->theItem; // Save before deleting the node.\n        topOfStack = old->next;\n        delete old;\n        --count;\n        return value;\n    }\n};\n\n// FREE FUNCTION: inspect values, then restore the original order.\nint maximum(Stack<int>& s) {\n    if (s.isEmpty()) throw StackException(\"Empty stack\");\n    int result = s.top();\n    Stack<int> temporary;\n    while (!s.isEmpty()) {\n        int value = s.pop();\n        if (value > result) result = value;\n        temporary.push(value);\n    }\n    while (!temporary.isEmpty()) s.push(temporary.pop());\n    return result;\n}",
+    "use": "Stack<int> s;\ns.push(-5); s.push(-2); s.push(-8);\ncout << maximum(s) << '\\n';\nwhile (!s.isEmpty()) cout << s.pop() << ' ';\ncout << '\\n';",
+    "expected": "-2\n-8 -2 -5",
+    "expectedOutput": "-2\n-8 -2 -5 \n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Start",
+        "Use the matching generic template above."
+      ],
+      [
+        "Change",
+        "Add the fields or operation named in the question."
+      ],
+      [
+        "Test",
+        "Use main() to check the result and an empty or boundary case."
+      ]
+    ],
+    "change": "Keep the structure. Change the names, data, and calculation to match your question.",
+    "watch": "Start from a real value, not zero: all values might be negative.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "facets": {
+      "structure": "stack",
+      "storage": "linked",
+      "type": "template",
+      "role": "example"
+    },
+    "typeLabel": "template",
+    "checks": "Stack<int> s; bool threw=false; try { maximum(s); } catch(const StackException&) { threw=true; } assert(threw); s.push(-3); assert(maximum(s)==-3 && s.pop()==-3);"
+  },
+  {
+    "id": "short-stack-duplicate",
+    "group": "short-drills",
+    "title": "Stack \u00b7 duplicate the top",
+    "shortTitle": "Stack \u00b7 duplicate the top",
+    "when": "Add a second copy of the top item.",
+    "question": [
+      "Add a second copy of the top item.",
+      "Write duplicateTop(s) using top() and push(). Throw on an empty stack through top()."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\nclass StackException : public exception {\n    string message;\npublic:\n    StackException(string msg) : message(msg) {}\n    const char* what() const noexcept override { return message.c_str(); }\n};\ntemplate <class T> class Stack {\n    struct stackNode { T theItem; stackNode* next; };\n    typedef stackNode StackNode;\n    StackNode* topOfStack;\n    int count;\npublic:\n    Stack() : topOfStack(nullptr), count(0) {}\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n    ~Stack() { while (!isEmpty()) pop(); }\n    bool isEmpty() const { return count == 0; }\n    int size() const { return count; }\n    void push(T item) {\n        // Link the new node to the OLD top before replacing topOfStack.\n        StackNode* node = new StackNode{item, topOfStack};\n        topOfStack = node;\n        ++count;\n    }\n    T top() const {\n        if (isEmpty()) throw StackException(\"Empty stack\");\n        return topOfStack->theItem; // Read without removing.\n    }\n    T pop() {\n        if (isEmpty()) throw StackException(\"Empty stack\");\n        StackNode* old = topOfStack;\n        T value = old->theItem; // Save before deleting the node.\n        topOfStack = old->next;\n        delete old;\n        --count;\n        return value;\n    }\n};\n\nvoid duplicateTop(Stack<int>& s) {\n    int value = s.top(); // Read first; throws if empty.\n    s.push(value);\n}",
+    "use": "Stack<int> s;\ns.push(3); s.push(7);\nduplicateTop(s);\nwhile (!s.isEmpty()) cout << s.pop() << ' ';\ncout << '\\n';",
+    "expected": "7 7 3",
+    "expectedOutput": "7 7 3 \n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Start",
+        "Use the matching generic template above."
+      ],
+      [
+        "Change",
+        "Add the fields or operation named in the question."
+      ],
+      [
+        "Test",
+        "Use main() to check the result and an empty or boundary case."
+      ]
+    ],
+    "change": "Keep the structure. Change the names, data, and calculation to match your question.",
+    "watch": "top() reads; pop() removes.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "facets": {
+      "structure": "stack",
+      "storage": "linked",
+      "type": "template",
+      "role": "example"
+    },
+    "typeLabel": "template",
+    "checks": "Stack<int> s; bool threw=false; try { duplicateTop(s); } catch(const StackException&) { threw=true; } assert(threw); s.push(2); duplicateTop(s); assert(s.size()==2); assert(s.pop()==2 && s.pop()==2);"
+  },
+  {
+    "id": "short-stack-remove",
+    "group": "short-drills",
+    "title": "Stack \u00b7 remove up to n",
+    "shortTitle": "Stack \u00b7 remove up to n",
+    "when": "Remove up to n top items and return how many were removed.",
+    "question": [
+      "Remove up to n top items and return how many were removed.",
+      "Stop if empty; if n is zero or negative, remove nothing."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\nclass StackException : public exception {\n    string message;\npublic:\n    StackException(string msg) : message(msg) {}\n    const char* what() const noexcept override { return message.c_str(); }\n};\ntemplate <class T> class Stack {\n    struct stackNode { T theItem; stackNode* next; };\n    typedef stackNode StackNode;\n    StackNode* topOfStack;\n    int count;\npublic:\n    Stack() : topOfStack(nullptr), count(0) {}\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n    ~Stack() { while (!isEmpty()) pop(); }\n    bool isEmpty() const { return count == 0; }\n    int size() const { return count; }\n    void push(T item) {\n        // Link the new node to the OLD top before replacing topOfStack.\n        StackNode* node = new StackNode{item, topOfStack};\n        topOfStack = node;\n        ++count;\n    }\n    T top() const {\n        if (isEmpty()) throw StackException(\"Empty stack\");\n        return topOfStack->theItem; // Read without removing.\n    }\n    T pop() {\n        if (isEmpty()) throw StackException(\"Empty stack\");\n        StackNode* old = topOfStack;\n        T value = old->theItem; // Save before deleting the node.\n        topOfStack = old->next;\n        delete old;\n        --count;\n        return value;\n    }\n};\n\nint removeTop(Stack<int>& s, int n) {\n    int removed = 0;\n    while (removed < n && !s.isEmpty()) {\n        s.pop();\n        ++removed;\n    }\n    return removed;\n}",
+    "use": "Stack<int> s;\ns.push(1); s.push(2); s.push(3);\ncout << removeTop(s, 2) << ' ' << s.top() << '\\n';",
+    "expected": "2 1",
+    "expectedOutput": "2 1\n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Start",
+        "Use the matching generic template above."
+      ],
+      [
+        "Change",
+        "Add the fields or operation named in the question."
+      ],
+      [
+        "Test",
+        "Use main() to check the result and an empty or boundary case."
+      ]
+    ],
+    "change": "Keep the structure. Change the names, data, and calculation to match your question.",
+    "watch": "Check empty before pop().",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "facets": {
+      "structure": "stack",
+      "storage": "linked",
+      "type": "template",
+      "role": "example"
+    },
+    "typeLabel": "template",
+    "checks": "Stack<int> s; assert(removeTop(s, 3)==0); s.push(1); assert(removeTop(s, -1)==0 && s.size()==1); assert(removeTop(s, 3)==1 && s.isEmpty());"
+  },
+  {
+    "id": "short-stack-replace",
+    "group": "short-drills",
+    "title": "Stack \u00b7 replace matching values",
+    "shortTitle": "Stack \u00b7 replace matching values",
+    "when": "Replace every matching stack value; keep the order.",
+    "question": [
+      "Replace every matching stack value; keep the order.",
+      "Write replaceAll(s, oldValue, newValue). Return the number replaced; use one temporary stack."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\nclass StackException : public exception {\n    string message;\npublic:\n    StackException(string msg) : message(msg) {}\n    const char* what() const noexcept override { return message.c_str(); }\n};\ntemplate <class T> class Stack {\n    struct stackNode { T theItem; stackNode* next; };\n    typedef stackNode StackNode;\n    StackNode* topOfStack;\n    int count;\npublic:\n    Stack() : topOfStack(nullptr), count(0) {}\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n    ~Stack() { while (!isEmpty()) pop(); }\n    bool isEmpty() const { return count == 0; }\n    int size() const { return count; }\n    void push(T item) {\n        // Link the new node to the OLD top before replacing topOfStack.\n        StackNode* node = new StackNode{item, topOfStack};\n        topOfStack = node;\n        ++count;\n    }\n    T top() const {\n        if (isEmpty()) throw StackException(\"Empty stack\");\n        return topOfStack->theItem; // Read without removing.\n    }\n    T pop() {\n        if (isEmpty()) throw StackException(\"Empty stack\");\n        StackNode* old = topOfStack;\n        T value = old->theItem; // Save before deleting the node.\n        topOfStack = old->next;\n        delete old;\n        --count;\n        return value;\n    }\n};\n\n// FREE FUNCTION: inspect values, then restore the original order.\nint replaceAll(Stack<int>& s, int oldValue, int newValue) {\n    int changed = 0;\n    Stack<int> temporary;\n    while (!s.isEmpty()) {\n        int value = s.pop();\n        if (value == oldValue) { value = newValue; ++changed; }\n        temporary.push(value);\n    }\n    while (!temporary.isEmpty()) s.push(temporary.pop());\n    return changed;\n}",
+    "use": "Stack<int> s;\ns.push(2); s.push(5); s.push(2);\ncout << replaceAll(s, 2, 9) << '\\n';\nwhile (!s.isEmpty()) cout << s.pop() << ' ';\ncout << '\\n';",
+    "expected": "2\n9 5 9",
+    "expectedOutput": "2\n9 5 9 \n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Start",
+        "Use the matching generic template above."
+      ],
+      [
+        "Change",
+        "Add the fields or operation named in the question."
+      ],
+      [
+        "Test",
+        "Use main() to check the result and an empty or boundary case."
+      ]
+    ],
+    "change": "Keep the structure. Change the names, data, and calculation to match your question.",
+    "watch": "Restore every value, including the ones that did not match.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "facets": {
+      "structure": "stack",
+      "storage": "linked",
+      "type": "template",
+      "role": "example"
+    },
+    "typeLabel": "template",
+    "checks": "Stack<int> s; assert(replaceAll(s,1,2)==0); s.push(1); s.push(3); assert(replaceAll(s,1,2)==1); assert(s.pop()==3 && s.pop()==2);"
+  },
+  {
+    "id": "short-queue-find",
+    "group": "short-drills",
+    "title": "Queue \u00b7 find a value",
+    "shortTitle": "Queue \u00b7 find a value",
+    "when": "Find a target without changing queue order.",
+    "question": [
+      "Find a target without changing queue order.",
+      "Return true if present; rotate exactly the original number of items."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\ntemplate <class T> class Queue {\n    struct Node { T theItem; Node* next; };\n    Node* head;\n    Node* tail;\n    int count;\npublic:\n    Queue() : head(nullptr), tail(nullptr), count(0) {}\n    Queue(const Queue&) = delete;\n    Queue& operator=(const Queue&) = delete;\n    ~Queue() { while (!isEmpty()) dequeue(); }\n    bool isEmpty() const { return head == nullptr; }\n    int size() const { return count; }\n    void enqueue(T value) {\n        Node* node = new Node{value, nullptr};\n        if (isEmpty()) head = node; // First node becomes BOTH ends.\n        else tail->next = node;\n        tail = node;\n        ++count;\n    }\n    T front() const {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        return head->theItem;\n    }\n    T dequeue() {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        Node* old = head;\n        T value = old->theItem;\n        head = head->next;\n        if (head == nullptr) tail = nullptr; // Last node was removed.\n        delete old;\n        --count;\n        return value;\n    }\n};\n\nbool contains(Queue<int>& q, int target) {\n    bool found = false;\n    int n = q.size(); // Save the count: re-enqueueing keeps the queue nonempty.\n    for (int i = 0; i < n; ++i) {\n        int value = q.dequeue();\n        if (value == target) found = true;\n        q.enqueue(value);\n    }\n    return found;\n}",
+    "use": "Queue<int> q;\nq.enqueue(4); q.enqueue(7);\ncout << contains(q, 7) << ' ' << contains(q, 9) << '\\n';\ncout << q.dequeue() << ' ' << q.dequeue() << '\\n';",
+    "expected": "1 0\n4 7",
+    "expectedOutput": "1 0\n4 7\n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Start",
+        "Use the matching generic template above."
+      ],
+      [
+        "Change",
+        "Add the fields or operation named in the question."
+      ],
+      [
+        "Test",
+        "Use main() to check the result and an empty or boundary case."
+      ]
+    ],
+    "change": "Keep the structure. Change the names, data, and calculation to match your question.",
+    "watch": "Do not return early; finish the rotation to preserve order.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "facets": {
+      "structure": "queue",
+      "storage": "linked",
+      "type": "template",
+      "role": "example"
+    },
+    "typeLabel": "template",
+    "checks": "Queue<int> q; assert(!contains(q,1)); q.enqueue(1); q.enqueue(2); assert(contains(q,1)); assert(q.dequeue()==1 && q.dequeue()==2);"
+  },
+  {
+    "id": "short-queue-min",
+    "group": "short-drills",
+    "title": "Queue \u00b7 smallest value",
+    "shortTitle": "Queue \u00b7 smallest value",
+    "when": "Return the minimum without changing queue order.",
+    "question": [
+      "Return the minimum without changing queue order.",
+      "Throw runtime_error if empty. Start from front(), then rotate the queue once."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\ntemplate <class T> class Queue {\n    struct Node { T theItem; Node* next; };\n    Node* head;\n    Node* tail;\n    int count;\npublic:\n    Queue() : head(nullptr), tail(nullptr), count(0) {}\n    Queue(const Queue&) = delete;\n    Queue& operator=(const Queue&) = delete;\n    ~Queue() { while (!isEmpty()) dequeue(); }\n    bool isEmpty() const { return head == nullptr; }\n    int size() const { return count; }\n    void enqueue(T value) {\n        Node* node = new Node{value, nullptr};\n        if (isEmpty()) head = node; // First node becomes BOTH ends.\n        else tail->next = node;\n        tail = node;\n        ++count;\n    }\n    T front() const {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        return head->theItem;\n    }\n    T dequeue() {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        Node* old = head;\n        T value = old->theItem;\n        head = head->next;\n        if (head == nullptr) tail = nullptr; // Last node was removed.\n        delete old;\n        --count;\n        return value;\n    }\n};\n\nint minimum(Queue<int>& q) {\n    int result = q.front(); // Throws when empty.\n    int n = q.size(); // Save the count: re-enqueueing keeps the queue nonempty.\n    for (int i = 0; i < n; ++i) {\n        int value = q.dequeue();\n        if (value < result) result = value;\n        q.enqueue(value);\n    }\n    return result;\n}",
+    "use": "Queue<int> q;\nq.enqueue(8); q.enqueue(3); q.enqueue(6);\ncout << minimum(q) << '\\n';\nwhile (!q.isEmpty()) cout << q.dequeue() << ' ';\ncout << '\\n';",
+    "expected": "3\n8 3 6",
+    "expectedOutput": "3\n8 3 6 \n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Start",
+        "Use the matching generic template above."
+      ],
+      [
+        "Change",
+        "Add the fields or operation named in the question."
+      ],
+      [
+        "Test",
+        "Use main() to check the result and an empty or boundary case."
+      ]
+    ],
+    "change": "Keep the structure. Change the names, data, and calculation to match your question.",
+    "watch": "Do not initialize the minimum to zero.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "facets": {
+      "structure": "queue",
+      "storage": "linked",
+      "type": "template",
+      "role": "example"
+    },
+    "typeLabel": "template",
+    "checks": "Queue<int> q; bool threw=false; try { minimum(q); } catch(const runtime_error&) { threw=true; } assert(threw); q.enqueue(4); assert(minimum(q)==4 && q.dequeue()==4);"
+  },
+  {
+    "id": "short-queue-rotate",
+    "group": "short-drills",
+    "title": "Queue \u00b7 move front to back",
+    "shortTitle": "Queue \u00b7 move front to back",
+    "when": "Move the first queue item to the back.",
+    "question": [
+      "Move the first queue item to the back.",
+      "Write rotateOnce(q). Do nothing if the queue is empty."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\ntemplate <class T> class Queue {\n    struct Node { T theItem; Node* next; };\n    Node* head;\n    Node* tail;\n    int count;\npublic:\n    Queue() : head(nullptr), tail(nullptr), count(0) {}\n    Queue(const Queue&) = delete;\n    Queue& operator=(const Queue&) = delete;\n    ~Queue() { while (!isEmpty()) dequeue(); }\n    bool isEmpty() const { return head == nullptr; }\n    int size() const { return count; }\n    void enqueue(T value) {\n        Node* node = new Node{value, nullptr};\n        if (isEmpty()) head = node; // First node becomes BOTH ends.\n        else tail->next = node;\n        tail = node;\n        ++count;\n    }\n    T front() const {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        return head->theItem;\n    }\n    T dequeue() {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        Node* old = head;\n        T value = old->theItem;\n        head = head->next;\n        if (head == nullptr) tail = nullptr; // Last node was removed.\n        delete old;\n        --count;\n        return value;\n    }\n};\n\nvoid rotateOnce(Queue<int>& q) {\n    if (!q.isEmpty()) {\n        int value = q.dequeue();\n        q.enqueue(value);\n    }\n}",
+    "use": "Queue<int> q;\nq.enqueue(1); q.enqueue(2); q.enqueue(3);\nrotateOnce(q);\nwhile (!q.isEmpty()) cout << q.dequeue() << ' ';\ncout << '\\n';",
+    "expected": "2 3 1",
+    "expectedOutput": "2 3 1 \n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Start",
+        "Use the matching generic template above."
+      ],
+      [
+        "Change",
+        "Add the fields or operation named in the question."
+      ],
+      [
+        "Test",
+        "Use main() to check the result and an empty or boundary case."
+      ]
+    ],
+    "change": "Keep the structure. Change the names, data, and calculation to match your question.",
+    "watch": "One rotation moves one item; a full rotation restores the queue.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "facets": {
+      "structure": "queue",
+      "storage": "linked",
+      "type": "template",
+      "role": "example"
+    },
+    "typeLabel": "template",
+    "checks": "Queue<int> q; rotateOnce(q); assert(q.isEmpty()); q.enqueue(1); rotateOnce(q); assert(q.size()==1 && q.dequeue()==1);"
+  },
+  {
+    "id": "short-queue-replace",
+    "group": "short-drills",
+    "title": "Queue \u00b7 replace matching values",
+    "shortTitle": "Queue \u00b7 replace matching values",
+    "when": "Replace matching queue values and keep their positions.",
+    "question": [
+      "Replace matching queue values and keep their positions.",
+      "Return the number replaced. Rotate once, enqueueing either the original or replacement value."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\ntemplate <class T> class Queue {\n    struct Node { T theItem; Node* next; };\n    Node* head;\n    Node* tail;\n    int count;\npublic:\n    Queue() : head(nullptr), tail(nullptr), count(0) {}\n    Queue(const Queue&) = delete;\n    Queue& operator=(const Queue&) = delete;\n    ~Queue() { while (!isEmpty()) dequeue(); }\n    bool isEmpty() const { return head == nullptr; }\n    int size() const { return count; }\n    void enqueue(T value) {\n        Node* node = new Node{value, nullptr};\n        if (isEmpty()) head = node; // First node becomes BOTH ends.\n        else tail->next = node;\n        tail = node;\n        ++count;\n    }\n    T front() const {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        return head->theItem;\n    }\n    T dequeue() {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        Node* old = head;\n        T value = old->theItem;\n        head = head->next;\n        if (head == nullptr) tail = nullptr; // Last node was removed.\n        delete old;\n        --count;\n        return value;\n    }\n};\n\nint replaceAll(Queue<int>& q, int oldValue, int newValue) {\n    int changed = 0;\n    int n = q.size(); // Save the count: re-enqueueing keeps the queue nonempty.\n    for (int i = 0; i < n; ++i) {\n        int value = q.dequeue();\n        if (value == oldValue) { value = newValue; ++changed; }\n        q.enqueue(value);\n    }\n    return changed;\n}",
+    "use": "Queue<int> q;\nq.enqueue(2); q.enqueue(4); q.enqueue(2);\ncout << replaceAll(q, 2, 8) << '\\n';\nwhile (!q.isEmpty()) cout << q.dequeue() << ' ';\ncout << '\\n';",
+    "expected": "2\n8 4 8",
+    "expectedOutput": "2\n8 4 8 \n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Start",
+        "Use the matching generic template above."
+      ],
+      [
+        "Change",
+        "Add the fields or operation named in the question."
+      ],
+      [
+        "Test",
+        "Use main() to check the result and an empty or boundary case."
+      ]
+    ],
+    "change": "Keep the structure. Change the names, data, and calculation to match your question.",
+    "watch": "Loop over the original size, not while the queue is nonempty.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "facets": {
+      "structure": "queue",
+      "storage": "linked",
+      "type": "template",
+      "role": "example"
+    },
+    "typeLabel": "template",
+    "checks": "Queue<int> q; assert(replaceAll(q,1,2)==0); q.enqueue(1); q.enqueue(3); assert(replaceAll(q,1,2)==1); assert(q.dequeue()==2 && q.dequeue()==3);"
+  },
+  {
+    "id": "short-queue-clear",
+    "group": "short-drills",
+    "title": "Queue \u00b7 clear and reuse",
+    "shortTitle": "Queue \u00b7 clear and reuse",
+    "when": "Remove all queue items; return the number removed.",
+    "question": [
+      "Remove all queue items; return the number removed.",
+      "Use public operations. Demonstrate that enqueue() still works afterward."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\ntemplate <class T> class Queue {\n    struct Node { T theItem; Node* next; };\n    Node* head;\n    Node* tail;\n    int count;\npublic:\n    Queue() : head(nullptr), tail(nullptr), count(0) {}\n    Queue(const Queue&) = delete;\n    Queue& operator=(const Queue&) = delete;\n    ~Queue() { while (!isEmpty()) dequeue(); }\n    bool isEmpty() const { return head == nullptr; }\n    int size() const { return count; }\n    void enqueue(T value) {\n        Node* node = new Node{value, nullptr};\n        if (isEmpty()) head = node; // First node becomes BOTH ends.\n        else tail->next = node;\n        tail = node;\n        ++count;\n    }\n    T front() const {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        return head->theItem;\n    }\n    T dequeue() {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        Node* old = head;\n        T value = old->theItem;\n        head = head->next;\n        if (head == nullptr) tail = nullptr; // Last node was removed.\n        delete old;\n        --count;\n        return value;\n    }\n};\n\nint clearQueue(Queue<int>& q) {\n    int removed = 0;\n    while (!q.isEmpty()) {\n        q.dequeue(); // dequeue also updates head/tail and frees each node.\n        ++removed;\n    }\n    return removed;\n}",
+    "use": "Queue<int> q;\nq.enqueue(1); q.enqueue(2);\ncout << clearQueue(q) << '\\n';\nq.enqueue(9);\ncout << q.dequeue() << '\\n';",
+    "expected": "2\n9",
+    "expectedOutput": "2\n9\n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Start",
+        "Use the matching generic template above."
+      ],
+      [
+        "Change",
+        "Add the fields or operation named in the question."
+      ],
+      [
+        "Test",
+        "Use main() to check the result and an empty or boundary case."
+      ]
+    ],
+    "change": "Keep the structure. Change the names, data, and calculation to match your question.",
+    "watch": "A cleared linked queue must have both head and tail null.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "facets": {
+      "structure": "queue",
+      "storage": "linked",
+      "type": "template",
+      "role": "example"
+    },
+    "typeLabel": "template",
+    "checks": "Queue<int> q; assert(clearQueue(q)==0); q.enqueue(2); assert(clearQueue(q)==1); q.enqueue(3); assert(q.dequeue()==3);"
+  },
+  {
+    "id": "short-list-size",
+    "group": "short-drills",
+    "title": "List \u00b7 count nodes",
+    "shortTitle": "List \u00b7 count nodes",
+    "when": "Count the nodes in a linked list.",
+    "question": [
+      "Count the nodes in a linked list.",
+      "Add size() const. Traverse from head; return zero for an empty list."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\nstruct IntSLLNode {\n    int info;\n    IntSLLNode* next;\n    IntSLLNode(int value, IntSLLNode* link = nullptr) : info(value), next(link) {}\n};\nclass IntSLList {\n    IntSLLNode* head;\n    IntSLLNode* tail;\npublic:\n    IntSLList() : head(nullptr), tail(nullptr) {}\n    IntSLList(const IntSLList&) = delete;\n    IntSLList& operator=(const IntSLList&) = delete;\n    ~IntSLList() {\n        while (head != nullptr) {\n            IntSLLNode* old = head;\n            head = head->next; // Keep the remaining chain before deleting.\n            delete old;\n        }\n    }\n    void addToTail(int value) {\n        IntSLLNode* node = new IntSLLNode(value);\n        if (head == nullptr) head = node;\n        else tail->next = node;\n        tail = node;\n    }\n    void print() const {\n        for (IntSLLNode* p = head; p != nullptr; p = p->next) cout << p->info << ' ';\n        cout << '\\n';\n    }\n    int size() const {\n        int count = 0;\n        for (IntSLLNode* p = head; p != nullptr; p = p->next) ++count;\n        return count; // p moves; head stays unchanged.\n    }\n};\n",
+    "use": "IntSLList list;\nlist.addToTail(4); list.addToTail(8);\ncout << list.size() << '\\n';",
+    "expected": "2",
+    "expectedOutput": "2\n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Start",
+        "Use the matching generic template above."
+      ],
+      [
+        "Change",
+        "Add the fields or operation named in the question."
+      ],
+      [
+        "Test",
+        "Use main() to check the result and an empty or boundary case."
+      ]
+    ],
+    "change": "Keep the structure. Change the names, data, and calculation to match your question.",
+    "watch": "Move a temporary pointer, not head.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "facets": {
+      "structure": "list",
+      "storage": "linked",
+      "type": "int",
+      "role": "example"
+    },
+    "typeLabel": "int",
+    "checks": "IntSLList list; assert(list.size()==0); list.addToTail(1); assert(list.size()==1);"
+  },
+  {
+    "id": "short-list-sum",
+    "group": "short-drills",
+    "title": "List \u00b7 sum values",
+    "shortTitle": "List \u00b7 sum values",
+    "when": "Add up all linked-list values.",
+    "question": [
+      "Add up all linked-list values.",
+      "Add sum() const; return zero for an empty list."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\nstruct IntSLLNode {\n    int info;\n    IntSLLNode* next;\n    IntSLLNode(int value, IntSLLNode* link = nullptr) : info(value), next(link) {}\n};\nclass IntSLList {\n    IntSLLNode* head;\n    IntSLLNode* tail;\npublic:\n    IntSLList() : head(nullptr), tail(nullptr) {}\n    IntSLList(const IntSLList&) = delete;\n    IntSLList& operator=(const IntSLList&) = delete;\n    ~IntSLList() {\n        while (head != nullptr) {\n            IntSLLNode* old = head;\n            head = head->next; // Keep the remaining chain before deleting.\n            delete old;\n        }\n    }\n    void addToTail(int value) {\n        IntSLLNode* node = new IntSLLNode(value);\n        if (head == nullptr) head = node;\n        else tail->next = node;\n        tail = node;\n    }\n    void print() const {\n        for (IntSLLNode* p = head; p != nullptr; p = p->next) cout << p->info << ' ';\n        cout << '\\n';\n    }\n    int sum() const {\n        int total = 0;\n        for (IntSLLNode* p = head; p != nullptr; p = p->next) total += p->info;\n        return total;\n    }\n};\n",
+    "use": "IntSLList list;\nlist.addToTail(3); list.addToTail(-1); list.addToTail(5);\ncout << list.sum() << '\\n';",
+    "expected": "7",
+    "expectedOutput": "7\n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Start",
+        "Use the matching generic template above."
+      ],
+      [
+        "Change",
+        "Add the fields or operation named in the question."
+      ],
+      [
+        "Test",
+        "Use main() to check the result and an empty or boundary case."
+      ]
+    ],
+    "change": "Keep the structure. Change the names, data, and calculation to match your question.",
+    "watch": "Read p->info and advance with p->next.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "facets": {
+      "structure": "list",
+      "storage": "linked",
+      "type": "int",
+      "role": "example"
+    },
+    "typeLabel": "int",
+    "checks": "IntSLList list; assert(list.sum()==0); list.addToTail(-2); assert(list.sum()==-2);"
+  },
+  {
+    "id": "short-list-find",
+    "group": "short-drills",
+    "title": "List \u00b7 find a value",
+    "shortTitle": "List \u00b7 find a value",
+    "when": "Return whether a linked list contains a target.",
+    "question": [
+      "Return whether a linked list contains a target.",
+      "Add contains(target) const. Return false if no node matches."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\nstruct IntSLLNode {\n    int info;\n    IntSLLNode* next;\n    IntSLLNode(int value, IntSLLNode* link = nullptr) : info(value), next(link) {}\n};\nclass IntSLList {\n    IntSLLNode* head;\n    IntSLLNode* tail;\npublic:\n    IntSLList() : head(nullptr), tail(nullptr) {}\n    IntSLList(const IntSLList&) = delete;\n    IntSLList& operator=(const IntSLList&) = delete;\n    ~IntSLList() {\n        while (head != nullptr) {\n            IntSLLNode* old = head;\n            head = head->next; // Keep the remaining chain before deleting.\n            delete old;\n        }\n    }\n    void addToTail(int value) {\n        IntSLLNode* node = new IntSLLNode(value);\n        if (head == nullptr) head = node;\n        else tail->next = node;\n        tail = node;\n    }\n    void print() const {\n        for (IntSLLNode* p = head; p != nullptr; p = p->next) cout << p->info << ' ';\n        cout << '\\n';\n    }\n    bool contains(int target) const {\n        for (IntSLLNode* p = head; p != nullptr; p = p->next)\n            if (p->info == target) return true; // Reading only: early return is safe.\n        return false;\n    }\n};\n",
+    "use": "IntSLList list;\nlist.addToTail(4); list.addToTail(8);\ncout << list.contains(8) << ' ' << list.contains(2) << '\\n';",
+    "expected": "1 0",
+    "expectedOutput": "1 0\n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Start",
+        "Use the matching generic template above."
+      ],
+      [
+        "Change",
+        "Add the fields or operation named in the question."
+      ],
+      [
+        "Test",
+        "Use main() to check the result and an empty or boundary case."
+      ]
+    ],
+    "change": "Keep the structure. Change the names, data, and calculation to match your question.",
+    "watch": "Check p is not null before reading its info.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "facets": {
+      "structure": "list",
+      "storage": "linked",
+      "type": "int",
+      "role": "example"
+    },
+    "typeLabel": "int",
+    "checks": "IntSLList list; assert(!list.contains(1)); list.addToTail(1); assert(list.contains(1));"
+  },
+  {
+    "id": "short-list-head",
+    "group": "short-drills",
+    "title": "List \u00b7 add at the front",
+    "shortTitle": "List \u00b7 add at the front",
+    "when": "Insert a new node at the front of a linked list.",
+    "question": [
+      "Insert a new node at the front of a linked list.",
+      "Add addToHead(value). If the list was empty, also update tail."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\nstruct IntSLLNode {\n    int info;\n    IntSLLNode* next;\n    IntSLLNode(int value, IntSLLNode* link = nullptr) : info(value), next(link) {}\n};\nclass IntSLList {\n    IntSLLNode* head;\n    IntSLLNode* tail;\npublic:\n    IntSLList() : head(nullptr), tail(nullptr) {}\n    IntSLList(const IntSLList&) = delete;\n    IntSLList& operator=(const IntSLList&) = delete;\n    ~IntSLList() {\n        while (head != nullptr) {\n            IntSLLNode* old = head;\n            head = head->next; // Keep the remaining chain before deleting.\n            delete old;\n        }\n    }\n    void addToTail(int value) {\n        IntSLLNode* node = new IntSLLNode(value);\n        if (head == nullptr) head = node;\n        else tail->next = node;\n        tail = node;\n    }\n    void print() const {\n        for (IntSLLNode* p = head; p != nullptr; p = p->next) cout << p->info << ' ';\n        cout << '\\n';\n    }\n    void addToHead(int value) {\n        head = new IntSLLNode(value, head); // New node links to the OLD head.\n        if (tail == nullptr) tail = head; // First node is both ends.\n    }\n};\n",
+    "use": "IntSLList list;\nlist.addToHead(2); list.addToHead(1); list.addToTail(3);\nlist.print();",
+    "expected": "1 2 3",
+    "expectedOutput": "1 2 3 \n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Start",
+        "Use the matching generic template above."
+      ],
+      [
+        "Change",
+        "Add the fields or operation named in the question."
+      ],
+      [
+        "Test",
+        "Use main() to check the result and an empty or boundary case."
+      ]
+    ],
+    "change": "Keep the structure. Change the names, data, and calculation to match your question.",
+    "watch": "Link the new node before losing the old head pointer.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "facets": {
+      "structure": "list",
+      "storage": "linked",
+      "type": "int",
+      "role": "example"
+    },
+    "typeLabel": "int",
+    "checks": "IntSLList list; list.addToHead(2); list.addToHead(1); list.addToTail(3);"
+  },
+  {
+    "id": "short-list-increase",
+    "group": "short-drills",
+    "title": "List \u00b7 increase every value",
+    "shortTitle": "List \u00b7 increase every value",
+    "when": "Add an amount to every linked-list value.",
+    "question": [
+      "Add an amount to every linked-list value.",
+      "Add increaseAll(amount). Keep the links and order unchanged."
+    ],
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\n#include <exception>\n#include <initializer_list>\nusing namespace std;\n\nstruct IntSLLNode {\n    int info;\n    IntSLLNode* next;\n    IntSLLNode(int value, IntSLLNode* link = nullptr) : info(value), next(link) {}\n};\nclass IntSLList {\n    IntSLLNode* head;\n    IntSLLNode* tail;\npublic:\n    IntSLList() : head(nullptr), tail(nullptr) {}\n    IntSLList(const IntSLList&) = delete;\n    IntSLList& operator=(const IntSLList&) = delete;\n    ~IntSLList() {\n        while (head != nullptr) {\n            IntSLLNode* old = head;\n            head = head->next; // Keep the remaining chain before deleting.\n            delete old;\n        }\n    }\n    void addToTail(int value) {\n        IntSLLNode* node = new IntSLLNode(value);\n        if (head == nullptr) head = node;\n        else tail->next = node;\n        tail = node;\n    }\n    void print() const {\n        for (IntSLLNode* p = head; p != nullptr; p = p->next) cout << p->info << ' ';\n        cout << '\\n';\n    }\n    void increaseAll(int amount) {\n        for (IntSLLNode* p = head; p != nullptr; p = p->next)\n            p->info += amount; // Change data, not links.\n    }\n};\n",
+    "use": "IntSLList list;\nlist.addToTail(1); list.addToTail(4);\nlist.increaseAll(3);\nlist.print();",
+    "expected": "4 7",
+    "expectedOutput": "4 7 \n",
+    "manualComments": true,
+    "parts": [
+      [
+        "Start",
+        "Use the matching generic template above."
+      ],
+      [
+        "Change",
+        "Add the fields or operation named in the question."
+      ],
+      [
+        "Test",
+        "Use main() to check the result and an empty or boundary case."
+      ]
+    ],
+    "change": "Keep the structure. Change the names, data, and calculation to match your question.",
+    "watch": "This modifies data, so the method is not const.",
+    "reference": "workspace/reference/course/labs/139E - Lab 6.html",
+    "referenceLabel": "Related lab: classes and linked structures",
+    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "facets": {
+      "structure": "list",
+      "storage": "linked",
+      "type": "int",
+      "role": "example"
+    },
+    "typeLabel": "int",
+    "checks": "IntSLList list; list.increaseAll(5); list.addToTail(1); list.increaseAll(-1);"
+  }
+]
