@@ -58,7 +58,7 @@
   const first=(text.match(/[A-Za-z_]\w*/)||[])[0];
   const option=[...select.options].find(o=>o.dataset.line===line)||[...select.options].find(o=>(s.map.get(o.value)||o.value)===first);
   panel.open=true;
-  if(!option){say(card,'This name is locked because it is shared, an override, or part of a fixed interface. Choose an available symbol from the list.');panel.scrollIntoView({block:'nearest'});return;}
+  if(!option){say(card,'This name is shared by unrelated declarations or part of a fixed interface. Use Edit UML & code to change its declaration and uses.');panel.scrollIntoView({block:'nearest'});return;}
   select.value=option.value;panel.querySelector('input').value=s.map.get(option.value)||option.value;
   panel.scrollIntoView({block:'nearest'});panel.querySelector('input').focus();panel.querySelector('input').select();
  },true);
