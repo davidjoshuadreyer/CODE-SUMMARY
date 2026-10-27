@@ -12,7 +12,7 @@ def add(slug, title, kind, question, code, use, output, watch, checks=''):
         parts=[['Start','Use the matching generic template above.'],['Change','Add the fields or operation named in the question.'],['Test','Use main() to check the result and an empty or boundary case.']],
         change='Keep the structure. Change the names, data, and calculation to match your question.',watch=watch,
         reference='workspace/reference/course/labs/139E - Lab 6.html',referenceLabel='Related lab: classes and linked structures',
-        sourceNote='Short study adaptation of course topics; not an exam prediction.',
+        sourceNote='Short practice based on course topics.',
         facets=dict(structure=kind, storage='none' if kind=='inheritance' else 'linked', type='template' if 'template <' in code else 'int', role='example'),
         typeLabel='non-template' if kind=='inheritance' else 'template' if 'template <' in code else 'int',checks=checks))
 

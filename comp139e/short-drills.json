@@ -32,7 +32,7 @@
     "watch": "Initialize the base with Person(n); name is private.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related lab: classes and linked structures",
-    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "sourceNote": "Short practice based on course topics.",
     "facets": {
       "structure": "inheritance",
       "storage": "none",
@@ -75,7 +75,7 @@
     "watch": "Protected data is accessible inside the derived class.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related lab: classes and linked structures",
-    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "sourceNote": "Short practice based on course topics.",
     "facets": {
       "structure": "inheritance",
       "storage": "none",
@@ -118,7 +118,7 @@
     "watch": "A derived class can call inherited public methods.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related lab: classes and linked structures",
-    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "sourceNote": "Short practice based on course topics.",
     "facets": {
       "structure": "inheritance",
       "storage": "none",
@@ -161,7 +161,7 @@
     "watch": "No override is needed when the inherited method already does the job.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related lab: classes and linked structures",
-    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "sourceNote": "Short practice based on course topics.",
     "facets": {
       "structure": "inheritance",
       "storage": "none",
@@ -204,7 +204,7 @@
     "watch": "virtual enables derived behavior through a base reference.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related lab: classes and linked structures",
-    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "sourceNote": "Short practice based on course topics.",
     "facets": {
       "structure": "inheritance",
       "storage": "none",
@@ -247,7 +247,7 @@
     "watch": "Use Ticket::cost(), not cost(), inside this override.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related lab: classes and linked structures",
-    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "sourceNote": "Short practice based on course topics.",
     "facets": {
       "structure": "inheritance",
       "storage": "none",
@@ -290,7 +290,7 @@
     "watch": "The override must match the base return type and const.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related lab: classes and linked structures",
-    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "sourceNote": "Short practice based on course topics.",
     "facets": {
       "structure": "inheritance",
       "storage": "none",
@@ -333,7 +333,7 @@
     "watch": "Use Box:: on definitions; write override only inside the class.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related lab: classes and linked structures",
-    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "sourceNote": "Short practice based on course topics.",
     "facets": {
       "structure": "inheritance",
       "storage": "none",
@@ -378,7 +378,7 @@
     "watch": "Keep the same signature in the base and both overrides.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related lab: classes and linked structures",
-    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "sourceNote": "Short practice based on course topics.",
     "facets": {
       "structure": "inheritance",
       "storage": "none",
@@ -423,7 +423,7 @@
     "watch": "Keep the same signature in the base and both overrides.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related lab: classes and linked structures",
-    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "sourceNote": "Short practice based on course topics.",
     "facets": {
       "structure": "inheritance",
       "storage": "none",
@@ -468,7 +468,7 @@
     "watch": "Keep the same signature in the base and both overrides.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related lab: classes and linked structures",
-    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "sourceNote": "Short practice based on course topics.",
     "facets": {
       "structure": "inheritance",
       "storage": "none",
@@ -513,7 +513,7 @@
     "watch": "Keep the same signature in the base and both overrides.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related lab: classes and linked structures",
-    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "sourceNote": "Short practice based on course topics.",
     "facets": {
       "structure": "inheritance",
       "storage": "none",
@@ -556,7 +556,7 @@
     "watch": "Use void when the method prints but returns no value.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related lab: classes and linked structures",
-    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "sourceNote": "Short practice based on course topics.",
     "facets": {
       "structure": "inheritance",
       "storage": "none",
@@ -599,7 +599,7 @@
     "watch": "Qualify the base call to avoid recursive Phone::print().",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related lab: classes and linked structures",
-    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "sourceNote": "Short practice based on course topics.",
     "facets": {
       "structure": "inheritance",
       "storage": "none",
@@ -642,7 +642,7 @@
     "watch": "Each constructor initializes its immediate base, not a grandparent.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related lab: classes and linked structures",
-    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "sourceNote": "Short practice based on course topics.",
     "facets": {
       "structure": "inheritance",
       "storage": "none",
@@ -685,7 +685,7 @@
     "watch": "Do not return early before restoring the stack.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related lab: classes and linked structures",
-    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "sourceNote": "Short practice based on course topics.",
     "facets": {
       "structure": "stack",
       "storage": "linked",
@@ -728,7 +728,7 @@
     "watch": "Start from a real value, not zero: all values might be negative.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related lab: classes and linked structures",
-    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "sourceNote": "Short practice based on course topics.",
     "facets": {
       "structure": "stack",
       "storage": "linked",
@@ -771,7 +771,7 @@
     "watch": "top() reads; pop() removes.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related lab: classes and linked structures",
-    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "sourceNote": "Short practice based on course topics.",
     "facets": {
       "structure": "stack",
       "storage": "linked",
@@ -814,7 +814,7 @@
     "watch": "Check empty before pop().",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related lab: classes and linked structures",
-    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "sourceNote": "Short practice based on course topics.",
     "facets": {
       "structure": "stack",
       "storage": "linked",
@@ -857,7 +857,7 @@
     "watch": "Restore every value, including the ones that did not match.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related lab: classes and linked structures",
-    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "sourceNote": "Short practice based on course topics.",
     "facets": {
       "structure": "stack",
       "storage": "linked",
@@ -900,7 +900,7 @@
     "watch": "Do not return early; finish the rotation to preserve order.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related lab: classes and linked structures",
-    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "sourceNote": "Short practice based on course topics.",
     "facets": {
       "structure": "queue",
       "storage": "linked",
@@ -943,7 +943,7 @@
     "watch": "Do not initialize the minimum to zero.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related lab: classes and linked structures",
-    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "sourceNote": "Short practice based on course topics.",
     "facets": {
       "structure": "queue",
       "storage": "linked",
@@ -986,7 +986,7 @@
     "watch": "One rotation moves one item; a full rotation restores the queue.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related lab: classes and linked structures",
-    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "sourceNote": "Short practice based on course topics.",
     "facets": {
       "structure": "queue",
       "storage": "linked",
@@ -1029,7 +1029,7 @@
     "watch": "Loop over the original size, not while the queue is nonempty.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related lab: classes and linked structures",
-    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "sourceNote": "Short practice based on course topics.",
     "facets": {
       "structure": "queue",
       "storage": "linked",
@@ -1072,7 +1072,7 @@
     "watch": "A cleared linked queue must have both head and tail null.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related lab: classes and linked structures",
-    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "sourceNote": "Short practice based on course topics.",
     "facets": {
       "structure": "queue",
       "storage": "linked",
@@ -1115,7 +1115,7 @@
     "watch": "Move a temporary pointer, not head.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related lab: classes and linked structures",
-    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "sourceNote": "Short practice based on course topics.",
     "facets": {
       "structure": "list",
       "storage": "linked",
@@ -1158,7 +1158,7 @@
     "watch": "Read p->info and advance with p->next.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related lab: classes and linked structures",
-    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "sourceNote": "Short practice based on course topics.",
     "facets": {
       "structure": "list",
       "storage": "linked",
@@ -1201,7 +1201,7 @@
     "watch": "Check p is not null before reading its info.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related lab: classes and linked structures",
-    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "sourceNote": "Short practice based on course topics.",
     "facets": {
       "structure": "list",
       "storage": "linked",
@@ -1244,7 +1244,7 @@
     "watch": "Link the new node before losing the old head pointer.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related lab: classes and linked structures",
-    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "sourceNote": "Short practice based on course topics.",
     "facets": {
       "structure": "list",
       "storage": "linked",
@@ -1287,7 +1287,7 @@
     "watch": "This modifies data, so the method is not const.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related lab: classes and linked structures",
-    "sourceNote": "Short study adaptation of course topics; not an exam prediction.",
+    "sourceNote": "Short practice based on course topics.",
     "facets": {
       "structure": "list",
       "storage": "linked",

@@ -33,7 +33,7 @@
     "watch": "Match const and the return type exactly. Do not try to instantiate the abstract base.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related course lab",
-    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "sourceNote": "Practice based on the course labs and lectures.",
     "manualComments": true,
     "facets": {
       "structure": "inheritance",
@@ -78,7 +78,7 @@
     "watch": "Match const and the return type exactly. Do not try to instantiate the abstract base.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related course lab",
-    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "sourceNote": "Practice based on the course labs and lectures.",
     "manualComments": true,
     "facets": {
       "structure": "inheritance",
@@ -123,7 +123,7 @@
     "watch": "Match const and the return type exactly. Do not try to instantiate the abstract base.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related course lab",
-    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "sourceNote": "Practice based on the course labs and lectures.",
     "manualComments": true,
     "facets": {
       "structure": "inheritance",
@@ -168,7 +168,7 @@
     "watch": "Match const and the return type exactly. Do not try to instantiate the abstract base.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related course lab",
-    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "sourceNote": "Practice based on the course labs and lectures.",
     "manualComments": true,
     "facets": {
       "structure": "inheritance",
@@ -213,7 +213,7 @@
     "watch": "Match const and the return type exactly. Do not try to instantiate the abstract base.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related course lab",
-    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "sourceNote": "Practice based on the course labs and lectures.",
     "manualComments": true,
     "facets": {
       "structure": "inheritance",
@@ -258,7 +258,7 @@
     "watch": "Match const and the return type exactly. Do not try to instantiate the abstract base.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related course lab",
-    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "sourceNote": "Practice based on the course labs and lectures.",
     "manualComments": true,
     "facets": {
       "structure": "inheritance",
@@ -303,7 +303,7 @@
     "watch": "Match const and the return type exactly. Do not try to instantiate the abstract base.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related course lab",
-    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "sourceNote": "Practice based on the course labs and lectures.",
     "manualComments": true,
     "facets": {
       "structure": "inheritance",
@@ -348,7 +348,7 @@
     "watch": "Match const and the return type exactly. Do not try to instantiate the abstract base.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related course lab",
-    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "sourceNote": "Practice based on the course labs and lectures.",
     "manualComments": true,
     "facets": {
       "structure": "inheritance",
@@ -389,7 +389,7 @@
     "watch": "Do not add another width or height inside Square.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related course lab",
-    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "sourceNote": "Practice based on the course labs and lectures.",
     "manualComments": true,
     "facets": {
       "structure": "inheritance",
@@ -430,7 +430,7 @@
     "watch": "Rate 0.1 means 10%; call applyInterest on the derived object.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related course lab",
-    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "sourceNote": "Practice based on the course labs and lectures.",
     "manualComments": true,
     "facets": {
       "structure": "inheritance",
@@ -471,7 +471,7 @@
     "watch": "Do not delete stack-allocated objects; these objects were created with new.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related course lab",
-    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "sourceNote": "Practice based on the course labs and lectures.",
     "manualComments": true,
     "facets": {
       "structure": "inheritance",
@@ -512,7 +512,7 @@
     "watch": "This simple version has no accumulated error or previous-sample state.",
     "reference": "workspace/reference/course/labs/139E - Lab 5.html",
     "referenceLabel": "Related course lab",
-    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "sourceNote": "Practice based on the course labs and lectures.",
     "manualComments": true,
     "facets": {
       "structure": "inheritance",
@@ -553,7 +553,7 @@
     "watch": "Calling controlStep(measured) without the base qualifier inside the override would recurse.",
     "reference": "workspace/reference/course/labs/139E - Lab 5.html",
     "referenceLabel": "Related course lab",
-    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "sourceNote": "Practice based on the course labs and lectures.",
     "manualComments": true,
     "facets": {
       "structure": "inheritance",
@@ -594,7 +594,7 @@
     "watch": "Do not redeclare name in Student; that creates a separate field.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related course lab",
-    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "sourceNote": "Practice based on the course labs and lectures.",
     "manualComments": true,
     "facets": {
       "structure": "inheritance",
@@ -635,7 +635,7 @@
     "watch": "Use Product* rather than copying derived objects into a Product array.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related course lab",
-    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "sourceNote": "Practice based on the course labs and lectures.",
     "manualComments": true,
     "facets": {
       "structure": "inheritance",
@@ -679,7 +679,7 @@
     "watch": "top() must not change count; pop() decrements it.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related course lab",
-    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "sourceNote": "Practice based on the course labs and lectures.",
     "manualComments": true,
     "facets": {
       "structure": "stack",
@@ -722,7 +722,7 @@
     "watch": "Use >, not >=. Restoring is necessary because pop changes the input.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related course lab",
-    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "sourceNote": "Practice based on the course labs and lectures.",
     "manualComments": true,
     "facets": {
       "structure": "stack",
@@ -765,7 +765,7 @@
     "watch": "An empty stack has sum 0. Do not return before restoring the input.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related course lab",
-    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "sourceNote": "Practice based on the course labs and lectures.",
     "manualComments": true,
     "facets": {
       "structure": "stack",
@@ -808,7 +808,7 @@
     "watch": "One transfer reverses order; the second transfer restores it.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related course lab",
-    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "sourceNote": "Practice based on the course labs and lectures.",
     "manualComments": true,
     "facets": {
       "structure": "stack",
@@ -851,7 +851,7 @@
     "watch": "The local stack destructor cleans remaining nodes even when returning early.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related course lab",
-    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "sourceNote": "Practice based on the course labs and lectures.",
     "manualComments": true,
     "facets": {
       "structure": "stack",
@@ -894,7 +894,7 @@
     "watch": "Removing the last node must reset tail.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related course lab",
-    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "sourceNote": "Practice based on the course labs and lectures.",
     "manualComments": true,
     "facets": {
       "structure": "queue",
@@ -937,7 +937,7 @@
     "watch": "while(!q.isEmpty()) would never end if every removed item is re-enqueued.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related course lab",
-    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "sourceNote": "Practice based on the course labs and lectures.",
     "manualComments": true,
     "facets": {
       "structure": "queue",
@@ -980,7 +980,7 @@
     "watch": "Cast before dividing; never divide by an empty queue size.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related course lab",
-    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "sourceNote": "Practice based on the course labs and lectures.",
     "manualComments": true,
     "facets": {
       "structure": "queue",
@@ -1023,7 +1023,7 @@
     "watch": "The loop must use originalSize because filtering can reduce the queue size.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related course lab",
-    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "sourceNote": "Practice based on the course labs and lectures.",
     "manualComments": true,
     "facets": {
       "structure": "queue",
@@ -1066,7 +1066,7 @@
     "watch": "This operation moves the values; it does not preserve the source.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related course lab",
-    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "sourceNote": "Practice based on the course labs and lectures.",
     "manualComments": true,
     "facets": {
       "structure": "queue",
@@ -1109,7 +1109,7 @@
     "watch": "Use a local traversal pointer, not head itself.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related course lab",
-    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "sourceNote": "Practice based on the course labs and lectures.",
     "manualComments": true,
     "facets": {
       "structure": "list",
@@ -1152,7 +1152,7 @@
     "watch": "Update data, not pointers. Count matches even when oldValue equals newValue.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related course lab",
-    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "sourceNote": "Practice based on the course labs and lectures.",
     "manualComments": true,
     "facets": {
       "structure": "list",
@@ -1195,7 +1195,7 @@
     "watch": "New node points to current; predecessor then points to new node. Tail stays unchanged.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related course lab",
-    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "sourceNote": "Practice based on the course labs and lectures.",
     "manualComments": true,
     "facets": {
       "structure": "list",
@@ -1238,7 +1238,7 @@
     "watch": "Save the value and next pointer before delete.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related course lab",
-    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "sourceNote": "Practice based on the course labs and lectures.",
     "manualComments": true,
     "facets": {
       "structure": "list",
@@ -1281,7 +1281,7 @@
     "watch": "Reconnect current->next before deleting the successor.",
     "reference": "workspace/reference/course/labs/139E - Lab 6.html",
     "referenceLabel": "Related course lab",
-    "sourceNote": "New study question inspired by the course labs and lectures. Simplified practice, not an actual or predicted exam question.",
+    "sourceNote": "Practice based on the course labs and lectures.",
     "manualComments": true,
     "facets": {
       "structure": "list",
