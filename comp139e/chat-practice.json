@@ -1,0 +1,117 @@
+[
+  {
+    "id": "practice-integer-queue",
+    "group": "practice-questions",
+    "title": "Integer queue",
+    "when": "Implement a template queue with linked nodes; test FIFO, reuse and an empty dequeue.",
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\ntemplate <typename T>\nclass Queue {\nprivate:\n    struct Node {\n        T item;\n        Node* next;\n        Node(T value, Node* link = nullptr) : item(value), next(link) {}\n    };\n    Node* head;\n    Node* tail;\npublic:\n    Queue() : head(nullptr), tail(nullptr) {}\n    // This object owns its nodes. Disable shallow copying.\n    Queue(const Queue&) = delete;\n    Queue& operator=(const Queue&) = delete;\n    ~Queue() {\n        while (head != nullptr) {\n            Node* old = head;\n            head = head->next;\n            delete old;\n        }\n    }\n    bool isEmpty() const { return head == nullptr; }\n    void enqueue(T item) {\n        Node* node = new Node(item);\n        if (isEmpty()) head = node;\n        else tail->next = node;\n        tail = node;\n    }\n    T front() const {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        return head->item;\n    }\n    T dequeue() {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        Node* old = head;\n        T value = old->item;\n        head = head->next;\n        if (head == nullptr) tail = nullptr;\n        delete old;\n        return value;\n    }\n};\n",
+    "use": "Queue<int> numbers;\nnumbers.enqueue(10);\nnumbers.enqueue(20);\nnumbers.enqueue(30);\ncout << numbers.dequeue() << '\\n';\ncout << numbers.dequeue() << '\\n';\nnumbers.enqueue(40);\nwhile (!numbers.isEmpty()) {\n    cout << numbers.dequeue() << '\\n';\n}\ntry {\n    numbers.dequeue();\n} catch (const runtime_error& error) {\n    cout << error.what() << '\\n';\n}",
+    "question": [
+      "Implement a generic Queue<T> using linked nodes. Do not use STL containers or arrays. Use using namespace std;.",
+      "Each node stores an item and a next pointer. The queue stores pointers to its first and last nodes.",
+      "Provide a constructor, destructor, void enqueue(T item), T dequeue(), and bool isEmpty() const. dequeue() throws runtime_error when empty.",
+      "In main(), enqueue 10, 20 and 30. Dequeue and print two items. Enqueue 40. Dequeue and print all remaining items, then attempt another dequeue and catch the exception.",
+      "Expected order: 10, 20, 30, 40, followed by the error. Both end pointers must be nullptr after removing the last node."
+    ],
+    "parts": [
+      [
+        "enqueue",
+        "Allocate a node, attach it after tail, then move tail. If empty, head also points to the new node."
+      ],
+      [
+        "dequeue",
+        "Save the value, advance head, clear tail if now empty, delete the old node, and return its value."
+      ],
+      [
+        "Destructor",
+        "Delete remaining nodes; disabled copying prevents accidental shared node ownership."
+      ]
+    ],
+    "change": "Change int and the sample values; preserve the empty and one-node cases. The front() method is an optional extra.",
+    "watch": "The final removal must set tail to nullptr. A subsequent enqueue must work. Never dereference head before checking isEmpty().",
+    "expected": "10\n20\n30\n40\nEmpty queue",
+    "expectedOutput": "10\n20\n30\n40\nEmpty queue\n",
+    "reference": "code-templates.html#topic-practice-questions",
+    "referenceLabel": "Practice questions",
+    "sourceNote": "Practice question created in this chat, not an instructor exam or official lab solution."
+  },
+  {
+    "id": "practice-job-inheritance",
+    "group": "practice-questions",
+    "title": "Job classes",
+    "when": "Abstract Job with PrintJob and BackupJob; call execute through base pointers.",
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Job {\nprotected:\n    int id;\npublic:\n    Job(int jobId) : id(jobId) {}\n    virtual void execute() const = 0;\n    virtual ~Job() = default;\n};\n\nclass PrintJob : public Job {\nprivate:\n    string filename;\npublic:\n    PrintJob(int jobId, string file)\n        : Job(jobId), filename(file) {}\n\n    void execute() const override {\n        cout << \"Print job \" << id << \": \" << filename << '\\n';\n    }\n};\n\nclass BackupJob : public Job {\nprivate:\n    string folder;\npublic:\n    BackupJob(int jobId, string folderName)\n        : Job(jobId), folder(folderName) {}\n\n    void execute() const override {\n        cout << \"Backup job \" << id << \": \" << folder << '\\n';\n    }\n};\n",
+    "use": "PrintJob print(1, \"notes.pdf\");\nBackupJob backup(2, \"coursework\");\nJob* jobs[] = {&print, &backup};\nfor (Job* job : jobs) {\n    job->execute();\n}",
+    "question": [
+      "Create an abstract class Job with a protected integer id initialized by its constructor, a pure virtual void execute() const, and a virtual destructor.",
+      "Derive PrintJob, which stores a filename. Its execute() prints the job ID and filename.",
+      "Derive BackupJob, which stores a folder name. Its execute() prints the job ID and folder name.",
+      "Use using namespace std;. Add main() to create one job of each kind and demonstrate calls through Job pointers."
+    ],
+    "parts": [
+      [
+        "Job",
+        "Stores shared id; = 0 makes execute pure virtual, so Job cannot be instantiated."
+      ],
+      [
+        "Derived constructors",
+        "Job(jobId) initializes the base part. filename(file) and folder(folderName) initialize each derived class\u2019s own data."
+      ],
+      [
+        "execute() const override",
+        "Matches the base signature and supplies type-specific behavior."
+      ],
+      [
+        "main()",
+        "The objects live on the stack. The Job pointers borrow their addresses; do not delete them."
+      ]
+    ],
+    "change": "Rename the base and derived classes, edit their fields and output, and keep constructor initialization consistent.",
+    "watch": "Include const on both overrides. The protected id is accessible to derived methods. Use a virtual destructor for safe deletion through base pointers.",
+    "expected": "Print job 1: notes.pdf\nBackup job 2: coursework",
+    "expectedOutput": "Print job 1: notes.pdf\nBackup job 2: coursework\n",
+    "reference": "code-templates.html#topic-practice-questions",
+    "referenceLabel": "Practice questions",
+    "sourceNote": "Practice question created in this chat, not an instructor exam or official lab solution."
+  },
+  {
+    "id": "practice-job-queue",
+    "group": "practice-questions",
+    "title": "Job queue",
+    "when": "Combine abstract Job, derived jobs and a linked Queue<Job*>. 30 minutes \u00b7 25 marks.",
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nclass Job {\nprotected:\n    int id;\npublic:\n    Job(int jobId) : id(jobId) {}\n    virtual void execute() const = 0;\n    virtual ~Job() = default;\n};\n\nclass PrintJob : public Job {\nprivate:\n    string filename;\npublic:\n    PrintJob(int jobId, string file)\n        : Job(jobId), filename(file) {}\n\n    void execute() const override {\n        cout << \"Print job \" << id << \": \" << filename << '\\n';\n    }\n};\n\nclass BackupJob : public Job {\nprivate:\n    string folder;\npublic:\n    BackupJob(int jobId, string folderName)\n        : Job(jobId), folder(folderName) {}\n\n    void execute() const override {\n        cout << \"Backup job \" << id << \": \" << folder << '\\n';\n    }\n};\n\ntemplate <typename T>\nclass Queue {\nprivate:\n    struct Node {\n        T item;\n        Node* next;\n        Node(T value, Node* link = nullptr) : item(value), next(link) {}\n    };\n    Node* head;\n    Node* tail;\npublic:\n    Queue() : head(nullptr), tail(nullptr) {}\n    // This object owns its nodes. Disable shallow copying.\n    Queue(const Queue&) = delete;\n    Queue& operator=(const Queue&) = delete;\n    ~Queue() {\n        while (head != nullptr) {\n            Node* old = head;\n            head = head->next;\n            delete old;\n        }\n    }\n    bool isEmpty() const { return head == nullptr; }\n    void enqueue(T item) {\n        Node* node = new Node(item);\n        if (isEmpty()) head = node;\n        else tail->next = node;\n        tail = node;\n    }\n    T front() const {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        return head->item;\n    }\n    T dequeue() {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        Node* old = head;\n        T value = old->item;\n        head = head->next;\n        if (head == nullptr) tail = nullptr;\n        delete old;\n        return value;\n    }\n};\n",
+    "use": "Queue<Job*> jobs;\njobs.enqueue(new PrintJob(1, \"notes.pdf\"));\njobs.enqueue(new BackupJob(2, \"coursework\"));\njobs.enqueue(new PrintJob(3, \"report.pdf\"));\n\nwhile (!jobs.isEmpty()) {\n    Job* job = jobs.dequeue();\n    job->execute();\n    delete job; // main owns the jobs; the queue owns only its nodes.\n}\n\ntry {\n    jobs.dequeue();\n} catch (const runtime_error& error) {\n    cout << error.what() << '\\n';\n}",
+    "question": [
+      "Suggested time: 30 minutes. Total: 25 marks.",
+      "Classes and inheritance (8 marks): create abstract Job with protected int id, a constructor, pure virtual void execute() const and a virtual destructor. Derive PrintJob (filename) and BackupJob (folder). Each execute() prints its ID and stored name.",
+      "Linked queue (12 marks): implement Queue<T> without STL containers. Include a constructor, destructor, enqueue(T), dequeue() and isEmpty() const. Throw runtime_error on an empty dequeue. Handle removing the final node.",
+      "Main (5 marks): create Queue<Job*>. Dynamically allocate and enqueue PrintJob(1, \"notes.pdf\"), BackupJob(2, \"coursework\"), and PrintJob(3, \"report.pdf\"). Dequeue, execute and delete each job. Attempt another dequeue and catch the exception.",
+      "Use using namespace std;. The queue deletes its nodes; main deletes the jobs. Expected processing order is 1, 2, 3, followed by an empty-queue message."
+    ],
+    "parts": [
+      [
+        "Queue<Job*>",
+        "T is Job*. Different derived job types share this base-pointer interface."
+      ],
+      [
+        "FIFO",
+        "enqueue adds at tail, dequeue removes at head, preserving arrival order."
+      ],
+      [
+        "Virtual dispatch",
+        "job->execute() runs PrintJob or BackupJob behavior according to the actual object."
+      ],
+      [
+        "Ownership",
+        "dequeue deletes a node, not its pointed-to Job. main deletes the job after execution. A virtual Job destructor makes that deletion correct."
+      ]
+    ],
+    "change": "Change the derived job types, their fields and execute() bodies. Keep the linked queue implementation and the dequeue \u2192 execute \u2192 delete loop.",
+    "watch": "Do not call delete on stack-allocated objects. This example drains the queue normally; if you add operations that can throw during processing, also design cleanup for unprocessed jobs.",
+    "expected": "Print job 1: notes.pdf\nBackup job 2: coursework\nPrint job 3: report.pdf\nEmpty queue",
+    "expectedOutput": "Print job 1: notes.pdf\nBackup job 2: coursework\nPrint job 3: report.pdf\nEmpty queue\n",
+    "reference": "code-templates.html#topic-practice-questions",
+    "referenceLabel": "Practice questions",
+    "sourceNote": "Practice question created in this chat, not an instructor exam or official lab solution."
+  }
+]

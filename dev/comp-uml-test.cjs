@@ -5,4 +5,4 @@ assert(basic.includes('Student → Person'));assert(basic.includes('- name : str
 const stack=uml('stack-core',data['stack-core'].symbols,program(items.find(x=>x.id==='stack-core')));
 assert(stack.includes('Stack → Stack::stackNode'));assert(stack.includes('Stack::stackNode → Stack::stackNode'));assert(stack.includes('ownership not inferred'));
 const func=uml('value-function',data['value-function'].symbols,program(items.find(x=>x.id==='value-function')));assert(func.includes('Function &amp;')||func.includes('Function & data'));assert(func.includes('main()'));
-console.log('PASS: 111 diagrams; inheritance direction, visibility, node associations, function-only maps and source links.');
+console.log('PASS: 114 diagrams; inheritance direction, visibility, node associations, function-only maps and source links.');
