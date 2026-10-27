@@ -1,0 +1,212 @@
+[
+  {
+    "id": "tree-search",
+    "group": "trees",
+    "title": "Insert / search",
+    "shortTitle": "Insert / search",
+    "when": "Build a binary search tree and find a value without changing the tree.",
+    "code": "#include <iostream>\nusing namespace std;\n\n// NODE: one value and links to the left and right subtrees.\nstruct TreeNode {\n    int info;\n    TreeNode* left;\n    TreeNode* right;\n    TreeNode(int value) : info(value), left(nullptr), right(nullptr) {}\n};\n\n// TREE: owns every node reachable from root.\nclass BST {\nprivate:\n    TreeNode* root; // nullptr means the tree is empty.\n\n    // Return the root of the updated subtree so the caller can save its link.\n    TreeNode* insertNode(TreeNode* node, int value) {\n        if (node == nullptr) return new TreeNode(value); // Empty spot: create leaf.\n        if (value < node->info)\n            node->left = insertNode(node->left, value);\n        else\n            node->right = insertNode(node->right, value); // Equal values go RIGHT.\n        return node; // Keep this subtree attached to its parent.\n    }\n\n    // POSTORDER cleanup: delete children before the parent that links to them.\n    void destroy(TreeNode* node) {\n        if (node == nullptr) return; // Base case: no node to delete.\n        destroy(node->left);\n        destroy(node->right);\n        delete node; // Never read node after this line.\n    }\n\npublic:\n    BST() : root(nullptr) {}\n    // Owning raw pointers cannot safely use the default shallow copy.\n    BST(const BST&) = delete;\n    BST& operator=(const BST&) = delete;\n    ~BST() { clear(); } // Automatically release all remaining nodes.\n\n    void insert(int value) { root = insertNode(root, value); }\n    bool isEmpty() const { return root == nullptr; }\n    void clear() {\n        destroy(root);\n        root = nullptr; // Prevent a dangling root and allow reuse.\n    }\n    // Follow ONE branch at each step; do not change root while searching.\n    bool contains(int value) const {\n        TreeNode* current = root;\n        while (current != nullptr) {\n            if (value == current->info) return true;\n            if (value < current->info) current = current->left;\n            else current = current->right;\n        }\n        return false; // Reached a missing child: value is absent.\n    }\n};\n",
+    "use": "BST tree;\n// Same values and shape as the Trees lecture's traversal exercise.\nint values[] = {17, 13, 27, 9, 16, 20, 39, 11};\nfor (int value : values) tree.insert(value);\ncout << boolalpha;\ncout << \"Find 20: \" << tree.contains(20) << '\\n';\ncout << \"Find 99: \" << tree.contains(99) << '\\n';",
+    "expected": "Find 20: true\nFind 99: false",
+    "expectedOutput": "Find 20: true\nFind 99: false\n",
+    "parts": [
+      [
+        "insertNode",
+        "Creates a leaf at nullptr and returns the updated subtree root."
+      ],
+      [
+        "contains",
+        "Moves a local pointer left or right until it finds the value or reaches nullptr."
+      ]
+    ],
+    "change": "Change the values in main(). Keep the null checks and reconnect returned subtree roots. Use the template example if the stored type must change.",
+    "watch": "The ordering rule applies to whole subtrees. Search/insert cost O(h): balanced O(log n), skewed O(n).",
+    "reference": "https://online.camosun.ca/d2l/le/content/347338/viewContent/5404957/View",
+    "referenceLabel": "D2L \u00b7 1-8 Trees",
+    "sourceNote": "Commented study implementation based on the Trees lecture; not verbatim instructor code. Duplicates go right. Empty-tree height is defined here as -1.",
+    "manualComments": true,
+    "facets": {
+      "structure": "tree",
+      "storage": "linked",
+      "type": "int",
+      "role": "example"
+    }
+  },
+  {
+    "id": "tree-traversals",
+    "group": "trees",
+    "title": "Traversals",
+    "shortTitle": "Traversals",
+    "when": "Print preorder, inorder and postorder; trace the lecture exercise.",
+    "code": "#include <iostream>\nusing namespace std;\n\n// NODE: one value and links to the left and right subtrees.\nstruct TreeNode {\n    int info;\n    TreeNode* left;\n    TreeNode* right;\n    TreeNode(int value) : info(value), left(nullptr), right(nullptr) {}\n};\n\n// TREE: owns every node reachable from root.\nclass BST {\nprivate:\n    TreeNode* root; // nullptr means the tree is empty.\n\n    // Return the root of the updated subtree so the caller can save its link.\n    TreeNode* insertNode(TreeNode* node, int value) {\n        if (node == nullptr) return new TreeNode(value); // Empty spot: create leaf.\n        if (value < node->info)\n            node->left = insertNode(node->left, value);\n        else\n            node->right = insertNode(node->right, value); // Equal values go RIGHT.\n        return node; // Keep this subtree attached to its parent.\n    }\n\n    // POSTORDER cleanup: delete children before the parent that links to them.\n    void destroy(TreeNode* node) {\n        if (node == nullptr) return; // Base case: no node to delete.\n        destroy(node->left);\n        destroy(node->right);\n        delete node; // Never read node after this line.\n    }\n    // PREORDER: visit the node BEFORE both subtrees (N L R).\n    void pre(TreeNode* node) const {\n        if (node == nullptr) return;\n        cout << node->info << ' ';\n        pre(node->left);\n        pre(node->right);\n    }\n    // INORDER: visit BETWEEN subtrees (L N R); BST output is sorted.\n    void in(TreeNode* node) const {\n        if (node == nullptr) return;\n        in(node->left);\n        cout << node->info << ' ';\n        in(node->right);\n    }\n    // POSTORDER: visit AFTER both subtrees (L R N).\n    void post(TreeNode* node) const {\n        if (node == nullptr) return;\n        post(node->left);\n        post(node->right);\n        cout << node->info << ' ';\n    }\n\npublic:\n    BST() : root(nullptr) {}\n    // Owning raw pointers cannot safely use the default shallow copy.\n    BST(const BST&) = delete;\n    BST& operator=(const BST&) = delete;\n    ~BST() { clear(); } // Automatically release all remaining nodes.\n\n    void insert(int value) { root = insertNode(root, value); }\n    bool isEmpty() const { return root == nullptr; }\n    void clear() {\n        destroy(root);\n        root = nullptr; // Prevent a dangling root and allow reuse.\n    }\n    // Public wrappers start traversal at root; helpers handle subtrees.\n    void preorder() const { pre(root); cout << '\\n'; }\n    void inorder() const { in(root); cout << '\\n'; }\n    void postorder() const { post(root); cout << '\\n'; }\n};\n",
+    "use": "BST tree;\n// Same values and shape as the Trees lecture's traversal exercise.\nint values[] = {17, 13, 27, 9, 16, 20, 39, 11};\nfor (int value : values) tree.insert(value);\ncout << \"Preorder: \"; tree.preorder();\ncout << \"Inorder: \"; tree.inorder();\ncout << \"Postorder: \"; tree.postorder();",
+    "expected": "Preorder: 17 13 9 11 16 27 20 39 \nInorder: 9 11 13 16 17 20 27 39 \nPostorder: 11 9 16 13 20 39 27 17",
+    "expectedOutput": "Preorder: 17 13 9 11 16 27 20 39 \nInorder: 9 11 13 16 17 20 27 39 \nPostorder: 11 9 16 13 20 39 27 17 \n",
+    "parts": [
+      [
+        "pre / in / post",
+        "Only the position of cout changes: before, between, or after the recursive calls."
+      ],
+      [
+        "main",
+        "Builds the lecture exercise tree, then prints all three orders."
+      ]
+    ],
+    "change": "Change the values in main(). Keep the null checks and reconnect returned subtree roots. Use the template example if the stored type must change.",
+    "watch": "Every traversal visits all n nodes: O(n). Sorted inorder output depends on the BST ordering rule.",
+    "reference": "https://online.camosun.ca/d2l/le/content/347338/viewContent/5404957/View",
+    "referenceLabel": "D2L \u00b7 1-8 Trees",
+    "sourceNote": "Commented study implementation based on the Trees lecture; not verbatim instructor code. Duplicates go right. Empty-tree height is defined here as -1.",
+    "manualComments": true,
+    "facets": {
+      "structure": "tree",
+      "storage": "linked",
+      "type": "int",
+      "role": "example"
+    }
+  },
+  {
+    "id": "tree-breadth",
+    "group": "trees",
+    "title": "Breadth-first",
+    "shortTitle": "Breadth-first",
+    "when": "Print nodes level by level using a queue of node pointers.",
+    "code": "#include <iostream>\n#include <queue>\nusing namespace std;\n\n// NODE: one value and links to the left and right subtrees.\nstruct TreeNode {\n    int info;\n    TreeNode* left;\n    TreeNode* right;\n    TreeNode(int value) : info(value), left(nullptr), right(nullptr) {}\n};\n\n// TREE: owns every node reachable from root.\nclass BST {\nprivate:\n    TreeNode* root; // nullptr means the tree is empty.\n\n    // Return the root of the updated subtree so the caller can save its link.\n    TreeNode* insertNode(TreeNode* node, int value) {\n        if (node == nullptr) return new TreeNode(value); // Empty spot: create leaf.\n        if (value < node->info)\n            node->left = insertNode(node->left, value);\n        else\n            node->right = insertNode(node->right, value); // Equal values go RIGHT.\n        return node; // Keep this subtree attached to its parent.\n    }\n\n    // POSTORDER cleanup: delete children before the parent that links to them.\n    void destroy(TreeNode* node) {\n        if (node == nullptr) return; // Base case: no node to delete.\n        destroy(node->left);\n        destroy(node->right);\n        delete node; // Never read node after this line.\n    }\n\npublic:\n    BST() : root(nullptr) {}\n    // Owning raw pointers cannot safely use the default shallow copy.\n    BST(const BST&) = delete;\n    BST& operator=(const BST&) = delete;\n    ~BST() { clear(); } // Automatically release all remaining nodes.\n\n    void insert(int value) { root = insertNode(root, value); }\n    bool isEmpty() const { return root == nullptr; }\n    void clear() {\n        destroy(root);\n        root = nullptr; // Prevent a dangling root and allow reuse.\n    }\n    // FIFO processes every node at one level before the next level.\n    void breadthFirst() const {\n        if (root == nullptr) { cout << '\\n'; return; }\n        queue<TreeNode*> pending; // Stores pointers; it does NOT own the nodes.\n        pending.push(root);\n        while (!pending.empty()) {\n            TreeNode* current = pending.front(); // Read before removing.\n            pending.pop(); // std::queue::pop() returns nothing.\n            cout << current->info << ' ';\n            // Left goes in first, so each level prints left to right.\n            if (current->left != nullptr) pending.push(current->left);\n            if (current->right != nullptr) pending.push(current->right);\n        }\n        cout << '\\n';\n    }\n};\n",
+    "use": "BST tree;\n// Same values and shape as the Trees lecture's traversal exercise.\nint values[] = {17, 13, 27, 9, 16, 20, 39, 11};\nfor (int value : values) tree.insert(value);\ncout << \"Levels: \"; tree.breadthFirst();",
+    "expected": "Levels: 17 13 27 9 16 20 39 11",
+    "expectedOutput": "Levels: 17 13 27 9 16 20 39 11 \n",
+    "parts": [
+      [
+        "pending",
+        "FIFO queue of pointers to nodes waiting to be visited."
+      ],
+      [
+        "Loop",
+        "Remove front, visit node, enqueue its existing children left then right."
+      ]
+    ],
+    "change": "Change the values in main(). Keep the null checks and reconnect returned subtree roots. Use the template example if the stored type must change.",
+    "watch": "Uses STL queue; use your own queue wrapper if STL is forbidden. Do not delete nodes during traversal. O(n) time.",
+    "reference": "https://online.camosun.ca/d2l/le/content/347338/viewContent/5404957/View",
+    "referenceLabel": "D2L \u00b7 1-8 Trees",
+    "sourceNote": "Commented study implementation based on the Trees lecture; not verbatim instructor code. Duplicates go right. Empty-tree height is defined here as -1.",
+    "manualComments": true,
+    "facets": {
+      "structure": "tree",
+      "storage": "linked",
+      "type": "int",
+      "role": "example"
+    }
+  },
+  {
+    "id": "tree-metrics",
+    "group": "trees",
+    "title": "Height / counts",
+    "shortTitle": "Height / counts",
+    "when": "Return height, total nodes and leaves using recursive subtree results.",
+    "code": "#include <iostream>\nusing namespace std;\n\n// NODE: one value and links to the left and right subtrees.\nstruct TreeNode {\n    int info;\n    TreeNode* left;\n    TreeNode* right;\n    TreeNode(int value) : info(value), left(nullptr), right(nullptr) {}\n};\n\n// TREE: owns every node reachable from root.\nclass BST {\nprivate:\n    TreeNode* root; // nullptr means the tree is empty.\n\n    // Return the root of the updated subtree so the caller can save its link.\n    TreeNode* insertNode(TreeNode* node, int value) {\n        if (node == nullptr) return new TreeNode(value); // Empty spot: create leaf.\n        if (value < node->info)\n            node->left = insertNode(node->left, value);\n        else\n            node->right = insertNode(node->right, value); // Equal values go RIGHT.\n        return node; // Keep this subtree attached to its parent.\n    }\n\n    // POSTORDER cleanup: delete children before the parent that links to them.\n    void destroy(TreeNode* node) {\n        if (node == nullptr) return; // Base case: no node to delete.\n        destroy(node->left);\n        destroy(node->right);\n        delete node; // Never read node after this line.\n    }\n    // Empty subtree contributes 0; each real node contributes 1.\n    int nodes(TreeNode* node) const {\n        if (node == nullptr) return 0;\n        return 1 + nodes(node->left) + nodes(node->right);\n    }\n    // A leaf has NEITHER a left child nor a right child.\n    int leaves(TreeNode* node) const {\n        if (node == nullptr) return 0;\n        if (node->left == nullptr && node->right == nullptr) return 1;\n        return leaves(node->left) + leaves(node->right);\n    }\n    // Height counts EDGES: leaf = 0. Empty tree = -1 by our convention.\n    int heightOf(TreeNode* node) const {\n        if (node == nullptr) return -1;\n        int leftHeight = heightOf(node->left);\n        int rightHeight = heightOf(node->right);\n        int taller = (leftHeight > rightHeight) ? leftHeight : rightHeight;\n        return 1 + taller; // One edge from this node to its taller child.\n    }\n\npublic:\n    BST() : root(nullptr) {}\n    // Owning raw pointers cannot safely use the default shallow copy.\n    BST(const BST&) = delete;\n    BST& operator=(const BST&) = delete;\n    ~BST() { clear(); } // Automatically release all remaining nodes.\n\n    void insert(int value) { root = insertNode(root, value); }\n    bool isEmpty() const { return root == nullptr; }\n    void clear() {\n        destroy(root);\n        root = nullptr; // Prevent a dangling root and allow reuse.\n    }\n    int countNodes() const { return nodes(root); }\n    int countLeaves() const { return leaves(root); }\n    int height() const { return heightOf(root); }\n};\n",
+    "use": "BST tree;\n// Same values and shape as the Trees lecture's traversal exercise.\nint values[] = {17, 13, 27, 9, 16, 20, 39, 11};\nfor (int value : values) tree.insert(value);\ncout << \"Height: \" << tree.height() << '\\n';\ncout << \"Nodes: \" << tree.countNodes() << '\\n';\ncout << \"Leaves: \" << tree.countLeaves() << '\\n';",
+    "expected": "Height: 3\nNodes: 8\nLeaves: 4",
+    "expectedOutput": "Height: 3\nNodes: 8\nLeaves: 4\n",
+    "parts": [
+      [
+        "nodes",
+        "Add 1 for this node plus the counts in both subtrees."
+      ],
+      [
+        "leaves",
+        "Count 1 only when both child pointers are null."
+      ],
+      [
+        "heightOf",
+        "Use 1 + maximum child height. Empty -1 makes a leaf height 0."
+      ]
+    ],
+    "change": "Change the values in main(). Keep the null checks and reconnect returned subtree roots. Use the template example if the stored type must change.",
+    "watch": "Root depth is 0, but root height is the longest path down. All three functions take O(n).",
+    "reference": "https://online.camosun.ca/d2l/le/content/347338/viewContent/5404957/View",
+    "referenceLabel": "D2L \u00b7 1-8 Trees",
+    "sourceNote": "Commented study implementation based on the Trees lecture; not verbatim instructor code. Duplicates go right. Empty-tree height is defined here as -1.",
+    "manualComments": true,
+    "facets": {
+      "structure": "tree",
+      "storage": "linked",
+      "type": "int",
+      "role": "example"
+    }
+  },
+  {
+    "id": "tree-clear",
+    "group": "trees",
+    "title": "Clear / reuse",
+    "shortTitle": "Clear / reuse",
+    "when": "Delete every node safely, then reuse the empty tree.",
+    "code": "#include <iostream>\nusing namespace std;\n\n// NODE: one value and links to the left and right subtrees.\nstruct TreeNode {\n    int info;\n    TreeNode* left;\n    TreeNode* right;\n    TreeNode(int value) : info(value), left(nullptr), right(nullptr) {}\n};\n\n// TREE: owns every node reachable from root.\nclass BST {\nprivate:\n    TreeNode* root; // nullptr means the tree is empty.\n\n    // Return the root of the updated subtree so the caller can save its link.\n    TreeNode* insertNode(TreeNode* node, int value) {\n        if (node == nullptr) return new TreeNode(value); // Empty spot: create leaf.\n        if (value < node->info)\n            node->left = insertNode(node->left, value);\n        else\n            node->right = insertNode(node->right, value); // Equal values go RIGHT.\n        return node; // Keep this subtree attached to its parent.\n    }\n\n    // POSTORDER cleanup: delete children before the parent that links to them.\n    void destroy(TreeNode* node) {\n        if (node == nullptr) return; // Base case: no node to delete.\n        destroy(node->left);\n        destroy(node->right);\n        delete node; // Never read node after this line.\n    }\n\npublic:\n    BST() : root(nullptr) {}\n    // Owning raw pointers cannot safely use the default shallow copy.\n    BST(const BST&) = delete;\n    BST& operator=(const BST&) = delete;\n    ~BST() { clear(); } // Automatically release all remaining nodes.\n\n    void insert(int value) { root = insertNode(root, value); }\n    bool isEmpty() const { return root == nullptr; }\n    void clear() {\n        destroy(root);\n        root = nullptr; // Prevent a dangling root and allow reuse.\n    }\n    // Follow ONE branch at each step; do not change root while searching.\n    bool contains(int value) const {\n        TreeNode* current = root;\n        while (current != nullptr) {\n            if (value == current->info) return true;\n            if (value < current->info) current = current->left;\n            else current = current->right;\n        }\n        return false; // Reached a missing child: value is absent.\n    }\n};\n",
+    "use": "BST tree;\ntree.insert(10);\ntree.insert(5);\ntree.insert(15);\n// clear() deletes children before parents and resets root.\ntree.clear();\ncout << boolalpha << \"Empty: \" << tree.isEmpty() << '\\n';\ntree.clear(); // Clearing an already empty tree is safe.\ntree.insert(7);\ncout << \"Find 7: \" << tree.contains(7) << '\\n';\n// Scope exit calls ~BST(), which deletes the remaining node.",
+    "expected": "Empty: true\nFind 7: true",
+    "expectedOutput": "Empty: true\nFind 7: true\n",
+    "parts": [
+      [
+        "destroy",
+        "Postorder deletion keeps each parent alive until its child links have been used."
+      ],
+      [
+        "clear / destructor",
+        "clear resets root; the destructor calls clear automatically."
+      ],
+      [
+        "Copying",
+        "Disabled because a shallow copy would make two trees own the same nodes."
+      ]
+    ],
+    "change": "Change the values in main(). Keep the null checks and reconnect returned subtree roots. Use the template example if the stored type must change.",
+    "watch": "This removes ALL nodes, not one chosen BST value. Never access node after delete.",
+    "reference": "https://online.camosun.ca/d2l/le/content/347338/viewContent/5404957/View",
+    "referenceLabel": "D2L \u00b7 1-8 Trees",
+    "sourceNote": "Commented study implementation based on the Trees lecture; not verbatim instructor code. Duplicates go right. Empty-tree height is defined here as -1.",
+    "manualComments": true,
+    "facets": {
+      "structure": "tree",
+      "storage": "linked",
+      "type": "int",
+      "role": "example"
+    }
+  },
+  {
+    "id": "tree-template",
+    "group": "trees",
+    "title": "Generic BST",
+    "shortTitle": "Generic BST",
+    "when": "Reuse one BST class for integers or strings.",
+    "code": "#include <iostream>\n#include <string>\n#include <initializer_list>\nusing namespace std;\n\n// NODE: one value and links to the left and right subtrees.\ntemplate <typename T>\nstruct TreeNode {\n    T info;\n    TreeNode<T>* left;\n    TreeNode<T>* right;\n    TreeNode(T value) : info(value), left(nullptr), right(nullptr) {}\n};\n\n// TREE: owns every node reachable from root.\ntemplate <typename T>\nclass BST {\nprivate:\n    TreeNode<T>* root; // nullptr means the tree is empty.\n\n    // Return the root of the updated subtree so the caller can save its link.\n    TreeNode<T>* insertNode(TreeNode<T>* node, T value) {\n        if (node == nullptr) return new TreeNode<T>(value); // Empty spot: create leaf.\n        if (value < node->info)\n            node->left = insertNode(node->left, value);\n        else\n            node->right = insertNode(node->right, value); // Equal values go RIGHT.\n        return node; // Keep this subtree attached to its parent.\n    }\n\n    // POSTORDER cleanup: delete children before the parent that links to them.\n    void destroy(TreeNode<T>* node) {\n        if (node == nullptr) return; // Base case: no node to delete.\n        destroy(node->left);\n        destroy(node->right);\n        delete node; // Never read node after this line.\n    }\n    // INORDER: visit BETWEEN subtrees (L N R); BST output is sorted.\n    void in(TreeNode<T>* node) const {\n        if (node == nullptr) return;\n        in(node->left);\n        cout << node->info << ' ';\n        in(node->right);\n    }\n\npublic:\n    BST() : root(nullptr) {}\n    // Owning raw pointers cannot safely use the default shallow copy.\n    BST(const BST&) = delete;\n    BST& operator=(const BST&) = delete;\n    ~BST() { clear(); } // Automatically release all remaining nodes.\n\n    void insert(T value) { root = insertNode(root, value); }\n    bool isEmpty() const { return root == nullptr; }\n    void clear() {\n        destroy(root);\n        root = nullptr; // Prevent a dangling root and allow reuse.\n    }\n    // Follow ONE branch at each step; do not change root while searching.\n    bool contains(T value) const {\n        TreeNode<T>* current = root;\n        while (current != nullptr) {\n            if (value == current->info) return true;\n            if (value < current->info) current = current->left;\n            else current = current->right;\n        }\n        return false; // Reached a missing child: value is absent.\n    }\n    void inorder() const { in(root); cout << '\\n'; }\n};\n",
+    "use": "BST<int> numbers;\nfor (int value : {4, 2, 6, 4}) numbers.insert(value);\ncout << \"Numbers: \"; numbers.inorder(); // Duplicate 4 is stored on the right.\nBST<string> words;\nwords.insert(\"pear\"); words.insert(\"apple\"); words.insert(\"orange\");\ncout << \"Words: \"; words.inorder();\ncout << boolalpha << \"Find pear: \" << words.contains(\"pear\") << '\\n';",
+    "expected": "Numbers: 2 4 4 6 \nWords: apple orange pear \nFind pear: true",
+    "expectedOutput": "Numbers: 2 4 4 6 \nWords: apple orange pear \nFind pear: true\n",
+    "parts": [
+      [
+        "T",
+        "Replace the stored type, not the pointer logic."
+      ],
+      [
+        "TreeNode<T>",
+        "Every link refers to a node containing the same T."
+      ],
+      [
+        "BST<int> / BST<string>",
+        "Two independent tree types using the same class template."
+      ]
+    ],
+    "change": "Change the values in main(). Keep the null checks and reconnect returned subtree roots. T must support <, == and stream output.",
+    "watch": "Custom record types need consistent < and == operators; printing also needs <<. Default copying is disabled.",
+    "reference": "https://online.camosun.ca/d2l/le/content/347338/viewContent/5404957/View",
+    "referenceLabel": "D2L \u00b7 1-8 Trees",
+    "sourceNote": "Commented study implementation based on the Trees lecture; not verbatim instructor code. Duplicates go right. Empty-tree height is defined here as -1.",
+    "manualComments": true,
+    "facets": {
+      "structure": "tree",
+      "storage": "linked",
+      "type": "template",
+      "role": "generic"
+    }
+  }
+]

@@ -7773,6 +7773,1651 @@
       }
     ]
   },
+  "tree-search": {
+    "sha256": "d17a77628cc0f1b218b1a516ed82a621f3e4343583fd163dc292a9e0341eeb04",
+    "offsetEncoding": "utf8",
+    "symbols": [
+      {
+        "name": "TreeNode",
+        "kind": "struct",
+        "line": 5,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "info",
+            "kind": "member",
+            "line": 6,
+            "type": "int",
+            "access": "public",
+            "children": []
+          },
+          {
+            "name": "left",
+            "kind": "member",
+            "line": 7,
+            "type": "TreeNode *",
+            "access": "public",
+            "children": []
+          },
+          {
+            "name": "right",
+            "kind": "member",
+            "line": 8,
+            "type": "TreeNode *",
+            "access": "public",
+            "children": []
+          },
+          {
+            "name": "TreeNode",
+            "kind": "constructor",
+            "line": 9,
+            "type": "void (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "value",
+                "kind": "parameter",
+                "line": 9,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "BST",
+        "kind": "class",
+        "line": 13,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "root",
+            "kind": "member",
+            "line": 15,
+            "type": "TreeNode *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "insertNode",
+            "kind": "method",
+            "line": 18,
+            "type": "TreeNode *(TreeNode *, int)",
+            "access": "private",
+            "children": [
+              {
+                "name": "node",
+                "kind": "parameter",
+                "line": 18,
+                "type": "TreeNode *",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "value",
+                "kind": "parameter",
+                "line": 18,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "destroy",
+            "kind": "method",
+            "line": 28,
+            "type": "void (TreeNode *)",
+            "access": "private",
+            "children": [
+              {
+                "name": "node",
+                "kind": "parameter",
+                "line": 28,
+                "type": "TreeNode *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "BST",
+            "kind": "constructor",
+            "line": 36,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "BST",
+            "kind": "constructor",
+            "line": 38,
+            "type": "void (const BST &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "operator=",
+            "kind": "method",
+            "line": 39,
+            "type": "BST &(const BST &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "~BST",
+            "kind": "destructor",
+            "line": 40,
+            "type": "void () noexcept",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "insert",
+            "kind": "method",
+            "line": 42,
+            "type": "void (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "value",
+                "kind": "parameter",
+                "line": 42,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 43,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "clear",
+            "kind": "method",
+            "line": 44,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "contains",
+            "kind": "method",
+            "line": 49,
+            "type": "bool (int) const",
+            "access": "public",
+            "children": [
+              {
+                "name": "value",
+                "kind": "parameter",
+                "line": 49,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "current",
+                "kind": "local",
+                "line": 50,
+                "type": "TreeNode *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 60,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "tree",
+            "kind": "local",
+            "line": 61,
+            "type": "BST",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "values",
+            "kind": "local",
+            "line": 63,
+            "type": "int[8]",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "value",
+            "kind": "local",
+            "line": 64,
+            "type": "int",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "tree-traversals": {
+    "sha256": "5c1d6886e634dfb6cdeb53694d348f9bc0de19e8f61b9cd444871ee18d5ec917",
+    "offsetEncoding": "utf8",
+    "symbols": [
+      {
+        "name": "TreeNode",
+        "kind": "struct",
+        "line": 5,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "info",
+            "kind": "member",
+            "line": 6,
+            "type": "int",
+            "access": "public",
+            "children": []
+          },
+          {
+            "name": "left",
+            "kind": "member",
+            "line": 7,
+            "type": "TreeNode *",
+            "access": "public",
+            "children": []
+          },
+          {
+            "name": "right",
+            "kind": "member",
+            "line": 8,
+            "type": "TreeNode *",
+            "access": "public",
+            "children": []
+          },
+          {
+            "name": "TreeNode",
+            "kind": "constructor",
+            "line": 9,
+            "type": "void (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "value",
+                "kind": "parameter",
+                "line": 9,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "BST",
+        "kind": "class",
+        "line": 13,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "root",
+            "kind": "member",
+            "line": 15,
+            "type": "TreeNode *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "insertNode",
+            "kind": "method",
+            "line": 18,
+            "type": "TreeNode *(TreeNode *, int)",
+            "access": "private",
+            "children": [
+              {
+                "name": "node",
+                "kind": "parameter",
+                "line": 18,
+                "type": "TreeNode *",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "value",
+                "kind": "parameter",
+                "line": 18,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "destroy",
+            "kind": "method",
+            "line": 28,
+            "type": "void (TreeNode *)",
+            "access": "private",
+            "children": [
+              {
+                "name": "node",
+                "kind": "parameter",
+                "line": 28,
+                "type": "TreeNode *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "pre",
+            "kind": "method",
+            "line": 35,
+            "type": "void (TreeNode *) const",
+            "access": "private",
+            "children": [
+              {
+                "name": "node",
+                "kind": "parameter",
+                "line": 35,
+                "type": "TreeNode *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "in",
+            "kind": "method",
+            "line": 42,
+            "type": "void (TreeNode *) const",
+            "access": "private",
+            "children": [
+              {
+                "name": "node",
+                "kind": "parameter",
+                "line": 42,
+                "type": "TreeNode *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "post",
+            "kind": "method",
+            "line": 49,
+            "type": "void (TreeNode *) const",
+            "access": "private",
+            "children": [
+              {
+                "name": "node",
+                "kind": "parameter",
+                "line": 49,
+                "type": "TreeNode *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "BST",
+            "kind": "constructor",
+            "line": 57,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "BST",
+            "kind": "constructor",
+            "line": 59,
+            "type": "void (const BST &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "operator=",
+            "kind": "method",
+            "line": 60,
+            "type": "BST &(const BST &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "~BST",
+            "kind": "destructor",
+            "line": 61,
+            "type": "void () noexcept",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "insert",
+            "kind": "method",
+            "line": 63,
+            "type": "void (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "value",
+                "kind": "parameter",
+                "line": 63,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 64,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "clear",
+            "kind": "method",
+            "line": 65,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "preorder",
+            "kind": "method",
+            "line": 70,
+            "type": "void () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "inorder",
+            "kind": "method",
+            "line": 71,
+            "type": "void () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "postorder",
+            "kind": "method",
+            "line": 72,
+            "type": "void () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 75,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "tree",
+            "kind": "local",
+            "line": 76,
+            "type": "BST",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "values",
+            "kind": "local",
+            "line": 78,
+            "type": "int[8]",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "value",
+            "kind": "local",
+            "line": 79,
+            "type": "int",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "tree-breadth": {
+    "sha256": "2e81b730d44df9a63d75c557d5712331d8b9c26ca078486c56cf061ac2c8ec58",
+    "offsetEncoding": "utf8",
+    "symbols": [
+      {
+        "name": "TreeNode",
+        "kind": "struct",
+        "line": 6,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "info",
+            "kind": "member",
+            "line": 7,
+            "type": "int",
+            "access": "public",
+            "children": []
+          },
+          {
+            "name": "left",
+            "kind": "member",
+            "line": 8,
+            "type": "TreeNode *",
+            "access": "public",
+            "children": []
+          },
+          {
+            "name": "right",
+            "kind": "member",
+            "line": 9,
+            "type": "TreeNode *",
+            "access": "public",
+            "children": []
+          },
+          {
+            "name": "TreeNode",
+            "kind": "constructor",
+            "line": 10,
+            "type": "void (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "value",
+                "kind": "parameter",
+                "line": 10,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "BST",
+        "kind": "class",
+        "line": 14,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "root",
+            "kind": "member",
+            "line": 16,
+            "type": "TreeNode *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "insertNode",
+            "kind": "method",
+            "line": 19,
+            "type": "TreeNode *(TreeNode *, int)",
+            "access": "private",
+            "children": [
+              {
+                "name": "node",
+                "kind": "parameter",
+                "line": 19,
+                "type": "TreeNode *",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "value",
+                "kind": "parameter",
+                "line": 19,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "destroy",
+            "kind": "method",
+            "line": 29,
+            "type": "void (TreeNode *)",
+            "access": "private",
+            "children": [
+              {
+                "name": "node",
+                "kind": "parameter",
+                "line": 29,
+                "type": "TreeNode *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "BST",
+            "kind": "constructor",
+            "line": 37,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "BST",
+            "kind": "constructor",
+            "line": 39,
+            "type": "void (const BST &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "operator=",
+            "kind": "method",
+            "line": 40,
+            "type": "BST &(const BST &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "~BST",
+            "kind": "destructor",
+            "line": 41,
+            "type": "void () noexcept",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "insert",
+            "kind": "method",
+            "line": 43,
+            "type": "void (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "value",
+                "kind": "parameter",
+                "line": 43,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 44,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "clear",
+            "kind": "method",
+            "line": 45,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "breadthFirst",
+            "kind": "method",
+            "line": 50,
+            "type": "void () const",
+            "access": "public",
+            "children": [
+              {
+                "name": "pending",
+                "kind": "local",
+                "line": 52,
+                "type": "queue<TreeNode *>",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "current",
+                "kind": "local",
+                "line": 55,
+                "type": "TreeNode *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 66,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "tree",
+            "kind": "local",
+            "line": 67,
+            "type": "BST",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "values",
+            "kind": "local",
+            "line": 69,
+            "type": "int[8]",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "value",
+            "kind": "local",
+            "line": 70,
+            "type": "int",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "tree-metrics": {
+    "sha256": "af9e53cd2c3f95655ff08e071731bcffe5cc7019c4d7bf933217849317777faa",
+    "offsetEncoding": "utf8",
+    "symbols": [
+      {
+        "name": "TreeNode",
+        "kind": "struct",
+        "line": 5,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "info",
+            "kind": "member",
+            "line": 6,
+            "type": "int",
+            "access": "public",
+            "children": []
+          },
+          {
+            "name": "left",
+            "kind": "member",
+            "line": 7,
+            "type": "TreeNode *",
+            "access": "public",
+            "children": []
+          },
+          {
+            "name": "right",
+            "kind": "member",
+            "line": 8,
+            "type": "TreeNode *",
+            "access": "public",
+            "children": []
+          },
+          {
+            "name": "TreeNode",
+            "kind": "constructor",
+            "line": 9,
+            "type": "void (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "value",
+                "kind": "parameter",
+                "line": 9,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "BST",
+        "kind": "class",
+        "line": 13,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "root",
+            "kind": "member",
+            "line": 15,
+            "type": "TreeNode *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "insertNode",
+            "kind": "method",
+            "line": 18,
+            "type": "TreeNode *(TreeNode *, int)",
+            "access": "private",
+            "children": [
+              {
+                "name": "node",
+                "kind": "parameter",
+                "line": 18,
+                "type": "TreeNode *",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "value",
+                "kind": "parameter",
+                "line": 18,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "destroy",
+            "kind": "method",
+            "line": 28,
+            "type": "void (TreeNode *)",
+            "access": "private",
+            "children": [
+              {
+                "name": "node",
+                "kind": "parameter",
+                "line": 28,
+                "type": "TreeNode *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "nodes",
+            "kind": "method",
+            "line": 35,
+            "type": "int (TreeNode *) const",
+            "access": "private",
+            "children": [
+              {
+                "name": "node",
+                "kind": "parameter",
+                "line": 35,
+                "type": "TreeNode *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "leaves",
+            "kind": "method",
+            "line": 40,
+            "type": "int (TreeNode *) const",
+            "access": "private",
+            "children": [
+              {
+                "name": "node",
+                "kind": "parameter",
+                "line": 40,
+                "type": "TreeNode *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "heightOf",
+            "kind": "method",
+            "line": 46,
+            "type": "int (TreeNode *) const",
+            "access": "private",
+            "children": [
+              {
+                "name": "node",
+                "kind": "parameter",
+                "line": 46,
+                "type": "TreeNode *",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "leftHeight",
+                "kind": "local",
+                "line": 48,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "rightHeight",
+                "kind": "local",
+                "line": 49,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "taller",
+                "kind": "local",
+                "line": 50,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "BST",
+            "kind": "constructor",
+            "line": 55,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "BST",
+            "kind": "constructor",
+            "line": 57,
+            "type": "void (const BST &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "operator=",
+            "kind": "method",
+            "line": 58,
+            "type": "BST &(const BST &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "~BST",
+            "kind": "destructor",
+            "line": 59,
+            "type": "void () noexcept",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "insert",
+            "kind": "method",
+            "line": 61,
+            "type": "void (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "value",
+                "kind": "parameter",
+                "line": 61,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 62,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "clear",
+            "kind": "method",
+            "line": 63,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "countNodes",
+            "kind": "method",
+            "line": 67,
+            "type": "int () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "countLeaves",
+            "kind": "method",
+            "line": 68,
+            "type": "int () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "height",
+            "kind": "method",
+            "line": 69,
+            "type": "int () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 72,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "tree",
+            "kind": "local",
+            "line": 73,
+            "type": "BST",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "values",
+            "kind": "local",
+            "line": 75,
+            "type": "int[8]",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "value",
+            "kind": "local",
+            "line": 76,
+            "type": "int",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "tree-clear": {
+    "sha256": "d8803514166b506ec4739a9241c5f1a1ca94a62cffed4c25a975256baa616f78",
+    "offsetEncoding": "utf8",
+    "symbols": [
+      {
+        "name": "TreeNode",
+        "kind": "struct",
+        "line": 5,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "info",
+            "kind": "member",
+            "line": 6,
+            "type": "int",
+            "access": "public",
+            "children": []
+          },
+          {
+            "name": "left",
+            "kind": "member",
+            "line": 7,
+            "type": "TreeNode *",
+            "access": "public",
+            "children": []
+          },
+          {
+            "name": "right",
+            "kind": "member",
+            "line": 8,
+            "type": "TreeNode *",
+            "access": "public",
+            "children": []
+          },
+          {
+            "name": "TreeNode",
+            "kind": "constructor",
+            "line": 9,
+            "type": "void (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "value",
+                "kind": "parameter",
+                "line": 9,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "BST",
+        "kind": "class",
+        "line": 13,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "root",
+            "kind": "member",
+            "line": 15,
+            "type": "TreeNode *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "insertNode",
+            "kind": "method",
+            "line": 18,
+            "type": "TreeNode *(TreeNode *, int)",
+            "access": "private",
+            "children": [
+              {
+                "name": "node",
+                "kind": "parameter",
+                "line": 18,
+                "type": "TreeNode *",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "value",
+                "kind": "parameter",
+                "line": 18,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "destroy",
+            "kind": "method",
+            "line": 28,
+            "type": "void (TreeNode *)",
+            "access": "private",
+            "children": [
+              {
+                "name": "node",
+                "kind": "parameter",
+                "line": 28,
+                "type": "TreeNode *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "BST",
+            "kind": "constructor",
+            "line": 36,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "BST",
+            "kind": "constructor",
+            "line": 38,
+            "type": "void (const BST &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "operator=",
+            "kind": "method",
+            "line": 39,
+            "type": "BST &(const BST &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "~BST",
+            "kind": "destructor",
+            "line": 40,
+            "type": "void () noexcept",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "insert",
+            "kind": "method",
+            "line": 42,
+            "type": "void (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "value",
+                "kind": "parameter",
+                "line": 42,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 43,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "clear",
+            "kind": "method",
+            "line": 44,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "contains",
+            "kind": "method",
+            "line": 49,
+            "type": "bool (int) const",
+            "access": "public",
+            "children": [
+              {
+                "name": "value",
+                "kind": "parameter",
+                "line": 49,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "current",
+                "kind": "local",
+                "line": 50,
+                "type": "TreeNode *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 60,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "tree",
+            "kind": "local",
+            "line": 61,
+            "type": "BST",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "tree-template": {
+    "sha256": "18ffe719972c9455e5dc13e715038a4228bb5318cff20018990abeb0880bb025",
+    "offsetEncoding": "utf8",
+    "symbols": [
+      {
+        "name": "TreeNode",
+        "kind": "struct",
+        "line": 8,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "info",
+            "kind": "member",
+            "line": 9,
+            "type": "T",
+            "access": "public",
+            "children": []
+          },
+          {
+            "name": "left",
+            "kind": "member",
+            "line": 10,
+            "type": "TreeNode<T> *",
+            "access": "public",
+            "children": []
+          },
+          {
+            "name": "right",
+            "kind": "member",
+            "line": 11,
+            "type": "TreeNode<T> *",
+            "access": "public",
+            "children": []
+          },
+          {
+            "name": "TreeNode<T>",
+            "kind": "constructor",
+            "line": 12,
+            "type": "void (T)",
+            "access": "public",
+            "children": [
+              {
+                "name": "value",
+                "kind": "parameter",
+                "line": 12,
+                "type": "T",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "BST",
+        "kind": "class",
+        "line": 17,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "root",
+            "kind": "member",
+            "line": 19,
+            "type": "TreeNode<T> *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "insertNode",
+            "kind": "method",
+            "line": 22,
+            "type": "TreeNode<T> *(TreeNode<T> *, T)",
+            "access": "private",
+            "children": [
+              {
+                "name": "node",
+                "kind": "parameter",
+                "line": 22,
+                "type": "TreeNode<T> *",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "value",
+                "kind": "parameter",
+                "line": 22,
+                "type": "T",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "destroy",
+            "kind": "method",
+            "line": 32,
+            "type": "void (TreeNode<T> *)",
+            "access": "private",
+            "children": [
+              {
+                "name": "node",
+                "kind": "parameter",
+                "line": 32,
+                "type": "TreeNode<T> *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "in",
+            "kind": "method",
+            "line": 39,
+            "type": "void (TreeNode<T> *) const",
+            "access": "private",
+            "children": [
+              {
+                "name": "node",
+                "kind": "parameter",
+                "line": 39,
+                "type": "TreeNode<T> *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "BST<T>",
+            "kind": "constructor",
+            "line": 47,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "BST<T>",
+            "kind": "constructor",
+            "line": 49,
+            "type": "void (const BST<T> &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "operator=",
+            "kind": "method",
+            "line": 50,
+            "type": "BST<T> &(const BST<T> &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "~BST<T>",
+            "kind": "destructor",
+            "line": 51,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "insert",
+            "kind": "method",
+            "line": 53,
+            "type": "void (T)",
+            "access": "public",
+            "children": [
+              {
+                "name": "value",
+                "kind": "parameter",
+                "line": 53,
+                "type": "T",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 54,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "clear",
+            "kind": "method",
+            "line": 55,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "contains",
+            "kind": "method",
+            "line": 60,
+            "type": "bool (T) const",
+            "access": "public",
+            "children": [
+              {
+                "name": "value",
+                "kind": "parameter",
+                "line": 60,
+                "type": "T",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "current",
+                "kind": "local",
+                "line": 61,
+                "type": "TreeNode<T> *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "inorder",
+            "kind": "method",
+            "line": 69,
+            "type": "void () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 72,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "numbers",
+            "kind": "local",
+            "line": 73,
+            "type": "BST<int>",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "value",
+            "kind": "local",
+            "line": 74,
+            "type": "int",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "words",
+            "kind": "local",
+            "line": 76,
+            "type": "BST<string>",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
   "inherit-basic": {
     "sha256": "05012bc0ca0060233701d4db2edc6bc53cf7ac086cb5bfe2daeb8ab465f64348",
     "offsetEncoding": "utf8",
