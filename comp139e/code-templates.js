@@ -2,6 +2,11 @@
  'use strict';
  const search=document.getElementById('template-search'),topic=document.getElementById('topic-filter');
  const cards=[...document.querySelectorAll('.template')];
+ const structureFilter=document.getElementById('structure-filter'),storageFilter=document.getElementById('storage-filter'),typeFilter=document.getElementById('type-filter');
+ const facets=[structureFilter,storageFilter,typeFilter];
+ function resetFacets(){facets.forEach(f=>f.value='all');storageFilter.disabled=false;}
+ facets.forEach(f=>f.addEventListener('change',()=>{topic.value='all';if(f===structureFilter){storageFilter.value='all';storageFilter.disabled=['inheritance','other'].includes(f.value);}filter();}));
+ document.getElementById('reset-combination').addEventListener('click',()=>{resetFacets();search.value='';topic.value='all';filter();});
  const views={list:'List · compact rows. Open only what you need.',gallery:'Gallery · compare question summaries, then expand a card.',focus:'Focus · one example open at a time, with a wider reading area.'};
  function setView(view){
   if(!views[view])view='list';document.body.dataset.view=view;
@@ -17,26 +22,28 @@
  document.querySelectorAll('[data-task]').forEach(b=>b.addEventListener('click',()=>{topic.value=topic.value===b.dataset.task?'all':b.dataset.task;search.value='';filter();}));
  function filter(){
   const words=search.value.toLowerCase().trim().split(/\s+/).filter(Boolean);let count=0;
-  for(const card of cards){card.hidden=(topic.value!=='all'&&!card.dataset.topics.split(' ').includes(topic.value))||!words.every(word=>card.dataset.search.includes(word));if(!card.hidden)count++;document.querySelector(`[data-index="${card.id}"]`).hidden=card.hidden;}
-  document.querySelectorAll('.topic').forEach(s=>s.hidden=![...s.querySelectorAll('.template')].some(c=>!c.hidden));
+  for(const card of cards){card.hidden=(topic.value!=='all'&&!card.dataset.topics.split(' ').includes(topic.value))||(structureFilter.value!=='all'&&!card.dataset.structure.split(' ').includes(structureFilter.value))||(storageFilter.value!=='all'&&card.dataset.storage!==storageFilter.value)||(typeFilter.value!=='all'&&card.dataset.type!==typeFilter.value)||!words.every(word=>card.dataset.search.includes(word));if(!card.hidden)count++;document.querySelector(`[data-index="${card.id}"]`).hidden=card.hidden;}
+  document.querySelectorAll('.topic').forEach(s=>{const visible=[...s.querySelectorAll('.template')].filter(c=>!c.hidden).length;s.hidden=!visible;s.querySelector('h2 small').textContent=visible;});
   document.querySelectorAll('.index nav details').forEach(g=>{g.hidden=![...g.querySelectorAll('[data-index]')].some(a=>!a.hidden);g.open=Boolean(words.length||topic.value!=='all');});
   document.querySelectorAll('[data-task]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.task===topic.value)));
   document.getElementById('search-count').textContent=`${count} of ${cards.length} examples`;
   document.getElementById('no-results').hidden=count!==0;
+  const generic=cards.filter(c=>!c.hidden&&c.dataset.role==='generic').length;
+  document.getElementById('combination-status').textContent=`${generic} generic · ${count-generic} examples`+(count===0?' — no saved example for this combination. Try Any storage or type.':'');
  }
  function openTarget(){
   const target=document.getElementById(decodeURIComponent(location.hash.slice(1)));if(!target)return;
-  if(target.classList.contains('template')){if(target.hidden){search.value='';topic.value='all';filter();}target.querySelector('.entry').open=true;}
+  if(target.classList.contains('template')){if(target.hidden){search.value='';topic.value='all';resetFacets();filter();}target.querySelector('.entry').open=true;}
   else if(target.matches('details'))target.open=true;
   if(target.classList.contains('code-line')){
-   const card=target.closest('.template');if(card.hidden){search.value='';topic.value='all';filter();}card.querySelector('.entry').open=true;
+   const card=target.closest('.template');if(card.hidden){search.value='';topic.value='all';resetFacets();filter();}card.querySelector('.entry').open=true;
    card.querySelectorAll('.selected-line').forEach(line=>line.classList.remove('selected-line'));target.classList.add('selected-line');target.focus({preventScroll:true});
   }
   for(let p=target.parentElement;p;p=p.parentElement)if(p.tagName==='DETAILS')p.open=true;
   target.scrollIntoView({block:'start'});
  }
- search.addEventListener('input',filter);topic.addEventListener('change',filter);
- document.getElementById('clear-filters').addEventListener('click',()=>{search.value='';topic.value='all';filter();search.focus();});
+ search.addEventListener('input',filter);topic.addEventListener('change',()=>{resetFacets();filter();});
+ document.getElementById('clear-filters').addEventListener('click',()=>{search.value='';topic.value='all';resetFacets();filter();search.focus();});
  window.addEventListener('hashchange',openTarget);
  document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',()=>{if(a.getAttribute('href')===location.hash)openTarget();}));
  document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();search.focus();search.select();}});
@@ -74,5 +81,6 @@
  window.addEventListener('beforeprint',()=>{beforePrint=[...document.querySelectorAll('details')].map(d=>[d,d.open]);document.querySelectorAll('.entry').forEach(d=>{if(!d.closest('.template').hidden)d.open=true;});});
  window.addEventListener('afterprint',()=>beforePrint.forEach(([d,open])=>d.open=open));
  document.getElementById('print-sheet').addEventListener('click',()=>window.print());
+ filter();
  if(location.hash)openTarget();
 })();

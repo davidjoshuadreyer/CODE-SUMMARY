@@ -1,4 +1,6898 @@
 {
+  "combo-stack-linked-template-generic": {
+    "sha256": "a1db8c36721334f8503a6df26d99cbf91340584bfd022b8ef7f165b3855d1712",
+    "symbols": [
+      {
+        "name": "Stack",
+        "kind": "class",
+        "line": 7,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "Node",
+            "kind": "struct",
+            "line": 9,
+            "type": "",
+            "access": "private",
+            "children": [
+              {
+                "name": "item",
+                "kind": "member",
+                "line": 10,
+                "type": "T",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "next",
+                "kind": "member",
+                "line": 11,
+                "type": "Node *",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "Node",
+                "kind": "constructor",
+                "line": 12,
+                "type": "void (T, Node *)",
+                "access": "public",
+                "children": [
+                  {
+                    "name": "value",
+                    "kind": "parameter",
+                    "line": 12,
+                    "type": "T",
+                    "access": "",
+                    "children": []
+                  },
+                  {
+                    "name": "link",
+                    "kind": "parameter",
+                    "line": 12,
+                    "type": "Node *",
+                    "access": "",
+                    "children": []
+                  }
+                ],
+                "status": "definition"
+              }
+            ]
+          },
+          {
+            "name": "head",
+            "kind": "member",
+            "line": 14,
+            "type": "Node *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Stack<T>",
+            "kind": "constructor",
+            "line": 16,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "Stack<T>",
+            "kind": "constructor",
+            "line": 18,
+            "type": "void (const Stack<T> &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "operator=",
+            "kind": "method",
+            "line": 19,
+            "type": "Stack<T> &(const Stack<T> &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "~Stack<T>",
+            "kind": "destructor",
+            "line": 20,
+            "type": "void ()",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 22,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 27,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "push",
+            "kind": "method",
+            "line": 28,
+            "type": "void (T)",
+            "access": "public",
+            "children": [
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 28,
+                "type": "T",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "top",
+            "kind": "method",
+            "line": 29,
+            "type": "T () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "pop",
+            "kind": "method",
+            "line": 33,
+            "type": "T ()",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 35,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "value",
+                "kind": "local",
+                "line": 36,
+                "type": "T",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 43,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "values",
+            "kind": "local",
+            "line": 45,
+            "type": "Stack<int>",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "item",
+            "kind": "local",
+            "line": 50,
+            "type": "int",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "combo-stack-linked-template-numbers": {
+    "sha256": "7d8cafdcf62226b224b1bdfe351b6a7d4110506e0193adde8c0af3ebf69d17d0",
+    "symbols": [
+      {
+        "name": "Stack",
+        "kind": "class",
+        "line": 7,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "Node",
+            "kind": "struct",
+            "line": 9,
+            "type": "",
+            "access": "private",
+            "children": [
+              {
+                "name": "item",
+                "kind": "member",
+                "line": 10,
+                "type": "T",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "next",
+                "kind": "member",
+                "line": 11,
+                "type": "Node *",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "Node",
+                "kind": "constructor",
+                "line": 12,
+                "type": "void (T, Node *)",
+                "access": "public",
+                "children": [
+                  {
+                    "name": "value",
+                    "kind": "parameter",
+                    "line": 12,
+                    "type": "T",
+                    "access": "",
+                    "children": []
+                  },
+                  {
+                    "name": "link",
+                    "kind": "parameter",
+                    "line": 12,
+                    "type": "Node *",
+                    "access": "",
+                    "children": []
+                  }
+                ],
+                "status": "definition"
+              }
+            ]
+          },
+          {
+            "name": "head",
+            "kind": "member",
+            "line": 14,
+            "type": "Node *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Stack<T>",
+            "kind": "constructor",
+            "line": 16,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "Stack<T>",
+            "kind": "constructor",
+            "line": 18,
+            "type": "void (const Stack<T> &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "operator=",
+            "kind": "method",
+            "line": 19,
+            "type": "Stack<T> &(const Stack<T> &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "~Stack<T>",
+            "kind": "destructor",
+            "line": 20,
+            "type": "void ()",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 22,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 27,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "push",
+            "kind": "method",
+            "line": 28,
+            "type": "void (T)",
+            "access": "public",
+            "children": [
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 28,
+                "type": "T",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "top",
+            "kind": "method",
+            "line": 29,
+            "type": "T () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "pop",
+            "kind": "method",
+            "line": 33,
+            "type": "T ()",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 35,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "value",
+                "kind": "local",
+                "line": 36,
+                "type": "T",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 43,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "values",
+            "kind": "local",
+            "line": 44,
+            "type": "Stack<int>",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "item",
+            "kind": "local",
+            "line": 49,
+            "type": "int",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "combo-stack-linked-template-records": {
+    "sha256": "a12657d5e71d0c5ce755492d857fad6be2d31df43e73b083ddccfc9842cc54cc",
+    "symbols": [
+      {
+        "name": "Stack",
+        "kind": "class",
+        "line": 7,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "Node",
+            "kind": "struct",
+            "line": 9,
+            "type": "",
+            "access": "private",
+            "children": [
+              {
+                "name": "item",
+                "kind": "member",
+                "line": 10,
+                "type": "T",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "next",
+                "kind": "member",
+                "line": 11,
+                "type": "Node *",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "Node",
+                "kind": "constructor",
+                "line": 12,
+                "type": "void (T, Node *)",
+                "access": "public",
+                "children": [
+                  {
+                    "name": "value",
+                    "kind": "parameter",
+                    "line": 12,
+                    "type": "T",
+                    "access": "",
+                    "children": []
+                  },
+                  {
+                    "name": "link",
+                    "kind": "parameter",
+                    "line": 12,
+                    "type": "Node *",
+                    "access": "",
+                    "children": []
+                  }
+                ],
+                "status": "definition"
+              }
+            ]
+          },
+          {
+            "name": "head",
+            "kind": "member",
+            "line": 14,
+            "type": "Node *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Stack<T>",
+            "kind": "constructor",
+            "line": 16,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "Stack<T>",
+            "kind": "constructor",
+            "line": 18,
+            "type": "void (const Stack<T> &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "operator=",
+            "kind": "method",
+            "line": 19,
+            "type": "Stack<T> &(const Stack<T> &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "~Stack<T>",
+            "kind": "destructor",
+            "line": 20,
+            "type": "void ()",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 22,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 27,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "push",
+            "kind": "method",
+            "line": 28,
+            "type": "void (T)",
+            "access": "public",
+            "children": [
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 28,
+                "type": "T",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "top",
+            "kind": "method",
+            "line": 29,
+            "type": "T () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "pop",
+            "kind": "method",
+            "line": 33,
+            "type": "T ()",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 35,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "value",
+                "kind": "local",
+                "line": 36,
+                "type": "T",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "Job",
+        "kind": "struct",
+        "line": 43,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "id",
+            "kind": "member",
+            "line": 44,
+            "type": "int",
+            "access": "public",
+            "children": []
+          },
+          {
+            "name": "name",
+            "kind": "member",
+            "line": 45,
+            "type": "string",
+            "access": "public",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 48,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "values",
+            "kind": "local",
+            "line": 49,
+            "type": "Stack<Job>",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "item",
+            "kind": "local",
+            "line": 54,
+            "type": "Job",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "combo-stack-linked-int-generic": {
+    "sha256": "886e59350f526ed91fd0063f319477a3785e5d2c3af5dcf7d9598831acfcd536",
+    "symbols": [
+      {
+        "name": "Stack",
+        "kind": "class",
+        "line": 6,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "Node",
+            "kind": "struct",
+            "line": 8,
+            "type": "",
+            "access": "private",
+            "children": [
+              {
+                "name": "item",
+                "kind": "member",
+                "line": 9,
+                "type": "int",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "next",
+                "kind": "member",
+                "line": 10,
+                "type": "Node *",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "Node",
+                "kind": "constructor",
+                "line": 11,
+                "type": "void (int, Node *)",
+                "access": "public",
+                "children": [
+                  {
+                    "name": "value",
+                    "kind": "parameter",
+                    "line": 11,
+                    "type": "int",
+                    "access": "",
+                    "children": []
+                  },
+                  {
+                    "name": "link",
+                    "kind": "parameter",
+                    "line": 11,
+                    "type": "Node *",
+                    "access": "",
+                    "children": []
+                  }
+                ],
+                "status": "definition"
+              }
+            ]
+          },
+          {
+            "name": "head",
+            "kind": "member",
+            "line": 13,
+            "type": "Node *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Stack",
+            "kind": "constructor",
+            "line": 15,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "Stack",
+            "kind": "constructor",
+            "line": 17,
+            "type": "void (const Stack &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "operator=",
+            "kind": "method",
+            "line": 18,
+            "type": "Stack &(const Stack &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "~Stack",
+            "kind": "destructor",
+            "line": 19,
+            "type": "void () noexcept",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 21,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 26,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "push",
+            "kind": "method",
+            "line": 27,
+            "type": "void (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 27,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "top",
+            "kind": "method",
+            "line": 28,
+            "type": "int () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "pop",
+            "kind": "method",
+            "line": 32,
+            "type": "int ()",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 34,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "value",
+                "kind": "local",
+                "line": 35,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 42,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "values",
+            "kind": "local",
+            "line": 44,
+            "type": "Stack",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "item",
+            "kind": "local",
+            "line": 49,
+            "type": "int",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "combo-stack-linked-int-numbers": {
+    "sha256": "969d3f4c4b6fc5b360e220ef974ce8d28d1f18b54ab09ce021ed752f60912e1a",
+    "symbols": [
+      {
+        "name": "Stack",
+        "kind": "class",
+        "line": 6,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "Node",
+            "kind": "struct",
+            "line": 8,
+            "type": "",
+            "access": "private",
+            "children": [
+              {
+                "name": "item",
+                "kind": "member",
+                "line": 9,
+                "type": "int",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "next",
+                "kind": "member",
+                "line": 10,
+                "type": "Node *",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "Node",
+                "kind": "constructor",
+                "line": 11,
+                "type": "void (int, Node *)",
+                "access": "public",
+                "children": [
+                  {
+                    "name": "value",
+                    "kind": "parameter",
+                    "line": 11,
+                    "type": "int",
+                    "access": "",
+                    "children": []
+                  },
+                  {
+                    "name": "link",
+                    "kind": "parameter",
+                    "line": 11,
+                    "type": "Node *",
+                    "access": "",
+                    "children": []
+                  }
+                ],
+                "status": "definition"
+              }
+            ]
+          },
+          {
+            "name": "head",
+            "kind": "member",
+            "line": 13,
+            "type": "Node *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Stack",
+            "kind": "constructor",
+            "line": 15,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "Stack",
+            "kind": "constructor",
+            "line": 17,
+            "type": "void (const Stack &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "operator=",
+            "kind": "method",
+            "line": 18,
+            "type": "Stack &(const Stack &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "~Stack",
+            "kind": "destructor",
+            "line": 19,
+            "type": "void () noexcept",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 21,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 26,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "push",
+            "kind": "method",
+            "line": 27,
+            "type": "void (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 27,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "top",
+            "kind": "method",
+            "line": 28,
+            "type": "int () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "pop",
+            "kind": "method",
+            "line": 32,
+            "type": "int ()",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 34,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "value",
+                "kind": "local",
+                "line": 35,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 42,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "values",
+            "kind": "local",
+            "line": 43,
+            "type": "Stack",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "item",
+            "kind": "local",
+            "line": 48,
+            "type": "int",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "combo-stack-linked-int-reuse": {
+    "sha256": "385f8aa62cf030f2e2eadafe338ea8cadb42388a1d0327e8130a6c5c6bfe6d9f",
+    "symbols": [
+      {
+        "name": "Stack",
+        "kind": "class",
+        "line": 6,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "Node",
+            "kind": "struct",
+            "line": 8,
+            "type": "",
+            "access": "private",
+            "children": [
+              {
+                "name": "item",
+                "kind": "member",
+                "line": 9,
+                "type": "int",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "next",
+                "kind": "member",
+                "line": 10,
+                "type": "Node *",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "Node",
+                "kind": "constructor",
+                "line": 11,
+                "type": "void (int, Node *)",
+                "access": "public",
+                "children": [
+                  {
+                    "name": "value",
+                    "kind": "parameter",
+                    "line": 11,
+                    "type": "int",
+                    "access": "",
+                    "children": []
+                  },
+                  {
+                    "name": "link",
+                    "kind": "parameter",
+                    "line": 11,
+                    "type": "Node *",
+                    "access": "",
+                    "children": []
+                  }
+                ],
+                "status": "definition"
+              }
+            ]
+          },
+          {
+            "name": "head",
+            "kind": "member",
+            "line": 13,
+            "type": "Node *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Stack",
+            "kind": "constructor",
+            "line": 15,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "Stack",
+            "kind": "constructor",
+            "line": 17,
+            "type": "void (const Stack &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "operator=",
+            "kind": "method",
+            "line": 18,
+            "type": "Stack &(const Stack &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "~Stack",
+            "kind": "destructor",
+            "line": 19,
+            "type": "void () noexcept",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 21,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 26,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "push",
+            "kind": "method",
+            "line": 27,
+            "type": "void (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 27,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "top",
+            "kind": "method",
+            "line": 28,
+            "type": "int () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "pop",
+            "kind": "method",
+            "line": 32,
+            "type": "int ()",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 34,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "value",
+                "kind": "local",
+                "line": 35,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 42,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "values",
+            "kind": "local",
+            "line": 43,
+            "type": "Stack",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "item",
+            "kind": "local",
+            "line": 48,
+            "type": "int",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "combo-stack-array-template-generic": {
+    "sha256": "4fbc9d46bd500f0455540e594631dacb0df664cef9c02984189951b4e18513f5",
+    "symbols": [
+      {
+        "name": "Stack",
+        "kind": "class",
+        "line": 7,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "capacity",
+            "kind": "variable",
+            "line": 9,
+            "type": "const int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "data",
+            "kind": "member",
+            "line": 10,
+            "type": "T[4]",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "count",
+            "kind": "member",
+            "line": 11,
+            "type": "int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Stack<T>",
+            "kind": "constructor",
+            "line": 13,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 14,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isFull",
+            "kind": "method",
+            "line": 15,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "push",
+            "kind": "method",
+            "line": 16,
+            "type": "void (T)",
+            "access": "public",
+            "children": [
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 16,
+                "type": "T",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "top",
+            "kind": "method",
+            "line": 20,
+            "type": "T () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "pop",
+            "kind": "method",
+            "line": 24,
+            "type": "T ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 30,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "values",
+            "kind": "local",
+            "line": 32,
+            "type": "Stack<int>",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "item",
+            "kind": "local",
+            "line": 37,
+            "type": "int",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "combo-stack-array-template-numbers": {
+    "sha256": "aee92ef3014b1f4d78c84fcfe16bdcdd5310163f9595dd096b9a6272dcc2e933",
+    "symbols": [
+      {
+        "name": "Stack",
+        "kind": "class",
+        "line": 7,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "capacity",
+            "kind": "variable",
+            "line": 9,
+            "type": "const int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "data",
+            "kind": "member",
+            "line": 10,
+            "type": "T[4]",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "count",
+            "kind": "member",
+            "line": 11,
+            "type": "int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Stack<T>",
+            "kind": "constructor",
+            "line": 13,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 14,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isFull",
+            "kind": "method",
+            "line": 15,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "push",
+            "kind": "method",
+            "line": 16,
+            "type": "void (T)",
+            "access": "public",
+            "children": [
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 16,
+                "type": "T",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "top",
+            "kind": "method",
+            "line": 20,
+            "type": "T () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "pop",
+            "kind": "method",
+            "line": 24,
+            "type": "T ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 30,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "values",
+            "kind": "local",
+            "line": 31,
+            "type": "Stack<int>",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "item",
+            "kind": "local",
+            "line": 36,
+            "type": "int",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "combo-stack-array-template-records": {
+    "sha256": "4492ef53aa0f377faf00abc94878cbcbde4cedf6ba60c324ff3e73f9691da734",
+    "symbols": [
+      {
+        "name": "Stack",
+        "kind": "class",
+        "line": 7,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "capacity",
+            "kind": "variable",
+            "line": 9,
+            "type": "const int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "data",
+            "kind": "member",
+            "line": 10,
+            "type": "T[4]",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "count",
+            "kind": "member",
+            "line": 11,
+            "type": "int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Stack<T>",
+            "kind": "constructor",
+            "line": 13,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 14,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isFull",
+            "kind": "method",
+            "line": 15,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "push",
+            "kind": "method",
+            "line": 16,
+            "type": "void (T)",
+            "access": "public",
+            "children": [
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 16,
+                "type": "T",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "top",
+            "kind": "method",
+            "line": 20,
+            "type": "T () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "pop",
+            "kind": "method",
+            "line": 24,
+            "type": "T ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "Job",
+        "kind": "struct",
+        "line": 30,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "id",
+            "kind": "member",
+            "line": 31,
+            "type": "int",
+            "access": "public",
+            "children": []
+          },
+          {
+            "name": "name",
+            "kind": "member",
+            "line": 32,
+            "type": "string",
+            "access": "public",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 35,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "values",
+            "kind": "local",
+            "line": 36,
+            "type": "Stack<Job>",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "item",
+            "kind": "local",
+            "line": 41,
+            "type": "Job",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "combo-stack-array-int-generic": {
+    "sha256": "eea389efab89aecabd2505a78a83e2f18ca932ea0f9fa022efe8b5dafa5e0fd2",
+    "symbols": [
+      {
+        "name": "Stack",
+        "kind": "class",
+        "line": 6,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "capacity",
+            "kind": "variable",
+            "line": 8,
+            "type": "const int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "data",
+            "kind": "member",
+            "line": 9,
+            "type": "int[4]",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "count",
+            "kind": "member",
+            "line": 10,
+            "type": "int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Stack",
+            "kind": "constructor",
+            "line": 12,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 13,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isFull",
+            "kind": "method",
+            "line": 14,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "push",
+            "kind": "method",
+            "line": 15,
+            "type": "void (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 15,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "top",
+            "kind": "method",
+            "line": 19,
+            "type": "int () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "pop",
+            "kind": "method",
+            "line": 23,
+            "type": "int ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 29,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "values",
+            "kind": "local",
+            "line": 31,
+            "type": "Stack",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "item",
+            "kind": "local",
+            "line": 36,
+            "type": "int",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "combo-stack-array-int-numbers": {
+    "sha256": "719d79b18e6b58867b4087a0d9f89738a49d03130af22e9c2f67743453dbda4e",
+    "symbols": [
+      {
+        "name": "Stack",
+        "kind": "class",
+        "line": 6,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "capacity",
+            "kind": "variable",
+            "line": 8,
+            "type": "const int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "data",
+            "kind": "member",
+            "line": 9,
+            "type": "int[4]",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "count",
+            "kind": "member",
+            "line": 10,
+            "type": "int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Stack",
+            "kind": "constructor",
+            "line": 12,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 13,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isFull",
+            "kind": "method",
+            "line": 14,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "push",
+            "kind": "method",
+            "line": 15,
+            "type": "void (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 15,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "top",
+            "kind": "method",
+            "line": 19,
+            "type": "int () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "pop",
+            "kind": "method",
+            "line": 23,
+            "type": "int ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 29,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "values",
+            "kind": "local",
+            "line": 30,
+            "type": "Stack",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "item",
+            "kind": "local",
+            "line": 35,
+            "type": "int",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "combo-stack-array-int-reuse": {
+    "sha256": "8fa8486f7ec7da8c21c411889ca674c6f88ddfbae2094b1d67ac3efea3b0d0e2",
+    "symbols": [
+      {
+        "name": "Stack",
+        "kind": "class",
+        "line": 6,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "capacity",
+            "kind": "variable",
+            "line": 8,
+            "type": "const int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "data",
+            "kind": "member",
+            "line": 9,
+            "type": "int[4]",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "count",
+            "kind": "member",
+            "line": 10,
+            "type": "int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Stack",
+            "kind": "constructor",
+            "line": 12,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 13,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isFull",
+            "kind": "method",
+            "line": 14,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "push",
+            "kind": "method",
+            "line": 15,
+            "type": "void (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 15,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "top",
+            "kind": "method",
+            "line": 19,
+            "type": "int () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "pop",
+            "kind": "method",
+            "line": 23,
+            "type": "int ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 29,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "values",
+            "kind": "local",
+            "line": 30,
+            "type": "Stack",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "item",
+            "kind": "local",
+            "line": 35,
+            "type": "int",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "combo-queue-linked-template-generic": {
+    "sha256": "15b05f50ae8dff2a68a61c9a748adecd8cbfc6e8184f784a0b607b73fffb7dbe",
+    "symbols": [
+      {
+        "name": "Queue",
+        "kind": "class",
+        "line": 7,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "Node",
+            "kind": "struct",
+            "line": 9,
+            "type": "",
+            "access": "private",
+            "children": [
+              {
+                "name": "item",
+                "kind": "member",
+                "line": 10,
+                "type": "T",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "next",
+                "kind": "member",
+                "line": 11,
+                "type": "Node *",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "Node",
+                "kind": "constructor",
+                "line": 12,
+                "type": "void (T, Node *)",
+                "access": "public",
+                "children": [
+                  {
+                    "name": "value",
+                    "kind": "parameter",
+                    "line": 12,
+                    "type": "T",
+                    "access": "",
+                    "children": []
+                  },
+                  {
+                    "name": "link",
+                    "kind": "parameter",
+                    "line": 12,
+                    "type": "Node *",
+                    "access": "",
+                    "children": []
+                  }
+                ],
+                "status": "definition"
+              }
+            ]
+          },
+          {
+            "name": "head",
+            "kind": "member",
+            "line": 14,
+            "type": "Node *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "tail",
+            "kind": "member",
+            "line": 15,
+            "type": "Node *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Queue<T>",
+            "kind": "constructor",
+            "line": 17,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "Queue<T>",
+            "kind": "constructor",
+            "line": 19,
+            "type": "void (const Queue<T> &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "operator=",
+            "kind": "method",
+            "line": 20,
+            "type": "Queue<T> &(const Queue<T> &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "~Queue<T>",
+            "kind": "destructor",
+            "line": 21,
+            "type": "void ()",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 23,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 28,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "enqueue",
+            "kind": "method",
+            "line": 29,
+            "type": "void (T)",
+            "access": "public",
+            "children": [
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 29,
+                "type": "T",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "node",
+                "kind": "local",
+                "line": 30,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "front",
+            "kind": "method",
+            "line": 35,
+            "type": "T () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "dequeue",
+            "kind": "method",
+            "line": 39,
+            "type": "T ()",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 41,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "value",
+                "kind": "local",
+                "line": 42,
+                "type": "T",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 50,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "values",
+            "kind": "local",
+            "line": 52,
+            "type": "Queue<int>",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "item",
+            "kind": "local",
+            "line": 57,
+            "type": "int",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "combo-queue-linked-template-numbers": {
+    "sha256": "01be656eee6df9ea7ef30988ee86224b4e97856104aacd5fff51c9c48751d2bd",
+    "symbols": [
+      {
+        "name": "Queue",
+        "kind": "class",
+        "line": 7,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "Node",
+            "kind": "struct",
+            "line": 9,
+            "type": "",
+            "access": "private",
+            "children": [
+              {
+                "name": "item",
+                "kind": "member",
+                "line": 10,
+                "type": "T",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "next",
+                "kind": "member",
+                "line": 11,
+                "type": "Node *",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "Node",
+                "kind": "constructor",
+                "line": 12,
+                "type": "void (T, Node *)",
+                "access": "public",
+                "children": [
+                  {
+                    "name": "value",
+                    "kind": "parameter",
+                    "line": 12,
+                    "type": "T",
+                    "access": "",
+                    "children": []
+                  },
+                  {
+                    "name": "link",
+                    "kind": "parameter",
+                    "line": 12,
+                    "type": "Node *",
+                    "access": "",
+                    "children": []
+                  }
+                ],
+                "status": "definition"
+              }
+            ]
+          },
+          {
+            "name": "head",
+            "kind": "member",
+            "line": 14,
+            "type": "Node *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "tail",
+            "kind": "member",
+            "line": 15,
+            "type": "Node *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Queue<T>",
+            "kind": "constructor",
+            "line": 17,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "Queue<T>",
+            "kind": "constructor",
+            "line": 19,
+            "type": "void (const Queue<T> &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "operator=",
+            "kind": "method",
+            "line": 20,
+            "type": "Queue<T> &(const Queue<T> &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "~Queue<T>",
+            "kind": "destructor",
+            "line": 21,
+            "type": "void ()",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 23,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 28,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "enqueue",
+            "kind": "method",
+            "line": 29,
+            "type": "void (T)",
+            "access": "public",
+            "children": [
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 29,
+                "type": "T",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "node",
+                "kind": "local",
+                "line": 30,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "front",
+            "kind": "method",
+            "line": 35,
+            "type": "T () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "dequeue",
+            "kind": "method",
+            "line": 39,
+            "type": "T ()",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 41,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "value",
+                "kind": "local",
+                "line": 42,
+                "type": "T",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 50,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "values",
+            "kind": "local",
+            "line": 51,
+            "type": "Queue<int>",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "item",
+            "kind": "local",
+            "line": 56,
+            "type": "int",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "combo-queue-linked-template-records": {
+    "sha256": "747ea02b060ac2e5e640586e4a63c3b5421af2e8513de0f32591711c2613ec28",
+    "symbols": [
+      {
+        "name": "Queue",
+        "kind": "class",
+        "line": 7,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "Node",
+            "kind": "struct",
+            "line": 9,
+            "type": "",
+            "access": "private",
+            "children": [
+              {
+                "name": "item",
+                "kind": "member",
+                "line": 10,
+                "type": "T",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "next",
+                "kind": "member",
+                "line": 11,
+                "type": "Node *",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "Node",
+                "kind": "constructor",
+                "line": 12,
+                "type": "void (T, Node *)",
+                "access": "public",
+                "children": [
+                  {
+                    "name": "value",
+                    "kind": "parameter",
+                    "line": 12,
+                    "type": "T",
+                    "access": "",
+                    "children": []
+                  },
+                  {
+                    "name": "link",
+                    "kind": "parameter",
+                    "line": 12,
+                    "type": "Node *",
+                    "access": "",
+                    "children": []
+                  }
+                ],
+                "status": "definition"
+              }
+            ]
+          },
+          {
+            "name": "head",
+            "kind": "member",
+            "line": 14,
+            "type": "Node *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "tail",
+            "kind": "member",
+            "line": 15,
+            "type": "Node *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Queue<T>",
+            "kind": "constructor",
+            "line": 17,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "Queue<T>",
+            "kind": "constructor",
+            "line": 19,
+            "type": "void (const Queue<T> &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "operator=",
+            "kind": "method",
+            "line": 20,
+            "type": "Queue<T> &(const Queue<T> &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "~Queue<T>",
+            "kind": "destructor",
+            "line": 21,
+            "type": "void ()",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 23,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 28,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "enqueue",
+            "kind": "method",
+            "line": 29,
+            "type": "void (T)",
+            "access": "public",
+            "children": [
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 29,
+                "type": "T",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "node",
+                "kind": "local",
+                "line": 30,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "front",
+            "kind": "method",
+            "line": 35,
+            "type": "T () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "dequeue",
+            "kind": "method",
+            "line": 39,
+            "type": "T ()",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 41,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "value",
+                "kind": "local",
+                "line": 42,
+                "type": "T",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "Job",
+        "kind": "struct",
+        "line": 50,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "id",
+            "kind": "member",
+            "line": 51,
+            "type": "int",
+            "access": "public",
+            "children": []
+          },
+          {
+            "name": "name",
+            "kind": "member",
+            "line": 52,
+            "type": "string",
+            "access": "public",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 55,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "values",
+            "kind": "local",
+            "line": 56,
+            "type": "Queue<Job>",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "item",
+            "kind": "local",
+            "line": 61,
+            "type": "Job",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "combo-queue-linked-int-generic": {
+    "sha256": "b12cdd524746dbe514143755499c8cde5d2afdf64d8526aee2c4b39e272195b0",
+    "symbols": [
+      {
+        "name": "Queue",
+        "kind": "class",
+        "line": 6,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "Node",
+            "kind": "struct",
+            "line": 8,
+            "type": "",
+            "access": "private",
+            "children": [
+              {
+                "name": "item",
+                "kind": "member",
+                "line": 9,
+                "type": "int",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "next",
+                "kind": "member",
+                "line": 10,
+                "type": "Node *",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "Node",
+                "kind": "constructor",
+                "line": 11,
+                "type": "void (int, Node *)",
+                "access": "public",
+                "children": [
+                  {
+                    "name": "value",
+                    "kind": "parameter",
+                    "line": 11,
+                    "type": "int",
+                    "access": "",
+                    "children": []
+                  },
+                  {
+                    "name": "link",
+                    "kind": "parameter",
+                    "line": 11,
+                    "type": "Node *",
+                    "access": "",
+                    "children": []
+                  }
+                ],
+                "status": "definition"
+              }
+            ]
+          },
+          {
+            "name": "head",
+            "kind": "member",
+            "line": 13,
+            "type": "Node *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "tail",
+            "kind": "member",
+            "line": 14,
+            "type": "Node *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Queue",
+            "kind": "constructor",
+            "line": 16,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "Queue",
+            "kind": "constructor",
+            "line": 18,
+            "type": "void (const Queue &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "operator=",
+            "kind": "method",
+            "line": 19,
+            "type": "Queue &(const Queue &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "~Queue",
+            "kind": "destructor",
+            "line": 20,
+            "type": "void () noexcept",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 22,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 27,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "enqueue",
+            "kind": "method",
+            "line": 28,
+            "type": "void (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 28,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "node",
+                "kind": "local",
+                "line": 29,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "front",
+            "kind": "method",
+            "line": 34,
+            "type": "int () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "dequeue",
+            "kind": "method",
+            "line": 38,
+            "type": "int ()",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 40,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "value",
+                "kind": "local",
+                "line": 41,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 49,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "values",
+            "kind": "local",
+            "line": 51,
+            "type": "Queue",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "item",
+            "kind": "local",
+            "line": 56,
+            "type": "int",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "combo-queue-linked-int-numbers": {
+    "sha256": "e8f2ed8acab169520917c9a94e12afc2778fcb7ccd9fa7381dcc8374ad935332",
+    "symbols": [
+      {
+        "name": "Queue",
+        "kind": "class",
+        "line": 6,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "Node",
+            "kind": "struct",
+            "line": 8,
+            "type": "",
+            "access": "private",
+            "children": [
+              {
+                "name": "item",
+                "kind": "member",
+                "line": 9,
+                "type": "int",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "next",
+                "kind": "member",
+                "line": 10,
+                "type": "Node *",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "Node",
+                "kind": "constructor",
+                "line": 11,
+                "type": "void (int, Node *)",
+                "access": "public",
+                "children": [
+                  {
+                    "name": "value",
+                    "kind": "parameter",
+                    "line": 11,
+                    "type": "int",
+                    "access": "",
+                    "children": []
+                  },
+                  {
+                    "name": "link",
+                    "kind": "parameter",
+                    "line": 11,
+                    "type": "Node *",
+                    "access": "",
+                    "children": []
+                  }
+                ],
+                "status": "definition"
+              }
+            ]
+          },
+          {
+            "name": "head",
+            "kind": "member",
+            "line": 13,
+            "type": "Node *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "tail",
+            "kind": "member",
+            "line": 14,
+            "type": "Node *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Queue",
+            "kind": "constructor",
+            "line": 16,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "Queue",
+            "kind": "constructor",
+            "line": 18,
+            "type": "void (const Queue &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "operator=",
+            "kind": "method",
+            "line": 19,
+            "type": "Queue &(const Queue &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "~Queue",
+            "kind": "destructor",
+            "line": 20,
+            "type": "void () noexcept",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 22,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 27,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "enqueue",
+            "kind": "method",
+            "line": 28,
+            "type": "void (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 28,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "node",
+                "kind": "local",
+                "line": 29,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "front",
+            "kind": "method",
+            "line": 34,
+            "type": "int () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "dequeue",
+            "kind": "method",
+            "line": 38,
+            "type": "int ()",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 40,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "value",
+                "kind": "local",
+                "line": 41,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 49,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "values",
+            "kind": "local",
+            "line": 50,
+            "type": "Queue",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "item",
+            "kind": "local",
+            "line": 55,
+            "type": "int",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "combo-queue-linked-int-reuse": {
+    "sha256": "c986ed6ee4a7be56fa812ccfe6bb8e26723fb870c92ca594abb7fc0fc6e9a861",
+    "symbols": [
+      {
+        "name": "Queue",
+        "kind": "class",
+        "line": 6,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "Node",
+            "kind": "struct",
+            "line": 8,
+            "type": "",
+            "access": "private",
+            "children": [
+              {
+                "name": "item",
+                "kind": "member",
+                "line": 9,
+                "type": "int",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "next",
+                "kind": "member",
+                "line": 10,
+                "type": "Node *",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "Node",
+                "kind": "constructor",
+                "line": 11,
+                "type": "void (int, Node *)",
+                "access": "public",
+                "children": [
+                  {
+                    "name": "value",
+                    "kind": "parameter",
+                    "line": 11,
+                    "type": "int",
+                    "access": "",
+                    "children": []
+                  },
+                  {
+                    "name": "link",
+                    "kind": "parameter",
+                    "line": 11,
+                    "type": "Node *",
+                    "access": "",
+                    "children": []
+                  }
+                ],
+                "status": "definition"
+              }
+            ]
+          },
+          {
+            "name": "head",
+            "kind": "member",
+            "line": 13,
+            "type": "Node *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "tail",
+            "kind": "member",
+            "line": 14,
+            "type": "Node *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Queue",
+            "kind": "constructor",
+            "line": 16,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "Queue",
+            "kind": "constructor",
+            "line": 18,
+            "type": "void (const Queue &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "operator=",
+            "kind": "method",
+            "line": 19,
+            "type": "Queue &(const Queue &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "~Queue",
+            "kind": "destructor",
+            "line": 20,
+            "type": "void () noexcept",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 22,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 27,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "enqueue",
+            "kind": "method",
+            "line": 28,
+            "type": "void (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 28,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "node",
+                "kind": "local",
+                "line": 29,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "front",
+            "kind": "method",
+            "line": 34,
+            "type": "int () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "dequeue",
+            "kind": "method",
+            "line": 38,
+            "type": "int ()",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 40,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "value",
+                "kind": "local",
+                "line": 41,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 49,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "values",
+            "kind": "local",
+            "line": 50,
+            "type": "Queue",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "item",
+            "kind": "local",
+            "line": 55,
+            "type": "int",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "combo-queue-array-template-generic": {
+    "sha256": "cc07ed277948a0ae530912e56316b3cd04e70f59e51a434a9ab260db331d6e43",
+    "symbols": [
+      {
+        "name": "Queue",
+        "kind": "class",
+        "line": 7,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "capacity",
+            "kind": "variable",
+            "line": 9,
+            "type": "const int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "data",
+            "kind": "member",
+            "line": 10,
+            "type": "T[4]",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "count",
+            "kind": "member",
+            "line": 11,
+            "type": "int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "first",
+            "kind": "member",
+            "line": 12,
+            "type": "int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Queue<T>",
+            "kind": "constructor",
+            "line": 14,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 15,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isFull",
+            "kind": "method",
+            "line": 16,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "enqueue",
+            "kind": "method",
+            "line": 17,
+            "type": "void (T)",
+            "access": "public",
+            "children": [
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 17,
+                "type": "T",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "front",
+            "kind": "method",
+            "line": 22,
+            "type": "T () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "dequeue",
+            "kind": "method",
+            "line": 26,
+            "type": "T ()",
+            "access": "public",
+            "children": [
+              {
+                "name": "value",
+                "kind": "local",
+                "line": 28,
+                "type": "T",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 35,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "values",
+            "kind": "local",
+            "line": 37,
+            "type": "Queue<int>",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "item",
+            "kind": "local",
+            "line": 42,
+            "type": "int",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "combo-queue-array-template-numbers": {
+    "sha256": "0a65b23349adf17238234d04cc33bdba6fd7894793e9c61555fc2e65d09d1bab",
+    "symbols": [
+      {
+        "name": "Queue",
+        "kind": "class",
+        "line": 7,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "capacity",
+            "kind": "variable",
+            "line": 9,
+            "type": "const int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "data",
+            "kind": "member",
+            "line": 10,
+            "type": "T[4]",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "count",
+            "kind": "member",
+            "line": 11,
+            "type": "int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "first",
+            "kind": "member",
+            "line": 12,
+            "type": "int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Queue<T>",
+            "kind": "constructor",
+            "line": 14,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 15,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isFull",
+            "kind": "method",
+            "line": 16,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "enqueue",
+            "kind": "method",
+            "line": 17,
+            "type": "void (T)",
+            "access": "public",
+            "children": [
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 17,
+                "type": "T",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "front",
+            "kind": "method",
+            "line": 22,
+            "type": "T () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "dequeue",
+            "kind": "method",
+            "line": 26,
+            "type": "T ()",
+            "access": "public",
+            "children": [
+              {
+                "name": "value",
+                "kind": "local",
+                "line": 28,
+                "type": "T",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 35,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "values",
+            "kind": "local",
+            "line": 36,
+            "type": "Queue<int>",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "item",
+            "kind": "local",
+            "line": 41,
+            "type": "int",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "combo-queue-array-template-records": {
+    "sha256": "67d183fed87baccc899706c4b53a3fb7b1e5c18a472ce4286dc8c4b7d4e6fc0f",
+    "symbols": [
+      {
+        "name": "Queue",
+        "kind": "class",
+        "line": 7,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "capacity",
+            "kind": "variable",
+            "line": 9,
+            "type": "const int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "data",
+            "kind": "member",
+            "line": 10,
+            "type": "T[4]",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "count",
+            "kind": "member",
+            "line": 11,
+            "type": "int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "first",
+            "kind": "member",
+            "line": 12,
+            "type": "int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Queue<T>",
+            "kind": "constructor",
+            "line": 14,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 15,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isFull",
+            "kind": "method",
+            "line": 16,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "enqueue",
+            "kind": "method",
+            "line": 17,
+            "type": "void (T)",
+            "access": "public",
+            "children": [
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 17,
+                "type": "T",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "front",
+            "kind": "method",
+            "line": 22,
+            "type": "T () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "dequeue",
+            "kind": "method",
+            "line": 26,
+            "type": "T ()",
+            "access": "public",
+            "children": [
+              {
+                "name": "value",
+                "kind": "local",
+                "line": 28,
+                "type": "T",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "Job",
+        "kind": "struct",
+        "line": 35,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "id",
+            "kind": "member",
+            "line": 36,
+            "type": "int",
+            "access": "public",
+            "children": []
+          },
+          {
+            "name": "name",
+            "kind": "member",
+            "line": 37,
+            "type": "string",
+            "access": "public",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 40,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "values",
+            "kind": "local",
+            "line": 41,
+            "type": "Queue<Job>",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "item",
+            "kind": "local",
+            "line": 46,
+            "type": "Job",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "combo-queue-array-int-generic": {
+    "sha256": "060171e43dcc64f4b9eca3c910ea29cf47569dea85b2becd1974d955aae391b8",
+    "symbols": [
+      {
+        "name": "Queue",
+        "kind": "class",
+        "line": 6,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "capacity",
+            "kind": "variable",
+            "line": 8,
+            "type": "const int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "data",
+            "kind": "member",
+            "line": 9,
+            "type": "int[4]",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "count",
+            "kind": "member",
+            "line": 10,
+            "type": "int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "first",
+            "kind": "member",
+            "line": 11,
+            "type": "int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Queue",
+            "kind": "constructor",
+            "line": 13,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 14,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isFull",
+            "kind": "method",
+            "line": 15,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "enqueue",
+            "kind": "method",
+            "line": 16,
+            "type": "void (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 16,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "front",
+            "kind": "method",
+            "line": 21,
+            "type": "int () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "dequeue",
+            "kind": "method",
+            "line": 25,
+            "type": "int ()",
+            "access": "public",
+            "children": [
+              {
+                "name": "value",
+                "kind": "local",
+                "line": 27,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 34,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "values",
+            "kind": "local",
+            "line": 36,
+            "type": "Queue",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "item",
+            "kind": "local",
+            "line": 41,
+            "type": "int",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "combo-queue-array-int-numbers": {
+    "sha256": "25720247c8dce64906a6de22172552fea57831681e43499a1c7a3eb72e46b94a",
+    "symbols": [
+      {
+        "name": "Queue",
+        "kind": "class",
+        "line": 6,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "capacity",
+            "kind": "variable",
+            "line": 8,
+            "type": "const int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "data",
+            "kind": "member",
+            "line": 9,
+            "type": "int[4]",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "count",
+            "kind": "member",
+            "line": 10,
+            "type": "int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "first",
+            "kind": "member",
+            "line": 11,
+            "type": "int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Queue",
+            "kind": "constructor",
+            "line": 13,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 14,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isFull",
+            "kind": "method",
+            "line": 15,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "enqueue",
+            "kind": "method",
+            "line": 16,
+            "type": "void (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 16,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "front",
+            "kind": "method",
+            "line": 21,
+            "type": "int () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "dequeue",
+            "kind": "method",
+            "line": 25,
+            "type": "int ()",
+            "access": "public",
+            "children": [
+              {
+                "name": "value",
+                "kind": "local",
+                "line": 27,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 34,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "values",
+            "kind": "local",
+            "line": 35,
+            "type": "Queue",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "item",
+            "kind": "local",
+            "line": 40,
+            "type": "int",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "combo-queue-array-int-reuse": {
+    "sha256": "c5adf4dac02526f0b2771d77ba518f3088251ceb5ce73454e9cfc9def9c986e5",
+    "symbols": [
+      {
+        "name": "Queue",
+        "kind": "class",
+        "line": 6,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "capacity",
+            "kind": "variable",
+            "line": 8,
+            "type": "const int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "data",
+            "kind": "member",
+            "line": 9,
+            "type": "int[4]",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "count",
+            "kind": "member",
+            "line": 10,
+            "type": "int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "first",
+            "kind": "member",
+            "line": 11,
+            "type": "int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "Queue",
+            "kind": "constructor",
+            "line": 13,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 14,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isFull",
+            "kind": "method",
+            "line": 15,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "enqueue",
+            "kind": "method",
+            "line": 16,
+            "type": "void (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 16,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "front",
+            "kind": "method",
+            "line": 21,
+            "type": "int () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "dequeue",
+            "kind": "method",
+            "line": 25,
+            "type": "int ()",
+            "access": "public",
+            "children": [
+              {
+                "name": "value",
+                "kind": "local",
+                "line": 27,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 34,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "values",
+            "kind": "local",
+            "line": 35,
+            "type": "Queue",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "item",
+            "kind": "local",
+            "line": 40,
+            "type": "int",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "combo-list-linked-template-generic": {
+    "sha256": "474167fe154036294273a7d4d3f7635291fdf4e9ba90194cc93ffcbf4199c9fa",
+    "symbols": [
+      {
+        "name": "List",
+        "kind": "class",
+        "line": 7,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "Node",
+            "kind": "struct",
+            "line": 9,
+            "type": "",
+            "access": "private",
+            "children": [
+              {
+                "name": "item",
+                "kind": "member",
+                "line": 10,
+                "type": "T",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "next",
+                "kind": "member",
+                "line": 11,
+                "type": "Node *",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "Node",
+                "kind": "constructor",
+                "line": 12,
+                "type": "void (T, Node *)",
+                "access": "public",
+                "children": [
+                  {
+                    "name": "value",
+                    "kind": "parameter",
+                    "line": 12,
+                    "type": "T",
+                    "access": "",
+                    "children": []
+                  },
+                  {
+                    "name": "link",
+                    "kind": "parameter",
+                    "line": 12,
+                    "type": "Node *",
+                    "access": "",
+                    "children": []
+                  }
+                ],
+                "status": "definition"
+              }
+            ]
+          },
+          {
+            "name": "head",
+            "kind": "member",
+            "line": 14,
+            "type": "Node *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "tail",
+            "kind": "member",
+            "line": 15,
+            "type": "Node *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "List<T>",
+            "kind": "constructor",
+            "line": 17,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "List<T>",
+            "kind": "constructor",
+            "line": 19,
+            "type": "void (const List<T> &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "operator=",
+            "kind": "method",
+            "line": 20,
+            "type": "List<T> &(const List<T> &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "~List<T>",
+            "kind": "destructor",
+            "line": 21,
+            "type": "void ()",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 23,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 28,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "addToTail",
+            "kind": "method",
+            "line": 29,
+            "type": "void (T)",
+            "access": "public",
+            "children": [
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 29,
+                "type": "T",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "node",
+                "kind": "local",
+                "line": 30,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "addToHead",
+            "kind": "method",
+            "line": 35,
+            "type": "void (T)",
+            "access": "public",
+            "children": [
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 35,
+                "type": "T",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "deleteFromHead",
+            "kind": "method",
+            "line": 39,
+            "type": "T ()",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 41,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "value",
+                "kind": "local",
+                "line": 42,
+                "type": "T",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "size",
+            "kind": "method",
+            "line": 48,
+            "type": "int () const",
+            "access": "public",
+            "children": [
+              {
+                "name": "count",
+                "kind": "local",
+                "line": 49,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "p",
+                "kind": "local",
+                "line": 50,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 55,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "values",
+            "kind": "local",
+            "line": 57,
+            "type": "List<int>",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "item",
+            "kind": "local",
+            "line": 62,
+            "type": "int",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "combo-list-linked-template-numbers": {
+    "sha256": "5d63f1feb6cd2fa443c930965f53797d8006f152755d39e2bd144bb2fdb8ac2f",
+    "symbols": [
+      {
+        "name": "List",
+        "kind": "class",
+        "line": 7,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "Node",
+            "kind": "struct",
+            "line": 9,
+            "type": "",
+            "access": "private",
+            "children": [
+              {
+                "name": "item",
+                "kind": "member",
+                "line": 10,
+                "type": "T",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "next",
+                "kind": "member",
+                "line": 11,
+                "type": "Node *",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "Node",
+                "kind": "constructor",
+                "line": 12,
+                "type": "void (T, Node *)",
+                "access": "public",
+                "children": [
+                  {
+                    "name": "value",
+                    "kind": "parameter",
+                    "line": 12,
+                    "type": "T",
+                    "access": "",
+                    "children": []
+                  },
+                  {
+                    "name": "link",
+                    "kind": "parameter",
+                    "line": 12,
+                    "type": "Node *",
+                    "access": "",
+                    "children": []
+                  }
+                ],
+                "status": "definition"
+              }
+            ]
+          },
+          {
+            "name": "head",
+            "kind": "member",
+            "line": 14,
+            "type": "Node *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "tail",
+            "kind": "member",
+            "line": 15,
+            "type": "Node *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "List<T>",
+            "kind": "constructor",
+            "line": 17,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "List<T>",
+            "kind": "constructor",
+            "line": 19,
+            "type": "void (const List<T> &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "operator=",
+            "kind": "method",
+            "line": 20,
+            "type": "List<T> &(const List<T> &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "~List<T>",
+            "kind": "destructor",
+            "line": 21,
+            "type": "void ()",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 23,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 28,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "addToTail",
+            "kind": "method",
+            "line": 29,
+            "type": "void (T)",
+            "access": "public",
+            "children": [
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 29,
+                "type": "T",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "node",
+                "kind": "local",
+                "line": 30,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "addToHead",
+            "kind": "method",
+            "line": 35,
+            "type": "void (T)",
+            "access": "public",
+            "children": [
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 35,
+                "type": "T",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "deleteFromHead",
+            "kind": "method",
+            "line": 39,
+            "type": "T ()",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 41,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "value",
+                "kind": "local",
+                "line": 42,
+                "type": "T",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "size",
+            "kind": "method",
+            "line": 48,
+            "type": "int () const",
+            "access": "public",
+            "children": [
+              {
+                "name": "count",
+                "kind": "local",
+                "line": 49,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "p",
+                "kind": "local",
+                "line": 50,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 55,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "values",
+            "kind": "local",
+            "line": 56,
+            "type": "List<int>",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "item",
+            "kind": "local",
+            "line": 61,
+            "type": "int",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "combo-list-linked-template-records": {
+    "sha256": "42d6b691cae92adb7a35d514d7b62fa42cb86f7c2fbc1466c3a9c6305b6c6cf1",
+    "symbols": [
+      {
+        "name": "List",
+        "kind": "class",
+        "line": 7,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "Node",
+            "kind": "struct",
+            "line": 9,
+            "type": "",
+            "access": "private",
+            "children": [
+              {
+                "name": "item",
+                "kind": "member",
+                "line": 10,
+                "type": "T",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "next",
+                "kind": "member",
+                "line": 11,
+                "type": "Node *",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "Node",
+                "kind": "constructor",
+                "line": 12,
+                "type": "void (T, Node *)",
+                "access": "public",
+                "children": [
+                  {
+                    "name": "value",
+                    "kind": "parameter",
+                    "line": 12,
+                    "type": "T",
+                    "access": "",
+                    "children": []
+                  },
+                  {
+                    "name": "link",
+                    "kind": "parameter",
+                    "line": 12,
+                    "type": "Node *",
+                    "access": "",
+                    "children": []
+                  }
+                ],
+                "status": "definition"
+              }
+            ]
+          },
+          {
+            "name": "head",
+            "kind": "member",
+            "line": 14,
+            "type": "Node *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "tail",
+            "kind": "member",
+            "line": 15,
+            "type": "Node *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "List<T>",
+            "kind": "constructor",
+            "line": 17,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "List<T>",
+            "kind": "constructor",
+            "line": 19,
+            "type": "void (const List<T> &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "operator=",
+            "kind": "method",
+            "line": 20,
+            "type": "List<T> &(const List<T> &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "~List<T>",
+            "kind": "destructor",
+            "line": 21,
+            "type": "void ()",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 23,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 28,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "addToTail",
+            "kind": "method",
+            "line": 29,
+            "type": "void (T)",
+            "access": "public",
+            "children": [
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 29,
+                "type": "T",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "node",
+                "kind": "local",
+                "line": 30,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "addToHead",
+            "kind": "method",
+            "line": 35,
+            "type": "void (T)",
+            "access": "public",
+            "children": [
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 35,
+                "type": "T",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "deleteFromHead",
+            "kind": "method",
+            "line": 39,
+            "type": "T ()",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 41,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "value",
+                "kind": "local",
+                "line": 42,
+                "type": "T",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "size",
+            "kind": "method",
+            "line": 48,
+            "type": "int () const",
+            "access": "public",
+            "children": [
+              {
+                "name": "count",
+                "kind": "local",
+                "line": 49,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "p",
+                "kind": "local",
+                "line": 50,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "Job",
+        "kind": "struct",
+        "line": 55,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "id",
+            "kind": "member",
+            "line": 56,
+            "type": "int",
+            "access": "public",
+            "children": []
+          },
+          {
+            "name": "name",
+            "kind": "member",
+            "line": 57,
+            "type": "string",
+            "access": "public",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 60,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "values",
+            "kind": "local",
+            "line": 61,
+            "type": "List<Job>",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "item",
+            "kind": "local",
+            "line": 66,
+            "type": "Job",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "combo-list-linked-int-generic": {
+    "sha256": "62578ee5964675fab31875d8c201663fae5430d1f52129520fec4c1e07fb7e09",
+    "symbols": [
+      {
+        "name": "List",
+        "kind": "class",
+        "line": 6,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "Node",
+            "kind": "struct",
+            "line": 8,
+            "type": "",
+            "access": "private",
+            "children": [
+              {
+                "name": "item",
+                "kind": "member",
+                "line": 9,
+                "type": "int",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "next",
+                "kind": "member",
+                "line": 10,
+                "type": "Node *",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "Node",
+                "kind": "constructor",
+                "line": 11,
+                "type": "void (int, Node *)",
+                "access": "public",
+                "children": [
+                  {
+                    "name": "value",
+                    "kind": "parameter",
+                    "line": 11,
+                    "type": "int",
+                    "access": "",
+                    "children": []
+                  },
+                  {
+                    "name": "link",
+                    "kind": "parameter",
+                    "line": 11,
+                    "type": "Node *",
+                    "access": "",
+                    "children": []
+                  }
+                ],
+                "status": "definition"
+              }
+            ]
+          },
+          {
+            "name": "head",
+            "kind": "member",
+            "line": 13,
+            "type": "Node *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "tail",
+            "kind": "member",
+            "line": 14,
+            "type": "Node *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "List",
+            "kind": "constructor",
+            "line": 16,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "List",
+            "kind": "constructor",
+            "line": 18,
+            "type": "void (const List &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "operator=",
+            "kind": "method",
+            "line": 19,
+            "type": "List &(const List &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "~List",
+            "kind": "destructor",
+            "line": 20,
+            "type": "void () noexcept",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 22,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 27,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "addToTail",
+            "kind": "method",
+            "line": 28,
+            "type": "void (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 28,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "node",
+                "kind": "local",
+                "line": 29,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "addToHead",
+            "kind": "method",
+            "line": 34,
+            "type": "void (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 34,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "deleteFromHead",
+            "kind": "method",
+            "line": 38,
+            "type": "int ()",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 40,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "value",
+                "kind": "local",
+                "line": 41,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "size",
+            "kind": "method",
+            "line": 47,
+            "type": "int () const",
+            "access": "public",
+            "children": [
+              {
+                "name": "count",
+                "kind": "local",
+                "line": 48,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "p",
+                "kind": "local",
+                "line": 49,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 54,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "values",
+            "kind": "local",
+            "line": 56,
+            "type": "List",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "item",
+            "kind": "local",
+            "line": 61,
+            "type": "int",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "combo-list-linked-int-numbers": {
+    "sha256": "621d1b8b2e9c66c50c698cc73642848099309658d92f90129c58c96d5fcaab31",
+    "symbols": [
+      {
+        "name": "List",
+        "kind": "class",
+        "line": 6,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "Node",
+            "kind": "struct",
+            "line": 8,
+            "type": "",
+            "access": "private",
+            "children": [
+              {
+                "name": "item",
+                "kind": "member",
+                "line": 9,
+                "type": "int",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "next",
+                "kind": "member",
+                "line": 10,
+                "type": "Node *",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "Node",
+                "kind": "constructor",
+                "line": 11,
+                "type": "void (int, Node *)",
+                "access": "public",
+                "children": [
+                  {
+                    "name": "value",
+                    "kind": "parameter",
+                    "line": 11,
+                    "type": "int",
+                    "access": "",
+                    "children": []
+                  },
+                  {
+                    "name": "link",
+                    "kind": "parameter",
+                    "line": 11,
+                    "type": "Node *",
+                    "access": "",
+                    "children": []
+                  }
+                ],
+                "status": "definition"
+              }
+            ]
+          },
+          {
+            "name": "head",
+            "kind": "member",
+            "line": 13,
+            "type": "Node *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "tail",
+            "kind": "member",
+            "line": 14,
+            "type": "Node *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "List",
+            "kind": "constructor",
+            "line": 16,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "List",
+            "kind": "constructor",
+            "line": 18,
+            "type": "void (const List &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "operator=",
+            "kind": "method",
+            "line": 19,
+            "type": "List &(const List &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "~List",
+            "kind": "destructor",
+            "line": 20,
+            "type": "void () noexcept",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 22,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 27,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "addToTail",
+            "kind": "method",
+            "line": 28,
+            "type": "void (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 28,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "node",
+                "kind": "local",
+                "line": 29,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "addToHead",
+            "kind": "method",
+            "line": 34,
+            "type": "void (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 34,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "deleteFromHead",
+            "kind": "method",
+            "line": 38,
+            "type": "int ()",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 40,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "value",
+                "kind": "local",
+                "line": 41,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "size",
+            "kind": "method",
+            "line": 47,
+            "type": "int () const",
+            "access": "public",
+            "children": [
+              {
+                "name": "count",
+                "kind": "local",
+                "line": 48,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "p",
+                "kind": "local",
+                "line": 49,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 54,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "values",
+            "kind": "local",
+            "line": 55,
+            "type": "List",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "item",
+            "kind": "local",
+            "line": 60,
+            "type": "int",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "combo-list-linked-int-reuse": {
+    "sha256": "86220fc29d810cbef3fc80a3adda83bbfa459b2c80798f910531ef2395aff11f",
+    "symbols": [
+      {
+        "name": "List",
+        "kind": "class",
+        "line": 6,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "Node",
+            "kind": "struct",
+            "line": 8,
+            "type": "",
+            "access": "private",
+            "children": [
+              {
+                "name": "item",
+                "kind": "member",
+                "line": 9,
+                "type": "int",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "next",
+                "kind": "member",
+                "line": 10,
+                "type": "Node *",
+                "access": "public",
+                "children": []
+              },
+              {
+                "name": "Node",
+                "kind": "constructor",
+                "line": 11,
+                "type": "void (int, Node *)",
+                "access": "public",
+                "children": [
+                  {
+                    "name": "value",
+                    "kind": "parameter",
+                    "line": 11,
+                    "type": "int",
+                    "access": "",
+                    "children": []
+                  },
+                  {
+                    "name": "link",
+                    "kind": "parameter",
+                    "line": 11,
+                    "type": "Node *",
+                    "access": "",
+                    "children": []
+                  }
+                ],
+                "status": "definition"
+              }
+            ]
+          },
+          {
+            "name": "head",
+            "kind": "member",
+            "line": 13,
+            "type": "Node *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "tail",
+            "kind": "member",
+            "line": 14,
+            "type": "Node *",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "List",
+            "kind": "constructor",
+            "line": 16,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "List",
+            "kind": "constructor",
+            "line": 18,
+            "type": "void (const List &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "operator=",
+            "kind": "method",
+            "line": 19,
+            "type": "List &(const List &)",
+            "access": "public",
+            "children": [],
+            "status": "disabled"
+          },
+          {
+            "name": "~List",
+            "kind": "destructor",
+            "line": 20,
+            "type": "void () noexcept",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 22,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 27,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "addToTail",
+            "kind": "method",
+            "line": 28,
+            "type": "void (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 28,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "node",
+                "kind": "local",
+                "line": 29,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "addToHead",
+            "kind": "method",
+            "line": 34,
+            "type": "void (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 34,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "deleteFromHead",
+            "kind": "method",
+            "line": 38,
+            "type": "int ()",
+            "access": "public",
+            "children": [
+              {
+                "name": "old",
+                "kind": "local",
+                "line": 40,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "value",
+                "kind": "local",
+                "line": 41,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "size",
+            "kind": "method",
+            "line": 47,
+            "type": "int () const",
+            "access": "public",
+            "children": [
+              {
+                "name": "count",
+                "kind": "local",
+                "line": 48,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "p",
+                "kind": "local",
+                "line": 49,
+                "type": "Node *",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 54,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "values",
+            "kind": "local",
+            "line": 55,
+            "type": "List",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "item",
+            "kind": "local",
+            "line": 60,
+            "type": "int",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "combo-list-array-template-generic": {
+    "sha256": "fd9b5e83f73b4d85891cba9f9a3abc580491327c6b5471a6829b155aef7575df",
+    "symbols": [
+      {
+        "name": "List",
+        "kind": "class",
+        "line": 7,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "capacity",
+            "kind": "variable",
+            "line": 9,
+            "type": "const int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "data",
+            "kind": "member",
+            "line": 10,
+            "type": "T[4]",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "count",
+            "kind": "member",
+            "line": 11,
+            "type": "int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "List<T>",
+            "kind": "constructor",
+            "line": 13,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 14,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isFull",
+            "kind": "method",
+            "line": 15,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "size",
+            "kind": "method",
+            "line": 16,
+            "type": "int () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "insert",
+            "kind": "method",
+            "line": 17,
+            "type": "void (int, T)",
+            "access": "public",
+            "children": [
+              {
+                "name": "index",
+                "kind": "parameter",
+                "line": 17,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 17,
+                "type": "T",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "i",
+                "kind": "local",
+                "line": 20,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "remove",
+            "kind": "method",
+            "line": 24,
+            "type": "T (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "index",
+                "kind": "parameter",
+                "line": 24,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "value",
+                "kind": "local",
+                "line": 26,
+                "type": "T",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "i",
+                "kind": "local",
+                "line": 27,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 33,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "values",
+            "kind": "local",
+            "line": 35,
+            "type": "List<int>",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "item",
+            "kind": "local",
+            "line": 40,
+            "type": "int",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "combo-list-array-template-numbers": {
+    "sha256": "8b41d1ce99519b37d5d4036dad2b1316e2640daf513c3d26c9c798fe5c678957",
+    "symbols": [
+      {
+        "name": "List",
+        "kind": "class",
+        "line": 7,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "capacity",
+            "kind": "variable",
+            "line": 9,
+            "type": "const int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "data",
+            "kind": "member",
+            "line": 10,
+            "type": "T[4]",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "count",
+            "kind": "member",
+            "line": 11,
+            "type": "int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "List<T>",
+            "kind": "constructor",
+            "line": 13,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 14,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isFull",
+            "kind": "method",
+            "line": 15,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "size",
+            "kind": "method",
+            "line": 16,
+            "type": "int () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "insert",
+            "kind": "method",
+            "line": 17,
+            "type": "void (int, T)",
+            "access": "public",
+            "children": [
+              {
+                "name": "index",
+                "kind": "parameter",
+                "line": 17,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 17,
+                "type": "T",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "i",
+                "kind": "local",
+                "line": 20,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "remove",
+            "kind": "method",
+            "line": 24,
+            "type": "T (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "index",
+                "kind": "parameter",
+                "line": 24,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "value",
+                "kind": "local",
+                "line": 26,
+                "type": "T",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "i",
+                "kind": "local",
+                "line": 27,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 33,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "values",
+            "kind": "local",
+            "line": 34,
+            "type": "List<int>",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "item",
+            "kind": "local",
+            "line": 39,
+            "type": "int",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "combo-list-array-template-records": {
+    "sha256": "965f7fe40666ac905aba2abed6602015470682484c1d59a3fe82fde0c0d01279",
+    "symbols": [
+      {
+        "name": "List",
+        "kind": "class",
+        "line": 7,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "capacity",
+            "kind": "variable",
+            "line": 9,
+            "type": "const int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "data",
+            "kind": "member",
+            "line": 10,
+            "type": "T[4]",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "count",
+            "kind": "member",
+            "line": 11,
+            "type": "int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "List<T>",
+            "kind": "constructor",
+            "line": 13,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 14,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isFull",
+            "kind": "method",
+            "line": 15,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "size",
+            "kind": "method",
+            "line": 16,
+            "type": "int () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "insert",
+            "kind": "method",
+            "line": 17,
+            "type": "void (int, T)",
+            "access": "public",
+            "children": [
+              {
+                "name": "index",
+                "kind": "parameter",
+                "line": 17,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 17,
+                "type": "T",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "i",
+                "kind": "local",
+                "line": 20,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "remove",
+            "kind": "method",
+            "line": 24,
+            "type": "T (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "index",
+                "kind": "parameter",
+                "line": 24,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "value",
+                "kind": "local",
+                "line": 26,
+                "type": "T",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "i",
+                "kind": "local",
+                "line": 27,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "Job",
+        "kind": "struct",
+        "line": 33,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "id",
+            "kind": "member",
+            "line": 34,
+            "type": "int",
+            "access": "public",
+            "children": []
+          },
+          {
+            "name": "name",
+            "kind": "member",
+            "line": 35,
+            "type": "string",
+            "access": "public",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 38,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "values",
+            "kind": "local",
+            "line": 39,
+            "type": "List<Job>",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "item",
+            "kind": "local",
+            "line": 44,
+            "type": "Job",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "combo-list-array-int-generic": {
+    "sha256": "29a38091ff4c88749ec6f3538d04e16007882af5977c35be7918eb2354015428",
+    "symbols": [
+      {
+        "name": "List",
+        "kind": "class",
+        "line": 6,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "capacity",
+            "kind": "variable",
+            "line": 8,
+            "type": "const int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "data",
+            "kind": "member",
+            "line": 9,
+            "type": "int[4]",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "count",
+            "kind": "member",
+            "line": 10,
+            "type": "int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "List",
+            "kind": "constructor",
+            "line": 12,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 13,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isFull",
+            "kind": "method",
+            "line": 14,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "size",
+            "kind": "method",
+            "line": 15,
+            "type": "int () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "insert",
+            "kind": "method",
+            "line": 16,
+            "type": "void (int, int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "index",
+                "kind": "parameter",
+                "line": 16,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 16,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "i",
+                "kind": "local",
+                "line": 19,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "remove",
+            "kind": "method",
+            "line": 23,
+            "type": "int (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "index",
+                "kind": "parameter",
+                "line": 23,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "value",
+                "kind": "local",
+                "line": 25,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "i",
+                "kind": "local",
+                "line": 26,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 32,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "values",
+            "kind": "local",
+            "line": 34,
+            "type": "List",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "item",
+            "kind": "local",
+            "line": 39,
+            "type": "int",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "combo-list-array-int-numbers": {
+    "sha256": "d3175ff2a7f00a73fae17b69effebc50cd210c077cb27b0635f7251f1c1133b5",
+    "symbols": [
+      {
+        "name": "List",
+        "kind": "class",
+        "line": 6,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "capacity",
+            "kind": "variable",
+            "line": 8,
+            "type": "const int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "data",
+            "kind": "member",
+            "line": 9,
+            "type": "int[4]",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "count",
+            "kind": "member",
+            "line": 10,
+            "type": "int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "List",
+            "kind": "constructor",
+            "line": 12,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 13,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isFull",
+            "kind": "method",
+            "line": 14,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "size",
+            "kind": "method",
+            "line": 15,
+            "type": "int () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "insert",
+            "kind": "method",
+            "line": 16,
+            "type": "void (int, int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "index",
+                "kind": "parameter",
+                "line": 16,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 16,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "i",
+                "kind": "local",
+                "line": 19,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "remove",
+            "kind": "method",
+            "line": 23,
+            "type": "int (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "index",
+                "kind": "parameter",
+                "line": 23,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "value",
+                "kind": "local",
+                "line": 25,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "i",
+                "kind": "local",
+                "line": 26,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 32,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "values",
+            "kind": "local",
+            "line": 33,
+            "type": "List",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "item",
+            "kind": "local",
+            "line": 38,
+            "type": "int",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
+  "combo-list-array-int-reuse": {
+    "sha256": "38caec819c6da8ffae9e65a44be058b283d69e633702a999e06e8090917c981e",
+    "symbols": [
+      {
+        "name": "List",
+        "kind": "class",
+        "line": 6,
+        "type": "",
+        "access": "",
+        "children": [
+          {
+            "name": "capacity",
+            "kind": "variable",
+            "line": 8,
+            "type": "const int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "data",
+            "kind": "member",
+            "line": 9,
+            "type": "int[4]",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "count",
+            "kind": "member",
+            "line": 10,
+            "type": "int",
+            "access": "private",
+            "children": []
+          },
+          {
+            "name": "List",
+            "kind": "constructor",
+            "line": 12,
+            "type": "void ()",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isEmpty",
+            "kind": "method",
+            "line": 13,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "isFull",
+            "kind": "method",
+            "line": 14,
+            "type": "bool () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "size",
+            "kind": "method",
+            "line": 15,
+            "type": "int () const",
+            "access": "public",
+            "children": [],
+            "status": "definition"
+          },
+          {
+            "name": "insert",
+            "kind": "method",
+            "line": 16,
+            "type": "void (int, int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "index",
+                "kind": "parameter",
+                "line": 16,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "item",
+                "kind": "parameter",
+                "line": 16,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "i",
+                "kind": "local",
+                "line": 19,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          },
+          {
+            "name": "remove",
+            "kind": "method",
+            "line": 23,
+            "type": "int (int)",
+            "access": "public",
+            "children": [
+              {
+                "name": "index",
+                "kind": "parameter",
+                "line": 23,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "value",
+                "kind": "local",
+                "line": 25,
+                "type": "int",
+                "access": "",
+                "children": []
+              },
+              {
+                "name": "i",
+                "kind": "local",
+                "line": 26,
+                "type": "int",
+                "access": "",
+                "children": []
+              }
+            ],
+            "status": "definition"
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "kind": "function",
+        "line": 32,
+        "type": "int ()",
+        "access": "",
+        "children": [
+          {
+            "name": "values",
+            "kind": "local",
+            "line": 33,
+            "type": "List",
+            "access": "",
+            "children": []
+          },
+          {
+            "name": "item",
+            "kind": "local",
+            "line": 38,
+            "type": "int",
+            "access": "",
+            "children": []
+          }
+        ],
+        "status": "definition"
+      }
+    ]
+  },
   "inherit-basic": {
     "sha256": "e9ef7c1a61c755745cf862583eed5f149f24e847ef0338acaa63e725fecd04b8",
     "symbols": [

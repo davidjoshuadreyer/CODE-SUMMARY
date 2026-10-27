@@ -17,6 +17,6 @@ for link in p.links:
  elif not link.startswith(('http:','https:','mailto:')):
   assert (root/'comp139e'/unquote(link.split('#')[0].split('?')[0])).exists(),link
 assert len(p.decisions)==29
-assert len(p.downloads)==75 and all(x in p.ids for x in p.downloads)
+assert len(p.downloads)==111 and all(x in p.ids for x in p.downloads)
 for n in range(1,8):assert any(f'139E - Lab {n}.html' in x for x in p.links)
-print('PASS: 29 decision routes, 7 original lab links, all internal links, 75 code downloads, unique IDs.')
+print('PASS: 29 decision routes, 7 original lab links, all internal links, 111 code downloads, unique IDs.')

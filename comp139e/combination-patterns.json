@@ -1,0 +1,1118 @@
+[
+  {
+    "id": "combo-stack-linked-template-generic",
+    "group": "combinations",
+    "title": "Generic",
+    "when": "Minimal implementation. Rename the class and fields to fit your question.",
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\ntemplate <typename T>\nclass Stack {\nprivate:\n    struct Node {\n        T item;\n        Node* next;\n        Node(T value, Node* link = nullptr) : item(value), next(link) {}\n    };\n    Node* head;\npublic:\n    Stack() : head(nullptr) {}\n    // This object owns its nodes. Disable shallow copying.\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n    ~Stack() {\n        while (head != nullptr) {\n            Node* old = head;\n            head = head->next;\n            delete old;\n        }\n    }\n    bool isEmpty() const { return head == nullptr; }\n    void push(T item) { head = new Node(item, head); }\n    T top() const {\n        if (isEmpty()) throw runtime_error(\"Empty stack\");\n        return head->item;\n    }\n    T pop() {\n        if (isEmpty()) throw runtime_error(\"Empty stack\");\n        Node* old = head;\n        T value = old->item;\n        head = head->next;\n        delete old;\n        return value;\n    }\n};\n",
+    "use": "// EDIT: replace int, values, and test items to match your question.\nStack<int> values;\nvalues.push(10);\nvalues.push(20);\nvalues.push(30);\nwhile (!values.isEmpty()) {\n    int item = values.pop();\n    cout << item << \"\\n\";\n}\n",
+    "test": "",
+    "parts": [
+      [
+        "Storage",
+        "Linked nodes allocate one node per item; removal deletes that node."
+      ],
+      [
+        "Type",
+        "T is chosen by the caller. Array versions require a default-constructible, assignable T."
+      ]
+    ],
+    "change": "Change class and item names, add the fields and operations required by the question. Keep the empty-list pointer updates and node cleanup.",
+    "watch": "Check empty, one item, reuse after empty. Node ownership means copying is disabled.",
+    "reference": "code-templates.html#lab-guide",
+    "expected": "30 \u00b7 20 \u00b7 10",
+    "expectedOutput": "30\n20\n10\n",
+    "facets": {
+      "structure": "stack",
+      "storage": "linked",
+      "type": "template",
+      "role": "generic"
+    },
+    "shortTitle": "Generic"
+  },
+  {
+    "id": "combo-stack-linked-template-numbers",
+    "group": "combinations",
+    "title": "Numbers",
+    "when": "Insert three numbers and remove them in order.",
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\ntemplate <typename T>\nclass Stack {\nprivate:\n    struct Node {\n        T item;\n        Node* next;\n        Node(T value, Node* link = nullptr) : item(value), next(link) {}\n    };\n    Node* head;\npublic:\n    Stack() : head(nullptr) {}\n    // This object owns its nodes. Disable shallow copying.\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n    ~Stack() {\n        while (head != nullptr) {\n            Node* old = head;\n            head = head->next;\n            delete old;\n        }\n    }\n    bool isEmpty() const { return head == nullptr; }\n    void push(T item) { head = new Node(item, head); }\n    T top() const {\n        if (isEmpty()) throw runtime_error(\"Empty stack\");\n        return head->item;\n    }\n    T pop() {\n        if (isEmpty()) throw runtime_error(\"Empty stack\");\n        Node* old = head;\n        T value = old->item;\n        head = head->next;\n        delete old;\n        return value;\n    }\n};\n",
+    "use": "Stack<int> values;\nvalues.push(10);\nvalues.push(20);\nvalues.push(30);\nwhile (!values.isEmpty()) {\n    int item = values.pop();\n    cout << item << \"\\n\";\n}\n",
+    "test": "",
+    "parts": [
+      [
+        "Storage",
+        "Linked nodes allocate one node per item; removal deletes that node."
+      ],
+      [
+        "Type",
+        "T is chosen by the caller. Array versions require a default-constructible, assignable T."
+      ]
+    ],
+    "change": "Change class and item names, add the fields and operations required by the question. Keep the empty-list pointer updates and node cleanup.",
+    "watch": "Check empty, one item, reuse after empty. Node ownership means copying is disabled.",
+    "reference": "code-templates.html#lab-guide",
+    "expected": "30 \u00b7 20 \u00b7 10",
+    "expectedOutput": "30\n20\n10\n",
+    "facets": {
+      "structure": "stack",
+      "storage": "linked",
+      "type": "template",
+      "role": "example"
+    },
+    "shortTitle": "Numbers"
+  },
+  {
+    "id": "combo-stack-linked-template-records",
+    "group": "combinations",
+    "title": "Jobs",
+    "when": "Store records with an ID and a name.",
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\ntemplate <typename T>\nclass Stack {\nprivate:\n    struct Node {\n        T item;\n        Node* next;\n        Node(T value, Node* link = nullptr) : item(value), next(link) {}\n    };\n    Node* head;\npublic:\n    Stack() : head(nullptr) {}\n    // This object owns its nodes. Disable shallow copying.\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n    ~Stack() {\n        while (head != nullptr) {\n            Node* old = head;\n            head = head->next;\n            delete old;\n        }\n    }\n    bool isEmpty() const { return head == nullptr; }\n    void push(T item) { head = new Node(item, head); }\n    T top() const {\n        if (isEmpty()) throw runtime_error(\"Empty stack\");\n        return head->item;\n    }\n    T pop() {\n        if (isEmpty()) throw runtime_error(\"Empty stack\");\n        Node* old = head;\n        T value = old->item;\n        head = head->next;\n        delete old;\n        return value;\n    }\n};\n\nstruct Job {\n    int id = 0;\n    string name;\n};\n",
+    "use": "Stack<Job> values;\nvalues.push({10, \"First\"});\nvalues.push({20, \"Second\"});\nvalues.push({30, \"Third\"});\nwhile (!values.isEmpty()) {\n    Job item = values.pop();\n    cout << item.id << \": \" << item.name << \"\\n\";\n}\n",
+    "test": "",
+    "parts": [
+      [
+        "Storage",
+        "Linked nodes allocate one node per item; removal deletes that node."
+      ],
+      [
+        "Type",
+        "T is chosen by the caller. Array versions require a default-constructible, assignable T."
+      ]
+    ],
+    "change": "Change class and item names, add the fields and operations required by the question. Keep the empty-list pointer updates and node cleanup.",
+    "watch": "Check empty, one item, reuse after empty. Node ownership means copying is disabled.",
+    "reference": "code-templates.html#lab-guide",
+    "expected": "30: Third \u00b7 20: Second \u00b7 10: First",
+    "expectedOutput": "30: Third\n20: Second\n10: First\n",
+    "facets": {
+      "structure": "stack",
+      "storage": "linked",
+      "type": "template",
+      "role": "example"
+    },
+    "shortTitle": "Jobs"
+  },
+  {
+    "id": "combo-stack-linked-int-generic",
+    "group": "combinations",
+    "title": "Generic",
+    "when": "Minimal implementation. Rename the class and fields to fit your question.",
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nclass Stack {\nprivate:\n    struct Node {\n        int item;\n        Node* next;\n        Node(int value, Node* link = nullptr) : item(value), next(link) {}\n    };\n    Node* head;\npublic:\n    Stack() : head(nullptr) {}\n    // This object owns its nodes. Disable shallow copying.\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n    ~Stack() {\n        while (head != nullptr) {\n            Node* old = head;\n            head = head->next;\n            delete old;\n        }\n    }\n    bool isEmpty() const { return head == nullptr; }\n    void push(int item) { head = new Node(item, head); }\n    int top() const {\n        if (isEmpty()) throw runtime_error(\"Empty stack\");\n        return head->item;\n    }\n    int pop() {\n        if (isEmpty()) throw runtime_error(\"Empty stack\");\n        Node* old = head;\n        int value = old->item;\n        head = head->next;\n        delete old;\n        return value;\n    }\n};\n",
+    "use": "// EDIT: replace int, values, and test items to match your question.\nStack values;\nvalues.push(10);\nvalues.push(20);\nvalues.push(30);\nwhile (!values.isEmpty()) {\n    int item = values.pop();\n    cout << item << \"\\n\";\n}\n",
+    "test": "",
+    "parts": [
+      [
+        "Storage",
+        "Linked nodes allocate one node per item; removal deletes that node."
+      ],
+      [
+        "Type",
+        "The item type is int. Replace all item types consistently if required."
+      ]
+    ],
+    "change": "Change class and item names, add the fields and operations required by the question. Keep the empty-list pointer updates and node cleanup.",
+    "watch": "Check empty, one item, reuse after empty. Node ownership means copying is disabled.",
+    "reference": "code-templates.html#lab-guide",
+    "expected": "30 \u00b7 20 \u00b7 10",
+    "expectedOutput": "30\n20\n10\n",
+    "facets": {
+      "structure": "stack",
+      "storage": "linked",
+      "type": "int",
+      "role": "generic"
+    },
+    "shortTitle": "Generic"
+  },
+  {
+    "id": "combo-stack-linked-int-numbers",
+    "group": "combinations",
+    "title": "Numbers",
+    "when": "Insert three numbers and remove them in order.",
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nclass Stack {\nprivate:\n    struct Node {\n        int item;\n        Node* next;\n        Node(int value, Node* link = nullptr) : item(value), next(link) {}\n    };\n    Node* head;\npublic:\n    Stack() : head(nullptr) {}\n    // This object owns its nodes. Disable shallow copying.\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n    ~Stack() {\n        while (head != nullptr) {\n            Node* old = head;\n            head = head->next;\n            delete old;\n        }\n    }\n    bool isEmpty() const { return head == nullptr; }\n    void push(int item) { head = new Node(item, head); }\n    int top() const {\n        if (isEmpty()) throw runtime_error(\"Empty stack\");\n        return head->item;\n    }\n    int pop() {\n        if (isEmpty()) throw runtime_error(\"Empty stack\");\n        Node* old = head;\n        int value = old->item;\n        head = head->next;\n        delete old;\n        return value;\n    }\n};\n",
+    "use": "Stack values;\nvalues.push(10);\nvalues.push(20);\nvalues.push(30);\nwhile (!values.isEmpty()) {\n    int item = values.pop();\n    cout << item << \"\\n\";\n}\n",
+    "test": "",
+    "parts": [
+      [
+        "Storage",
+        "Linked nodes allocate one node per item; removal deletes that node."
+      ],
+      [
+        "Type",
+        "The item type is int. Replace all item types consistently if required."
+      ]
+    ],
+    "change": "Change class and item names, add the fields and operations required by the question. Keep the empty-list pointer updates and node cleanup.",
+    "watch": "Check empty, one item, reuse after empty. Node ownership means copying is disabled.",
+    "reference": "code-templates.html#lab-guide",
+    "expected": "30 \u00b7 20 \u00b7 10",
+    "expectedOutput": "30\n20\n10\n",
+    "facets": {
+      "structure": "stack",
+      "storage": "linked",
+      "type": "int",
+      "role": "example"
+    },
+    "shortTitle": "Numbers"
+  },
+  {
+    "id": "combo-stack-linked-int-reuse",
+    "group": "combinations",
+    "title": "Empty \u2192 reuse",
+    "when": "Remove every item, then insert and remove one more.",
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nclass Stack {\nprivate:\n    struct Node {\n        int item;\n        Node* next;\n        Node(int value, Node* link = nullptr) : item(value), next(link) {}\n    };\n    Node* head;\npublic:\n    Stack() : head(nullptr) {}\n    // This object owns its nodes. Disable shallow copying.\n    Stack(const Stack&) = delete;\n    Stack& operator=(const Stack&) = delete;\n    ~Stack() {\n        while (head != nullptr) {\n            Node* old = head;\n            head = head->next;\n            delete old;\n        }\n    }\n    bool isEmpty() const { return head == nullptr; }\n    void push(int item) { head = new Node(item, head); }\n    int top() const {\n        if (isEmpty()) throw runtime_error(\"Empty stack\");\n        return head->item;\n    }\n    int pop() {\n        if (isEmpty()) throw runtime_error(\"Empty stack\");\n        Node* old = head;\n        int value = old->item;\n        head = head->next;\n        delete old;\n        return value;\n    }\n};\n",
+    "use": "Stack values;\nvalues.push(10);\nvalues.push(20);\nvalues.push(30);\nwhile (!values.isEmpty()) {\n    int item = values.pop();\n    cout << item << \"\\n\";\n}\nvalues.push(40);\ncout << values.pop() << \"\\n\";\n",
+    "test": "",
+    "parts": [
+      [
+        "Storage",
+        "Linked nodes allocate one node per item; removal deletes that node."
+      ],
+      [
+        "Type",
+        "The item type is int. Replace all item types consistently if required."
+      ]
+    ],
+    "change": "Change class and item names, add the fields and operations required by the question. Keep the empty-list pointer updates and node cleanup.",
+    "watch": "Check empty, one item, reuse after empty. Node ownership means copying is disabled.",
+    "reference": "code-templates.html#lab-guide",
+    "expected": "30 \u00b7 20 \u00b7 10 \u00b7 40",
+    "expectedOutput": "30\n20\n10\n40\n",
+    "facets": {
+      "structure": "stack",
+      "storage": "linked",
+      "type": "int",
+      "role": "example"
+    },
+    "shortTitle": "Empty \u2192 reuse"
+  },
+  {
+    "id": "combo-stack-array-template-generic",
+    "group": "combinations",
+    "title": "Generic",
+    "when": "Minimal implementation. Rename the class and fields to fit your question.",
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\ntemplate <typename T>\nclass Stack {\nprivate:\n    static const int capacity = 4; // EDIT: maximum number of items.\n    T data[capacity];\n    int count;\npublic:\n    Stack() : count(0) {}\n    bool isEmpty() const { return count == 0; }\n    bool isFull() const { return count == capacity; }\n    void push(T item) {\n        if (isFull()) throw runtime_error(\"Full stack\");\n        data[count++] = item;\n    }\n    T top() const {\n        if (isEmpty()) throw runtime_error(\"Empty stack\");\n        return data[count - 1];\n    }\n    T pop() {\n        if (isEmpty()) throw runtime_error(\"Empty stack\");\n        return data[--count];\n    }\n};\n",
+    "use": "// EDIT: replace int, values, and test items to match your question.\nStack<int> values;\nvalues.push(10);\nvalues.push(20);\nvalues.push(30);\nwhile (!values.isEmpty()) {\n    int item = values.pop();\n    cout << item << \"\\n\";\n}\n",
+    "test": "",
+    "parts": [
+      [
+        "Storage",
+        "Fixed array capacity is 4. Queue indices wrap with modulo; list insert/remove shifts items."
+      ],
+      [
+        "Type",
+        "T is chosen by the caller. Array versions require a default-constructible, assignable T."
+      ]
+    ],
+    "change": "Change class and item names, add the fields and operations required by the question. Array capacity is an editable constant.",
+    "watch": "Check empty, one item, reuse after empty, full capacity and wraparound.",
+    "reference": "code-templates.html#lab-guide",
+    "expected": "30 \u00b7 20 \u00b7 10",
+    "expectedOutput": "30\n20\n10\n",
+    "facets": {
+      "structure": "stack",
+      "storage": "array",
+      "type": "template",
+      "role": "generic"
+    },
+    "shortTitle": "Generic"
+  },
+  {
+    "id": "combo-stack-array-template-numbers",
+    "group": "combinations",
+    "title": "Numbers",
+    "when": "Insert three numbers and remove them in order.",
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\ntemplate <typename T>\nclass Stack {\nprivate:\n    static const int capacity = 4; // EDIT: maximum number of items.\n    T data[capacity];\n    int count;\npublic:\n    Stack() : count(0) {}\n    bool isEmpty() const { return count == 0; }\n    bool isFull() const { return count == capacity; }\n    void push(T item) {\n        if (isFull()) throw runtime_error(\"Full stack\");\n        data[count++] = item;\n    }\n    T top() const {\n        if (isEmpty()) throw runtime_error(\"Empty stack\");\n        return data[count - 1];\n    }\n    T pop() {\n        if (isEmpty()) throw runtime_error(\"Empty stack\");\n        return data[--count];\n    }\n};\n",
+    "use": "Stack<int> values;\nvalues.push(10);\nvalues.push(20);\nvalues.push(30);\nwhile (!values.isEmpty()) {\n    int item = values.pop();\n    cout << item << \"\\n\";\n}\n",
+    "test": "",
+    "parts": [
+      [
+        "Storage",
+        "Fixed array capacity is 4. Queue indices wrap with modulo; list insert/remove shifts items."
+      ],
+      [
+        "Type",
+        "T is chosen by the caller. Array versions require a default-constructible, assignable T."
+      ]
+    ],
+    "change": "Change class and item names, add the fields and operations required by the question. Array capacity is an editable constant.",
+    "watch": "Check empty, one item, reuse after empty, full capacity and wraparound.",
+    "reference": "code-templates.html#lab-guide",
+    "expected": "30 \u00b7 20 \u00b7 10",
+    "expectedOutput": "30\n20\n10\n",
+    "facets": {
+      "structure": "stack",
+      "storage": "array",
+      "type": "template",
+      "role": "example"
+    },
+    "shortTitle": "Numbers"
+  },
+  {
+    "id": "combo-stack-array-template-records",
+    "group": "combinations",
+    "title": "Jobs",
+    "when": "Store records with an ID and a name.",
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\ntemplate <typename T>\nclass Stack {\nprivate:\n    static const int capacity = 4; // EDIT: maximum number of items.\n    T data[capacity];\n    int count;\npublic:\n    Stack() : count(0) {}\n    bool isEmpty() const { return count == 0; }\n    bool isFull() const { return count == capacity; }\n    void push(T item) {\n        if (isFull()) throw runtime_error(\"Full stack\");\n        data[count++] = item;\n    }\n    T top() const {\n        if (isEmpty()) throw runtime_error(\"Empty stack\");\n        return data[count - 1];\n    }\n    T pop() {\n        if (isEmpty()) throw runtime_error(\"Empty stack\");\n        return data[--count];\n    }\n};\n\nstruct Job {\n    int id = 0;\n    string name;\n};\n",
+    "use": "Stack<Job> values;\nvalues.push({10, \"First\"});\nvalues.push({20, \"Second\"});\nvalues.push({30, \"Third\"});\nwhile (!values.isEmpty()) {\n    Job item = values.pop();\n    cout << item.id << \": \" << item.name << \"\\n\";\n}\n",
+    "test": "",
+    "parts": [
+      [
+        "Storage",
+        "Fixed array capacity is 4. Queue indices wrap with modulo; list insert/remove shifts items."
+      ],
+      [
+        "Type",
+        "T is chosen by the caller. Array versions require a default-constructible, assignable T."
+      ]
+    ],
+    "change": "Change class and item names, add the fields and operations required by the question. Array capacity is an editable constant.",
+    "watch": "Check empty, one item, reuse after empty, full capacity and wraparound.",
+    "reference": "code-templates.html#lab-guide",
+    "expected": "30: Third \u00b7 20: Second \u00b7 10: First",
+    "expectedOutput": "30: Third\n20: Second\n10: First\n",
+    "facets": {
+      "structure": "stack",
+      "storage": "array",
+      "type": "template",
+      "role": "example"
+    },
+    "shortTitle": "Jobs"
+  },
+  {
+    "id": "combo-stack-array-int-generic",
+    "group": "combinations",
+    "title": "Generic",
+    "when": "Minimal implementation. Rename the class and fields to fit your question.",
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nclass Stack {\nprivate:\n    static const int capacity = 4; // EDIT: maximum number of items.\n    int data[capacity];\n    int count;\npublic:\n    Stack() : count(0) {}\n    bool isEmpty() const { return count == 0; }\n    bool isFull() const { return count == capacity; }\n    void push(int item) {\n        if (isFull()) throw runtime_error(\"Full stack\");\n        data[count++] = item;\n    }\n    int top() const {\n        if (isEmpty()) throw runtime_error(\"Empty stack\");\n        return data[count - 1];\n    }\n    int pop() {\n        if (isEmpty()) throw runtime_error(\"Empty stack\");\n        return data[--count];\n    }\n};\n",
+    "use": "// EDIT: replace int, values, and test items to match your question.\nStack values;\nvalues.push(10);\nvalues.push(20);\nvalues.push(30);\nwhile (!values.isEmpty()) {\n    int item = values.pop();\n    cout << item << \"\\n\";\n}\n",
+    "test": "",
+    "parts": [
+      [
+        "Storage",
+        "Fixed array capacity is 4. Queue indices wrap with modulo; list insert/remove shifts items."
+      ],
+      [
+        "Type",
+        "The item type is int. Replace all item types consistently if required."
+      ]
+    ],
+    "change": "Change class and item names, add the fields and operations required by the question. Array capacity is an editable constant.",
+    "watch": "Check empty, one item, reuse after empty, full capacity and wraparound.",
+    "reference": "code-templates.html#lab-guide",
+    "expected": "30 \u00b7 20 \u00b7 10",
+    "expectedOutput": "30\n20\n10\n",
+    "facets": {
+      "structure": "stack",
+      "storage": "array",
+      "type": "int",
+      "role": "generic"
+    },
+    "shortTitle": "Generic"
+  },
+  {
+    "id": "combo-stack-array-int-numbers",
+    "group": "combinations",
+    "title": "Numbers",
+    "when": "Insert three numbers and remove them in order.",
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nclass Stack {\nprivate:\n    static const int capacity = 4; // EDIT: maximum number of items.\n    int data[capacity];\n    int count;\npublic:\n    Stack() : count(0) {}\n    bool isEmpty() const { return count == 0; }\n    bool isFull() const { return count == capacity; }\n    void push(int item) {\n        if (isFull()) throw runtime_error(\"Full stack\");\n        data[count++] = item;\n    }\n    int top() const {\n        if (isEmpty()) throw runtime_error(\"Empty stack\");\n        return data[count - 1];\n    }\n    int pop() {\n        if (isEmpty()) throw runtime_error(\"Empty stack\");\n        return data[--count];\n    }\n};\n",
+    "use": "Stack values;\nvalues.push(10);\nvalues.push(20);\nvalues.push(30);\nwhile (!values.isEmpty()) {\n    int item = values.pop();\n    cout << item << \"\\n\";\n}\n",
+    "test": "",
+    "parts": [
+      [
+        "Storage",
+        "Fixed array capacity is 4. Queue indices wrap with modulo; list insert/remove shifts items."
+      ],
+      [
+        "Type",
+        "The item type is int. Replace all item types consistently if required."
+      ]
+    ],
+    "change": "Change class and item names, add the fields and operations required by the question. Array capacity is an editable constant.",
+    "watch": "Check empty, one item, reuse after empty, full capacity and wraparound.",
+    "reference": "code-templates.html#lab-guide",
+    "expected": "30 \u00b7 20 \u00b7 10",
+    "expectedOutput": "30\n20\n10\n",
+    "facets": {
+      "structure": "stack",
+      "storage": "array",
+      "type": "int",
+      "role": "example"
+    },
+    "shortTitle": "Numbers"
+  },
+  {
+    "id": "combo-stack-array-int-reuse",
+    "group": "combinations",
+    "title": "Empty \u2192 reuse",
+    "when": "Remove every item, then insert and remove one more.",
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nclass Stack {\nprivate:\n    static const int capacity = 4; // EDIT: maximum number of items.\n    int data[capacity];\n    int count;\npublic:\n    Stack() : count(0) {}\n    bool isEmpty() const { return count == 0; }\n    bool isFull() const { return count == capacity; }\n    void push(int item) {\n        if (isFull()) throw runtime_error(\"Full stack\");\n        data[count++] = item;\n    }\n    int top() const {\n        if (isEmpty()) throw runtime_error(\"Empty stack\");\n        return data[count - 1];\n    }\n    int pop() {\n        if (isEmpty()) throw runtime_error(\"Empty stack\");\n        return data[--count];\n    }\n};\n",
+    "use": "Stack values;\nvalues.push(10);\nvalues.push(20);\nvalues.push(30);\nwhile (!values.isEmpty()) {\n    int item = values.pop();\n    cout << item << \"\\n\";\n}\nvalues.push(40);\ncout << values.pop() << \"\\n\";\n",
+    "test": "",
+    "parts": [
+      [
+        "Storage",
+        "Fixed array capacity is 4. Queue indices wrap with modulo; list insert/remove shifts items."
+      ],
+      [
+        "Type",
+        "The item type is int. Replace all item types consistently if required."
+      ]
+    ],
+    "change": "Change class and item names, add the fields and operations required by the question. Array capacity is an editable constant.",
+    "watch": "Check empty, one item, reuse after empty, full capacity and wraparound.",
+    "reference": "code-templates.html#lab-guide",
+    "expected": "30 \u00b7 20 \u00b7 10 \u00b7 40",
+    "expectedOutput": "30\n20\n10\n40\n",
+    "facets": {
+      "structure": "stack",
+      "storage": "array",
+      "type": "int",
+      "role": "example"
+    },
+    "shortTitle": "Empty \u2192 reuse"
+  },
+  {
+    "id": "combo-queue-linked-template-generic",
+    "group": "combinations",
+    "title": "Generic",
+    "when": "Minimal implementation. Rename the class and fields to fit your question.",
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\ntemplate <typename T>\nclass Queue {\nprivate:\n    struct Node {\n        T item;\n        Node* next;\n        Node(T value, Node* link = nullptr) : item(value), next(link) {}\n    };\n    Node* head;\n    Node* tail;\npublic:\n    Queue() : head(nullptr), tail(nullptr) {}\n    // This object owns its nodes. Disable shallow copying.\n    Queue(const Queue&) = delete;\n    Queue& operator=(const Queue&) = delete;\n    ~Queue() {\n        while (head != nullptr) {\n            Node* old = head;\n            head = head->next;\n            delete old;\n        }\n    }\n    bool isEmpty() const { return head == nullptr; }\n    void enqueue(T item) {\n        Node* node = new Node(item);\n        if (isEmpty()) head = node;\n        else tail->next = node;\n        tail = node;\n    }\n    T front() const {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        return head->item;\n    }\n    T dequeue() {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        Node* old = head;\n        T value = old->item;\n        head = head->next;\n        if (head == nullptr) tail = nullptr;\n        delete old;\n        return value;\n    }\n};\n",
+    "use": "// EDIT: replace int, values, and test items to match your question.\nQueue<int> values;\nvalues.enqueue(10);\nvalues.enqueue(20);\nvalues.enqueue(30);\nwhile (!values.isEmpty()) {\n    int item = values.dequeue();\n    cout << item << \"\\n\";\n}\n",
+    "test": "",
+    "parts": [
+      [
+        "Storage",
+        "Linked nodes allocate one node per item; removal deletes that node."
+      ],
+      [
+        "Type",
+        "T is chosen by the caller. Array versions require a default-constructible, assignable T."
+      ]
+    ],
+    "change": "Change class and item names, add the fields and operations required by the question. Keep the empty-list pointer updates and node cleanup.",
+    "watch": "Check empty, one item, reuse after empty. Node ownership means copying is disabled.",
+    "reference": "code-templates.html#lab-guide",
+    "expected": "10 \u00b7 20 \u00b7 30",
+    "expectedOutput": "10\n20\n30\n",
+    "facets": {
+      "structure": "queue",
+      "storage": "linked",
+      "type": "template",
+      "role": "generic"
+    },
+    "shortTitle": "Generic"
+  },
+  {
+    "id": "combo-queue-linked-template-numbers",
+    "group": "combinations",
+    "title": "Numbers",
+    "when": "Insert three numbers and remove them in order.",
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\ntemplate <typename T>\nclass Queue {\nprivate:\n    struct Node {\n        T item;\n        Node* next;\n        Node(T value, Node* link = nullptr) : item(value), next(link) {}\n    };\n    Node* head;\n    Node* tail;\npublic:\n    Queue() : head(nullptr), tail(nullptr) {}\n    // This object owns its nodes. Disable shallow copying.\n    Queue(const Queue&) = delete;\n    Queue& operator=(const Queue&) = delete;\n    ~Queue() {\n        while (head != nullptr) {\n            Node* old = head;\n            head = head->next;\n            delete old;\n        }\n    }\n    bool isEmpty() const { return head == nullptr; }\n    void enqueue(T item) {\n        Node* node = new Node(item);\n        if (isEmpty()) head = node;\n        else tail->next = node;\n        tail = node;\n    }\n    T front() const {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        return head->item;\n    }\n    T dequeue() {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        Node* old = head;\n        T value = old->item;\n        head = head->next;\n        if (head == nullptr) tail = nullptr;\n        delete old;\n        return value;\n    }\n};\n",
+    "use": "Queue<int> values;\nvalues.enqueue(10);\nvalues.enqueue(20);\nvalues.enqueue(30);\nwhile (!values.isEmpty()) {\n    int item = values.dequeue();\n    cout << item << \"\\n\";\n}\n",
+    "test": "",
+    "parts": [
+      [
+        "Storage",
+        "Linked nodes allocate one node per item; removal deletes that node."
+      ],
+      [
+        "Type",
+        "T is chosen by the caller. Array versions require a default-constructible, assignable T."
+      ]
+    ],
+    "change": "Change class and item names, add the fields and operations required by the question. Keep the empty-list pointer updates and node cleanup.",
+    "watch": "Check empty, one item, reuse after empty. Node ownership means copying is disabled.",
+    "reference": "code-templates.html#lab-guide",
+    "expected": "10 \u00b7 20 \u00b7 30",
+    "expectedOutput": "10\n20\n30\n",
+    "facets": {
+      "structure": "queue",
+      "storage": "linked",
+      "type": "template",
+      "role": "example"
+    },
+    "shortTitle": "Numbers"
+  },
+  {
+    "id": "combo-queue-linked-template-records",
+    "group": "combinations",
+    "title": "Jobs",
+    "when": "Store records with an ID and a name.",
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\ntemplate <typename T>\nclass Queue {\nprivate:\n    struct Node {\n        T item;\n        Node* next;\n        Node(T value, Node* link = nullptr) : item(value), next(link) {}\n    };\n    Node* head;\n    Node* tail;\npublic:\n    Queue() : head(nullptr), tail(nullptr) {}\n    // This object owns its nodes. Disable shallow copying.\n    Queue(const Queue&) = delete;\n    Queue& operator=(const Queue&) = delete;\n    ~Queue() {\n        while (head != nullptr) {\n            Node* old = head;\n            head = head->next;\n            delete old;\n        }\n    }\n    bool isEmpty() const { return head == nullptr; }\n    void enqueue(T item) {\n        Node* node = new Node(item);\n        if (isEmpty()) head = node;\n        else tail->next = node;\n        tail = node;\n    }\n    T front() const {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        return head->item;\n    }\n    T dequeue() {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        Node* old = head;\n        T value = old->item;\n        head = head->next;\n        if (head == nullptr) tail = nullptr;\n        delete old;\n        return value;\n    }\n};\n\nstruct Job {\n    int id = 0;\n    string name;\n};\n",
+    "use": "Queue<Job> values;\nvalues.enqueue({10, \"First\"});\nvalues.enqueue({20, \"Second\"});\nvalues.enqueue({30, \"Third\"});\nwhile (!values.isEmpty()) {\n    Job item = values.dequeue();\n    cout << item.id << \": \" << item.name << \"\\n\";\n}\n",
+    "test": "",
+    "parts": [
+      [
+        "Storage",
+        "Linked nodes allocate one node per item; removal deletes that node."
+      ],
+      [
+        "Type",
+        "T is chosen by the caller. Array versions require a default-constructible, assignable T."
+      ]
+    ],
+    "change": "Change class and item names, add the fields and operations required by the question. Keep the empty-list pointer updates and node cleanup.",
+    "watch": "Check empty, one item, reuse after empty. Node ownership means copying is disabled.",
+    "reference": "code-templates.html#lab-guide",
+    "expected": "10: First \u00b7 20: Second \u00b7 30: Third",
+    "expectedOutput": "10: First\n20: Second\n30: Third\n",
+    "facets": {
+      "structure": "queue",
+      "storage": "linked",
+      "type": "template",
+      "role": "example"
+    },
+    "shortTitle": "Jobs"
+  },
+  {
+    "id": "combo-queue-linked-int-generic",
+    "group": "combinations",
+    "title": "Generic",
+    "when": "Minimal implementation. Rename the class and fields to fit your question.",
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nclass Queue {\nprivate:\n    struct Node {\n        int item;\n        Node* next;\n        Node(int value, Node* link = nullptr) : item(value), next(link) {}\n    };\n    Node* head;\n    Node* tail;\npublic:\n    Queue() : head(nullptr), tail(nullptr) {}\n    // This object owns its nodes. Disable shallow copying.\n    Queue(const Queue&) = delete;\n    Queue& operator=(const Queue&) = delete;\n    ~Queue() {\n        while (head != nullptr) {\n            Node* old = head;\n            head = head->next;\n            delete old;\n        }\n    }\n    bool isEmpty() const { return head == nullptr; }\n    void enqueue(int item) {\n        Node* node = new Node(item);\n        if (isEmpty()) head = node;\n        else tail->next = node;\n        tail = node;\n    }\n    int front() const {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        return head->item;\n    }\n    int dequeue() {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        Node* old = head;\n        int value = old->item;\n        head = head->next;\n        if (head == nullptr) tail = nullptr;\n        delete old;\n        return value;\n    }\n};\n",
+    "use": "// EDIT: replace int, values, and test items to match your question.\nQueue values;\nvalues.enqueue(10);\nvalues.enqueue(20);\nvalues.enqueue(30);\nwhile (!values.isEmpty()) {\n    int item = values.dequeue();\n    cout << item << \"\\n\";\n}\n",
+    "test": "",
+    "parts": [
+      [
+        "Storage",
+        "Linked nodes allocate one node per item; removal deletes that node."
+      ],
+      [
+        "Type",
+        "The item type is int. Replace all item types consistently if required."
+      ]
+    ],
+    "change": "Change class and item names, add the fields and operations required by the question. Keep the empty-list pointer updates and node cleanup.",
+    "watch": "Check empty, one item, reuse after empty. Node ownership means copying is disabled.",
+    "reference": "code-templates.html#lab-guide",
+    "expected": "10 \u00b7 20 \u00b7 30",
+    "expectedOutput": "10\n20\n30\n",
+    "facets": {
+      "structure": "queue",
+      "storage": "linked",
+      "type": "int",
+      "role": "generic"
+    },
+    "shortTitle": "Generic"
+  },
+  {
+    "id": "combo-queue-linked-int-numbers",
+    "group": "combinations",
+    "title": "Numbers",
+    "when": "Insert three numbers and remove them in order.",
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nclass Queue {\nprivate:\n    struct Node {\n        int item;\n        Node* next;\n        Node(int value, Node* link = nullptr) : item(value), next(link) {}\n    };\n    Node* head;\n    Node* tail;\npublic:\n    Queue() : head(nullptr), tail(nullptr) {}\n    // This object owns its nodes. Disable shallow copying.\n    Queue(const Queue&) = delete;\n    Queue& operator=(const Queue&) = delete;\n    ~Queue() {\n        while (head != nullptr) {\n            Node* old = head;\n            head = head->next;\n            delete old;\n        }\n    }\n    bool isEmpty() const { return head == nullptr; }\n    void enqueue(int item) {\n        Node* node = new Node(item);\n        if (isEmpty()) head = node;\n        else tail->next = node;\n        tail = node;\n    }\n    int front() const {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        return head->item;\n    }\n    int dequeue() {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        Node* old = head;\n        int value = old->item;\n        head = head->next;\n        if (head == nullptr) tail = nullptr;\n        delete old;\n        return value;\n    }\n};\n",
+    "use": "Queue values;\nvalues.enqueue(10);\nvalues.enqueue(20);\nvalues.enqueue(30);\nwhile (!values.isEmpty()) {\n    int item = values.dequeue();\n    cout << item << \"\\n\";\n}\n",
+    "test": "",
+    "parts": [
+      [
+        "Storage",
+        "Linked nodes allocate one node per item; removal deletes that node."
+      ],
+      [
+        "Type",
+        "The item type is int. Replace all item types consistently if required."
+      ]
+    ],
+    "change": "Change class and item names, add the fields and operations required by the question. Keep the empty-list pointer updates and node cleanup.",
+    "watch": "Check empty, one item, reuse after empty. Node ownership means copying is disabled.",
+    "reference": "code-templates.html#lab-guide",
+    "expected": "10 \u00b7 20 \u00b7 30",
+    "expectedOutput": "10\n20\n30\n",
+    "facets": {
+      "structure": "queue",
+      "storage": "linked",
+      "type": "int",
+      "role": "example"
+    },
+    "shortTitle": "Numbers"
+  },
+  {
+    "id": "combo-queue-linked-int-reuse",
+    "group": "combinations",
+    "title": "Empty \u2192 reuse",
+    "when": "Remove every item, then insert and remove one more.",
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nclass Queue {\nprivate:\n    struct Node {\n        int item;\n        Node* next;\n        Node(int value, Node* link = nullptr) : item(value), next(link) {}\n    };\n    Node* head;\n    Node* tail;\npublic:\n    Queue() : head(nullptr), tail(nullptr) {}\n    // This object owns its nodes. Disable shallow copying.\n    Queue(const Queue&) = delete;\n    Queue& operator=(const Queue&) = delete;\n    ~Queue() {\n        while (head != nullptr) {\n            Node* old = head;\n            head = head->next;\n            delete old;\n        }\n    }\n    bool isEmpty() const { return head == nullptr; }\n    void enqueue(int item) {\n        Node* node = new Node(item);\n        if (isEmpty()) head = node;\n        else tail->next = node;\n        tail = node;\n    }\n    int front() const {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        return head->item;\n    }\n    int dequeue() {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        Node* old = head;\n        int value = old->item;\n        head = head->next;\n        if (head == nullptr) tail = nullptr;\n        delete old;\n        return value;\n    }\n};\n",
+    "use": "Queue values;\nvalues.enqueue(10);\nvalues.enqueue(20);\nvalues.enqueue(30);\nwhile (!values.isEmpty()) {\n    int item = values.dequeue();\n    cout << item << \"\\n\";\n}\nvalues.enqueue(40);\ncout << values.dequeue() << \"\\n\";\n",
+    "test": "",
+    "parts": [
+      [
+        "Storage",
+        "Linked nodes allocate one node per item; removal deletes that node."
+      ],
+      [
+        "Type",
+        "The item type is int. Replace all item types consistently if required."
+      ]
+    ],
+    "change": "Change class and item names, add the fields and operations required by the question. Keep the empty-list pointer updates and node cleanup.",
+    "watch": "Check empty, one item, reuse after empty. Node ownership means copying is disabled.",
+    "reference": "code-templates.html#lab-guide",
+    "expected": "10 \u00b7 20 \u00b7 30 \u00b7 40",
+    "expectedOutput": "10\n20\n30\n40\n",
+    "facets": {
+      "structure": "queue",
+      "storage": "linked",
+      "type": "int",
+      "role": "example"
+    },
+    "shortTitle": "Empty \u2192 reuse"
+  },
+  {
+    "id": "combo-queue-array-template-generic",
+    "group": "combinations",
+    "title": "Generic",
+    "when": "Minimal implementation. Rename the class and fields to fit your question.",
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\ntemplate <typename T>\nclass Queue {\nprivate:\n    static const int capacity = 4; // EDIT: maximum number of items.\n    T data[capacity];\n    int count;\n    int first;\npublic:\n    Queue() : count(0), first(0) {}\n    bool isEmpty() const { return count == 0; }\n    bool isFull() const { return count == capacity; }\n    void enqueue(T item) {\n        if (isFull()) throw runtime_error(\"Full queue\");\n        data[(first + count) % capacity] = item;\n        ++count;\n    }\n    T front() const {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        return data[first];\n    }\n    T dequeue() {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        T value = data[first];\n        first = (first + 1) % capacity;\n        --count;\n        return value;\n    }\n};\n",
+    "use": "// EDIT: replace int, values, and test items to match your question.\nQueue<int> values;\nvalues.enqueue(10);\nvalues.enqueue(20);\nvalues.enqueue(30);\nwhile (!values.isEmpty()) {\n    int item = values.dequeue();\n    cout << item << \"\\n\";\n}\n",
+    "test": "",
+    "parts": [
+      [
+        "Storage",
+        "Fixed array capacity is 4. Queue indices wrap with modulo; list insert/remove shifts items."
+      ],
+      [
+        "Type",
+        "T is chosen by the caller. Array versions require a default-constructible, assignable T."
+      ]
+    ],
+    "change": "Change class and item names, add the fields and operations required by the question. Array capacity is an editable constant.",
+    "watch": "Check empty, one item, reuse after empty, full capacity and wraparound.",
+    "reference": "code-templates.html#lab-guide",
+    "expected": "10 \u00b7 20 \u00b7 30",
+    "expectedOutput": "10\n20\n30\n",
+    "facets": {
+      "structure": "queue",
+      "storage": "array",
+      "type": "template",
+      "role": "generic"
+    },
+    "shortTitle": "Generic"
+  },
+  {
+    "id": "combo-queue-array-template-numbers",
+    "group": "combinations",
+    "title": "Numbers",
+    "when": "Insert three numbers and remove them in order.",
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\ntemplate <typename T>\nclass Queue {\nprivate:\n    static const int capacity = 4; // EDIT: maximum number of items.\n    T data[capacity];\n    int count;\n    int first;\npublic:\n    Queue() : count(0), first(0) {}\n    bool isEmpty() const { return count == 0; }\n    bool isFull() const { return count == capacity; }\n    void enqueue(T item) {\n        if (isFull()) throw runtime_error(\"Full queue\");\n        data[(first + count) % capacity] = item;\n        ++count;\n    }\n    T front() const {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        return data[first];\n    }\n    T dequeue() {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        T value = data[first];\n        first = (first + 1) % capacity;\n        --count;\n        return value;\n    }\n};\n",
+    "use": "Queue<int> values;\nvalues.enqueue(10);\nvalues.enqueue(20);\nvalues.enqueue(30);\nwhile (!values.isEmpty()) {\n    int item = values.dequeue();\n    cout << item << \"\\n\";\n}\n",
+    "test": "",
+    "parts": [
+      [
+        "Storage",
+        "Fixed array capacity is 4. Queue indices wrap with modulo; list insert/remove shifts items."
+      ],
+      [
+        "Type",
+        "T is chosen by the caller. Array versions require a default-constructible, assignable T."
+      ]
+    ],
+    "change": "Change class and item names, add the fields and operations required by the question. Array capacity is an editable constant.",
+    "watch": "Check empty, one item, reuse after empty, full capacity and wraparound.",
+    "reference": "code-templates.html#lab-guide",
+    "expected": "10 \u00b7 20 \u00b7 30",
+    "expectedOutput": "10\n20\n30\n",
+    "facets": {
+      "structure": "queue",
+      "storage": "array",
+      "type": "template",
+      "role": "example"
+    },
+    "shortTitle": "Numbers"
+  },
+  {
+    "id": "combo-queue-array-template-records",
+    "group": "combinations",
+    "title": "Jobs",
+    "when": "Store records with an ID and a name.",
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\ntemplate <typename T>\nclass Queue {\nprivate:\n    static const int capacity = 4; // EDIT: maximum number of items.\n    T data[capacity];\n    int count;\n    int first;\npublic:\n    Queue() : count(0), first(0) {}\n    bool isEmpty() const { return count == 0; }\n    bool isFull() const { return count == capacity; }\n    void enqueue(T item) {\n        if (isFull()) throw runtime_error(\"Full queue\");\n        data[(first + count) % capacity] = item;\n        ++count;\n    }\n    T front() const {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        return data[first];\n    }\n    T dequeue() {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        T value = data[first];\n        first = (first + 1) % capacity;\n        --count;\n        return value;\n    }\n};\n\nstruct Job {\n    int id = 0;\n    string name;\n};\n",
+    "use": "Queue<Job> values;\nvalues.enqueue({10, \"First\"});\nvalues.enqueue({20, \"Second\"});\nvalues.enqueue({30, \"Third\"});\nwhile (!values.isEmpty()) {\n    Job item = values.dequeue();\n    cout << item.id << \": \" << item.name << \"\\n\";\n}\n",
+    "test": "",
+    "parts": [
+      [
+        "Storage",
+        "Fixed array capacity is 4. Queue indices wrap with modulo; list insert/remove shifts items."
+      ],
+      [
+        "Type",
+        "T is chosen by the caller. Array versions require a default-constructible, assignable T."
+      ]
+    ],
+    "change": "Change class and item names, add the fields and operations required by the question. Array capacity is an editable constant.",
+    "watch": "Check empty, one item, reuse after empty, full capacity and wraparound.",
+    "reference": "code-templates.html#lab-guide",
+    "expected": "10: First \u00b7 20: Second \u00b7 30: Third",
+    "expectedOutput": "10: First\n20: Second\n30: Third\n",
+    "facets": {
+      "structure": "queue",
+      "storage": "array",
+      "type": "template",
+      "role": "example"
+    },
+    "shortTitle": "Jobs"
+  },
+  {
+    "id": "combo-queue-array-int-generic",
+    "group": "combinations",
+    "title": "Generic",
+    "when": "Minimal implementation. Rename the class and fields to fit your question.",
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nclass Queue {\nprivate:\n    static const int capacity = 4; // EDIT: maximum number of items.\n    int data[capacity];\n    int count;\n    int first;\npublic:\n    Queue() : count(0), first(0) {}\n    bool isEmpty() const { return count == 0; }\n    bool isFull() const { return count == capacity; }\n    void enqueue(int item) {\n        if (isFull()) throw runtime_error(\"Full queue\");\n        data[(first + count) % capacity] = item;\n        ++count;\n    }\n    int front() const {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        return data[first];\n    }\n    int dequeue() {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        int value = data[first];\n        first = (first + 1) % capacity;\n        --count;\n        return value;\n    }\n};\n",
+    "use": "// EDIT: replace int, values, and test items to match your question.\nQueue values;\nvalues.enqueue(10);\nvalues.enqueue(20);\nvalues.enqueue(30);\nwhile (!values.isEmpty()) {\n    int item = values.dequeue();\n    cout << item << \"\\n\";\n}\n",
+    "test": "",
+    "parts": [
+      [
+        "Storage",
+        "Fixed array capacity is 4. Queue indices wrap with modulo; list insert/remove shifts items."
+      ],
+      [
+        "Type",
+        "The item type is int. Replace all item types consistently if required."
+      ]
+    ],
+    "change": "Change class and item names, add the fields and operations required by the question. Array capacity is an editable constant.",
+    "watch": "Check empty, one item, reuse after empty, full capacity and wraparound.",
+    "reference": "code-templates.html#lab-guide",
+    "expected": "10 \u00b7 20 \u00b7 30",
+    "expectedOutput": "10\n20\n30\n",
+    "facets": {
+      "structure": "queue",
+      "storage": "array",
+      "type": "int",
+      "role": "generic"
+    },
+    "shortTitle": "Generic"
+  },
+  {
+    "id": "combo-queue-array-int-numbers",
+    "group": "combinations",
+    "title": "Numbers",
+    "when": "Insert three numbers and remove them in order.",
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nclass Queue {\nprivate:\n    static const int capacity = 4; // EDIT: maximum number of items.\n    int data[capacity];\n    int count;\n    int first;\npublic:\n    Queue() : count(0), first(0) {}\n    bool isEmpty() const { return count == 0; }\n    bool isFull() const { return count == capacity; }\n    void enqueue(int item) {\n        if (isFull()) throw runtime_error(\"Full queue\");\n        data[(first + count) % capacity] = item;\n        ++count;\n    }\n    int front() const {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        return data[first];\n    }\n    int dequeue() {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        int value = data[first];\n        first = (first + 1) % capacity;\n        --count;\n        return value;\n    }\n};\n",
+    "use": "Queue values;\nvalues.enqueue(10);\nvalues.enqueue(20);\nvalues.enqueue(30);\nwhile (!values.isEmpty()) {\n    int item = values.dequeue();\n    cout << item << \"\\n\";\n}\n",
+    "test": "",
+    "parts": [
+      [
+        "Storage",
+        "Fixed array capacity is 4. Queue indices wrap with modulo; list insert/remove shifts items."
+      ],
+      [
+        "Type",
+        "The item type is int. Replace all item types consistently if required."
+      ]
+    ],
+    "change": "Change class and item names, add the fields and operations required by the question. Array capacity is an editable constant.",
+    "watch": "Check empty, one item, reuse after empty, full capacity and wraparound.",
+    "reference": "code-templates.html#lab-guide",
+    "expected": "10 \u00b7 20 \u00b7 30",
+    "expectedOutput": "10\n20\n30\n",
+    "facets": {
+      "structure": "queue",
+      "storage": "array",
+      "type": "int",
+      "role": "example"
+    },
+    "shortTitle": "Numbers"
+  },
+  {
+    "id": "combo-queue-array-int-reuse",
+    "group": "combinations",
+    "title": "Empty \u2192 reuse",
+    "when": "Remove every item, then insert and remove one more.",
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nclass Queue {\nprivate:\n    static const int capacity = 4; // EDIT: maximum number of items.\n    int data[capacity];\n    int count;\n    int first;\npublic:\n    Queue() : count(0), first(0) {}\n    bool isEmpty() const { return count == 0; }\n    bool isFull() const { return count == capacity; }\n    void enqueue(int item) {\n        if (isFull()) throw runtime_error(\"Full queue\");\n        data[(first + count) % capacity] = item;\n        ++count;\n    }\n    int front() const {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        return data[first];\n    }\n    int dequeue() {\n        if (isEmpty()) throw runtime_error(\"Empty queue\");\n        int value = data[first];\n        first = (first + 1) % capacity;\n        --count;\n        return value;\n    }\n};\n",
+    "use": "Queue values;\nvalues.enqueue(10);\nvalues.enqueue(20);\nvalues.enqueue(30);\nwhile (!values.isEmpty()) {\n    int item = values.dequeue();\n    cout << item << \"\\n\";\n}\nvalues.enqueue(40);\ncout << values.dequeue() << \"\\n\";\n",
+    "test": "",
+    "parts": [
+      [
+        "Storage",
+        "Fixed array capacity is 4. Queue indices wrap with modulo; list insert/remove shifts items."
+      ],
+      [
+        "Type",
+        "The item type is int. Replace all item types consistently if required."
+      ]
+    ],
+    "change": "Change class and item names, add the fields and operations required by the question. Array capacity is an editable constant.",
+    "watch": "Check empty, one item, reuse after empty, full capacity and wraparound.",
+    "reference": "code-templates.html#lab-guide",
+    "expected": "10 \u00b7 20 \u00b7 30 \u00b7 40",
+    "expectedOutput": "10\n20\n30\n40\n",
+    "facets": {
+      "structure": "queue",
+      "storage": "array",
+      "type": "int",
+      "role": "example"
+    },
+    "shortTitle": "Empty \u2192 reuse"
+  },
+  {
+    "id": "combo-list-linked-template-generic",
+    "group": "combinations",
+    "title": "Generic",
+    "when": "Minimal implementation. Rename the class and fields to fit your question.",
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\ntemplate <typename T>\nclass List {\nprivate:\n    struct Node {\n        T item;\n        Node* next;\n        Node(T value, Node* link = nullptr) : item(value), next(link) {}\n    };\n    Node* head;\n    Node* tail;\npublic:\n    List() : head(nullptr), tail(nullptr) {}\n    // This object owns its nodes. Disable shallow copying.\n    List(const List&) = delete;\n    List& operator=(const List&) = delete;\n    ~List() {\n        while (head != nullptr) {\n            Node* old = head;\n            head = head->next;\n            delete old;\n        }\n    }\n    bool isEmpty() const { return head == nullptr; }\n    void addToTail(T item) {\n        Node* node = new Node(item);\n        if (isEmpty()) head = node;\n        else tail->next = node;\n        tail = node;\n    }\n    void addToHead(T item) {\n        head = new Node(item, head);\n        if (tail == nullptr) tail = head;\n    }\n    T deleteFromHead() {\n        if (isEmpty()) throw runtime_error(\"Empty list\");\n        Node* old = head;\n        T value = old->item;\n        head = head->next;\n        if (head == nullptr) tail = nullptr;\n        delete old;\n        return value;\n    }\n    int size() const {\n        int count = 0;\n        for (Node* p = head; p != nullptr; p = p->next) ++count;\n        return count;\n    }\n};\n",
+    "use": "// EDIT: replace int, values, and test items to match your question.\nList<int> values;\nvalues.addToTail(10);\nvalues.addToTail(20);\nvalues.addToTail(30);\nwhile (!values.isEmpty()) {\n    int item = values.deleteFromHead();\n    cout << item << \"\\n\";\n}\n",
+    "test": "",
+    "parts": [
+      [
+        "Storage",
+        "Linked nodes allocate one node per item; removal deletes that node."
+      ],
+      [
+        "Type",
+        "T is chosen by the caller. Array versions require a default-constructible, assignable T."
+      ]
+    ],
+    "change": "Change class and item names, add the fields and operations required by the question. Keep the empty-list pointer updates and node cleanup.",
+    "watch": "Check empty, one item, reuse after empty. Node ownership means copying is disabled.",
+    "reference": "code-templates.html#lab-guide",
+    "expected": "10 \u00b7 20 \u00b7 30",
+    "expectedOutput": "10\n20\n30\n",
+    "facets": {
+      "structure": "list",
+      "storage": "linked",
+      "type": "template",
+      "role": "generic"
+    },
+    "shortTitle": "Generic"
+  },
+  {
+    "id": "combo-list-linked-template-numbers",
+    "group": "combinations",
+    "title": "Numbers",
+    "when": "Insert three numbers and remove them in order.",
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\ntemplate <typename T>\nclass List {\nprivate:\n    struct Node {\n        T item;\n        Node* next;\n        Node(T value, Node* link = nullptr) : item(value), next(link) {}\n    };\n    Node* head;\n    Node* tail;\npublic:\n    List() : head(nullptr), tail(nullptr) {}\n    // This object owns its nodes. Disable shallow copying.\n    List(const List&) = delete;\n    List& operator=(const List&) = delete;\n    ~List() {\n        while (head != nullptr) {\n            Node* old = head;\n            head = head->next;\n            delete old;\n        }\n    }\n    bool isEmpty() const { return head == nullptr; }\n    void addToTail(T item) {\n        Node* node = new Node(item);\n        if (isEmpty()) head = node;\n        else tail->next = node;\n        tail = node;\n    }\n    void addToHead(T item) {\n        head = new Node(item, head);\n        if (tail == nullptr) tail = head;\n    }\n    T deleteFromHead() {\n        if (isEmpty()) throw runtime_error(\"Empty list\");\n        Node* old = head;\n        T value = old->item;\n        head = head->next;\n        if (head == nullptr) tail = nullptr;\n        delete old;\n        return value;\n    }\n    int size() const {\n        int count = 0;\n        for (Node* p = head; p != nullptr; p = p->next) ++count;\n        return count;\n    }\n};\n",
+    "use": "List<int> values;\nvalues.addToTail(10);\nvalues.addToTail(20);\nvalues.addToTail(30);\nwhile (!values.isEmpty()) {\n    int item = values.deleteFromHead();\n    cout << item << \"\\n\";\n}\n",
+    "test": "",
+    "parts": [
+      [
+        "Storage",
+        "Linked nodes allocate one node per item; removal deletes that node."
+      ],
+      [
+        "Type",
+        "T is chosen by the caller. Array versions require a default-constructible, assignable T."
+      ]
+    ],
+    "change": "Change class and item names, add the fields and operations required by the question. Keep the empty-list pointer updates and node cleanup.",
+    "watch": "Check empty, one item, reuse after empty. Node ownership means copying is disabled.",
+    "reference": "code-templates.html#lab-guide",
+    "expected": "10 \u00b7 20 \u00b7 30",
+    "expectedOutput": "10\n20\n30\n",
+    "facets": {
+      "structure": "list",
+      "storage": "linked",
+      "type": "template",
+      "role": "example"
+    },
+    "shortTitle": "Numbers"
+  },
+  {
+    "id": "combo-list-linked-template-records",
+    "group": "combinations",
+    "title": "Jobs",
+    "when": "Store records with an ID and a name.",
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\ntemplate <typename T>\nclass List {\nprivate:\n    struct Node {\n        T item;\n        Node* next;\n        Node(T value, Node* link = nullptr) : item(value), next(link) {}\n    };\n    Node* head;\n    Node* tail;\npublic:\n    List() : head(nullptr), tail(nullptr) {}\n    // This object owns its nodes. Disable shallow copying.\n    List(const List&) = delete;\n    List& operator=(const List&) = delete;\n    ~List() {\n        while (head != nullptr) {\n            Node* old = head;\n            head = head->next;\n            delete old;\n        }\n    }\n    bool isEmpty() const { return head == nullptr; }\n    void addToTail(T item) {\n        Node* node = new Node(item);\n        if (isEmpty()) head = node;\n        else tail->next = node;\n        tail = node;\n    }\n    void addToHead(T item) {\n        head = new Node(item, head);\n        if (tail == nullptr) tail = head;\n    }\n    T deleteFromHead() {\n        if (isEmpty()) throw runtime_error(\"Empty list\");\n        Node* old = head;\n        T value = old->item;\n        head = head->next;\n        if (head == nullptr) tail = nullptr;\n        delete old;\n        return value;\n    }\n    int size() const {\n        int count = 0;\n        for (Node* p = head; p != nullptr; p = p->next) ++count;\n        return count;\n    }\n};\n\nstruct Job {\n    int id = 0;\n    string name;\n};\n",
+    "use": "List<Job> values;\nvalues.addToTail({10, \"First\"});\nvalues.addToTail({20, \"Second\"});\nvalues.addToTail({30, \"Third\"});\nwhile (!values.isEmpty()) {\n    Job item = values.deleteFromHead();\n    cout << item.id << \": \" << item.name << \"\\n\";\n}\n",
+    "test": "",
+    "parts": [
+      [
+        "Storage",
+        "Linked nodes allocate one node per item; removal deletes that node."
+      ],
+      [
+        "Type",
+        "T is chosen by the caller. Array versions require a default-constructible, assignable T."
+      ]
+    ],
+    "change": "Change class and item names, add the fields and operations required by the question. Keep the empty-list pointer updates and node cleanup.",
+    "watch": "Check empty, one item, reuse after empty. Node ownership means copying is disabled.",
+    "reference": "code-templates.html#lab-guide",
+    "expected": "10: First \u00b7 20: Second \u00b7 30: Third",
+    "expectedOutput": "10: First\n20: Second\n30: Third\n",
+    "facets": {
+      "structure": "list",
+      "storage": "linked",
+      "type": "template",
+      "role": "example"
+    },
+    "shortTitle": "Jobs"
+  },
+  {
+    "id": "combo-list-linked-int-generic",
+    "group": "combinations",
+    "title": "Generic",
+    "when": "Minimal implementation. Rename the class and fields to fit your question.",
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nclass List {\nprivate:\n    struct Node {\n        int item;\n        Node* next;\n        Node(int value, Node* link = nullptr) : item(value), next(link) {}\n    };\n    Node* head;\n    Node* tail;\npublic:\n    List() : head(nullptr), tail(nullptr) {}\n    // This object owns its nodes. Disable shallow copying.\n    List(const List&) = delete;\n    List& operator=(const List&) = delete;\n    ~List() {\n        while (head != nullptr) {\n            Node* old = head;\n            head = head->next;\n            delete old;\n        }\n    }\n    bool isEmpty() const { return head == nullptr; }\n    void addToTail(int item) {\n        Node* node = new Node(item);\n        if (isEmpty()) head = node;\n        else tail->next = node;\n        tail = node;\n    }\n    void addToHead(int item) {\n        head = new Node(item, head);\n        if (tail == nullptr) tail = head;\n    }\n    int deleteFromHead() {\n        if (isEmpty()) throw runtime_error(\"Empty list\");\n        Node* old = head;\n        int value = old->item;\n        head = head->next;\n        if (head == nullptr) tail = nullptr;\n        delete old;\n        return value;\n    }\n    int size() const {\n        int count = 0;\n        for (Node* p = head; p != nullptr; p = p->next) ++count;\n        return count;\n    }\n};\n",
+    "use": "// EDIT: replace int, values, and test items to match your question.\nList values;\nvalues.addToTail(10);\nvalues.addToTail(20);\nvalues.addToTail(30);\nwhile (!values.isEmpty()) {\n    int item = values.deleteFromHead();\n    cout << item << \"\\n\";\n}\n",
+    "test": "",
+    "parts": [
+      [
+        "Storage",
+        "Linked nodes allocate one node per item; removal deletes that node."
+      ],
+      [
+        "Type",
+        "The item type is int. Replace all item types consistently if required."
+      ]
+    ],
+    "change": "Change class and item names, add the fields and operations required by the question. Keep the empty-list pointer updates and node cleanup.",
+    "watch": "Check empty, one item, reuse after empty. Node ownership means copying is disabled.",
+    "reference": "code-templates.html#lab-guide",
+    "expected": "10 \u00b7 20 \u00b7 30",
+    "expectedOutput": "10\n20\n30\n",
+    "facets": {
+      "structure": "list",
+      "storage": "linked",
+      "type": "int",
+      "role": "generic"
+    },
+    "shortTitle": "Generic"
+  },
+  {
+    "id": "combo-list-linked-int-numbers",
+    "group": "combinations",
+    "title": "Numbers",
+    "when": "Insert three numbers and remove them in order.",
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nclass List {\nprivate:\n    struct Node {\n        int item;\n        Node* next;\n        Node(int value, Node* link = nullptr) : item(value), next(link) {}\n    };\n    Node* head;\n    Node* tail;\npublic:\n    List() : head(nullptr), tail(nullptr) {}\n    // This object owns its nodes. Disable shallow copying.\n    List(const List&) = delete;\n    List& operator=(const List&) = delete;\n    ~List() {\n        while (head != nullptr) {\n            Node* old = head;\n            head = head->next;\n            delete old;\n        }\n    }\n    bool isEmpty() const { return head == nullptr; }\n    void addToTail(int item) {\n        Node* node = new Node(item);\n        if (isEmpty()) head = node;\n        else tail->next = node;\n        tail = node;\n    }\n    void addToHead(int item) {\n        head = new Node(item, head);\n        if (tail == nullptr) tail = head;\n    }\n    int deleteFromHead() {\n        if (isEmpty()) throw runtime_error(\"Empty list\");\n        Node* old = head;\n        int value = old->item;\n        head = head->next;\n        if (head == nullptr) tail = nullptr;\n        delete old;\n        return value;\n    }\n    int size() const {\n        int count = 0;\n        for (Node* p = head; p != nullptr; p = p->next) ++count;\n        return count;\n    }\n};\n",
+    "use": "List values;\nvalues.addToTail(10);\nvalues.addToTail(20);\nvalues.addToTail(30);\nwhile (!values.isEmpty()) {\n    int item = values.deleteFromHead();\n    cout << item << \"\\n\";\n}\n",
+    "test": "",
+    "parts": [
+      [
+        "Storage",
+        "Linked nodes allocate one node per item; removal deletes that node."
+      ],
+      [
+        "Type",
+        "The item type is int. Replace all item types consistently if required."
+      ]
+    ],
+    "change": "Change class and item names, add the fields and operations required by the question. Keep the empty-list pointer updates and node cleanup.",
+    "watch": "Check empty, one item, reuse after empty. Node ownership means copying is disabled.",
+    "reference": "code-templates.html#lab-guide",
+    "expected": "10 \u00b7 20 \u00b7 30",
+    "expectedOutput": "10\n20\n30\n",
+    "facets": {
+      "structure": "list",
+      "storage": "linked",
+      "type": "int",
+      "role": "example"
+    },
+    "shortTitle": "Numbers"
+  },
+  {
+    "id": "combo-list-linked-int-reuse",
+    "group": "combinations",
+    "title": "Empty \u2192 reuse",
+    "when": "Remove every item, then insert and remove one more.",
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nclass List {\nprivate:\n    struct Node {\n        int item;\n        Node* next;\n        Node(int value, Node* link = nullptr) : item(value), next(link) {}\n    };\n    Node* head;\n    Node* tail;\npublic:\n    List() : head(nullptr), tail(nullptr) {}\n    // This object owns its nodes. Disable shallow copying.\n    List(const List&) = delete;\n    List& operator=(const List&) = delete;\n    ~List() {\n        while (head != nullptr) {\n            Node* old = head;\n            head = head->next;\n            delete old;\n        }\n    }\n    bool isEmpty() const { return head == nullptr; }\n    void addToTail(int item) {\n        Node* node = new Node(item);\n        if (isEmpty()) head = node;\n        else tail->next = node;\n        tail = node;\n    }\n    void addToHead(int item) {\n        head = new Node(item, head);\n        if (tail == nullptr) tail = head;\n    }\n    int deleteFromHead() {\n        if (isEmpty()) throw runtime_error(\"Empty list\");\n        Node* old = head;\n        int value = old->item;\n        head = head->next;\n        if (head == nullptr) tail = nullptr;\n        delete old;\n        return value;\n    }\n    int size() const {\n        int count = 0;\n        for (Node* p = head; p != nullptr; p = p->next) ++count;\n        return count;\n    }\n};\n",
+    "use": "List values;\nvalues.addToTail(10);\nvalues.addToTail(20);\nvalues.addToTail(30);\nwhile (!values.isEmpty()) {\n    int item = values.deleteFromHead();\n    cout << item << \"\\n\";\n}\nvalues.addToTail(40);\ncout << values.deleteFromHead() << \"\\n\";\n",
+    "test": "",
+    "parts": [
+      [
+        "Storage",
+        "Linked nodes allocate one node per item; removal deletes that node."
+      ],
+      [
+        "Type",
+        "The item type is int. Replace all item types consistently if required."
+      ]
+    ],
+    "change": "Change class and item names, add the fields and operations required by the question. Keep the empty-list pointer updates and node cleanup.",
+    "watch": "Check empty, one item, reuse after empty. Node ownership means copying is disabled.",
+    "reference": "code-templates.html#lab-guide",
+    "expected": "10 \u00b7 20 \u00b7 30 \u00b7 40",
+    "expectedOutput": "10\n20\n30\n40\n",
+    "facets": {
+      "structure": "list",
+      "storage": "linked",
+      "type": "int",
+      "role": "example"
+    },
+    "shortTitle": "Empty \u2192 reuse"
+  },
+  {
+    "id": "combo-list-array-template-generic",
+    "group": "combinations",
+    "title": "Generic",
+    "when": "Minimal implementation. Rename the class and fields to fit your question.",
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\ntemplate <typename T>\nclass List {\nprivate:\n    static const int capacity = 4; // EDIT: maximum number of items.\n    T data[capacity];\n    int count;\npublic:\n    List() : count(0) {}\n    bool isEmpty() const { return count == 0; }\n    bool isFull() const { return count == capacity; }\n    int size() const { return count; }\n    void insert(int index, T item) {\n        if (index < 0 || index > count) throw runtime_error(\"Invalid index\");\n        if (isFull()) throw runtime_error(\"Full list\");\n        for (int i = count; i > index; --i) data[i] = data[i - 1];\n        data[index] = item;\n        ++count;\n    }\n    T remove(int index) {\n        if (index < 0 || index >= count) throw runtime_error(\"Invalid index\");\n        T value = data[index];\n        for (int i = index; i + 1 < count; ++i) data[i] = data[i + 1];\n        --count;\n        return value;\n    }\n};\n",
+    "use": "// EDIT: replace int, values, and test items to match your question.\nList<int> values;\nvalues.insert(0, 10);\nvalues.insert(1, 20);\nvalues.insert(2, 30);\nwhile (!values.isEmpty()) {\n    int item = values.remove(0);\n    cout << item << \"\\n\";\n}\n",
+    "test": "",
+    "parts": [
+      [
+        "Storage",
+        "Fixed array capacity is 4. Queue indices wrap with modulo; list insert/remove shifts items."
+      ],
+      [
+        "Type",
+        "T is chosen by the caller. Array versions require a default-constructible, assignable T."
+      ]
+    ],
+    "change": "Change class and item names, add the fields and operations required by the question. Array capacity is an editable constant.",
+    "watch": "Check empty, one item, reuse after empty, full capacity and wraparound.",
+    "reference": "code-templates.html#lab-guide",
+    "expected": "10 \u00b7 20 \u00b7 30",
+    "expectedOutput": "10\n20\n30\n",
+    "facets": {
+      "structure": "list",
+      "storage": "array",
+      "type": "template",
+      "role": "generic"
+    },
+    "shortTitle": "Generic"
+  },
+  {
+    "id": "combo-list-array-template-numbers",
+    "group": "combinations",
+    "title": "Numbers",
+    "when": "Insert three numbers and remove them in order.",
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\ntemplate <typename T>\nclass List {\nprivate:\n    static const int capacity = 4; // EDIT: maximum number of items.\n    T data[capacity];\n    int count;\npublic:\n    List() : count(0) {}\n    bool isEmpty() const { return count == 0; }\n    bool isFull() const { return count == capacity; }\n    int size() const { return count; }\n    void insert(int index, T item) {\n        if (index < 0 || index > count) throw runtime_error(\"Invalid index\");\n        if (isFull()) throw runtime_error(\"Full list\");\n        for (int i = count; i > index; --i) data[i] = data[i - 1];\n        data[index] = item;\n        ++count;\n    }\n    T remove(int index) {\n        if (index < 0 || index >= count) throw runtime_error(\"Invalid index\");\n        T value = data[index];\n        for (int i = index; i + 1 < count; ++i) data[i] = data[i + 1];\n        --count;\n        return value;\n    }\n};\n",
+    "use": "List<int> values;\nvalues.insert(0, 10);\nvalues.insert(1, 20);\nvalues.insert(2, 30);\nwhile (!values.isEmpty()) {\n    int item = values.remove(0);\n    cout << item << \"\\n\";\n}\n",
+    "test": "",
+    "parts": [
+      [
+        "Storage",
+        "Fixed array capacity is 4. Queue indices wrap with modulo; list insert/remove shifts items."
+      ],
+      [
+        "Type",
+        "T is chosen by the caller. Array versions require a default-constructible, assignable T."
+      ]
+    ],
+    "change": "Change class and item names, add the fields and operations required by the question. Array capacity is an editable constant.",
+    "watch": "Check empty, one item, reuse after empty, full capacity and wraparound.",
+    "reference": "code-templates.html#lab-guide",
+    "expected": "10 \u00b7 20 \u00b7 30",
+    "expectedOutput": "10\n20\n30\n",
+    "facets": {
+      "structure": "list",
+      "storage": "array",
+      "type": "template",
+      "role": "example"
+    },
+    "shortTitle": "Numbers"
+  },
+  {
+    "id": "combo-list-array-template-records",
+    "group": "combinations",
+    "title": "Jobs",
+    "when": "Store records with an ID and a name.",
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\ntemplate <typename T>\nclass List {\nprivate:\n    static const int capacity = 4; // EDIT: maximum number of items.\n    T data[capacity];\n    int count;\npublic:\n    List() : count(0) {}\n    bool isEmpty() const { return count == 0; }\n    bool isFull() const { return count == capacity; }\n    int size() const { return count; }\n    void insert(int index, T item) {\n        if (index < 0 || index > count) throw runtime_error(\"Invalid index\");\n        if (isFull()) throw runtime_error(\"Full list\");\n        for (int i = count; i > index; --i) data[i] = data[i - 1];\n        data[index] = item;\n        ++count;\n    }\n    T remove(int index) {\n        if (index < 0 || index >= count) throw runtime_error(\"Invalid index\");\n        T value = data[index];\n        for (int i = index; i + 1 < count; ++i) data[i] = data[i + 1];\n        --count;\n        return value;\n    }\n};\n\nstruct Job {\n    int id = 0;\n    string name;\n};\n",
+    "use": "List<Job> values;\nvalues.insert(0, {10, \"First\"});\nvalues.insert(1, {20, \"Second\"});\nvalues.insert(2, {30, \"Third\"});\nwhile (!values.isEmpty()) {\n    Job item = values.remove(0);\n    cout << item.id << \": \" << item.name << \"\\n\";\n}\n",
+    "test": "",
+    "parts": [
+      [
+        "Storage",
+        "Fixed array capacity is 4. Queue indices wrap with modulo; list insert/remove shifts items."
+      ],
+      [
+        "Type",
+        "T is chosen by the caller. Array versions require a default-constructible, assignable T."
+      ]
+    ],
+    "change": "Change class and item names, add the fields and operations required by the question. Array capacity is an editable constant.",
+    "watch": "Check empty, one item, reuse after empty, full capacity and wraparound.",
+    "reference": "code-templates.html#lab-guide",
+    "expected": "10: First \u00b7 20: Second \u00b7 30: Third",
+    "expectedOutput": "10: First\n20: Second\n30: Third\n",
+    "facets": {
+      "structure": "list",
+      "storage": "array",
+      "type": "template",
+      "role": "example"
+    },
+    "shortTitle": "Jobs"
+  },
+  {
+    "id": "combo-list-array-int-generic",
+    "group": "combinations",
+    "title": "Generic",
+    "when": "Minimal implementation. Rename the class and fields to fit your question.",
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nclass List {\nprivate:\n    static const int capacity = 4; // EDIT: maximum number of items.\n    int data[capacity];\n    int count;\npublic:\n    List() : count(0) {}\n    bool isEmpty() const { return count == 0; }\n    bool isFull() const { return count == capacity; }\n    int size() const { return count; }\n    void insert(int index, int item) {\n        if (index < 0 || index > count) throw runtime_error(\"Invalid index\");\n        if (isFull()) throw runtime_error(\"Full list\");\n        for (int i = count; i > index; --i) data[i] = data[i - 1];\n        data[index] = item;\n        ++count;\n    }\n    int remove(int index) {\n        if (index < 0 || index >= count) throw runtime_error(\"Invalid index\");\n        int value = data[index];\n        for (int i = index; i + 1 < count; ++i) data[i] = data[i + 1];\n        --count;\n        return value;\n    }\n};\n",
+    "use": "// EDIT: replace int, values, and test items to match your question.\nList values;\nvalues.insert(0, 10);\nvalues.insert(1, 20);\nvalues.insert(2, 30);\nwhile (!values.isEmpty()) {\n    int item = values.remove(0);\n    cout << item << \"\\n\";\n}\n",
+    "test": "",
+    "parts": [
+      [
+        "Storage",
+        "Fixed array capacity is 4. Queue indices wrap with modulo; list insert/remove shifts items."
+      ],
+      [
+        "Type",
+        "The item type is int. Replace all item types consistently if required."
+      ]
+    ],
+    "change": "Change class and item names, add the fields and operations required by the question. Array capacity is an editable constant.",
+    "watch": "Check empty, one item, reuse after empty, full capacity and wraparound.",
+    "reference": "code-templates.html#lab-guide",
+    "expected": "10 \u00b7 20 \u00b7 30",
+    "expectedOutput": "10\n20\n30\n",
+    "facets": {
+      "structure": "list",
+      "storage": "array",
+      "type": "int",
+      "role": "generic"
+    },
+    "shortTitle": "Generic"
+  },
+  {
+    "id": "combo-list-array-int-numbers",
+    "group": "combinations",
+    "title": "Numbers",
+    "when": "Insert three numbers and remove them in order.",
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nclass List {\nprivate:\n    static const int capacity = 4; // EDIT: maximum number of items.\n    int data[capacity];\n    int count;\npublic:\n    List() : count(0) {}\n    bool isEmpty() const { return count == 0; }\n    bool isFull() const { return count == capacity; }\n    int size() const { return count; }\n    void insert(int index, int item) {\n        if (index < 0 || index > count) throw runtime_error(\"Invalid index\");\n        if (isFull()) throw runtime_error(\"Full list\");\n        for (int i = count; i > index; --i) data[i] = data[i - 1];\n        data[index] = item;\n        ++count;\n    }\n    int remove(int index) {\n        if (index < 0 || index >= count) throw runtime_error(\"Invalid index\");\n        int value = data[index];\n        for (int i = index; i + 1 < count; ++i) data[i] = data[i + 1];\n        --count;\n        return value;\n    }\n};\n",
+    "use": "List values;\nvalues.insert(0, 10);\nvalues.insert(1, 20);\nvalues.insert(2, 30);\nwhile (!values.isEmpty()) {\n    int item = values.remove(0);\n    cout << item << \"\\n\";\n}\n",
+    "test": "",
+    "parts": [
+      [
+        "Storage",
+        "Fixed array capacity is 4. Queue indices wrap with modulo; list insert/remove shifts items."
+      ],
+      [
+        "Type",
+        "The item type is int. Replace all item types consistently if required."
+      ]
+    ],
+    "change": "Change class and item names, add the fields and operations required by the question. Array capacity is an editable constant.",
+    "watch": "Check empty, one item, reuse after empty, full capacity and wraparound.",
+    "reference": "code-templates.html#lab-guide",
+    "expected": "10 \u00b7 20 \u00b7 30",
+    "expectedOutput": "10\n20\n30\n",
+    "facets": {
+      "structure": "list",
+      "storage": "array",
+      "type": "int",
+      "role": "example"
+    },
+    "shortTitle": "Numbers"
+  },
+  {
+    "id": "combo-list-array-int-reuse",
+    "group": "combinations",
+    "title": "Empty \u2192 reuse",
+    "when": "Remove every item, then insert and remove one more.",
+    "code": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nclass List {\nprivate:\n    static const int capacity = 4; // EDIT: maximum number of items.\n    int data[capacity];\n    int count;\npublic:\n    List() : count(0) {}\n    bool isEmpty() const { return count == 0; }\n    bool isFull() const { return count == capacity; }\n    int size() const { return count; }\n    void insert(int index, int item) {\n        if (index < 0 || index > count) throw runtime_error(\"Invalid index\");\n        if (isFull()) throw runtime_error(\"Full list\");\n        for (int i = count; i > index; --i) data[i] = data[i - 1];\n        data[index] = item;\n        ++count;\n    }\n    int remove(int index) {\n        if (index < 0 || index >= count) throw runtime_error(\"Invalid index\");\n        int value = data[index];\n        for (int i = index; i + 1 < count; ++i) data[i] = data[i + 1];\n        --count;\n        return value;\n    }\n};\n",
+    "use": "List values;\nvalues.insert(0, 10);\nvalues.insert(1, 20);\nvalues.insert(2, 30);\nwhile (!values.isEmpty()) {\n    int item = values.remove(0);\n    cout << item << \"\\n\";\n}\nvalues.insert(0, 40);\ncout << values.remove(0) << \"\\n\";\n",
+    "test": "",
+    "parts": [
+      [
+        "Storage",
+        "Fixed array capacity is 4. Queue indices wrap with modulo; list insert/remove shifts items."
+      ],
+      [
+        "Type",
+        "The item type is int. Replace all item types consistently if required."
+      ]
+    ],
+    "change": "Change class and item names, add the fields and operations required by the question. Array capacity is an editable constant.",
+    "watch": "Check empty, one item, reuse after empty, full capacity and wraparound.",
+    "reference": "code-templates.html#lab-guide",
+    "expected": "10 \u00b7 20 \u00b7 30 \u00b7 40",
+    "expectedOutput": "10\n20\n30\n40\n",
+    "facets": {
+      "structure": "list",
+      "storage": "array",
+      "type": "int",
+      "role": "example"
+    },
+    "shortTitle": "Empty \u2192 reuse"
+  }
+]
