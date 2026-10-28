@@ -1,966 +1,1011 @@
 {
-  "hw-22-15": [
-    {
-      "src": "midterm-images/hw4-1.jpg",
-      "width": 774,
-      "height": 1062,
-      "page": 1,
-      "label": "Homework 4",
-      "note": "Original question 22.15",
-      "printedPage": 1
-    }
-  ],
-  "hw-22-19": [
-    {
-      "src": "midterm-images/hw4-1.jpg",
-      "width": 774,
-      "height": 1062,
-      "page": 1,
-      "label": "Homework 4",
-      "note": "Original question 22.19",
-      "printedPage": 1
-    }
-  ],
-  "hw-22-21": [
-    {
-      "src": "midterm-images/hw4-1.jpg",
-      "width": 774,
-      "height": 1062,
-      "page": 1,
-      "label": "Homework 4",
-      "note": "Original question 22.21",
-      "printedPage": 1
-    }
-  ],
-  "hw-22-33": [
-    {
-      "src": "midterm-images/hw4-1.jpg",
-      "width": 774,
-      "height": 1062,
-      "page": 1,
-      "label": "Homework 4",
-      "note": "Original question 22.33",
-      "printedPage": 1
-    }
-  ],
-  "hw-22-37": [
-    {
-      "src": "midterm-images/hw4-2.jpg",
-      "width": 763,
-      "height": 570,
-      "page": 2,
-      "label": "Homework 4",
-      "note": "Original question 22.37",
-      "printedPage": 2
-    }
-  ],
-  "hw-23-1": [
-    {
-      "src": "midterm-images/hw5-1.jpg",
-      "width": 782,
-      "height": 1350,
-      "page": 1,
-      "label": "Homework 5",
-      "note": "Original question 23.1",
-      "printedPage": 1
-    }
-  ],
-  "hw-23-5": [
-    {
-      "src": "midterm-images/hw5-1.jpg",
-      "width": 782,
-      "height": 1350,
-      "page": 1,
-      "label": "Homework 5",
-      "note": "Original question 23.5",
-      "printedPage": 1
-    }
-  ],
-  "hw-23-7": [
-    {
-      "src": "midterm-images/hw5-1.jpg",
-      "width": 782,
-      "height": 1350,
-      "page": 1,
-      "label": "Homework 5",
-      "note": "Original question 23.7",
-      "printedPage": 1
-    }
-  ],
-  "hw-23-8": [
-    {
-      "src": "midterm-images/hw5-1.jpg",
-      "width": 782,
-      "height": 1350,
-      "page": 1,
-      "label": "Homework 5",
-      "note": "Original question 23.8",
-      "printedPage": 1
-    }
-  ],
-  "hw-23-19": [
-    {
-      "src": "midterm-images/hw5-1.jpg",
-      "width": 782,
-      "height": 1350,
-      "page": 1,
-      "label": "Homework 5",
-      "note": "Original question 23.19",
-      "printedPage": 1
-    }
-  ],
-  "hw-23-27": [
-    {
-      "src": "midterm-images/hw5-2.jpg",
-      "width": 761,
-      "height": 273,
-      "page": 2,
-      "label": "Homework 5",
-      "note": "Original question 23.27",
-      "printedPage": 2
-    }
-  ],
-  "hw-23-44": [
-    {
-      "src": "midterm-images/hw6-1.jpg",
-      "width": 769,
-      "height": 1417,
-      "page": 1,
-      "label": "Homework 6",
-      "note": "Original question 23.44",
-      "printedPage": 1
-    }
-  ],
-  "hw-23-55": [
-    {
-      "src": "midterm-images/hw6-1.jpg",
-      "width": 769,
-      "height": 1417,
-      "page": 1,
-      "label": "Homework 6",
-      "note": "Original question 23.55",
-      "printedPage": 1
-    }
-  ],
-  "hw-23-59": [
-    {
-      "src": "midterm-images/hw6-1.jpg",
-      "width": 769,
-      "height": 1417,
-      "page": 1,
-      "label": "Homework 6",
-      "note": "Original question 23.59",
-      "printedPage": 1
-    }
-  ],
-  "hw-24-1": [
-    {
-      "src": "midterm-images/hw6-1.jpg",
-      "width": 769,
-      "height": 1417,
-      "page": 1,
-      "label": "Homework 6",
-      "note": "Original question 24.1",
-      "printedPage": 1
-    }
-  ],
-  "hw-24-3": [
-    {
-      "src": "midterm-images/hw6-2.jpg",
-      "width": 767,
-      "height": 495,
-      "page": 2,
-      "label": "Homework 6",
-      "note": "Original question 24.3",
-      "printedPage": 2
-    }
-  ],
-  "hw-24-7": [
-    {
-      "src": "midterm-images/hw6-2.jpg",
-      "width": 767,
-      "height": 495,
-      "page": 2,
-      "label": "Homework 6",
-      "note": "Original question 24.7",
-      "printedPage": 2
-    }
-  ],
-  "hw-24-8": [
-    {
-      "src": "midterm-images/hw7-1.jpg",
-      "width": 769,
-      "height": 1319,
-      "page": 1,
-      "label": "Homework 7",
-      "note": "Original question 24.8",
-      "printedPage": 1
-    }
-  ],
-  "hw-24-12": [
-    {
-      "src": "midterm-images/hw7-1.jpg",
-      "width": 769,
-      "height": 1319,
-      "page": 1,
-      "label": "Homework 7",
-      "note": "Original question 24.12",
-      "printedPage": 1
-    }
-  ],
-  "hw-24-14": [
-    {
-      "src": "midterm-images/hw7-1.jpg",
-      "width": 769,
-      "height": 1319,
-      "page": 1,
-      "label": "Homework 7",
-      "note": "Original question 24.14",
-      "printedPage": 1
-    }
-  ],
-  "hw-24-24": [
-    {
-      "src": "midterm-images/hw7-2.jpg",
-      "width": 765,
-      "height": 1187,
-      "page": 2,
-      "label": "Homework 7",
-      "note": "Original question 24.24",
-      "printedPage": 2
-    }
-  ],
-  "hw-24-36": [
-    {
-      "src": "midterm-images/hw7-2.jpg",
-      "width": 765,
-      "height": 1187,
-      "page": 2,
-      "label": "Homework 7",
-      "note": "Original question 24.36",
-      "printedPage": 2
-    }
-  ],
-  "hw-24-66": [
-    {
-      "src": "midterm-images/hw7-2.jpg",
-      "width": 765,
-      "height": 1187,
-      "page": 2,
-      "label": "Homework 7",
-      "note": "Original question 24.66",
-      "printedPage": 2
-    }
-  ],
-  "hw-24-68": [
-    {
-      "src": "midterm-images/hw7-3.jpg",
-      "width": 762,
-      "height": 667,
-      "page": 3,
-      "label": "Homework 7",
-      "note": "Original question 24.68",
-      "printedPage": 3
-    }
-  ],
   "t4-q1": [
     {
-      "src": "midterm-images/tutorial4-1.jpg",
-      "width": 1538,
-      "height": 1697,
+      "src": "midterm-crops/t4-q1-q1.jpg",
+      "width": 1350,
+      "height": 300,
       "page": 1,
+      "printedPage": 1,
       "label": "Tutorial 4",
-      "note": "Original question 1",
-      "printedPage": 1
+      "note": "Original question 1"
     }
   ],
   "t4-q2": [
     {
-      "src": "midterm-images/tutorial4-1.jpg",
-      "width": 1538,
-      "height": 1697,
+      "src": "midterm-crops/t4-q2-q1.jpg",
+      "width": 1362,
+      "height": 266,
       "page": 1,
+      "printedPage": 1,
       "label": "Tutorial 4",
-      "note": "Original question 2",
-      "printedPage": 1
+      "note": "Original question 2"
     }
   ],
   "t4-q3": [
     {
-      "src": "midterm-images/tutorial4-1.jpg",
-      "width": 1538,
-      "height": 1697,
+      "src": "midterm-crops/t4-q3-q1.jpg",
+      "width": 1344,
+      "height": 297,
       "page": 1,
+      "printedPage": 1,
       "label": "Tutorial 4",
-      "note": "Original question 3",
-      "printedPage": 1
+      "note": "Original question 3"
     }
   ],
   "t4-q4": [
     {
-      "src": "midterm-images/tutorial4-1.jpg",
-      "width": 1538,
-      "height": 1697,
+      "src": "midterm-crops/t4-q4-q1.jpg",
+      "width": 1415,
+      "height": 304,
       "page": 1,
+      "printedPage": 1,
       "label": "Tutorial 4",
-      "note": "Original question 4",
-      "printedPage": 1
+      "note": "Original question 4"
     }
   ],
   "t4-q5": [
     {
-      "src": "midterm-images/tutorial4-1.jpg",
-      "width": 1538,
-      "height": 1697,
+      "src": "midterm-crops/t4-q5-q1.jpg",
+      "width": 1376,
+      "height": 301,
       "page": 1,
+      "printedPage": 1,
       "label": "Tutorial 4",
-      "note": "Original question 5",
-      "printedPage": 1
+      "note": "Original question 5"
     }
   ],
   "t4-q6": [
     {
-      "src": "midterm-images/tutorial4-2.jpg",
-      "width": 1273,
-      "height": 1475,
+      "src": "midterm-crops/t4-q6-q1.jpg",
+      "width": 1350,
+      "height": 302,
       "page": 2,
+      "printedPage": 2,
       "label": "Tutorial 4",
-      "note": "Original question 6",
-      "printedPage": 2
+      "note": "Original question 6"
     }
   ],
   "t4-q7": [
     {
-      "src": "midterm-images/tutorial4-2.jpg",
-      "width": 1273,
-      "height": 1475,
+      "src": "midterm-crops/t4-q7-q1.jpg",
+      "width": 1393,
+      "height": 297,
       "page": 2,
+      "printedPage": 2,
       "label": "Tutorial 4",
-      "note": "Original question 7",
-      "printedPage": 2
+      "note": "Original question 7"
     }
   ],
   "t4-q8": [
     {
-      "src": "midterm-images/tutorial4-2.jpg",
-      "width": 1273,
-      "height": 1475,
+      "src": "midterm-crops/t4-q8-q1.jpg",
+      "width": 1419,
+      "height": 301,
       "page": 2,
+      "printedPage": 2,
       "label": "Tutorial 4",
-      "note": "Original question 8",
-      "printedPage": 2
+      "note": "Original question 8"
     }
   ],
   "t4-q9": [
     {
-      "src": "midterm-images/tutorial4-2.jpg",
-      "width": 1273,
-      "height": 1475,
+      "src": "midterm-crops/t4-q9-q1.jpg",
+      "width": 1403,
+      "height": 317,
       "page": 2,
+      "printedPage": 2,
       "label": "Tutorial 4",
-      "note": "Original question 9",
-      "printedPage": 2
+      "note": "Original question 9"
     }
   ],
   "t5-q3": [
     {
-      "src": "midterm-images/tutorial5-1.jpg",
-      "width": 1108,
-      "height": 1252,
+      "src": "midterm-crops/t5-q3-q1.jpg",
+      "width": 1276,
+      "height": 166,
       "page": 1,
+      "printedPage": 1,
       "label": "Tutorial 5",
-      "note": "Original question 3",
-      "printedPage": 1
+      "note": "Original question 3"
     }
   ],
   "t5-q37": [
     {
-      "src": "midterm-images/tutorial5-1.jpg",
-      "width": 1108,
-      "height": 1252,
+      "src": "midterm-crops/t5-q37-q1.jpg",
+      "width": 1315,
+      "height": 242,
       "page": 1,
+      "printedPage": 1,
       "label": "Tutorial 5",
-      "note": "Original question 37",
-      "printedPage": 1
+      "note": "Original question 37"
     }
   ],
   "t5-q16": [
     {
-      "src": "midterm-images/tutorial5-1.jpg",
-      "width": 1108,
-      "height": 1252,
+      "src": "midterm-crops/t5-q16-q1.jpg",
+      "width": 1323,
+      "height": 630,
       "page": 1,
+      "printedPage": 1,
       "label": "Tutorial 5",
-      "note": "Original question 16",
-      "printedPage": 1
+      "note": "Original question 16"
     }
   ],
   "t5-q17": [
     {
-      "src": "midterm-images/tutorial5-1.jpg",
-      "width": 1108,
-      "height": 1252,
+      "src": "midterm-crops/t5-q17-q1.jpg",
+      "width": 1311,
+      "height": 165,
       "page": 1,
+      "printedPage": 1,
       "label": "Tutorial 5",
-      "note": "Original question 17",
-      "printedPage": 1
+      "note": "Original question 17"
     }
   ],
   "t5-q18": [
     {
-      "src": "midterm-images/tutorial5-1.jpg",
-      "width": 1108,
-      "height": 1252,
+      "src": "midterm-crops/t5-q18-q1.jpg",
+      "width": 1290,
+      "height": 107,
       "page": 1,
+      "printedPage": 1,
       "label": "Tutorial 5",
-      "note": "Original question 18",
-      "printedPage": 1
+      "note": "Original question 18"
     }
   ],
   "t5-q34": [
     {
-      "src": "midterm-images/tutorial5-2.jpg",
-      "width": 1107,
-      "height": 1001,
+      "src": "midterm-crops/t5-q34-q1.jpg",
+      "width": 1244,
+      "height": 658,
       "page": 2,
+      "printedPage": 2,
       "label": "Tutorial 5",
-      "note": "Original question 34",
-      "printedPage": 2
+      "note": "Original question 34"
     }
   ],
   "t5-q39": [
     {
-      "src": "midterm-images/tutorial5-2.jpg",
-      "width": 1107,
-      "height": 1001,
+      "src": "midterm-crops/t5-q39-q1.jpg",
+      "width": 1321,
+      "height": 166,
       "page": 2,
+      "printedPage": 2,
       "label": "Tutorial 5",
-      "note": "Original question 39",
-      "printedPage": 2
+      "note": "Original question 39"
     }
   ],
   "t5-q42": [
     {
-      "src": "midterm-images/tutorial5-2.jpg",
-      "width": 1107,
-      "height": 1001,
+      "src": "midterm-crops/t5-q42-q1.jpg",
+      "width": 1275,
+      "height": 194,
       "page": 2,
+      "printedPage": 2,
       "label": "Tutorial 5",
-      "note": "Original question 42",
-      "printedPage": 2
+      "note": "Original question 42"
     }
   ],
   "t5-q63": [
     {
-      "src": "midterm-images/tutorial5-2.jpg",
-      "width": 1107,
-      "height": 1001,
+      "src": "midterm-crops/t5-q63-q1.jpg",
+      "width": 1293,
+      "height": 211,
       "page": 2,
+      "printedPage": 2,
       "label": "Tutorial 5",
-      "note": "Original question 63",
-      "printedPage": 2
+      "note": "Original question 63"
     }
   ],
   "t6-q7": [
     {
-      "src": "midterm-images/tutorial6-1.jpg",
-      "width": 1104,
-      "height": 1402,
+      "src": "midterm-crops/t6-q7-q1.jpg",
+      "width": 1272,
+      "height": 253,
       "page": 1,
+      "printedPage": 1,
       "label": "Tutorial 6",
-      "note": "Original question 7",
-      "printedPage": 1
+      "note": "Original question 7"
     }
   ],
   "t6-q23": [
     {
-      "src": "midterm-images/tutorial6-1.jpg",
-      "width": 1104,
-      "height": 1402,
+      "src": "midterm-crops/t6-q23-q1.jpg",
+      "width": 1319,
+      "height": 641,
       "page": 1,
+      "printedPage": 1,
       "label": "Tutorial 6",
-      "note": "Original question 23",
-      "printedPage": 1
+      "note": "Original question 23"
     }
   ],
   "t6-q31": [
     {
-      "src": "midterm-images/tutorial6-1.jpg",
-      "width": 1104,
-      "height": 1402,
+      "src": "midterm-crops/t6-q31-q1.jpg",
+      "width": 1308,
+      "height": 152,
       "page": 1,
+      "printedPage": 1,
       "label": "Tutorial 6",
-      "note": "Original question 31",
-      "printedPage": 1
+      "note": "Original question 31"
     }
   ],
   "t6-q34": [
     {
-      "src": "midterm-images/tutorial6-1.jpg",
-      "width": 1104,
-      "height": 1402,
+      "src": "midterm-crops/t6-q34-q1.jpg",
+      "width": 1275,
+      "height": 152,
       "page": 1,
+      "printedPage": 1,
       "label": "Tutorial 6",
-      "note": "Original question 34",
-      "printedPage": 1
+      "note": "Original question 34"
     }
   ],
   "t6-q47": [
     {
-      "src": "midterm-images/tutorial6-1.jpg",
-      "width": 1104,
-      "height": 1402,
+      "src": "midterm-crops/t6-q47-q1.jpg",
+      "width": 1313,
+      "height": 286,
       "page": 1,
+      "printedPage": 1,
       "label": "Tutorial 6",
-      "note": "Original question 47",
-      "printedPage": 1
+      "note": "Original question 47"
     }
   ],
   "t6-q67": [
     {
-      "src": "midterm-images/tutorial6-2.jpg",
-      "width": 1110,
-      "height": 787,
+      "src": "midterm-crops/t6-q67-q1.jpg",
+      "width": 1289,
+      "height": 305,
       "page": 2,
+      "printedPage": 2,
       "label": "Tutorial 6",
-      "note": "Original question 67",
-      "printedPage": 2
+      "note": "Original question 67"
     }
   ],
   "t6-q69": [
     {
-      "src": "midterm-images/tutorial6-2.jpg",
-      "width": 1110,
-      "height": 787,
+      "src": "midterm-crops/t6-q69-q1.jpg",
+      "width": 1325,
+      "height": 387,
       "page": 2,
+      "printedPage": 2,
       "label": "Tutorial 6",
-      "note": "Original question 69",
-      "printedPage": 2
+      "note": "Original question 69"
     }
   ],
   "t6-q71": [
     {
-      "src": "midterm-images/tutorial6-2.jpg",
-      "width": 1110,
-      "height": 787,
+      "src": "midterm-crops/t6-q71-q1.jpg",
+      "width": 1304,
+      "height": 196,
       "page": 2,
+      "printedPage": 2,
       "label": "Tutorial 6",
-      "note": "Original question 71",
-      "printedPage": 2
+      "note": "Original question 71"
     }
   ],
   "t7-q1": [
     {
-      "src": "midterm-images/tutorial7-1.jpg",
-      "width": 1595,
-      "height": 1887,
+      "src": "midterm-crops/t7-q1-q1.jpg",
+      "width": 1384,
+      "height": 522,
       "page": 1,
+      "printedPage": 1,
       "label": "Tutorial 7",
-      "note": "Original question 1",
-      "printedPage": 1
+      "note": "Original question 1"
     }
   ],
   "t7-q2": [
     {
-      "src": "midterm-images/tutorial7-1.jpg",
-      "width": 1595,
-      "height": 1887,
+      "src": "midterm-crops/t7-q2-q1.jpg",
+      "width": 1309,
+      "height": 684,
       "page": 1,
+      "printedPage": 1,
       "label": "Tutorial 7",
-      "note": "Original question 2",
-      "printedPage": 1
+      "note": "Original question 2"
     }
   ],
   "t7-q3": [
     {
-      "src": "midterm-images/tutorial7-1.jpg",
-      "width": 1595,
-      "height": 1887,
+      "src": "midterm-crops/t7-q3-q1.jpg",
+      "width": 1463,
+      "height": 298,
       "page": 1,
+      "printedPage": 1,
       "label": "Tutorial 7",
-      "note": "Original question 3",
-      "printedPage": 1
+      "note": "Original question 3"
     }
   ],
   "t7-q4": [
     {
-      "src": "midterm-images/tutorial7-2.jpg",
-      "width": 1320,
-      "height": 1561,
+      "src": "midterm-crops/t7-q4-q1.jpg",
+      "width": 1438,
+      "height": 317,
       "page": 2,
+      "printedPage": 2,
       "label": "Tutorial 7",
-      "note": "Original question 4",
-      "printedPage": 2
+      "note": "Original question 4"
     }
   ],
   "t7-q5": [
     {
-      "src": "midterm-images/tutorial7-2.jpg",
-      "width": 1320,
-      "height": 1561,
+      "src": "midterm-crops/t7-q5-q1.jpg",
+      "width": 1407,
+      "height": 282,
       "page": 2,
+      "printedPage": 2,
       "label": "Tutorial 7",
-      "note": "Original question 5",
-      "printedPage": 2
+      "note": "Original question 5"
     }
   ],
   "t7-q6": [
     {
-      "src": "midterm-images/tutorial7-2.jpg",
-      "width": 1320,
-      "height": 1561,
+      "src": "midterm-crops/t7-q6-q1.jpg",
+      "width": 1478,
+      "height": 417,
       "page": 2,
+      "printedPage": 2,
       "label": "Tutorial 7",
-      "note": "Original question 6",
-      "printedPage": 2
+      "note": "Original question 6"
     }
   ],
   "t7-q7": [
     {
-      "src": "midterm-images/tutorial7-2.jpg",
-      "width": 1320,
-      "height": 1561,
+      "src": "midterm-crops/t7-q7-q1.jpg",
+      "width": 1441,
+      "height": 418,
       "page": 2,
+      "printedPage": 2,
       "label": "Tutorial 7",
-      "note": "Original question 7",
-      "printedPage": 2
+      "note": "Original question 7"
+    }
+  ],
+  "hw-22-15": [
+    {
+      "src": "midterm-crops/hw-22-15-q1.jpg",
+      "width": 738,
+      "height": 120,
+      "page": 1,
+      "printedPage": 1,
+      "label": "Homework 4",
+      "note": "Original question 22.15"
+    }
+  ],
+  "hw-22-19": [
+    {
+      "src": "midterm-crops/hw-22-19-q1.jpg",
+      "width": 743,
+      "height": 283,
+      "page": 1,
+      "printedPage": 1,
+      "label": "Homework 4",
+      "note": "Original question 22.19"
+    }
+  ],
+  "hw-22-21": [
+    {
+      "src": "midterm-crops/hw-22-21-q1.jpg",
+      "width": 738,
+      "height": 186,
+      "page": 1,
+      "printedPage": 1,
+      "label": "Homework 4",
+      "note": "Original question 22.21"
+    }
+  ],
+  "hw-22-33": [
+    {
+      "src": "midterm-crops/hw-22-33-q1.jpg",
+      "width": 740,
+      "height": 359,
+      "page": 1,
+      "printedPage": 1,
+      "label": "Homework 4",
+      "note": "Original question 22.33"
+    }
+  ],
+  "hw-22-37": [
+    {
+      "src": "midterm-crops/hw-22-37-q1.jpg",
+      "width": 740,
+      "height": 548,
+      "page": 2,
+      "printedPage": 2,
+      "label": "Homework 4",
+      "note": "Original question 22.37"
+    }
+  ],
+  "hw-23-1": [
+    {
+      "src": "midterm-crops/hw-23-1-q1.jpg",
+      "width": 738,
+      "height": 153,
+      "page": 1,
+      "printedPage": 1,
+      "label": "Homework 5",
+      "note": "Original question 23.1"
+    }
+  ],
+  "hw-23-5": [
+    {
+      "src": "midterm-crops/hw-23-5-q1.jpg",
+      "width": 739,
+      "height": 412,
+      "page": 1,
+      "printedPage": 1,
+      "label": "Homework 5",
+      "note": "Original question 23.5"
+    }
+  ],
+  "hw-23-7": [
+    {
+      "src": "midterm-crops/hw-23-7-q1.jpg",
+      "width": 739,
+      "height": 143,
+      "page": 1,
+      "printedPage": 1,
+      "label": "Homework 5",
+      "note": "Original question 23.7"
+    }
+  ],
+  "hw-23-8": [
+    {
+      "src": "midterm-crops/hw-23-8-q1.jpg",
+      "width": 739,
+      "height": 153,
+      "page": 1,
+      "printedPage": 1,
+      "label": "Homework 5",
+      "note": "Original question 23.8"
+    }
+  ],
+  "hw-23-19": [
+    {
+      "src": "midterm-crops/hw-23-19-q1.jpg",
+      "width": 746,
+      "height": 385,
+      "page": 1,
+      "printedPage": 1,
+      "label": "Homework 5",
+      "note": "Original question 23.19"
+    }
+  ],
+  "hw-23-27": [
+    {
+      "src": "midterm-crops/hw-23-27-q1.jpg",
+      "width": 739,
+      "height": 249,
+      "page": 2,
+      "printedPage": 2,
+      "label": "Homework 5",
+      "note": "Original question 23.27"
+    }
+  ],
+  "hw-23-44": [
+    {
+      "src": "midterm-crops/hw-23-44-q1.jpg",
+      "width": 741,
+      "height": 185,
+      "page": 1,
+      "printedPage": 1,
+      "label": "Homework 6",
+      "note": "Original question 23.44"
+    }
+  ],
+  "hw-23-55": [
+    {
+      "src": "midterm-crops/hw-23-55-q1.jpg",
+      "width": 740,
+      "height": 527,
+      "page": 1,
+      "printedPage": 1,
+      "label": "Homework 6",
+      "note": "Original question 23.55"
+    }
+  ],
+  "hw-23-59": [
+    {
+      "src": "midterm-crops/hw-23-59-q1.jpg",
+      "width": 737,
+      "height": 438,
+      "page": 1,
+      "printedPage": 1,
+      "label": "Homework 6",
+      "note": "Original question 23.59"
+    }
+  ],
+  "hw-24-1": [
+    {
+      "src": "midterm-crops/hw-24-1-q1.jpg",
+      "width": 741,
+      "height": 186,
+      "page": 1,
+      "printedPage": 1,
+      "label": "Homework 6",
+      "note": "Original question 24.1"
+    }
+  ],
+  "hw-24-3": [
+    {
+      "src": "midterm-crops/hw-24-3-q1.jpg",
+      "width": 738,
+      "height": 220,
+      "page": 2,
+      "printedPage": 2,
+      "label": "Homework 6",
+      "note": "Original question 24.3"
+    }
+  ],
+  "hw-24-7": [
+    {
+      "src": "midterm-crops/hw-24-7-q1.jpg",
+      "width": 741,
+      "height": 249,
+      "page": 2,
+      "printedPage": 2,
+      "label": "Homework 6 & 7",
+      "note": "Original question 24.7"
+    }
+  ],
+  "hw-24-8": [
+    {
+      "src": "midterm-crops/hw-24-8-q1.jpg",
+      "width": 739,
+      "height": 278,
+      "page": 1,
+      "printedPage": 1,
+      "label": "Homework 7",
+      "note": "Original question 24.8"
+    }
+  ],
+  "hw-24-12": [
+    {
+      "src": "midterm-crops/hw-24-12-q1.jpg",
+      "width": 741,
+      "height": 252,
+      "page": 1,
+      "printedPage": 1,
+      "label": "Homework 7",
+      "note": "Original question 24.12"
+    }
+  ],
+  "hw-24-14": [
+    {
+      "src": "midterm-crops/hw-24-14-q1.jpg",
+      "width": 738,
+      "height": 478,
+      "page": 1,
+      "printedPage": 1,
+      "label": "Homework 7",
+      "note": "Original question 24.14"
+    }
+  ],
+  "hw-24-24": [
+    {
+      "src": "midterm-crops/hw-24-24-q1.jpg",
+      "width": 740,
+      "height": 184,
+      "page": 2,
+      "printedPage": 2,
+      "label": "Homework 7",
+      "note": "Original question 24.24"
+    }
+  ],
+  "hw-24-36": [
+    {
+      "src": "midterm-crops/hw-24-36-q1.jpg",
+      "width": 741,
+      "height": 510,
+      "page": 2,
+      "printedPage": 2,
+      "label": "Homework 7",
+      "note": "Original question 24.36"
+    }
+  ],
+  "hw-24-66": [
+    {
+      "src": "midterm-crops/hw-24-66-q1.jpg",
+      "width": 740,
+      "height": 446,
+      "page": 2,
+      "printedPage": 2,
+      "label": "Homework 7",
+      "note": "Original question 24.66"
+    }
+  ],
+  "hw-24-68": [
+    {
+      "src": "midterm-crops/hw-24-68-q1.jpg",
+      "width": 741,
+      "height": 641,
+      "page": 3,
+      "printedPage": 3,
+      "label": "Homework 7",
+      "note": "Original question 24.68"
     }
   ],
   "book-22-24": [
     {
-      "src": "midterm-images/book-762.jpg",
-      "width": 1551,
-      "height": 2037,
+      "src": "midterm-crops/book-22-24-q1.jpg",
+      "width": 754,
+      "height": 204,
       "page": 762,
-      "label": "University Physics, 15th edition",
-      "note": "Original question 22.24",
-      "printedPage": 742
+      "printedPage": 742,
+      "label": "Textbook 15e",
+      "note": "Original question 22.24"
     }
   ],
   "book-22-25": [
     {
-      "src": "midterm-images/book-762.jpg",
-      "width": 1551,
-      "height": 2037,
+      "src": "midterm-crops/book-22-25-q1.jpg",
+      "width": 753,
+      "height": 143,
       "page": 762,
-      "label": "University Physics, 15th edition",
-      "note": "Original question 22.25",
-      "printedPage": 742
+      "printedPage": 742,
+      "label": "Textbook 15e",
+      "note": "Original question 22.25"
     }
   ],
   "book-22-40": [
     {
-      "src": "midterm-images/book-763.jpg",
-      "width": 1550,
-      "height": 2009,
+      "src": "midterm-crops/book-22-40-q1.jpg",
+      "width": 753,
+      "height": 356,
       "page": 763,
-      "label": "University Physics, 15th edition",
-      "note": "Original question 22.40",
-      "printedPage": 743
+      "printedPage": 743,
+      "label": "Textbook 15e",
+      "note": "Original question 22.40"
     }
   ],
   "book-22-42": [
     {
-      "src": "midterm-images/book-763.jpg",
-      "width": 1550,
-      "height": 2009,
+      "src": "midterm-crops/book-22-42-q1.jpg",
+      "width": 754,
+      "height": 362,
       "page": 763,
-      "label": "University Physics, 15th edition",
-      "note": "Original question 22.42",
-      "printedPage": 743
+      "printedPage": 743,
+      "label": "Textbook 15e",
+      "note": "Original question 22.42"
     }
   ],
   "book-22-47": [
     {
-      "src": "midterm-images/book-764.jpg",
-      "width": 1550,
-      "height": 2012,
+      "src": "midterm-crops/book-22-47-q1.jpg",
+      "width": 753,
+      "height": 217,
       "page": 764,
-      "label": "University Physics, 15th edition",
-      "note": "Original question 22.47",
-      "printedPage": 744
+      "printedPage": 744,
+      "label": "Textbook 15e",
+      "note": "Original question 22.47"
+    },
+    {
+      "src": "midterm-crops/book-22-47-q2.jpg",
+      "width": 752,
+      "height": 238,
+      "page": 764,
+      "printedPage": 744,
+      "label": "Textbook 15e",
+      "note": "Original question 22.47"
     }
   ],
   "book-22-50": [
     {
-      "src": "midterm-images/book-764.jpg",
-      "width": 1550,
-      "height": 2012,
+      "src": "midterm-crops/book-22-50-q1.jpg",
+      "width": 754,
+      "height": 265,
       "page": 764,
-      "label": "University Physics, 15th edition",
-      "note": "Original question 22.50",
-      "printedPage": 744
+      "printedPage": 744,
+      "label": "Textbook 15e",
+      "note": "Original question 22.50"
     }
   ],
   "book-22-52": [
     {
-      "src": "midterm-images/book-764.jpg",
-      "width": 1550,
-      "height": 2012,
+      "src": "midterm-crops/book-22-52-q1.jpg",
+      "width": 752,
+      "height": 367,
       "page": 764,
-      "label": "University Physics, 15th edition",
-      "note": "Original question 22.52",
-      "printedPage": 744
+      "printedPage": 744,
+      "label": "Textbook 15e",
+      "note": "Original question 22.52"
     }
   ],
   "book-23-75": [
     {
-      "src": "midterm-images/book-798.jpg",
-      "width": 1549,
-      "height": 2001,
+      "src": "midterm-crops/book-23-75-q1.jpg",
+      "width": 753,
+      "height": 205,
       "page": 798,
-      "label": "University Physics, 15th edition",
-      "note": "Original question 23.75",
-      "printedPage": 778
+      "printedPage": 778,
+      "label": "Textbook 15e",
+      "note": "Original question 23.75"
     }
   ],
   "book-24-17": [
     {
-      "src": "midterm-images/book-826.jpg",
-      "width": 1549,
-      "height": 1979,
+      "src": "midterm-crops/book-24-17-q1.jpg",
+      "width": 753,
+      "height": 144,
       "page": 826,
-      "label": "University Physics, 15th edition",
-      "note": "Original question 24.17",
-      "printedPage": 806
+      "printedPage": 806,
+      "label": "Textbook 15e",
+      "note": "Original question 24.17"
+    },
+    {
+      "src": "midterm-crops/book-24-17-q2.jpg",
+      "width": 534,
+      "height": 351,
+      "page": 826,
+      "printedPage": 806,
+      "label": "Textbook 15e",
+      "note": "Referenced Figure E24.17"
     }
   ],
   "book-24-20": [
     {
-      "src": "midterm-images/book-826.jpg",
-      "width": 1549,
-      "height": 1979,
+      "src": "midterm-crops/book-24-20-q1.jpg",
+      "width": 396,
+      "height": 299,
       "page": 826,
-      "label": "University Physics, 15th edition",
-      "note": "Original question 24.20",
-      "printedPage": 806
+      "printedPage": 806,
+      "label": "Textbook 15e",
+      "note": "Original question 24.20"
+    },
+    {
+      "src": "midterm-crops/book-24-20-q2.jpg",
+      "width": 334,
+      "height": 352,
+      "page": 826,
+      "printedPage": 806,
+      "label": "Textbook 15e",
+      "note": "Figure E24.20"
     }
   ],
   "book-24-21": [
     {
-      "src": "midterm-images/book-826.jpg",
-      "width": 1549,
-      "height": 1979,
+      "src": "midterm-crops/book-24-21-q1.jpg",
+      "width": 377,
+      "height": 361,
       "page": 826,
-      "label": "University Physics, 15th edition",
-      "note": "Original question 24.21",
-      "printedPage": 806
+      "printedPage": 806,
+      "label": "Textbook 15e",
+      "note": "Original question 24.21"
+    },
+    {
+      "src": "midterm-crops/book-24-21-q2.jpg",
+      "width": 354,
+      "height": 347,
+      "page": 826,
+      "printedPage": 806,
+      "label": "Textbook 15e",
+      "note": "Figure E24.21"
     }
   ],
   "book-24-30": [
     {
-      "src": "midterm-images/book-827.jpg",
-      "width": 1549,
-      "height": 2027,
+      "src": "midterm-crops/book-24-30-q1.jpg",
+      "width": 753,
+      "height": 294,
       "page": 827,
-      "label": "University Physics, 15th edition",
-      "note": "Original question 24.30",
-      "printedPage": 807
+      "printedPage": 807,
+      "label": "Textbook 15e",
+      "note": "Original question 24.30"
     }
   ],
   "book-24-31": [
     {
-      "src": "midterm-images/book-827.jpg",
-      "width": 1549,
-      "height": 2027,
+      "src": "midterm-crops/book-24-31-q1.jpg",
+      "width": 753,
+      "height": 205,
       "page": 827,
-      "label": "University Physics, 15th edition",
-      "note": "Original question 24.31",
-      "printedPage": 807
+      "printedPage": 807,
+      "label": "Textbook 15e",
+      "note": "Original question 24.31"
     }
   ],
   "book-24-34": [
     {
-      "src": "midterm-images/book-827.jpg",
-      "width": 1549,
-      "height": 2027,
+      "src": "midterm-crops/book-24-34-q1.jpg",
+      "width": 752,
+      "height": 297,
       "page": 827,
-      "label": "University Physics, 15th edition",
-      "note": "Original question 24.34",
-      "printedPage": 807
+      "printedPage": 807,
+      "label": "Textbook 15e",
+      "note": "Original question 24.34"
     }
   ],
   "book-24-35": [
     {
-      "src": "midterm-images/book-827.jpg",
-      "width": 1549,
-      "height": 2027,
+      "src": "midterm-crops/book-24-35-q1.jpg",
+      "width": 752,
+      "height": 263,
       "page": 827,
-      "label": "University Physics, 15th edition",
-      "note": "Original question 24.35",
-      "printedPage": 807
+      "printedPage": 807,
+      "label": "Textbook 15e",
+      "note": "Original question 24.35"
     }
   ],
   "book-24-36": [
     {
-      "src": "midterm-images/book-827.jpg",
-      "width": 1549,
-      "height": 2027,
+      "src": "midterm-crops/book-24-36-q1.jpg",
+      "width": 753,
+      "height": 359,
       "page": 827,
-      "label": "University Physics, 15th edition",
-      "note": "Original question 24.36",
-      "printedPage": 807
+      "printedPage": 807,
+      "label": "Textbook 15e",
+      "note": "Original question 24.36"
     }
   ],
   "book-24-39": [
     {
-      "src": "midterm-images/book-827.jpg",
-      "width": 1549,
-      "height": 2027,
+      "src": "midterm-crops/book-24-39-q1.jpg",
+      "width": 753,
+      "height": 325,
       "page": 827,
-      "label": "University Physics, 15th edition",
-      "note": "Original question 24.39",
-      "printedPage": 807
+      "printedPage": 807,
+      "label": "Textbook 15e",
+      "note": "Original question 24.39"
     }
   ],
   "book-24-42": [
     {
-      "src": "midterm-images/book-828.jpg",
-      "width": 1549,
-      "height": 2002,
+      "src": "midterm-crops/book-24-42-q1.jpg",
+      "width": 753,
+      "height": 387,
       "page": 828,
-      "label": "University Physics, 15th edition",
-      "note": "Original question 24.42",
-      "printedPage": 808
+      "printedPage": 808,
+      "label": "Textbook 15e",
+      "note": "Original question 24.42"
     }
   ],
   "book-24-44": [
     {
-      "src": "midterm-images/book-828.jpg",
-      "width": 1549,
-      "height": 2002,
+      "src": "midterm-crops/book-24-44-q1.jpg",
+      "width": 753,
+      "height": 205,
       "page": 828,
-      "label": "University Physics, 15th edition",
-      "note": "Original question 24.44",
-      "printedPage": 808
+      "printedPage": 808,
+      "label": "Textbook 15e",
+      "note": "Original question 24.44"
     }
   ],
   "book-24-49": [
     {
-      "src": "midterm-images/book-828.jpg",
-      "width": 1549,
-      "height": 2002,
+      "src": "midterm-crops/book-24-49-q1.jpg",
+      "width": 753,
+      "height": 205,
       "page": 828,
-      "label": "University Physics, 15th edition",
-      "note": "Original question 24.49",
-      "printedPage": 808
+      "printedPage": 808,
+      "label": "Textbook 15e",
+      "note": "Original question 24.49"
     }
   ],
   "book-24-52": [
     {
-      "src": "midterm-images/book-828.jpg",
-      "width": 1549,
-      "height": 2002,
+      "src": "midterm-crops/book-24-52-q1.jpg",
+      "width": 752,
+      "height": 206,
       "page": 828,
-      "label": "University Physics, 15th edition",
-      "note": "Original question 24.52",
-      "printedPage": 808
+      "printedPage": 808,
+      "label": "Textbook 15e",
+      "note": "Original question 24.52"
     },
     {
-      "src": "midterm-images/book-826.jpg",
-      "width": 1549,
-      "height": 1979,
+      "src": "midterm-crops/book-24-52-q2.jpg",
+      "width": 534,
+      "height": 351,
       "page": 826,
-      "label": "University Physics, 15th edition",
-      "note": "Referenced circuit diagram (E24.17 / E24.20)",
-      "printedPage": 806
+      "printedPage": 806,
+      "label": "Textbook 15e",
+      "note": "Referenced Figure E24.17"
     }
   ],
   "book-24-55": [
     {
-      "src": "midterm-images/book-829.jpg",
-      "width": 1551,
-      "height": 2001,
+      "src": "midterm-crops/book-24-55-q1.jpg",
+      "width": 753,
+      "height": 112,
       "page": 829,
-      "label": "University Physics, 15th edition",
-      "note": "Original question 24.55",
-      "printedPage": 809
+      "printedPage": 809,
+      "label": "Textbook 15e",
+      "note": "Original question 24.55"
     },
     {
-      "src": "midterm-images/book-826.jpg",
-      "width": 1549,
-      "height": 1979,
+      "src": "midterm-crops/book-24-55-q2.jpg",
+      "width": 334,
+      "height": 352,
       "page": 826,
-      "label": "University Physics, 15th edition",
-      "note": "Referenced circuit diagram (E24.17 / E24.20)",
-      "printedPage": 806
+      "printedPage": 806,
+      "label": "Textbook 15e",
+      "note": "Referenced Figure E24.20"
     }
   ],
   "book-24-57": [
     {
-      "src": "midterm-images/book-829.jpg",
-      "width": 1551,
-      "height": 2001,
+      "src": "midterm-crops/book-24-57-q1.jpg",
+      "width": 753,
+      "height": 298,
       "page": 829,
-      "label": "University Physics, 15th edition",
-      "note": "Original question 24.57",
-      "printedPage": 809
+      "printedPage": 809,
+      "label": "Textbook 15e",
+      "note": "Original question 24.57"
     }
   ],
   "book-24-71": [
     {
-      "src": "midterm-images/book-831.jpg",
-      "width": 1549,
-      "height": 2025,
+      "src": "midterm-crops/book-24-71-q1.jpg",
+      "width": 753,
+      "height": 270,
       "page": 831,
-      "label": "University Physics, 15th edition",
-      "note": "Original question 24.71",
-      "printedPage": 811
+      "printedPage": 811,
+      "label": "Textbook 15e",
+      "note": "Original question 24.71"
     }
   ],
   "book-24-72": [
     {
-      "src": "midterm-images/book-831.jpg",
-      "width": 1549,
-      "height": 2025,
+      "src": "midterm-crops/book-24-72-q1.jpg",
+      "width": 753,
+      "height": 991,
       "page": 831,
-      "label": "University Physics, 15th edition",
-      "note": "Original question 24.72",
-      "printedPage": 811
+      "printedPage": 811,
+      "label": "Textbook 15e",
+      "note": "Original question 24.72"
     }
   ],
   "book-VP24-11.1": [
     {
-      "src": "midterm-images/book-824.jpg",
-      "width": 1550,
-      "height": 2078,
+      "src": "midterm-crops/book-VP24-11.1-q1.jpg",
+      "width": 753,
+      "height": 325,
       "page": 824,
-      "label": "University Physics, 15th edition",
-      "note": "Original question VP24.11.1",
-      "printedPage": 804
+      "printedPage": 804,
+      "label": "Textbook 15e",
+      "note": "Original question VP24.11.1"
     }
   ],
   "book-VP24-11.2": [
     {
-      "src": "midterm-images/book-824.jpg",
-      "width": 1550,
-      "height": 2078,
+      "src": "midterm-crops/book-VP24-11.2-q1.jpg",
+      "width": 753,
+      "height": 176,
       "page": 824,
-      "label": "University Physics, 15th edition",
-      "note": "Original question VP24.11.2",
-      "printedPage": 804
+      "printedPage": 804,
+      "label": "Textbook 15e",
+      "note": "Original question VP24.11.2"
+    },
+    {
+      "src": "midterm-crops/book-VP24-11.2-q2.jpg",
+      "width": 752,
+      "height": 143,
+      "page": 824,
+      "printedPage": 804,
+      "label": "Textbook 15e",
+      "note": "Original question VP24.11.2"
     }
   ],
   "book-VP24-11.3": [
     {
-      "src": "midterm-images/book-824.jpg",
-      "width": 1550,
-      "height": 2078,
+      "src": "midterm-crops/book-VP24-11.3-q1.jpg",
+      "width": 753,
+      "height": 236,
       "page": 824,
-      "label": "University Physics, 15th edition",
-      "note": "Original question VP24.11.3",
-      "printedPage": 804
+      "printedPage": 804,
+      "label": "Textbook 15e",
+      "note": "Original question VP24.11.3"
     }
   ],
   "book-VP24-11.4": [
     {
-      "src": "midterm-images/book-824.jpg",
-      "width": 1550,
-      "height": 2078,
+      "src": "midterm-crops/book-VP24-11.4-q1.jpg",
+      "width": 753,
+      "height": 205,
       "page": 824,
-      "label": "University Physics, 15th edition",
-      "note": "Original question VP24.11.4",
-      "printedPage": 804
+      "printedPage": 804,
+      "label": "Textbook 15e",
+      "note": "Original question VP24.11.4"
     }
   ]
 }

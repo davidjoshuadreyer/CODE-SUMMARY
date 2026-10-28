@@ -18,14 +18,24 @@
   message(panel,'Loading original textbook solution…');
   try{
    const fragments=[];
-   for(const n of panel.dataset.pages.split(',').map(Number)){
+   for(const crop of JSON.parse(panel.dataset.crops)){
+    const n=crop.page;
     if(!cache.has(n))cache.set(n,C.referencePage('phys-manual',n,scope).catch(e=>{cache.delete(n);throw e;}));
     const data=await cache.get(n);
     if(ticket!==generation||owner!==C.user?.id)return;
     if(!data||typeof data.image!=='string'||!/^\/9j\/[A-Za-z0-9+/=]+$/.test(data.image)){cache.delete(n);throw Error('Manual page '+n+' is unavailable.');}
     const figure=document.createElement('figure'),image=document.createElement('img'),caption=document.createElement('figcaption');
-    image.src='data:image/jpeg;base64,'+data.image;
-    image.alt='Original textbook solution '+panel.dataset.problem+', solutions-manual PDF page '+n;
+    const original=new Image();original.src='data:image/jpeg;base64,'+data.image;await original.decode();
+    if(ticket!==generation||owner!==C.user?.id)return;
+    const [x0,y0,x1,y1]=crop.box;
+    if(![x0,y0,x1,y1].every(Number.isFinite)||x0<0||y0<0||x1>1||y1>1||x1<=x0||y1<=y0)throw Error('Invalid solution crop.');
+    const canvas=document.createElement('canvas'),w=original.naturalWidth,h=original.naturalHeight;
+    const sx=Math.floor(x0*w),sy=Math.floor(y0*h),sw=Math.floor(x1*w)-sx,sh=Math.floor(y1*h)-sy;
+    canvas.width=sw+28;canvas.height=sh+28;
+    const ctx=canvas.getContext('2d');ctx.fillStyle='white';ctx.fillRect(0,0,canvas.width,canvas.height);
+    ctx.drawImage(original,sx,sy,sw,sh,14,14,sw,sh);image.src=canvas.toDataURL('image/jpeg',.95);
+    image.width=canvas.width;image.height=canvas.height;
+    image.alt='Cropped original textbook solution '+panel.dataset.problem+', solutions-manual PDF page '+n;
     image.className='source-page';image.decoding='async';
     caption.textContent='Solutions manual · problem '+panel.dataset.problem+' · PDF page '+n+'. Click the image to enlarge.';
     image.tabIndex=0;image.setAttribute('role','button');image.setAttribute('aria-label',image.alt+' — enlarge');

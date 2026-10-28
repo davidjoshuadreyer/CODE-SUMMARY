@@ -44,8 +44,17 @@ const shots=require('../phys210/midterm-2-images.json');
 assert.equal(Object.keys(shots).length,manifest.total);
 for(const p of manifest.problems){
  assert(shots[p.id]?.length,`Missing screenshot for ${p.id}`);
- for(const s of shots[p.id]){assert(fs.existsSync(path.join(dir,s.src)),s.src);assert(s.width>500&&s.height>200);assert(s.page>=1);}
+ for(const s of shots[p.id]){assert(fs.existsSync(path.join(dir,s.src)),s.src);assert(s.width>50&&s.height>40);assert(s.page>=1);}
 }
 assert.equal((html.match(/class="source-screenshots"/g)||[]).length,86);
 assert.equal((html.match(/class="manual-screenshots"/g)||[]).length,manifest.problems.filter(p=>p.manual).length);
 console.log('PASS: original question screenshots cover all 86 entries; every matched manual has inline image controls.');
+
+const keys=require('../phys210/midterm-2-tutorial-solutions.json'),crops=require('../phys210/midterm-2-manual-crops.json');
+assert.equal(Object.keys(keys.solutions).length,18);
+assert.equal((html.match(/class="tutorial-screenshots"/g)||[]).length,18);
+for(const shots of Object.values(keys.solutions))for(const shot of shots){assert(fs.existsSync(path.join(dir,shot.src)));assert(shot.url.startsWith('https://online.camosun.ca/'));}
+for(const p of manifest.problems)if(p.manual){const cs=crops[p.manual.problem];assert.deepEqual([...new Set(cs.map(c=>c.page))],p.manual.pages);for(const c of cs){const [a,b,x,y]=c.box;assert(a>=0&&b>=0&&x<=1&&y<=1&&a<x&&b<y);}}
+assert.deepEqual(crops['22.52'].map(c=>c.page),[99,100]);
+assert.deepEqual(crops['23.1'].map(c=>c.page),[114,115]);
+console.log('PASS: 18 posted tutorial solutions, normalized manual crops and multi-page continuations.');
