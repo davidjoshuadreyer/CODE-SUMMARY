@@ -39,3 +39,13 @@ const parse=sol.slice(sol.indexOf('const params='),sol.indexOf('let owner='));
 for(const [query,expected] of [['?manualPage=97',97],['?manualPage=-2',null],['?manualPage=abc',null],['?manualPage=1.5',null],['',null]]){const c={URLSearchParams,location:{search:query}};vm.runInNewContext(parse+'this.answer=directManualPage;',c);assert.equal(c.answer,expected);}
 assert(sol.includes('showPage(directManualPage||'));
 console.log('PASS: 86 worked solutions, local links/anchors, manual page links, Gauss quadrature, angle capacitance, network conservation and manual URL parsing.');
+
+const shots=require('../phys210/midterm-2-images.json');
+assert.equal(Object.keys(shots).length,manifest.total);
+for(const p of manifest.problems){
+ assert(shots[p.id]?.length,`Missing screenshot for ${p.id}`);
+ for(const s of shots[p.id]){assert(fs.existsSync(path.join(dir,s.src)),s.src);assert(s.width>500&&s.height>200);assert(s.page>=1);}
+}
+assert.equal((html.match(/class="source-screenshots"/g)||[]).length,86);
+assert.equal((html.match(/class="manual-screenshots"/g)||[]).length,manifest.problems.filter(p=>p.manual).length);
+console.log('PASS: original question screenshots cover all 86 entries; every matched manual has inline image controls.');
