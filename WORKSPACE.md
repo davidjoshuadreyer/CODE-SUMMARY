@@ -202,3 +202,12 @@ labelled separately. Circuits lesson aliases include the new worked-library entr
 ## ENGR 290 assignment reps
 
 `engr290/assignment-practice.html` provides 42 multiple-choice questions covering all six Assignment 1 and fourteen Assignment 2 problems, verified against D2L on October 26, 2026. Edit `dev/build-engr290-reps.cjs` and run it to rebuild the bank. Graph readings are approximate and stated explicitly; Assignment 2 Q5(c)'s apparent key error is explained. Progress uses `engr290-assignment-reps-v1` in browser localStorage, separate from account backups. Hints count as assisted, revealed answers do not count as correct, and missed/assisted questions can be retried.
+
+
+## Physics Midterm 2 (October 28, 2026)
+
+`phys210/midterm-2.html` maps the October 30 exam hints to 24 homework questions, 33 tutorial questions, and 29 additional textbook solutions. It includes potential/energy practice, both announced bonuses, edition translations, and a small-angle tilted-plate capacitance solver. The angle prediction is identified separately from the D2L announcement.
+
+Rebuild with `node dev/build-physics-midterm2.cjs`; original additional explanations live in `dev/physics-midterm2-extra.cjs`. Existing homework/tutorial data remain the sources of their worked explanations. The textbook manual is not copied into public assets: checked `solutions.html?manualPage=N#manual-image` links use the existing authenticated reference viewer and its account guards. Review checks use browser-local `tesselate-phys210-midterm2-reviewed-v1`.
+
+Run `node dev/check-physics-midterm2.cjs`, `node dev/check-physics-course.cjs`, and `node dev/solutions-test.cjs`. The midterm check covers static links, question coverage, independent Gauss quadrature, numerical strip integration, capacitor conservation and direct manual-page parsing. Browser verification covers combined filters, disclosures, persistent checks, infeasible calculator inputs, phone layout and the physics workspace entry.

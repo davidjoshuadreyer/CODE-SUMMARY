@@ -21,7 +21,7 @@ near(integral/a,1/(x*(x-a)),1e-8);
 assert.equal(questions.length,89);assert.equal(new Set(questions.map(q=>q.id)).size,89);
 for(const q of questions)assert.deepEqual(q.steps.map(s=>s[0]),['Identify','Set up','Execute','Evaluate']);
 const ctx={window:{}};vm.runInNewContext(fs.readFileSync('assets/workspace/learning-paths.js','utf8'),ctx);
-for(const course of Object.values(ctx.window.TESSELATE_PATHS))for(const item of [...course.lessons,...course.practice])assert.ok(fs.existsSync(item.url),item.url);
+for(const course of Object.values(ctx.window.TESSELATE_PATHS))for(const item of [...course.lessons,...course.practice])assert.ok(fs.existsSync(item.url.split(/[?#]/)[0]),item.url);
 for(const file of fs.readdirSync('phys210').filter(f=>f.startsWith('learn-')||f==='quiz.html'||f==='review.html')){
  const html=fs.readFileSync('phys210/'+file,'utf8');assert.ok(!html.includes('katex-error'));assert.ok(!html.includes('href="undefined"'));
  for(const [,href] of html.matchAll(/href="([^"#]+)(?:#[^"]*)?"/g)){if(!/^https?:/.test(href))assert.ok(fs.existsSync(require('node:path').resolve('phys210',href.split('?')[0])),file+': '+href)}

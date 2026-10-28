@@ -1,0 +1,964 @@
+{
+  "date": "2026-10-28",
+  "counts": {
+    "homework": 24,
+    "tutorial": 33,
+    "textbook": 29
+  },
+  "total": 86,
+  "problems": [
+    {
+      "id": "hw-22-15",
+      "number": "22.15",
+      "kind": "homework",
+      "source": "Homework 4",
+      "topic": "gauss"
+    },
+    {
+      "id": "hw-22-19",
+      "number": "22.19",
+      "kind": "homework",
+      "source": "Homework 4",
+      "topic": "gauss",
+      "manual": {
+        "problem": "22.19",
+        "pages": [
+          79,
+          80
+        ]
+      }
+    },
+    {
+      "id": "hw-22-21",
+      "number": "22.21",
+      "kind": "homework",
+      "source": "Homework 4",
+      "topic": "bonus-sphere",
+      "manual": {
+        "problem": "22.21",
+        "pages": [
+          80,
+          81
+        ]
+      }
+    },
+    {
+      "id": "hw-22-33",
+      "number": "22.33",
+      "kind": "homework",
+      "source": "Homework 4",
+      "topic": "tilt",
+      "manual": {
+        "problem": "22.31",
+        "pages": [
+          84
+        ]
+      }
+    },
+    {
+      "id": "hw-22-37",
+      "number": "22.37",
+      "kind": "homework",
+      "source": "Homework 4",
+      "topic": "gauss"
+    },
+    {
+      "id": "hw-23-1",
+      "number": "23.1",
+      "kind": "homework",
+      "source": "Homework 5",
+      "topic": "collision",
+      "manual": {
+        "problem": "23.1",
+        "pages": [
+          115
+        ]
+      }
+    },
+    {
+      "id": "hw-23-5",
+      "number": "23.5",
+      "kind": "homework",
+      "source": "Homework 5",
+      "topic": "collision",
+      "manual": {
+        "problem": "23.5",
+        "pages": [
+          116,
+          117
+        ]
+      }
+    },
+    {
+      "id": "hw-23-7",
+      "number": "23.7",
+      "kind": "homework",
+      "source": "Homework 5",
+      "topic": "collision",
+      "manual": {
+        "problem": "23.7",
+        "pages": [
+          118
+        ]
+      }
+    },
+    {
+      "id": "hw-23-8",
+      "number": "23.8",
+      "kind": "homework",
+      "source": "Homework 5",
+      "topic": "potential",
+      "manual": {
+        "problem": "23.8",
+        "pages": [
+          118
+        ]
+      }
+    },
+    {
+      "id": "hw-23-19",
+      "number": "23.19",
+      "kind": "homework",
+      "source": "Homework 5",
+      "topic": "potential",
+      "manual": {
+        "problem": "23.19",
+        "pages": [
+          123
+        ]
+      }
+    },
+    {
+      "id": "hw-23-27",
+      "number": "23.27",
+      "kind": "homework",
+      "source": "Homework 5",
+      "topic": "potential",
+      "manual": {
+        "problem": "23.29",
+        "pages": [
+          126,
+          127
+        ]
+      }
+    },
+    {
+      "id": "hw-23-44",
+      "number": "23.44",
+      "kind": "homework",
+      "source": "Homework 6",
+      "topic": "potential",
+      "manual": {
+        "problem": "23.44",
+        "pages": [
+          132
+        ]
+      }
+    },
+    {
+      "id": "hw-23-55",
+      "number": "23.55",
+      "kind": "homework",
+      "source": "Homework 6",
+      "topic": "potential",
+      "manual": {
+        "problem": "23.55",
+        "pages": [
+          139
+        ]
+      }
+    },
+    {
+      "id": "hw-23-59",
+      "number": "23.59",
+      "kind": "homework",
+      "source": "Homework 6",
+      "topic": "tilt",
+      "manual": {
+        "problem": "23.59",
+        "pages": [
+          140
+        ]
+      }
+    },
+    {
+      "id": "hw-24-1",
+      "number": "24.1",
+      "kind": "homework",
+      "source": "Homework 6",
+      "topic": "dielectric",
+      "manual": {
+        "problem": "24.1",
+        "pages": [
+          158
+        ]
+      }
+    },
+    {
+      "id": "hw-24-3",
+      "number": "24.3",
+      "kind": "homework",
+      "source": "Homework 6",
+      "topic": "dielectric",
+      "manual": {
+        "problem": "24.3",
+        "pages": [
+          159
+        ]
+      }
+    },
+    {
+      "id": "hw-24-7",
+      "number": "24.7",
+      "kind": "homework",
+      "source": "Homework 6 & 7",
+      "topic": "dielectric",
+      "manual": {
+        "problem": "24.7",
+        "pages": [
+          160
+        ]
+      }
+    },
+    {
+      "id": "hw-24-8",
+      "number": "24.8",
+      "kind": "homework",
+      "source": "Homework 7",
+      "topic": "dielectric",
+      "manual": {
+        "problem": "24.6",
+        "pages": [
+          159,
+          160
+        ]
+      }
+    },
+    {
+      "id": "hw-24-12",
+      "number": "24.12",
+      "kind": "homework",
+      "source": "Homework 7",
+      "topic": "potential",
+      "manual": {
+        "problem": "24.10",
+        "pages": [
+          161
+        ]
+      }
+    },
+    {
+      "id": "hw-24-14",
+      "number": "24.14",
+      "kind": "homework",
+      "source": "Homework 7",
+      "topic": "networks",
+      "manual": {
+        "problem": "24.14",
+        "pages": [
+          162
+        ]
+      }
+    },
+    {
+      "id": "hw-24-24",
+      "number": "24.24",
+      "kind": "homework",
+      "source": "Homework 7",
+      "topic": "dielectric",
+      "manual": {
+        "problem": "24.24",
+        "pages": [
+          167
+        ]
+      }
+    },
+    {
+      "id": "hw-24-36",
+      "number": "24.36",
+      "kind": "homework",
+      "source": "Homework 7",
+      "topic": "dielectric"
+    },
+    {
+      "id": "hw-24-66",
+      "number": "24.66",
+      "kind": "homework",
+      "source": "Homework 7",
+      "topic": "bonus-dielectric",
+      "manual": {
+        "problem": "24.64",
+        "pages": [
+          186
+        ]
+      }
+    },
+    {
+      "id": "hw-24-68",
+      "number": "24.68",
+      "kind": "homework",
+      "source": "Homework 7",
+      "topic": "tilt",
+      "manual": {
+        "problem": "24.66",
+        "pages": [
+          187
+        ]
+      }
+    },
+    {
+      "id": "t4-q1",
+      "number": "1",
+      "kind": "tutorial",
+      "source": "Tutorial 4",
+      "topic": "gauss",
+      "manual": null
+    },
+    {
+      "id": "t4-q2",
+      "number": "2",
+      "kind": "tutorial",
+      "source": "Tutorial 4",
+      "topic": "gauss",
+      "manual": null
+    },
+    {
+      "id": "t4-q3",
+      "number": "3",
+      "kind": "tutorial",
+      "source": "Tutorial 4",
+      "topic": "gauss",
+      "manual": null
+    },
+    {
+      "id": "t4-q4",
+      "number": "4",
+      "kind": "tutorial",
+      "source": "Tutorial 4",
+      "topic": "bonus-sphere",
+      "manual": null
+    },
+    {
+      "id": "t4-q5",
+      "number": "5",
+      "kind": "tutorial",
+      "source": "Tutorial 4",
+      "topic": "gauss",
+      "manual": null
+    },
+    {
+      "id": "t4-q6",
+      "number": "6",
+      "kind": "tutorial",
+      "source": "Tutorial 4",
+      "topic": "gauss",
+      "manual": null
+    },
+    {
+      "id": "t4-q7",
+      "number": "7",
+      "kind": "tutorial",
+      "source": "Tutorial 4",
+      "topic": "gauss",
+      "manual": null
+    },
+    {
+      "id": "t4-q8",
+      "number": "8",
+      "kind": "tutorial",
+      "source": "Tutorial 4",
+      "topic": "gauss",
+      "manual": null
+    },
+    {
+      "id": "t4-q9",
+      "number": "9",
+      "kind": "tutorial",
+      "source": "Tutorial 4",
+      "topic": "gauss",
+      "manual": null
+    },
+    {
+      "id": "t5-q3",
+      "number": "3",
+      "kind": "tutorial",
+      "source": "Tutorial 5",
+      "topic": "potential",
+      "manual": null
+    },
+    {
+      "id": "t5-q37",
+      "number": "37",
+      "kind": "tutorial",
+      "source": "Tutorial 5",
+      "topic": "potential",
+      "manual": null
+    },
+    {
+      "id": "t5-q16",
+      "number": "16",
+      "kind": "tutorial",
+      "source": "Tutorial 5",
+      "topic": "potential",
+      "manual": null
+    },
+    {
+      "id": "t5-q17",
+      "number": "17",
+      "kind": "tutorial",
+      "source": "Tutorial 5",
+      "topic": "potential",
+      "manual": null
+    },
+    {
+      "id": "t5-q18",
+      "number": "18",
+      "kind": "tutorial",
+      "source": "Tutorial 5",
+      "topic": "potential",
+      "manual": null
+    },
+    {
+      "id": "t5-q34",
+      "number": "34",
+      "kind": "tutorial",
+      "source": "Tutorial 5",
+      "topic": "potential",
+      "manual": null
+    },
+    {
+      "id": "t5-q39",
+      "number": "39",
+      "kind": "tutorial",
+      "source": "Tutorial 5",
+      "topic": "potential",
+      "manual": null
+    },
+    {
+      "id": "t5-q42",
+      "number": "42",
+      "kind": "tutorial",
+      "source": "Tutorial 5",
+      "topic": "potential",
+      "manual": null
+    },
+    {
+      "id": "t5-q63",
+      "number": "63",
+      "kind": "tutorial",
+      "source": "Tutorial 5",
+      "topic": "potential",
+      "manual": null
+    },
+    {
+      "id": "t6-q7",
+      "number": "7",
+      "kind": "tutorial",
+      "source": "Tutorial 6",
+      "topic": "dielectric",
+      "manual": null
+    },
+    {
+      "id": "t6-q23",
+      "number": "23",
+      "kind": "tutorial",
+      "source": "Tutorial 6",
+      "topic": "sharing",
+      "manual": null
+    },
+    {
+      "id": "t6-q31",
+      "number": "31",
+      "kind": "tutorial",
+      "source": "Tutorial 6",
+      "topic": "dielectric",
+      "manual": null
+    },
+    {
+      "id": "t6-q34",
+      "number": "34",
+      "kind": "tutorial",
+      "source": "Tutorial 6",
+      "topic": "dielectric",
+      "manual": null
+    },
+    {
+      "id": "t6-q47",
+      "number": "47",
+      "kind": "tutorial",
+      "source": "Tutorial 6",
+      "topic": "dielectric",
+      "manual": null
+    },
+    {
+      "id": "t6-q67",
+      "number": "67",
+      "kind": "tutorial",
+      "source": "Tutorial 6",
+      "topic": "sharing",
+      "manual": null
+    },
+    {
+      "id": "t6-q69",
+      "number": "69",
+      "kind": "tutorial",
+      "source": "Tutorial 6",
+      "topic": "dielectric",
+      "manual": null
+    },
+    {
+      "id": "t6-q71",
+      "number": "71",
+      "kind": "tutorial",
+      "source": "Tutorial 6",
+      "topic": "sharing",
+      "manual": null
+    },
+    {
+      "id": "t7-q1",
+      "number": "1",
+      "kind": "tutorial",
+      "source": "Tutorial 7",
+      "topic": "networks",
+      "manual": null
+    },
+    {
+      "id": "t7-q2",
+      "number": "2",
+      "kind": "tutorial",
+      "source": "Tutorial 7",
+      "topic": "networks",
+      "manual": null
+    },
+    {
+      "id": "t7-q3",
+      "number": "3",
+      "kind": "tutorial",
+      "source": "Tutorial 7",
+      "topic": "sharing",
+      "manual": null
+    },
+    {
+      "id": "t7-q4",
+      "number": "4",
+      "kind": "tutorial",
+      "source": "Tutorial 7",
+      "topic": "sharing",
+      "manual": null
+    },
+    {
+      "id": "t7-q5",
+      "number": "5",
+      "kind": "tutorial",
+      "source": "Tutorial 7",
+      "topic": "sharing",
+      "manual": null
+    },
+    {
+      "id": "t7-q6",
+      "number": "6",
+      "kind": "tutorial",
+      "source": "Tutorial 7",
+      "topic": "dielectric",
+      "manual": null
+    },
+    {
+      "id": "t7-q7",
+      "number": "7",
+      "kind": "tutorial",
+      "source": "Tutorial 7",
+      "topic": "dielectric",
+      "manual": null
+    },
+    {
+      "id": "book-22-24",
+      "number": "22.24",
+      "kind": "textbook",
+      "source": "Textbook 15e",
+      "topic": "bonus-sphere",
+      "manual": {
+        "problem": "22.24",
+        "pages": [
+          82
+        ]
+      }
+    },
+    {
+      "id": "book-22-25",
+      "number": "22.25",
+      "kind": "textbook",
+      "source": "Textbook 15e",
+      "topic": "gauss",
+      "manual": {
+        "problem": "22.25",
+        "pages": [
+          82
+        ]
+      }
+    },
+    {
+      "id": "book-22-40",
+      "number": "22.40",
+      "kind": "textbook",
+      "source": "Textbook 15e",
+      "topic": "gauss",
+      "manual": {
+        "problem": "22.40",
+        "pages": [
+          89,
+          90
+        ]
+      }
+    },
+    {
+      "id": "book-22-42",
+      "number": "22.42",
+      "kind": "textbook",
+      "source": "Textbook 15e",
+      "topic": "gauss",
+      "manual": {
+        "problem": "22.42",
+        "pages": [
+          90,
+          91
+        ]
+      }
+    },
+    {
+      "id": "book-22-47",
+      "number": "22.47",
+      "kind": "textbook",
+      "source": "Textbook 15e",
+      "topic": "bonus-sphere",
+      "manual": {
+        "problem": "22.47",
+        "pages": [
+          94,
+          95,
+          96
+        ]
+      }
+    },
+    {
+      "id": "book-22-50",
+      "number": "22.50",
+      "kind": "textbook",
+      "source": "Textbook 15e",
+      "topic": "bonus-sphere",
+      "manual": {
+        "problem": "22.50",
+        "pages": [
+          97
+        ]
+      }
+    },
+    {
+      "id": "book-22-52",
+      "number": "22.52",
+      "kind": "textbook",
+      "source": "Textbook 15e",
+      "topic": "bonus-sphere",
+      "manual": {
+        "problem": "22.52",
+        "pages": [
+          99
+        ]
+      }
+    },
+    {
+      "id": "book-23-75",
+      "number": "23.75",
+      "kind": "textbook",
+      "source": "Textbook 15e",
+      "topic": "collision",
+      "manual": {
+        "problem": "23.75",
+        "pages": [
+          148,
+          149
+        ]
+      }
+    },
+    {
+      "id": "book-24-17",
+      "number": "24.17",
+      "kind": "textbook",
+      "source": "Textbook 15e",
+      "topic": "networks",
+      "manual": {
+        "problem": "24.17",
+        "pages": [
+          163,
+          164,
+          165
+        ]
+      }
+    },
+    {
+      "id": "book-24-20",
+      "number": "24.20",
+      "kind": "textbook",
+      "source": "Textbook 15e",
+      "topic": "networks",
+      "manual": {
+        "problem": "24.20",
+        "pages": [
+          166
+        ]
+      }
+    },
+    {
+      "id": "book-24-21",
+      "number": "24.21",
+      "kind": "textbook",
+      "source": "Textbook 15e",
+      "topic": "networks",
+      "manual": {
+        "problem": "24.21",
+        "pages": [
+          166,
+          167
+        ]
+      }
+    },
+    {
+      "id": "book-24-30",
+      "number": "24.30",
+      "kind": "textbook",
+      "source": "Textbook 15e",
+      "topic": "bonus-dielectric",
+      "manual": {
+        "problem": "24.30",
+        "pages": [
+          170
+        ]
+      }
+    },
+    {
+      "id": "book-24-31",
+      "number": "24.31",
+      "kind": "textbook",
+      "source": "Textbook 15e",
+      "topic": "dielectric",
+      "manual": {
+        "problem": "24.31",
+        "pages": [
+          170
+        ]
+      }
+    },
+    {
+      "id": "book-24-34",
+      "number": "24.34",
+      "kind": "textbook",
+      "source": "Textbook 15e",
+      "topic": "bonus-dielectric",
+      "manual": {
+        "problem": "24.34",
+        "pages": [
+          171
+        ]
+      }
+    },
+    {
+      "id": "book-24-35",
+      "number": "24.35",
+      "kind": "textbook",
+      "source": "Textbook 15e",
+      "topic": "bonus-dielectric",
+      "manual": {
+        "problem": "24.35",
+        "pages": [
+          171
+        ]
+      }
+    },
+    {
+      "id": "book-24-36",
+      "number": "24.36",
+      "kind": "textbook",
+      "source": "Textbook 15e",
+      "topic": "bonus-dielectric",
+      "manual": {
+        "problem": "24.36",
+        "pages": [
+          171
+        ]
+      }
+    },
+    {
+      "id": "book-24-39",
+      "number": "24.39",
+      "kind": "textbook",
+      "source": "Textbook 15e",
+      "topic": "dielectric",
+      "manual": {
+        "problem": "24.39",
+        "pages": [
+          172
+        ]
+      }
+    },
+    {
+      "id": "book-24-42",
+      "number": "24.42",
+      "kind": "textbook",
+      "source": "Textbook 15e",
+      "topic": "dielectric",
+      "manual": {
+        "problem": "24.42",
+        "pages": [
+          173
+        ]
+      }
+    },
+    {
+      "id": "book-24-44",
+      "number": "24.44",
+      "kind": "textbook",
+      "source": "Textbook 15e",
+      "topic": "dielectric",
+      "manual": {
+        "problem": "24.44",
+        "pages": [
+          174
+        ]
+      }
+    },
+    {
+      "id": "book-24-49",
+      "number": "24.49",
+      "kind": "textbook",
+      "source": "Textbook 15e",
+      "topic": "sharing",
+      "manual": {
+        "problem": "24.49",
+        "pages": [
+          176
+        ]
+      }
+    },
+    {
+      "id": "book-24-52",
+      "number": "24.52",
+      "kind": "textbook",
+      "source": "Textbook 15e",
+      "topic": "networks",
+      "manual": {
+        "problem": "24.52",
+        "pages": [
+          177,
+          178
+        ]
+      }
+    },
+    {
+      "id": "book-24-55",
+      "number": "24.55",
+      "kind": "textbook",
+      "source": "Textbook 15e",
+      "topic": "networks",
+      "manual": {
+        "problem": "24.55",
+        "pages": [
+          180
+        ]
+      }
+    },
+    {
+      "id": "book-24-57",
+      "number": "24.57",
+      "kind": "textbook",
+      "source": "Textbook 15e",
+      "topic": "sharing",
+      "manual": {
+        "problem": "24.57",
+        "pages": [
+          181,
+          182
+        ]
+      }
+    },
+    {
+      "id": "book-24-71",
+      "number": "24.71",
+      "kind": "textbook",
+      "source": "Textbook 15e",
+      "topic": "tilt",
+      "manual": {
+        "problem": "24.71",
+        "pages": [
+          191,
+          192
+        ]
+      }
+    },
+    {
+      "id": "book-24-72",
+      "number": "24.72",
+      "kind": "textbook",
+      "source": "Textbook 15e",
+      "topic": "tilt",
+      "manual": {
+        "problem": "24.72",
+        "pages": [
+          192
+        ]
+      }
+    },
+    {
+      "id": "book-VP24-11.1",
+      "number": "VP24.11.1",
+      "kind": "textbook",
+      "source": "Textbook 15e",
+      "topic": "dielectric",
+      "manual": {
+        "problem": "VP24.11.1",
+        "pages": [
+          157,
+          158
+        ]
+      }
+    },
+    {
+      "id": "book-VP24-11.2",
+      "number": "VP24.11.2",
+      "kind": "textbook",
+      "source": "Textbook 15e",
+      "topic": "dielectric",
+      "manual": {
+        "problem": "VP24.11.2",
+        "pages": [
+          157,
+          158
+        ]
+      }
+    },
+    {
+      "id": "book-VP24-11.3",
+      "number": "VP24.11.3",
+      "kind": "textbook",
+      "source": "Textbook 15e",
+      "topic": "dielectric",
+      "manual": {
+        "problem": "VP24.11.3",
+        "pages": [
+          158
+        ]
+      }
+    },
+    {
+      "id": "book-VP24-11.4",
+      "number": "VP24.11.4",
+      "kind": "textbook",
+      "source": "Textbook 15e",
+      "topic": "dielectric",
+      "manual": {
+        "problem": "VP24.11.4",
+        "pages": [
+          158
+        ]
+      }
+    }
+  ]
+}

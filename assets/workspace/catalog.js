@@ -2540,6 +2540,17 @@ window.TESSELATE_CATALOG = {
       "description": "Eight guided RC/RL setups, square-wave scope measurements, resistance prechecks and CSV records. D2L checked October 26, 2026.",
       "referenceIds": [],
       "builtin": true
+    },
+    {
+      "id": "page-cGh5czIxMC9taWR0ZXJtLTIuaHRtbA",
+      "courseId": "phys210",
+      "title": "Midterm 2 · Topic map & worked solutions",
+      "kind": "Study notes",
+      "url": "phys210/midterm-2.html",
+      "body": "",
+      "description": "October 30 midterm: 86 tutorial, homework and textbook solutions, signed-in manual links and a tilted-capacitor angle solver. D2L checked October 28.",
+      "referenceIds": [],
+      "builtin": true
     }
   ],
   "references": [
