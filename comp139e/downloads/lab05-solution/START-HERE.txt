@@ -1,0 +1,25 @@
+LAB 5 — DIGITAL PID CONTROLLER
+
+1. Extract this entire ZIP to a normal folder (do not run inside the ZIP).
+2. Open Lab05.sln in Visual Studio with the Desktop development with C++ workload.
+3. Press Ctrl+F5. There is only one project and one main().
+4. The program prints Y = [ ... ]; with 50 rows and two columns.
+5. Open IMPLEMENTATION.html in your browser for the separate explanation.
+6. In MATLAB, open and run plotResponse.m to plot the supplied verified output.
+   To plot your own run, paste the console's Y = [ ... ]; into MATLAB,
+   then enter figure(1); plot(Y);
+
+REQUIRED HAND-IN
+PID_Controller.hpp and PID_Controller.cpp; show the MATLAB plot.
+The other C++ files are supplied support code plus the completed runner.
+
+This project does not pin v143. It lets Visual Studio choose its default toolset.
+If Visual Studio still asks for retargeting, choose an installed toolset and SDK.
+A plain console project also works: add the four .cpp and four .hpp files here,
+and disable precompiled headers. Do not add a second main().
+
+VERIFICATION
+Compiled and run with Clang C++17; all 50 output rows checked against the
+course PID output. Windows Visual Studio and MATLAB were not available here.
+The included PNG is a preview made from the same computed data; run the .m
+file in MATLAB to produce the plot requested by the lab.

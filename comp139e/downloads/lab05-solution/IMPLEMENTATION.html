@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Lab 5 · Implementation outline</title>
+<style>body{font:17px/1.6 system-ui,sans-serif;color:#24312c;background:#fafbf9;max-width:850px;margin:40px auto;padding:0 22px}h1,h2{line-height:1.2}h1{font-size:32px}h2{font-size:22px;margin-top:32px}table{border-collapse:collapse;width:100%;background:white}th,td{text-align:left;border-bottom:1px solid #dce2dd;padding:10px;vertical-align:top}code{font-size:.92em;background:#edf0ec;padding:2px 4px}pre{overflow:auto;background:#edf0ec;padding:16px}pre code{padding:0}a{color:#235b40}img{max-width:100%;height:auto}small{color:#536158}@media print{body{margin:0;font-size:12px}h2{break-after:avoid}tr,img,pre{break-inside:avoid}}</style></head><body>
+<h1>Lab 5 · PID controller</h1>
+<p>Calculate the next plant input from the target, current plant output, and remembered values from the last call.</p>
+<h2>Run it</h2>
+<ol><li>Extract the ZIP and open <strong>Lab05.sln</strong> in Visual Studio.</li><li>Press <strong>Ctrl+F5</strong>. The one project runs the PID controller for 50 steps.</li><li>In MATLAB, open and run <strong>plotResponse.m</strong> to produce the plot.</li></ol>
+<p>To use fresh console output, paste the complete <code>Y = [ ... ];</code> block into MATLAB, then run <code>figure(1); plot(Y);</code>.</p>
+<h2>What goes where</h2>
+<table><tr><th>File</th><th>Purpose</th></tr>
+<tr><td><code>Controller.hpp</code></td><td>Supplied abstract base. Declares <code>controlStep()</code> and fixes <code>deltaT = 1.0</code>.</td></tr>
+<tr><td><code>PID_Controller.hpp</code></td><td>New derived class. Declares the constructor and override; stores settings and remembered values.</td></tr>
+<tr><td><code>PID_Controller.cpp</code></td><td>New method definitions. Initializes the settings and performs one PID calculation.</td></tr>
+<tr><td><code>Plant.hpp / Plant.cpp</code></td><td>Supplied plant model, unchanged. <code>plantResponse(input)</code> calculates the next output.</td></tr>
+<tr><td><code>ProportionalController.hpp / .cpp</code></td><td>Supplied simpler controller, unchanged. Kept as the course's reference implementation.</td></tr>
+<tr><td><code>controllerMain.cpp</code></td><td>Completed runner. Creates the plant and PID object, runs 50 steps, and prints input/output columns for MATLAB.</td></tr></table>
+<h2>Classes and functions</h2>
+<pre>Controller (abstract)
+  deltaT = 1.0
+  controlStep(plantOutput, setpoint) = 0
+       ↑ public inheritance
+PID_Controller
+  constructor(gain, integralTime, derivativeTime)
+  controlStep(plantOutput, setpoint) override
+
+Plant
+  plantResponse(input)
+
+main()
+  Controller* → PID_Controller object
+  controller calculates input → plant calculates output → repeat</pre>
+<p>The loop calls <code>controller-&gt;controlStep(...)</code> through a base pointer. Because the function is virtual, it runs the PID version. The PID object is local to <code>main()</code>; the pointer does not need <code>delete</code>.</p>
+<h2>State stored in PID_Controller</h2>
+<table><tr><th>Member</th><th>Meaning</th><th>Initial value</th></tr>
+<tr><td><code>kc</code></td><td>Proportional gain</td><td>0.5</td></tr>
+<tr><td><code>tI</code></td><td>Integration time constant</td><td>25</td></tr>
+<tr><td><code>tD</code></td><td>Derivative time constant</td><td>2.5</td></tr>
+<tr><td><code>q</code></td><td>Leaky integral of error</td><td>0</td></tr>
+<tr><td><code>previousOutput</code></td><td>Plant output from the previous call</td><td>0 (plant starts at rest)</td></tr></table>
+<p><code>q</code> and <code>previousOutput</code> are members so their values survive between calls. The constructor assumes the supplied valid settings; <code>tI</code> must be greater than zero because it is used as a divisor.</p>
+<h2>One controlStep(), in order</h2>
+<ol><li><strong>Error:</strong> subtract the plant output from the setpoint.</li><li><strong>Leaky integral:</strong> keep 90% of the old <code>q</code> and add 10% of the current error.</li><li><strong>New plant input:</strong> apply the exact equation below.</li><li><strong>Remember:</strong> save the current output for the next call, then return the input.</li></ol>
+<pre><code>error = setpoint - plantOutput;
+q = 0.9 * q + 0.1 * error;
+plantInput = setpoint + kc * (error + (deltaT / tI) * q
+    - (tD / deltaT) * (plantOutput - previousOutput));
+previousOutput = plantOutput;</code></pre>
+<p>The derivative uses the change in <strong>plant output</strong>, with a minus sign. The integral uses the updated <code>q</code>, not a running sum. Update <code>previousOutput</code> only after calculating the input.</p>
+<p><strong>First call:</strong> output is 0 and setpoint is 1. Error is 1, <code>q</code> becomes 0.1, and the returned input is <strong>1.502</strong>.</p>
+<h2>Plot</h2>
+<p>The first column of <code>Y</code> is plant input; the second is plant output. The target is 1. The saved MATLAB script uses the program's verified 50-row output and plots both columns.</p>
+<img src="step-response.png" alt="PID response over 50 samples: plant input starts at 1.502; output rises from zero, slightly overshoots, and settles near one.">
+<p><small>Preview generated from the C++ results with Matplotlib. Run plotResponse.m in MATLAB for the lab's requested MATLAB plot.</small></p>
+<h2>Requirements check</h2>
+<table><tr><th>Handout requirement</th><th>Included / checked</th></tr>
+<tr><td>Write PID_Controller.hpp and PID_Controller.cpp</td><td>Both provided, with comments.</td></tr>
+<tr><td>Implement the Controller interface</td><td>Public inheritance and the matching controlStep override.</td></tr>
+<tr><td>Use the specified leaky integral and PID formula</td><td>Formula, update order, and saved state tested.</td></tr>
+<tr><td>Run the supplied plant and settings</td><td>50 steps, setpoint 1, kc 0.5, tI 25, tD 2.5. All 50 output rows match the supplied pidOutput.txt at its printed precision.</td></tr>
+<tr><td>Plot the step response in MATLAB</td><td>plotResponse.m is ready to run; preview included.</td></tr>
+<tr><td>Hand in the two documented PID files; show the plot</td><td>Submit the two PID files and run the MATLAB script to show your plot.</td></tr></table>
+<p><small>C++ compiled and ran with Clang C++17 and memory/undefined-behavior checks. Additional checks cover consecutive calls, separate controller objects, zero gain, and zero error. Visual Studio and MATLAB were not available to execute here. The supplied Plant header retains its original initializer-order warning; the supplied support files are unchanged.</small></p>
+<p><a href="https://tesselate.ca/comp139e/workspace/reference/course/labs/files/DigitalController/DigitalControl.pdf">Original Lab 5 handout</a></p>
+</body></html>

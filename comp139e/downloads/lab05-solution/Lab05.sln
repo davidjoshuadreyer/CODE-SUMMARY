@@ -1,0 +1,16 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+Project("{BC8A1FFA-BEE3-4634-8014-F334798102B3}") = "Lab05", "Lab05.vcxproj", "{02D6557E-3670-44E1-87B5-5CE140FA40CD}"
+EndProject
+Global
+    GlobalSection(SolutionConfigurationPlatforms) = preSolution
+        Debug|x64 = Debug|x64
+        Release|x64 = Release|x64
+    EndGlobalSection
+    GlobalSection(ProjectConfigurationPlatforms) = postSolution
+        {02D6557E-3670-44E1-87B5-5CE140FA40CD}.Debug|x64.ActiveCfg = Debug|x64
+        {02D6557E-3670-44E1-87B5-5CE140FA40CD}.Debug|x64.Build.0 = Debug|x64
+        {02D6557E-3670-44E1-87B5-5CE140FA40CD}.Release|x64.ActiveCfg = Release|x64
+        {02D6557E-3670-44E1-87B5-5CE140FA40CD}.Release|x64.Build.0 = Release|x64
+    EndGlobalSection
+EndGlobal
