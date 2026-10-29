@@ -4,16 +4,17 @@
 <h1>Lab 5 · PID controller</h1>
 <p>Calculate the next plant input from the target, current plant output, and remembered values from the last call.</p>
 <h2>Run it</h2>
-<ol><li>Extract the ZIP and open <strong>Lab05.sln</strong> in Visual Studio.</li><li>Press <strong>Ctrl+F5</strong>. The one project runs the PID controller for 50 steps.</li><li>In MATLAB, open and run <strong>plotResponse.m</strong> to produce the plot.</li></ol>
+<ol><li>Extract the ZIP and open <strong>Lab05.sln</strong> in Visual Studio.</li><li>Press <strong>Ctrl+F5</strong>. The unchanged supplied main runs the proportional controller for 50 steps.</li><li>In MATLAB, open and run <strong>plotResponse.m</strong> to produce the plot.</li></ol>
 <p>To use fresh console output, paste the complete <code>Y = [ ... ];</code> block into MATLAB, then run <code>figure(1); plot(Y);</code>.</p>
-<h2>What goes where</h2>
+<h2>Select PID when you are ready</h2><p>All six provided C++ files are copied byte-for-byte. Only <code>PID_Controller.hpp</code> and <code>PID_Controller.cpp</code> contain new C++ code.</p><p>The original main selects the proportional controller. To run PID yourself, uncomment these two existing lines in <code>controllerMain.cpp</code>:</p><pre><code>PID_Controller pidController(0.5, 25, 2.5);
+controller = &amp;pidController;</code></pre><p>They come after the proportional setup, so the later assignment selects PID. They remain commented in this download. Paste the output from that PID run into MATLAB if you want to plot a fresh run; the unchanged main produces proportional output.</p><h2>What goes where</h2>
 <table><tr><th>File</th><th>Purpose</th></tr>
 <tr><td><code>Controller.hpp</code></td><td>Supplied abstract base. Declares <code>controlStep()</code> and fixes <code>deltaT = 1.0</code>.</td></tr>
 <tr><td><code>PID_Controller.hpp</code></td><td>New derived class. Declares the constructor and override; stores settings and remembered values.</td></tr>
 <tr><td><code>PID_Controller.cpp</code></td><td>New method definitions. Initializes the settings and performs one PID calculation.</td></tr>
 <tr><td><code>Plant.hpp / Plant.cpp</code></td><td>Supplied plant model, unchanged. <code>plantResponse(input)</code> calculates the next output.</td></tr>
 <tr><td><code>ProportionalController.hpp / .cpp</code></td><td>Supplied simpler controller, unchanged. Kept as the course's reference implementation.</td></tr>
-<tr><td><code>controllerMain.cpp</code></td><td>Completed runner. Creates the plant and PID object, runs 50 steps, and prints input/output columns for MATLAB.</td></tr></table>
+<tr><td><code>controllerMain.cpp</code></td><td>Supplied runner, unchanged byte-for-byte. Selects the proportional controller; includes two commented lines for selecting PID.</td></tr></table>
 <h2>Classes and functions</h2>
 <pre>Controller (abstract)
   deltaT = 1.0
@@ -29,7 +30,7 @@ Plant
 main()
   Controller* → PID_Controller object
   controller calculates input → plant calculates output → repeat</pre>
-<p>The loop calls <code>controller-&gt;controlStep(...)</code> through a base pointer. Because the function is virtual, it runs the PID version. The PID object is local to <code>main()</code>; the pointer does not need <code>delete</code>.</p>
+<p>The loop calls <code>controller-&gt;controlStep(...)</code> through a base pointer. With the two PID lines activated, this runs the PID version. The PID object is local to <code>main()</code>; the pointer does not need <code>delete</code>.</p>
 <h2>State stored in PID_Controller</h2>
 <table><tr><th>Member</th><th>Meaning</th><th>Initial value</th></tr>
 <tr><td><code>kc</code></td><td>Proportional gain</td><td>0.5</td></tr>
@@ -48,7 +49,7 @@ previousOutput = plantOutput;</code></pre>
 <p>The derivative uses the change in <strong>plant output</strong>, with a minus sign. The integral uses the updated <code>q</code>, not a running sum. Update <code>previousOutput</code> only after calculating the input.</p>
 <p><strong>First call:</strong> output is 0 and setpoint is 1. Error is 1, <code>q</code> becomes 0.1, and the returned input is <strong>1.502</strong>.</p>
 <h2>Plot</h2>
-<p>The first column of <code>Y</code> is plant input; the second is plant output. The target is 1. The saved MATLAB script uses the program's verified 50-row output and plots both columns.</p>
+<p>The first column of <code>Y</code> is plant input; the second is plant output. The target is 1. The saved MATLAB script uses the verified 50-row PID test output and plots both columns.</p>
 <img src="step-response.png" alt="PID response over 50 samples: plant input starts at 1.502; output rises from zero, slightly overshoots, and settles near one.">
 <p><small>Preview generated from the C++ results with Matplotlib. Run plotResponse.m in MATLAB for the lab's requested MATLAB plot.</small></p>
 <h2>Requirements check</h2>
@@ -56,7 +57,7 @@ previousOutput = plantOutput;</code></pre>
 <tr><td>Write PID_Controller.hpp and PID_Controller.cpp</td><td>Both provided, with comments.</td></tr>
 <tr><td>Implement the Controller interface</td><td>Public inheritance and the matching controlStep override.</td></tr>
 <tr><td>Use the specified leaky integral and PID formula</td><td>Formula, update order, and saved state tested.</td></tr>
-<tr><td>Run the supplied plant and settings</td><td>50 steps, setpoint 1, kc 0.5, tI 25, tD 2.5. All 50 output rows match the supplied pidOutput.txt at its printed precision.</td></tr>
+<tr><td>Run the supplied plant and settings</td><td>The untouched main matches the supplied proportional output. A temporary test copy activating the original PID lines uses 50 steps, setpoint 1, kc 0.5, tI 25, tD 2.5; all rows match pidOutput.txt at its printed precision.</td></tr>
 <tr><td>Plot the step response in MATLAB</td><td>plotResponse.m is ready to run; preview included.</td></tr>
 <tr><td>Hand in the two documented PID files; show the plot</td><td>Submit the two PID files and run the MATLAB script to show your plot.</td></tr></table>
 <p><small>C++ compiled and ran with Clang C++17 and memory/undefined-behavior checks. Additional checks cover consecutive calls, separate controller objects, zero gain, and zero error. Visual Studio and MATLAB were not available to execute here. The supplied Plant header retains its original initializer-order warning; the supplied support files are unchanged.</small></p>

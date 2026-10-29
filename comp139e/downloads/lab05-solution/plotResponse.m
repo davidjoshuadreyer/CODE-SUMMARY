@@ -1,4 +1,5 @@
-% Lab 5: verified output from the included C++ program.
+% Lab 5: PID output verified using a temporary copy of the supplied main
+% with its two existing PID lines uncommented. Packaged main is unchanged.
 % Column 1 is plant input x; column 2 is plant output y.
 Y = [
 1.502  0.0345737
