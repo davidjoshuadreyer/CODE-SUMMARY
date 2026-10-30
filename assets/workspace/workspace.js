@@ -333,13 +333,13 @@ document.addEventListener('click',async event=>{
  }catch(error){if(dialog.open&&$('.form-error',dialog))$('.form-error',dialog).textContent=error.message;else toast(error.message);}
 });
 document.addEventListener('input',event=>{
- if(event.target.id==='reference-search'){search=event.target.value;$('#reference-results').innerHTML=referenceResults(location.hash.startsWith('#course/')?location.hash.slice(8):'');}
+ if(event.target.id==='reference-search'){search=event.target.value;$('#reference-results').innerHTML=referenceResults(location.hash.startsWith('#course/')?location.hash.slice(8).split('/')[0]:'');}
  if(event.target.id==='course-search'){search=event.target.value;$('#course-results').innerHTML=courseResults(state.courses.filter(c=>location.hash==='#archive'?c.semester!==state.currentSemester:c.semester===state.currentSemester));}
 });
 document.addEventListener('change',async event=>{
  try{
   if(event.target.id==='semester'){if(event.target.value==='__new__'){render();semesterEditor();}else{const next=copy(state);next.currentSemester=event.target.value;await commit(next);render();}}
-  if(event.target.id==='course-filter'||event.target.id==='status-filter'){courseFilter=$('#course-filter')?.value||'';statusFilter=$('#status-filter').value;$('#reference-results').innerHTML=referenceResults(location.hash.startsWith('#course/')?location.hash.slice(8):'');}
+  if(event.target.id==='course-filter'||event.target.id==='status-filter'){courseFilter=$('#course-filter')?.value||'';statusFilter=$('#status-filter').value;$('#reference-results').innerHTML=referenceResults(location.hash.startsWith('#course/')?location.hash.slice(8).split('/')[0]:'');}
   if(event.target.id==='restore-file'){const file=event.target.files[0];event.target.value='';await restore(file);}
  }catch(error){toast(error.message);}
 });
