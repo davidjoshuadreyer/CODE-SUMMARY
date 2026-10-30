@@ -36,6 +36,8 @@ for (const [dir,courseId] of [['phys210','phys210'],['ecet250e','ecet250e'],['ma
 }
 for(let i=resources.length-1;i>=0;i--)if(['comp139e/midterm-patterns.html','comp139e/cpp-cheat-sheet.html'].includes(resources[i].url))resources.splice(i,1);
 const compCode=resources.find(r=>r.url==='comp139e/code-templates.html');if(compCode)Object.assign(compCode,{title:'COMP midterm cheat sheet · Code, templates & rules',description:'75 complete examples, Labs 1–7 study solutions, 19 lab-style drills, a decision matrix, code outlines and 24 blank starters in one sheet.',referenceIds:[]});
+const physicsPractice=resources.find(r=>r.url==='phys210/practice-tests.html');
+if(physicsPractice)Object.assign(physicsPractice,{title:'Midterm 2 · Practice tests & separate bonus papers',description:'Eight choose-3-of-4 midterms, six separate bonus tests and supplementary papers using all 86 exact source questions, with worked solution keys.',kind:'Practice exam',referenceIds:[]});
 const physicsMidterm2=resources.find(r=>r.url==='phys210/midterm-2.html');
 if(physicsMidterm2)Object.assign(physicsMidterm2,{title:'Midterm 2 · Topic map & worked solutions',description:'October 30 midterm: 86 tutorial, homework and textbook solutions, signed-in manual links and a tilted-capacitor angle solver. D2L checked October 28.',kind:'Study notes'});
 const engrReps=resources.find(r=>r.url==='engr290/assignment-practice.html');

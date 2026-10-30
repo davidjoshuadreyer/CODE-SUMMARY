@@ -1,0 +1,2400 @@
+{
+  "date": "2026-10-29",
+  "format": {
+    "width": 612,
+    "height": 1008,
+    "font": "Times New Roman",
+    "size": 12,
+    "source": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5448812/View",
+    "prior": "https://online.camosun.ca/d2l/le/content/348967/viewContent/5481071/View",
+    "announcement": "https://online.camosun.ca/d2l/le/news/348967/715998/view?ou=348967"
+  },
+  "tests": [
+    {
+      "id": "midterm-a",
+      "kind": "main",
+      "title": "Practice Midterm A",
+      "ids": [
+        "hw-23-5",
+        "hw-22-19",
+        "hw-24-14",
+        "t6-q47"
+      ],
+      "pdf": "midterm-a.pdf",
+      "key": "midterm-a-solutions.html"
+    },
+    {
+      "id": "midterm-b",
+      "kind": "main",
+      "title": "Practice Midterm B",
+      "ids": [
+        "hw-23-7",
+        "book-22-40",
+        "t7-q1",
+        "t6-q69"
+      ],
+      "pdf": "midterm-b.pdf",
+      "key": "midterm-b-solutions.html"
+    },
+    {
+      "id": "midterm-c",
+      "kind": "main",
+      "title": "Practice Midterm C",
+      "ids": [
+        "book-23-75",
+        "book-22-42",
+        "t7-q2",
+        "t7-q7"
+      ],
+      "pdf": "midterm-c.pdf",
+      "key": "midterm-c-solutions.html"
+    },
+    {
+      "id": "midterm-d",
+      "kind": "main",
+      "title": "Practice Midterm D",
+      "ids": [
+        "hw-23-5",
+        "t4-q7",
+        "book-24-17",
+        "book-24-31"
+      ],
+      "pdf": "midterm-d.pdf",
+      "key": "midterm-d-solutions.html"
+    },
+    {
+      "id": "midterm-e",
+      "kind": "main",
+      "title": "Practice Midterm E",
+      "ids": [
+        "hw-23-7",
+        "t4-q9",
+        "book-24-20",
+        "book-24-39"
+      ],
+      "pdf": "midterm-e.pdf",
+      "key": "midterm-e-solutions.html"
+    },
+    {
+      "id": "midterm-f",
+      "kind": "main",
+      "title": "Practice Midterm F",
+      "ids": [
+        "book-23-75",
+        "t4-q8",
+        "book-24-21",
+        "book-24-42"
+      ],
+      "pdf": "midterm-f.pdf",
+      "key": "midterm-f-solutions.html"
+    },
+    {
+      "id": "midterm-g",
+      "kind": "main",
+      "title": "Practice Midterm G",
+      "ids": [
+        "hw-23-5",
+        "book-22-25",
+        "book-24-52",
+        "book-24-44"
+      ],
+      "pdf": "midterm-g.pdf",
+      "key": "midterm-g-solutions.html"
+    },
+    {
+      "id": "midterm-h",
+      "kind": "main",
+      "title": "Practice Midterm H",
+      "ids": [
+        "hw-23-7",
+        "t4-q6",
+        "book-24-55",
+        "book-VP24-11.1"
+      ],
+      "pdf": "midterm-h.pdf",
+      "key": "midterm-h-solutions.html"
+    },
+    {
+      "id": "bonus-a",
+      "kind": "bonus",
+      "title": "Bonus Practice A",
+      "ids": [
+        "book-22-47",
+        "book-24-34"
+      ],
+      "pdf": "bonus-a.pdf",
+      "key": "bonus-a-solutions.html"
+    },
+    {
+      "id": "bonus-b",
+      "kind": "bonus",
+      "title": "Bonus Practice B",
+      "ids": [
+        "book-22-50",
+        "book-24-35"
+      ],
+      "pdf": "bonus-b.pdf",
+      "key": "bonus-b-solutions.html"
+    },
+    {
+      "id": "bonus-c",
+      "kind": "bonus",
+      "title": "Bonus Practice C",
+      "ids": [
+        "book-22-52",
+        "book-24-36"
+      ],
+      "pdf": "bonus-c.pdf",
+      "key": "bonus-c-solutions.html"
+    },
+    {
+      "id": "bonus-d",
+      "kind": "bonus",
+      "title": "Bonus Practice D",
+      "ids": [
+        "hw-22-21",
+        "book-24-30"
+      ],
+      "pdf": "bonus-d.pdf",
+      "key": "bonus-d-solutions.html"
+    },
+    {
+      "id": "bonus-e",
+      "kind": "bonus",
+      "title": "Bonus Practice E",
+      "ids": [
+        "book-22-24",
+        "hw-24-66"
+      ],
+      "pdf": "bonus-e.pdf",
+      "key": "bonus-e-solutions.html"
+    },
+    {
+      "id": "bonus-f",
+      "kind": "bonus",
+      "title": "Bonus Practice F",
+      "ids": [
+        "book-22-47",
+        "hw-24-68"
+      ],
+      "pdf": "bonus-f.pdf",
+      "key": "bonus-f-solutions.html"
+    },
+    {
+      "id": "angle-a",
+      "kind": "angle",
+      "title": "Angle Preparation A",
+      "ids": [
+        "hw-22-33",
+        "hw-23-59"
+      ],
+      "pdf": "angle-a.pdf",
+      "key": "angle-a-solutions.html"
+    },
+    {
+      "id": "angle-b",
+      "kind": "angle",
+      "title": "Angle Preparation B",
+      "ids": [
+        "book-24-71",
+        "book-24-72"
+      ],
+      "pdf": "angle-b.pdf",
+      "key": "angle-b-solutions.html"
+    },
+    {
+      "id": "supplement-01",
+      "kind": "supplement",
+      "title": "Supplementary Practice 1",
+      "ids": [
+        "t4-q4",
+        "hw-23-1",
+        "hw-24-1",
+        "hw-24-3"
+      ],
+      "pdf": "supplement-01.pdf",
+      "key": "supplement-01-solutions.html"
+    },
+    {
+      "id": "supplement-02",
+      "kind": "supplement",
+      "title": "Supplementary Practice 2",
+      "ids": [
+        "hw-24-7",
+        "hw-24-8",
+        "hw-24-24",
+        "hw-24-36"
+      ],
+      "pdf": "supplement-02.pdf",
+      "key": "supplement-02-solutions.html"
+    },
+    {
+      "id": "supplement-03",
+      "kind": "supplement",
+      "title": "Supplementary Practice 3",
+      "ids": [
+        "t6-q7",
+        "t6-q31",
+        "t6-q34",
+        "t7-q6"
+      ],
+      "pdf": "supplement-03.pdf",
+      "key": "supplement-03-solutions.html"
+    },
+    {
+      "id": "supplement-04",
+      "kind": "supplement",
+      "title": "Supplementary Practice 4",
+      "ids": [
+        "book-VP24-11.2",
+        "book-VP24-11.3",
+        "book-VP24-11.4",
+        "hw-22-15"
+      ],
+      "pdf": "supplement-04.pdf",
+      "key": "supplement-04-solutions.html"
+    },
+    {
+      "id": "supplement-05",
+      "kind": "supplement",
+      "title": "Supplementary Practice 5",
+      "ids": [
+        "hw-22-37",
+        "t4-q1",
+        "t4-q2",
+        "t4-q3"
+      ],
+      "pdf": "supplement-05.pdf",
+      "key": "supplement-05-solutions.html"
+    },
+    {
+      "id": "supplement-06",
+      "kind": "supplement",
+      "title": "Supplementary Practice 6",
+      "ids": [
+        "t4-q5",
+        "hw-23-8",
+        "hw-23-19",
+        "hw-23-27"
+      ],
+      "pdf": "supplement-06.pdf",
+      "key": "supplement-06-solutions.html"
+    },
+    {
+      "id": "supplement-07",
+      "kind": "supplement",
+      "title": "Supplementary Practice 7",
+      "ids": [
+        "hw-23-44",
+        "hw-23-55",
+        "hw-24-12",
+        "t5-q3"
+      ],
+      "pdf": "supplement-07.pdf",
+      "key": "supplement-07-solutions.html"
+    },
+    {
+      "id": "supplement-08",
+      "kind": "supplement",
+      "title": "Supplementary Practice 8",
+      "ids": [
+        "t5-q37",
+        "t5-q16",
+        "t5-q17",
+        "t5-q18"
+      ],
+      "pdf": "supplement-08.pdf",
+      "key": "supplement-08-solutions.html"
+    },
+    {
+      "id": "supplement-09",
+      "kind": "supplement",
+      "title": "Supplementary Practice 9",
+      "ids": [
+        "t5-q34",
+        "t5-q39",
+        "t5-q42",
+        "t5-q63"
+      ],
+      "pdf": "supplement-09.pdf",
+      "key": "supplement-09-solutions.html"
+    },
+    {
+      "id": "supplement-10",
+      "kind": "supplement",
+      "title": "Supplementary Practice 10",
+      "ids": [
+        "t6-q23",
+        "t6-q67",
+        "t6-q71",
+        "t7-q3"
+      ],
+      "pdf": "supplement-10.pdf",
+      "key": "supplement-10-solutions.html"
+    },
+    {
+      "id": "supplement-11",
+      "kind": "supplement",
+      "title": "Supplementary Practice 11",
+      "ids": [
+        "t7-q4",
+        "t7-q5",
+        "book-24-49",
+        "book-24-57"
+      ],
+      "pdf": "supplement-11.pdf",
+      "key": "supplement-11-solutions.html"
+    }
+  ],
+  "coverage": {
+    "hw-22-15": [
+      "supplement-04"
+    ],
+    "hw-22-19": [
+      "midterm-a"
+    ],
+    "hw-22-21": [
+      "bonus-d"
+    ],
+    "hw-22-33": [
+      "angle-a"
+    ],
+    "hw-22-37": [
+      "supplement-05"
+    ],
+    "hw-23-1": [
+      "supplement-01"
+    ],
+    "hw-23-5": [
+      "midterm-a",
+      "midterm-d",
+      "midterm-g"
+    ],
+    "hw-23-7": [
+      "midterm-b",
+      "midterm-e",
+      "midterm-h"
+    ],
+    "hw-23-8": [
+      "supplement-06"
+    ],
+    "hw-23-19": [
+      "supplement-06"
+    ],
+    "hw-23-27": [
+      "supplement-06"
+    ],
+    "hw-23-44": [
+      "supplement-07"
+    ],
+    "hw-23-55": [
+      "supplement-07"
+    ],
+    "hw-23-59": [
+      "angle-a"
+    ],
+    "hw-24-1": [
+      "supplement-01"
+    ],
+    "hw-24-3": [
+      "supplement-01"
+    ],
+    "hw-24-7": [
+      "supplement-02"
+    ],
+    "hw-24-8": [
+      "supplement-02"
+    ],
+    "hw-24-12": [
+      "supplement-07"
+    ],
+    "hw-24-14": [
+      "midterm-a"
+    ],
+    "hw-24-24": [
+      "supplement-02"
+    ],
+    "hw-24-36": [
+      "supplement-02"
+    ],
+    "hw-24-66": [
+      "bonus-e"
+    ],
+    "hw-24-68": [
+      "bonus-f"
+    ],
+    "t4-q1": [
+      "supplement-05"
+    ],
+    "t4-q2": [
+      "supplement-05"
+    ],
+    "t4-q3": [
+      "supplement-05"
+    ],
+    "t4-q4": [
+      "supplement-01"
+    ],
+    "t4-q5": [
+      "supplement-06"
+    ],
+    "t4-q6": [
+      "midterm-h"
+    ],
+    "t4-q7": [
+      "midterm-d"
+    ],
+    "t4-q8": [
+      "midterm-f"
+    ],
+    "t4-q9": [
+      "midterm-e"
+    ],
+    "t5-q3": [
+      "supplement-07"
+    ],
+    "t5-q37": [
+      "supplement-08"
+    ],
+    "t5-q16": [
+      "supplement-08"
+    ],
+    "t5-q17": [
+      "supplement-08"
+    ],
+    "t5-q18": [
+      "supplement-08"
+    ],
+    "t5-q34": [
+      "supplement-09"
+    ],
+    "t5-q39": [
+      "supplement-09"
+    ],
+    "t5-q42": [
+      "supplement-09"
+    ],
+    "t5-q63": [
+      "supplement-09"
+    ],
+    "t6-q7": [
+      "supplement-03"
+    ],
+    "t6-q23": [
+      "supplement-10"
+    ],
+    "t6-q31": [
+      "supplement-03"
+    ],
+    "t6-q34": [
+      "supplement-03"
+    ],
+    "t6-q47": [
+      "midterm-a"
+    ],
+    "t6-q67": [
+      "supplement-10"
+    ],
+    "t6-q69": [
+      "midterm-b"
+    ],
+    "t6-q71": [
+      "supplement-10"
+    ],
+    "t7-q1": [
+      "midterm-b"
+    ],
+    "t7-q2": [
+      "midterm-c"
+    ],
+    "t7-q3": [
+      "supplement-10"
+    ],
+    "t7-q4": [
+      "supplement-11"
+    ],
+    "t7-q5": [
+      "supplement-11"
+    ],
+    "t7-q6": [
+      "supplement-03"
+    ],
+    "t7-q7": [
+      "midterm-c"
+    ],
+    "book-22-24": [
+      "bonus-e"
+    ],
+    "book-22-25": [
+      "midterm-g"
+    ],
+    "book-22-40": [
+      "midterm-b"
+    ],
+    "book-22-42": [
+      "midterm-c"
+    ],
+    "book-22-47": [
+      "bonus-a",
+      "bonus-f"
+    ],
+    "book-22-50": [
+      "bonus-b"
+    ],
+    "book-22-52": [
+      "bonus-c"
+    ],
+    "book-23-75": [
+      "midterm-c",
+      "midterm-f"
+    ],
+    "book-24-17": [
+      "midterm-d"
+    ],
+    "book-24-20": [
+      "midterm-e"
+    ],
+    "book-24-21": [
+      "midterm-f"
+    ],
+    "book-24-30": [
+      "bonus-d"
+    ],
+    "book-24-31": [
+      "midterm-d"
+    ],
+    "book-24-34": [
+      "bonus-a"
+    ],
+    "book-24-35": [
+      "bonus-b"
+    ],
+    "book-24-36": [
+      "bonus-c"
+    ],
+    "book-24-39": [
+      "midterm-e"
+    ],
+    "book-24-42": [
+      "midterm-f"
+    ],
+    "book-24-44": [
+      "midterm-g"
+    ],
+    "book-24-49": [
+      "supplement-11"
+    ],
+    "book-24-52": [
+      "midterm-g"
+    ],
+    "book-24-55": [
+      "midterm-h"
+    ],
+    "book-24-57": [
+      "supplement-11"
+    ],
+    "book-24-71": [
+      "angle-b"
+    ],
+    "book-24-72": [
+      "angle-b"
+    ],
+    "book-VP24-11.1": [
+      "midterm-h"
+    ],
+    "book-VP24-11.2": [
+      "supplement-04"
+    ],
+    "book-VP24-11.3": [
+      "supplement-04"
+    ],
+    "book-VP24-11.4": [
+      "supplement-04"
+    ]
+  },
+  "problems": [
+    {
+      "id": "hw-22-15",
+      "number": "22.15",
+      "source": "Homework 4",
+      "kind": "homework",
+      "title": "Excess electrons on a conducting sphere",
+      "topic": "gauss",
+      "result": "1.35 × 10¹⁰ excess electrons; Q = −2.16 nC.",
+      "shots": [
+        {
+          "src": "midterm-crops/hw-22-15-q1.jpg",
+          "width": 738,
+          "height": 120,
+          "page": 1,
+          "printedPage": 1,
+          "label": "Homework 4",
+          "note": "Original question 22.15"
+        }
+      ]
+    },
+    {
+      "id": "hw-22-19",
+      "number": "22.19",
+      "source": "Homework 4",
+      "kind": "homework",
+      "title": "Charge inside a conducting shell",
+      "topic": "gauss",
+      "result": "(a) +5.73 × 10⁻⁶ C/m²; (b) 6.48 × 10⁵ N/C outward; (c) −5.65 × 10⁴ N m²/C.",
+      "shots": [
+        {
+          "src": "midterm-crops/hw-22-19-q1.jpg",
+          "width": 743,
+          "height": 283,
+          "page": 1,
+          "printedPage": 1,
+          "label": "Homework 4",
+          "note": "Original question 22.19"
+        }
+      ]
+    },
+    {
+      "id": "hw-22-21",
+      "number": "22.21",
+      "source": "Homework 4",
+      "kind": "homework",
+      "title": "Uniformly charged insulating sphere",
+      "topic": "bonus-sphere",
+      "result": "|ρ| = 2.60 × 10⁻⁷ C/m³; |E(0.200 m)| = 1.96 × 10³ N/C.",
+      "shots": [
+        {
+          "src": "midterm-crops/hw-22-21-q1.jpg",
+          "width": 738,
+          "height": 186,
+          "page": 1,
+          "printedPage": 1,
+          "label": "Homework 4",
+          "note": "Original question 22.21"
+        }
+      ]
+    },
+    {
+      "id": "hw-22-33",
+      "number": "22.33",
+      "source": "Homework 4",
+      "kind": "homework",
+      "title": "Sphere suspended beside a charged sheet",
+      "topic": "tilt",
+      "result": "θ = 10.2° toward the negative sheet.",
+      "shots": [
+        {
+          "src": "midterm-crops/hw-22-33-q1.jpg",
+          "width": 740,
+          "height": 359,
+          "page": 1,
+          "printedPage": 1,
+          "label": "Homework 4",
+          "note": "Original question 22.33"
+        }
+      ]
+    },
+    {
+      "id": "hw-22-37",
+      "number": "22.37",
+      "source": "Homework 4",
+      "kind": "homework",
+      "title": "Flux through a slanted box",
+      "topic": "gauss",
+      "result": "Qenc = −5.98 × 10⁻¹⁰ C. External contributions cannot be resolved from net flux alone.",
+      "shots": [
+        {
+          "src": "midterm-crops/hw-22-37-q1.jpg",
+          "width": 740,
+          "height": 548,
+          "page": 2,
+          "printedPage": 2,
+          "label": "Homework 4",
+          "note": "Original question 22.37"
+        }
+      ]
+    },
+    {
+      "id": "hw-23-1",
+      "number": "23.1",
+      "source": "Homework 5",
+      "kind": "homework",
+      "title": "Work along a two-dimensional move",
+      "topic": "collision",
+      "result": "−0.356 J.",
+      "shots": [
+        {
+          "src": "midterm-crops/hw-23-1-q1.jpg",
+          "width": 738,
+          "height": 153,
+          "page": 1,
+          "printedPage": 1,
+          "label": "Homework 5",
+          "note": "Original question 23.1"
+        }
+      ]
+    },
+    {
+      "id": "hw-23-5",
+      "number": "23.5",
+      "source": "Homework 5",
+      "kind": "homework",
+      "title": "Closest approach of repelling charges",
+      "topic": "collision",
+      "result": "12.5 m/s; minimum separation 0.323 m.",
+      "shots": [
+        {
+          "src": "midterm-crops/hw-23-5-q1.jpg",
+          "width": 739,
+          "height": 412,
+          "page": 1,
+          "printedPage": 1,
+          "label": "Homework 5",
+          "note": "Original question 23.5"
+        }
+      ]
+    },
+    {
+      "id": "hw-23-7",
+      "number": "23.7",
+      "source": "Homework 5",
+      "kind": "homework",
+      "title": "Two protons approaching head-on",
+      "topic": "collision",
+      "result": "Maximum force 1.94 × 10⁻⁵ N.",
+      "shots": [
+        {
+          "src": "midterm-crops/hw-23-7-q1.jpg",
+          "width": 739,
+          "height": 143,
+          "page": 1,
+          "printedPage": 1,
+          "label": "Homework 5",
+          "note": "Original question 23.7"
+        }
+      ]
+    },
+    {
+      "id": "hw-23-8",
+      "number": "23.8",
+      "source": "Homework 5",
+      "kind": "homework",
+      "title": "Energy of three equal charges",
+      "topic": "potential",
+      "result": "0.0971 J.",
+      "shots": [
+        {
+          "src": "midterm-crops/hw-23-8-q1.jpg",
+          "width": 739,
+          "height": 153,
+          "page": 1,
+          "printedPage": 1,
+          "label": "Homework 5",
+          "note": "Original question 23.8"
+        }
+      ]
+    },
+    {
+      "id": "hw-23-19",
+      "number": "23.19",
+      "source": "Homework 5",
+      "kind": "homework",
+      "title": "Potentials at two points",
+      "topic": "potential",
+      "result": "Vₐ = −737 V; Vᵦ = −704 V; W = +8.24 × 10⁻⁸ J.",
+      "shots": [
+        {
+          "src": "midterm-crops/hw-23-19-q1.jpg",
+          "width": 746,
+          "height": 385,
+          "page": 1,
+          "printedPage": 1,
+          "label": "Homework 5",
+          "note": "Original question 23.19"
+        }
+      ]
+    },
+    {
+      "id": "hw-23-27",
+      "number": "23.27",
+      "source": "Homework 5",
+      "kind": "homework",
+      "title": "Electron on a charged ring axis",
+      "topic": "potential",
+      "result": "Oscillatory motion; centre speed 1.67 × 10⁷ m/s.",
+      "shots": [
+        {
+          "src": "midterm-crops/hw-23-27-q1.jpg",
+          "width": 739,
+          "height": 249,
+          "page": 2,
+          "printedPage": 2,
+          "label": "Homework 5",
+          "note": "Original question 23.27"
+        }
+      ]
+    },
+    {
+      "id": "hw-23-44",
+      "number": "23.44",
+      "source": "Homework 6",
+      "kind": "homework",
+      "title": "Electric field from a potential",
+      "topic": "potential",
+      "result": "E = (−6.72 i − 7.20 j) V/m; 9.85 V/m at 227°.",
+      "shots": [
+        {
+          "src": "midterm-crops/hw-23-44-q1.jpg",
+          "width": 741,
+          "height": 185,
+          "page": 1,
+          "printedPage": 1,
+          "label": "Homework 6",
+          "note": "Original question 23.44"
+        }
+      ]
+    },
+    {
+      "id": "hw-23-55",
+      "number": "23.55",
+      "source": "Homework 6",
+      "kind": "homework",
+      "title": "Nonuniform field in a diode",
+      "topic": "potential",
+      "result": "C = 7.85 × 10⁴ V/m^(4/3); midpoint force +3.13 × 10⁻¹⁵ N.",
+      "shots": [
+        {
+          "src": "midterm-crops/hw-23-55-q1.jpg",
+          "width": 740,
+          "height": 527,
+          "page": 1,
+          "printedPage": 1,
+          "label": "Homework 6",
+          "note": "Original question 23.55"
+        }
+      ]
+    },
+    {
+      "id": "hw-23-59",
+      "number": "23.59",
+      "source": "Homework 6",
+      "kind": "homework",
+      "title": "Hanging charge between plates",
+      "topic": "tilt",
+      "result": "47.7 V.",
+      "shots": [
+        {
+          "src": "midterm-crops/hw-23-59-q1.jpg",
+          "width": 737,
+          "height": 438,
+          "page": 1,
+          "printedPage": 1,
+          "label": "Homework 6",
+          "note": "Original question 23.59"
+        }
+      ]
+    },
+    {
+      "id": "hw-24-1",
+      "number": "24.1",
+      "source": "Homework 6",
+      "kind": "homework",
+      "title": "Vacuum parallel plates",
+      "topic": "dielectric",
+      "result": "10.0 kV; 22.6 cm²; 8.00 pF.",
+      "shots": [
+        {
+          "src": "midterm-crops/hw-24-1-q1.jpg",
+          "width": 741,
+          "height": 186,
+          "page": 1,
+          "printedPage": 1,
+          "label": "Homework 6",
+          "note": "Original question 24.1"
+        }
+      ]
+    },
+    {
+      "id": "hw-24-3",
+      "number": "24.3",
+      "source": "Homework 6",
+      "kind": "homework",
+      "title": "Capacitor geometry and field",
+      "topic": "dielectric",
+      "result": "604 V; 90.8 cm²; 1.84 × 10⁶ V/m; ±1.63 × 10⁻⁵ C/m².",
+      "shots": [
+        {
+          "src": "midterm-crops/hw-24-3-q1.jpg",
+          "width": 738,
+          "height": 220,
+          "page": 2,
+          "printedPage": 2,
+          "label": "Homework 6",
+          "note": "Original question 24.3"
+        }
+      ]
+    },
+    {
+      "id": "hw-24-7",
+      "number": "24.7",
+      "source": "Homework 6 & 7",
+      "kind": "homework",
+      "title": "Changing capacitor separation",
+      "topic": "dielectric",
+      "result": "d = 1.05 mm; new voltage 84.0 V.",
+      "shots": [
+        {
+          "src": "midterm-crops/hw-24-7-q1.jpg",
+          "width": 741,
+          "height": 249,
+          "page": 2,
+          "printedPage": 2,
+          "label": "Homework 6 & 7",
+          "note": "Original question 24.7"
+        }
+      ]
+    },
+    {
+      "id": "hw-24-8",
+      "number": "24.8",
+      "source": "Homework 7",
+      "kind": "homework",
+      "title": "Design an air capacitor",
+      "topic": "dielectric",
+      "result": "10.0 mm gap; 4.24 cm radius; 500 pC.",
+      "shots": [
+        {
+          "src": "midterm-crops/hw-24-8-q1.jpg",
+          "width": 739,
+          "height": 278,
+          "page": 1,
+          "printedPage": 1,
+          "label": "Homework 7",
+          "note": "Original question 24.8"
+        }
+      ]
+    },
+    {
+      "id": "hw-24-12",
+      "number": "24.12",
+      "source": "Homework 7",
+      "kind": "homework",
+      "title": "Cylindrical capacitor",
+      "topic": "potential",
+      "result": "120 pF/m; inner +117 pC, outer −117 pC.",
+      "shots": [
+        {
+          "src": "midterm-crops/hw-24-12-q1.jpg",
+          "width": 741,
+          "height": 252,
+          "page": 1,
+          "printedPage": 1,
+          "label": "Homework 7",
+          "note": "Original question 24.12"
+        }
+      ]
+    },
+    {
+      "id": "hw-24-14",
+      "number": "24.14",
+      "source": "Homework 7",
+      "kind": "homework",
+      "title": "Series and parallel capacitors",
+      "topic": "networks",
+      "result": "Ceq = 3.47 µF; total, Q₁₀ and Q₉ = 174 µC each.",
+      "shots": [
+        {
+          "src": "midterm-crops/hw-24-14-q1.jpg",
+          "width": 738,
+          "height": 478,
+          "page": 1,
+          "printedPage": 1,
+          "label": "Homework 7",
+          "note": "Original question 24.14"
+        }
+      ]
+    },
+    {
+      "id": "hw-24-24",
+      "number": "24.24",
+      "source": "Homework 7",
+      "kind": "homework",
+      "title": "Work pulling plates apart",
+      "topic": "dielectric",
+      "result": "4.24 kV → 8.48 kV; external work 8.27 mJ.",
+      "shots": [
+        {
+          "src": "midterm-crops/hw-24-24-q1.jpg",
+          "width": 740,
+          "height": 184,
+          "page": 2,
+          "printedPage": 2,
+          "label": "Homework 7",
+          "note": "Original question 24.24"
+        }
+      ]
+    },
+    {
+      "id": "hw-24-36",
+      "number": "24.36",
+      "source": "Homework 7",
+      "kind": "homework",
+      "title": "Build a paper capacitor",
+      "topic": "dielectric",
+      "result": "About 8 sheets; posterboard area 0.452 m²; Teflon needs more area.",
+      "shots": [
+        {
+          "src": "midterm-crops/hw-24-36-q1.jpg",
+          "width": 741,
+          "height": 510,
+          "page": 2,
+          "printedPage": 2,
+          "label": "Homework 7",
+          "note": "Original question 24.36"
+        }
+      ]
+    },
+    {
+      "id": "hw-24-66",
+      "number": "24.66",
+      "source": "Homework 7",
+      "kind": "homework",
+      "title": "Half-filled dielectric capacitor",
+      "topic": "bonus-dielectric",
+      "result": "62.3 pF; 10.1 nJ initially; 4.59 nJ after removal.",
+      "shots": [
+        {
+          "src": "midterm-crops/hw-24-66-q1.jpg",
+          "width": 740,
+          "height": 446,
+          "page": 2,
+          "printedPage": 2,
+          "label": "Homework 7",
+          "note": "Original question 24.66"
+        }
+      ]
+    },
+    {
+      "id": "hw-24-68",
+      "number": "24.68",
+      "source": "Homework 7",
+      "kind": "homework",
+      "title": "Capacitive fuel gauge",
+      "topic": "tilt",
+      "result": "κeff = 1 + (κ − 1)h/L; methanol is more sensitive.",
+      "shots": [
+        {
+          "src": "midterm-crops/hw-24-68-q1.jpg",
+          "width": 741,
+          "height": 641,
+          "page": 3,
+          "printedPage": 3,
+          "label": "Homework 7",
+          "note": "Original question 24.68"
+        }
+      ]
+    },
+    {
+      "id": "t4-q1",
+      "number": "1",
+      "source": "Tutorial 4",
+      "kind": "tutorial",
+      "title": "Field from perpendicular infinite sheets",
+      "topic": "gauss",
+      "result": "Signs change component directions across sheets, but the magnitude remains the same.",
+      "shots": [
+        {
+          "src": "midterm-crops/t4-q1-q1.jpg",
+          "width": 1350,
+          "height": 300,
+          "page": 1,
+          "printedPage": 1,
+          "label": "Tutorial 4",
+          "note": "Original question 1"
+        }
+      ]
+    },
+    {
+      "id": "t4-q2",
+      "number": "2",
+      "source": "Tutorial 4",
+      "kind": "tutorial",
+      "title": "Field inside a uniformly charged cylinder",
+      "topic": "gauss",
+      "result": "Inside a uniformly charged cylinder the field grows linearly from zero at the axis.",
+      "shots": [
+        {
+          "src": "midterm-crops/t4-q2-q1.jpg",
+          "width": 1362,
+          "height": 266,
+          "page": 1,
+          "printedPage": 1,
+          "label": "Tutorial 4",
+          "note": "Original question 2"
+        }
+      ]
+    },
+    {
+      "id": "t4-q3",
+      "number": "3",
+      "source": "Tutorial 4",
+      "kind": "tutorial",
+      "title": "Field outside a uniformly charged cylinder",
+      "topic": "gauss",
+      "result": "The result decreases as 1/r outside the cylinder and does not depend on its radius.",
+      "shots": [
+        {
+          "src": "midterm-crops/t4-q3-q1.jpg",
+          "width": 1344,
+          "height": 297,
+          "page": 1,
+          "printedPage": 1,
+          "label": "Tutorial 4",
+          "note": "Original question 3"
+        }
+      ]
+    },
+    {
+      "id": "t4-q4",
+      "number": "4",
+      "source": "Tutorial 4",
+      "kind": "tutorial",
+      "title": "Field inside a cylinder with quadratic density",
+      "topic": "bonus-sphere",
+      "result": "The r³ dependence follows from enclosed charge proportional to r⁴ and flux area proportional to r.",
+      "shots": [
+        {
+          "src": "midterm-crops/t4-q4-q1.jpg",
+          "width": 1415,
+          "height": 304,
+          "page": 1,
+          "printedPage": 1,
+          "label": "Tutorial 4",
+          "note": "Original question 4"
+        }
+      ]
+    },
+    {
+      "id": "t4-q5",
+      "number": "5",
+      "source": "Tutorial 4",
+      "kind": "tutorial",
+      "title": "Field within a charged cylindrical annulus",
+      "topic": "gauss",
+      "result": "The expression tends to zero as r approaches the inner radius.",
+      "shots": [
+        {
+          "src": "midterm-crops/t4-q5-q1.jpg",
+          "width": 1376,
+          "height": 301,
+          "page": 1,
+          "printedPage": 1,
+          "label": "Tutorial 4",
+          "note": "Original question 5"
+        }
+      ]
+    },
+    {
+      "id": "t4-q6",
+      "number": "6",
+      "source": "Tutorial 4",
+      "kind": "tutorial",
+      "title": "Exterior field of two charged spherical shells",
+      "topic": "gauss",
+      "result": "Both positive shells contribute outward fields; surface area must be included before summing charges.",
+      "shots": [
+        {
+          "src": "midterm-crops/t4-q6-q1.jpg",
+          "width": 1350,
+          "height": 302,
+          "page": 2,
+          "printedPage": 2,
+          "label": "Tutorial 4",
+          "note": "Original question 6"
+        }
+      ]
+    },
+    {
+      "id": "t4-q7",
+      "number": "7",
+      "source": "Tutorial 4",
+      "kind": "tutorial",
+      "title": "Exterior field of a charged conductor with a central charge",
+      "topic": "gauss",
+      "result": "Surface charges −4 pC and +8 pC sum to the specified +4 pC conductor charge.",
+      "shots": [
+        {
+          "src": "midterm-crops/t4-q7-q1.jpg",
+          "width": 1393,
+          "height": 297,
+          "page": 2,
+          "printedPage": 2,
+          "label": "Tutorial 4",
+          "note": "Original question 7"
+        }
+      ]
+    },
+    {
+      "id": "t4-q8",
+      "number": "8",
+      "source": "Tutorial 4",
+      "kind": "tutorial",
+      "title": "Exterior field of a wire and conducting cylindrical shell",
+      "topic": "gauss",
+      "result": "The induced inner-surface charge is +8 pC/m and outer-surface charge is −12 pC/m, preserving net shell charge −4 pC/m.",
+      "shots": [
+        {
+          "src": "midterm-crops/t4-q8-q1.jpg",
+          "width": 1419,
+          "height": 301,
+          "page": 2,
+          "printedPage": 2,
+          "label": "Tutorial 4",
+          "note": "Original question 8"
+        }
+      ]
+    },
+    {
+      "id": "t4-q9",
+      "number": "9",
+      "source": "Tutorial 4",
+      "kind": "tutorial",
+      "title": "Induced charge density on a conductor’s inner surface",
+      "topic": "gauss",
+      "result": "The outer surface carries +2.0 nC, so −6.0 + 2.0 = −4.0 nC equals the specified shell net charge.",
+      "shots": [
+        {
+          "src": "midterm-crops/t4-q9-q1.jpg",
+          "width": 1403,
+          "height": 317,
+          "page": 2,
+          "printedPage": 2,
+          "label": "Tutorial 4",
+          "note": "Original question 9"
+        }
+      ]
+    },
+    {
+      "id": "t5-q3",
+      "number": "3",
+      "source": "Tutorial 5",
+      "kind": "tutorial",
+      "title": "Accelerating a proton and an electron",
+      "topic": "potential",
+      "result": "Both particles gain 120 eV. The lighter electron is faster by √(mp/me) ≈ 42.8; both speeds are nonrelativistic.",
+      "shots": [
+        {
+          "src": "midterm-crops/t5-q3-q1.jpg",
+          "width": 1276,
+          "height": 166,
+          "page": 1,
+          "printedPage": 1,
+          "label": "Tutorial 5",
+          "note": "Original question 3"
+        }
+      ]
+    },
+    {
+      "id": "t5-q37",
+      "number": "37",
+      "source": "Tutorial 5",
+      "kind": "tutorial",
+      "title": "Potential and field from a linear function",
+      "topic": "potential",
+      "result": "Potential decreases toward +x, so the field points +x. Endpoint values use the field within the stated region.",
+      "shots": [
+        {
+          "src": "midterm-crops/t5-q37-q1.jpg",
+          "width": 1315,
+          "height": 242,
+          "page": 1,
+          "printedPage": 1,
+          "label": "Tutorial 5",
+          "note": "Original question 37"
+        }
+      ]
+    },
+    {
+      "id": "t5-q16",
+      "number": "16",
+      "source": "Tutorial 5",
+      "kind": "tutorial",
+      "title": "Symmetric charges: zero field, nonzero potential",
+      "topic": "potential",
+      "result": "A zero potential gradient at the symmetry point does not require the potential itself to be zero.",
+      "shots": [
+        {
+          "src": "midterm-crops/t5-q16-q1.jpg",
+          "width": 1323,
+          "height": 630,
+          "page": 1,
+          "printedPage": 1,
+          "label": "Tutorial 5",
+          "note": "Original question 16"
+        }
+      ]
+    },
+    {
+      "id": "t5-q17",
+      "number": "17",
+      "source": "Tutorial 5",
+      "kind": "tutorial",
+      "title": "Recovering a point charge from E and V",
+      "topic": "potential",
+      "result": "Substitution into k|Q|/r² returns 500 V/m.",
+      "shots": [
+        {
+          "src": "midterm-crops/t5-q17-q1.jpg",
+          "width": 1311,
+          "height": 165,
+          "page": 1,
+          "printedPage": 1,
+          "label": "Tutorial 5",
+          "note": "Original question 17"
+        }
+      ]
+    },
+    {
+      "id": "t5-q18",
+      "number": "18",
+      "source": "Tutorial 5",
+      "kind": "tutorial",
+      "title": "Where field and potential vanish",
+      "topic": "potential",
+      "result": "Neither charge location is allowed. Checking field directions removes the spurious positive root of the squared field equation.",
+      "shots": [
+        {
+          "src": "midterm-crops/t5-q18-q1.jpg",
+          "width": 1290,
+          "height": 107,
+          "page": 1,
+          "printedPage": 1,
+          "label": "Tutorial 5",
+          "note": "Original question 18"
+        }
+      ]
+    },
+    {
+      "id": "t5-q34",
+      "number": "34",
+      "source": "Tutorial 5",
+      "kind": "tutorial",
+      "title": "Energy of a four-charge rectangle",
+      "topic": "potential",
+      "result": "The formula contains exactly 4·3/2 = 6 pair interactions. A negative result represents released energy, not a negative energy requirement magnitude.",
+      "shots": [
+        {
+          "src": "midterm-crops/t5-q34-q1.jpg",
+          "width": 1244,
+          "height": 658,
+          "page": 2,
+          "printedPage": 2,
+          "label": "Tutorial 5",
+          "note": "Original question 34"
+        }
+      ]
+    },
+    {
+      "id": "t5-q39",
+      "number": "39",
+      "source": "Tutorial 5",
+      "kind": "tutorial",
+      "title": "Electric field from a three-dimensional potential",
+      "topic": "potential",
+      "result": "The z component is zero at P because y = 0, even though z is nonzero.",
+      "shots": [
+        {
+          "src": "midterm-crops/t5-q39-q1.jpg",
+          "width": 1321,
+          "height": 166,
+          "page": 2,
+          "printedPage": 2,
+          "label": "Tutorial 5",
+          "note": "Original question 39"
+        }
+      ]
+    },
+    {
+      "id": "t5-q42",
+      "number": "42",
+      "source": "Tutorial 5",
+      "kind": "tutorial",
+      "title": "Potential difference along a charged ring axis",
+      "topic": "potential",
+      "result": "For Q > 0, potential decreases away from the ring center along its axis, so this difference is negative.",
+      "shots": [
+        {
+          "src": "midterm-crops/t5-q42-q1.jpg",
+          "width": 1275,
+          "height": 194,
+          "page": 2,
+          "printedPage": 2,
+          "label": "Tutorial 5",
+          "note": "Original question 42"
+        }
+      ]
+    },
+    {
+      "id": "t5-q63",
+      "number": "63",
+      "source": "Tutorial 5",
+      "kind": "tutorial",
+      "title": "Potential difference near an infinite line charge",
+      "topic": "potential",
+      "result": "For positive λ and r₂ > r₁, the potential difference is negative, consistent with the outward electric field.",
+      "shots": [
+        {
+          "src": "midterm-crops/t5-q63-q1.jpg",
+          "width": 1293,
+          "height": 211,
+          "page": 2,
+          "printedPage": 2,
+          "label": "Tutorial 5",
+          "note": "Original question 63"
+        }
+      ]
+    },
+    {
+      "id": "t6-q7",
+      "number": "7",
+      "source": "Tutorial 6",
+      "kind": "tutorial",
+      "title": "Parallel plates: field, charge and capacitance",
+      "topic": "dielectric",
+      "result": "σA agrees with CV. The field points from the positive plate toward the negative plate.",
+      "shots": [
+        {
+          "src": "midterm-crops/t6-q7-q1.jpg",
+          "width": 1272,
+          "height": 253,
+          "page": 1,
+          "printedPage": 1,
+          "label": "Tutorial 6",
+          "note": "Original question 7"
+        }
+      ]
+    },
+    {
+      "id": "t6-q23",
+      "number": "23",
+      "source": "Tutorial 6",
+      "kind": "tutorial",
+      "title": "Charge sharing after switching",
+      "topic": "sharing",
+      "result": "Final positive-plate charges sum to 120 μC; each negative plate has the opposite charge. Electrostatic energy is not conserved during charge redistribution.",
+      "shots": [
+        {
+          "src": "midterm-crops/t6-q23-q1.jpg",
+          "width": 1319,
+          "height": 641,
+          "page": 1,
+          "printedPage": 1,
+          "label": "Tutorial 6",
+          "note": "Original question 23"
+        }
+      ]
+    },
+    {
+      "id": "t6-q31",
+      "number": "31",
+      "source": "Tutorial 6",
+      "kind": "tutorial",
+      "title": "Stored energy at two battery voltages",
+      "topic": "dielectric",
+      "result": "U₆/U₁₂ = (6/12)² = 1/4.",
+      "shots": [
+        {
+          "src": "midterm-crops/t6-q31-q1.jpg",
+          "width": 1308,
+          "height": 152,
+          "page": 1,
+          "printedPage": 1,
+          "label": "Tutorial 6",
+          "note": "Original question 31"
+        }
+      ]
+    },
+    {
+      "id": "t6-q34",
+      "number": "34",
+      "source": "Tutorial 6",
+      "kind": "tutorial",
+      "title": "Doubling separation at fixed charge",
+      "topic": "dielectric",
+      "result": "Mechanical work is needed to pull the attracting plates apart; that work supplies the increased field energy.",
+      "shots": [
+        {
+          "src": "midterm-crops/t6-q34-q1.jpg",
+          "width": 1275,
+          "height": 152,
+          "page": 1,
+          "printedPage": 1,
+          "label": "Tutorial 6",
+          "note": "Original question 34"
+        }
+      ]
+    },
+    {
+      "id": "t6-q47",
+      "number": "47",
+      "source": "Tutorial 6",
+      "kind": "tutorial",
+      "title": "Isolated capacitor immersed in water",
+      "topic": "dielectric",
+      "result": "The plates have opposite signs. For any κ > 1, fixed-charge energy decreases. Numerical water results require a specified κ; the source omits it.",
+      "shots": [
+        {
+          "src": "midterm-crops/t6-q47-q1.jpg",
+          "width": 1313,
+          "height": 286,
+          "page": 1,
+          "printedPage": 1,
+          "label": "Tutorial 6",
+          "note": "Original question 47"
+        }
+      ]
+    },
+    {
+      "id": "t6-q67",
+      "number": "67",
+      "source": "Tutorial 6",
+      "kind": "tutorial",
+      "title": "Find an unknown capacitance by charge sharing",
+      "topic": "sharing",
+      "result": "Initial charge is 428.6 μC; final charges 128.6 μC and 300 μC sum to the same value.",
+      "shots": [
+        {
+          "src": "midterm-crops/t6-q67-q1.jpg",
+          "width": 1289,
+          "height": 305,
+          "page": 2,
+          "printedPage": 2,
+          "label": "Tutorial 6",
+          "note": "Original question 67"
+        }
+      ]
+    },
+    {
+      "id": "t6-q69",
+      "number": "69",
+      "source": "Tutorial 6",
+      "kind": "tutorial",
+      "title": "Dielectric insertion with the battery connected",
+      "topic": "dielectric",
+      "result": "This is fixed voltage, not fixed charge. The battery is the energy source; inserting a dielectric does not create energy.",
+      "shots": [
+        {
+          "src": "midterm-crops/t6-q69-q1.jpg",
+          "width": 1325,
+          "height": 387,
+          "page": 2,
+          "printedPage": 2,
+          "label": "Tutorial 6",
+          "note": "Original question 69"
+        }
+      ]
+    },
+    {
+      "id": "t6-q71",
+      "number": "71",
+      "source": "Tutorial 6",
+      "kind": "tutorial",
+      "title": "Reconnect charged capacitors with reversed polarity",
+      "topic": "sharing",
+      "result": "Final charge on the reference node is 750 + 250 = 1000 μC, equal to the initial signed sum.",
+      "shots": [
+        {
+          "src": "midterm-crops/t6-q71-q1.jpg",
+          "width": 1304,
+          "height": 196,
+          "page": 2,
+          "printedPage": 2,
+          "label": "Tutorial 6",
+          "note": "Original question 71"
+        }
+      ]
+    },
+    {
+      "id": "t7-q1",
+      "number": "1",
+      "source": "Tutorial 7",
+      "kind": "tutorial",
+      "title": "Energy in a capacitor network",
+      "topic": "networks",
+      "result": "The other group has 11.25 V, and the two group voltages sum to 30 V. Agrees with the printed key.",
+      "shots": [
+        {
+          "src": "midterm-crops/t7-q1-q1.jpg",
+          "width": 1384,
+          "height": 522,
+          "page": 1,
+          "printedPage": 1,
+          "label": "Tutorial 7",
+          "note": "Original question 1"
+        }
+      ]
+    },
+    {
+      "id": "t7-q2",
+      "number": "2",
+      "source": "Tutorial 7",
+      "kind": "tutorial",
+      "title": "Voltage division in a series capacitor branch",
+      "topic": "networks",
+      "result": "V₃ = 8 V; V₂ + V₃ = 24 V. Agrees with the printed key.",
+      "shots": [
+        {
+          "src": "midterm-crops/t7-q2-q1.jpg",
+          "width": 1309,
+          "height": 684,
+          "page": 1,
+          "printedPage": 1,
+          "label": "Tutorial 7",
+          "note": "Original question 2"
+        }
+      ]
+    },
+    {
+      "id": "t7-q3",
+      "number": "3",
+      "source": "Tutorial 7",
+      "kind": "tutorial",
+      "title": "Energy after same-polarity charge sharing",
+      "topic": "sharing",
+      "result": "Final voltage lies between 34 V and 50 V; the printed key is B.",
+      "shots": [
+        {
+          "src": "midterm-crops/t7-q3-q1.jpg",
+          "width": 1463,
+          "height": 298,
+          "page": 1,
+          "printedPage": 1,
+          "label": "Tutorial 7",
+          "note": "Original question 3"
+        }
+      ]
+    },
+    {
+      "id": "t7-q4",
+      "number": "4",
+      "source": "Tutorial 7",
+      "kind": "tutorial",
+      "title": "Unknown capacitor from two initial voltages",
+      "topic": "sharing",
+      "result": "Both sides give 1687.5 μC at the unrounded C. Agrees with the printed key.",
+      "shots": [
+        {
+          "src": "midterm-crops/t7-q4-q1.jpg",
+          "width": 1438,
+          "height": 317,
+          "page": 2,
+          "printedPage": 2,
+          "label": "Tutorial 7",
+          "note": "Original question 4"
+        }
+      ]
+    },
+    {
+      "id": "t7-q5",
+      "number": "5",
+      "source": "Tutorial 7",
+      "kind": "tutorial",
+      "title": "Unknown initially uncharged capacitor",
+      "topic": "sharing",
+      "result": "Final charges are 600 μC and 1800 μC, totaling the original 2400 μC. Agrees with the key.",
+      "shots": [
+        {
+          "src": "midterm-crops/t7-q5-q1.jpg",
+          "width": 1407,
+          "height": 282,
+          "page": 2,
+          "printedPage": 2,
+          "label": "Tutorial 7",
+          "note": "Original question 5"
+        }
+      ]
+    },
+    {
+      "id": "t7-q6",
+      "number": "6",
+      "source": "Tutorial 7",
+      "kind": "tutorial",
+      "title": "Pulling plates apart while connected to a battery",
+      "topic": "dielectric",
+      "result": "Charge is not conserved on the capacitor because the battery stays connected. Agrees with the printed key.",
+      "shots": [
+        {
+          "src": "midterm-crops/t7-q6-q1.jpg",
+          "width": 1478,
+          "height": 417,
+          "page": 2,
+          "printedPage": 2,
+          "label": "Tutorial 7",
+          "note": "Original question 6"
+        }
+      ]
+    },
+    {
+      "id": "t7-q7",
+      "number": "7",
+      "source": "Tutorial 7",
+      "kind": "tutorial",
+      "title": "Dielectric insertion after battery disconnection",
+      "topic": "dielectric",
+      "result": "U_f = U₀/3 at fixed charge. Agrees with the printed key.",
+      "shots": [
+        {
+          "src": "midterm-crops/t7-q7-q1.jpg",
+          "width": 1441,
+          "height": 418,
+          "page": 2,
+          "printedPage": 2,
+          "label": "Tutorial 7",
+          "note": "Original question 7"
+        }
+      ]
+    },
+    {
+      "id": "book-22-24",
+      "number": "22.24",
+      "source": "Textbook 15e",
+      "kind": "textbook",
+      "title": "Infer a uniform sphere’s charge density",
+      "topic": "bonus-sphere",
+      "result": "|ρ| = 2.50 µC/m³; |Einside| = 1880 N/C.",
+      "shots": [
+        {
+          "src": "midterm-crops/book-22-24-q1.jpg",
+          "width": 754,
+          "height": 204,
+          "page": 762,
+          "printedPage": 742,
+          "label": "Textbook 15e",
+          "note": "Original question 22.24"
+        }
+      ]
+    },
+    {
+      "id": "book-22-25",
+      "number": "22.25",
+      "source": "Textbook 15e",
+      "kind": "textbook",
+      "title": "Charge on cavity and outer surfaces",
+      "topic": "gauss",
+      "result": "Inner +6.00 nC; outer −1.00 nC.",
+      "shots": [
+        {
+          "src": "midterm-crops/book-22-25-q1.jpg",
+          "width": 753,
+          "height": 143,
+          "page": 762,
+          "printedPage": 742,
+          "label": "Textbook 15e",
+          "note": "Original question 22.25"
+        }
+      ]
+    },
+    {
+      "id": "book-22-40",
+      "number": "22.40",
+      "source": "Textbook 15e",
+      "kind": "textbook",
+      "title": "A conducting sphere inside a neutral shell",
+      "topic": "gauss",
+      "result": "Shell inner −q; shell outer +q. Metal regions have zero field.",
+      "shots": [
+        {
+          "src": "midterm-crops/book-22-40-q1.jpg",
+          "width": 753,
+          "height": 356,
+          "page": 763,
+          "printedPage": 743,
+          "label": "Textbook 15e",
+          "note": "Original question 22.40"
+        }
+      ]
+    },
+    {
+      "id": "book-22-42",
+      "number": "22.42",
+      "source": "Textbook 15e",
+      "kind": "textbook",
+      "title": "A central charge inside a negatively charged shell",
+      "topic": "gauss",
+      "result": "Inner −Q; outer −2Q. Exterior field points inward.",
+      "shots": [
+        {
+          "src": "midterm-crops/book-22-42-q1.jpg",
+          "width": 754,
+          "height": 362,
+          "page": 763,
+          "printedPage": 743,
+          "label": "Textbook 15e",
+          "note": "Original question 22.42"
+        }
+      ]
+    },
+    {
+      "id": "book-22-47",
+      "number": "22.47",
+      "source": "Textbook 15e",
+      "kind": "textbook",
+      "title": "Nonuniform sphere: density decreases linearly",
+      "topic": "bonus-sphere",
+      "result": "rmax = 2R/3; Emax = ρ₀R/(9ε₀). For 22.47, Emax = Q/(3πε₀R²).",
+      "shots": [
+        {
+          "src": "midterm-crops/book-22-47-q1.jpg",
+          "width": 753,
+          "height": 217,
+          "page": 764,
+          "printedPage": 744,
+          "label": "Textbook 15e",
+          "note": "Original question 22.47"
+        },
+        {
+          "src": "midterm-crops/book-22-47-q2.jpg",
+          "width": 752,
+          "height": 238,
+          "page": 764,
+          "printedPage": 744,
+          "label": "Textbook 15e",
+          "note": "Original question 22.47"
+        }
+      ]
+    },
+    {
+      "id": "book-22-50",
+      "number": "22.50",
+      "source": "Textbook 15e",
+      "kind": "textbook",
+      "title": "Nonuniform sphere: density decreases linearly",
+      "topic": "bonus-sphere",
+      "result": "rmax = 2R/3; Emax = ρ₀R/(9ε₀). For 22.47, Emax = Q/(3πε₀R²).",
+      "shots": [
+        {
+          "src": "midterm-crops/book-22-50-q1.jpg",
+          "width": 754,
+          "height": 265,
+          "page": 764,
+          "printedPage": 744,
+          "label": "Textbook 15e",
+          "note": "Original question 22.50"
+        }
+      ]
+    },
+    {
+      "id": "book-22-52",
+      "number": "22.52",
+      "source": "Textbook 15e",
+      "kind": "textbook",
+      "title": "A sphere with zero total charge",
+      "topic": "bonus-sphere",
+      "result": "Qtotal = 0; exterior E = 0; interior peak at R/2.",
+      "shots": [
+        {
+          "src": "midterm-crops/book-22-52-q1.jpg",
+          "width": 752,
+          "height": 367,
+          "page": 764,
+          "printedPage": 744,
+          "label": "Textbook 15e",
+          "note": "Original question 22.52"
+        }
+      ]
+    },
+    {
+      "id": "book-23-75",
+      "number": "23.75",
+      "source": "Textbook 15e",
+      "kind": "textbook",
+      "title": "Alpha particle approaching a lead nucleus",
+      "topic": "collision",
+      "result": "Closest approach ≈ 2.49 × 10⁻¹⁴ m (24.9 fm).",
+      "shots": [
+        {
+          "src": "midterm-crops/book-23-75-q1.jpg",
+          "width": 753,
+          "height": 205,
+          "page": 798,
+          "printedPage": 778,
+          "label": "Textbook 15e",
+          "note": "Original question 23.75"
+        }
+      ]
+    },
+    {
+      "id": "book-24-17",
+      "number": "24.17",
+      "source": "Textbook 15e",
+      "kind": "textbook",
+      "title": "Four-capacitor network",
+      "topic": "networks",
+      "result": "Q₁,Q₂,Q₃,Q₄ = 22.4, 22.4, 44.8, 67.2 µC; V = 5.60, 5.60, 11.2, 16.8 V.",
+      "shots": [
+        {
+          "src": "midterm-crops/book-24-17-q1.jpg",
+          "width": 753,
+          "height": 144,
+          "page": 826,
+          "printedPage": 806,
+          "label": "Textbook 15e",
+          "note": "Original question 24.17"
+        },
+        {
+          "src": "midterm-crops/book-24-17-q2.jpg",
+          "width": 534,
+          "height": 351,
+          "page": 826,
+          "printedPage": 806,
+          "label": "Textbook 15e",
+          "note": "Referenced Figure E24.17"
+        }
+      ]
+    },
+    {
+      "id": "book-24-20",
+      "number": "24.20",
+      "source": "Textbook 15e",
+      "kind": "textbook",
+      "title": "Recover applied voltage from a branch charge",
+      "topic": "networks",
+      "result": "Q₁ = 60.0 µC; Q₃ = 90.0 µC; Vab = 28.0 V.",
+      "shots": [
+        {
+          "src": "midterm-crops/book-24-20-q1.jpg",
+          "width": 396,
+          "height": 299,
+          "page": 826,
+          "printedPage": 806,
+          "label": "Textbook 15e",
+          "note": "Original question 24.20"
+        },
+        {
+          "src": "midterm-crops/book-24-20-q2.jpg",
+          "width": 334,
+          "height": 352,
+          "page": 826,
+          "printedPage": 806,
+          "label": "Textbook 15e",
+          "note": "Figure E24.20"
+        }
+      ]
+    },
+    {
+      "id": "book-24-21",
+      "number": "24.21",
+      "source": "Textbook 15e",
+      "kind": "textbook",
+      "title": "Three parallel branches, one containing a series chain",
+      "topic": "networks",
+      "result": "Ceq ≈ 19.3 nF; Qtotal ≈ 482 nC; Q6.5 = 162.5 nC; V7.5 = 25 V.",
+      "shots": [
+        {
+          "src": "midterm-crops/book-24-21-q1.jpg",
+          "width": 377,
+          "height": 361,
+          "page": 826,
+          "printedPage": 806,
+          "label": "Textbook 15e",
+          "note": "Original question 24.21"
+        },
+        {
+          "src": "midterm-crops/book-24-21-q2.jpg",
+          "width": 354,
+          "height": 347,
+          "page": 826,
+          "printedPage": 806,
+          "label": "Textbook 15e",
+          "note": "Figure E24.21"
+        }
+      ]
+    },
+    {
+      "id": "book-24-30",
+      "number": "24.30",
+      "source": "Textbook 15e",
+      "kind": "textbook",
+      "title": "Dielectric in one parallel capacitor",
+      "topic": "bonus-dielectric",
+      "result": "360 µC → 936 µC.",
+      "shots": [
+        {
+          "src": "midterm-crops/book-24-30-q1.jpg",
+          "width": 753,
+          "height": 294,
+          "page": 827,
+          "printedPage": 807,
+          "label": "Textbook 15e",
+          "note": "Original question 24.30"
+        }
+      ]
+    },
+    {
+      "id": "book-24-31",
+      "number": "24.31",
+      "source": "Textbook 15e",
+      "kind": "textbook",
+      "title": "Energy at fixed voltage after dielectric insertion",
+      "topic": "dielectric",
+      "result": "Uinitial = 3.60 mJ; Ufinal = 13.5 mJ; increase 9.90 mJ.",
+      "shots": [
+        {
+          "src": "midterm-crops/book-24-31-q1.jpg",
+          "width": 753,
+          "height": 205,
+          "page": 827,
+          "printedPage": 807,
+          "label": "Textbook 15e",
+          "note": "Original question 24.31"
+        }
+      ]
+    },
+    {
+      "id": "book-24-34",
+      "number": "24.34",
+      "source": "Textbook 15e",
+      "kind": "textbook",
+      "title": "Dielectric in a series pair: energy ratio",
+      "topic": "bonus-dielectric",
+      "result": "U/U₀ = Q/Q₀ = 2κ/(κ+1).",
+      "shots": [
+        {
+          "src": "midterm-crops/book-24-34-q1.jpg",
+          "width": 752,
+          "height": 297,
+          "page": 827,
+          "printedPage": 807,
+          "label": "Textbook 15e",
+          "note": "Original question 24.34"
+        }
+      ]
+    },
+    {
+      "id": "book-24-35",
+      "number": "24.35",
+      "source": "Textbook 15e",
+      "kind": "textbook",
+      "title": "Dielectric in a series pair: charge ratio",
+      "topic": "bonus-dielectric",
+      "result": "U/U₀ = Q/Q₀ = 2κ/(κ+1).",
+      "shots": [
+        {
+          "src": "midterm-crops/book-24-35-q1.jpg",
+          "width": 752,
+          "height": 263,
+          "page": 827,
+          "printedPage": 807,
+          "label": "Textbook 15e",
+          "note": "Original question 24.35"
+        }
+      ]
+    },
+    {
+      "id": "book-24-36",
+      "number": "24.36",
+      "source": "Textbook 15e",
+      "kind": "textbook",
+      "title": "How a dielectric changes the other capacitor’s field",
+      "topic": "bonus-dielectric",
+      "result": "Series: field doubles. Parallel: field unchanged. This is not HW7’s paper-design question 24.36.",
+      "shots": [
+        {
+          "src": "midterm-crops/book-24-36-q1.jpg",
+          "width": 753,
+          "height": 359,
+          "page": 827,
+          "printedPage": 807,
+          "label": "Textbook 15e",
+          "note": "Original question 24.36"
+        }
+      ]
+    },
+    {
+      "id": "book-24-39",
+      "number": "24.39",
+      "source": "Textbook 15e",
+      "kind": "textbook",
+      "title": "Extra charge and bound charge in Mylar",
+      "topic": "dielectric",
+      "result": "Extra free charge = 6.30 µC; bound charge magnitude per face = 6.30 µC; E unchanged.",
+      "shots": [
+        {
+          "src": "midterm-crops/book-24-39-q1.jpg",
+          "width": 753,
+          "height": 325,
+          "page": 827,
+          "printedPage": 807,
+          "label": "Textbook 15e",
+          "note": "Original question 24.39"
+        }
+      ]
+    },
+    {
+      "id": "book-24-42",
+      "number": "24.42",
+      "source": "Textbook 15e",
+      "kind": "textbook",
+      "title": "Infer a dielectric constant from charge",
+      "topic": "dielectric",
+      "result": "κ = 1.80; V = 2.00 V and E ≈ 1000 V/m in both states.",
+      "shots": [
+        {
+          "src": "midterm-crops/book-24-42-q1.jpg",
+          "width": 753,
+          "height": 387,
+          "page": 828,
+          "printedPage": 808,
+          "label": "Textbook 15e",
+          "note": "Original question 24.42"
+        }
+      ]
+    },
+    {
+      "id": "book-24-44",
+      "number": "24.44",
+      "source": "Textbook 15e",
+      "kind": "textbook",
+      "title": "Remove Teflon after disconnecting the battery",
+      "topic": "dielectric",
+      "result": "Q = 5.02 nC; Ei = 12.0 kV/m; Ef = 25.2 kV/m.",
+      "shots": [
+        {
+          "src": "midterm-crops/book-24-44-q1.jpg",
+          "width": 753,
+          "height": 205,
+          "page": 828,
+          "printedPage": 808,
+          "label": "Textbook 15e",
+          "note": "Original question 24.44"
+        }
+      ]
+    },
+    {
+      "id": "book-24-49",
+      "number": "24.49",
+      "source": "Textbook 15e",
+      "kind": "textbook",
+      "title": "Connect a charged capacitor to an uncharged one",
+      "topic": "sharing",
+      "result": "Vf ≈ 533 V; Uf ≈ 4.27 J; loss ≈ 2.13 J.",
+      "shots": [
+        {
+          "src": "midterm-crops/book-24-49-q1.jpg",
+          "width": 753,
+          "height": 205,
+          "page": 828,
+          "printedPage": 808,
+          "label": "Textbook 15e",
+          "note": "Original question 24.49"
+        }
+      ]
+    },
+    {
+      "id": "book-24-52",
+      "number": "24.52",
+      "source": "Textbook 15e",
+      "kind": "textbook",
+      "title": "Work backward from an internal voltage",
+      "topic": "networks",
+      "result": "V₁ ≈ 13.3 V; V₂ ≈ 26.7 V; V₄ = 30.0 V; Vab = 70.0 V.",
+      "shots": [
+        {
+          "src": "midterm-crops/book-24-52-q1.jpg",
+          "width": 752,
+          "height": 206,
+          "page": 828,
+          "printedPage": 808,
+          "label": "Textbook 15e",
+          "note": "Original question 24.52"
+        },
+        {
+          "src": "midterm-crops/book-24-52-q2.jpg",
+          "width": 534,
+          "height": 351,
+          "page": 826,
+          "printedPage": 806,
+          "label": "Textbook 15e",
+          "note": "Referenced Figure E24.17"
+        }
+      ]
+    },
+    {
+      "id": "book-24-55",
+      "number": "24.55",
+      "source": "Textbook 15e",
+      "kind": "textbook",
+      "title": "Unknown capacitors from charges and voltage",
+      "topic": "networks",
+      "result": "C₂ = 6.00 µF; C₃ = 4.50 µF.",
+      "shots": [
+        {
+          "src": "midterm-crops/book-24-55-q1.jpg",
+          "width": 753,
+          "height": 112,
+          "page": 829,
+          "printedPage": 809,
+          "label": "Textbook 15e",
+          "note": "Original question 24.55"
+        },
+        {
+          "src": "midterm-crops/book-24-55-q2.jpg",
+          "width": 334,
+          "height": 352,
+          "page": 826,
+          "printedPage": 806,
+          "label": "Textbook 15e",
+          "note": "Referenced Figure E24.20"
+        }
+      ]
+    },
+    {
+      "id": "book-24-57",
+      "number": "24.57",
+      "source": "Textbook 15e",
+      "kind": "textbook",
+      "title": "Reconnect a series chain in parallel",
+      "topic": "sharing",
+      "result": "Each initial charge 75.6 µC; final voltage 10.8 V; energy 1.3608 → 1.22472 mJ.",
+      "shots": [
+        {
+          "src": "midterm-crops/book-24-57-q1.jpg",
+          "width": 753,
+          "height": 298,
+          "page": 829,
+          "printedPage": 809,
+          "label": "Textbook 15e",
+          "note": "Original question 24.57"
+        }
+      ]
+    },
+    {
+      "id": "book-24-71",
+      "number": "24.71",
+      "source": "Textbook 15e",
+      "kind": "textbook",
+      "title": "A continuously varying dielectric",
+      "topic": "tilt",
+      "result": "C = (ε₀A/d)(κ − 1)/ln κ.",
+      "shots": [
+        {
+          "src": "midterm-crops/book-24-71-q1.jpg",
+          "width": 753,
+          "height": 270,
+          "page": 831,
+          "printedPage": 811,
+          "label": "Textbook 15e",
+          "note": "Original question 24.71"
+        }
+      ]
+    },
+    {
+      "id": "book-24-72",
+      "number": "24.72",
+      "source": "Textbook 15e",
+      "kind": "textbook",
+      "title": "Partly inserted dielectric slab",
+      "topic": "tilt",
+      "result": "F = ε₀L(κ − 1)V²/(2D), pulling the slab farther into the capacitor.",
+      "shots": [
+        {
+          "src": "midterm-crops/book-24-72-q1.jpg",
+          "width": 753,
+          "height": 991,
+          "page": 831,
+          "printedPage": 811,
+          "label": "Textbook 15e",
+          "note": "Original question 24.72"
+        }
+      ]
+    },
+    {
+      "id": "book-VP24-11.1",
+      "number": "VP24.11.1",
+      "source": "Textbook 15e",
+      "kind": "textbook",
+      "title": "Full dielectric insertion: isolated charge",
+      "topic": "dielectric",
+      "result": "Q unchanged; voltage drops by κ.",
+      "shots": [
+        {
+          "src": "midterm-crops/book-VP24-11.1-q1.jpg",
+          "width": 753,
+          "height": 325,
+          "page": 824,
+          "printedPage": 804,
+          "label": "Textbook 15e",
+          "note": "Original question VP24.11.1"
+        }
+      ]
+    },
+    {
+      "id": "book-VP24-11.2",
+      "number": "VP24.11.2",
+      "source": "Textbook 15e",
+      "kind": "textbook",
+      "title": "Full dielectric insertion: fixed voltage",
+      "topic": "dielectric",
+      "result": "V unchanged; charge increases by κ.",
+      "shots": [
+        {
+          "src": "midterm-crops/book-VP24-11.2-q1.jpg",
+          "width": 753,
+          "height": 176,
+          "page": 824,
+          "printedPage": 804,
+          "label": "Textbook 15e",
+          "note": "Original question VP24.11.2"
+        },
+        {
+          "src": "midterm-crops/book-VP24-11.2-q2.jpg",
+          "width": 752,
+          "height": 143,
+          "page": 824,
+          "printedPage": 804,
+          "label": "Textbook 15e",
+          "note": "Original question VP24.11.2"
+        }
+      ]
+    },
+    {
+      "id": "book-VP24-11.3",
+      "number": "VP24.11.3",
+      "source": "Textbook 15e",
+      "kind": "textbook",
+      "title": "Dielectric energy: fixed charge",
+      "topic": "dielectric",
+      "result": "17.6 J → 7.56 J.",
+      "shots": [
+        {
+          "src": "midterm-crops/book-VP24-11.3-q1.jpg",
+          "width": 753,
+          "height": 236,
+          "page": 824,
+          "printedPage": 804,
+          "label": "Textbook 15e",
+          "note": "Original question VP24.11.3"
+        }
+      ]
+    },
+    {
+      "id": "book-VP24-11.4",
+      "number": "VP24.11.4",
+      "source": "Textbook 15e",
+      "kind": "textbook",
+      "title": "Dielectric energy: fixed voltage",
+      "topic": "dielectric",
+      "result": "6.30 J → 18.0 J.",
+      "shots": [
+        {
+          "src": "midterm-crops/book-VP24-11.4-q1.jpg",
+          "width": 753,
+          "height": 205,
+          "page": 824,
+          "printedPage": 804,
+          "label": "Textbook 15e",
+          "note": "Original question VP24.11.4"
+        }
+      ]
+    }
+  ]
+}
