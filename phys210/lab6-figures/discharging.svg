@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 310" role="img"><style>text{font-family:Georgia,serif;fill:#22313a;font-size:18px}.wire{fill:none;stroke:#33434b;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}.red{stroke:#ae4535}.small{font-family:Arial,sans-serif;font-size:14px;fill:#55616a}.label{font-size:21px}</style><rect x="580" y="42" width="195" height="213" rx="10" fill="#edf3f4"/><text x="678" y="68" text-anchor="middle">LabPro · CH 1</text>
+ <path class="wire" d="M105 130V88H195M245 88H275M400 88H645V126M645 190V235H105V190M420 88V148M420 174V235"/><path class="wire red" d="M275 88H400"/>
+ <circle cx="105" cy="160" r="30" fill="white" stroke="#33434b" stroke-width="2.5"/><text x="105" y="153" text-anchor="middle">+</text><text x="105" y="181" text-anchor="middle">−</text><text x="35" y="270">DC supply · 4.00 V</text>
+ <circle cx="195" cy="88" r="4" fill="white" stroke="#33434b" stroke-width="2"/><circle cx="245" cy="88" r="4" fill="white" stroke="#33434b" stroke-width="2"/><path class="wire" d="M198 85l37 -24"/><text x="205" y="34" text-anchor="middle">Open to discharge</text>
+ <path class="wire" d="M390 148H450M390 174H450M645 126l-9 8 18 10 -18 10 18 10 -18 10 18 10 -9 6"/>
+ <text x="464" y="166" class="label">C</text><text x="666" y="152">Rᵢₙₜ</text><text x="666" y="176" class="small">≈ 1 MΩ</text>
+ <circle cx="420" cy="88" r="4" fill="#ae4535"/><circle cx="420" cy="235" r="4" fill="#33434b"/><text x="460" y="110" class="small">red (+)</text><text x="455" y="226" class="small">black (−)</text>
+ <text x="430" y="288" class="small" text-anchor="middle">Probe clips stay across the capacitor. No external resistor in this circuit.</text></svg>

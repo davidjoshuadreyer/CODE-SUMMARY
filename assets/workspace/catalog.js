@@ -2561,6 +2561,17 @@ window.TESSELATE_CATALOG = {
       "description": "Eight choose-3-of-4 midterms, six separate bonus tests and supplementary papers using all 86 exact source questions, with worked solution keys.",
       "referenceIds": [],
       "builtin": true
+    },
+    {
+      "id": "page-phys210-lab6",
+      "courseId": "phys210",
+      "title": "Experiment 6 · RC circuit lab and report",
+      "kind": "Lab report",
+      "url": "phys210/lab6.html",
+      "body": "",
+      "description": "October 30 lab: clear wiring diagrams, measurement-only inputs, automatic RC calculations and private account saves.",
+      "referenceIds": [],
+      "builtin": true
     }
   ],
   "references": [
