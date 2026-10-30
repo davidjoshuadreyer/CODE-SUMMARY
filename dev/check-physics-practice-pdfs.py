@@ -18,5 +18,5 @@ for t in m['tests']:
   for n,id in enumerate(t['ids'],1):assert 'Question '+ps[id]['number'] in text,(t['id'],id)
   assert 'Choose 3 of the following 4 problems.' in text if t['kind']=='main' else True
  for p in PdfReader(out/t['pdf']).pages:assert p.get('/Annots'),'Missing solution hyperlink'
-for kind,name in [('main','main-tests.pdf'),('bonus','bonus-tests.pdf'),('angle','angle-preparation.pdf'),('supplement','supplementary-tests.pdf')]:assert len(PdfReader(out/name).pages)==sum(counts[t['id']] for t in m['tests'] if t['kind']==kind)
-print('PASS: 31 PDFs; legal-size pages; all source crops included; no question-free pages, image clipping or missing solution links; bundle counts match.')
+for kind,name in [('forecast','most-likely-tests.pdf'),('main','main-tests.pdf'),('bonus','bonus-tests.pdf'),('angle','angle-preparation.pdf'),('supplement','supplementary-tests.pdf')]:assert len(PdfReader(out/name).pages)==sum(counts[t['id']] for t in m['tests'] if t['kind']==kind)
+print('PASS: 35 PDFs; legal-size pages; all source crops included; no question-free pages, image clipping or missing solution links; bundle counts match.')

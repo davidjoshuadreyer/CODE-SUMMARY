@@ -1,7 +1,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const root=path.resolve(__dirname,'..'),dir=path.join(root,'phys210'),out=path.join(dir,'practice-tests');
 const m=require('../phys210/practice-tests/manifest.json'),original=require('../phys210/midterm-2-images.json');
-assert.equal(m.tests.length,27);assert.equal(Object.keys(m.coverage).length,86);assert.equal(m.tests.filter(t=>t.kind==='main').length,8);assert.equal(m.tests.filter(t=>t.kind==='bonus').length,6);
+assert.equal(m.tests.length,30);assert.equal(Object.keys(m.coverage).length,86);assert.equal(m.tests.filter(t=>t.kind==='main').length,8);assert.equal(m.tests.filter(t=>t.kind==='bonus').length,6);
 const byId=new Map(m.problems.map(p=>[p.id,p]));
 for(const t of m.tests){
  assert.equal(new Set(t.ids).size,t.ids.length);
@@ -20,4 +20,4 @@ for(const file of [path.join(dir,'practice-tests.html'),...m.tests.map(t=>path.j
  }
 }
 assert(fs.readFileSync(path.join(dir,'midterm-2.html'),'utf8').includes('href="practice-tests.html"'));
-console.log('PASS: 27 papers, 86 unchanged source questions, all main/bonus topic slots, worked keys, previews, downloads and site links.');
+console.log('PASS: 30 papers, 86 unchanged source questions, all main/bonus topic slots, worked keys, previews, downloads and site links.');

@@ -344,6 +344,55 @@
       ],
       "pdf": "supplement-11.pdf",
       "key": "supplement-11-solutions.html"
+    },
+    {
+      "id": "most-likely-main",
+      "kind": "forecast",
+      "title": "Most Likely - Main Test",
+      "ids": [
+        "hw-23-7",
+        "hw-22-19",
+        "hw-24-14",
+        "t6-q47"
+      ],
+      "pdf": "most-likely-main.pdf",
+      "key": "most-likely-main-solutions.html",
+      "instructions": "Choose 3 of the following 4 problems. Complete every part of each chosen problem. These are the four strongest practice matches to the announced topics, not confirmed exam questions."
+    },
+    {
+      "id": "most-likely-followup",
+      "kind": "forecast",
+      "title": "Most Likely - Ranked Follow-up",
+      "ids": [
+        "hw-23-5",
+        "t6-q69",
+        "t7-q1",
+        "t4-q7",
+        "t4-q9",
+        "t7-q2",
+        "t7-q7",
+        "hw-24-36"
+      ],
+      "pdf": "most-likely-followup.pdf",
+      "key": "most-likely-followup-solutions.html",
+      "instructions": "Attempt all questions in the ranked study order. These continue the shortlist after the main test; this longer paper is extra practice, not the announced exam format."
+    },
+    {
+      "id": "most-likely-bonus",
+      "kind": "forecast",
+      "title": "Most Likely - Bonus Practice",
+      "ids": [
+        "hw-24-66",
+        "hw-22-21",
+        "book-22-47",
+        "book-22-50",
+        "book-24-34",
+        "book-24-35",
+        "book-24-36"
+      ],
+      "pdf": "most-likely-bonus.pdf",
+      "key": "most-likely-bonus-solutions.html",
+      "instructions": "Bonus practice only. Attempt all questions in ranked study order. The actual announcement specifies two bonus problems; these seven questions cover the shortlisted alternatives."
     }
   ],
   "coverage": {
@@ -351,10 +400,12 @@
       "supplement-04"
     ],
     "hw-22-19": [
-      "midterm-a"
+      "midterm-a",
+      "most-likely-main"
     ],
     "hw-22-21": [
-      "bonus-d"
+      "bonus-d",
+      "most-likely-bonus"
     ],
     "hw-22-33": [
       "angle-a"
@@ -368,12 +419,14 @@
     "hw-23-5": [
       "midterm-a",
       "midterm-d",
-      "midterm-g"
+      "midterm-g",
+      "most-likely-followup"
     ],
     "hw-23-7": [
       "midterm-b",
       "midterm-e",
-      "midterm-h"
+      "midterm-h",
+      "most-likely-main"
     ],
     "hw-23-8": [
       "supplement-06"
@@ -409,16 +462,19 @@
       "supplement-07"
     ],
     "hw-24-14": [
-      "midterm-a"
+      "midterm-a",
+      "most-likely-main"
     ],
     "hw-24-24": [
       "supplement-02"
     ],
     "hw-24-36": [
-      "supplement-02"
+      "supplement-02",
+      "most-likely-followup"
     ],
     "hw-24-66": [
-      "bonus-e"
+      "bonus-e",
+      "most-likely-bonus"
     ],
     "hw-24-68": [
       "bonus-f"
@@ -442,13 +498,15 @@
       "midterm-h"
     ],
     "t4-q7": [
-      "midterm-d"
+      "midterm-d",
+      "most-likely-followup"
     ],
     "t4-q8": [
       "midterm-f"
     ],
     "t4-q9": [
-      "midterm-e"
+      "midterm-e",
+      "most-likely-followup"
     ],
     "t5-q3": [
       "supplement-07"
@@ -490,22 +548,26 @@
       "supplement-03"
     ],
     "t6-q47": [
-      "midterm-a"
+      "midterm-a",
+      "most-likely-main"
     ],
     "t6-q67": [
       "supplement-10"
     ],
     "t6-q69": [
-      "midterm-b"
+      "midterm-b",
+      "most-likely-followup"
     ],
     "t6-q71": [
       "supplement-10"
     ],
     "t7-q1": [
-      "midterm-b"
+      "midterm-b",
+      "most-likely-followup"
     ],
     "t7-q2": [
-      "midterm-c"
+      "midterm-c",
+      "most-likely-followup"
     ],
     "t7-q3": [
       "supplement-10"
@@ -520,7 +582,8 @@
       "supplement-03"
     ],
     "t7-q7": [
-      "midterm-c"
+      "midterm-c",
+      "most-likely-followup"
     ],
     "book-22-24": [
       "bonus-e"
@@ -536,10 +599,12 @@
     ],
     "book-22-47": [
       "bonus-a",
-      "bonus-f"
+      "bonus-f",
+      "most-likely-bonus"
     ],
     "book-22-50": [
-      "bonus-b"
+      "bonus-b",
+      "most-likely-bonus"
     ],
     "book-22-52": [
       "bonus-c"
@@ -564,13 +629,16 @@
       "midterm-d"
     ],
     "book-24-34": [
-      "bonus-a"
+      "bonus-a",
+      "most-likely-bonus"
     ],
     "book-24-35": [
-      "bonus-b"
+      "bonus-b",
+      "most-likely-bonus"
     ],
     "book-24-36": [
-      "bonus-c"
+      "bonus-c",
+      "most-likely-bonus"
     ],
     "book-24-39": [
       "midterm-e"

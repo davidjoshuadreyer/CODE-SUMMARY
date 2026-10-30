@@ -1,7 +1,7 @@
 """Compose exact, reviewed source crops into legal-size practice papers.
 No source wording, numbers, diagrams or requested parts are rewritten.
 """
-import json,html,subprocess,os
+import json,html,subprocess,os,sys
 from pathlib import Path
 from reportlab.pdfgen import canvas
 from reportlab.pdfbase import pdfmetrics
@@ -32,8 +32,9 @@ def image_flow(p,s):
  w=s['width'];h=s['height'];desired=min(available-24,w/2.81*(1.25 if p['kind']=='textbook' else 1.0))
  scale=min(desired/w,460/h);return Image(str(root/'phys210'/s['src']),width=w*scale,height=h*scale)
 for t in data['tests']:
+ if '--forecast-only' in sys.argv and t['kind']!='forecast':continue
  story=[Paragraph('<b>PHYS 210 Electricity and Magnetism</b>',center),Paragraph('<b>Celebration of Knowledge!</b>',center),Paragraph(html.escape(t['title'])+' - CK #2 preparation',center),Spacer(1,8)]
- story+=[Paragraph('Name: __________________________________    Date: _______________',body),Paragraph('Time: __________    Marks: __________    Practice paper - not an official exam',body),Paragraph(instructions[t['kind']],body),Paragraph('Write all rough calculations and final answers on separate paper. Show your working.',body),Paragraph('Original source numbering is retained inside each question. Answer the entire cropped question.',small)]
+ story+=[Paragraph('Name: __________________________________    Date: _______________',body),Paragraph('Time: __________    Marks: __________    Practice paper - not an official exam',body),Paragraph(t.get('instructions') or instructions[t['kind']],body),Paragraph('Write all rough calculations and final answers on separate paper. Show your working.',body),Paragraph('Original source numbering is retained inside each question. Answer the entire cropped question.',small)]
  line=Table([['']],colWidths=[available],rowHeights=[4]);line.setStyle(TableStyle([('LINEBELOW',(0,0),(-1,-1),.7,colors.black)]));story.extend([line,Spacer(1,10)])
  for i,id in enumerate(t['ids'],1):
   p=ps[id];images=[image_flow(p,s) for s in p['shots']]
@@ -48,11 +49,12 @@ for t in data['tests']:
  doc.solution_url='tesselate.ca/phys210/practice-tests/'+t['key']
  doc.build(story,onFirstPage=footer,onLaterPages=footer)
  reader=PdfReader(out/t['pdf']);render_log.append({'id':t['id'],'pages':len(reader.pages),'questions':len(t['ids'])})
-for kind,name in [('main','main-tests.pdf'),('bonus','bonus-tests.pdf'),('angle','angle-preparation.pdf'),('supplement','supplementary-tests.pdf')]:
+for kind,name in [('forecast','most-likely-tests.pdf'),('main','main-tests.pdf'),('bonus','bonus-tests.pdf'),('angle','angle-preparation.pdf'),('supplement','supplementary-tests.pdf')]:
+ if '--forecast-only' in sys.argv and kind!='forecast':continue
  writer=PdfWriter()
  for t in data['tests']:
   if t['kind']==kind:writer.append(out/t['pdf'],outline_item=t['title'])
  writer.add_metadata({'/Title':'PHYS 210 - '+kind+' practice papers','/Author':'Tesselate'})
  with (out/name).open('wb') as f:writer.write(f)
 (root/'tmp/practice-tests/pdf-layout.json').write_text(json.dumps(render_log,indent=2))
-print('Created',len(data['tests']),'individual papers and 4 combined PDFs;',sum(x['pages'] for x in render_log),'pages.')
+print('Created',len(render_log),'individual papers and',1 if '--forecast-only' in sys.argv else 5,'combined PDFs;',sum(x['pages'] for x in render_log),'pages.')
