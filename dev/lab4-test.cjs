@@ -35,3 +35,17 @@ assert.ok(Math.abs(pfResult.k1-a.k1)<1e-12);assert.ok(Math.abs(pfResult.k2-a.k2)
 assert.ok(Math.abs(pfResult.u1-a.u1)<1e-12);assert.ok(Math.abs(pfResult.B[0].y-a.B[0].y)<1e-20);
 assert.equal(M.withUncertainties({capacitanceUnit:'pF',meterAccuracy:'manufacturer',meterPercent:'1',meterDigits:'3',meterIncrement:'1',b0c:'500'}).b0u,'8');
 console.log('PASS pF entries preserve SI calculations and use 1 pF meter resolution');
+
+// The posted capacitance rubric uses half the difference for the mean,
+// while agreement between methods still uses the two propagated uncertainties.
+const unequal=structuredClone(d);
+for(let i=0;i<6;i++)unequal['c'+i+'c']=String(Number(unequal['c'+i+'c'])*2);
+const different=M.analyze(unequal);
+assert.ok(Math.abs(different.mean-4.5)<1e-12);
+assert.ok(Math.abs(different.um-1.5)<1e-12);
+assert.equal(different.sum,different.u1+different.u2);
+assert.equal(different.consistent,different.difference<=different.sum);
+assert.ok(Math.abs(a.um)<1e-12);
+assert.equal(M.analyze({...unequal,b0u:''}).sum,null);
+assert.equal(M.analyze({...unequal,b0u:''}).consistent,null);
+console.log('PASS rubric half-difference mean uncertainty and separate propagated consistency check');

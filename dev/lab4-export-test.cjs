@@ -11,6 +11,18 @@ assert.equal(ctx.Lab4UI.getData().b0c,'500');assert.equal(ctx.Lab4UI.getData().m
 for(const s of sample.meterSamples)assert.ok(!ctx.katex.renderToString(s.tex,{throwOnError:true}).includes('katex-error'));
 assert.ok(sample.sections[2][1].includes('Circuit-Test DCM-200'));
 ctx.Lab4UI.apply(require('./lab4-test.cjs'));const model=ctx.Lab4UI.reportModel();assert.equal(model.a.complete,true);assert.ok(model.charts.every(c=>c.startsWith('<svg')));assert.ok(model.charts.every(c=>c.includes('Capacitance C (F)')));
+const gaps=model.tables.find(t=>t.title==='Part B plate separation');
+assert.equal(gaps.rows.length,6);
+assert.equal(gaps.headers.join('|'),'Trial|d (m)|Δd (m)');
+assert.ok(gaps.rows.every(r=>r[1]!=='—'&&r[2]!=='—'));
+const calculations=model.sections.find(s=>s[0]==='Calculations')[1];
+assert.ok(calculations.includes('Δκ̄ = |κ₁ − κ₂|/2'));
+assert.ok(calculations.includes('Δ(1/d) = Δd/d² ='));
+assert.ok(calculations.includes('\n\nFixed area:'));
+assert.ok(!calculations.includes('pFixed area:'));
+assert.ok(model.sections[1][1].includes('vacuum capacitance for the same geometry'));
+ctx.Lab4UI.apply({...ctx.Lab4UI.getData(),c0ul:'',c0uw:'',rulerUncertainty:'0.1'});
+assert.ok(ctx.Lab4UI.reportModel().sections[5][1].includes('(0.1/20 + 0.1/20)'));
 // The browser rasterizes charts; this headless structural check covers report text, tables and native equations.
 model.charts=[];
 ctx.Lab4Export.report(model).then(async blob=>{fs.mkdirSync(root+'/../tmp/capacitance-test',{recursive:true});fs.writeFileSync(root+'/../tmp/capacitance-test/test-report.docx',Buffer.from(await blob.arrayBuffer()));console.log('PASS report assembly, blank draft, six-row tables, SVG plots and native Word equation export');}).catch(e=>{console.error(e);process.exitCode=1;});

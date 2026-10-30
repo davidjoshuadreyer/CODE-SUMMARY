@@ -34,7 +34,7 @@ for(let i=0;i<6;i++){
  rawC.push([i+1,...['l','ul','w','uw','c','u'].map(k=>d[`c${i}${k}`])]);if(ar&&c)C.push({i,x:ar,dx:ur,y:c*capScale,dy:u===null?null:u*capScale});
 }
 const bf=fit(B),cf=fit(C),k1=bf?.m>0&&area?bf.m/(e*area):null,k2=cf?.m>0&&gap?cf.m*gap/e:null,u1=k1!==null&&bf.dm!==null&&ua!==null?k1*(bf.dm/bf.m+ua/area):null,u2=k2!==null&&cf.dm!==null&&ug!==null?k2*(cf.dm/cf.m+ug/gap):null;
-const mean=k1!==null&&k2!==null?(k1+k2)/2:null,um=u1!==null&&u2!==null?(u1+u2)/2:null,difference=mean!==null?Math.abs(k1-k2):null,sum=um!==null?u1+u2:null,consistent=sum!==null?difference<=sum:null;
+const mean=k1!==null&&k2!==null?(k1+k2)/2:null,um=mean!==null?Math.abs(k1-k2)/2:null,difference=mean!==null?Math.abs(k1-k2):null,sum=u1!==null&&u2!==null?u1+u2:null,consistent=sum!==null?difference<=sum:null;
 const ref=pos(d.reference),uref=unc(d.dReference),referenceConsistent=mean!==null&&um!==null&&ref!==null&&uref!==null?Math.abs(mean-ref)<=um+uref:null;
 if(d.reviewStatus!=='reviewed')issues.push('After measuring, review the prepared procedure, equipment and discussion.');
 if(!validN||!T||uT===null)issues.push('Enter the paper stack thickness, uncertainty and a whole-number sheet count.');
