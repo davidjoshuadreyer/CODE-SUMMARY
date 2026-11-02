@@ -2330,5 +2330,52 @@ window.TESSELATE_SOLUTIONS = {
         "url": "ecet250e/source-materials/ecet-250e-linear-circuit-1-problemset-7-chapter-8-2023-52d6c989.pdf"
       }
     ]
+  },
+  "f26-45": {
+    "title": "ECET 250E · Problem Set 9 · Chapter 10",
+    "status": "Released instructor solutions · 5 questions · 7 pages",
+    "source": "https://online.camosun.ca/d2l/le/content/347548/viewContent/5366876/View",
+    "sections": [
+      {
+        "title": "10.7 · Nodal analysis",
+        "steps": [
+          "Open the instructor solution key at page 1."
+        ]
+      },
+      {
+        "title": "10.25 · Mesh analysis",
+        "steps": [
+          "Open the instructor solution key at page 1."
+        ]
+      },
+      {
+        "title": "10.40 · Superposition",
+        "steps": [
+          "Open the instructor solution key at page 3."
+        ]
+      },
+      {
+        "title": "10.49 · Source transformation",
+        "steps": [
+          "Open the instructor solution key at page 4."
+        ]
+      },
+      {
+        "title": "10.55 · Thevenin and Norton equivalents",
+        "steps": [
+          "Open the instructor solution key at page 5."
+        ]
+      }
+    ],
+    "files": [
+      {
+        "label": "Released solution key",
+        "url": "ecet250e/source-materials/ecet-problem-set-9-chapter-10-solutions-8529e794.pdf"
+      },
+      {
+        "label": "Original D2L posting",
+        "url": "https://online.camosun.ca/d2l/le/content/347548/viewContent/5366876/View"
+      }
+    ]
   }
 };

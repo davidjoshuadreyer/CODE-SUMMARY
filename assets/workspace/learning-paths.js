@@ -481,7 +481,7 @@ window.TESSELATE_PATHS = {
     ]
   },
   "ecet250e": {
-    "coverage": "183 worked problems cover the currently posted Weeks 1–8 (Chapters 1–4, 6–9). All 55 original files, expandable solutions, and an optional Lab report theme. Checked October 26, 2026.",
+    "coverage": "183 worked problems cover the currently posted Weeks 1–8 (Chapters 1–4, 6–9). All 56 original files, expandable solutions, and an optional Lab report theme. Checked October 26, 2026.",
     "lessons": [
       {
         "title": "Worked problem library",
@@ -505,6 +505,11 @@ window.TESSELATE_PATHS = {
       }
     ],
     "practice": [
+      {
+        "title": "Problem Set 9 · Instructor solutions",
+        "url": "ecet250e/assignments.html#f26-45",
+        "summary": "Chapter 10: nodal, mesh, superposition, source transformation, and Thevenin/Norton equivalents."
+      },
       {
         "title": "Lab 6 · RC–RL transient bench",
         "url": "ecet250e/lab6.html",

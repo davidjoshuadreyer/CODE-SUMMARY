@@ -31,3 +31,7 @@ Five new originals (54 total): Chapter 8 PPTX, response-summary PDF, Problem Set
 ## Week 8 import
 
 Chapter 9 adds 11 lecture entries and the unchanged 68-slide PPTX (55 originals total). Includes the sine-to-cosine exercise and posted Examples 9.1–9.5, 9.7–9.11; Example 9.6 is not present. Source figures are untouched embedded excerpts, some including answers. Slide 31 is an unnumbered conversion exercise. The printed negative derivative term in Example 9.7 is retained; its answer is explicitly a sinusoidal particular solution, not a stable transient claim. Phasors use peak amplitudes and a cosine reference. The cumulative formula sheet still covers through Chapter 8.
+
+## Problem Set 9 key
+
+November 2, 2026: added the seven-page instructor solution PDF currently posted on D2L (file labelled 2025), preserved byte-for-byte. It covers 10.7, 10.25, 10.40, 10.49 and 10.55. Linked from the assignment directory, workspace, learning path and source library. This adds one original (56 total); the 183 authored problem entries are unchanged.

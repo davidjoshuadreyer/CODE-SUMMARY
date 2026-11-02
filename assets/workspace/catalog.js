@@ -566,7 +566,8 @@ window.TESSELATE_CATALOG = {
         "ref-ecet-import-52d6c989c8c5374e",
         "ref-ecet-import-7df127fa315e3a98",
         "ref-ecet-import-46df03ad7979441d",
-        "ref-ecet-import-305928b5744a75a2"
+        "ref-ecet-import-305928b5744a75a2",
+        "ref-ecet-import-8529e7945967224c"
       ],
       "builtin": true
     },
@@ -6677,6 +6678,17 @@ window.TESSELATE_CATALOG = {
       "notes": "Original D2L file · Week 8 · Sinusoids and phasors · Collected October 26, 2026.",
       "builtin": true,
       "createdAt": "2026-10-26T00:00:00.000Z"
+    },
+    {
+      "id": "ref-ecet-import-8529e7945967224c",
+      "courseId": "ecet250e",
+      "name": "Problem Set 9 · Chapter 10 · Instructor solutions",
+      "url": "ecet250e/source-materials/ecet-problem-set-9-chapter-10-solutions-8529e794.pdf",
+      "size": 420309,
+      "stage": "unreviewed",
+      "notes": "Original D2L file · Problem sets & solutions · Collected November 2, 2026.",
+      "builtin": true,
+      "createdAt": "2026-11-02T00:00:00.000Z"
     }
   ]
 };

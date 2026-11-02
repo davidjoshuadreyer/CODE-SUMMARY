@@ -465,11 +465,11 @@ window.TESSELATE_ASSIGNMENTS = {
       "title": "Problem Set 9 · Chapter 10",
       "date": "2026-11-09",
       "time": "9:30 a.m.",
-      "source": "https://online.camosun.ca/d2l/lms/dropbox/dropbox.d2l?ou=347548",
-      "solution": "",
-      "label": "Worked solution",
-      "status": "Solution not yet prepared",
-      "pdf": ""
+      "source": "https://online.camosun.ca/d2l/le/content/347548/viewContent/5366876/View",
+      "solution": "ecet250e/source-materials/ecet-problem-set-9-chapter-10-solutions-8529e794.pdf",
+      "label": "Instructor key · PDF",
+      "status": "Released instructor solutions · 5 questions · 7 pages",
+      "pdf": "ecet250e/source-materials/ecet-problem-set-9-chapter-10-solutions-8529e794.pdf"
     },
     {
       "id": "f26-55",

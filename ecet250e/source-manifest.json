@@ -736,5 +736,18 @@
     "original": true,
     "collected": "2026-10-26",
     "topicUrl": "https://online.camosun.ca/d2l/le/content/347548/viewContent/5366837/View"
+  },
+  {
+    "id": "8529e7945967224c",
+    "title": "Problem Set 9 · Chapter 10 · Instructor solutions",
+    "filename": "ECET 250E-Linear Circuit 1-Problemset 9-Chapter 10-Solution - 2025.pdf",
+    "url": "source-materials/ecet-problem-set-9-chapter-10-solutions-8529e794.pdf",
+    "format": "PDF",
+    "bytes": 420309,
+    "sha256": "8529e7945967224c827e8ec53685e0c089448103b2547208515e1c829c83d444",
+    "group": "Problem sets & solutions",
+    "original": true,
+    "sourceUrl": "https://online.camosun.ca/d2l/le/content/347548/viewContent/5366876/View",
+    "collected": "2026-11-02"
   }
 ]

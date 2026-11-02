@@ -2,7 +2,7 @@ const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypt
 const root=path.resolve(__dirname,'..'),dir=path.join(root,'ecet250e');
 const data=require('../ecet250e/study-data.json'),manifest=require('../ecet250e/source-manifest.json');
 assert.equal(data.length,183);assert.equal(new Set(data.map(p=>p.id)).size,data.length);
-assert.equal(manifest.filter(m=>m.original).length,55);
+assert.equal(manifest.filter(m=>m.original).length,56);
 assert.deepEqual([1,2,3,4,6,7,8].map(ch=>data.filter(p=>p.chapter===ch&&p.kind==='problemset').length),[15,11,10,10,10,9,5]);
 assert.equal(data.filter(p=>p.kind==='quiz').length,11);
 assert.equal(data.filter(p=>p.chapter===8&&p.kind==='lecture').length,5);
@@ -21,4 +21,4 @@ for(const [stored,expected]of [[null,'original'],['report','report'],['unexpecte
  vm.runInNewContext(fs.readFileSync(path.join(root,'assets/report-theme.js'),'utf8'),{document:doc,localStorage:{getItem:()=>{if(stored==='throws')throw Error('disabled');return stored;}},addEventListener:(name,fn)=>listeners[name]=fn});
  assert.equal(doc.documentElement.dataset.studyStyle,expected);listeners.storage({key:'tesselate-study-style',newValue:'report'});assert.equal(doc.documentElement.dataset.studyStyle,'report');listeners.storage({key:'tesselate-study-style',newValue:null});assert.equal(doc.documentElement.dataset.studyStyle,'original');
 }
-console.log('PASS: 183 entries, assignment coverage, 55 originals and SHA-256 checks, all source/figure links, math output, preference defaults and storage fallback.');
+console.log('PASS: 183 entries, assignment coverage, 56 originals and SHA-256 checks, all source/figure links, math output, preference defaults and storage fallback.');
