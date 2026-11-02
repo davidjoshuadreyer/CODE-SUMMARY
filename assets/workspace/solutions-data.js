@@ -2333,48 +2333,129 @@ window.TESSELATE_SOLUTIONS = {
   },
   "f26-45": {
     "title": "ECET 250E · Problem Set 9 · Chapter 10",
-    "status": "Released instructor solutions · 5 questions · 7 pages",
+    "status": "Clean worked solutions · 5 questions",
     "source": "https://online.camosun.ca/d2l/le/content/347548/viewContent/5366876/View",
+    "walkthrough": "ecet250e/problem-set-9.html",
     "sections": [
       {
         "title": "10.7 · Nodal analysis",
         "steps": [
-          "Open the instructor solution key at page 1."
+          "Find the node voltage V.",
+          "Open the worked solution for the full calculations."
         ]
       },
       {
         "title": "10.25 · Mesh analysis",
         "steps": [
-          "Open the instructor solution key at page 1."
+          "Find the downward capacitor current iₒ(t).",
+          "Open the worked solution for the full calculations."
         ]
       },
       {
         "title": "10.40 · Superposition",
         "steps": [
-          "Open the instructor solution key at page 3."
+          "Find the downward inductor current iₒ(t).",
+          "Open the worked solution for the full calculations."
         ]
       },
       {
         "title": "10.49 · Source transformation",
         "steps": [
-          "Open the instructor solution key at page 4."
+          "Find i(t) in the right-hand branch.",
+          "Open the worked solution for the full calculations."
         ]
       },
       {
-        "title": "10.55 · Thevenin and Norton equivalents",
+        "title": "10.55(a) · Thevenin and Norton",
         "steps": [
-          "Open the instructor solution key at page 5."
+          "Find both equivalent circuits at terminals a–b.",
+          "Open the worked solution for the full calculations."
+        ]
+      },
+      {
+        "title": "10.55(b) · Thevenin and Norton",
+        "steps": [
+          "Find both equivalent circuits at terminals a–b.",
+          "Open the worked solution for the full calculations."
         ]
       }
-    ],
-    "files": [
+    ]
+  },
+  "f26-44": {
+    "title": "ECET 250E · Problem Set 8 · Chapter 9",
+    "status": "Clean worked solutions · 10 questions",
+    "source": "https://online.camosun.ca/d2l/le/content/347548/viewContent/5366875/View",
+    "walkthrough": "ecet250e/problem-set-8.html",
+    "sections": [
       {
-        "label": "Released solution key",
-        "url": "ecet250e/source-materials/ecet-problem-set-9-chapter-10-solutions-8529e794.pdf"
+        "title": "9.1 · Read a sinusoid",
+        "steps": [
+          "Given v(t) = 50 cos(30t + 10°) V, find amplitude, period, frequency, and the voltage at 10 ms.",
+          "Open the worked solution for the full calculations."
+        ]
       },
       {
-        "label": "Original D2L posting",
-        "url": "https://online.camosun.ca/d2l/le/content/347548/viewContent/5366876/View"
+        "title": "9.5 · Compare phase",
+        "steps": [
+          "Given v₁ = 45 sin(ωt + 30°) V and v₂ = 50 cos(ωt − 30°) V, find the phase difference and which voltage lags.",
+          "Open the worked solution for the full calculations."
+        ]
+      },
+      {
+        "title": "9.6 · Find which waveform leads",
+        "steps": [
+          "Compare each pair using positive-amplitude cosine forms.",
+          "Open the worked solution for the full calculations."
+        ]
+      },
+      {
+        "title": "9.8 · Complex arithmetic",
+        "steps": [
+          "Evaluate each expression in rectangular form. Use polar form for division and rectangular form for addition.",
+          "Open the worked solution for the full calculations."
+        ]
+      },
+      {
+        "title": "9.16 · Convert to phasors",
+        "steps": [
+          "Use positive-amplitude cosine forms. These phasors use peak values.",
+          "Open the worked solution for the full calculations."
+        ]
+      },
+      {
+        "title": "9.20 · Find impedance",
+        "steps": [
+          "The input current is 7.5 cos(10t + 30°) A and the output voltage is 120 cos(10t + 75°) V.",
+          "Open the worked solution for the full calculations."
+        ]
+      },
+      {
+        "title": "9.23 · Combine sinusoids",
+        "steps": [
+          "Combine each pair into one cosine using phasors.",
+          "Open the worked solution for the full calculations."
+        ]
+      },
+      {
+        "title": "9.35 · Series RLC current",
+        "steps": [
+          "Find i when vₛ(t) = 50 cos(200t) V.",
+          "Open the worked solution for the full calculations."
+        ]
+      },
+      {
+        "title": "9.42 · Inductor voltage",
+        "steps": [
+          "Calculate vₒ(t) for the circuit shown.",
+          "Open the worked solution for the full calculations."
+        ]
+      },
+      {
+        "title": "9.47 · Source current",
+        "steps": [
+          "Determine iₛ(t) for the circuit shown.",
+          "Open the worked solution for the full calculations."
+        ]
       }
     ]
   }

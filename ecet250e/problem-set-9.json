@@ -1,0 +1,182 @@
+[
+  {
+    "id": "10-7",
+    "title": "10.7 · Nodal analysis",
+    "question": "Find the node voltage V.",
+    "steps": [
+      {
+        "title": "Write KCL",
+        "body": "Current entering from the left equals the three currents leaving the node.",
+        "math": "\\frac{120\\angle(-15^\\circ)-V}{40+j20}=6\\angle30^\\circ+\\frac{V}{-j30}+\\frac{V}{50}"
+      },
+      {
+        "title": "Collect the V terms",
+        "body": "Move the current source to the left and factor V on the right.",
+        "math": "V\\left(\\frac1{40+j20}+\\frac1{-j30}+\\frac1{50}\\right)=\\frac{120\\angle(-15^\\circ)}{40+j20}-6\\angle30^\\circ"
+      },
+      {
+        "title": "Divide in rectangular form",
+        "body": "Use rectangular form when adding or subtracting complex numbers.",
+        "math": "V=\\frac{-3.1885-j4.7805}{0.0400+j0.023333}=-111.488-j54.472\\ \\mathrm V"
+      },
+      {
+        "title": "Convert to polar form",
+        "body": "Find the magnitude and angle. Both parts are negative, so V is in the third quadrant.",
+        "math": "|V|=\\sqrt{111.488^2+54.472^2}=124.084,\\qquad \\angle V=-153.96^\\circ"
+      }
+    ],
+    "answer": "V=124.08\\angle(-153.96^\\circ)\\ \\mathrm V",
+    "check": "Substituting this voltage into KCL balances the entering and leaving currents.",
+    "figure": "10-7"
+  },
+  {
+    "id": "10-25",
+    "title": "10.25 · Mesh analysis",
+    "question": "Find the downward capacitor current iₒ(t).",
+    "steps": [
+      {
+        "title": "Convert to phasors",
+        "body": "Use cosine as the reference. The sine source has a −90° phase shift.",
+        "math": "\\omega=2,\\quad V_1=10,\\quad V_2=6\\angle(-90^\\circ)=-j6\\ \\mathrm V\\\\Z_L=j(2)(2)=j4\\ \\Omega,\\qquad Z_C=\\frac1{j(2)(0.25)}=-j2\\ \\Omega"
+      },
+      {
+        "title": "Write the mesh equations",
+        "body": "Choose clockwise mesh currents I₁ on the left and I₂ on the right. Their currents oppose each other in the capacitor.",
+        "math": "(4-j2)I_1+j2I_2=10\\\\j2I_1+j2I_2=j6"
+      },
+      {
+        "title": "Solve for the two currents",
+        "body": "Divide the first equation by 2 and the second by j2. Substitute I₂ = 3 − I₁ into the first.",
+        "math": "(2-j)I_1+jI_2=5,\\qquad I_1+I_2=3\\\\(2-j)I_1+j(3-I_1)=5\\\\I_1=\\frac{5-j3}{2-j2}=2+j0.5\\ \\mathrm A\\\\I_2=3-I_1=1-j0.5\\ \\mathrm A"
+      },
+      {
+        "title": "Find the shared current",
+        "body": "Downward capacitor current is the left mesh current minus the right mesh current.",
+        "math": "I_o=I_1-I_2=1+j1=1.414\\angle45^\\circ\\ \\mathrm A"
+      }
+    ],
+    "answer": "i_o(t)=1.414\\cos(2t+45^\\circ)\\ \\mathrm A",
+    "check": "The mesh currents satisfy both equations; their difference gives the marked downward current.",
+    "figure": "10-25"
+  },
+  {
+    "id": "10-40",
+    "title": "10.40 · Superposition",
+    "question": "Find the downward inductor current iₒ(t).",
+    "steps": [
+      {
+        "title": "Keep only the DC source",
+        "body": "Short the AC voltage source. At DC steady state, the inductor is a short circuit.",
+        "math": "I_{o,\\mathrm{DC}}=\\frac{8}{2}=4\\ \\mathrm A"
+      },
+      {
+        "title": "Keep only the AC source",
+        "body": "Short the 8 V source. At ω = 4 rad/s, the inductor impedance is j4 Ω.",
+        "math": "Z_L=j\\omega L=j(4)(1)=j4\\ \\Omega"
+      },
+      {
+        "title": "Transform the AC source",
+        "body": "The 10 V source with 4 Ω in series becomes a 2.5 A source with 4 Ω in parallel. Combine the two parallel resistors.",
+        "math": "I_s=\\frac{10\\angle0^\\circ}{4}=2.5\\angle0^\\circ\\ \\mathrm A,\\qquad R_p=4\\parallel2=\\frac{4(2)}{4+2}=\\frac43\\ \\Omega"
+      },
+      {
+        "title": "Use current division",
+        "body": "Find the current in the inductor branch.",
+        "math": "I_{o,\\mathrm{AC}}=2.5\\frac{4/3}{4/3+j4}=0.25-j0.75=0.7906\\angle(-71.57^\\circ)\\ \\mathrm A"
+      },
+      {
+        "title": "Add in the time domain",
+        "body": "Add the constant DC current to the AC waveform.",
+        "math": "i_o(t)=I_{o,\\mathrm{DC}}+i_{o,\\mathrm{AC}}(t)"
+      }
+    ],
+    "answer": "i_o(t)=4+0.7906\\cos(4t-71.57^\\circ)\\ \\mathrm A",
+    "check": "The average current is 4 A. The AC part has zero average; different frequencies are added in the time domain.",
+    "figure": "10-40"
+  },
+  {
+    "id": "10-49",
+    "title": "10.49 · Source transformation",
+    "question": "Find i(t) in the right-hand branch.",
+    "steps": [
+      {
+        "title": "Find the impedances",
+        "body": "Keep a sine reference for this question, so the source is 8∠30° A.",
+        "math": "\\omega=200,\\quad Z_L=j(200)(0.005)=j1\\ \\Omega\\\\Z_C=\\frac1{j(200)(0.001)}=-j5\\ \\Omega"
+      },
+      {
+        "title": "Transform the source",
+        "body": "Replace the current source and parallel 5 Ω resistor with a voltage source and series 5 Ω resistor.",
+        "math": "V_s=I_sR=(8\\angle30^\\circ)(5)=40\\angle30^\\circ\\ \\mathrm V"
+      },
+      {
+        "title": "Add the series impedances",
+        "body": "The transformed circuit is one series loop.",
+        "math": "Z=5+3+j1-j5=8-j4=8.944\\angle(-26.565^\\circ)\\ \\Omega"
+      },
+      {
+        "title": "Divide voltage by impedance",
+        "body": "Divide magnitudes and subtract angles.",
+        "math": "I=\\frac{40\\angle30^\\circ}{8.944\\angle(-26.565^\\circ)}=4.472\\angle56.565^\\circ\\ \\mathrm A"
+      }
+    ],
+    "answer": "i(t)=4.472\\sin(200t+56.57^\\circ)\\ \\mathrm A",
+    "check": "The negative impedance angle means current leads the source. Keep the sine reference in the final answer.",
+    "figure": "10-49"
+  },
+  {
+    "id": "10-55a",
+    "title": "10.55(a) · Thevenin and Norton",
+    "question": "Find both equivalent circuits at terminals a–b.",
+    "steps": [
+      {
+        "title": "Find the equivalent impedance",
+        "body": "Turn off the independent voltage source by shorting it. The 10 Ω resistor is in series with the parallel reactances.",
+        "math": "Z_{\\mathrm{th}}=Z_N=10+(j20\\parallel -j10)\\\\=10+\\frac{(j20)(-j10)}{j20-j10}=10-j20\\ \\Omega"
+      },
+      {
+        "title": "Find the open-circuit voltage",
+        "body": "With a–b open, no current flows through 10 Ω. The terminal voltage is the capacitor voltage.",
+        "math": "V_{\\mathrm{th}}=(50\\angle30^\\circ)\\frac{-j10}{j20-j10}\\\\=-50\\angle30^\\circ=50\\angle(-150^\\circ)\\ \\mathrm V"
+      },
+      {
+        "title": "Find the Norton current",
+        "body": "Divide the open-circuit voltage by the equivalent impedance.",
+        "math": "Z_{\\mathrm{th}}=22.361\\angle(-63.435^\\circ)\\ \\Omega\\\\I_N=\\frac{50\\angle(-150^\\circ)}{22.361\\angle(-63.435^\\circ)}=2.236\\angle(-86.565^\\circ)\\ \\mathrm A"
+      }
+    ],
+    "answer": "V_{\\mathrm{th}}=50\\angle(-150^\\circ)\\ \\mathrm V,\\quad Z_{\\mathrm{th}}=Z_N=10-j20\\ \\Omega\\\\I_N=2.236\\angle(-86.57^\\circ)\\ \\mathrm A",
+    "check": "Thevenin: voltage source in series with Zth. Norton: current source in parallel with ZN. Use + at a and a Norton source arrow from b to a.",
+    "figure": "10-55"
+  },
+  {
+    "id": "10-55b",
+    "title": "10.55(b) · Thevenin and Norton",
+    "question": "Find both equivalent circuits at terminals a–b.",
+    "steps": [
+      {
+        "title": "Find the equivalent impedance",
+        "body": "Turn off the independent current source by opening it. Looking into a–b, j10 Ω is in parallel with 8 − j5 Ω.",
+        "math": "Z_{\\mathrm{th}}=Z_N=j10\\parallel(8-j5)\\\\=\\frac{j10(8-j5)}{j10+8-j5}=8.9888+j4.3820=10\\angle25.99^\\circ\\ \\Omega"
+      },
+      {
+        "title": "Find the inductor current",
+        "body": "Restore the source and leave a–b open. Use current division between 8 Ω and the series branch −j5 + j10.",
+        "math": "I_L=(4\\angle0^\\circ)\\frac8{8-j5+j10}=\\frac{32}{8+j5}\\ \\mathrm A"
+      },
+      {
+        "title": "Find the open-circuit voltage",
+        "body": "The voltage at a–b is across the j10 Ω inductor.",
+        "math": "V_{\\mathrm{th}}=j10I_L=\\frac{j320}{8+j5}\\\\=17.9775+j28.7640=33.920\\angle57.99^\\circ\\ \\mathrm V"
+      },
+      {
+        "title": "Find the Norton current",
+        "body": "Divide magnitudes and subtract angles.",
+        "math": "I_N=\\frac{V_{\\mathrm{th}}}{Z_{\\mathrm{th}}}=\\frac{33.920\\angle57.99^\\circ}{10\\angle25.99^\\circ}=3.392\\angle32.01^\\circ\\ \\mathrm A"
+      }
+    ],
+    "answer": "V_{\\mathrm{th}}=33.920\\angle57.99^\\circ\\ \\mathrm V,\\quad Z_{\\mathrm{th}}=Z_N=10\\angle25.99^\\circ\\ \\Omega\\\\I_N=3.392\\angle32.01^\\circ\\ \\mathrm A",
+    "check": "Thevenin: Vth in series with Zth. Norton: IN in parallel with ZN. Use + at a and a Norton source arrow from b to a.",
+    "figure": "10-55"
+  }
+]

@@ -35,3 +35,7 @@ Chapter 9 adds 11 lecture entries and the unchanged 68-slide PPTX (55 originals 
 ## Problem Set 9 key
 
 November 2, 2026: added the seven-page instructor solution PDF currently posted on D2L (file labelled 2025), preserved byte-for-byte. It covers 10.7, 10.25, 10.40, 10.49 and 10.55. Linked from the assignment directory, workspace, learning path and source library. This adds one original (56 total); the 183 authored problem entries are unchanged.
+
+## Clean solutions for Problem Sets 8 and 9
+
+The authored sets live in `problem-set-8.json` and `problem-set-9.json`. Rebuild with `node dev/build-ecet-ps9.cjs 8` and `node dev/build-ecet-ps9.cjs 9`. Both are linked from assignments and the ECET learning path. PS8 was checked against the posted Chapter 9 handout and key on November 2, 2026; the 9.1 radians conversion and 9.23 voltage units are corrected. Preserve peak-value phasors and the stated sine/cosine reference.

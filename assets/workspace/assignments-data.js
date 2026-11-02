@@ -443,10 +443,10 @@ window.TESSELATE_ASSIGNMENTS = {
       "title": "Problem Set 8 · Chapter 9",
       "date": "2026-11-02",
       "time": "9:30 a.m.",
-      "source": "https://online.camosun.ca/d2l/lms/dropbox/dropbox.d2l?ou=347548",
-      "solution": "",
+      "source": "https://online.camosun.ca/d2l/le/content/347548/viewContent/5366875/View",
+      "solution": "ecet250e/problem-set-8.html",
       "label": "Worked solution",
-      "status": "Solution not yet prepared",
+      "status": "Clean worked solutions · 10 questions",
       "pdf": ""
     },
     {
@@ -466,10 +466,10 @@ window.TESSELATE_ASSIGNMENTS = {
       "date": "2026-11-09",
       "time": "9:30 a.m.",
       "source": "https://online.camosun.ca/d2l/le/content/347548/viewContent/5366876/View",
-      "solution": "ecet250e/source-materials/ecet-problem-set-9-chapter-10-solutions-8529e794.pdf",
-      "label": "Instructor key · PDF",
-      "status": "Released instructor solutions · 5 questions · 7 pages",
-      "pdf": "ecet250e/source-materials/ecet-problem-set-9-chapter-10-solutions-8529e794.pdf"
+      "solution": "ecet250e/problem-set-9.html",
+      "label": "Worked solution",
+      "status": "Clean worked solutions · 5 questions",
+      "pdf": ""
     },
     {
       "id": "f26-55",

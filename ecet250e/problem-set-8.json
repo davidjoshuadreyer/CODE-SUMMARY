@@ -1,0 +1,237 @@
+[
+  {
+    "id": "9-1",
+    "title": "9.1 \u00b7 Read a sinusoid",
+    "question": "Given v(t) = 50 cos(30t + 10\u00b0) V, find amplitude, period, frequency, and the voltage at 10 ms.",
+    "steps": [
+      {
+        "title": "Identify the constants",
+        "body": "Compare with v(t) = Vm cos(\u03c9t + \u03c6).",
+        "math": "V_m=50\\ \\mathrm V,\\qquad\\omega=30\\ \\mathrm{rad/s},\\qquad\\phi=10^\\circ"
+      },
+      {
+        "title": "Find period and frequency",
+        "body": "One cycle is 2\u03c0 radians.",
+        "math": "T=\\frac{2\\pi}{\\omega}=\\frac{2\\pi}{30}=0.20944\\ \\mathrm s\\\\f=\\frac1T=\\frac{30}{2\\pi}=4.7746\\ \\mathrm{Hz}"
+      },
+      {
+        "title": "Substitute the time",
+        "body": "Convert the phase to radians before adding it to \u03c9t.",
+        "math": "t=10\\ \\mathrm{ms}=0.010\\ \\mathrm s\\\\v(0.010)=50\\cos\\left(30(0.010)+10\\frac{\\pi}{180}\\right)\\\\=50\\cos(0.474533)=44.4753\\ \\mathrm V"
+      }
+    ],
+    "answer": "V_m=50\\ \\mathrm V,\\quad T=209.44\\ \\mathrm{ms}\\\\f=4.775\\ \\mathrm{Hz},\\quad v(10\\ \\mathrm{ms})=44.48\\ \\mathrm V",
+    "check": "Here, 0.3 rad = 17.19\u00b0. Keep radians and degrees consistent.",
+    "figure": null
+  },
+  {
+    "id": "9-5",
+    "title": "9.5 \u00b7 Compare phase",
+    "question": "Given v\u2081 = 45 sin(\u03c9t + 30\u00b0) V and v\u2082 = 50 cos(\u03c9t \u2212 30\u00b0) V, find the phase difference and which voltage lags.",
+    "steps": [
+      {
+        "title": "Use cosine for both",
+        "body": "Use sin \u03b8 = cos(\u03b8 \u2212 90\u00b0).",
+        "math": "v_1=45\\cos(\\omega t-60^\\circ)\\\\v_2=50\\cos(\\omega t-30^\\circ)"
+      },
+      {
+        "title": "Compare the phase angles",
+        "body": "The larger cosine phase leads.",
+        "math": "\\Delta\\phi=(-30^\\circ)-(-60^\\circ)=30^\\circ"
+      }
+    ],
+    "answer": "v_1\\text{ lags }v_2\\text{ by }30^\\circ",
+    "check": "",
+    "figure": null
+  },
+  {
+    "id": "9-6",
+    "title": "9.6 \u00b7 Find which waveform leads",
+    "question": "Compare each pair using positive-amplitude cosine forms.",
+    "steps": [
+      {
+        "title": "(a) Convert current to cosine",
+        "body": "Given v = 10 cos(4t \u2212 60\u00b0) and i = 4 sin(4t + 50\u00b0).",
+        "math": "i=4\\cos(4t-40^\\circ)\\\\(-40^\\circ)-(-60^\\circ)=20^\\circ\\\\i\\text{ leads }v\\text{ by }20^\\circ"
+      },
+      {
+        "title": "(b) Remove the negative amplitude",
+        "body": "Given v\u2081 = 4 cos(377t + 10\u00b0) and v\u2082 = \u221220 cos(377t). Add 180\u00b0 to the phase of v\u2082.",
+        "math": "v_2=20\\cos(377t+180^\\circ)\\\\180^\\circ-10^\\circ=170^\\circ\\\\v_2\\text{ leads }v_1\\text{ by }170^\\circ"
+      },
+      {
+        "title": "(c) Combine the two terms in x",
+        "body": "Given x = 13 cos(2t) + 5 sin(2t) and y = 15 cos(2t \u2212 11.8\u00b0).",
+        "math": "X=13-j5=13.928\\angle-21.038^\\circ\\\\x=13.928\\cos(2t-21.038^\\circ)\\\\\\Delta\\phi=-11.8^\\circ-(-21.038^\\circ)=9.238^\\circ"
+      }
+    ],
+    "answer": "\\text{(a) }i\\text{ leads by }20^\\circ\\\\\\text{(b) }v_2\\text{ leads by }170^\\circ\\\\\\text{(c) }y\\text{ leads }x\\text{ by }9.24^\\circ",
+    "check": "",
+    "figure": null
+  },
+  {
+    "id": "9-8",
+    "title": "9.8 \u00b7 Complex arithmetic",
+    "question": "Evaluate each expression in rectangular form. Use polar form for division and rectangular form for addition.",
+    "steps": [
+      {
+        "title": "(a) Divide, then add j2",
+        "body": "Convert the denominator to polar form.",
+        "math": "\\frac{60\\angle45^\\circ}{7.5-j10}+j2\\\\7.5-j10=12.5\\angle-53.130^\\circ\\\\=4.8\\angle98.130^\\circ+j2\\\\=-0.67882+j4.75176+j2=-0.67882+j6.75176"
+      },
+      {
+        "title": "(b) Work out each fraction",
+        "body": "Multiply the first denominator, then divide each complex fraction.",
+        "math": "\\frac{32\\angle-20^\\circ}{(6-j8)(4+j2)}+\\frac{20}{-10+j24}\\\\(6-j8)(4+j2)=40-j20\\\\\\frac{32\\angle-20^\\circ}{40-j20}=0.71085+j0.08181\\\\\\frac{20}{-10+j24}=-0.29586-j0.71006\\\\\\text{Sum}=0.41499-j0.62825"
+      },
+      {
+        "title": "(c) Multiply, then add 20",
+        "body": "Convert 5 + j12 to polar form.",
+        "math": "20+(16\\angle-50^\\circ)(5+j12)\\\\5+j12=13\\angle67.380^\\circ\\\\=20+208\\angle17.380^\\circ\\\\=20+198.5035+j62.1317"
+      }
+    ],
+    "answer": "\\text{(a) }-0.6788+j6.7518\\\\\\text{(b) }0.4150-j0.6283\\\\\\text{(c) }218.5035+j62.1317",
+    "check": "",
+    "figure": null
+  },
+  {
+    "id": "9-16",
+    "title": "9.16 \u00b7 Convert to phasors",
+    "question": "Use positive-amplitude cosine forms. These phasors use peak values.",
+    "steps": [
+      {
+        "title": "(a) \u221220 cos(4t + 135\u00b0)",
+        "body": "A negative amplitude is a 180\u00b0 phase shift.",
+        "math": "-20\\cos(4t+135^\\circ)=20\\cos(4t-45^\\circ)\\\\X_a=20\\angle-45^\\circ"
+      },
+      {
+        "title": "(b) 8 sin(20t + 30\u00b0)",
+        "body": "Subtract 90\u00b0 to change sine into cosine.",
+        "math": "8\\sin(20t+30^\\circ)=8\\cos(20t-60^\\circ)\\\\X_b=8\\angle-60^\\circ"
+      },
+      {
+        "title": "(c) 20 cos(2t) + 15 sin(2t)",
+        "body": "Convert each term, then add in rectangular form.",
+        "math": "X_c=20\\angle0^\\circ+15\\angle-90^\\circ=20-j15\\\\|X_c|=\\sqrt{20^2+15^2}=25\\\\\\angle X_c=\\tan^{-1}(-15/20)=-36.870^\\circ"
+      }
+    ],
+    "answer": "X_a=20\\angle-45^\\circ,\\quad X_b=8\\angle-60^\\circ\\\\X_c=25\\angle-36.87^\\circ",
+    "check": "",
+    "figure": null
+  },
+  {
+    "id": "9-20",
+    "title": "9.20 \u00b7 Find impedance",
+    "question": "The input current is 7.5 cos(10t + 30\u00b0) A and the output voltage is 120 cos(10t + 75\u00b0) V.",
+    "steps": [
+      {
+        "title": "Write the phasors",
+        "body": "Both signals already use cosine.",
+        "math": "I=7.5\\angle30^\\circ\\ \\mathrm A,\\quad V=120\\angle75^\\circ\\ \\mathrm V"
+      },
+      {
+        "title": "Divide voltage by current",
+        "body": "Divide magnitudes and subtract angles.",
+        "math": "Z=\\frac VI=\\frac{120}{7.5}\\angle(75^\\circ-30^\\circ)\\\\=16\\angle45^\\circ\\\\=16\\cos45^\\circ+j16\\sin45^\\circ"
+      }
+    ],
+    "answer": "Z=16\\angle45^\\circ\\ \\Omega=(11.314+j11.314)\\ \\Omega",
+    "check": "",
+    "figure": null
+  },
+  {
+    "id": "9-23",
+    "title": "9.23 \u00b7 Combine sinusoids",
+    "question": "Combine each pair into one cosine using phasors.",
+    "steps": [
+      {
+        "title": "(a) Voltage",
+        "body": "Given v = 110 sin(20t + 30\u00b0) + 220 cos(20t \u2212 90\u00b0) V.",
+        "math": "V=110\\angle-60^\\circ+220\\angle-90^\\circ\\\\=55-j95.263-j220=55-j315.263\\\\|V|=\\sqrt{55^2+315.263^2}=320.024\\\\\\angle V=\\tan^{-1}(-315.263/55)=-80.104^\\circ"
+      },
+      {
+        "title": "(b) Current",
+        "body": "Given i = 30 cos(5t + 60\u00b0) \u2212 20 sin(5t + 60\u00b0) A. Keep the minus sign when adding the phasors.",
+        "math": "I=30\\angle60^\\circ-20\\angle-30^\\circ\\\\=(15+j25.981)-(17.321-j10)\\\\=-2.321+j35.981\\\\|I|=36.056,\\quad\\angle I=93.690^\\circ"
+      }
+    ],
+    "answer": "v(t)=320.02\\cos(20t-80.10^\\circ)\\ \\mathrm V\\\\i(t)=36.06\\cos(5t+93.69^\\circ)\\ \\mathrm A",
+    "check": "The current phasor is in quadrant II, so its phase is greater than 90\u00b0.",
+    "figure": null
+  },
+  {
+    "id": "9-35",
+    "title": "9.35 \u00b7 Series RLC current",
+    "question": "Find i when v\u209b(t) = 50 cos(200t) V.",
+    "steps": [
+      {
+        "title": "Find the impedances",
+        "body": "Use \u03c9 = 200 rad/s, L = 0.020 H, and C = 0.005 F.",
+        "math": "Z_R=10\\ \\Omega\\\\Z_L=j\\omega L=j(200)(0.020)=j4\\ \\Omega\\\\Z_C=\\frac1{j\\omega C}=-j\\frac1{200(0.005)}=-j1\\ \\Omega"
+      },
+      {
+        "title": "Add the series impedances",
+        "body": "The same current flows through all three components.",
+        "math": "Z=10+j4-j1=10+j3=10.440\\angle16.699^\\circ\\ \\Omega"
+      },
+      {
+        "title": "Divide voltage by impedance",
+        "body": "Return to the time domain using the same cosine reference.",
+        "math": "I=\\frac{50\\angle0^\\circ}{10.440\\angle16.699^\\circ}=4.789\\angle-16.699^\\circ\\ \\mathrm A"
+      }
+    ],
+    "answer": "i(t)=4.789\\cos(200t-16.70^\\circ)\\ \\mathrm A",
+    "check": "The net reactance is inductive, so current lags the source voltage.",
+    "figure": "9-35"
+  },
+  {
+    "id": "9-42",
+    "title": "9.42 \u00b7 Inductor voltage",
+    "question": "Calculate v\u2092(t) for the circuit shown.",
+    "steps": [
+      {
+        "title": "Convert to phasors",
+        "body": "Use a cosine reference for the sine source.",
+        "math": "V_s=60\\angle-90^\\circ=-j60\\ \\mathrm V\\\\Z_L=j(200)(0.1)=j20\\ \\Omega\\\\Z_C=\\frac1{j(200)(50\\times10^{-6})}=-j100\\ \\Omega"
+      },
+      {
+        "title": "Combine the parallel branch",
+        "body": "The 50 \u03a9 resistor is in parallel with the capacitor.",
+        "math": "Z_p=\\frac{50(-j100)}{50-j100}=40-j20\\ \\Omega\\\\Z_{total}=30+(40-j20)+j20=70\\ \\Omega"
+      },
+      {
+        "title": "Use the voltage divider",
+        "body": "The output is across the inductor.",
+        "math": "V_o=V_s\\frac{Z_L}{Z_{total}}=(-j60)\\frac{j20}{70}=17.1429\\angle0^\\circ\\ \\mathrm V"
+      }
+    ],
+    "answer": "v_o(t)=17.14\\cos(200t)\\ \\mathrm V\\\\=17.14\\sin(200t+90^\\circ)\\ \\mathrm V",
+    "check": "",
+    "figure": "9-42"
+  },
+  {
+    "id": "9-47",
+    "title": "9.47 \u00b7 Source current",
+    "question": "Determine i\u209b(t) for the circuit shown.",
+    "steps": [
+      {
+        "title": "Find the impedances",
+        "body": "Use \u03c9 = 2000 rad/s, L = 0.002 H, and C = 50 \u03bcF.",
+        "math": "V_s=5\\angle0^\\circ\\ \\mathrm V\\\\Z_L=j(2000)(0.002)=j4\\ \\Omega\\\\Z_C=\\frac1{j(2000)(50\\times10^{-6})}=-j10\\ \\Omega"
+      },
+      {
+        "title": "Combine the branches",
+        "body": "The capacitor is in parallel with the series 20 \u03a9 resistor and inductor.",
+        "math": "Z_p=\\frac{(-j10)(20+j4)}{-j10+20+j4}\\\\=\\frac{40-j200}{20-j6}=4.5872-j8.6239\\ \\Omega"
+      },
+      {
+        "title": "Add the 2 \u03a9 resistor and solve",
+        "body": "Divide the source voltage by the total impedance.",
+        "math": "Z_{total}=2+Z_p=6.5872-j8.6239\\\\=10.8518\\angle-52.626^\\circ\\ \\Omega\\\\I_s=\\frac{5\\angle0^\\circ}{10.8518\\angle-52.626^\\circ}\\\\=0.46075\\angle52.626^\\circ\\ \\mathrm A"
+      }
+    ],
+    "answer": "i_s(t)=460.75\\cos(2000t+52.63^\\circ)\\ \\mathrm{mA}",
+    "check": "The total reactance is capacitive, so source current leads source voltage.",
+    "figure": "9-47"
+  }
+]

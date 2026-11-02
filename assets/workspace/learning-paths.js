@@ -505,9 +505,10 @@ window.TESSELATE_PATHS = {
       }
     ],
     "practice": [
+      {"title":"Problem Set 8 · Clean worked solutions","url":"ecet250e/problem-set-8.html","summary":"Ten questions on sinusoids, phasors, impedance, and AC circuits."},
       {
-        "title": "Problem Set 9 · Instructor solutions",
-        "url": "ecet250e/assignments.html#f26-45",
+        "title": "Problem Set 9 · Clean worked solutions",
+        "url": "ecet250e/problem-set-9.html",
         "summary": "Chapter 10: nodal, mesh, superposition, source transformation, and Thevenin/Norton equivalents."
       },
       {
