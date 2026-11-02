@@ -1299,7 +1299,7 @@ window.TESSELATE_SOLUTIONS = {
   },
   "f26-7": {
     "title": "PHYS 210 · Homework 8",
-    "status": "8 assigned questions · full worked practice, diagrams and references",
+    "status": "Clean worked solutions · 8 questions",
     "sections": [
       {
         "problem": "25.1",
@@ -1419,7 +1419,8 @@ window.TESSELATE_SOLUTIONS = {
         "label": "Homework 8 · full worked steps, diagrams and answer checks",
         "url": "phys210/quiz.html?homework=8"
       }
-    ]
+    ],
+    "walkthrough": "phys210/homework-8.html"
   },
   "f26-8": {
     "title": "PHYS 210 · Homework 9",

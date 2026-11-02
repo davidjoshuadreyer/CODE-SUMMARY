@@ -1,0 +1,183 @@
+[
+  {
+    "id": "25-1",
+    "steps": [
+      {
+        "title": "Convert the time",
+        "text": "Use seconds with amperes.",
+        "math": "\\Delta t=40\\ \\mu\\mathrm s=40\\times10^{-6}\\ \\mathrm s"
+      },
+      {
+        "title": "Calculate charge",
+        "text": "Treat the current as constant during the strike.",
+        "math": "Q=I\\Delta t=(25000)(40\\times10^{-6})=1.0\\ \\mathrm C"
+      }
+    ],
+    "answer": "Q=1.0\\ \\mathrm C",
+    "figure": null
+  },
+  {
+    "id": "25-2",
+    "steps": [
+      {
+        "title": "Part (a) Find current",
+        "text": "Convert minutes to seconds, then divide charge by time.",
+        "math": "t=80(60)=4800\\ \\mathrm s\\\\I=\\frac Qt=\\frac{420}{4800}=0.0875\\ \\mathrm A"
+      },
+      {
+        "title": "Part (b) Find area",
+        "text": "The radius is half the diameter.",
+        "math": "d=2.6\\times10^{-3}\\ \\mathrm m\\\\A=\\frac{\\pi d^2}{4}=\\frac{\\pi(2.6\\times10^{-3})^2}{4}\\\\A=5.3093\\times10^{-6}\\ \\mathrm{m^2}"
+      },
+      {
+        "title": "Calculate drift speed",
+        "text": "Use the magnitude of the electron charge.",
+        "math": "I=neAv_d\\quad\\Rightarrow\\quad v_d=\\frac{I}{neA}\\\\v_d=\\frac{0.0875}{(5.8\\times10^{28})(1.602\\times10^{-19})(5.3093\\times10^{-6})}\\\\v_d=1.77\\times10^{-6}\\ \\mathrm{m/s}"
+      }
+    ],
+    "answer": "I=0.0875\\ \\mathrm A,\\qquad v_d=1.77\\times10^{-6}\\ \\mathrm{m/s}",
+    "figure": "drift"
+  },
+  {
+    "id": "25-5",
+    "steps": [
+      {
+        "title": "Set up the calculation",
+        "text": "Find the drift speed, then divide length by speed.",
+        "math": "A=\\frac{\\pi d^2}{4},\\qquad v_d=\\frac{I}{neA},\\qquad t=\\frac{L}{v_d}"
+      },
+      {
+        "title": "Part (a) Use the 2.05 mm wire",
+        "text": "Convert the diameter to metres.",
+        "math": "A_1=\\frac{\\pi(2.05\\times10^{-3})^2}{4}=3.3006\\times10^{-6}\\ \\mathrm{m^2}\\\\v_{d1}=\\frac{4.85}{(8.5\\times10^{28})(1.602\\times10^{-19})(3.3006\\times10^{-6})}\\\\v_{d1}=1.0791\\times10^{-4}\\ \\mathrm{m/s}\\\\t_1=\\frac{0.710}{1.0791\\times10^{-4}}=6.58\\times10^3\\ \\mathrm s=1.83\\ \\mathrm h"
+      },
+      {
+        "title": "Part (b) Use the 4.12 mm wire",
+        "text": "Keep the current, length and electron density the same.",
+        "math": "A_2=\\frac{\\pi(4.12\\times10^{-3})^2}{4}=1.3332\\times10^{-5}\\ \\mathrm{m^2}\\\\v_{d2}=\\frac{4.85}{(8.5\\times10^{28})(1.602\\times10^{-19})(1.3332\\times10^{-5})}\\\\v_{d2}=2.6716\\times10^{-5}\\ \\mathrm{m/s}\\\\t_2=\\frac{0.710}{2.6716\\times10^{-5}}=2.66\\times10^4\\ \\mathrm s=7.38\\ \\mathrm h"
+      },
+      {
+        "title": "Part (c) Compare the diameters",
+        "text": "At fixed current, a thicker wire has a lower drift speed.",
+        "math": "v_d=\\frac{4I}{ne\\pi d^2}\\quad\\Rightarrow\\quad v_d\\propto\\frac1{d^2}\\\\\\frac{v_{d2}}{v_{d1}}=\\left(\\frac{2.05}{4.12}\\right)^2=0.2476"
+      }
+    ],
+    "answer": "t_1=1.83\\ \\mathrm h,\\qquad t_2=7.38\\ \\mathrm h\\\\\\text{Larger diameter gives lower drift speed.}",
+    "figure": "gauges"
+  },
+  {
+    "id": "25-11",
+    "steps": [
+      {
+        "title": "Part (a) Find area and resistance",
+        "text": "Convert the diameter from centimetres to metres.",
+        "math": "d=0.500\\ \\mathrm{cm}=0.00500\\ \\mathrm m\\\\A=\\frac{\\pi(0.00500)^2}{4}=1.9635\\times10^{-5}\\ \\mathrm{m^2}\\\\R_{20}=\\frac{15.0}{18.5}=0.81081\\ \\Omega"
+      },
+      {
+        "title": "Calculate resistivity",
+        "text": "Rearrange R = ρL/A.",
+        "math": "\\rho_{20}=\\frac{R_{20}A}{L}\\\\=\\frac{(0.81081)(1.9635\\times10^{-5})}{1.50}\\\\=1.061\\times10^{-5}\\ \\Omega\\,\\mathrm m"
+      },
+      {
+        "title": "Part (b) Find the new resistance",
+        "text": "The voltage stays the same.",
+        "math": "R_{92}=\\frac{15.0}{17.2}=0.87209\\ \\Omega\\\\R_{92}=R_{20}[1+\\alpha(92.0-20.0)]"
+      },
+      {
+        "title": "Solve for the temperature coefficient",
+        "text": "The dimensions stay constant, so resistance and resistivity have the same fractional change.",
+        "math": "\\alpha=\\frac{R_{92}/R_{20}-1}{92.0-20.0}\\\\=\\frac{18.5/17.2-1}{72.0}=1.05\\times10^{-3}\\ \\mathrm{K^{-1}}"
+      }
+    ],
+    "answer": "\\rho_{20}=1.06\\times10^{-5}\\ \\Omega\\,\\mathrm m\\\\\\alpha=1.05\\times10^{-3}\\ \\mathrm{K^{-1}}",
+    "figure": null
+  },
+  {
+    "id": "25-12",
+    "steps": [
+      {
+        "title": "Part (a) Find area and current density",
+        "text": "Use the square area.",
+        "math": "A=s^2=(2.3\\times10^{-3})^2=5.29\\times10^{-6}\\ \\mathrm{m^2}\\\\J=\\frac IA=\\frac{3.6}{5.29\\times10^{-6}}=6.81\\times10^5\\ \\mathrm{A/m^2}"
+      },
+      {
+        "title": "Part (b) Find the electric field",
+        "text": "Use the microscopic form of Ohm’s law.",
+        "math": "E=\\rho J=(1.72\\times10^{-8})(6.8053\\times10^5)\\\\E=1.17\\times10^{-2}\\ \\mathrm{V/m}"
+      },
+      {
+        "title": "Part (c) Find the travel time",
+        "text": "Find drift speed, then divide length by speed.",
+        "math": "v_d=\\frac{J}{ne}=\\frac{6.8053\\times10^5}{(8.5\\times10^{28})(1.602\\times10^{-19})}\\\\v_d=4.998\\times10^{-5}\\ \\mathrm{m/s}\\\\t=\\frac{L}{v_d}=\\frac{4.0}{4.998\\times10^{-5}}\\\\t=8.00\\times10^4\\ \\mathrm s=22.2\\ \\mathrm h"
+      }
+    ],
+    "answer": "J=6.81\\times10^5\\ \\mathrm{A/m^2}\\\\E=1.17\\times10^{-2}\\ \\mathrm{V/m}\\\\t=8.00\\times10^4\\ \\mathrm s\\;(22.2\\ \\mathrm h)",
+    "figure": "square"
+  },
+  {
+    "id": "25-16",
+    "steps": [
+      {
+        "title": "Keep the volume constant",
+        "text": "The same mass and density mean the same volume.",
+        "math": "LA=L'A',\\qquad L'=3L\\\\LA=3LA'\\quad\\Rightarrow\\quad A'=\\frac A3"
+      },
+      {
+        "title": "Substitute the new dimensions",
+        "text": "The wire is three times longer and has one-third the area.",
+        "math": "R'=\\rho\\frac{L'}{A'}=\\rho\\frac{3L}{A/3}\\\\R'=9\\rho\\frac LA=9R"
+      }
+    ],
+    "answer": "R'=9R",
+    "figure": "stretch"
+  },
+  {
+    "id": "25-25",
+    "steps": [
+      {
+        "title": "Find cable resistance",
+        "text": "Convert length and diameter to metres.",
+        "math": "L=1.00\\times10^5\\ \\mathrm m,\\qquad d=0.100\\ \\mathrm m\\\\A=\\frac{\\pi(0.100)^2}{4}=7.8540\\times10^{-3}\\ \\mathrm{m^2}\\\\R=\\rho\\frac LA=\\frac{(1.72\\times10^{-8})(1.00\\times10^5)}{7.8540\\times10^{-3}}\\\\R=0.2190\\ \\Omega"
+      },
+      {
+        "title": "Part (a) Calculate voltage drop",
+        "text": "Use Ohm’s law for this cable.",
+        "math": "\\Delta V=IR=(125)(0.2190)=27.4\\ \\mathrm V"
+      },
+      {
+        "title": "Part (b) Find energy in one hour",
+        "text": "First find heating power, then multiply by 3600 s.",
+        "math": "P=I^2R=(125)^2(0.2190)=3422\\ \\mathrm W\\\\E_{\\mathrm{heat}}=P\\Delta t=(3422)(3600)\\\\E_{\\mathrm{heat}}=1.23\\times10^7\\ \\mathrm J=3.42\\ \\mathrm{kWh}"
+      }
+    ],
+    "answer": "\\Delta V=27.4\\ \\mathrm V\\\\E_{\\mathrm{heat}}=1.23\\times10^7\\ \\mathrm J\\text{ each hour}",
+    "figure": "cable"
+  },
+  {
+    "id": "25-21",
+    "steps": [
+      {
+        "title": "Part (a) Find area and current density",
+        "text": "Use the resistivity of gold from the supplied table.",
+        "math": "A=\\frac{\\pi(0.84\\times10^{-3})^2}{4}=5.5418\\times10^{-7}\\ \\mathrm{m^2}\\\\J=\\frac E\\rho=\\frac{0.49}{2.44\\times10^{-8}}=2.0082\\times10^7\\ \\mathrm{A/m^2}"
+      },
+      {
+        "title": "Calculate current",
+        "text": "Multiply current density by area.",
+        "math": "I=JA=(2.0082\\times10^7)(5.5418\\times10^{-7})\\\\I=11.1\\ \\mathrm A"
+      },
+      {
+        "title": "Part (b) Calculate potential difference",
+        "text": "The electric field is uniform along the segment.",
+        "math": "|\\Delta V|=EL=(0.49)(6.4)=3.14\\ \\mathrm V"
+      },
+      {
+        "title": "Part (c) Calculate resistance",
+        "text": "Use the same length and cross-sectional area.",
+        "math": "R=\\rho\\frac LA=\\frac{(2.44\\times10^{-8})(6.4)}{5.5418\\times10^{-7}}\\\\R=0.282\\ \\Omega"
+      }
+    ],
+    "answer": "I=11.1\\ \\mathrm A,\\qquad |\\Delta V|=3.14\\ \\mathrm V\\\\R=0.282\\ \\Omega",
+    "figure": "gold"
+  }
+]

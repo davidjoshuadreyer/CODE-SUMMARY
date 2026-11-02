@@ -117,9 +117,9 @@ window.TESSELATE_ASSIGNMENTS = {
       "date": "2026-11-03",
       "time": "11:59 p.m.",
       "source": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2ODg/PHYS%20210%20Homework%208.pdf?ou=348967",
-      "solution": "phys210/quiz.html?homework=8",
+      "solution": "phys210/homework-8.html",
       "label": "Worked solution",
-      "status": "8 assigned questions · full worked practice, diagrams and references",
+      "status": "Clean worked solutions · 8 questions",
       "pdf": ""
     },
     {

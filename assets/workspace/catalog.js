@@ -2584,6 +2584,17 @@ window.TESSELATE_CATALOG = {
       "description": "Completed prelab, bench guide, component readings and automatic damping calculations.",
       "referenceIds": [],
       "builtin": true
+    },
+    {
+      "id": "page-cGh5czIxMC9ob21ld29yay04Lmh0bWw",
+      "courseId": "phys210",
+      "title": "Homework 8 · Clean worked solutions",
+      "kind": "Study notes",
+      "url": "phys210/homework-8.html",
+      "body": "",
+      "description": "Eight worked questions in the Math 252 report style, with diagrams.",
+      "referenceIds": [],
+      "builtin": true
     }
   ],
   "references": [

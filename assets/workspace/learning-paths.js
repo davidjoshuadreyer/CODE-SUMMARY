@@ -71,6 +71,11 @@ window.TESSELATE_PATHS = {
     ],
     "practice": [
       {
+        "title": "Homework 8 · Clean worked solutions",
+        "url": "phys210/homework-8.html",
+        "summary": "Eight current and resistance questions with clear calculations and diagrams."
+      },
+      {
         "title": "Tutorials 1–11 · Complete worked solutions",
         "url": "phys210/tutorials.html",
         "summary": "105 tutorial questions plus 12 vector-review examples and exercises, with source diagrams and expandable steps."
