@@ -1,0 +1,10 @@
+const assert=require('node:assert/strict'),M=require('../ecet250e/lab7-math.js');
+const near=(a,b)=>assert.ok(Math.abs(a-b)<1e-7*Math.max(1,Math.abs(b)),`${a} != ${b}`);
+for(const x of ['',null,undefined,-1])assert.equal(M.analyze(100,10,x),null);
+assert.equal(M.analyze(0,10,1000),null);assert.equal(M.analyze(100,-10,1000),null);
+const A=M.analyze(100,10,2*Math.sqrt(.1/1e-8)),B=M.analyze(100,10,10000),C=M.analyze(100,10,1000);
+assert.equal(A.kind,'Critical');near(A.wd,0);near(A.zeta,1);
+assert.equal(B.kind,'Overdamped');assert.equal(B.wd,null);near(B.s1+B.s2,-100000);near(B.s1*B.s2,1e9);
+assert.equal(C.kind,'Underdamped');near(C.alpha**2+C.wd**2,C.w0**2);near(C.f0,5032.921210448703);
+near(M.analyze(100,10,A.crit-72.1-50+72.1+50).zeta,1);
+console.log('PASS: component validation, all damping cases, characteristic roots, and total resistance.');

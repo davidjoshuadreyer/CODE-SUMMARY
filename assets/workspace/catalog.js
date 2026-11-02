@@ -2573,6 +2573,17 @@ window.TESSELATE_CATALOG = {
       "description": "October 30 lab: clear wiring diagrams, measurement-only inputs, automatic RC calculations and private account saves.",
       "referenceIds": [],
       "builtin": true
+    },
+    {
+      "id": "page-ZWNldDI1MGUvbGFiNy5odG1s",
+      "courseId": "ecet250e",
+      "title": "Lab 07 · RLC preparation and readings",
+      "kind": "Study notes",
+      "url": "ecet250e/lab7.html",
+      "body": "",
+      "description": "Completed prelab, bench guide, component readings and automatic damping calculations.",
+      "referenceIds": [],
+      "builtin": true
     }
   ],
   "references": [

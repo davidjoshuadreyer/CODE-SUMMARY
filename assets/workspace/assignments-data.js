@@ -476,10 +476,10 @@ window.TESSELATE_ASSIGNMENTS = {
       "title": "Lab 7 · Second-Order RLC report",
       "date": "2026-11-16",
       "time": "Time not specified",
-      "source": "https://online.camosun.ca/d2l/le/content/347548/viewContent/5366808/View",
-      "solution": "",
-      "label": "Worked solution",
-      "status": "Solution not yet prepared",
+      "source": "https://online.camosun.ca/d2l/le/content/347548/viewContent/5366841/View",
+      "solution": "ecet250e/lab7.html",
+      "label": "Open lab preparation",
+      "status": "Preparation ready · enter your measurements",
       "pdf": ""
     },
     {

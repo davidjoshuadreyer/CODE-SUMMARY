@@ -2458,5 +2458,20 @@ window.TESSELATE_SOLUTIONS = {
         ]
       }
     ]
+  },
+  "f26-55": {
+    "title": "ECET 250E · Lab 07 · Second Order RLC Circuits",
+    "status": "Preparation ready · enter your measurements",
+    "source": "https://online.camosun.ca/d2l/le/content/347548/viewContent/5366841/View",
+    "walkthrough": "ecet250e/lab7.html",
+    "sections": [
+      {
+        "title": "Preparation and readings",
+        "steps": [
+          "Completed C and resistor design calculations, bench steps, measured-component calculations and report checklist.",
+          "Capture A2, B2, C2 and photos of all wiring connections."
+        ]
+      }
+    ]
   }
 };

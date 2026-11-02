@@ -505,7 +505,16 @@ window.TESSELATE_PATHS = {
       }
     ],
     "practice": [
-      {"title":"Problem Set 8 · Clean worked solutions","url":"ecet250e/problem-set-8.html","summary":"Ten questions on sinusoids, phasors, impedance, and AC circuits."},
+      {
+        "title": "Lab 07 · RLC preparation and readings",
+        "url": "ecet250e/lab7.html",
+        "summary": "Completed preparation, simple bench steps, measurement-only form, automatic calculations and account saves."
+      },
+      {
+        "title": "Problem Set 8 · Clean worked solutions",
+        "url": "ecet250e/problem-set-8.html",
+        "summary": "Ten questions on sinusoids, phasors, impedance, and AC circuits."
+      },
       {
         "title": "Problem Set 9 · Clean worked solutions",
         "url": "ecet250e/problem-set-9.html",
