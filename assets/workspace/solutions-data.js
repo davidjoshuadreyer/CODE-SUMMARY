@@ -269,8 +269,8 @@ window.TESSELATE_SOLUTIONS = {
   },
   "f26-36": {
     "title": "ENGR 290 · Assignment 1",
-    "status": "Worked walkthrough · all 6 questions",
-    "source": "ENGR%20290/ENGR%20290_Assign_1_2026.docx",
+    "status": "Clean worked solutions · 6 questions",
+    "source": "https://online.camosun.ca/d2l/le/content/347881/viewContent/5465527/View",
     "sections": [
       {
         "title": "1 · Density of MgO",
@@ -328,7 +328,8 @@ window.TESSELATE_SOLUTIONS = {
         "label": "Download the solution key and guide (PDF)",
         "url": "engr290/assignment-1-solution-key.pdf"
       }
-    ]
+    ],
+    "walkthrough": "engr290/assignment-1-solutions.html"
   },
   "f26-66": {
     "title": "COMP 139E · Lab 3: Spherical-coordinate conversion",
@@ -687,7 +688,7 @@ window.TESSELATE_SOLUTIONS = {
   },
   "f26-0": {
     "title": "PHYS 210 · Homework 1",
-    "status": "3 assigned questions · full worked practice, diagrams and references",
+    "status": "Clean worked solutions · 3 questions",
     "sections": [
       {
         "title": "Check your completed work",
@@ -707,11 +708,12 @@ window.TESSELATE_SOLUTIONS = {
       }
     ],
     "practice": "phys210/quiz.html?homework=1",
-    "source": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2ODE/PHYS%20210%20Homework%201.pdf?ou=348967"
+    "source": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2ODE/PHYS%20210%20Homework%201.pdf?ou=348967",
+    "walkthrough": "phys210/homework-1.html"
   },
   "f26-1": {
     "title": "PHYS 210 · Homework 2",
-    "status": "4 assigned questions · full worked practice, diagrams and references",
+    "status": "Clean worked solutions · 4 questions",
     "sections": [
       {
         "title": "Check your completed work",
@@ -731,7 +733,8 @@ window.TESSELATE_SOLUTIONS = {
       }
     ],
     "practice": "phys210/quiz.html?homework=2",
-    "source": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2ODI/PHYS%20210%20Homework%202.pdf?ou=348967"
+    "source": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2ODI/PHYS%20210%20Homework%202.pdf?ou=348967",
+    "walkthrough": "phys210/homework-2.html"
   },
   "f26-25": {
     "title": "MATH 250B · Assignment 1",
@@ -776,7 +779,7 @@ window.TESSELATE_SOLUTIONS = {
   },
   "f26-2": {
     "title": "PHYS 210 · Homework 3",
-    "status": "6 assigned questions · full worked practice, diagrams and references",
+    "status": "Clean worked solutions · 6 questions",
     "sections": [
       {
         "problem": "22.1",
@@ -873,11 +876,12 @@ window.TESSELATE_SOLUTIONS = {
         "label": "Homework 3 · full worked steps, diagrams and answer checks",
         "url": "phys210/quiz.html?homework=3"
       }
-    ]
+    ],
+    "walkthrough": "phys210/homework-3.html"
   },
   "f26-3": {
     "title": "PHYS 210 · Homework 4",
-    "status": "5 assigned questions · full worked practice, diagrams and references",
+    "status": "Clean worked solutions · 5 questions",
     "sections": [
       {
         "problem": "22.15",
@@ -967,11 +971,12 @@ window.TESSELATE_SOLUTIONS = {
         "url": "phys210/quiz.html?homework=4"
       }
     ],
-    "practice": "phys210/quiz.html?homework=4"
+    "practice": "phys210/quiz.html?homework=4",
+    "walkthrough": "phys210/homework-4.html"
   },
   "f26-4": {
     "title": "PHYS 210 · Homework 5 · Electric potential and energy",
-    "status": "Full step-by-step walkthrough · 6 questions",
+    "status": "Clean worked solutions · 6 questions",
     "sections": [
       {
         "problem": "23.1",
@@ -1072,11 +1077,11 @@ window.TESSELATE_SOLUTIONS = {
         "url": "phys210/homework-5-solution-key.pdf"
       }
     ],
-    "walkthrough": "phys210/homework-5.html"
+    "walkthrough": "phys210/homework-5-clean.html"
   },
   "f26-5": {
     "title": "PHYS 210 · Homework 6",
-    "status": "6 assigned questions · full worked practice, diagrams and references",
+    "status": "Clean worked solutions · 6 questions",
     "sections": [
       {
         "problem": "23.44",
@@ -1170,11 +1175,12 @@ window.TESSELATE_SOLUTIONS = {
         "label": "Homework 6 · full worked steps, diagrams and answer checks",
         "url": "phys210/quiz.html?homework=6"
       }
-    ]
+    ],
+    "walkthrough": "phys210/homework-6.html"
   },
   "f26-6": {
     "title": "PHYS 210 · Homework 7",
-    "status": "8 assigned questions · full worked practice, diagrams and references",
+    "status": "Clean worked solutions · 8 questions",
     "sections": [
       {
         "problem": "24.7",
@@ -1295,7 +1301,8 @@ window.TESSELATE_SOLUTIONS = {
         "label": "Homework 7 · full worked steps, diagrams and answer checks",
         "url": "phys210/quiz.html?homework=7"
       }
-    ]
+    ],
+    "walkthrough": "phys210/homework-7.html"
   },
   "f26-7": {
     "title": "PHYS 210 · Homework 8",
@@ -1424,7 +1431,7 @@ window.TESSELATE_SOLUTIONS = {
   },
   "f26-8": {
     "title": "PHYS 210 · Homework 9",
-    "status": "10 assigned questions · full worked practice, diagrams and references",
+    "status": "Clean worked solutions · 10 questions",
     "sections": [
       {
         "problem": "26.3",
@@ -1573,11 +1580,12 @@ window.TESSELATE_SOLUTIONS = {
         "label": "Homework 9 · full worked steps, diagrams and answer checks",
         "url": "phys210/quiz.html?homework=9"
       }
-    ]
+    ],
+    "walkthrough": "phys210/homework-9.html"
   },
   "f26-9": {
     "title": "PHYS 210 · Homework 10",
-    "status": "9 assigned questions · full worked practice, diagrams and references",
+    "status": "Clean worked solutions · 9 questions",
     "sections": [
       {
         "problem": "27.1",
@@ -1711,11 +1719,12 @@ window.TESSELATE_SOLUTIONS = {
         "label": "Homework 10 · full worked steps, diagrams and answer checks",
         "url": "phys210/quiz.html?homework=10"
       }
-    ]
+    ],
+    "walkthrough": "phys210/homework-10.html"
   },
   "f26-10": {
     "title": "PHYS 210 · Homework 11",
-    "status": "6 assigned questions · full worked practice, diagrams and references",
+    "status": "Clean worked solutions · 6 questions",
     "sections": [
       {
         "problem": "27.37",
@@ -1812,11 +1821,12 @@ window.TESSELATE_SOLUTIONS = {
         "label": "Homework 11 · full worked steps, diagrams and answer checks",
         "url": "phys210/quiz.html?homework=11"
       }
-    ]
+    ],
+    "walkthrough": "phys210/homework-11.html"
   },
   "f26-11": {
     "title": "PHYS 210 · Homework 12",
-    "status": "10 assigned questions · full worked practice, diagrams and references",
+    "status": "Clean worked solutions · 10 questions",
     "sections": [
       {
         "problem": "28.29",
@@ -1960,11 +1970,12 @@ window.TESSELATE_SOLUTIONS = {
         "label": "Homework 12 · full worked steps, diagrams and answer checks",
         "url": "phys210/quiz.html?homework=12"
       }
-    ]
+    ],
+    "walkthrough": "phys210/homework-12.html"
   },
   "f26-12": {
     "title": "PHYS 210 · Homework 13",
-    "status": "8 assigned questions · full worked practice, diagrams and references",
+    "status": "Clean worked solutions · 8 questions",
     "sections": [
       {
         "problem": "29.25",
@@ -2089,7 +2100,8 @@ window.TESSELATE_SOLUTIONS = {
         "label": "Homework 13 · full worked steps, diagrams and answer checks",
         "url": "phys210/quiz.html?homework=13"
       }
-    ]
+    ],
+    "walkthrough": "phys210/homework-13.html"
   },
   "f26-52": {
     "title": "ECET 250E · Lab 4 · Resistive DC Circuits",
@@ -2471,6 +2483,28 @@ window.TESSELATE_SOLUTIONS = {
         "steps": [
           "Completed C and resistor design calculations, bench steps, measured-component calculations and report checklist.",
           "Capture A2, B2, C2 and photos of all wiring connections."
+        ]
+      }
+    ]
+  },
+  "engr-assignment-2": {
+    "title": "ENGR 290 · Assignment 2",
+    "status": "Clean worked solutions · 14 questions",
+    "source": "https://online.camosun.ca/d2l/le/content/347881/viewContent/5494675/View",
+    "walkthrough": "engr290/assignment-2-solutions.html",
+    "assignment": {
+      "course": "engr290",
+      "title": "Assignment 2",
+      "date": "2026-11-04",
+      "time": "11:59 p.m. in handout",
+      "dateLabel": "Deadline unconfirmed: handout says Monday, November 4, 2026"
+    },
+    "sections": [
+      {
+        "title": "Materials and polymers",
+        "steps": [
+          "All 14 questions have worked solutions and the supplied phase diagrams.",
+          "Phase-diagram readings are approximate; the inconsistent printed Gibbs-rule answer is explained."
         ]
       }
     ]

@@ -1,0 +1,190 @@
+[
+  {
+    "id": "hw7-24-7",
+    "problem": "24.7",
+    "title": "24.7 · Changing capacitor separation",
+    "given": "Air capacitor: Q = 240 pC, V = 42.0 V, plate area A = 6.80 cm².",
+    "find": "Find gap d, then voltage for the same Q if d doubles.",
+    "figure": "homework-late-figures/hw7-24-7.svg",
+    "original": "midterm-crops/hw-24-7-q1.jpg",
+    "steps": [
+      {
+        "title": "Find the initial gap",
+        "math": "C=\\frac QV=\\frac{240\\times10^{-12}}{42.0}=5.714\\times10^{-12}\\ \\mathrm F\\\\d=\\frac{\\varepsilon_0A}{C}=\\frac{(8.854\\times10^{-12})(6.80\\times10^{-4})}{5.714\\times10^{-12}}\\\\d=1.05\\times10^{-3}\\ \\mathrm m=1.05\\ \\mathrm{mm}"
+      },
+      {
+        "title": "Double the gap at fixed charge",
+        "math": "C'=\\frac{\\varepsilon_0A}{2d}=\\frac C2\\\\V'=\\frac Q{C'}=2\\frac QC=2(42.0)=84.0\\ \\mathrm V"
+      }
+    ],
+    "answer": "d = 1.05 mm; new voltage 84.0 V.",
+    "note": "",
+    "check": "The field stays constant because Q/A is unchanged; voltage grows with gap. This question appears in both Homework 6 and 7."
+  },
+  {
+    "id": "24-8",
+    "problem": "24.8",
+    "title": "24.8 · Design an air capacitor",
+    "given": "Circular air capacitor C = 5.00 pF must withstand 100 V while E ≤ 1.00 × 10⁴ N/C.",
+    "find": "Find minimum gap, minimum plate radius, and maximum charge at 100 V.",
+    "figure": "homework-late-figures/24-8.svg",
+    "original": "midterm-crops/hw-24-8-q1.jpg",
+    "steps": [
+      {
+        "title": "Use the field limit",
+        "math": "E=\\frac Vd\\le E_{max}\\quad\\Rightarrow\\quad d\\ge\\frac V{E_{max}}\\\\d_{min}=\\frac{100}{1.00\\times10^4}=0.0100\\ \\mathrm m"
+      },
+      {
+        "title": "Find the minimum radius",
+        "math": "C=\\frac{\\varepsilon_0\\pi r^2}{d}\\\\r_{min}=\\sqrt{\\frac{Cd_{min}}{\\pi\\varepsilon_0}}=\\sqrt{\\frac{(5.00\\times10^{-12})(0.0100)}{\\pi(8.854\\times10^{-12})}}\\\\r_{min}=0.0424\\ \\mathrm m=4.24\\ \\mathrm{cm}"
+      },
+      {
+        "title": "Find the charge at 100 V",
+        "math": "Q_{max}=CV=(5.00\\times10^{-12})(100)=5.00\\times10^{-10}\\ \\mathrm C"
+      }
+    ],
+    "answer": "10.0 mm gap; 4.24 cm radius; 500 pC.",
+    "note": "",
+    "check": "Increasing d beyond its minimum requires larger plates to preserve C."
+  },
+  {
+    "id": "24-12",
+    "problem": "24.12",
+    "title": "24.12 · Cylindrical capacitor",
+    "given": "Coaxial air capacitor: inner radius a = 2.20 mm, outer inner radius b = 3.50 mm, length L = 2.80 m. Inner conductor is 0.350 V higher.",
+    "find": "Find capacitance per length and charge on each conductor.",
+    "figure": "homework-late-figures/24-12.svg",
+    "original": "midterm-crops/hw-24-12-q1.jpg",
+    "steps": [
+      {
+        "title": "Find capacitance per length",
+        "math": "V=\\int_a^b\\frac{\\lambda}{2\\pi\\varepsilon_0r}\\,dr=\\frac{\\lambda}{2\\pi\\varepsilon_0}\\ln\\frac ba\\\\\\frac CL=\\frac{\\lambda}{V}=\\frac{2\\pi\\varepsilon_0}{\\ln(b/a)}\\\\=\\frac{2\\pi(8.854\\times10^{-12})}{\\ln(3.50/2.20)}=1.20\\times10^{-10}\\ \\mathrm{F/m}"
+      },
+      {
+        "title": "Find the conductor charges",
+        "math": "Q=\\left(\\frac CL\\right)LV=(1.198\\times10^{-10})(2.80)(0.350)\\\\Q=1.17\\times10^{-10}\\ \\mathrm C\\\\Q_{inner}=+117\\ \\mathrm{pC},\\quad Q_{outer}=-117\\ \\mathrm{pC}"
+      }
+    ],
+    "answer": "120 pF/m; inner +117 pC, outer −117 pC.",
+    "note": "",
+    "check": "The inner conductor is positive and the outer negative; use the inner surface radius of the outer cylinder."
+  },
+  {
+    "id": "24-14",
+    "problem": "24.14",
+    "title": "24.14 · Series and parallel capacitors",
+    "given": "Network A—10 µF—(5 µF in parallel with 8 µF)—9 µF—B; Vₐᵦ = 50.0 V.",
+    "find": "Find equivalent capacitance, total stored plate charge, and charges on the 10 and 9 µF capacitors.",
+    "figure": "homework-late-figures/24-14.svg",
+    "original": "midterm-crops/hw-24-14-q1.jpg",
+    "steps": [
+      {
+        "title": "Combine the capacitances",
+        "math": "C_p=5+8=13\\ \\mu\\mathrm F\\\\\\frac1{C_{eq}}=\\frac1{10}+\\frac1{13}+\\frac19\\quad(\\mu\\mathrm F)^{-1}\\\\C_{eq}=3.4718\\ \\mu\\mathrm F"
+      },
+      {
+        "title": "Find the series charge",
+        "math": "Q=C_{eq}V=(3.4718\\ \\mu\\mathrm F)(50.0\\ \\mathrm V)=173.59\\ \\mu\\mathrm C\\\\Q_{10}=Q_9=Q=174\\ \\mu\\mathrm C"
+      }
+    ],
+    "answer": "Ceq = 3.47 µF; total, Q₁₀ and Q₉ = 174 µC each.",
+    "note": "",
+    "check": "The 5 and 8 µF branch charges add to the series charge; they are not individually equal to it."
+  },
+  {
+    "id": "24-24",
+    "problem": "24.24",
+    "title": "24.24 · Work pulling plates apart",
+    "given": "Isolated capacitor C = 920 pF carries Q = 3.90 µC. Double the gap, keeping Q constant.",
+    "find": "Find original and final voltages and external work.",
+    "figure": "homework-late-figures/24-24.svg",
+    "original": "midterm-crops/hw-24-24-q1.jpg",
+    "steps": [
+      {
+        "title": "Find the two voltages",
+        "math": "V_i=\\frac QC=\\frac{3.90\\times10^{-6}}{920\\times10^{-12}}=4.24\\times10^3\\ \\mathrm V\\\\C_f=C_i/2,\\quad V_f=Q/C_f=2V_i=8.48\\times10^3\\ \\mathrm V"
+      },
+      {
+        "title": "Find the work required",
+        "math": "U_i=\\frac{Q^2}{2C_i},\\quad U_f=\\frac{Q^2}{2(C_i/2)}=2U_i\\\\W_{ext}=U_f-U_i=\\frac{(3.90\\times10^{-6})^2}{2(920\\times10^{-12})}\\\\W_{ext}=8.27\\times10^{-3}\\ \\mathrm J"
+      }
+    ],
+    "answer": "4.24 kV → 8.48 kV; external work 8.27 mJ.",
+    "note": "",
+    "check": "Positive work separates attracting plates; the energy doubles."
+  },
+  {
+    "id": "24-36",
+    "problem": "24.36",
+    "title": "24.36 · Build a paper capacitor",
+    "given": "Target C = 1.00 nF. Paper κ = 3.0, sheet thickness 0.20 mm, plate dimensions 22 cm × 28 cm. Posterboard has thickness 12 mm and the same κ.",
+    "find": "Find the number of paper sheets, the required posterboard plate area, and whether replacing that posterboard with Teflon of the same thickness requires larger or smaller plates.",
+    "figure": "homework-late-figures/24-36.svg",
+    "original": "midterm-crops/hw-24-36-q1.jpg",
+    "steps": [
+      {
+        "title": "Count the paper sheets",
+        "math": "A=(0.22)(0.28)=0.0616\\ \\mathrm{m^2},\\quad d=nt\\\\C=\\frac{\\kappa\\varepsilon_0 A}{nt}\\quad\\Rightarrow\\quad n=\\frac{\\kappa\\varepsilon_0 A}{Ct}\\\\n=\\frac{3.0(8.854\\times10^{-12})(0.0616)}{(1.00\\times10^{-9})(0.20\\times10^{-3})}=8.18"
+      },
+      {
+        "title": "Find the posterboard area",
+        "math": "A=\\frac{Cd}{\\kappa\\varepsilon_0}=\\frac{(1.00\\times10^{-9})(0.0120)}{3.0(8.854\\times10^{-12})}\\\\A=0.452\\ \\mathrm{m^2}"
+      },
+      {
+        "title": "Compare Teflon",
+        "math": "A=\\frac{Cd}{\\kappa\\varepsilon_0}\\quad\\Rightarrow\\quad A\\propto\\frac1\\kappa"
+      }
+    ],
+    "answer": "About 8 sheets; posterboard area 0.452 m²; Teflon needs more area.",
+    "note": "Use about eight sheets. Teflon has a smaller dielectric constant than the posterboard, so it needs a larger plate area.",
+    "check": "An integer number of sheets gives an approximate target. For the same thickness and capacitance, lower κ requires larger area."
+  },
+  {
+    "id": "24-66",
+    "problem": "24.66",
+    "title": "24.66 · Half-filled dielectric capacitor",
+    "given": "Square plates 0.120 m on a side, gap d = 4.50 mm; half the area contains Plexiglas κ = 3.40 and half air. Battery stays connected at 18.0 V.",
+    "find": "Find C, stored energy, and energy after removing the dielectric.",
+    "figure": "homework-late-figures/24-66.svg",
+    "original": "midterm-crops/hw-24-66-q1.jpg",
+    "steps": [
+      {
+        "title": "Add the two parallel sections",
+        "math": "A=(0.120)^2=0.0144\\ \\mathrm{m^2}\\\\C=C_{air}+C_{plastic}=\\frac{\\varepsilon_0(A/2)}d+\\frac{\\kappa\\varepsilon_0(A/2)}d\\\\C=\\frac{(8.854\\times10^{-12})(0.0144)(1+3.40)}{2(0.00450)}\\\\C=6.23\\times10^{-11}\\ \\mathrm F=62.3\\ \\mathrm{pF}"
+      },
+      {
+        "title": "Find the initial energy",
+        "math": "U=\\frac12CV^2=\\frac12(6.233\\times10^{-11})(18.0)^2\\\\U=1.01\\times10^{-8}\\ \\mathrm J"
+      },
+      {
+        "title": "Remove the plastic with the battery connected",
+        "math": "C_0=\\frac{\\varepsilon_0 A}d=\\frac{(8.854\\times10^{-12})(0.0144)}{0.00450}=2.833\\times10^{-11}\\ \\mathrm F\\\\U_0=\\frac12C_0V^2=\\frac12(2.833\\times10^{-11})(18.0)^2\\\\U_0=4.59\\times10^{-9}\\ \\mathrm J"
+      }
+    ],
+    "answer": "62.3 pF; 10.1 nJ initially; 4.59 nJ after removal.",
+    "note": "",
+    "check": "The battery fixes voltage, not charge. Using a series-dielectric formula would describe a different geometry."
+  },
+  {
+    "id": "24-68",
+    "problem": "24.68",
+    "title": "24.68 · Capacitive fuel gauge",
+    "given": "Vertical plates have width w, height L and gap d. Fuel fills height h; air above it. κ = 1.95 for gasoline or 33.0 for methanol.",
+    "find": "Derive effective dielectric constant; evaluate quarter, half and three-quarter full; compare sensitivity.",
+    "figure": "homework-late-figures/24-68.svg",
+    "original": "midterm-crops/hw-24-68-q1.jpg",
+    "steps": [
+      {
+        "title": "Add fuel and air sections",
+        "math": "C=\\frac{\\varepsilon_0w(L-h)}d+\\frac{\\kappa\\varepsilon_0wh}d\\\\C=\\frac{\\varepsilon_0wL}d\\left[1+(\\kappa-1)\\frac hL\\right]\\\\\\kappa_{eff}=1+(\\kappa-1)\\frac hL"
+      },
+      {
+        "title": "Substitute the fill fractions",
+        "math": "\\text{Gasoline: }\\kappa_{eff}=1+0.95(h/L)\\\\h/L=\\tfrac14,\\tfrac12,\\tfrac34:\\quad1.2375,\\ 1.475,\\ 1.7125\\\\\\text{Methanol: }\\kappa_{eff}=1+32(h/L)\\\\h/L=\\tfrac14,\\tfrac12,\\tfrac34:\\quad9,\\ 17,\\ 25"
+      }
+    ],
+    "answer": "κeff = 1 + (κ − 1)h/L; methanol is more sensitive.",
+    "note": "",
+    "check": "Both are linear in fill height in this ideal model. Methanol gives a larger capacitance change per unit height, making the change easier to resolve."
+  }
+]

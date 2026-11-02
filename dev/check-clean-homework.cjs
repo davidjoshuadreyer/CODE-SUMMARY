@@ -1,0 +1,10 @@
+const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),assert=require('node:assert/strict');
+const root=path.resolve(__dirname,'..'),counts=[3,4,6,5,6,6,8,8,10,9,6,10,8];
+const pages=counts.map((n,i)=>({file:`phys210/homework-${i===4?'5-clean':i+1}.html`,n})).concat([{file:'engr290/assignment-1-solutions.html',n:6},{file:'engr290/assignment-2-solutions.html',n:14}]);
+for(const {file,n} of pages){const html=fs.readFileSync(path.join(root,file),'utf8');assert.equal((html.match(/<section class="question"/g)||[]).length,n,file+' coverage');assert(!html.includes('katex-error'),file+' math');const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);assert.equal(ids.length,new Set(ids).size,file+' duplicate IDs');for(const [,raw] of html.matchAll(/\b(?:src|href)="([^"]+)"/g)){if(/^(https?:|data:|mailto:)/.test(raw))continue;const [link,anchor]=raw.split('#');if(!link){assert(ids.includes(anchor),file+' anchor '+anchor);continue;}const target=path.resolve(root,path.dirname(file),decodeURIComponent(link.split('?')[0]));assert(fs.existsSync(target),file+' missing '+raw);}}
+function data(file,key){const c={window:{}};vm.runInNewContext(fs.readFileSync(path.join(root,file),'utf8'),c);return c.window[key];}
+const A=data('assets/workspace/assignments-data.js','TESSELATE_ASSIGNMENTS'),S=data('assets/workspace/solutions-data.js','TESSELATE_SOLUTIONS');
+for(let h=1;h<=13;h++){const expected=pages[h-1].file,a=A.phys210.find(x=>x.id==='f26-'+(h-1));assert.equal(a.solution,expected);assert.equal(S[a.id].walkthrough,expected);}
+for(const [id,url] of [['f26-36','engr290/assignment-1-solutions.html'],['engr-assignment-2','engr290/assignment-2-solutions.html']]){assert.equal(A.engr290.find(x=>x.id===id).solution,url);assert.equal(S[id].walkthrough,url);}
+assert(A.engr290.find(x=>x.id==='engr-assignment-2').dateLabel.includes('unconfirmed'));
+console.log('PASS: 89 Physics and20 Materials questions, all local assets/links, unique anchors, rendered math, and assignment destinations.');

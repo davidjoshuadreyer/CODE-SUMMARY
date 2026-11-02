@@ -594,9 +594,9 @@ window.ENGR_REPS = [
     "assignment": 2,
     "source": 9,
     "topic": "Composition balance",
-    "prompt": "At 2200°C, the NiO–MgO solidus is approximately 40 mol% MgO. With M(NiO) = 74.69 and M(MgO) = 40.30 g/mol, how much MgO must be added to 1000 g NiO?",
+    "prompt": "At 2200°C, the NiO–MgO solidus is approximately 35 mol% MgO. With M(NiO) = 74.69 and M(MgO) = 40.30 g/mol, how much MgO must be added to 1000 g NiO?",
     "options": [
-      "About 360 g",
+      "About 290 g",
       "About 667 g",
       "About 400 g",
       "About 1350 g"
@@ -605,8 +605,8 @@ window.ENGR_REPS = [
     "hint": "The composition axis is mole percent. Convert the original NiO mass to moles.",
     "steps": [
       "nNiO = 1000/74.69 = 13.389 mol.",
-      "nMgO/(nMgO + 13.389) = 0.40 → nMgO = (0.40/0.60)(13.389) = 8.926 mol.",
-      "mMgO = 8.926 × 40.30 ≈ 360 g. The 40 mol% reading is approximate."
+      "nMgO/(nMgO + 13.389) = 0.35 → nMgO = (0.35/0.65)(13.389) = 7.209 mol.",
+      "mMgO = 7.209 × 40.30 ≈ 290 g. The 35 mol% reading is approximate."
     ],
     "fig": 5
   },

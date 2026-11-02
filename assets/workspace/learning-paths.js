@@ -71,9 +71,9 @@ window.TESSELATE_PATHS = {
     ],
     "practice": [
       {
-        "title": "Homework 8 · Clean worked solutions",
-        "url": "phys210/homework-8.html",
-        "summary": "Eight current and resistance questions with clear calculations and diagrams."
+        "title": "Homework 1–13 · Clean worked solutions",
+        "url": "phys210/homework.html",
+        "summary": "All 89 assigned questions with clear calculations, source questions, diagrams and free-body diagrams where needed."
       },
       {
         "title": "Tutorials 1–11 · Complete worked solutions",
@@ -311,6 +311,16 @@ window.TESSELATE_PATHS = {
       }
     ],
     "practice": [
+      {
+        "title": "Assignment 1 · Clean worked solutions",
+        "url": "engr290/assignment-1-solutions.html",
+        "summary": "6 complete solutions with equations, calculations and diagrams."
+      },
+      {
+        "title": "Assignment 2 · Clean worked solutions",
+        "url": "engr290/assignment-2-solutions.html",
+        "summary": "14 complete solutions with equations, calculations and diagrams."
+      },
       {
         "title": "Assignments 1 & 2 · Multiple-choice reps",
         "url": "engr290/assignment-practice.html",

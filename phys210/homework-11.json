@@ -1,0 +1,138 @@
+[
+  {
+    "id": "27-37",
+    "problem": "27.37",
+    "title": "27.37 · Lift-off of a conducting bar",
+    "given": "Bar L = 0.500 m, mass 0.750 kg, B = 0.450 T into the page; current runs rightward. Series resistance starts at 25.0 Ω, then falls to 2.0 Ω.",
+    "find": "Find maximum battery voltage before lift-off, then initial acceleration after resistance falls.",
+    "figure": "homework-late-figures/27-37.svg",
+    "original": "homework-late-figures/27-37-question.png",
+    "steps": [
+      {
+        "title": "Part (a): balance the weight at lift-off",
+        "math": "N+ILB-mg=0,\\quad N=0\\text{ at lift-off}\\\\I_{max}=\\frac{mg}{LB}=\\frac{(0.750)(9.80)}{(0.500)(0.450)}=32.6667\\ \\mathrm A\\\\V_{max}=I_{max}R=(32.6667)(25.0)=816.7\\ \\mathrm V"
+      },
+      {
+        "title": "Part (b): reduce the resistance",
+        "math": "I'=\\frac{V_{max}}{R'}=\\frac{816.7}{2.0}=408.3\\ \\mathrm A\\\\F_B=I'LB=(408.3)(0.500)(0.450)=91.875\\ \\mathrm N\\\\a=\\frac{F_B-mg}{m}=\\frac{91.875-7.350}{0.750}=112.7\\ \\mathrm{m/s^2}"
+      }
+    ],
+    "answer": "Maximum ≈ 817 V; initial acceleration ≈ 113 m/s² upward.",
+    "note": "",
+    "check": "This is the initial acceleration while current still flows through the contacts; the circuit breaks when the bar lifts off."
+  },
+  {
+    "id": "27-41",
+    "problem": "27.41",
+    "title": "27.41 · Torque about a loop hinge",
+    "given": "Rectangle abcd: vertical ab = cd = 0.200 m; horizontal bc = da = 0.350 m. Clockwise current 5.00 A; B = 1.20 T rightward; hinge along left side ab.",
+    "find": "Find force directions, identify which force torques the hinge, and calculate torque.",
+    "figure": "homework-late-figures/27-41.svg",
+    "original": "homework-late-figures/27-41-question.png",
+    "steps": [
+      {
+        "title": "Find the four forces",
+        "math": "\\mathbf F=I\\mathbf L\\times\\mathbf B\\\\F_{ab}=F_{cd}=ILB=(5.00)(0.200)(1.20)=1.20\\ \\mathrm N\\\\F_{bc}=F_{da}=ILB\\sin0^\\circ=0"
+      },
+      {
+        "title": "Find torque about the hinge",
+        "math": "\\tau_{ab}=0\\quad\\text{(force at the hinge)}\\\\\\tau_{cd}=F_{cd}(0.350)=(1.20)(0.350)=0.420\\ \\mathrm{N\\,m}"
+      }
+    ],
+    "answer": "Only cd torques the hinge: 1.20 N outward; torque 0.420 N m.",
+    "note": "Force on ab is into the page; force on cd is out of the page. The other two sides are parallel to B.",
+    "check": "The right side cd swings out of the page. Net force is zero, but the force couple produces nonzero torque."
+  },
+  {
+    "id": "27-42",
+    "problem": "27.42",
+    "title": "27.42 · Rotating a current loop",
+    "given": "Loop 0.220 m × 0.350 m, I = 1.95 A counterclockwise, B = 1.50 T into page. Initially loop plane is perpendicular to B; then rotate 30° with left side outward and right side inward.",
+    "find": "Find net force and torque before and after rotation.",
+    "figure": "homework-late-figures/27-42.svg",
+    "original": "homework-late-figures/27-42-question.png",
+    "steps": [
+      {
+        "title": "Before rotation",
+        "math": "A=(0.220)(0.350)=0.0770\\ \\mathrm{m^2}\\\\\\mu=IA=(1.95)(0.0770)=0.15015\\ \\mathrm{A\\,m^2}\\\\F_{net}=0,\\quad\\tau=\\mu B\\sin180^\\circ=0"
+      },
+      {
+        "title": "After rotation",
+        "math": "\\theta=180^\\circ-30^\\circ=150^\\circ\\\\\\tau=\\mu B\\sin\\theta=(0.15015)(1.50)\\sin150^\\circ\\\\\\tau=0.113\\ \\mathrm{N\\,m},\\quad F_{net}=0"
+      }
+    ],
+    "answer": "Both net forces zero; torque 0 initially, then 0.113 N m continuing the rotation.",
+    "note": "",
+    "check": "The initial magnetic moment is opposite B (unstable equilibrium). After the stated rotation the torque continues that rotation, with left side moving further out."
+  },
+  {
+    "id": "27-56",
+    "problem": "27.56",
+    "title": "27.56 · Cyclotron energy limit",
+    "given": "Cyclotron B = 0.85 T, maximum orbit radius 0.40 m. Proton q = 1.60 × 10⁻¹⁹ C, m = 1.67 × 10⁻²⁷ kg. Alpha q = 3.20 × 10⁻¹⁹ C, m = 6.64 × 10⁻²⁷ kg.",
+    "find": "Find proton maximum energy in J/eV, period, B needed to double energy, and alpha maximum energy at 0.85 T.",
+    "figure": null,
+    "original": "homework-late-figures/27-56-question.png",
+    "steps": [
+      {
+        "title": "Find proton energy and period",
+        "math": "K_{max}=\\frac{q^2B^2R^2}{2m}\\\\=\\frac{(1.60\\times10^{-19})^2(0.85)^2(0.40)^2}{2(1.67\\times10^{-27})}\\\\K_p=8.86\\times10^{-13}\\ \\mathrm J=\\frac{8.86\\times10^{-13}}{1.60\\times10^{-19}}\\ \\mathrm{eV}=5.54\\ \\mathrm{MeV}\\\\T_p=\\frac{2\\pi m}{qB}=\\frac{2\\pi(1.67\\times10^{-27})}{(1.60\\times10^{-19})(0.85)}=7.72\\times10^{-8}\\ \\mathrm s"
+      },
+      {
+        "title": "Double the proton energy",
+        "math": "K\\propto B^2\\quad\\Rightarrow\\quad B'=\\sqrt2B=\\sqrt2(0.85)=1.20\\ \\mathrm T"
+      },
+      {
+        "title": "Find the alpha-particle energy",
+        "math": "K_\\alpha=\\frac{(3.20\\times10^{-19})^2(0.85)^2(0.40)^2}{2(6.64\\times10^{-27})}\\\\K_\\alpha=8.91\\times10^{-13}\\ \\mathrm J=5.57\\ \\mathrm{MeV}"
+      }
+    ],
+    "answer": "Proton 5.54 MeV; period 77.2 ns; doubling requires 1.20 T; alpha 5.57 MeV.",
+    "note": "",
+    "check": "The alpha energy is almost the same: its charge squared is four times greater and mass approximately four times greater. Nonrelativistic model."
+  },
+  {
+    "id": "27-65",
+    "problem": "27.65",
+    "title": "27.65 · Rail-gun acceleration",
+    "given": "A bar of mass m and length L bridges horizontal rails in uniform vertical field B, carrying constant current I across the bar as shown in the handout. Ignore friction and gravity for the motion.",
+    "find": "Derive force and distance from rest to speed v; evaluate for 11.2 km/s, B = 0.80 T, I = 2.0 × 10³ A, m = 25 kg, L = 0.50 m.",
+    "figure": "homework-late-figures/27-65.svg",
+    "original": "homework-late-figures/27-65-question.png",
+    "steps": [
+      {
+        "title": "Find force and distance symbolically",
+        "math": "F_B=ILB,\\quad a=\\frac{ILB}{m}\\\\v^2=2ad\\quad\\Rightarrow\\quad d=\\frac{mv^2}{2ILB}"
+      },
+      {
+        "title": "Substitute the launch values",
+        "math": "F_B=(2.0\\times10^3)(0.50)(0.80)=800\\ \\mathrm N\\\\a=800/25=32\\ \\mathrm{m/s^2}\\\\d=\\frac{25(11.2\\times10^3)^2}{2(2.0\\times10^3)(0.50)(0.80)}\\\\d=1.96\\times10^6\\ \\mathrm m\\approx1960\\ \\mathrm{km}"
+      }
+    ],
+    "answer": "F = ILB along rails; d = mv²/(2ILB); example distance 1.96 × 10⁶ m.",
+    "note": "",
+    "check": "Force points along the rails away from the source for the shown current. The 1960 km distance illustrates the limits of this simplified launch model."
+  },
+  {
+    "id": "27-69",
+    "problem": "27.69",
+    "title": "27.69 · Suspended loop in equilibrium",
+    "given": "Loop width 6.00 cm, height 8.00 cm, mass per length 0.15 g/cm, current 8.2 A as in handout. Hinge is its upper 6 cm side; plane tilts 30° from yz-plane. B is parallel to y.",
+    "find": "Find magnitude and direction of B needed for equilibrium.",
+    "figure": "homework-late-figures/27-69.svg",
+    "original": "homework-late-figures/27-69-question.png",
+    "steps": [
+      {
+        "title": "Find loop mass and gravity torque",
+        "math": "m=\\lambda[2(w+h)]=(0.15\\ \\mathrm{g/cm})[2(6.00+8.00)\\ \\mathrm{cm}]\\\\m=4.20\\ \\mathrm g=0.00420\\ \\mathrm{kg}\\\\\\tau_g=mg\\frac h2\\sin30^\\circ"
+      },
+      {
+        "title": "Balance magnetic torque",
+        "math": "A=wh=(0.0600)(0.0800)=0.00480\\ \\mathrm{m^2}\\\\\\tau_B=IAB\\cos30^\\circ=\\tau_g\\\\B=\\frac{mg(h/2)\\tan30^\\circ}{IA}\\\\=\\frac{(0.00420)(9.80)(0.0400)\\tan30^\\circ}{(8.2)(0.00480)}\\\\B=0.0242\\ \\mathrm T"
+      }
+    ],
+    "answer": "0.0242 T along +y.",
+    "note": "",
+    "check": "B points upward along +y for the shown current. The wire loop’s centre of mass lies halfway down; counting only the bottom wire would underestimate gravity torque."
+  }
+]

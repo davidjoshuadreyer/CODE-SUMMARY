@@ -1,0 +1,200 @@
+[
+  {
+    "id": "27-1",
+    "problem": "27.1",
+    "title": "27.1 · Magnetic force on a negative charge",
+    "given": "q = −1.24 × 10⁻⁸ C; v = (4.19 × 10⁴ i − 3.85 × 10⁴ j) m/s.",
+    "find": "Find F for (a) B = 1.40 i T and (b) B = 1.40 k T.",
+    "figure": null,
+    "original": "homework-late-figures/27-1-question.png",
+    "steps": [
+      {
+        "title": "Part (a): field along x",
+        "math": "\\mathbf v\\times\\mathbf B=-v_yB_x\\mathbf k\\\\=-(-3.85\\times10^4)(1.40)\\mathbf k=5.390\\times10^4\\mathbf k\\\\\\mathbf F=q(\\mathbf v\\times\\mathbf B)=(-1.24\\times10^{-8})(5.390\\times10^4)\\mathbf k\\\\\\mathbf F=-6.68\\times10^{-4}\\mathbf k\\ \\mathrm N"
+      },
+      {
+        "title": "Part (b): field along z",
+        "math": "\\mathbf v\\times\\mathbf B=B_z(v_y\\mathbf i-v_x\\mathbf j)\\\\=1.40[-3.85\\times10^4\\mathbf i-4.19\\times10^4\\mathbf j]\\\\\\mathbf F=(-1.24\\times10^{-8})(-5.390\\times10^4\\mathbf i-5.866\\times10^4\\mathbf j)\\\\\\mathbf F=(6.68\\mathbf i+7.27\\mathbf j)\\times10^{-4}\\ \\mathrm N"
+      }
+    ],
+    "answer": "(a) −6.68 × 10⁻⁴ k N; (b) (6.68 i + 7.27 j) × 10⁻⁴ N.",
+    "note": "",
+    "check": "Each result is perpendicular to both velocity and field. A negative charge reverses the right-hand-rule direction."
+  },
+  {
+    "id": "27-4",
+    "problem": "27.4",
+    "title": "27.4 · Magnetic acceleration",
+    "given": "m = 1.81 × 10⁻³ kg; q = +1.22 × 10⁻⁸ C; v = 3.00 × 10⁴ j m/s; B = (1.63 i + 0.980 j) T.",
+    "find": "Find acceleration magnitude and direction.",
+    "figure": null,
+    "original": "homework-late-figures/27-4-question.png",
+    "steps": [
+      {
+        "title": "Take the cross product",
+        "math": "\\mathbf v=v_y\\mathbf j,\\quad\\mathbf B=B_x\\mathbf i+B_y\\mathbf j\\\\\\mathbf v\\times\\mathbf B=-v_yB_x\\mathbf k\\\\\\mathbf a=\\frac q m(\\mathbf v\\times\\mathbf B)"
+      },
+      {
+        "title": "Substitute the values",
+        "math": "\\mathbf a=-\\frac{(1.22\\times10^{-8})(3.00\\times10^4)(1.63)}{1.81\\times10^{-3}}\\mathbf k\\\\\\mathbf a=-0.330\\mathbf k\\ \\mathrm{m/s^2}"
+      }
+    ],
+    "answer": "0.330 m/s² along −k.",
+    "note": "",
+    "check": "j × i = −k, so acceleration is into the xy-plane for positive q."
+  },
+  {
+    "id": "27-7",
+    "problem": "27.7",
+    "title": "27.7 · Recover magnetic-field components",
+    "given": "q = +7.80 µC; v = −3.80 × 10³ j m/s; F = (7.60 × 10⁻³ i − 5.20 × 10⁻³ k) N.",
+    "find": "Find determined B components, identify any undetermined component, and calculate B·F and their angle.",
+    "figure": null,
+    "original": "homework-late-figures/27-7-question.png",
+    "steps": [
+      {
+        "title": "Find the determined components",
+        "math": "\\mathbf F=qv_y(B_z\\mathbf i-B_x\\mathbf k)\\\\B_z=\\frac{F_x}{qv_y}=\\frac{7.60\\times10^{-3}}{(7.80\\times10^{-6})(-3.80\\times10^3)}=-0.256\\ \\mathrm T\\\\B_x=\\frac{-F_z}{qv_y}=\\frac{5.20\\times10^{-3}}{(7.80\\times10^{-6})(-3.80\\times10^3)}=-0.175\\ \\mathrm T"
+      },
+      {
+        "title": "Find the dot product",
+        "math": "\\mathbf B\\cdot\\mathbf F=B_xF_x+B_zF_z\\\\=\\frac{-F_zF_x+F_xF_z}{qv_y}=0\\\\\\cos\\theta=\\frac{\\mathbf B\\cdot\\mathbf F}{BF}=0\\quad\\Rightarrow\\quad\\theta=90^\\circ"
+      }
+    ],
+    "answer": "Bx = −0.175 T; Bz = −0.256 T; By undetermined; B·F = 0, angle 90°.",
+    "note": "The force does not determine Bᵧ: a field parallel to the velocity adds no magnetic force.",
+    "check": "B and F are perpendicular (90°) regardless of By. Do not assume By = 0 just because it is undetermined."
+  },
+  {
+    "id": "27-10",
+    "problem": "27.10",
+    "title": "27.10 · Magnetic flux through an xy square",
+    "given": "Square side 0.0340 m lies in the xy-plane; B = (0.200 i + 0.300 j − 0.500 k) T.",
+    "find": "Find magnetic-flux magnitude.",
+    "figure": null,
+    "original": "homework-late-figures/27-10-question.png",
+    "steps": [
+      {
+        "title": "Use only the normal field component",
+        "math": "\\mathbf A=s^2\\mathbf k,\\quad\\Phi=\\mathbf B\\cdot\\mathbf A=B_zs^2\\\\\\Phi=(-0.500)(0.0340)^2=-5.78\\times10^{-4}\\ \\mathrm{Wb}\\\\|\\Phi|=5.78\\times10^{-4}\\ \\mathrm{Wb}"
+      }
+    ],
+    "answer": "Magnitude 5.78 × 10⁻⁴ Wb.",
+    "note": "",
+    "check": "The x and y components run along the surface and contribute no flux."
+  },
+  {
+    "id": "27-19",
+    "problem": "27.19",
+    "title": "27.19 · Cosmic-ray semicircle",
+    "given": "Particles have |q| = 3e, m = 12mₚ and enter downward into B = 0.250 T out of the page. They curve to the right through a semicircle of diameter 0.950 m.",
+    "find": "Find speed and charge sign, assess gravity, and compare entry/exit speeds.",
+    "figure": "homework-late-figures/27-19.svg",
+    "original": "homework-late-figures/27-19-question.png",
+    "steps": [
+      {
+        "title": "Find the speed",
+        "math": "r=0.950/2=0.475\\ \\mathrm m\\\\|q|vB=\\frac{mv^2}{r}\\quad\\Rightarrow\\quad v=\\frac{|q|Br}{m}\\\\v=\\frac{3(1.602\\times10^{-19})(0.250)(0.475)}{12(1.673\\times10^{-27})}\\\\v=2.84\\times10^6\\ \\mathrm{m/s}"
+      },
+      {
+        "title": "Check gravity and speed change",
+        "math": "\\frac{F_B}{mg}=\\frac{mv^2/r}{mg}=\\frac{v^2}{rg}\\\\=\\frac{(2.843\\times10^6)^2}{(0.475)(9.80)}=1.74\\times10^{12}\\\\\\mathbf F_B\\cdot\\mathbf v=0\\quad\\Rightarrow\\quad v_{exit}=v_{entry}"
+      }
+    ],
+    "answer": "2.84 × 10⁶ m/s; negative charge; negligible gravity; unchanged speed.",
+    "note": "With velocity downward and B out of the page, positive charge would bend left. The shown path bends right, so the charge is negative.",
+    "check": "Gravity is negligible. Magnetic force does no work, so entry and exit speeds are equal."
+  },
+  {
+    "id": "27-21",
+    "problem": "27.21",
+    "title": "27.21 · Deuteron orbit",
+    "given": "Deuteron mass 3.34 × 10⁻²⁷ kg and charge +e; orbit radius 6.96 mm in B = 2.50 T.",
+    "find": "Find speed, half-orbit time, and accelerating potential magnitude from rest.",
+    "figure": null,
+    "original": "homework-late-figures/27-21-question.png",
+    "steps": [
+      {
+        "title": "Find speed",
+        "math": "v=\\frac{qBr}{m}=\\frac{(1.602\\times10^{-19})(2.50)(6.96\\times10^{-3})}{3.34\\times10^{-27}}\\\\v=8.35\\times10^5\\ \\mathrm{m/s}"
+      },
+      {
+        "title": "Find half-orbit time",
+        "math": "t_{1/2}=\\frac{\\pi r}{v}=\\frac{\\pi m}{qB}\\\\=\\frac{\\pi(3.34\\times10^{-27})}{(1.602\\times10^{-19})(2.50)}=2.62\\times10^{-8}\\ \\mathrm s"
+      },
+      {
+        "title": "Find the accelerating voltage",
+        "math": "q|\\Delta V|=\\frac12mv^2\\\\|\\Delta V|=\\frac{(3.34\\times10^{-27})(8.346\\times10^5)^2}{2(1.602\\times10^{-19})}\\\\|\\Delta V|=7.26\\times10^3\\ \\mathrm V"
+      }
+    ],
+    "answer": "8.35 × 10⁵ m/s; 26.2 ns; 7.26 kV drop.",
+    "note": "",
+    "check": "The positive deuteron must move through a potential drop of 7.26 kV to gain this energy."
+  },
+  {
+    "id": "27-24",
+    "problem": "27.24",
+    "title": "27.24 · Quarter-circle proton path",
+    "given": "Protons at 1.20 km/s turn 90° while travelling arc length 1.18 cm in a perpendicular magnetic field.",
+    "find": "Find magnetic-field magnitude.",
+    "figure": "homework-late-figures/27-24.svg",
+    "original": "homework-late-figures/27-24-question.png",
+    "steps": [
+      {
+        "title": "Convert arc length to radius",
+        "math": "s=0.0118\\ \\mathrm m=\\frac\\pi2r\\\\r=\\frac{2s}\\pi=\\frac{2(0.0118)}\\pi=7.512\\times10^{-3}\\ \\mathrm m"
+      },
+      {
+        "title": "Find the field",
+        "math": "B=\\frac{m_pv}{er}=\\frac{(1.673\\times10^{-27})(1.20\\times10^3)}{(1.602\\times10^{-19})(7.512\\times10^{-3})}\\\\B=1.67\\times10^{-3}\\ \\mathrm T"
+      }
+    ],
+    "answer": "1.67 mT.",
+    "note": "",
+    "check": "For a proton entering rightward and turning upward, B points into the page."
+  },
+  {
+    "id": "27-27",
+    "problem": "27.27",
+    "title": "27.27 · Crossed-field selector",
+    "given": "v = +5.85 × 10³ j m/s; B = −1.35 k T. Charges are (a) +0.640 nC and (b) −0.320 nC.",
+    "find": "Find E needed for undeflected motion in each case.",
+    "figure": "homework-late-figures/27-27.svg",
+    "original": "homework-late-figures/27-27-question.png",
+    "steps": [
+      {
+        "title": "Set the net force to zero",
+        "math": "q\\mathbf E+q\\mathbf v\\times\\mathbf B=0\\\\\\mathbf E=-\\mathbf v\\times\\mathbf B"
+      },
+      {
+        "title": "Substitute the velocity and field",
+        "math": "\\mathbf v\\times\\mathbf B=(5.85\\times10^3\\mathbf j)\\times(-1.35\\mathbf k)\\\\=-7.8975\\times10^3\\mathbf i\\\\\\mathbf E=+7.90\\times10^3\\mathbf i\\ \\mathrm{N/C}"
+      }
+    ],
+    "answer": "Both require E = +7.90 × 10³ i N/C.",
+    "note": "",
+    "check": "Both forces reverse with charge sign, leaving the same cancellation condition."
+  },
+  {
+    "id": "27-29",
+    "problem": "27.29",
+    "title": "27.29 · Alpha-particle velocity selector",
+    "given": "Alpha q = +2e, m = 6.64 × 10⁻²⁷ kg accelerates from rest through 1.75 kV. It enters rightward between plates separated 8.20 mm with 150 V across them; lower plate positive.",
+    "find": "Find the magnetic field for no deflection.",
+    "figure": "homework-late-figures/27-29.svg",
+    "original": "homework-late-figures/27-29-question.png",
+    "steps": [
+      {
+        "title": "Find the alpha-particle speed",
+        "math": "\\frac12mv^2=qV_{acc}\\\\v=\\sqrt{\\frac{2qV_{acc}}m}=\\sqrt{\\frac{2(2)(1.602\\times10^{-19})(1750)}{6.64\\times10^{-27}}}\\\\v=4.11\\times10^5\\ \\mathrm{m/s}"
+      },
+      {
+        "title": "Balance electric and magnetic forces",
+        "math": "E=\\frac Vd=\\frac{150}{8.20\\times10^{-3}}=1.8293\\times10^4\\ \\mathrm{V/m}\\\\qE=qvB\\quad\\Rightarrow\\quad B=\\frac Ev=\\frac{1.8293\\times10^4}{4.110\\times10^5}\\\\B=0.0445\\ \\mathrm T"
+      }
+    ],
+    "answer": "0.0445 T out of the page.",
+    "note": "",
+    "check": "B must point out of the page: rightward v × outward B points downward, cancelling the upward electric force. Plate area is not needed."
+  }
+]

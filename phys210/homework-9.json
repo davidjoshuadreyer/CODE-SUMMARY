@@ -1,0 +1,242 @@
+[
+  {
+    "id": "26-3",
+    "problem": "26.3",
+    "title": "26.3 · Adding a series resistor",
+    "given": "A 25.0 Ω resistor dissipates 36.0 W on an ideal battery. Add 15.0 Ω in series.",
+    "find": "Find total power after the change.",
+    "figure": null,
+    "original": "homework-late-figures/26-3-question.png",
+    "steps": [
+      {
+        "title": "Recover the battery voltage",
+        "math": "P_1=\\frac{V^2}{R_1}\\quad\\Rightarrow\\quad V=\\sqrt{P_1R_1}=\\sqrt{(36.0)(25.0)}=30.0\\ \\mathrm V"
+      },
+      {
+        "title": "Find the new total power",
+        "math": "R_{eq}=25.0+15.0=40.0\\ \\Omega\\\\I=\\frac{30.0}{40.0}=0.750\\ \\mathrm A\\\\P=\\frac{V^2}{R_{eq}}=\\frac{30.0^2}{40.0}=22.5\\ \\mathrm W"
+      }
+    ],
+    "answer": "22.5 W.",
+    "note": "",
+    "check": "Adding series resistance reduces total power for a fixed-voltage source."
+  },
+  {
+    "id": "26-6",
+    "problem": "26.6",
+    "title": "26.6 · Find the source from an ammeter",
+    "given": "45 Ω and 35 Ω are in series with a parallel group: 25 Ω (ammeter branch), 15 Ω, and (15 Ω + 10 Ω). Ideal ammeter reads 1.25 A; voltmeter spans 45 Ω.",
+    "find": "Find voltmeter reading and battery emf.",
+    "figure": "homework-late-figures/26-6.svg",
+    "original": "homework-late-figures/26-6-question.png",
+    "steps": [
+      {
+        "title": "Find the voltage across the parallel group",
+        "math": "V_p=I_{25}R_{25}=(1.25)(25.0)=31.25\\ \\mathrm V"
+      },
+      {
+        "title": "Add the branch currents",
+        "math": "I_{15}=\\frac{31.25}{15.0}=2.0833\\ \\mathrm A\\\\I_{15+10}=\\frac{31.25}{15.0+10.0}=1.25\\ \\mathrm A\\\\I_{total}=1.25+2.0833+1.25=4.5833\\ \\mathrm A"
+      },
+      {
+        "title": "Find the meter reading and emf",
+        "math": "V_{45}=(4.5833)(45.0)=206.25\\ \\mathrm V\\\\\\mathcal E=I_{total}(45.0+35.0)+V_p\\\\=(4.5833)(80.0)+31.25=397.92\\ \\mathrm V"
+      }
+    ],
+    "answer": "Voltmeter ≈ 206 V; battery emf ≈ 398 V.",
+    "note": "",
+    "check": "The lower 15 Ω and 10 Ω are in series; treating all four resistors as parallel gives a wrong source voltage."
+  },
+  {
+    "id": "26-8",
+    "problem": "26.8",
+    "title": "26.8 · Three resistors in parallel",
+    "given": "Resistors 1.60 Ω, 2.40 Ω and 4.80 Ω connect in parallel to an ideal 28.0 V battery.",
+    "find": "Find equivalent resistance, branch currents, total current, branch voltages and powers.",
+    "figure": "homework-late-figures/26-8.svg",
+    "original": "homework-late-figures/26-8-question.png",
+    "steps": [
+      {
+        "title": "Combine the resistors",
+        "math": "\\frac1{R_{eq}}=\\frac1{1.60}+\\frac1{2.40}+\\frac1{4.80}=1.25\\ \\Omega^{-1}\\\\R_{eq}=0.800\\ \\Omega"
+      },
+      {
+        "title": "Find each current and voltage",
+        "math": "V_1=V_2=V_3=28.0\\ \\mathrm V\\\\I_1=28.0/1.60=17.5\\ \\mathrm A\\\\I_2=28.0/2.40=11.7\\ \\mathrm A\\\\I_3=28.0/4.80=5.83\\ \\mathrm A\\\\I_{total}=28.0/0.800=35.0\\ \\mathrm A"
+      },
+      {
+        "title": "Find the powers",
+        "math": "P_1=28.0^2/1.60=490\\ \\mathrm W\\\\P_2=28.0^2/2.40=327\\ \\mathrm W\\\\P_3=28.0^2/4.80=163\\ \\mathrm W\\\\P_{total}=VI_{total}=(28.0)(35.0)=980\\ \\mathrm W"
+      }
+    ],
+    "answer": "0.800 Ω; 17.5, 11.7, 5.83 A; total 35.0 A; each 28 V; 490, 327, 163 W.",
+    "note": "",
+    "check": "Branch currents sum to 35.0 A and powers sum to VI = 980 W."
+  },
+  {
+    "id": "26-21",
+    "problem": "26.21",
+    "title": "26.21 · Brightness in series and parallel",
+    "given": "Treat two bulbs as constant resistances 400 Ω and 800 Ω, supplied by 120 V.",
+    "find": "For series and parallel, find currents, powers, total power and relative brightness.",
+    "figure": "homework-late-figures/26-21.svg",
+    "original": "homework-late-figures/26-21-question.png",
+    "steps": [
+      {
+        "title": "Series connection",
+        "math": "I_1=I_2=\\frac{120}{400+800}=0.100\\ \\mathrm A\\\\P_1=I^2R_1=(0.100)^2(400)=4.00\\ \\mathrm W\\\\P_2=(0.100)^2(800)=8.00\\ \\mathrm W\\\\P_{series}=4.00+8.00=12.0\\ \\mathrm W"
+      },
+      {
+        "title": "Parallel connection",
+        "math": "I_1=120/400=0.300\\ \\mathrm A,\\quad I_2=120/800=0.150\\ \\mathrm A\\\\P_1=120^2/400=36.0\\ \\mathrm W\\\\P_2=120^2/800=18.0\\ \\mathrm W\\\\P_{parallel}=36.0+18.0=54.0\\ \\mathrm W"
+      }
+    ],
+    "answer": "Series: 12 W total, 800 Ω brighter. Parallel: 54 W total, 400 Ω brighter.",
+    "note": "",
+    "check": "800 Ω is brighter in series; 400 Ω is brighter in parallel. Parallel gives greater combined output under the stated constant-resistance model."
+  },
+  {
+    "id": "26-24",
+    "problem": "26.24",
+    "title": "26.24 · Two ideal sources",
+    "given": "Three branches connect top/bottom nodes: a 10.0 V source (+ on top), a 30.0 Ω resistor, and a 20.0 Ω resistor above a 5.00 V source (+ on top).",
+    "find": "Find current through each resistor and the 10 V battery.",
+    "figure": "homework-late-figures/26-24.svg",
+    "original": "homework-late-figures/26-24-question.png",
+    "steps": [
+      {
+        "title": "Use the node voltage",
+        "math": "V_{top}-V_{bottom}=10.0\\ \\mathrm V\\\\I_{30}=\\frac{10.0}{30.0}=0.333\\ \\mathrm A\\quad\\text{downward}\\\\10.0-I_{20}(20.0)-5.00=0\\\\I_{20}=\\frac{10.0-5.00}{20.0}=0.250\\ \\mathrm A\\quad\\text{downward}"
+      },
+      {
+        "title": "Apply the junction rule",
+        "math": "I_{10V}=I_{30}+I_{20}=0.3333+0.250=0.583\\ \\mathrm A\\quad\\text{upward}"
+      }
+    ],
+    "answer": "30 Ω: 0.333 A down; 20 Ω: 0.250 A down; 10 V source: 0.583 A up.",
+    "note": "",
+    "check": "The smaller battery is being charged. Junction current is conserved: 0.583 = 0.333 + 0.250."
+  },
+  {
+    "id": "26-28",
+    "problem": "26.28",
+    "title": "26.28 · Three-branch circuit and node voltage",
+    "given": "Top branch left→right: 2 Ω, 10 V source (+ left), point a, 3 Ω. Middle: 1 Ω, 5 V source (+ left), point b, 4 Ω. Bottom: 10 Ω.",
+    "find": "Find branch currents and Vₐ − Vᵦ. Do only 26.28.",
+    "figure": "homework-late-figures/26-28.svg",
+    "original": "homework-late-figures/26-28-question.png",
+    "steps": [
+      {
+        "title": "Write the three branch currents",
+        "math": "D=V_L-V_R\\\\I_t=\\frac{D-10}{2+3},\\quad I_m=\\frac{D-5}{1+4},\\quad I_b=\\frac D{10}"
+      },
+      {
+        "title": "Solve the junction equation",
+        "math": "I_t+I_m+I_b=0\\\\2(D-10)+2(D-5)+D=0\\\\5D=30\\quad\\Rightarrow\\quad D=6.00\\ \\mathrm V\\\\I_t=(6-10)/5=-0.800\\ \\mathrm A\\\\I_m=(6-5)/5=0.200\\ \\mathrm A,\\quad I_b=6/10=0.600\\ \\mathrm A"
+      },
+      {
+        "title": "Compare the two marked points",
+        "math": "V_a-V_R=(3)(-0.800)=-2.40\\ \\mathrm V\\\\V_b-V_R=(4)(0.200)=0.800\\ \\mathrm V\\\\V_a-V_b=-2.40-0.800=-3.20\\ \\mathrm V"
+      }
+    ],
+    "answer": "Top 0.800 A right→left; middle 0.200 A and bottom 0.600 A left→right; Vab = −3.20 V.",
+    "note": "Currents are positive from left to right. A negative top-branch current means 0.800 A flows from right to left.",
+    "check": "Therefore Vab = −3.20 V. Both positive battery terminals are on the left; the polarity-reversal question 26.29 is excluded."
+  },
+  {
+    "id": "26-39",
+    "problem": "26.39",
+    "title": "26.39 · Voltmeter discharges a capacitor",
+    "given": "Initially V₀ = 12.0 V. A 3.40 MΩ voltmeter reads 3.0 V after 4.00 s.",
+    "find": "Find capacitance and time constant.",
+    "figure": null,
+    "original": "homework-late-figures/26-39-question.png",
+    "steps": [
+      {
+        "title": "Solve the discharge equation",
+        "math": "V=V_0e^{-t/\\tau}\\quad\\Rightarrow\\quad\\ln(V_0/V)=t/\\tau\\\\\\tau=\\frac{4.00}{\\ln(12.0/3.0)}=2.8854\\ \\mathrm s"
+      },
+      {
+        "title": "Find capacitance",
+        "math": "C=\\frac\\tau R=\\frac{2.8854}{3.40\\times10^6}=8.49\\times10^{-7}\\ \\mathrm F\\\\C=0.849\\ \\mu\\mathrm F"
+      }
+    ],
+    "answer": "C = 0.849 µF; τ = 2.89 s.",
+    "note": "",
+    "check": "At one time constant the voltage is 36.8%, not 25%, of its starting value."
+  },
+  {
+    "id": "26-43",
+    "problem": "26.43",
+    "title": "26.43 · Discharge of two capacitors",
+    "given": "15.0 µF and 20.0 µF capacitors are parallel, initially at 45.0 V. Closing the switch discharges them through 50.0 Ω and 30.0 Ω in series.",
+    "find": "Find time to reach 10.0 V and current then.",
+    "figure": "homework-late-figures/26-43.svg",
+    "original": "homework-late-figures/26-43-question.png",
+    "steps": [
+      {
+        "title": "Combine the circuit",
+        "math": "C=15.0+20.0=35.0\\ \\mu\\mathrm F\\\\R=50.0+30.0=80.0\\ \\Omega\\\\\\tau=RC=(80.0)(35.0\\times10^{-6})=2.80\\times10^{-3}\\ \\mathrm s"
+      },
+      {
+        "title": "Find time and current at 10 V",
+        "math": "10.0=45.0e^{-t/\\tau}\\\\t=\\tau\\ln\\frac{45.0}{10.0}=(2.80\\ \\mathrm{ms})\\ln4.50=4.21\\ \\mathrm{ms}\\\\I=V/R=10.0/80.0=0.125\\ \\mathrm A"
+      }
+    ],
+    "answer": "4.21 ms; 0.125 A.",
+    "note": "",
+    "check": "Both capacitors always have the same voltage; discharge current flows from their positive terminals through the resistors."
+  },
+  {
+    "id": "26-51",
+    "problem": "26.51",
+    "title": "26.51 · Charging curve determines R",
+    "given": "Uncharged C = 5.90 µF charges through R from a 28.0 V ideal source. At t = 3.00 ms, Q = 110 µC.",
+    "find": "Find final charge, resistance and time to 99% charge.",
+    "figure": null,
+    "original": "homework-late-figures/26-51-question.png",
+    "steps": [
+      {
+        "title": "Find final charge",
+        "math": "Q_\\infty=C\\mathcal E=(5.90\\ \\mu\\mathrm F)(28.0\\ \\mathrm V)=165.2\\ \\mu\\mathrm C"
+      },
+      {
+        "title": "Solve for the resistance",
+        "math": "Q=Q_\\infty(1-e^{-t/RC})\\\\RC=\\frac{-t}{\\ln(1-Q/Q_\\infty)}=\\frac{-0.00300}{\\ln(1-110/165.2)}\\\\\\tau=2.7367\\times10^{-3}\\ \\mathrm s\\\\R=\\frac\\tau C=\\frac{2.7367\\times10^{-3}}{5.90\\times10^{-6}}=464\\ \\Omega"
+      },
+      {
+        "title": "Find the 99% time",
+        "math": "0.99=1-e^{-t/\\tau}\\quad\\Rightarrow\\quad e^{-t/\\tau}=0.01\\\\t=-\\tau\\ln0.01=(2.7367\\ \\mathrm{ms})\\ln100=12.6\\ \\mathrm{ms}"
+      }
+    ],
+    "answer": "165.2 µC; 464 Ω; 12.6 ms.",
+    "note": "",
+    "check": "99% charge takes 4.605 time constants; it never reaches exactly 100% in the ideal model."
+  },
+  {
+    "id": "25-59",
+    "problem": "25.59",
+    "title": "25.59 · Supplement: tapered resistor",
+    "given": "A truncated cone of height h has end radii r₁ and r₂ and uniform resistivity ρ. Current travels along its axis.",
+    "find": "Find resistance using thin slices; check the cylinder limit.",
+    "figure": "homework-late-figures/25-59.svg",
+    "original": "homework-late-figures/25-59-question.png",
+    "steps": [
+      {
+        "title": "Write a thin-slice resistance",
+        "math": "r(x)=r_1+\\frac{r_2-r_1}{h}x\\\\dR=\\frac{\\rho\\,dx}{\\pi[r(x)]^2}"
+      },
+      {
+        "title": "Integrate the slices in series",
+        "math": "R=\\frac\\rho\\pi\\int_0^h\\frac{dx}{[r_1+(r_2-r_1)x/h]^2}\\\\u=r_1+(r_2-r_1)x/h,\\quad dx=\\frac h{r_2-r_1}du\\\\R=\\frac{\\rho h}{\\pi(r_2-r_1)}\\int_{r_1}^{r_2}u^{-2}\\,du\\\\=\\frac{\\rho h}{\\pi(r_2-r_1)}\\left(\\frac1{r_1}-\\frac1{r_2}\\right)=\\frac{\\rho h}{\\pi r_1r_2}"
+      },
+      {
+        "title": "Check equal radii",
+        "math": "r_1=r_2=r\\quad\\Rightarrow\\quad R=\\frac{\\rho h}{\\pi r^2}=\\frac{\\rho h}{A}"
+      }
+    ],
+    "answer": "R = ρh/(πr₁r₂).",
+    "note": "",
+    "check": "When r₁ = r₂ = r, the limit is ρh/(πr²). This uses the thin-slice axial-current model requested by the problem."
+  }
+]

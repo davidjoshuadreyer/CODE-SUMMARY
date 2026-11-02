@@ -1,0 +1,190 @@
+[
+  {
+    "id": "29-25",
+    "problem": "29.25",
+    "title": "29.25 · Motional voltage along a rod",
+    "given": "Rod a→b points up-right, length 0.300 m. It moves down-right perpendicular to itself at 5.00 m/s through B = 0.450 T into page.",
+    "find": "Find voltage magnitude, higher-potential end, internal E and positive end; then voltage for motion along the rod or out of the page.",
+    "figure": "homework-late-figures/29-25.svg",
+    "original": "homework-late-figures/29-25-question.png",
+    "steps": [
+      {
+        "title": "Find voltage and electric field",
+        "math": "|\\Delta V|=BLv=(0.450)(0.300)(5.00)=0.675\\ \\mathrm V\\\\E=vB=(5.00)(0.450)=2.25\\ \\mathrm{V/m}\\\\q\\mathbf E+q\\mathbf v\\times\\mathbf B=0\\quad\\Rightarrow\\quad\\mathbf E=-\\mathbf v\\times\\mathbf B"
+      },
+      {
+        "title": "Check the other motions",
+        "math": "\\mathbf v\\parallel\\text{rod}:\\quad(\\mathbf v\\times\\mathbf B)\\cdot\\boldsymbol\\ell=0\\\\\\mathbf v\\parallel\\mathbf B:\\quad\\mathbf v\\times\\mathbf B=0\\\\\\Delta V=0\\quad\\text{for both alternate motions}"
+      }
+    ],
+    "answer": "0.675 V; b positive and higher; E = 2.25 V/m toward a; both alternate motions give 0 V.",
+    "note": "",
+    "check": "For along-rod motion the magnetic force is perpendicular to the rod; for motion parallel/antiparallel to B it vanishes."
+  },
+  {
+    "id": "29-26",
+    "problem": "29.26",
+    "title": "29.26 · Loop leaving a field",
+    "given": "Loop 0.300 m wide × 0.400 m tall moves right at 0.0200 m/s out of a region with B = 1.25 T into page.",
+    "find": "Find emf when fully inside, partly inside and fully outside.",
+    "figure": "homework-late-figures/29-26.svg",
+    "original": "homework-late-figures/29-26-question.png",
+    "steps": [
+      {
+        "title": "Use Faraday’s law",
+        "math": "|\\mathcal E|=\\left|\\frac{d\\Phi}{dt}\\right|=B\\left|\\frac{dA_{inside}}{dt}\\right|"
+      },
+      {
+        "title": "Evaluate the three positions",
+        "math": "\\text{Fully inside: }dA/dt=0\\quad\\Rightarrow\\quad\\mathcal E=0\\\\\\text{During exit: }|dA/dt|=hv\\\\|\\mathcal E|=(1.25)(0.400)(0.0200)=0.0100\\ \\mathrm V\\\\\\text{Fully outside: }\\Phi=0\\quad\\Rightarrow\\quad\\mathcal E=0"
+      }
+    ],
+    "answer": "0 V; 10.0 mV during exit; 0 V.",
+    "note": "",
+    "check": "During exit induced current is clockwise to reinforce the diminishing inward flux. Use the 0.400 m side transverse to motion."
+  },
+  {
+    "id": "29-29",
+    "problem": "29.29",
+    "title": "29.29 · Sliding rod and energy conservation",
+    "given": "Rod length 0.500 m slides right at 7.50 m/s along closed rails; B = 0.800 T into page; circuit resistance 1.50 Ω. Top rod end a, bottom b.",
+    "find": "Find induced emf, rod current direction, required external force, and mechanical/electrical powers.",
+    "figure": "homework-late-figures/29-29.svg",
+    "original": "homework-late-figures/29-29-question.png",
+    "steps": [
+      {
+        "title": "Find emf and current",
+        "math": "\\mathcal E=BLv=(0.800)(0.500)(7.50)=3.00\\ \\mathrm V\\\\I=\\frac{\\mathcal E}{R}=\\frac{3.00}{1.50}=2.00\\ \\mathrm A"
+      },
+      {
+        "title": "Balance the magnetic drag",
+        "math": "F_B=ILB=(2.00)(0.500)(0.800)=0.800\\ \\mathrm N\\\\F_{ext}-F_B=0\\quad\\Rightarrow\\quad F_{ext}=0.800\\ \\mathrm N"
+      },
+      {
+        "title": "Compare the powers",
+        "math": "P_{mech}=F_{ext}v=(0.800)(7.50)=6.00\\ \\mathrm W\\\\P_{heat}=I^2R=(2.00)^2(1.50)=6.00\\ \\mathrm W"
+      }
+    ],
+    "answer": "3.00 V; 2.00 A b→a; external force 0.800 N rightward; both powers 6.00 W.",
+    "note": "",
+    "check": "The magnetic force on the rod is leftward. External mechanical work supplies the resistive heat."
+  },
+  {
+    "id": "29-42",
+    "problem": "29.42",
+    "title": "29.42 · Displacement current between plates",
+    "given": "Circular air-capacitor plates have radius R = 0.0400 m; charging current I = 0.520 A. Assume uniform field away from edges.",
+    "find": "Find displacement current density, dE/dt, and B at radii 0.0200 m and 0.0100 m.",
+    "figure": "homework-late-figures/29-42.svg",
+    "original": "homework-late-figures/29-42-question.png",
+    "steps": [
+      {
+        "title": "Find displacement current density",
+        "math": "I_D=I=0.520\\ \\mathrm A,\\quad A=\\pi R^2=\\pi(0.0400)^2\\\\J_D=\\frac IA=\\frac{0.520}{\\pi(0.0400)^2}=103.45\\ \\mathrm{A/m^2}\\\\\\frac{dE}{dt}=\\frac{J_D}{\\varepsilon_0}=\\frac{103.45}{8.854\\times10^{-12}}=1.17\\times10^{13}\\ \\mathrm{V/(m\\,s)}"
+      },
+      {
+        "title": "Find the field inside the plate radius",
+        "math": "B(2\\pi r)=\\mu_0J_D\\pi r^2\\quad\\Rightarrow\\quad B=\\frac{\\mu_0J_Dr}{2}\\\\B(0.0200)=\\frac{(4\\pi\\times10^{-7})(103.45)(0.0200)}2=1.30\\times10^{-6}\\ \\mathrm T\\\\B(0.0100)=0.650\\times10^{-6}\\ \\mathrm T"
+      }
+    ],
+    "answer": "103 A/m²; 1.17 × 10¹³ V/(m s); 1.30 µT and 0.650 µT.",
+    "note": "",
+    "check": "Inside the plate radius B grows linearly with r; its direction circles the charging axis by the right-hand rule."
+  },
+  {
+    "id": "30-9",
+    "problem": "30.9",
+    "title": "30.9 · Inductance and flux per turn",
+    "given": "Current increases at 0.0640 A/s and induced emf magnitude is 0.0160 V. Solenoid has N = 400 turns; consider I = 0.720 A.",
+    "find": "Find inductance and average flux per turn.",
+    "figure": null,
+    "original": "homework-late-figures/30-9-question.png",
+    "steps": [
+      {
+        "title": "Find inductance",
+        "math": "|\\mathcal E|=L\\left|\\frac{dI}{dt}\\right|\\\\L=\\frac{0.0160}{0.0640}=0.250\\ \\mathrm H"
+      },
+      {
+        "title": "Find flux through one turn",
+        "math": "N\\Phi=LI\\quad\\Rightarrow\\quad\\Phi=\\frac{LI}{N}\\\\\\Phi=\\frac{(0.250)(0.720)}{400}=4.50\\times10^{-4}\\ \\mathrm{Wb}"
+      }
+    ],
+    "answer": "0.250 H; 4.50 × 10⁻⁴ Wb per turn.",
+    "note": "",
+    "check": "The induced emf opposes the current increase; the reported emf and flux here are magnitudes."
+  },
+  {
+    "id": "30-11",
+    "problem": "30.11",
+    "title": "30.11 · Polarity of a decreasing-current inductor",
+    "given": "L = 0.260 H; current runs from b to a (right-to-left) and decreases at 0.0180 A/s.",
+    "find": "Find induced emf and higher-potential end.",
+    "figure": null,
+    "original": "homework-late-figures/30-11-question.png",
+    "steps": [
+      {
+        "title": "Find the induced emf",
+        "math": "\\mathcal E=-L\\frac{di}{dt}=-(0.260)(-0.0180)\\\\\\mathcal E=+4.68\\times10^{-3}\\ \\mathrm V\\quad\\text{along }b\\to a"
+      },
+      {
+        "title": "Identify the higher-potential end",
+        "math": "V_b-V_a=L\\frac{di}{dt}=-4.68\\ \\mathrm{mV}\\\\V_a-V_b=+4.68\\ \\mathrm{mV}"
+      }
+    ],
+    "answer": "4.68 mV; a is higher than b.",
+    "note": "",
+    "check": "The inductor acts as a source while returning stored magnetic energy; a is at higher potential."
+  },
+  {
+    "id": "30-23",
+    "problem": "30.23",
+    "title": "30.23 · Current growth in an RL circuit",
+    "given": "Battery emf 6.00 V; series inductor L = 2.50 H and resistance R = 8.00 Ω; initial current zero.",
+    "find": "Find initial di/dt, di/dt at I = 0.500 A, I at 0.250 s, and final current.",
+    "figure": null,
+    "original": "homework-late-figures/30-23-question.png",
+    "steps": [
+      {
+        "title": "Find the rates of current change",
+        "math": "\\mathcal E-IR=L\\frac{dI}{dt}\\\\\\left.\\frac{dI}{dt}\\right|_{I=0}=\\frac{6.00}{2.50}=2.40\\ \\mathrm{A/s}\\\\\\left.\\frac{dI}{dt}\\right|_{I=0.500}=\\frac{6.00-(0.500)(8.00)}{2.50}=0.800\\ \\mathrm{A/s}"
+      },
+      {
+        "title": "Find the current at 0.250 s",
+        "math": "\\tau=\\frac LR=\\frac{2.50}{8.00}=0.3125\\ \\mathrm s\\\\I(t)=\\frac{\\mathcal E}{R}(1-e^{-t/\\tau})\\\\I(0.250)=\\frac{6.00}{8.00}(1-e^{-0.250/0.3125})=0.413\\ \\mathrm A"
+      },
+      {
+        "title": "Find the final current",
+        "math": "t\\to\\infty:\\quad e^{-t/\\tau}\\to0\\\\I_\\infty=\\mathcal E/R=6.00/8.00=0.750\\ \\mathrm A"
+      }
+    ],
+    "answer": "2.40 A/s; 0.800 A/s; 0.413 A; final 0.750 A.",
+    "note": "",
+    "check": "The inductor limits the initial rate of change; at steady state its ideal inductive voltage is zero."
+  },
+  {
+    "id": "30-25",
+    "problem": "30.25",
+    "title": "30.25 · Half-current versus half-energy",
+    "given": "Initially open series circuit: 35.0 V ideal battery, R = 50.0 Ω and ideal L = 1.25 mH. Close the switch at t = 0.",
+    "find": "Find times to half maximum current and half maximum magnetic energy.",
+    "figure": null,
+    "original": "homework-late-figures/30-25-question.png",
+    "steps": [
+      {
+        "title": "Find the time constant",
+        "math": "\\tau=\\frac LR=\\frac{1.25\\times10^{-3}}{50.0}=25.0\\times10^{-6}\\ \\mathrm s"
+      },
+      {
+        "title": "Time to half the final current",
+        "math": "\\frac{I}{I_\\infty}=1-e^{-t/\\tau}=\\frac12\\\\t=\\tau\\ln2=(25.0\\ \\mu\\mathrm s)\\ln2=17.3\\ \\mu\\mathrm s"
+      },
+      {
+        "title": "Time to half the final energy",
+        "math": "U=\\frac12LI^2\\quad\\Rightarrow\\quad\\frac{U}{U_\\infty}=\\left(\\frac I{I_\\infty}\\right)^2\\\\U/U_\\infty=\\frac12\\quad\\Rightarrow\\quad I/I_\\infty=\\frac1{\\sqrt2}\\\\t=-\\tau\\ln\\left(1-\\frac1{\\sqrt2}\\right)\\\\=-(25.0\\ \\mu\\mathrm s)\\ln(0.292893)=30.7\\ \\mu\\mathrm s"
+      }
+    ],
+    "answer": "17.3 µs to half-current; 30.7 µs to half-energy.",
+    "note": "",
+    "check": "Half-energy occurs later than half-current: half-current stores only one-quarter of maximum energy."
+  }
+]

@@ -7,9 +7,9 @@ window.TESSELATE_ASSIGNMENTS = {
       "date": "2026-09-14",
       "time": "11:59 p.m.",
       "source": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2ODE/PHYS%20210%20Homework%201.pdf?ou=348967",
-      "solution": "phys210/quiz.html?homework=1",
+      "solution": "phys210/homework-1.html",
       "label": "Worked solution",
-      "status": "3 assigned questions · full worked practice, diagrams and references",
+      "status": "Clean worked solutions · 3 questions",
       "pdf": ""
     },
     {
@@ -29,9 +29,9 @@ window.TESSELATE_ASSIGNMENTS = {
       "date": "2026-09-21",
       "time": "11:59 p.m.",
       "source": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2ODI/PHYS%20210%20Homework%202.pdf?ou=348967",
-      "solution": "phys210/quiz.html?homework=2",
+      "solution": "phys210/homework-2.html",
       "label": "Worked solution",
-      "status": "4 assigned questions · full worked practice, diagrams and references",
+      "status": "Clean worked solutions · 4 questions",
       "pdf": ""
     },
     {
@@ -51,9 +51,9 @@ window.TESSELATE_ASSIGNMENTS = {
       "date": "2026-09-29",
       "time": "11:59 p.m.",
       "source": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2ODM/PHYS%20210%20Homework%203%20v2.pdf?ou=348967",
-      "solution": "phys210/quiz.html?homework=3",
+      "solution": "phys210/homework-3.html",
       "label": "Worked solution",
-      "status": "6 assigned questions · full worked practice, diagrams and references",
+      "status": "Clean worked solutions · 6 questions",
       "pdf": ""
     },
     {
@@ -73,9 +73,9 @@ window.TESSELATE_ASSIGNMENTS = {
       "date": "2026-10-06",
       "time": "11:59 p.m.",
       "source": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2ODQ/PHYS%20210%20Homework%20_4.pdf?ou=348967",
-      "solution": "phys210/quiz.html?homework=4",
+      "solution": "phys210/homework-4.html",
       "label": "Worked solution",
-      "status": "5 assigned questions · full worked practice, diagrams and references",
+      "status": "Clean worked solutions · 5 questions",
       "pdf": ""
     },
     {
@@ -84,9 +84,9 @@ window.TESSELATE_ASSIGNMENTS = {
       "date": "2026-10-13",
       "time": "11:59 p.m.",
       "source": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2ODU/PHYS%20210%20Homework%205.pdf?ou=348967",
-      "solution": "phys210/homework-5.html",
+      "solution": "phys210/homework-5-clean.html",
       "label": "Worked solution",
-      "status": "Full step-by-step walkthrough · 6 questions",
+      "status": "Clean worked solutions · 6 questions",
       "pdf": "phys210/homework-5-solution-key.pdf"
     },
     {
@@ -95,9 +95,9 @@ window.TESSELATE_ASSIGNMENTS = {
       "date": "2026-10-20",
       "time": "11:59 p.m.",
       "source": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2ODY/PHYS%20210%20Homework%206.pdf?ou=348967",
-      "solution": "phys210/quiz.html?homework=6",
+      "solution": "phys210/homework-6.html",
       "label": "Worked solution",
-      "status": "6 assigned questions · full worked practice, diagrams and references",
+      "status": "Clean worked solutions · 6 questions",
       "pdf": ""
     },
     {
@@ -106,9 +106,9 @@ window.TESSELATE_ASSIGNMENTS = {
       "date": "2026-10-27",
       "time": "11:59 p.m.",
       "source": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2ODc/PHYS%20210%20Homework%207.pdf?ou=348967",
-      "solution": "phys210/quiz.html?homework=7",
+      "solution": "phys210/homework-7.html",
       "label": "Worked solution",
-      "status": "8 assigned questions · full worked practice, diagrams and references",
+      "status": "Clean worked solutions · 8 questions",
       "pdf": ""
     },
     {
@@ -139,9 +139,9 @@ window.TESSELATE_ASSIGNMENTS = {
       "date": "2026-11-10",
       "time": "12:59 a.m. (D2L; conflicts with announcement)",
       "source": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2ODk/PHYS%20210%20Homework%209.pdf?ou=348967",
-      "solution": "phys210/quiz.html?homework=9",
+      "solution": "phys210/homework-9.html",
       "label": "Worked solution",
-      "status": "10 assigned questions · full worked practice, diagrams and references",
+      "status": "Clean worked solutions · 10 questions",
       "pdf": ""
     },
     {
@@ -161,9 +161,9 @@ window.TESSELATE_ASSIGNMENTS = {
       "date": "2026-11-17",
       "time": "12:59 a.m. (D2L; conflicts with announcement)",
       "source": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2OTE/PHYS%20210%20Hmwk%2010.pdf?ou=348967",
-      "solution": "phys210/quiz.html?homework=10",
+      "solution": "phys210/homework-10.html",
       "label": "Worked solution",
-      "status": "9 assigned questions · full worked practice, diagrams and references",
+      "status": "Clean worked solutions · 9 questions",
       "pdf": ""
     },
     {
@@ -183,9 +183,9 @@ window.TESSELATE_ASSIGNMENTS = {
       "date": "2026-11-24",
       "time": "12:59 a.m. (D2L; conflicts with announcement)",
       "source": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2OTI/PHYS%20210%20Homework%2011.pdf?ou=348967",
-      "solution": "phys210/quiz.html?homework=11",
+      "solution": "phys210/homework-11.html",
       "label": "Worked solution",
-      "status": "6 assigned questions · full worked practice, diagrams and references",
+      "status": "Clean worked solutions · 6 questions",
       "pdf": ""
     },
     {
@@ -216,9 +216,9 @@ window.TESSELATE_ASSIGNMENTS = {
       "date": "2026-12-08",
       "time": "12:59 a.m. (D2L; conflicts with announcement)",
       "source": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2OTM/PHYS%20210%20Homework%2012.pdf?ou=348967",
-      "solution": "phys210/quiz.html?homework=12",
+      "solution": "phys210/homework-12.html",
       "label": "Worked solution",
-      "status": "10 assigned questions · full worked practice, diagrams and references",
+      "status": "Clean worked solutions · 10 questions",
       "pdf": ""
     },
     {
@@ -238,9 +238,9 @@ window.TESSELATE_ASSIGNMENTS = {
       "date": "2026-12-14",
       "time": "12:59 a.m. (D2L; conflicts with announcement)",
       "source": "https://online.camosun.ca/d2l/common/viewFile.d2lfile/Database/MTczMzg2OTQ/PHYS%20210%20Homework%2013%20new.pdf?ou=348967",
-      "solution": "phys210/quiz.html?homework=13",
+      "solution": "phys210/homework-13.html",
       "label": "Worked solution",
-      "status": "8 assigned questions · full worked practice, diagrams and references",
+      "status": "Clean worked solutions · 8 questions",
       "pdf": ""
     }
   ],
@@ -309,11 +309,23 @@ window.TESSELATE_ASSIGNMENTS = {
       "title": "Assignment 1",
       "date": "2026-10-07",
       "time": "Time not posted",
-      "source": "ENGR%20290/ENGR%20290_Assign_1_2026.docx",
-      "solution": "engr290/assignment-1.html",
+      "source": "https://online.camosun.ca/d2l/le/content/347881/viewContent/5465527/View",
+      "solution": "engr290/assignment-1-solutions.html",
       "label": "Worked solution",
-      "status": "Worked walkthrough · all 6 questions",
+      "status": "Clean worked solutions · 6 questions",
       "pdf": "engr290/assignment-1-solution-key.pdf"
+    },
+    {
+      "id": "engr-assignment-2",
+      "title": "Assignment 2",
+      "date": "2026-11-04",
+      "dateLabel": "Deadline unconfirmed: handout says Monday, November 4, 2026",
+      "time": "11:59 p.m. in handout",
+      "source": "https://online.camosun.ca/d2l/le/content/347881/viewContent/5494675/View",
+      "solution": "engr290/assignment-2-solutions.html",
+      "label": "Worked solution",
+      "status": "Clean worked solutions · 14 questions",
+      "pdf": ""
     }
   ],
   "ecet250e": [

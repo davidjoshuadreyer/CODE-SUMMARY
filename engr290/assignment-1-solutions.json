@@ -1,0 +1,137 @@
+[
+  {
+    "n": 1,
+    "title": "Density of MgO",
+    "given": "One mole of MgO fills a cube with side 22.37 mm. Find density in g/cm³.",
+    "steps": [
+      {
+        "title": "Find mass",
+        "text": "Add the molar masses of Mg and O.",
+        "math": "m=(1\\ \\mathrm{mol})(24.305+15.999)\\ \\mathrm{g/mol}=40.304\\ \\mathrm g"
+      },
+      {
+        "title": "Find volume",
+        "text": "Convert the side to centimetres before cubing it.",
+        "math": "L=22.37\\ \\mathrm{mm}=2.237\\ \\mathrm{cm}\\\\V=L^3=(2.237)^3=11.1943\\ \\mathrm{cm^3}"
+      },
+      {
+        "title": "Divide mass by volume",
+        "text": "",
+        "math": "\\rho=\\frac mV=\\frac{40.304}{11.1943}=3.600\\ \\mathrm{g/cm^3}"
+      }
+    ],
+    "answer": "\\rho=3.600\\ \\mathrm{g/cm^3}",
+    "figure": null,
+    "note": ""
+  },
+  {
+    "n": 2,
+    "title": "Dimensions of a magnesium cube",
+    "given": "Find the three dimensions of a cube containing 1 mol of solid Mg.",
+    "steps": [
+      {
+        "title": "Find the volume",
+        "text": "Use M = 24.305 g/mol and room-temperature density ρ = 1.74 g/cm³.",
+        "math": "m=(1)(24.305)=24.305\\ \\mathrm g\\\\V=\\frac m\\rho=\\frac{24.305}{1.74}=13.9684\\ \\mathrm{cm^3}"
+      },
+      {
+        "title": "Take the cube root",
+        "text": "All three sides are equal.",
+        "math": "L=\\sqrt[3]{V}=\\sqrt[3]{13.9684}=2.4083\\ \\mathrm{cm}"
+      }
+    ],
+    "answer": "2.41\\ \\mathrm{cm}\\times2.41\\ \\mathrm{cm}\\times2.41\\ \\mathrm{cm}",
+    "figure": null,
+    "note": "The handout does not supply magnesium’s density. This uses 1.74 g/cm³; use the course table if a different value is specified."
+  },
+  {
+    "n": 3,
+    "title": "Angle between crystal directions",
+    "given": "Find the angle between [110] and [111] in a cubic crystal.",
+    "steps": [
+      {
+        "title": "Write the vectors",
+        "text": "For cubic axes, use the indices as Cartesian components.",
+        "math": "\\mathbf u=(1,1,0),\\quad\\mathbf v=(1,1,1)"
+      },
+      {
+        "title": "Use the dot product",
+        "text": "",
+        "math": "\\cos\\theta=\\frac{\\mathbf u\\cdot\\mathbf v}{|\\mathbf u||\\mathbf v|}\\\\=\\frac{1(1)+1(1)+0(1)}{\\sqrt{1^2+1^2}\\sqrt{1^2+1^2+1^2}}=\\frac2{\\sqrt6}"
+      },
+      {
+        "title": "Find the angle",
+        "text": "",
+        "math": "\\theta=\\cos^{-1}(2/\\sqrt6)=35.264^\\circ"
+      }
+    ],
+    "answer": "\\theta=35.26^\\circ",
+    "figure": "directions.svg",
+    "note": ""
+  },
+  {
+    "n": 4,
+    "title": "Plane intercepts",
+    "given": "Find the axial intercepts of the (3, −1, 1) plane. The middle index has an overbar in the handout.",
+    "steps": [
+      {
+        "title": "Take reciprocals",
+        "text": "For Miller indices (hkl), the intercepts are a/h, b/k, and c/l.",
+        "math": "(h,k,l)=(3,-1,1)\\\\x=\\frac a3,\\qquad y=\\frac b{-1}=-b,\\qquad z=\\frac c1=c"
+      }
+    ],
+    "answer": "(x,y,z)=(a/3,-b,c)",
+    "figure": "intercepts.svg",
+    "note": ""
+  },
+  {
+    "n": 5,
+    "title": "Vacancy fraction at 660°C",
+    "given": "At 400°C, f₁ = 2.29 × 10⁻⁵. Find f₂ at 660°C using Q = 0.76 eV and k = 8.62 × 10⁻⁵ eV/K.",
+    "steps": [
+      {
+        "title": "Convert temperatures",
+        "text": "Use kelvin in the exponential.",
+        "math": "T_1=400+273.15=673.15\\ \\mathrm K\\\\T_2=660+273.15=933.15\\ \\mathrm K"
+      },
+      {
+        "title": "Divide the two vacancy equations",
+        "text": "Use f = A exp(−Q/kT). Taking a ratio removes the same prefactor A.",
+        "math": "\\frac{f_2}{f_1}=\\frac{Ae^{-Q/(kT_2)}}{Ae^{-Q/(kT_1)}}\\\\=\\exp\\left[\\frac Qk\\left(\\frac1{T_1}-\\frac1{T_2}\\right)\\right]"
+      },
+      {
+        "title": "Substitute",
+        "text": "",
+        "math": "f_2=(2.29\\times10^{-5})\\exp\\left[\\frac{0.76}{8.62\\times10^{-5}}\\left(\\frac1{673.15}-\\frac1{933.15}\\right)\\right]\\\\=(2.29\\times10^{-5})e^{3.64936}=8.8050\\times10^{-4}"
+      }
+    ],
+    "answer": "f_2=8.81\\times10^{-4}=0.0881\\%",
+    "figure": null,
+    "note": "Using A = 1 would not reproduce the supplied starting fraction. The ratio method uses both the initial fraction and the lecture model."
+  },
+  {
+    "n": 6,
+    "title": "Carbon diffusion time",
+    "given": "Cₛ = 1.0 wt%, C₀ = 0.2 wt%, C = 0.6 wt%, x = 1 mm, and D = 2.98 × 10⁻¹¹ m²/s at 1000°C. Find time.",
+    "steps": [
+      {
+        "title": "Form the concentration ratio",
+        "text": "Use the constant-surface-concentration solution for a semi-infinite solid.",
+        "math": "\\frac{C-C_0}{C_s-C_0}=1-\\operatorname{erf}(z),\\qquad z=\\frac{x}{2\\sqrt{Dt}}\\\\\\frac{0.6-0.2}{1.0-0.2}=0.5\\quad\\Rightarrow\\quad\\operatorname{erf}(z)=0.5"
+      },
+      {
+        "title": "Read the error-function table",
+        "text": "Interpolate between erf(0.47) = 0.4937 and erf(0.48) = 0.5028.",
+        "math": "z=0.47+\\frac{0.5000-0.4937}{0.5028-0.4937}(0.01)=0.47692"
+      },
+      {
+        "title": "Solve for time",
+        "text": "Convert the depth to metres.",
+        "math": "z=\\frac{x}{2\\sqrt{Dt}}\\Rightarrow t=\\frac{x^2}{4Dz^2}\\\\t=\\frac{(0.001)^2}{4(2.98\\times10^{-11})(0.47692)^2}\\\\\\approx3.69\\times10^4\\ \\mathrm s=10.2\\ \\mathrm h"
+      }
+    ],
+    "answer": "t\\approx3.69\\times10^4\\ \\mathrm s\\approx10.2\\ \\mathrm h",
+    "figure": null,
+    "note": "Assumes constant surface concentration, temperature and D, and one-dimensional diffusion into a thick solid."
+  }
+]

@@ -1,0 +1,337 @@
+[
+  {
+    "n": 1,
+    "title": "When a thermoplastic becomes rigid",
+    "given": "Below what temperature must a thermoplastic be to become rigid?",
+    "steps": [
+      {
+        "title": "Identify the transition",
+        "text": "Below the glass-transition temperature, large-scale motion of the amorphous chain segments is restricted. The polymer becomes glassy and rigid.",
+        "math": ""
+      }
+    ],
+    "answer": "T<T_g",
+    "figure": null,
+    "note": "This is the glass-transition answer. Crystalline regions in a semicrystalline polymer can keep it stiff above Tg until they melt at Tm."
+  },
+  {
+    "n": 2,
+    "title": "Strengthening during drawing",
+    "given": "Why do thermoplastic polymers get stronger during plastic deformation?",
+    "steps": [
+      {
+        "title": "Follow the chains",
+        "text": "Drawing uncoils and aligns polymer chains along the pull. Aligned chains are harder to extend further, so the material strain-hardens in that direction. Drawing may also increase crystallinity.",
+        "math": ""
+      }
+    ],
+    "answer": "\\text{Chain alignment increases strength along the draw direction.}",
+    "figure": "chains.svg",
+    "note": ""
+  },
+  {
+    "n": 3,
+    "title": "A flat solidification front",
+    "given": "During nucleation and growth, describe how the liquid–solid interface stays flat.",
+    "steps": [
+      {
+        "title": "Consider a small bump",
+        "text": "For a stable planar front, liquid ahead is warmer than its local freezing temperature. A solid bump entering that warmer liquid tends to remelt.",
+        "math": ""
+      },
+      {
+        "title": "Remove latent heat",
+        "text": "Heat released by freezing is carried away, typically through the solid. Protrusions remelt and the interface stays approximately flat. If the liquid ahead becomes undercooled, bumps can grow into dendrites instead.",
+        "math": ""
+      }
+    ],
+    "answer": "\\text{Bumps remelt in warmer liquid, restoring a flat front.}",
+    "figure": null,
+    "note": ""
+  },
+  {
+    "n": 4,
+    "title": "Why elastomers stretch",
+    "given": "Elastomers and thermosets are both cross-linked. Why can an elastomer stretch more than 200%?",
+    "steps": [
+      {
+        "title": "Compare the cross-links",
+        "text": "Elastomers have long, flexible chain segments between relatively sparse cross-links. Above Tg, those segments can uncoil and align without needing large bond stretching.",
+        "math": ""
+      },
+      {
+        "title": "Explain recovery",
+        "text": "Cross-links stop the chains from flowing freely past one another. When the load is removed, the chains tend to coil again. Dense cross-linking in rigid thermosets leaves much less room for this motion.",
+        "math": ""
+      }
+    ],
+    "answer": "\\text{Flexible chains uncoil between widely spaced cross-links.}",
+    "figure": null,
+    "note": ""
+  },
+  {
+    "n": 5,
+    "title": "Gibbs phase rule",
+    "given": "Find the degrees of freedom of an Al–20 wt% Cu alloy at 700°C, 550°C and 500°C.",
+    "steps": [
+      {
+        "title": "Choose the phase rule",
+        "text": "Use the full rule because the handout’s first two answers count pressure as a variable.",
+        "math": "F=C-P+2,\\qquad C=2\\quad\\Rightarrow\\quad F=4-P"
+      },
+      {
+        "title": "(a) 700°C",
+        "text": "The point is in the single liquid field.",
+        "math": "P=1\\quad\\Rightarrow\\quad F=2-1+2=3"
+      },
+      {
+        "title": "(b) 550°C",
+        "text": "The point is in the α + liquid field.",
+        "math": "P=2\\quad\\Rightarrow\\quad F=2-2+2=2"
+      },
+      {
+        "title": "(c) 500°C",
+        "text": "The diagram places the point in α + θ, which contains two solid phases.",
+        "math": "P=2\\quad\\Rightarrow\\quad F=2-2+2=2"
+      }
+    ],
+    "answer": "F_a=3,\\qquad F_b=2,\\qquad F_c=2",
+    "figure": "../practice-figures/image1.png",
+    "note": "The handout prints F = 3 for (c), but its diagram shows two phases. That printed answer is inconsistent. At fixed pressure, the reduced rule F = C − P + 1 gives 2, 1 and 1 instead."
+  },
+  {
+    "n": 6,
+    "title": "Cooling copper–silver alloys",
+    "given": "Describe slow cooling from liquid for (a) 20 at.% Ag and (b) 80 at.% Ag. Use the top atomic-percent scale.",
+    "steps": [
+      {
+        "title": "(a) 20 at.% Ag",
+        "text": "This is on the Cu-rich side. The melt first forms Cu-rich α crystals at the liquidus. As α grows, the remaining liquid becomes richer in Ag. At about 780°C, the remaining liquid changes into α + β eutectic.",
+        "math": ""
+      },
+      {
+        "title": "(b) 80 at.% Ag",
+        "text": "This is on the Ag-rich side. Ag-rich β crystals form first. The remaining liquid moves toward the eutectic composition and changes into α + β at about 780°C.",
+        "math": ""
+      },
+      {
+        "title": "Continue cooling",
+        "text": "Below the eutectic, α and β become richer in their own base metals as solid solubility falls. Both final structures contain α and β, but their primary crystals differ.",
+        "math": ""
+      }
+    ],
+    "answer": "\\text{(a) Primary }\\alpha+\\text{eutectic }(\\alpha+\\beta)\\\\\\text{(b) Primary }\\beta+\\text{eutectic }(\\alpha+\\beta)",
+    "figure": "../practice-figures/image2.png",
+    "note": ""
+  },
+  {
+    "n": 7,
+    "title": "Phase amounts in Al–Si",
+    "given": "Find each phase mass in 50 kg of Al–10 wt% Si at the four temperatures.",
+    "steps": [
+      {
+        "title": "Use the lever rule",
+        "text": "For a two-phase tie line, each phase fraction uses the opposite segment.",
+        "math": "w_\\alpha=\\frac{C_{right}-C_0}{C_{right}-C_\\alpha},\\qquad w_{right}=1-w_\\alpha\\\\m_i=(50\\ \\mathrm{kg})w_i"
+      },
+      {
+        "title": "(a) 700°C",
+        "text": "The alloy is above the liquidus: all liquid.",
+        "math": "m_L=50\\ \\mathrm{kg}"
+      },
+      {
+        "title": "(b) 590°C",
+        "text": "Read approximately Cα = 1.5 and CL = 11 wt% Si from the diagram.",
+        "math": "w_\\alpha=\\frac{11-10}{11-1.5}=0.10526\\\\m_\\alpha=50(0.10526)=5.26\\ \\mathrm{kg}\\\\m_L=50-5.26=44.74\\ \\mathrm{kg}"
+      },
+      {
+        "title": "(c) Just above 577°C",
+        "text": "The tie line ends are Cα = 1.6 and CL = 12.6 wt% Si.",
+        "math": "w_\\alpha=\\frac{12.6-10}{12.6-1.6}=0.23636\\\\m_\\alpha=11.82\\ \\mathrm{kg},\\quad m_L=38.18\\ \\mathrm{kg}"
+      },
+      {
+        "title": "(d) Just below 577°C",
+        "text": "The liquid is gone. Use the α–β tie line, with Cβ ≈ 100 wt% Si.",
+        "math": "w_\\beta=\\frac{10-1.6}{100-1.6}=0.08537\\\\m_\\beta=50(0.08537)=4.27\\ \\mathrm{kg}\\\\m_\\alpha=50-4.27=45.73\\ \\mathrm{kg}"
+      }
+    ],
+    "answer": "\\text{(a) }50\\ \\mathrm{kg}\\ L\\\\\\text{(b) }5.26\\ \\mathrm{kg}\\ \\alpha+44.74\\ \\mathrm{kg}\\ L\\\\\\text{(c) }11.82\\ \\mathrm{kg}\\ \\alpha+38.18\\ \\mathrm{kg}\\ L\\\\\\text{(d) }45.73\\ \\mathrm{kg}\\ \\alpha+4.27\\ \\mathrm{kg}\\ \\beta",
+    "figure": "../practice-figures/image3.png",
+    "note": "Graph-based values are approximate. At 590°C, use your own careful endpoint readings if they differ. The eutectic is a mixture of α and β, not a third phase."
+  },
+  {
+    "n": 8,
+    "title": "First solid in brass",
+    "given": "Cool 1.0 kg of Cu–35 wt% Zn. Find (a) the first-solid temperature and (b) the phase and composition.",
+    "steps": [
+      {
+        "title": "(a) Read the liquidus",
+        "text": "Start at 35 wt% Zn on the bottom axis and move up to the liquidus.",
+        "math": "T_{first}\\approx930^\\circ\\mathrm C"
+      },
+      {
+        "title": "(b) Follow a horizontal tie line",
+        "text": "At that temperature, move left to the solid boundary. The first solid is Cu-rich α with approximately 31 wt% Zn.",
+        "math": "C_\\alpha\\approx31\\ \\mathrm{wt\\%\\ Zn}\\\\\\text{Cu content}\\approx100-31=69\\ \\mathrm{wt\\%}"
+      }
+    ],
+    "answer": "T_{first}\\approx930^\\circ\\mathrm C\\\\\\text{First solid: }\\alpha\\text{, about }31\\ \\mathrm{wt\\%\\ Zn}",
+    "figure": "../practice-figures/image4.png",
+    "note": "The phase-boundary readings are approximate; about 30–32 wt% Zn is reasonable for the solid composition on this figure."
+  },
+  {
+    "n": 9,
+    "title": "MgO added to NiO",
+    "given": "How much MgO must be added to 1 kg of NiO for a solidus temperature of 2200°C?",
+    "steps": [
+      {
+        "title": "Read the solidus",
+        "text": "At 2200°C, the lower boundary gives approximately 35 mol% MgO. The axis is mole percent, not mass percent.",
+        "math": "x_{MgO}\\approx0.35"
+      },
+      {
+        "title": "Convert NiO mass to moles",
+        "text": "Use MNiO = 74.69 g/mol.",
+        "math": "n_{NiO}=\\frac{1000}{74.69}=13.389\\ \\mathrm{mol}"
+      },
+      {
+        "title": "Solve for added MgO",
+        "text": "",
+        "math": "\\frac{n_{MgO}}{n_{MgO}+13.389}=0.35\\\\0.65n_{MgO}=0.35(13.389)\\\\n_{MgO}=7.209\\ \\mathrm{mol}"
+      },
+      {
+        "title": "Convert to grams",
+        "text": "Use MMgO = 40.30 g/mol.",
+        "math": "m_{MgO}=(7.209)(40.30)=290.5\\ \\mathrm g"
+      }
+    ],
+    "answer": "m_{MgO}\\approx290\\ \\mathrm g",
+    "figure": "../practice-figures/image5.png",
+    "note": "The answer depends on the solidus reading. In general, mMgO = (1000/74.69)[x/(1−x)](40.30), with x as a mole fraction."
+  },
+  {
+    "n": 10,
+    "title": "Tungsten added to Nb–W",
+    "given": "A 1200 lb Nb–40 wt% W bath is held at 2800°C. Find the W addition at first solid and when all material is solid.",
+    "steps": [
+      {
+        "title": "Find initial tungsten mass",
+        "text": "Let x be the mass of pure W added. It increases both tungsten mass and total mass.",
+        "math": "m_{W,0}=0.40(1200)=480\\ \\mathrm{lb}\\\\C_W=\\frac{480+x}{1200+x}"
+      },
+      {
+        "title": "At the first solid",
+        "text": "Read the liquidus at 2800°C as approximately 50 wt% W.",
+        "math": "\\frac{480+x}{1200+x}=0.50\\\\480+x=600+0.50x\\\\x=240\\ \\mathrm{lb}"
+      },
+      {
+        "title": "When fully solid",
+        "text": "Read the solidus as approximately 70 wt% W.",
+        "math": "\\frac{480+x}{1200+x}=0.70\\\\480+x=840+0.70x\\\\0.30x=360\\quad\\Rightarrow\\quad x=1200\\ \\mathrm{lb}"
+      }
+    ],
+    "answer": "\\text{First solid: }240\\ \\mathrm{lb\\ added}\\ W\\\\\\text{Fully solid: }1200\\ \\mathrm{lb\\ total\\ added}\\ W",
+    "figure": "../practice-figures/image6.png",
+    "note": "These use approximate graph readings of 50 wt% W at the liquidus and 70 wt% W at the solidus. The second answer is total added W from the original bath, or 960 lb beyond the first-solid addition. Use x = (1200c − 480)/(1 − c) if your endpoint reading c differs."
+  },
+  {
+    "n": 11,
+    "title": "Read a cooling curve",
+    "given": "Find the liquidus temperature, solidus temperature and freezing range for the shown Nb–W alloy.",
+    "steps": [
+      {
+        "title": "(a) Liquidus",
+        "text": "The first change in slope marks the start of freezing.",
+        "math": "T_L\\approx2900^\\circ\\mathrm C"
+      },
+      {
+        "title": "(b) Solidus",
+        "text": "The last change in slope marks the end of freezing.",
+        "math": "T_S\\approx2700^\\circ\\mathrm C"
+      },
+      {
+        "title": "(c) Freezing range",
+        "text": "Subtract the solidus from the liquidus.",
+        "math": "\\Delta T=T_L-T_S=2900-2700=200^\\circ\\mathrm C"
+      }
+    ],
+    "answer": "T_L\\approx2900^\\circ\\mathrm C,\\quad T_S\\approx2700^\\circ\\mathrm C\\\\\\Delta T\\approx200^\\circ\\mathrm C",
+    "figure": "../practice-figures/image7.png",
+    "note": ""
+  },
+  {
+    "n": 12,
+    "title": "Repeat units in polypropylene",
+    "given": "Use ρ = 0.89 g/cm³, repeat-unit molar mass 42 g/mol, and orthorhombic cell sides 1.450, 0.569 and 0.740 nm.",
+    "steps": [
+      {
+        "title": "Find unit-cell volume",
+        "text": "The cell is orthorhombic, so multiply its three side lengths.",
+        "math": "V=abc=(1.450)(0.569)(0.740)=0.610537\\ \\mathrm{nm^3}\\\\1\\ \\mathrm{nm^3}=10^{-21}\\ \\mathrm{cm^3}\\\\V=6.10537\\times10^{-22}\\ \\mathrm{cm^3}"
+      },
+      {
+        "title": "Compare cell mass and repeat-unit mass",
+        "text": "",
+        "math": "m_{cell}=\\rho V=(0.89)(6.10537\\times10^{-22})\\\\=5.43378\\times10^{-22}\\ \\mathrm g\\\\m_{repeat}=\\frac{42}{6.023\\times10^{23}}\\ \\mathrm g"
+      },
+      {
+        "title": "Divide",
+        "text": "The number of repeat units in a cell is a whole number.",
+        "math": "n=\\frac{m_{cell}}{m_{repeat}}=\\frac{\\rho VN_A}{M}\\\\=\\frac{(0.89)(6.10537\\times10^{-22})(6.023\\times10^{23})}{42}\\\\=7.79\\approx8"
+      }
+    ],
+    "answer": "8\\text{ repeat units per cell}",
+    "figure": "../practice-figures/image8.png",
+    "note": "The supplied approximate density gives 7.79; it is consistent with about eight repeat units."
+  },
+  {
+    "n": 13,
+    "title": "Stress relaxation and service life",
+    "given": "Stress falls from 2500 psi to 2400 psi in 100 h at constant strain. It must remain above 2100 psi. Use σ = σ₀ exp(−t/λ).",
+    "steps": [
+      {
+        "title": "Find the relaxation time",
+        "text": "Divide by the initial stress and take natural logs.",
+        "math": "\\frac{2400}{2500}=e^{-100/\\lambda}\\\\\\ln(0.96)=-\\frac{100}{\\lambda}\\\\\\lambda=-\\frac{100}{\\ln(0.96)}=2449.66\\ \\mathrm h"
+      },
+      {
+        "title": "Find the time at 2100 psi",
+        "text": "Use the original 2500 psi for total life from loading.",
+        "math": "\\frac{2100}{2500}=e^{-t/2449.66}\\\\t=-2449.66\\ln(0.84)=427.11\\ \\mathrm h"
+      },
+      {
+        "title": "State total and remaining life",
+        "text": "Subtract the elapsed 100 h if remaining life is requested.",
+        "math": "t_{remaining}=427.11-100=327.11\\ \\mathrm h"
+      }
+    ],
+    "answer": "t_{limit}\\approx427\\ \\mathrm h\\text{ from initial loading}\\\\\\text{Remaining after 100 h: }327\\ \\mathrm h",
+    "figure": null,
+    "note": "To stay strictly above 2100 psi, service time must be less than the threshold time."
+  },
+  {
+    "n": 14,
+    "title": "Adjusting ABS composition",
+    "given": "ABS contains BS rubber and a rigid SAN copolymer. How should their proportions change for the three desired properties?",
+    "steps": [
+      {
+        "title": "(a) Impact properties",
+        "text": "Increase the rubbery BS contribution relative to SAN. Rubber domains help absorb impact energy and reduce brittle fracture.",
+        "math": ""
+      },
+      {
+        "title": "(b) Room-temperature ductility",
+        "text": "Increase the rubbery BS contribution. This generally allows more deformation before fracture, with some loss of stiffness.",
+        "math": ""
+      },
+      {
+        "title": "(c) Room-temperature strength",
+        "text": "Increase the rigid SAN contribution relative to BS rubber. The SAN matrix carries load and generally improves stiffness and strength, with a toughness tradeoff.",
+        "math": ""
+      }
+    ],
+    "answer": "\\text{Impact and ductility: more BS rubber.}\\\\\\text{Strength and stiffness: more SAN.}",
+    "figure": null,
+    "note": "These are qualitative formulation trends. Particle size, bonding between phases and processing also affect the properties; the handout does not give enough data for exact percentages."
+  }
+]

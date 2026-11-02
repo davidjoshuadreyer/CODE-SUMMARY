@@ -1,0 +1,218 @@
+[
+  {
+    "id": "28-29",
+    "problem": "28.29",
+    "title": "28.29 · Force between opposite currents",
+    "given": "Two long wires 0.400 m apart carry 5.00 A rightward and 2.00 A leftward. Consider 1.20 m of each wire.",
+    "find": "Find the force and whether it attracts; then double both currents.",
+    "figure": "homework-late-figures/28-29.svg",
+    "original": "homework-late-figures/28-29-question.png",
+    "steps": [
+      {
+        "title": "Find the force on either wire",
+        "math": "F=\\frac{\\mu_0I_1I_2L}{2\\pi d}\\\\=\\frac{(4\\pi\\times10^{-7})(5.00)(2.00)(1.20)}{2\\pi(0.400)}\\\\F=6.00\\times10^{-6}\\ \\mathrm N"
+      },
+      {
+        "title": "Double both currents",
+        "math": "F\\propto I_1I_2\\quad\\Rightarrow\\quad F'=2(2)F=4F\\\\F'=2.40\\times10^{-5}\\ \\mathrm N"
+      }
+    ],
+    "answer": "6.00 µN repulsive; doubled currents give 24.0 µN.",
+    "note": "",
+    "check": "Opposite currents repel. The two forces have equal magnitudes and opposite directions."
+  },
+  {
+    "id": "28-34",
+    "problem": "28.34",
+    "title": "28.34 · Field from a semicircular wire",
+    "given": "Current I enters from the left, runs clockwise around an upper semicircle of radius R, then exits rightward along the same diameter line. P is the arc centre.",
+    "find": "Find B at P, including straight sections.",
+    "figure": "homework-late-figures/28-34.svg",
+    "original": "homework-late-figures/28-34-question.png",
+    "steps": [
+      {
+        "title": "Evaluate the straight sections",
+        "math": "d\\mathbf B=\\frac{\\mu_0I}{4\\pi}\\frac{d\\boldsymbol\\ell\\times\\hat{\\mathbf r}}{r^2}\\\\d\\boldsymbol\\ell\\parallel\\hat{\\mathbf r}\\quad\\Rightarrow\\quad B_{straight}=0"
+      },
+      {
+        "title": "Integrate the semicircle",
+        "math": "B_{arc}=\\frac{\\mu_0I}{4\\pi R^2}\\int_{arc}d\\ell\\\\=\\frac{\\mu_0I}{4\\pi R^2}(\\pi R)=\\frac{\\mu_0I}{4R}"
+      }
+    ],
+    "answer": "B = μ₀I/(4R), into the page.",
+    "note": "",
+    "check": "Clockwise current makes B point into the page. This is half the field of a complete loop of the same R and I."
+  },
+  {
+    "id": "28-40",
+    "problem": "28.40",
+    "title": "28.40 · Ampère integrals",
+    "given": "I₁ = 4 A into page, I₂ = 6 A out, I₃ = 2 A out. Counterclockwise paths: a encloses none; b only I₁; c I₁+I₂; d all three.",
+    "find": "Find ∮B·dl for each path.",
+    "figure": "homework-late-figures/28-40.svg",
+    "original": "homework-late-figures/28-40-question.png",
+    "steps": [
+      {
+        "title": "Count the signed currents",
+        "math": "I_a=0,\\quad I_b=-4,\\quad I_c=-4+6=2,\\quad I_d=-4+6+2=4\\ \\mathrm A"
+      },
+      {
+        "title": "Apply Ampère’s law",
+        "math": "\\oint\\mathbf B\\cdot d\\boldsymbol\\ell=\\mu_0 I_{enc}\\\\a:\\ 0\\\\b:\\ (4\\pi\\times10^{-7})(-4)=-5.03\\times10^{-6}\\ \\mathrm{T\\,m}\\\\c:\\ (4\\pi\\times10^{-7})(2)=2.51\\times10^{-6}\\ \\mathrm{T\\,m}\\\\d:\\ (4\\pi\\times10^{-7})(4)=5.03\\times10^{-6}\\ \\mathrm{T\\,m}"
+      }
+    ],
+    "answer": "a: 0; b: −5.03 × 10⁻⁶; c: +2.51 × 10⁻⁶; d: +5.03 × 10⁻⁶ T m.",
+    "note": "",
+    "check": "A zero integral does not imply zero field everywhere on the path. Shape and perimeter do not affect this steady-current result."
+  },
+  {
+    "id": "28-43",
+    "problem": "28.43",
+    "title": "28.43 · Coaxial cable field",
+    "given": "Solid conductor radius a and outer tube inner/outer radii b,c carry equal currents I in opposite directions, uniformly distributed.",
+    "find": "Derive B for a < r < b and r > c.",
+    "figure": "homework-late-figures/28-43.svg",
+    "original": "homework-late-figures/28-43-question.png",
+    "steps": [
+      {
+        "title": "Between the conductors",
+        "math": "a<r<b:\\quad I_{enc}=I\\\\B(2\\pi r)=\\mu_0I\\quad\\Rightarrow\\quad B=\\frac{\\mu_0 I}{2\\pi r}"
+      },
+      {
+        "title": "Outside both conductors",
+        "math": "r>c:\\quad I_{enc}=I-I=0\\\\B(2\\pi r)=0\\quad\\Rightarrow\\quad B=0"
+      }
+    ],
+    "answer": "Between: μ₀I/(2πr); outside: 0.",
+    "note": "",
+    "check": "Between conductors, field is azimuthal with direction from the inner-current right-hand rule. Exterior cancellation depends on equal opposite currents and ideal long coaxial geometry."
+  },
+  {
+    "id": "28-57",
+    "problem": "28.57",
+    "title": "28.57 · Where two-wire fields cancel",
+    "given": "Long wires 0.400 m apart carry 25.0 A and 75.0 A.",
+    "find": "Find all zero-field locations for same-direction and opposite-direction currents.",
+    "figure": "homework-late-figures/28-57.svg",
+    "original": "homework-late-figures/28-57-question.png",
+    "steps": [
+      {
+        "title": "Same-direction currents",
+        "math": "\\frac{\\mu_0(25)}{2\\pi x}=\\frac{\\mu_0(75)}{2\\pi(0.400-x)}\\\\25(0.400-x)=75x\\\\10.0=100x\\quad\\Rightarrow\\quad x=0.100\\ \\mathrm m"
+      },
+      {
+        "title": "Opposite-direction currents",
+        "math": "\\frac{25}{s}=\\frac{75}{s+0.400}\\\\25(s+0.400)=75s\\\\10.0=50s\\quad\\Rightarrow\\quad s=0.200\\ \\mathrm m"
+      }
+    ],
+    "answer": "Same: 0.100 m between; opposite: 0.200 m outside the 25 A wire.",
+    "note": "",
+    "check": "Each solution extends along a line parallel to the wires. There is no cancellation outside for same directions or between for opposite directions."
+  },
+  {
+    "id": "28-61",
+    "problem": "28.61",
+    "title": "28.61 · Overhead bus cables",
+    "given": "Bus input power 65 hp, cable voltage 600 V, separation 0.55 m. Use 1 hp = 746 W.",
+    "find": "Find current and force per unit length.",
+    "figure": null,
+    "original": "homework-late-figures/28-61-question.png",
+    "steps": [
+      {
+        "title": "Convert power and find current",
+        "math": "P=(65)(746)=48490\\ \\mathrm W\\\\I=\\frac PV=\\frac{48490}{600}=80.8\\ \\mathrm A"
+      },
+      {
+        "title": "Find force per length",
+        "math": "\\frac FL=\\frac{\\mu_0I^2}{2\\pi d}=\\frac{(2\\times10^{-7})(80.8167)^2}{0.55}\\\\\\frac FL=2.38\\times10^{-3}\\ \\mathrm{N/m}"
+      }
+    ],
+    "answer": "80.8 A; 2.38 × 10⁻³ N/m, repulsive for supply/return cables.",
+    "note": "The supply and return currents run in opposite directions, so the wires repel. The handout calls this force attractive; its magnitude is the value calculated here.",
+    "check": ""
+  },
+  {
+    "id": "28-62",
+    "problem": "28.62",
+    "title": "28.62 · Field on the symmetry axis",
+    "given": "Wires at (0,+a) and (0,−a) carry equal I, respectively out of and into the page. Observe P = (x,0).",
+    "find": "Draw each field and net field, derive B(x), graph it, find its maximum and far-field limit.",
+    "figure": "homework-late-figures/28-62.svg",
+    "original": "homework-late-figures/28-62-question.png",
+    "steps": [
+      {
+        "title": "Add the field components",
+        "math": "r=\\sqrt{x^2+a^2},\\quad B_{each}=\\frac{\\mu_0I}{2\\pi r}\\\\B_y=0,\\quad B_x=2B_{each}\\frac ar\\\\\\mathbf B=\\frac{\\mu_0Ia}{\\pi(x^2+a^2)}\\mathbf i"
+      },
+      {
+        "title": "Find the maximum and far-field limit",
+        "math": "\\frac{dB}{dx}=-\\frac{2\\mu_0Ia x}{\\pi(x^2+a^2)^2}=0\\quad\\Rightarrow\\quad x=0\\\\B_{max}=\\frac{\\mu_0I}{\\pi a}\\\\|x|\\gg a:\\quad B\\approx\\frac{\\mu_0Ia}{\\pi x^2}"
+      }
+    ],
+    "answer": "B = μ₀Ia/[π(x²+a²)] along +x; peak at x = 0; far field ∝ 1/x².",
+    "note": "",
+    "check": "The graph is even in x, peaks at zero and falls toward zero on either side. At x > 0 the upper wire field tilts up-right and lower wire field down-right."
+  },
+  {
+    "id": "28-64",
+    "problem": "28.64",
+    "title": "28.64 · Force on a loop beside a wire",
+    "given": "Long wire carries 14.0 A rightward. Loop below it carries 5.00 A clockwise, horizontal length 0.200 m. Top edge is 0.0260 m from wire; bottom edge is 0.100 m from wire.",
+    "find": "Find net force on the loop.",
+    "figure": "homework-late-figures/28-64.svg",
+    "original": "homework-late-figures/28-64-question.png",
+    "steps": [
+      {
+        "title": "Find the forces on the horizontal sides",
+        "math": "F_{top}=\\frac{\\mu_0 I_wI_lL}{2\\pi r_{top}}=\\frac{(2\\times10^{-7})(14.0)(5.00)(0.200)}{0.0260}\\\\F_{top}=1.077\\times10^{-4}\\ \\mathrm N\\quad\\text{upward}\\\\F_{bottom}=\\frac{(2\\times10^{-7})(14.0)(5.00)(0.200)}{0.100}\\\\F_{bottom}=2.80\\times10^{-5}\\ \\mathrm N\\quad\\text{downward}"
+      },
+      {
+        "title": "Subtract the opposing forces",
+        "math": "F_{net}=F_{top}-F_{bottom}\\\\=1.077\\times10^{-4}-2.80\\times10^{-5}=7.97\\times10^{-5}\\ \\mathrm N"
+      }
+    ],
+    "answer": "7.97 × 10⁻⁵ N toward the wire.",
+    "note": "The two vertical sides have equal and opposite horizontal forces at each height, so those forces cancel.",
+    "check": "The near edge has current parallel to the wire and is attracted more strongly, so net force is upward toward the wire. The 10.0 cm label is wire-to-bottom distance."
+  },
+  {
+    "id": "28-65",
+    "problem": "28.65",
+    "title": "28.65 · Suspended current-carrying wires",
+    "given": "Two opposite-current wires hang from common supports on 0.0400 m cords, each 6.00° from vertical. Mass per wire length λ = 0.0125 kg/m.",
+    "find": "Find the equal current magnitude.",
+    "figure": "homework-late-figures/28-65.svg",
+    "original": "homework-late-figures/28-65-question.png",
+    "steps": [
+      {
+        "title": "Find the wire separation",
+        "math": "d=2\\ell\\sin\\theta=2(0.0400)\\sin6.00^\\circ\\\\d=8.3623\\times10^{-3}\\ \\mathrm m"
+      },
+      {
+        "title": "Use the free-body diagram",
+        "math": "T\\cos\\theta=mg,\\quad T\\sin\\theta=F_B\\\\\\frac{F_B}{\\mathcal L}=\\lambda g\\tan\\theta=\\frac{\\mu_0I^2}{2\\pi d}\\\\I=\\sqrt{\\frac{2\\pi d\\lambda g\\tan\\theta}{\\mu_0}}\\\\=\\sqrt{\\frac{(8.3623\\times10^{-3})(0.0125)(9.80)\\tan6.00^\\circ}{2\\times10^{-7}}}\\\\I=23.2\\ \\mathrm A"
+      }
+    ],
+    "answer": "23.2 A per wire, in opposite directions.",
+    "note": "",
+    "check": "Use the separation of both wires, 2ℓ sinθ, not the displacement of only one."
+  },
+  {
+    "id": "28-72",
+    "problem": "28.72",
+    "title": "28.72 · Cancel a loop’s centre field",
+    "given": "Clockwise circular loop radius R carries I₂. Its centre is distance D above a long horizontal wire carrying I₁.",
+    "find": "Find I₁ magnitude and direction for zero field at the loop centre.",
+    "figure": "homework-late-figures/28-72.svg",
+    "original": "homework-late-figures/28-72-question.png",
+    "steps": [
+      {
+        "title": "Set the field magnitudes equal",
+        "math": "B_{wire}=\\frac{\\mu_0I_1}{2\\pi D},\\quad B_{loop}=\\frac{\\mu_0I_2}{2R}\\\\\\frac{\\mu_0I_1}{2\\pi D}=\\frac{\\mu_0I_2}{2R}\\\\I_1=\\frac{\\pi D I_2}{R}"
+      }
+    ],
+    "answer": "I₁ = πDI₂/R, rightward.",
+    "note": "",
+    "check": "For a rightward wire current the field above it is out of the page. Cancellation is at the centre, not throughout the loop area."
+  }
+]
