@@ -16,7 +16,7 @@ function invalidate(){if(state.worker&&state.jobKind==='search')cancel();state.r
 function json(value){return JSON.stringify(value,(_,v)=>ArrayBuffer.isView(v)?Array.from(v):v,2);}
 function download(name,data,type='application/json'){const url=URL.createObjectURL(new Blob([typeof data==='string'?data:json(data)],{type}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 function cancel(){if(state.worker){state.worker.terminate();state.worker=null;}state.jobKind=null;state.job++;$('progress-row').hidden=true;document.querySelectorAll('[data-busy]').forEach(el=>{el.disabled=false;delete el.dataset.busy;});}
-function job(kind,payload){cancel();const id=state.job;return new Promise((resolve,reject)=>{const worker=new Worker(new URL('./worker.js?v=video1',import.meta.url),{type:'module'});state.worker=worker;state.jobKind=kind;$('progress').value=0;$('progress-row').hidden=false;['analyze','extract','search','demo','reference-events','save-event','rescan'].forEach(key=>{const el=$(key);if(!el.disabled){el.disabled=true;el.dataset.busy='1';}});worker.onerror=event=>{if(id!==state.job)return;cancel();reject(Error(event.message||'Analysis worker could not start. Reload the page.'));};worker.onmessage=({data})=>{if(data.id!==state.job)return;if(data.progress!=null){$('progress').value=Math.max(0,Math.min(1,data.progress));if(data.phase)status(data.phase);return;}cancel();if(data.error)reject(Error(data.error));else resolve(data.result);};worker.postMessage({id,kind,payload});});}
+function job(kind,payload){cancel();const id=state.job;return new Promise((resolve,reject)=>{const worker=new Worker(new URL('./worker.js?v=short2',import.meta.url),{type:'module'});state.worker=worker;state.jobKind=kind;$('progress').value=0;$('progress-row').hidden=false;['analyze','extract','search','demo','reference-events','save-event','rescan'].forEach(key=>{const el=$(key);if(!el.disabled){el.disabled=true;el.dataset.busy='1';}});worker.onerror=event=>{if(id!==state.job)return;cancel();reject(Error(event.message||'Analysis worker could not start. Reload the page.'));};worker.onmessage=({data})=>{if(data.id!==state.job)return;if(data.progress!=null){$('progress').value=Math.max(0,Math.min(1,data.progress));if(data.phase)status(data.phase);return;}cancel();if(data.error)reject(Error(data.error));else resolve(data.result);};worker.postMessage({id,kind,payload});});}
 $('cancel').onclick=()=>{state.sourceRevision++;cancel();$('rescan').disabled=!(state.source?.samples||isVideoFile(state.source?.file)||state.source?.file?.name?.toLowerCase().endsWith('.mp3')||state.source?.file?.type==='audio/mpeg');status('Analysis cancelled. Existing saved events are unchanged.');};
 function resetRecording(){cancel();state.sourceRevision++;state.detections=[];state.scan=null;$('detections').replaceChildren();$('scan-summary').textContent='Scanning will start after local decoding.';$('export-auto').disabled=true;$('rescan').disabled=true;state.spec=null;state.ridge=null;state.events=[];state.tracks=[];state.demo=null;state.view=null;invalidate();$('ridge-details').hidden=true;$('reference-events').hidden=true;$('extract').disabled=true;$('zoom-view').disabled=true;$('reset-view').disabled=true;$('play-selection').disabled=true;$('anchors').value='';$('spectrum-empty').hidden=false;renderEvents();renderTracks();drawSpectrum();}
 async function hash(data){if(!crypto.subtle)return null;return Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',data))).map(v=>v.toString(16).padStart(2,'0')).join('');}
@@ -30,6 +30,7 @@ async function decodeVideoAndScan(file,revision){
     if(!String(error.message).startsWith('VIDEO_NATIVE_FALLBACK:'))throw error;
     status('Preparing audio-only video fallback locally…');
     const prepared=await job('prepareVideoFallback',{file});if(revision!==state.sourceRevision)return null;
+    $('progress-row').hidden=false;$('progress').value=.35;status('Decoding the extracted soundtrack locally…');
     const bytes=await prepared.blob.arrayBuffer();if(revision!==state.sourceRevision)return null;
     const context=new OfflineAudioContext(1,1,8000);
     let buffer;try{buffer=await context.decodeAudioData(bytes);}catch{throw Error('This browser cannot decode the extracted AAC audio. Use a newer Safari/Chrome, or export the audio as MP3.');}
@@ -63,7 +64,7 @@ async function selectMedia(event){
       state.source.samples=new Float32Array(first.length+last.length);state.source.samples.set(first);state.source.samples.set(last,first.length);state.source.sr=4000;state.source.duration=state.source.samples.length/4000;
       state.source.channels=buffer.numberOfChannels;buffer=null;await runAutomatic();
     }
-  }catch(e){if(revision!==state.sourceRevision)return;report(e);$('rescan').disabled=!(state.source?.samples||isVideoFile(state.source?.file)||/\.mp3$/i.test(state.source?.file?.name||'')||state.source?.file?.type==='audio/mpeg');}
+  }catch(e){if(revision!==state.sourceRevision)return;cancel();report(e);$('rescan').disabled=!(state.source?.samples||isVideoFile(state.source?.file)||/\.mp3$/i.test(state.source?.file?.name||'')||state.source?.file?.type==='audio/mpeg');}
 }
 $('media-file').onchange=selectMedia;$('video-file').onchange=selectMedia;
 $('choose-video').onclick=()=>$('video-file').click();$('choose-audio').onclick=()=>$('media-file').click();
@@ -140,7 +141,7 @@ function applyAutomatic(output){
     ['reset-view','zoom-view','play-selection'].forEach(id=>$(id).disabled=false);$('extract').disabled=true;
   }
   renderDetections();renderEvents();drawSpectrum();
-  status(`Automatic scan complete: ${state.detections.length} candidate curves. No time ranges or guide points required.`,'success');
+  status(`Automatic scan complete: ${state.detections.length} candidate curve${state.detections.length===1?'':'s'}. No time ranges or guide points required.`,'success');
   $('curves').scrollIntoView({behavior:'smooth',block:'start'});
 }
 function renderDetections(){

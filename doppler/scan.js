@@ -1,6 +1,6 @@
 import {computeSpectrogram} from './audio.js';
-import {detectDopplerEvents,deduplicateEvents} from './detection.js?v=auto3';
-export {deduplicateEvents} from './detection.js?v=auto3';
+import {detectDopplerEvents,deduplicateEvents} from './detection.js?v=short2';
+export {deduplicateEvents} from './detection.js?v=short2';
 
 /** Scan the complete recording in overlapping windows, keeping memory bounded.
  * No file names, expected event times, or reference flight tracks enter detection.
@@ -43,16 +43,24 @@ export async function scanRecording(samples,sr,{onProgress,chunkSeconds=600,over
     }
     const found=await detectDopplerEvents(spec,{onProgress:value=>{
       const f=typeof value==='number'?value:value.fraction;
-      onProgress?.({fraction:(i+.35+.65*(f||0))/starts.length,phase:`Finding curved tonal tracks · ${formatTime(start)}–${formatTime(end)}`});
+      onProgress?.({fraction:(i+.35+.4*(f||0))/starts.length,phase:`Finding curved tonal tracks · ${formatTime(start)}–${formatTime(end)}`});
     }});
-    proposals.push(...found.events);
-    windows.push({start_s:start,end_s:end,status:'scanned',events:found.events.length,diagnostics:found.diagnostics});
+    // Nearby passes can change pitch within a few seconds. A shorter STFT
+    // resolves their trajectory; incomplete greedy seeds are recovered from
+    // measured peaks before applying the SAME final coverage/prominence gates.
+    const shortSpec=await computeSpectrogram(audio,sr,{startS:start,windowS:.75,hopS:.25,minHz:40,maxHz:1000});
+    const shortFound=await detectDopplerEvents(shortSpec,{minDurationS:10,seedMinCoverage:.4,minTimescaleS:2,maxDescendingFractionPerS:.08,requireCenteredTransition:true,onProgress:value=>{
+      onProgress?.({fraction:(i+.75+.25*value)/starts.length,phase:`Checking short tonal passes · ${formatTime(start)}–${formatTime(end)}`});
+    }});
+    for(const event of shortFound.events)event.detection_scale='short_pass';
+    proposals.push(...found.events,...shortFound.events);
+    windows.push({start_s:start,end_s:end,status:'scanned',events:found.events.length+shortFound.events.length,diagnostics:found.diagnostics,short_pass_diagnostics:shortFound.diagnostics});
     await new Promise(resolve=>setTimeout(resolve,0));
   }
   const events=deduplicateEvents(proposals).sort((a,b)=>quality(b)-quality(a)).slice(0,maxEvents);
   events.forEach((e,i)=>{e.name=`Tonal candidate ${i+1}`;e.flight_id='auto';e.provenance='automatic_audio_detection';});
   onProgress?.({fraction:1,phase:'Scan complete'});
-  return {events,overview,diagnostics:{algorithm_version:'2026-11-02-auto1',duration_s:duration,scan_band_hz:[40,1000],window_s:2,hop_s:.5,windows,
+  return {events,overview,diagnostics:{algorithm_version:'2026-11-02-multiscale1',duration_s:duration,scan_band_hz:[40,1000],window_s:2,hop_s:.5,additional_pass:{window_s:.75,hop_s:.25,min_duration_s:10,seed_min_coverage:.4,final_min_coverage:.7},windows,
     proposal_count:proposals.length,returned_events:events.length,max_events:maxEvents,
     method:'Automatic tonal-curve detection; candidate sounds are not verified aircraft identities.'}};
 }

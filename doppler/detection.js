@@ -54,9 +54,21 @@ function fuseOverlappingEvents(events){
  }
  return pool;
 }
+/** Short-pass recovery needs an observed central transition, not just a
+ * weakly curved tail of a drifting tone. Recheck after fragment fusion too. */
+export function isSupportedShortTransition(event){
+ const fit=event.ideal_fit,t=event.times_s,f=event.frequencies_hz;
+ if(!fit||!t?.length||!f?.length)return false;
+ const duration=t.at(-1)-t[0],center=fit.closest_arrival_s-fit.beta*fit.tau_s,margin=.25*fit.tau_s;
+ const n=Math.max(3,Math.floor(f.length*.15)),drop=median(f.slice(0,n))-median(f.slice(-n));
+ return duration>0&&center-margin>=t[0]&&center+margin<=t.at(-1)
+   &&fit.tau_s<=duration*.5&&fit.rmse_hz<=fit.linear_rmse_hz*.8
+   &&drop>=Math.max(3,median(f)*.05);
+}
 export function deduplicateEvents(events){
  const kept=[];
  for(const event of fuseOverlappingEvents(events).sort((a,b)=>b.quality-a.quality)){
+   if(event.detection_scale==='short_pass'&&!isSupportedShortTransition(event))continue;
    const existing=kept.find(other=>{if(overlap(event,other)<.55)return false;const common=event.times_s.map((t,i)=>{if(t<other.start_s||t>other.end_s)return null;let j=0;while(j<other.times_s.length-1&&other.times_s[j]<t)j++;return event.frequencies_hz[i]/other.frequencies_hz[j];}).filter(v=>v!=null);const r=common.length?median(common):median(event.frequencies_hz)/median(other.frequencies_hz),harmonic=Math.max(r,1/r),integer=Math.round(harmonic),scatter=common.length?median(common.map(v=>Math.abs(v-r)))/r:0;if(scatter>.025)return false;return Math.abs(r-1)<.08||(integer>=2&&integer<=6&&Math.abs(harmonic-integer)<.04*integer);});
    if(existing){existing.harmonic_companions=(existing.harmonic_companions??0)+1;continue;}
    kept.push(event);
@@ -123,7 +135,7 @@ function extendSupportedTrack(track,fit,peakFrames,times,df,dt){
  }
  return {track:current,fit:currentFit};
 }
-export async function detectDopplerEvents(spec,{onProgress,minDurationS=20,minCoverage=.7,minProminenceDb=5,maxGapS=2.0,maxEvents=40}={}){
+export async function detectDopplerEvents(spec,{onProgress,minDurationS=20,minCoverage=.7,minProminenceDb=5,maxGapS=2.0,maxEvents=40,minFrequencyHz=40,maxFrequencyHz=1000,seedMinCoverage=minCoverage,minTimescaleS=5,maxDescendingFractionPerS=.025,requireCenteredTransition=false}={}){
  const times=spec?.times_s,freq=spec?.frequencies_hz,power=spec?.power_db;
  if(!times||!freq||!power||times.length<4||freq.length<3)return {events:[],diagnostics:{reason:'Insufficient spectrogram samples'}};
  const nt=times.length,nf=freq.length,dt=times[1]-times[0],df=freq[1]-freq[0];
@@ -139,7 +151,7 @@ export async function detectDopplerEvents(spec,{onProgress,minDurationS=20,minCo
    for(let k=0;k<nf;k++){const lo=Math.max(0,k-radius),hi=Math.min(nf,k+radius+1);local[k]=column[k]-(prefix[hi]-prefix[lo])/(hi-lo);}
    const peaks=[];
    for(let k=1;k<nf-1;k++){
-     if(freq[k]<40||freq[k]>1000||column[k]<column[k-1]||column[k]<column[k+1])continue;
+     if(freq[k]<minFrequencyHz||freq[k]>maxFrequencyHz||column[k]<column[k-1]||column[k]<column[k+1])continue;
      const temporal=column[k]-baseline[k],prominence=local[k];
      if(prominence<minProminenceDb||temporal<3)continue;
      const curvature=column[k-1]-2*column[k]+column[k+1],shift=curvature<-.00001?Math.max(-.5,Math.min(.5,.5*(column[k-1]-column[k+1])/curvature)):0;
@@ -158,7 +170,7 @@ export async function detectDopplerEvents(spec,{onProgress,minDurationS=20,minCo
      const gate=Math.max(1.2*df,last*.007)*elapsed+df*.65;
      for(let p=0;p<peaks.length;p++){
        const delta=peaks[p].f-last,slope=delta/elapsed;
-       if(slope>Math.max(.5,last*.003)||slope< -Math.max(2,last*.025))continue;
+       if(slope>Math.max(.5,last*.003)||slope< -Math.max(2,last*maxDescendingFractionPerS))continue;
        const error=Math.abs(peaks[p].f-expected);if(error>gate)continue;
        pairs.push({a,p,cost:error/gate-.008*peaks[p].q-.001*Math.min(60,track.t.length)});
      }
@@ -170,25 +182,28 @@ export async function detectDopplerEvents(spec,{onProgress,minDurationS=20,minCo
    if(j%80===0){onProgress?.(.7*j/nt);await pause();}
  }
  finished.push(...active);
- let candidates=mergeFragments(finished,dt).filter(track=>track.t.at(-1)-track.t[0]>=minDurationS);
+ const mergedTracks=mergeFragments(finished,dt);
+ let candidates=mergedTracks.filter(track=>track.t.at(-1)-track.t[0]>=minDurationS);
+ const durationPassed=candidates.length,rejectionCounts={coverage:0,insufficient_descending_shift:0,excessive_shift:0};
  // Preselect stable descending evidence before any nonlinear fit.
- candidates=candidates.filter(track=>{const duration=track.t.at(-1)-track.t[0],coverage=track.t.length/(duration/dt+1),span=Math.max(3,Math.floor(track.f.length*.15)),drop=median(track.f.slice(0,span))-median(track.f.slice(-span));return coverage>=minCoverage&&drop>=Math.max(3,median(track.f)*.05)&&drop<median(track.f)*.8;});
+ candidates=candidates.filter(track=>{const duration=track.t.at(-1)-track.t[0],coverage=track.t.length/(duration/dt+1),span=Math.max(3,Math.floor(track.f.length*.15)),drop=median(track.f.slice(0,span))-median(track.f.slice(-span));if(coverage<seedMinCoverage){rejectionCounts.coverage++;return false;}if(drop<Math.max(3,median(track.f)*.05)){rejectionCounts.insufficient_descending_shift++;return false;}if(drop>=median(track.f)*.8){rejectionCounts.excessive_shift++;return false;}return true;});
  candidates.sort((a,b)=>(b.t.length*median(b.q))-(a.t.length*median(a.q)));candidates=candidates.slice(0,250);
  const events=[];let fitRejected=0;
  for(let i=0;i<candidates.length;i++){
    let track=candidates[i],fit=fitDopplerShape(track.t,track.f);
-   if(fit&&fit.tau_s>=5&&fit.rmse_hz<2){const extended=extendSupportedTrack(track,fit,peakFrames,times,df,dt);track=extended.track;fit=extended.fit;}
+   if(fit&&fit.tau_s>=minTimescaleS&&fit.rmse_hz<2){const extended=extendSupportedTrack(track,fit,peakFrames,times,df,dt);track=extended.track;fit=extended.fit;}
    const duration=track.t.at(-1)-track.t[0],span=track.f[0]-track.f.at(-1),coverage=track.t.length/(duration/dt+1);
-   if(!fit||coverage<minCoverage||fit.tau_s<Math.max(5,duration*.1)||fit.rmse_hz>Math.max(1.5,Math.abs(span)*.12)||fit.rmse_hz>fit.flat_rmse_hz*.35||fit.rmse_hz>fit.linear_rmse_hz*.92){fitRejected++;continue;}
+   if(!fit||coverage<minCoverage||fit.tau_s<Math.max(minTimescaleS,duration*.1)||fit.rmse_hz>Math.max(1.5,Math.abs(span)*.12)||fit.rmse_hz>fit.flat_rmse_hz*.35||fit.rmse_hz>fit.linear_rmse_hz*.92){fitRejected++;continue;}
+   if(requireCenteredTransition&&!isSupportedShortTransition({ideal_fit:fit,times_s:track.t,frequencies_hz:track.f})){fitRejected++;continue;}
    const transitionCenter=fit.closest_arrival_s-fit.beta*fit.tau_s;
    const coreStart=Math.max(track.t[0],transitionCenter-fit.tau_s*.5),coreEnd=Math.min(track.t.at(-1),transitionCenter+fit.tau_s*.5);
    const coreSupport=track.t.filter(t=>t>=coreStart&&t<=coreEnd).length/Math.max(1,(coreEnd-coreStart)/dt+1);
    if(coreEnd<=coreStart||coreSupport<.65||median(track.q.filter((q,p)=>track.t[p]>=coreStart&&track.t[p]<=coreEnd))<9){fitRejected++;continue;}
    const quality=median(track.q)*coverage*Math.sqrt(duration)*Math.min(1,coreSupport)*(1-fit.rmse_hz/Math.max(.1,fit.flat_rmse_hz));
-   events.push({times_s:track.t,frequencies_hz:track.f,raw_frequencies_hz:[...track.f],fitted_frequencies_hz:fit.frequencies_hz,strength_db:track.q,start_s:track.t[0],end_s:track.t.at(-1),quality,fit_rmse_hz:fit.rmse_hz,coverage,transition_coverage:Math.min(1,coreSupport),ideal_fit:fit,flight_id:'auto',provenance:'automatic_observed_ridge',warnings:['Automatically detected descending tonal candidate; aircraft origin is unverified.','Observed supported peaks remain separate from the ideal model overlay. Quality is a ranking score, not a confidence probability.']});
+   events.push({times_s:track.t,frequencies_hz:track.f,raw_frequencies_hz:[...track.f],fitted_frequencies_hz:fit.frequencies_hz,strength_db:track.q,start_s:track.t[0],end_s:track.t.at(-1),quality,fit_rmse_hz:fit.rmse_hz,coverage,transition_coverage:Math.min(1,coreSupport),ideal_fit:fit,flight_id:'auto',...(requireCenteredTransition?{detection_scale:'short_pass'}:{}),provenance:'automatic_observed_ridge',warnings:['Automatically detected descending tonal candidate; aircraft origin is unverified.','Observed supported peaks remain separate from the ideal model overlay. Quality is a ranking score, not a confidence probability.']});
    if(i%15===0){onProgress?.(.7+.3*i/Math.max(1,candidates.length));await pause();}
  }
  const deduped=deduplicateEvents(events).sort((a,b)=>b.quality-a.quality).slice(0,maxEvents).sort((a,b)=>a.start_s-b.start_s);
  onProgress?.(1);
- return {events:deduped,diagnostics:{frames:nt,frequency_bins:nf,peaks_considered:peakCount,tracks:finished.length,duration_candidates:candidates.length,shape_rejections:fitRejected,accepted_before_dedup:events.length,accepted:deduped.length,notes:'Temporal and local spectral whitening, supported peak tracking, descending-shape checks. Non-detection is not evidence of no aircraft.'}};
+ return {events:deduped,diagnostics:{frames:nt,frequency_bins:nf,peaks_considered:peakCount,tracks:finished.length,longest_raw_track_s:finished.reduce((longest,track)=>Math.max(longest,track.t.at(-1)-track.t[0]),0),merged_tracks:mergedTracks.length,duration_passed:durationPassed,pre_fit_rejections:rejectionCounts,descending_coverage_rejections:durationPassed-candidates.length,duration_candidates:candidates.length,shape_rejections:fitRejected,accepted_before_dedup:events.length,accepted:deduped.length,notes:'Temporal and local spectral whitening, supported peak tracking, descending-shape checks. Non-detection is not evidence of no aircraft.'}};
 }

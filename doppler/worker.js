@@ -1,6 +1,6 @@
 import {computeSpectrogram,extractRidge} from './audio.js';
 import {searchCandidates,scoreCandidate} from './physics.js';
-import {scanRecording} from './scan.js?v=auto3';
+import {scanRecording} from './scan.js?v=short2';
 import {decodeMP3} from './decode.js';
 import {decodeMP4,extractAudioM4A} from './video.js';
 self.onmessage=async({data:{id,kind,payload}})=>{
