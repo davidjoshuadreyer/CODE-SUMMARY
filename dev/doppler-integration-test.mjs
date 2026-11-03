@@ -3,9 +3,23 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 const base=new URL('../doppler/',import.meta.url);
 const asModule=source=>'data:text/javascript;base64,'+Buffer.from(source).toString('base64');
-const physicsUrl=asModule(await readFile(new URL('physics.js',base),'utf8'));
-const audioUrl=asModule(await readFile(new URL('audio.js',base),'utf8'));
-const demoUrl=asModule((await readFile(new URL('demo.js',base),'utf8')).replace("'./physics.js'",JSON.stringify(physicsUrl)));
+// Resolve the same module graph as the browser, without changing the site's package mode.
+globalThis.Worker=(await import('node:worker_threads')).Worker;
+const modules=new Map();
+async function moduleURL(name){
+ if(modules.has(name))return modules.get(name);
+ const url=new URL(name,base);
+ if(name.endsWith('.mjs'))return url.href;
+ let source=await readFile(url,'utf8');
+ const dependencies=[...source.matchAll(/(?:from\s*|import\s*)['"](\.\/[^'"]+)['"]/g)].map(match=>match[1]);
+ for(const dependency of new Set(dependencies)){
+  const absolute=new URL(dependency,url),relative=absolute.pathname.slice(base.pathname.length);
+  const replacement=JSON.stringify(await moduleURL(relative));
+  source=source.split("'"+dependency+"'").join(replacement).split('"'+dependency+'"').join(replacement);
+ }
+ const result=asModule(source);modules.set(name,result);return result;
+}
+const demoUrl=await moduleURL('demo.js');
 const {makeDemo}=await import(demoUrl);
 const demo=makeDemo(),sr=4000,samples=new Float32Array(demo.duration_s*sr);
 // Independent synthesis integrates linearly interpolated reference-event Hz.
@@ -30,8 +44,7 @@ for(const event of demo.events){
 // This validates option forwarding and the summary + best-detail integration.
 const messages=[];
 globalThis.self={postMessage:message=>messages.push(message)};
-const workerSource=(await readFile(new URL('worker.js',base),'utf8')).replace("'./audio.js'",JSON.stringify(audioUrl)).replace("'./physics.js'",JSON.stringify(physicsUrl));
-await import(asModule(workerSource));
+await import(await moduleURL('worker.js'));
 let id=0;
 async function run(kind,payload){
  const current=++id;
@@ -58,3 +71,15 @@ assert.ok(detail.per_event.every(e=>e.rmse_hz<1));
 assert.ok(results.every(r=>!('per_event'in r)));
 assert.ok(messages.some(m=>m.id===id&&m.progress===1),'Worker must forward completion progress');
 console.log(`PASS synthetic audio → spectrogram → two extracted ridges → worker grid search: ${best.score.toFixed(3)} Hz RMSE; correct location cell, shared clock and both flight assignments. This is not real-world accuracy validation.`);
+
+const automatic=await run('autoPCM',{samples,sr});
+assert.equal(automatic.samples.length,samples.length);
+assert.equal(automatic.sr,sr);
+assert.ok(automatic.overview?.display_only,'Automatic scan must return a display-only overview');
+assert.ok(automatic.events.length>=2,'Raw synthetic audio scan must find both flyovers');
+for(const reference of demo.events){
+ const overlap=automatic.events.some(e=>Math.min(e.times_s.at(-1),reference.times_s.at(-1))-Math.max(e.times_s[0],reference.times_s[0])>40);
+ assert.ok(overlap,`Automatic PCM worker missed ${reference.flight_id}`);
+}
+assert.ok(automatic.events.every(e=>e.provenance==='automatic_audio_detection'));
+console.log('PASS worker autoPCM → complete synthetic recording scan → both supported flyover candidates, overview, original timeline and sample transfer payload.');
