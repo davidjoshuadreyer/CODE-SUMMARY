@@ -56,3 +56,14 @@ button.primary:hover {background:#243e30}
   .steps {justify-content:flex-start;gap:10px 15px}
   .panel {padding:20px 13px}.section-head {flex-wrap:wrap}
 }
+
+/* Illustrated plates keep the analytical canvas free for measured data. */
+.field-plate .meadow {margin:9px 0;width:100%;aspect-ratio:12/5}
+.plate-key {padding-top:7px}
+.meadow-toggle {font:11px var(--type);letter-spacing:0;color:#314d40;border:1px solid #859983;background:#faf7e8;padding:5px 9px;line-height:1.2}
+.canvas-empty:has(.meadow) {display:flex;flex-direction:column;background:#f4eddf}
+.canvas-empty .meadow {display:block;width:100%;height:calc(100% - 35px);min-height:0}
+.canvas-empty .scope-idle {display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;min-height:35px;padding:3px 12px;background:#f4eddf;color:#29493c}
+.scope-idle span,.scope-idle a {color:#345442}
+.scope-idle button {pointer-events:auto}
+@media(max-width:500px){.canvas-empty .scope-idle {padding:3px 5px;font-size:11px}.scope-idle span {font-size:8px;letter-spacing:0}}
