@@ -1,6 +1,9 @@
 import {parseTracks,candidateGrid,importEvents} from './flights.js';
 import {makeDemo} from './demo.js';
 import {predictReceivedCurve,interpolateArrival} from './physics.js';
+import {createStreamingResampler} from './decode.js';
+import {mapMovieTimeline} from './video.js';
+const isVideoFile=file=>/\.(mov|mp4|m4v)$/i.test(file?.name||'')||['video/mp4','video/quicktime'].includes(file?.type);
 
 const $=id=>document.getElementById(id);
 const state={source:null,spec:null,ridge:null,events:[],tracks:[],result:null,view:null,demo:null,url:null,worker:null,jobKind:null,job:0,sourceRevision:0,detections:[],scan:null};
@@ -13,37 +16,57 @@ function invalidate(){if(state.worker&&state.jobKind==='search')cancel();state.r
 function json(value){return JSON.stringify(value,(_,v)=>ArrayBuffer.isView(v)?Array.from(v):v,2);}
 function download(name,data,type='application/json'){const url=URL.createObjectURL(new Blob([typeof data==='string'?data:json(data)],{type}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 function cancel(){if(state.worker){state.worker.terminate();state.worker=null;}state.jobKind=null;state.job++;$('progress-row').hidden=true;document.querySelectorAll('[data-busy]').forEach(el=>{el.disabled=false;delete el.dataset.busy;});}
-function job(kind,payload){cancel();const id=state.job;return new Promise((resolve,reject)=>{const worker=new Worker(new URL('./worker.js?v=auto3',import.meta.url),{type:'module'});state.worker=worker;state.jobKind=kind;$('progress').value=0;$('progress-row').hidden=false;['analyze','extract','search','demo','reference-events','save-event','rescan'].forEach(key=>{const el=$(key);if(!el.disabled){el.disabled=true;el.dataset.busy='1';}});worker.onerror=event=>{if(id!==state.job)return;cancel();reject(Error(event.message||'Analysis worker could not start. Reload the page.'));};worker.onmessage=({data})=>{if(data.id!==state.job)return;if(data.progress!=null){$('progress').value=Math.max(0,Math.min(1,data.progress));if(data.phase)status(data.phase);return;}cancel();if(data.error)reject(Error(data.error));else resolve(data.result);};worker.postMessage({id,kind,payload});});}
-$('cancel').onclick=()=>{cancel();$('rescan').disabled=!(state.source?.samples||state.source?.file?.name?.toLowerCase().endsWith('.mp3')||state.source?.file?.type==='audio/mpeg');status('Analysis cancelled. Existing saved events are unchanged.');};
+function job(kind,payload){cancel();const id=state.job;return new Promise((resolve,reject)=>{const worker=new Worker(new URL('./worker.js?v=video1',import.meta.url),{type:'module'});state.worker=worker;state.jobKind=kind;$('progress').value=0;$('progress-row').hidden=false;['analyze','extract','search','demo','reference-events','save-event','rescan'].forEach(key=>{const el=$(key);if(!el.disabled){el.disabled=true;el.dataset.busy='1';}});worker.onerror=event=>{if(id!==state.job)return;cancel();reject(Error(event.message||'Analysis worker could not start. Reload the page.'));};worker.onmessage=({data})=>{if(data.id!==state.job)return;if(data.progress!=null){$('progress').value=Math.max(0,Math.min(1,data.progress));if(data.phase)status(data.phase);return;}cancel();if(data.error)reject(Error(data.error));else resolve(data.result);};worker.postMessage({id,kind,payload});});}
+$('cancel').onclick=()=>{state.sourceRevision++;cancel();$('rescan').disabled=!(state.source?.samples||isVideoFile(state.source?.file)||state.source?.file?.name?.toLowerCase().endsWith('.mp3')||state.source?.file?.type==='audio/mpeg');status('Analysis cancelled. Existing saved events are unchanged.');};
 function resetRecording(){cancel();state.sourceRevision++;state.detections=[];state.scan=null;$('detections').replaceChildren();$('scan-summary').textContent='Scanning will start after local decoding.';$('export-auto').disabled=true;$('rescan').disabled=true;state.spec=null;state.ridge=null;state.events=[];state.tracks=[];state.demo=null;state.view=null;invalidate();$('ridge-details').hidden=true;$('reference-events').hidden=true;$('extract').disabled=true;$('zoom-view').disabled=true;$('reset-view').disabled=true;$('play-selection').disabled=true;$('anchors').value='';$('spectrum-empty').hidden=false;renderEvents();renderTracks();drawSpectrum();}
 async function hash(data){if(!crypto.subtle)return null;return Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',data))).map(v=>v.toString(16).padStart(2,'0')).join('');}
 function wav(samples,sr){const bytes=new ArrayBuffer(44+samples.length*2),v=new DataView(bytes),text=(o,s)=>[...s].forEach((c,i)=>v.setUint8(o+i,c.charCodeAt(0)));text(0,'RIFF');v.setUint32(4,36+samples.length*2,true);text(8,'WAVE');text(12,'fmt ');v.setUint32(16,16,true);v.setUint16(20,1,true);v.setUint16(22,1,true);v.setUint32(24,sr,true);v.setUint32(28,sr*2,true);v.setUint16(32,2,true);v.setUint16(34,16,true);text(36,'data');v.setUint32(40,samples.length*2,true);samples.forEach((s,i)=>v.setInt16(44+2*i,Math.round(Math.max(-1,Math.min(1,s))*32767),true));return new Blob([bytes],{type:'audio/wav'});}
 function generateAudio(demo){const sr=4000,samples=new Float32Array(demo.duration_s*sr);let seed=73;for(let i=0;i<samples.length;i++){seed=(Math.imul(seed,1664525)+1013904223)>>>0;samples[i]=.025*(seed/4294967296-.5);}for(const event of demo.events){const track=demo.tracks.find(t=>t.flight_id===event.flight_id),curve=predictReceivedCurve(track,demo.observer);let phase=0;const lo=event.times_s[0],hi=event.times_s.at(-1);for(let i=Math.max(0,Math.floor((lo-3)*sr));i<Math.min(samples.length,Math.ceil((hi+3)*sr));i++){const t=i/sr,ratio=interpolateArrival(curve,demo.recording_start_utc+t);if(!Number.isFinite(ratio))continue;phase+=2*Math.PI*event.f0_hz*ratio/sr;const env=Math.max(0,Math.min(1,(t-lo+3)/3,(hi+3-t)/3));samples[i]+=env*(.22*Math.sin(phase)+.04*Math.sin(2*phase));}}return {samples,sr};}
-$('demo').onclick=async()=>{try{resetRecording();const demo=makeDemo(),audio=generateAudio(demo);state.demo=demo;state.source={kind:'synthetic',name:'Generated two-flight recording',...audio,duration:audio.samples.length/audio.sr};state.tracks=demo.tracks;if(state.url)URL.revokeObjectURL(state.url);state.url=URL.createObjectURL(wav(audio.samples,audio.sr));$('media-player').hidden=true;$('media-player').pause();$('demo-player').src=state.url;$('demo-player').hidden=false;$('media-file').value='';$('source-name').textContent=state.source.name;$('source-detail').textContent='SYNTHETIC · Two generated flyovers at 25–100 s and 125–200 s. This checks the workflow, not real-world accuracy.';set('crop-start',0);set('crop-duration',220);set('channel',0);set('recording-time',iso(demo.recording_start_utc));set('south',49.24);set('north',49.26);set('west',-123.115);set('east',-123.085);set('elevation',0);$('analyze').disabled=false;$('reference-events').hidden=false;renderTracks();status('Synthetic recording loaded. Scanning for curves automatically…');await runAutomatic();}catch(e){report(e);}};
-$('media-file').onchange=async event=>{
+$('demo').onclick=async()=>{try{resetRecording();const demo=makeDemo(),audio=generateAudio(demo);state.demo=demo;state.source={kind:'synthetic',name:'Generated two-flight recording',...audio,duration:audio.samples.length/audio.sr};state.tracks=demo.tracks;if(state.url)URL.revokeObjectURL(state.url);state.url=URL.createObjectURL(wav(audio.samples,audio.sr));$('media-player').hidden=true;$('media-player').pause();$('demo-player').src=state.url;$('demo-player').hidden=false;$('media-file').value='';$('video-file').value='';$('source-name').textContent=state.source.name;$('source-detail').textContent='SYNTHETIC · Two generated flyovers at 25–100 s and 125–200 s. This checks the workflow, not real-world accuracy.';set('crop-start',0);set('crop-duration',220);set('channel',0);set('recording-time',iso(demo.recording_start_utc));set('south',49.24);set('north',49.26);set('west',-123.115);set('east',-123.085);set('elevation',0);$('analyze').disabled=false;$('reference-events').hidden=false;renderTracks();status('Synthetic recording loaded. Scanning for curves automatically…');await runAutomatic();}catch(e){report(e);}};
+async function decodeVideoAndScan(file,revision){
+  try{return await job('autoVideo',{file});}
+  catch(error){
+    if(revision!==state.sourceRevision)return null;
+    if(!String(error.message).startsWith('VIDEO_NATIVE_FALLBACK:'))throw error;
+    status('Preparing audio-only video fallback locally…');
+    const prepared=await job('prepareVideoFallback',{file});if(revision!==state.sourceRevision)return null;
+    const bytes=await prepared.blob.arrayBuffer();if(revision!==state.sourceRevision)return null;
+    const context=new OfflineAudioContext(1,1,8000);
+    let buffer;try{buffer=await context.decodeAudioData(bytes);}catch{throw Error('This browser cannot decode the extracted AAC audio. Use a newer Safari/Chrome, or export the audio as MP3.');}
+    if(revision!==state.sourceRevision)return null;
+    const resampler=createStreamingResampler(buffer.sampleRate),parts=[resampler.process(buffer.getChannelData(0)),resampler.finish()],media=new Float32Array(parts[0].length+parts[1].length);media.set(parts[0]);media.set(parts[1],parts[0].length);
+    const samples=mapMovieTimeline(media,prepared.meta,4000);buffer=null;
+    const output=await job('autoPCM',{samples,sr:4000});
+    output.decode_info={channels:prepared.meta.channels,warnings:['AAC extracted locally into an audio-only container and decoded with the browser fallback.','Movie edit-list timing is applied explicitly; analysis retains audio channel 0.']};return output;
+  }
+}
+async function selectMedia(event){
   const file=event.target.files[0];if(!file)return;
+  let revision=state.sourceRevision;
   try{
-    const isMP3=/\.mp3$/i.test(file.name)||file.type==='audio/mpeg';
-    if(file.size>(isMP3?200:100)*1024**2)throw Error('Use an MP3 under 200 MB, or another supported media file under 100 MB.');
-    resetRecording();const revision=state.sourceRevision;state.source={kind:'user_recording',name:file.name,file,size_bytes:file.size};
+    const isMP3=/\.mp3$/i.test(file.name)||file.type==='audio/mpeg',isVideo=isVideoFile(file);
+    if(file.size>(isVideo?2048:isMP3?200:100)*1024**2)throw Error('Use MOV/MP4 under 2 GB, MP3 under 200 MB, or another audio file under 100 MB.');
+    resetRecording();revision=state.sourceRevision;state.source={kind:'user_recording',name:file.name,file,size_bytes:file.size};
     $('analyze').disabled=true;$('source-name').textContent=file.name;
     if(state.url)URL.revokeObjectURL(state.url);state.url=URL.createObjectURL(file);
     $('demo-player').pause();$('demo-player').hidden=true;$('media-player').src=state.url;$('media-player').hidden=false;
     $('source-detail').textContent='Processing locally. You can cancel or choose another recording.';
-    if(isMP3){status('Decoding MP3 incrementally…');const output=await job('autoFile',{file});if(revision!==state.sourceRevision)return;applyAutomatic(output);}
+    if(isMP3||isVideo){status(isVideo?'Extracting video audio locally…':'Decoding MP3 incrementally…');const output=isVideo?await decodeVideoAndScan(file,revision):await job('autoFile',{file});if(revision!==state.sourceRevision||!output)return;applyAutomatic(output);}
     else{
       status('Decoding locally at analysis sample rate…');
-      const bytes=await file.arrayBuffer();
-      const context=new OfflineAudioContext(1,1,4000);
-      let buffer;try{buffer=await context.decodeAudioData(bytes);}catch{throw Error('This browser cannot decode this file. Try MP3 or WAV. MP3 uses incremental decoding for long recordings.');}
+      const bytes=await file.arrayBuffer();if(revision!==state.sourceRevision)return;
+      const context=new OfflineAudioContext(1,1,8000);
+      let buffer;try{buffer=await context.decodeAudioData(bytes);}catch{throw Error('This browser cannot decode this file. Try MP3 or WAV.');}
       if(revision!==state.sourceRevision)return;
       if(buffer.duration>7200)throw Error('Automatic scans support at most two hours.');
-      state.source.samples=buffer.getChannelData(0).slice();state.source.sr=buffer.sampleRate;state.source.duration=buffer.duration;
-      state.source.channels=buffer.numberOfChannels;buffer=null;
-      await runAutomatic();
+      const resampler=createStreamingResampler(buffer.sampleRate),first=resampler.process(buffer.getChannelData(0)),last=resampler.finish();
+      state.source.samples=new Float32Array(first.length+last.length);state.source.samples.set(first);state.source.samples.set(last,first.length);state.source.sr=4000;state.source.duration=state.source.samples.length/4000;
+      state.source.channels=buffer.numberOfChannels;buffer=null;await runAutomatic();
     }
-  }catch(e){report(e);$('rescan').disabled=!(state.source?.samples||/\.mp3$/i.test(state.source?.file?.name||'')||state.source?.file?.type==='audio/mpeg');}
-};
+  }catch(e){if(revision!==state.sourceRevision)return;report(e);$('rescan').disabled=!(state.source?.samples||isVideoFile(state.source?.file)||/\.mp3$/i.test(state.source?.file?.name||'')||state.source?.file?.type==='audio/mpeg');}
+}
+$('media-file').onchange=selectMedia;$('video-file').onchange=selectMedia;
+$('choose-video').onclick=()=>$('video-file').click();$('choose-audio').onclick=()=>$('media-file').click();
 
 async function croppedAudio(){if(!state.source)throw Error('Choose a recording first.');const start=number('crop-start'),duration=number('crop-duration'),channel=number('channel');if(start<0||duration<2||duration>600||start>=state.source.duration||!Number.isInteger(channel)||channel<0)throw Error('Use a valid start, 2–600 seconds of audio, and an integer channel.');const length=Math.min(duration,state.source.duration-start),sr=4000;if(state.source.samples){if(channel!==0)throw Error('Automatic analysis retains channel 0. Select channel 0 for refinement.');const sourceSR=state.source.sr;return {samples:state.source.samples.slice(Math.round(start*sourceSR),Math.round((start+length)*sourceSR)),sr:sourceSR,start:Math.round(start*sourceSR)/sourceSR};}if(channel>=state.source.buffer.numberOfChannels)throw Error('That channel is not present in this recording.');const original=state.source.buffer,first=Math.round(start*original.sampleRate),count=Math.round(length*original.sampleRate),offline=new OfflineAudioContext(1,Math.ceil(length*sr),sr),mono=offline.createBuffer(1,count,original.sampleRate);mono.copyToChannel(original.getChannelData(channel).subarray(first,first+count),0);const source=offline.createBufferSource();source.buffer=mono;source.connect(offline.destination);source.start();const rendered=await offline.startRendering();return {samples:rendered.getChannelData(0).slice(),sr,start:first/original.sampleRate};}
 $('analyze').onclick=async()=>{try{status('Building spectrogram…');const revision=state.sourceRevision;const audio=await croppedAudio();if(revision!==state.sourceRevision)return;const spec=await job('spectrum',{samples:audio.samples,sr:audio.sr,options:{startS:audio.start,windowS:number('window'),hopS:number('hop'),minHz:number('spec-low'),maxHz:number('spec-high')}});if(spec.times_s.length<2)throw Error('Choose a longer crop or shorter FFT window; at least two analysis frames are required.');state.spec=spec;state.ridge=null;state.view=null;$('ridge-details').hidden=true;$('anchors').value='';set('event-start',spec.times_s[0]);set('event-end',spec.times_s.at(-1));set('band-low',spec.frequencies_hz[0]);set('band-high',spec.frequencies_hz.at(-1));if(state.demo&&spec.times_s[0]<=25&&spec.times_s.at(-1)>=100&&spec.frequencies_hz[0]<=100&&spec.frequencies_hz.at(-1)>=210){set('event-start',25);set('event-end',100);set('band-low',100);set('band-high',210);}['extract','reset-view','zoom-view','play-selection'].forEach(id=>$(id).disabled=false);$('spectrum-empty').hidden=true;$('resolution').textContent=`${spec.frequency_resolution_hz.toFixed(3)} HZ / ${spec.actual_window_s.toFixed(3)} S WINDOW`;drawSpectrum();status('Spectrogram ready. Select a flyover and extract its curve.','success');$('curves').scrollIntoView({behavior:'smooth',block:'start'});}catch(e){report(e);}};
@@ -90,8 +113,8 @@ async function runAutomatic(){
   invalidate();
   const output=state.source.samples
     ?await job('autoPCM',{samples:state.source.samples,sr:state.source.sr})
-    :await job('autoFile',{file:state.source.file});
-  if(revision!==state.sourceRevision)return;
+    :isVideoFile(state.source.file)?await decodeVideoAndScan(state.source.file,revision):await job('autoFile',{file:state.source.file});
+  if(revision!==state.sourceRevision||!output)return;
   applyAutomatic(output);
 }
 function applyAutomatic(output){

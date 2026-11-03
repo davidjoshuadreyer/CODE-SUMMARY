@@ -128,3 +128,49 @@ def test_explicit_ambiguous_duplicate_policy(tmp_path):
     assert 1700000010 not in track['times_utc']
     assert len(track['times_utc'])==4
     assert any('Dropped all 2' in s for s in track['warnings'])
+
+
+def test_fast_parser_parity():
+    import numpy as np
+    from doppler_lab.flights import _readsb
+    value=trace()
+    value['trace'].extend([[60,49,-123,1000,100,0,1], [70,49,-123,'ground',1,0,0], [80,None,-123,1000,1,0,0]])
+    for source in ['auto','barometric']:
+        old=_readsb(value,source)[0];new=archive._readsb_fast(value,source)[0]
+        for key in ['times_utc','latitudes','longitudes','altitudes_m']:np.testing.assert_array_equal(old[key],new[key])
+        assert old['warnings']==new['warnings']
+    for row in value['trace'][:5]:row.extend([None,{},None,1200])
+    old=_readsb(value,'auto')[0];new=archive._readsb_fast(value,'auto')[0]
+    assert new['altitude_datum']=='geometric'
+    np.testing.assert_array_equal(old['altitudes_m'],new['altitudes_m'])
+
+
+def test_invalid_audit_and_preserved_partial(tmp_path):
+    value=trace();value['trace'][0][3]=99999999
+    parts=fixture(tmp_path,value=value);audit=[]
+    with pytest.raises(ValueError,match='audit callback'):
+        archive.extract_tracks(parts,invalid_track_policy='skip')
+    assert archive.extract_tracks(parts,invalid_track_policy='skip',on_invalid=audit.append)['tracks']==[]
+    assert len(audit)==1 and 'altitude outside' in audit[0]['reason']
+    output=tmp_path/'index.jsonl'
+    with pytest.raises(ValueError,match='altitude outside'):
+        archive.write_tracks_jsonl(parts,output,max_points=100,keep_partial_on_error=True)
+    assert not output.exists()
+    assert output.with_name('index.jsonl.partial').exists()
+    assert json.loads(output.with_name('index.jsonl.partial.json').read_text())['complete'] is False
+
+
+def test_fast_json_fallback_parity(monkeypatch):
+    data={'flight_id':'abc123','times_utc':[1700000000.125],'altitudes_m':[304.8]}
+    encoded=archive._json_line(data)
+    assert archive._json_loads(encoded)==data
+    monkeypatch.setattr(archive,'_fast_json',None)
+    assert archive._json_loads(archive._json_line(data))==json.loads(encoded)
+
+
+@pytest.mark.parametrize('column,value',[(0,True),(1,91),(2,181),(3,99999999),(6,1.5),(6,-1)])
+def test_fast_numeric_rejects_invalid_like_reference(column,value):
+    from doppler_lab.flights import _readsb
+    data=trace();data['trace'][0][column]=value
+    with pytest.raises(ValueError):_readsb(data,'auto')
+    with pytest.raises(ValueError):archive._readsb_fast(data,'auto')

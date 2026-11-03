@@ -22,6 +22,23 @@ from urllib.request import Request, urlopen
 
 from .flights import _readsb, _time
 
+try:
+    import orjson as _fast_json
+except ImportError:
+    _fast_json = None
+
+
+def _json_loads(raw):
+    return _fast_json.loads(raw) if _fast_json is not None else json.loads(raw)
+
+
+def _json_line(data):
+    # Normalized parser output contains only finite numbers and native lists.
+    if _fast_json is not None:
+        return _fast_json.dumps(data) + b'\n'
+    return (json.dumps(data, separators=(',', ':'), allow_nan=False) + '\n').encode()
+
+
 MIB = 1024 ** 2
 
 
@@ -195,11 +212,93 @@ class _Parts(io.RawIOBase):
         super().close()
 
 
+def _readsb_fast(data, altitude_source):
+    """Vectorized numeric validation equivalent to the bounded readsb importer."""
+    import numpy as np
+    base = _time(data.get('timestamp'))
+    entries = data.get('trace')
+    if not isinstance(entries, list) or len(entries) > 500000:
+        raise ValueError('readsb trace must be a list of at most 500000 points')
+    if not all(isinstance(e, list) and len(e) >= 7 for e in entries):
+        raise ValueError('Malformed readsb trace row: at least seven entries required')
+    def numbers(values):
+        if any(isinstance(v, bool) for v in values):
+            raise ValueError('readsb numeric fields must be finite numbers')
+        try:
+            array = np.asarray(values, dtype=float)
+        except (ValueError, TypeError) as exc:
+            raise ValueError('readsb numeric fields must be finite numbers') from exc
+        if not np.all(np.isfinite(array)):
+            raise ValueError('readsb numeric fields must be finite numbers')
+        return array
+    flags = numbers([e[6] for e in entries])
+    if np.any((flags < 0) | (flags != np.floor(flags)) | (flags > 2**53)):
+        raise ValueError('readsb flags must be a nonnegative integer')
+    flags = flags.astype(np.int64)
+    stale_mask = (flags & 1) != 0
+    ground_mask = np.asarray([e[3] == 'ground' for e in entries], dtype=bool) & ~stale_mask
+    missing_mask = np.asarray([e[1] is None or e[2] is None for e in entries], dtype=bool) & ~stale_mask & ~ground_mask
+    live = [(e, int(flag)) for e, flag, keep in zip(entries, flags, ~(stale_mask | ground_mask | missing_mask)) if keep]
+    positions = [e for e, _ in live]
+    offsets = numbers([e[0] for e in positions])
+    # Validate both altitude buckets even when only one datum is selected.
+    buckets = {'geometric': [], 'barometric': []}
+    for i, (e, flag) in enumerate(live):
+        extra = e[8] if len(e) > 8 and isinstance(e[8], dict) else {}
+        geom = e[10] if len(e) > 10 else None
+        if geom is None:
+            geom = extra.get('alt_geom')
+        if geom is None and flag & 8:
+            geom = e[3]
+        baro = e[3] if not flag & 8 else extra.get('alt_baro')
+        if geom is not None and geom != 'ground':
+            buckets['geometric'].append((i, geom))
+        if baro is not None and baro != 'ground':
+            buckets['barometric'].append((i, baro))
+    converted = {key: numbers([a for _, a in rows]) * .3048 for key, rows in buckets.items()}
+    selected = altitude_source
+    if selected == 'auto':
+        selected = 'geometric' if len(buckets['geometric']) >= 2 else 'barometric'
+    identity = data.get('icao') or data.get('hex') or data.get('flight_id')
+    if not isinstance(identity, str) or not identity.strip():
+        raise ValueError('Each track requires a nonempty string flight_id')
+    indices = np.asarray([i for i, _ in buckets[selected]], dtype=int)
+    if len(indices) < 2:
+        raise ValueError(f'Track {identity}: requires 2–500000 points')
+    times = base + offsets[indices]
+    lats = numbers([positions[i][1] for i in indices])
+    lons = numbers([positions[i][2] for i in indices])
+    alts = converted[selected]
+    _time(float(times.min())); _time(float(times.max()))
+    if np.any(np.abs(lats) > 90) or np.any(np.abs(lons) > 180):
+        raise ValueError(f'Track {identity}: latitude/longitude outside WGS84 degree bounds')
+    if np.any((alts < -1000) | (alts > 100000)):
+        raise ValueError(f'Track {identity}: altitude outside supported -1000 to 100000 metres')
+    stale, ground, missing = [int(mask.sum()) for mask in (stale_mask, ground_mask, missing_mask)]
+    notes = [f'readsb {selected} altitude selected uniformly; feet converted to metres.',
+             f'Excluded {stale} stale, {ground} ground, and {missing} missing-position points.']
+    excluded = len(entries) - stale - ground - missing - len(indices)
+    if excluded:
+        notes.append(f'Excluded {excluded} points lacking {selected} altitude; no mixed-datum fallback.')
+    if np.any(np.diff(times) < 0):
+        notes.append('Input points were sorted by UTC time.')
+    order = np.argsort(times, kind='stable')
+    times, lats, lons, alts = [a[order] for a in (times, lats, lons, alts)]
+    if np.any(np.diff(times) <= 0):
+        raise ValueError(f'Track {identity}: duplicate timestamps; resolve them before import')
+    if np.any(np.diff(times) > 30):
+        notes.append('Track contains gaps over 30 seconds; do not interpolate across them.')
+    if selected != 'geometric':
+        notes.append(f'Altitude datum is {selected}; heights are not verified WGS84 ellipsoid heights. No conversion was applied.')
+    return [dict(flight_id=identity.strip(), times_utc=times, latitudes=lats,
+                 longitudes=lons, altitudes_m=alts, altitude_datum=selected, warnings=notes)]
+
+
 def iter_archive_traces(parts, flight_ids=None, start_utc=None, end_utc=None,
                         bbox=None, altitude_source='auto', max_bytes=4 * 1024**3,
                         max_members=300000, max_member_bytes=8 * MIB,
                         max_json_bytes=64 * MIB, max_points=500000,
-                        max_tracks=10000, time_padding_s=0, duplicate_time_policy="error"):
+                        max_tracks=10000, time_padding_s=0, duplicate_time_policy="error", invalid_track_policy="error", on_invalid=None, fast_numeric=False):
     """Stream local split tar into parser-compatible JSON tracks.
 
     Time cropping retains one bracketing sample on each side plus explicit
@@ -215,6 +314,10 @@ def iter_archive_traces(parts, flight_ids=None, start_utc=None, end_utc=None,
         raise ValueError("Archive parts must be regular, non-symlink files")
     if sum(p.stat().st_size for p in paths) > max_bytes:
         raise ValueError("Archive exceeds explicit scan byte budget")
+    if invalid_track_policy not in {'error', 'skip'}:
+        raise ValueError('Invalid invalid_track_policy')
+    if invalid_track_policy == 'skip' and on_invalid is None:
+        raise ValueError('Skipping invalid tracks requires an audit callback')
     if duplicate_time_policy not in {'error', 'drop-all'}:
         raise ValueError('Invalid duplicate_time_policy')
     if altitude_source not in {'auto', 'geometric', 'barometric'}:
@@ -257,7 +360,7 @@ def iter_archive_traces(parts, flight_ids=None, start_utc=None, end_utc=None,
                     raw = f.read(max_json_bytes + 1)
             if len(raw) > max_json_bytes:
                 raise ValueError("Decompressed trace exceeds JSON limit")
-            data = json.loads(raw)
+            data = _json_loads(raw)
             if not isinstance(data, dict):
                 raise ValueError("Trace JSON must be an object")
             data.setdefault('icao', identity)
@@ -282,11 +385,14 @@ def iter_archive_traces(parts, flight_ids=None, start_utc=None, end_utc=None,
                     data['trace'] = [row for row, key in zip(entries, keys) if counts[key] == 1]
                     dropped = len(entries) - len(data['trace'])
             try:
-                track = _readsb(data, altitude_source)[0]
+                track = (_readsb_fast if fast_numeric else _readsb)(data, altitude_source)[0]
                 if dropped:
                     track['warnings'].append(f'Dropped all {dropped} observations at duplicate timestamps; no ambiguous observation selected.')
             except ValueError as exc:
                 if 'requires 2–500000 points' in str(exc):
+                    continue
+                if invalid_track_policy == "skip":
+                    on_invalid({"member": member.name, "flight_id": identity, "reason": str(exc)})
                     continue
                 raise ValueError(f"{member.name}: {exc}") from exc
             times = track['times_utc']
@@ -323,7 +429,7 @@ def extract_tracks(parts, **kwargs):
 
 
 def write_tracks_jsonl(parts, output, *, max_points, max_tracks=100000,
-                       max_output_bytes=8 * 1024**3, on_progress=None, **kwargs):
+                       max_output_bytes=8 * 1024**3, on_progress=None, keep_partial_on_error=False, **kwargs):
     """Atomically stream independent normalized tracks to seekable JSONL.
 
     A .gz output suffix opts into gzip compression.
@@ -335,6 +441,7 @@ def write_tracks_jsonl(parts, output, *, max_points, max_tracks=100000,
     """
     if type(max_points) is not int or max_points <= 0:
         raise ValueError("Streaming output needs an explicit positive max_points")
+    kwargs.setdefault("fast_numeric", True)
     output = Path(output)
     output.parent.mkdir(parents=True, exist_ok=True)
     count = points = size = 0
@@ -344,16 +451,24 @@ def write_tracks_jsonl(parts, output, *, max_points, max_tracks=100000,
             temp = Path(f.name)
             with (gzip.GzipFile(fileobj=f, mode='wb', mtime=0) if output.suffix == '.gz' else nullcontext(f)) as zipped:
                 for track in iter_archive_traces(parts, max_points=max_points, max_tracks=max_tracks, **kwargs):
-                    raw = (json.dumps(track, separators=(',', ':'), allow_nan=False) + '\n').encode()
-                    size += len(raw)
-                    if size > max_output_bytes:
+                    raw = _json_line(track)
+                    if size + len(raw) > max_output_bytes:
                         raise ValueError("JSONL exceeds uncompressed output byte budget")
                     zipped.write(raw)
+                    size += len(raw)
                     count += 1
                     points += len(track['times_utc'])
                     if on_progress:
                         on_progress(count, points, size)
         temp.replace(output)
+    except BaseException:
+        if keep_partial_on_error and temp is not None and temp.exists():
+            checkpoint = output.with_name(output.name + '.partial')
+            temp.replace(checkpoint)
+            checkpoint.with_name(checkpoint.name + '.json').write_text(json.dumps(
+                dict(tracks=count, points=points, uncompressed_bytes=size,
+                     complete=False, warning='Partial index; do not treat as complete day coverage.')))
+        raise
     finally:
         if temp is not None:
             temp.unlink(missing_ok=True)

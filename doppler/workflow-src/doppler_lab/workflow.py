@@ -240,10 +240,16 @@ def main(argv=None):
         elif args.command=='archive-index':
             from .archive import write_tracks_jsonl
             start=parse_utc(args.date+'T00:00:00Z')
+            rejected=[];audit_run=datetime.now(timezone.utc).isoformat()
+            audit=Path(str(args.output)+'.rejected.jsonl');audit.parent.mkdir(parents=True,exist_ok=True)
+            def reject(row):
+                row={**row,'index_run':audit_run}
+                rejected.append(row)
+                with audit.open('a') as log:log.write(json.dumps(row)+'\n')
             def progress(tracks,points,size):
                 if tracks%1000==0:print(f'Indexed {tracks} tracks / {points} points / {size/1024**2:.0f} MiB',flush=True)
-            summary=write_tracks_jsonl(args.parts,args.output,max_points=args.max_points,start_utc=start,end_utc=start+86400,bbox=(20,55,-130,-60),max_bytes=int(args.max_mb*1024**2),duplicate_time_policy='drop-all',on_progress=progress)
-            summary.update(date_utc=args.date,selection_bbox=[20,55,-130,-60],duplicate_time_policy='drop-all',archive_parts=[{'file':str(Path(p).resolve()),'sha256':sha256(p)} for p in args.parts])
+            summary=write_tracks_jsonl(args.parts,args.output,max_points=args.max_points,start_utc=start,end_utc=start+86400,bbox=(20,55,-130,-60),max_bytes=int(args.max_mb*1024**2),duplicate_time_policy='drop-all',invalid_track_policy='skip',on_invalid=reject,on_progress=progress,keep_partial_on_error=True)
+            summary.update(date_utc=args.date,selection_bbox=[20,55,-130,-60],duplicate_time_policy='drop-all',invalid_track_policy='skip-with-audit',rejected_tracks=rejected,archive_parts=[{'file':str(Path(p).resolve()),'sha256':sha256(p)} for p in args.parts])
             write_json(str(args.output)+'.manifest.json',summary);print(dump_json(summary))
         return 0
     except (ValueError,KeyError,TypeError,OSError) as exc:

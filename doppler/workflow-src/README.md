@@ -30,7 +30,7 @@ After exporting and selecting two measured flyovers, the experimental `day-searc
 .venv/bin/python -m doppler_lab day-search my-recording/job.json --tracks day-tracks.jsonl --date 2026-09-08
 ```
 
-The date is a UTC archive day, not automatically the recording’s local calendar day. Adjacent days may be needed. The index selects aircraft intersecting 20–55°N, 130–60°W and preserves their original samples. Search uses physical curve fits to propose receivers on both sides of flight paths, pairs compatible receiver/time hypotheses, and refines a bounded shortlist against measured frequencies. Results record search coverage and work limits; this is a heuristic search, not exhaustive proof of location. Receiver elevation hypotheses (0, 750 and 2,000 m by default) and constant sound speed remain approximations. Ambiguous duplicate timestamps are discarded during indexing, with omissions recorded in track warnings.
+The date is a UTC archive day, not automatically the recording’s local calendar day. Adjacent days may be needed. The index selects aircraft intersecting 20–55°N, 130–60°W and preserves their original samples. Search uses physical curve fits to propose receivers on both sides of flight paths, pairs compatible receiver/time hypotheses, and refines a bounded shortlist against measured frequencies. Results record search coverage and work limits; this is a heuristic search, not exhaustive proof of location. Receiver elevation hypotheses (0, 750 and 2,000 m by default) and constant sound speed remain approximations. Ambiguous duplicate timestamps are discarded during indexing, with omissions recorded in track warnings. Invalid tracks are skipped with reasons in a rejection audit and the index manifest. Failed conversions retain a clearly marked partial file and checkpoint; it is never accepted as a complete index. NumPy validation and orjson accelerate the full-day conversion.
 
 `--max-hypotheses`, `--max-pairs`, `--max-curve-fits` and `--max-refinements` control the work budget. Inspect reported truncation and alternatives before interpreting the top candidate. A best fit alone is not verified identification.
 
@@ -118,4 +118,4 @@ These are reviewed suggestions, not newly validated performance claims. The revi
 
 ## Software license
 
-The source in this standalone workflow bundle is MIT licensed (see LICENSE). NumPy and SciPy retain their own licenses. The software license does not relicense aircraft archives, the creator’s media, or user recordings.
+The source in this standalone workflow bundle is MIT licensed (see LICENSE). NumPy, SciPy and orjson retain their own licenses. The software license does not relicense aircraft archives, the creator’s media, or user recordings.

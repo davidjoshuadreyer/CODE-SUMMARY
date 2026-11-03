@@ -2,6 +2,7 @@ import {computeSpectrogram,extractRidge} from './audio.js';
 import {searchCandidates,scoreCandidate} from './physics.js';
 import {scanRecording} from './scan.js?v=auto3';
 import {decodeMP3} from './decode.js';
+import {decodeMP4,extractAudioM4A} from './video.js';
 self.onmessage=async({data:{id,kind,payload}})=>{
   try {
     const onProgress=(value)=>self.postMessage({id,progress:typeof value==='number'?value:value.fraction,phase:value?.phase});
@@ -10,6 +11,17 @@ self.onmessage=async({data:{id,kind,payload}})=>{
       const decoded=await decodeMP3(payload.file,{onProgress:value=>onProgress({fraction:.35*(typeof value==='number'?value:value.fraction),phase:'Decoding MP3 incrementally…'})});
       const scan=await scanRecording(decoded.samples,decoded.sr,{onProgress:value=>onProgress({...value,fraction:.35+.65*value.fraction})});
       result={...scan,samples:decoded.samples,sr:decoded.sr,decode_info:{duration:decoded.duration,channels:decoded.channels,warnings:decoded.warnings}};
+    }
+    else if(kind==='autoVideo') {
+      const decoded=await decodeMP4(payload.file,{onProgress:value=>onProgress({fraction:.35*value,phase:'Extracting video audio locally…'})});
+      const scan=await scanRecording(decoded.samples,decoded.sr,{onProgress:value=>onProgress({...value,fraction:.35+.65*value.fraction})});
+      result={...scan,samples:decoded.samples,sr:decoded.sr,decode_info:{duration:decoded.duration,channels:decoded.channels,warnings:decoded.warnings}};
+    }
+    else if(kind==='prepareVideoFallback') {
+      const extracted=await extractAudioM4A(payload.file,{maxAudioBytes:48*1024**2});
+      if(extracted.meta.duration>900)throw Error('This browser supports video audio extraction up to 15 minutes. For longer videos use Safari 26 or newer, or export the audio as MP3.');
+      const {moov,samples,config,...meta}=extracted.meta;
+      result={blob:extracted.blob,meta};
     }
     else if(kind==='autoPCM') result={...await scanRecording(payload.samples,payload.sr,{onProgress}),samples:payload.samples,sr:payload.sr};
     else if(kind==='spectrum') result=await computeSpectrogram(payload.samples,payload.sr,{...payload.options,onProgress});
