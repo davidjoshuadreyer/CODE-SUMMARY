@@ -67,3 +67,5 @@ button.primary:hover {background:#243e30}
 .scope-idle span,.scope-idle a {color:#345442}
 .scope-idle button {pointer-events:auto}
 @media(max-width:500px){.canvas-empty .scope-idle {padding:3px 5px;font-size:11px}.scope-idle span {font-size:8px;letter-spacing:0}}
+svg.meadow {display:block;width:100%;overflow:hidden;font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace;background:linear-gradient(#b5d7cd,#f9dcbc 48%,#f8e5ba 69%,#d9dcb8 100%)}
+svg.meadow text {white-space:pre;font-variant-ligatures:none}
