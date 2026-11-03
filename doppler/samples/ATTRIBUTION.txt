@@ -1,0 +1,3 @@
+Praveen Pathak. Aeroplane data full analysis and raw files, v1 (2026). https://doi.org/10.5281/zenodo.23424278
+CC BY 4.0: https://creativecommons.org/licenses/by/4.0/
+Twelve recordings selected by Tesselate; audio unchanged; filenames anonymized. No reference curves, tracks, timestamps, or answer metadata bundled.

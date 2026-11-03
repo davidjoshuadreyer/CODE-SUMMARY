@@ -15,7 +15,7 @@ function report(error){status(error.message||String(error),'error');}
 function invalidate(){if(state.worker&&state.jobKind==='search')cancel();state.result=null;$('results').hidden=true;$('export-results').disabled=true;}
 function json(value){return JSON.stringify(value,(_,v)=>ArrayBuffer.isView(v)?Array.from(v):v,2);}
 function download(name,data,type='application/json'){const url=URL.createObjectURL(new Blob([typeof data==='string'?data:json(data)],{type}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
-function cancel(){if(state.worker){state.worker.terminate();state.worker=null;}state.jobKind=null;state.job++;$('progress-row').hidden=true;document.querySelectorAll('[data-busy]').forEach(el=>{el.disabled=false;delete el.dataset.busy;});}
+function cancel(){if(state.sampleFetch){state.sampleFetch.abort();state.sampleFetch=null;}if(state.worker){state.worker.terminate();state.worker=null;}state.jobKind=null;state.job++;$('progress-row').hidden=true;document.querySelectorAll('[data-busy]').forEach(el=>{el.disabled=false;delete el.dataset.busy;});}
 function job(kind,payload){cancel();const id=state.job;return new Promise((resolve,reject)=>{const worker=new Worker(new URL('./worker.js?v=short2',import.meta.url),{type:'module'});state.worker=worker;state.jobKind=kind;$('progress').value=0;$('progress-row').hidden=false;['analyze','extract','search','demo','reference-events','save-event','rescan'].forEach(key=>{const el=$(key);if(!el.disabled){el.disabled=true;el.dataset.busy='1';}});worker.onerror=event=>{if(id!==state.job)return;cancel();reject(Error(event.message||'Analysis worker could not start. Reload the page.'));};worker.onmessage=({data})=>{if(data.id!==state.job)return;if(data.progress!=null){$('progress').value=Math.max(0,Math.min(1,data.progress));if(data.phase)status(data.phase);return;}cancel();if(data.error)reject(Error(data.error));else resolve(data.result);};worker.postMessage({id,kind,payload});});}
 $('cancel').onclick=()=>{state.sourceRevision++;cancel();$('rescan').disabled=!(state.source?.samples||isVideoFile(state.source?.file)||state.source?.file?.name?.toLowerCase().endsWith('.mp3')||state.source?.file?.type==='audio/mpeg');status('Analysis cancelled. Existing saved events are unchanged.');};
 function resetRecording(){cancel();state.sourceRevision++;state.detections=[];state.scan=null;$('detections').replaceChildren();$('scan-summary').textContent='Scanning will start after local decoding.';$('export-auto').disabled=true;$('rescan').disabled=true;state.spec=null;state.ridge=null;state.events=[];state.tracks=[];state.demo=null;state.view=null;invalidate();$('ridge-details').hidden=true;$('reference-events').hidden=true;$('extract').disabled=true;$('zoom-view').disabled=true;$('reset-view').disabled=true;$('play-selection').disabled=true;$('anchors').value='';$('spectrum-empty').hidden=false;renderEvents();renderTracks();drawSpectrum();}
@@ -66,6 +66,21 @@ async function selectMedia(event){
     }
   }catch(e){if(revision!==state.sourceRevision)return;cancel();report(e);$('rescan').disabled=!(state.source?.samples||isVideoFile(state.source?.file)||/\.mp3$/i.test(state.source?.file?.name||'')||state.source?.file?.type==='audio/mpeg');}
 }
+$('load-sample').onclick=async()=>{
+  const id=$('sample-choice').value;if(!/^\d{2}$/.test(id)||Number(id)<1||Number(id)>12)return;
+  resetRecording();state.source=null;['recording-time','south','north','west','east'].forEach(id=>set(id,''));$('analyze').disabled=true;$('media-player').pause();$('media-player').hidden=true;$('demo-player').pause();$('demo-player').hidden=true;const revision=state.sourceRevision,controller=new AbortController();state.sampleFetch=controller;
+  $('load-sample').disabled=true;$('source-name').textContent=`Sample ${id}`;
+  $('source-detail').textContent='Downloading the original audio for local analysis…';
+  $('progress-row').hidden=false;$('progress').removeAttribute('value');status(`Downloading sample ${id}…`);
+  try{
+    const response=await fetch(new URL(`./samples/sample-${id}.wav`,import.meta.url),{signal:controller.signal});
+    if(!response.ok)throw Error(`Sample download failed (${response.status}). Try again.`);
+    const blob=await response.blob();if(revision!==state.sourceRevision)return;
+    state.sampleFetch=null;$('load-sample').disabled=false;
+    await selectMedia({target:{files:[new File([blob],`Sample-${id}.wav`,{type:'audio/wav'})]}});
+  }catch(error){if(revision===state.sourceRevision&&error.name!=='AbortError'){cancel();report(error);}}
+  finally{if(state.sampleFetch===controller)state.sampleFetch=null;$('load-sample').disabled=false;}
+};
 $('media-file').onchange=selectMedia;$('video-file').onchange=selectMedia;
 $('choose-video').onclick=()=>$('video-file').click();$('choose-audio').onclick=()=>$('media-file').click();
 
