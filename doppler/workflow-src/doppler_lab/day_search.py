@@ -247,8 +247,8 @@ def search_unknown_clock(events, tracks_path, *, date_utc='2026-09-08', output_d
     coverage = {'archive_date_utc': date_utc, 'index_path': str(path), 'index_bytes': path.stat().st_size,
                 'sample_step_s': sample_step_s, 'sound_speed_m_s': sound_speed_m_s, 'receiver_elevations_m': list(map(float, elevations_m)),
                 'altitude_datums': sorted({m['altitude_datum'] for m in metadata}),
-                'speed_relative_tolerance': speed_relative_tolerance,
-                'slant_relative_tolerance': slant_relative_tolerance,
+                'speed_relative_tolerance': speed_relative_tolerance, 'speed_absolute_margin_m_s': 20.,
+                'slant_relative_tolerance': slant_relative_tolerance, 'slant_absolute_margin_m': 500.,
                 'receiver_tolerance_m': receiver_tolerance_m, 'clock_tolerance_s': clock_tolerance_s,
                 'neighbor_limit_per_hypothesis': max_neighbors,
                 'reservoir_sampling_applied': any(a > b for a, b in zip(work['hypotheses_generated'], work['hypotheses_retained'])),
@@ -262,7 +262,11 @@ def search_unknown_clock(events, tracks_path, *, date_utc='2026-09-08', output_d
         _checkpoint(output_dir, 'complete_no_hypotheses', work)
         return result
     scale = np.array([receiver_tolerance_m]*3+[clock_tolerance_s])
-    features = [np.column_stack((h[:, :3], h[:, 3]-day_start))/scale for h in H]
+    # Treat tested elevation tiers separately, so wrong-tier nearest neighbors
+    # cannot crowd out valid same-tier pairs before the neighbor cap.
+    elevation_ids = {float(value): index for index, value in enumerate(elevations_m)}
+    features = [np.column_stack((np.column_stack((h[:, :3], h[:, 3]-day_start))/scale,
+                                 np.asarray([elevation_ids[float(v)] for v in h[:, 7]])*3.)) for h in H]
     tree = cKDTree(features[1])
     proposals = []
     counter = 0
