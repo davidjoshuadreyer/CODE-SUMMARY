@@ -8,7 +8,7 @@ if (frame) {
     if (!document) return;
     const fit = () => {
       const inner = document.getElementById('codex-visualization');
-      const height = Math.ceil((inner?.getBoundingClientRect().height || 1300) + 48);
+      const height = Math.ceil((inner?.getBoundingClientRect().height || document.body.getBoundingClientRect().height || 1300) + 32);
       if (Math.abs(frame.getBoundingClientRect().height - height) > 2) frame.style.height = `${height}px`;
     };
     observer = new ResizeObserver(fit);
