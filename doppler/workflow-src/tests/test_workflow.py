@@ -44,3 +44,37 @@ def test_init_accepts_top_level_event_array(tmp_path):
     assert main(['init',str(source),'--output',str(tmp_path/'array-job')])==0
     job=json.loads((tmp_path/'array-job/job.json').read_text())
     assert len(job['events'])==1 and job['source']['curves_sha256']
+
+
+def test_archive_index_dispatch(monkeypatch,tmp_path):
+    from doppler_lab import archive
+    seen={}
+    def index(parts,output,**kwargs):
+        seen.update(kwargs);return {'tracks':2,'points':100}
+    monkeypatch.setattr(archive,'write_tracks_jsonl',index)
+    part=tmp_path/'day.tar.aa';part.write_bytes(b'fixture')
+    output=tmp_path/'tracks.jsonl'
+    assert main(['archive-index',str(part),'--date','2026-09-08','--output',str(output)])==0
+    assert seen['end_utc']-seen['start_utc']==86400
+    assert seen['bbox']==(20,55,-130,-60)
+    manifest=json.loads(Path(str(output)+'.manifest.json').read_text())
+    assert manifest['date_utc']=='2026-09-08' and manifest['archive_parts'][0]['sha256']
+
+
+def test_day_search_requires_no_clock_or_bounds(monkeypatch,tmp_path):
+    import sys,types
+    from doppler_lab.workflow import run_day_job
+    called={}
+    def search(events,tracks_path,**kwargs):
+        called.update(kwargs)
+        assert events[0]['frequencies_hz'].tolist()==[101,91,81]
+        return {'best':None,'warnings':['No candidate in bounded shortlist.'],'coverage':{'date_utc':kwargs['date_utc']},'work':{'pairs':0}}
+    monkeypatch.setitem(sys.modules,'doppler_lab.day_search',types.SimpleNamespace(search_unknown_clock=search))
+    job=default_job([event(),{**event(),'times_s':[10,11,12]}]);job['archive']['date']='2026-09-08'
+    config=tmp_path/'job.json';config.write_text(json.dumps(job));tracks=tmp_path/'tracks.jsonl';tracks.write_text('{}\n')
+    result=run_day_job(config,tracks,max_curve_fits=25)
+    assert called['date_utc']=='2026-09-08' and called['max_curve_fits']==25
+    assert result['solution']['best'] is None
+    report=(tmp_path/'day-results/report.html').read_text()
+    assert 'Search coverage' in report and 'No valid match in the evaluated candidates' in report
+    assert (tmp_path/'day-results/curves.csv').is_file()

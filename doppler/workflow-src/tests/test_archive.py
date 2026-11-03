@@ -102,3 +102,29 @@ def test_discovery(monkeypatch):
     assert found['assets']==plan['assets']
     assert 'globe_history_2026' in visited[0]
     assert '/releases/tags/' in visited[1]
+
+
+def test_streaming_jsonl_atomic_budget(tmp_path):
+    parts=fixture(tmp_path)
+    output=tmp_path/'tracks.jsonl'
+    report=archive.write_tracks_jsonl(parts,output,max_points=100)
+    assert report['points']==5 and report['tracks']==1
+    original=output.read_bytes()
+    assert json.loads(original)['flight_id']=='abc123'
+    with pytest.raises(ValueError,match='byte budget'):
+        archive.write_tracks_jsonl(parts,output,max_points=100,max_output_bytes=2)
+    assert output.read_bytes()==original
+    assert not list(tmp_path.glob('*.part'))
+    zipped=tmp_path/'tracks.jsonl.gz'
+    archive.write_tracks_jsonl(parts,zipped,max_points=100)
+    assert gzip.decompress(zipped.read_bytes())==original
+
+
+def test_explicit_ambiguous_duplicate_policy(tmp_path):
+    value=trace();value['trace'].append(value['trace'][1][:]);value['trace'][-1][1]=50
+    parts=fixture(tmp_path,value=value)
+    with pytest.raises(ValueError,match='duplicate timestamps'):archive.extract_tracks(parts)
+    track=archive.extract_tracks(parts,duplicate_time_policy='drop-all')['tracks'][0]
+    assert 1700000010 not in track['times_utc']
+    assert len(track['times_utc'])==4
+    assert any('Dropped all 2' in s for s in track['warnings'])

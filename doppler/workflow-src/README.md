@@ -21,6 +21,19 @@ On Windows use `.venv\Scripts\python` in place of `.venv/bin/python`.
 
 Open `demo-run/results/report.html`. This explicitly synthetic example exercises automatic aircraft assignment, a coarse position/time grid, bounded SciPy refinement, a shared recording clock, predicted-versus-measured overlays, CSV and JSON evidence. The known reference position is compared only after fitting. This is a functional test, not real-recording accuracy evidence.
 
+## Search when only the date is known
+
+After exporting and selecting two measured flyovers, the experimental `day-search` path does not require a recording start or receiver bounds. Download the date’s archive as described below, then run:
+
+```sh
+.venv/bin/python -m doppler_lab archive-index archive-cache/*.tar.* --date 2026-09-08 --output day-tracks.jsonl --max-mb 6144
+.venv/bin/python -m doppler_lab day-search my-recording/job.json --tracks day-tracks.jsonl --date 2026-09-08
+```
+
+The date is a UTC archive day, not automatically the recording’s local calendar day. Adjacent days may be needed. The index selects aircraft intersecting 20–55°N, 130–60°W and preserves their original samples. Search uses physical curve fits to propose receivers on both sides of flight paths, pairs compatible receiver/time hypotheses, and refines a bounded shortlist against measured frequencies. Results record search coverage and work limits; this is a heuristic search, not exhaustive proof of location. Receiver elevation hypotheses (0, 750 and 2,000 m by default) and constant sound speed remain approximations. Ambiguous duplicate timestamps are discarded during indexing, with omissions recorded in track warnings.
+
+`--max-hypotheses`, `--max-pairs`, `--max-curve-fits` and `--max-refinements` control the work budget. Inspect reported truncation and alternatives before interpreting the top candidate. A best fit alone is not verified identification.
+
 ## Prepare your recording
 
 On Tesselate, upload the recording and let automatic extraction finish. Export detected curves and timestamps. To prepare a local job:
@@ -31,7 +44,7 @@ On Tesselate, upload the recording and let automatic extraction finish. Export d
 
 Event numbers are one-based positions in the exported file. `1,3` selects the two prominent flyovers in the supplied example's current export; it is not a universal selection rule. Omit `--events` to retain every exported event. Do not force unrelated tones to match aircraft. The page also exports a `job.json` directly from its saved events and current search settings.
 
-Fill these fields in `my-recording/job.json`:
+For the original bounded `run` mode, fill these fields in `my-recording/job.json`:
 
 - `recording_start_utc`: original recording start, such as `2026-09-08T20:00:00Z`. This date/time is an illustrative format, not the sample's verified timestamp.
 - `search.bounds`: receiver latitude/longitude search rectangle, with keys `lat_min`, `lat_max`, `lon_min`, `lon_max`.
@@ -39,7 +52,7 @@ Fill these fields in `my-recording/job.json`:
 - `search.time_range_s` and `time_step_s`: a shared clock search around the approximate start.
 - `tracks`: normalized CSV/JSON or individual readsb `.json.gz` paths, relative to the job file.
 
-Unknown inputs remain null. File creation time and YouTube upload date are never substituted for recording time. The current solver searches a bounded region and time interval; an unknown-year, countrywide search still needs a larger indexing and candidate-pruning stage.
+Unknown inputs remain null. File creation time and YouTube upload date are never substituted for recording time. The bounded `run` mode needs a region and approximate clock; `day-search` instead uses a known date and flight-pair pruning. Neither mode discovers the recording year.
 
 ```sh
 .venv/bin/python -m doppler_lab check my-recording/job.json
@@ -69,7 +82,7 @@ The official format is a split **plain tar** (`.tar.aa`, `.tar.ab`, sometimes mo
 .venv/bin/python -m doppler_lab archive-extract archive-cache/*.tar.* --start 2026-09-08T19:55:00Z --end 2026-09-08T21:10:00Z --flight-id abc123 --flight-id def456 --output my-recording/tracks.json --max-mb 4096
 ```
 
-Those timestamps and aircraft hex IDs are illustrative placeholders, not verified sample metadata. Omit `--flight-id` to consider all aircraft in the selected time window, subject to output limits. Use a window that includes aircraft emissions **before** the recorded sound arrives. Check errors rather than silently discarding missing coverage. This release limits selected tracks to 100 aircraft / 500,000 points; it does not yet automatically prune an entire country's flights to that shortlist.
+Those timestamps and aircraft hex IDs are illustrative placeholders, not verified sample metadata. Omit `--flight-id` to consider all aircraft in the selected time window, subject to output limits. Use a window that includes aircraft emissions **before** the recorded sound arrives. Check errors rather than silently discarding missing coverage. The bounded `run` mode limits selected tracks to 100 aircraft / 500,000 points. Use `archive-index` and `day-search` for the experimental full-day pruning path.
 
 Data source: [adsb.lol historical archives](https://www.adsb.lol/docs/open-data/historical), under ODbL 1.0. Code and data have separate licenses. Keep source attribution and comply with archive redistribution terms.
 
@@ -91,7 +104,7 @@ Optional `reference_location` is used only for a post-fit distance comparison; i
 
 ## Source and comment review
 
-The creator's description says no code or tools are being released. The transcript identifies September 8 and the continental US, but the recording year and full-hour UTC start remain unverified. The 20:37 UTC mention describes a separate faint one-minute example, not explicitly the beginning of the full recording.
+The creator's description says no code or tools are being released. The transcript identifies September 8 and the continental US, and the sample’s year was subsequently supplied as 2026 by the user. The full-hour UTC start remains unknown and is fitted jointly with location. The 20:37 UTC mention describes a separate faint one-minute example, not explicitly the beginning of the full recording.
 
 Useful viewer suggestions:
 

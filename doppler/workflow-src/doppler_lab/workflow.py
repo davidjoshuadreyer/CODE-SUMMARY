@@ -128,7 +128,7 @@ def run_job(config_path, output_dir=None):
 def write_report(path,result):
     esc=lambda value:html.escape(str(value));solution=result['solution'];best=solution.get('best')
     content='<h1>Doppler flight-matching report</h1>'+('<p><strong>SYNTHETIC DEMONSTRATION — generated tones and flight tracks; not a real location result.</strong></p>' if result.get('source',{}).get('kind')=='synthetic' else '')+'<p>Observed frequencies compared with actual imported flight trajectories. Fit errors are not confidence probabilities.</p>'
-    if not best:content+='<h2>No valid match</h2><p>Check track coverage, recording clock, and search bounds.</p>'
+    if not best:content+='<h2>No valid match in the evaluated candidates</h2><p>Inspect coverage, pruning thresholds and work limits in result.json. This does not prove the recording has no matching flights.</p>'
     else:
         o=best['observer'];content+=f'<h2>Best candidate: {o["latitude"]:.6f}, {o["longitude"]:.6f}</h2><p>Combined error: {best["rmse_hz"]:.3f} Hz · Recording start: {esc(format_utc(best["recording_start_utc"]))}</p>'
         if 'reference_check' in result:content+=f'<p>Distance to withheld reference: {result["reference_check"]["distance_m"]:.1f} m. Reference was not supplied to the solver.</p>'
@@ -145,15 +145,47 @@ def write_report(path,result):
                 for start,end in segments: paths+=f'<polyline fill="none" stroke="{color}" stroke-width="2" points="'+ ' '.join(f'{x(tt):.2f},{y(ff):.2f}' for tt,ff in zip(t[start:end],values[start:end]))+'"/>'
             content+=f'<section><h3>Event {i} · {esc(event["flight_id"])} · {event["rmse_hz"]:.3f} Hz</h3><p>{t[0]:.1f}–{t[-1]:.1f} seconds · fitted source tone {event["f0_hz"]:.2f} Hz</p><svg viewBox="0 0 900 260" role="img" aria-label="Measured and predicted frequency curves"><path d="M55 30V215H845" fill="none" stroke="#ccc"/>{paths}<text x="10" y="35">{hi:.0f} Hz</text><text x="10" y="215">{lo:.0f} Hz</text><text x="55" y="240">{t[0]:.1f} s</text><text x="795" y="240">{t[-1]:.1f} s</text></svg><p>Purple: measured · Teal: predicted from flight track</p></section>'
     warnings=list(dict.fromkeys(solution.get('warnings',[])+((best or {}).get('warnings',[]))))
+    if solution.get('coverage'):
+        content+='<h2>Search coverage</h2><pre style="white-space:pre-wrap">'+esc(json.dumps(solution['coverage'],indent=2))+'</pre>'
+    if solution.get('work'):
+        content+='<h2>Work performed</h2><pre style="white-space:pre-wrap">'+esc(json.dumps(solution['work'],indent=2))+'</pre>'
     content+='<h2>Checks and limitations</h2><ul>'+''.join('<li>'+esc(w)+'</li>' for w in warnings)+'</ul>'
     rows=solution.get('grid_candidates',[])[:10]
     if rows:
-        content+='<h2>Coarse search alternatives</h2><table><tr><th>Latitude</th><th>Longitude</th><th>Clock offset (s)</th><th>Error (Hz)</th></tr>'
+        content+='<h2>Coarse search alternatives</h2><table><tr><th>Latitude</th><th>Longitude</th><th>Recording start (UTC)</th><th>Error (Hz)</th></tr>'
         for row in rows:
-            o=row.get('observer',row);content+=f'<tr><td>{o["latitude"]:.6f}</td><td>{o["longitude"]:.6f}</td><td>{row.get("time_offset_s",0):.2f}</td><td>{row["score"]:.3f}</td></tr>'
+            o=row.get('observer',row);start=format_utc(row['recording_start_utc']) if 'recording_start_utc' in row else 'Unavailable';content+=f'<tr><td>{o["latitude"]:.6f}</td><td>{o["longitude"]:.6f}</td><td>{esc(start)}</td><td>{row["score"]:.3f}</td></tr>'
         content+='</table>'
     content+='<p>Complete configuration, track hashes, assignments and diagnostics are in result.json. Frequency samples are in curves.csv.</p>'
     Path(path).write_text('<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Doppler matching report</title><style>body{max-width:1000px;margin:40px auto;padding:0 24px;font:16px/1.6 system-ui;color:#302d3d;background:#f8f7fb}section{background:white;padding:20px;border-radius:12px;margin:24px 0}svg{width:100%;font:12px system-ui}table{border-collapse:collapse}td,th{padding:8px 18px;border-bottom:1px solid #ddd;text-align:left}</style>'+content+'</html>')
+
+
+def run_day_job(config_path, tracks_path, *, date_utc=None, output_dir=None, **limits):
+    """Fit date-wide hypotheses without requiring a known receiver or clock."""
+    from .day_search import search_unknown_clock
+    path=Path(config_path).resolve();job=read_json(path)
+    date_utc=date_utc or job.get('archive',{}).get('date')
+    if not date_utc:raise ValueError('Provide --date YYYY-MM-DD or archive.date in the job.')
+    events=validate_events(job['events'])
+    out=Path(output_dir).resolve() if output_dir else path.parent/'day-results'
+    out.mkdir(parents=True,exist_ok=True)
+    solution=search_unknown_clock(events,Path(tracks_path).resolve(),date_utc=date_utc,output_dir=out,**limits)
+    index_manifest=Path(str(tracks_path)+'.manifest.json')
+    if not index_manifest.is_file():index_manifest=Path(tracks_path).parent/'extraction.json'
+    if index_manifest.is_file():
+        solution.setdefault('coverage',{})['index_provenance']=read_json(index_manifest)
+    result={'schema_version':1,'workflow_version':VERSION,'created_utc':datetime.now(timezone.utc).isoformat(),
+        'source':job.get('source',{}),'config_sha256':sha256(path),
+        'track_files':[{'file':str(Path(tracks_path).resolve()),'sha256':sha256(tracks_path)}],
+        'configuration':{'date_utc':date_utc,'limits':limits,'job':job},'solution':solution,
+        'note':'Candidate fit, not verified location. Search pruning and compute limits can miss the true solution.'}
+    write_json(out/'result.json',result);write_report(out/'report.html',result)
+    with (out/'curves.csv').open('w',newline='') as stream:
+        writer=csv.writer(stream);writer.writerow(['event','flight_id','recording_seconds','observed_hz','predicted_hz','residual_hz'])
+        for i,event in enumerate((solution.get('best') or {}).get('per_event',[]),1):
+            for t,a,b in zip(event['times_s'],event['observed_frequencies_hz'],event['predicted_frequencies_hz']):writer.writerow([i,event['flight_id'],t,a,b,float(a-b)])
+    print(f'Results: {out / "report.html"}',flush=True)
+    return result
 
 
 def main(argv=None):
@@ -162,10 +194,13 @@ def main(argv=None):
     init=sub.add_parser('init',help='Prepare a job from exported measured curves');init.add_argument('curves');init.add_argument('--output',required=True);init.add_argument('--events',help='One-based event numbers, e.g. 1,3');init.add_argument('--recording-start');init.add_argument('--bounds',nargs=4,type=float,metavar=('SOUTH','NORTH','WEST','EAST'))
     check=sub.add_parser('check',help='Validate metadata and list missing inputs');check.add_argument('job')
     run=sub.add_parser('run',help='Run local matching; never downloads implicitly');run.add_argument('job');run.add_argument('--output')
+    day=sub.add_parser('day-search',help='Search a UTC day with unknown recording clock and receiver');day.add_argument('job');day.add_argument('--tracks',required=True);day.add_argument('--date');day.add_argument('--output')
+    day.add_argument('--max-hypotheses',type=int,default=1000000);day.add_argument('--max-pairs',type=int,default=20000);day.add_argument('--max-curve-fits',type=int,default=300);day.add_argument('--max-refinements',type=int,default=12)
     demo=sub.add_parser('demo',help='Run a labelled synthetic end-to-end workflow');demo.add_argument('--output',required=True)
     plan=sub.add_parser('archive-plan',help='Read release metadata without downloading aircraft data');plan.add_argument('--date',required=True);plan.add_argument('--output',required=True)
     fetch=sub.add_parser('archive-fetch',help='Download planned archive parts under an explicit byte budget');fetch.add_argument('plan');fetch.add_argument('--cache',required=True);fetch.add_argument('--max-mb',type=float,default=256)
     extract=sub.add_parser('archive-extract',help='Stream local archive parts into normalized tracks');extract.add_argument('parts',nargs='+');extract.add_argument('--output',required=True);extract.add_argument('--flight-id',action='append');extract.add_argument('--start',required=True);extract.add_argument('--end',required=True);extract.add_argument('--max-mb',type=float,default=4096)
+    index=sub.add_parser('archive-index',help='Create a full-day JSONL index for aircraft intersecting 20–55N, 130–60W');index.add_argument('parts',nargs='+');index.add_argument('--date',required=True);index.add_argument('--output',required=True);index.add_argument('--max-mb',type=float,default=6144);index.add_argument('--max-points',type=int,default=100000000)
     args=parser.parse_args(argv)
     try:
         if args.command=='init':
@@ -183,6 +218,7 @@ def main(argv=None):
         elif args.command=='check':
             path=Path(args.job);report=check_job(read_json(path),path.parent);print(dump_json(report));return 0 if report['ready'] else 2
         elif args.command=='run':run_job(args.job,args.output)
+        elif args.command=='day-search':run_day_job(args.job,args.tracks,date_utc=args.date,output_dir=args.output,max_hypotheses=args.max_hypotheses,max_pairs=args.max_pairs,max_curve_fits=args.max_curve_fits,max_refinements=args.max_refinements)
         elif args.command=='demo':
             from .demo import make_demo
             demo=make_demo();folder=Path(args.output)
@@ -201,6 +237,14 @@ def main(argv=None):
             from .archive import extract_tracks
             data=extract_tracks(args.parts,flight_ids=args.flight_id,start_utc=parse_utc(args.start),end_utc=parse_utc(args.end),max_bytes=int(args.max_mb*1024**2))
             write_json(args.output,data);print(f'Wrote {len(data["tracks"])} tracks to {args.output}')
+        elif args.command=='archive-index':
+            from .archive import write_tracks_jsonl
+            start=parse_utc(args.date+'T00:00:00Z')
+            def progress(tracks,points,size):
+                if tracks%1000==0:print(f'Indexed {tracks} tracks / {points} points / {size/1024**2:.0f} MiB',flush=True)
+            summary=write_tracks_jsonl(args.parts,args.output,max_points=args.max_points,start_utc=start,end_utc=start+86400,bbox=(20,55,-130,-60),max_bytes=int(args.max_mb*1024**2),duplicate_time_policy='drop-all',on_progress=progress)
+            summary.update(date_utc=args.date,selection_bbox=[20,55,-130,-60],duplicate_time_policy='drop-all',archive_parts=[{'file':str(Path(p).resolve()),'sha256':sha256(p)} for p in args.parts])
+            write_json(str(args.output)+'.manifest.json',summary);print(dump_json(summary))
         return 0
     except (ValueError,KeyError,TypeError,OSError) as exc:
         parser.exit(2,f'Workflow stopped: {exc}\n')

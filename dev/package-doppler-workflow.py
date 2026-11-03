@@ -3,9 +3,9 @@ from pathlib import Path
 import argparse,hashlib,json,zipfile
 parser=argparse.ArgumentParser();parser.add_argument('--source',type=Path,default=Path(__file__).resolve().parents[2]/'doppler-lab');args=parser.parse_args()
 site=Path(__file__).resolve().parents[1];out=site/'doppler/workflow-src';out.mkdir(parents=True,exist_ok=True)
-files={f'doppler_lab/{name}.py':args.source/'doppler_lab'/f'{name}.py' for name in ['__init__','__main__','workflow','workflow_solver','archive','physics','flights','demo','workbench']}
+files={f'doppler_lab/{name}.py':args.source/'doppler_lab'/f'{name}.py' for name in ['__init__','__main__','workflow','workflow_solver','day_search','archive','physics','flights','demo','workbench']}
 files.update({'README.md':args.source/'WORKFLOW.md','requirements.txt':args.source/'requirements-workflow.txt','LICENSE':args.source/'WORKFLOW-LICENSE'})
-for name in ['test_workflow','test_workflow_solver','test_archive','test_physics','test_flights']:
+for name in ['test_workflow','test_workflow_solver','test_day_search','test_day_search_review','test_archive','test_physics','test_flights']:
  files[f'tests/{name}.py']=args.source/'tests'/f'{name}.py'
 manifest={}
 for name,source in files.items():

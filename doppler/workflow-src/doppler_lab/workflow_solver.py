@@ -125,6 +125,9 @@ def solve_workflow(events, tracks, candidates, recording_start_utc, *,
         bound_events = [{**event, 'flight_id': fid} for event, fid in zip(events, assignment)]
         elevation = float(seed['observer'].get('elevation_m', 0.))
         initial = np.r_[(np.asarray([seed['latitude'], seed['longitude']])-center)*scales[:2], seed['time_offset_s']]
+        # A numerically tiny nonzero start makes TRF choose a vanishing trust
+        # radius. Exact centered seeds should use SciPy's normal zero-start scale.
+        initial[(np.abs(initial) < 1e-8) & (lower <= 0.) & (upper >= 0.)] = 0.
         best_detail = score_candidate(bound_events, tracks, seed['observer'], seed['recording_start_utc'], sound_speed_m_s, max_gap_s)
         best_x = initial.copy()
         valid_evaluations, invalid_evaluations = 0, 0

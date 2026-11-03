@@ -6,6 +6,8 @@ No archive member is ever extracted to disk. Bbox selects whole trajectories;
 it is an aircraft filter, not a receiver search boundary.
 """
 from __future__ import annotations
+from collections import Counter
+from contextlib import nullcontext
 import datetime as dt
 import gzip
 import hashlib
@@ -197,7 +199,7 @@ def iter_archive_traces(parts, flight_ids=None, start_utc=None, end_utc=None,
                         bbox=None, altitude_source='auto', max_bytes=4 * 1024**3,
                         max_members=300000, max_member_bytes=8 * MIB,
                         max_json_bytes=64 * MIB, max_points=500000,
-                        max_tracks=10000, time_padding_s=0):
+                        max_tracks=10000, time_padding_s=0, duplicate_time_policy="error"):
     """Stream local split tar into parser-compatible JSON tracks.
 
     Time cropping retains one bracketing sample on each side plus explicit
@@ -213,6 +215,8 @@ def iter_archive_traces(parts, flight_ids=None, start_utc=None, end_utc=None,
         raise ValueError("Archive parts must be regular, non-symlink files")
     if sum(p.stat().st_size for p in paths) > max_bytes:
         raise ValueError("Archive exceeds explicit scan byte budget")
+    if duplicate_time_policy not in {'error', 'drop-all'}:
+        raise ValueError('Invalid duplicate_time_policy')
     if altitude_source not in {'auto', 'geometric', 'barometric'}:
         raise ValueError("Invalid altitude_source")
     start = _time(start_utc) if start_utc is not None else -math.inf
@@ -259,8 +263,28 @@ def iter_archive_traces(parts, flight_ids=None, start_utc=None, end_utc=None,
             data.setdefault('icao', identity)
             if str(data['icao']).lower() != identity:
                 raise ValueError("Trace filename and aircraft identity disagree")
+            # Cheap conservative prefilter avoids normalizing every global
+            # flight for a regional streaming index. Final normalized filter
+            # below still determines inclusion after stale/ground exclusion.
+            if bbox is not None and isinstance(data.get('trace'), list):
+                if not any(isinstance(row, list) and len(row) >= 3
+                           and isinstance(row[1], (int, float)) and isinstance(row[2], (int, float))
+                           and bbox[0] <= row[1] <= bbox[1] and bbox[2] <= row[2] <= bbox[3]
+                           for row in data['trace']):
+                    continue
+            dropped = 0
+            if duplicate_time_policy == 'drop-all' and isinstance(data.get('trace'), list):
+                base = _time(data.get('timestamp'))
+                entries = data['trace']
+                if all(isinstance(row, list) and len(row) >= 7 for row in entries):
+                    keys = [base + float(row[0]) for row in entries]
+                    counts = Counter(keys)
+                    data['trace'] = [row for row, key in zip(entries, keys) if counts[key] == 1]
+                    dropped = len(entries) - len(data['trace'])
             try:
                 track = _readsb(data, altitude_source)[0]
+                if dropped:
+                    track['warnings'].append(f'Dropped all {dropped} observations at duplicate timestamps; no ambiguous observation selected.')
             except ValueError as exc:
                 if 'requires 2–500000 points' in str(exc):
                     continue
@@ -282,7 +306,7 @@ def iter_archive_traces(parts, flight_ids=None, start_utc=None, end_utc=None,
             seen.add(identity)
             count += 1
             points += len(track['times_utc'])
-            if count > max_tracks or points > min(max_points, 500000):
+            if count > max_tracks or points > max_points:
                 raise ValueError("Extracted tracks exceed output count/point budget")
             yield track
 
@@ -290,8 +314,49 @@ def iter_archive_traces(parts, flight_ids=None, start_utc=None, end_utc=None,
 def extract_tracks(parts, **kwargs):
     """Return a JSON-serializable normalized dataset without writing files."""
     parts = list(parts)
+    kwargs["max_points"] = min(kwargs.get("max_points", 500000), 500000)
     tracks = list(iter_archive_traces(parts, **kwargs))
     return dict(tracks=tracks, provenance=dict(provider='ADSB.lol', license='ODbL-1.0',
                 archive_parts=[Path(p).name for p in parts],
                 source='https://github.com/adsblol/globe_history',
                 warnings=['Archive observations are not guaranteed complete; no terrain or altitude-datum conversion applied.']))
+
+
+def write_tracks_jsonl(parts, output, *, max_points, max_tracks=100000,
+                       max_output_bytes=8 * 1024**3, on_progress=None, **kwargs):
+    """Atomically stream independent normalized tracks to seekable JSONL.
+
+    A .gz output suffix opts into gzip compression.
+
+    Unlike a combined normalized import, this format supports a full-day index
+    with an explicit aggregate point budget. It preserves all selected points;
+    no resampling or geographic clipping occurs. Only one track is in memory.
+    Output byte bound applies to uncompressed JSON, not just compressed bytes.
+    """
+    if type(max_points) is not int or max_points <= 0:
+        raise ValueError("Streaming output needs an explicit positive max_points")
+    output = Path(output)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    count = points = size = 0
+    temp = None
+    try:
+        with tempfile.NamedTemporaryFile(dir=output.parent, suffix='.part', delete=False) as f:
+            temp = Path(f.name)
+            with (gzip.GzipFile(fileobj=f, mode='wb', mtime=0) if output.suffix == '.gz' else nullcontext(f)) as zipped:
+                for track in iter_archive_traces(parts, max_points=max_points, max_tracks=max_tracks, **kwargs):
+                    raw = (json.dumps(track, separators=(',', ':'), allow_nan=False) + '\n').encode()
+                    size += len(raw)
+                    if size > max_output_bytes:
+                        raise ValueError("JSONL exceeds uncompressed output byte budget")
+                    zipped.write(raw)
+                    count += 1
+                    points += len(track['times_utc'])
+                    if on_progress:
+                        on_progress(count, points, size)
+        temp.replace(output)
+    finally:
+        if temp is not None:
+            temp.unlink(missing_ok=True)
+    return dict(path=str(output.resolve()), tracks=count, points=points,
+                uncompressed_bytes=size, compressed_bytes=output.stat().st_size,
+                format='normalized-tracks-jsonl' + ('-gzip' if output.suffix == '.gz' else ''), license='ODbL-1.0')
