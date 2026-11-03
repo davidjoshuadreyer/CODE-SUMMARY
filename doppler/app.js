@@ -159,3 +159,17 @@ async function inspectDetection(index){
 }
 $('rescan').onclick=()=>runAutomatic().catch(report);
 $('export-auto').onclick=()=>download('detected-doppler-curves.json',{schema_version:2,source:sourceMetadata(),...state.scan,events:state.detections});
+
+$('export-job').onclick=()=>{try{
+ if(!state.events.length)throw Error('Analyze a recording or import measured curves first.');
+ const suppliedTime=$('recording-time').value.trim();
+ const recording=suppliedTime?iso(utc(suppliedTime)):null;
+ const completeBounds=['south','north','west','east'].every(id=>$(id).value.trim());
+ const bounds=completeBounds?{lat_min:number('south'),lat_max:number('north'),lon_min:number('west'),lon_max:number('east')}:null;
+ const job={schema_version:1,workflow_version:'2026-11-02.1',events:structuredClone(state.events),source:sourceMetadata(),recording_start_utc:recording,tracks:['tracks.json'],
+ search:{bounds,spacing_m:number('spacing'),elevation_m:number('elevation'),sound_speed_m_s:number('sound-speed'),time_range_s:number('offset-range'),time_step_s:number('offset-step'),max_grid_points:250,max_evaluations:4000,max_refinements:8},
+ archive:{date:recording?.slice(0,10)||null,flight_ids:[],max_download_mb:256},reference_location:null,
+ notes:['Measured event timestamps retain the original recording clock.','Unknown recording time and bounds must be supplied before matching.','Run python -m doppler_lab check job.json to list missing inputs.']};
+ download('job.json',job);$('workflow-info').textContent=`Exported ${state.events.length} measured events. ${recording?'Recording clock supplied.':'Recording clock is still unknown.'} ${bounds?'Search bounds supplied.':'Search bounds are still unknown.'} Open the setup guide to retrieve tracks and run the fit.`;
+ status('Matching job exported for the local Python workflow.','success');
+}catch(e){report(e);}};
