@@ -135,7 +135,7 @@ function extendSupportedTrack(track,fit,peakFrames,times,df,dt){
  }
  return {track:current,fit:currentFit};
 }
-export async function detectDopplerEvents(spec,{onProgress,minDurationS=20,minCoverage=.7,minProminenceDb=5,maxGapS=2.0,maxEvents=40,minFrequencyHz=40,maxFrequencyHz=1000,seedMinCoverage=minCoverage,minTimescaleS=5,maxDescendingFractionPerS=.025,requireCenteredTransition=false}={}){
+export async function detectDopplerEvents(spec,{onProgress,minDurationS=20,minCoverage=.7,minProminenceDb=5,maxGapS=2.0,maxEvents=40,minFrequencyHz=40,maxFrequencyHz=1000,seedMinCoverage=minCoverage,minTimescaleS=5,maxDescendingFractionPerS=.025,requireCenteredTransition=false,fastSeeds=false}={}){
  const times=spec?.times_s,freq=spec?.frequencies_hz,power=spec?.power_db;
  if(!times||!freq||!power||times.length<4||freq.length<3)return {events:[],diagnostics:{reason:'Insufficient spectrogram samples'}};
  const nt=times.length,nf=freq.length,dt=times[1]-times[0],df=freq[1]-freq[0];
@@ -167,7 +167,7 @@ export async function detectDopplerEvents(spec,{onProgress,minDurationS=20,minCo
    const pairs=[];
    for(let a=0;a<active.length;a++){
      const track=active[a],last=track.f.at(-1),elapsed=times[j]-track.t.at(-1),velocity=track.velocity??0,expected=last+velocity*elapsed;
-     const gate=Math.max(1.2*df,last*.007)*elapsed+df*.65;
+     const gate=fastSeeds&&track.t.length<3 ? Math.max(2,last*maxDescendingFractionPerS)*elapsed+df*.65 : Math.max(1.2*df,last*.007)*elapsed+df*.65;
      for(let p=0;p<peaks.length;p++){
        const delta=peaks[p].f-last,slope=delta/elapsed;
        if(slope>Math.max(.5,last*.003)||slope< -Math.max(2,last*maxDescendingFractionPerS))continue;
