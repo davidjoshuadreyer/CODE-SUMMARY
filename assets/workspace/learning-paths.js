@@ -312,6 +312,11 @@ window.TESSELATE_PATHS = {
     ],
     "practice": [
       {
+        "title": "November 9 midterm study pack",
+        "url": "engr290/midterm.html",
+        "summary": "Study guide, 110-minute practice midterm and 60 non-calculator questions, with answer keys. Open PDFs or download Word copies."
+      },
+      {
         "title": "Assignment 1 · Clean worked solutions",
         "url": "engr290/assignment-1-solutions.html",
         "summary": "6 complete solutions with equations, calculations and diagrams."
