@@ -2,14 +2,14 @@ const questions = [...document.querySelectorAll('fieldset')];
 const progress = document.querySelector('#progress');
 const score = document.querySelector('#score');
 const mark = document.querySelector('#mark');
-const storageKey = 'ecet250e-quiz2-lecture-practice-v1';
+const storageKey = 'ecet250e-quiz2-mixed-practice-v1';
 let saved = {};
 try { saved = JSON.parse(localStorage.getItem(storageKey)) || {}; } catch {}
 let marked = saved.marked === true;
 const selected = q => q.querySelector('input:checked');
 function update() {
   const answers = questions.map(q => selected(q)?.value ?? null);
-  progress.textContent = answers.filter(a => a !== null).length + ' of 5 checkpoints answered';
+  progress.textContent = answers.filter(a => a !== null).length + ' of ' + questions.length + ' checkpoints answered';
   let correct = 0;
   questions.forEach((q, i) => {
     const right = answers[i] === q.dataset.answer;
@@ -19,7 +19,7 @@ function update() {
       : '';
     q.querySelectorAll('input').forEach(input => { input.disabled = marked; });
   });
-  score.textContent = marked ? correct + ' / 5 checkpoints correct' : '';
+  score.textContent = marked ? correct + ' / ' + questions.length + ' checkpoints correct' : '';
   mark.disabled = marked;
   try { localStorage.setItem(storageKey, JSON.stringify({answers, marked})); } catch {}
 }
