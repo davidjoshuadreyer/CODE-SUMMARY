@@ -1,3 +1,5 @@
+For data entry only, open PHYS210-Experiment8-Data.xlsx and fill the yellow cells.
+
 Start with PHYS210-Experiment8-Prep.pdf. Complete the yellow placeholders in the Word report using your actual measurements. The manual and simplified handout use different circuit instructions; see page 1 before wiring.
 
 Original lab manual: https://online.camosun.ca/d2l/le/content/348967/viewContent/5448840/View

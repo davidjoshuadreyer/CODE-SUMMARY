@@ -247,3 +247,5 @@ Checks: `node dev/lab6-test.cjs` and `node dev/lab6-account-test.cjs`; desktop a
 Verified all relative links/assets through HTTP, section anchors, catalog uniqueness and downloaded document hashes. Browser preview was unavailable because local browser use was disabled.
 
 Experiment 8 navigation: the home overview now shows a direct prep card when PHYS 210 is in the active semester, and the PHYS 210 course view shows the same card above its older featured labs on every tab. The workspace script URL is versioned to refresh cached navigation.
+
+Simplified data entry: `PHYS210-Experiment8-Data.xlsx` contains one Measurements sheet with blank readings and uncertainty fields for the two manual circuits. Home, PHYS 210 and the Experiment 8 page expose a direct Excel download; it is also included in the prep ZIP.
