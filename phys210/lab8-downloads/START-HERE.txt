@@ -1,4 +1,4 @@
-For data entry only, open PHYS210-Experiment8-Data.xlsx and fill the yellow cells.
+Open PHYS210-Experiment8-Data.xlsx. Select Fluke 177 or Fluke 45 in B6, set the meter to the ranges shown, and enter readings in yellow cells. Gray uncertainty cells calculate automatically. Fluke 45 uses medium rate and 1-year accuracy. If fluctuations exceed instrumental uncertainty, use half the observed range instead.
 
 Start with PHYS210-Experiment8-Prep.pdf. Complete the yellow placeholders in the Word report using your actual measurements. The manual and simplified handout use different circuit instructions; see page 1 before wiring.
 
