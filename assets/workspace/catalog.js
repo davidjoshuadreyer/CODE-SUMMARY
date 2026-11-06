@@ -2760,6 +2760,20 @@ window.TESSELATE_CATALOG = {
       "description": "14 materials questions with full calculations and diagrams.",
       "referenceIds": [],
       "builtin": true
+    },
+    {
+      "id": "page-cGh5czIxMC9sYWI4Lmh0bWw",
+      "courseId": "phys210",
+      "title": "Experiment 8 · Kirchhoff’s Laws prep and report",
+      "kind": "Lab report",
+      "url": "phys210/lab8.html",
+      "body": "",
+      "description": "Bench guide, two circuit diagrams, blank measurement tables, Cramer’s-rule examples, uncertainty checks and Word/PDF downloads.",
+      "referenceIds": [
+        "ref-d2l-phys210-5448840",
+        "ref-d2l-phys210-5448826"
+      ],
+      "builtin": true
     }
   ],
   "references": [

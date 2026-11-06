@@ -238,3 +238,10 @@ Validation: `node dev/check-physics-practice-tests.cjs`, bundled Python `dev/che
 The account adapter reuses the existing private progress store with the separate `__phys210_lab6` namespace, pending patches, owner scoping and offline recovery. No other experiment data are changed. Exports provide printable report/guide views and a JSON readings backup. Actual LoggerPro graphs must be retained separately; generated numerical prose does not claim fit quality or completed objectives.
 
 Checks: `node dev/lab6-test.cjs` and `node dev/lab6-account-test.cjs`; desktop and 390-pixel browser review, all six synthetic runs and reload persistence. Synthetic readings were entered only on localhost.
+
+
+## Physics Experiment 8 preparation (November 6, 2026)
+
+`phys210/lab8.html` provides the Kirchhoff bench guide, both manual circuit diagrams, blank measurement tables, Cramer-rule examples, uncertainty propagation and KCL/KVL checks. `lab8-downloads/` holds reviewed prep and report documents in Word/PDF plus a ZIP. The report remains a prelab draft with yellow placeholders. Numerical examples are explicitly nominal predictions, not measurements. The full manual and separate simplified handout have different resistor labels and source settings; the page flags this before the wiring steps. Original full handouts remain D2L links. The shared catalog and Physics materials page link to this prep page, with both generators retaining its metadata/navigation.
+
+Verified all relative links/assets through HTTP, section anchors, catalog uniqueness and downloaded document hashes. Browser preview was unavailable because local browser use was disabled.
