@@ -15,7 +15,6 @@ header{display:flex;align-items:flex-end;justify-content:space-between;gap:1.25r
 .state{padding:18px 0 0}.state p{color:var(--muted);font-size:14px}.gate{max-width:670px;background:var(--white);border:1px solid var(--line);border-radius:9px;margin:35px 0;padding:clamp(25px,4vw,48px)}.gate h2,.section h2{font:normal clamp(1.65rem,3vw,2.5rem)/1.12 var(--serif);letter-spacing:-.035em}.gate p{color:var(--muted);margin:.7rem 0 1.35rem}
 .dashboard{margin:26px 0}.metrics{display:grid;grid-template-columns:1.65fr 1fr 1fr 1fr;border:1px solid var(--line);border-radius:9px;overflow:hidden;background:var(--white)}.metric{padding:22px 24px;border-left:1px solid var(--line);min-width:0}.metric:first-child{border:0;background:var(--green);color:white}.metric:first-child .label,.metric:first-child .small{color:#d6e4d6}.metric .value{display:block;font:normal clamp(2rem,3.8vw,3.6rem)/1.1 var(--serif);letter-spacing:-.045em;margin:.25em 0 .1em;overflow-wrap:anywhere}.small{font-size:13px;color:var(--muted)}.track{height:5px;border-radius:4px;background:#587b6a;margin:12px 0 7px}.track span{height:100%;display:block;background:var(--accent);border-radius:4px;width:0}
 .section{margin-top:42px}.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:15px;flex-wrap:wrap}.hint{font-size:13px;color:var(--muted)}.panel{border:1px solid var(--line);border-radius:8px;background:var(--white)}
-.steps{list-style:none;margin:0;padding:0;counter-reset:step}.steps li{counter-increment:step;display:grid;grid-template-columns:2.2rem 1fr auto;gap:12px;align-items:center;padding:14px 18px}.steps li+li{border-top:1px solid var(--line)}.steps li::before{content:counter(step);font:normal 1.6rem/1 var(--serif);color:var(--green)}.steps strong{display:block;font-weight:650}.steps span.why{display:block;font-size:13px;color:var(--muted);overflow-wrap:anywhere}.steps .do{display:flex;gap:.5rem;flex-wrap:wrap;justify-content:flex-end}.steps li.done::before{content:"✓"}.steps li.david{background:#fbf3e0}
 .paste textarea{min-height:9em}.paste{padding:18px 20px}.preview{margin:.8rem 0 0;padding:12px 14px;background:var(--paper);border:1px solid var(--line);border-radius:6px;font-size:14px}.preview ul{margin:.3rem 0 0;padding-left:1.2rem}.preview .warnings{color:var(--warn)}
 .chips{display:flex;gap:6px;flex-wrap:wrap}.chip{background:transparent;color:var(--green);border:1px solid var(--line);padding:.35rem .7rem;font-size:13px;border-radius:999px}.chip[aria-pressed="true"]{background:var(--green);color:white;border-color:var(--green)}
 .daynav{display:flex;align-items:center;gap:8px}.daynav .label{min-width:9.5em;text-align:center}
@@ -29,10 +28,12 @@ header{display:flex;align-items:flex-end;justify-content:space-between;gap:1.25r
 .list{list-style:none;margin:0;padding:0 19px}.list li{padding:13px 0}.list li+li{border-top:1px solid var(--line)}.list p{font-size:14px;overflow-wrap:anywhere;white-space:pre-line}.list .meta{font:600 11px/1.5 var(--mono);color:var(--muted);display:block;margin-bottom:2px}.list a{font-weight:650;overflow-wrap:anywhere}.empty{padding:14px 0;color:var(--muted);font-size:14px}
 .twin{display:grid;grid-template-columns:1fr 1fr;gap:25px}details.fold>summary{font-weight:650;cursor:pointer;color:var(--green);padding:14px 19px}details.fold[open]>summary{border-bottom:1px solid var(--line)}
 .import{margin:35px 0;padding:19px 23px}.import>summary{font-weight:650;cursor:pointer;color:var(--green)}.import p{font-size:14px;color:var(--muted);margin:12px 0}.tools{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap}label.text-label{display:block;margin:.2rem 0 .4rem;font-weight:600;font-size:14px}textarea{display:block;width:100%;min-height:7em;resize:vertical;border:1px solid #a3aea1;border-radius:5px;background:var(--paper);color:var(--ink);padding:10px;font:13px/1.45 var(--mono)}.actions{margin-top:.7rem}.file-label input{max-width:100%;font-family:inherit;font-size:13px;margin-left:5px}.status{min-height:1.35em;font-size:14px;margin-top:.5rem}.status.error{color:var(--warn)}footer{margin:40px 0;color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:15px}
+.queue{display:grid;gap:12px}.qitem{border:1px solid var(--line);border-radius:8px;background:var(--white);padding:16px 18px;display:grid;grid-template-columns:1fr auto;gap:10px 18px;align-items:start}.qitem.decision{background:#fbf3e0}.qitem.expired{opacity:.6}.qitem h3{font-size:16px;font-weight:650;line-height:1.35;overflow-wrap:anywhere;margin-top:6px}.qitem p{font-size:14px;overflow-wrap:anywhere;white-space:pre-line;margin-top:4px}.qitem .qact{display:flex;flex-direction:column;gap:8px;min-width:200px}.qitem .qact input{font:13px var(--sans);padding:.5rem .6rem;border:1px solid #a3aea1;border-radius:5px;background:var(--paper);color:var(--ink);width:100%}.qitem .qbtns{display:flex;gap:8px;flex-wrap:wrap}.qempty{padding:18px 20px;color:var(--muted);font-size:14px}.qempty strong{color:var(--ink);display:block;margin-bottom:4px;font-size:15px}
+.agent-line{font-size:13px;color:var(--muted);margin-top:10px}.ramp{list-style:none;margin:0;padding:0}.ramp li{display:grid;grid-template-columns:7.5rem 1fr auto;gap:12px;padding:12px 18px;border-bottom:1px solid var(--line);font-size:14px;align-items:baseline}.ramp li.next{background:#f3f6ee}.ramp .meta{font:600 11px/1.5 var(--mono);color:var(--muted)}.ramp b{white-space:nowrap}.signals{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;width:100%;font-size:13px}.signals b{display:block;font:normal 1.3rem/1.1 var(--serif)}.trank{font:normal 2rem/1 var(--serif);color:var(--green)}
+@media(max-width:720px){.qitem{grid-template-columns:1fr}.qitem .qact{min-width:0}.ramp li{grid-template-columns:1fr auto}.ramp li .meta{grid-column:1/-1}}
 dialog{border:1px solid var(--line);border-radius:9px;background:var(--white);color:var(--ink);padding:22px;width:min(760px,calc(100% - 32px));max-height:calc(100% - 40px)}dialog::backdrop{background:#1e2c2680}dialog h2{font:normal 1.8rem/1.1 var(--serif);margin-bottom:.4rem}dialog p{font-size:14px;color:var(--muted);margin-bottom:.7rem}dialog textarea{min-height:16em}
 @media(max-width:860px){.metrics{grid-template-columns:1fr 1fr}.metric:first-child{grid-column:1/-1}.metric:nth-child(2){border-left:0}.metric:nth-child(n+2){border-top:1px solid var(--line)}}
 @media(max-width:720px){.wrap{width:calc(100% - 32px)}header{padding:32px 0 22px;align-items:flex-start;flex-direction:column}.metric{padding:16px}.twin,.vs{grid-template-columns:1fr;gap:0}.vs>div+div{border-left:0;border-top:1px solid var(--line)}.section{margin-top:30px}.bar-right{gap:8px}.import{padding:15px}.file-label input{display:block;margin:.4em 0 0}
-.steps li{grid-template-columns:1.8rem 1fr;padding:13px 14px}.steps .do{grid-column:2;justify-content:flex-start}
 .grid{grid-template-columns:1fr 1fr}.grid .colhead.first{display:none}.grid>div.cat{grid-column:1/-1;background:var(--paper);padding:8px 14px}.grid>div{padding:10px 14px;border-top:1px solid var(--line)}.grid>div:nth-child(-n+3){border-top:0}
 .board details>summary{grid-template-columns:1.8rem 1fr;padding:12px 14px}.scores{grid-column:2;justify-content:flex-start;text-align:left}.detail{grid-template-columns:1fr;padding:0 14px 16px}}
 </style>
@@ -47,47 +48,48 @@ dialog{border:1px solid var(--line);border-radius:9px;background:var(--white);co
 <section id="dashboard" class="dashboard" hidden aria-label="Income lab overview">
 <div class="metrics">
 <div class="metric"><span class="label">Net this month</span><strong class="value" id="net"></strong><div class="track" aria-hidden="true"><span id="fill"></span></div><span class="small" id="target"></span></div>
-<div class="metric"><span class="label">Daily cycle</span><strong class="value" id="day"></strong><span class="small" id="day-note"></span></div>
-<div class="metric"><span class="label">Live tests</span><strong class="value" id="slots"></strong><span class="small" id="builds"></span></div>
-<div class="metric"><span class="label">Competition</span><strong class="value" id="leader"></strong><span class="small" id="leader-note"></span></div>
+<div class="metric"><span class="label">Waiting for you</span><strong class="value" id="waiting"></strong><span class="small" id="waiting-note"></span></div>
+<div class="metric"><span class="label">Live experiments</span><strong class="value" id="slots"></strong><span class="small" id="builds"></span></div>
+<div class="metric"><span class="label">Next checkpoint</span><strong class="value" id="checkpoint"></strong><span class="small" id="checkpoint-note"></span></div>
 </div>
+<p class="agent-line" id="agent-line"></p><p class="status" id="page-status" aria-live="polite"></p>
 
-<section class="section" aria-labelledby="steps-h"><div class="section-head"><h2 id="steps-h">Next steps</h2><span class="hint">Work top to bottom. Each step says what to copy and where to paste it.</span></div><ol class="steps panel" id="steps"></ol></section>
+<section class="section" aria-labelledby="queue-h"><div class="section-head"><h2 id="queue-h">Your approval queue</h2><span class="hint">About 30 minutes on Sundays. Anything not approved within 3 days doesn't ship.</span></div>
+<div id="queue" class="queue"></div>
+<details class="fold panel" id="decided-wrap" style="margin-top:14px" hidden><summary id="decided-sum"></summary><ul class="list" id="decided"></ul></details></section>
 
-<section class="section" aria-labelledby="paste-h"><div class="section-head"><h2 id="paste-h">Paste a model's output</h2><span class="hint">Daily round, cross-review or Friday update. The page works out which one it is.</span></div>
-<div class="panel paste"><label class="text-label" for="json">Paste the JSON reply from Claude or ChatGPT</label><textarea id="json" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder='{"kind": "round", "model": "chatgpt", "date": "…", "cards": […]}'></textarea>
-<div class="tools actions"><button id="inspect">Check it</button><button id="save" hidden>Add to my lab</button><button class="quiet" id="discard" hidden>Discard</button></div>
-<div class="preview" id="preview" hidden></div><p class="status" id="import-status" aria-live="polite"></p></div></section>
-
-<section class="section" aria-labelledby="round-h"><div class="section-head"><h2 id="round-h">Daily round</h2><div class="daynav"><button class="quiet sm" id="prev-day" aria-label="Previous day">←</button><span class="label" id="round-date"></span><button class="quiet sm" id="next-day" aria-label="Next day">→</button></div></div>
-<div class="panel grid" id="round"></div></section>
-
-<section class="section" aria-labelledby="board-h"><div class="section-head"><h2 id="board-h">Leaderboard</h2><div class="chips" id="cat-filter" role="group" aria-label="Filter by category"></div></div>
-<p class="hint" style="margin:-6px 0 12px">Ranked by the average of both models' scores out of 18. Cards from the last 14 days only. An average under 12 is never built. A gap of 4 or more points goes to you.</p>
-<ol class="board panel" id="board"></ol></section>
-
-<section class="section" aria-labelledby="tests-h"><div class="section-head"><h2 id="tests-h">Live tests</h2><span class="hint" id="tests-hint"></span></div><div class="cards" id="tests"></div>
+<section class="section" aria-labelledby="tests-h"><div class="section-head"><h2 id="tests-h">Experiments</h2><span class="hint" id="tests-hint"></span></div><div class="cards" id="tests"></div>
 <details class="fold panel" id="ended-wrap" style="margin-top:14px" hidden><summary id="ended-sum"></summary><div class="cards" id="ended" style="padding:14px"></div></details></section>
+
+<section class="section" aria-labelledby="hist-h"><div class="section-head"><h2 id="hist-h">Progress to $1,000 a month</h2><button class="quiet sm" id="close-month" hidden></button></div>
+<div class="panel"><ol class="ramp" id="ramp"></ol><div class="history" id="history"></div></div></section>
 
 <section class="section" aria-labelledby="vs-h"><div class="section-head"><h2 id="vs-h">Claude vs ChatGPT</h2><span class="hint">Won on net revenue from each model's ideas, not on idea count.</span></div><div class="panel vs" id="vs"></div></section>
 
-<section class="section" aria-labelledby="hist-h"><div class="section-head"><h2 id="hist-h">Progress to $1,000 a month</h2><button class="quiet sm" id="close-month" hidden></button></div><div class="panel history" id="history"></div></section>
-
-<section class="section" aria-labelledby="rej-h"><div class="section-head"><h2 id="rej-h">Rejected ideas</h2><span class="hint">Kept with the reason, so bad ideas stay flagged and are not tried again.</span></div>
-<details class="fold panel"><summary id="rej-sum"></summary><ul class="list" id="rejected"></ul></details>
+<section class="section" aria-labelledby="pipe-h"><div class="section-head"><h2 id="pipe-h">Idea pipeline</h2><span class="hint">Agents scout weekly, only for open slots. A chosen idea reaches you as a start request in the queue.</span></div>
+<details class="fold panel"><summary id="board-sum">Leaderboard</summary><div style="padding:12px 18px 0"><div class="chips" id="cat-filter" role="group" aria-label="Filter by category"></div><p class="hint" style="margin:10px 0 4px">Ranked by the average of both models' scores out of 18, cards from the last 14 days. An average under 12 is never built.</p></div><ol class="board" id="board"></ol></details>
+<details class="fold panel" style="margin-top:14px"><summary>Idea rounds by day</summary><div class="daynav" style="padding:12px 18px"><button class="quiet sm" id="prev-day" aria-label="Previous day">←</button><span class="label" id="round-date"></span><button class="quiet sm" id="next-day" aria-label="Next day">→</button></div><div class="grid" id="round"></div></details>
+<details class="fold panel" style="margin-top:14px"><summary id="rej-sum"></summary><ul class="list" id="rejected"></ul></details>
 <details class="fold panel" style="margin-top:14px"><summary id="backlog-sum"></summary><ol class="board" id="backlog"></ol></details></section>
 
 <div class="twin"><section class="section"><div class="section-head"><h2>Research sources</h2></div><ul class="list panel" id="sources"></ul></section><section class="section"><div class="section-head"><h2>Decision log</h2></div><ol class="list panel" id="decisions"></ol></section></div>
 </section>
 
-<details class="import panel" id="import" hidden><summary>Backup, restore and full replace</summary>
+<details class="import panel" id="import" hidden><summary>Setup and manual tools</summary>
 <p id="import-help"></p>
-<div class="tools"><button class="quiet" id="download">Download a backup</button><button class="quiet" id="copy-all">Copy the whole lab as JSON</button><label class="file-label">Open a JSON file<input id="file" type="file" accept=".json,application/json"></label><button class="quiet" id="refresh" hidden>Reload saved lab</button></div>
-<p>A file you open is checked the same way as a paste. A full lab file (schema 1 or 2) replaces everything after you confirm; a round, review or update file is added.</p>
 <div id="cycle-key" hidden><h3 class="label" style="margin-top:18px">Automatic cycle updates</h3>
 <p>A cycle key lets the scheduled research cycle read and update this lab, and nothing else in your account. It is shown once. Add it as <code>BUSINESS_LAB_KEY</code> in the cycle's environment. Creating a new key stops the old one.</p>
 <div class="tools"><button class="quiet" id="key-make">Create cycle key</button><button class="quiet" id="key-off" hidden>Turn off cycle key</button></div>
-<p class="status" id="key-status" aria-live="polite"></p></div></details>
+<p class="status" id="key-status" aria-live="polite"></p></div>
+<h3 class="label" style="margin-top:22px">Run a step by hand</h3>
+<p>Only needed until the automatic cycle runs, or to redo a step. Copy a prompt into Claude or ChatGPT, then paste its JSON reply below.</p>
+<div class="tools" id="manual"></div>
+<label class="text-label" for="json" style="margin-top:14px">Paste a model's JSON reply</label><textarea id="json" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder='{"kind": "queue", "model": "claude", "date": "…", "items": […]}'></textarea>
+<div class="tools actions"><button id="inspect">Check it</button><button id="save" hidden>Add to my lab</button><button class="quiet" id="discard" hidden>Discard</button></div>
+<div class="preview" id="preview" hidden></div><p class="status" id="import-status" aria-live="polite"></p>
+<h3 class="label" style="margin-top:22px">Backup</h3>
+<div class="tools"><button class="quiet" id="download">Download a backup</button><button class="quiet" id="copy-all">Copy the whole lab as JSON</button><label class="file-label">Open a JSON file<input id="file" type="file" accept=".json,application/json"></label><button class="quiet" id="refresh" hidden>Reload saved lab</button></div>
+<p>A file you open is checked the same way as a paste. A full lab file (schema 1, 2 or 3) replaces everything after you confirm; a round, review, update or queue file is added.</p></details>
 <footer>Business Lab · Tesselate</footer>
 </main>
 
@@ -108,6 +110,10 @@ const STAGES=['Queued','Building','Testing','Earning','Scaling','Paused','Killed
 const ACTIVE=['Building','Testing'];
 const CALLS=['continue','kill','pivot','scale'];
 const MONEY=['receipts','fees','refunds','costs','orders'];
+const QUEUE_F=['id','created','model','type','testId','cardId','title','summary','link','amount','expires','status','decided','note'];
+const QTYPES={short:'Short',page:'Product page',release:'Tool release',issue:'Newsletter issue',spend:'Spend',start:'Start an experiment',kill:'Kill an experiment',other:'Other'};
+const QSTATUS=['pending','approved','rejected','shipped','withdrawn'];
+const QDAYS=3;
 const CHECKS=[[14,'Day 14 signal check','about 300 targeted views or visits and at least 1% clicking, signing up or replying. No signal: kill.'],[30,'Day 30 money check','at least one paying customer. None: kill, or one logged pivot of angle or price and a final 14 days.'],[60,'Day 60 trajectory check','net growing month over month and at least $100 net. Otherwise kill, or keep as passive if upkeep is under 30 minutes a week.']];
 let cloud=null,owner=null,generation=0,request=0,revision=0,ready=false,busy=false,fileVersion=0;
 let data=null,draft=null,legacy=false,viewDate=null,catFilter='all';
@@ -130,7 +136,7 @@ function clone(v){return JSON.parse(JSON.stringify(v));}
 function node(tag,text,cls){const el=document.createElement(tag);if(text!==undefined&&text!==null)el.textContent=text;if(cls)el.className=cls;return el;}
 function btn(text,fn,cls='sm'){const b=node('button',text,cls);b.type='button';b.addEventListener('click',fn);return b;}
 
-/* ---------- strict validation of the stored lab (schema 2) ---------- */
+/* ---------- strict validation of the stored lab (schema 3) ---------- */
 function fields(v,list,where){
   if(!isObj(v))throw Error(where+' must be an object.');
   for(const k of list)if(!own(v,k))throw Error(where+' is missing "'+k+'".');
@@ -156,12 +162,24 @@ function score(v,where){
   o.improvement=str(v.improvement,where);o.redFlag=str(v.redFlag,where);return o;
 }
 const CARD_F=['id','date','model','category','title','pitch','buyer','channel','price','redFlags','test','day14','day30','links','scores','david','archived'];
-const TEST_F=['id','cardId','title','category','model','stage','started','price','next','gate','evidence','month','pastNet','verdicts'];
+const TEST_F=['id','cardId','title','category','model','stage','started','price','next','gate','evidence','month','pastNet','signals','verdicts'];
 function lab(p){
-  fields(p,['schema','asOf','currency','target','startDate','month','shared','history','cards','rejected','tests','sources','decisions'],'The lab');
-  if(p.schema!==2||p.currency!=='USD')throw Error('Check the schema (2) and currency (USD).');
+  fields(p,['schema','asOf','currency','target','startDate','month','lastAgentRun','limits','shared','history','ramp','queue','cards','rejected','tests','sources','decisions'],'The lab');
+  if(p.schema!==3||p.currency!=='USD')throw Error('Check the schema (3) and currency (USD).');
   if(amount(p.target,'target')===0)throw Error('The monthly target must be above zero.');
-  const out={schema:2,asOf:day(p.asOf,'asOf'),currency:'USD',target:p.target,startDate:day(p.startDate,'startDate'),month:monthStr(p.month,'month'),shared:ledger(p.shared,'shared')};
+  const out={schema:3,asOf:day(p.asOf,'asOf'),currency:'USD',target:p.target,startDate:day(p.startDate,'startDate'),month:monthStr(p.month,'month'),lastAgentRun:p.lastAgentRun===''?'':day(p.lastAgentRun,'lastAgentRun'),shared:ledger(p.shared,'shared')};
+  out.limits=limits(p.limits);
+  out.ramp=list(p.ramp,'ramp',(r,w)=>{fields(r,['date','signal','low','high'],w);const o={date:day(r.date,w),signal:str(r.signal,w,2000),low:amount(r.low,w),high:amount(r.high,w)};if(o.high<o.low)throw Error('Check the range in '+w+'.');return o;});
+  const qids=new Set();
+  out.queue=list(p.queue,'queue',(q,w)=>{
+    fields(q,QUEUE_F,w);const o={};o.id=str(q.id,w,20);if(!/^q-\d{4,7}$/.test(o.id)||qids.has(o.id))throw Error('Queue IDs must be unique, like q-0001.');qids.add(o.id);
+    o.created=day(q.created,w);if(!MODELS[q.model])throw Error('Check the model in '+w+'.');o.model=q.model;
+    if(!QTYPES[q.type])throw Error('Queue type must be one of: '+Object.keys(QTYPES).join(', ')+'.');o.type=q.type;
+    o.testId=str(q.testId,w,80);o.cardId=str(q.cardId,w,40);o.title=str(q.title,w,500);if(!o.title.trim())throw Error('Every queue item needs a title.');
+    o.summary=str(q.summary,w);o.link=q.link===''?'':link(q.link,w);o.amount=amount(q.amount,w);o.expires=day(q.expires,w);
+    if(!QSTATUS.includes(q.status))throw Error('Queue status must be one of: '+QSTATUS.join(', ')+'.');o.status=q.status;
+    o.decided=q.decided===''?'':day(q.decided,w);o.note=str(q.note,w,4000);return o;
+  });
   out.history=list(p.history,'history',(h,w)=>{fields(h,['month','net','claude','chatgpt'],w);return {month:monthStr(h.month,w),net:amount(h.net,w,true),claude:amount(h.claude,w,true),chatgpt:amount(h.chatgpt,w,true)};});
   const ids=new Set();
   out.cards=list(p.cards,'cards',(c,w)=>{
@@ -189,16 +207,30 @@ function lab(p){
     if(!STAGES.includes(t.stage))throw Error('Test stage must be one of: '+STAGES.join(', ')+'.');o.stage=t.stage;
     o.started=day(t.started,w);for(const k of ['price','next','gate','evidence'])o[k]=str(t[k],w+' '+k);
     o.month=ledger(t.month,w+' month');o.pastNet=amount(t.pastNet,w+' pastNet',true);
+    fields(t.signals,['visits','signups'],w+' signals');o.signals={visits:count(t.signals.visits,w+' visits'),signups:count(t.signals.signups,w+' signups')};
     fields(t.verdicts,['date','claude','chatgpt'],w+' verdicts');const v=t.verdicts;
     const call=(x,vw)=>{if(x===null)return null;fields(x,['call','note'],vw);if(!CALLS.includes(x.call))throw Error('Verdicts are '+CALLS.join(', ')+'.');return {call:x.call,note:str(x.note,vw)};};
     o.verdicts={date:v.date===''?'':day(v.date,w),claude:call(v.claude,w),chatgpt:call(v.chatgpt,w)};return o;
   });
   out.sources=list(p.sources,'sources',(s,w)=>{fields(s,['title','url','note'],w);return {title:str(s.title,w),url:link(s.url,w),note:str(s.note,w)};});
   out.decisions=list(p.decisions,'decisions',(d,w)=>{fields(d,['date','note'],w);return {date:day(d.date,w),note:str(d.note,w)};});
+  for(const q of out.queue){if(q.testId&&!tids.has(q.testId))throw Error('Queue item '+q.id+' points at a missing experiment.');if(q.cardId&&!ids.has(q.cardId))throw Error('Queue item '+q.id+' points at a missing card.');}
   return out;
 }
-function emptyLab(){const t=today();return {schema:2,asOf:t,currency:'USD',target:1000,startDate:'2026-11-11',month:t.slice(0,7),shared:zero(),history:[],cards:[],rejected:[],tests:[],sources:[],decisions:[]};}
+function whole(v,where,min,max){if(!Number.isInteger(v)||v<min||v>max)throw Error('Use a whole number from '+min+' to '+max+' for '+where+'.');return v;}
+function limits(v){
+  const w='limits';fields(v,['total','scaling','perWeek','slots'],w);
+  const o={total:whole(v.total,'limits.total',1,20),scaling:whole(v.scaling,'limits.scaling',1,20),perWeek:whole(v.perWeek,'limits.perWeek',0,20)};
+  const seen=new Set();
+  o.slots=list(v.slots,'limits.slots',(s,sw)=>{fields(s,['label','categories','max'],sw);const label=str(s.label,sw,80).trim();if(!label)throw Error(sw+' needs a label.');
+    const cats=list(s.categories,sw+' categories',c=>{if(!CAT_LABEL[c])throw Error('Unknown category "'+c+'" in '+sw+'.');if(seen.has(c))throw Error('Category "'+c+'" is in two slots.');seen.add(c);return c;});
+    if(!cats.length)throw Error(sw+' needs at least one category.');return {label,categories:cats,max:whole(s.max,sw+' max',1,20)};});
+  if(!o.slots.length)throw Error('Add at least one test slot.');return o;
+}
+function defaultLimits(){return {total:3,scaling:3,perWeek:2,slots:CATS.map(([k,l])=>({label:l,categories:[k],max:1}))};}
+function emptyLab(){const t=today();return {schema:3,asOf:t,currency:'USD',target:1000,startDate:'2026-11-11',month:t.slice(0,7),lastAgentRun:'',limits:defaultLimits(),shared:zero(),history:[],ramp:[],queue:[],cards:[],rejected:[],tests:[],sources:[],decisions:[]};}
 function zero(){return {receipts:0,fees:0,refunds:0,costs:0,orders:0};}
+function noSignals(){return {visits:0,signups:0};}
 
 /* ---------- schema 1 migration ---------- */
 function v1(p){
@@ -219,14 +251,23 @@ function migrate(p){
     const stage=stageFrom(e.stage),model=/^c-\d/.test(e.id)?'claude':/^o-\d/.test(e.id)?'chatgpt':'unassigned';
     const price=typeof e.price==='number'?money(e.price):String(e.price);
     if(stage==='Rejected'){out.rejected.push({date:p.asOf,model,category:'other',idea:String(e.title),reason:String(e.gate)});continue;}
-    out.tests.push({id:String(e.id),cardId:'',title:String(e.title),category:'other',model,stage,started:p.asOf,price,next:String(e.next),gate:String(e.gate),evidence:String(e.evidence)+(stage!=='Building'&&stage!=='Queued'?'':'')+'\nStage before upgrade: '+String(e.stage),month:zero(),pastNet:0,verdicts:{date:'',claude:null,chatgpt:null}});
+    out.tests.push({id:String(e.id),cardId:'',title:String(e.title),category:'other',model,stage,started:p.asOf,price,next:String(e.next),gate:String(e.gate),evidence:String(e.evidence)+(stage!=='Building'&&stage!=='Queued'?'':'')+'\nStage before upgrade: '+String(e.stage),month:zero(),pastNet:0,signals:noSignals(),verdicts:{date:'',claude:null,chatgpt:null}});
   }
   out.sources=p.sources.map(s=>({title:String(s.title),url:String(s.url),note:String(s.note)}));
   out.decisions=p.decisions.map(d=>({date:String(d.date),note:String(d.note)}));
-  out.decisions.push({date:p.asOf,note:'Upgraded to the daily-cycle format. This month\'s money so far is under "shared" because the old format had no per-test totals. Older experiments have no category yet.'});
+  out.decisions.push({date:p.asOf,note:'Upgraded from the first format. This month\'s money so far is under "shared" because the old format had no per-test totals. Older experiments have no category yet.'});
   return lab(out);
 }
-function loadLab(v){if(isObj(v)&&v.schema===1){legacy=true;return migrate(v);}legacy=false;return lab(v);}
+function up2(p){
+  // schema 2 → 3: adds the approval queue, the income ramp, test signals and the last agent run.
+  if(!isObj(p)||p.schema!==2)throw Error('Not schema 2.');
+  fields(p,['schema','asOf','currency','target','startDate','month','shared','history','cards','rejected','tests','sources','decisions'],'The schema 2 lab');
+  const out={...p,schema:3,lastAgentRun:'',limits:defaultLimits(),ramp:[],queue:[]};
+  const keys=['schema','asOf','currency','target','startDate','month','lastAgentRun','limits','shared','history','ramp','queue','cards','rejected','tests','sources','decisions'];
+  out.tests=Array.isArray(p.tests)?p.tests.map(t=>isObj(t)&&!own(t,'signals')?{...t,signals:noSignals()}:t):p.tests;
+  return lab(Object.fromEntries(keys.map(k=>[k,out[k]])));
+}
+function loadLab(v){if(isObj(v)&&v.schema===1){legacy=true;return migrate(v);}if(isObj(v)&&v.schema===2){legacy=true;return up2(v);}legacy=false;return lab(v);}
 
 /* ---------- derived state ---------- */
 function testNet(t){return t.month.receipts-t.month.fees-t.month.refunds-t.month.costs;}
@@ -253,10 +294,14 @@ function canStart(c,p){
   if(cardState(c,p)!=='live')return 'Not on the live leaderboard.';
   const a=avg(c);if(a===null)return 'Waiting for the rival\'s score.';if(a<12)return 'Average under 12, below the build line.';
   if(gap(c)>=4&&c.david!=='keep')return 'Scores differ by 4 or more. Decide first.';
-  const act=active(p);if(act.length>=3)return 'All 3 test slots are full.';
-  if(act.some(t=>t.category===c.category))return 'This category already has a live test.';
-  if(buildsThisWeek(p)>=2)return 'Already 2 new builds this week.';return '';
+  const act=active(p),cap=capacity(p);if(act.length>=cap)return 'All '+cap+' test slots are full'+(cap<p.limits.total?' while a winner scales':'')+'.';
+  const sl=slotFor(p,c.category);if(!sl)return 'No test slot takes '+CAT_LABEL[c.category]+' ideas.';
+  if(act.filter(t=>sl.categories.includes(t.category)).length>=sl.max)return 'The '+sl.label+' slot'+(sl.max===1?' is':'s are')+' full.';
+  if(buildsThisWeek(p)>=p.limits.perWeek)return 'Already '+p.limits.perWeek+' new build'+(p.limits.perWeek===1?'':'s')+' this week.';return '';
 }
+function capacity(p){return p.tests.some(t=>t.stage==='Scaling')?Math.min(p.limits.scaling,p.limits.total):p.limits.total;}
+function slotFor(p,cat){return p.limits.slots.find(s=>s.categories.includes(cat))||null;}
+function slotUse(p){const act=active(p);return p.limits.slots.map(s=>s.label+' '+act.filter(t=>s.categories.includes(t.category)).length+'/'+s.max).join(' · ');}
 function checkpoint(t){
   const age=daysBetween(t.started,today());let due=null,next=null;
   for(const c of CHECKS){const d=addDays(t.started,c[0]);if(age>=c[0])due={c,d};else if(!next)next={c,d};}
@@ -269,6 +314,7 @@ function nextId(p,model){
   return pre+String(n+1).padStart(3,'0');
 }
 function compact(p){
+  const old=addDays(today(),-120);p.queue=p.queue.filter(q=>q.created>=old||q.status==='approved');
   const cut=addDays(today(),-45);
   for(const c of p.cards)if(!c.archived&&c.date<cut&&!p.tests.some(t=>t.cardId===c.id)){Object.assign(c,{buyer:'',channel:'',redFlags:'',test:'',day14:'',day30:'',links:[],archived:true});}
   return p;
@@ -311,15 +357,16 @@ function readLinks(v){
 /* ---------- merging a paste into the lab ---------- */
 function merge(base,input){
   const p=clone(base),lines=[],warn=[],t=today();
-  if(isObj(input)&&(input.schema===1||input.schema===2)){
+  if(isObj(input)&&(input.schema===1||input.schema===2||input.schema===3)){
     const next=loadLab(input);legacy=false;
     lines.push('Replaces your whole lab with this file ('+next.cards.length+' cards, '+next.tests.length+' tests, '+next.decisions.length+' decisions, as of '+next.asOf+').');
     if(input.schema===1)lines.push('Converted from the old schema 1 format. Old experiments become tests with no category yet.');
+    if(input.schema===2)lines.push('Converted from schema 2: adds an empty approval queue and income ramp.');
     if(base.cards.length||base.tests.length)warn.push('Anything in your saved lab that is not in this file will be lost. Download a backup first if unsure.');
     return {next,lines,warn,kind:'replace'};
   }
   if(!isObj(input))throw Error('Paste one JSON object.');
-  const kind=String(input.kind||'').toLowerCase()||(input.cards?'round':input.reviews?'review':input.tests?'update':'');
+  const kind=String(input.kind||'').toLowerCase()||(input.items?'queue':input.cards?'round':input.reviews?'review':input.tests?'update':'');
   const model=modelKey(input.model);
   if(!model)throw Error('Add "model": "claude" or "chatgpt" so the page knows who wrote this.');
   let date=input.date;if(date===undefined){date=t;warn.push('No date given, so today ('+t+') was used.');}day(date,'the date');
@@ -375,6 +422,7 @@ function merge(base,input){
       if(u.stage!==undefined){const st=STAGES.find(s=>s.toLowerCase()===String(u.stage).toLowerCase());if(!st)throw Error('Stage for '+id+' must be one of '+STAGES.join(', ')+'.');if(st!==t.stage){ch.push(t.stage+' → '+st);t.stage=st;}}
       for(const k of ['next','gate','evidence','price'])if(u[k]!==undefined){t[k]=txt(u[k]);ch.push(k);}
       if(isObj(u.month)){for(const k of MONEY)if(u.month[k]!==undefined)t.month[k]=k==='orders'?count(u.month[k],id+' orders'):amount(u.month[k],id+' '+k);ch.push('money');}
+      if(isObj(u.signals)){for(const k of ['visits','signups'])if(u.signals[k]!==undefined)t.signals[k]=count(u.signals[k],id+' '+k);ch.push('signals');}
       if(u.verdict!==undefined){
         const call=String(u.verdict).toLowerCase();if(!CALLS.includes(call))throw Error('Verdict for '+id+' must be one of '+CALLS.join(', ')+'.');
         if(t.verdicts.date!==date)t.verdicts={date,claude:null,chatgpt:null};
@@ -386,7 +434,42 @@ function merge(base,input){
     for(const d of Array.isArray(input.decisions)?input.decisions.slice(0,40):[]){if(isObj(d)&&txt(d.note).trim()){p.decisions.push({date:d.date?day(d.date,'a decision date'):date,note:'['+MODELS[model]+'] '+txt(d.note)});}}
     for(const s of Array.isArray(input.sources)?input.sources.slice(0,40):[]){const l=readLinks([s])[0];if(l&&!p.sources.some(x=>x.url===l.url))p.sources.push({title:l.title,url:l.url,note:txt(s.note,2000)});}
     if(Array.isArray(input.decisions)&&input.decisions.length)lines.push('Adds '+input.decisions.length+' decision'+(input.decisions.length===1?'':'s')+'.');
-  }else throw Error('Set "kind" to "round", "review" or "update".');
+    for(const u of Array.isArray(input.queue)?input.queue.slice(0,100):[]){
+      if(!isObj(u))continue;const id=txt(u.id,20).trim();const q=p.queue.find(q=>q.id===id);if(!q)throw Error('No queue item "'+id+'".');
+      const st=String(u.status||'').toLowerCase();
+      if(st==='shipped'){if(q.status!=='approved')throw Error(id+' can only be marked shipped after it is approved.');}
+      else if(st==='withdrawn'){if(q.status!=='pending')throw Error(id+' can only be withdrawn while it is waiting.');}
+      else throw Error('Agents can set a queue item to "shipped" or "withdrawn" only. Approving is the owner\'s step.');
+      q.status=st;if(u.note!==undefined)q.note=txt(u.note,4000);lines.push(id+' marked '+st+'.');
+    }
+    if(isObj(input.limits)){const cur=p.limits;p.limits=limits({total:input.limits.total??cur.total,scaling:input.limits.scaling??cur.scaling,perWeek:input.limits.perWeek??cur.perWeek,slots:input.limits.slots===undefined?cur.slots:input.limits.slots.map(s=>isObj(s)?{...s,categories:Array.isArray(s.categories)?s.categories.map(c=>catKey(c)||c):s.categories}:s)});
+      lines.push('Sets test limits: '+p.limits.total+' live ('+p.limits.scaling+' while scaling), '+p.limits.perWeek+' new a week; '+p.limits.slots.map(s=>s.label+' '+s.max).join(', ')+'.');}
+    if(Array.isArray(input.ramp)){
+      p.ramp=input.ramp.slice(0,24).map((r,i)=>{const w='Ramp row '+(i+1);if(!isObj(r))throw Error(w+' is not an object.');return {date:day(r.date,w),signal:txt(r.signal,2000),low:amount(r.low,w),high:amount(r.high,w)};}).sort((a,b)=>a.date.localeCompare(b.date));
+      lines.push('Sets the income ramp ('+p.ramp.length+' checkpoints).');
+    }
+  }else if(kind==='queue'){
+    if(!Array.isArray(input.items))throw Error('A queue paste needs an "items" list.');
+    let n=0;
+    for(const [i,it] of input.items.slice(0,50).entries()){
+      const w='Item '+(i+1)+(it&&it.title?' ("'+txt(it.title,60)+'")':'');if(!isObj(it))throw Error(w+' is not an object.');
+      const type=String(it.type||'').toLowerCase();if(!QTYPES[type])throw Error(w+' needs a type: '+Object.keys(QTYPES).join(', ')+'.');
+      const title=txt(it.title,500).trim();if(!title)throw Error(w+' needs a title.');
+      const testId=txt(it.testId??it.test,80).trim(),cardId=txt(it.cardId??it.card,40).trim().toLowerCase();
+      if(testId&&!p.tests.some(x=>x.id===testId))throw Error(w+' points at experiment "'+testId+'", which does not exist.');
+      if(cardId&&!p.cards.some(x=>x.id===cardId))throw Error(w+' points at card "'+cardId+'", which does not exist.');
+      if(type==='start'&&!cardId)throw Error(w+': a start request needs the cardId of the idea to build.');
+      if(type==='kill'&&!testId)throw Error(w+': a kill request needs the testId.');
+      const amt=it.amount===undefined||it.amount===null||it.amount===''?0:amount(typeof it.amount==='string'?Number(it.amount.replace(/[$,]/g,'')):it.amount,w+' amount');
+      if(type==='spend'&&!(amt>0))throw Error(w+': a spend request needs an amount in USD.');
+      const l=readLinks(it.link?[it.link]:it.preview&&/^https?:/.test(String(it.preview))?[it.preview]:[])[0];
+      if(p.queue.some(q=>q.status==='pending'&&q.type===type&&q.title===title&&q.testId===testId&&q.expires>=t)){warn.push(w+' is already waiting, so it was skipped.');continue;}
+      const id='q-'+String(p.queue.reduce((m,q)=>Math.max(m,parseInt(q.id.slice(2),10)),0)+1).padStart(4,'0');
+      p.queue.push({id,created:date,model,type,testId,cardId,title,summary:txt(it.summary??it.description),link:l?l.url:'',amount:amt,expires:addDays(date,QDAYS),status:'pending',decided:'',note:''});n++;
+    }
+    lines.push('Adds '+n+' item'+(n===1?'':'s')+' to your approval queue from '+MODELS[model]+'.');
+  }else throw Error('Set "kind" to "round", "review", "update" or "queue".');
+  if(kind!=='replace'&&(!p.lastAgentRun||date>p.lastAgentRun))p.lastAgentRun=date;
   p.asOf=t>p.asOf?t:p.asOf;
   return {next:lab(compact(p)),lines,warn,kind};
 }
@@ -400,7 +483,7 @@ function applyCall(p,t,call,who){
 function closeMonth(p,to){
   const by={claude:0,chatgpt:0};for(const t of p.tests)if(by[t.model]!==undefined)by[t.model]+=testNet(t);
   const net=monthNet(p);p.history=p.history.filter(h=>h.month!==p.month);p.history.push({month:p.month,net,claude:by.claude,chatgpt:by.chatgpt});
-  for(const t of p.tests){t.pastNet+=testNet(t);t.month=zero();}p.shared=zero();
+  for(const t of p.tests){t.pastNet+=testNet(t);t.month=zero();t.signals=noSignals();}p.shared=zero();
   p.decisions.push({date:today(),note:'Closed '+niceMonth(p.month)+' at '+money(net)+' net (Claude '+money(by.claude)+', ChatGPT '+money(by.chatgpt)+').'});p.month=to;
 }
 
@@ -442,9 +525,9 @@ Reply with ONLY this JSON (no other text), one entry per card ID above:
 ${JSON.stringify(ex,null,2)}`;
 }
 function fridayPrompt(model,p){
-  const tests=p.tests.filter(t=>t.stage!=='Killed').map(t=>{const c=checkpoint(t);return {id:t.id,title:t.title,category:CAT_LABEL[t.category],from:MODELS[t.model]||'unassigned',stage:t.stage,started:t.started,daysRunning:c.age,checkDue:c.due?c.due.c[1]:'none',next:t.next,gate:t.gate,evidence:t.evidence,thisMonth:t.month};});
-  const ex={kind:'update',model,date:today(),tests:tests.slice(0,1).map(t=>({id:t.id,verdict:'continue',note:'Why, with the numbers.',evidence:'Rank 1 · Claude 14 · ChatGPT 13. Latest numbers…',next:'The single next action.',month:{receipts:0,fees:0,refunds:0,costs:0,orders:0}})),decisions:[{note:'Anything decided, with the reason.'}]};
-  return `You are ${MODELS[model]} doing the Friday review for the AI Income Lab (plan: ${PLAN}). Judge each live test on your own, without seeing the other model's verdicts. 0 searches.
+  const tests=p.tests.filter(t=>t.stage!=='Killed').map(t=>{const c=checkpoint(t);return {id:t.id,title:t.title,category:CAT_LABEL[t.category],from:MODELS[t.model]||'unassigned',stage:t.stage,started:t.started,daysRunning:c.age,checkDue:c.due?c.due.c[1]:'none',next:t.next,gate:t.gate,evidence:t.evidence,thisMonth:t.month,signals:t.signals};});
+  const ex={kind:'update',model,date:today(),tests:tests.slice(0,1).map(t=>({id:t.id,verdict:'continue',note:'Why, with the numbers.',evidence:'Rank 1 · Claude 14 · ChatGPT 13. Latest numbers…',next:'The single next action.',month:{receipts:0,fees:0,refunds:0,costs:0,orders:0},signals:{visits:0,signups:0}})),decisions:[{note:'Anything decided, with the reason.'}]};
+  return `You are ${MODELS[model]} doing the weekly review for the AI Income Lab (plan: ${PLAN}). Judge each live test on your own, without seeing the other model's verdicts. 0 searches.
 
 Kill-or-continue rules:
 - Day 14: about 300 targeted views or visits and at least 1% clicking, signing up or replying, else kill.
@@ -474,15 +557,19 @@ $('prompt-close').addEventListener('click',()=>$('prompt-dialog').close?.()??$('
 
 /* ---------- drawing ---------- */
 function draw(p){
-  const t=today(),net=monthNet(p),dayN=Math.max(1,daysBetween(p.startDate,t)+1);
+  const t=today(),net=monthNet(p);
   $('as-of').textContent='As of '+p.asOf;
   $('net').textContent=money(net);$('fill').style.width=Math.min(100,Math.max(0,net/p.target*100))+'%';
   $('target').textContent=money(p.target)+' target · '+niceMonth(p.month)+' · '+Math.round(net/p.target*100)+'%';
-  $('day').textContent=t<p.startDate?'Not started':'Day '+dayN;$('day-note').textContent='Started '+nice(p.startDate)+' · 6 categories, 2 models';
-  const act=active(p);$('slots').textContent=act.length+' / 3';$('builds').textContent=buildsThisWeek(p)+' of 2 new builds this week · one per category';
-  const s=scoreboard(p);const lead=s.claude.all===s.chatgpt.all?'Tied':s.claude.all>s.chatgpt.all?'Claude':'ChatGPT';
-  $('leader').textContent=lead;$('leader-note').textContent='Claude '+money(s.claude.all)+' · ChatGPT '+money(s.chatgpt.all)+' net, all time';
-  drawSteps(p);drawRound(p);drawBoard(p);drawTests(p);drawVs(p,s);drawHistory(p,net);drawRejected(p);drawLists(p);
+  const wait=pending(p),soon=wait.filter(q=>q.expires<=addDays(t,1)).length,dec=decisions(p).length;
+  $('waiting').textContent=String(wait.length+dec);
+  $('waiting-note').textContent=wait.length+dec?(soon?soon+' expire within a day':'Oldest expires '+nice(wait.map(q=>q.expires).sort()[0]||t))+(dec?' · '+dec+' decision'+(dec===1?'':'s'):''):'Nothing to approve right now';
+  const act=active(p),cap=capacity(p);$('slots').textContent=act.length+' / '+cap;$('builds').textContent=buildsThisWeek(p)+' of '+p.limits.perWeek+' new builds this week'+(cap<p.limits.total?' · narrowed while a winner scales':'');
+  const nx=p.ramp.find(r=>r.date>=t);
+  $('checkpoint').textContent=nx?money(nx.low)+'–'+money(nx.high):'Not set';
+  $('checkpoint-note').textContent=nx?'Net a month by '+nice(nx.date)+(nx.signal?' · '+nx.signal:''):'The agents set the income ramp in an update.';
+  $('agent-line').textContent=p.lastAgentRun?'Agents last updated this lab on '+nice(p.lastAgentRun)+'.':'No agent has updated this lab yet. Finish setup under "Setup and manual tools", or run a step by hand there.';
+  drawQueue(p);drawRound(p);drawBoard(p);drawTests(p);drawVs(p,scoreboard(p));drawHistory(p,net);drawRejected(p);drawLists(p);drawManual(p);
   $('dashboard').hidden=false;$('gate').hidden=true;
 }
 function scoreboard(p){
@@ -492,34 +579,81 @@ function scoreboard(p){
     out[m]={cards:p.cards.filter(c=>c.model===m).length,top5:top5.filter(c=>c.model===m).length,tests:tests.length,earning:tests.filter(t=>testNet(t)+t.pastNet>0).length,month,all};
   }return out;
 }
-function step(title,why,actions=[],cls=''){const li=node('li','',cls);const d=node('div');d.append(node('strong',title),node('span',why,'why'));const a=node('div','','do');a.append(...actions);li.append(d,a);return li;}
-function drawSteps(p){
-  const t=today(),items=[];
-  for(const m of ['claude','chatgpt']){
-    const n=p.cards.filter(c=>c.model===m&&c.date===t).length+(p.rejected.some(r=>r.model===m&&r.date===t)?0:0);
-    if(!n)items.push(step('Run '+MODELS[m]+'\'s daily round','Copy the prompt into '+(m==='claude'?'Claude':'ChatGPT')+', then paste its JSON reply in the box below. About 6 cards, one per category.',[btn('Copy prompt for '+MODELS[m],()=>showPrompt(MODELS[m]+'\'s daily round','Paste this into '+MODELS[m]+'. When it replies, paste the JSON into "Paste a model\'s output".',roundPrompt(m,t)))]));
-    else items.push(step(MODELS[m]+'\'s round is in',n+' card'+(n===1?'':'s')+' for today.',[],'done'));
+function pending(p){const t=today();return p.queue.filter(q=>q.status==='pending'&&q.expires>=t);}
+function splits(p){return p.tests.filter(x=>x.verdicts.claude&&x.verdicts.chatgpt&&x.verdicts.claude.call!==x.verdicts.chatgpt.call&&!p.decisions.some(d=>d.date>=x.verdicts.date&&d.note.includes('The owner decided')&&d.note.includes(x.id)));}
+function decisions(p){
+  const out=splits(p).map(x=>({kind:'split',x}));
+  if(today().slice(0,7)>p.month)out.push({kind:'month'});
+  return out;
+}
+function qCard(q,p){
+  const t=today(),expired=q.status==='pending'&&q.expires<t,a=node('article','','qitem'+(expired?' expired':''));
+  const body=node('div'),tags=node('div','','tags');
+  tags.append(node('span',QTYPES[q.type],q.type==='spend'||q.type==='kill'?'pill flag':'pill'));
+  const test=p.tests.find(x=>x.id===q.testId),card=p.cards.find(x=>x.id===q.cardId);
+  if(test)tags.append(node('span',test.title,'pill plain'));else if(card)tags.append(node('span',card.id+' · avg '+fmt(avg(card)),'pill plain'));
+  tags.append(node('span','From '+MODELS[q.model],'pill plain'));
+  if(q.status==='pending')tags.append(node('span',expired?'Expired '+nice(q.expires):'Expires '+nice(q.expires),expired?'pill bad':'pill plain'));
+  body.append(tags,node('h3',q.title));
+  if(q.type==='spend')body.append(node('p','Amount: '+money(q.amount)));
+  if(q.summary)body.append(node('p',q.summary));
+  if(card&&q.type==='start'){const c=node('p','Idea: '+card.pitch+(card.test?'\nCheapest test: '+card.test:''));body.append(c);}
+  if(q.link){const l=node('a','Open the preview ↗');l.href=q.link;l.target='_blank';l.rel='noopener noreferrer';const pp=node('p');pp.append(l);body.append(pp);}
+  a.append(body);
+  if(q.status==='pending'&&!expired){
+    const side=node('div','','qact'),note=node('input');note.type='text';note.placeholder='Note for the agents (optional)';note.setAttribute('aria-label','Note for the agents about '+q.title);
+    const why=q.type==='start'&&card?canStart(card,p):'';
+    const ok=btn(q.type==='start'?'Approve and start':q.type==='kill'?'Approve the kill':'Approve',()=>decide(q.id,'approved',note.value));
+    ok.disabled=busy||!editable()||Boolean(why);
+    const no=btn('Reject',()=>decide(q.id,'rejected',note.value),'sm quiet');no.disabled=busy||!editable();
+    const bb=node('div','','qbtns');bb.append(ok,no);side.append(note,bb);if(why)side.append(node('span',why,'small'));a.append(side);
   }
-  for(const m of ['claude','chatgpt']){
-    const n=reviewCards(p,m).length;
-    if(n)items.push(step('Have '+MODELS[m]+' review '+n+' of '+MODELS[RIVAL[m]]+'\'s card'+(n===1?'':'s'),'The prompt already includes the cards. Paste '+MODELS[m]+'\'s scores back here.',[btn('Copy review prompt',()=>showPrompt(MODELS[m]+' reviews '+MODELS[RIVAL[m]],'Paste this into '+MODELS[m]+'. It contains the cards to score.',reviewPrompt(m,p)))]));
+  return a;
+}
+function drawQueue(p){
+  const items=[];
+  for(const d of decisions(p)){
+    const a=node('article','','qitem decision'),body=node('div'),tags=node('div','','tags');
+    if(d.kind==='split'){
+      const x=d.x;tags.append(node('span','Your decision','pill flag'),node('span',x.title,'pill plain'));
+      body.append(tags,node('h3','The models split on '+x.id),node('p','Claude says '+x.verdicts.claude.call+(x.verdicts.claude.note?' ('+x.verdicts.claude.note+')':'')+'.\nChatGPT says '+x.verdicts.chatgpt.call+(x.verdicts.chatgpt.note?' ('+x.verdicts.chatgpt.note+')':'')+'.'));
+      const side=node('div','','qact'),bb=node('div','','qbtns');
+      for(const c of CALLS)bb.append(btn(c[0].toUpperCase()+c.slice(1),()=>act(q=>{applyCall(q,q.tests.find(y=>y.id===x.id),c,'The owner decided');},'Saved your decision on '+x.id+'.'),'sm quiet'));
+      side.append(bb);a.append(body,side);
+    }else{
+      tags.append(node('span','Your decision','pill flag'));body.append(tags,node('h3','Close '+niceMonth(p.month)),node('p','A new month started. Closing records the final net per model and resets the month\'s money and signals.'));
+      const side=node('div','','qact');side.append(btn('Close month',closeMonthNow));a.append(body,side);
+    }
+    items.push(a);
   }
-  const live=ranked(p);
-  const gaps=live.filter(c=>gap(c)>=4&&c.david==='');
-  if(gaps.length)items.push(step('Decide '+gaps.length+' card'+(gaps.length===1?'':'s')+' where the scores differ by 4+','Open each flagged card on the leaderboard and choose Keep or Reject.',[btn('Show them',()=>{catFilter='all';drawBoard(p);const el=document.querySelector('[data-card="'+gaps[0].id+'"]');if(el){el.open=true;el.scrollIntoView({behavior:'smooth',block:'center'});}})],'david'));
-  const splits=p.tests.filter(x=>x.verdicts.claude&&x.verdicts.chatgpt&&x.verdicts.claude.call!==x.verdicts.chatgpt.call&&!p.decisions.some(d=>d.date>=x.verdicts.date&&d.note.includes('The owner decided')&&d.note.includes(x.id)));
-  for(const x of splits)items.push(step('Settle the split on '+x.id,'Claude says '+x.verdicts.claude.call+', ChatGPT says '+x.verdicts.chatgpt.call+'. Your call.',CALLS.map(c=>btn(c[0].toUpperCase()+c.slice(1),()=>act(q=>{const tt=q.tests.find(y=>y.id===x.id);applyCall(q,tt,c,'The owner decided');},'Saved your decision on '+x.id+'.'),'sm quiet')),'david'));
-  const top=live.find(c=>!canStart(c,p));
-  if(top)items.push(step('Start a test: '+top.title,'Rank '+rankOf(p,top.id)+' with an average of '+fmt(avg(top))+'. A slot is free, so build its cheapest test.',[btn('Start test',()=>startTest(top.id))]));
-  else if(live.length&&active(p).length>=3)items.push(step('Test slots are full','3 live tests is the limit. The top card waits until a test is killed or earns.',[],'done'));
-  const due=p.tests.filter(x=>ACTIVE.includes(x.stage)&&checkpoint(x).due);
-  const friday=weekday(t)===5;
-  if((friday||due.length)&&p.tests.some(x=>x.stage!=='Killed')){
-    items.push(step(friday?'Friday review':'Checkpoint due: '+due.map(x=>x.id).join(', '),'Give each model the review prompt separately, then paste both replies here. Agreed verdicts apply; splits come to you. Add real numbers from the platforms first.',['claude','chatgpt'].map(m=>btn('Copy for '+MODELS[m],()=>showPrompt('Friday review for '+MODELS[m],'Paste into '+MODELS[m]+'. Tell it any new platform numbers (sales, fees, visits) before it answers.',fridayPrompt(m,p)),'sm quiet'))));
+  for(const q of pending(p).sort((a,b)=>a.expires.localeCompare(b.expires)||a.id.localeCompare(b.id)))items.push(qCard(q,p));
+  if(!items.length){
+    const e=node('div','','qempty panel');e.append(node('strong','Nothing waiting for you.'),node('span',p.lastAgentRun?'The agents add next week\'s batch here. Come back on Sunday.':'Once the automatic cycle is running, the agents add their work here for you to approve.'));items.push(e);
   }
-  if(t.slice(0,7)>p.month)items.push(step('Close '+niceMonth(p.month),'A new month started. Closing it records the final net and resets this month\'s money.',[btn('Close month',closeMonthNow)]));
-  if(legacy)items.push(step('Save the upgraded format','Your saved lab uses the old format. It is shown converted; it is upgraded the next time anything is saved.',[]));
-  $('steps').replaceChildren(...items);
+  $('queue').replaceChildren(...items);
+  const t=today(),done=p.queue.filter(q=>q.status!=='pending'||q.expires<t).sort((a,b)=>(b.decided||b.expires).localeCompare(a.decided||a.expires)).slice(0,40);
+  $('decided-wrap').hidden=!done.length;$('decided-sum').textContent='Decided and expired ('+done.length+')';
+  const label={approved:'Approved',rejected:'Rejected',shipped:'Shipped',withdrawn:'Withdrawn',pending:'Expired'};
+  $('decided').replaceChildren(...done.map(q=>{const li=node('li');li.append(node('span',(q.decided||q.expires)+' · '+label[q.status]+' · '+QTYPES[q.type]+' · '+q.id,'meta'),node('strong',q.title));if(q.note)li.append(node('p','Note: '+q.note));return li;}));
+}
+function drawManual(p){
+  const t=today(),b=[];
+  for(const m of ['claude','chatgpt'])b.push(btn(MODELS[m]+': idea round',()=>showPrompt(MODELS[m]+'\'s idea round','Paste this into '+MODELS[m]+', then paste its JSON reply below.',roundPrompt(m,t)),'sm quiet'));
+  for(const m of ['claude','chatgpt'])if(reviewCards(p,m).length)b.push(btn(MODELS[m]+': review '+reviewCards(p,m).length+' cards',()=>showPrompt(MODELS[m]+' reviews '+MODELS[RIVAL[m]],'Paste this into '+MODELS[m]+'. It contains the cards to score.',reviewPrompt(m,p)),'sm quiet'));
+  if(p.tests.some(x=>x.stage!=='Killed'))for(const m of ['claude','chatgpt'])b.push(btn(MODELS[m]+': weekly review',()=>showPrompt('Weekly review for '+MODELS[m],'Paste into '+MODELS[m]+'. Give it any new platform numbers first.',fridayPrompt(m,p)),'sm quiet'));
+  $('manual').replaceChildren(...b);
+}
+async function decide(id,st,note){
+  const q0=data&&data.queue.find(q=>q.id===id);if(!q0)return;
+  await act(p=>{
+    const q=p.queue.find(x=>x.id===id);if(q.status!=='pending'||q.expires<today())throw Error('That item is no longer waiting.');
+    q.status=st;q.decided=today();q.note=String(note||'').slice(0,4000);
+    if(st==='approved'){
+      if(q.type==='start'){const c=p.cards.find(x=>x.id===q.cardId);const why=canStart(c,p);if(why)throw Error(why);addTest(p,c);}
+      else if(q.type==='kill'){applyCall(p,p.tests.find(x=>x.id===q.testId),'kill','The owner approved a request');}
+      else if(q.type==='spend')p.decisions.push({date:today(),note:'The owner approved spending '+money(q.amount)+': '+q.title+'.'});
+    }else if(q.type==='start'||q.type==='kill'||q.type==='spend')p.decisions.push({date:today(),note:'The owner rejected '+QTYPES[q.type].toLowerCase()+' request '+q.id+': '+q.title+(q.note?' ('+q.note+')':'')+'.'});
+  },(st==='approved'?'Approved ':'Rejected ')+q0.title+'.');
 }
 function drawRound(p){
   if(!viewDate)viewDate=today();
@@ -580,8 +714,9 @@ function drawBoard(p){
   const back=ranked(p,'backlog');$('backlog-sum').textContent='Backlog: '+back.length+' card'+(back.length===1?'':'s')+' not built within 14 days';
   $('backlog').replaceChildren(...(back.length?back.map(c=>cardItem(c,p,null)):[node('li','Nothing in the backlog.','empty')]));
 }
-function testCard(t,p){
+function testCard(t,p,rank){
   const c=node('article','','card'),tags=node('div','','tags');
+  if(rank)tags.append(node('span','#'+rank,'trank'));
   tags.append(node('span',t.stage,'pill'),node('span',CAT_LABEL[t.category],'pill plain'),node('span',(MODELS[t.model]||'No model')+' · '+t.id,'pill plain'));
   c.append(tags,node('h3',t.title));if(t.price)c.append(node('p',t.price,'small'));
   const ck=checkpoint(t);
@@ -593,16 +728,19 @@ function testCard(t,p){
     c.append(box);
   }
   const m=node('div','','money row'),mb=(v,l)=>{const x=node('div');x.append(node('b',v),node('span',l,'label'));return x;};
-  m.append(mb(money(testNet(t)),'Net this month'),mb(String(t.month.orders),'Paid orders'),mb(money(testNet(t)+t.pastNet),'Net all time'));c.append(m);
+  m.append(mb(money(testNet(t)),'Net this month'),mb(money(testNet(t)+t.pastNet),'Net all time'),mb(money(t.month.costs),'Costs this month'));c.append(m);
+  const sg=node('div','','signals row');sg.append(mb(t.signals.visits.toLocaleString('en-US'),'Visits'),mb(t.signals.signups.toLocaleString('en-US'),'Sign-ups'),mb(String(t.month.orders),'Sales'));c.append(sg);
+  const waiting=pending(p).filter(q=>q.testId===t.id).length;if(waiting)c.append(node('p',waiting+' item'+(waiting===1?'':'s')+' waiting in your queue','small'));
   for(const [l,v] of [['Next',t.next],['Decision rule',t.gate],['Evidence',t.evidence]])if(v){const r=node('div','','row');r.append(node('span',l,'label'),node('p',v));c.append(r);}
   const v=t.verdicts;if(v.date){const r=node('div','','row');r.append(node('span','Verdicts '+v.date,'label'),node('p',['claude','chatgpt'].map(k=>MODELS[k]+': '+(v[k]?v[k].call+(v[k].note?' ('+v[k].note+')':''):'pending')).join('\n')));c.append(r);}
   return c;
 }
+function byNet(a,b){return testNet(b)-testNet(a)||(testNet(b)+b.pastNet)-(testNet(a)+a.pastNet)||b.month.orders-a.month.orders||b.signals.visits-a.signals.visits||a.started.localeCompare(b.started);}
 function drawTests(p){
-  const live=p.tests.filter(t=>t.stage!=='Killed'),ended=p.tests.filter(t=>t.stage==='Killed');
-  $('tests-hint').textContent='Max 3 building or testing at once, one per category, 2 new builds a week.';
-  $('tests').replaceChildren(...(live.length?live.map(t=>testCard(t,p)):[node('p','No live tests. Start one from the leaderboard.','empty')]));
-  $('ended-wrap').hidden=!ended.length;$('ended-sum').textContent='Killed tests ('+ended.length+')';$('ended').replaceChildren(...ended.map(t=>testCard(t,p)));
+  const live=p.tests.filter(t=>t.stage!=='Killed').sort(byNet),ended=p.tests.filter(t=>t.stage==='Killed');
+  $('tests-hint').textContent='Ranked by net dollars. Slots in use: '+slotUse(p)+'.';
+  $('tests').replaceChildren(...(live.length?live.map((t,i)=>testCard(t,p,i+1)):[node('p','No live experiments. Start requests arrive in your queue.','empty')]));
+  $('ended-wrap').hidden=!ended.length;$('ended-sum').textContent='Killed experiments ('+ended.length+')';$('ended').replaceChildren(...ended.map(t=>testCard(t,p,null)));
 }
 function drawVs(p,s){
   const lead=s.claude.all===s.chatgpt.all?null:s.claude.all>s.chatgpt.all?'claude':'chatgpt';
@@ -613,9 +751,12 @@ function drawVs(p,s){
   }));
 }
 function drawHistory(p,net){
+  const t0=today(),nxt=p.ramp.find(r=>r.date>=t0);
+  $('ramp').replaceChildren(...(p.ramp.length?p.ramp.map(r=>{const li=node('li',null,r===nxt?'next':'');li.append(node('span',nice(r.date)+(r===nxt?' · next':r.date<t0?' · past':''),'meta'),node('span',r.signal||'–'),node('b',money(r.low)+'–'+money(r.high)));return li;}):[node('li','The agents set the month-by-month income ramp here in an update.','empty')]));
+  if(!p.ramp.length)$('ramp').firstChild.style.padding='14px 18px';
   const rows=p.history.slice(-11).concat([{month:p.month,net,current:true}]);const max=Math.max(p.target,...rows.map(r=>r.net));
   $('history').replaceChildren(...rows.map(r=>{const d=node('div'),bar=node('i');bar.style.height=Math.max(2,Math.round(Math.max(0,r.net)/max*70))+'px';if(r.current)bar.style.background='var(--accent)';d.title=niceMonth(r.month)+': '+money(r.net);d.append(node('span',money(r.net)),bar,node('span',niceMonth(r.month).replace(' 20',' ’')));return d;}));
-  const t=today();$('close-month').hidden=!(t.slice(0,7)>p.month)||!editable();$('close-month').textContent='Close '+niceMonth(p.month);
+  $('close-month').hidden=!(t0.slice(0,7)>p.month)||!editable();$('close-month').textContent='Close '+niceMonth(p.month);
 }
 function drawRejected(p){
   const rows=[...p.rejected.map(r=>({date:r.date,who:r.model==='david'?'you':MODELS[r.model]||'Earlier research',cat:CAT_LABEL[r.category],idea:r.idea,reason:r.reason})),
@@ -630,7 +771,7 @@ function drawLists(p){
 
 /* ---------- saving ---------- */
 function editable(){return local||(Boolean(owner)&&ready);}
-function status(message,error=false){$('import-status').textContent=message;$('import-status').classList.toggle('error',error);}
+function status(message,error=false){for(const k of ['import-status','page-status']){$(k).textContent=message;$(k).classList.toggle('error',error);}}
 function controls(){
   const ed=editable();for(const k of ['file','json','inspect'])$(k).disabled=busy||!ed;
   $('save').hidden=!draft;$('discard').hidden=!draft;$('save').disabled=busy||!ed;$('save').textContent=draft&&draft.kind==='replace'?'Replace my whole lab':local?'Apply in this tab':'Add to my lab';
@@ -644,7 +785,7 @@ function readRow(rows){
   if(!Number.isSafeInteger(row.revision)||row.revision<1)throw Error('Invalid cloud revision.');
   return {revision:row.revision,value:loadLab(row.value)};
 }
-function clearBoard(){$('dashboard').hidden=true;for(const k of ['as-of','net','target','day','day-note','slots','builds','leader','leader-note','steps','round','board','tests','vs','history','rejected','backlog','sources','decisions'])$(k).replaceChildren();$('fill').style.width='0';}
+function clearBoard(){$('dashboard').hidden=true;for(const k of ['as-of','net','target','waiting','waiting-note','slots','builds','checkpoint','checkpoint-note','agent-line','queue','decided','round','board','tests','ended','vs','ramp','history','rejected','backlog','sources','decisions','manual'])$(k).replaceChildren();$('fill').style.width='0';}
 async function refresh(){
   if(!owner||!cloud)return;
   const token=generation,id=owner,seq=++request;draft=null;busy=true;ready=false;controls();
@@ -676,15 +817,16 @@ async function act(fn,message){
   try{const p=clone(data);fn(p);p.asOf=today()>p.asOf?today():p.asOf;const next=lab(compact(p));forgetDraft();await commit(next,message);}
   catch(e){status(e.message||'That change could not be made.',true);}
 }
+function addTest(p,c){
+  const r=rankOf(p,c.id),s=today();
+  p.tests.push({id:c.id,cardId:c.id,title:c.title,category:c.category,model:c.model,stage:'Building',started:s,price:c.price,next:c.test||'Build the cheapest test.',
+    gate:CHECKS.map(([n,l,rule])=>l+' ('+addDays(s,n)+'): '+rule).join('\n')+'\nCard targets: '+[c.day14&&'day 14: '+c.day14,c.day30&&'day 30: '+c.day30].filter(Boolean).join('; '),
+    evidence:'Rank '+r+' · Claude '+fmt(total(c.scores.claude))+' · ChatGPT '+fmt(total(c.scores.chatgpt))+'. No results yet.',month:zero(),pastNet:0,signals:noSignals(),verdicts:{date:'',claude:null,chatgpt:null}});
+  p.decisions.push({date:s,note:'Started experiment '+c.id+' ('+c.title+'), rank '+r+', average '+fmt(avg(c))+'.'});
+}
 function startTest(id){
   const c=data.cards.find(c=>c.id===id);if(!c)return;const why=canStart(c,data);if(why){status(why,true);return;}
-  const r=rankOf(data,id),s=today();
-  act(p=>{
-    p.tests.push({id:c.id,cardId:c.id,title:c.title,category:c.category,model:c.model,stage:'Building',started:s,price:c.price,next:c.test||'Build the cheapest test.',
-      gate:CHECKS.map(([n,l,rule])=>l+' ('+addDays(s,n)+'): '+rule).join('\n')+'\nCard targets: '+[c.day14&&'day 14: '+c.day14,c.day30&&'day 30: '+c.day30].filter(Boolean).join('; '),
-      evidence:'Rank '+r+' · Claude '+fmt(total(c.scores.claude))+' · ChatGPT '+fmt(total(c.scores.chatgpt))+'. No results yet.',month:zero(),pastNet:0,verdicts:{date:'',claude:null,chatgpt:null}});
-    p.decisions.push({date:s,note:'Started test '+c.id+' ('+c.title+'), rank '+r+', average '+fmt(avg(c))+'. '+MODELS[c.model]+' owns the copy and posts; Claude builds the visuals.'});
-  },'Started test '+c.id+'.');
+  act(p=>addTest(p,p.cards.find(x=>x.id===id)),'Started experiment '+c.id+'.');
 }
 function closeMonthNow(){const to=today().slice(0,7);act(p=>{if(to>p.month)closeMonth(p,to);},'Closed the month.');}
 
