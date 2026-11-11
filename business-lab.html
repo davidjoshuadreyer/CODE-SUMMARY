@@ -164,10 +164,11 @@ function score(v,where){
 const CARD_F=['id','date','model','category','title','pitch','buyer','channel','price','redFlags','test','day14','day30','links','scores','david','archived'];
 const TEST_F=['id','cardId','title','category','model','stage','started','price','next','gate','evidence','month','pastNet','signals','verdicts'];
 function lab(p){
-  fields(p,['schema','asOf','currency','target','startDate','month','lastAgentRun','shared','history','ramp','queue','cards','rejected','tests','sources','decisions'],'The lab');
+  fields(p,['schema','asOf','currency','target','startDate','month','lastAgentRun','limits','shared','history','ramp','queue','cards','rejected','tests','sources','decisions'],'The lab');
   if(p.schema!==3||p.currency!=='USD')throw Error('Check the schema (3) and currency (USD).');
   if(amount(p.target,'target')===0)throw Error('The monthly target must be above zero.');
   const out={schema:3,asOf:day(p.asOf,'asOf'),currency:'USD',target:p.target,startDate:day(p.startDate,'startDate'),month:monthStr(p.month,'month'),lastAgentRun:p.lastAgentRun===''?'':day(p.lastAgentRun,'lastAgentRun'),shared:ledger(p.shared,'shared')};
+  out.limits=limits(p.limits);
   out.ramp=list(p.ramp,'ramp',(r,w)=>{fields(r,['date','signal','low','high'],w);const o={date:day(r.date,w),signal:str(r.signal,w,2000),low:amount(r.low,w),high:amount(r.high,w)};if(o.high<o.low)throw Error('Check the range in '+w+'.');return o;});
   const qids=new Set();
   out.queue=list(p.queue,'queue',(q,w)=>{
@@ -216,7 +217,18 @@ function lab(p){
   for(const q of out.queue){if(q.testId&&!tids.has(q.testId))throw Error('Queue item '+q.id+' points at a missing experiment.');if(q.cardId&&!ids.has(q.cardId))throw Error('Queue item '+q.id+' points at a missing card.');}
   return out;
 }
-function emptyLab(){const t=today();return {schema:3,asOf:t,currency:'USD',target:1000,startDate:'2026-11-11',month:t.slice(0,7),lastAgentRun:'',shared:zero(),history:[],ramp:[],queue:[],cards:[],rejected:[],tests:[],sources:[],decisions:[]};}
+function whole(v,where,min,max){if(!Number.isInteger(v)||v<min||v>max)throw Error('Use a whole number from '+min+' to '+max+' for '+where+'.');return v;}
+function limits(v){
+  const w='limits';fields(v,['total','scaling','perWeek','slots'],w);
+  const o={total:whole(v.total,'limits.total',1,20),scaling:whole(v.scaling,'limits.scaling',1,20),perWeek:whole(v.perWeek,'limits.perWeek',0,20)};
+  const seen=new Set();
+  o.slots=list(v.slots,'limits.slots',(s,sw)=>{fields(s,['label','categories','max'],sw);const label=str(s.label,sw,80).trim();if(!label)throw Error(sw+' needs a label.');
+    const cats=list(s.categories,sw+' categories',c=>{if(!CAT_LABEL[c])throw Error('Unknown category "'+c+'" in '+sw+'.');if(seen.has(c))throw Error('Category "'+c+'" is in two slots.');seen.add(c);return c;});
+    if(!cats.length)throw Error(sw+' needs at least one category.');return {label,categories:cats,max:whole(s.max,sw+' max',1,20)};});
+  if(!o.slots.length)throw Error('Add at least one test slot.');return o;
+}
+function defaultLimits(){return {total:3,scaling:3,perWeek:2,slots:CATS.map(([k,l])=>({label:l,categories:[k],max:1}))};}
+function emptyLab(){const t=today();return {schema:3,asOf:t,currency:'USD',target:1000,startDate:'2026-11-11',month:t.slice(0,7),lastAgentRun:'',limits:defaultLimits(),shared:zero(),history:[],ramp:[],queue:[],cards:[],rejected:[],tests:[],sources:[],decisions:[]};}
 function zero(){return {receipts:0,fees:0,refunds:0,costs:0,orders:0};}
 function noSignals(){return {visits:0,signups:0};}
 
@@ -250,8 +262,8 @@ function up2(p){
   // schema 2 → 3: adds the approval queue, the income ramp, test signals and the last agent run.
   if(!isObj(p)||p.schema!==2)throw Error('Not schema 2.');
   fields(p,['schema','asOf','currency','target','startDate','month','shared','history','cards','rejected','tests','sources','decisions'],'The schema 2 lab');
-  const out={...p,schema:3,lastAgentRun:'',ramp:[],queue:[]};
-  const keys=['schema','asOf','currency','target','startDate','month','lastAgentRun','shared','history','ramp','queue','cards','rejected','tests','sources','decisions'];
+  const out={...p,schema:3,lastAgentRun:'',limits:defaultLimits(),ramp:[],queue:[]};
+  const keys=['schema','asOf','currency','target','startDate','month','lastAgentRun','limits','shared','history','ramp','queue','cards','rejected','tests','sources','decisions'];
   out.tests=Array.isArray(p.tests)?p.tests.map(t=>isObj(t)&&!own(t,'signals')?{...t,signals:noSignals()}:t):p.tests;
   return lab(Object.fromEntries(keys.map(k=>[k,out[k]])));
 }
@@ -282,10 +294,14 @@ function canStart(c,p){
   if(cardState(c,p)!=='live')return 'Not on the live leaderboard.';
   const a=avg(c);if(a===null)return 'Waiting for the rival\'s score.';if(a<12)return 'Average under 12, below the build line.';
   if(gap(c)>=4&&c.david!=='keep')return 'Scores differ by 4 or more. Decide first.';
-  const act=active(p);if(act.length>=3)return 'All 3 test slots are full.';
-  if(act.some(t=>t.category===c.category))return 'This category already has a live test.';
-  if(buildsThisWeek(p)>=2)return 'Already 2 new builds this week.';return '';
+  const act=active(p),cap=capacity(p);if(act.length>=cap)return 'All '+cap+' test slots are full'+(cap<p.limits.total?' while a winner scales':'')+'.';
+  const sl=slotFor(p,c.category);if(!sl)return 'No test slot takes '+CAT_LABEL[c.category]+' ideas.';
+  if(act.filter(t=>sl.categories.includes(t.category)).length>=sl.max)return 'The '+sl.label+' slot'+(sl.max===1?' is':'s are')+' full.';
+  if(buildsThisWeek(p)>=p.limits.perWeek)return 'Already '+p.limits.perWeek+' new build'+(p.limits.perWeek===1?'':'s')+' this week.';return '';
 }
+function capacity(p){return p.tests.some(t=>t.stage==='Scaling')?Math.min(p.limits.scaling,p.limits.total):p.limits.total;}
+function slotFor(p,cat){return p.limits.slots.find(s=>s.categories.includes(cat))||null;}
+function slotUse(p){const act=active(p);return p.limits.slots.map(s=>s.label+' '+act.filter(t=>s.categories.includes(t.category)).length+'/'+s.max).join(' · ');}
 function checkpoint(t){
   const age=daysBetween(t.started,today());let due=null,next=null;
   for(const c of CHECKS){const d=addDays(t.started,c[0]);if(age>=c[0])due={c,d};else if(!next)next={c,d};}
@@ -426,6 +442,8 @@ function merge(base,input){
       else throw Error('Agents can set a queue item to "shipped" or "withdrawn" only. Approving is the owner\'s step.');
       q.status=st;if(u.note!==undefined)q.note=txt(u.note,4000);lines.push(id+' marked '+st+'.');
     }
+    if(isObj(input.limits)){const cur=p.limits;p.limits=limits({total:input.limits.total??cur.total,scaling:input.limits.scaling??cur.scaling,perWeek:input.limits.perWeek??cur.perWeek,slots:input.limits.slots===undefined?cur.slots:input.limits.slots.map(s=>isObj(s)?{...s,categories:Array.isArray(s.categories)?s.categories.map(c=>catKey(c)||c):s.categories}:s)});
+      lines.push('Sets test limits: '+p.limits.total+' live ('+p.limits.scaling+' while scaling), '+p.limits.perWeek+' new a week; '+p.limits.slots.map(s=>s.label+' '+s.max).join(', ')+'.');}
     if(Array.isArray(input.ramp)){
       p.ramp=input.ramp.slice(0,24).map((r,i)=>{const w='Ramp row '+(i+1);if(!isObj(r))throw Error(w+' is not an object.');return {date:day(r.date,w),signal:txt(r.signal,2000),low:amount(r.low,w),high:amount(r.high,w)};}).sort((a,b)=>a.date.localeCompare(b.date));
       lines.push('Sets the income ramp ('+p.ramp.length+' checkpoints).');
@@ -546,7 +564,7 @@ function draw(p){
   const wait=pending(p),soon=wait.filter(q=>q.expires<=addDays(t,1)).length,dec=decisions(p).length;
   $('waiting').textContent=String(wait.length+dec);
   $('waiting-note').textContent=wait.length+dec?(soon?soon+' expire within a day':'Oldest expires '+nice(wait.map(q=>q.expires).sort()[0]||t))+(dec?' · '+dec+' decision'+(dec===1?'':'s'):''):'Nothing to approve right now';
-  const act=active(p);$('slots').textContent=act.length+' / 3';$('builds').textContent=buildsThisWeek(p)+' of 2 new builds this week · one per category';
+  const act=active(p),cap=capacity(p);$('slots').textContent=act.length+' / '+cap;$('builds').textContent=buildsThisWeek(p)+' of '+p.limits.perWeek+' new builds this week'+(cap<p.limits.total?' · narrowed while a winner scales':'');
   const nx=p.ramp.find(r=>r.date>=t);
   $('checkpoint').textContent=nx?money(nx.low)+'–'+money(nx.high):'Not set';
   $('checkpoint-note').textContent=nx?'Net a month by '+nice(nx.date)+(nx.signal?' · '+nx.signal:''):'The agents set the income ramp in an update.';
@@ -720,7 +738,7 @@ function testCard(t,p,rank){
 function byNet(a,b){return testNet(b)-testNet(a)||(testNet(b)+b.pastNet)-(testNet(a)+a.pastNet)||b.month.orders-a.month.orders||b.signals.visits-a.signals.visits||a.started.localeCompare(b.started);}
 function drawTests(p){
   const live=p.tests.filter(t=>t.stage!=='Killed').sort(byNet),ended=p.tests.filter(t=>t.stage==='Killed');
-  $('tests-hint').textContent='Ranked by net dollars this month, then all time. Max 3 building or testing, one per category.';
+  $('tests-hint').textContent='Ranked by net dollars. Slots in use: '+slotUse(p)+'.';
   $('tests').replaceChildren(...(live.length?live.map((t,i)=>testCard(t,p,i+1)):[node('p','No live experiments. Start requests arrive in your queue.','empty')]));
   $('ended-wrap').hidden=!ended.length;$('ended-sum').textContent='Killed experiments ('+ended.length+')';$('ended').replaceChildren(...ended.map(t=>testCard(t,p,null)));
 }

@@ -43,6 +43,8 @@ The owner's only regular step is the approval queue at the top of Business Lab. 
 
 Types are `short`, `page`, `release`, `issue`, `spend`, `start` (needs `cardId`), `kill` (needs `testId`) and `other`. An item expires 3 days after its date if nobody approves it, and expired work does not ship. Pull the lab to see each item's `status`. After publishing approved work, send an `update` with `"queue": [{"id": "q-0001", "status": "shipped"}]`. Agents can also set `withdrawn` on an item that is still waiting, but they can never approve one.
 
+Test slots are data, not code: an `update` with `"limits": {"total": 6, "scaling": 3, "perWeek": 2, "slots": [{"label": "Games", "categories": ["apps"], "max": 2}, …]}` sets how many experiments may run, how many while a winner is Scaling, how many new builds a week, and which idea categories fill which slot.
+
 Dates follow `BUSINESS_LAB_TZ` (default `America/Vancouver`). `SUPABASE_URL` and `SUPABASE_ANON_KEY` default to the public values in `assets/workspace/cloud.js`.
 
 ## Tests
