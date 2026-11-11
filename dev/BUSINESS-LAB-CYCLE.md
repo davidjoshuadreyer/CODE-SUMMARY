@@ -20,13 +20,27 @@ To revoke access, press **Turn off cycle key**. **Replace cycle key** issues a n
 # Latest saved lab, to plan from (prints JSON; or give a file name to write it)
 node dev/business-lab-cycle.cjs pull lab.json
 
-# Save a model's output: a daily round, a cross-review, a Friday update,
-# or a full lab file. Same JSON the page's paste box accepts.
+# Save a model's output: an idea round, a cross-review, a weekly update,
+# items for the owner's approval queue, or a full lab file.
+# Same JSON the page's paste box accepts.
 node dev/business-lab-cycle.cjs apply round-claude.json --dry-run   # check only
 node dev/business-lab-cycle.cjs apply round-claude.json
 ```
 
 `apply` merges and validates with the code inside `business-lab.html` itself, so the script and the page always agree on the format. It saves with a revision check. If the page or the other model saved in the meantime, it re-reads and merges again (three tries), and it never overwrites a newer save. Invalid input is refused before anything is written, with the same message the page would show.
+
+## The approval queue
+
+The owner's only regular step is the approval queue at the top of Business Lab. Agents add work there with a `queue` file and act only on what was approved:
+
+```json
+{"kind": "queue", "model": "claude", "date": "2026-11-15",
+ "items": [{"type": "short", "testId": "exp-03", "title": "…", "summary": "…", "link": "https://…"},
+           {"type": "spend", "title": "…", "amount": 12},
+           {"type": "start", "cardId": "c-007", "title": "…"}]}
+```
+
+Types are `short`, `page`, `release`, `issue`, `spend`, `start` (needs `cardId`), `kill` (needs `testId`) and `other`. An item expires 3 days after its date if nobody approves it, and expired work does not ship. Pull the lab to see each item's `status`. After publishing approved work, send an `update` with `"queue": [{"id": "q-0001", "status": "shipped"}]`. Agents can also set `withdrawn` on an item that is still waiting, but they can never approve one.
 
 Dates follow `BUSINESS_LAB_TZ` (default `America/Vancouver`). `SUPABASE_URL` and `SUPABASE_ANON_KEY` default to the public values in `assets/workspace/cloud.js`.
 

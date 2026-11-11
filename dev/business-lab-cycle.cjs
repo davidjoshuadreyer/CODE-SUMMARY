@@ -8,8 +8,9 @@
 
  pull   prints (or writes) the saved lab, so the cycle starts from the latest state.
  apply  takes exactly what a model would have pasted into the page: a daily round,
-        a cross-review, a Friday update ({"kind": "round" | "review" | "update", ...})
-        or a full lab file (schema 1 or 2). It merges it with the page's own code,
+        a cross-review, a weekly update, items for the owner's approval queue
+        ({"kind": "round" | "review" | "update" | "queue", ...}) or a full lab
+        file (schema 1, 2 or 3). It merges it with the page's own code,
         validates it with the page's own validator, and saves it with a revision
         check. If the lab changed in the meantime it re-reads and merges again
         (up to 3 times), so it never overwrites a newer save.
