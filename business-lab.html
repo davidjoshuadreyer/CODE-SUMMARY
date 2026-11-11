@@ -83,7 +83,11 @@ dialog{border:1px solid var(--line);border-radius:9px;background:var(--white);co
 <details class="import panel" id="import" hidden><summary>Backup, restore and full replace</summary>
 <p id="import-help"></p>
 <div class="tools"><button class="quiet" id="download">Download a backup</button><button class="quiet" id="copy-all">Copy the whole lab as JSON</button><label class="file-label">Open a JSON file<input id="file" type="file" accept=".json,application/json"></label><button class="quiet" id="refresh" hidden>Reload saved lab</button></div>
-<p>A file you open is checked the same way as a paste. A full lab file (schema 1 or 2) replaces everything after you confirm; a round, review or update file is added.</p></details>
+<p>A file you open is checked the same way as a paste. A full lab file (schema 1 or 2) replaces everything after you confirm; a round, review or update file is added.</p>
+<div id="cycle-key" hidden><h3 class="label" style="margin-top:18px">Automatic cycle updates</h3>
+<p>A cycle key lets the scheduled research cycle read and update this lab, and nothing else in your account. It is shown once. Add it as <code>BUSINESS_LAB_KEY</code> in the cycle's environment. Creating a new key stops the old one.</p>
+<div class="tools"><button class="quiet" id="key-make">Create cycle key</button><button class="quiet" id="key-off" hidden>Turn off cycle key</button></div>
+<p class="status" id="key-status" aria-live="polite"></p></div></details>
 <footer>Business Lab · Tesselate</footer>
 </main>
 
@@ -647,7 +651,7 @@ async function refresh(){
   try{
     const rows=await cloud.studyRead();if(!current(token,id)||seq!==request)return;
     const row=readRow(rows);revision=row.revision;ready=true;
-    data=row.value||emptyLab();draw(data);
+    data=row.value||emptyLab();draw(data);void loadKey();
     $('notice').textContent=row.value?'Saved to your account · Revision '+revision+(legacy?' · old format, shown converted':''):'Signed in · Nothing saved yet. Start with step 1.';
   }catch{
     if(!current(token,id)||seq!==request)return;data=null;
@@ -721,13 +725,43 @@ $('close-month').addEventListener('click',closeMonthNow);
 $('download').addEventListener('click',()=>{if(!data)return;const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));a.download='business-lab-'+today()+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);});
 $('copy-all').addEventListener('click',()=>{if(data)showPrompt('Your whole lab as JSON','Give this to Claude when it needs the latest saved state, for example to write a full replacement.',JSON.stringify(data,null,2));});
 
+/* ---------- cycle key ---------- */
+let keyInfo=null,keyArmed=0;
+function keyStatus(message,error=false){$('key-status').textContent=message;$('key-status').classList.toggle('error',error);}
+async function loadKey(){
+  if(local||!owner||!cloud?.businessLabKeyInfo)return;const token=generation,id=owner;$('cycle-key').hidden=false;
+  try{const info=await cloud.businessLabKeyInfo();if(!current(token,id))return;keyInfo=info;
+    $('key-off').hidden=!info;$('key-make').textContent=info?'Replace cycle key':'Create cycle key';
+    keyStatus(info?'Cycle key active since '+info.created_at.slice(0,10)+' · last used '+(info.last_used_at?info.last_used_at.slice(0,16).replace('T',' ')+' UTC':'never'):'No cycle key. Cycles cannot update this lab yet.');
+  }catch{if(current(token,id)){keyInfo=null;$('key-off').hidden=true;keyStatus('Cycle keys are not set up on the server yet (run dev/supabase_business_lab_cycle.sql once).',true);}}
+}
+function newKey(){const b=crypto.getRandomValues(new Uint8Array(32));return 'bl1_'+btoa(String.fromCharCode(...b)).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');}
+async function sha256hex(t){return [...new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(t)))].map(n=>n.toString(16).padStart(2,'0')).join('');}
+$('key-make').addEventListener('click',async()=>{
+  if(!owner||!cloud||busy)return;
+  if(keyInfo&&Date.now()-keyArmed>8000){keyArmed=Date.now();keyStatus('The current key will stop working. Press "Replace cycle key" again to confirm.',true);return;}
+  keyArmed=0;const token=generation,id=owner,key=newKey();$('key-make').disabled=true;
+  try{await cloud.setBusinessLabKey(await sha256hex(key));if(!current(token,id))return;
+    showPrompt('Your cycle key','Copy it now and add it as BUSINESS_LAB_KEY in the cycle environment\'s secrets. It is not stored anywhere and will not be shown again. Never paste it into a chat or commit it.',key);
+    await loadKey();
+  }catch{if(current(token,id))keyStatus('The key could not be saved. Nothing changed.',true);}
+  finally{$('key-make').disabled=false;}
+});
+$('key-off').addEventListener('click',async()=>{
+  if(!owner||!cloud||busy)return;const token=generation,id=owner;$('key-off').disabled=true;
+  try{await cloud.removeBusinessLabKey();if(current(token,id)){await loadKey();keyStatus('Cycle key turned off. Cycles can no longer update this lab.');}}
+  catch{if(current(token,id))keyStatus('Could not turn the key off. Try again.',true);}
+  finally{$('key-off').disabled=false;}
+});
+$('prompt-dialog').addEventListener('close',()=>{$('prompt-text').value='';});
+
 /* ---------- accounts ---------- */
 $('signin').addEventListener('click',async()=>{if(!cloud)return;$('signin').disabled=true;try{await cloud.signIn();}catch{$('notice').textContent='Sign-in could not start. Please try again.';}finally{$('signin').disabled=false;}});
 $('signout').addEventListener('click',async()=>{if(!cloud||busy)return;try{await cloud.signOut();switchAccount(null);}catch{$('notice').textContent='Sign-out failed. Try again.';}});
 function switchAccount(user,force=false){
   const next=user?.id||null;if(next===owner&&!force)return;
   generation++;request++;owner=next;revision=0;ready=false;busy=false;data=null;clearBoard();forgetDraft();
-  $('signout').hidden=!owner;$('import').hidden=!owner;$('import').open=false;$('gate').hidden=true;
+  $('signout').hidden=!owner;$('import').hidden=!owner;$('import').open=false;$('gate').hidden=true;keyInfo=null;keyArmed=0;$('cycle-key').hidden=true;keyStatus('');
   if(!owner){$('notice').textContent='Signed out';showGate('Sign in to see your private idea rounds, tests and results. Google returns you to the workspace home. Reopen Business Lab there to continue.',true);return;}
   $('notice').textContent='Loading your private lab…';
   const token=generation;setTimeout(()=>{if(token===generation)void refresh();},0);
