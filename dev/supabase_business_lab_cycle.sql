@@ -100,8 +100,9 @@ begin
   -- The page and dev/business-lab-cycle.cjs validate the full format; here we
   -- only require a lab object with a whole-number schema version, so new
   -- schema versions need no SQL change.
-  if p_value is null or jsonb_typeof(p_value) <> 'object' or jsonb_typeof(p_value->'schema') <> 'number'
-     or (p_value->>'schema') !~ '^[1-9][0-9]?$' then
+  if p_value is null or jsonb_typeof(p_value) <> 'object'
+     or coalesce(jsonb_typeof(p_value->'schema'), '') <> 'number'
+     or coalesce(p_value->>'schema', '') !~ '^[1-9][0-9]?$' then
     raise exception 'The lab must be an object with a schema version' using errcode = '22023';
   end if;
   if octet_length(p_value::text) > 2500000 then
