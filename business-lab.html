@@ -278,7 +278,8 @@ function cardState(c,p){
   const flag=['claude','chatgpt'].some(m=>c.scores[m]&&c.scores[m].redFlag.trim());if(flag&&c.david!=='keep')return 'rejected';
   if(daysBetween(c.date,today())>14)return 'backlog';return 'live';
 }
-function avg(c){const a=total(c.scores.claude),b=total(c.scores.chatgpt);return a===null||b===null?null:(a+b)/2;}
+// A card scored by only one model (ChatGPT is not in the cycle) uses that score; two scores are averaged.
+function avg(c){const a=total(c.scores.claude),b=total(c.scores.chatgpt);if(a!==null&&b!==null)return (a+b)/2;return a===null&&b===null?null:(a??b);}
 function demandAvg(c){const v=['claude','chatgpt'].map(m=>c.scores[m]?.demand).filter(x=>x!==undefined);return v.length?v.reduce((a,b)=>a+b,0)/v.length:0;}
 function gap(c){const a=total(c.scores.claude),b=total(c.scores.chatgpt);return a===null||b===null?0:Math.abs(a-b);}
 function ranked(p,state='live'){
