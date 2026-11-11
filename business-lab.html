@@ -853,7 +853,9 @@ $('copy-all').addEventListener('click',()=>{if(data)showPrompt('Your whole lab a
 let keyInfo=null,keyArmed=0;
 function keyStatus(message,error=false){$('key-status').textContent=message;$('key-status').classList.toggle('error',error);}
 async function loadKey(){
-  if(local||!owner||!cloud?.businessLabKeyInfo)return;const token=generation,id=owner;$('cycle-key').hidden=false;
+  if(local||!owner||!cloud)return;const token=generation,id=owner;$('cycle-key').hidden=false;
+  if(!cloud.businessLabKeyInfo){$('key-make').disabled=true;keyStatus('Your browser is using an old copy of the sign-in code. Hard refresh this page (Cmd+Shift+R on Mac, Ctrl+Shift+R on Windows).',true);return;}
+  $('key-make').disabled=false;
   try{const info=await cloud.businessLabKeyInfo();if(!current(token,id))return;keyInfo=info;
     $('key-off').hidden=!info;$('key-make').textContent=info?'Replace cycle key':'Create cycle key';
     keyStatus(info?'Cycle key active since '+info.created_at.slice(0,10)+' · last used '+(info.last_used_at?info.last_used_at.slice(0,16).replace('T',' ')+' UTC':'never'):'No cycle key. Cycles cannot update this lab yet.');
@@ -898,7 +900,7 @@ async function start(){
   }
   $('import-help').textContent='Keep a backup before big changes. Everything here is private to your signed-in account.';
   try{
-    await script('/assets/vendor/supabase-2.116.0.js');await script('/assets/workspace/cloud.js');cloud=window.TesselateCloud;
+    await script('/assets/vendor/supabase-2.116.0.js');await script('/assets/workspace/cloud.js?v=2026-11-11-cycle-key');cloud=window.TesselateCloud;
     await cloud.init(u=>switchAccount(u));switchAccount(cloud.user,!owner);
   }catch{clearBoard();$('notice').textContent='Sign-in is unavailable.';showGate('Reload this page when the workspace is reachable.');}
 }
