@@ -42,6 +42,20 @@
    if(error?.code==='23505'||(!error&&!data?.length))throw new Error('This item changed on another device. Refresh the plan, then try again.');
    fail(error);if(needUser()!==owner)throw new Error('Account changed. Reload your study plan.');return data[0];
   },
+  // Business Lab cycle key: only the SHA-256 hash is sent; see dev/supabase_business_lab_cycle.sql.
+  async businessLabKeyInfo(){
+   const owner=needUser();const {data,error}=await client.from('tesselate_business_lab_keys').select('created_at,last_used_at').eq('user_id',owner).maybeSingle();fail(error);
+   if(needUser()!==owner)throw new Error('Account changed.');return data||null;
+  },
+  async setBusinessLabKey(keyHash){
+   const owner=needUser();if(!/^[0-9a-f]{64}$/.test(keyHash))throw new Error('Invalid key hash.');
+   const {error}=await client.from('tesselate_business_lab_keys').upsert({user_id:owner,key_hash:keyHash,created_at:new Date().toISOString(),last_used_at:null},{onConflict:'user_id'});fail(error);
+   if(needUser()!==owner)throw new Error('Account changed.');
+  },
+  async removeBusinessLabKey(){
+   const owner=needUser();const {error}=await client.from('tesselate_business_lab_keys').delete().eq('user_id',owner);fail(error);
+   if(needUser()!==owner)throw new Error('Account changed.');
+  },
   async sharedReferenceManifest(id){
    const owner=needUser();
    if(!/^[a-z0-9-]+$/.test(id))throw new Error('Invalid reference.');
