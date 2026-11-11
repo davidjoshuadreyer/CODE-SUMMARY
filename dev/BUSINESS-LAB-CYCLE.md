@@ -9,7 +9,8 @@ Never commit lab data or the key to this repository. The repository is public an
 1. **Server.** Run `dev/supabase_business_lab_cycle.sql` once in the Supabase SQL editor (after `dev/supabase_study_plan.sql`). It is safe to re-run.
 2. **Key.** Sign in to Business Lab, open **Backup, restore and full replace**, and press **Create cycle key**. Copy the key it shows. It is shown once and only its SHA-256 hash is stored.
 3. **Cycle environment.** In the cloud environment that runs the cycle:
-   - add the key as the secret/environment variable `BUSINESS_LAB_KEY`;
+   - preferred: add it as a **network secret** for host `xsscvdooviztaxzuwbmr.supabase.co`, type custom header, header name `x-business-lab-key`, no prefix. The proxy adds it to each request, so the cycle never sees the key;
+   - or: set it as the environment variable `BUSINESS_LAB_KEY`;
    - allow network access to `xsscvdooviztaxzuwbmr.supabase.co`.
 
 To revoke access, press **Turn off cycle key**. **Replace cycle key** issues a new key and stops the old one at once.

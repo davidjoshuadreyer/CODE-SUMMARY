@@ -15,8 +15,9 @@
         check. If the lab changed in the meantime it re-reads and merges again
         (up to 3 times), so it never overwrites a newer save.
 
- The key comes from the environment only, never from arguments or files, and is
- never printed. The key can only read and replace the Business Lab record; see
+ The key comes from BUSINESS_LAB_KEY, or is added by the environment's network
+ proxy as the x-business-lab-key header (then this script never sees it). It
+ is never taken from arguments or files and never printed. The key can only read and replace the Business Lab record; see
  dev/supabase_business_lab_cycle.sql. Dates follow BUSINESS_LAB_TZ
  (default America/Vancouver), matching the owner's browser.
 */
@@ -40,7 +41,10 @@ function config(env=process.env){
   const url=env.SUPABASE_URL||(src.match(/const URL='([^']+)'/)||[])[1],anon=env.SUPABASE_ANON_KEY||(src.match(/const KEY='([^']+)'/)||[])[1];
   const key=env.BUSINESS_LAB_KEY||'';
   if(!url||!anon)throw new Error('Supabase URL or public key not found.');
-  if(!/^bl1_[A-Za-z0-9_-]{40,}$/.test(key))throw new Error('Set BUSINESS_LAB_KEY to the cycle key from Business Lab (Backup, restore and full replace → Create cycle key).');
+  // No key here is normal when the environment stores it as a network secret:
+  // the proxy then adds it as the x-business-lab-key header and the script
+  // never sees it.
+  if(key&&!/^bl1_[A-Za-z0-9_-]{40,}$/.test(key))throw new Error('BUSINESS_LAB_KEY does not look like a cycle key from Business Lab (Backup, restore and full replace → Create cycle key).');
   return {url:url.replace(/\/$/,''),anon,key};
 }
 async function rpc(cfg,name,body,fetchImpl=fetch){
@@ -48,7 +52,7 @@ async function rpc(cfg,name,body,fetchImpl=fetch){
   const text=await res.text();let json=null;try{json=text?JSON.parse(text):null;}catch{}
   if(!res.ok){
     const code=json?.code,msg=json?.message||text.slice(0,200);
-    const err=new Error(code==='28000'?'The cycle key was refused. Create a new one in Business Lab.':code==='40001'?'conflict':'Supabase '+res.status+': '+msg);
+    const err=new Error(code==='28000'?(cfg.key?'The cycle key was refused. Create a new one in Business Lab.':'No cycle key reached Supabase. Add it as a network secret (header x-business-lab-key) or set BUSINESS_LAB_KEY.'):code==='40001'?'conflict':'Supabase '+res.status+': '+msg);
     err.code=code;throw err;
   }
   return json;
