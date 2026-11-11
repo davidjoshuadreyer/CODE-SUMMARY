@@ -54,7 +54,9 @@ select (select count(*) from public.tesselate_study_items) = 2
 set role authenticated; select set_config('request.jwt.claim.sub', :A, false) as _jwt \gset
 -- Rotation, as the page does it (PostgREST upsert on user_id).
 insert into public.tesselate_business_lab_keys(user_id,key_hash,created_at,last_used_at) values (:A, encode(extensions.digest(convert_to('rotated-key-for-a-0123456789abcdefghij','UTF8'),'sha256'),'hex'), now(), null)
-  on conflict (user_id) do update set key_hash = excluded.key_hash, created_at = excluded.created_at, last_used_at = excluded.last_used_at;
+  on conflict (user_id) do update set user_id = excluded.user_id, key_hash = excluded.key_hash, created_at = excluded.created_at, last_used_at = excluded.last_used_at;
+-- An upsert cannot move the row to another account.
+do $$ begin update public.tesselate_business_lab_keys set user_id = '00000000-0000-0000-0000-00000000000b'; raise exception 'moved key to B'; exception when insufficient_privilege or unique_violation then null; end $$;
 reset role; set role anon;
 do $$ begin perform public.business_lab_cycle_read('key-for-account-a-0123456789abcdefghij'); raise exception 'old key still works after rotation'; exception when sqlstate '28000' then null; end $$;
 select (public.business_lab_cycle_read('rotated-key-for-a-0123456789abcdefghij'))->>'revision' = '2' as rotated \gset

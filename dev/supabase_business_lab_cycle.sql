@@ -29,7 +29,9 @@ revoke all on public.tesselate_business_lab_keys from anon, authenticated;
 -- The owner may create, replace or delete their own key hash, and see when it
 -- was made or last used. Nobody can read another account's row. (A SHA-256
 -- hash of a 256-bit random key cannot be turned back into the key.)
-grant select, insert (user_id, key_hash, created_at, last_used_at), update (key_hash, created_at, last_used_at), delete
+-- user_id is in the update grant because PostgREST upserts set every column;
+-- the update policy still pins it to the signed-in account.
+grant select, insert (user_id, key_hash, created_at, last_used_at), update (user_id, key_hash, created_at, last_used_at), delete
   on public.tesselate_business_lab_keys to authenticated;
 drop policy if exists lab_key_read_own on public.tesselate_business_lab_keys;
 drop policy if exists lab_key_insert_own on public.tesselate_business_lab_keys;
