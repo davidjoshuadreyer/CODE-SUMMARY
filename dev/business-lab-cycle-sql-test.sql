@@ -43,6 +43,17 @@ select (public.business_lab_cycle_read(:KA))->'value'->>'n' = '2' and (public.bu
 \if :isolated \else \echo 'FAIL: accounts not isolated' \quit \endif
 reset role;
 
+-- The key can also arrive in the x-business-lab-key header (network secret).
+set role anon;
+select set_config('request.headers', '{"x-business-lab-key":"key-for-account-a-0123456789abcdefghij"}', false) as _h \gset
+select (public.business_lab_cycle_read(''))->'value'->>'n' = '2' as header_ok \gset
+\if :header_ok \else \echo 'FAIL: header key' \quit \endif
+select set_config('request.headers', '{"x-business-lab-key":"wrong-key-0123456789abcdefghijklmnop"}', false) as _h \gset
+do $$ begin perform public.business_lab_cycle_read(''); raise exception 'bad header key accepted'; exception when sqlstate '28000' then null; end $$;
+select set_config('request.headers', '', false) as _h \gset
+do $$ begin perform public.business_lab_cycle_read(''); raise exception 'missing key accepted'; exception when sqlstate '28000' then null; end $$;
+reset role;
+
 -- Only the lab row of account A changed; its other study data is untouched.
 select (select count(*) from public.tesselate_study_items) = 2
    and (select value->>'n' from public.tesselate_study_items where user_id=:A and key='business-lab/portfolio-v1') = '2'
@@ -54,7 +65,9 @@ select (select count(*) from public.tesselate_study_items) = 2
 set role authenticated; select set_config('request.jwt.claim.sub', :A, false) as _jwt \gset
 -- Rotation, as the page does it (PostgREST upsert on user_id).
 insert into public.tesselate_business_lab_keys(user_id,key_hash,created_at,last_used_at) values (:A, encode(extensions.digest(convert_to('rotated-key-for-a-0123456789abcdefghij','UTF8'),'sha256'),'hex'), now(), null)
-  on conflict (user_id) do update set key_hash = excluded.key_hash, created_at = excluded.created_at, last_used_at = excluded.last_used_at;
+  on conflict (user_id) do update set user_id = excluded.user_id, key_hash = excluded.key_hash, created_at = excluded.created_at, last_used_at = excluded.last_used_at;
+-- An upsert cannot move the row to another account.
+do $$ begin update public.tesselate_business_lab_keys set user_id = '00000000-0000-0000-0000-00000000000b'; raise exception 'moved key to B'; exception when insufficient_privilege or unique_violation then null; end $$;
 reset role; set role anon;
 do $$ begin perform public.business_lab_cycle_read('key-for-account-a-0123456789abcdefghij'); raise exception 'old key still works after rotation'; exception when sqlstate '28000' then null; end $$;
 select (public.business_lab_cycle_read('rotated-key-for-a-0123456789abcdefghij'))->>'revision' = '2' as rotated \gset
@@ -64,4 +77,4 @@ delete from public.tesselate_business_lab_keys where user_id = :A;
 reset role; set role anon;
 do $$ begin perform public.business_lab_cycle_read('rotated-key-for-a-0123456789abcdefghij'); raise exception 'removed key still works'; exception when sqlstate '28000' then null; end $$;
 reset role;
-\echo 'PASS: cycle key SQL (hash only, owner-only key rows, rotation by upsert, anon cannot read tables, bad, rotated and removed keys refused, one row per account, revision conflicts, other data untouched)'
+\echo 'PASS: cycle key SQL (hash only, owner-only key rows, rotation by upsert, anon cannot read tables, key by argument or header, bad, rotated and removed keys refused, one row per account, revision conflicts, other data untouched)'

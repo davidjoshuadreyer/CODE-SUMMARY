@@ -11,6 +11,9 @@
 -- * The cycle calls business_lab_cycle_read / business_lab_cycle_write with the
 --   public (anon) API key plus the cycle key. Both functions only ever touch the
 --   business-lab/portfolio-v1 row of the account that owns the key.
+-- * The key can come as p_key, or (with p_key '') in an x-business-lab-key
+--   request header, so a cloud environment's network secret can add it
+--   without the cycle ever seeing the key.
 -- * Writes use the same optimistic revision check as the page, so a stale cycle
 --   cannot overwrite a newer save from the page or from another model.
 -- * Creating a new key replaces the old one. Deleting the row turns cycle
@@ -29,7 +32,9 @@ revoke all on public.tesselate_business_lab_keys from anon, authenticated;
 -- The owner may create, replace or delete their own key hash, and see when it
 -- was made or last used. Nobody can read another account's row. (A SHA-256
 -- hash of a 256-bit random key cannot be turned back into the key.)
-grant select, insert (user_id, key_hash, created_at, last_used_at), update (key_hash, created_at, last_used_at), delete
+-- user_id is in the update grant because PostgREST upserts set every column;
+-- the update policy still pins it to the signed-in account.
+grant select, insert (user_id, key_hash, created_at, last_used_at), update (user_id, key_hash, created_at, last_used_at), delete
   on public.tesselate_business_lab_keys to authenticated;
 drop policy if exists lab_key_read_own on public.tesselate_business_lab_keys;
 drop policy if exists lab_key_insert_own on public.tesselate_business_lab_keys;
@@ -49,13 +54,15 @@ set search_path = ''
 as $$
 declare
   v_owner uuid;
+  v_key text := coalesce(nullif(p_key, ''),
+    nullif(current_setting('request.headers', true), '')::jsonb->>'x-business-lab-key');
 begin
-  if p_key is null or length(p_key) < 32 or length(p_key) > 200 then
+  if v_key is null or length(v_key) < 32 or length(v_key) > 200 then
     raise exception 'Invalid cycle key' using errcode = '28000';
   end if;
   update public.tesselate_business_lab_keys
      set last_used_at = now()
-   where key_hash = encode(extensions.digest(convert_to(p_key, 'UTF8'), 'sha256'), 'hex')
+   where key_hash = encode(extensions.digest(convert_to(v_key, 'UTF8'), 'sha256'), 'hex')
   returning user_id into v_owner;
   if v_owner is null then
     raise exception 'Invalid cycle key' using errcode = '28000';

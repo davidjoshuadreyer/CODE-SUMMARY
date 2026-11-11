@@ -12,6 +12,7 @@ const core=loadCore();
 const KEY='bl1_'+'A'.repeat(43);
 const cfg=config({BUSINESS_LAB_KEY:KEY});
 assert.throws(()=>config({BUSINESS_LAB_KEY:'nope'}),/BUSINESS_LAB_KEY/);
+assert.equal(config({}).key,'');  // network-secret mode: the proxy adds the header
 assert.match(cfg.url,/^https:\/\/.+supabase\.co$/);
 
 // In-memory stand-in for the two RPC functions.
@@ -55,6 +56,8 @@ const quiet={log:()=>{},fetchImpl:fakeFetch};
   assert.equal(row.revision,before);
   // Wrong key: clear message, key never echoed.
   await assert.rejects(()=>pull({...cfg,key:'bl1_'+'B'.repeat(43)},core,fakeFetch),e=>/refused/.test(e.message)&&!e.message.includes('BBBB'));
+  // Network-secret mode: no key in the body; a missing header gives a clear hint.
+  await assert.rejects(()=>pull({...cfg,key:''},core,fakeFetch),/network secret/);
   // Persistent conflicts give up instead of looping.
   bump=5;await assert.rejects(()=>apply(cfg,core,{kind:'update',model:'claude',date:today,decisions:[{note:'x'}]},quiet),/kept changing/);
   console.log('PASS: business lab cycle client (pull, dry run, round, review, conflict re-merge, refused input, bad key, retry cap).');
