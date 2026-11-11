@@ -29,12 +29,14 @@ do $$ begin perform public.business_lab_cycle_read('short'); raise exception 'sh
 
 select (public.business_lab_cycle_read(:KA)) = '{"revision":0,"value":null}'::jsonb as empty_ok \gset
 \if :empty_ok \else \echo 'FAIL: empty read' \quit \endif
-do $$ begin perform public.business_lab_cycle_write('key-for-account-a-0123456789abcdefghij','{"schema":3}',0); raise exception 'bad schema accepted'; exception when sqlstate '22023' then null; end $$;
+do $$ begin perform public.business_lab_cycle_write('key-for-account-a-0123456789abcdefghij','{"schema":0}',0); raise exception 'bad schema accepted'; exception when sqlstate '22023' then null; end $$;
 do $$ begin perform public.business_lab_cycle_write('key-for-account-a-0123456789abcdefghij','[1]',0); raise exception 'array accepted'; exception when sqlstate '22023' then null; end $$;
+do $$ begin perform public.business_lab_cycle_write('key-for-account-a-0123456789abcdefghij','{"schema":"2"}',0); raise exception 'string schema accepted'; exception when sqlstate '22023' then null; end $$;
+do $$ begin perform public.business_lab_cycle_write('key-for-account-a-0123456789abcdefghij','{"n":1}',0); raise exception 'missing schema accepted'; exception when sqlstate '22023' then null; end $$;
 select public.business_lab_cycle_write(:KA,'{"schema":2,"n":1}',0) = 1 as first_ok \gset
 \if :first_ok \else \echo 'FAIL: first write' \quit \endif
 do $$ begin perform public.business_lab_cycle_write('key-for-account-a-0123456789abcdefghij','{"schema":2,"n":9}',0); raise exception 'second insert accepted'; exception when sqlstate '40001' then null; end $$;
-select public.business_lab_cycle_write(:KA,'{"schema":2,"n":2}',1) = 2 as second_ok \gset
+select public.business_lab_cycle_write(:KA,'{"schema":3,"n":2}',1) = 2 as second_ok \gset
 \if :second_ok \else \echo 'FAIL: second write' \quit \endif
 do $$ begin perform public.business_lab_cycle_write('key-for-account-a-0123456789abcdefghij','{"schema":2,"n":9}',1); raise exception 'stale write accepted'; exception when sqlstate '40001' then null; end $$;
 select (public.business_lab_cycle_read(:KA))->'value'->>'n' = '2' and (public.business_lab_cycle_read(:KB))->>'revision' = '0' as isolated \gset

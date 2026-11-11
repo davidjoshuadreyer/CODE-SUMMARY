@@ -97,8 +97,13 @@ declare
   v_owner uuid := public.business_lab_cycle_owner(p_key);
   v_next integer;
 begin
-  if p_value is null or jsonb_typeof(p_value) <> 'object' or (p_value->>'schema') not in ('1', '2') then
-    raise exception 'The lab must be a schema 1 or 2 object' using errcode = '22023';
+  -- The page and dev/business-lab-cycle.cjs validate the full format; here we
+  -- only require a lab object with a whole-number schema version, so new
+  -- schema versions need no SQL change.
+  if p_value is null or jsonb_typeof(p_value) <> 'object'
+     or coalesce(jsonb_typeof(p_value->'schema'), '') <> 'number'
+     or coalesce(p_value->>'schema', '') !~ '^[1-9][0-9]?$' then
+    raise exception 'The lab must be an object with a schema version' using errcode = '22023';
   end if;
   if octet_length(p_value::text) > 2500000 then
     raise exception 'The lab is over 2.5 MB' using errcode = '22023';
