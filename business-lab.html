@@ -7,17 +7,34 @@
 <meta name="robots" content="noindex,nofollow">
 <title>Business Lab · Tesselate</title>
 <style>
-:root{color-scheme:light;--paper:#f7f6f0;--ink:#1e2c26;--muted:#506057;--line:#c9cec2;--green:#214e40;--mint:#dce7d4;--white:#fffef9;--accent:#ecbd73;--sans:"Instrument Sans","Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--serif:"Instrument Serif","Iowan Old Style",Baskerville,Georgia,serif;--mono:"IBM Plex Mono",ui-monospace,monospace}
+:root{color-scheme:light;--paper:#f7f6f0;--ink:#1e2c26;--muted:#506057;--line:#c9cec2;--green:#214e40;--mint:#dce7d4;--white:#fffef9;--accent:#ecbd73;--warn:#8a351d;--warnbg:#f6e3d6;--flag:#f3e6c4;--sans:"Instrument Sans","Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--serif:"Instrument Serif","Iowan Old Style",Baskerville,Georgia,serif;--mono:"IBM Plex Mono",ui-monospace,monospace}
 *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 var(--sans)}[hidden]{display:none!important}a{color:var(--green);text-underline-offset:.2em}a:hover{text-decoration-thickness:2px}
-button,.file-label{cursor:pointer;border:1px solid var(--green);background:var(--green);color:white;font:600 14px/1.3 var(--sans);border-radius:5px;padding:.75rem 1rem;text-align:center}button:hover,.file-label:hover{filter:brightness(1.13)}button:disabled{opacity:.5;cursor:auto}.quiet,.file-label{background:transparent;color:var(--green)}:focus-visible{outline:3px solid #ce7519;outline-offset:3px}
+button,.file-label{cursor:pointer;border:1px solid var(--green);background:var(--green);color:white;font:600 14px/1.3 var(--sans);border-radius:5px;padding:.75rem 1rem;text-align:center}button:hover,.file-label:hover{filter:brightness(1.13)}button:disabled{opacity:.5;cursor:auto;filter:none}.quiet,.file-label{background:transparent;color:var(--green)}button.sm{padding:.4rem .7rem;font-size:13px}:focus-visible{outline:3px solid #ce7519;outline-offset:3px}
 .wrap{width:min(1180px,calc(100% - 64px));margin-inline:auto}.bar{background:var(--ink);color:var(--paper)}.bar .wrap{min-height:58px;display:flex;align-items:center;gap:18px;justify-content:space-between}.brand{display:flex;align-items:center;gap:.6rem;color:inherit;text-decoration:none;font-weight:700;letter-spacing:-.045em;font-size:21px}.mark{width:20px;height:20px;display:inline-block;background:conic-gradient(from 45deg,#a6c49e 0 25%,#f0c580 0 50%,#91a790 0 75%,#f6edce 0);transform:rotate(-5deg);border-radius:3px}.bar-right{display:flex;align-items:center;gap:1rem;font-size:13px}.bar a.home{color:inherit}.bar button{border-color:#738779;color:white;padding:.45rem .85rem;background:transparent}
-header{display:flex;align-items:flex-end;justify-content:space-between;gap:1.25rem;padding:49px 0 28px;border-bottom:1px solid var(--line)}h1,h2,h3,p{margin:0}h1{font:normal clamp(3.3rem,7vw,6.4rem)/.95 var(--serif);letter-spacing:-.06em}.date,.label,.eyebrow{font:600 11px/1.45 var(--mono);letter-spacing:.065em;text-transform:uppercase}.date,.label{color:var(--muted)}.eyebrow{display:block;color:var(--muted);margin-bottom:9px}
-.state{padding:18px 0 0}.state p{color:var(--muted);font-size:14px}.gate{max-width:670px;background:var(--white);border:1px solid var(--line);border-radius:9px;margin:35px 0;padding:clamp(25px,4vw,48px)}.gate h2,.section h2,.import h2{font:normal clamp(1.65rem,3vw,2.5rem)/1.12 var(--serif);letter-spacing:-.035em}.gate p{color:var(--muted);margin:.7rem 0 1.35rem}
-.dashboard{margin:26px 0}.metrics{display:grid;grid-template-columns:1.65fr 1fr 1fr;border:1px solid var(--line);border-radius:9px;overflow:hidden;background:var(--white)}.metric{padding:22px 24px;border-left:1px solid var(--line);min-width:0}.metric:first-child{border:0;background:var(--green);color:white}.metric:first-child .label,.metric:first-child .small{color:#d6e4d6}.metric .value{display:block;font:normal clamp(2.15rem,4.2vw,3.9rem)/1.1 var(--serif);letter-spacing:-.045em;margin:.25em 0 .1em;overflow-wrap:anywhere}.small{font-size:13px;color:var(--muted)}.track{height:5px;border-radius:4px;background:#587b6a;margin:12px 0 7px}.track span{height:100%;display:block;background:var(--accent);border-radius:4px;width:0}
-.section{margin-top:42px}.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:15px}.hint{font-size:13px;color:var(--muted)}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,285px),1fr));gap:14px}.card,.source-list,.decisions{border:1px solid var(--line);border-radius:8px;background:var(--white)}.card{padding:20px;display:flex;flex-direction:column;align-items:flex-start;gap:11px}.pill{font:600 11px/1.5 var(--mono);background:var(--mint);color:#264e37;padding:2px 8px;border-radius:3px}.card h3{font:normal 1.65rem/1.08 var(--serif);letter-spacing:-.025em}.card p,.source-list p,.decisions p{font-size:14px;overflow-wrap:anywhere;white-space:pre-line}.card .label{display:block;margin-bottom:3px}.price{color:var(--green)}.card div:last-child{border-top:1px solid var(--line);padding-top:10px;width:100%}
-.twin{display:grid;grid-template-columns:1fr 1fr;gap:25px}.source-list,.decisions{padding:0 19px;list-style:none;margin:0}.source-list li,.decisions li{padding:14px 0}.source-list li+li,.decisions li+li{border-top:1px solid var(--line)}.source-list a{font-weight:650;overflow-wrap:anywhere}.source-list p{margin-top:4px;color:var(--muted)}.decisions time{font:600 11px/1.5 var(--mono);color:var(--muted)}.empty{padding:.5rem 0;color:var(--muted)}
-.import{margin:35px 0;padding:19px 23px;border:1px solid var(--line);border-radius:8px;background:var(--white)}summary{font-weight:650;cursor:pointer;color:var(--green)}.import p{font-size:14px;color:var(--muted);margin:12px 0}.tools{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap}.import label.text-label{display:block;margin:.8rem 0 .3rem;font-weight:600;font-size:14px}textarea{display:block;width:100%;min-height:7em;resize:vertical;border:1px solid #a3aea1;border-radius:5px;background:var(--paper);color:var(--ink);padding:10px;font:13px/1.45 var(--mono)}.actions{margin-top:.7rem}.file-label input{max-width:100%;font-family:inherit;font-size:13px;margin-left:5px}.status{min-height:1.35em}.status.error{color:#8a351d}footer{margin:40px 0;color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:15px}
-@media(max-width:720px){.wrap{width:calc(100% - 30px)}header{padding:32px 0 22px;align-items:flex-start;flex-direction:column}.metrics{grid-template-columns:1fr 1fr}.metric:first-child{grid-column:1/-1}.metric:nth-child(2){border-left:0}.metric{padding:16px}.twin{grid-template-columns:1fr;gap:0}.section{margin-top:28px}.bar-right{gap:8px}.section-head{align-items:flex-start;flex-direction:column;gap:4px}.import{padding:15px}.file-label input{display:block;margin:.4em 0 0}}
+header{display:flex;align-items:flex-end;justify-content:space-between;gap:1.25rem;padding:49px 0 28px;border-bottom:1px solid var(--line)}h1,h2,h3,h4,p{margin:0}h1{font:normal clamp(3.3rem,7vw,6.4rem)/.95 var(--serif);letter-spacing:-.06em}.date,.label,.eyebrow{font:600 11px/1.45 var(--mono);letter-spacing:.065em;text-transform:uppercase}.date,.label{color:var(--muted)}.eyebrow{display:block;color:var(--muted);margin-bottom:9px}
+.state{padding:18px 0 0}.state p{color:var(--muted);font-size:14px}.gate{max-width:670px;background:var(--white);border:1px solid var(--line);border-radius:9px;margin:35px 0;padding:clamp(25px,4vw,48px)}.gate h2,.section h2{font:normal clamp(1.65rem,3vw,2.5rem)/1.12 var(--serif);letter-spacing:-.035em}.gate p{color:var(--muted);margin:.7rem 0 1.35rem}
+.dashboard{margin:26px 0}.metrics{display:grid;grid-template-columns:1.65fr 1fr 1fr 1fr;border:1px solid var(--line);border-radius:9px;overflow:hidden;background:var(--white)}.metric{padding:22px 24px;border-left:1px solid var(--line);min-width:0}.metric:first-child{border:0;background:var(--green);color:white}.metric:first-child .label,.metric:first-child .small{color:#d6e4d6}.metric .value{display:block;font:normal clamp(2rem,3.8vw,3.6rem)/1.1 var(--serif);letter-spacing:-.045em;margin:.25em 0 .1em;overflow-wrap:anywhere}.small{font-size:13px;color:var(--muted)}.track{height:5px;border-radius:4px;background:#587b6a;margin:12px 0 7px}.track span{height:100%;display:block;background:var(--accent);border-radius:4px;width:0}
+.section{margin-top:42px}.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:15px;flex-wrap:wrap}.hint{font-size:13px;color:var(--muted)}.panel{border:1px solid var(--line);border-radius:8px;background:var(--white)}
+.steps{list-style:none;margin:0;padding:0;counter-reset:step}.steps li{counter-increment:step;display:grid;grid-template-columns:2.2rem 1fr auto;gap:12px;align-items:center;padding:14px 18px}.steps li+li{border-top:1px solid var(--line)}.steps li::before{content:counter(step);font:normal 1.6rem/1 var(--serif);color:var(--green)}.steps strong{display:block;font-weight:650}.steps span.why{display:block;font-size:13px;color:var(--muted);overflow-wrap:anywhere}.steps .do{display:flex;gap:.5rem;flex-wrap:wrap;justify-content:flex-end}.steps li.done::before{content:"✓"}.steps li.david{background:#fbf3e0}
+.paste textarea{min-height:9em}.paste{padding:18px 20px}.preview{margin:.8rem 0 0;padding:12px 14px;background:var(--paper);border:1px solid var(--line);border-radius:6px;font-size:14px}.preview ul{margin:.3rem 0 0;padding-left:1.2rem}.preview .warnings{color:var(--warn)}
+.chips{display:flex;gap:6px;flex-wrap:wrap}.chip{background:transparent;color:var(--green);border:1px solid var(--line);padding:.35rem .7rem;font-size:13px;border-radius:999px}.chip[aria-pressed="true"]{background:var(--green);color:white;border-color:var(--green)}
+.daynav{display:flex;align-items:center;gap:8px}.daynav .label{min-width:9.5em;text-align:center}
+.grid{display:grid;grid-template-columns:minmax(150px,.7fr) 1fr 1fr;overflow:hidden}.grid>div{padding:12px 16px;border-top:1px solid var(--line);min-width:0}.grid>div:nth-child(-n+3){border-top:0}.grid .cat{font-weight:650;font-size:14px}.grid .colhead{font:600 11px/1.45 var(--mono);letter-spacing:.065em;text-transform:uppercase;color:var(--muted)}.cell-title{font-size:14px;font-weight:600;overflow-wrap:anywhere}.cell-meta{font-size:12px;color:var(--muted)}.missing{font-size:13px;color:var(--muted);font-style:italic}
+.board{list-style:none;margin:0;padding:0}.board>li+li{border-top:1px solid var(--line)}.board details>summary{list-style:none;display:grid;grid-template-columns:2.4rem 1fr auto;gap:12px;align-items:center;padding:13px 18px;color:inherit;font-weight:400}.board details>summary::-webkit-details-marker{display:none}.rank{font:normal 1.7rem/1 var(--serif);color:var(--green)}.board h3{font-size:15px;font-weight:650;line-height:1.35;overflow-wrap:anywhere}.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}.pill{font:600 11px/1.5 var(--mono);background:var(--mint);color:#264e37;padding:2px 8px;border-radius:3px;white-space:nowrap}.pill.flag{background:var(--flag);color:#6b4a0c}.pill.bad{background:var(--warnbg);color:var(--warn)}.pill.plain{background:transparent;border:1px solid var(--line);color:var(--muted)}
+.scores{display:flex;gap:14px;align-items:center;text-align:right}.scores b{display:block;font:normal 1.7rem/1 var(--serif)}.scores span{font:600 10px/1.4 var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.detail{padding:0 18px 18px calc(2.4rem + 30px);display:grid;grid-template-columns:1fr 1fr;gap:12px 24px}.detail p{font-size:14px;overflow-wrap:anywhere;white-space:pre-line}.detail .label{display:block;margin-bottom:2px}.detail .wide{grid-column:1/-1}.detail .actions{display:flex;gap:.5rem;flex-wrap:wrap;grid-column:1/-1;align-items:center}.factor{width:100%;border-collapse:collapse;font-size:13px}.factor td,.factor th{padding:3px 6px;border-bottom:1px solid var(--line);text-align:left}.factor th{font:600 10px/1.4 var(--mono);text-transform:uppercase;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:14px}.card{border:1px solid var(--line);border-radius:8px;background:var(--white);padding:20px;display:flex;flex-direction:column;align-items:flex-start;gap:10px}.card h3{font:normal 1.5rem/1.1 var(--serif);letter-spacing:-.025em;overflow-wrap:anywhere}.card p{font-size:14px;overflow-wrap:anywhere;white-space:pre-line}.card .label{display:block;margin-bottom:3px}.card .row{border-top:1px solid var(--line);padding-top:9px;width:100%}.money{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;width:100%;font-size:13px}.money b{display:block;font:normal 1.3rem/1.1 var(--serif)}.check{background:var(--paper);border-radius:6px;padding:8px 10px;width:100%;font-size:13px}.check.due{background:var(--flag)}
+.vs{display:grid;grid-template-columns:1fr 1fr}.vs>div{padding:20px 22px;min-width:0}.vs>div+div{border-left:1px solid var(--line)}.vs h3{font:normal 1.9rem/1.1 var(--serif)}.vs dl{display:grid;grid-template-columns:1fr auto;gap:4px 12px;margin:12px 0 0;font-size:14px}.vs dd{margin:0;font-weight:650;text-align:right}.vs .lead{font:600 11px/1.5 var(--mono);color:var(--green)}
+.history{display:flex;gap:10px;align-items:flex-end;padding:14px 18px;min-height:110px;overflow-x:auto}.history div{display:flex;flex-direction:column;align-items:center;gap:4px;font-size:11px;color:var(--muted);min-width:44px}.history i{display:block;width:26px;background:var(--green);border-radius:3px 3px 0 0}
+.list{list-style:none;margin:0;padding:0 19px}.list li{padding:13px 0}.list li+li{border-top:1px solid var(--line)}.list p{font-size:14px;overflow-wrap:anywhere;white-space:pre-line}.list .meta{font:600 11px/1.5 var(--mono);color:var(--muted);display:block;margin-bottom:2px}.list a{font-weight:650;overflow-wrap:anywhere}.empty{padding:14px 0;color:var(--muted);font-size:14px}
+.twin{display:grid;grid-template-columns:1fr 1fr;gap:25px}details.fold>summary{font-weight:650;cursor:pointer;color:var(--green);padding:14px 19px}details.fold[open]>summary{border-bottom:1px solid var(--line)}
+.import{margin:35px 0;padding:19px 23px}.import>summary{font-weight:650;cursor:pointer;color:var(--green)}.import p{font-size:14px;color:var(--muted);margin:12px 0}.tools{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap}label.text-label{display:block;margin:.2rem 0 .4rem;font-weight:600;font-size:14px}textarea{display:block;width:100%;min-height:7em;resize:vertical;border:1px solid #a3aea1;border-radius:5px;background:var(--paper);color:var(--ink);padding:10px;font:13px/1.45 var(--mono)}.actions{margin-top:.7rem}.file-label input{max-width:100%;font-family:inherit;font-size:13px;margin-left:5px}.status{min-height:1.35em;font-size:14px;margin-top:.5rem}.status.error{color:var(--warn)}footer{margin:40px 0;color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:15px}
+dialog{border:1px solid var(--line);border-radius:9px;background:var(--white);color:var(--ink);padding:22px;width:min(760px,calc(100% - 32px));max-height:calc(100% - 40px)}dialog::backdrop{background:#1e2c2680}dialog h2{font:normal 1.8rem/1.1 var(--serif);margin-bottom:.4rem}dialog p{font-size:14px;color:var(--muted);margin-bottom:.7rem}dialog textarea{min-height:16em}
+@media(max-width:860px){.metrics{grid-template-columns:1fr 1fr}.metric:first-child{grid-column:1/-1}.metric:nth-child(2){border-left:0}.metric:nth-child(n+2){border-top:1px solid var(--line)}}
+@media(max-width:720px){.wrap{width:calc(100% - 32px)}header{padding:32px 0 22px;align-items:flex-start;flex-direction:column}.metric{padding:16px}.twin,.vs{grid-template-columns:1fr;gap:0}.vs>div+div{border-left:0;border-top:1px solid var(--line)}.section{margin-top:30px}.bar-right{gap:8px}.import{padding:15px}.file-label input{display:block;margin:.4em 0 0}
+.steps li{grid-template-columns:1.8rem 1fr;padding:13px 14px}.steps .do{grid-column:2;justify-content:flex-start}
+.grid{grid-template-columns:1fr 1fr}.grid .colhead.first{display:none}.grid>div.cat{grid-column:1/-1;background:var(--paper);padding:8px 14px}.grid>div{padding:10px 14px;border-top:1px solid var(--line)}.grid>div:nth-child(-n+3){border-top:0}
+.board details>summary{grid-template-columns:1.8rem 1fr;padding:12px 14px}.scores{grid-column:2;justify-content:flex-start;text-align:left}.detail{grid-template-columns:1fr;padding:0 14px 16px}}
 </style>
 </head>
 <body>
@@ -25,214 +42,709 @@ header{display:flex;align-items:flex-end;justify-content:space-between;gap:1.25r
 <main class="wrap">
 <header><div><span class="eyebrow">Private workspace</span><h1>Business Lab</h1></div><span id="as-of" class="date"></span></header>
 <div class="state" aria-live="polite"><p id="notice">Opening workspace…</p></div>
-<section id="gate" class="gate" hidden><h2>Your portfolio</h2><p id="gate-text"></p><button id="signin" hidden>Sign in with Google</button></section>
-<section id="dashboard" class="dashboard" hidden aria-label="Portfolio overview">
+<section id="gate" class="gate" hidden><h2>Your income lab</h2><p id="gate-text"></p><button id="signin" hidden>Sign in with Google</button></section>
+
+<section id="dashboard" class="dashboard" hidden aria-label="Income lab overview">
 <div class="metrics">
-<div class="metric"><span class="label">Monthly contribution</span><strong class="value" id="contribution"></strong><div class="track" aria-hidden="true"><span id="fill"></span></div><span class="small" id="target"></span></div>
-<div class="metric"><span class="label">Cash received</span><strong class="value" id="receipts"></strong><span class="small" id="deductions"></span></div>
-<div class="metric"><span class="label">Paid orders</span><strong class="value" id="orders"></strong><span class="small">A show view measures reach. A qualified buyer seeing the price counts as an offer exposure. A payment counts here.</span></div>
+<div class="metric"><span class="label">Net this month</span><strong class="value" id="net"></strong><div class="track" aria-hidden="true"><span id="fill"></span></div><span class="small" id="target"></span></div>
+<div class="metric"><span class="label">Daily cycle</span><strong class="value" id="day"></strong><span class="small" id="day-note"></span></div>
+<div class="metric"><span class="label">Live tests</span><strong class="value" id="slots"></strong><span class="small" id="builds"></span></div>
+<div class="metric"><span class="label">Competition</span><strong class="value" id="leader"></strong><span class="small" id="leader-note"></span></div>
 </div>
-<section class="section"><div class="section-head"><h2>Experiment board</h2><span class="hint" id="count"></span></div><div class="cards" id="experiments"></div></section>
-<div class="twin"><section class="section"><div class="section-head"><h2>Research sources</h2></div><ul class="source-list" id="sources"></ul></section><section class="section"><div class="section-head"><h2>Decision log</h2></div><ol class="decisions" id="decisions"></ol></section></div>
+
+<section class="section" aria-labelledby="steps-h"><div class="section-head"><h2 id="steps-h">Next steps</h2><span class="hint">Work top to bottom. Each step says what to copy and where to paste it.</span></div><ol class="steps panel" id="steps"></ol></section>
+
+<section class="section" aria-labelledby="paste-h"><div class="section-head"><h2 id="paste-h">Paste a model's output</h2><span class="hint">Daily round, cross-review or Friday update. The page works out which one it is.</span></div>
+<div class="panel paste"><label class="text-label" for="json">Paste the JSON reply from Claude or ChatGPT</label><textarea id="json" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder='{"kind": "round", "model": "chatgpt", "date": "…", "cards": […]}'></textarea>
+<div class="tools actions"><button id="inspect">Check it</button><button id="save" hidden>Add to my lab</button><button class="quiet" id="discard" hidden>Discard</button></div>
+<div class="preview" id="preview" hidden></div><p class="status" id="import-status" aria-live="polite"></p></div></section>
+
+<section class="section" aria-labelledby="round-h"><div class="section-head"><h2 id="round-h">Daily round</h2><div class="daynav"><button class="quiet sm" id="prev-day" aria-label="Previous day">←</button><span class="label" id="round-date"></span><button class="quiet sm" id="next-day" aria-label="Next day">→</button></div></div>
+<div class="panel grid" id="round"></div></section>
+
+<section class="section" aria-labelledby="board-h"><div class="section-head"><h2 id="board-h">Leaderboard</h2><div class="chips" id="cat-filter" role="group" aria-label="Filter by category"></div></div>
+<p class="hint" style="margin:-6px 0 12px">Ranked by the average of both models' scores out of 18. Cards from the last 14 days only. An average under 12 is never built. A gap of 4 or more points goes to you.</p>
+<ol class="board panel" id="board"></ol></section>
+
+<section class="section" aria-labelledby="tests-h"><div class="section-head"><h2 id="tests-h">Live tests</h2><span class="hint" id="tests-hint"></span></div><div class="cards" id="tests"></div>
+<details class="fold panel" id="ended-wrap" style="margin-top:14px" hidden><summary id="ended-sum"></summary><div class="cards" id="ended" style="padding:14px"></div></details></section>
+
+<section class="section" aria-labelledby="vs-h"><div class="section-head"><h2 id="vs-h">Claude vs ChatGPT</h2><span class="hint">Won on net revenue from each model's ideas, not on idea count.</span></div><div class="panel vs" id="vs"></div></section>
+
+<section class="section" aria-labelledby="hist-h"><div class="section-head"><h2 id="hist-h">Progress to $1,000 a month</h2><button class="quiet sm" id="close-month" hidden></button></div><div class="panel history" id="history"></div></section>
+
+<section class="section" aria-labelledby="rej-h"><div class="section-head"><h2 id="rej-h">Rejected ideas</h2><span class="hint">Kept with the reason, so bad ideas stay flagged and are not tried again.</span></div>
+<details class="fold panel"><summary id="rej-sum"></summary><ul class="list" id="rejected"></ul></details>
+<details class="fold panel" style="margin-top:14px"><summary id="backlog-sum"></summary><ol class="board" id="backlog"></ol></details></section>
+
+<div class="twin"><section class="section"><div class="section-head"><h2>Research sources</h2></div><ul class="list panel" id="sources"></ul></section><section class="section"><div class="section-head"><h2>Decision log</h2></div><ol class="list panel" id="decisions"></ol></section></div>
 </section>
-<details class="import" id="import" hidden><summary>Import a portfolio</summary>
+
+<details class="import panel" id="import" hidden><summary>Backup, restore and full replace</summary>
 <p id="import-help"></p>
-<div class="tools"><label class="file-label">Choose a JSON file<input id="file" type="file" accept=".json,application/json"></label></div>
-<label class="text-label" for="json">Or paste portfolio JSON</label><textarea id="json" autocomplete="off" autocapitalize="off" spellcheck="false"></textarea>
-<div class="tools actions"><button id="inspect">Review portfolio</button><button id="save" hidden>Save to my account</button><button class="quiet" id="refresh" hidden>Refresh saved portfolio</button></div>
-<p class="status" id="import-status" aria-live="polite"></p></details>
+<div class="tools"><button class="quiet" id="download">Download a backup</button><button class="quiet" id="copy-all">Copy the whole lab as JSON</button><label class="file-label">Open a JSON file<input id="file" type="file" accept=".json,application/json"></label><button class="quiet" id="refresh" hidden>Reload saved lab</button></div>
+<p>A file you open is checked the same way as a paste. A full lab file (schema 1 or 2) replaces everything after you confirm; a round, review or update file is added.</p></details>
 <footer>Business Lab · Tesselate</footer>
 </main>
+
+<dialog id="prompt-dialog" aria-labelledby="prompt-title"><h2 id="prompt-title"></h2><p id="prompt-help"></p><textarea id="prompt-text" readonly spellcheck="false"></textarea><div class="tools actions"><button id="prompt-copy">Copy</button><button class="quiet" id="prompt-close">Close</button><span class="small" id="prompt-status" aria-live="polite"></span></div></dialog>
+
 <script>
 'use strict';
 const $=id=>document.getElementById(id);
-const KEY='business-lab/portfolio-v1';
+const KEY='business-lab/portfolio-v1'; // storage key kept from schema 1 so saved data and the cycle-key proposal keep working
 const local=location.protocol==='file:';
-let cloud=null,owner=null,generation=0,request=0,revision=0,ready=false,busy=false,draft=null,fileVersion=0;
-const fieldNames=['schema','asOf','currency','target','month','receipts','fees','refunds','costs','paidOrders','experiments','sources','decisions'];
-const own=(value,key)=>Object.prototype.hasOwnProperty.call(value,key);
-function object(value,fields){
-  if(!value||typeof value!=='object'||Array.isArray(value)||fields.some(k=>!own(value,k))||Object.keys(value).some(k=>!fields.includes(k))) throw Error('A field is missing or unsupported.');
+const MAX_BYTES=2500000,MAX_LIST=10000,TEXT=12000;
+const CATS=[['video','Social media video'],['apps','Apps and games'],['saas','Micro-SaaS and tools'],['products','Digital products'],['services','Services'],['content','Content and affiliate']];
+const CAT_LABEL=Object.fromEntries([...CATS,['other','Not yet categorised']]);
+const MODELS={claude:'Claude',chatgpt:'ChatGPT'};
+const RIVAL={claude:'chatgpt',chatgpt:'claude'};
+const FACTORS=[['cost','Upfront cost'],['time','Time to first dollar'],['demand','Demand evidence'],['saturation','Saturation'],['platform','Platform risk'],['upkeep','Weekly upkeep']];
+const STAGES=['Queued','Building','Testing','Earning','Scaling','Paused','Killed'];
+const ACTIVE=['Building','Testing'];
+const CALLS=['continue','kill','pivot','scale'];
+const MONEY=['receipts','fees','refunds','costs','orders'];
+const CHECKS=[[14,'Day 14 signal check','about 300 targeted views or visits and at least 1% clicking, signing up or replying. No signal: kill.'],[30,'Day 30 money check','at least one paying customer. None: kill, or one logged pivot of angle or price and a final 14 days.'],[60,'Day 60 trajectory check','net growing month over month and at least $100 net. Otherwise kill, or keep as passive if upkeep is under 30 minutes a week.']];
+let cloud=null,owner=null,generation=0,request=0,revision=0,ready=false,busy=false,fileVersion=0;
+let data=null,draft=null,legacy=false,viewDate=null,catFilter='all';
+
+/* ---------- small helpers ---------- */
+const own=(o,k)=>Object.prototype.hasOwnProperty.call(o,k);
+const isObj=v=>v&&typeof v==='object'&&!Array.isArray(v);
+function pad(n){return String(n).padStart(2,'0');}
+function today(){const d=new Date();return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());}
+function addDays(s,n){const d=new Date(s+'T00:00:00Z');d.setUTCDate(d.getUTCDate()+n);return d.toISOString().slice(0,10);}
+function daysBetween(a,b){return Math.round((new Date(b+'T00:00:00Z')-new Date(a+'T00:00:00Z'))/86400000);}
+function weekStart(s){const d=new Date(s+'T00:00:00Z');return addDays(s,-((d.getUTCDay()+6)%7));}
+function weekday(s){return new Date(s+'T00:00:00Z').getUTCDay();}
+function nice(s){return new Date(s+'T00:00:00Z').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric',timeZone:'UTC'});}
+function niceMonth(m){return new Date(m+'-01T00:00:00Z').toLocaleDateString('en-US',{month:'short',year:'numeric',timeZone:'UTC'});}
+const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',minimumFractionDigits:0,maximumFractionDigits:2}).format(n);
+const total=s=>s?FACTORS.reduce((a,[k])=>a+s[k],0):null;
+const fmt=n=>n===null?'–':(Math.round(n*10)/10).toString();
+function clone(v){return JSON.parse(JSON.stringify(v));}
+function node(tag,text,cls){const el=document.createElement(tag);if(text!==undefined&&text!==null)el.textContent=text;if(cls)el.className=cls;return el;}
+function btn(text,fn,cls='sm'){const b=node('button',text,cls);b.type='button';b.addEventListener('click',fn);return b;}
+
+/* ---------- strict validation of the stored lab (schema 2) ---------- */
+function fields(v,list,where){
+  if(!isObj(v))throw Error(where+' must be an object.');
+  for(const k of list)if(!own(v,k))throw Error(where+' is missing "'+k+'".');
+  for(const k of Object.keys(v))if(!list.includes(k))throw Error(where+' has an unsupported field "'+k+'".');
 }
-function short(value,field,limit=12000){
-  if(typeof value!=='string'||value.length>limit)throw Error('Check the '+field+' field.');
-  return value;
+function str(v,where,limit=TEXT){if(typeof v!=='string'||v.length>limit)throw Error('Check '+where+'.');return v;}
+function day(v,where='a date'){
+  if(typeof v!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(v))throw Error('Use YYYY-MM-DD for '+where+'.');
+  const d=new Date(v+'T00:00:00Z');if(!Number.isFinite(d.getTime())||d.toISOString().slice(0,10)!==v)throw Error('Check the calendar date in '+where+'.');return v;
 }
-function date(value){
-  if(typeof value!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(value))throw Error('Use a valid YYYY-MM-DD date.');
-  const d=new Date(value+'T00:00:00Z');
-  if(!Number.isFinite(d.getTime())||d.toISOString().slice(0,10)!==value)throw Error('Check the calendar date.');
-  return value;
+function monthStr(v,where){if(typeof v!=='string'||!/^\d{4}-(0[1-9]|1[0-2])$/.test(v))throw Error('Use YYYY-MM for '+where+'.');return v;}
+function amount(v,where,signed=false){if(typeof v!=='number'||!Number.isFinite(v)||Math.abs(v)>1e12||(!signed&&v<0))throw Error('Check the amount in '+where+'.');return v;}
+function count(v,where){if(!Number.isSafeInteger(v)||v<0)throw Error('Check the count in '+where+'.');return v;}
+function link(v,where){
+  let u;try{u=new URL(str(v,where,4096));}catch{throw Error('Check the link in '+where+'.');}
+  if(!['https:','http:'].includes(u.protocol)||u.username||u.password)throw Error('Links in '+where+' must be plain HTTP or HTTPS.');return v;
 }
-function number(value,field){
-  if(typeof value!=='number'||!Number.isFinite(value)||value<0||value>Number.MAX_SAFE_INTEGER)throw Error('Check the '+field+' amount.');
-  return value;
+function list(v,where,fn){if(!Array.isArray(v)||v.length>MAX_LIST)throw Error('Check the '+where+' list.');return v.map((x,i)=>fn(x,where+' item '+(i+1)));}
+function ledger(v,where){fields(v,MONEY,where);const o={};for(const k of MONEY)o[k]=k==='orders'?count(v[k],where):amount(v[k],where);return o;}
+function score(v,where){
+  if(v===null)return null;fields(v,[...FACTORS.map(f=>f[0]),'improvement','redFlag'],where);
+  const o={};for(const [k] of FACTORS){if(!Number.isInteger(v[k])||v[k]<0||v[k]>3)throw Error('Scores in '+where+' must be whole numbers from 0 to 3.');o[k]=v[k];}
+  o.improvement=str(v.improvement,where);o.redFlag=str(v.redFlag,where);return o;
 }
-function url(value){
-  const link=new URL(short(value,'source URL',4096));
-  if(!['https:','http:'].includes(link.protocol)||link.username||link.password)throw Error('Sources must use an HTTP or HTTPS link.');
-  return value;
-}
-function items(value,fn){
-  if(!Array.isArray(value)||value.length>2500)throw Error('Check the portfolio lists.');
-  return value.map(fn);
-}
-function portfolio(p){
-  object(p,fieldNames);
-  if(p.schema!==1||p.currency!=='USD'||typeof p.month!=='string'||!/^\d{4}-(0[1-9]|1[0-2])$/.test(p.month)||!Number.isSafeInteger(p.paidOrders)||p.paidOrders<0)throw Error('Check the schema, currency, month, and paid order count.');
-  if(number(p.target,'target')===0)throw Error('The monthly target must be above zero.');
-  const clean={schema:1,asOf:date(p.asOf),currency:p.currency,target:p.target,month:p.month};
-  for(const key of ['receipts','fees','refunds','costs'])clean[key]=number(p[key],key);
-  clean.paidOrders=p.paidOrders;
+const CARD_F=['id','date','model','category','title','pitch','buyer','channel','price','redFlags','test','day14','day30','links','scores','david','archived'];
+const TEST_F=['id','cardId','title','category','model','stage','started','price','next','gate','evidence','month','pastNet','verdicts'];
+function lab(p){
+  fields(p,['schema','asOf','currency','target','startDate','month','shared','history','cards','rejected','tests','sources','decisions'],'The lab');
+  if(p.schema!==2||p.currency!=='USD')throw Error('Check the schema (2) and currency (USD).');
+  if(amount(p.target,'target')===0)throw Error('The monthly target must be above zero.');
+  const out={schema:2,asOf:day(p.asOf,'asOf'),currency:'USD',target:p.target,startDate:day(p.startDate,'startDate'),month:monthStr(p.month,'month'),shared:ledger(p.shared,'shared')};
+  out.history=list(p.history,'history',(h,w)=>{fields(h,['month','net','claude','chatgpt'],w);return {month:monthStr(h.month,w),net:amount(h.net,w,true),claude:amount(h.claude,w,true),chatgpt:amount(h.chatgpt,w,true)};});
   const ids=new Set();
-  clean.experiments=items(p.experiments,e=>{
-    const fields=['id','title','stage','price','next','gate','evidence'];object(e,fields);
-    const out={};
-    for(const k of fields)out[k]=k==='price'&&typeof e[k]==='number'?number(e[k],k):short(e[k],k);
-    if(!out.id.trim()||ids.has(out.id))throw Error('Use unique experiment IDs.');
-    ids.add(out.id);return out;
+  out.cards=list(p.cards,'cards',(c,w)=>{
+    fields(c,CARD_F,w);const o={};
+    o.id=str(c.id,w,40);if(!/^[co]-\d{3,6}$/.test(o.id)||ids.has(o.id))throw Error('Card IDs must be unique, like c-001 or o-001.');ids.add(o.id);
+    o.date=day(c.date,w);if(!MODELS[c.model])throw Error('Check the model in '+w+'.');o.model=c.model;
+    if((o.model==='claude')!==(o.id[0]==='c'))throw Error('Claude cards start c-, ChatGPT cards start o- ('+o.id+').');
+    if(!CATS.some(x=>x[0]===c.category))throw Error('Check the category in '+w+'.');o.category=c.category;
+    for(const k of ['title','pitch','buyer','channel','price','redFlags','test','day14','day30'])o[k]=str(c[k],w+' '+k);
+    if(!o.title.trim())throw Error('Every card needs a title.');
+    o.links=list(c.links,w+' links',(l,lw)=>{fields(l,['title','url'],lw);return {title:str(l.title,lw,500),url:link(l.url,lw)};});
+    fields(c.scores,['claude','chatgpt'],w+' scores');o.scores={claude:score(c.scores.claude,w+' Claude score'),chatgpt:score(c.scores.chatgpt,w+' ChatGPT score')};
+    if(!o.scores[o.model])throw Error(o.id+' needs its own model\'s score.');
+    if(!['','keep','reject'].includes(c.david))throw Error('Check the david field in '+w+'.');o.david=c.david;
+    if(typeof c.archived!=='boolean')throw Error('Check archived in '+w+'.');o.archived=c.archived;return o;
   });
-  clean.sources=items(p.sources,s=>{object(s,['title','url','note']);return {title:short(s.title,'title'),url:url(s.url),note:short(s.note,'note')};});
-  clean.decisions=items(p.decisions,d=>{object(d,['date','note']);return {date:date(d.date),note:short(d.note,'note')};});
-  return clean;
+  out.rejected=list(p.rejected,'rejected',(r,w)=>{fields(r,['date','model','category','idea','reason'],w);
+    if(!MODELS[r.model]&&r.model!=='david'&&r.model!=='unassigned')throw Error('Check the model in '+w+'.');if(!CAT_LABEL[r.category])throw Error('Check the category in '+w+'.');
+    return {date:day(r.date,w),model:r.model,category:r.category,idea:str(r.idea,w),reason:str(r.reason,w)};});
+  const tids=new Set();
+  out.tests=list(p.tests,'tests',(t,w)=>{
+    fields(t,TEST_F,w);const o={};o.id=str(t.id,w,80);if(!o.id.trim()||tids.has(o.id))throw Error('Test IDs must be unique.');tids.add(o.id);
+    o.cardId=str(t.cardId,w,40);o.title=str(t.title,w);if(!CAT_LABEL[t.category])throw Error('Check the category in '+w+'.');o.category=t.category;
+    if(!MODELS[t.model]&&t.model!=='unassigned')throw Error('Check the model in '+w+'.');o.model=t.model;
+    if(!STAGES.includes(t.stage))throw Error('Test stage must be one of: '+STAGES.join(', ')+'.');o.stage=t.stage;
+    o.started=day(t.started,w);for(const k of ['price','next','gate','evidence'])o[k]=str(t[k],w+' '+k);
+    o.month=ledger(t.month,w+' month');o.pastNet=amount(t.pastNet,w+' pastNet',true);
+    fields(t.verdicts,['date','claude','chatgpt'],w+' verdicts');const v=t.verdicts;
+    const call=(x,vw)=>{if(x===null)return null;fields(x,['call','note'],vw);if(!CALLS.includes(x.call))throw Error('Verdicts are '+CALLS.join(', ')+'.');return {call:x.call,note:str(x.note,vw)};};
+    o.verdicts={date:v.date===''?'':day(v.date,w),claude:call(v.claude,w),chatgpt:call(v.chatgpt,w)};return o;
+  });
+  out.sources=list(p.sources,'sources',(s,w)=>{fields(s,['title','url','note'],w);return {title:str(s.title,w),url:link(s.url,w),note:str(s.note,w)};});
+  out.decisions=list(p.decisions,'decisions',(d,w)=>{fields(d,['date','note'],w);return {date:day(d.date,w),note:str(d.note,w)};});
+  return out;
 }
-function node(tag,text,cls){
-  const el=document.createElement(tag);el.textContent=text;if(cls)el.className=cls;return el;
+function emptyLab(){const t=today();return {schema:2,asOf:t,currency:'USD',target:1000,startDate:'2026-11-11',month:t.slice(0,7),shared:zero(),history:[],cards:[],rejected:[],tests:[],sources:[],decisions:[]};}
+function zero(){return {receipts:0,fees:0,refunds:0,costs:0,orders:0};}
+
+/* ---------- schema 1 migration ---------- */
+function v1(p){
+  fields(p,['schema','asOf','currency','target','month','receipts','fees','refunds','costs','paidOrders','experiments','sources','decisions'],'The schema 1 portfolio');
+  if(p.schema!==1)throw Error('Not schema 1.');
+  return p;
 }
-function draw(p){
-  const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:p.currency,minimumFractionDigits:0,maximumFractionDigits:2}).format(n);
-  const net=p.receipts-p.fees-p.refunds-p.costs;
-  $('as-of').textContent='As of '+p.asOf; $('contribution').textContent=money(net);
-  $('target').textContent=money(p.target)+' target · '+p.month+' · '+Math.round(net/p.target*100)+'%';
-  $('fill').style.width=Math.min(100,Math.max(0,net/p.target*100))+'%';
-  $('receipts').textContent=money(p.receipts);$('orders').textContent=String(p.paidOrders);
-  $('deductions').textContent='Fees '+money(p.fees)+' · Refunds '+money(p.refunds)+' · Costs '+money(p.costs);
-  $('count').textContent=p.experiments.length+' experiment'+(p.experiments.length===1?'':'s');
-  const cards=p.experiments.map(e=>{
-    const card=node('article','','card');card.append(node('span',e.stage,'pill'),node('h3',e.title),node('p',typeof e.price==='number'?money(e.price):e.price,'price'));
-    for(const [label,val] of [['Next test',e.next],['Decision rule',e.gate],['Evidence so far',e.evidence]]){
-      const f=node('div','');f.append(node('span',label,'label'),node('p',val));card.append(f);
+function stageFrom(s){
+  const t=String(s).toLowerCase();
+  if(t.includes('kill'))return 'Killed';if(t.includes('reject'))return 'Rejected';if(t.includes('scal'))return 'Scaling';if(t.includes('earn'))return 'Earning';
+  if(t.includes('paus'))return 'Paused';if(t.includes('queue')||t.includes('wave 2')||t.includes('backlog'))return 'Queued';if(t.includes('test'))return 'Testing';return 'Building';
+}
+function migrate(p){
+  v1(p);const out=emptyLab();
+  out.asOf=p.asOf;out.target=p.target;out.month=p.month;
+  out.shared={receipts:p.receipts,fees:p.fees,refunds:p.refunds,costs:p.costs,orders:p.paidOrders};
+  for(const e of p.experiments){
+    const stage=stageFrom(e.stage),model=/^c-\d/.test(e.id)?'claude':/^o-\d/.test(e.id)?'chatgpt':'unassigned';
+    const price=typeof e.price==='number'?money(e.price):String(e.price);
+    if(stage==='Rejected'){out.rejected.push({date:p.asOf,model,category:'other',idea:String(e.title),reason:String(e.gate)});continue;}
+    out.tests.push({id:String(e.id),cardId:'',title:String(e.title),category:'other',model,stage,started:p.asOf,price,next:String(e.next),gate:String(e.gate),evidence:String(e.evidence)+(stage!=='Building'&&stage!=='Queued'?'':'')+'\nStage before upgrade: '+String(e.stage),month:zero(),pastNet:0,verdicts:{date:'',claude:null,chatgpt:null}});
+  }
+  out.sources=p.sources.map(s=>({title:String(s.title),url:String(s.url),note:String(s.note)}));
+  out.decisions=p.decisions.map(d=>({date:String(d.date),note:String(d.note)}));
+  out.decisions.push({date:p.asOf,note:'Upgraded to the daily-cycle format. This month\'s money so far is under "shared" because the old format had no per-test totals. Older experiments have no category yet.'});
+  return lab(out);
+}
+function loadLab(v){if(isObj(v)&&v.schema===1){legacy=true;return migrate(v);}legacy=false;return lab(v);}
+
+/* ---------- derived state ---------- */
+function testNet(t){return t.month.receipts-t.month.fees-t.month.refunds-t.month.costs;}
+function monthNet(p){return p.tests.reduce((a,t)=>a+testNet(t),0)+p.shared.receipts-p.shared.fees-p.shared.refunds-p.shared.costs;}
+function cardState(c,p){
+  const t=p.tests.find(t=>t.cardId===c.id);if(t)return 'test';
+  if(c.david==='reject')return 'rejected';
+  const flag=['claude','chatgpt'].some(m=>c.scores[m]&&c.scores[m].redFlag.trim());if(flag&&c.david!=='keep')return 'rejected';
+  if(daysBetween(c.date,today())>14)return 'backlog';return 'live';
+}
+function avg(c){const a=total(c.scores.claude),b=total(c.scores.chatgpt);return a===null||b===null?null:(a+b)/2;}
+function demandAvg(c){const v=['claude','chatgpt'].map(m=>c.scores[m]?.demand).filter(x=>x!==undefined);return v.length?v.reduce((a,b)=>a+b,0)/v.length:0;}
+function gap(c){const a=total(c.scores.claude),b=total(c.scores.chatgpt);return a===null||b===null?0:Math.abs(a-b);}
+function ranked(p,state='live'){
+  return p.cards.filter(c=>cardState(c,p)===state).sort((x,y)=>{
+    const ax=avg(x),ay=avg(y);if((ax===null)!==(ay===null))return ax===null?1:-1;
+    const sx=ax??total(x.scores[x.model]),sy=ay??total(y.scores[y.model]);return sy-sx||demandAvg(y)-demandAvg(x)||y.date.localeCompare(x.date);
+  });
+}
+function rankOf(p,id){const i=ranked(p).findIndex(c=>c.id===id);return i<0?null:i+1;}
+function active(p){return p.tests.filter(t=>ACTIVE.includes(t.stage));}
+function buildsThisWeek(p){const w=weekStart(today());return p.tests.filter(t=>t.cardId&&t.started>=w&&t.started<=addDays(w,6)).length;}
+function canStart(c,p){
+  if(cardState(c,p)!=='live')return 'Not on the live leaderboard.';
+  const a=avg(c);if(a===null)return 'Waiting for the rival\'s score.';if(a<12)return 'Average under 12, below the build line.';
+  if(gap(c)>=4&&c.david!=='keep')return 'Scores differ by 4 or more. Decide first.';
+  const act=active(p);if(act.length>=3)return 'All 3 test slots are full.';
+  if(act.some(t=>t.category===c.category))return 'This category already has a live test.';
+  if(buildsThisWeek(p)>=2)return 'Already 2 new builds this week.';return '';
+}
+function checkpoint(t){
+  const age=daysBetween(t.started,today());let due=null,next=null;
+  for(const c of CHECKS){const d=addDays(t.started,c[0]);if(age>=c[0])due={c,d};else if(!next)next={c,d};}
+  if(due&&t.verdicts.date&&t.verdicts.date>=due.d)due=null;
+  return {age,due,next};
+}
+function nextId(p,model){
+  const pre=model==='claude'?'c-':'o-';let n=0;
+  for(const x of [...p.cards.map(c=>c.id),...p.tests.map(t=>t.id)])if(x.startsWith(pre)){const k=parseInt(x.slice(2),10);if(k>n)n=k;}
+  return pre+String(n+1).padStart(3,'0');
+}
+function compact(p){
+  const cut=addDays(today(),-45);
+  for(const c of p.cards)if(!c.archived&&c.date<cut&&!p.tests.some(t=>t.cardId===c.id)){Object.assign(c,{buyer:'',channel:'',redFlags:'',test:'',day14:'',day30:'',links:[],archived:true});}
+  return p;
+}
+
+/* ---------- lenient readers for model output ---------- */
+function extractJSON(text){
+  const t=text.trim();try{return JSON.parse(t);}catch{}
+  const fence=t.match(/```(?:json)?\s*([\s\S]*?)```/i);if(fence){try{return JSON.parse(fence[1]);}catch{}}
+  const a=t.indexOf('{'),b=t.lastIndexOf('}');if(a>=0&&b>a){try{return JSON.parse(t.slice(a,b+1));}catch{}}
+  throw Error('That is not valid JSON. Paste only the JSON block from the reply.');
+}
+function modelKey(v){const t=String(v||'').toLowerCase();if(t.includes('claude'))return 'claude';if(t.includes('chatgpt')||t.includes('openai')||t.includes('gpt'))return 'chatgpt';return null;}
+function catKey(v){
+  const t=String(v||'').toLowerCase();if(CATS.some(c=>c[0]===t))return t;
+  if(t.includes('video')||t.includes('social')||t.includes('shorts'))return 'video';if(t.includes('game')||t.includes('app'))return 'apps';
+  if(t.includes('saas')||t.includes('tool'))return 'saas';if(t.includes('product')||t.includes('template')||t.includes('printable'))return 'products';
+  if(t.includes('service'))return 'services';if(t.includes('content')||t.includes('affiliate')||t.includes('newsletter'))return 'content';return null;
+}
+function txt(v,max=TEXT){if(v===undefined||v===null)return '';if(Array.isArray(v))v=v.join('\n');if(typeof v==='object')v=JSON.stringify(v);return String(v).slice(0,max);}
+function factorKey(k){
+  const t=k.toLowerCase().replace(/[^a-z]/g,'');
+  if(t==='cost'||t.includes('upfront'))return 'cost';if(t.startsWith('time'))return 'time';if(t.startsWith('demand'))return 'demand';
+  if(t.startsWith('satur'))return 'saturation';if(t.startsWith('platform'))return 'platform';if(t.includes('upkeep'))return 'upkeep';return null;
+}
+function readScore(src,where){
+  if(!isObj(src))throw Error(where+' needs a score with '+FACTORS.map(f=>f[0]).join(', ')+'.');
+  const s={};for(const [k,v] of Object.entries(src)){const f=factorKey(k);if(f)s[f]=v;}
+  for(const [k] of FACTORS){const v=typeof s[k]==='string'?Number(s[k]):s[k];if(!Number.isInteger(v)||v<0||v>3)throw Error(where+': "'+k+'" must be a whole number from 0 to 3.');s[k]=v;}
+  return s;
+}
+function readLinks(v){
+  const out=[];for(const l of Array.isArray(v)?v:[]){
+    const url=typeof l==='string'?l:(l&&(l.url||l.href));const title=typeof l==='string'?'':txt(l.title,500);
+    try{const u=new URL(url);if(['https:','http:'].includes(u.protocol)&&!u.username&&!u.password)out.push({title:title||u.hostname,url:u.href});}catch{}
+    if(out.length>=8)break;
+  }return out;
+}
+
+/* ---------- merging a paste into the lab ---------- */
+function merge(base,input){
+  const p=clone(base),lines=[],warn=[],t=today();
+  if(isObj(input)&&(input.schema===1||input.schema===2)){
+    const next=loadLab(input);legacy=false;
+    lines.push('Replaces your whole lab with this file ('+next.cards.length+' cards, '+next.tests.length+' tests, '+next.decisions.length+' decisions, as of '+next.asOf+').');
+    if(input.schema===1)lines.push('Converted from the old schema 1 format. Old experiments become tests with no category yet.');
+    if(base.cards.length||base.tests.length)warn.push('Anything in your saved lab that is not in this file will be lost. Download a backup first if unsure.');
+    return {next,lines,warn,kind:'replace'};
+  }
+  if(!isObj(input))throw Error('Paste one JSON object.');
+  const kind=String(input.kind||'').toLowerCase()||(input.cards?'round':input.reviews?'review':input.tests?'update':'');
+  const model=modelKey(input.model);
+  if(!model)throw Error('Add "model": "claude" or "chatgpt" so the page knows who wrote this.');
+  let date=input.date;if(date===undefined){date=t;warn.push('No date given, so today ('+t+') was used.');}day(date,'the date');
+  if(date>t)throw Error('The date '+date+' is in the future.');
+  if(kind==='round'){
+    if(!Array.isArray(input.cards))throw Error('A round needs a "cards" list.');
+    const old=p.cards.filter(c=>c.model===model&&c.date===date);
+    for(const c of old)if(p.tests.some(x=>x.cardId===c.id))throw Error(c.id+' from that round is already a live test, so the round cannot be replaced.');
+    const seen=new Set(),cards=[];
+    input.cards.slice(0,12).forEach((c,i)=>{
+      const w='Card '+(i+1)+(c&&c.title?' ("'+txt(c.title,60)+'")':'');
+      if(!isObj(c))throw Error(w+' is not an object.');
+      const cat=catKey(c.category);if(!cat)throw Error(w+' needs a category: '+CATS.map(x=>x[0]).join(', ')+'.');
+      if(seen.has(cat))throw Error('Two cards in '+CAT_LABEL[cat]+'. A round has one card per category.');seen.add(cat);
+      const title=txt(c.title,500).trim();if(!title)throw Error(w+' needs a title.');
+      const s=readScore(c.score||c.scores||c,w);
+      const prev=old.find(o=>o.category===cat);
+      const card={id:'',date,model,category:cat,title,pitch:txt(c.pitch),buyer:txt(c.buyer),channel:txt(c.channel),price:txt(c.price),redFlags:txt(c.redFlags??c.redFlagCheck??c.red_flags),test:txt(c.test??c.cheapestTest),day14:txt(c.day14),day30:txt(c.day30),links:readLinks(c.links||c.sources),scores:{claude:null,chatgpt:null},david:'',archived:false};
+      card.scores[model]={...s,improvement:'',redFlag:''};
+      if(prev){card.id=prev.id;if(prev.title===title)card.scores[RIVAL[model]]=prev.scores[RIVAL[model]];card.david=prev.title===title?prev.david:'';}
+      for(const k of ['pitch','buyer','channel','price','test','day14','day30'])if(!card[k].trim())warn.push(w+' has no '+k+'.');
+      cards.push(card);
+    });
+    p.cards=p.cards.filter(c=>!(c.model===model&&c.date===date));
+    for(const c of cards){if(!c.id){c.id=nextId(p,model);}p.cards.push(c);}
+    const rej=Array.isArray(input.rejected)?input.rejected:[];
+    p.rejected=p.rejected.filter(r=>!(r.model===model&&r.date===date));
+    for(const r of rej.slice(0,60)){if(!isObj(r))continue;const idea=txt(r.idea??r.title,2000).trim();if(!idea)continue;p.rejected.push({date,model,category:catKey(r.category)||'other',idea,reason:txt(r.reason,2000)||'No reason given'});}
+    for(const s of Array.isArray(input.sources)?input.sources.slice(0,40):[]){const l=readLinks([s])[0];if(l&&!p.sources.some(x=>x.url===l.url))p.sources.push({title:l.title,url:l.url,note:txt(s.note,2000)});}
+    const missing=CATS.filter(c=>!seen.has(c[0])).map(c=>c[1]);
+    lines.push((old.length?'Replaces ':'Adds ')+MODELS[model]+'\'s round for '+nice(date)+': '+cards.length+' card'+(cards.length===1?'':'s')+' ('+cards.map(c=>c.id).join(', ')+'), '+rej.length+' rejected idea'+(rej.length===1?'':'s')+'.');
+    if(missing.length)warn.push('No card for: '+missing.join(', ')+'. Add a rejected entry saying why, if there was no viable idea.');
+  }else if(kind==='review'){
+    const rows=Array.isArray(input.reviews)?input.reviews:Array.isArray(input.cards)?input.cards:null;if(!rows)throw Error('A review needs a "reviews" list.');
+    let n=0;const flagged=[],gaps=[];
+    for(const r of rows.slice(0,40)){
+      if(!isObj(r))continue;const id=txt(r.id??r.card,40).trim().toLowerCase();const c=p.cards.find(c=>c.id===id);
+      if(!c)throw Error('No card with ID "'+id+'". Use the IDs from the review prompt.');
+      if(c.model===model)throw Error(MODELS[model]+' cannot score its own card '+id+'. Each model scores only the rival\'s cards.');
+      const s=readScore(r.score||r.scores||r,id);const red=txt(r.redFlag??r.red_flag,2000).trim();
+      c.scores[model]={...s,improvement:txt(r.improvement,4000),redFlag:red};n++;
+      if(red)flagged.push(id);if(gap(c)>=4)gaps.push(id);
     }
-    return card;
-  });
-  $('experiments').replaceChildren(...(cards.length?cards:[node('p','No experiments recorded.','empty')]));
-  const sources=p.sources.map(s=>{
-    const item=node('li',''),link=node('a',s.title);link.href=s.url;link.target='_blank';link.rel='noopener noreferrer';item.append(link,node('p',s.note));return item;
-  });
-  $('sources').replaceChildren(...(sources.length?sources:[node('li','No research sources recorded.','empty')]));
-  const decisions=p.decisions.slice().sort((a,b)=>b.date.localeCompare(a.date)).map(d=>{
-    const item=node('li',''),t=node('time',d.date);t.dateTime=d.date;item.append(t,node('p',d.note));return item;
-  });
-  $('decisions').replaceChildren(...(decisions.length?decisions:[node('li','No decisions recorded.','empty')]));
+    lines.push(MODELS[model]+' scored '+n+' card'+(n===1?'':'s')+'.');
+    if(flagged.length)lines.push('Red flag found on '+flagged.join(', ')+'. These move to Rejected unless you keep them.');
+    if(gaps.length)lines.push('Scores differ by 4+ on '+gaps.join(', ')+'. You decide those.');
+  }else if(kind==='update'){
+    if(input.month!==undefined){monthStr(input.month,'month');if(input.month>p.month){closeMonth(p,input.month);lines.push('Closes '+niceMonth(base.month)+' and starts '+niceMonth(input.month)+'.');}else if(input.month<p.month)throw Error('This update is for '+input.month+', but the lab is already on '+p.month+'.');}
+    if(isObj(input.shared)){for(const k of MONEY)if(input.shared[k]!==undefined)p.shared[k]=k==='orders'?count(input.shared[k],'shared orders'):amount(input.shared[k],'shared '+k);lines.push('Updates shared money for the month.');}
+    for(const u of Array.isArray(input.tests)?input.tests.slice(0,40):[]){
+      if(!isObj(u))continue;const id=txt(u.id,80).trim();const t=p.tests.find(t=>t.id===id);if(!t)throw Error('No live test with ID "'+id+'".');
+      const ch=[];
+      if(u.stage!==undefined){const st=STAGES.find(s=>s.toLowerCase()===String(u.stage).toLowerCase());if(!st)throw Error('Stage for '+id+' must be one of '+STAGES.join(', ')+'.');if(st!==t.stage){ch.push(t.stage+' → '+st);t.stage=st;}}
+      for(const k of ['next','gate','evidence','price'])if(u[k]!==undefined){t[k]=txt(u[k]);ch.push(k);}
+      if(isObj(u.month)){for(const k of MONEY)if(u.month[k]!==undefined)t.month[k]=k==='orders'?count(u.month[k],id+' orders'):amount(u.month[k],id+' '+k);ch.push('money');}
+      if(u.verdict!==undefined){
+        const call=String(u.verdict).toLowerCase();if(!CALLS.includes(call))throw Error('Verdict for '+id+' must be one of '+CALLS.join(', ')+'.');
+        if(t.verdicts.date!==date)t.verdicts={date,claude:null,chatgpt:null};
+        t.verdicts[model]={call,note:txt(u.note,4000)};ch.push(MODELS[model]+' says '+call);
+        const v=t.verdicts;if(v.claude&&v.chatgpt){if(v.claude.call===v.chatgpt.call){applyCall(p,t,v.claude.call,'Both models agreed');lines.push('Both models agree on '+id+': '+v.claude.call+'. Applied.');}else lines.push('Models split on '+id+' ('+v.claude.call+' vs '+v.chatgpt.call+'). You decide.');}
+      }
+      lines.push(id+': '+(ch.join(', ')||'no changes'));
+    }
+    for(const d of Array.isArray(input.decisions)?input.decisions.slice(0,40):[]){if(isObj(d)&&txt(d.note).trim()){p.decisions.push({date:d.date?day(d.date,'a decision date'):date,note:'['+MODELS[model]+'] '+txt(d.note)});}}
+    for(const s of Array.isArray(input.sources)?input.sources.slice(0,40):[]){const l=readLinks([s])[0];if(l&&!p.sources.some(x=>x.url===l.url))p.sources.push({title:l.title,url:l.url,note:txt(s.note,2000)});}
+    if(Array.isArray(input.decisions)&&input.decisions.length)lines.push('Adds '+input.decisions.length+' decision'+(input.decisions.length===1?'':'s')+'.');
+  }else throw Error('Set "kind" to "round", "review" or "update".');
+  p.asOf=t>p.asOf?t:p.asOf;
+  return {next:lab(compact(p)),lines,warn,kind};
+}
+function applyCall(p,t,call,who){
+  const log=(note)=>p.decisions.push({date:today(),note});
+  if(call==='kill'){t.stage='Killed';log(who+' to kill '+t.id+' ('+t.title+').');}
+  else if(call==='scale'){t.stage='Scaling';log(who+' to scale '+t.id+'.');}
+  else if(call==='pivot'){log(who+' to pivot '+t.id+' once. Final 14 days.');}
+  else log(who+' to continue '+t.id+'.');
+}
+function closeMonth(p,to){
+  const by={claude:0,chatgpt:0};for(const t of p.tests)if(by[t.model]!==undefined)by[t.model]+=testNet(t);
+  const net=monthNet(p);p.history=p.history.filter(h=>h.month!==p.month);p.history.push({month:p.month,net,claude:by.claude,chatgpt:by.chatgpt});
+  for(const t of p.tests){t.pastNet+=testNet(t);t.month=zero();}p.shared=zero();
+  p.decisions.push({date:today(),note:'Closed '+niceMonth(p.month)+' at '+money(net)+' net (Claude '+money(by.claude)+', ChatGPT '+money(by.chatgpt)+').'});p.month=to;
+}
+
+/* ---------- prompts the page hands to each model ---------- */
+const PLAN='https://claude.ai/artifact/MfnArdUq2yPZ1xpiXmvrf7';
+const RED='Red flags (any one rejects an idea): needs over $25 upfront, inventory or paid ads for a first sale; needs the owner\'s face, voice, real name or personal accounts; mass-produced AI content, fake reviews or testimonials, spam, or breaking platform rules; medical, legal, financial or tax advice, or income claims; someone else\'s trademark, copyright or likeness, or a clone of another product\'s name, art, rules text or look (borrowing a mechanic is fine); get-rich schemes (no-edge dropshipping, MLM, crypto or trading signals, money-making courses).';
+const SCORE='Score 0 to 3 each (18 max): cost (3 = $0, 0 = over $25), time to first dollar (3 = under 14 days, 0 = over 60), demand (3 = people asking for it in public threads this month, 0 = none found), saturation (3 = clear niche gap, 0 = hundreds of identical offers), platform (3 = owned channel or rules clearly allow it, 0 = one platform hostile to AI), upkeep (3 = under 1 hour a week once running, 0 = over 5 hours).';
+function roundPrompt(model,date){
+  const ex={kind:'round',model,date,cards:[{category:'apps',title:'Brand name: short working title',pitch:'One line.',buyer:'Who buys and where you found them asking (with links).',channel:'One distribution channel.',price:'$9 one-time',redFlags:'Passes. Any caution in one line.',test:'Cheapest test.',day14:'Day-14 target.',day30:'Day-30 target.',links:['https://…'],score:{cost:3,time:2,demand:2,saturation:2,platform:2,upkeep:2}}],rejected:[{category:'video',idea:'Idea you dropped',reason:'Which red flag or why weak'}]};
+  return `You are ${MODELS[model]} in the AI Income Lab daily round for ${date}. Follow the shared operating plan (${PLAN}). Work alone; do not look at the other model's cards.
+
+For each of the 6 categories, jot 3 quick ideas, drop any with a red flag, and finish the best one as a complete idea card. If a category has nothing good today, skip its card and add a rejected entry with idea "No viable idea" and the reason. Never pad.
+Categories (use these keys): video = Social media video; apps = Apps and games; saas = Micro-SaaS and tools; products = Digital products; services = Services; content = Content and affiliate.
+
+${RED}
+${SCORE} Score your own cards honestly; the rival will score them too.
+Every business uses a brand name. Never write the owner's real name, email, location or school.
+Usage cap: 12 searches and 12 page reads in total. If you hit it, stop and finish the cards you have.
+Log every idea you dropped in "rejected" with its reason.
+
+Reply with ONLY the JSON below (no other text) so the owner can paste it into Business Lab. Keep the keys exactly; one card per category:
+${JSON.stringify(ex,null,2)}`;
+}
+function reviewCards(p,reviewer){return p.cards.filter(c=>c.model!==reviewer&&!c.scores[reviewer]&&cardState(c,p)==='live');}
+function reviewPrompt(model,p){
+  const cards=reviewCards(p,model).map(c=>({id:c.id,date:c.date,category:c.category,title:c.title,pitch:c.pitch,buyer:c.buyer,channel:c.channel,price:c.price,redFlags:c.redFlags,test:c.test,day14:c.day14,day30:c.day30,links:c.links.map(l=>l.url),ownScore:total(c.scores[c.model])}));
+  const ex={kind:'review',model,date:today(),reviews:cards.slice(0,1).map(c=>({id:c.id,cost:2,time:2,demand:1,saturation:2,platform:2,upkeep:2,redFlag:'',improvement:'One concrete improvement: narrower niche, better channel, price or cheaper test.'}))};
+  return `You are ${MODELS[model]} cross-reviewing ${MODELS[RIVAL[model]]}'s idea cards for the AI Income Lab (plan: ${PLAN}). Below are ${cards.length} cards.
+
+For each card: hunt for red flags it missed, score it on the 18-point screen, and add one concrete improvement. Be fair; the competition is won on money, not on marking the rival down. Usage cap: 6 page reads.
+${RED}
+If you find a red flag, put the reason in "redFlag" (otherwise leave it ""). A red flag moves the card to Rejected unless the owner keeps it.
+${SCORE}
+
+Cards to review:
+${JSON.stringify(cards,null,2)}
+
+Reply with ONLY this JSON (no other text), one entry per card ID above:
+${JSON.stringify(ex,null,2)}`;
+}
+function fridayPrompt(model,p){
+  const tests=p.tests.filter(t=>t.stage!=='Killed').map(t=>{const c=checkpoint(t);return {id:t.id,title:t.title,category:CAT_LABEL[t.category],from:MODELS[t.model]||'unassigned',stage:t.stage,started:t.started,daysRunning:c.age,checkDue:c.due?c.due.c[1]:'none',next:t.next,gate:t.gate,evidence:t.evidence,thisMonth:t.month};});
+  const ex={kind:'update',model,date:today(),tests:tests.slice(0,1).map(t=>({id:t.id,verdict:'continue',note:'Why, with the numbers.',evidence:'Rank 1 · Claude 14 · ChatGPT 13. Latest numbers…',next:'The single next action.',month:{receipts:0,fees:0,refunds:0,costs:0,orders:0}})),decisions:[{note:'Anything decided, with the reason.'}]};
+  return `You are ${MODELS[model]} doing the Friday review for the AI Income Lab (plan: ${PLAN}). Judge each live test on your own, without seeing the other model's verdicts. 0 searches.
+
+Kill-or-continue rules:
+- Day 14: about 300 targeted views or visits and at least 1% clicking, signing up or replying, else kill.
+- Day 30: at least one paying customer, else kill or one logged pivot plus a final 14 days.
+- Day 60: net growing month over month and at least $100 net, else kill (or keep passive if upkeep is under 30 minutes a week).
+- Over $300 net in a month: scale.
+- Stop at once on a platform strike, policy warning, complaint, or any link to the owner's identity.
+Verdict is one of: continue, kill, pivot, scale. If both models agree the page applies it; if they split, the owner decides.
+Only fill "month" with real platform numbers the owner gave you (amounts this month in USD; orders = paid orders). Leave out anything you do not know.
+
+Live tests:
+${JSON.stringify(tests,null,2)}
+
+Month in the lab: ${p.month}. Reply with ONLY this JSON (no other text), one entry per test:
+${JSON.stringify(ex,null,2)}`;
+}
+function showPrompt(title,help,text){
+  $('prompt-title').textContent=title;$('prompt-help').textContent=help;$('prompt-text').value=text;$('prompt-status').textContent='';
+  if(typeof $('prompt-dialog').showModal==='function')$('prompt-dialog').showModal();else $('prompt-dialog').setAttribute('open','');
+  $('prompt-text').scrollTop=0;
+}
+$('prompt-copy').addEventListener('click',async()=>{
+  const ta=$('prompt-text');try{await navigator.clipboard.writeText(ta.value);$('prompt-status').textContent='Copied.';}
+  catch{ta.focus();ta.select();$('prompt-status').textContent='Press Ctrl+C or ⌘C to copy.';}
+});
+$('prompt-close').addEventListener('click',()=>$('prompt-dialog').close?.()??$('prompt-dialog').removeAttribute('open'));
+
+/* ---------- drawing ---------- */
+function draw(p){
+  const t=today(),net=monthNet(p),dayN=Math.max(1,daysBetween(p.startDate,t)+1);
+  $('as-of').textContent='As of '+p.asOf;
+  $('net').textContent=money(net);$('fill').style.width=Math.min(100,Math.max(0,net/p.target*100))+'%';
+  $('target').textContent=money(p.target)+' target · '+niceMonth(p.month)+' · '+Math.round(net/p.target*100)+'%';
+  $('day').textContent=t<p.startDate?'Not started':'Day '+dayN;$('day-note').textContent='Started '+nice(p.startDate)+' · 6 categories, 2 models';
+  const act=active(p);$('slots').textContent=act.length+' / 3';$('builds').textContent=buildsThisWeek(p)+' of 2 new builds this week · one per category';
+  const s=scoreboard(p);const lead=s.claude.all===s.chatgpt.all?'Tied':s.claude.all>s.chatgpt.all?'Claude':'ChatGPT';
+  $('leader').textContent=lead;$('leader-note').textContent='Claude '+money(s.claude.all)+' · ChatGPT '+money(s.chatgpt.all)+' net, all time';
+  drawSteps(p);drawRound(p);drawBoard(p);drawTests(p);drawVs(p,s);drawHistory(p,net);drawRejected(p);drawLists(p);
   $('dashboard').hidden=false;$('gate').hidden=true;
 }
-function clearBoard(){
-  $('dashboard').hidden=true;
-  for(const key of ['as-of','contribution','target','receipts','deductions','orders','count','experiments','sources','decisions'])$(key).replaceChildren();
-  $('fill').style.width='0';
+function scoreboard(p){
+  const top5=ranked(p).slice(0,5);const out={};
+  for(const m of ['claude','chatgpt']){
+    const tests=p.tests.filter(t=>t.model===m),month=tests.reduce((a,t)=>a+testNet(t),0),all=month+tests.reduce((a,t)=>a+t.pastNet,0);
+    out[m]={cards:p.cards.filter(c=>c.model===m).length,top5:top5.filter(c=>c.model===m).length,tests:tests.length,earning:tests.filter(t=>testNet(t)+t.pastNet>0).length,month,all};
+  }return out;
 }
+function step(title,why,actions=[],cls=''){const li=node('li','',cls);const d=node('div');d.append(node('strong',title),node('span',why,'why'));const a=node('div','','do');a.append(...actions);li.append(d,a);return li;}
+function drawSteps(p){
+  const t=today(),items=[];
+  for(const m of ['claude','chatgpt']){
+    const n=p.cards.filter(c=>c.model===m&&c.date===t).length+(p.rejected.some(r=>r.model===m&&r.date===t)?0:0);
+    if(!n)items.push(step('Run '+MODELS[m]+'\'s daily round','Copy the prompt into '+(m==='claude'?'Claude':'ChatGPT')+', then paste its JSON reply in the box below. About 6 cards, one per category.',[btn('Copy prompt for '+MODELS[m],()=>showPrompt(MODELS[m]+'\'s daily round','Paste this into '+MODELS[m]+'. When it replies, paste the JSON into "Paste a model\'s output".',roundPrompt(m,t)))]));
+    else items.push(step(MODELS[m]+'\'s round is in',n+' card'+(n===1?'':'s')+' for today.',[],'done'));
+  }
+  for(const m of ['claude','chatgpt']){
+    const n=reviewCards(p,m).length;
+    if(n)items.push(step('Have '+MODELS[m]+' review '+n+' of '+MODELS[RIVAL[m]]+'\'s card'+(n===1?'':'s'),'The prompt already includes the cards. Paste '+MODELS[m]+'\'s scores back here.',[btn('Copy review prompt',()=>showPrompt(MODELS[m]+' reviews '+MODELS[RIVAL[m]],'Paste this into '+MODELS[m]+'. It contains the cards to score.',reviewPrompt(m,p)))]));
+  }
+  const live=ranked(p);
+  const gaps=live.filter(c=>gap(c)>=4&&c.david==='');
+  if(gaps.length)items.push(step('Decide '+gaps.length+' card'+(gaps.length===1?'':'s')+' where the scores differ by 4+','Open each flagged card on the leaderboard and choose Keep or Reject.',[btn('Show them',()=>{catFilter='all';drawBoard(p);const el=document.querySelector('[data-card="'+gaps[0].id+'"]');if(el){el.open=true;el.scrollIntoView({behavior:'smooth',block:'center'});}})],'david'));
+  const splits=p.tests.filter(x=>x.verdicts.claude&&x.verdicts.chatgpt&&x.verdicts.claude.call!==x.verdicts.chatgpt.call&&!p.decisions.some(d=>d.date>=x.verdicts.date&&d.note.includes('The owner decided')&&d.note.includes(x.id)));
+  for(const x of splits)items.push(step('Settle the split on '+x.id,'Claude says '+x.verdicts.claude.call+', ChatGPT says '+x.verdicts.chatgpt.call+'. Your call.',CALLS.map(c=>btn(c[0].toUpperCase()+c.slice(1),()=>act(q=>{const tt=q.tests.find(y=>y.id===x.id);applyCall(q,tt,c,'The owner decided');},'Saved your decision on '+x.id+'.'),'sm quiet')),'david'));
+  const top=live.find(c=>!canStart(c,p));
+  if(top)items.push(step('Start a test: '+top.title,'Rank '+rankOf(p,top.id)+' with an average of '+fmt(avg(top))+'. A slot is free, so build its cheapest test.',[btn('Start test',()=>startTest(top.id))]));
+  else if(live.length&&active(p).length>=3)items.push(step('Test slots are full','3 live tests is the limit. The top card waits until a test is killed or earns.',[],'done'));
+  const due=p.tests.filter(x=>ACTIVE.includes(x.stage)&&checkpoint(x).due);
+  const friday=weekday(t)===5;
+  if((friday||due.length)&&p.tests.some(x=>x.stage!=='Killed')){
+    items.push(step(friday?'Friday review':'Checkpoint due: '+due.map(x=>x.id).join(', '),'Give each model the review prompt separately, then paste both replies here. Agreed verdicts apply; splits come to you. Add real numbers from the platforms first.',['claude','chatgpt'].map(m=>btn('Copy for '+MODELS[m],()=>showPrompt('Friday review for '+MODELS[m],'Paste into '+MODELS[m]+'. Tell it any new platform numbers (sales, fees, visits) before it answers.',fridayPrompt(m,p)),'sm quiet'))));
+  }
+  if(t.slice(0,7)>p.month)items.push(step('Close '+niceMonth(p.month),'A new month started. Closing it records the final net and resets this month\'s money.',[btn('Close month',closeMonthNow)]));
+  if(legacy)items.push(step('Save the upgraded format','Your saved lab uses the old format. It is shown converted; it is upgraded the next time anything is saved.',[]));
+  $('steps').replaceChildren(...items);
+}
+function drawRound(p){
+  if(!viewDate)viewDate=today();
+  $('round-date').textContent=nice(viewDate)+(viewDate===today()?' · today':'');$('next-day').disabled=viewDate>=today();$('prev-day').disabled=viewDate<=p.startDate;
+  const cells=[node('div','Category','colhead first'),node('div','Claude','colhead'),node('div','ChatGPT','colhead')];
+  for(const [k,label] of CATS){
+    cells.push(node('div',label,'cat'));
+    for(const m of ['claude','chatgpt']){
+      const c=p.cards.find(c=>c.model===m&&c.date===viewDate&&c.category===k),cell=node('div');
+      if(c){
+        const st=cardState(c,p),a=avg(c);
+        cell.append(node('div',c.title,'cell-title'),node('div',c.id+' · own '+total(c.scores[m])+' · rival '+(c.scores[RIVAL[m]]?total(c.scores[RIVAL[m]]):'pending')+(a!==null?' · avg '+fmt(a):'')+(st==='rejected'?' · rejected':st==='test'?' · live test':''),'cell-meta'));
+      }else{const r=p.rejected.find(r=>r.model===m&&r.date===viewDate&&r.category===k&&/no viable/i.test(r.idea));cell.append(node('div',r?'No viable idea: '+r.reason:(m==='claude'?'Claude':'ChatGPT')+' has no card yet','missing'));}
+      cells.push(cell);
+    }
+  }
+  $('round').replaceChildren(...cells);
+}
+function factorTable(c){
+  const tb=node('table','','factor'),h=node('tr');h.append(node('th','Factor'),node('th','Claude'),node('th','ChatGPT'));tb.append(h);
+  for(const [k,l] of FACTORS){const r=node('tr');r.append(node('td',l),node('td',c.scores.claude?String(c.scores.claude[k]):'–'),node('td',c.scores.chatgpt?String(c.scores.chatgpt[k]):'–'));tb.append(r);}
+  const r=node('tr');r.append(node('td','Total'),node('td',fmt(total(c.scores.claude))),node('td',fmt(total(c.scores.chatgpt))));tb.append(r);return tb;
+}
+function cardItem(c,p,rank){
+  const li=node('li'),d=node('details');d.dataset.card=c.id;const s=node('summary');
+  const a=avg(c),g=gap(c);
+  const head=node('div');head.append(node('h3',c.title));const tags=node('div','','tags');
+  tags.append(node('span',CAT_LABEL[c.category],'pill plain'),node('span',MODELS[c.model]+' · '+c.id,'pill'));
+  if(a===null)tags.append(node('span','Awaiting '+MODELS[RIVAL[c.model]]+'\'s score','pill plain'));
+  else if(a<12)tags.append(node('span','Below build line','pill bad'));
+  if(g>=4)tags.append(node('span',c.david==='keep'?'Gap '+g+' · kept by you':'Gap '+g+' · you decide','pill flag'));
+  for(const m of ['claude','chatgpt'])if(c.scores[m]?.redFlag)tags.append(node('span','Red flag from '+MODELS[m],'pill bad'));
+  if(c.archived)tags.append(node('span','Archived','pill plain'));
+  head.append(tags);
+  const sc=node('div','','scores');const box=(v,l)=>{const x=node('div');x.append(node('b',v),node('span',l));return x;};
+  sc.append(...['claude','chatgpt'].map(m=>box(c.scores[m]?fmt(total(c.scores[m])):'–',MODELS[m]+(m===c.model?' ·own':''))),box(fmt(a),'Average'));
+  s.append(node('span',rank===null?'·':String(rank),'rank'),head,sc);d.append(s);
+  const det=node('div','','detail');const f=(l,v,wide)=>{if(!v)return;const x=node('div','',wide?'wide':'');x.append(node('span',l,'label'),node('p',v));det.append(x);};
+  f('Pitch',c.pitch,true);f('Buyer and where found',c.buyer);f('Channel',c.channel);f('Price',c.price);f('Red-flag check',c.redFlags);f('Cheapest test',c.test);f('Targets',[c.day14&&'Day 14: '+c.day14,c.day30&&'Day 30: '+c.day30].filter(Boolean).join('\n'));
+  for(const m of ['claude','chatgpt']){const sx=c.scores[m];if(sx&&m!==c.model){f(MODELS[m]+'\'s improvement',sx.improvement);if(sx.redFlag)f(MODELS[m]+'\'s red flag',sx.redFlag);}}
+  const ft=node('div');ft.append(node('span','Score breakdown','label'),factorTable(c));det.append(ft);
+  if(c.links.length){const x=node('div');x.append(node('span','Links','label'));const ul=node('p');c.links.forEach((l,i)=>{const aa=node('a',l.title);aa.href=l.url;aa.target='_blank';aa.rel='noopener noreferrer';if(i)ul.append(document.createTextNode(' · '));ul.append(aa);});x.append(ul);det.append(x);}
+  const acts=node('div','','actions'),st=cardState(c,p);
+  if(st==='live'){
+    const why=canStart(c,p),b=btn('Start test',()=>startTest(c.id));b.disabled=Boolean(why)||busy||!editable();acts.append(b);if(why)acts.append(node('span',why,'small'));
+    if(g>=4&&c.david===''){acts.append(btn('Keep in ranking',()=>act(q=>{q.cards.find(x=>x.id===c.id).david='keep';q.decisions.push({date:today(),note:'The owner kept '+c.id+' in the ranking despite a '+g+'-point score gap.'});},'Kept '+c.id+'.'),'sm quiet'));}
+    acts.append(btn('Reject',()=>act(q=>{q.cards.find(x=>x.id===c.id).david='reject';q.decisions.push({date:today(),note:'The owner rejected '+c.id+' ('+c.title+').'});},'Rejected '+c.id+'.'),'sm quiet'));
+  }else if(st==='rejected'&&c.david!=='reject'){acts.append(btn('Keep it anyway',()=>act(q=>{q.cards.find(x=>x.id===c.id).david='keep';q.decisions.push({date:today(),note:'The owner overrode a red flag on '+c.id+'.'});},'Restored '+c.id+'.'),'sm quiet'));}
+  if(acts.childNodes.length)det.append(acts);
+  d.append(det);li.append(d);return li;
+}
+function drawBoard(p){
+  const chips=[['all','All']].concat(CATS).map(([k,l])=>{const b=btn(l,()=>{catFilter=k;drawBoard(p);},'chip');b.setAttribute('aria-pressed',String(catFilter===k));return b;});
+  $('cat-filter').replaceChildren(...chips);
+  const all=ranked(p),rows=all.filter(c=>catFilter==='all'||c.category===catFilter);
+  $('board').replaceChildren(...(rows.length?rows.map(c=>cardItem(c,p,avg(c)===null?null:all.indexOf(c)+1)):[node('li','No cards here yet. Paste a daily round to fill the leaderboard.','empty')]));
+  if(!rows.length)$('board').firstChild.style.padding='14px 19px';
+  const back=ranked(p,'backlog');$('backlog-sum').textContent='Backlog: '+back.length+' card'+(back.length===1?'':'s')+' not built within 14 days';
+  $('backlog').replaceChildren(...(back.length?back.map(c=>cardItem(c,p,null)):[node('li','Nothing in the backlog.','empty')]));
+}
+function testCard(t,p){
+  const c=node('article','','card'),tags=node('div','','tags');
+  tags.append(node('span',t.stage,'pill'),node('span',CAT_LABEL[t.category],'pill plain'),node('span',(MODELS[t.model]||'No model')+' · '+t.id,'pill plain'));
+  c.append(tags,node('h3',t.title));if(t.price)c.append(node('p',t.price,'small'));
+  const ck=checkpoint(t);
+  if(ACTIVE.includes(t.stage)||t.stage==='Earning'){
+    const box=node('div','','check'+(ck.due?' due':''));
+    if(ck.due)box.append(node('strong',ck.due.c[1]+' due ('+nice(ck.due.d)+')'),node('p',ck.due.c[2]));
+    else if(ck.next)box.append(node('strong','Day '+ck.age+' · next: '+ck.next.c[1]+' on '+nice(ck.next.d)),node('p',ck.next.c[2]));
+    else box.append(node('strong','Day '+ck.age+' · past day 60'),node('p','Scale above $300 net in a month.'));
+    c.append(box);
+  }
+  const m=node('div','','money row'),mb=(v,l)=>{const x=node('div');x.append(node('b',v),node('span',l,'label'));return x;};
+  m.append(mb(money(testNet(t)),'Net this month'),mb(String(t.month.orders),'Paid orders'),mb(money(testNet(t)+t.pastNet),'Net all time'));c.append(m);
+  for(const [l,v] of [['Next',t.next],['Decision rule',t.gate],['Evidence',t.evidence]])if(v){const r=node('div','','row');r.append(node('span',l,'label'),node('p',v));c.append(r);}
+  const v=t.verdicts;if(v.date){const r=node('div','','row');r.append(node('span','Verdicts '+v.date,'label'),node('p',['claude','chatgpt'].map(k=>MODELS[k]+': '+(v[k]?v[k].call+(v[k].note?' ('+v[k].note+')':''):'pending')).join('\n')));c.append(r);}
+  return c;
+}
+function drawTests(p){
+  const live=p.tests.filter(t=>t.stage!=='Killed'),ended=p.tests.filter(t=>t.stage==='Killed');
+  $('tests-hint').textContent='Max 3 building or testing at once, one per category, 2 new builds a week.';
+  $('tests').replaceChildren(...(live.length?live.map(t=>testCard(t,p)):[node('p','No live tests. Start one from the leaderboard.','empty')]));
+  $('ended-wrap').hidden=!ended.length;$('ended-sum').textContent='Killed tests ('+ended.length+')';$('ended').replaceChildren(...ended.map(t=>testCard(t,p)));
+}
+function drawVs(p,s){
+  const lead=s.claude.all===s.chatgpt.all?null:s.claude.all>s.chatgpt.all?'claude':'chatgpt';
+  $('vs').replaceChildren(...['claude','chatgpt'].map(m=>{
+    const d=node('div');if(lead===m)d.append(node('span','Leading','lead'));d.append(node('h3',MODELS[m]));const dl=node('dl');
+    for(const [l,v] of [['Net this month',money(s[m].month)],['Net all time',money(s[m].all)],['Tests started',String(s[m].tests)],['Tests that earned',String(s[m].earning)],['Cards in the top 5',String(s[m].top5)],['Cards written',String(s[m].cards)]]){dl.append(node('dt',l),node('dd',v));}
+    d.append(dl);return d;
+  }));
+}
+function drawHistory(p,net){
+  const rows=p.history.slice(-11).concat([{month:p.month,net,current:true}]);const max=Math.max(p.target,...rows.map(r=>r.net));
+  $('history').replaceChildren(...rows.map(r=>{const d=node('div'),bar=node('i');bar.style.height=Math.max(2,Math.round(Math.max(0,r.net)/max*70))+'px';if(r.current)bar.style.background='var(--accent)';d.title=niceMonth(r.month)+': '+money(r.net);d.append(node('span',money(r.net)),bar,node('span',niceMonth(r.month).replace(' 20',' ’')));return d;}));
+  const t=today();$('close-month').hidden=!(t.slice(0,7)>p.month)||!editable();$('close-month').textContent='Close '+niceMonth(p.month);
+}
+function drawRejected(p){
+  const rows=[...p.rejected.map(r=>({date:r.date,who:r.model==='david'?'you':MODELS[r.model]||'Earlier research',cat:CAT_LABEL[r.category],idea:r.idea,reason:r.reason})),
+    ...p.cards.filter(c=>cardState(c,p)==='rejected').map(c=>{const m=['claude','chatgpt'].find(m=>c.scores[m]?.redFlag);return {date:c.date,who:c.david==='reject'?'you':MODELS[m]+' on review',cat:CAT_LABEL[c.category],idea:c.id+' '+c.title,reason:c.david==='reject'?'Rejected by you.':c.scores[m].redFlag};})].sort((a,b)=>b.date.localeCompare(a.date));
+  $('rej-sum').textContent=rows.length+' rejected idea'+(rows.length===1?'':'s');
+  $('rejected').replaceChildren(...(rows.length?rows.map(r=>{const li=node('li');li.append(node('span',r.date+' · '+r.cat+' · rejected by '+r.who,'meta'),node('strong',r.idea),node('p',r.reason));return li;}):[node('li','Nothing rejected yet.','empty')]));
+}
+function drawLists(p){
+  $('sources').replaceChildren(...(p.sources.length?p.sources.slice().reverse().map(s=>{const li=node('li'),a=node('a',s.title);a.href=s.url;a.target='_blank';a.rel='noopener noreferrer';li.append(a,node('p',s.note));return li;}):[node('li','No research sources recorded.','empty')]));
+  $('decisions').replaceChildren(...(p.decisions.length?p.decisions.map((d,i)=>[d,i]).sort((a,b)=>b[0].date.localeCompare(a[0].date)||b[1]-a[1]).slice(0,60).map(([d])=>{const li=node('li'),t=node('time',d.date,'meta');t.dateTime=d.date;li.append(t,node('p',d.note));return li;}):[node('li','No decisions recorded.','empty')]));
+}
+
+/* ---------- saving ---------- */
+function editable(){return local||(Boolean(owner)&&ready);}
 function status(message,error=false){$('import-status').textContent=message;$('import-status').classList.toggle('error',error);}
 function controls(){
-  const editable=local||(Boolean(owner)&&ready);
-  for(const k of ['file','json','inspect'])$(k).disabled=busy||!editable;
-  $('save').hidden=local||!draft||!editable;$('save').disabled=busy;
-  $('refresh').hidden=local||!owner;$('refresh').disabled=busy;$('signout').disabled=busy;
+  const ed=editable();for(const k of ['file','json','inspect'])$(k).disabled=busy||!ed;
+  $('save').hidden=!draft;$('discard').hidden=!draft;$('save').disabled=busy||!ed;$('save').textContent=draft&&draft.kind==='replace'?'Replace my whole lab':local?'Apply in this tab':'Add to my lab';
+  $('refresh').hidden=local||!owner;$('refresh').disabled=busy;$('signout').disabled=busy;$('download').disabled=!data;$('copy-all').disabled=!data;
 }
-function forgetDraft(){
-  draft=null;fileVersion++;$('json').value='';$('file').value='';status('');controls();
-}
-function showGate(message,sign=false){
-  $('gate-text').textContent=message;$('gate').hidden=false;$('signin').hidden=!sign;
-}
+function forgetDraft(){draft=null;fileVersion++;$('json').value='';$('file').value='';$('preview').hidden=true;status('');controls();}
+function showGate(message,sign=false){$('gate-text').textContent=message;$('gate').hidden=false;$('signin').hidden=!sign;}
 function current(token,id){return generation===token&&owner===id&&cloud?.user?.id===id;}
 function readRow(rows){
-  const row=rows[KEY];
-  if(!row)return {revision:0,value:null};
+  const row=rows[KEY];if(!row)return {revision:0,value:null};
   if(!Number.isSafeInteger(row.revision)||row.revision<1)throw Error('Invalid cloud revision.');
-  return {revision:row.revision,value:portfolio(row.value)};
+  return {revision:row.revision,value:loadLab(row.value)};
 }
+function clearBoard(){$('dashboard').hidden=true;for(const k of ['as-of','net','target','day','day-note','slots','builds','leader','leader-note','steps','round','board','tests','vs','history','rejected','backlog','sources','decisions'])$(k).replaceChildren();$('fill').style.width='0';}
 async function refresh(){
   if(!owner||!cloud)return;
-  const token=generation,id=owner,seq=++request;
-  draft=null;busy=true;ready=false;controls();
+  const token=generation,id=owner,seq=++request;draft=null;busy=true;ready=false;controls();
   try{
-    const rows=await cloud.studyRead();
-    if(!current(token,id)||seq!==request)return;
+    const rows=await cloud.studyRead();if(!current(token,id)||seq!==request)return;
     const row=readRow(rows);revision=row.revision;ready=true;
-    if(row.value){draw(row.value);$('notice').textContent='Saved to your account · Revision '+revision;}
-    else{clearBoard();showGate('Import your portfolio below to see experiments, results and decisions here.');$('notice').textContent='Signed in · No portfolio saved yet';$('import').open=true;}
+    data=row.value||emptyLab();draw(data);
+    $('notice').textContent=row.value?'Saved to your account · Revision '+revision+(legacy?' · old format, shown converted':''):'Signed in · Nothing saved yet. Start with step 1.';
   }catch{
-    if(!current(token,id)||seq!==request)return;
-    clearBoard();showGate('Refresh the saved portfolio to reconnect.');$('notice').textContent='Could not load your saved portfolio.';
+    if(!current(token,id)||seq!==request)return;data=null;
+    clearBoard();showGate('Reload the saved lab to reconnect. If this keeps happening, the saved copy may not match the format.');$('notice').textContent='Could not load your saved lab.';$('import').open=true;
   }finally{if(current(token,id)&&seq===request){busy=false;controls();}}
 }
-function switchAccount(user,force=false){
-  const next=user?.id||null;if(next===owner&&!force)return;
-  generation++;request++;owner=next;revision=0;ready=false;busy=false;clearBoard();forgetDraft();
-  $('signout').hidden=!owner;$('import').hidden=!owner;$('import').open=false;$('gate').hidden=true;
-  if(!owner){
-    $('notice').textContent='Signed out';showGate('Sign in to see your private experiments and results. Google returns you to the workspace home. Reopen Business Lab there to continue.',true);return;
-  }
-  $('notice').textContent='Loading your private portfolio…';
-  // Begin networking after Supabase releases its auth callback.
-  const token=generation;setTimeout(()=>{if(token===generation)void refresh();},0);
-}
-function review(){
-  if(busy||(!local&&!ready))return;
-  draft=null;
+async function commit(next,message){
+  if(local){data=next;legacy=false;draw(data);status(message+' (this tab only)');controls();return true;}
+  if(busy||!ready||!owner)return false;
+  const token=generation,id=owner,base=revision;busy=true;controls();status('Saving and checking…');
   try{
-    const text=$('json').value;
-    if(!text.trim()||text.length>1600000)throw Error('Choose or paste a JSON portfolio under 1.6 MB.');
-    let parsed;try{parsed=JSON.parse(text);}catch{throw Error('The text is not valid JSON.');}
-    const p=portfolio(parsed);draft=p;
-    if(local){draw(p);$('notice').textContent='Local file preview';status('Portfolio opened in this tab.');}
-    else status('Ready to replace the saved portfolio with '+p.experiments.length+' experiments, '+p.sources.length+' sources and '+p.decisions.length+' decisions as of '+p.asOf+'.');
-  }catch(e){status(e.message||'Check the portfolio format.',true);}
+    const written=await cloud.studyWrite(KEY,next,base);if(!current(token,id))return false;
+    const rows=await cloud.studyRead();if(!current(token,id))return false;const row=readRow(rows);
+    if(written.revision!==base+1||row.revision!==written.revision||JSON.stringify(row.value)!==JSON.stringify(next))throw Error('revision');
+    revision=row.revision;data=row.value;legacy=false;draw(data);status(message+' Saved · Revision '+revision+'.');$('notice').textContent='Saved to your account · Revision '+revision;return true;
+  }catch{
+    if(!current(token,id))return false;ready=false;status('The save could not be verified, possibly because the lab changed on another device. Reload the saved lab, then try again.',true);return false;
+  }finally{if(current(token,id)){busy=false;controls();}}
+}
+async function act(fn,message){
+  if(!data||busy||!editable())return;
+  try{const p=clone(data);fn(p);p.asOf=today()>p.asOf?today():p.asOf;const next=lab(compact(p));forgetDraft();await commit(next,message);}
+  catch(e){status(e.message||'That change could not be made.',true);}
+}
+function startTest(id){
+  const c=data.cards.find(c=>c.id===id);if(!c)return;const why=canStart(c,data);if(why){status(why,true);return;}
+  const r=rankOf(data,id),s=today();
+  act(p=>{
+    p.tests.push({id:c.id,cardId:c.id,title:c.title,category:c.category,model:c.model,stage:'Building',started:s,price:c.price,next:c.test||'Build the cheapest test.',
+      gate:CHECKS.map(([n,l,rule])=>l+' ('+addDays(s,n)+'): '+rule).join('\n')+'\nCard targets: '+[c.day14&&'day 14: '+c.day14,c.day30&&'day 30: '+c.day30].filter(Boolean).join('; '),
+      evidence:'Rank '+r+' · Claude '+fmt(total(c.scores.claude))+' · ChatGPT '+fmt(total(c.scores.chatgpt))+'. No results yet.',month:zero(),pastNet:0,verdicts:{date:'',claude:null,chatgpt:null}});
+    p.decisions.push({date:s,note:'Started test '+c.id+' ('+c.title+'), rank '+r+', average '+fmt(avg(c))+'. '+MODELS[c.model]+' owns the copy and posts; Claude builds the visuals.'});
+  },'Started test '+c.id+'.');
+}
+function closeMonthNow(){const to=today().slice(0,7);act(p=>{if(to>p.month)closeMonth(p,to);},'Closed the month.');}
+
+/* ---------- import box ---------- */
+function review(){
+  if(busy||!editable())return;draft=null;$('preview').hidden=true;
+  try{
+    const text=$('json').value;if(!text.trim()||text.length>MAX_BYTES)throw Error('Paste the JSON reply (under 2.5 MB).');
+    const input=extractJSON(text);const res=merge(data||emptyLab(),input);
+    if(JSON.stringify(res.next).length>MAX_BYTES)throw Error('The lab would be over 2.5 MB. Download a backup and ask Claude to archive old cards.');
+    draft=res;const box=$('preview');box.replaceChildren();
+    const ul=node('ul');res.lines.forEach(l=>ul.append(node('li',l)));box.append(node('strong',res.kind==='replace'?'Full replace':res.kind[0].toUpperCase()+res.kind.slice(1)),ul);
+    if(res.warn.length){const w=node('ul','','warnings');res.warn.forEach(l=>w.append(node('li',l)));box.append(w);}
+    box.hidden=false;status('Looks good. Check the summary, then save.');
+  }catch(e){status(e.message||'Check the format.',true);}
   controls();
 }
-$('json').addEventListener('input',()=>{fileVersion++;draft=null;status('');controls();});
+$('json').addEventListener('input',()=>{fileVersion++;draft=null;$('preview').hidden=true;status('');controls();});
 $('file').addEventListener('change',async()=>{
-  const f=$('file').files[0];if(!f||busy)return;
-  const token=generation,seq=++fileVersion;
-  draft=null;controls();
-  if(f.size>1600000){status('Choose a file under 1.6 MB.',true);return;}
-  try{const raw=await f.text();if(token!==generation||seq!==fileVersion)return;$('json').value=raw;review();}
+  const f=$('file').files[0];if(!f||busy)return;const token=generation,seq=++fileVersion;draft=null;controls();
+  if(f.size>MAX_BYTES){status('Choose a file under 2.5 MB.',true);return;}
+  try{const raw=await f.text();if(token!==generation||seq!==fileVersion)return;$('json').value=raw;$('json').scrollIntoView({block:'center'});review();}
   catch{if(token===generation&&seq===fileVersion)status('The file could not be opened.',true);}
 });
 $('inspect').addEventListener('click',review);
-$('refresh').addEventListener('click',()=>{if(!busy){status('Review your import again after refreshing.');void refresh();}});
+$('discard').addEventListener('click',forgetDraft);
 $('save').addEventListener('click',async()=>{
-  if(busy||!ready||!draft||!owner)return;
-  const p=draft,token=generation,id=owner,base=revision;
-  busy=true;controls();status('Saving and verifying the portfolio…');
-  try{
-    const written=await cloud.studyWrite(KEY,p,base);
-    if(!current(token,id))return;
-    const rows=await cloud.studyRead();if(!current(token,id))return;
-    const row=readRow(rows);
-    if(written.revision!==base+1||row.revision!==written.revision||JSON.stringify(row.value)!==JSON.stringify(p))throw Error('revision');
-    revision=row.revision;draw(row.value);forgetDraft();status('Cloud copy verified · Revision '+revision+'.');$('notice').textContent='Saved to your account · Revision '+revision;
-  }catch{
-    if(!current(token,id))return;
-    ready=false;draft=null;status('Save could not be verified. Refresh the saved portfolio, compare it with the import, then review again before saving.',true);
-  }finally{if(current(token,id)){busy=false;controls();}}
+  if(!draft||busy)return;const d=draft;
+  if(d.kind==='replace'&&!confirmReplace())return;
+  if(await commit(d.next,d.lines[0])){draft=null;$('json').value='';$('preview').hidden=true;controls();}
 });
+let replaceArmed=0;
+function confirmReplace(){if(Date.now()-replaceArmed<8000){replaceArmed=0;return true;}replaceArmed=Date.now();status('This replaces everything. Press "Replace my whole lab" again to confirm.',true);return false;}
+$('refresh').addEventListener('click',()=>{if(!busy){status('');void refresh();}});
+$('prev-day').addEventListener('click',()=>{viewDate=addDays(viewDate,-1);drawRound(data);});
+$('next-day').addEventListener('click',()=>{viewDate=addDays(viewDate,1);drawRound(data);});
+$('close-month').addEventListener('click',closeMonthNow);
+$('download').addEventListener('click',()=>{if(!data)return;const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));a.download='business-lab-'+today()+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);});
+$('copy-all').addEventListener('click',()=>{if(data)showPrompt('Your whole lab as JSON','Give this to Claude when it needs the latest saved state, for example to write a full replacement.',JSON.stringify(data,null,2));});
+
+/* ---------- accounts ---------- */
 $('signin').addEventListener('click',async()=>{if(!cloud)return;$('signin').disabled=true;try{await cloud.signIn();}catch{$('notice').textContent='Sign-in could not start. Please try again.';}finally{$('signin').disabled=false;}});
 $('signout').addEventListener('click',async()=>{if(!cloud||busy)return;try{await cloud.signOut();switchAccount(null);}catch{$('notice').textContent='Sign-out failed. Try again.';}});
+function switchAccount(user,force=false){
+  const next=user?.id||null;if(next===owner&&!force)return;
+  generation++;request++;owner=next;revision=0;ready=false;busy=false;data=null;clearBoard();forgetDraft();
+  $('signout').hidden=!owner;$('import').hidden=!owner;$('import').open=false;$('gate').hidden=true;
+  if(!owner){$('notice').textContent='Signed out';showGate('Sign in to see your private idea rounds, tests and results. Google returns you to the workspace home. Reopen Business Lab there to continue.',true);return;}
+  $('notice').textContent='Loading your private lab…';
+  const token=generation;setTimeout(()=>{if(token===generation)void refresh();},0);
+}
 function script(src){return new Promise((resolve,reject)=>{const s=document.createElement('script');s.src=src;s.onload=resolve;s.onerror=reject;document.head.append(s);});}
 async function start(){
   if(local){
-    $('notice').textContent='Local file preview';showGate('Open a portfolio JSON file below. This preview stays in the tab.');
-    $('import-help').textContent='Choose a file or paste JSON to view it on this device.';$('import').hidden=false;$('import').open=true;controls();return;
+    $('notice').textContent='Local file preview · changes stay in this tab';data=emptyLab();draw(data);
+    $('import-help').textContent='Open or paste JSON to try it on this device. Nothing is saved.';$('import').hidden=false;controls();return;
   }
-  $('import-help').textContent='Choose a file or paste JSON, review its contents, then save it to your signed-in account.';
+  $('import-help').textContent='Keep a backup before big changes. Everything here is private to your signed-in account.';
   try{
     await script('/assets/vendor/supabase-2.116.0.js');await script('/assets/workspace/cloud.js');cloud=window.TesselateCloud;
-    await cloud.init(u=>switchAccount(u));
-    switchAccount(cloud.user,!owner);
+    await cloud.init(u=>switchAccount(u));switchAccount(cloud.user,!owner);
   }catch{clearBoard();$('notice').textContent='Sign-in is unavailable.';showGate('Reload this page when the workspace is reachable.');}
 }
-window.addEventListener('pagehide',()=>{generation++;request++;owner=null;ready=false;busy=false;clearBoard();forgetDraft();$('import').hidden=true;});
+window.addEventListener('pagehide',()=>{generation++;request++;owner=null;ready=false;busy=false;data=null;clearBoard();forgetDraft();$('import').hidden=true;});
 window.addEventListener('pageshow',e=>{if(e.persisted)location.reload();});
 void start();
 </script>
