@@ -1,0 +1,58 @@
+import {SIZE,SYMBOLS,normalize,display,newGame,openGate,lockSecret,submitGuess,expireClock} from './engine.mjs';
+const $=s=>document.querySelector(s),KEY='tesselate-equation-traffic-light-v1';let game=newGame(),started=false,curtain=false,storageOK=true,inputInvalid=false;
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+try{const s=JSON.parse(localStorage.getItem(KEY));if(s?.version===1&&['solo','local'].includes(s.mode)&&Array.isArray(s.secrets)&&Array.isArray(s.histories)&&Array.isArray(s.draft)&&s.draft.length===9){game=s;started=true;curtain=s.mode==='local'&&['setup','guess'].includes(s.phase);}}catch{}
+const hidden=()=>curtain||game.phase==='gate';const name=p=>`Player ${p+1}`;
+function say(s,error=false){$('#message').textContent=s;$('#message').classList.toggle('error',error);}
+function save(){if(!started)return;try{localStorage.setItem(KEY,JSON.stringify(game));}catch{storageOK=false;}}
+const button=(id,text,kind='primary',disabled=false)=>`<button id="${id}" class="${kind}" ${disabled?'disabled':''}>${text}</button>`;
+const bind=(id,fn)=>document.getElementById(id)?.addEventListener('click',fn);
+function row(guess,hints=null){return `<div class="equation-row">${[...guess].map((c,i)=>`<span class="equation-tile ${hints?.[i]||''}" aria-label="Cell ${i+1}: ${esc(display(c))}${hints?`, ${hints[i]}`:''}">${esc(display(c))}${hints?`<span class="hint-icon" aria-hidden="true">${{green:'✓',yellow:'↔',red:'×'}[hints[i]]}</span>`:''}</span>`).join('')}</div>`;}
+function renderEditor(){
+ inputInvalid=false;const setup=game.phase==='setup',history=game.histories[game.player];
+ $('#stage').innerHTML=(setup?'<p class="blank-copy">Build a true equation your opponent will try to uncover. Use exactly nine cells.</p>':`<div class="guess-history" id="guess-history">${history.length?history.map(h=>`<div class="history-row"><div class="history-label">Attempt ${h.round}</div>${h.guess===null?'<div class="skipped-row">Time expired · no clues this round</div>':row(h.guess,h.hints)}</div>`).join(''):'<div class="empty-history"><strong>A blank slate.</strong>Your first guess can be any nine symbols.</div>'}</div>`)+`<div class="history-label">${setup?'YOUR SECRET':'YOUR NEXT GUESS'}</div><div class="equation-row draft-row">${game.draft.map((c,i)=>`<button class="equation-tile ${game.cursor===i?'active':''}" data-cell="${i}" aria-label="Cell ${i+1}${c?`: ${esc(display(c))}`:', empty'}">${c?esc(display(c)):'·'}</button>`).join('')}</div><label class="input-label" for="quick-entry">Type or paste nine symbols</label><input class="quick-entry" id="quick-entry" autocomplete="off" autocapitalize="off" spellcheck="false" inputmode="text" maxlength="32" aria-label="Equation or guess" value="${esc(game.draft.join(''))}"><p class="timing-note">${setup?'Only secrets need to balance. Use ^ for powers.':'Probes do not need to balance. Click a cell to replace it.'}</p>`;
+ $('#stage').querySelectorAll('[data-cell]').forEach(b=>b.onclick=()=>{game.cursor=Number(b.dataset.cell);save();updateDraft();});
+ $('#quick-entry').addEventListener('input',e=>{const s=normalize(e.target.value);if([...s].some(c=>!SYMBOLS.includes(c))){inputInvalid=true;$('#submit-button').disabled=true;say('Use only digits, +, −, ×, ÷, = and ^.',true);return;}if(s.length>SIZE){inputInvalid=true;$('#submit-button').disabled=true;say('Use at most nine symbols.',true);return;}inputInvalid=false;game.draft=Array.from({length:SIZE},(_,i)=>s[i]||'');game.cursor=Math.min(s.length,8);save();updateDraft(false);say('');});
+ $('#quick-entry').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();submit();}});
+ $('#guess-history')?.scrollTo(0,$('#guess-history').scrollHeight);
+}
+function updateDraft(updateInput=true){
+ document.querySelectorAll('[data-cell]').forEach(b=>{const i=Number(b.dataset.cell);b.textContent=display(game.draft[i]||'·');b.classList.toggle('active',i===game.cursor);b.setAttribute('aria-label',`Cell ${i+1}${game.draft[i]?`: ${display(game.draft[i])}`:', empty'}`);});
+ if(updateInput&&$('#quick-entry')){inputInvalid=false;$('#quick-entry').value=game.draft.join('');}
+ if($('#submit-button'))$('#submit-button').disabled=inputInvalid||game.draft.some(c=>!c);
+}
+function typeSymbol(c){if(!started||hidden()||!['guess','setup'].includes(game.phase)||checkClock())return;game.draft[game.cursor]=c;game.cursor=Math.min(8,game.cursor+1);save();updateDraft();say('');}
+function backspace(){if(!started||hidden()||!['guess','setup'].includes(game.phase))return;if(!game.draft[game.cursor]&&game.cursor>0)game.cursor--;game.draft[game.cursor]='';save();updateDraft();}
+function submit(){
+ if(checkClock()||hidden())return;if(inputInvalid)return say('Use exactly nine allowed symbols.',true);const guess=game.draft.join('');const r=game.phase==='setup'?lockSecret(game,guess):submitGuess(game,guess);
+ if(!r.ok)return say(r.error,true);save();render();say(game.phase==='gate'?'Submission locked. Hand over the device.':game.phase==='over'?'Game complete.':'Clues revealed. Keep narrowing it down.');
+}
+function render(){
+ const gated=hidden(),active=started&&!gated&&['setup','guess'].includes(game.phase),over=game.phase==='over';
+ $('#round-label').textContent=!started?'CODEBREAKING':game.phase==='setup'?'SET YOUR SECRET':`ROUND ${game.round}`;
+ $('#board-title').textContent=!started?'Read the signals.':over?'The equation revealed.':gated?'Private handoff':game.phase==='setup'?'Make it a good one.':'Your clue board';
+ $('#phase-label').textContent=!started?'A GAME OF DEDUCTION':gated?'PASS THE DEVICE':over?'GAME COMPLETE':game.phase==='setup'?'KEEP IT SECRET':game.mode==='solo'?'SOLO PRACTICE':`${name(game.player).toUpperCase()}’S TURN`;
+ $('#turn-title').textContent=!started?'Find what fits.':gated?`${name(game.player)}, ready?`:over?(game.winner==='tie'?'A simultaneous solve.':game.winner==='revealed'?'Answer revealed.':game.mode==='solo'?'You cracked it.':`${game.winner==='p1'?'Player 1':'Player 2'} wins.`):game.phase==='setup'?'Create your equation.':'Follow the clues.';
+ $('#instruction').textContent=!started?'Choose solo practice or a private duel with a friend.':gated?'Only the next player should see the screen.':over?'Start a fresh equation whenever you’re ready.':game.phase==='setup'?'The secret must be mathematically true.':'Guesses can be any nine symbols. Match the hidden equation exactly.';
+ if(!started){$('#stage').innerHTML=`<div class="result-box"><div class="equation-row-example" aria-hidden="true"><span class="green">4</span><span class="yellow">+</span><span class="red">8</span><span class="green">=</span></div><h2>Read between<br>the numbers.</h2><p>A little arithmetic.<br>A lot of deduction.</p>${button('stage-start','Choose your game')}</div>`;bind('stage-start',openNew);}
+ else if(gated){$('#stage').innerHTML=`<div class="result-box"><span class="private-mark">◇</span><p class="eyebrow">PRIVATE HANDOFF</p><h2>${name(game.player)}${game.mode==='solo'?' · next attempt':''}</h2><p>${game.mode==='solo'?'Your next five-minute attempt starts when you’re ready.':(game.phase==='gate'?game.nextPhase:game.phase)==='setup'?'Look away while this player creates their secret.':'Look away while this player reviews their clues and makes a guess.'}</p>${button('open-gate',game.mode==='solo'?'Start next attempt':`I’m ${name(game.player)} · ready`)}</div>`;bind('open-gate',()=>{curtain=false;if(game.phase==='gate')openGate(game);if(checkClock())return;save();render();say('');});}
+ else if(over){$('#stage').innerHTML=`<div class="result-box"><span class="private-mark">✧</span><h2>${$('#turn-title').textContent}</h2><p>${game.winner==='tie'?'Both players found the equation in the same round. Play again to break the tie.':game.winner==='revealed'?'Use the clues to review how the answer fits.':`Solved in round ${game.round}.`}</p>${game.secrets.map((s,i)=>`<div class="secret-result"><p>${game.mode==='solo'?'Hidden equation':`${name(i)}’s secret`}</p><code>${esc(display(s))}</code></div>`).join('')}${button('play-again',game.winner==='tie'?'Play the tiebreak':'Play again')}</div>`;bind('play-again',openNew);}
+ else renderEditor();
+ $('#keyboard').hidden=!active;$('#keyboard').innerHTML=active?[...SYMBOLS].map(c=>`<button data-key="${c}" class="${/\d/.test(c)?'':'operator'}" aria-label="Enter ${esc(display(c))}">${esc(display(c))}</button>`).join('')+'<button id="backspace-key" aria-label="Delete previous symbol">Backspace</button>':'';
+ $('#keyboard').querySelectorAll('[data-key]').forEach(b=>b.onclick=()=>typeSymbol(b.dataset.key));bind('backspace-key',backspace);
+ $('#actions').innerHTML=active?button('submit-button',game.phase==='setup'?'Lock secret equation':'Submit guess','primary',game.draft.some(c=>!c))+`<div class="minor-actions">${button('clear-button','Clear row','outline')}${game.mode==='solo'?button('reveal-button','Reveal answer','quiet'):''}</div>`:!started?button('choose-game','Start a game'):over?button('choose-game','New game'):'';
+ bind('submit-button',submit);bind('clear-button',()=>{game.draft=Array(9).fill('');game.cursor=0;save();updateDraft();say('Row cleared.');});bind('reveal-button',()=>$('#reveal-dialog').showModal());bind('choose-game',openNew);
+ $('#notes-wrap').hidden=!active||game.phase==='setup';$('#notes').value=active?game.notes[game.player]:'';renderClock();
+}
+function renderClock(){const el=$('#timer');el.textContent=game.phase==='over'?'Complete':started&&game.deadline&&!hidden()?`${Math.floor(Math.max(0,Math.ceil((game.deadline-Date.now())/1000))/60)}:${String(Math.max(0,Math.ceil((game.deadline-Date.now())/1000))%60).padStart(2,'0')}`:game.timed&&started?'5 min / guess':'Untimed';el.classList.toggle('urgent',!!game.deadline&&game.deadline-Date.now()<30000&&!hidden());}
+function checkClock(){if(!started||!expireClock(game))return false;curtain=false;save();render();say('Time expired. No clues for that attempt.');return true;}
+function openNew(){$('#replace-note').textContent=started?'Starting a new game replaces this one.':'Progress saves in this browser.';$('#new-dialog').showModal();}
+$('#new-form').onsubmit=e=>{e.preventDefault();const f=new FormData(e.currentTarget);game=newGame({mode:f.get('mode'),timed:f.has('timed')});started=true;curtain=false;$('#new-dialog').close();save();render();say(storageOK?'Game started.':'Game started. Browser storage is unavailable.');};
+$('#new-button').onclick=openNew;$('#rules-button').onclick=()=>$('#rules-dialog').showModal();document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>document.getElementById(b.dataset.close).close());
+$('#notes').oninput=e=>{game.notes[game.player]=e.target.value;save();};$('#confirm-reveal').onclick=()=>{if(checkClock()){$('#reveal-dialog').close();return;}game.phase='over';game.winner='revealed';game.deadline=null;$('#reveal-dialog').close();save();render();say('Answer revealed.');};
+document.addEventListener('keydown',e=>{
+ if(document.querySelector('dialog[open]')||['INPUT','TEXTAREA','SELECT'].includes(e.target.tagName)||hidden()||!started||!['guess','setup'].includes(game.phase))return;
+ const c=normalize(e.key);if(c.length===1&&SYMBOLS.includes(c)){e.preventDefault();typeSymbol(c);}else if(e.key==='Backspace'){e.preventDefault();backspace();}else if(e.key==='Enter'&&e.target.tagName!=='BUTTON'){e.preventDefault();submit();}
+});
+window.addEventListener('storage',e=>{if(e.key===KEY&&e.newValue){started=false;curtain=true;render();say('This game changed in another tab. Reload to use the latest save.',true);}});
+setInterval(()=>{checkClock();renderClock();},250);render();checkClock();

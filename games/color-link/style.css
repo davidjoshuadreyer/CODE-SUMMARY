@@ -7,3 +7,7 @@
 /* Keep every result action reachable on short screens. */
 .board-overlay{overflow:auto;align-items:flex-start}.overlay-content{margin:auto}
 @media(max-width:720px){.overlay-content .overlay-mark{display:none}.overlay-content h2{margin:9px 0}.overlay-content p{margin:8px 0 14px}.overlay-content button{margin-bottom:7px}.overlay-content .view-board{margin:0}}
+
+@media(max-width:720px){.topbar .brand{font-size:18px}.topbar .quiet{padding:8px 4px}.topbar nav{white-space:nowrap}}
+@media(max-width:720px){.topbar nav>*{white-space:nowrap;font-size:12px;padding-left:6px;padding-right:6px}}
+@media(max-width:360px){.topbar{height:auto;min-height:68px;flex-wrap:wrap;padding-top:12px;padding-bottom:12px}.topbar nav{width:100%;justify-content:space-between}}
