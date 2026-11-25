@@ -188,7 +188,7 @@ function render(){
   const r=state.resources.find(r=>r.id===id);
   html=r?`<a class="back" href="#course/${esc(r.courseId)}">← Back to course</a>`+heading(r.kind,r.title,r.description,button('edit-page','Edit note',r.id))+`<article class="note-body">${esc(r.body)}</article>`:empty('Page not found','Open a study page from a course.');
  } else html=overview();
- $('#main').innerHTML=html+`<div class="mobile-tools"><p class="hint">Local copies are kept in this browser. Use Online storage above to save to your account.</p>${button('backup','Export backup','','text-button')}${button('restore','Restore backup','','text-button')}${button('theme','Toggle appearance','','text-button')}<a class="text-button" href="town.html">Tesselate World ↗</a><a class="text-button" href="Tree.html">Fractal tree ↗</a></div>`;
+ $('#main').innerHTML=html+`<div class="mobile-tools"><p class="hint">Local copies are kept in this browser. Use Online storage above to save to your account.</p>${button('backup','Export backup','','text-button')}${button('restore','Restore backup','','text-button')}${button('theme','Toggle appearance','','text-button')}<a class="text-button" href="games/color-link/">Color Link</a><a class="text-button" href="town.html">Tesselate World ↗</a><a class="text-button" href="Tree.html">Fractal tree ↗</a></div>`;
 }
 function modal(title,description,fields,submit,onSave){
  $('#dialog-content').innerHTML=`<form><div class="dialog-heading"><h2 id="dialog-title">${esc(title)}</h2>${button('close','×','','close')}</div><p class="sub">${esc(description)}</p>${fields}<p class="form-error" role="alert"></p><div class="dialog-actions">${button('close','Cancel')}<button class="primary" type="submit">${esc(submit)}</button></div></form>`;
