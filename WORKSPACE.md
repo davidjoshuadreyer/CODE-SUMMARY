@@ -276,3 +276,10 @@ Run `node --test dev/color-link-test.mjs`. Checks cover legal placement, challen
 Each game records the source transcript and adaptation details in its rules. These are independent fan games with no show results. Browser saves are separate from the study workspace's backups and online storage. Private handoffs are for shared-device play, not an account/security boundary.
 
 Run the game rule checks with `node --test dev/card-janggi-test.mjs dev/equation-traffic-light-test.mjs dev/color-link-test.mjs`. The 30 tests cover moves/captures/wins, four-versus-five opening sequences, replanning order, computer information boundaries, exact arithmetic, clue multiplicity, generated equation validity, simultaneous duel results, and clocks. Browser QA covers desktop/mobile layouts, local handoffs, private reload, computer replies, round scoring, invalid text, and save/resume.
+
+
+## CK 3 Physics question map (November 25, 2026)
+
+`phys210/ck3.html` maps the November 23 D2L hints to 14 homework and 11 tutorial questions, followed by 12 additional textbook questions. It uses the November 24 rescheduled date (December 1, 9:00–9:50), preserves the announcement’s ambiguity about the number of questions, and distinguishes model alternatives from required circuit topics. Source-specific numbers are matched to Young & Freedman 15e; repeated homework/textbook questions are counted once. Existing course explanations are reused; textbook follow-ups have question crops and method cues, not full solutions.
+
+Edit `dev/physics-ck3-content.cjs` and run `node dev/build-physics-ck3.cjs`, then `node dev/build-workspace-catalog.cjs` and `node dev/build-learning-paths.cjs`. The question-image manifest preserves page numbers and normalized crop rectangles. Checkbox progress saves locally under `tesselate-physics-ck3-v1`. Topic/search/progress filters apply to both banks. Hash links open the correct question and clear incompatible filters. Printing retains the current visible/open state. The map is featured on the workspace home and Physics course page.

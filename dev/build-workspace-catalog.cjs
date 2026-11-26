@@ -39,6 +39,8 @@ for(let i=resources.length-1;i>=0;i--)if(['comp139e/midterm-patterns.html','comp
 const compCode=resources.find(r=>r.url==='comp139e/code-templates.html');if(compCode)Object.assign(compCode,{title:'COMP midterm cheat sheet · Code, templates & rules',description:'75 complete examples, Labs 1–7 study solutions, 19 lab-style drills, a decision matrix, code outlines and 24 blank starters in one sheet.',referenceIds:[]});
 const physicsPractice=resources.find(r=>r.url==='phys210/practice-tests.html');
 if(physicsPractice)Object.assign(physicsPractice,{title:'Midterm 2 · Practice tests & separate bonus papers',description:'Eight choose-3-of-4 midterms, six separate bonus tests and supplementary papers using all 86 exact source questions, with worked solution keys.',kind:'Practice exam',referenceIds:[]});
+const physicsCK3=resources.find(r=>r.url==='phys210/ck3.html');
+if(physicsCK3)Object.assign(physicsCK3,{title:'CK 3 · Hints & question map',description:'December 1 CK 3: 25 homework/tutorial questions, 12 textbook follow-ups, model derivations and verified handout/15e numbering. Hints checked November 25.',kind:'Study notes',referenceIds:['ref-d2l-phys210-5448828','ref-d2l-phys210-5448823','ref-d2l-phys210-5448827']});
 const physicsMidterm2=resources.find(r=>r.url==='phys210/midterm-2.html');
 if(physicsMidterm2)Object.assign(physicsMidterm2,{title:'Midterm 2 · Topic map & worked solutions',description:'October 30 midterm: 86 tutorial, homework and textbook solutions, signed-in manual links and a tilted-capacitor angle solver. D2L checked October 28.',kind:'Study notes'});
 const engrReps=resources.find(r=>r.url==='engr290/assignment-practice.html');

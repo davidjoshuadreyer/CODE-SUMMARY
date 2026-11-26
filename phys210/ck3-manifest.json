@@ -1,0 +1,296 @@
+{
+  "verified": "2026-11-25",
+  "exam": "2026-12-01 09:00–09:50 America/Vancouver",
+  "counts": {
+    "homework": 14,
+    "tutorial": 11,
+    "textbook": 12
+  },
+  "questions": [
+    {
+      "id": "hw-26-39",
+      "ref": "HW 9 · 26.39",
+      "kind": "homework",
+      "topic": "rc",
+      "priority": "Core",
+      "book": "26.37"
+    },
+    {
+      "id": "hw-26-43",
+      "ref": "HW 9 · 26.43",
+      "kind": "homework",
+      "topic": "rc",
+      "priority": "Core",
+      "book": "26.41"
+    },
+    {
+      "id": "hw-26-51",
+      "ref": "HW 9 · 26.51",
+      "kind": "homework",
+      "topic": "rc",
+      "priority": "Core",
+      "book": "26.49"
+    },
+    {
+      "id": "hw-26-24",
+      "ref": "HW 9 · 26.24",
+      "kind": "homework",
+      "topic": "kirchhoff",
+      "priority": "Core",
+      "book": "26.22"
+    },
+    {
+      "id": "hw-26-28",
+      "ref": "HW 9 · 26.28",
+      "kind": "homework",
+      "topic": "kirchhoff",
+      "priority": "Core",
+      "book": "26.26"
+    },
+    {
+      "id": "hw-27-21",
+      "ref": "HW 10 · 27.21",
+      "kind": "homework",
+      "topic": "em cyclotron",
+      "priority": "Core",
+      "book": "27.20"
+    },
+    {
+      "id": "hw-27-56",
+      "ref": "HW 11 · 27.56",
+      "kind": "homework",
+      "topic": "cyclotron",
+      "priority": "Core",
+      "book": "27.52"
+    },
+    {
+      "id": "hw-27-37",
+      "ref": "HW 11 · 27.37",
+      "kind": "homework",
+      "topic": "bonus",
+      "priority": "Core",
+      "book": "27.31"
+    },
+    {
+      "id": "hw-27-41",
+      "ref": "HW 11 · 27.41",
+      "kind": "homework",
+      "topic": "bonus",
+      "priority": "Core",
+      "book": "27.37"
+    },
+    {
+      "id": "hw-27-42",
+      "ref": "HW 11 · 27.42",
+      "kind": "homework",
+      "topic": "bonus",
+      "priority": "Core",
+      "book": "27.38"
+    },
+    {
+      "id": "hw-27-69",
+      "ref": "HW 11 · 27.69",
+      "kind": "homework",
+      "topic": "bonus",
+      "priority": "Extension",
+      "book": "27.65"
+    },
+    {
+      "id": "hw-26-6",
+      "ref": "HW 9 · 26.6",
+      "kind": "homework",
+      "topic": "rc kirchhoff",
+      "priority": "Support",
+      "book": "26.6"
+    },
+    {
+      "id": "hw-27-19",
+      "ref": "HW 10 · 27.19",
+      "kind": "homework",
+      "topic": "em cyclotron",
+      "priority": "Support",
+      "book": "27.19"
+    },
+    {
+      "id": "hw-27-65",
+      "ref": "HW 11 · 27.65",
+      "kind": "homework",
+      "topic": "bonus",
+      "priority": "Extension",
+      "book": "27.59"
+    },
+    {
+      "id": "t8-q6",
+      "ref": "Tutorial 8 · Q6",
+      "kind": "tutorial",
+      "topic": "kirchhoff",
+      "priority": "Core"
+    },
+    {
+      "id": "t8-q5",
+      "ref": "Tutorial 8 · Q5",
+      "kind": "tutorial",
+      "topic": "kirchhoff",
+      "priority": "Core"
+    },
+    {
+      "id": "t8-q4",
+      "ref": "Tutorial 8 · Q4",
+      "kind": "tutorial",
+      "topic": "kirchhoff rc",
+      "priority": "Support"
+    },
+    {
+      "id": "t9-q10",
+      "ref": "Tutorial 9 · Q10",
+      "kind": "tutorial",
+      "topic": "em cyclotron",
+      "priority": "Core"
+    },
+    {
+      "id": "t9-q8",
+      "ref": "Tutorial 9 · Q8",
+      "kind": "tutorial",
+      "topic": "cyclotron",
+      "priority": "Core"
+    },
+    {
+      "id": "t9-q9",
+      "ref": "Tutorial 9 · Q9",
+      "kind": "tutorial",
+      "topic": "em cyclotron",
+      "priority": "Core"
+    },
+    {
+      "id": "t8-q9",
+      "ref": "Tutorial 8 · Q9",
+      "kind": "tutorial",
+      "topic": "em",
+      "priority": "Support"
+    },
+    {
+      "id": "t9-q2",
+      "ref": "Tutorial 9 · Q2",
+      "kind": "tutorial",
+      "topic": "bonus",
+      "priority": "Core"
+    },
+    {
+      "id": "t9-q3",
+      "ref": "Tutorial 9 · Q3",
+      "kind": "tutorial",
+      "topic": "bonus",
+      "priority": "Core"
+    },
+    {
+      "id": "t9-q4",
+      "ref": "Tutorial 9 · Q4",
+      "kind": "tutorial",
+      "topic": "bonus",
+      "priority": "Core"
+    },
+    {
+      "id": "t9-q5",
+      "ref": "Tutorial 9 · Q5",
+      "kind": "tutorial",
+      "topic": "bonus",
+      "priority": "Core"
+    },
+    {
+      "id": "book-26-38",
+      "ref": "Textbook 15e · 26.38",
+      "kind": "textbook",
+      "topic": "rc",
+      "priority": "Follow-up",
+      "number": "26.38"
+    },
+    {
+      "id": "book-26-39",
+      "ref": "Textbook 15e · 26.39",
+      "kind": "textbook",
+      "topic": "rc",
+      "priority": "Follow-up",
+      "number": "26.39"
+    },
+    {
+      "id": "book-26-47",
+      "ref": "Textbook 15e · 26.47",
+      "kind": "textbook",
+      "topic": "rc kirchhoff",
+      "priority": "Follow-up",
+      "number": "26.47"
+    },
+    {
+      "id": "book-26-48",
+      "ref": "Textbook 15e · 26.48",
+      "kind": "textbook",
+      "topic": "rc",
+      "priority": "Follow-up",
+      "number": "26.48"
+    },
+    {
+      "id": "book-26-27",
+      "ref": "Textbook 15e · 26.27",
+      "kind": "textbook",
+      "topic": "kirchhoff",
+      "priority": "Follow-up",
+      "number": "26.27"
+    },
+    {
+      "id": "book-26-30",
+      "ref": "Textbook 15e · 26.30",
+      "kind": "textbook",
+      "topic": "kirchhoff",
+      "priority": "Follow-up",
+      "number": "26.30"
+    },
+    {
+      "id": "book-26-59",
+      "ref": "Textbook 15e · 26.59",
+      "kind": "textbook",
+      "topic": "kirchhoff",
+      "priority": "Follow-up",
+      "number": "26.59"
+    },
+    {
+      "id": "book-27-51",
+      "ref": "Textbook 15e · 27.51",
+      "kind": "textbook",
+      "topic": "em",
+      "priority": "Follow-up",
+      "number": "27.51"
+    },
+    {
+      "id": "book-27-21",
+      "ref": "Textbook 15e · 27.21",
+      "kind": "textbook",
+      "topic": "em",
+      "priority": "Follow-up",
+      "number": "27.21"
+    },
+    {
+      "id": "book-27-18",
+      "ref": "Textbook 15e · 27.18",
+      "kind": "textbook",
+      "topic": "cyclotron",
+      "priority": "Follow-up",
+      "number": "27.18"
+    },
+    {
+      "id": "book-27-29",
+      "ref": "Textbook 15e · 27.29",
+      "kind": "textbook",
+      "topic": "bonus",
+      "priority": "Follow-up",
+      "number": "27.29"
+    },
+    {
+      "id": "book-27-36",
+      "ref": "Textbook 15e · 27.36",
+      "kind": "textbook",
+      "topic": "bonus",
+      "priority": "Follow-up",
+      "number": "27.36"
+    }
+  ]
+}

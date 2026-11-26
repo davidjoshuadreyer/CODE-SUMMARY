@@ -71,6 +71,11 @@ window.TESSELATE_PATHS = {
     ],
     "practice": [
       {
+        "title": "CK 3 · Hints & question map",
+        "url": "phys210/ck3.html",
+        "summary": "December 1: homework and tutorials first, then 12 textbook follow-ups. Compare the hints and check edition numbers."
+      },
+      {
         "title": "Homework 1–13 · Clean worked solutions",
         "url": "phys210/homework.html",
         "summary": "All 89 assigned questions with clear calculations, source questions, diagrams and free-body diagrams where needed."

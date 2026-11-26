@@ -2774,6 +2774,21 @@ window.TESSELATE_CATALOG = {
         "ref-d2l-phys210-5448826"
       ],
       "builtin": true
+    },
+    {
+      "id": "page-cGh5czIxMC9jazMuaHRtbA",
+      "courseId": "phys210",
+      "title": "CK 3 · Hints & question map",
+      "kind": "Study notes",
+      "url": "phys210/ck3.html",
+      "body": "",
+      "description": "December 1 CK 3: 25 homework/tutorial questions, 12 textbook follow-ups, model derivations and verified handout/15e numbering. Hints checked November 25.",
+      "referenceIds": [
+        "ref-d2l-phys210-5448828",
+        "ref-d2l-phys210-5448823",
+        "ref-d2l-phys210-5448827"
+      ],
+      "builtin": true
     }
   ],
   "references": [
